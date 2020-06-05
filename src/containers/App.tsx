@@ -1,13 +1,13 @@
 import React from 'react';
 import {BrowserRouter as Router} from 'react-router-dom';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import {ocean} from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import {obsidian} from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 import codeString from './snippet';
 
 const Component = () => {
   return (
-    <SyntaxHighlighter language="python" showLineNumbers style={ocean}>
+    <SyntaxHighlighter language="python" showLineNumbers style={obsidian}>
       {codeString}
     </SyntaxHighlighter>
   );
