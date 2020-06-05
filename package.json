@@ -22,10 +22,11 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prettier": "prettier --write \"{,!(node_modules)/**/}*.{ts,tsx,js,json,css,less,scss}\"",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
