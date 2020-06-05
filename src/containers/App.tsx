@@ -16,7 +16,7 @@ const Component = () => {
 const App = () => {
   return (
     <Router>
-      <h1>hey</h1>
+      <h1>sup</h1>
       <Component/>
     </Router>
   );
