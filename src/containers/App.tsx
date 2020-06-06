@@ -1,6 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router} from 'react-router-dom';
 
+import AdminLayout from './AdminLayout';
 import Home from './Home';
 import LeftMenu from './LeftMenu';
 import TopNav from './TopNav';
@@ -8,11 +9,7 @@ import TopNav from './TopNav';
 const App = () => {
   return (
     <Router>
-      <TopNav />
-      <div>
-        <LeftMenu />
-        <Home />
-      </div>
+      <AdminLayout left={<LeftMenu />} right={<Home />} top={<TopNav />} />
     </Router>
   );
 };
