@@ -7,7 +7,7 @@
   a:visited {
     border-right: 1px solid #e6e6e6;
     color: var(--color-text);
-    padding: 12px 14px;
+    padding: 0 .875em;
     text-decoration: none;
 
     &:hover {
@@ -28,11 +28,11 @@
     align-items: center;
     display: flex;
     font-weight: 300;
-    padding: 0 8px;
+    padding: 0 .5em;
 
     img.logo {
-      height: 24px;
-      margin-right: 6px;
+      height: 1.5em;
+      margin-right: .375em;
     }
   }
 }

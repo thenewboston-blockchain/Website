@@ -5,17 +5,19 @@ import './TopNav.scss';
 
 const TopNav = () => {
   return (
-    <div className="TopNav">
+    <header className="TopNav">
       <div className="thenewboston">
         <img alt="thenewboston logo" className="logo" src={Logo} />
         <span>thenewboston</span>
       </div>
-      <a className="active" href="#">
-        Home
-      </a>
-      <a href="#">Second</a>
-      <a href="#">Third Item</a>
-    </div>
+      <nav className="TopNav__links">
+        <a className="active" href="#">
+          Home
+        </a>
+        <a href="#">Second</a>
+        <a href="#">Third Item</a>
+      </nav>
+    </header>
   );
 };
 

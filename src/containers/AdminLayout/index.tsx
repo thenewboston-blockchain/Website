@@ -1,11 +1,11 @@
-import React, {FC} from 'react';
+import React, {FC, ReactNode} from 'react';
 
 import './AdminLayout.scss';
 
 interface ComponentProps {
-  left: any;
-  right: any;
-  top: any;
+  left: ReactNode;
+  right: ReactNode;
+  top: ReactNode;
 }
 
 export const AdminLayout: FC<ComponentProps> = ({left, right, top}) => {
