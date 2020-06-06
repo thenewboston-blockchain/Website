@@ -7,32 +7,36 @@
   a:visited {
     border-right: 1px solid #e6e6e6;
     color: var(--color-text);
-    padding: 0 0.875em;
+    padding: 12px 14px;
     text-decoration: none;
 
     &:hover {
-      background-color: #ededed;
+      background-color: #f4f4f4;
+    }
+
+    &:nth-child(2) {
+      border-left: 1px solid #e6e6e6;
     }
 
     &.active {
-      background-color: #ededed;
-      font-weight: 600;
-    }
-
-    &:first-of-type {
-      border-left: 1px solid #e6e6e6;
+      background-color: #f4f4f4;
     }
   }
 
   .thenewboston {
     align-items: center;
+    border-right: none;
     display: flex;
     font-weight: 300;
-    padding: 0 0.5em;
+    padding: 0 8px;
+
+    &.active {
+      background-color: transparent;
+    }
 
     img.logo {
-      height: 1.5em;
-      margin-right: 0.375em;
+      height: 24px;
+      margin-right: 6px;
     }
   }
 }

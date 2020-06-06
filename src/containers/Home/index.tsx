@@ -1,15 +1,18 @@
-import React, {useMemo} from 'react';
-import {useParams} from 'react-router-dom';
+import React from 'react';
 
-import {getChapterContent} from './docs';
+import TopNav from 'containers/TopNav';
+
 import './Home.scss';
 
 const Home = () => {
-  const {chapter: chapterParam} = useParams();
-  const chapter = parseInt(chapterParam, 10);
-  const chapterContent = useMemo(() => getChapterContent(chapter), [chapter]);
-
-  return <div className="Home">{chapterContent}</div>;
+  return (
+    <div className="Home">
+      <div className="top">
+        <TopNav />
+      </div>
+      <div className="main-content">Home</div>
+    </div>
+  );
 };
 
 export default Home;

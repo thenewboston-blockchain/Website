@@ -1,3 +1,16 @@
 .Home {
-  padding: 0.75em 1em;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: fit-content(100px) auto;
+  height: 100vh;
+
+  .top {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+  }
+
+  .main-content {
+    padding: 0.75em 1em;
+  }
 }
