@@ -7,7 +7,7 @@ const LeftMenu = () => {
   return (
     <nav className="LeftMenu">
       <NavLink to="/docs/1">Home</NavLink>
-      <NavLink to="/docs/2">Second</NavLink>
+      <NavLink to="/docs/2">Deployment Guide</NavLink>
       <NavLink to="/docs/3">Third Item</NavLink>
     </nav>
   );
