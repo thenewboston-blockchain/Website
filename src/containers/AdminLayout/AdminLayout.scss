@@ -1,0 +1,24 @@
+.AdminLayout {
+  display: grid;
+  grid-template-columns: 230px auto;
+  grid-template-rows: fit-content(100px) auto;
+  height: 100vh;
+
+  .top {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+  }
+
+  .left {
+    background: #26252b;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+  }
+
+  .right {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+  }
+}
