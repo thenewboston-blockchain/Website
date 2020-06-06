@@ -1,20 +1,19 @@
 .LeftMenu {
-  background: black;
   color: white;
   display: flex;
   flex-direction: column;
 
   a {
     color: white;
-    padding: 14px 16px;
+    padding: 12px 14px;
     text-decoration: none;
 
     &:hover {
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.1);
     }
 
     &.active {
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.15);
     }
   }
 }
