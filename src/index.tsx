@@ -6,11 +6,11 @@ import 'normalize.css';
 import 'styles/colors.scss';
 import 'styles/index.scss';
 
-import App from 'containers/App';
+import Teaser from 'containers/Teaser';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Teaser />
   </React.StrictMode>,
   document.getElementById('root'),
 );
