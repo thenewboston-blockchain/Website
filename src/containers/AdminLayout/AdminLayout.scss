@@ -1,3 +1,21 @@
 .AdminLayout {
-  background: blue;
+  display: grid;
+  grid-template-columns: 230px auto;
+  grid-template-rows: fit-content(100px) auto;
+  height: 100vh;
+
+  .top {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+  }
+
+  .left {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+  }
+
+  .right {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+  }
 }

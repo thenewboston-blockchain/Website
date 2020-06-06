@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className="Home">
       <section>
-        <h1>1 - Introduction</h1>
+        <span>1 - Introduction</span>
         <p>
           This paper will outline the foundation for a trust based distributed network architecture. This architecture
           offers an efficient yet scalable peer-to-peer consensus mechanism through the election of a centralized
