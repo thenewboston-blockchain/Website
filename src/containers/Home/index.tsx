@@ -48,7 +48,8 @@ const Home = () => {
         transaction processing itself that requires distribution across multiple servers, for this often results in
         duplicate work being done by several servers causing an inherent inefficiency in the system. It is rather the
         ability to fairly elect a single validation server and consensual acceptance of the produced results that
-        requires distribution among peers. This allows for highly performant validation within a decentralized network.
+        requires distribution among peers. This allows for highly performant transaction validation within a
+        decentralized network.
       </p>
       {/* SHOW COMPARISON CHART OF TX TIMES (COLORS) */}
     </div>
@@ -56,7 +57,7 @@ const Home = () => {
 
   const renderTrust = () => (
     <div className="trust">
-      <h3>Trust and Security</h3>
+      <h3>Trust</h3>
       <p>
         The single most important concept in this network architecture is the concept of trust. It is also where this
         network deviates most from traditional Blockchain based cryptocurrencies that abide by common consensus
