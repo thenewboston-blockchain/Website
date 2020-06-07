@@ -9,7 +9,7 @@ const Home = () => {
   const renderHero = () => (
     <div className="hero">
       <h1>thenewboston</h1>
-      <h2>Open Source Digital Currency</h2>
+      <h2>A Trust Based Open Source Digital Currency</h2>
       <div className="action-buttons">
         <button>Download</button>
         <button>View docs</button>
@@ -37,14 +37,45 @@ const Home = () => {
   const renderPerformance = () => (
     <div className="performance">
       <h3>Performance</h3>
-      <p>Compare to other crypto</p>
+      <p>
+        An inherent defect in the traditional Blockchain architecture is the inefficient composition of blocks. Blocks
+        in the Bitcoin Blockchain are composed of multiple unrelated transactions. This indicates that within any given
+        block, the earliest transactions experience significant delays as later transactions continue to accumulate
+        until the entire block eventually becomes verified.
+      </p>
+      <p>
+        Our architecture was built on the idea that when building a distributed payment ledger, it is not the
+        transaction processing itself that requires distribution across multiple servers, for this often results in
+        duplicate work being done by several servers causing an inherent inefficiency in the system. It is rather the
+        ability to fairly elect a single validation server and consensual acceptance of the produced results that
+        requires distribution among peers. This allows for highly performant validation within a decentralized network.
+      </p>
+      {/* SHOW COMPARISON CHART OF TX TIMES (COLORS) */}
     </div>
   );
 
-  const renderSecurity = () => (
-    <div className="security">
-      <h3>Security</h3>
-      <p>How is everything kept safe and secure?</p>
+  const renderTrust = () => (
+    <div className="trust">
+      <h3>Trust and Security</h3>
+      <p>
+        The single most important concept in this network architecture is the concept of trust. It is also where this
+        network deviates most from traditional Blockchain based cryptocurrencies that abide by common consensus
+        mechanisms such as Proof of Work (PoW) or Proof of Stake (PoS).
+      </p>
+      <p>
+        It is our belief that we have incorrectly turned to computer science in search of a solution to a question in
+        which computers are simply not capable of solving. In an effort to quantify the level of "trust", we have lost
+        sight of what "trust" truly means. Trust is not a formula. It is not an equation in which a given set of inputs
+        should always lead to an expected output. It is an ever evolving, ever changing feeling in which only life is
+        capable of experiencing. It is the unseen bond in which time can both strengthen or break.
+      </p>
+      <p>
+        By establishing a network architecture in which discrepancies in transactions are able to be solved quickly and
+        efficiently through the use of human quantified trust, it is possible to construct a highly scalable, highly
+        reliable, and highly performant globally distributed network. A trust based network architecture would
+        immediately reject any node deemed untrustworthy, regardless of computing power or the amount of wealth that
+        node controlled.
+      </p>
     </div>
   );
 
@@ -57,7 +88,7 @@ const Home = () => {
         {renderHero()}
         {renderOverview()}
         {renderPerformance()}
-        {renderSecurity()}
+        {renderTrust()}
       </div>
       <Footer />
     </div>
