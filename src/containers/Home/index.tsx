@@ -10,7 +10,7 @@ const Home = () => {
       <div className="top">
         <TopNav />
       </div>
-      <div className="main-content">Home</div>
+      <div className="main-content">Home page.</div>
     </div>
   );
 };
