@@ -3,9 +3,9 @@ import React from 'react';
 import Footer from 'containers/Footer';
 import TopNav from 'containers/TopNav';
 
+import Chart from 'assets/images/chart.png';
 import KeyPair from 'assets/images/key-pair.png';
 import './Home.scss';
-import Logo from '../../assets/images/logo.png';
 
 const Home = () => {
   const renderHero = () => (
@@ -38,22 +38,24 @@ const Home = () => {
 
   const renderPerformance = () => (
     <div className="performance">
-      <h3>Performance</h3>
-      <p>
-        An inherent defect in the traditional Blockchain architecture is the inefficient composition of blocks. Blocks
-        in the Bitcoin Blockchain are composed of multiple unrelated transactions. This indicates that within any given
-        block, the earliest transactions experience significant delays as later transactions continue to accumulate
-        until the entire block eventually becomes verified.
-      </p>
-      <p>
-        Our architecture was built on the idea that when building a distributed payment ledger, it is not the
-        transaction processing itself that requires distribution across multiple servers, for this often results in
-        duplicate work being done by several servers causing an inherent inefficiency in the system. It is rather the
-        ability to fairly elect a single validation server and consensual acceptance of the produced results that
-        requires distribution among peers. This allows for highly performant transaction validation within a
-        decentralized network.
-      </p>
-      {/* SHOW COMPARISON CHART OF TX TIMES (COLORS) */}
+      <img alt="chart" className="chart" src={Chart} />
+      <div>
+        <h3>Performance</h3>
+        <p>
+          An inherent defect in the traditional Blockchain architecture is the inefficient composition of blocks. Blocks
+          in the Bitcoin Blockchain are composed of multiple unrelated transactions. This indicates that within any
+          given block, the earliest transactions experience significant delays as later transactions continue to
+          accumulate until the entire block eventually becomes verified.
+        </p>
+        <p>
+          Our architecture was built on the idea that when building a distributed payment ledger, it is not the
+          transaction processing itself that requires distribution across multiple servers, for this often results in
+          duplicate work being done by several servers causing an inherent inefficiency in the system. It is rather the
+          ability to fairly elect a single validation server and consensual acceptance of the produced results that
+          requires distribution among peers. This allows for highly performant transaction validation within a
+          decentralized network.
+        </p>
+      </div>
     </div>
   );
 

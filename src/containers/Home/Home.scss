@@ -55,7 +55,13 @@
     }
 
     .performance {
+      display: flex;
       padding: 2em 1em;
+
+      img.chart {
+        margin-right: 2em;
+        width: 260px;
+      }
     }
 
     .security {
