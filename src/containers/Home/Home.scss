@@ -1,7 +1,7 @@
 .Home {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: fit-content(100px) auto;
+  grid-template-rows: fit-content(100px) auto fit-content(100px);
   height: 100vh;
 
   .top {
@@ -9,12 +9,15 @@
     grid-row: 1 / span 1;
   }
 
+  .Footer {
+    grid-row: 3 / span 1;
+  }
+
   .main-content {
     grid-row: 2 / span 1;
-    text-align: center;
 
     .hero {
-      padding: 2em 1em;
+      padding: 4em 1em;
       text-align: center;
 
       h1,
@@ -38,6 +41,26 @@
           margin: 0 0.5em;
         }
       }
+    }
+
+    .overview {
+      background: #2a2c34;
+      color: #fff;
+      padding: 2em 1em;
+
+      a,
+      a:visited {
+        color: #fff;
+      }
+    }
+
+    .performance {
+      padding: 2em 1em;
+    }
+
+    .security {
+      background: #e6e6e6;
+      padding: 2em 1em;
     }
   }
 }
