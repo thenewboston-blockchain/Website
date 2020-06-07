@@ -69,6 +69,10 @@ const Home = () => {
           reveal their secret "signing key". The signing key for all user accounts are kept private and secured by the
           users themselves on their own personal devices.
         </p>
+        <p>
+          Our network uses the <a href="https://ed25519.cr.yp.to/">Ed25519 Digital Signature Algorithm</a> which allows
+          for both highly performant and highly secure signatures.
+        </p>
       </div>
       <img alt="key-pair" className="key-pair" src={KeyPair} />
     </div>
