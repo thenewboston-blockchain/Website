@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - npm install
+      - CI=true npm test
+      - npm run build
+artifacts:
+  files:
+    - "**/*"
+  discards-paths: no
+  base-directory: build 
