@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 
 // Styles
 import 'normalize.css';
-import 'styles/colors.scss';
-import 'styles/index.scss';
+import 'styles/main.scss';
 
 import App from 'containers/App';
 
