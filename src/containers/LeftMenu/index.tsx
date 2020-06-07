@@ -6,9 +6,11 @@ import './LeftMenu.scss';
 const LeftMenu = () => {
   return (
     <nav className="LeftMenu">
-      <NavLink to="/docs/1">Docs</NavLink>
-      <NavLink to="/docs/2">Deployment Guide</NavLink>
-      <NavLink to="/docs/3">Third Item</NavLink>
+      <NavLink to="/docs/introduction">Introduction</NavLink>
+      <NavLink to="/docs/overview">Overview</NavLink>
+      <NavLink to="/docs/accounts">Accounts</NavLink>
+      <NavLink to="/docs/transactions">Transactions</NavLink>
+      <NavLink to="/docs/transaction-fees">Transaction Fees</NavLink>
     </nav>
   );
 };

@@ -1,15 +1,35 @@
 import React, {useMemo} from 'react';
 import {useParams} from 'react-router-dom';
 
-import {getChapterContent} from './docs';
+import Accounts from './Accounts';
+import Introduction from './Introduction';
+import Overview from './Overview';
+import Transactions from './Transactions';
+import TransactionFees from './TransactionFees';
 import './Docs.scss';
 
-const Docs = () => {
-  const {chapter: chapterParam} = useParams();
-  const chapter = parseInt(chapterParam, 10);
-  const chapterContent = useMemo(() => getChapterContent(chapter), [chapter]);
+const getPageContent = (chapter: string) => {
+  switch (chapter) {
+    case 'accounts':
+      return <Accounts />;
+    case 'introduction':
+      return <Introduction />;
+    case 'overview':
+      return <Overview />;
+    case 'transactions':
+      return <Transactions />;
+    case 'transaction-fees':
+      return <TransactionFees />;
+    default:
+      return <Introduction />;
+  }
+};
 
-  return <div className="Docs">{chapterContent}</div>;
+const Docs = () => {
+  const {chapter} = useParams();
+  const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
+
+  return <div className="Docs">{pageContent}</div>;
 };
 
 export default Docs;

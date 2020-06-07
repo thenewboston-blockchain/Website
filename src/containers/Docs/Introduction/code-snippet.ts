@@ -1,4 +1,4 @@
-const codeString = `
+const code = `
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 
@@ -28,4 +28,4 @@ class Bank(NetworkNode):
         )
   `;
 
-export default codeString;
+export default code;

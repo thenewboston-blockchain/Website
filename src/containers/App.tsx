@@ -15,7 +15,7 @@ const App = () => {
           <Home />
         </Route>
         <Route exact path="/docs">
-          <Redirect to="/docs/1" />
+          <Redirect to="/docs/introduction" />
         </Route>
         <Route path="/docs/:chapter">
           <AdminLayout left={<LeftMenu />} right={<Docs />} top={<TopNav />} />

@@ -12,9 +12,7 @@ const TopNav = () => {
         <img alt="thenewboston logo" className="logo" src={Logo} />
         <span>thenewboston</span>
       </NavLink>
-      <NavLink to="/docs/1">Docs</NavLink>
-      <NavLink to="/docs/2">Deployment Guide</NavLink>
-      <NavLink to="/docs/3">Third Item</NavLink>
+      <NavLink to="/docs">Docs</NavLink>
     </div>
   );
 };
