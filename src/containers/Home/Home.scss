@@ -58,6 +58,15 @@
       padding: 2em 1em;
     }
 
+    .security {
+      display: flex;
+      padding: 2em 1em;
+
+      img.key-pair {
+        width: 400px;
+      }
+    }
+
     .trust {
       background: #e6e6e6;
       padding: 2em 1em;

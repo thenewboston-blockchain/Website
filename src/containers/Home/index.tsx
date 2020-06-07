@@ -3,7 +3,9 @@ import React from 'react';
 import Footer from 'containers/Footer';
 import TopNav from 'containers/TopNav';
 
+import KeyPair from 'assets/images/key-pair.png';
 import './Home.scss';
+import Logo from '../../assets/images/logo.png';
 
 const Home = () => {
   const renderHero = () => (
@@ -55,6 +57,23 @@ const Home = () => {
     </div>
   );
 
+  const renderSecurity = () => (
+    <div className="security">
+      <div>
+        <h3>Security</h3>
+        <p>
+          All account balances and transactions over the network are secured through the use of digital signatures. When
+          transferring points between accounts, sending users digitally sign their transactions in order to prove
+          ownership of their funds and authorize the transfer of points to others. All participants on the network are
+          able to publicly view and verify the authenticity of these signatures without the need for the sender to ever
+          reveal their secret "signing key". The signing key for all user accounts are kept private and secured by the
+          users themselves on their own personal devices.
+        </p>
+      </div>
+      <img alt="key-pair" className="key-pair" src={KeyPair} />
+    </div>
+  );
+
   const renderTrust = () => (
     <div className="trust">
       <h3>Trust</h3>
@@ -90,6 +109,7 @@ const Home = () => {
         {renderOverview()}
         {renderPerformance()}
         {renderTrust()}
+        {renderSecurity()}
       </div>
       <Footer />
     </div>
