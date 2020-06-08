@@ -2,7 +2,7 @@ import React from 'react';
 
 const Overview = () => (
   <section>
-    <span>Overview</span>
+    <h1 className="page-title">Overview</h1>
     <ul>
       <li>
         <strong>Transaction -</strong> the transfer of points from one account to another

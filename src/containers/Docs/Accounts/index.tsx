@@ -2,7 +2,7 @@ import React from 'react';
 
 const Accounts = () => (
   <section>
-    <span>Accounts</span>
+    <h1 className="page-title">Accounts</h1>
     <p>
       <strong>Account managers</strong> are software applications (such as a mobile application or desktop software)
       that are used by users to send, receive, and store points. To send points, users enter the amount they wish to

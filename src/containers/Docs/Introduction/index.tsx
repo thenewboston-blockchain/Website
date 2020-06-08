@@ -7,7 +7,7 @@ import code from './code-snippet';
 const Introduction = () => (
   <>
     <section>
-      <span>Introduction</span>
+      <h1 className="page-title">Introduction</h1>
       <p>
         This paper will outline the foundation for a trust based distributed network architecture. This architecture
         offers an efficient yet scalable peer-to-peer consensus mechanism through the election of a centralized
