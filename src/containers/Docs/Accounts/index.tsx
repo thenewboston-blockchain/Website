@@ -18,7 +18,7 @@ const Accounts = () => (
     <p>
       The account number of the account is similar to a username, but is unique across the entire network (rather than a
       single website). All accounts are secured through the use of signing keys. Signing keys can be used to prove
-      ownership of points. They are also used in the process of “signing” a transaction. This allows for the ability of
+      ownership of points. They are also used in the process of "signing" a transaction. This allows for the ability of
       users to create secure transactions that can further be validated by the network without revealing the signing key
       itself. The signing key should always remain private to the account owner.
     </p>
@@ -60,7 +60,7 @@ const Accounts = () => (
       Account manager applications can manage multiple accounts (key pairs) for a single user. A more accurate
       representation of user transactions can be seen in the following diagram.
     </p>
-    <p>The terms “account” and “user account” are used interchangeably throughout this paper.</p>
+    <p>The terms "account" and "user account" are used interchangeably throughout this paper.</p>
   </section>
 );
 
