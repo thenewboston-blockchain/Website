@@ -1,0 +1,28 @@
+.Overview {
+  img.overview-diagram {
+    max-width: 800px;
+  }
+
+  table.glossary {
+    border: 1px solid #e6e6e6;
+    border-collapse: collapse;
+    margin: 0 0 20px 0;
+
+    tr {
+      &:nth-child(odd) {
+        background-color: #f6f6f6;
+      }
+
+      td {
+        padding: 2px 8px;
+        vertical-align: top;
+      }
+
+      td:first-child {
+        font-weight: 700;
+        padding-right: 16px;
+        white-space: nowrap;
+      }
+    }
+  }
+}

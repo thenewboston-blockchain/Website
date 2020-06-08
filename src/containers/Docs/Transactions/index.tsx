@@ -2,7 +2,7 @@ import React from 'react';
 
 const Transactions = () => (
   <section>
-    <span>Transactions</span>
+    <h1 className="page-title">Transactions</h1>
     <p>
       Transactions refer to the transfer of points from one account to another. Transactions are created through the use
       of an account manager application and then forwarded to a bank. The bank will then forward the transaction along

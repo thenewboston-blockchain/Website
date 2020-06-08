@@ -1,3 +1,12 @@
 .Docs {
-  padding: 0.75em 1em;
+  padding: 24px;
+
+  .img-container {
+    text-align: center;
+
+    img {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
 }

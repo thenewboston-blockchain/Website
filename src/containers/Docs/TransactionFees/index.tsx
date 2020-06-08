@@ -2,7 +2,7 @@ import React from 'react';
 
 const TransactionFees = () => (
   <section>
-    <span>Transaction Fees</span>
+    <h1 className="page-title">Transaction Fees</h1>
     <p>
       Users are incentivized to maintain bank and validator nodes through the collection of transaction fees. The fee
       amounts and fee structures are set entirely by the owners of the nodes. Users may also choose to set their

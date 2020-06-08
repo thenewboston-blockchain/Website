@@ -13,6 +13,7 @@ const TopNav = () => {
         <span>thenewboston</span>
       </NavLink>
       <NavLink to="/docs">Docs</NavLink>
+      <NavLink to="/api">API</NavLink>
     </div>
   );
 };
