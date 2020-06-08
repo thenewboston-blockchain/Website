@@ -1,4 +1,8 @@
 .Overview {
+  img.overview-diagram {
+    max-width: 800px;
+  }
+
   table.glossary {
     border: 1px solid #e6e6e6;
     border-collapse: collapse;
@@ -18,19 +22,6 @@
         font-weight: 700;
         padding-right: 16px;
         white-space: nowrap;
-      }
-    }
-  }
-
-  .img-container {
-    text-align: center;
-
-    img {
-      margin-bottom: 20px;
-      width: 100%;
-
-      &.overview-diagram {
-        max-width: 800px;
       }
     }
   }

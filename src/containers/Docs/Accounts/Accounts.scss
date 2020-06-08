@@ -1,0 +1,15 @@
+.Accounts {
+  img {
+    &.account-details-diagram {
+      max-width: 1200px;
+    }
+
+    &.accounts-diagram {
+      max-width: 620px;
+    }
+
+    &.key-pair-diagram {
+      max-width: 460px;
+    }
+  }
+}
