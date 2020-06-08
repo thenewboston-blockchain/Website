@@ -1,0 +1,13 @@
+.Transactions {
+  img {
+    &.transaction-diagram {
+      max-width: 760px;
+    }
+    &.transaction-failed-diagram {
+      max-width: 760px;
+    }
+    &.transaction-success-diagram {
+      max-width: 760px;
+    }
+  }
+}
