@@ -1,8 +1,4 @@
 import React from 'react';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import {obsidian} from 'react-syntax-highlighter/dist/esm/styles/hljs';
-
-import code from './code-snippet';
 
 const Introduction = () => (
   <>
@@ -23,9 +19,6 @@ const Introduction = () => (
         network.
       </p>
     </section>
-    <SyntaxHighlighter language="python" showLineNumbers style={obsidian}>
-      {code}
-    </SyntaxHighlighter>
   </>
 );
 
