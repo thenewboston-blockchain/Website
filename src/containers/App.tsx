@@ -1,11 +1,11 @@
 import React from 'react';
 import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom';
 
-import AdminLayout from './AdminLayout';
 import API from './API';
-import APILeftMenu from './API/APILeftMenu';
+import APILeftMenu from './APILeftMenu';
+import AdminLayout from './AdminLayout';
 import Docs from './Docs';
-import DocsLeftMenu from './Docs/DocsLeftMenu';
+import DocsLeftMenu from './DocsLeftMenu';
 import Home from './Home';
 import TopNav from './TopNav';
 
