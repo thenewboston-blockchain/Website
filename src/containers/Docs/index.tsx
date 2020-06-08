@@ -6,6 +6,7 @@ import Introduction from './Introduction';
 import Overview from './Overview';
 import Transactions from './Transactions';
 import TransactionFees from './TransactionFees';
+
 import './Docs.scss';
 
 const getPageContent = (chapter: string) => {
