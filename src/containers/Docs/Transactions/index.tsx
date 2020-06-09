@@ -50,8 +50,8 @@ const Transactions = () => {
       <p>
         If the recipient of the transaction is a member at a different bank, a backup validator will forward the
         successful transaction along to the recipient's bank. This logic will be covered later in the{' '}
-        <a href="">Backup Validators</a> section. The recipient's bank can then send the recipient a notification
-        regarding the successful transfer.
+        <a href="https://www.google.com/">Backup Validators</a> section. The recipient's bank can then send the
+        recipient a notification regarding the successful transfer.
       </p>
     </section>
   );

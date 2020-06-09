@@ -1,0 +1,26 @@
+table {
+  border: 1px solid #e6e6e6;
+  border-collapse: collapse;
+  margin: 0 0 20px 0;
+
+  tr {
+    td {
+      padding: 2px 8px;
+      vertical-align: top;
+    }
+  }
+
+  &.glossary {
+    tr {
+      &:nth-child(odd) {
+        background-color: #f6f6f6;
+      }
+
+      td:first-child {
+        font-weight: 700;
+        padding-right: 16px;
+        white-space: nowrap;
+      }
+    }
+  }
+}
