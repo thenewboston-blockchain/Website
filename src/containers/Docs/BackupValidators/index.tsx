@@ -1,5 +1,8 @@
 import React from 'react';
 
+import BackupValidatorsConfirmations from './BackupValidatorsConfirmations.png';
+import Resyncing from './Resyncing.png';
+
 import './BackupValidators.scss';
 
 const BackupValidators = () => {
@@ -97,6 +100,74 @@ const BackupValidators = () => {
         been confirmed by the primary validator, that backup validator should begin to accept incoming transactions as
         the new primary validator. At that point in time, the other backup validators on the network would have also
         found the erroneous block and began acting as primary validators themselves.
+      </p>
+
+      <div className="img-container">
+        <img
+          alt="backup validators confirmations diagram"
+          className="backup-validators-confirmations"
+          src={BackupValidatorsConfirmations}
+        />
+      </div>
+
+      <p>
+        A network state would then occur where all backup validators were no longer syncing with the primary validator
+        due to incorrect information provided by the primary validator. The banks then know to mark that primary
+        validator as “untrusted” and they will jointly elect a new primary validator from all of the available backup
+        validators (who are now temporarily all acting as primary validators). The banks will switch their primary
+        validators to the backup validator who has earned the highest level of network trust which is a value that they
+        will already have predetermined. After the election, all backup validators will become aware of the new bank
+        elected primary validator and will begin syncing to it. This will allow for an extremely fault tolerant network
+        with zero downtime, even as the entire network is changing over to a new primary validator.
+      </p>
+      <p>The process in which existing backup validators must re-sync with a new primary validator is as follows:</p>
+
+      <ol>
+        <li>Obtain the hash of the base block from the new primary validator</li>
+        <ol type="a">
+          <li>
+            if the backup validator does not have this block (meaning the new validator was ahead in processing blocks)
+            then the backup validator must query the new primary validator with the address of the most recent validated
+            block and continue syncing until the base block is found
+          </li>
+        </ol>
+        <li>
+          Beginning with the previous primary validators base balance sheet, apply the verified blocks (already verified
+          by the backup validator) until reaching the base block from the new primary validator
+        </li>
+        <li>Compare the updated balance sheet to the base balance sheet of the new primary validator</li>
+        <ol type="a">
+          <li>
+            if they match, accept them as the new primary validator and copy their base balance sheet, hash of that base
+            balance sheet, and hash of the base block over to the backup validators config
+          </li>
+        </ol>
+      </ol>
+
+      <div className="img-container">
+        <img alt="resyncing diagram" className="resyncing" src={Resyncing} />
+      </div>
+
+      <p>
+        When a new block is verified by the primary validator, the primary validator will send a POST request to all
+        backup validators. This will inform the backup validators of the updated data immediately, and prevent the
+        backup validators from needing to continuously make GET requests to the primary validator to check for new
+        blocks.
+      </p>
+      <p>
+        Given that backup validators do not earn points through transaction fees like the primary validator, the
+        incentive for individuals to deploy and maintain backup validators is achieved through separate means. Backup
+        validators may receive points from banks through pre-registration fees. This process is useful for banks by
+        avoiding the need to register with a new validator if the primary validator were to go offline. It is also
+        beneficial to bank members and the network as a whole in ensuring the network would remain functional in the
+        event the primary validator goes down. Back up validators also provide confirmation services, which will be
+        discussed in more detail in the following section.
+      </p>
+      <p>
+        It is important to note that backup validators may also become the primary network validator if the banks simply
+        wish to change primary validators for any number of reasons (improved reliability, faster response times,
+        additional data services, etc...). The primary validator is appointed through consensus of the banks and does
+        not require the existing primary validator to go offline.
       </p>
     </section>
   );
