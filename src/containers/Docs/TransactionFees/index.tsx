@@ -137,7 +137,7 @@ const TransactionFees = () => {
       </table>
       <p>
         Additionally, the balance sheet would also be updated to reflect the new point balances of all four parties
-        involved. For more details, see the Blocks section of this paper.
+        involved. For more details, see the <a href="https://www.google.com/">Blocks</a> section.
       </p>
     </section>
   );
