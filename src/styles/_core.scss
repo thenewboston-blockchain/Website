@@ -4,8 +4,8 @@
 
 body {
   background: var(--color-bg);
-  color: var(--color-grey);
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  color: var(--color-gray-2);
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 22px;
   margin: auto;
@@ -17,7 +17,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--color-grey-dark);
+  color: var(--color-gray-1);
   margin: 0;
 }
 

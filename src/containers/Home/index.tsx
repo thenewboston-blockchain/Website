@@ -5,6 +5,7 @@ import TopNav from 'containers/TopNav';
 
 import Chart from 'assets/images/chart.png';
 import KeyPair from 'assets/images/key-pair.png';
+
 import './Home.scss';
 
 const Home = () => {
@@ -13,8 +14,8 @@ const Home = () => {
       <h1>thenewboston</h1>
       <h2>A Trust Based Open Source Digital Currency</h2>
       <div className="action-buttons">
-        <button>Download</button>
-        <button>View docs</button>
+        <button className="primary">Download</button>
+        <button className="primary">View docs</button>
       </div>
     </div>
   );
