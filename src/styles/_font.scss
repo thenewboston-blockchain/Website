@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('./fonts/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
+    url('./fonts/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff') format('woff'),
+    url('./fonts/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+}
+
+:root {
+  --font-family-mono: 'JetBrainsMono', monospace;
+  --font-size-large: 24px;
+  --font-size-medium: 20px;
+  --font-size-regular: 14px;
+  --font-size-small: 12px;
+}

@@ -1,5 +1,4 @@
-const code = `
-from django.core.validators import MaxValueValidator, MinValueValidator
+const code = `from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 
 from thenewboston.models.network_node import NetworkNode
