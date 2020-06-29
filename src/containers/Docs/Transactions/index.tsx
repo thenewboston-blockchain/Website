@@ -3,6 +3,7 @@ import React from 'react';
 import TransactionDiagram from './Transaction.png';
 import TransactionFailedDiagram from './TransactionFailed.png';
 import TransactionSuccessDiagram from './TransactionSuccess.png';
+import {NavLink} from 'react-router-dom';
 
 import './Transactions.scss';
 
@@ -34,10 +35,10 @@ const Transactions = () => {
         <img alt="transaction failed diagram" className="transaction-failed-diagram" src={TransactionFailedDiagram} />
       </div>
       <p>
-        When a transaction is verified and accepted by the validator, the validator will first append that transaction
-        onto the transaction ledger and also update the balance sheet. The validator will then respond with a success
-        status to the bank. The bank will then return that response to the original sender. If the recipient of that
-        transaction is also a member of that same bank, the bank will send the recipient a notification of the
+        When a transaction is verified and accepted by the validator, the validator will append that transaction block
+        onto their blockchain and also update the related account balances. The validator will then respond with a
+        success status to the bank. The bank will then return that response to the original sender. If the recipient of
+        that transaction is also a member of that same bank, the bank will send the recipient a notification of the
         successful transaction as well.
       </p>
       <div className="img-container">
@@ -48,10 +49,9 @@ const Transactions = () => {
         />
       </div>
       <p>
-        If the recipient of the transaction is a member at a different bank, a backup validator will forward the
+        If the recipient of the transaction is a member at a different bank, a confirmation validator will forward the
         successful transaction along to the recipient's bank. This logic will be covered later in the{' '}
-        <a href="https://www.google.com/">Backup Validators</a> section. The recipient's bank can then send the
-        recipient a notification regarding the successful transfer.
+        <NavLink to="/docs/backup-validators">Confirmation Validators</NavLink> section.
       </p>
     </section>
   );
