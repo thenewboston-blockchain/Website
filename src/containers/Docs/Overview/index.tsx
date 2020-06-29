@@ -13,11 +13,7 @@ const Overview = () => {
       </tr>
       <tr>
         <td>Block</td>
-        <td>a signed list of one or more transactions</td>
-      </tr>
-      <tr>
-        <td>Confirmation</td>
-        <td>a Block that has been signed by a validator as confirmation it has been added to their blockchain</td>
+        <td>a list of one or more transactions, signed (authorized) by the account owner</td>
       </tr>
       <tr>
         <td>Signature</td>
@@ -25,32 +21,29 @@ const Overview = () => {
       </tr>
       <tr>
         <td>Bank</td>
-        <td>
-          a network server that has several responsibilities such as electing a validator and routing member
-          transactions
-        </td>
-      </tr>
-      <tr>
-        <td>Member</td>
-        <td>a user belonging to a bank</td>
+        <td>a network server that has several responsibilities such as electing a validator</td>
       </tr>
       <tr>
         <td>Validator</td>
         <td>
-          a central server that accepts transactions from multiple banks, and after final validation adds those
-          transactions to the transaction ledger (commonly referred to as "the ledger") and updates account balances
+          a central server that accepts blocks from multiple banks and after validation adds those blocks to the
+          blockchain while updating account balances
         </td>
       </tr>
       <tr>
-        <td>Base Balance Sheet</td>
+        <td>Confirmation</td>
         <td>
-          a historical record of all account balances at the time the primary validator was first elected (never
-          changes)
+          a block that has been signed by a validator as confirmation it has been added to their blockchain, indicating
+          that the transactions have been authorized and the points have been successfully transferred
         </td>
       </tr>
       <tr>
-        <td>Live Balance Sheet</td>
-        <td>a current record of all account balances</td>
+        <td>Root Balance Sheet</td>
+        <td>a historic record of all account balances at a given point in time</td>
+      </tr>
+      <tr>
+        <td>Blockchain</td>
+        <td>a validators log of all of confirmed transactions since the creation of the balance sheet (or earlier)</td>
       </tr>
     </table>
   );
@@ -59,9 +52,9 @@ const Overview = () => {
     <section className="Overview">
       <h1 className="page-title">Overview</h1>
       <p>
-        The system is composed of many nodes, each of which play a specific role in allowing the transfer of points (the
-        currency of the system) between users. Each of these nodes will be discussed in more detail in future sections,
-        but for now we will examine a simplified network composed of the core components.
+        The system is composed of many components, each of which play a specific role in allowing the transfer of points
+        (the currency of the system) between users. Each of these nodes will be discussed in more detail in future
+        sections, but for now we will examine a simplified network composed of the core components.
       </p>
       {renderGlossary()}
       <div className="img-container">

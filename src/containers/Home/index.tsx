@@ -23,7 +23,7 @@ const Home = () => {
     <div className="overview">
       <h3>Overview</h3>
       <p>
-        Digital currency allows users from all around the world to send points to each other in exchange for goods and
+        Digital currency allows users from all around the world to send points to one another in exchange for goods and
         services. Unlike traditional currency, users are in complete control of their own accounts. On thenewboston, all
         transactions are instant. Overdraft, minimum balance, and checking account fees do not exist. All of your points
         are available and accessible 24 hours a day, 7 days a week, 365 days a year.
