@@ -12,10 +12,10 @@ const Accounts = () => {
       <h1 className="page-title">Accounts</h1>
       <p>
         <strong>Account managers</strong> are software applications (such as a mobile application or desktop software)
-        that are used by users to send, receive, and store points. To send points, users enter the amount they wish to
-        send along with the account number of the recipient and submit it to the network for processing. To receive
-        points, users share their own account number with other users on the network who will then be able to form
-        transactions themselves.
+        that are used by individuals to create/manage their accounts and to send points. When sending points, users
+        enter the amount they wish to send along with the account number of the recipient and submit it to the network
+        for processing. To receive points, users share their own account number with other users on the network who will
+        then be able to form blocks themselves.
       </p>
       <div className="img-container">
         <img alt="accounts diagram" className="accounts-diagram" src={AccountsDiagram} />
@@ -29,11 +29,11 @@ const Accounts = () => {
         <img alt="key pair diagram" className="key-pair-diagram" src={KeyPair} />
       </div>
       <p>
-        The account number of the account is similar to a username, but is unique across the entire network (rather than
+        The account number of an account is similar to a username, but is unique across the entire network (rather than
         a single website). All accounts are secured through the use of signing keys. Signing keys can be used to prove
-        ownership of points. They are also used in the process of "signing" a transaction. This allows for the ability
-        of users to create secure transactions that can further be validated by the network without revealing the
-        signing key itself. The signing key should always remain private to the account owner.
+        ownership of points. They are also used in the process of "signing" a block. This allows for the ability of
+        users to create secure transactions that can further be validated by the network without revealing the signing
+        key itself. The signing key should always remain private to the account owner.
       </p>
       <p>A simplified overview of each key is as follows:</p>
       <p>
