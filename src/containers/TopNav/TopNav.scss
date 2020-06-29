@@ -27,7 +27,8 @@
     align-items: center;
     border-right: none;
     display: flex;
-    font-weight: 300;
+    font-family: var(--font-family-mono);
+    font-weight: 700;
     padding: 0 8px;
 
     &.active {
