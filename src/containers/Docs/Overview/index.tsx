@@ -23,8 +23,8 @@ const Overview = () => {
       <tr>
         <td>Signature</td>
         <td>
-          unique value used to verify they authenticity of a digital document (included in every block to prove that the
-          related transactions have been authorized by the account owner)
+          unique value used to verify they authenticity of a digital document (included with every block to prove that
+          the related transactions have been authorized by the account owner)
         </td>
       </tr>
       <tr>
@@ -43,10 +43,11 @@ const Overview = () => {
         </td>
       </tr>
       <tr>
-        <td>Confirmation (Block)</td>
+        <td>Confirmation Block</td>
         <td>
-          a block that has been signed by a validator as confirmation it has been added to their blockchain, indicating
-          that the transactions have been validated and that the points have been successfully transferred
+          often referred to as a "confirmation", a block that has been signed by a validator as confirmation it has been
+          added to their blockchain, indicating that the transactions have been validated and that the points have been
+          successfully transferred
         </td>
       </tr>
       <tr>
@@ -55,7 +56,7 @@ const Overview = () => {
       </tr>
       <tr>
         <td>Root Balance Sheet</td>
-        <td>a historic record of all account balances at a given point in time</td>
+        <td>a historic record (snapshot) of all account balances at a given point in time</td>
       </tr>
     </table>
   );
@@ -78,8 +79,8 @@ const Overview = () => {
       <p>
         All transactions on the network will begin with a user account. The owner of the account will create a block
         (group of transactions) indicating the amount of points they would like to send to each recipient and then send
-        that block to their bank. The bank will then forward the block (now a bank block) along to the validator and
-        upon successful validation of the transaction, append it onto blockchain while updating account balances. There
+        that block to their bank. The bank will then forward the block (now a bank block) along to the validator which
+        upon successful validation of the transaction, appends it onto blockchain while updating account balances. There
         are several key differences between the network structure outlined above and the traditional Blockchain
         architecture regarding the creation of a distributed public ledger.
       </p>
