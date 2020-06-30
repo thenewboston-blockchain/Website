@@ -1,4 +1,13 @@
 .Blocks {
+  img {
+    &.balance-lock-and-key {
+      max-width: 1200px;
+    }
+    &.block-details {
+      max-width: 530px;
+    }
+  }
+
   table {
     tr {
       td {

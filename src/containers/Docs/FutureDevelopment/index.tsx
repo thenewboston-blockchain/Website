@@ -14,7 +14,7 @@ const FutureDevelopment = () => {
       <p>
         As the network grows, additional points must be created to match the natural growth of the economy in order to
         remain as an effective means for exchange of value for goods and services. A fixed interest rate structure is
-        preferred in the form of network protocol to prevent the system from “printing more money”. If too high, the
+        preferred in the form of network protocol to prevent the system from "printing more money". If too high, the
         amount of new currency will outpace production and lead to increased inflation. If too low, users will not be
         able to obtain points to use as a means of exchange as the network grows. Additional discussion and consensus
         among the development community is required before integration into the network.

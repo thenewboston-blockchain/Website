@@ -151,7 +151,7 @@ const RootBalanceSheet = () => {
         is simple.
       </p>
 
-      <ol>
+      <ol className="mb-20">
         <li>start with the most recent verified balance sheet (from his notebook)</li>
         <li>
           beginning with the first unverified transaction (in this case Tx ID: 2) apply each transaction to the verified

@@ -1,8 +1,7 @@
 import React from 'react';
 
-import SigningProcess from './SigningProcess.png';
-import TransactionDetails from './TransactionDetails.png';
-import TransactionDetailsSimple from './TransactionDetailsSimple.png';
+import BalanceLockAndKey from './BalanceLockAndKey.png';
+import BlockDetails from './BlockDetails.png';
 
 import './Blocks.scss';
 
@@ -12,7 +11,7 @@ const Blocks = () => {
       <h1 className="page-title">Blocks</h1>
       <p>
         Now that we have covered the basics of all nodes in the system, we can now inspect more closely the technical
-        details of blocks. A block is a representation of a complete transaction. The term “complete” is needed to
+        details of blocks. A block is a representation of a complete transaction. The term "complete" is needed to
         clarify that there are often multiple transactions (usually fees) to different recipients within a single block.
         A block is what will be sent from Amy's account to her bank, and what the bank will then forward to the
         validator. We can now take a closer look at the example discussed earlier.
@@ -42,11 +41,11 @@ const Blocks = () => {
         the transfer including verification that:
       </p>
 
-      <ol>
+      <ol className="mb-20">
         <li>The block was signed by Amy</li>
         <ol type="a">
           <li>
-            the term “signing” is preferred over “created” because Amy may sign (authorize) blocks that she did not
+            the term "signing" is preferred over "created" because Amy may sign (authorize) blocks that she did not
             originate
           </li>
           <ol type="i">
@@ -64,42 +63,39 @@ const Blocks = () => {
       </ol>
 
       <p>
-        The signing process produces digital signatures using the Ed25519 algorithm to ensure that the set of
+        The signing process produces digital signatures using the{' '}
+        <a href="https://ed25519.cr.yp.to/">Ed25519 Digital Signature Algorithm</a> to ensure that the set of
         transactions within a given block were indeed signed by the account owner. Although in previous explanations of
-        the system the “owner” of an account was often referred to by name, in the actual network architecture
+        the system the "owner" of an account was often referred to by name, in the actual network architecture
         individuals' names are never stored. Instead, each balance will refer to the owner by their account number.
       </p>
       <p>
-        The account number (often referred to as the “public-key” in public-key cryptography) is not only used to
+        The account number (often referred to as the "public-key" in public-key cryptography) is not only used to
         identify your account when other users wish to send you points, but is also used during the verification process
         in which blocks must be correctly verified in order to ensure the related transactions have been authorized by
         the sender (account owner). Therefore, a more realistic representation of a block would be as follows.
       </p>
 
       <div className="img-container">
-        <img
-          alt="transaction details simple diagram"
-          className="transaction-details-simple"
-          src={TransactionDetailsSimple}
-        />
+        <img alt="block details" className="block-details" src={BlockDetails} />
       </div>
 
       <p>
         Before we can go into more details regarding exactly how a block is created, we first need to understand an
         integral aspect of the network balance sheet called the balance lock. Every account on the balance sheet
-        includes a related balance lock. This is a value that must be provided by the account owner in order to “unlock”
+        includes a related balance lock. This is a value that must be provided by the account owner in order to "unlock"
         or spend their point balance. The method to unlock a balance lock is done through the use of balance keys, which
-        are provided within the transactions of every block.
+        are provided within the message of every block.
       </p>
       <p>
-        Each transaction within a block will be hashed and that hash value will be used as the next balance lock. Since
-        every transaction contains a unique balance key (as created by the previous transaction), this will ensure that
-        for every transaction made over the network the balance lock will become updated, therefore preventing banks and
-        validators from sending or processing the same block (payments) multiple times.
+        Every message within a block will be hashed and that hash value will be used as the next balance lock. Since
+        every block contains a unique balance key (as created by the previous block), this will ensure that for every
+        block sent over the network the balance lock will become updated, therefore preventing banks and validators from
+        sending or processing the same block (payments) multiple times.
       </p>
 
       <div className="img-container">
-        <img alt="transaction details diagram" className="transaction-details" src={TransactionDetails} />
+        <img alt="balance lock and key diagram" className="balance-lock-and-key" src={BalanceLockAndKey} />
       </div>
 
       <p>
@@ -112,49 +108,17 @@ const Blocks = () => {
         be simplified as follows:
       </p>
 
-      <ol>
+      <ol className="mb-20">
         <li>If an owner has never sent points before, the balance lock is equal to their account number</li>
         <li>Otherwise, the balance lock is equal to the hash value of their most recent sent transaction</li>
       </ol>
 
       <p>
         Important Note: The balance lock for an account is only updated when that account owner is sending points. The
-        balance “lock and key” system is similar to the lock and key for a mailbox. No mailbox key is required by others
+        balance "lock and key" system is similar to the lock and key for a mailbox. No mailbox key is required by others
         when inserting mail into your mailbox, only when opening the mailbox to access the contents inside is when a key
         is required.
       </p>
-      <p>The specifics of how an individual block is created is as follows:</p>
-
-      <ol>
-        <li>The most recent balance lock will be obtained from the network balance sheet</li>
-        <li>When forming the first transaction in a block, the balance key will be set to that balance lock</li>
-        <li>
-          For every other transaction included in that block, the balance key will be set to the hash value of the
-          previous transaction
-        </li>
-        <ol type="a">
-          <li>the last hash value will be used as the new balance lock on the network balance sheet</li>
-        </ol>
-        <li>
-          Once all transactions have been included in the block, a signature will be formed using all transactions as
-          the input
-        </li>
-        <li>Account number will also be included in the block, this is necessary for two reasons:</li>
-        <ol type="a">
-          <li>identifying who signed the block (who is sending points)</li>
-          <li>used in the signature verification process to ensure both:</li>
-          <ol type="i">
-            <li>the signers (senders) identity</li>
-            <li>he signed transaction data can be verified</li>
-          </ol>
-        </ol>
-      </ol>
-
-      <p>A more detailed diagram of the signing processes and block creation is shown below.</p>
-
-      <div className="img-container">
-        <img alt="signing process diagram" className="signing-process" src={SigningProcess} />
-      </div>
     </section>
   );
 };

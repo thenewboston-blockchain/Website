@@ -22,11 +22,11 @@ const Trust = () => {
         peer-to-peer network allowing anyone in the world to view, save, and update the ledger. It was a concept that
         revolutionized the way the world thought about currency and the transfer of value. However, this novel idea
         brought along with it a very interesting question. If anyone in the world could view, save, and update this
-        Blockchain resulting in many different variations of the same object, which one would be the “true” Blockchain?
+        Blockchain resulting in many different variations of the same object, which one would be the "true" Blockchain?
       </p>
       <p>
         In a Blockchain, every new block added is dependent on the last. As new transactions occur all across the world,
-        Bitcoin nodes known as “miners” attempt to validate these transactions, bundle them together into a block, and
+        Bitcoin nodes known as "miners" attempt to validate these transactions, bundle them together into a block, and
         append it to the Blockchain. However, when several miners simultaneously announce that their block is the block
         that all other nodes should append to their copy of the Blockchain, the network must reach a consensus in order
         to decide which miner to trust. Given that the purpose of the Blockchain is to act as a record of all
@@ -56,16 +56,16 @@ const Trust = () => {
       <p>
         Proof of Stake states that rather than solving puzzles, network nodes would instead vote for the block that
         would be added as the next block on the Blockchain. To ensure that the voting process was fair, voting power
-        (technically “mining power”) is proportional to the amount of coins held by a node. This is supported by the
+        (technically "mining power") is proportional to the amount of coins held by a node. This is supported by the
         philosophy that nodes with the most coins would also have the most incentive to maintain a secure and reliable
         network. While PoS provides many benefits over PoW such as confirmation time improvements and lower energy
         requirements for miners, it also comes with challenges of its own. The most well known being a network attack,
-        commonly referred to as a “51% attack”.
+        commonly referred to as a "51% attack".
       </p>
       <p>
         A 51% attack occurs when a single entity controls 51% or more of the network's currency. Since voting power is
         proportional to the amount of currency held, a majority holder of the currency could essentially act as a
-        dictator, making the notion of “consensus” on the network obsolete. Given the ever growing wealth inequality
+        dictator, making the notion of "consensus" on the network obsolete. Given the ever growing wealth inequality
         that is visible across the entire global economy, it is difficult to ignore the inherent possibility of a 51%
         attack. In addition, a network where the most wealthy individuals are given the most power is an all too
         familiar road that many wish to avoid.
@@ -101,22 +101,22 @@ const Trust = () => {
       </p>
       <p>
         When we view the problem as Bank 3 needing to decide between two valid transactions, one from Bank 1 and the
-        other from Bank 2, since both transactions can indeed be independently viewed as “valid” they can therefore be
+        other from Bank 2, since both transactions can indeed be independently viewed as "valid" they can therefore be
         cancelled out and removed from the equation entirely. What we are left with is a rather straightforward problem,
         one in which Bank 3 must decide between Bank 1 and Bank 2. In the end, the question for Bank 3 is not about the
         transactions at all, but a much more simplified one:
       </p>
-      <p>“Who do I trust?”</p>
+      <p>"Who do I trust?"</p>
       <p>
         Since the creation of the very first distributed Blockchain, this seemingly simple question has become one of
         the most difficult challenges in all of computer science. We have already reviewed the two most widely used
-        answers to this question, those being “the nodes with the most computing power” and “the nodes with the most
-        money”. However, in an effort to find a mathematical formula that is capable of quantifying the level of “trust”
+        answers to this question, those being "the nodes with the most computing power" and "the nodes with the most
+        money". However, in an effort to find a mathematical formula that is capable of quantifying the level of "trust"
         needed to support a distributed peer-to-peer payment network, it is important to remember the purpose behind any
         such formula at all. It is not a formula itself that is needed, but merely a method in which computers are able
         to quickly provide an answer to the much familiar question:
       </p>
-      <p>“Who do I trust?”</p>
+      <p>"Who do I trust?"</p>
       <p>
         Before we can turn to computer science or mathematics for an answer to this problem, we must first be able to
         answer this question as human beings. Only then may we then attempt to translate that solution into a
@@ -124,11 +124,11 @@ const Trust = () => {
         spread out across the world, all working towards achieving consensus regarding transaction validation, the
         question that each and every one of us must answer on our own is:
       </p>
-      <p>“Who do we trust?” </p>
+      <p>"Who do we trust?" </p>
       <p>
         It is my belief that we have incorrectly turned to computer science in search of a solution to a question in
-        which computers are simply not capable of solving. In an effort to quantify the level of “trust”, we have lost
-        sight of what “trust” truly means. Trust is not a formula. It is not an equation in which a given set of inputs
+        which computers are simply not capable of solving. In an effort to quantify the level of "trust", we have lost
+        sight of what "trust" truly means. Trust is not a formula. It is not an equation in which a given set of inputs
         should always lead to an expected output. It is an ever evolving, ever changing feeling in which only life is
         capable of experiencing. It is the unseen bond in which time can both strengthen or break.
       </p>
@@ -141,7 +141,7 @@ const Trust = () => {
       </p>
       <p>
         To maintain efficiency of an automated distributed network, nodes must still be given a value that will allow
-        them to answer the question of “Who do I trust?”, but the value provided should not stem from a mathematical
+        them to answer the question of "Who do I trust?", but the value provided should not stem from a mathematical
         equation or predefined formula. This value must always originate from humans. It should remain flexible to allow
         for adjustment as needed over time. The method in which this value is determined will be different for each and
         every individual, yet this is the method that most accurately reflects true human nature.
