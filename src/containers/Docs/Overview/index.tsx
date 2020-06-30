@@ -8,42 +8,49 @@ const Overview = () => {
   const renderGlossary = () => (
     <table className="glossary">
       <tr>
+        <td>Account</td>
+        <td>an anonymous digital identity on the network where points may be sent to and from</td>
+      </tr>
+      <tr>
         <td>Transaction</td>
         <td>the transfer of points from one account to another</td>
       </tr>
       <tr>
         <td>Block</td>
-        <td>a list of one or more transactions, signed (authorized) by the account owner</td>
+        <td>a group of one or more transactions along with the senders account number and a signature</td>
       </tr>
       <tr>
         <td>Signature</td>
-        <td>a unique value used to verify the authenticity of a block</td>
+        <td>
+          unique value used to verify they authenticity of a digital document (included in every block to prove that the
+          related transactions have been authorized by the account owner)
+        </td>
       </tr>
       <tr>
         <td>Bank</td>
-        <td>a network server that has several responsibilities such as electing a validator</td>
+        <td>a network server that has several responsibilities such as electing a validator and routing blocks</td>
       </tr>
       <tr>
         <td>Validator</td>
         <td>
-          a central server that accepts blocks from multiple banks and after validation adds those blocks to the
-          blockchain while updating account balances
+          a central server that accepts blocks from multiple banks and after successful validation/confirmation of each
+          block, creates a new confirmation block which is added to the blockchain
         </td>
       </tr>
       <tr>
-        <td>Confirmation</td>
+        <td>Confirmation (Block)</td>
         <td>
           a block that has been signed by a validator as confirmation it has been added to their blockchain, indicating
-          that the transactions have been authorized and the points have been successfully transferred
+          that the transactions have been validated and that the points have been successfully transferred
         </td>
+      </tr>
+      <tr>
+        <td>Blockchain</td>
+        <td>an ordered list of confirmation blocks</td>
       </tr>
       <tr>
         <td>Root Balance Sheet</td>
         <td>a historic record of all account balances at a given point in time</td>
-      </tr>
-      <tr>
-        <td>Blockchain</td>
-        <td>a validators log of all of confirmed transactions since the creation of the balance sheet (or earlier)</td>
       </tr>
     </table>
   );
@@ -53,13 +60,16 @@ const Overview = () => {
       <h1 className="page-title">Overview</h1>
       <p>
         The system is composed of many components, each of which play a specific role in allowing the transfer of points
-        (the currency of the system) between users. Each of these nodes will be discussed in more detail in future
-        sections, but for now we will examine a simplified network composed of the core components.
+        (the currency of the system) securely between accounts. Each of these elements will be discussed in more detail
+        in future sections, but for now we will examine a simplified network composed of the core components.
       </p>
+
       {renderGlossary()}
+
       <div className="img-container">
         <img alt="overview diagram" className="overview-diagram" src={OverviewDiagram} />
       </div>
+
       <p>
         All transactions on the network will begin with a user account. The owner of the account will create a block
         (list of transactions) indicating the amount of points they would like to send to each recipient and then send
