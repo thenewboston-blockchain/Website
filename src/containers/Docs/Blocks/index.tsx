@@ -1,8 +1,7 @@
 import React from 'react';
 
+import BalanceLockAndKey from './BalanceLockAndKey.png';
 import BlockDetails from './BlockDetails.png';
-import SigningProcess from './SigningProcess.png';
-import TransactionDetails from './TransactionDetails.png';
 
 import './Blocks.scss';
 
@@ -96,7 +95,7 @@ const Blocks = () => {
       </p>
 
       <div className="img-container">
-        <img alt="transaction details diagram" className="transaction-details" src={TransactionDetails} />
+        <img alt="balance lock and key diagram" className="balance-lock-and-key" src={BalanceLockAndKey} />
       </div>
 
       <p>
@@ -120,38 +119,6 @@ const Blocks = () => {
         when inserting mail into your mailbox, only when opening the mailbox to access the contents inside is when a key
         is required.
       </p>
-      <p>The specifics of how an individual block is created is as follows:</p>
-
-      <ol>
-        <li>The most recent balance lock will be obtained from the network balance sheet</li>
-        <li>When forming the first transaction in a block, the balance key will be set to that balance lock</li>
-        <li>
-          For every other transaction included in that block, the balance key will be set to the hash value of the
-          previous transaction
-        </li>
-        <ol type="a">
-          <li>the last hash value will be used as the new balance lock on the network balance sheet</li>
-        </ol>
-        <li>
-          Once all transactions have been included in the block, a signature will be formed using all transactions as
-          the input
-        </li>
-        <li>Account number will also be included in the block, this is necessary for two reasons:</li>
-        <ol type="a">
-          <li>identifying who signed the block (who is sending points)</li>
-          <li>used in the signature verification process to ensure both:</li>
-          <ol type="i">
-            <li>the signers (senders) identity</li>
-            <li>he signed transaction data can be verified</li>
-          </ol>
-        </ol>
-      </ol>
-
-      <p>A more detailed diagram of the signing processes and block creation is shown below.</p>
-
-      <div className="img-container">
-        <img alt="signing process diagram" className="signing-process" src={SigningProcess} />
-      </div>
     </section>
   );
 };
