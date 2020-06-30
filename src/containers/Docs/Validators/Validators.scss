@@ -1,2 +1,15 @@
 .Validators {
+  img {
+    &.confirmation-validators {
+      max-width: 670px;
+    }
+
+    &.overview-full {
+      max-width: 700px;
+    }
+  }
+
+  ul {
+    margin-bottom: 20px;
+  }
 }
