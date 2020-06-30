@@ -14,7 +14,7 @@ const Blocks = () => {
         Now that we have covered the basics of all nodes in the system, we can now inspect more closely the technical
         details of blocks. A block is a representation of a complete transaction. The term “complete” is needed to
         clarify that there are often multiple transactions (usually fees) to different recipients within a single block.
-        A block is what will be sent from Amy’s account to her bank, and what the bank will then forward to the
+        A block is what will be sent from Amy's account to her bank, and what the bank will then forward to the
         validator. We can now take a closer look at the example discussed earlier.
       </p>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './TransactionFees.scss';
+import {NavLink} from 'react-router-dom';
 
 const TransactionFees = () => {
   return (
@@ -8,24 +9,23 @@ const TransactionFees = () => {
       <h1 className="page-title">Transaction Fees</h1>
       <p>
         Users are incentivized to maintain bank and validator nodes through the collection of transaction fees. The fee
-        amounts and fee structures are set entirely by the owners of the nodes. Users may also choose to set their
-        transactions fees to 0 to allow for free usage of their nodes. It is recommended however for nodes to set a
-        small fee to deter malicious users from attacking the network and bloating the transaction log by sending a
-        large amount of useless transactions between accounts.
+        amounts and fee structures are set entirely by the owners of the nodes. It is required for nodes to set a
+        minimum fee to deter malicious users from attacking the network and bloating the blockchain by sending a large
+        amount of useless transactions between accounts.
       </p>
       <p>
         As banks and validators join the network, they will announce their transaction fees. This is the amount (in
         points) that nodes will charge per transaction. Nodes may charge a fixed transaction fee for all users, or offer
-        tier based fees based on trust levels. This is one way in which more trusted bank members and more trusted banks
-        may be rewarded by the network.{' '}
+        tier based fees based on trust levels. This is one way in which more trusted accounts and more trusted banks may
+        be rewarded by the network.
       </p>
       <p>
         Users will always attempt to join banks that offer the lowest transaction fees. There are also additional
         factors such as server reliability and other services the bank may provide, but the transaction fees will likely
-        be a large consideration. When bank fees become too high, the members will look for a new bank to join.
+        be a large consideration. When bank fees become too high, users will look for a new bank to join.
       </p>
       <p>
-        In the following example, Amy is sending 100 points to Brian. Before the transaction is even created, Amy’s bank
+        In the following example, Amy is sending 100 points to Brian. Before the transaction is even created, Amy's bank
         is aware of the validators transaction fee. The transaction fees of both the bank and the validator will be
         displayed in the user interface. When creating a transaction, Amy will first choose the desired recipient and
         then the amount of points she wishes to send. A very simple UI that Amy may see at that point might look like
@@ -75,11 +75,11 @@ const TransactionFees = () => {
         Once the transaction has been reviewed, signed, and sent to the bank by Amy, the following functions will be
         performed:
         <ol>
-          <li>Amy’s bank will validate that:</li>
+          <li>Amy's bank will validate that:</li>
           <ol type="a">
             <li>The transaction (Tx) is formatted properly (according to network protocol)</li>
             <li>
-              The fees included in Amy’s signed Tx are in agreement with the expected fee structure of the network
+              The fees included in Amy's signed Tx are in agreement with the expected fee structure of the network
             </li>
             <li>
               If any aspect of the transaction can not be validated, an error will be returned to Amy and the Tx will
@@ -87,7 +87,7 @@ const TransactionFees = () => {
             </li>
           </ol>
           <li>
-            After initial validation by Amy’s bank, the Tx will be forwarded to the primary validator where it will
+            After initial validation by Amy's bank, the Tx will be forwarded to the primary validator where it will
             validate:
           </li>
           <ol type="a">
@@ -98,11 +98,11 @@ const TransactionFees = () => {
             <li>Amy has enough funds to cover the total Tx cost</li>
           </ol>
           <li>
-            After the transaction is confirmed by the validator, the validator will add that transaction to the ledger
-            and update the balance sheet for both Amy and Brian.
+            After the transaction is confirmed by the validator, the validator will add that transaction block to the
+            blockchain and update the point balances for both Amy and Brian.
           </li>
           <li>
-            The validator will then send the response back to Amy’s bank where it can then notify both users of the
+            The validator will then send the response back to Amy's bank where it can then notify both users of the
             successful transaction.
           </li>
         </ol>
@@ -136,8 +136,8 @@ const TransactionFees = () => {
         </tr>
       </table>
       <p>
-        Additionally, the balance sheet would also be updated to reflect the new point balances of all four parties
-        involved. For more details, see the <a href="https://www.google.com/">Blocks</a> section.
+        Additionally, the point balances of all four parties involved would also be updated as a result of the blocks
+        transactions. For more details, see the <NavLink to="/docs/blocks">Blocks</NavLink> section.
       </p>
     </section>
   );

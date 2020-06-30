@@ -18,7 +18,7 @@ const InitialFunds = () => {
 
       <p>
         In designing the system, it was a challenge to find a fair solution to the first problem of how the currency was
-        to be created. It wasn’t until a solution to the second problem was found that there would be an answer to the
+        to be created. It wasn't until a solution to the second problem was found that there would be an answer to the
         first. Given that the usefulness of currency is the transfer of value from one individual to another, the
         initial distribution of funds must be to several individuals. This would not only help alleviate the
         concentration of wealth that is apparent in the majority of existing economies, both fiat and digital, but also

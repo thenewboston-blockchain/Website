@@ -81,7 +81,7 @@ const Banks = () => {
         As briefly mentioned earlier, before users are able to use a bank's services they must first register one (or
         more) of their accounts with that bank. This process involves paying a registration fee to the bank.
         Registration fees are necessary to prove that the account applied at the given bank. Otherwise, any bank would
-        be able to lie and state that another bank’s member had applied there, therefore harming the reputation and
+        be able to lie and state that another bank's member had applied there, therefore harming the reputation and
         trust level of that user account.
       </p>
       <p>

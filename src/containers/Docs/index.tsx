@@ -3,7 +3,6 @@ import {useParams} from 'react-router-dom';
 
 import Accounts from './Accounts';
 import BackupValidators from './BackupValidators';
-import BalanceSheet from './BalanceSheet';
 import Banks from './Banks';
 import BestPractices from './BestPractices';
 import Blocks from './Blocks';
@@ -12,8 +11,9 @@ import FutureDevelopment from './FutureDevelopment';
 import InitialFunds from './InitialFunds';
 import Introduction from './Introduction';
 import Overview from './Overview';
-import Transactions from './Transactions';
+import RootBalanceSheet from './RootBalanceSheet';
 import TransactionFees from './TransactionFees';
+import Transactions from './Transactions';
 import Trust from './Trust';
 import Validators from './Validators';
 
@@ -25,8 +25,6 @@ const getPageContent = (chapter: string) => {
       return <Accounts />;
     case 'backup-validators':
       return <BackupValidators />;
-    case 'balance-sheet':
-      return <BalanceSheet />;
     case 'banks':
       return <Banks />;
     case 'best-practices':
@@ -43,6 +41,8 @@ const getPageContent = (chapter: string) => {
       return <Introduction />;
     case 'overview':
       return <Overview />;
+    case 'root-balance-sheet':
+      return <RootBalanceSheet />;
     case 'transactions':
       return <Transactions />;
     case 'transaction-fees':
