@@ -1,4 +1,10 @@
 .Blocks {
+  img {
+    &.block-details {
+      max-width: 530px;
+    }
+  }
+
   table {
     tr {
       td {
@@ -6,5 +12,9 @@
         min-width: 90px;
       }
     }
+  }
+
+  .outer-ol {
+    margin-bottom: 20px;
   }
 }

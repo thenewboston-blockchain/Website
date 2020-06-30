@@ -1,8 +1,8 @@
 import React from 'react';
 
+import BlockDetails from './BlockDetails.png';
 import SigningProcess from './SigningProcess.png';
 import TransactionDetails from './TransactionDetails.png';
-import TransactionDetailsSimple from './TransactionDetailsSimple.png';
 
 import './Blocks.scss';
 
@@ -37,12 +37,12 @@ const Blocks = () => {
         </tr>
       </table>
 
-      <p>
+      <div>
         In the block above, Amy is sending 100 points to Brian. In doing so, the system must validate several aspects of
         the transfer including verification that:
-      </p>
+      </div>
 
-      <ol>
+      <ol className="outer-ol">
         <li>The block was signed by Amy</li>
         <ol type="a">
           <li>
@@ -64,7 +64,8 @@ const Blocks = () => {
       </ol>
 
       <p>
-        The signing process produces digital signatures using the Ed25519 algorithm to ensure that the set of
+        The signing process produces digital signatures using the{' '}
+        <a href="https://ed25519.cr.yp.to/">Ed25519 Digital Signature Algorithm</a> to ensure that the set of
         transactions within a given block were indeed signed by the account owner. Although in previous explanations of
         the system the "owner" of an account was often referred to by name, in the actual network architecture
         individuals' names are never stored. Instead, each balance will refer to the owner by their account number.
@@ -77,11 +78,7 @@ const Blocks = () => {
       </p>
 
       <div className="img-container">
-        <img
-          alt="transaction details simple diagram"
-          className="transaction-details-simple"
-          src={TransactionDetailsSimple}
-        />
+        <img alt="block details" className="block-details" src={BlockDetails} />
       </div>
 
       <p>
@@ -89,13 +86,13 @@ const Blocks = () => {
         integral aspect of the network balance sheet called the balance lock. Every account on the balance sheet
         includes a related balance lock. This is a value that must be provided by the account owner in order to "unlock"
         or spend their point balance. The method to unlock a balance lock is done through the use of balance keys, which
-        are provided within the transactions of every block.
+        are provided within the message of every block.
       </p>
       <p>
-        Each transaction within a block will be hashed and that hash value will be used as the next balance lock. Since
-        every transaction contains a unique balance key (as created by the previous transaction), this will ensure that
-        for every transaction made over the network the balance lock will become updated, therefore preventing banks and
-        validators from sending or processing the same block (payments) multiple times.
+        Every message within a block will be hashed and that hash value will be used as the next balance lock. Since
+        every block contains a unique balance key (as created by the previous block), this will ensure that for every
+        block sent over the network the balance lock will become updated, therefore preventing banks and validators from
+        sending or processing the same block (payments) multiple times.
       </p>
 
       <div className="img-container">
