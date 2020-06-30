@@ -2,10 +2,10 @@ import React, {useMemo} from 'react';
 import {useParams} from 'react-router-dom';
 
 import Accounts from './Accounts';
-import BackupValidators from './BackupValidators';
 import Banks from './Banks';
 import BestPractices from './BestPractices';
 import Blocks from './Blocks';
+import ConfirmationValidators from './ConfirmationValidators';
 import Confirmations from './Confirmations';
 import FutureDevelopment from './FutureDevelopment';
 import InitialFunds from './InitialFunds';
@@ -23,14 +23,14 @@ const getPageContent = (chapter: string) => {
   switch (chapter) {
     case 'accounts':
       return <Accounts />;
-    case 'backup-validators':
-      return <BackupValidators />;
     case 'banks':
       return <Banks />;
     case 'best-practices':
       return <BestPractices />;
     case 'blocks':
       return <Blocks />;
+    case 'confirmation-validators':
+      return <ConfirmationValidators />;
     case 'confirmations':
       return <Confirmations />;
     case 'future-development':

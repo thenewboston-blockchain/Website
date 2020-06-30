@@ -51,7 +51,7 @@ const Transactions = () => {
       <p>
         If the recipient of the transaction is a member at a different bank, a confirmation validator will forward the
         successful transaction along to the recipient's bank. This logic will be covered later in the{' '}
-        <NavLink to="/docs/backup-validators">Confirmation Validators</NavLink> section.
+        <NavLink to="/docs/confirmation-validators">Confirmation Validators</NavLink> section.
       </p>
     </section>
   );
