@@ -23,7 +23,7 @@ const BackupValidators = () => {
         <ul>
           <li>
             this is the flattened representation of the balance sheet at the moment in time that the validator was first
-            set to “primary”
+            set to "primary"
           </li>
           <li>the data in the base balance sheet provided by the primary validator will never be updated in any way</li>
         </ul>
@@ -46,7 +46,7 @@ const BackupValidators = () => {
         </ul>
         <li>Address of the most recent validated block</li>
         <ul>
-          <li>this will allow the backup validators to know when they are “up to date”</li>
+          <li>this will allow the backup validators to know when they are "up to date"</li>
         </ul>
       </ul>
 
@@ -74,7 +74,7 @@ const BackupValidators = () => {
         <li>Verify the block against their own copy of the balance sheet</li>
         <ol type="a">
           <li>
-            if the backup validators results match the “Updated Balances” given by the primary validator (the block is
+            if the backup validators results match the "Updated Balances" given by the primary validator (the block is
             verified) the backup validator will:
           </li>
           <ol type="i">
@@ -113,7 +113,7 @@ const BackupValidators = () => {
       <p>
         A network state would then occur where all backup validators were no longer syncing with the primary validator
         due to incorrect information provided by the primary validator. The banks then know to mark that primary
-        validator as “untrusted” and they will jointly elect a new primary validator from all of the available backup
+        validator as "untrusted" and they will jointly elect a new primary validator from all of the available backup
         validators (who are now temporarily all acting as primary validators). The banks will switch their primary
         validators to the backup validator who has earned the highest level of network trust which is a value that they
         will already have predetermined. After the election, all backup validators will become aware of the new bank

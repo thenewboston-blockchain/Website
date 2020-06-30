@@ -12,7 +12,7 @@ const Blocks = () => {
       <h1 className="page-title">Blocks</h1>
       <p>
         Now that we have covered the basics of all nodes in the system, we can now inspect more closely the technical
-        details of blocks. A block is a representation of a complete transaction. The term “complete” is needed to
+        details of blocks. A block is a representation of a complete transaction. The term "complete" is needed to
         clarify that there are often multiple transactions (usually fees) to different recipients within a single block.
         A block is what will be sent from Amy's account to her bank, and what the bank will then forward to the
         validator. We can now take a closer look at the example discussed earlier.
@@ -46,7 +46,7 @@ const Blocks = () => {
         <li>The block was signed by Amy</li>
         <ol type="a">
           <li>
-            the term “signing” is preferred over “created” because Amy may sign (authorize) blocks that she did not
+            the term "signing" is preferred over "created" because Amy may sign (authorize) blocks that she did not
             originate
           </li>
           <ol type="i">
@@ -66,11 +66,11 @@ const Blocks = () => {
       <p>
         The signing process produces digital signatures using the Ed25519 algorithm to ensure that the set of
         transactions within a given block were indeed signed by the account owner. Although in previous explanations of
-        the system the “owner” of an account was often referred to by name, in the actual network architecture
+        the system the "owner" of an account was often referred to by name, in the actual network architecture
         individuals' names are never stored. Instead, each balance will refer to the owner by their account number.
       </p>
       <p>
-        The account number (often referred to as the “public-key” in public-key cryptography) is not only used to
+        The account number (often referred to as the "public-key" in public-key cryptography) is not only used to
         identify your account when other users wish to send you points, but is also used during the verification process
         in which blocks must be correctly verified in order to ensure the related transactions have been authorized by
         the sender (account owner). Therefore, a more realistic representation of a block would be as follows.
@@ -87,7 +87,7 @@ const Blocks = () => {
       <p>
         Before we can go into more details regarding exactly how a block is created, we first need to understand an
         integral aspect of the network balance sheet called the balance lock. Every account on the balance sheet
-        includes a related balance lock. This is a value that must be provided by the account owner in order to “unlock”
+        includes a related balance lock. This is a value that must be provided by the account owner in order to "unlock"
         or spend their point balance. The method to unlock a balance lock is done through the use of balance keys, which
         are provided within the transactions of every block.
       </p>
@@ -119,7 +119,7 @@ const Blocks = () => {
 
       <p>
         Important Note: The balance lock for an account is only updated when that account owner is sending points. The
-        balance “lock and key” system is similar to the lock and key for a mailbox. No mailbox key is required by others
+        balance "lock and key" system is similar to the lock and key for a mailbox. No mailbox key is required by others
         when inserting mail into your mailbox, only when opening the mailbox to access the contents inside is when a key
         is required.
       </p>

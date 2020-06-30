@@ -82,7 +82,7 @@ const Validators = () => {
       <p>
         Banks must also register with validators before they are accepted onto the network by that validator. This is
         done in a similar fashion to the registration process between user accounts and banks. To register, banks will
-        pay a registration fee to the validator. The validator will then place the registration in a “pending” state as
+        pay a registration fee to the validator. The validator will then place the registration in a "pending" state as
         it performs a network background check of the applying bank. During this process, validators will check the
         bank's trust level with other existing banks. Banks must also prove that they are configured properly to act as
         a bank node. This is done through the ability to act as a server by responding properly to network requests made

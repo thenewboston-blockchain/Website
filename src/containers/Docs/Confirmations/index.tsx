@@ -14,7 +14,7 @@ const Confirmations = () => {
         Backup validators are able to provide confirmation services to all banks in the network. These services are
         offered at a time based rate, which are determined by the validators themselves. Confirmation services are the
         backup validators method of confirming/re-validating blocks from the primary validator. An example rate that a
-        backup validator might give to the banks may be “100 points per week”. When a bank wishes to purchase
+        backup validator might give to the banks may be "100 points per week". When a bank wishes to purchase
         confirmation services, the bank will send a transaction to the backup validators account for an amount based on
         the length of time they wish to purchase.
       </p>
@@ -50,8 +50,8 @@ const Confirmations = () => {
         After a bank has purchased confirmation services from a backup validator, that validator will then forward all
         validated blocks to that bank immediately after confirmation. Members of banks prefer when their banks purchase
         confirmation services from multiple backup validators (the more the better) because confirmations are a backup
-        validator's way of saying “These transactions and updated account balances have been verified and backed up. If
-        I ever become the primary validator then these balances remain secured”.
+        validator's way of saying "These transactions and updated account balances have been verified and backed up. If
+        I ever become the primary validator then these balances remain secured".
       </p>
 
       <div className="img-container">
@@ -99,7 +99,7 @@ const Confirmations = () => {
         Technical Note: Backup validators do not send the original verified blocks back to the banks, but rather signed
         copies of the verified blocks. This offers nonrepudiation and allows banks to provide irrefutable proof to their
         members of the authentic confirmations. These signed copies are signed for a specific bank. This ensures
-        non-paying banks are not able to listen in for “free confirmations”. Members will lose trust in banks that only
+        non-paying banks are not able to listen in for "free confirmations". Members will lose trust in banks that only
         offer confirmations signed for other banks.
       </p>
 

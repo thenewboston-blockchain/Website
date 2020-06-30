@@ -47,7 +47,7 @@ const InitialFunds = () => {
         <li>
           As new developers join the GitHub organization, their GitHub accounts will be inspected to ensure certain
           criteria is met. If and when all criteria is met, users will receive their initial funds (often referred to as
-          “seed funds”) of 4,096 (212) points. The criteria for receiving seed funds through ownership of a GitHub
+          "seed funds") of 4,096 (212) points. The criteria for receiving seed funds through ownership of a GitHub
           account is as follows:
         </li>
         <ol type="a">

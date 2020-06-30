@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BanksAndWallets from './BanksAndWallets.png';
+import BanksAndAccounts from './BanksAndAccounts.png';
 import RegistrationBankMembers from './RegistrationBankMembers.png';
 import ValidatorElection from './ValidatorElection.png';
 
@@ -35,7 +35,7 @@ const Banks = () => {
         primary validator for the network. All banks in the network are responsible for assigning their own trust levels
         to each validator. Banks in the network will often set their primary validator as the one that was appointed
         through network consensus, yet assign higher trust levels to other validators as a way of indicating their
-        “vote” for the ideal validator. This allows banks to remain part of the network while also recommending an
+        "vote" for the ideal validator. This allows banks to remain part of the network while also recommending an
         alternative validator through open communication.
       </p>
       <p>
@@ -43,105 +43,93 @@ const Banks = () => {
         This is done by providing reliable service and accurate information to other bank nodes. They are also
         responsible for monitoring network activity and reporting any mischievous behavior. This will help ensure that
         the same accounts are not joining multiple banks. If there are accounts discovered on the network who are
-        members at multiple banks, it will be announced to the network and remain visible to all nodes until the issue
-        is resolved.
+        registered at multiple banks, it will be announced to the network and remain visible to all nodes until the
+        issue is resolved.
       </p>
       <p>
-        Banks will also perform additional network tasks such as updating other banks when one of their members receives
-        points through a transaction as described earlier. Banks may also keep track of all network account numbers and
-        the banks that those accounts belong to. This last responsibility is not a requirement, but will help build
-        trust from other banks.
-      </p>
-      <p>
-        In addition to the responsibilities to the network, banks also have responsibilities to their members. When
-        users first download account manager applications and create their accounts, they will then select a bank in
-        which they wish to become a member of. Upon successful registration with the bank, they are then able to connect
-        to the network through that bank and may begin sending transactions.
+        In addition to the responsibilities to the network, banks also have responsibilities to their users (account
+        owners). When users first download account manager applications and create their accounts, they will then select
+        a bank in which they wish to register an account with. Upon successful registration with the bank, they are then
+        able to connect to the network through that bank and may begin sending transactions.
       </p>
       <p>
         Banks prevent users from the need to set up and maintain their own network servers. Banks will also assign trust
-        levels to all of their members, similar to how trust levels are assigned to validators. The specific method of
-        assigning trust levels to members is entirely up to the bank itself, but in general banks will often assign
-        trust levels based on several factors including:
+        levels to all of the registered accounts, similar to how trust levels are assigned to validators. The specific
+        method of assigning trust levels to the registered accounts is entirely up to the bank itself, but in general
+        banks will often assign trust levels based on several factors including:
       </p>
       <ul>
-        <li>time as a member (older members are generally more trusted)</li>
+        <li>time since account was first registered (older accounts are generally more trusted)</li>
         <li>previous attempts to register with multiple banks</li>
         <li>previous attempts to pay with insufficient funds</li>
         <li>improper formatting of Txs</li>
       </ul>
       <p>
-        Lastly, banks will collect transaction fees from member transactions. The transaction fees are determined by the
-        individual banks. This will give users the ability to join banks with the most reliable service and who offer
-        the lowest transaction fees. Transaction fees are also determined on a per member basis, allowing the banks to
-        reward their most trustworthy members. Transaction fees charged to members will often be tier based, as
-        determined by the members trust level, rather than determining the fees for each individual member one by one.
+        Lastly, banks will collect transaction fees via transactions sent from users. The transaction fees are
+        determined by the individual banks. This will give users the ability to join banks with the most reliable
+        service and who offer the lowest transaction fees. Transaction fees are also determined on a per account basis,
+        allowing the banks to reward their most trustworthy users. Transaction fees charged to accounts will often be
+        tier based, as determined by the users trust level, rather than determining the fees for each individual account
+        one by one.
       </p>
       <p>
         As briefly mentioned earlier, before users are able to use a bank's services they must first register one (or
         more) of their accounts with that bank. This process involves paying a registration fee to the bank.
         Registration fees are necessary to prove that the account applied at the given bank. Otherwise, any bank would
-        be able to lie and state that another bank's member had applied there, therefore harming the reputation and
-        trust level of that user account.
+        be able to lie and state that another bank's user had applied there, therefore harming the reputation and trust
+        level of that user account.
       </p>
       <p>
-        Initially, the account registration will be placed in a “pending” status as that bank checks with all other
-        banks on the network to ensure that the account is not already a registered member at another bank. As those
-        other banks receive this inquiry, they will know not to accept the new account themselves and also report any
-        attempts from that account to register. The process of temporarily denying account registration by the other
-        banks is referred to as “locking out” the account. Banks will “unlock” the account when an update from the
-        inquiring bank is received informing them of the results (that the account was either accepted or rejected). If
-        no update is received, banks will have to query the original bank to review both their registration and member
-        lists in order to obtain the updated status of that user account.
+        Initially, the account registration will be placed in a "pending" status as that bank checks with all other
+        banks on the network to ensure that the account is not already registered at another bank. As those other banks
+        receive this inquiry, they will know not to accept the new account themselves and also report any attempts from
+        that account to register. The process of temporarily denying account registrations by other banks is referred to
+        as "locking out" the account. Banks will "unlock" the account when an update from the inquiring bank is received
+        informing them of the results (that the account was either accepted or rejected). If no update is received,
+        banks will have to query the original bank to review both their registration and account lists in order to
+        obtain the updated status of that user account.
       </p>
       <div className="img-container">
         <img alt="registration bank members" className="registration-bank-members" src={RegistrationBankMembers} />
       </div>
       <p>
-        During this check, if it is discovered that the account is already an existing member at another bank, the new
-        bank will block that account and broadcast their misbehavior to the network. The bank in which they are already
-        a member may block them as well, but a more likely scenario is simply a reduced trust level of the member. They
-        will also check that the account does not have an untrusted reputation (this does not apply to new accounts). If
-        the account is found to be untrusted, the registration status will be set to “rejected” and the account will
-        need to register at a different bank.
+        During this check, if it is discovered that the account is already registered at another bank, the new bank will
+        block that account and broadcast their misbehavior to the network. The bank in which they are already registered
+        may block them as well, but a more likely scenario is simply a reduced trust level. They will also check that
+        the account does not have an untrusted reputation (this does not apply to new accounts). If the account is found
+        to be untrusted, the registration status will be set to "rejected" and the account will need to register at a
+        different bank.
       </p>
       <p>
-        If there are no issues discovered during this check, the registration status will be set to “accepted” and the
-        user account (now a member) can begin using the network through that bank. The relationship between the member
-        and the bank will grow over time, along with their trust for each other. Time is one of the largest factors
-        regarding trust.
+        If there are no issues discovered during this check, the registration status will be set to "accepted" and the
+        user can begin using their account through that bank. The relationship between the user account and the bank
+        will grow over time, along with their trust for each other. Time is one of the largest factors regarding trust.
       </p>
       <p>
-        All accounts on the network should only belong to one bank. When the network discovers an account who is a
-        member at multiple banks, the network will punish both the offending (new) bank and the user account in the form
-        of reduced trust. In addition, if a bank is caught misleading other banks (not revealing their members,
+        All accounts on the network should only belong to one bank. When the network discovers an account who is
+        registered at multiple banks, the network will punish both the offending (new) bank and the user account in the
+        form of reduced trust. In addition, if a bank is caught misleading other banks (not revealing their accounts,
         providing false information, etc...) they will be punished by the network in the form of reduced trust.
       </p>
       <div className="img-container">
-        <img alt="banks and wallets" className="banks-and-wallets" src={BanksAndWallets} />
+        <img alt="banks and accounts" className="banks-and-accounts" src={BanksAndAccounts} />
       </div>
       <p>
-        Important Note: If and when a bank server goes down, the funds of all members belonging to that bank remain
+        Important Note: If and when a bank server goes down, the points of all accounts registered with that bank remain
         secure. This is because unlike a real-world bank, network banks do not store points. All account balances are
-        maintained and updated by the central validator and both the balance sheet and the transaction ledger are
-        continuously backed up by several backup validators in the case where the primary validator goes down. Banks act
-        simply as routers and initial validation mechanisms to enhance the performance of the network by distributing
-        the processing power that would otherwise be required by a single node. When a bank server fails, the network
-        will become aware of the failed server and acknowledge that the previous members are now free to join a new bank
-        without incurring any trust penalty.
-      </p>
-      <p>
-        As nodes on the network receive new information (such as accepting new members) they will broadcast it out to
-        all other nodes on the network by sending out POST requests. This is how nodes will communicate and stay updated
-        of network activity. Only when nodes are initially deployed or if they realize there is a missing piece of data
-        that was never received, do they need to make a GET request to retrieve the missing data.
+        maintained and updated by the primary validator and both the root balance sheet and blockchain are continuously
+        backed up by several confirmation validators in the case where the primary validator goes down. Banks act simply
+        as routers and initial validation mechanisms to enhance the performance of the network by distributing the
+        processing power that would otherwise be required by a single node. When a bank server fails, the network will
+        become aware of the failed server and acknowledge that those accounts are now free to join a new bank without
+        incurring any trust penalty.
       </p>
       <p>
         This architecture does not imply that a single human individual should only ever have one account. It is
         perfectly acceptable and even encouraged for individuals to have multiple accounts, only that they do not use
         the same account across multiple banks.
       </p>
-      <p>To leave a bank, simply make a request to the bank to remove your user account from their members list.</p>
+      <p>To leave a bank, users can simply make a request to their bank indicating the account number to be removed.</p>
     </section>
   );
 };
