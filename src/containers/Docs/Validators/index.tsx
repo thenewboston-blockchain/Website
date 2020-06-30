@@ -14,11 +14,11 @@ const Validators = () => {
         section, upon validation of a block the validator will append that block onto their blockchain and also update
         the balances of all accounts involved.
       </p>
-      <div>
+      <p>
         The validators root balance sheet and blockchain (record of all confirmed transactions since the balance sheet
         creation) are always made publicly available for the following purposes:
-      </div>
-      <ul>
+      </p>
+      <ul className="mb-20">
         <li>allowing all network participants (end users, banks, and validators) to audit all data</li>
         <li>
           allowing confirmation validators to continuously confirm all account balances and maintain frequent backups

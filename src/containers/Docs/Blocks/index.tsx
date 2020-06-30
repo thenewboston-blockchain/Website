@@ -36,12 +36,12 @@ const Blocks = () => {
         </tr>
       </table>
 
-      <div>
+      <p>
         In the block above, Amy is sending 100 points to Brian. In doing so, the system must validate several aspects of
         the transfer including verification that:
-      </div>
+      </p>
 
-      <ol className="outer-ol">
+      <ol className="mb-20">
         <li>The block was signed by Amy</li>
         <ol type="a">
           <li>
@@ -108,7 +108,7 @@ const Blocks = () => {
         be simplified as follows:
       </p>
 
-      <ol>
+      <ol className="mb-20">
         <li>If an owner has never sent points before, the balance lock is equal to their account number</li>
         <li>Otherwise, the balance lock is equal to the hash value of their most recent sent transaction</li>
       </ol>

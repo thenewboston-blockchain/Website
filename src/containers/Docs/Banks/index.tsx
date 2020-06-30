@@ -58,7 +58,7 @@ const Banks = () => {
         method of assigning trust levels to the registered accounts is entirely up to the bank itself, but in general
         banks will often assign trust levels based on several factors including:
       </p>
-      <ul>
+      <ul className="mb-20">
         <li>time since account was first registered (older accounts are generally more trusted)</li>
         <li>previous attempts to register with multiple banks</li>
         <li>previous attempts to pay with insufficient funds</li>

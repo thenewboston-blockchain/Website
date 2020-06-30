@@ -74,39 +74,37 @@ const TransactionFees = () => {
       <p>
         Once the transaction has been reviewed, signed, and sent to the bank by Amy, the following functions will be
         performed:
-        <ol>
-          <li>Amy's bank will validate that:</li>
-          <ol type="a">
-            <li>The transaction (Tx) is formatted properly (according to network protocol)</li>
-            <li>
-              The fees included in Amy's signed Tx are in agreement with the expected fee structure of the network
-            </li>
-            <li>
-              If any aspect of the transaction can not be validated, an error will be returned to Amy and the Tx will
-              not continue
-            </li>
-          </ol>
+      </p>
+      <ol className="mb-20">
+        <li>Amy's bank will validate that:</li>
+        <ol type="a">
+          <li>The transaction (Tx) is formatted properly (according to network protocol)</li>
+          <li>The fees included in Amy's signed Tx are in agreement with the expected fee structure of the network</li>
           <li>
-            After initial validation by Amy's bank, the Tx will be forwarded to the primary validator where it will
-            validate:
-          </li>
-          <ol type="a">
-            <li>
-              The transaction (Tx) is formatted properly (necessary to store the data on the ledger and balance sheet)
-            </li>
-            <li>The correct fees to the validator are included</li>
-            <li>Amy has enough funds to cover the total Tx cost</li>
-          </ol>
-          <li>
-            After the transaction is confirmed by the validator, the validator will add that transaction block to the
-            blockchain and update the point balances for both Amy and Brian.
-          </li>
-          <li>
-            The validator will then send the response back to Amy's bank where it can then notify both users of the
-            successful transaction.
+            If any aspect of the transaction can not be validated, an error will be returned to Amy and the Tx will not
+            continue
           </li>
         </ol>
-      </p>
+        <li>
+          After initial validation by Amy's bank, the Tx will be forwarded to the primary validator where it will
+          validate:
+        </li>
+        <ol type="a">
+          <li>
+            The transaction (Tx) is formatted properly (necessary to store the data on the ledger and balance sheet)
+          </li>
+          <li>The correct fees to the validator are included</li>
+          <li>Amy has enough funds to cover the total Tx cost</li>
+        </ol>
+        <li>
+          After the transaction is confirmed by the validator, the validator will add that transaction block to the
+          blockchain and update the point balances for both Amy and Brian.
+        </li>
+        <li>
+          The validator will then send the response back to Amy's bank where it can then notify both users of the
+          successful transaction.
+        </li>
+      </ol>
       <p>
         A more technical point worth noting (for developers) is that although this process is seen from the users
         perspective as a single transaction, it is technically three separate yet related transactions. This is because
