@@ -13,7 +13,9 @@ const TopNav = () => {
         <span>thenewboston</span>
       </NavLink>
       <NavLink to="/docs">Docs</NavLink>
-      <NavLink to="/api">API</NavLink>
+      <NavLink to="/bank-api">Bank API</NavLink>
+      <NavLink to="/pv-api">PV API</NavLink>
+      <NavLink to="/cv-api">CV API</NavLink>
     </div>
   );
 };

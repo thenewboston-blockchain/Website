@@ -1,11 +1,15 @@
 import React, {useMemo} from 'react';
 import {useParams} from 'react-router-dom';
 
+import BankRegistration from './BankRegistration';
 import Introduction from './Introduction';
-import './API.scss';
+
+import './BankAPI.scss';
 
 const getPageContent = (chapter: string) => {
   switch (chapter) {
+    case 'bank-registration':
+      return <BankRegistration />;
     case 'introduction':
       return <Introduction />;
     default:
@@ -13,11 +17,11 @@ const getPageContent = (chapter: string) => {
   }
 };
 
-const API = () => {
+const BankAPI = () => {
   const {chapter} = useParams();
   const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
 
-  return <div className="API">{pageContent}</div>;
+  return <div className="BankAPI">{pageContent}</div>;
 };
 
-export default API;
+export default BankAPI;

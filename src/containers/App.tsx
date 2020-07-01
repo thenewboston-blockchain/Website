@@ -1,9 +1,9 @@
 import React from 'react';
 import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom';
 
-import API from './API';
-import APILeftMenu from './APILeftMenu';
 import AdminLayout from './AdminLayout';
+import BankAPI from './BankAPI';
+import BankAPILeftMenu from './BankAPILeftMenu';
 import Docs from './Docs';
 import DocsLeftMenu from './DocsLeftMenu';
 import Home from './Home';
@@ -16,11 +16,11 @@ const App = () => {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/api">
-          <Redirect to="/api/introduction" />
+        <Route exact path="/bank-api">
+          <Redirect to="/bank-api/introduction" />
         </Route>
-        <Route path="/api/:chapter">
-          <AdminLayout left={<APILeftMenu />} right={<API />} top={<TopNav />} />
+        <Route path="/bank-api/:chapter">
+          <AdminLayout left={<BankAPILeftMenu />} right={<BankAPI />} top={<TopNav />} />
         </Route>
         <Route exact path="/docs">
           <Redirect to="/docs/introduction" />
