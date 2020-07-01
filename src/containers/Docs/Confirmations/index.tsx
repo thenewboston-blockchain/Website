@@ -2,7 +2,7 @@ import React from 'react';
 
 import ConfirmationServicesSimple from './ConfirmationServicesSimple.png';
 import ConfirmationServiceCycle from './ConfirmationServiceCycle.png';
-import UpdatedFlow from './UpdatedFlow.png';
+import FullSystem from './FullSystem.png';
 
 import './Confirmations.scss';
 
@@ -100,7 +100,7 @@ const Confirmations = () => {
       </p>
 
       <div className="img-container">
-        <img alt="updated flow diagram" className="updated-flow-diagram" src={UpdatedFlow} />
+        <img alt="full system" className="full-system" src={FullSystem} />
       </div>
     </section>
   );
