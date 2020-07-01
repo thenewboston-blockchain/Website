@@ -1,7 +1,6 @@
 import React from 'react';
 
-import OverviewFull from './OverviewFull.png';
-import ConfirmationValidators from './ConfirmationValidators.png';
+import ConfirmationValidatorOverview from './ConfirmationValidatorOverview.png';
 
 import './Validators.scss';
 
@@ -15,11 +14,11 @@ const Validators = () => {
         the balances of all accounts involved.
       </p>
       <p>
-        The validators root balance sheet and blockchain (record of all confirmed transactions since the balance sheet
+        The validators root account file and blockchain (record of all confirmed transactions since the account file
         creation) are always made publicly available for the following purposes:
       </p>
       <ul className="mb-20">
-        <li>allowing all network participants (end users, banks, and validators) to audit all data</li>
+        <li>allowing all network participants (users, banks, and validators) to audit all data</li>
         <li>
           allowing confirmation validators to continuously confirm all account balances and maintain frequent backups
         </li>
@@ -33,7 +32,7 @@ const Validators = () => {
       </p>
       <p>
         Validators also provide additional network information such as a log of all connected banks, statistics on
-        connected banks (Tx error rate, total Txs, etc...), and other optional network analytics as well. All of these
+        connected banks (Tx error rate, total Txs, etc...), and other optional network analytics as well. Many of these
         are not a requirement as they are outside the main responsibilities of the validator, however validators that
         offer additional information services to the network will build trust faster than those that do not. This is
         because banks would prefer validators that are both more reliable and offer more services than others.
@@ -43,30 +42,28 @@ const Validators = () => {
         confirmation validators. The purpose of confirmation validators are to both continuously validate and backup all
         account balances, as well as serve as backups in the case where the primary validator were to go offline.
       </p>
-
-      <div className="img-container">
-        <img alt="confirmation validators" className="confirmation-validators" src={ConfirmationValidators} />
-      </div>
-
       <p>
-        Confirmation validators are unable to process incoming transactions directly while actively verifying blocks
-        from the primary validator. This is because if they were to do so, the network would then have two separate
-        sources of truth. If a confirmation validator was ever to begin processing incoming transactions, this would
-        create a new network separate from the main network. Since banks are only permitted to have one primary
-        validator, they would have to choose between the original validator and the new one. Networks are essentially
-        defined by the primary validator.
+        Confirmation validators are unable to process incoming blocks directly while actively verifying blocks from the
+        primary validator. This is because if they were to do so, the network would then have two separate sources of
+        truth. If a confirmation validator was ever to begin processing incoming blocks, this would create a new network
+        separate from the main network. Since banks are only permitted to have one primary validator, they would have to
+        choose between the original validator and the new one. Networks are essentially defined by the primary
+        validator.
       </p>
       <p>
         <strong>Important Note:</strong> While syncing, if a confirmation validator ever receives data from the primary
         validator that is inaccurate or otherwise unable to be verified, the confirmation validator will reject the
-        updates and immediately end synchronization with the primary validator. The confirmation validator should then
-        begin to accept incoming transactions as the new primary validator and broadcast their findings to the banks.
-        The banks, upon verification of the inaccurate data, will switch primary validators as well as punish the
-        original validator in the form of reduced trust.
+        updates and immediately end synchronization with the primary validator. The banks, upon notification of the
+        inaccurate data (sent to them from the confirmation validators) will switch primary validators as well as punish
+        the original validator in the form of reduced trust.
       </p>
 
       <div className="img-container">
-        <img alt="overview full" className="overview-full" src={OverviewFull} />
+        <img
+          alt="confirmation validator overview"
+          className="confirmation-validator-overview"
+          src={ConfirmationValidatorOverview}
+        />
       </div>
 
       <p>
@@ -96,13 +93,13 @@ const Validators = () => {
         Banks will also register with confirmation validators for two main reasons. The first reason is that this will
         act as a safety net in the event the current primary validator goes offline. Since one of the confirmation
         validators will become the new primary validator, the bank will already be registered and not experience any
-        delay in transaction processing. The second reason is to receive additional confirmation blocks. This topic will
-        be discussed in more detail later.
+        delays in block processing. The second reason is to receive additional confirmation blocks. This topic will be
+        discussed in more detail in later sections.
       </p>
       <p>
-        Registration fees and transaction fees between both user accounts and banks, and banks and validators generally
-        follow a simple rule. That is initial registration fees are a fixed cost while transaction fees are tiered based
-        on trust levels. The next page will diagram a more comprehensive model of the system.
+        Registration fees and transaction fees between user accounts and banks, as well as between banks and validators
+        generally follow a simple rule. That is initial registration fees are a fixed cost while transaction fees are
+        tiered based on trust levels.
       </p>
     </section>
   );

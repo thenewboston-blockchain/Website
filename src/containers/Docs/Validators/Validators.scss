@@ -1,11 +1,7 @@
 .Validators {
   img {
-    &.confirmation-validators {
-      max-width: 670px;
-    }
-
-    &.overview-full {
-      max-width: 700px;
+    &.confirmation-validator-overview {
+      max-width: 760px;
     }
   }
 }
