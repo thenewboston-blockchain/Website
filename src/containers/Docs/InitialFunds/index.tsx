@@ -11,7 +11,7 @@ const InitialFunds = () => {
       <h1 className="page-title">Initial Creation and Distribution of Funds</h1>
       <p>When creating a new economy, there are two important questions that must first be answered:</p>
 
-      <ol>
+      <ol className="mb-20">
         <li>How is currency created?</li>
         <li>How is currency initially distributed?</li>
       </ol>
@@ -135,11 +135,7 @@ const InitialFunds = () => {
       </ol>
 
       <div className="img-container">
-        <img
-          alt="bank distribution schedule diagram"
-          className="bank-distribution-schedule-diagram"
-          src={BankDistributionSchedule}
-        />
+        <img alt="bank distribution schedule" className="bank-distribution-schedule" src={BankDistributionSchedule} />
       </div>
 
       <p>
@@ -178,7 +174,7 @@ const InitialFunds = () => {
       </p>
 
       <div className="img-container">
-        <img alt="treasury diagram" className="treasury-diagram" src={Treasury} />
+        <img alt="treasury" className="treasury" src={Treasury} />
       </div>
 
       <p>
