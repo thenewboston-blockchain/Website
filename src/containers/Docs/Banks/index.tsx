@@ -17,7 +17,7 @@ const Banks = () => {
       <p>
         Regarding network related responsibilities, banks are responsible for assigning trust levels to validators. This
         will allow the network to not only reach consensus of the primary validator, but also determine the line of
-        succession from a list of backup validators in the event the primary validator were to go offline.
+        succession from a list of confirmation validators in the event the primary validator was to go offline.
       </p>
       <p>
         The election of a trusted validator is performed by all banks through the processes of setting a chosen
@@ -25,9 +25,11 @@ const Banks = () => {
         who has earned the highest amount of trust, but is not a strict requirement. Only one primary validator is
         allowed per bank.
       </p>
+
       <div className="img-container">
         <img alt="validator election" className="validator-election" src={ValidatorElection} />
       </div>
+
       <p>
         Given the architecture of a peer-to-peer network, all bank nodes are always in constant communication with one
         another. This will allow them to view each other's trust levels of all validators on the network. Through doing
@@ -50,27 +52,29 @@ const Banks = () => {
         In addition to the responsibilities to the network, banks also have responsibilities to their users (account
         owners). When users first download account manager applications and create their accounts, they will then select
         a bank in which they wish to register an account with. Upon successful registration with the bank, they are then
-        able to connect to the network through that bank and may begin sending transactions.
+        able to connect to the network through that bank and may begin sending blocks.
       </p>
       <p>
         Banks prevent users from the need to set up and maintain their own network servers. Banks will also assign trust
-        levels to all of the registered accounts, similar to how trust levels are assigned to validators. The specific
+        levels to all of their registered accounts, similar to how trust levels are assigned to validators. The specific
         method of assigning trust levels to the registered accounts is entirely up to the bank itself, but in general
         banks will often assign trust levels based on several factors including:
       </p>
+
       <ul className="mb-20">
         <li>time since account was first registered (older accounts are generally more trusted)</li>
         <li>previous attempts to register with multiple banks</li>
         <li>previous attempts to pay with insufficient funds</li>
         <li>improper formatting of Txs</li>
       </ul>
+
       <p>
-        Lastly, banks will collect transaction fees via transactions sent from users. The transaction fees are
-        determined by the individual banks. This will give users the ability to join banks with the most reliable
+        Lastly, banks will collect transaction fees via transactions sent from registered accounts. The transaction fees
+        are determined by the individual banks. This will give users the ability to join banks with the most reliable
         service and who offer the lowest transaction fees. Transaction fees are also determined on a per account basis,
-        allowing the banks to reward their most trustworthy users. Transaction fees charged to accounts will often be
-        tier based, as determined by the users trust level, rather than determining the fees for each individual account
-        one by one.
+        allowing the banks to reward their most trustworthy users. Transaction fees charged to user accounts will often
+        be tier based, as determined by the users trust level, rather than determining the fees for each individual
+        account one by one.
       </p>
       <p>
         As briefly mentioned earlier, before users are able to use a bank's services they must first register one (or
@@ -86,16 +90,18 @@ const Banks = () => {
         that account to register. The process of temporarily denying account registrations by other banks is referred to
         as "locking out" the account. Banks will "unlock" the account when an update from the inquiring bank is received
         informing them of the results (that the account was either accepted or rejected). If no update is received,
-        banks will have to query the original bank to review both their registration and account lists in order to
-        obtain the updated status of that user account.
+        banks will have to query the original bank to review both the registration and user account lists in order to
+        obtain the updated status of that account.
       </p>
+
       <div className="img-container">
         <img alt="registration bank members" className="registration-bank-members" src={RegistrationBankMembers} />
       </div>
+
       <p>
         During this check, if it is discovered that the account is already registered at another bank, the new bank will
         block that account and broadcast their misbehavior to the network. The bank in which they are already registered
-        may block them as well, but a more likely scenario is simply a reduced trust level. They will also check that
+        may block them as well, but a more likely scenario is simply a reduced trust level. Banks will also check that
         the account does not have an untrusted reputation (this does not apply to new accounts). If the account is found
         to be untrusted, the registration status will be set to "rejected" and the account will need to register at a
         different bank.
@@ -111,9 +117,11 @@ const Banks = () => {
         form of reduced trust. In addition, if a bank is caught misleading other banks (not revealing their accounts,
         providing false information, etc...) they will be punished by the network in the form of reduced trust.
       </p>
+
       <div className="img-container">
         <img alt="banks and accounts" className="banks-and-accounts" src={BanksAndAccounts} />
       </div>
+
       <p>
         Important Note: If and when a bank server goes down, the points of all accounts registered with that bank remain
         secure. This is because unlike a real-world bank, network banks do not store points. All account balances are
