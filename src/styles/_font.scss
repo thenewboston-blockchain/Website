@@ -5,8 +5,11 @@
     url('./fonts/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf') format('truetype');
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
+
 :root {
   --font-family-mono: 'JetBrainsMono', monospace;
+  --font-family-mono-roboto: 'Roboto Mono', monospace;
   --font-size-large: 24px;
   --font-size-medium: 20px;
   --font-size-regular: 14px;

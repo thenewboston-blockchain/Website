@@ -1,2 +1,7 @@
 .BankRegistration {
+  img {
+    &.bank-registrations {
+      max-width: 940px;
+    }
+  }
 }

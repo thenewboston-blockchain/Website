@@ -1,0 +1,18 @@
+.API {
+  padding: 24px 24px 96px;
+
+  h2.endpoint {
+    font-family: var(--font-family-mono-roboto);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .img-container {
+    text-align: center;
+
+    img {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+}
