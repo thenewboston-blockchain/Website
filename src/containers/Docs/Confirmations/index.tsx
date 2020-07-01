@@ -92,11 +92,11 @@ const Confirmations = () => {
       </ol>
 
       <p>
-        Technical Note: Confirmation validators do not send the original verified blocks back to the banks, but rather
-        signed copies of the verified blocks. This offers nonrepudiation and allows banks to provide irrefutable proof
-        to their members of the authentic confirmations. These signed copies are signed for a specific bank. This
-        ensures non-paying banks are not able to listen in for "free confirmations". Members will lose trust in banks
-        that only offer confirmations signed for other banks.
+        <strong>Technical Note:</strong> Confirmation validators do not send the original confirmed blocks back to the
+        banks, but rather signed copies of the confirmed blocks. This offers nonrepudiation and allows banks to provide
+        irrefutable proof to their members of the authentic confirmations. These signed copies are signed for a specific
+        bank. This ensures non-paying banks are not able to listen in for "free confirmations". Members will lose trust
+        in banks that only offer confirmations signed for other banks.
       </p>
 
       <div className="img-container">
