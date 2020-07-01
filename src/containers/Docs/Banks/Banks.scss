@@ -1,13 +1,11 @@
 .Banks {
   img {
+    &.account-registration {
+      max-width: 940px;
+    }
     &.banks-and-accounts {
       max-width: 460px;
     }
-
-    &.registration-bank-members {
-      max-width: 820px;
-    }
-
     &.validator-election {
       max-width: 740px;
     }

@@ -112,10 +112,10 @@ const Blocks = () => {
       </ol>
 
       <p>
-        Important Note: The balance lock for an account is only updated when that account owner is sending blocks. The
-        balance "lock and key" system is similar to the lock and key for a mailbox. No mailbox key is required by others
-        when inserting mail into your mailbox, only when opening the mailbox to access the contents inside is when a key
-        is required.
+        <strong>Important Note:</strong> The balance lock for an account is only updated when that account owner is
+        sending blocks. The balance "lock and key" system is similar to the lock and key for a mailbox. No mailbox key
+        is required by others when inserting mail into your mailbox, only when opening the mailbox to access the
+        contents inside is when a key is required.
       </p>
     </section>
   );

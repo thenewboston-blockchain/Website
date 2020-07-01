@@ -1,7 +1,6 @@
 import React from 'react';
 
-import BanksAndAccounts from './BanksAndAccounts.png';
-import RegistrationBankMembers from './RegistrationBankMembers.png';
+import AccountRegistration from './AccountRegistration.png';
 import ValidatorElection from './ValidatorElection.png';
 
 import './Banks.scss';
@@ -95,7 +94,7 @@ const Banks = () => {
       </p>
 
       <div className="img-container">
-        <img alt="registration bank members" className="registration-bank-members" src={RegistrationBankMembers} />
+        <img alt="account registration" className="account-registration" src={AccountRegistration} />
       </div>
 
       <p>
@@ -117,20 +116,15 @@ const Banks = () => {
         form of reduced trust. In addition, if a bank is caught misleading other banks (not revealing their accounts,
         providing false information, etc...) they will be punished by the network in the form of reduced trust.
       </p>
-
-      <div className="img-container">
-        <img alt="banks and accounts" className="banks-and-accounts" src={BanksAndAccounts} />
-      </div>
-
       <p>
-        Important Note: If and when a bank server goes down, the points of all accounts registered with that bank remain
-        secure. This is because unlike a real-world bank, network banks do not store points. All account balances are
-        maintained and updated by the primary validator and both the root balance sheet and blockchain are continuously
-        backed up by several confirmation validators in the case where the primary validator goes down. Banks act simply
-        as routers and initial validation mechanisms to enhance the performance of the network by distributing the
-        processing power that would otherwise be required by a single node. When a bank server fails, the network will
-        become aware of the failed server and acknowledge that those accounts are now free to join a new bank without
-        incurring any trust penalty.
+        <strong>Important Note:</strong> If and when a bank server goes down, the points of all accounts registered with
+        that bank remain secure. This is because unlike a real-world bank, network banks do not store points. All
+        account balances are maintained and updated by the primary validator and both the root balance sheet and
+        blockchain are continuously backed up by several confirmation validators in the case where the primary validator
+        goes down. Banks act simply as routers and initial validation mechanisms to enhance the performance of the
+        network by distributing the processing power that would otherwise be required by a single node. When a bank
+        server fails, the network will become aware of the failed server and acknowledge that those accounts are now
+        free to join a new bank without incurring any trust penalty.
       </p>
       <p>
         This architecture does not imply that a single human individual should only ever have one account. It is

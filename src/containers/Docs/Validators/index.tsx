@@ -57,12 +57,12 @@ const Validators = () => {
         defined by the primary validator.
       </p>
       <p>
-        Important Note: While syncing, if a confirmation validator ever receives data from the primary validator that is
-        inaccurate or otherwise unable to be verified, the confirmation validator will reject the updates and
-        immediately end synchronization with the primary validator. The confirmation validator should then begin to
-        accept incoming transactions as the new primary validator and broadcast their findings to the banks. The banks,
-        upon verification of the inaccurate data, will switch primary validators as well as punish the original
-        validator in the form of reduced trust.
+        <strong>Important Note:</strong> While syncing, if a confirmation validator ever receives data from the primary
+        validator that is inaccurate or otherwise unable to be verified, the confirmation validator will reject the
+        updates and immediately end synchronization with the primary validator. The confirmation validator should then
+        begin to accept incoming transactions as the new primary validator and broadcast their findings to the banks.
+        The banks, upon verification of the inaccurate data, will switch primary validators as well as punish the
+        original validator in the form of reduced trust.
       </p>
 
       <div className="img-container">
