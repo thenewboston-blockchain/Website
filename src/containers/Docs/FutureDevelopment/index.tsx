@@ -10,7 +10,8 @@ const FutureDevelopment = () => {
         In addition to the architecture outlined earlier, there are also several additional features being considered
         for inclusion into the network. These features require additional discussion with the development community.
       </p>
-      <p>Interest Rates</p>
+
+      <strong>Interest Rates</strong>
       <p>
         As the network grows, additional points must be created to match the natural growth of the economy in order to
         remain as an effective means for exchange of value for goods and services. A fixed interest rate structure is
@@ -19,7 +20,8 @@ const FutureDevelopment = () => {
         able to obtain points to use as a means of exchange as the network grows. Additional discussion and consensus
         among the development community is required before integration into the network.
       </p>
-      <p>Payment Library</p>
+
+      <strong>Payment Library</strong>
       <p>
         A payment library is necessary to allow for the widespread adoption of the network. This will allow individuals
         and businesses to make and receive points over the network through simple integration. These libraries should be

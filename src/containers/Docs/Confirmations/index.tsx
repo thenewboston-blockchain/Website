@@ -25,7 +25,7 @@ const Confirmations = () => {
         sender and if the account number matches a registered bank then they will either:
       </p>
 
-      <ul>
+      <ul className="mb-20">
         <li>add that amount of additional time to the banks existing confirmation service</li>
         <ul>
           <li>

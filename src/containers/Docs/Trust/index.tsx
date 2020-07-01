@@ -126,7 +126,7 @@ const Trust = () => {
       </p>
       <p>"Who do we trust?" </p>
       <p>
-        It is my belief that we have incorrectly turned to computer science in search of a solution to a question in
+        It is our belief that we have incorrectly turned to computer science in search of a solution to a question in
         which computers are simply not capable of solving. In an effort to quantify the level of "trust", we have lost
         sight of what "trust" truly means. Trust is not a formula. It is not an equation in which a given set of inputs
         should always lead to an expected output. It is an ever evolving, ever changing feeling in which only life is
