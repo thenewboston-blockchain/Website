@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ParamsTable from 'components/ParamsTable';
+
 import BankRegistrations from './BankRegistrations.png';
 
 import './BankRegistration.scss';
@@ -23,27 +25,25 @@ const BankRegistration = () => (
     </div>
 
     <h2 className="endpoint">POST /bank_registrations</h2>
-
-    <table className="request-params">
-      <tr>
-        <td>
-          message<span className="data-type">string</span>
-        </td>
-        <td>validator_node_identifier to register with and block payment for registration fee</td>
-      </tr>
-      <tr>
-        <td>
-          node_identifier<span className="data-type">string</span>
-        </td>
-        <td>node identifier of the bank</td>
-      </tr>
-      <tr>
-        <td>
-          signature<span className="data-type">string</span>
-        </td>
-        <td>hex value of the signed message</td>
-      </tr>
-    </table>
+    <ParamsTable
+      items={[
+        {
+          param: 'message',
+          dataType: 'object',
+          description: 'validator_node_identifier to register with and block payment for registration fee',
+        },
+        {
+          param: 'node_identifier',
+          dataType: 'string',
+          description: 'node identifier of the bank',
+        },
+        {
+          param: 'signature',
+          dataType: 'string',
+          description: 'hex value of the signed message',
+        },
+      ]}
+    />
   </div>
 );
 
