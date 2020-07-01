@@ -11,7 +11,7 @@ import FutureDevelopment from './FutureDevelopment';
 import InitialFunds from './InitialFunds';
 import Introduction from './Introduction';
 import Overview from './Overview';
-import RootBalanceSheet from './RootBalanceSheet';
+import RootAccountFile from './RootAccountFile';
 import TransactionFees from './TransactionFees';
 import Trust from './Trust';
 import Validators from './Validators';
@@ -40,8 +40,8 @@ const getPageContent = (chapter: string) => {
       return <Introduction />;
     case 'overview':
       return <Overview />;
-    case 'root-balance-sheet':
-      return <RootBalanceSheet />;
+    case 'root-account-file':
+      return <RootAccountFile />;
     case 'transaction-fees':
       return <TransactionFees />;
     case 'trust':

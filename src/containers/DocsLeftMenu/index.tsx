@@ -11,7 +11,7 @@ const DocsLeftMenu = () => {
       <NavLink to="/docs/accounts">Accounts</NavLink>
       <NavLink to="/docs/blocks">Blocks</NavLink>
       <NavLink to="/docs/transaction-fees">Transaction Fees</NavLink>
-      <NavLink to="/docs/root-balance-sheet">Root Balance Sheet</NavLink>
+      <NavLink to="/docs/root-account-file">Root Account File</NavLink>
       <NavLink to="/docs/banks">Banks</NavLink>
       <NavLink to="/docs/validators">Validators</NavLink>
       <NavLink to="/docs/confirmation-validators">Confirmation Validators</NavLink>
