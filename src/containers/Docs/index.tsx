@@ -13,7 +13,6 @@ import Introduction from './Introduction';
 import Overview from './Overview';
 import RootBalanceSheet from './RootBalanceSheet';
 import TransactionFees from './TransactionFees';
-import Transactions from './Transactions';
 import Trust from './Trust';
 import Validators from './Validators';
 
@@ -43,8 +42,6 @@ const getPageContent = (chapter: string) => {
       return <Overview />;
     case 'root-balance-sheet':
       return <RootBalanceSheet />;
-    case 'transactions':
-      return <Transactions />;
     case 'transaction-fees':
       return <TransactionFees />;
     case 'trust':
