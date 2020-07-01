@@ -10,11 +10,9 @@ const Blocks = () => {
     <section className="Blocks">
       <h1 className="page-title">Blocks</h1>
       <p>
-        Now that we have covered the basics of all nodes in the system, we can now inspect more closely the technical
-        details of blocks. A block is a representation of a complete transaction. The term "complete" is needed to
-        clarify that there are often multiple transactions (usually fees) to different recipients within a single block.
-        A block is what will be sent from Amy's account to her bank, and what the bank will then forward to the
-        validator. We can now take a closer look at the example discussed earlier.
+        A block is a group of one or more transactions. There are often multiple transactions (usually fees) to
+        different recipients within a single block. We can inspect the structure of a block by first examining a
+        simplified overview below. In this example, Amy is sending 100 points to her friend Brian.
       </p>
 
       <table>
@@ -37,8 +35,8 @@ const Blocks = () => {
       </table>
 
       <p>
-        In the block above, Amy is sending 100 points to Brian. In doing so, the system must validate several aspects of
-        the transfer including verification that:
+        After Amy creates the block shown above, the network must validate several aspects of the block and all related
+        transactions including verification that:
       </p>
 
       <ol className="mb-20">
@@ -65,9 +63,9 @@ const Blocks = () => {
       <p>
         The signing process produces digital signatures using the{' '}
         <a href="https://ed25519.cr.yp.to/">Ed25519 Digital Signature Algorithm</a> to ensure that the set of
-        transactions within a given block were indeed signed by the account owner. Although in previous explanations of
-        the system the "owner" of an account was often referred to by name, in the actual network architecture
-        individuals' names are never stored. Instead, each balance will refer to the owner by their account number.
+        transactions within a given block were indeed signed by the account owner. Although in many explanations of the
+        network the "owner" of an account is often referred to by name, in the actual network architecture individuals'
+        names are never stored. Instead, each account will refer to the owner by their account number.
       </p>
       <p>
         The account number (often referred to as the "public-key" in public-key cryptography) is not only used to
@@ -91,33 +89,33 @@ const Blocks = () => {
         Every message within a block will be hashed and that hash value will be used as the next balance lock. Since
         every block contains a unique balance key (as created by the previous block), this will ensure that for every
         block sent over the network the balance lock will become updated, therefore preventing banks and validators from
-        sending or processing the same block (payments) multiple times.
+        processing the same block multiple times.
       </p>
 
       <div className="img-container">
-        <img alt="balance lock and key diagram" className="balance-lock-and-key" src={BalanceLockAndKey} />
+        <img alt="balance lock and key" className="balance-lock-and-key" src={BalanceLockAndKey} />
       </div>
 
       <p>
         Note that there is one exception to the method in which balance locks are determined. The majority of the time
-        it is determined by the hash value of the account owner's last sent transaction. This does however leave out the
-        scenario in which the owner must access their point balance for the very first time before a transaction has
-        ever been sent. This occurs when a separate user has sent funds to an account for the very first time, but
-        before that recipient has sent any points (created any transactions) themselves. In this case, the balance lock
-        for the account will be set to the account number. Therefore, the rules of how balance locks are determined can
-        be simplified as follows:
+        it is determined by the hash value of the account owner's last sent block message. This does however leave out
+        the scenario in which the account owner must access their point balance for the very first time before a block
+        has ever been sent. This occurs when a separate user has sent funds to an account for the very first time, but
+        before that recipient has sent any points (created any blocks) themselves. In this case, the balance lock for
+        the account will be set to the recipients account number. Therefore, the rules of how balance locks are
+        determined can be simplified as follows:
       </p>
 
       <ol className="mb-20">
         <li>If an owner has never sent points before, the balance lock is equal to their account number</li>
-        <li>Otherwise, the balance lock is equal to the hash value of their most recent sent transaction</li>
+        <li>Otherwise, the balance lock is equal to the hash value of their most recently sent blocks message</li>
       </ol>
 
       <p>
-        Important Note: The balance lock for an account is only updated when that account owner is sending points. The
-        balance "lock and key" system is similar to the lock and key for a mailbox. No mailbox key is required by others
-        when inserting mail into your mailbox, only when opening the mailbox to access the contents inside is when a key
-        is required.
+        <strong>Important Note:</strong> The balance lock for an account is only updated when that account owner is
+        sending blocks. The balance "lock and key" system is similar to the lock and key for a mailbox. No mailbox key
+        is required by others when inserting mail into your mailbox, only when opening the mailbox to access the
+        contents inside is when a key is required.
       </p>
     </section>
   );

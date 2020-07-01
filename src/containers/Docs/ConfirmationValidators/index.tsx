@@ -1,5 +1,8 @@
 import React from 'react';
 
+import ConfirmationValidatorBlockSyncing from './ConfirmationValidatorBlockSyncing.png';
+import ConfirmationValidatorSyncing from './ConfirmationValidatorSyncing.png';
+
 import './ConfirmationValidators.scss';
 
 const ConfirmationValidators = () => {
@@ -22,7 +25,6 @@ const ConfirmationValidators = () => {
             this is the flattened representation of all account balances at the moment in time that the validator was
             first set to "primary"
           </li>
-          <li>the data in the root balance sheet provided by the primary validator will never be updated in any way</li>
         </ul>
         <li>Root account file hash</li>
         <ul>
@@ -44,28 +46,36 @@ const ConfirmationValidators = () => {
         </ul>
       </ul>
 
+      <div className="img-container">
+        <img
+          alt="confirmation validator syncing"
+          className="confirmation-validator-syncing"
+          src={ConfirmationValidatorSyncing}
+        />
+      </div>
+
       <p>When confirmation validators first come online, the will:</p>
 
       <ol className="mb-20">
-        <li>Download the root balance sheet from the primary validator</li>
+        <li>Download the root account file from the primary validator</li>
         <li>
-          Hash that balance sheet and compare it to the hash provided by the primary validator to ensure they match
+          Hash that account file and compare it to the hash provided by the primary validator to ensure they match
         </li>
         <li>
-          Store the block hash of the primary validators last validated block, also known as the head block hash, for
+          Store the block hash of the primary validators last validated block, also known as the HEAD block hash, for
           reference (we will see how this is used later)
         </li>
       </ol>
 
       <p>
-        After the confirmation validator has all data downloaded and has made their own copy of the balance sheet, the
+        After the confirmation validator has all data downloaded and has made their own copy of the account file, the
         confirmation validator will begin processing blocks beginning with the seed block and continuing until it
-        reaches the address of the head block. The iteration logic is as follows:
+        reaches the address of the HEAD block. The iteration logic is as follows:
       </p>
 
       <ol className="mb-20">
         <li>Download the confirmed block from the primary validator</li>
-        <li>Verify the block against their own copy of the balance sheet</li>
+        <li>Verify the block against their own copy of the account file</li>
         <ol type="a">
           <li>
             if the confirmation validators results match the updated balances given by the primary validator (the block
@@ -75,29 +85,21 @@ const ConfirmationValidators = () => {
             <li>update the account balances</li>
             <li>send a confirmation block to any banks that are registered with them</li>
             <li>
-              generate a hash of the block message, which will become the block_identifier of the next confirmed block,
+              generate a hash of the block message, which will become the block identifier of the next confirmed block,
               and repeat
             </li>
           </ol>
         </ol>
       </ol>
 
-      <p>
-        Note that when a discrepancy is found by a confirmation validator and is unable to re-confirm a block that has
-        already been confirmed by the primary validator, that confirmation validator should begin to accept incoming
-        transactions as the new primary validator. At that point in time, the other confirmation validators on the
-        network would have also found the erroneous block and began acting as primary validators themselves.
-      </p>
-      <p>
-        A network state would then occur where all confirmation validators were no longer syncing with the primary
-        validator due to incorrect information provided by the primary validator. The banks then know to mark that
-        primary validator as "untrusted" and they will jointly elect a new primary validator from all of the available
-        confirmation validators. The banks will switch their primary validators to the confirmation validator who has
-        earned the highest level of network trust which is a value that they will already have predetermined. After the
-        election, all confirmation validators will become aware of the new bank elected primary validator and will begin
-        syncing to it. This will allow for an extremely fault tolerant network with zero downtime, even as the entire
-        network is changing over to a new primary validator.
-      </p>
+      <div className="img-container">
+        <img
+          alt="confirmation validator block syncing"
+          className="confirmation-validator-block-syncing"
+          src={ConfirmationValidatorBlockSyncing}
+        />
+      </div>
+
       <p>
         The process in which existing confirmation validators must re-sync with a new primary validator is as follows:
       </p>
@@ -112,14 +114,14 @@ const ConfirmationValidators = () => {
           </li>
         </ol>
         <li>
-          Beginning with the previous primary validators root balance sheet, apply the confirmed blocks (already
-          verified by the confirmation validator) until reaching the seed block from the new primary validator
+          Beginning with the previous primary validators root account file, apply the confirmed blocks (already verified
+          by the confirmation validator) until reaching the seed block from the new primary validator
         </li>
-        <li>Compare the updated balance sheet to the root balance sheet of the new primary validator</li>
+        <li>Compare the updated account file to the root account file of the new primary validator</li>
         <ol type="a">
           <li>
-            if they match, accept them as the new primary validator and copy their root balance sheet, hash of that base
-            balance sheet, and hash of the base block over to the confirmation validators config
+            if they match, accept them as the new primary validator and copy their root account file, hash of that base
+            account file, and hash of the base block over to the confirmation validators config
           </li>
         </ol>
       </ol>
@@ -134,10 +136,9 @@ const ConfirmationValidators = () => {
         Given that confirmation validators do not earn points through transaction fees like the primary validator, the
         incentive for individuals to deploy and maintain confirmation validators is achieved through separate means.
         Confirmation validators may receive points from banks through pre-registration fees. This process is useful for
-        banks by avoiding the need to register with a new validator if the primary validator were to go offline. It is
-        also beneficial to bank members and the network as a whole in ensuring the network would remain functional in
-        the event the primary validator goes down. Confirmation validators also provide confirmation services, which
-        will be discussed in more detail in the following section.
+        banks by avoiding the need to register with a new validator if the primary validator were to go offline.
+        Confirmation validators also provide confirmation services, which will be discussed in more detail in the
+        following section.
       </p>
       <p>
         It is important to note that confirmation validators may also become the primary network validator if the banks

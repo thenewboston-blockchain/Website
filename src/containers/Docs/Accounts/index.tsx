@@ -1,8 +1,7 @@
 import React from 'react';
 
-import AccountDetailsDiagram from './AccountDetails.png';
-import AccountsDiagram from './Accounts.png';
-import KeyPair from 'assets/images/key-pair.png';
+import AccountsSimple from './AccountsSimple.png';
+import KeyPair from 'assets/images/KeyPair.png';
 
 import './Accounts.scss';
 
@@ -11,22 +10,25 @@ const Accounts = () => {
     <section className="Accounts">
       <h1 className="page-title">Accounts</h1>
       <p>
+        <strong>Accounts</strong> are anonymous digital identities on the network where points may be sent to and from.{' '}
         <strong>Account managers</strong> are software applications (such as a mobile application or desktop software)
-        that are used by individuals to create/manage their accounts and to send points. When sending points, users
-        enter the amount they wish to send along with the account number of the recipient and submit it to the network
-        for processing. To receive points, users share their own account number with other users on the network who will
-        then be able to form blocks themselves.
+        that are used by individuals to create new accounts, manage existing accounts, and to send points. When sending
+        points, users enter the amount they wish to send along with the account number of the recipient and submit it to
+        the network for processing. To receive points, users share their own account number with other users on the
+        network who will then be able to form blocks themselves.
       </p>
+
       <div className="img-container">
-        <img alt="accounts diagram" className="accounts-diagram" src={AccountsDiagram} />
+        <img alt="accounts simple" className="accounts-simple" src={AccountsSimple} />
       </div>
+
       <p>
         When users first download an account manager, it will take the user through the process of creating a{' '}
         <strong>key pair</strong>. A key pair consists of two keys, a <strong>signing key</strong> and an{' '}
         <strong>account number</strong>. These keys serve many different purposes in the network.
       </p>
       <div className="img-container">
-        <img alt="key pair diagram" className="key-pair-diagram" src={KeyPair} />
+        <img alt="key pair" className="key-pair" src={KeyPair} />
       </div>
       <p>
         The account number of an account is similar to a username, but is unique across the entire network (rather than
@@ -40,7 +42,7 @@ const Accounts = () => {
         <strong>Signing key</strong>
         <ul>
           <li>must remain private to the owner</li>
-          <li>allows the owner to securely sign (authorize) the sending of points</li>
+          <li>allows the account owner to securely sign (authorize) the sending of points</li>
         </ul>
       </p>
       <p>
@@ -54,8 +56,8 @@ const Accounts = () => {
           <li>used in verifying the sender when validating transactions</li>
           <ul>
             <li>
-              the account number can be used to prove ownership of the signing key, and therefore the owner, without
-              revealing the signing key itself
+              the account number can be used to prove ownership of the signing key, and therefore the account owner,
+              without revealing the signing key itself
             </li>
             <li>
               this is done through the use of asymmetric cryptography (specifically digital signatures) which we will
@@ -69,14 +71,7 @@ const Accounts = () => {
         several accounts (key pairs) through the same account manager application. This can be thought of as an
         individual having multiple email addresses, but managing all of their email accounts from a single app.
       </p>
-      <p>
-        Account manager applications can manage multiple accounts (key pairs) for a single user. A more accurate
-        representation of user transactions can be seen in the following diagram.
-      </p>
-      <div className="img-container">
-        <img alt="accounts details diagram" className="account-details-diagram" src={AccountDetailsDiagram} />
-      </div>
-      <p>The terms "account" and "user account" are used interchangeably throughout this paper.</p>
+      <p>The terms "account" and "user account" are used interchangeably throughout this documentation.</p>
     </section>
   );
 };
