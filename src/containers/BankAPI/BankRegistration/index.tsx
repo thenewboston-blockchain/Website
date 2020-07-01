@@ -1,10 +1,13 @@
 import React from 'react';
 
 import ParamsTable from 'components/ParamsTable';
+import RequestResponse from 'components/RequestResponse';
 
 import BankRegistrations from './BankRegistrations.png';
 
 import './BankRegistration.scss';
+
+import code from './code-snippet';
 
 const BankRegistration = () => (
   <div className="BankRegistration">
@@ -44,6 +47,7 @@ const BankRegistration = () => (
         },
       ]}
     />
+    <RequestResponse code={code} heading="Request (Bank > Validator):" />
   </div>
 );
 
