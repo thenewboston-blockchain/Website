@@ -1,18 +1,18 @@
 import React, {useMemo} from 'react';
 import {useParams} from 'react-router-dom';
 
-import AccountRegistration from './AccountRegistration';
-import BankRegistration from './BankRegistration';
+import AccountRegistrations from './AccountRegistrations';
+import BankRegistrations from './BankRegistrations';
 import Introduction from './Introduction';
 
 import './BankAPI.scss';
 
 const getPageContent = (chapter: string) => {
   switch (chapter) {
-    case 'account-registration':
-      return <AccountRegistration />;
-    case 'bank-registration':
-      return <BankRegistration />;
+    case 'account-registrations':
+      return <AccountRegistrations />;
+    case 'bank-registrations':
+      return <BankRegistrations />;
     case 'introduction':
       return <Introduction />;
     default:

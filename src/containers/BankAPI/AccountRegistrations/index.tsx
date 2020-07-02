@@ -7,11 +7,11 @@ import bankToValidatorRequest from './code-snippets/bank-to-validator-request';
 import clientToBankRequest from './code-snippets/client-to-bank-request';
 import clientToBankResponse from './code-snippets/client-to-bank-response';
 
-import './AccountRegistration.scss';
+import './AccountRegistrations.scss';
 
-const AccountRegistration = () => (
-  <div className="AccountRegistration">
-    <h1 className="page-title">Account Registration</h1>
+const AccountRegistrations = () => (
+  <div className="AccountRegistrations">
+    <h1 className="page-title">Account Registrations</h1>
     <p>
       Users are required to register their account(s) with a bank before they are able to send transactions through that
       bank.
@@ -49,4 +49,4 @@ const AccountRegistration = () => (
   </div>
 );
 
-export default AccountRegistration;
+export default AccountRegistrations;

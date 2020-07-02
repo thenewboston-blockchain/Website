@@ -8,13 +8,13 @@ import bankToValidatorResponse from './code-snippets/bank-to-validator-response'
 import validatorToBankRequest from './code-snippets/validator-to-bank-request';
 import validatorToBankResponse from './code-snippets/validator-to-bank-response';
 
-import BankRegistrations from './BankRegistrations.png';
+import BankRegistrationDiagram from './BankRegistrations.png';
 
-import './BankRegistration.scss';
+import './BankRegistrations.scss';
 
-const BankRegistration = () => (
-  <div className="BankRegistration">
-    <h1 className="page-title">Bank Registration</h1>
+const BankRegistrations = () => (
+  <div className="BankRegistrations">
+    <h1 className="page-title">Bank Registrations</h1>
     <p>
       Banks must register with validators before they are accepted onto the network by that validator. This is done in a
       similar fashion to the registration process between user accounts and banks. To register, banks will pay a
@@ -27,7 +27,7 @@ const BankRegistration = () => (
     </p>
 
     <div className="img-container">
-      <img alt="bank registrations" className="bank-registrations" src={BankRegistrations} />
+      <img alt="bank registration diagram" className="bank-registration-diagram" src={BankRegistrationDiagram} />
     </div>
 
     <h2 className="endpoint">POST /bank_registrations</h2>
@@ -91,4 +91,4 @@ const BankRegistration = () => (
   </div>
 );
 
-export default BankRegistration;
+export default BankRegistrations;
