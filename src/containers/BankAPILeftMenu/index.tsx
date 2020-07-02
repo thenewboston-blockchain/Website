@@ -8,6 +8,7 @@ const BankAPILeftMenu = () => {
     <LeftMenu>
       <NavLink to="/bank-api/introduction">Introduction</NavLink>
       <NavLink to="/bank-api/bank-registration">Bank Registration</NavLink>
+      <NavLink to="/bank-api/account-registration">Account Registration</NavLink>
     </LeftMenu>
   );
 };
