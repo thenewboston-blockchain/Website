@@ -4,11 +4,13 @@ import {obsidian} from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 interface ComponentProps {
   code: string;
+  language?: string;
+  showLineNumbers?: boolean;
 }
 
-const CodeHighlighter: FC<ComponentProps> = ({code}) => {
+const CodeHighlighter: FC<ComponentProps> = ({code, language = 'python', showLineNumbers = true}) => {
   return (
-    <SyntaxHighlighter language="python" showLineNumbers style={obsidian}>
+    <SyntaxHighlighter language={language} showLineNumbers={showLineNumbers} style={obsidian}>
       {code}
     </SyntaxHighlighter>
   );

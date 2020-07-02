@@ -7,7 +7,7 @@ import BankRegistrations from './BankRegistrations.png';
 
 import './BankRegistration.scss';
 
-import code from './code-snippet';
+import code from './code-snippets/code-snippet';
 
 const BankRegistration = () => (
   <div className="BankRegistration">
@@ -47,7 +47,7 @@ const BankRegistration = () => (
         },
       ]}
     />
-    <RequestResponse code={code} heading="Request (Bank > Validator):" />
+    <RequestResponse code={code} heading="Request (Bank > Validator)" />
   </div>
 );
 
