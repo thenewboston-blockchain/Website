@@ -45,7 +45,7 @@ const AccountRegistration = () => (
       validator for validation. After successful validation, the validator will send a confirmation block back to the
       bank and the bank will create the account and update the account registration status to accepted.
     </p>
-    <RequestResponse code={bankToValidatorRequest} heading="Request (client > Bank)" />
+    <RequestResponse code={bankToValidatorRequest} heading="Request (Bank > Validator)" />
   </div>
 );
 
