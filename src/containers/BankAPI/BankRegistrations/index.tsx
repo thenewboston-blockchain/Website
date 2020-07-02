@@ -50,7 +50,6 @@ const BankRegistrations = () => (
         },
       ]}
     />
-
     <RequestResponse code={bankToValidatorRequest} heading="Request (Bank > Validator)" />
     <p>
       After receiving the registration request, the validator will create a bank registration which will be initially
@@ -85,7 +84,6 @@ const BankRegistrations = () => (
         },
       ]}
     />
-
     <RequestResponse code={validatorToBankRequest} heading="Request (Validator > Bank)" />
     <RequestResponse code={validatorToBankResponse} heading="Response (Bank > Validator):" />
   </div>

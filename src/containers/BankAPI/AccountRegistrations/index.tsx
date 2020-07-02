@@ -37,7 +37,6 @@ const AccountRegistrations = () => (
         },
       ]}
     />
-
     <RequestResponse code={clientToBankRequest} heading="Request (client > Bank)" />
     <RequestResponse code={clientToBankResponse} heading="Response (Bank > client)" />
     <p>

@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom';
 
 import AccountRegistrations from './AccountRegistrations';
 import BankRegistrations from './BankRegistrations';
+import ConfirmationBlocks from './ConfirmationBlocks';
 import Introduction from './Introduction';
 
 import './BankAPI.scss';
@@ -13,6 +14,8 @@ const getPageContent = (chapter: string) => {
       return <AccountRegistrations />;
     case 'bank-registrations':
       return <BankRegistrations />;
+    case 'confirmation-blocks':
+      return <ConfirmationBlocks />;
     case 'introduction':
       return <Introduction />;
     default:
