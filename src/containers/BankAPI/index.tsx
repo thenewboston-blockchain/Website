@@ -1,13 +1,14 @@
 import React, {useMemo} from 'react';
 import {useParams} from 'react-router-dom';
 
+import ConnectionRequests from 'containers/NodeAPI/ConnectionRequests';
+
 import Accounts from './Accounts';
 import BankTransactions from './BankTransactions';
 import Banks from './Banks';
 import Blocks from './Blocks';
 import Config from './Config';
 import ConfirmationBlocks from './ConfirmationBlocks';
-import ConnectionRequests from './ConnectionRequests';
 import Introduction from './Introduction';
 import ValidatorConfirmationServices from './ValidatorConfirmationServices';
 import Validators from './Validators';
