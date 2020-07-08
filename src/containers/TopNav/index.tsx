@@ -15,7 +15,7 @@ const TopNav = () => {
       <NavLink to="/docs">Docs</NavLink>
       <NavLink to="/bank-api">Bank API</NavLink>
       <NavLink to="/confirmation-validator-api">Confirmation Validator API</NavLink>
-      <NavLink to="/primary-validator-api">Primary API</NavLink>
+      <NavLink to="/primary-validator-api">Primary Validator API</NavLink>
     </div>
   );
 };
