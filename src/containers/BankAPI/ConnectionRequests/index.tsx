@@ -29,6 +29,10 @@ const ConnectionRequests = () => {
         protocol. This is because the requesting node does not care how they are stored on the target node, only that
         the connection exists.
       </p>
+      <p>
+        Connect requests can be sent directly from a client as long as they are properly signed with the NID signing
+        key. They do not have to be sent from the node itself.
+      </p>
 
       <RequestResponse code={`{}`} heading="Response" />
     </section>
