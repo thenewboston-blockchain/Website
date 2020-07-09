@@ -12,8 +12,8 @@ interface ComponentProps {
 const Commands: FC<ComponentProps> = ({code, comment}) => {
   return (
     <div className="Commands">
-      {comment && <div className="comment">{comment}:</div>}
-      <CodeHighlighter code={code} language="bash" showLineNumbers={false} />
+      {comment && <div className="comment">{comment}</div>}
+      <CodeHighlighter code={code} language="bash" light showLineNumbers={false} />
     </div>
   );
 };
