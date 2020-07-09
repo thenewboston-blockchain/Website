@@ -16,8 +16,6 @@ import TransactionFees from './TransactionFees';
 import Trust from './Trust';
 import Validators from './Validators';
 
-import './Docs.scss';
-
 const getPageContent = (chapter: string) => {
   switch (chapter) {
     case 'accounts':
@@ -57,7 +55,7 @@ const Docs = () => {
   const {chapter} = useParams();
   const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
 
-  return <div className="Docs">{pageContent}</div>;
+  return <div className="Documentation">{pageContent}</div>;
 };
 
 export default Docs;

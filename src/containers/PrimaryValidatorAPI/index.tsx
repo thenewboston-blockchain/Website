@@ -40,7 +40,7 @@ const PrimaryValidatorAPI = () => {
   const {chapter} = useParams();
   const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
 
-  return <div className="API PrimaryValidatorAPI">{pageContent}</div>;
+  return <div className="Documentation PrimaryValidatorAPI">{pageContent}</div>;
 };
 
 export default PrimaryValidatorAPI;

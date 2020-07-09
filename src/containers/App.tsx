@@ -6,6 +6,8 @@ import BankAPI from './BankAPI';
 import BankAPILeftMenu from './BankAPILeftMenu';
 import ConfirmationValidatorAPI from './ConfirmationValidatorAPI';
 import ConfirmationValidatorAPILeftMenu from './ConfirmationValidatorAPILeftMenu';
+import DeploymentGuides from './DeploymentGuides';
+import DeploymentGuidesLeftMenu from './DeploymentGuidesLeftMenu';
 import Docs from './Docs';
 import DocsLeftMenu from './DocsLeftMenu';
 import Home from './Home';
@@ -20,12 +22,14 @@ const App = () => {
         <Route exact path="/">
           <Home />
         </Route>
+
         <Route exact path="/bank-api">
           <Redirect to="/bank-api/introduction" />
         </Route>
         <Route path="/bank-api/:chapter">
           <AdminLayout left={<BankAPILeftMenu />} right={<BankAPI />} top={<TopNav />} />
         </Route>
+
         <Route exact path="/confirmation-validator-api">
           <Redirect to="/confirmation-validator-api/introduction" />
         </Route>
@@ -36,12 +40,21 @@ const App = () => {
             top={<TopNav />}
           />
         </Route>
+
+        <Route exact path="/deployment-guides">
+          <Redirect to="/deployment-guides/banks" />
+        </Route>
+        <Route path="/deployment-guides/:chapter">
+          <AdminLayout left={<DeploymentGuidesLeftMenu />} right={<DeploymentGuides />} top={<TopNav />} />
+        </Route>
+
         <Route exact path="/docs">
           <Redirect to="/docs/introduction" />
         </Route>
         <Route path="/docs/:chapter">
           <AdminLayout left={<DocsLeftMenu />} right={<Docs />} top={<TopNav />} />
         </Route>
+
         <Route exact path="/primary-validator-api">
           <Redirect to="/primary-validator-api/introduction" />
         </Route>

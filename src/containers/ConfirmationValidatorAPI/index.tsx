@@ -40,7 +40,7 @@ const ConfirmationValidatorAPI = () => {
   const {chapter} = useParams();
   const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
 
-  return <div className="API ConfirmationValidatorAPI">{pageContent}</div>;
+  return <div className="Documentation ConfirmationValidatorAPI">{pageContent}</div>;
 };
 
 export default ConfirmationValidatorAPI;
