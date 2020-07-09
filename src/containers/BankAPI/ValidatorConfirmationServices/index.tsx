@@ -13,14 +13,6 @@ const ValidatorConfirmationServices = () => {
         that the confirmation validator will sign and send all confirmed blocks to the bank for a specified period of
         time.
       </p>
-      <p>
-        When a bank wishes to purchase confirmation services from a confirmation validator, the bank will simply send a
-        transaction to the confirmation validator for any amount. Since the confirmation validators confirm all blocks
-        on the network, upon receiving this payment it is implied that the sending account number (if a connected bank)
-        is purchasing confirmation services. The confirmation validator will create the ValidatorConfirmationService
-        object by making a POST request to the bank. This way, both nodes will be aware that the payment has been
-        received and the agreement has been accepted.
-      </p>
 
       <h2 className="endpoint">GET /validator_confirmation_services</h2>
       <RequestResponse
@@ -44,6 +36,19 @@ const ValidatorConfirmationServices = () => {
 ]`}
         heading="Response"
       />
+
+      <p>
+        When a bank wishes to purchase confirmation services from a confirmation validator, the bank will simply send a
+        transaction to the confirmation validator for any amount. Since the confirmation validators confirm all blocks
+        on the network, upon receiving this payment it is implied that the sending account number (if a connected bank)
+        is purchasing confirmation services. The confirmation validator will create the ValidatorConfirmationService
+        object by making a POST request to the bank. This way, both nodes will be aware that the payment has been
+        received and the agreement has been accepted.
+      </p>
+
+      <h2 className="endpoint">POST /validator_confirmation_services</h2>
+      <RequestResponse code={`{}`} heading="Request" />
+      <RequestResponse code={`{}`} heading="Response" />
     </section>
   );
 };
