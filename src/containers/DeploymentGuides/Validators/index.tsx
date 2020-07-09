@@ -2,11 +2,9 @@ import React from 'react';
 
 import RequestResponse from 'components/RequestResponse';
 
-import './Validators.scss';
-
 const Validators = () => {
   return (
-    <section className="Validators">
+    <section>
       <h1 className="page-title">Validators</h1>
       <p>Banks will maintain a record of all validators, both primary and confirmation, that they are connected to.</p>
 

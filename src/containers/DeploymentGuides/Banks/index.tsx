@@ -1,12 +1,10 @@
 import React from 'react';
 
-import RequestResponse from 'components/RequestResponse';
-
-import './Banks.scss';
+import Commands from 'components/Commands';
 
 const Banks = () => {
   return (
-    <section className="Banks">
+    <section>
       <h1 className="page-title">Banks</h1>
       <p>
         All banks have the option of connecting to other banks. Although it is not a requirement, it is often useful for
@@ -14,32 +12,38 @@ const Banks = () => {
         primary validator to elect as well as which confirmation validators to connect to and purchase services from.
       </p>
 
-      <h2 className="endpoint">GET /banks</h2>
-      <RequestResponse
-        code={`[
-  {
-    "account_number": "5e12967707909e62b2bb2036c209085a784fabbc3deccefee70052b6181c8ed8",
-    "ip_address": "83.168.1.232",
-    "node_identifier": "d5356888dc9303e44ce52b1e06c3165a7759b9df1e6a6dfbd33ee1c3df1ab4d1",
-    "port": 80,
-    "protocol": "http",
-    "version": "v1.0",
-    "default_transaction_fee": "1.0000000000000000",
-    "trust": "100.00"
-  },
-  {
-    "account_number": "db1a9ac3c356ab744ab4ad5256bb86c2f6dfaa7c1aece1f026a08dbd8c7178f2",
-    "ip_address": "74.124.1.68",
-    "node_identifier": "3214108063cda7b259782c57ff8cec343ad2f1ad35baf38c3503db5cf6f3b2f7",
-    "port": 80,
-    "protocol": "http",
-    "version": "v1.0",
-    "default_transaction_fee": "2.5000000000000000",
-    "trust": "98.32"
-  }
-]`}
-        heading="Response"
+      <h2>Install Dependencies</h2>
+
+      <Commands
+        code={`sudo apt -y update && sudo apt -y upgrade
+sudo apt -y install build-essential nginx python3-pip redis-server
+`}
+        comment="Update and install packages"
       />
+
+      <h2>Firewall</h2>
+
+      <Commands
+        code={`sudo ufw app list
+sudo ufw allow 'Nginx Full' && sudo ufw allow OpenSSH && sudo ufw enable
+`}
+        comment="Enable firewall"
+      />
+      <Commands
+        code={`sudo ufw status && systemctl status nginx`}
+        comment="Verify that firewall is active and nginx is running"
+      />
+
+      <p>You should now be able to visit your server's public IP address and see the welcome page.</p>
+
+      <Commands code={`adduser deploy`} comment="First log in as root, then create the new user" />
+      <Commands
+        code={`Apples123!`}
+        comment="Fill the form and set the password (use different, more secure password after guide is finished)"
+      />
+      <Commands code={`visudo`} comment="Allow this user to use sudo" />
+      <Commands code={`deploy ALL=(ALL) NOPASSWD:ALL`} comment="Add following line into the opened edit" />
+      <Commands code={`su - deploy`} comment="Then switch to this new user" />
     </section>
   );
 };
