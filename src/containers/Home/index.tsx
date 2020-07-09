@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Footer from 'containers/Footer';
 import TopNav from 'containers/TopNav';
 
 import Chart from 'assets/images/chart.png';
 import KeyPair from 'assets/images/KeyPair.png';
+
 import './Home.scss';
 
 const Home = () => {
@@ -117,7 +117,6 @@ const Home = () => {
         {renderTrust()}
         {renderSecurity()}
       </div>
-      <Footer />
     </div>
   );
 };

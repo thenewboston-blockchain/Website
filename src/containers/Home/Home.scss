@@ -1,7 +1,7 @@
 .Home {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: fit-content(100px) auto fit-content(100px);
+  grid-template-rows: fit-content(100px) auto;
   height: 100vh;
 
   .top {
@@ -9,12 +9,9 @@
     grid-row: 1 / span 1;
   }
 
-  .Footer {
-    grid-row: 3 / span 1;
-  }
-
   .main-content {
     grid-row: 2 / span 1;
+    overflow-y: auto;
 
     .hero {
       line-height: 1.4;
