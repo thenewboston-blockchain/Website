@@ -4,6 +4,7 @@ import TopNav from 'containers/TopNav';
 
 import Chart from 'assets/images/chart.png';
 import KeyPair from 'assets/images/KeyPair.png';
+
 import './Home.scss';
 
 const Home = () => {
