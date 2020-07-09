@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Footer from 'containers/Footer';
 import TopNav from 'containers/TopNav';
 
 import Chart from 'assets/images/chart.png';
@@ -117,7 +116,6 @@ const Home = () => {
         {renderTrust()}
         {renderSecurity()}
       </div>
-      <Footer />
     </div>
   );
 };
