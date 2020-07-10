@@ -1,6 +1,11 @@
 .Documentation {
   padding: 24px 24px 96px;
 
+  h2 {
+    margin-bottom: 18px;
+    margin-top: 36px;
+  }
+
   h2.endpoint {
     font-family: var(--font-family-mono-roboto);
     font-weight: 700;
