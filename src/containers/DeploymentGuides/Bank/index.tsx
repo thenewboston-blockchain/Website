@@ -15,11 +15,7 @@ const Bank = () => {
   return (
     <section>
       <h1 className="page-title">Bank Deployment Guide</h1>
-      <p>
-        All banks have the option of connecting to other banks. Although it is not a requirement, it is often useful for
-        a bank to inspect the trust levels assigned by other banks. This data is used primarily in determining which
-        primary validator to elect as well as which confirmation validators to connect to and purchase services from.
-      </p>
+      <p>This guide will detail the deployment instructions for banks.</p>
       <InstallDependencies />
       <Firewall />
       <ProjectSetup />
