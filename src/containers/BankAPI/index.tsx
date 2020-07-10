@@ -46,7 +46,7 @@ const BankAPI = () => {
   const {chapter} = useParams();
   const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
 
-  return <div className="API BankAPI">{pageContent}</div>;
+  return <div className="Documentation BankAPI">{pageContent}</div>;
 };
 
 export default BankAPI;
