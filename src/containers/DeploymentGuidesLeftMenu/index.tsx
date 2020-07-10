@@ -6,8 +6,8 @@ import LeftMenu from 'containers/LeftMenu';
 const DeploymentGuidesLeftMenu = () => {
   return (
     <LeftMenu>
-      <NavLink to="/deployment-guides/banks">Banks</NavLink>
-      <NavLink to="/deployment-guides/validators">Validators</NavLink>
+      <NavLink to="/deployment-guides/bank">Bank</NavLink>
+      <NavLink to="/deployment-guides/validator">Validator</NavLink>
     </LeftMenu>
   );
 };

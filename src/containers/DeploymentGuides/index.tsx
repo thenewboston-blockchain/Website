@@ -1,19 +1,19 @@
 import React, {useMemo} from 'react';
 import {useParams} from 'react-router-dom';
 
-import Banks from './Banks';
-import Validators from './Validators';
+import Bank from './Bank';
+import Validator from './Validator';
 
 import './DeploymentGuides.scss';
 
 const getPageContent = (chapter: string) => {
   switch (chapter) {
-    case 'banks':
-      return <Banks />;
-    case 'validators':
-      return <Validators />;
+    case 'bank':
+      return <Bank />;
+    case 'validator':
+      return <Validator />;
     default:
-      return <Banks />;
+      return <Bank />;
   }
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Commands from 'components/Commands';
 
-const Banks = () => {
+const Bank = () => {
   const render01InstallDependencies = () => (
     <>
       <h2>Install Dependencies</h2>
@@ -296,7 +296,7 @@ sudo journalctl -u nginx.service
 
   return (
     <section>
-      <h1 className="page-title">Banks</h1>
+      <h1 className="page-title">Bank Deployment Guide</h1>
       <p>
         All banks have the option of connecting to other banks. Although it is not a requirement, it is often useful for
         a bank to inspect the trust levels assigned by other banks. This data is used primarily in determining which
@@ -316,4 +316,4 @@ sudo journalctl -u nginx.service
   );
 };
 
-export default Banks;
+export default Bank;

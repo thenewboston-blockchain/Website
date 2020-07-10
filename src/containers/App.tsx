@@ -42,7 +42,7 @@ const App = () => {
         </Route>
 
         <Route exact path="/deployment-guides">
-          <Redirect to="/deployment-guides/banks" />
+          <Redirect to="/deployment-guides/bank" />
         </Route>
         <Route path="/deployment-guides/:chapter">
           <AdminLayout left={<DeploymentGuidesLeftMenu />} right={<DeploymentGuides />} top={<TopNav />} />

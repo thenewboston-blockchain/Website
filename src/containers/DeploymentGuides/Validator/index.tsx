@@ -2,10 +2,10 @@ import React from 'react';
 
 import RequestResponse from 'components/RequestResponse';
 
-const Validators = () => {
+const Validator = () => {
   return (
     <section>
-      <h1 className="page-title">Validators</h1>
+      <h1 className="page-title">Validator Deployment Guide</h1>
       <p>Banks will maintain a record of all validators, both primary and confirmation, that they are connected to.</p>
 
       <h2 className="endpoint">GET /validators</h2>
@@ -46,4 +46,4 @@ const Validators = () => {
   );
 };
 
-export default Validators;
+export default Validator;
