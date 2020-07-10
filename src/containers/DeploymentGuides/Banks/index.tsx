@@ -81,6 +81,97 @@ sudo pip3 install file:///var/www/thenewboston-python/dist/thenewboston-0.0.1.ta
     </>
   );
 
+  const render04NGINX = () => (
+    <>
+      <h2>NGINX</h2>
+
+      <Commands
+        code={`sudo rm /etc/nginx/sites-available/default
+sudo nano /etc/nginx/sites-available/default
+`}
+        comment="Create NGINX configuration"
+      />
+      <Commands
+        code={`upstream django {
+\tserver 127.0.0.1:8001;
+}
+
+server {
+\tlisten 80 default_server;
+\tserver_name localhost;
+\tcharset utf-8;
+\tclient_max_body_size 75M;
+
+\t# Django media
+\tlocation /media {
+\t\talias /var/www/Validator/media;
+\t}
+
+\tlocation /static {
+\t\talias /var/www/Validator/static;
+\t}
+
+\t# Send all non-media requests to the Django server
+\tlocation / {
+\t\tuwsgi_pass django;
+\t\tinclude /var/www/Validator/uwsgi_params;
+\t}
+
+}
+`}
+        comment="Paste in the following and save"
+      />
+      <Commands code={`sudo nginx -t`} comment="Test configuration" />
+    </>
+  );
+
+  const render05Redis = () => (
+    <>
+      <h2>Redis</h2>
+
+      <Commands
+        code={`sudo nano /etc/redis/redis.conf`}
+        comment="Since we are running Ubuntu, which uses the systemd init system, change this to systemd"
+      />
+      <Commands
+        code={`# Note: these supervision methods only signal "process is ready."
+#       They do not enable continuous liveness pings back to your supervisor.
+supervised systemd`}
+        comment="Update the following line in the configuration and save file"
+      />
+      <Commands
+        code={`sudo systemctl restart redis.service`}
+        comment="Restart the Redis service to reflect the changes you made to the configuration file"
+      />
+      <Commands code={`sudo systemctl status redis`} comment="Check status to make sure Redis is running correctly" />
+    </>
+  );
+
+  const render06systemd = () => (
+    <>
+      <h2>systemd</h2>
+
+      <Commands code={`sudo nano /usr/local/bin/start_api.sh`} comment="Create script to run uwsgi" />
+      <Commands
+        code={`#!/bin/bash
+
+cd /var/www/Validator
+uwsgi --ini app.ini
+`}
+        comment="Paste in the following and save"
+      />
+      <Commands code={`sudo chmod a+x /usr/local/bin/start_api.sh`} comment="Update permissions for shell script" />
+    </>
+  );
+
+  const zzz = () => (
+    <>
+      <h2>zzz</h2>
+
+      <Commands code={``} comment="" />
+    </>
+  );
+
   return (
     <section>
       <h1 className="page-title">Banks</h1>
@@ -92,6 +183,9 @@ sudo pip3 install file:///var/www/thenewboston-python/dist/thenewboston-0.0.1.ta
       {render01InstallDependencies()}
       {render02Firewall()}
       {render03ProjectSetup()}
+      {render04NGINX()}
+      {render05Redis()}
+      {render06systemd()}
     </section>
   );
 };
