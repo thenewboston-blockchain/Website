@@ -164,11 +164,133 @@ uwsgi --ini app.ini
     </>
   );
 
-  const zzz = () => (
+  const render07Celery = () => (
     <>
-      <h2>zzz</h2>
+      <h2>Celery</h2>
 
-      <Commands code={``} comment="" />
+      <Commands
+        code={`cd /etc/
+sudo mkdir validator
+sudo mkdir /var/log/celery
+sudo chown deploy /var/log/celery
+sudo nano /etc/validator/environment
+`}
+        comment="Create a file to contain our environment variables"
+      />
+      <Commands
+        code={`DJANGO_APPLICATION_ENVIRONMENT=local
+NETWORK_SIGNING_KEY=6f812a35643b55a77f71c3b722504fbc5918e83ec72965f7fd33865ed0be8f81
+`}
+      />
+      <Commands code={`sudo nano /etc/validator/celery.conf`} comment="Create celery env config" />
+      <Commands
+        code={`CELERYD_NODES="w1"
+CELERY_BIN="/usr/local/bin/celery"
+CELERY_APP="config.settings"
+CELERYD_MULTI="multi"
+CELERYD_OPTS="--time-limit=1800 --concurrency=2"
+CELERYD_PID_FILE="/var/log/celery/%n.pid"
+CELERYD_LOG_FILE="/var/log/celery/%n%I.log"
+CELERYD_LOG_LEVEL="DEBUG"
+DJANGO_APPLICATION_ENVIRONMENT=local`}
+      />
+      <Commands code={`sudo nano /etc/systemd/system/api.service`} comment="Create service" />
+      <Commands
+        code={`[Unit]
+Description = Service to run Django API
+After = network.target
+
+[Service]
+EnvironmentFile = /etc/validator/environment
+User = deploy
+ExecStart = /usr/local/bin/start_api.sh
+
+[Install]
+WantedBy = multi-user.target
+`}
+      />
+      <Commands code={`sudo chmod a+x /etc/systemd/system/api.service`} comment="Update permissions for file" />
+      <Commands code={`sudo nano /etc/systemd/system/celery.service`} comment="Create service for celery" />
+      <Commands
+        code={`[Unit]
+Description=Validator Celery Service
+After=network.target
+
+[Service]
+Type=forking
+User=deploy
+EnvironmentFile=/etc/validator/celery.conf
+WorkingDirectory=/var/www/Validator
+ExecStart=/bin/sh -c '\${CELERY_BIN} multi start \${CELERYD_NODES} \\
+  -A \${CELERY_APP} --pidfile=\${CELERYD_PID_FILE} \\
+  --logfile=\${CELERYD_LOG_FILE} --loglevel=\${CELERYD_LOG_LEVEL} \${CELERYD_OPTS}'
+ExecStop=/bin/sh -c '\${CELERY_BIN} multi stopwait \${CELERYD_NODES} \\
+  --pidfile=\${CELERYD_PID_FILE}'
+ExecReload=/bin/sh -c '\${CELERY_BIN} multi restart \${CELERYD_NODES} \\
+  -A \${CELERY_APP} --pidfile=\${CELERYD_PID_FILE} \\
+  --logfile=\${CELERYD_LOG_FILE} --loglevel=\${CELERYD_LOG_LEVEL} \${CELERYD_OPTS}'
+
+[Install]
+WantedBy=multi-user.target
+`}
+      />
+      <Commands
+        code={`sudo systemctl daemon-reload && sudo systemctl enable api && sudo systemctl enable celery`}
+        comment="Reload systemd and enable both services"
+      />
+      <Commands code={`ls /etc/systemd/system/multi-user.target.wants/`} comment="Verify it is enabled" />
+    </>
+  );
+
+  const render08Services = () => (
+    <>
+      <h2>Services</h2>
+
+      <Commands
+        code={`sudo systemctl start api && sudo systemctl start celery && sudo systemctl restart nginx`}
+        comment="Start API service, restart NGINX, and verify services are active"
+      />
+      <Commands code={`sudo systemctl status api celery nginx redis`} comment="Check the status of the services" />
+    </>
+  );
+
+  const render09Application = () => (
+    <>
+      <h2>Static files and Application Configuration</h2>
+
+      <Commands
+        code={`nano ~/.profile
+export DJANGO_APPLICATION_ENVIRONMENT="local"`}
+        comment="Set environment variable"
+      />
+
+      <p>Log out and log back in</p>
+
+      <Commands
+        code={`cd /var/www/Validator/
+python3 manage.py makemigrations && python3 manage.py migrate
+python3 manage.py createsuperuser
+python3 manage.py collectstatic
+`}
+        comment="Set up database"
+      />
+      <Commands code={`python3 manage.py initialize_primary_validator`} comment="Initialize validator" />
+      <Commands code={`http://[IP_ADDRESS]/config`} comment="Verify everything is working correctly by visiting" />
+    </>
+  );
+
+  const render10Troubleshooting = () => (
+    <>
+      <h2>Troubleshooting</h2>
+
+      <Commands code={`sudo systemctl status api celery nginx redis`} comment="Check the status of the services" />
+      <Commands
+        code={`sudo journalctl -u api.service
+sudo journalctl -u celery.service
+sudo journalctl -u nginx.service
+`}
+        comment="View the logs"
+      />
     </>
   );
 
@@ -186,6 +308,10 @@ uwsgi --ini app.ini
       {render04NGINX()}
       {render05Redis()}
       {render06systemd()}
+      {render07Celery()}
+      {render08Services()}
+      {render09Application()}
+      {render10Troubleshooting()}
     </section>
   );
 };
