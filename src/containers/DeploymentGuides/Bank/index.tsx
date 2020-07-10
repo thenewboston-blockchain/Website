@@ -7,8 +7,8 @@ import InstallDependencies from 'containers/DeploymentGuides/InstallDependencies
 import NGINX from 'containers/DeploymentGuides/NGINX';
 import ProjectSetup from 'containers/DeploymentGuides/ProjectSetup';
 import Redis from 'containers/DeploymentGuides/Redis';
-import Services from 'containers/DeploymentGuides/Services';
-import StaticFilesAndApplication from 'containers/DeploymentGuides/StaticFilesAndApplication';
+import StaticFilesAndApplicationConfiguration from 'containers/DeploymentGuides/StaticFilesAndApplicationConfiguration';
+import SystemServices from 'containers/DeploymentGuides/SystemServices';
 import Troubleshooting from 'containers/DeploymentGuides/Troubleshooting';
 
 const Bank = () => {
@@ -27,8 +27,8 @@ const Bank = () => {
       <Redis />
       <GatewayInterface />
       <Celery />
-      <Services />
-      <StaticFilesAndApplication />
+      <SystemServices />
+      <StaticFilesAndApplicationConfiguration />
       <Troubleshooting />
     </section>
   );

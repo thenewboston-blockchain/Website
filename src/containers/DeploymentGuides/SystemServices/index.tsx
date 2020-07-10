@@ -2,10 +2,10 @@ import React from 'react';
 
 import Commands from 'components/Commands';
 
-const Services = () => {
+const SystemServices = () => {
   return (
     <>
-      <h2>Services</h2>
+      <h2>System Services</h2>
 
       <Commands
         code={`sudo systemctl start api && sudo systemctl start celery && sudo systemctl restart nginx`}
@@ -16,4 +16,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default SystemServices;
