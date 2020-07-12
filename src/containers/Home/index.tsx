@@ -13,8 +13,12 @@ const Home = () => {
       <h1>thenewboston</h1>
       <h2>A Trust Based Open Source Digital Currency</h2>
       <div className="action-buttons">
-        <button className="primary">Download</button>
-        <button className="primary">View docs</button>
+        <a href="https://github.com/thenewboston-developers" target="_blank">
+          <button className="primary">GitHub</button>
+        </a>
+        <a href="https://www.reddit.com/r/thenewboston/" target="_blank">
+          <button className="primary">reddit</button>
+        </a>
       </div>
     </div>
   );
