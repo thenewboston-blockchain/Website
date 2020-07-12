@@ -9,10 +9,6 @@ const BestPractices = () => {
       <p>In this section we will review some best practices regarding the network as a whole.</p>
       <ol>
         <li>
-          Always use IP addresses rather than domain names when identifying nodes (both banks and validators). This will
-          prevent issues related to domain name expirations and DNS server reliability.
-        </li>
-        <li>
           Never share your secret key with anyone. If possible, your secret key should never touch the internet. This
           means that it should not be stored on any website, sent to anyone through email, or shared on social media.
           There will be some applications that require the ability to sign and send transactions which will require
