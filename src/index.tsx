@@ -3,14 +3,13 @@ import ReactDOM from 'react-dom';
 
 // Styles
 import 'normalize.css';
-import 'styles/colors.scss';
-import 'styles/index.scss';
+import 'styles/main.scss';
 
-import Teaser from 'containers/Teaser';
+import App from 'containers/App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Teaser />
+    <App />
   </React.StrictMode>,
   document.getElementById('root'),
 );

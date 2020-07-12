@@ -1,0 +1,40 @@
+.Documentation {
+  padding: 32px 32px 96px;
+
+  h2 {
+    margin-bottom: 18px;
+    margin-top: 36px;
+  }
+
+  h2.endpoint {
+    font-family: var(--font-family-mono-roboto);
+    font-weight: 700;
+    margin: 32px 0 12px 0;
+  }
+
+  .img-container {
+    text-align: center;
+
+    img {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+
+  .heavy {
+    font-weight: 700;
+  }
+
+  .light {
+    color: #9b9b9b;
+  }
+
+  .placeholder {
+    font-style: italic;
+  }
+
+  .table-title {
+    color: #006699;
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,13 @@
+.Banks {
+  img {
+    &.account-registration {
+      max-width: 940px;
+    }
+    &.banks-and-accounts {
+      max-width: 460px;
+    }
+    &.validator-election {
+      max-width: 740px;
+    }
+  }
+}

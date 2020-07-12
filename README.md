@@ -1,12 +1,6 @@
 ## thenewboston
 
-Website for <a href="https://thenewboston.com" target="_blank">thenewboston.com</a>
-
-
-## Prerequisites
-
-<a href="https://nodejs.org" target="_blank">Node.js</a> v.14 or higher required. 
-
+The website and documentation for [https://thenewboston.com/](https://thenewboston.com/)
 
 ## Getting Started
 

@@ -1,0 +1,10 @@
+.ConfirmationValidators {
+  img {
+    &.confirmation-validator-block-syncing {
+      max-width: 740px;
+    }
+    &.confirmation-validator-syncing {
+      max-width: 1000px;
+    }
+  }
+}

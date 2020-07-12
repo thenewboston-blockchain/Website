@@ -1,0 +1,13 @@
+.Confirmations {
+  img {
+    &.confirmation-service-cycle {
+      max-width: 640px;
+    }
+    &.confirmations-services-simple {
+      max-width: 740px;
+    }
+    &.full-system {
+      max-width: 1400px;
+    }
+  }
+}
