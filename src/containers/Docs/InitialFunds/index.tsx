@@ -41,13 +41,13 @@ const InitialFunds = () => {
 
       <ol>
         <li>
-          The ledger will be initialized with a single account belonging to the Treasury with a value of 4,294,967,296
-          (232) points.
+          The ledger will be initialized with a single account belonging to the Treasury with a value of
+          281,474,976,710,656 (2^48) points.
         </li>
         <li>
           As new developers join the GitHub organization, their GitHub accounts will be inspected to ensure certain
           criteria is met. If and when all criteria is met, users will receive their initial funds (often referred to as
-          "seed funds") of 4,096 (212) points. The criteria for receiving seed funds through ownership of a GitHub
+          "seed funds") of 4,096 (2^12) points. The criteria for receiving seed funds through ownership of a GitHub
           account is as follows:
         </li>
         <ol type="a">
@@ -80,14 +80,14 @@ const InitialFunds = () => {
               of the recipient
             </li>
             <ol>
-              <li>the user ID is prefered over the username due to the ability for users to change their usernames</li>
+              <li>the user ID is preferred over the username due to the ability for users to change their usernames</li>
             </ol>
           </ol>
         </ol>
         <li>
           Additional seed funds will be awarded to any users that contribute to the network through the creation of a
           bank. When the following criteria regarding a bank node is met, owners of the bank will receive funds of
-          65,536 (216) points. These funds will act as an incentive for any individuals that help create the initial
+          65,536 (2^16) points. These funds will act as an incentive for any individuals that help create the initial
           decentralized network, as well as reflect the additional amount of effort and cost necessary to deploy and
           maintain servers. The criteria for receiving seed funds through the creation of a trusted bank node as well as
           distribution details is as follows:
