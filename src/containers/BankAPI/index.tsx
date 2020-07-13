@@ -9,7 +9,6 @@ import Banks from './Banks';
 import Blocks from './Blocks';
 import Config from './Config';
 import ConfirmationBlocks from './ConfirmationBlocks';
-import Introduction from './Introduction';
 import ValidatorConfirmationServices from './ValidatorConfirmationServices';
 import Validators from './Validators';
 
@@ -31,14 +30,12 @@ const getPageContent = (chapter: string) => {
       return <ConfirmationBlocks />;
     case 'connection-requests':
       return <ConnectionRequests />;
-    case 'introduction':
-      return <Introduction />;
     case 'validator-confirmation-services':
       return <ValidatorConfirmationServices />;
     case 'validators':
       return <Validators />;
     default:
-      return <Introduction />;
+      return <Accounts />;
   }
 };
 

@@ -6,7 +6,6 @@ import LeftMenu from 'containers/LeftMenu';
 const BankAPILeftMenu = () => {
   return (
     <LeftMenu>
-      <NavLink to="/bank-api/introduction">Introduction</NavLink>
       <NavLink to="/bank-api/accounts">Accounts</NavLink>
       <NavLink to="/bank-api/bank-transactions">Bank Transactions</NavLink>
       <NavLink to="/bank-api/banks">Banks</NavLink>
