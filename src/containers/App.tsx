@@ -25,14 +25,14 @@ const App = () => {
         </Route>
 
         <Route exact path="/bank-api">
-          <Redirect to="/bank-api/introduction" />
+          <Redirect to="/bank-api/accounts" />
         </Route>
         <Route path="/bank-api/:chapter">
           <AdminLayout left={<BankAPILeftMenu />} right={<BankAPI />} top={<TopNav />} />
         </Route>
 
         <Route exact path="/confirmation-validator-api">
-          <Redirect to="/confirmation-validator-api/introduction" />
+          <Redirect to="/confirmation-validator-api/accounts" />
         </Route>
         <Route path="/confirmation-validator-api/:chapter">
           <AdminLayout
@@ -61,7 +61,7 @@ const App = () => {
         </Route>
 
         <Route exact path="/primary-validator-api">
-          <Redirect to="/primary-validator-api/introduction" />
+          <Redirect to="/primary-validator-api/accounts" />
         </Route>
         <Route path="/primary-validator-api/:chapter">
           <AdminLayout left={<PrimaryValidatorAPILeftMenu />} right={<PrimaryValidatorAPI />} top={<TopNav />} />

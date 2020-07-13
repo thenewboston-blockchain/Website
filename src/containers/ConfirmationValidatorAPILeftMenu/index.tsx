@@ -6,7 +6,6 @@ import LeftMenu from 'containers/LeftMenu';
 const ConfirmationValidatorAPILeftMenu = () => {
   return (
     <LeftMenu>
-      <NavLink to="/confirmation-validator-api/introduction">Introduction</NavLink>
       <NavLink to="/confirmation-validator-api/accounts">Accounts</NavLink>
       <NavLink to="/confirmation-validator-api/bank-confirmation-services">Bank Confirmation Services</NavLink>
       <NavLink to="/confirmation-validator-api/banks">Banks</NavLink>
