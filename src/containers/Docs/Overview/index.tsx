@@ -23,7 +23,7 @@ const Overview = () => {
       <tr>
         <td>Signature</td>
         <td>
-          unique value used to verify they authenticity of a digital document (included with every block to prove that
+          unique value used to verify the authenticity of a digital document (included with every block to prove that
           the related transactions have been authorized by the account owner)
         </td>
       </tr>
