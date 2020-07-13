@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 
 import ValidatorElection from './ValidatorElection.png';
 
@@ -76,6 +77,26 @@ const Banks = () => {
       <p>
         This architecture does not imply that a single human individual should only ever have one account. It is
         perfectly acceptable and even encouraged for individuals to have multiple accounts.
+      </p>
+      <p>
+        Although the documentation has not yet covered the topic of{' '}
+        <NavLink to="/docs/confirmation-validators">Confirmation Validators</NavLink>, it is important to remember these
+        key ideas:
+      </p>
+
+      <ul className="mb-20">
+        <li>users choose their banks</li>
+        <li>banks choose their primary validators</li>
+        <li>
+          the banks confirmation validators will tell the bank when to switch primary validators (if/when the primary
+          validator becomes untrustworthy)
+        </li>
+      </ul>
+
+      <p>
+        Given that the banks are essentially representatives of the users, and that users will reward the banks through
+        transaction fees for selecting the primary validator that is both the most performant and most trustworthy, the
+        ability to determine the network as a whole is ultimately in the hands of the people.
       </p>
     </section>
   );
