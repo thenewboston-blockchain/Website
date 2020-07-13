@@ -16,6 +16,12 @@ const Home = () => {
         <a href="https://github.com/thenewboston-developers" target="_blank">
           <button className="primary">GitHub</button>
         </a>
+        <a
+          href="https://join.slack.com/t/thenewboston/shared_invite/zt-g31r9hm8-gqVQmhwhhoriEhZQJTsdkQ"
+          target="_blank"
+        >
+          <button className="primary">Slack</button>
+        </a>
         <a href="https://www.reddit.com/r/thenewboston/" target="_blank">
           <button className="primary">reddit</button>
         </a>
