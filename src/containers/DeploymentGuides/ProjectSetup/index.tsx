@@ -7,7 +7,7 @@ const ProjectSetup = () => {
     <>
       <h2>Project Setup</h2>
 
-      <Commands code={`ssh-keygen -t rsa -b 4096 -C "buckyroberts@gmail.com"`} comment="Generate SSH key pair" />
+      <Commands code={`ssh-keygen -t rsa -b 4096 -C "bucky@hotmale.com"`} comment="Generate SSH key pair" />
       <Commands code={`cat ~/.ssh/id_rsa.pub`} comment="Display SSH key in console" />
 
       <p>
