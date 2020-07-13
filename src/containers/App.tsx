@@ -66,6 +66,8 @@ const App = () => {
         <Route path="/primary-validator-api/:chapter">
           <AdminLayout left={<PrimaryValidatorAPILeftMenu />} right={<PrimaryValidatorAPI />} top={<TopNav />} />
         </Route>
+
+        <Redirect to="/" />
       </Switch>
     </Router>
   );
