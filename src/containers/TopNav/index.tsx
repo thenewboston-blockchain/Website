@@ -13,10 +13,11 @@ const TopNav = () => {
         <span>thenewboston</span>
       </NavLink>
       <NavLink to="/docs">Documentation</NavLink>
-      <NavLink to="/deployment-guides">Deployment Guides</NavLink>
+      <NavLink to="/contributors">Contributors</NavLink>
       <NavLink to="/bank-api">Bank API</NavLink>
       <NavLink to="/confirmation-validator-api">Confirmation Validator API</NavLink>
       <NavLink to="/primary-validator-api">Primary Validator API</NavLink>
+      <NavLink to="/deployment-guides">Deployment Guides</NavLink>
     </div>
   );
 };

@@ -6,6 +6,7 @@ import BankAPI from './BankAPI';
 import BankAPILeftMenu from './BankAPILeftMenu';
 import ConfirmationValidatorAPI from './ConfirmationValidatorAPI';
 import ConfirmationValidatorAPILeftMenu from './ConfirmationValidatorAPILeftMenu';
+import Contributors from './Contributors';
 import DeploymentGuides from './DeploymentGuides';
 import DeploymentGuidesLeftMenu from './DeploymentGuidesLeftMenu';
 import Docs from './Docs';
@@ -39,6 +40,10 @@ const App = () => {
             right={<ConfirmationValidatorAPI />}
             top={<TopNav />}
           />
+        </Route>
+
+        <Route exact path="/contributors">
+          <Contributors />
         </Route>
 
         <Route exact path="/deployment-guides">

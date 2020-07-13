@@ -1,0 +1,25 @@
+.Contributors {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: fit-content(100px) auto;
+  height: 100vh;
+
+  .top {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    grid-row: 1 / span 1;
+  }
+
+  .main-content {
+    grid-row: 2 / span 1;
+    overflow-y: auto;
+    padding: 32px 32px 96px;
+
+    h2 {
+      margin-bottom: 12px;
+    }
+
+    h4 {
+      margin-bottom: 4px;
+    }
+  }
+}
