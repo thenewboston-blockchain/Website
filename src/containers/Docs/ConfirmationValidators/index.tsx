@@ -83,7 +83,6 @@ const ConfirmationValidators = () => {
           </li>
           <ol type="i">
             <li>update the account balances</li>
-            <li>send a confirmation block to any banks that are registered with them</li>
             <li>
               generate a hash of the block message, which will become the block identifier of the next confirmed block,
               and repeat
@@ -130,21 +129,20 @@ const ConfirmationValidators = () => {
         When a new block is verified by the primary validator, the primary validator will send a POST request to all
         confirmation validators. This will inform the confirmation validators of the updated data immediately, and
         prevent the confirmation validators from needing to continuously make GET requests to the primary validator to
-        check for new blocks.
+        check for new blocks. The primary validator has incentive to reliably forward all confirmed blocks to the
+        confirmation validators since this will help the primary validators trust level remain high among all banks.
       </p>
       <p>
         Given that confirmation validators do not earn points through transaction fees like the primary validator, the
         incentive for individuals to deploy and maintain confirmation validators is achieved through separate means.
-        Confirmation validators may receive points from banks through pre-registration fees. This process is useful for
-        banks by avoiding the need to register with a new validator if the primary validator were to go offline.
-        Confirmation validators also provide confirmation services, which will be discussed in more detail in the
-        following section.
+        Confirmation validators provide confirmation services which can be purchased by banks. This topic will be
+        discussed in more detail in the following section.
       </p>
       <p>
         It is important to note that confirmation validators may also become the primary network validator if the banks
         simply wish to change primary validators for any number of reasons (improved reliability, faster response times,
-        additional data services, etc...). The primary validator is appointed through consensus of the banks and does
-        not require the existing primary validator to go offline.
+        additional data services, etc...). The primary validator is determined by the banks and does not require the
+        existing primary validator to go offline.
       </p>
     </section>
   );

@@ -5,12 +5,13 @@ import Accounts from './Accounts';
 import Banks from './Banks';
 import BestPractices from './BestPractices';
 import Blocks from './Blocks';
+import ConfirmationServices from './ConfirmationServices';
 import ConfirmationValidators from './ConfirmationValidators';
-import Confirmations from './Confirmations';
 import FutureDevelopment from './FutureDevelopment';
 import InitialFunds from './InitialFunds';
 import Introduction from './Introduction';
 import Overview from './Overview';
+import Resyncing from './Resyncing';
 import RootAccountFile from './RootAccountFile';
 import TransactionFees from './TransactionFees';
 import Trust from './Trust';
@@ -26,10 +27,10 @@ const getPageContent = (chapter: string) => {
       return <BestPractices />;
     case 'blocks':
       return <Blocks />;
+    case 'confirmation-services':
+      return <ConfirmationServices />;
     case 'confirmation-validators':
       return <ConfirmationValidators />;
-    case 'confirmations':
-      return <Confirmations />;
     case 'future-development':
       return <FutureDevelopment />;
     case 'initial-funds':
@@ -38,6 +39,8 @@ const getPageContent = (chapter: string) => {
       return <Introduction />;
     case 'overview':
       return <Overview />;
+    case 'resyncing':
+      return <Resyncing />;
     case 'root-account-file':
       return <RootAccountFile />;
     case 'transaction-fees':
