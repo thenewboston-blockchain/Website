@@ -54,7 +54,7 @@ const ConfirmationValidators = () => {
         />
       </div>
 
-      <p>When confirmation validators first come online, the will:</p>
+      <p>When confirmation validators first come online, they will:</p>
 
       <ol className="mb-20">
         <li>Download the root account file from the primary validator</li>
