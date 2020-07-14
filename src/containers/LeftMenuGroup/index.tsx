@@ -1,26 +1,24 @@
-import React from 'react';
+import React, {FC, ReactNode, useState} from 'react';
 
-import './LeftMenuGroup.scss';
-import {NavLink} from 'react-router-dom';
+interface ComponentProps {
+  children: ReactNode;
+  leftIcon: ReactNode;
+  title: string;
+}
 
-const LeftMenuGroup = () => {
+const LeftMenuGroup: FC<ComponentProps> = ({children, leftIcon, title}) => {
+  const [expanded, toggleExpanded] = useState(false);
+
   return (
     <div className="LeftMenuGroup">
-      <div className="toggle">
-        <span>Bank API</span>
-        <span className="material-icons">keyboard_arrow_right</span>
+      <div className={`toggle ${expanded ? 'expanded' : ''}`} onClick={() => toggleExpanded(!expanded)}>
+        <div className="left-elements">
+          {leftIcon}
+          <span className="heavy">{title}</span>
+        </div>
+        <span className="material-icons arrow">keyboard_arrow_right</span>
       </div>
-      <div className="submenu">
-        <NavLink to="/bank-api/accounts">Accounts</NavLink>
-        <NavLink to="/bank-api/bank-transactions">Bank Transactions</NavLink>
-        <NavLink to="/bank-api/banks">Banks</NavLink>
-        <NavLink to="/bank-api/blocks">Blocks</NavLink>
-        <NavLink to="/bank-api/config">Config</NavLink>
-        <NavLink to="/bank-api/confirmation-blocks">Confirmation Blocks</NavLink>
-        <NavLink to="/bank-api/connection-requests">Connection Requests</NavLink>
-        <NavLink to="/bank-api/validator-confirmation-services">Validator Confirmation Services</NavLink>
-        <NavLink to="/bank-api/validators">Validators</NavLink>
-      </div>
+      <div className={`submenu ${expanded ? 'expanded' : ''}`}>{children}</div>
     </div>
   );
 };
