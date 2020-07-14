@@ -43,7 +43,11 @@ const Home = () => {
       <p>
         This network is an open source, peer-to-peer network. This means that there is no single entity in control. It
         is built and maintained entirely by a team of volunteers from all around the globe. All of the source code is
-        open source and publicly viewable on <a href="https://github.com/thenewboston-developers" rel="noopener noreferrer">our GitHub page</a>.
+        open source and publicly viewable on{' '}
+        <a href="https://github.com/thenewboston-developers" rel="noopener noreferrer">
+          our GitHub page
+        </a>
+        .
       </p>
     </div>
   );
@@ -84,8 +88,11 @@ const Home = () => {
           users themselves on their own personal devices.
         </p>
         <p>
-          Our network uses the <a rel="noopener noreferrer" href="https://ed25519.cr.yp.to/">Ed25519 Digital Signature Algorithm</a> which allows
-          for both highly performant and highly secure signatures.
+          Our network uses the{' '}
+          <a rel="noopener noreferrer" href="https://ed25519.cr.yp.to/">
+            Ed25519 Digital Signature Algorithm
+          </a>{' '}
+          which allows for both highly performant and highly secure signatures.
         </p>
       </div>
       <img alt="key-pair" className="key-pair" src={KeyPair} />
