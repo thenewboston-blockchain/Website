@@ -23,6 +23,7 @@ const Contributors = () => {
             <a
               href="https://join.slack.com/t/thenewboston/shared_invite/zt-g31r9hm8-gqVQmhwhhoriEhZQJTsdkQ"
               target="_blank"
+              rel="noopener noreferrer"
             >
               https://join.slack.com/t/thenewboston/shared_invite/zt-g31r9hm8-gqVQmhwhhoriEhZQJTsdkQ
             </a>
@@ -31,7 +32,7 @@ const Contributors = () => {
         <tr>
           <td>GitHub</td>
           <td>
-            <a href="https://github.com/thenewboston-developers" target="_blank">
+            <a href="https://github.com/thenewboston-developers" target="_blank" rel="noopener noreferrer">
               https://github.com/thenewboston-developers
             </a>
           </td>
@@ -39,7 +40,7 @@ const Contributors = () => {
         <tr>
           <td>reddit</td>
           <td>
-            <a href="https://www.reddit.com/r/thenewboston/" target="_blank">
+            <a href="https://www.reddit.com/r/thenewboston/" target="_blank" rel="noopener noreferrer">
               https://www.reddit.com/r/thenewboston/
             </a>
           </td>
@@ -63,7 +64,7 @@ const Contributors = () => {
         <tr>
           <td>Repository</td>
           <td>
-            <a href="https://github.com/thenewboston-developers/Bank" target="_blank">
+            <a href="https://github.com/thenewboston-developers/Bank" target="_blank" rel="noopener noreferrer">
               https://github.com/thenewboston-developers/Bank
             </a>
           </td>
@@ -71,7 +72,11 @@ const Contributors = () => {
         <tr>
           <td>Tasks</td>
           <td>
-            <a href="https://github.com/thenewboston-developers/Bank/projects/3" target="_blank">
+            <a
+              href="https://github.com/thenewboston-developers/Bank/projects/3"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               https://github.com/thenewboston-developers/Bank/projects/3
             </a>
           </td>
@@ -95,7 +100,7 @@ const Contributors = () => {
         <tr>
           <td>Repository</td>
           <td>
-            <a href="https://github.com/thenewboston-developers/Validator" target="_blank">
+            <a href="https://github.com/thenewboston-developers/Validator" target="_blank" rel="noopener noreferrer">
               https://github.com/thenewboston-developers/Validator
             </a>
           </td>
@@ -103,7 +108,11 @@ const Contributors = () => {
         <tr>
           <td>Tasks</td>
           <td>
-            <a href="https://github.com/thenewboston-developers/Validator/projects/2" target="_blank">
+            <a
+              href="https://github.com/thenewboston-developers/Validator/projects/2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               https://github.com/thenewboston-developers/Validator/projects/2
             </a>
           </td>
@@ -121,7 +130,11 @@ const Contributors = () => {
         <tr>
           <td>Repository</td>
           <td>
-            <a href="https://github.com/thenewboston-developers/Account-Manager" target="_blank">
+            <a
+              href="https://github.com/thenewboston-developers/Account-Manager"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               https://github.com/thenewboston-developers/Account-Manager
             </a>
           </td>
@@ -129,7 +142,11 @@ const Contributors = () => {
         <tr>
           <td>Tasks</td>
           <td>
-            <a href="https://github.com/thenewboston-developers/Account-Manager/projects/1" target="_blank">
+            <a
+              href="https://github.com/thenewboston-developers/Account-Manager/projects/1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               https://github.com/thenewboston-developers/Account-Manager/projects/1
             </a>
           </td>
@@ -141,7 +158,7 @@ const Contributors = () => {
         <tr>
           <td>Repository</td>
           <td>
-            <a href="https://github.com/thenewboston-developers/Website" target="_blank">
+            <a href="https://github.com/thenewboston-developers/Website" target="_blank" rel="noopener noreferrer">
               https://github.com/thenewboston-developers/Website
             </a>
           </td>
@@ -149,7 +166,11 @@ const Contributors = () => {
         <tr>
           <td>Tasks</td>
           <td>
-            <a href="https://github.com/thenewboston-developers/Website/projects/1" target="_blank">
+            <a
+              href="https://github.com/thenewboston-developers/Website/projects/1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               https://github.com/thenewboston-developers/Website/projects/1
             </a>
           </td>

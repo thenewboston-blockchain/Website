@@ -13,16 +13,17 @@ const Home = () => {
       <h1>thenewboston</h1>
       <h2>A Trust Based Open Source Digital Currency</h2>
       <div className="action-buttons">
-        <a href="https://github.com/thenewboston-developers" target="_blank">
+        <a href="https://github.com/thenewboston-developers" target="_blank" rel="noopener noreferrer">
           <button className="primary">GitHub</button>
         </a>
         <a
-          href="https://join.slack.com/t/thenewboston/shared_invite/zt-g31r9hm8-gqVQmhwhhoriEhZQJTsdkQ"
+          href="https://thenewboston.slack.com/join/shared_invite/zt-fmj4j8af-reXJKdQADo7QIvAp92Ro5w?fbclid=IwAR1AKKWJ_ljPi8SpfEuQW2oCcZ8r_ho9ebanqH0fDvuppQKxSiN-k5VY4jk#/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <button className="primary">Slack</button>
         </a>
-        <a href="https://www.reddit.com/r/thenewboston/" target="_blank">
+        <a href="https://www.reddit.com/r/thenewboston/" target="_blank" rel="noopener noreferrer">
           <button className="primary">reddit</button>
         </a>
       </div>
@@ -42,7 +43,11 @@ const Home = () => {
       <p>
         This network is an open source, peer-to-peer network. This means that there is no single entity in control. It
         is built and maintained entirely by a team of volunteers from all around the globe. All of the source code is
-        open source and publicly viewable on <a href="https://github.com/thenewboston-developers">our GitHub page</a>.
+        open source and publicly viewable on{' '}
+        <a href="https://github.com/thenewboston-developers" rel="noopener noreferrer">
+          our GitHub page
+        </a>
+        .
       </p>
     </div>
   );
@@ -83,8 +88,11 @@ const Home = () => {
           users themselves on their own personal devices.
         </p>
         <p>
-          Our network uses the <a href="https://ed25519.cr.yp.to/">Ed25519 Digital Signature Algorithm</a> which allows
-          for both highly performant and highly secure signatures.
+          Our network uses the{' '}
+          <a rel="noopener noreferrer" href="https://ed25519.cr.yp.to/">
+            Ed25519 Digital Signature Algorithm
+          </a>{' '}
+          which allows for both highly performant and highly secure signatures.
         </p>
       </div>
       <img alt="key-pair" className="key-pair" src={KeyPair} />
