@@ -3,12 +3,12 @@ import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom
 
 import AdminLayout from './AdminLayout';
 import BankAPI from './BankAPI';
-import BankAPILeftMenu from './BankAPILeftMenu';
 import ConfirmationValidatorAPI from './ConfirmationValidatorAPI';
 import Contributors from './Contributors';
 import DeploymentGuides from './DeploymentGuides';
 import Docs from './Docs';
 import Home from './Home';
+import LeftMenu from './LeftMenu';
 import PrimaryValidatorAPI from './PrimaryValidatorAPI';
 import TopNav from './TopNav';
 
@@ -64,7 +64,7 @@ const App = () => {
 
   return (
     <Router>
-      <AdminLayout left={<BankAPILeftMenu />} right={renderContent()} top={<TopNav />} />
+      <AdminLayout left={<LeftMenu />} right={renderContent()} top={<TopNav />} />
     </Router>
   );
 };
