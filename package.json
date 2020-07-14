@@ -12,6 +12,7 @@
     "@types/react-dom": "^16.9.0",
     "@types/react-syntax-highlighter": "^11.0.4",
     "lodash": "^4.17.15",
+    "material-icons": "^0.3.1",
     "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",

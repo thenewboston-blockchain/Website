@@ -1,11 +1,15 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
+import LeftMenuGroup from 'containers/LeftMenuGroup';
+
 import './LeftMenu.scss';
 
 export const LeftMenu = () => {
   return (
     <nav className="LeftMenu">
+      <LeftMenuGroup />
+
       <NavLink to="/deployment-guides/bank">Bank</NavLink>
       <NavLink to="/deployment-guides/validator">Validator</NavLink>
 

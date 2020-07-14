@@ -1,8 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
-import TopNav from 'containers/TopNav';
-
 import './Contributors.scss';
 
 const Contributors = () => {

@@ -1,0 +1,28 @@
+$item-padding: 6px 12px;
+
+.LeftMenuGroup {
+  .submenu {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      padding: $item-padding;
+    }
+  }
+
+  .toggle {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: $item-padding;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    &.active {
+      background: rgba(255, 255, 255, 0.15);
+    }
+  }
+}
