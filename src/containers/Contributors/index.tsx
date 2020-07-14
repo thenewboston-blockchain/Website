@@ -181,14 +181,9 @@ const Contributors = () => {
 
   return (
     <div className="Contributors">
-      <div className="top">
-        <TopNav />
-      </div>
-      <div className="main-content">
-        {renderAll()}
-        {renderBE()}
-        {renderFE()}
-      </div>
+      {renderAll()}
+      {renderBE()}
+      {renderFE()}
     </div>
   );
 };
