@@ -62,7 +62,7 @@ const Blocks = () => {
 
       <p>
         The signing process produces digital signatures using the{' '}
-        <a href="https://ed25519.cr.yp.to/">Ed25519 Digital Signature Algorithm</a> to ensure that the set of
+        <a rel="noopener noreferrer" href="https://ed25519.cr.yp.to/">Ed25519 Digital Signature Algorithm</a> to ensure that the set of
         transactions within a given block were indeed signed by the account owner. Although in many explanations of the
         network the "owner" of an account is often referred to by name, in the actual network architecture individuals'
         names are never stored. Instead, each account will refer to the owner by their account number.
