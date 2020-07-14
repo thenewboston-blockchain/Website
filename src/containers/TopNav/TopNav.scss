@@ -3,12 +3,24 @@
   background: white;
   display: flex;
   height: 46px;
-  padding: 0 16px;
 
   a,
   a:visited {
     color: var(--color-text);
     text-decoration: none;
+  }
+
+  .left-menu-toggle-container {
+    align-items: center;
+    border-right: 1px solid var(--color-gray-4);
+    cursor: pointer;
+    display: flex;
+    height: 100%;
+    padding: 0 12px;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.02);
+    }
   }
 
   .thenewboston {
@@ -19,6 +31,7 @@
     font-size: 16px;
     font-weight: 700;
     padding: 8px 0;
+    margin-left: 12px;
 
     &.active {
       background-color: transparent;
