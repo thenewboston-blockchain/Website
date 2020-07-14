@@ -16,11 +16,40 @@
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
     overflow-y: auto;
+    
+    @media (max-width: 768px) {
+      &.isOpen {
+        transform: translateX(0);
+      }
+
+      transition: transform 150ms cubic-bezier(0.4, 0.0, 0.2, 1);
+      z-index: 2;
+      position: fixed;
+      top: 0; left: 0; bottom: 0;
+      transform: translateX(-100%);
+    }
   }
 
   .right {
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
     overflow-y: auto;
+
+    @media (max-width: 768px) {
+      grid-column: 1 / span 2;
+    }
+  }
+
+  .scrim {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, .24);
+
+    transition: opacity 150ms cubic-bezier(0.4, 0.0, 0.2, 1);
+
+    &.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 }

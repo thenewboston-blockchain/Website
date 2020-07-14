@@ -3,12 +3,27 @@
   background: white;
   display: flex;
 
+  height: 3rem;
+
+  .TopNav__Links {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (max-width: 768px) {
+    .TopNav__Links {
+      display: none;
+    }
+  }
+
   a,
   a:visited {
     border-right: 1px solid #e6e6e6;
     color: var(--color-text);
     padding: 12px 14px;
     text-decoration: none;
+    height: 100%;
+    display: block;
 
     &:hover {
       background-color: #f4f4f4;
@@ -39,5 +54,26 @@
       height: 24px;
       margin-right: 6px;
     }
+  }
+}
+
+.TopNav_MenuButton {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    color: var(--color-gray-2);
   }
 }
