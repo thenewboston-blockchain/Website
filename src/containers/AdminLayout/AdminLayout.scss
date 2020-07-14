@@ -1,13 +1,63 @@
 .AdminLayout {
   display: grid;
-  grid-template-columns: 270px auto;
+  grid-template-columns: 0 auto;
   grid-template-rows: fit-content(0) auto;
   height: 100vh;
+
+  &.left-menu-open {
+    grid-template-columns: 270px auto;
+  }
 
   .top {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
+
+    .TopNav {
+      align-items: center;
+      background: white;
+      display: flex;
+      height: 46px;
+
+      a,
+      a:visited {
+        color: var(--color-text);
+        text-decoration: none;
+      }
+
+      .left-menu-toggle-container {
+        align-items: center;
+        border-right: 1px solid var(--color-gray-4);
+        cursor: pointer;
+        display: flex;
+        height: 100%;
+        padding: 0 12px;
+
+        &:hover {
+          background: rgba(0, 0, 0, 0.02);
+        }
+      }
+
+      .thenewboston {
+        align-items: center;
+        border-right: none;
+        display: flex;
+        font-family: var(--font-family-mono);
+        font-size: 16px;
+        font-weight: 700;
+        padding: 8px 0;
+        margin-left: 12px;
+
+        &.active {
+          background-color: transparent;
+        }
+
+        img.logo {
+          height: 26px;
+          margin-right: 6px;
+        }
+      }
+    }
   }
 
   .left {

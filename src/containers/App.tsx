@@ -10,7 +10,6 @@ import Docs from './Docs';
 import Home from './Home';
 import LeftMenu from './LeftMenu';
 import PrimaryValidatorAPI from './PrimaryValidatorAPI';
-import TopNav from './TopNav';
 
 const App = () => {
   const renderContent = () => (
@@ -64,7 +63,7 @@ const App = () => {
 
   return (
     <Router>
-      <AdminLayout left={<LeftMenu />} right={renderContent()} top={<TopNav />} />
+      <AdminLayout left={<LeftMenu />} right={renderContent()} />
     </Router>
   );
 };
