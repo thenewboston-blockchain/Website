@@ -72,7 +72,11 @@ const Contributors = () => {
         <tr>
           <td>Tasks</td>
           <td>
-            <a href="https://github.com/thenewboston-developers/Bank/projects/3" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/thenewboston-developers/Bank/projects/3"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               https://github.com/thenewboston-developers/Bank/projects/3
             </a>
           </td>
@@ -104,7 +108,11 @@ const Contributors = () => {
         <tr>
           <td>Tasks</td>
           <td>
-            <a href="https://github.com/thenewboston-developers/Validator/projects/2" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/thenewboston-developers/Validator/projects/2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               https://github.com/thenewboston-developers/Validator/projects/2
             </a>
           </td>
@@ -122,7 +130,11 @@ const Contributors = () => {
         <tr>
           <td>Repository</td>
           <td>
-            <a href="https://github.com/thenewboston-developers/Account-Manager" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/thenewboston-developers/Account-Manager"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               https://github.com/thenewboston-developers/Account-Manager
             </a>
           </td>
@@ -130,7 +142,11 @@ const Contributors = () => {
         <tr>
           <td>Tasks</td>
           <td>
-            <a href="https://github.com/thenewboston-developers/Account-Manager/projects/1" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/thenewboston-developers/Account-Manager/projects/1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               https://github.com/thenewboston-developers/Account-Manager/projects/1
             </a>
           </td>
@@ -150,7 +166,11 @@ const Contributors = () => {
         <tr>
           <td>Tasks</td>
           <td>
-            <a href="https://github.com/thenewboston-developers/Website/projects/1" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/thenewboston-developers/Website/projects/1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               https://github.com/thenewboston-developers/Website/projects/1
             </a>
           </td>
