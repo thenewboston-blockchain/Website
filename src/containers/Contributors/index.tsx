@@ -80,8 +80,10 @@ const Contributors = () => {
 
   const renderStepIndicator = (color: string, number: number, text: string) => (
     <div className="step-indicator">
-      <div className="step-bubble" style={{backgroundColor: color}}>
-        {number}
+      <div>
+        <div className="step-bubble" style={{backgroundColor: color}}>
+          {number}
+        </div>
       </div>
       <div className="step-text">{text}</div>
     </div>
