@@ -1,9 +1,19 @@
 $section-padding: 24px 42px;
 
 .Home {
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin: 0 0 12px 0;
+  }
+
   .hero {
     line-height: 1.4;
-    padding: 72px 12px;
+    padding: 76px 12px;
     text-align: center;
 
     h1,
@@ -13,13 +23,13 @@ $section-padding: 24px 42px;
 
     h1 {
       font-family: var(--font-family-roboto);
-      font-size: 18px;
+      font-size: 24px;
       font-weight: 300;
     }
 
     h2 {
       font-family: var(--font-family-roboto);
-      font-size: 28px;
+      font-size: 36px;
       font-weight: 300;
       margin-top: 2px;
     }
@@ -27,7 +37,7 @@ $section-padding: 24px 42px;
     .marketing-buttons {
       display: flex;
       justify-content: center;
-      margin-top: 16px;
+      margin: 24px 36px 0 0;
 
       .MarketingButton {
         margin: 0 8px;
@@ -44,13 +54,33 @@ $section-padding: 24px 42px;
 
   .performance {
     display: flex;
-    padding: $section-padding;
+    padding: 12px 42px;
 
     img.chart {
       height: 100%;
-      margin-right: 2em;
-      width: 260px;
+      margin-right: 24px;
+      width: 280px;
     }
+
+    .performance-text {
+      margin-top: 24px;
+    }
+
+    @media (max-width: 760px) {
+      flex-direction: column-reverse;
+
+      img.chart {
+        align-self: center;
+        display: flex;
+        margin: 0;
+      }
+
+      .performance-text {
+        margin-top: 24px;
+      }
+
+    }
+
   }
 
   .security {
@@ -61,6 +91,17 @@ $section-padding: 24px 42px;
       height: 100%;
       width: 400px;
     }
+
+    @media (max-width: 760px) {
+      flex-direction: column;
+
+      img.key-pair {
+        align-self: center;
+        display: flex;
+      }
+
+    }
+
   }
 
   .trust {

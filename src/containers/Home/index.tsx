@@ -3,8 +3,8 @@ import React from 'react';
 import MarketingButton from 'components/MarketingButton';
 import Feature from './Feature';
 
-import Chart from 'assets/images/chart.png';
 import KeyPair from 'assets/images/KeyPair.png';
+import TxTimes from './TxTimes.png';
 
 import './Home.scss';
 
@@ -32,8 +32,8 @@ const Home = () => {
 
   const renderPerformance = () => (
     <div className="performance">
-      <img alt="chart" className="chart" src={Chart} />
-      <div>
+      <img alt="chart" className="chart" src={TxTimes} />
+      <div className="performance-text">
         <h3>Performance</h3>
         <p>
           An inherent defect in the traditional Blockchain architecture is the inefficient composition of blocks. Blocks
