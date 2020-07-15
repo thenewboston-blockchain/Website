@@ -1,17 +1,59 @@
 .Contributors {
-  padding: 32px 32px 96px;
+  display: flex;
+  padding: 48px 160px;
 
-  section {
-    margin-bottom: 48px;
+  .step-indicator {
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 42px;
 
-    h2 {
-      margin-bottom: 12px;
+    .step-bubble {
+      align-items: center;
+      border-radius: 18px;
+      display: flex;
+      height: 36px;
+      justify-content: center;
+      margin-right: 18px;
+      width: 36px;
     }
+  }
 
-    h3 {
-      font-size: 16px;
-      font-weight: 400;
-      margin-bottom: 4px;
+  .step-one {
+    width: 30%;
+
+    .button-container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+
+      button,
+      .marketing-button {
+        height: 36px;
+        margin-bottom: 12px;
+        width: 200px;
+      }
+
+      .marketing-button {
+        align-items: center;
+        border-radius: 3px;
+        box-shadow: 0 0 3px #c2a2a4;
+        display: flex;
+        justify-content: center;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.04);
+        }
+
+        img {
+          max-width: 72px;
+        }
+      }
     }
+  }
+
+  .step-two {
+    width: 70%;
   }
 }

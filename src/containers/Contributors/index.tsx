@@ -1,6 +1,10 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
+import GitHubLogo from './GitHubLogo.png';
+import RedditLogo from './RedditLogo.png';
+import SlackLogo from './SlackLogo.png';
+
 import './Contributors.scss';
 
 const Contributors = () => {
@@ -177,11 +181,56 @@ const Contributors = () => {
     </section>
   );
 
+  const renderStepIndicator = (color: string, number: number, text: string) => (
+    <div className="step-indicator">
+      <div className="step-bubble" style={{backgroundColor: color}}>
+        {number}
+      </div>
+      <div className="step-text">{text}</div>
+    </div>
+  );
+
+  const renderStepOne = () => (
+    <div className="step-one">
+      {renderStepIndicator('#f4c2c4', 1, 'Get started on thenewboston')}
+      <div className="button-container">
+        <NavLink to="/docs/introduction">
+          <button className="primary">Documentation</button>
+        </NavLink>
+        <a
+          className="marketing-button"
+          href="https://thenewboston.slack.com/join/shared_invite/zt-fmj4j8af-reXJKdQADo7QIvAp92Ro5w?fbclid=IwAR1AKKWJ_ljPi8SpfEuQW2oCcZ8r_ho9ebanqH0fDvuppQKxSiN-k5VY4jk#/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img alt="slack logo" className="" src={SlackLogo} />
+        </a>
+        <a
+          className="marketing-button"
+          href="https://github.com/thenewboston-developers"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img alt="github logo" className="" src={GitHubLogo} />
+        </a>
+        <a
+          className="marketing-button"
+          href="https://www.reddit.com/r/thenewboston/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img alt="reddit logo" className="" src={RedditLogo} />
+        </a>
+      </div>
+    </div>
+  );
+
+  const renderStepTwo = () => <div className="step-two">{renderStepIndicator('#b7d6ff', 2, 'Choose your weapon')}</div>;
+
   return (
     <div className="Contributors">
-      {renderAll()}
-      {renderBE()}
-      {renderFE()}
+      {renderStepOne()}
+      {renderStepTwo()}
     </div>
   );
 };
