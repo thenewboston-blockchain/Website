@@ -1,7 +1,9 @@
+$section-padding: 24px 42px;
+
 .Home {
   .hero {
     line-height: 1.4;
-    padding: 4em 1em;
+    padding: 72px 12px;
     text-align: center;
 
     h1,
@@ -10,43 +12,42 @@
     }
 
     h1 {
-      font-weight: 700;
+      font-family: var(--font-family-roboto);
+      font-size: 18px;
+      font-weight: 300;
     }
 
     h2 {
-      font-size: 1.1em;
-      font-weight: 400;
+      font-family: var(--font-family-roboto);
+      font-size: 28px;
+      font-weight: 300;
+      margin-top: 2px;
     }
 
-    .action-buttons {
-      margin-top: 1em;
+    .marketing-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 16px;
 
-      button {
-        margin: 0 0.5em;
+      .MarketingButton {
+        margin: 0 8px;
       }
     }
   }
 
-  .overview {
+  .features {
     background: #2a2c34;
-    color: #fff;
-    padding: 2em 1em;
-
-    a,
-    a:visited {
-      color: #fff;
-    }
-
-    h3 {
-      color: var(--color-gray-5);
-    }
+    display: flex;
+    justify-content: space-evenly;
+    padding: $section-padding;
   }
 
   .performance {
     display: flex;
-    padding: 2em 1em;
+    padding: $section-padding;
 
     img.chart {
+      height: 100%;
       margin-right: 2em;
       width: 260px;
     }
@@ -54,15 +55,16 @@
 
   .security {
     display: flex;
-    padding: 2em 1em;
+    padding: $section-padding;
 
     img.key-pair {
+      height: 100%;
       width: 400px;
     }
   }
 
   .trust {
     background: #e6e6e6;
-    padding: 2em 1em;
+    padding: $section-padding;
   }
 }

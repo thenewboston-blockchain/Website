@@ -1,52 +1,32 @@
 import React from 'react';
 
+import MarketingButton from 'components/MarketingButton';
+import Feature from './Feature';
+
 import Chart from 'assets/images/chart.png';
 import KeyPair from 'assets/images/KeyPair.png';
 
 import './Home.scss';
 
 const Home = () => {
-  const renderHero = () => (
-    <div className="hero">
-      <h1>thenewboston</h1>
-      <h2>A Trust Based Open Source Digital Currency</h2>
-      <div className="action-buttons">
-        <a href="https://github.com/thenewboston-developers" target="_blank" rel="noopener noreferrer">
-          <button className="primary">GitHub</button>
-        </a>
-        <a
-          href="https://thenewboston.slack.com/join/shared_invite/zt-fmj4j8af-reXJKdQADo7QIvAp92Ro5w?fbclid=IwAR1AKKWJ_ljPi8SpfEuQW2oCcZ8r_ho9ebanqH0fDvuppQKxSiN-k5VY4jk#/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="primary">Slack</button>
-        </a>
-        <a href="https://www.reddit.com/r/thenewboston/" target="_blank" rel="noopener noreferrer">
-          <button className="primary">reddit</button>
-        </a>
-      </div>
+  const renderFeatures = () => (
+    <div className="features">
+      <Feature icon="speed" title="Instant Transactions" subtitle="Say goodbye to 10 minute block times" />
+      <Feature icon="verified_user" title="Trust Based" subtitle="No more PoW or PoS" />
+      <Feature icon="code" title="Open Source" subtitle="Built and maintained by thenewboston community" />
     </div>
   );
 
-  const renderOverview = () => (
-    <div className="overview">
-      <h3>Overview</h3>
-      <p>
-        Welcome to thenewboston, an open source digital currency that allows users from all around the world to send
-        points to one another in exchange for goods and services. Unlike traditional currency, users are in complete
-        control of their own accounts. On thenewboston, all transactions are instant. Overdraft, minimum balance, and
-        checking account fees do not exist. All of your points are available and accessible 24 hours a day, 7 days a
-        week, 365 days a year.
-      </p>
-      <p>
-        This network is an open source, peer-to-peer network. This means that there is no single entity in control. It
-        is built and maintained entirely by a team of volunteers from all around the globe. All of the source code is
-        open source and publicly viewable on{' '}
-        <a href="https://github.com/thenewboston-developers" rel="noopener noreferrer">
-          our GitHub page
-        </a>
-        .
-      </p>
+  const renderHero = () => (
+    <div className="hero">
+      <h1>Welcome to thenewboston</h1>
+      <h2>
+        A <span className="red">Trust Based</span> Open Source Digital Currency
+      </h2>
+      <div className="marketing-buttons">
+        <MarketingButton website="slack" />
+        <MarketingButton website="github" />
+      </div>
     </div>
   );
 
@@ -125,7 +105,7 @@ const Home = () => {
   return (
     <div className="Home">
       {renderHero()}
-      {renderOverview()}
+      {renderFeatures()}
       {renderPerformance()}
       {renderTrust()}
       {renderSecurity()}

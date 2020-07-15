@@ -50,26 +50,10 @@
       padding-left: 54px;
 
       button,
-      .marketing-button {
+      .MarketingButton {
         height: 36px;
         margin-bottom: 12px;
         width: 200px;
-      }
-
-      .marketing-button {
-        align-items: center;
-        border-radius: 3px;
-        box-shadow: 0 0 3px #c2a2a4;
-        display: flex;
-        justify-content: center;
-
-        &:hover {
-          background-color: rgba(0, 0, 0, 0.04);
-        }
-
-        img {
-          max-width: 72px;
-        }
       }
     }
   }
