@@ -1,0 +1,26 @@
+.Feature {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin: 0 12px;
+  text-align: center;
+
+  .material-icons {
+    font-size: 54px;
+  }
+
+  .feature-title {
+    font-family: var(--font-family-mono-roboto);
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .feature-subtitle {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-top: 3px;
+    opacity: 0.9;
+  }
+}

@@ -1,0 +1,17 @@
+.MarketingButton {
+  align-items: center;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #c2a2a4;
+  display: flex;
+  height: 36px;
+  justify-content: center;
+  width: 200px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+
+  img {
+    max-width: 72px;
+  }
+}

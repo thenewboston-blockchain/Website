@@ -1,10 +1,9 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
+import MarketingButton from 'components/MarketingButton';
+
 import Arm from './Arm.png';
-import GitHubLogo from './GitHubLogo.png';
-import RedditLogo from './RedditLogo.png';
-import SlackLogo from './SlackLogo.png';
 
 import './Contributors.scss';
 
@@ -96,30 +95,9 @@ const Contributors = () => {
         <NavLink to="/docs/introduction">
           <button className="primary">Documentation</button>
         </NavLink>
-        <a
-          className="marketing-button"
-          href="https://thenewboston.slack.com/join/shared_invite/zt-fmj4j8af-reXJKdQADo7QIvAp92Ro5w?fbclid=IwAR1AKKWJ_ljPi8SpfEuQW2oCcZ8r_ho9ebanqH0fDvuppQKxSiN-k5VY4jk#/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img alt="slack logo" src={SlackLogo} />
-        </a>
-        <a
-          className="marketing-button"
-          href="https://github.com/thenewboston-developers"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img alt="github logo" src={GitHubLogo} />
-        </a>
-        <a
-          className="marketing-button"
-          href="https://www.reddit.com/r/thenewboston/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img alt="reddit logo" src={RedditLogo} />
-        </a>
+        <MarketingButton website="slack" />
+        <MarketingButton website="github" />
+        <MarketingButton website="reddit" />
       </div>
     </div>
   );
