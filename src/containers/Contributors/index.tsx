@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
+import Arm from './Arm.png';
 import GitHubLogo from './GitHubLogo.png';
 import RedditLogo from './RedditLogo.png';
 import SlackLogo from './SlackLogo.png';
@@ -99,7 +100,7 @@ const Contributors = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img alt="slack logo" className="" src={SlackLogo} />
+          <img alt="slack logo" src={SlackLogo} />
         </a>
         <a
           className="marketing-button"
@@ -107,7 +108,7 @@ const Contributors = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img alt="github logo" className="" src={GitHubLogo} />
+          <img alt="github logo" src={GitHubLogo} />
         </a>
         <a
           className="marketing-button"
@@ -115,7 +116,7 @@ const Contributors = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img alt="reddit logo" className="" src={RedditLogo} />
+          <img alt="reddit logo" src={RedditLogo} />
         </a>
       </div>
     </div>
@@ -135,6 +136,7 @@ const Contributors = () => {
     <div className="Contributors">
       {renderStepOne()}
       {renderStepTwo()}
+      <img alt="arm" className="arm" src={Arm} />
     </div>
   );
 };
