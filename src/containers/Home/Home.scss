@@ -1,83 +1,68 @@
 .Home {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: fit-content(100px) auto;
-  height: 100vh;
+  .hero {
+    line-height: 1.4;
+    padding: 4em 1em;
+    text-align: center;
 
-  .top {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    grid-row: 1 / span 1;
+    h1,
+    h2 {
+      font-family: var(--font-family-mono);
+    }
+
+    h1 {
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: 1.1em;
+      font-weight: 400;
+    }
+
+    .action-buttons {
+      margin-top: 1em;
+
+      button {
+        margin: 0 0.5em;
+      }
+    }
   }
 
-  .main-content {
-    grid-row: 2 / span 1;
-    overflow-y: auto;
+  .overview {
+    background: #2a2c34;
+    color: #fff;
+    padding: 2em 1em;
 
-    .hero {
-      line-height: 1.4;
-      padding: 4em 1em;
-      text-align: center;
-
-      h1,
-      h2 {
-        font-family: var(--font-family-mono);
-      }
-
-      h1 {
-        font-weight: 700;
-      }
-
-      h2 {
-        font-size: 1.1em;
-        font-weight: 400;
-      }
-
-      .action-buttons {
-        margin-top: 1em;
-
-        button {
-          margin: 0 0.5em;
-        }
-      }
-    }
-
-    .overview {
-      background: #2a2c34;
+    a,
+    a:visited {
       color: #fff;
-      padding: 2em 1em;
-
-      a,
-      a:visited {
-        color: #fff;
-      }
-
-      h3 {
-        color: var(--color-gray-5);
-      }
     }
 
-    .performance {
-      display: flex;
-      padding: 2em 1em;
-
-      img.chart {
-        margin-right: 2em;
-        width: 260px;
-      }
+    h3 {
+      color: var(--color-gray-5);
     }
+  }
 
-    .security {
-      display: flex;
-      padding: 2em 1em;
+  .performance {
+    display: flex;
+    padding: 2em 1em;
 
-      img.key-pair {
-        width: 400px;
-      }
+    img.chart {
+      margin-right: 2em;
+      width: 260px;
     }
+  }
 
-    .trust {
-      background: #e6e6e6;
-      padding: 2em 1em;
+  .security {
+    display: flex;
+    padding: 2em 1em;
+
+    img.key-pair {
+      width: 400px;
     }
+  }
+
+  .trust {
+    background: #e6e6e6;
+    padding: 2em 1em;
   }
 }

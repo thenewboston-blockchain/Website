@@ -1,7 +1,5 @@
 import React from 'react';
 
-import TopNav from 'containers/TopNav';
-
 import Chart from 'assets/images/chart.png';
 import KeyPair from 'assets/images/KeyPair.png';
 
@@ -126,16 +124,11 @@ const Home = () => {
 
   return (
     <div className="Home">
-      <div className="top">
-        <TopNav />
-      </div>
-      <div className="main-content">
-        {renderHero()}
-        {renderOverview()}
-        {renderPerformance()}
-        {renderTrust()}
-        {renderSecurity()}
-      </div>
+      {renderHero()}
+      {renderOverview()}
+      {renderPerformance()}
+      {renderTrust()}
+      {renderSecurity()}
     </div>
   );
 };
