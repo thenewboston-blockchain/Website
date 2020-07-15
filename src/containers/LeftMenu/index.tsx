@@ -19,7 +19,6 @@ export const LeftMenu = () => {
 
       <LeftMenuGroup leftIcon={<span className="material-icons">description</span>} title="Docs">
         <NavLink to="/docs/introduction">Introduction</NavLink>
-        <NavLink to="/docs/overview">Overview</NavLink>
         <NavLink to="/docs/accounts">Accounts</NavLink>
         <NavLink to="/docs/blocks">Blocks</NavLink>
         <NavLink to="/docs/transaction-fees">Transaction Fees</NavLink>
