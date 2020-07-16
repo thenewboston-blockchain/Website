@@ -17,7 +17,7 @@ const Quarters = () => {
     () => (quater: string, index: number) => (
       <div key={index} className="flex-1 quarter">
         <div className="arrow" style={arrowStyle}></div>
-        <div className="d-flex quarter-circle" style={circleStyle}>
+        <div className="quarter-circle" style={circleStyle}>
           <span className="quarter-name">{quater}</span>
         </div>
       </div>
@@ -25,7 +25,7 @@ const Quarters = () => {
     [arrowStyle, circleStyle],
   );
   return (
-    <div className="d-flex flex-row align-items-center quarters-row">
+    <div className="flex-row align-items-center quarters-row">
       <div className="flex-1"></div>
       {['Q1', 'Q2', 'Q3', 'Q4'].map((quater, index) => renderQuater(quater, index))}
     </div>

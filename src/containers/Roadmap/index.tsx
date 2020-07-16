@@ -10,6 +10,8 @@ import data from './sample.json';
 const colors = ['#007bff', '#dc3545', '#28a745', '#ffc107', '#17a2b8', '#6c757d'];
 
 const Roadmap = () => {
+  const _data = JSON.parse(JSON.stringify(data));
+
   const getTeamColor = useMemo(
     () => (index: number) => {
       const colorIndex = index % colors.length;
@@ -18,12 +20,10 @@ const Roadmap = () => {
     [],
   );
 
-  const _data = JSON.parse(JSON.stringify(data));
-
   return (
     <div className="Roadmap">
-      <div className="d-flex fled-row">
-        <div className="flex-1"></div>
+      <div className="flex-row">
+        <div className="flex-1" />
         <Quarters />
       </div>
       <div className="teams">

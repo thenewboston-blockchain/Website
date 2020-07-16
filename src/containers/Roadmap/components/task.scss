@@ -1,7 +1,7 @@
 .task-row {
   width: 100%;
   background-color: #ffffff;
-  border-bottom: 1px solid var(--roadmap-border-color);
+  border-bottom: 1px solid var(--color-gray-3);
   align-items: stretch;
   &:nth-of-type(odd) {
     background-color: var(--color-gray-4);
@@ -24,7 +24,7 @@
     flex: 4;
     position: relative;
     .cell {
-      border-left: 1px solid var(--roadmap-border-color);
+      border-left: 1px solid var(--color-gray-3);
     }
     .task-progress-row {
       position: absolute;

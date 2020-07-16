@@ -1,8 +1,11 @@
 .quarters-row {
+  display: flex;
   flex: 12;
   padding: 1rem 0 2.5rem;
+
   .quarter {
     position: relative;
+
     .arrow {
       height: 2px;
       position: absolute;
@@ -10,6 +13,7 @@
       transform: translateY(-50%);
       z-index: -1;
       background-color: #999999;
+
       &:after {
         content: ' ';
         border: 5px solid transparent;
@@ -22,33 +26,42 @@
         transform: translate(-50%, -50%);
       }
     }
+
     &:last-of-type {
       .arrow {
         display: none;
       }
     }
+
     .quarter-circle {
+      display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
       margin: auto;
+
       .quarter-name {
         font-size: 16px;
         font-weight: bold;
         color: #ffffff;
       }
     }
+
     &:nth-of-type(2) .quarter-circle {
       background-color: #666666;
     }
+
     &:nth-of-type(3) .quarter-circle {
       background-color: #777777;
     }
+
     &:nth-of-type(4) .quarter-circle {
       background-color: #888888;
     }
+
     &:nth-of-type(5) .quarter-circle {
       background-color: #999999;
+
       .quarter-name {
         color: #000000;
       }

@@ -1,4 +1,4 @@
-import React, {FC, useMemo} from 'react';
+import React, {FC} from 'react';
 
 import Task, {TaskObj} from './task';
 
@@ -14,8 +14,8 @@ const Team: FC<ComponentProps> = ({data, teamName, color}) => {
   if (!Boolean(data)) return null;
 
   return (
-    <div className="d-flex flex-row team-row">
-      <div className="d-flex team-name">
+    <div className="flex-row team-row">
+      <div className="team-name">
         <span>{teamName}</span>
       </div>
       <div className="team-tasks">

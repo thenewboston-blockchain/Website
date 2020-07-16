@@ -31,16 +31,16 @@ const Task: FC<ComponentProps> = ({task, color}) => {
   if (!Boolean(task)) return null;
 
   return (
-    <div className="d-flex flex-row task-row">
+    <div className="flex-row task-row">
       <div className="task-name">
         <span>{task.task_name}</span>
       </div>
-      <div className="d-flex flex-row task-range">
+      <div className="flex-row task-range">
         <div className="cell"></div>
         <div className="cell"></div>
         <div className="cell"></div>
         <div className="cell"></div>
-        <div className="d-flex flex-row align-items-center task-progress-row">
+        <div className="flex-row align-items-center task-progress-row">
           <div className="task-current-state" style={progressStateStyle}></div>
         </div>
       </div>
