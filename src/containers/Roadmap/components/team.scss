@@ -1,0 +1,19 @@
+.team-row {
+    border-bottom: 1px solid var(--roadmap-border-color);
+    &:last-of-type {
+        border-bottom: 0;
+    }
+    .team-name {
+        flex: 1;
+        background-color: #666666;
+        padding: 0 5px;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: #FFFFFF;
+        text-align: center;
+    }
+    .team-tasks {
+        flex: 12;
+    }
+}
