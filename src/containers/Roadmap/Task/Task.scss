@@ -1,26 +1,27 @@
 .task-row {
   align-items: stretch;
   background-color: #fff;
-  border-bottom: 1px solid var(--color-gray-3);
   width: 100%;
-
-  &:nth-of-type(odd) {
-    background-color: var(--color-gray-5);
-  }
 
   &:last-of-type {
     border-bottom: 0;
   }
 
+  &.dark {
+    background-color: var(--color-gray-5);
+  }
+
   .task-name {
-    color: #000000;
+    color: #000;
     font-size: 13px;
+    font-weight: 300;
     text-align: center;
     white-space: pre-wrap;
   }
 
   .task-name,
   .cell {
+    border-bottom: 1px solid var(--color-gray-3);
     flex: 1;
     padding: 10px 5px;
   }

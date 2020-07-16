@@ -9,6 +9,8 @@ import roadmapData from './roadmap-data.json';
 const colors = ['#d30c15', '#2462e7', '#108118', '#212121'];
 
 const Teams = () => {
+  let totalItemsRendered = 0;
+
   const _roadmapData = JSON.parse(JSON.stringify(roadmapData));
 
   const getTeamColor = useMemo(
@@ -21,9 +23,12 @@ const Teams = () => {
 
   return (
     <div className="Teams">
-      {Object.keys(_roadmapData).map((key: string, index: number) => (
-        <Team key={index} data={_roadmapData[key]} teamName={key} color={getTeamColor(index)} />
-      ))}
+      {Object.keys(_roadmapData).map((key: string, i: number) => {
+        const chunkSize = Object.keys(_roadmapData[key]).length;
+        totalItemsRendered += chunkSize;
+        const rowStart = totalItemsRendered - chunkSize;
+        return <Team color={getTeamColor(i)} data={_roadmapData[key]} key={i} rowStart={rowStart} teamName={key} />;
+      })}
     </div>
   );
 };

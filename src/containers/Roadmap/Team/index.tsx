@@ -1,16 +1,19 @@
 import React, {FC} from 'react';
 
-import Task, {TaskObj} from 'containers/Roadmap/Task';
+import Task, {ITask} from 'containers/Roadmap/Task';
 
 import './Team.scss';
 
 interface ComponentProps {
   color: string;
-  data: {[key: string]: TaskObj};
+  data: {[key: string]: ITask};
+  rowStart: number;
   teamName: string;
 }
 
-const Team: FC<ComponentProps> = ({color, data, teamName}) => {
+const Team: FC<ComponentProps> = ({color, data, rowStart, teamName}) => {
+  let rowNumber = rowStart;
+
   if (!Boolean(data)) return null;
 
   return (
@@ -19,9 +22,10 @@ const Team: FC<ComponentProps> = ({color, data, teamName}) => {
         <span>{teamName}</span>
       </div>
       <div className="team-tasks">
-        {Object.keys(data).map((key) => (
-          <Task key={key} task={data[key]} color={color} />
-        ))}
+        {Object.keys(data).map((key) => {
+          rowNumber += 1;
+          return <Task color={color} key={key} rowNumber={rowNumber} task={data[key]} />;
+        })}
       </div>
     </div>
   );

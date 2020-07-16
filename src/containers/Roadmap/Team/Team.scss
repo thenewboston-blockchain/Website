@@ -1,6 +1,4 @@
 .Team {
-  border-bottom: 1px solid var(--color-gray-3);
-
   &:last-of-type {
     border-bottom: 0;
   }
@@ -8,10 +6,12 @@
   .team-name {
     align-items: center;
     background-color: var(--color-gray-2);
+    border-bottom: 1px solid var(--color-gray-1);
     color: #fff;
     display: flex;
     flex: 1;
     font-size: 14px;
+    font-weight: 500;
     justify-content: center;
     padding: 0 5px;
     text-align: center;

@@ -2,7 +2,7 @@ import React, {FC, useMemo} from 'react';
 
 import './Task.scss';
 
-export interface TaskObj {
+export interface ITask {
   task_name: string;
   task_range: {
     start: number;
@@ -12,12 +12,13 @@ export interface TaskObj {
 
 interface ComponentProps {
   color: string;
-  task: TaskObj;
+  rowNumber: number;
+  task: ITask;
 }
 
 const quarterNum = 4;
 
-const Task: FC<ComponentProps> = ({color, task}) => {
+const Task: FC<ComponentProps> = ({color, rowNumber, task}) => {
   const progressStateStyle = useMemo(() => {
     const {
       task_range: {start, stop},
@@ -32,7 +33,7 @@ const Task: FC<ComponentProps> = ({color, task}) => {
   if (!Boolean(task)) return null;
 
   return (
-    <div className="flex-row task-row">
+    <div className={`flex-row task-row ${rowNumber} ${rowNumber % 2 !== 0 ? 'dark' : ''}`}>
       <div className="task-name">
         <span>{task.task_name}</span>
       </div>
