@@ -2,7 +2,7 @@
   .quarters-row {
     display: flex;
     flex: 12;
-    padding: 1rem 0 2.5rem;
+    padding-bottom: 24px;
 
     .quarter {
       position: relative;
@@ -19,7 +19,7 @@
           border: 5px solid transparent;
           border-left-width: 10px;
           border-right-width: 10px;
-          border-left-color: #999999;
+          border-left-color: #999;
           content: ' ';
           left: 100%;
           position: absolute;
