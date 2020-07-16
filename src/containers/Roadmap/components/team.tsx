@@ -7,7 +7,7 @@ import './team.scss';
 interface ComponentProps {
   data: {[key: string]: TaskObj};
   teamName: string;
-  color: string
+  color: string;
 }
 
 const Team: FC<ComponentProps> = ({data, teamName, color}) => {

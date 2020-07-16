@@ -1,34 +1,66 @@
 {
-    "Account Manager": {
-        "1": {
-            "task_name": "Create roadmap page",
-            "task_range": {
-                "start": 1.3,
-                "stop": 1.6
-            }
-        },
-        "2": {
-            "task_name": "Update deployment guide",
-            "task_range": {
-                "start": 2.1,
-                "stop": 2.7
-            }
-        }
+  "Account Manager": {
+    "1": {
+      "task_name": "Create roadmap page",
+      "task_range": {
+        "start": 1.3,
+        "stop": 1.6
+      }
     },
-    "Bank": {
-        "1": {
-            "task_name": "Create roadmap page",
-            "task_range": {
-                "start": 1.8,
-                "stop": 2.9
-            }
-        },
-        "2": {
-            "task_name": "Write tests",
-            "task_range": {
-                "start": 3.1,
-                "stop": 3.4
-            }
-        }
+    "2": {
+      "task_name": "Update deployment guide",
+      "task_range": {
+        "start": 2.1,
+        "stop": 2.7
+      }
     }
+  },
+  "Bank": {
+    "1": {
+      "task_name": "Create roadmap page",
+      "task_range": {
+        "start": 1.8,
+        "stop": 2.9
+      }
+    },
+    "2": {
+      "task_name": "Write tests",
+      "task_range": {
+        "start": 3.1,
+        "stop": 3.4
+      }
+    }
+  },
+  "Validator": {
+    "1": {
+      "task_name": "First validator task",
+      "task_range": {
+        "start": 1.8,
+        "stop": 2.9
+      }
+    }
+  },
+  "Website": {
+    "1": {
+      "task_name": "First",
+      "task_range": {
+        "start": 1.8,
+        "stop": 2.9
+      }
+    },
+    "2": {
+      "task_name": "Second",
+      "task_range": {
+        "start": 3.1,
+        "stop": 3.4
+      }
+    },
+    "3": {
+      "task_name": "Third",
+      "task_range": {
+        "start": 3.1,
+        "stop": 3.8
+      }
+    }
+  }
 }

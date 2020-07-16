@@ -1,39 +1,39 @@
 :root {
-    --roadmap-border-color: #999999;
+  --roadmap-border-color: #999999;
 }
 
 .Roadmap {
-    padding: 32px 32px 96px;
-    img {
-        &.roadmap {
-            max-width: 560px;
-        }
+  padding: 32px 32px 96px;
+  img {
+    &.roadmap {
+      max-width: 560px;
     }
-    .teams {
-        border: 1px solid var(--roadmap-border-color);
-        width: 100%;
-    }
-    .d-flex {
-        display: flex;
-        display: -moz-flex;
-        display: -o-flex;
-        display: -ms-flex;
-        display: -webkit-flex;
-    }
-    .flex-1 {
-        flex: 1;
-        -webkit-flex: 1;
-        -ms-flex: 1;
-    }
-    .flex-row {
-        flex-direction: row;
-        -ms-flex-direction: row;
-        -webkit-flex-direction: row;
-    }
-    .align-items-center {
-        align-items: center;
-    }
-    .justify-content-center {
-        justify-content: center;
-    }
+  }
+  .teams {
+    border: 1px solid var(--roadmap-border-color);
+    width: 100%;
+  }
+  .d-flex {
+    display: flex;
+    display: -moz-flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -webkit-flex;
+  }
+  .flex-1 {
+    flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+  }
+  .flex-row {
+    flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+  }
+  .align-items-center {
+    align-items: center;
+  }
+  .justify-content-center {
+    justify-content: center;
+  }
 }

@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, {useMemo} from 'react';
 
 import Team from './components/team';
 import Quarters from './components/quarters';

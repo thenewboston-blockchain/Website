@@ -12,22 +12,24 @@ export interface TaskObj {
 
 interface ComponentProps {
   task: TaskObj;
-  color: string
+  color: string;
 }
 
 const quarterNum = 4;
 
 const Task: FC<ComponentProps> = ({task, color}) => {
   const progressStateStyle = useMemo(() => {
-      const {task_range: {start, stop}} = task;
-      const percentage = 100 * (stop - start) / quarterNum;
+    const {
+      task_range: {start, stop},
+    } = task;
+    const percentage = (100 * (stop - start)) / quarterNum;
 
-      const marginLeft = 100 * start/quarterNum;
-      return {width: `${percentage}%`, marginLeft: `${marginLeft}%`, backgroundColor: color};
+    const marginLeft = (100 * start) / quarterNum;
+    return {width: `${percentage}%`, marginLeft: `${marginLeft}%`, backgroundColor: color};
   }, [task, color]);
 
   if (!Boolean(task)) return null;
-  
+
   return (
     <div className="d-flex flex-row task-row">
       <div className="task-name">
@@ -39,7 +41,7 @@ const Task: FC<ComponentProps> = ({task, color}) => {
         <div className="cell"></div>
         <div className="cell"></div>
         <div className="d-flex flex-row align-items-center task-progress-row">
-            <div className="task-current-state" style={progressStateStyle}></div>
+          <div className="task-current-state" style={progressStateStyle}></div>
         </div>
       </div>
     </div>
