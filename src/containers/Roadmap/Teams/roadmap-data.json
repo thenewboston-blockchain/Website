@@ -35,8 +35,8 @@
     "1": {
       "task_name": "First validator task",
       "task_range": {
-        "start": 1.8,
-        "stop": 2.9
+        "start": 1.7,
+        "stop": 2.7
       }
     }
   },
@@ -51,15 +51,29 @@
     "2": {
       "task_name": "Second",
       "task_range": {
-        "start": 3.1,
-        "stop": 3.4
+        "start": 2.1,
+        "stop": 2.4
       }
     },
     "3": {
       "task_name": "Third",
       "task_range": {
-        "start": 3.1,
-        "stop": 3.8
+        "start": 2.3,
+        "stop": 2.8
+      }
+    },
+    "4": {
+      "task_name": "Fourth",
+      "task_range": {
+        "start": 2.4,
+        "stop": 3.5
+      }
+    },
+    "5": {
+      "task_name": "Fifth",
+      "task_range": {
+        "start": 2.8,
+        "stop": 3.9
       }
     }
   }
