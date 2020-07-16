@@ -14,7 +14,7 @@ const Team: FC<ComponentProps> = ({data, teamName, color}) => {
   if (!Boolean(data)) return null;
 
   return (
-    <div className="flex-row team-row">
+    <div className="flex-row Team">
       <div className="team-name">
         <span>{teamName}</span>
       </div>

@@ -1,9 +1,8 @@
 .Roadmap {
   padding: 32px 32px 96px;
 
-  .teams {
-    border: 1px solid var(--color-gray-3);
-    width: 100%;
+  .align-items-center {
+    align-items: center;
   }
 
   .flex-1 {
@@ -13,13 +12,5 @@
   .flex-row {
     display: flex;
     flex-direction: row;
-  }
-
-  .align-items-center {
-    align-items: center;
-  }
-
-  .justify-content-center {
-    justify-content: center;
   }
 }

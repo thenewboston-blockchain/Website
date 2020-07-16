@@ -41,29 +41,29 @@
       margin: auto;
 
       .quarter-name {
-        color: #ffffff;
+        color: #fff;
         font-size: 16px;
         font-weight: bold;
       }
     }
 
     &:nth-of-type(2) .quarter-circle {
-      background-color: #666666;
+      background-color: #666;
     }
 
     &:nth-of-type(3) .quarter-circle {
-      background-color: #777777;
+      background-color: #777;
     }
 
     &:nth-of-type(4) .quarter-circle {
-      background-color: #888888;
+      background-color: #888;
     }
 
     &:nth-of-type(5) .quarter-circle {
-      background-color: #999999;
+      background-color: #999;
 
       .quarter-name {
-        color: #000000;
+        color: #000;
       }
     }
   }

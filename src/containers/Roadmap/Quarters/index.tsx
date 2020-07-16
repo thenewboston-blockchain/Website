@@ -28,9 +28,12 @@ const Quarters = () => {
   );
 
   return (
-    <div className="flex-row align-items-center quarters-row">
+    <div className="flex-row">
       <div className="flex-1" />
-      {['Q1', 'Q2', 'Q3', 'Q4'].map((quarter, index) => renderQuarter(quarter, index))}
+      <div className="align-items-center flex-row quarters-row">
+        <div className="flex-1" />
+        {['Q1', 'Q2', 'Q3', 'Q4'].map((quarter, index) => renderQuarter(quarter, index))}
+      </div>
     </div>
   );
 };
