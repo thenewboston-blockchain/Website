@@ -10,6 +10,7 @@ import Docs from './Docs';
 import Home from './Home';
 import LeftMenu from './LeftMenu';
 import PrimaryValidatorAPI from './PrimaryValidatorAPI';
+import Roadmap from './Roadmap';
 
 const App = () => {
   const renderContent = () => (
@@ -55,6 +56,10 @@ const App = () => {
       </Route>
       <Route path="/primary-validator-api/:chapter">
         <PrimaryValidatorAPI />
+      </Route>
+
+      <Route exact path="/roadmap">
+        <Roadmap />
       </Route>
 
       <Redirect to="/" />

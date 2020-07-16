@@ -16,10 +16,13 @@ export const LeftMenu = () => {
         <span className="material-icons">people</span>
         <span>Contributors</span>
       </NavLink>
+      <NavLink className="menu-link heavy" to="/roadmap">
+        <span className="material-icons">map</span>
+        <span>Roadmap</span>
+      </NavLink>
 
       <LeftMenuGroup leftIcon={<span className="material-icons">description</span>} title="Docs">
         <NavLink to="/docs/introduction">Introduction</NavLink>
-        <NavLink to="/docs/overview">Overview</NavLink>
         <NavLink to="/docs/accounts">Accounts</NavLink>
         <NavLink to="/docs/blocks">Blocks</NavLink>
         <NavLink to="/docs/transaction-fees">Transaction Fees</NavLink>
