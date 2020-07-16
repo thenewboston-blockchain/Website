@@ -7,21 +7,21 @@
     position: relative;
 
     .arrow {
+      background-color: #999999;
       height: 2px;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       z-index: -1;
-      background-color: #999999;
 
       &:after {
-        content: ' ';
         border: 5px solid transparent;
         border-left-width: 10px;
         border-right-width: 10px;
         border-left-color: #999999;
-        position: absolute;
+        content: ' ';
         left: 100%;
+        position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
       }
@@ -34,16 +34,16 @@
     }
 
     .quarter-circle {
-      display: flex;
       align-items: center;
-      justify-content: center;
       border-radius: 50%;
+      display: flex;
+      justify-content: center;
       margin: auto;
 
       .quarter-name {
+        color: #ffffff;
         font-size: 16px;
         font-weight: bold;
-        color: #ffffff;
       }
     }
 

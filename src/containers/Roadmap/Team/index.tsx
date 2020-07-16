@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
 
-import Task, {TaskObj} from './task';
+import Task, {TaskObj} from 'containers/Roadmap/Task';
 
-import './team.scss';
+import './Team.scss';
 
 interface ComponentProps {
   data: {[key: string]: TaskObj};

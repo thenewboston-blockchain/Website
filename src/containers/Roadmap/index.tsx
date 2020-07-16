@@ -1,13 +1,13 @@
 import React, {useMemo} from 'react';
 
-import Team from './components/team';
-import Quarters from './components/quarters';
+import Quarters from './Quarters';
+import Team from './Team';
 
 import './Roadmap.scss';
 
 import data from './sample.json';
 
-const colors = ['#007bff', '#dc3545', '#28a745', '#ffc107', '#17a2b8', '#6c757d'];
+const colors = ['#d30c15', '#2462e7', '#108118', '#212121'];
 
 const Roadmap = () => {
   const _data = JSON.parse(JSON.stringify(data));

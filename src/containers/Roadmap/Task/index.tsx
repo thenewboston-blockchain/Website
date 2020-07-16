@@ -1,6 +1,6 @@
 import React, {FC, useMemo} from 'react';
 
-import './task.scss';
+import './Task.scss';
 
 export interface TaskObj {
   task_name: string;
@@ -22,9 +22,10 @@ const Task: FC<ComponentProps> = ({task, color}) => {
     const {
       task_range: {start, stop},
     } = task;
-    const percentage = (100 * (stop - start)) / quarterNum;
 
+    const percentage = (100 * (stop - start)) / quarterNum;
     const marginLeft = (100 * start) / quarterNum;
+
     return {width: `${percentage}%`, marginLeft: `${marginLeft}%`, backgroundColor: color};
   }, [task, color]);
 
@@ -36,12 +37,12 @@ const Task: FC<ComponentProps> = ({task, color}) => {
         <span>{task.task_name}</span>
       </div>
       <div className="flex-row task-range">
-        <div className="cell"></div>
-        <div className="cell"></div>
-        <div className="cell"></div>
-        <div className="cell"></div>
+        <div className="cell" />
+        <div className="cell" />
+        <div className="cell" />
+        <div className="cell" />
         <div className="flex-row align-items-center task-progress-row">
-          <div className="task-current-state" style={progressStateStyle}></div>
+          <div className="task-current-state" style={progressStateStyle} />
         </div>
       </div>
     </div>
