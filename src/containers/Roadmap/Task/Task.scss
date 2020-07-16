@@ -1,11 +1,11 @@
 .task-row {
   align-items: stretch;
-  background-color: #ffffff;
+  background-color: #fff;
   border-bottom: 1px solid var(--color-gray-3);
   width: 100%;
 
   &:nth-of-type(odd) {
-    background-color: var(--color-gray-4);
+    background-color: var(--color-gray-5);
   }
 
   &:last-of-type {
