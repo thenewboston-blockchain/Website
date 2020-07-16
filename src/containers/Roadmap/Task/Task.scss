@@ -11,6 +11,10 @@
     background-color: var(--color-gray-5);
   }
 
+  &.row-1 {
+    border-top: 1px solid var(--color-gray-3);
+  }
+
   .task-name {
     color: #000;
     font-size: 13px;
@@ -22,6 +26,7 @@
   .task-name,
   .cell {
     border-bottom: 1px solid var(--color-gray-3);
+    border-right: 1px solid var(--color-gray-3);
     flex: 1;
     padding: 10px 5px;
   }
@@ -29,10 +34,6 @@
   .task-range {
     flex: 4;
     position: relative;
-
-    .cell {
-      border-left: 1px solid var(--color-gray-3);
-    }
 
     .task-progress-row {
       height: 100%;

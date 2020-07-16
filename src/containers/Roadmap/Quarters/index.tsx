@@ -28,7 +28,7 @@ const Quarters = () => {
   );
 
   return (
-    <div className="flex-row">
+    <div className="flex-row Quarters">
       <div className="flex-1" />
       <div className="align-items-center flex-row quarters-row">
         <div className="flex-1" />

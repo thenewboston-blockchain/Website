@@ -33,7 +33,7 @@ const Task: FC<ComponentProps> = ({color, rowNumber, task}) => {
   if (!Boolean(task)) return null;
 
   return (
-    <div className={`flex-row task-row ${rowNumber} ${rowNumber % 2 !== 0 ? 'dark' : ''}`}>
+    <div className={`flex-row task-row row-${rowNumber} ${rowNumber % 2 !== 0 ? 'dark' : ''}`}>
       <div className="task-name">
         <span>{task.task_name}</span>
       </div>

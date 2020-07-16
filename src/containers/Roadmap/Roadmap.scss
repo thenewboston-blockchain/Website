@@ -2,6 +2,7 @@
   padding: 32px 32px 96px;
 
   .cell,
+  .flex-1,
   .task-name,
   .team-name {
     min-width: 120px;
@@ -18,5 +19,14 @@
   .flex-row {
     display: flex;
     flex-direction: row;
+  }
+
+  .roadmap-wrapper {
+    overflow-x: auto;
+    width: 100%;
+
+    .teams {
+      border-bottom: none;
+    }
   }
 }
