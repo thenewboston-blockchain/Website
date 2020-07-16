@@ -1,6 +1,12 @@
 .Roadmap {
   padding: 32px 32px 96px;
 
+  .cell,
+  .task-name,
+  .team-name {
+    min-width: 120px;
+  }
+
   .align-items-center {
     align-items: center;
   }

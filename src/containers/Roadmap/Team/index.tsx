@@ -10,7 +10,7 @@ interface ComponentProps {
   teamName: string;
 }
 
-const Team: FC<ComponentProps> = ({data, teamName, color}) => {
+const Team: FC<ComponentProps> = ({color, data, teamName}) => {
   if (!Boolean(data)) return null;
 
   return (
