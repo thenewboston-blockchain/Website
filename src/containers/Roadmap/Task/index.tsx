@@ -11,13 +11,13 @@ export interface TaskObj {
 }
 
 interface ComponentProps {
-  task: TaskObj;
   color: string;
+  task: TaskObj;
 }
 
 const quarterNum = 4;
 
-const Task: FC<ComponentProps> = ({task, color}) => {
+const Task: FC<ComponentProps> = ({color, task}) => {
   const progressStateStyle = useMemo(() => {
     const {
       task_range: {start, stop},
@@ -26,7 +26,7 @@ const Task: FC<ComponentProps> = ({task, color}) => {
     const percentage = (100 * (stop - start)) / quarterNum;
     const marginLeft = (100 * start) / quarterNum;
 
-    return {width: `${percentage}%`, marginLeft: `${marginLeft}%`, backgroundColor: color};
+    return {backgroundColor: color, marginLeft: `${marginLeft}%`, width: `${percentage}%`};
   }, [task, color]);
 
   if (!Boolean(task)) return null;

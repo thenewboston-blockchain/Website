@@ -5,9 +5,9 @@ import Task, {TaskObj} from 'containers/Roadmap/Task';
 import './Team.scss';
 
 interface ComponentProps {
+  color: string;
   data: {[key: string]: TaskObj};
   teamName: string;
-  color: string;
 }
 
 const Team: FC<ComponentProps> = ({data, teamName, color}) => {

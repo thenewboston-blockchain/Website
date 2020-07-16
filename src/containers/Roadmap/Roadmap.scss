@@ -8,15 +8,11 @@
 
   .flex-1 {
     flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
   }
 
   .flex-row {
     display: flex;
     flex-direction: row;
-    -ms-flex-direction: row;
-    -webkit-flex-direction: row;
   }
 
   .align-items-center {

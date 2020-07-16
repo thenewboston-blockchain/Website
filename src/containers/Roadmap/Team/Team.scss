@@ -6,14 +6,14 @@
   }
 
   .team-name {
+    align-items: center;
+    background-color: #666666;
+    color: #ffffff;
     display: flex;
     flex: 1;
-    background-color: #666666;
-    padding: 0 5px;
-    align-items: center;
-    justify-content: center;
     font-size: 14px;
-    color: #ffffff;
+    justify-content: center;
+    padding: 0 5px;
     text-align: center;
   }
 
