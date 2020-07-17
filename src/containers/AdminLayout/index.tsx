@@ -1,5 +1,5 @@
-import React, {FC, ReactNode, useState} from 'react';
-import {NavLink} from 'react-router-dom';
+import React, {FC, ReactNode, useState, useEffect} from 'react';
+import {NavLink, useLocation} from 'react-router-dom';
 
 import Logo from 'assets/images/logo.png';
 
@@ -12,6 +12,11 @@ interface ComponentProps {
 
 export const AdminLayout: FC<ComponentProps> = ({left, right}) => {
   const [leftMenuOpen, toggleLeftMenuOpen] = useState(window.innerWidth > 1200);
+  const location = useLocation();
+
+  useEffect(() => {
+    toggleLeftMenuOpen(window.innerWidth > 1200);
+  }, [location]);
 
   return (
     <div className={`AdminLayout ${leftMenuOpen ? 'left-menu-open' : ''}`}>
