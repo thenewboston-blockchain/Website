@@ -6,7 +6,7 @@ import BankAPI from './BankAPI';
 import ConfirmationValidatorAPI from './ConfirmationValidatorAPI';
 import Contributors from './Contributors';
 import DeploymentGuides from './DeploymentGuides';
-import Docs from './Docs';
+import Guide from './Guide';
 import Home from './Home';
 import LeftMenu from './LeftMenu';
 import PrimaryValidatorAPI from './PrimaryValidatorAPI';
@@ -44,11 +44,11 @@ const App = () => {
         <DeploymentGuides />
       </Route>
 
-      <Route exact path="/docs">
-        <Redirect to="/docs/introduction" />
+      <Route exact path="/guide">
+        <Redirect to="/guide/introduction" />
       </Route>
-      <Route path="/docs/:chapter">
-        <Docs />
+      <Route path="/guide/:chapter">
+        <Guide />
       </Route>
 
       <Route exact path="/primary-validator-api">

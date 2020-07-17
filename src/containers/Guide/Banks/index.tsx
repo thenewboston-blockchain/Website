@@ -80,8 +80,8 @@ const Banks = () => {
       </p>
       <p>
         Although the documentation has not yet covered the topic of{' '}
-        <NavLink to="/docs/confirmation-validators">Confirmation Validators</NavLink>, it is important to remember these
-        key ideas:
+        <NavLink to="/guide/confirmation-validators">Confirmation Validators</NavLink>, it is important to remember
+        these key ideas:
       </p>
 
       <ul className="mb-20">

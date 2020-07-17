@@ -109,7 +109,7 @@ const TransactionFees = () => {
       </ol>
       <p>
         We will cover the exact role of confirmation validators in the{' '}
-        <NavLink to="/docs/confirmation-validators">Confirmation Validators</NavLink> section of the documentation.
+        <NavLink to="/guide/confirmation-validators">Confirmation Validators</NavLink> section of the documentation.
       </p>
     </section>
   );

@@ -92,7 +92,7 @@ const Contributors = () => {
     <div className="step-one">
       {renderStepIndicator('#f4c2c4', 1, 'Get started on thenewboston')}
       <div className="button-container">
-        <NavLink to="/docs/introduction">
+        <NavLink to="/guide/introduction">
           <button className="primary">Documentation</button>
         </NavLink>
         <MarketingButton website="slack" />
