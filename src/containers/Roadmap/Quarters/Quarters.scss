@@ -1,6 +1,8 @@
 $quarter-circle-size: 75px;
 
 .Quarters {
+  display: flex;
+
   .quarters-row {
     display: flex;
     flex: 12;
