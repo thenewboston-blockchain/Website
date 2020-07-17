@@ -2,11 +2,11 @@ $quarter-circle-size: 75px;
 
 .Quarters {
   display: flex;
+  padding-bottom: 24px;
 
   .quarters-row {
     display: flex;
     flex: 12;
-    padding-bottom: 24px;
 
     .quarter {
       position: relative;
