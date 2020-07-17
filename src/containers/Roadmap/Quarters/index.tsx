@@ -5,9 +5,9 @@ import './Quarters.scss';
 const Quarters = () => {
   const renderQuarter = useMemo(
     () => (quarter: string, index: number) => (
-      <div key={index} className="flex-1 quarter">
+      <div key={index} className={`flex-1 quarter ${quarter.toLowerCase()}`}>
         <div className="arrow" />
-        <div className={`quarter-circle ${quarter.toLowerCase()}`}>
+        <div className="quarter-circle">
           <span className="quarter-name">{quarter}</span>
         </div>
       </div>
