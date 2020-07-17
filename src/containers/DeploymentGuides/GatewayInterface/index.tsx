@@ -16,7 +16,7 @@ uwsgi --ini app.ini
 `}
         comment="Paste in the following and save"
       />
-      <Commands code={`sudo chmod a+x /usr/local/bin/start_api.sh`} comment="Update permissions for shell script" />
+      <Commands code={`sudo chmod a+x /usr/local/bin/start_api.sh`} comment="Update permissions for the shell script" />
     </>
   );
 };

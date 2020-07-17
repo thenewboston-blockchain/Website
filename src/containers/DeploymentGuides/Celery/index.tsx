@@ -17,7 +17,7 @@ sudo nano /etc/validator/environment
         comment="Create a file to contain our environment variables"
       />
       <Commands
-        code={`DJANGO_APPLICATION_ENVIRONMENT=local
+        code={`DJANGO_APPLICATION_ENVIRONMENT=production
 NETWORK_SIGNING_KEY=6f812a35643b55a77f71c3b722504fbc5918e83ec72965f7fd33865ed0be8f81
 `}
       />
@@ -31,7 +31,7 @@ CELERYD_OPTS="--time-limit=1800 --concurrency=2"
 CELERYD_PID_FILE="/var/log/celery/%n.pid"
 CELERYD_LOG_FILE="/var/log/celery/%n%I.log"
 CELERYD_LOG_LEVEL="DEBUG"
-DJANGO_APPLICATION_ENVIRONMENT=local`}
+DJANGO_APPLICATION_ENVIRONMENT=production`}
       />
       <Commands code={`sudo nano /etc/systemd/system/api.service`} comment="Create service" />
       <Commands
