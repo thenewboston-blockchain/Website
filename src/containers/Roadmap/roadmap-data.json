@@ -1,203 +1,128 @@
 {
   "Account Manager": [
     {
-      "taskName": "Increase engagement",
+      "taskName": "Setup core architecture",
       "taskCards": [
         {
-          "description": "Increase personalization",
-          "start": 1.1,
-          "stop": 1.9
-        },
-        {
-          "description": "Improve product experience",
-          "start": 2.1,
-          "stop": 4.1
-        },
-        {
-          "description": "Implement product education",
-          "start": 4.2,
-          "stop": 4.9
+          "description": "",
+          "start": 2.93,
+          "stop": 3.62
         }
       ]
     },
     {
-      "taskName": "Improve functionality",
+      "taskName": "Build UI",
       "taskCards": [
         {
-          "description": "Improve basic functionality",
-          "start": 1.5,
-          "stop": 2.9
-        },
-        {
-          "description": "3.0 release",
-          "start": 3.2,
-          "stop": 3.8
+          "description": "",
+          "start": 3.22,
+          "stop": 3.94
         }
       ]
     },
     {
-      "taskName": "Increase Simplicity",
+      "taskName": "Send blocks",
       "taskCards": [
         {
-          "description": "Identify pain points",
-          "start": 1.1,
-          "stop": 1.9
-        },
-        {
-          "description": "Simplify user experience",
-          "start": 2.1,
-          "stop": 4.9
+          "description": "",
+          "start": 3.35,
+          "stop": 4.05
         }
       ]
     }
   ],
   "Bank": [
     {
-      "taskName": "Create app",
+      "taskName": "Validate and forward blocks",
       "taskCards": [
         {
-          "description": "Identify functionality",
-          "start": 1.1,
-          "stop": 1.7
-        },
-        {
-          "description": "Develop",
-          "start": 1.8,
-          "stop": 4.2
-        },
-        {
-          "description": "Release",
-          "start": 4.3,
-          "stop": 4.5
+          "description": "",
+          "start": 2.84,
+          "stop": 3.74
         }
       ]
     },
     {
-      "taskName": "Objective 2",
+      "taskName": "Accept Confirmations",
       "taskCards": [
         {
-          "description": "Epic",
-          "start": 1.5,
-          "stop": 2.9
-        },
-        {
-          "description": "Epic",
-          "start": 3.1,
-          "stop": 3.9
-        },
-        {
-          "description": "Epic",
-          "start": 4.2,
-          "stop": 4.9
+          "description": "",
+          "start": 3.26,
+          "stop": 3.94
         }
       ]
     },
     {
-      "taskName": "Objective 3",
+      "taskName": "Switch PV Logic",
       "taskCards": [
         {
-          "description": "Epic",
-          "start": 1.2,
-          "stop": 1.9
-        },
-        {
-          "description": "Epic",
-          "start": 2.2,
-          "stop": 4.9
+          "description": "",
+          "start": 3.38,
+          "stop": 3.86
         }
       ]
     }
   ],
   "Validator": [
     {
-      "taskName": "Objective 1",
+      "taskName": "Confirm blocks",
       "taskCards": [
         {
-          "description": "Epic",
-          "start": 1.1,
-          "stop": 1.7
-        },
-        {
-          "description": "Epic",
-          "start": 1.8,
-          "stop": 3.4
-        },
-        {
-          "description": "Epic",
-          "start": 3.6,
-          "stop": 4.5
+          "description": "",
+          "start": 3.08,
+          "stop": 3.48
         }
       ]
     },
     {
-      "taskName": "Objective 2",
+      "taskName": "Update accounts",
       "taskCards": [
         {
-          "description": "Epic",
-          "start": 1.5,
-          "stop": 2.9
-        },
-        {
-          "description": "Epic",
-          "start": 3.1,
-          "stop": 3.9
+          "description": "",
+          "start": 3.39,
+          "stop": 4.21
         }
       ]
     },
     {
-      "taskName": "Objective 3",
+      "taskName": "Forward blocks to CVs",
       "taskCards": [
         {
-          "description": "Epic",
-          "start": 1.2,
-          "stop": 1.9
-        },
-        {
-          "description": "Epic",
-          "start": 2.2,
-          "stop": 4.9
+          "description": "",
+          "start": 3.52,
+          "stop": 3.86
         }
       ]
     }
   ],
   "Website": [
     {
-      "taskName": "Objective 1",
+      "taskName": "Contributors page",
       "taskCards": [
         {
-          "description": "Epic",
-          "start": 1.7,
-          "stop": 4.2
-        },
-        {
-          "description": "Epic",
-          "start": 4.3,
-          "stop": 4.5
+          "description": "",
+          "start": 3.03,
+          "stop": 3.48
         }
       ]
     },
     {
-      "taskName": "Objective 2",
+      "taskName": "Roadmap page",
       "taskCards": [
         {
-          "description": "Epic",
-          "start": 3.2,
-          "stop": 3.9
-        },
-        {
-          "description": "Epic",
-          "start": 4.1,
-          "stop": 4.9
+          "description": "",
+          "start": 3.22,
+          "stop": 3.65
         }
       ]
     },
     {
-      "taskName": "Objective 3",
+      "taskName": "Landing page redesign",
       "taskCards": [
         {
-          "description": "Epic",
-          "start": 2.1,
-          "stop": 4.9
+          "description": "",
+          "start": 3.29,
+          "stop": 3.89
         }
       ]
     }
