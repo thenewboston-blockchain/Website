@@ -1,40 +1,73 @@
-import React, {useMemo} from 'react';
-
-import Quarters from './Quarters';
-import Team from './Team';
+import React, {CSSProperties, FC, Fragment, ReactNode} from 'react';
+import clsx from 'clsx';
 
 import roadmapData from './roadmap-data.json';
-
 import './Roadmap.scss';
 
-const colors = ['#d30c15', '#2462e7', '#108118', '#212121'];
+const taskColors = [
+  {background: '#4099FE', color: '#FFF'},
+  {background: '#FFCE78', color: '#000'},
+  {background: '#59D7D8', color: '#000'},
+  {background: '#FF8180', color: '#000'},
+];
 
-const Roadmap = () => {
-  let totalItemsRendered = 0;
+const Roadmap: FC = () => {
+  const renderQuarters = (): ReactNode => {
+    return ['Q1', 'Q2', 'Q3', 'Q4'].map((quarter) => (
+      <div className={clsx('header', quarter.toLowerCase())} key={quarter}>
+        <div className="header__circle">{quarter}</div>
+      </div>
+    ));
+  };
 
-  const _roadmapData = JSON.parse(JSON.stringify(roadmapData));
+  const renderTeams = (): ReactNode => {
+    return Object.entries(roadmapData).map(([teamName, teamData], teamIndex) => {
+      const rowCount = teamData.length;
 
-  const getTeamColor = useMemo(
-    () => (index: number) => {
-      const colorIndex = index % colors.length;
-      return colors[colorIndex];
-    },
-    [],
-  );
+      return (
+        <Fragment key={teamName}>
+          <div className="team" style={{gridRowEnd: `span ${rowCount || 1}`}}>
+            {teamName}
+          </div>
+          {teamData.map(({taskName, taskCards}, taskIndex) => {
+            const altBg = (teamIndex + taskIndex) % 2 === 0;
+            return (
+              <Fragment key={taskName}>
+                <div className={clsx('task cell', {'alt-bg': altBg})}>
+                  {taskName}
+                  {taskCards.map(({description, start, stop}, taskIndex) => {
+                    const taskColor = taskColors[teamIndex];
+                    const cardSize = stop - start;
+                    const cardStyle: CSSProperties = {
+                      background: taskColor.background,
+                      color: taskColor.color,
+                      left: `${100 * start}%`,
+                      width: `${100 * cardSize}%`,
+                    };
+                    return (
+                      <div className="card" key={taskIndex} style={cardStyle}>
+                        {description}
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className={clsx('quarter q1 cell', {'alt-bg': altBg})} />
+                <div className={clsx('quarter q2 cell', {'alt-bg': altBg})} />
+                <div className={clsx('quarter q3 cell', {'alt-bg': altBg})} />
+                <div className={clsx('quarter q4 cell', {'alt-bg': altBg})} />
+              </Fragment>
+            );
+          })}
+        </Fragment>
+      );
+    });
+  };
 
   return (
-    <div className="Roadmap">
-      <div className="roadmap-wrapper">
-        <Quarters />
-        <div className="teams">
-          {Object.keys(_roadmapData).map((key: string, i: number) => {
-            const chunkSize = Object.keys(_roadmapData[key]).length;
-            totalItemsRendered += chunkSize;
-            const rowStart = totalItemsRendered - chunkSize;
-            return <Team color={getTeamColor(i)} data={_roadmapData[key]} key={i} rowStart={rowStart} teamName={key} />;
-          })}
-        </div>
-      </div>
+    <div className="Roadmap2">
+      <div className="empty-cell" />
+      {renderQuarters()}
+      {renderTeams()}
     </div>
   );
 };
