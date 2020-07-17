@@ -1,0 +1,205 @@
+{
+  "Account Manager": [
+    {
+      "taskName": "Increase engagement",
+      "taskCards": [
+        {
+          "description": "Increase personalization",
+          "start": 1.1,
+          "stop": 1.9
+        },
+        {
+          "description": "Improve product experience",
+          "start": 2.1,
+          "stop": 4.1
+        },
+        {
+          "description": "Implement product education",
+          "start": 4.2,
+          "stop": 4.9
+        }
+      ]
+    },
+    {
+      "taskName": "Improve functionality",
+      "taskCards": [
+        {
+          "description": "Improve basic functionality",
+          "start": 1.5,
+          "stop": 2.9
+        },
+        {
+          "description": "3.0 release",
+          "start": 3.2,
+          "stop": 3.8
+        }
+      ]
+    },
+    {
+      "taskName": "Increase Simplicity",
+      "taskCards": [
+        {
+          "description": "Identify pain points",
+          "start": 1.1,
+          "stop": 1.9
+        },
+        {
+          "description": "Simplify user experience",
+          "start": 2.1,
+          "stop": 4.9
+        }
+      ]
+    }
+  ],
+  "Bank": [
+    {
+      "taskName": "Create app",
+      "taskCards": [
+        {
+          "description": "Identify functionality",
+          "start": 1.1,
+          "stop": 1.7
+        },
+        {
+          "description": "Develop",
+          "start": 1.8,
+          "stop": 4.2
+        },
+        {
+          "description": "Release",
+          "start": 4.3,
+          "stop": 4.5
+        }
+      ]
+    },
+    {
+      "taskName": "Objective 2",
+      "taskCards": [
+        {
+          "description": "Epic",
+          "start": 1.5,
+          "stop": 2.9
+        },
+        {
+          "description": "Epic",
+          "start": 3.1,
+          "stop": 3.9
+        },
+        {
+          "description": "Epic",
+          "start": 4.2,
+          "stop": 4.9
+        }
+      ]
+    },
+    {
+      "taskName": "Objective 3",
+      "taskCards": [
+        {
+          "description": "Epic",
+          "start": 1.2,
+          "stop": 1.9
+        },
+        {
+          "description": "Epic",
+          "start": 2.2,
+          "stop": 4.9
+        }
+      ]
+    }
+  ],
+  "Validator": [
+    {
+      "taskName": "Objective 1",
+      "taskCards": [
+        {
+          "description": "Epic",
+          "start": 1.1,
+          "stop": 1.7
+        },
+        {
+          "description": "Epic",
+          "start": 1.8,
+          "stop": 3.4
+        },
+        {
+          "description": "Epic",
+          "start": 3.6,
+          "stop": 4.5
+        }
+      ]
+    },
+    {
+      "taskName": "Objective 2",
+      "taskCards": [
+        {
+          "description": "Epic",
+          "start": 1.5,
+          "stop": 2.9
+        },
+        {
+          "description": "Epic",
+          "start": 3.1,
+          "stop": 3.9
+        }
+      ]
+    },
+    {
+      "taskName": "Objective 3",
+      "taskCards": [
+        {
+          "description": "Epic",
+          "start": 1.2,
+          "stop": 1.9
+        },
+        {
+          "description": "Epic",
+          "start": 2.2,
+          "stop": 4.9
+        }
+      ]
+    }
+  ],
+  "Website": [
+    {
+      "taskName": "Objective 1",
+      "taskCards": [
+        {
+          "description": "Epic",
+          "start": 1.7,
+          "stop": 4.2
+        },
+        {
+          "description": "Epic",
+          "start": 4.3,
+          "stop": 4.5
+        }
+      ]
+    },
+    {
+      "taskName": "Objective 2",
+      "taskCards": [
+        {
+          "description": "Epic",
+          "start": 3.2,
+          "stop": 3.9
+        },
+        {
+          "description": "Epic",
+          "start": 4.1,
+          "stop": 4.9
+        }
+      ]
+    },
+    {
+      "taskName": "Objective 3",
+      "taskCards": [
+        {
+          "description": "Epic",
+          "start": 2.1,
+          "stop": 4.9
+        }
+      ]
+    }
+  ]
+}
