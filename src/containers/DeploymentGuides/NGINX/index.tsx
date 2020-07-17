@@ -15,29 +15,28 @@ sudo nano /etc/nginx/sites-available/default
       />
       <Commands
         code={`upstream django {
-\tserver 127.0.0.1:8001;
+    server 127.0.0.1:8001;
 }
 
 server {
-\tlisten 80 default_server;
-\tserver_name localhost;
-\tcharset utf-8;
-\tclient_max_body_size 75M;
+    listen 80 default_server;
+    server_name localhost;
+    charset utf-8;
+    client_max_body_size 75M;
 
-\t# Django media
-\tlocation /media {
-\t\talias /var/www/Validator/media;
-\t}
+    location /media {
+        alias /var/www/Validator/media;
+    }
 
-\tlocation /static {
-\t\talias /var/www/Validator/static;
-\t}
+    location /static {
+        alias /var/www/Validator/static;
+    }
 
-\t# Send all non-media requests to the Django server
-\tlocation / {
-\t\tuwsgi_pass django;
-\t\tinclude /var/www/Validator/uwsgi_params;
-\t}
+    # Send all non-media requests to the Django server
+    location / {
+        uwsgi_pass django;
+        include /var/www/Validator/uwsgi_params;
+    }
 
 }
 `}

@@ -51,11 +51,11 @@ const getPageContent = (chapter: string) => {
   }
 };
 
-const Docs = () => {
+const Guide = () => {
   const {chapter} = useParams();
   const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
 
   return <div className="Documentation">{pageContent}</div>;
 };
 
-export default Docs;
+export default Guide;
