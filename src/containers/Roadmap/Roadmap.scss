@@ -1,14 +1,14 @@
 $quarter-circle-size: 75px;
 
-.Roadmap2 {
+.Roadmap {
   display: grid;
   grid-auto-rows: 42px;
-  grid-template-columns: [team] minmax(50px, max-content) [task] minmax(120px, 1fr) repeat(
+  grid-template-columns: [team] minmax(80px, max-content) [task] minmax(120px, 1fr) repeat(
       4,
       [quarter] minmax(120px, 1fr)
     );
   grid-template-rows: 100px;
-  padding: 32px;
+  overflow-x: auto;
 
   .empty-cell {
     border-bottom: 1px solid var(--color-gray-3);

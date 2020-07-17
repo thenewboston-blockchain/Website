@@ -46,7 +46,7 @@ const Roadmap: FC = () => {
                     };
                     return (
                       <div className="card" key={taskIndex} style={cardStyle}>
-                        {description}
+                        {description || ''}
                       </div>
                     );
                   })}
@@ -64,10 +64,12 @@ const Roadmap: FC = () => {
   };
 
   return (
-    <div className="Roadmap2">
-      <div className="empty-cell" />
-      {renderQuarters()}
-      {renderTeams()}
+    <div className="Documentation">
+      <div className="Roadmap">
+        <div className="empty-cell" />
+        {renderQuarters()}
+        {renderTeams()}
+      </div>
     </div>
   );
 };
