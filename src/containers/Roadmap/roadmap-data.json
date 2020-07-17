@@ -1,7 +1,7 @@
 {
   "Account Manager": [
     {
-      "taskName": "Setup Core Architecture",
+      "taskName": "Setup core architecture",
       "taskCards": [
         {
           "description": "",
@@ -21,7 +21,7 @@
       ]
     },
     {
-      "taskName": "Send Blocks",
+      "taskName": "Send blocks",
       "taskCards": [
         {
           "description": "",
@@ -33,7 +33,7 @@
   ],
   "Bank": [
     {
-      "taskName": "Send Blocks",
+      "taskName": "Validate and forward blocks",
       "taskCards": [
         {
           "description": "",
@@ -65,7 +65,7 @@
   ],
   "Validator": [
     {
-      "taskName": "Contributors page",
+      "taskName": "Confirm blocks",
       "taskCards": [
         {
           "description": "",
@@ -75,7 +75,7 @@
       ]
     },
     {
-      "taskName": "Roadmap page",
+      "taskName": "Update accounts",
       "taskCards": [
         {
           "description": "",
@@ -85,7 +85,7 @@
       ]
     },
     {
-      "taskName": "Landing page redesign",
+      "taskName": "Forward blocks to CVs",
       "taskCards": [
         {
           "description": "",
