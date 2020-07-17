@@ -20,7 +20,7 @@ sudo ufw allow 'Nginx Full' && sudo ufw allow OpenSSH && sudo ufw enable
 
       <p>You should now be able to visit your server's public IP address and see the welcome page.</p>
 
-      <Commands code={`adduser deploy`} comment="First log in as root, then create the new user" />
+      <Commands code={`adduser deploy`} comment="Create a new user" />
       <Commands code={`> enter a secure password`} comment="Fill the form and set a password" />
       <Commands code={`visudo`} comment="Allow this user to use sudo" />
       <Commands code={`deploy ALL=(ALL) NOPASSWD:ALL`} comment="Add following line into the opened file" />
