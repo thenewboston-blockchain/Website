@@ -42,7 +42,7 @@ const Resyncing = () => (
       would prefer that the most trusted validators are also the primary validator for the network.
     </p>
 
-    <table>
+    <table className="border-grid">
       <tr className="heavy">
         <td>Validator</td>
         <td>Trust</td>

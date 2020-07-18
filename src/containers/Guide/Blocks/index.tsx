@@ -15,7 +15,7 @@ const Blocks = () => {
         simplified overview below. In this example, Amy is sending 100 points to her friend Brian.
       </p>
 
-      <table>
+      <table className="border-grid">
         <tbody>
           <tr>
             <td>Points being sent to Brian</td>

@@ -1,0 +1,22 @@
+.ParamsTable {
+  border: 1px solid #e6e6e6;
+  display: inline-block;
+  margin: 0 0 20px 0;
+  max-width: 100%;
+  overflow-x: auto;
+
+  table.request-params {
+    border: none;
+    margin: 0;
+
+    thead {
+      text-align: left;
+    }
+
+    tr {
+      td {
+        min-width: 260px;
+      }
+    }
+  }
+}
