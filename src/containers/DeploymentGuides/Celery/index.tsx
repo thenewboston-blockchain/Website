@@ -1,27 +1,32 @@
-import React from 'react';
+import React, {FC} from 'react';
 
 import Commands from 'components/Commands';
 
-const Celery = () => {
+interface ComponentProps {
+  name: string;
+  networkSigningKey: string;
+}
+
+const Celery: FC<ComponentProps> = ({name, networkSigningKey}) => {
   return (
     <>
       <h2>Celery</h2>
 
       <Commands
         code={`cd /etc/
-sudo mkdir validator
+sudo mkdir ${name.toLowerCase()}
 sudo mkdir /var/log/celery
 sudo chown deploy /var/log/celery
-sudo nano /etc/validator/environment
+sudo nano /etc/${name.toLowerCase()}/environment
 `}
         comment="Create a file to contain our environment variables"
       />
       <Commands
         code={`DJANGO_APPLICATION_ENVIRONMENT=production
-NETWORK_SIGNING_KEY=6f812a35643b55a77f71c3b722504fbc5918e83ec72965f7fd33865ed0be8f81
+NETWORK_SIGNING_KEY=${networkSigningKey}
 `}
       />
-      <Commands code={`sudo nano /etc/validator/celery.conf`} comment="Create celery env config" />
+      <Commands code={`sudo nano /etc/${name.toLowerCase()}/celery.conf`} comment="Create celery env config" />
       <Commands
         code={`CELERYD_NODES="w1"
 CELERY_BIN="/usr/local/bin/celery"
@@ -40,7 +45,7 @@ Description = Service to run Django API
 After = network.target
 
 [Service]
-EnvironmentFile = /etc/validator/environment
+EnvironmentFile = /etc/${name.toLowerCase()}/environment
 User = deploy
 ExecStart = /usr/local/bin/start_api.sh
 
@@ -52,14 +57,14 @@ WantedBy = multi-user.target
       <Commands code={`sudo nano /etc/systemd/system/celery.service`} comment="Create service for celery" />
       <Commands
         code={`[Unit]
-Description=Validator Celery Service
+Description=${name} Celery Service
 After=network.target
 
 [Service]
 Type=forking
 User=deploy
-EnvironmentFile=/etc/validator/celery.conf
-WorkingDirectory=/var/www/Validator
+EnvironmentFile=/etc/${name.toLowerCase()}/celery.conf
+WorkingDirectory=/var/www/${name}
 ExecStart=/bin/sh -c '\${CELERY_BIN} multi start \${CELERYD_NODES} \\
   -A \${CELERY_APP} --pidfile=\${CELERYD_PID_FILE} \\
   --logfile=\${CELERYD_LOG_FILE} --loglevel=\${CELERYD_LOG_LEVEL} \${CELERYD_OPTS}'

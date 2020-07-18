@@ -1,8 +1,13 @@
-import React from 'react';
+import React, {FC, ReactNode} from 'react';
 
 import Commands from 'components/Commands';
 
-const StaticFilesAndApplication = () => {
+interface ComponentProps {
+  initializationCommand: ReactNode;
+  name: string;
+}
+
+const StaticFilesAndApplication: FC<ComponentProps> = ({initializationCommand, name}) => {
   return (
     <>
       <h2>Static files and Application Configuration</h2>
@@ -20,14 +25,14 @@ printenv
       />
 
       <Commands
-        code={`cd /var/www/Validator/
+        code={`cd /var/www/${name}/
 python3 manage.py makemigrations && python3 manage.py migrate
 python3 manage.py createsuperuser
 python3 manage.py collectstatic
 `}
         comment="Set up database"
       />
-      <Commands code={`python3 manage.py initialize_validator`} comment="Initialize server as primary validator" />
+      {initializationCommand}
       <Commands code={`http://[IP_ADDRESS]/config`} comment="Verify everything is working correctly by visiting" />
     </>
   );
