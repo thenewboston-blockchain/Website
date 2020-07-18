@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 
 import RequestResponse from 'components/RequestResponse';
 
@@ -9,6 +10,10 @@ const Validators = () => {
     <section className="Validators">
       <h1 className="page-title">Validators</h1>
       <p>Banks will maintain a record of all validators, both primary and confirmation, that they are connected to.</p>
+      <p>
+        More information about validators can be found in the <NavLink to="/guide/validators">Validators</NavLink>{' '}
+        section of the guide.
+      </p>
 
       <h2 className="endpoint">GET /validators</h2>
       <RequestResponse

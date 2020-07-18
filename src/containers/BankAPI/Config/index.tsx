@@ -10,8 +10,8 @@ const Config = () => {
       <h1 className="page-title">Config</h1>
       <p>
         All nodes will provide config data detailing their current configuration details as well as their primary
-        validator selection. This information is used not only by connecting clients but also all other nodes in order
-        to ensure proper connection settings.
+        validator selection. This information is used not only by connecting clients but also by all other nodes in
+        order to ensure proper connection settings.
       </p>
 
       <h2 className="endpoint">GET /config</h2>
