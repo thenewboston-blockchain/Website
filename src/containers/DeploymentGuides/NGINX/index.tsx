@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {FC} from 'react';
 
 import Commands from 'components/Commands';
 
-const NGINX = () => {
+interface ComponentProps {
+  name: string;
+}
+
+const NGINX: FC<ComponentProps> = ({name}) => {
   return (
     <>
       <h2>NGINX</h2>
@@ -25,17 +29,17 @@ server {
     client_max_body_size 75M;
 
     location /media {
-        alias /var/www/Validator/media;
+        alias /var/www/${name}/media;
     }
 
     location /static {
-        alias /var/www/Validator/static;
+        alias /var/www/${name}/static;
     }
 
     # Send all non-media requests to the Django server
     location / {
         uwsgi_pass django;
-        include /var/www/Validator/uwsgi_params;
+        include /var/www/${name}/uwsgi_params;
     }
 
 }
