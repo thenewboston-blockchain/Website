@@ -8,9 +8,9 @@ const Banks = () => {
   return (
     <section className="Banks">
       <h1 className="page-title">Banks</h1>
-      <p>Hey</p>
+      <p>The primary validator will maintain a record of all connected banks on the network.</p>
 
-      <h2 className="endpoint">GET /sample</h2>
+      <h2 className="endpoint">GET /banks</h2>
       <RequestResponse code={`{}`} heading="Response" />
     </section>
   );
