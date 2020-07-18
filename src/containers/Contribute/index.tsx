@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 import MarketingButton from 'components/MarketingButton';
 
@@ -104,7 +104,7 @@ const Contribute = () => {
   const renderStepIndicator = (color: string, number: number, text: string) => (
     <div className="step-indicator">
       <div>
-        <div className="step-bubble" style={{ backgroundColor: color }}>
+        <div className="step-bubble" style={{backgroundColor: color}}>
           {number}
         </div>
       </div>

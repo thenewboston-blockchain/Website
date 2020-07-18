@@ -16,6 +16,13 @@
     z-index: -1;
   }
 
+  @media (max-width: 500px) {
+    img.arm {
+      max-height: 250px;
+      top: -20px;
+    }
+  }
+
   .step-indicator {
     align-items: center;
     display: flex;
@@ -97,16 +104,6 @@
           margin-bottom: 36px;
         }
       }
-    }
-  }
-
-  @media (max-width: 500px) {
-    img.arm {
-      top: -20px;
-      max-height: 250px;
-      position: absolute;
-      right: 0;
-      z-index: -1;
     }
   }
 }
