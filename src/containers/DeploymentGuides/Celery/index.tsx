@@ -4,9 +4,10 @@ import Commands from 'components/Commands';
 
 interface ComponentProps {
   name: string;
+  networkSigningKey: string;
 }
 
-const Celery: FC<ComponentProps> = ({name}) => {
+const Celery: FC<ComponentProps> = ({name, networkSigningKey}) => {
   return (
     <>
       <h2>Celery</h2>
@@ -22,7 +23,7 @@ sudo nano /etc/${name.toLowerCase()}/environment
       />
       <Commands
         code={`DJANGO_APPLICATION_ENVIRONMENT=production
-NETWORK_SIGNING_KEY=6f812a35643b55a77f71c3b722504fbc5918e83ec72965f7fd33865ed0be8f81
+NETWORK_SIGNING_KEY=${networkSigningKey}
 `}
       />
       <Commands code={`sudo nano /etc/${name.toLowerCase()}/celery.conf`} comment="Create celery env config" />

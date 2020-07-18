@@ -27,7 +27,7 @@ const Validator = () => {
       <NGINX name="Validator" />
       <Redis />
       <GatewayInterface name="Validator" />
-      <Celery name="Validator" />
+      <Celery name="Validator" networkSigningKey="6f812a35643b55a77f71c3b722504fbc5918e83ec72965f7fd33865ed0be8f81" />
       <SystemServices />
       <StaticFilesAndApplicationConfiguration initializationCommand={renderInitializationCommands()} name="Validator" />
       <Troubleshooting />
