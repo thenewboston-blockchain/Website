@@ -43,10 +43,13 @@ const Resyncing = () => (
     </p>
 
     <table className="border-grid">
+      <thead>
       <tr className="heavy">
         <td>Validator</td>
         <td>Trust</td>
       </tr>
+      </thead>
+      <tbody>
       <tr>
         <td>CV_001</td>
         <td>98.21</td>
@@ -59,6 +62,7 @@ const Resyncing = () => (
         <td>PV</td>
         <td>86.04</td>
       </tr>
+      </tbody>
     </table>
 
     <p>

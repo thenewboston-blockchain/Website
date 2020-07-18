@@ -16,8 +16,8 @@ interface ComponentProps {
 
 const ParamsTable: FC<ComponentProps> = ({items, tableHeading}) => {
   const renderItems = () =>
-    items.map(({dataType, description, param, sampleValue}) => (
-      <tr>
+    items.map(({dataType, description, param, sampleValue}, index) => (
+      <tr key={index}>
         <td>
           {param}
           <span className="data-type">{dataType}</span>
@@ -30,8 +30,12 @@ const ParamsTable: FC<ComponentProps> = ({items, tableHeading}) => {
   return (
     <div className="ParamsTable">
       <table className="request-params">
+        <thead>
         {tableHeading && tableHeading}
+        </thead>
+        <tbody>
         {renderItems()}
+        </tbody>
       </table>
     </div>
   );
