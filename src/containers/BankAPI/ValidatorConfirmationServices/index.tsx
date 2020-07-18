@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 
 import RequestResponse from 'components/RequestResponse';
 
@@ -12,6 +13,10 @@ const ValidatorConfirmationServices = () => {
         Validator confirmation services represent an agreement between a confirmation validator and a bank. They state
         that the confirmation validator will sign and send all confirmed blocks to the bank for a specified period of
         time.
+      </p>
+      <p>
+        More information about the confirmation process can be found in the{' '}
+        <NavLink to="/guide/confirmation-services">Confirmation Services</NavLink> section of the guide.
       </p>
 
       <h2 className="endpoint">GET /validator_confirmation_services</h2>

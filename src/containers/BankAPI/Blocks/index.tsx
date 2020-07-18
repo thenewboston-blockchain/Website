@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 
 import ParamsTable from 'components/ParamsTable';
 import RequestResponse from 'components/RequestResponse';
@@ -12,6 +13,10 @@ const Blocks = () => {
       <p>
         A block is a group of one or more transactions. There are often multiple transactions (usually fees) to
         different recipients within a single block.
+      </p>
+      <p>
+        More information about blocks can be found in the <NavLink to="/guide/blocks">Blocks</NavLink> section of the
+        guide.
       </p>
 
       <h2 className="endpoint">GET /blocks</h2>

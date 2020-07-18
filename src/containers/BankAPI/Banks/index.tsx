@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 
 import RequestResponse from 'components/RequestResponse';
 
@@ -12,6 +13,10 @@ const Banks = () => {
         All banks have the option of connecting to other banks. Although it is not a requirement, it is often useful for
         a bank to inspect the trust levels assigned by other banks. This data is used primarily in determining which
         primary validator to elect as well as which confirmation validators to connect to and purchase services from.
+      </p>
+      <p>
+        More information about banks can be found in the <NavLink to="/guide/banks">Banks</NavLink> section of the
+        guide.
       </p>
 
       <h2 className="endpoint">GET /banks</h2>
