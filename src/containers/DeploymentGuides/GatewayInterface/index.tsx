@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {FC} from 'react';
 
 import Commands from 'components/Commands';
 
-const GatewayInterface = () => {
+interface ComponentProps {
+  name: string;
+}
+
+const GatewayInterface: FC<ComponentProps> = ({name}) => {
   return (
     <>
       <h2>Gateway Interface (uwsgi)</h2>
@@ -11,7 +15,7 @@ const GatewayInterface = () => {
       <Commands
         code={`#!/bin/bash
 
-cd /var/www/Validator
+cd /var/www/${name}
 uwsgi --ini app.ini
 `}
         comment="Paste in the following and save"
