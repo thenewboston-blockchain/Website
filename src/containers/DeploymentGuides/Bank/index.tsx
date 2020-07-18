@@ -23,39 +23,19 @@ const Bank = () => {
             param: 'node_identifier',
             dataType: 'string',
             description: 'Public key used to sign requests to other nodes',
-            sampleValue: '3afdf37573f1a511def0bd85553404b7091a76bcd79cdcebba1310527b167521',
+            sampleValue: 'd5356888dc9303e44ce52b1e06c3165a7759b9df1e6a6dfbd33ee1c3df1ab4d1',
           },
           {
             param: 'account_number',
             dataType: 'string',
             description: 'The account number where Tx fees will be sent',
-            sampleValue: 'ad1f8845c6a1abb6011a2a434a079a087c460657aad54329a84b406dce8bf314',
+            sampleValue: '5e12967707909e62b2bb2036c209085a784fabbc3deccefee70052b6181c8ed8',
           },
           {
             param: 'default_transaction_fee',
             dataType: 'decimal',
             description: 'Tx fee cost',
-            sampleValue: '4.0',
-          },
-          {
-            param: 'node_type',
-            dataType: 'string',
-            description: 'Network standardized type of node',
-            sampleValue: 'PRIMARY_VALIDATOR',
-          },
-          {
-            param: 'seed_block_identifier',
-            dataType: 'string',
-            description: 'Identifier of the last block that was used when the root account file was generated',
-            sampleValue: ' ',
-          },
-          {
-            param: 'root_account_file',
-            dataType: 'URL',
-            description:
-              'Record of all account balances at the moment in time that the validator was first set to "primary"',
-            sampleValue:
-              'https://gist.githubusercontent.com/buckyroberts/519b5cb82a0a5b5d4ae8a2175b722520/raw/9237deb449e27cab93cb89ea3346ecdfc61fe9ea/0.json',
+            sampleValue: '1.0',
           },
           {
             param: 'protocol',

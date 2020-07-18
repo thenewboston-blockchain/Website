@@ -16,7 +16,7 @@ import Troubleshooting from 'containers/DeploymentGuides/Troubleshooting';
 const Validator = () => {
   const renderInitializationCommands = () => (
     <>
-      <Commands code={`python3 manage.py initialize_validator`} comment="Initialize server as primary validator" />
+      <Commands code={`python3 manage.py initialize_validator`} comment="Initialize validator node" />
       <ParamsTable
         items={[
           {
@@ -40,7 +40,7 @@ const Validator = () => {
           {
             param: 'node_type',
             dataType: 'string',
-            description: 'Network standardized type of node',
+            description: 'Network standardized type of node (PRIMARY_VALIDATOR or CONFIRMATION_VALIDATOR)',
             sampleValue: 'PRIMARY_VALIDATOR',
           },
           {
@@ -91,6 +91,10 @@ const Validator = () => {
             </tr>
           </thead>
         }
+      />
+      <Commands
+        code={`python3 manage.py initialize_confirmation_validator`}
+        comment="If setting up confirmation validator, run this script to connect to the primary validator"
       />
     </>
   );
