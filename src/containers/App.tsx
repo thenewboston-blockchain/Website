@@ -1,10 +1,10 @@
 import React from 'react';
-import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 
 import AdminLayout from './AdminLayout';
 import BankAPI from './BankAPI';
 import ConfirmationValidatorAPI from './ConfirmationValidatorAPI';
-import Contributors from './Contributors';
+import Contribute from './Contribute';
 import DeploymentGuides from './DeploymentGuides';
 import Guide from './Guide';
 import Home from './Home';
@@ -33,8 +33,8 @@ const App = () => {
         <ConfirmationValidatorAPI />
       </Route>
 
-      <Route exact path="/contributors">
-        <Contributors />
+      <Route exact path="/contribute">
+        <Contribute />
       </Route>
 
       <Route exact path="/deployment-guides">

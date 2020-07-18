@@ -1,13 +1,13 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import MarketingButton from 'components/MarketingButton';
 
 import Arm from './Arm.png';
 
-import './Contributors.scss';
+import './Contribute.scss';
 
-const Contributors = () => {
+const Contribute = () => {
   const renderDesign = () => (
     <div className="navigation-column">
       <h2 className="development-heading">Design</h2>
@@ -104,7 +104,7 @@ const Contributors = () => {
   const renderStepIndicator = (color: string, number: number, text: string) => (
     <div className="step-indicator">
       <div>
-        <div className="step-bubble" style={{backgroundColor: color}}>
+        <div className="step-bubble" style={{ backgroundColor: color }}>
           {number}
         </div>
       </div>
@@ -138,7 +138,7 @@ const Contributors = () => {
   );
 
   return (
-    <div className="Contributors">
+    <div className="Contribute">
       {renderStepOne()}
       {renderStepTwo()}
       <img alt="arm" className="arm" src={Arm} />
@@ -146,4 +146,4 @@ const Contributors = () => {
   );
 };
 
-export default Contributors;
+export default Contribute;
