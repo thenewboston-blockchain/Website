@@ -15,23 +15,25 @@ const Blocks = () => {
         simplified overview below. In this example, Amy is sending 100 points to her friend Brian.
       </p>
 
-      <table>
-        <tr>
-          <td>Points being sent to Brian</td>
-          <td>100.00</td>
-        </tr>
-        <tr>
-          <td>Bank fees</td>
-          <td className="light">2 points</td>
-        </tr>
-        <tr>
-          <td>Validator fees</td>
-          <td className="light">1 point</td>
-        </tr>
-        <tr>
-          <td>Total</td>
-          <td>103.00</td>
-        </tr>
+      <table className="border-grid">
+        <tbody>
+          <tr>
+            <td>Points being sent to Brian</td>
+            <td>100.00</td>
+          </tr>
+          <tr>
+            <td>Bank fees</td>
+            <td className="light">2 points</td>
+          </tr>
+          <tr>
+            <td>Validator fees</td>
+            <td className="light">1 point</td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td>103.00</td>
+          </tr>
+        </tbody>
       </table>
 
       <p>
