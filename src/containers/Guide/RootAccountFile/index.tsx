@@ -35,7 +35,7 @@ const RootAccountFile = () => {
       </p>
 
       <div className="table-title">Transaction Log</div>
-      <table>
+      <table className="border-grid">
         <tbody>
           <tr className="heavy">
             <td>Tx ID</td>
@@ -55,7 +55,7 @@ const RootAccountFile = () => {
       </table>
 
       <div className="table-title">Account File</div>
-      <table>
+      <table className="border-grid">
         <tbody>
           <tr className="heavy">
             <td>Last Tx Id</td>
@@ -94,7 +94,7 @@ const RootAccountFile = () => {
       </p>
 
       <div className="table-title">Account File</div>
-      <table>
+      <table className="border-grid">
         <tbody>
           <tr className="heavy">
             <td>Last Tx Id</td>
@@ -126,7 +126,7 @@ const RootAccountFile = () => {
       </p>
 
       <div className="table-title">Transaction Log</div>
-      <table>
+      <table className="border-grid">
         <tbody>
           <tr className="heavy">
             <td>Tx ID</td>
@@ -181,7 +181,7 @@ const RootAccountFile = () => {
       </p>
 
       <div className="table-title">Account File</div>
-      <table>
+      <table className="border-grid">
         <tbody>
           <tr className="heavy">
             <td>Last Tx Id</td>
@@ -212,7 +212,7 @@ const RootAccountFile = () => {
       </p>
 
       <div className="table-title">Account File</div>
-      <table>
+      <table className="border-grid">
         <tbody>
           <tr className="heavy">
             <td>Last Tx Id</td>

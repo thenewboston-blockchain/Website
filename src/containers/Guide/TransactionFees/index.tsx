@@ -30,7 +30,7 @@ const TransactionFees = () => {
         this:
       </p>
 
-      <table>
+      <table className="border-grid">
         <tbody>
           <tr>
             <td>Points being sent to Brian</td>
@@ -56,7 +56,7 @@ const TransactionFees = () => {
         amount is acceptable before signing and sending the block to her bank.
       </p>
 
-      <table>
+      <table className="border-grid">
         <tbody>
           <tr>
             <td>Points being sent to Brian</td>
