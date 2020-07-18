@@ -38,34 +38,37 @@ const Accounts = () => {
         key itself. The signing key should always remain private to the account owner.
       </p>
       <p>A simplified overview of each key is as follows:</p>
+
       <p>
         <strong>Signing key</strong>
-        <ul>
-          <li>must remain private to the owner</li>
-          <li>allows the account owner to securely sign (authorize) the sending of points</li>
-        </ul>
       </p>
+      <ul className="mb-20">
+        <li>must remain private to the owner</li>
+        <li>allows the account owner to securely sign (authorize) the sending of points</li>
+      </ul>
+
       <p>
         <strong>Account number</strong>
-        <ul>
-          <li>is made public to the network</li>
-          <li>acts as a receiving address</li>
-          <ul>
-            <li>other users are able to send points to you using your account number</li>
-          </ul>
-          <li>used in verifying the sender when validating transactions</li>
-          <ul>
-            <li>
-              the account number can be used to prove ownership of the signing key, and therefore the account owner,
-              without revealing the signing key itself
-            </li>
-            <li>
-              this is done through the use of asymmetric cryptography (specifically digital signatures) which we will
-              cover in a later section
-            </li>
-          </ul>
-        </ul>
       </p>
+      <ul className="mb-20">
+        <li>is made public to the network</li>
+        <li>acts as a receiving address</li>
+        <ul>
+          <li>other users are able to send points to you using your account number</li>
+        </ul>
+        <li>used in verifying the sender when validating transactions</li>
+        <ul>
+          <li>
+            the account number can be used to prove ownership of the signing key, and therefore the account owner,
+            without revealing the signing key itself
+          </li>
+          <li>
+            this is done through the use of asymmetric cryptography (specifically digital signatures) which we will
+            cover in a later section
+          </li>
+        </ul>
+      </ul>
+
       <p>
         <strong>Important Note:</strong> Users are not limited to a single account. Users are able to create and manage
         several accounts (key pairs) through the same account manager application. This can be thought of as an
