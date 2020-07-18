@@ -12,9 +12,9 @@ export const LeftMenu = () => {
         <span className="material-icons">home</span>
         <span>Home</span>
       </NavLink>
-      <NavLink className="menu-link heavy" to="/contributors">
+      <NavLink className="menu-link heavy" to="/contribute">
         <span className="material-icons">people</span>
-        <span>Contributors</span>
+        <span>Contribute</span>
       </NavLink>
       <NavLink className="menu-link heavy" to="/roadmap">
         <span className="material-icons">map</span>
