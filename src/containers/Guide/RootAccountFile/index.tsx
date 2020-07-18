@@ -36,44 +36,48 @@ const RootAccountFile = () => {
 
       <div className="table-title">Transaction Log</div>
       <table>
-        <tr className="heavy">
-          <td>Tx ID</td>
-          <td>From</td>
-          <td>To</td>
-          <td>Description</td>
-          <td>Amount</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Amy</td>
-          <td>Carl</td>
-          <td>ham sandwich</td>
-          <td>$2</td>
-        </tr>
+        <tbody>
+          <tr className="heavy">
+            <td>Tx ID</td>
+            <td>From</td>
+            <td>To</td>
+            <td>Description</td>
+            <td>Amount</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Amy</td>
+            <td>Carl</td>
+            <td>ham sandwich</td>
+            <td>$2</td>
+          </tr>
+        </tbody>
       </table>
 
       <div className="table-title">Account File</div>
       <table>
-        <tr className="heavy">
-          <td>Last Tx Id</td>
-          <td>User</td>
-          <td>Balance</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Amy</td>
-          <td>$8</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Bucky</td>
-          <td>$10</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Carl</td>
-          <td>$12</td>
-        </tr>
+        <tbody>
+          <tr className="heavy">
+            <td>Last Tx Id</td>
+            <td>User</td>
+            <td>Balance</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Amy</td>
+            <td>$8</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Bucky</td>
+            <td>$10</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Carl</td>
+            <td>$12</td>
+          </tr>
+        </tbody>
       </table>
 
       <p>
@@ -91,26 +95,28 @@ const RootAccountFile = () => {
 
       <div className="table-title">Account File</div>
       <table>
-        <tr className="heavy">
-          <td>Last Tx Id</td>
-          <td>User</td>
-          <td>Balance</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Amy</td>
-          <td>$13</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Bucky</td>
-          <td>$10</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>Carl</td>
-          <td>$7</td>
-        </tr>
+        <tbody>
+          <tr className="heavy">
+            <td>Last Tx Id</td>
+            <td>User</td>
+            <td>Balance</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Amy</td>
+            <td>$13</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Bucky</td>
+            <td>$10</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Carl</td>
+            <td>$7</td>
+          </tr>
+        </tbody>
       </table>
 
       <p>
@@ -121,27 +127,29 @@ const RootAccountFile = () => {
 
       <div className="table-title">Transaction Log</div>
       <table>
-        <tr className="heavy">
-          <td>Tx ID</td>
-          <td>From</td>
-          <td>To</td>
-          <td>Description</td>
-          <td>Amount</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Amy</td>
-          <td>Carl</td>
-          <td>tuna sandwich</td>
-          <td>$1</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Carl</td>
-          <td>Amy</td>
-          <td>gold watch</td>
-          <td>$6</td>
-        </tr>
+        <tbody>
+          <tr className="heavy">
+            <td>Tx ID</td>
+            <td>From</td>
+            <td>To</td>
+            <td>Description</td>
+            <td>Amount</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Amy</td>
+            <td>Carl</td>
+            <td>tuna sandwich</td>
+            <td>$1</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Carl</td>
+            <td>Amy</td>
+            <td>gold watch</td>
+            <td>$6</td>
+          </tr>
+        </tbody>
       </table>
 
       <p>
@@ -174,26 +182,28 @@ const RootAccountFile = () => {
 
       <div className="table-title">Account File</div>
       <table>
-        <tr className="heavy">
-          <td>Last Tx Id</td>
-          <td>User</td>
-          <td>Balance</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Amy</td>
-          <td>$7</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Bucky</td>
-          <td>$10</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Carl</td>
-          <td>$13</td>
-        </tr>
+        <tbody>
+          <tr className="heavy">
+            <td>Last Tx Id</td>
+            <td>User</td>
+            <td>Balance</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Amy</td>
+            <td>$7</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Bucky</td>
+            <td>$10</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Carl</td>
+            <td>$13</td>
+          </tr>
+        </tbody>
       </table>
 
       <p>
@@ -203,26 +213,28 @@ const RootAccountFile = () => {
 
       <div className="table-title">Account File</div>
       <table>
-        <tr className="heavy">
-          <td>Last Tx Id</td>
-          <td>User</td>
-          <td>Balance</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Amy</td>
-          <td>$13</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Bucky</td>
-          <td>$10</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Carl</td>
-          <td>$6</td>
-        </tr>
+        <tbody>
+          <tr className="heavy">
+            <td>Last Tx Id</td>
+            <td>User</td>
+            <td>Balance</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Amy</td>
+            <td>$13</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Bucky</td>
+            <td>$10</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Carl</td>
+            <td>$6</td>
+          </tr>
+        </tbody>
       </table>
 
       <p>
