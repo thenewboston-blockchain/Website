@@ -5,9 +5,33 @@ import MarketingButton from 'components/MarketingButton';
 
 import Arm from './Arm.png';
 
-import './Contributors.scss';
+import './Contribute.scss';
 
-const Contributors = () => {
+const Contribute = () => {
+  const renderDesign = () => (
+    <div className="navigation-column">
+      <h2 className="development-heading">Design</h2>
+
+      <div className="navigation-group">
+        <h2>Resources</h2>
+        <a
+          href="https://www.figma.com/file/ZLQBaMEsAQIdnfg5qtL384/TNB-System?node-id=12%3A113"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Style Guide
+        </a>
+        <a
+          href="https://docs.google.com/document/d/1gRy71vQrHGDk2bZ4Wcz3ha4xHjNmOtcXCkDXtLeqt-4/edit"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Figma Links
+        </a>
+      </div>
+    </div>
+  );
+
   const renderPythonDjango = () => (
     <div className="navigation-column">
       <h2 className="development-heading">Python / Django</h2>
@@ -92,7 +116,7 @@ const Contributors = () => {
     <div className="step-one">
       {renderStepIndicator('#f4c2c4', 1, 'Get started on thenewboston')}
       <div className="button-container">
-        <NavLink to="/docs/introduction">
+        <NavLink to="/guide/introduction">
           <button className="primary">Documentation</button>
         </NavLink>
         <MarketingButton website="slack" />
@@ -108,12 +132,13 @@ const Contributors = () => {
       <div className="navigation-section">
         {renderPythonDjango()}
         {renderReactFE()}
+        {renderDesign()}
       </div>
     </div>
   );
 
   return (
-    <div className="Contributors">
+    <div className="Contribute">
       {renderStepOne()}
       {renderStepTwo()}
       <img alt="arm" className="arm" src={Arm} />
@@ -121,4 +146,4 @@ const Contributors = () => {
   );
 };
 
-export default Contributors;
+export default Contribute;

@@ -4,9 +4,26 @@ table {
   margin: 0 0 20px 0;
 
   tr {
+    td,
+    th {
+      vertical-align: top;
+    }
+
     td {
       padding: 2px 8px;
-      vertical-align: top;
+    }
+
+    th {
+      padding: 4px 8px;
+    }
+  }
+
+  &.border-grid {
+    border: none;
+
+    td {
+      border: 1px solid #e6e6e6;
+      min-width: 90px;
     }
   }
 
@@ -43,6 +60,13 @@ table {
           font-weight: 400;
           padding-left: 6px;
         }
+      }
+
+      // Sample value
+      td:nth-child(3) {
+        color: #9b9b9b;
+        font-family: var(--font-family-mono-roboto);
+        font-size: 13px;
       }
     }
   }

@@ -29,50 +29,59 @@ const TransactionFees = () => {
         then the amount of points she wishes to send. A very simple UI that Amy may see at that point might look like
         this:
       </p>
-      <table>
-        <tr>
-          <td>Points being sent to Brian</td>
-          <td className="light placeholder">Enter the amount of points here...</td>
-        </tr>
-        <tr>
-          <td>Bank fees</td>
-          <td className="light">2 points</td>
-        </tr>
-        <tr>
-          <td>Validator fees</td>
-          <td className="light">1 point</td>
-        </tr>
-        <tr>
-          <td>Total</td>
-          <td />
-        </tr>
+
+      <table className="border-grid">
+        <tbody>
+          <tr>
+            <td>Points being sent to Brian</td>
+            <td className="light placeholder">Enter the amount of points here...</td>
+          </tr>
+          <tr>
+            <td>Bank fees</td>
+            <td className="light">2 points</td>
+          </tr>
+          <tr>
+            <td>Validator fees</td>
+            <td className="light">1 point</td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td />
+          </tr>
+        </tbody>
       </table>
+
       <p>
         After typing in the amount of points, Amy is able to see the total cost of her transaction and verify that the
         amount is acceptable before signing and sending the block to her bank.
       </p>
-      <table>
-        <tr>
-          <td>Points being sent to Brian</td>
-          <td>100</td>
-        </tr>
-        <tr>
-          <td>Bank fees</td>
-          <td className="light">2 points</td>
-        </tr>
-        <tr>
-          <td>Validator fees</td>
-          <td className="light">1 point</td>
-        </tr>
-        <tr>
-          <td>Total</td>
-          <td>103</td>
-        </tr>
+
+      <table className="border-grid">
+        <tbody>
+          <tr>
+            <td>Points being sent to Brian</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <td>Bank fees</td>
+            <td className="light">2 points</td>
+          </tr>
+          <tr>
+            <td>Validator fees</td>
+            <td className="light">1 point</td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td>103</td>
+          </tr>
+        </tbody>
       </table>
+
       <p>
         Once the block has been reviewed, signed, and sent to the bank by Amy, the following functions will be
         performed:
       </p>
+
       <ol className="mb-20">
         <li>Amy's bank will validate that:</li>
         <ol type="a">
@@ -107,9 +116,10 @@ const TransactionFees = () => {
           receive a confirmation block from the confirmation validators.
         </li>
       </ol>
+
       <p>
         We will cover the exact role of confirmation validators in the{' '}
-        <NavLink to="/docs/confirmation-validators">Confirmation Validators</NavLink> section of the documentation.
+        <NavLink to="/guide/confirmation-validators">Confirmation Validators</NavLink> section of the documentation.
       </p>
     </section>
   );

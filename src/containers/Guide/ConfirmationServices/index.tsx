@@ -101,7 +101,7 @@ const ConfirmationServices = () => {
         trust in banks that do not provide confirmations signed for their own banks.
       </p>
       <p>
-        A note mentioned earlier in the <NavLink to="/docs/banks">Banks</NavLink> section that is worth repeating:
+        A note mentioned earlier in the <NavLink to="/guide/banks">Banks</NavLink> section that is worth repeating:
       </p>
 
       <ul className="mb-20">
