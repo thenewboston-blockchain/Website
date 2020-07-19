@@ -83,13 +83,11 @@ const Validator = () => {
           },
         ]}
         tableHeading={
-          <thead>
-            <tr>
-              <th>Parameter</th>
-              <th>Description</th>
-              <th>Sample Value</th>
-            </tr>
-          </thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+            <th>Sample Value</th>
+          </tr>
         }
       />
       <Commands

@@ -63,13 +63,11 @@ const Bank = () => {
           },
         ]}
         tableHeading={
-          <thead>
-            <tr>
-              <th>Parameter</th>
-              <th>Description</th>
-              <th>Sample Value</th>
-            </tr>
-          </thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Description</th>
+            <th>Sample Value</th>
+          </tr>
         }
       />
       <Commands code={`python3 manage.py connect_to_primary_validator`} comment="Connect to the primary validator" />
