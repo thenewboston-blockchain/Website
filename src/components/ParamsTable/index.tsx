@@ -30,12 +30,8 @@ const ParamsTable: FC<ComponentProps> = ({items, tableHeading}) => {
   return (
     <div className="ParamsTable">
       <table className="request-params">
-        <thead>
-        {tableHeading && tableHeading}
-        </thead>
-        <tbody>
-        {renderItems()}
-        </tbody>
+        <thead>{tableHeading && tableHeading}</thead>
+        <tbody>{renderItems()}</tbody>
       </table>
     </div>
   );
