@@ -33,8 +33,8 @@ const NodeIdentifier = () => (
     <RequestResponse
       code={`{
   "message": {
-    "ip_address": "192.168.1.232",
-    "port": "8000",
+    "ip_address": "167.99.173.247",
+    "port": "80",
     "protocol": "http"
   },
   "node_identifier": "d5356888dc9303e44ce52b1e06c3165a7759b9df1e6a6dfbd33ee1c3df1ab4d1",
