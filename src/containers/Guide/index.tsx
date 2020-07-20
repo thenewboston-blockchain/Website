@@ -10,6 +10,7 @@ import ConfirmationValidators from './ConfirmationValidators';
 import FutureDevelopment from './FutureDevelopment';
 import InitialFunds from './InitialFunds';
 import Introduction from './Introduction';
+import NodeIdentifier from './NodeIdentifier';
 import Resyncing from './Resyncing';
 import RootAccountFile from './RootAccountFile';
 import TransactionFees from './TransactionFees';
@@ -36,6 +37,8 @@ const getPageContent = (chapter: string) => {
       return <InitialFunds />;
     case 'introduction':
       return <Introduction />;
+    case 'node-identifiers':
+      return <NodeIdentifier />;
     case 'resyncing':
       return <Resyncing />;
     case 'root-account-file':
