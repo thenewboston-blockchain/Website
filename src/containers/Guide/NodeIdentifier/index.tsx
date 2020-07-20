@@ -69,9 +69,9 @@ const NodeIdentifier = () => (
       code={`{
   "primary_validator": {
     "account_number": "ad1f8845c6a1abb6011a2a434a079a087c460657aad54329a84b406dce8bf314",
-    "ip_address": "192.168.1.74",
+    "ip_address": "64.225.47.205",
     "node_identifier": "3afdf37573f1a511def0bd85553404b7091a76bcd79cdcebba1310527b167521",
-    "port": 8000,
+    "port": 80,
     "protocol": "http",
     "version": "v1.0",
     "default_transaction_fee": "4.0000000000000000",
@@ -82,9 +82,9 @@ const NodeIdentifier = () => (
     "trust": "100.00"
   },
   "account_number": "5e12967707909e62b2bb2036c209085a784fabbc3deccefee70052b6181c8ed8",
-  "ip_address": "192.168.1.232",
+  "ip_address": "167.99.173.247",
   "node_identifier": "d5356888dc9303e44ce52b1e06c3165a7759b9df1e6a6dfbd33ee1c3df1ab4d1",
-  "port": 8000,
+  "port": 80,
   "protocol": "http",
   "version": "v1.0",
   "default_transaction_fee": "1.0000000000000000",
