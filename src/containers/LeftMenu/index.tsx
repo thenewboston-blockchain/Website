@@ -31,6 +31,7 @@ export const LeftMenu = () => {
         <NavLink to="/guide/validators">Validators</NavLink>
         <NavLink to="/guide/confirmation-validators">Confirmation Validators</NavLink>
         <NavLink to="/guide/confirmation-services">Confirmation Services</NavLink>
+        <NavLink to="/guide/node-identifiers">Node Identifiers</NavLink>
         <NavLink to="/guide/resyncing">Resyncing</NavLink>
         <NavLink to="/guide/trust">Trust</NavLink>
         <NavLink to="/guide/initial-funds">Initial Funds</NavLink>
