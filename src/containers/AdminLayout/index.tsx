@@ -16,6 +16,7 @@ export const AdminLayout: FC<ComponentProps> = ({left, right}) => {
 
   useEffect(() => {
     toggleLeftMenuOpen(window.innerWidth > 1200);
+    document.getElementById('main-content-area')?.scrollTo(0, 0);
   }, [location]);
 
   return (
@@ -32,7 +33,9 @@ export const AdminLayout: FC<ComponentProps> = ({left, right}) => {
         </div>
       </div>
       <div className="left">{left}</div>
-      <div className="right">{right}</div>
+      <div className="right" id="main-content-area">
+        {right}
+      </div>
     </div>
   );
 };
