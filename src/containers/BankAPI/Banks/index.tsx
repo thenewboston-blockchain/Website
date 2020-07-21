@@ -1,10 +1,10 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
+import ParamsTable from 'components/ParamsTable';
 import RequestResponse from 'components/RequestResponse';
 
 import './Banks.scss';
-import ParamsTable from '../../../components/ParamsTable';
 
 const Banks = () => {
   return (
