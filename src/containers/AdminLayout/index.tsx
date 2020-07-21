@@ -1,4 +1,4 @@
-import React, {FC, ReactNode, useEffect, useState} from 'react';
+import React, {FC, ReactNode, useEffect, useRef, useState} from 'react';
 import {NavLink, useLocation} from 'react-router-dom';
 
 import Logo from 'assets/images/logo.png';
@@ -12,11 +12,16 @@ interface ComponentProps {
 
 export const AdminLayout: FC<ComponentProps> = ({left, right}) => {
   const [leftMenuOpen, toggleLeftMenuOpen] = useState(window.innerWidth > 1200);
-  const location = useLocation();
+  const {pathname} = useLocation();
+  const rightDiv = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     toggleLeftMenuOpen(window.innerWidth > 1200);
-  }, [location]);
+  }, []);
+
+  useEffect(() => {
+    rightDiv.current?.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <div className={`AdminLayout ${leftMenuOpen ? 'left-menu-open' : ''}`}>
@@ -32,7 +37,9 @@ export const AdminLayout: FC<ComponentProps> = ({left, right}) => {
         </div>
       </div>
       <div className="left">{left}</div>
-      <div className="right">{right}</div>
+      <div className="right" ref={rightDiv}>
+        {right}
+      </div>
     </div>
   );
 };
