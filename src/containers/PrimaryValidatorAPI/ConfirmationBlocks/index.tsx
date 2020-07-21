@@ -12,7 +12,7 @@ const ConfirmationBlocks = () => (
       been added to the blockchain. No confirmation blocks will be sent to the primary validator directly.
     </p>
 
-    <h2 className="endpoint">{'GET confirmation_blocks/{block_identifier}'}</h2>
+    <h2 className="endpoint">{'GET confirmation_blocks/<block_identifier>'}</h2>
     <p>View details of an individual confirmation block.</p>
     <RequestResponse
       code={`{
