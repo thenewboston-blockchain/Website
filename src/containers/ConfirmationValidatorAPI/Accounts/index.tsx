@@ -43,6 +43,22 @@ const Accounts = () => {
 ]`}
         heading="Response"
       />
+
+      <h2 className="endpoint">{'GET /account_balance/<account_number>'}</h2>
+      <RequestResponse
+        code={`{
+  "balance": "4294967051.0000000000000000"
+}`}
+        heading="Response"
+      />
+
+      <h2 className="endpoint">{'GET /account_balance_lock/<account_number>'}</h2>
+      <RequestResponse
+        code={`{
+  "balance_lock": "21cfd80a31930e801e97d34e3f00a7d9b5c01b2fb531a5ac14cd59d10ab446c8"
+}`}
+        heading="Response"
+      />
     </section>
   );
 };
