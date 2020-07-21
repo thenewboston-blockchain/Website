@@ -42,8 +42,8 @@ const Contribute = () => {
         <a href="https://github.com/thenewboston-developers/Bank" target="_blank" rel="noopener noreferrer">
           Repository
         </a>
-        <a href="https://github.com/thenewboston-developers/Bank/projects/3" target="_blank" rel="noopener noreferrer">
-          Tasks
+        <a href="https://github.com/thenewboston-developers/Bank/issues" target="_blank" rel="noopener noreferrer">
+          Issues / Tasks
         </a>
       </div>
 
@@ -53,12 +53,8 @@ const Contribute = () => {
       <a href="https://github.com/thenewboston-developers/Validator" target="_blank" rel="noopener noreferrer">
         Repository
       </a>
-      <a
-        href="https://github.com/thenewboston-developers/Validator/projects/2"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Tasks
+      <a href="https://github.com/thenewboston-developers/Validator/issues" target="_blank" rel="noopener noreferrer">
+        Issues / Tasks
       </a>
     </div>
   );
@@ -73,18 +69,11 @@ const Contribute = () => {
           Repository
         </a>
         <a
-          href="https://github.com/thenewboston-developers/Account-Manager/projects/2"
+          href="https://github.com/thenewboston-developers/Account-Manager/issues"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Design Tasks
-        </a>
-        <a
-          href="https://github.com/thenewboston-developers/Account-Manager/projects/1"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Engineering Tasks
+          Issues / Tasks
         </a>
       </div>
 
@@ -92,11 +81,8 @@ const Contribute = () => {
       <a href="https://github.com/thenewboston-developers/Website" target="_blank" rel="noopener noreferrer">
         Repository
       </a>
-      <a href="https://github.com/thenewboston-developers/Website/projects/2" target="_blank" rel="noopener noreferrer">
-        Design Tasks
-      </a>
-      <a href="https://github.com/thenewboston-developers/Website/projects/1" target="_blank" rel="noopener noreferrer">
-        Engineering Tasks
+      <a href="https://github.com/thenewboston-developers/Website/issues" target="_blank" rel="noopener noreferrer">
+        Issues / Tasks
       </a>
     </div>
   );

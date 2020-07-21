@@ -4,6 +4,7 @@ import {NavLink} from 'react-router-dom';
 import RequestResponse from 'components/RequestResponse';
 
 import './Banks.scss';
+import ParamsTable from '../../../components/ParamsTable';
 
 const Banks = () => {
   return (
@@ -43,6 +44,40 @@ const Banks = () => {
     "trust": "98.32"
   }
 ]`}
+        heading="Response"
+      />
+
+      <h2 className="endpoint">{'PATCH /banks/<node_identifier>'}</h2>
+      <ParamsTable
+        items={[
+          {
+            param: 'trust',
+            dataType: 'decimal',
+            description: 'amount of trust',
+          },
+        ]}
+      />
+      <RequestResponse
+        code={`{
+  "message": {
+    "trust": 76.26
+  },
+  "node_identifier": "d5356888dc9303e44ce52b1e06c3165a7759b9df1e6a6dfbd33ee1c3df1ab4d1",
+  "signature": "d11c5f7fcc5f541a94ceee7c73972b21c73912e41f06cc22989863fa22529f55d0b81bc9f95a203191be0259518bdfe073de77d87a7230d37bb14f21666ee40a"
+}`}
+        heading="Request"
+      />
+      <RequestResponse
+        code={`{
+  "account_number": "5e12967707909e62b2bb2036c209085a784fabbc3deccefee70052b6181c8ed8",
+  "ip_address": "192.168.1.232",
+  "node_identifier": "d5356888dc9303e44ce52b1e06c3165a7759b9df1e6a6dfbd33ee1c3df1ab4d1",
+  "port": null,
+  "protocol": "http",
+  "version": "v1.0",
+  "default_transaction_fee": "1.0000000000000000",
+  "trust": "76.26"
+}`}
         heading="Response"
       />
     </section>
