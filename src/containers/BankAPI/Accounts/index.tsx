@@ -4,6 +4,7 @@ import {NavLink} from 'react-router-dom';
 import RequestResponse from 'components/RequestResponse';
 
 import './Accounts.scss';
+import ParamsTable from '../../../components/ParamsTable';
 
 const Accounts = () => {
   return (
@@ -37,6 +38,37 @@ const Accounts = () => {
     "trust": "94.63"
   }
 ]`}
+        heading="Response"
+      />
+
+      <h2 className="endpoint">{'PATCH /accounts/<account_number>'}</h2>
+      <ParamsTable
+        items={[
+          {
+            param: 'trust',
+            dataType: 'decimal',
+            description: 'amount of trust',
+          },
+        ]}
+      />
+      <RequestResponse
+        code={`{
+  "message": {
+    "trust": 99.98
+  },
+  "node_identifier": "d5356888dc9303e44ce52b1e06c3165a7759b9df1e6a6dfbd33ee1c3df1ab4d1",
+  "signature": "f41788fe19690a67abe3336d4ca84565c090691efae0e5cdd8bf02e126842215080405013b8461f734d091e673e9edefca53a51773fda59bbebcef77ab8e2901"
+}`}
+        heading="Request"
+      />
+      <RequestResponse
+        code={`{
+  "id": "64426fc5-b3ac-42fb-b75b-d5ccfcdc6872",
+  "created_date": "2020-07-14T02:59:22.204580Z",
+  "modified_date": "2020-07-21T00:58:01.013685Z",
+  "account_number": "0cdd4ba04456ca169baca3d66eace869520c62fe84421329086e03d91a68acdb",
+  "trust": "99.98"
+}`}
         heading="Response"
       />
     </section>
