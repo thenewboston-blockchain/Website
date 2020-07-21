@@ -1,3 +1,5 @@
+$TopNav-height: 46px;
+
 .AdminLayout {
   display: grid;
   grid-template-columns: 0 auto;
@@ -17,7 +19,7 @@
       align-items: center;
       background: white;
       display: flex;
-      height: 46px;
+      height: $TopNav-height;
 
       a,
       a:visited {
@@ -61,7 +63,7 @@
   }
 
   .left {
-    margin-top: 46px;
+    margin-top: $TopNav-height;
     background: #26252b;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
     grid-column: 1 / span 1;
