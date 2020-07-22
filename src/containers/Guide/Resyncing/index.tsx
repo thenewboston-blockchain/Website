@@ -5,9 +5,9 @@ import PrimaryValidatorUpgradeRequest from './PrimaryValidatorUpgradeRequest.png
 import './Resyncing.scss';
 
 const Resyncing = () => {
-  const renderPrimaryValidatorUpdateRequest = () => (
+  const renderPrimaryValidatorUpgradeRequest = () => (
     <>
-      <h2>Primary Validator Update Request</h2>
+      <h2>Primary Validator Upgrade Request</h2>
 
       <p>
         When a bank alters the trust levels of their validators, if the results indicate that there are now confirmation
@@ -82,9 +82,9 @@ const Resyncing = () => {
     </>
   );
 
-  const renderPrimaryValidatorUpgradeNotice = () => (
+  const renderPrimaryValidatorUpdateNotice = () => (
     <>
-      <h2>Primary Validator Upgrade Notice</h2>
+      <h2>Primary Validator Update Notice</h2>
 
       <p>
         This notice is sent from banks to confirmation validators to indicate that the requesting bank is leaving the
@@ -116,8 +116,8 @@ const Resyncing = () => {
         confirmation validators need to remain aware whenever certain changes occur at their most trusted banks. These
         changes will be sent to them from their connected banks and include:
       </p>
-      {renderPrimaryValidatorUpdateRequest()}
-      {renderPrimaryValidatorUpgradeNotice()}
+      {renderPrimaryValidatorUpgradeRequest()}
+      {renderPrimaryValidatorUpdateNotice()}
     </section>
   );
 };
