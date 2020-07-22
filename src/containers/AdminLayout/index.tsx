@@ -21,6 +21,9 @@ export const AdminLayout: FC<ComponentProps> = ({left, right}) => {
 
   useEffect(() => {
     rightDiv.current?.scrollTo(0, 0);
+    if (window.innerWidth < 768) {
+      toggleLeftMenuOpen(false);
+    }
   }, [pathname]);
 
   return (
