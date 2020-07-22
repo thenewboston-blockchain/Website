@@ -36,7 +36,8 @@ CELERYD_OPTS="--time-limit=1800 --concurrency=2"
 CELERYD_PID_FILE="/var/log/celery/%n.pid"
 CELERYD_LOG_FILE="/var/log/celery/%n%I.log"
 CELERYD_LOG_LEVEL="DEBUG"
-DJANGO_APPLICATION_ENVIRONMENT=production`}
+DJANGO_APPLICATION_ENVIRONMENT=production
+NETWORK_SIGNING_KEY=${networkSigningKey}`}
       />
       <Commands code={`sudo nano /etc/systemd/system/api.service`} comment="Create service" />
       <Commands
