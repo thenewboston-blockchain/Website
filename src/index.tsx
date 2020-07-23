@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 
 // Styles
 import 'normalize.css';
-import 'styles/main.scss';
+import './styles/main.scss';
 
-import App from 'containers/App';
+import App from 'App';
 
 ReactDOM.render(
   <React.StrictMode>

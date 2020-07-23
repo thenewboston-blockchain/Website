@@ -1,0 +1,36 @@
+.app-button {
+    -webkit-appearance: none;
+    background: transparent;
+    border-radius: 0.25rem;
+    border: none;
+    color: var(--colors-foreground);
+    font-weight: 800;
+    font-size: 1rem;
+    min-height: 2.25rem;
+    
+    padding: 0.5625 0.75rem;
+    
+    &__content {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 0.25rem;
+        place-content: center;
+        place-items: center;
+        line-height: 0%;
+    }
+
+    &__icon {
+        --app-icon-size: 1.5rem;
+    }
+    
+    &--outline {
+        border: 1px solid var(--color-border);
+    }
+
+    &--primary {
+        font-size: 0.875rem;
+        box-shadow: 0px 4px 4px rgba(3, 33, 55, 0.25);
+        color: white;
+        background-color: var(--color-primary);
+    }
+}

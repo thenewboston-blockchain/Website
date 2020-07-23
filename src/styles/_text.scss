@@ -5,3 +5,11 @@
 .red {
   color: var(--color-primary);
 }
+
+.app-subheader {
+  font-size: 0.875rem;
+  color: var(--color-accent);
+  font-weight: 500;
+  line-height: 120%;
+  text-transform: uppercase;
+}

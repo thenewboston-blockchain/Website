@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
-import RequestResponse from 'components/RequestResponse';
+import RequestResponse from '../../../components/RequestResponse';
 
 import ConnectionNID from './ConnectionNID.png';
 import NID from './NID.png';

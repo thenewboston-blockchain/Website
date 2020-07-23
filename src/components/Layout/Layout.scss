@@ -1,0 +1,37 @@
+.app-layout {
+    &__toolbar {
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        z-index: 10;
+    }
+
+    &__toolbar-container {
+        display: grid !important;
+        grid-template-columns: 205px auto 205px;
+        place-items: center;
+        height: 100%;
+    }
+
+    &__logo {
+        height: 30px;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+
+        a {
+            display: block;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.14285rem;
+            color: var(--color-foreground-secondary);
+        }
+    }
+
+    &__tools {
+        justify-self: flex-end;
+    }
+}

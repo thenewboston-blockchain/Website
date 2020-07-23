@@ -1,7 +1,7 @@
 import React from 'react';
 
 import AccountsSimple from './AccountsSimple.png';
-import KeyPair from 'assets/images/KeyPair.png';
+import KeyPair from './KeyPair.png';
 
 import './Accounts.scss';
 

@@ -110,7 +110,7 @@ const ConfirmationBlocks = () => (
       heading="Response"
     />
 
-    <h2 className="endpoint">{'GET confirmation_blocks/<block_identifier>'}</h2>
+    <h2 className="endpoint">{'GET confirmation_blocks/{block_identifier}'}</h2>
     <RequestResponse
       code={`{
   "message": {

@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import CodeHighlighter from 'components/CodeHighlighter';
+import CodeHighlighter from '../CodeHighlighter';
 
 import './RequestResponse.scss';
 

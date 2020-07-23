@@ -1,0 +1,10 @@
+.app-toolbar {
+    height: var(--app-toolbar-height, 66px);
+    // border-bottom: 1px solid var(--app-toolbar-border-color, rgba(0, 0, 0, .1));
+
+    padding: 0 1rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

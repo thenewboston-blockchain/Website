@@ -6,6 +6,9 @@ $item-padding: 10px 16px;
   flex-direction: column;
   padding: 12px 0;
 
+  background: #26252b;
+  width: var(--layout-navigation-width, 256px);
+
   a {
     color: #fff;
     padding: $item-padding;

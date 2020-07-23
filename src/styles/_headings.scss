@@ -5,6 +5,10 @@ h1.page-title {
 }
 
 h2 {
-  font-size: var(--font-size-medium);
-  font-weight: 500;
+  font-size: 2.25rem;
+  color: var(--color-primary);
+  line-height: 120%;
+
+  // font-size: var(--font-size-medium);
+  // font-weight: 500;
 }

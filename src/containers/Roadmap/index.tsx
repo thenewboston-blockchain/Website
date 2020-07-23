@@ -65,7 +65,7 @@ const Roadmap: FC = () => {
 
   return (
     <div className="Documentation">
-      <div className="Roadmap">
+      <div className="Roadmap app-container">
         <div className="empty-cell" />
         {renderQuarters()}
         {renderTeams()}
