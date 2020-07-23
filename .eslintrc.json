@@ -29,7 +29,6 @@
   },
   "plugins": ["react", "@typescript-eslint", "jest"],
   "rules": {
-    "linebreak-style": "off",
     "prettier/prettier": [
       "error",
       {
