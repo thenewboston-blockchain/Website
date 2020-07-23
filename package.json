@@ -11,7 +11,11 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@types/react-syntax-highlighter": "^11.0.4",
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "@typescript-eslint/parser": "^3.7.0",
     "clsx": "^1.1.1",
+    "eslint-config-airbnb-typescript": "^9.0.0",
+    "eslint-plugin-jest": "^23.18.0",
     "lodash": "^4.17.15",
     "material-icons": "^0.3.1",
     "node-sass": "^4.14.1",
@@ -26,6 +30,7 @@
   "scripts": {
     "build": "react-scripts build",
     "eject": "react-scripts eject",
+    "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
     "prettier": "prettier --write \"{,!(node_modules)/**/}*.{ts,tsx,js,json,css,less,scss}\"",
     "start": "react-scripts start",
     "test": "react-scripts test"
@@ -66,6 +71,6 @@
     }
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix"
+    "*.{js,jsx,ts,tsx,css,scss}": "eslint --cache --fix"
   }
 }
