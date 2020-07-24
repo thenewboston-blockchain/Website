@@ -45,11 +45,11 @@ $item-padding: 10px 16px;
       transition-duration: 0.2s;
 
       &:hover {
-        background: rgba(255, 255, 255, 0.1);
+        background: var(--color-blue-gray-700);
       }
 
       &.expanded {
-        background: rgba(217, 15, 23, 0.5);
+        background: var(--color-blue-gray-700);
 
         .arrow {
           transform: rotate(90deg);
@@ -82,7 +82,7 @@ $item-padding: 10px 16px;
       }
 
       a {
-        background: #1f1f1f;
+        background: var(--color-blue-gray-900);
         padding: 10px 16px 10px 48px;
 
         &:hover {
