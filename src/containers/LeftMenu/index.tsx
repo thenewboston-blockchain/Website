@@ -8,19 +8,6 @@ import './LeftMenu.scss';
 export const LeftMenu = () => {
   return (
     <nav className="LeftMenu">
-      <NavLink className="menu-link heavy" exact to="/">
-        <span className="material-icons">home</span>
-        <span>Home</span>
-      </NavLink>
-      <NavLink className="menu-link heavy" to="/contribute">
-        <span className="material-icons">people</span>
-        <span>Contribute</span>
-      </NavLink>
-      <NavLink className="menu-link heavy" to="/roadmap">
-        <span className="material-icons">map</span>
-        <span>Roadmap</span>
-      </NavLink>
-
       <LeftMenuGroup leftIcon={<span className="material-icons">description</span>} title="Guide">
         <NavLink to="/guide/introduction">Introduction</NavLink>
         <NavLink to="/guide/accounts">Accounts</NavLink>

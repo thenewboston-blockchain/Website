@@ -14,17 +14,6 @@
     grid-row: 1 / span 1;
 
     .TopNav {
-      align-items: center;
-      background: white;
-      display: flex;
-      height: 46px;
-
-      a,
-      a:visited {
-        color: var(--color-text);
-        text-decoration: none;
-      }
-
       .left-menu-toggle-container {
         align-items: center;
         border-right: 1px solid var(--color-gray-4);
@@ -35,26 +24,6 @@
 
         &:hover {
           background: rgba(0, 0, 0, 0.02);
-        }
-      }
-
-      .thenewboston {
-        align-items: center;
-        border-right: none;
-        display: flex;
-        font-family: var(--font-family-mono);
-        font-size: 16px;
-        font-weight: 700;
-        padding: 8px 0;
-        margin-left: 12px;
-
-        &.active {
-          background-color: transparent;
-        }
-
-        img.logo {
-          height: 26px;
-          margin-right: 6px;
         }
       }
     }
