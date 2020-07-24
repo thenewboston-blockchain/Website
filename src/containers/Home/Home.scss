@@ -59,6 +59,28 @@ $content-padding: 128px 64px 128px 128px;
         max-width: 100%;
       }
     }
+
+    @media (max-width: 1200px) {
+      flex-direction: column;
+
+      &__left {
+        max-width: 100%;
+        padding: 64px 128px 0 128px;
+
+        .content-container {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+
+      &__right {
+        img.screenshot {
+          padding: 64px;
+        }
+      }
+    }
   }
 
   .instant-transactions {
@@ -76,6 +98,7 @@ $content-padding: 128px 64px 128px 128px;
     }
 
     .content-container {
+      width: 100%;
       z-index: 1;
 
       h1 {
@@ -155,6 +178,37 @@ $content-padding: 128px 64px 128px 128px;
 
         .right-block {
           margin-left: 30px;
+        }
+      }
+    }
+
+    @media (max-width: 1200px) {
+      padding: 128px;
+
+      .content-container {
+        .comparison-card-container {
+          align-items: center;
+          flex-direction: column;
+
+          .arrow-container {
+            height: 60px;
+            transform: rotate(90deg);
+            width: auto;
+          }
+        }
+
+        .text-snippets {
+          @media (max-width: 1200px) {
+            flex-direction: column;
+
+            .left-block {
+              margin: 0 0 30px 0;
+            }
+
+            .right-block {
+              margin: 0;
+            }
+          }
         }
       }
     }
