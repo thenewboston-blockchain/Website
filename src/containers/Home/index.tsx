@@ -5,6 +5,7 @@ import MarketingButton from 'components/MarketingButton';
 
 import Bitcoin from 'assets/svgs/bitcoin.svg';
 import Logo from 'assets/svgs/thenewboston.svg';
+import RightArrow from 'assets/svgs/right-arrow.svg';
 import Screenshot from './Screenshot.png';
 
 import './Home.scss';
@@ -25,7 +26,7 @@ const Home = () => {
         {renderComparisonCardStat('avg. tx time', '~5 min')}
       </div>
       <div className="arrow-container">
-        <span> >>>> </span>
+        <img alt="right arrow" className="right-arrow" src={RightArrow} />
       </div>
       <div className="comparison-card">
         <img alt="logo" className="crypto-logo" src={Logo} />

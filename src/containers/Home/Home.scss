@@ -64,7 +64,8 @@ $content-padding: 128px 64px 128px 128px;
   .instant-transactions {
     background: #f6f9fc;
     display: flex;
-    min-height: 1200px;
+    min-height: 1440px;
+    padding: $content-padding;
     position: relative;
 
     svg.background-graphic {
@@ -75,7 +76,6 @@ $content-padding: 128px 64px 128px 128px;
     }
 
     .content-container {
-      padding: $content-padding;
       z-index: 1;
 
       h1 {
@@ -103,6 +103,8 @@ $content-padding: 128px 64px 128px 128px;
           box-shadow: 0 20px 40px rgba(11, 38, 63, 0.15);
           display: flex;
           flex-direction: column;
+          justify-content: center;
+          min-height: 390px;
           padding: 30px 32px 60px;
           width: 360px;
 
