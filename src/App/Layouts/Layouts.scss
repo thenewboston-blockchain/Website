@@ -51,8 +51,8 @@
     }
 
     &__links {
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-auto-flow: column;
         justify-content: center;
         gap: 3rem;
 
