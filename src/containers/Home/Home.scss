@@ -1,6 +1,8 @@
 $content-padding: 128px 64px 128px 128px;
 
 .Home {
+  font-family: Helvetica, serif;
+
   .hero {
     display: flex;
     min-height: 700px;
@@ -20,11 +22,6 @@ $content-padding: 128px 64px 128px 128px;
       padding: $content-padding;
 
       .content-container {
-        h1,
-        h2 {
-          font-family: Helvetica, serif;
-        }
-
         h1 {
           font-size: 48px;
           font-weight: 300;
@@ -82,16 +79,59 @@ $content-padding: 128px 64px 128px 128px;
       z-index: 1;
 
       h1 {
-        font-family: Helvetica, serif;
         font-size: 36px;
         font-weight: bold;
         line-height: 120%;
         margin-top: 30px;
       }
 
+      .comparison-card-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+
+        .arrow-container {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          width: 60px;
+        }
+
+        .comparison-card {
+          background: white;
+          border-radius: 12px;
+          box-shadow: 0 20px 40px rgba(11, 38, 63, 0.15);
+          display: flex;
+          flex-direction: column;
+          padding: 30px 32px 60px;
+          width: 360px;
+
+          img.crypto-logo {
+            height: 30px;
+          }
+
+          .comparison-card-stat {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            margin-top: 60px;
+
+            .attribute {
+              font-size: 20px;
+              font-weight: 500;
+              margin-top: 12px;
+            }
+
+            .value {
+              font-size: 36px;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+
       .instant-transactions-mini {
         color: #556cd6;
-        font-family: Helvetica, serif;
         font-weight: 500;
         line-height: 120%;
       }
@@ -103,7 +143,6 @@ $content-padding: 128px 64px 128px 128px;
         .left-block,
         .right-block {
           flex: 1;
-          font-family: Helvetica, serif;
           font-size: 16px;
           line-height: 150%;
         }

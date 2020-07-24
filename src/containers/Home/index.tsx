@@ -3,11 +3,38 @@ import {NavLink} from 'react-router-dom';
 
 import MarketingButton from 'components/MarketingButton';
 
+import Bitcoin from 'assets/svgs/bitcoin.svg';
+import Logo from 'assets/svgs/thenewboston.svg';
 import Screenshot from './Screenshot.png';
 
 import './Home.scss';
 
 const Home = () => {
+  const renderComparisonCardStat = (attribute: string, value: string) => (
+    <div className="comparison-card-stat">
+      <div className="value">{value}</div>
+      <div className="attribute">{attribute}</div>
+    </div>
+  );
+
+  const renderComparisonCards = () => (
+    <div className="comparison-card-container">
+      <div className="comparison-card">
+        <img alt="logo" className="crypto-logo" src={Bitcoin} />
+        {renderComparisonCardStat('txs per second', '7')}
+        {renderComparisonCardStat('avg. tx time', '~5 min')}
+      </div>
+      <div className="arrow-container">
+        <span> >>>> </span>
+      </div>
+      <div className="comparison-card">
+        <img alt="logo" className="crypto-logo" src={Logo} />
+        {renderComparisonCardStat('txs per second', '3,238')}
+        {renderComparisonCardStat('avg. tx time', '0.015 seconds')}
+      </div>
+    </div>
+  );
+
   const renderHero = () => (
     <div className="hero">
       <svg className="background-graphic" viewBox="0 0 1366 396">
@@ -67,6 +94,7 @@ const Home = () => {
             </p>
           </div>
         </div>
+        {renderComparisonCards()}
       </div>
     </div>
   );
