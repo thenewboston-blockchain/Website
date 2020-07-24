@@ -45,7 +45,7 @@ $item-padding: 10px 16px;
       transition-duration: 0.2s;
 
       &:hover {
-        background: var(--color-blue-gray-700);
+        background: var(--color-blue-gray-900);
       }
 
       &.expanded {
@@ -86,11 +86,11 @@ $item-padding: 10px 16px;
         padding: 10px 16px 10px 48px;
 
         &:hover {
-          background: rgba(255, 255, 255, 0.1);
+          background: var(--color-blue-gray-800);
         }
 
         &.active {
-          background: rgba(255, 255, 255, 0.15);
+          background: var(--color-blue-gray-800);
         }
       }
     }
