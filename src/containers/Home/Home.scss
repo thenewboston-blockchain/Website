@@ -1,107 +1,133 @@
 $section-padding: 24px 42px;
 
 .Home {
-  h3 {
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 10px;
+  &__background {
+    position: absolute;
+    top: 0;
+    z-index: -1;
   }
 
-  p {
-    margin: 0 0 12px 0;
+  &__hero {
+    min-height: 70vh;
+    padding-top: calc(var(--app-toolbar-height, 4.125rem) + 1.75rem);
   }
 
-  .hero {
-    line-height: 1.4;
-    padding: 76px 12px;
+  &__heading {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 110%;
+  }
+
+  &__hero-content {
+    align-items: center;
+    display: grid;
+    gap: 4.875rem;
+    grid-template-columns: 1fr 1fr;
+    height: 70vh;
+  }
+
+  &__hero-description {
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 150%;
+    margin: 1.875rem 0 0 0;
+  }
+
+  &__button-links-container {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fill, 114px);
+    margin-top: 1.75rem;
+  }
+
+  &__content-right {
+    height: 100%;
+    position: relative;
+  }
+
+  &__image-preview {
+    display: block;
+    height: 100%;
+    position: absolute;
+  }
+
+  &__instant-transactions {
+    background-color: var(--color-background-secondary);
+    padding: 4.75rem 0 0 0;
+  }
+
+  &__heading-secondary {
+    margin-top: 1.875rem;
+  }
+
+  &__pitch-content {
+    display: grid;
+    gap: 3.75rem;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.875rem;
+
+    p {
+      font-size: 1rem;
+      line-height: 150%;
+    }
+  }
+
+  &__footer-graphic {
+    display: block;
+  }
+
+  &__comparison {
+    display: grid;
+    grid-template-columns: auto 3.75rem auto;
+    margin-bottom: -11rem;
+    margin-top: 3.75rem;
+    place-items: center;
+    position: relative;
+  }
+
+  &__card {
+    background: var(--color-background);
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 40px rgba(4, 34, 53, 0.15);
+    display: grid;
+    height: 396px;
+    justify-items: center;
+    max-width: 360px;
+    padding: 1rem;
+    width: 100%;
+
+    &:first-child {
+      justify-self: flex-end;
+    }
+
+    &:last-child {
+      justify-self: flex-start;
+    }
+  }
+
+  &__card-logo {
+    height: 1.875rem;
+    margin-top: 0.875rem;
+  }
+
+  &__card-arrow {
+    color: var(--color-accent);
+  }
+
+  &__card-item {
     text-align: center;
-
-    h1,
-    h2 {
-      font-family: var(--font-family-mono);
-    }
-
-    h1 {
-      font-family: var(--font-family-roboto);
-      font-size: 24px;
-      font-weight: 300;
-    }
-
-    h2 {
-      font-family: var(--font-family-roboto);
-      font-size: 36px;
-      font-weight: 300;
-      margin-top: 2px;
-    }
-
-    .marketing-buttons {
-      display: flex;
-      justify-content: center;
-      margin: 24px 0 0 0;
-
-      .MarketingButton {
-        margin: 0 8px;
-      }
-    }
   }
 
-  .features {
-    background: #2a2c34;
-    display: flex;
-    justify-content: space-evenly;
-    padding: $section-padding;
+  &__card-item-value {
+    display: block;
+    font-size: 2.25rem;
+    font-weight: 300;
+    line-height: 120%;
   }
 
-  .performance {
-    display: flex;
-    padding: 12px 42px;
-
-    img.chart {
-      height: 100%;
-      margin-right: 24px;
-      width: 280px;
-    }
-
-    .performance-text {
-      margin-top: 24px;
-    }
-
-    @media (max-width: 760px) {
-      flex-direction: column-reverse;
-
-      img.chart {
-        align-self: center;
-        display: flex;
-        margin: 0;
-      }
-
-      .performance-text {
-        margin-top: 24px;
-      }
-    }
-  }
-
-  .security {
-    display: flex;
-    padding: $section-padding;
-
-    img.key-pair {
-      height: 100%;
-      width: 400px;
-    }
-
-    @media (max-width: 760px) {
-      flex-direction: column;
-
-      img.key-pair {
-        align-self: center;
-        display: flex;
-      }
-    }
-  }
-
-  .trust {
-    background: #e6e6e6;
-    padding: $section-padding;
+  &__card-item-label {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 500;
   }
 }

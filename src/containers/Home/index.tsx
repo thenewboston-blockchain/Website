@@ -1,114 +1,109 @@
 import React from 'react';
 
 import MarketingButton from 'components/MarketingButton';
-import Feature from './Feature';
 
-import KeyPair from 'assets/images/KeyPair.png';
-import TxTimes from './TxTimes.png';
+import IntroPreview from './IntroPreview.png';
 
 import './Home.scss';
 
 const Home = () => {
-  const renderFeatures = () => (
-    <div className="features">
-      <Feature icon="speed" title="Instant Transactions" subtitle="Say goodbye to 10 minute block times" />
-      <Feature icon="verified_user" title="Trust Based" subtitle="No more PoW or PoS" />
-      <Feature icon="code" title="Open Source" subtitle="Built and maintained by thenewboston community" />
-    </div>
-  );
-
   const renderHero = () => (
-    <div className="hero">
-      <h1>Welcome to thenewboston</h1>
-      <h2>
-        A <span className="red">Trust Based</span> Open Source Digital Currency
-      </h2>
-      <div className="marketing-buttons">
-        <MarketingButton website="slack" />
-        <MarketingButton website="github" />
+    <div className="Home__hero">
+      <svg className="Home__background" viewBox="0 0 1366 396">
+        <path fill="#F6F9FC" fillRule="nonzero" d="M0 395.5L1366 106V0H0v395.5z" />
+      </svg>
+
+      <div className="Home__hero-content">
+        <div className="Home__content-left">
+          <h1 className="Home__heading">Transact in seconds with cryptocurrency</h1>
+          <p className="Home__hero-description">
+            An open source project built and maintained by thenewboston community to give the world the ability to send
+            transactions in seconds with cryptocurrency and give value to the people.
+          </p>
+          <div className="Home__button-links-container">
+            <MarketingButton website="slack" />
+            <MarketingButton website="github" />
+          </div>
+        </div>
+        <div className="Home__content-right">
+          <img alt="Application Preview" className="Home__image-preview" src={IntroPreview} />
+        </div>
       </div>
     </div>
   );
 
-  const renderPerformance = () => (
-    <div className="performance">
-      <img alt="chart" className="chart" src={TxTimes} />
-      <div className="performance-text">
-        <h3>Performance</h3>
-        <p>
-          An inherent defect in the traditional Blockchain architecture is the inefficient composition of blocks. Blocks
-          in the Bitcoin Blockchain are composed of multiple unrelated transactions. This indicates that within any
-          given block, the earliest transactions experience significant delays as later transactions continue to
-          accumulate until the entire block eventually becomes verified.
-        </p>
-        <p>
-          Our architecture was built on the idea that when building a distributed payment ledger, it is not the
-          transaction processing itself that requires distribution across multiple servers, for this often results in
-          duplicate work being done by several servers causing an inherent inefficiency in the system. It is rather the
-          ability to fairly elect a single validation server and consensual acceptance of the produced results that
-          requires distribution among peers. This allows for highly performant transaction validation within a
-          decentralized network.
-        </p>
-      </div>
-    </div>
-  );
-
-  const renderSecurity = () => (
-    <div className="security">
+  const renderInstantTransactions = () => (
+    <div className="Home__instant-transactions">
       <div>
-        <h3>Security</h3>
-        <p>
-          All account balances and transactions over the network are secured through the use of digital signatures. When
-          transferring points between accounts, sending users digitally sign their transactions in order to prove
-          ownership of their funds and authorize the transfer of points to others. All participants on the network are
-          able to publicly view and verify the authenticity of these signatures without the need for the sender to ever
-          reveal their secret "signing key". The signing key for all user accounts are kept private and secured by the
-          users themselves on their own personal devices.
-        </p>
-        <p>
-          Our network uses the{' '}
-          <a rel="noopener noreferrer" href="https://ed25519.cr.yp.to/">
-            Ed25519 Digital Signature Algorithm
-          </a>{' '}
-          which allows for both highly performant and highly secure signatures.
-        </p>
-      </div>
-      <img alt="key-pair" className="key-pair" src={KeyPair} />
-    </div>
-  );
+        <span className="app-subheader">Instant Transactions</span>
 
-  const renderTrust = () => (
-    <div className="trust">
-      <h3>Trust</h3>
-      <p>
-        The single most important concept in this network architecture is the concept of trust. It is also where this
-        network deviates most from traditional Blockchain based cryptocurrencies that abide by common consensus
-        mechanisms such as Proof of Work (PoW) or Proof of Stake (PoS).
-      </p>
-      <p>
-        It is our belief that we have incorrectly turned to computer science in search of a solution to a question in
-        which computers are simply not capable of solving. In an effort to quantify the level of "trust", we have lost
-        sight of what "trust" truly means. Trust is not a formula. It is not an equation in which a given set of inputs
-        should always lead to an expected output. It is an ever evolving, ever changing feeling in which only life is
-        capable of experiencing. It is the unseen bond in which time can both strengthen or break.
-      </p>
-      <p>
-        By establishing a network architecture in which discrepancies in transactions are able to be solved quickly and
-        efficiently through the use of human quantified trust, it is possible to construct a highly scalable, highly
-        reliable, and highly performant globally distributed network. A trust based network architecture would
-        immediately reject any node deemed untrustworthy, regardless of computing power or the amount of wealth that
-        node controlled.
-      </p>
+        <h2 className="Home__heading-secondary">
+          Say goodbye to <br /> 10 minute block times
+        </h2>
+
+        <div className="Home__pitch-content">
+          <div>
+            <p>
+              An inherent defect in the traditional Blockchain architecture is the inefficient composition of blocks.
+              Blocks in the Bitcoin Blockchain are composed of multiple unrelated transactions. This indicates that
+              within any given block, the earliest transactions experience significant delays as later transactions
+              continue to accumulate until the entire block eventually becomes verified.
+            </p>
+            {/*<AppButton primary>View Guide<AppIcon icon="chevron-right" /></AppButton>*/}
+          </div>
+          <div>
+            <p>
+              Our architecture was built on the idea that when building a distributed payment ledger, it is not the
+              transaction processing itself that requires distribution across multiple servers, for this often results
+              in duplicate work being done by several servers causing an inherent inefficiency in the system. It is
+              rather the ability to fairly elect a single validation server and consensual acceptance of the produced
+              results that requires distribution among peers. This allows for highly performant transaction validation
+              within a decentralized network
+            </p>
+          </div>
+        </div>
+
+        <div className="Home__comparison">
+          <div className="Home__card">
+            {/*<img alt="Bitcoin Logo" src={BitcoinLogo} className="Home__card-logo" />*/}
+
+            <div className="Home__card-item">
+              <span className="Home__card-item-value">7</span>
+              <span className="Home__card-item-label">txs per second</span>
+            </div>
+
+            <div className="Home__card-item">
+              <span className="Home__card-item-value">~5 min</span>
+              <span className="Home__card-item-label">avg. tx time</span>
+            </div>
+          </div>
+          <div>{/*<AppIcon className="Home__card-arrow" icon="arrow-right" />*/}</div>
+          <div className="Home__card">
+            {/*<AppLogo className="Home__card-logo" />*/}
+
+            <div className="Home__card-item">
+              <span className="Home__card-item-value">3,238</span>
+              <span className="Home__card-item-label">txs per second</span>
+            </div>
+
+            <div className="Home__card-item">
+              <span className="Home__card-item-value">0.015 seconds</span>
+              <span className="Home__card-item-label">avg. tx time</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <svg className="Home__footer-graphic" viewBox="0 0 1366 659" fill="none">
+        <path d="M1366 0L0 147L0.5 659H1366.5L1366 0Z" fill="#131F41" />
+      </svg>
     </div>
   );
 
   return (
     <div className="Home">
       {renderHero()}
-      {renderFeatures()}
-      {renderPerformance()}
-      {renderTrust()}
-      {renderSecurity()}
+      {renderInstantTransactions()}
     </div>
   );
 };
