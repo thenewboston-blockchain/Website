@@ -1,7 +1,7 @@
 import React, {FC, ReactNode} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import Logo from 'assets/images/logo.png';
+import Logo from 'assets/svgs/thenewboston.svg';
 
 import './TopNav.scss';
 
@@ -14,8 +14,7 @@ export const TopNav: FC<ComponentProps> = ({leftMenuToggle}) => {
     <div className="left-items">
       {leftMenuToggle && leftMenuToggle}
       <NavLink className="thenewboston" to="/">
-        <img alt="thenewboston logo" className="logo" src={Logo} />
-        <span>thenewboston</span>
+        <img alt="thenewboston Logo" className="logo" src={Logo} />
       </NavLink>
     </div>
   );

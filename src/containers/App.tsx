@@ -23,6 +23,18 @@ const App = () => {
           </Layout>
         </Route>
 
+        <Route exact path="/contribute">
+          <Layout>
+            <Contribute />
+          </Layout>
+        </Route>
+
+        <Route exact path="/roadmap">
+          <Layout>
+            <Roadmap />
+          </Layout>
+        </Route>
+
         <Route exact path="/bank-api">
           <Redirect to="/bank-api/accounts" />
         </Route>
@@ -35,10 +47,6 @@ const App = () => {
         </Route>
         <Route path="/confirmation-validator-api/:chapter">
           <AdminLayout left={<LeftMenu />} right={<ConfirmationValidatorAPI />} />
-        </Route>
-
-        <Route exact path="/contribute">
-          <AdminLayout left={<LeftMenu />} right={<Contribute />} />
         </Route>
 
         <Route exact path="/deployment-guides">
@@ -60,10 +68,6 @@ const App = () => {
         </Route>
         <Route path="/primary-validator-api/:chapter">
           <AdminLayout left={<LeftMenu />} right={<PrimaryValidatorAPI />} />
-        </Route>
-
-        <Route exact path="/roadmap">
-          <AdminLayout left={<LeftMenu />} right={<Roadmap />} />
         </Route>
 
         <Redirect to="/" />
