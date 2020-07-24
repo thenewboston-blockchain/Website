@@ -1,25 +1,23 @@
-<p align="center">
-    <img width="400" src="./src/assets/images/TheNewBostonLogo.svg">
-</p>
+<div style="text-align: center">
+    <img alt="tnb logo" width="400" src="./src/assets/images/TheNewBostonLogo.svg">
+</div>
 
-
-<h2 align="center">Getting Started</h2>
-<p align="center">
+<h2 style="text-align: center">Getting Started</h2>
+<div style="text-align: center">
 This repository contains all the code for the <a href="https://thenewboston.com">TheNewBoston Website</a> 
-</p>
+</div>
 
 ## Contributing
 
-Feel free to contirbue to the project. You can request new features by creating an issue or you can contribute your own features by creating a pull request. Before working on a feature it is a good idea to open an issue to ensure the feature fits the project.
+Feel free to contribute to the project. You can request new features by creating an issue, or you can contribute your own features by creating a pull request. Before working on a feature it is a good idea to open an issue to ensure the feature fits the project.
 
-Bug reports are also appericated. When reporting a bug try to provide some information that can be used to help determine the issue. Things like erros messages, package version, and relevent code would be good things to include.
-
+Bug reports are also appreciated. When reporting a bug try to provide some information that can be used to help determine the issue. Things like error messages, package version, and relevant code would be good things to include.
 
 ## Development Setup
 
 ### Getting the code
 
-To get the source code for this project, run the following command in the directory you want to have this project in. 
+To get the source code for this project, run the following command in the directory you want to have this project in.
 
 ```bash
 Using HTTPS
@@ -32,12 +30,15 @@ git clone git@github.com:thenewboston-developers/Website.git
 ```
 
 ### Running the project
-After cloning the repo, run the following command to install the project dependencies: 
+
+After cloning the repo, run the following command to install the project dependencies:
+
 ```bash
 $ npm install
 ```
 
 Then to run the code, run the following command
+
 ```bash
 $ npm start
 ```
