@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
-import MarketingButton from 'components/MarketingButton';
+import {MarketingButton} from 'components';
 
 import Bitcoin from 'assets/svgs/bitcoin.svg';
 import Logo from 'assets/svgs/thenewboston.svg';

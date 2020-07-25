@@ -1,3 +1,4 @@
 import {Commands, RequestResponse} from './CodeHighlighter';
+import MarketingButton from './MarketingButton';
 
-export {Commands, RequestResponse};
+export {Commands, MarketingButton, RequestResponse};
