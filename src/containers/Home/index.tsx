@@ -66,9 +66,6 @@ const Home = () => {
 
   const renderInstantTransactions = () => (
     <div className="instant-transactions">
-      <svg className="background-graphic" viewBox="0 0 1366 659" fill="none">
-        <path d="M1366 0L0 147L0.5 659H1366.5L1366 0Z" fill="#131F41" />
-      </svg>
       <div className="content-container">
         <div className="instant-transactions-mini">INSTANT TRANSACTIONS</div>
         <h1>Say goodbye to 10 minute block times</h1>
@@ -97,6 +94,9 @@ const Home = () => {
         </div>
         {renderComparisonCards()}
       </div>
+      <svg className="background-graphic" viewBox="0 0 1366 659" fill="none">
+        <path d="M1366 0L0 147L0.5 659H1366.5L1366 0Z" fill="#131F41" />
+      </svg>
     </div>
   );
 
