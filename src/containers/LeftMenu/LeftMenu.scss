@@ -10,14 +10,6 @@ $item-padding: 10px 16px;
     color: #fff;
     padding: $item-padding;
     text-decoration: none;
-
-    &:hover {
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    &.active {
-      background: rgba(255, 255, 255, 0.15);
-    }
   }
 
   .heavy {
