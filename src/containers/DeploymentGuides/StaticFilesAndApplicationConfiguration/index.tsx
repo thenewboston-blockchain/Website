@@ -1,6 +1,6 @@
 import React, {FC, ReactNode} from 'react';
 
-import Commands from 'components/Commands';
+import {Commands} from 'components';
 
 interface ComponentProps {
   initializationCommand: ReactNode;
@@ -13,7 +13,7 @@ const StaticFilesAndApplication: FC<ComponentProps> = ({initializationCommand, n
     <>
       <h2>Static files and Application Configuration</h2>
 
-      <Commands code={`nano ~/.profile`} comment="Set environment variable" />
+      <Commands code={`nano ~/.profile`} heading="Set environment variable" />
 
       <Commands
         code={`export DJANGO_APPLICATION_ENVIRONMENT="production"
@@ -25,7 +25,7 @@ export NETWORK_SIGNING_KEY="${networkSigningKey}"`}
 su - deploy
 printenv
 `}
-        comment="Log out and log back in"
+        heading="Log out and log back in"
       />
 
       <Commands
@@ -34,10 +34,10 @@ python3 manage.py makemigrations && python3 manage.py migrate
 python3 manage.py createsuperuser
 python3 manage.py collectstatic
 `}
-        comment="Set up database"
+        heading="Set up database"
       />
       {initializationCommand}
-      <Commands code={`http://[IP_ADDRESS]/config`} comment="Verify everything is working correctly by visiting" />
+      <Commands code={`http://[IP_ADDRESS]/config`} heading="Verify everything is working correctly by visiting" />
     </>
   );
 };

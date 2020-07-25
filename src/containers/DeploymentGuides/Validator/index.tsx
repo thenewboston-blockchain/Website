@@ -1,7 +1,7 @@
 import React from 'react';
 
+import {Commands} from 'components';
 import Celery from 'containers/DeploymentGuides/Celery';
-import Commands from 'components/Commands';
 import Firewall from 'containers/DeploymentGuides/Firewall';
 import GatewayInterface from 'containers/DeploymentGuides/GatewayInterface';
 import InstallDependencies from 'containers/DeploymentGuides/InstallDependencies';
@@ -16,7 +16,7 @@ import Troubleshooting from 'containers/DeploymentGuides/Troubleshooting';
 const Validator = () => {
   const renderInitializationCommands = () => (
     <>
-      <Commands code={`python3 manage.py initialize_validator`} comment="Initialize validator node" />
+      <Commands code={`python3 manage.py initialize_validator`} heading="Initialize validator node" />
       <ParamsTable
         items={[
           {
@@ -92,7 +92,7 @@ const Validator = () => {
       />
       <Commands
         code={`python3 manage.py initialize_confirmation_validator`}
-        comment="If setting up confirmation validator, run this script to connect to the primary validator"
+        heading="If setting up confirmation validator, run this script to connect to the primary validator"
       />
     </>
   );

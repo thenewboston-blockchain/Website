@@ -1,8 +1,8 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
+import {RequestResponse} from 'components';
 import ParamsTable from 'components/ParamsTable';
-import RequestResponse from 'components/RequestResponse';
 
 import './ConfirmationBlocks.scss';
 

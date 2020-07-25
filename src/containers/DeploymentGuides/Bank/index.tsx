@@ -1,7 +1,7 @@
 import React from 'react';
 
+import {Commands} from 'components';
 import Celery from 'containers/DeploymentGuides/Celery';
-import Commands from 'components/Commands';
 import Firewall from 'containers/DeploymentGuides/Firewall';
 import GatewayInterface from 'containers/DeploymentGuides/GatewayInterface';
 import InstallDependencies from 'containers/DeploymentGuides/InstallDependencies';
@@ -16,7 +16,7 @@ import Troubleshooting from 'containers/DeploymentGuides/Troubleshooting';
 const Bank = () => {
   const renderInitializationCommands = () => (
     <>
-      <Commands code={`python3 manage.py initialize_bank`} comment="Initialize server as bank" />
+      <Commands code={`python3 manage.py initialize_bank`} heading="Initialize server as bank" />
       <ParamsTable
         items={[
           {
@@ -70,7 +70,7 @@ const Bank = () => {
           </tr>
         }
       />
-      <Commands code={`python3 manage.py connect_to_primary_validator`} comment="Connect to the primary validator" />
+      <Commands code={`python3 manage.py connect_to_primary_validator`} heading="Connect to the primary validator" />
     </>
   );
 

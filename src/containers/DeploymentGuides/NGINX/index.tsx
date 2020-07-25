@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import Commands from 'components/Commands';
+import {Commands} from 'components';
 
 interface ComponentProps {
   name: string;
@@ -15,7 +15,7 @@ const NGINX: FC<ComponentProps> = ({name}) => {
         code={`sudo rm /etc/nginx/sites-available/default
 sudo nano /etc/nginx/sites-available/default
 `}
-        comment="Create NGINX configuration"
+        heading="Create NGINX configuration"
       />
       <Commands
         code={`upstream django {
@@ -44,9 +44,9 @@ server {
 
 }
 `}
-        comment="Paste in the following and save"
+        heading="Paste in the following and save"
       />
-      <Commands code={`sudo nginx -t`} comment="Test configuration" />
+      <Commands code={`sudo nginx -t`} heading="Test configuration" />
     </>
   );
 };

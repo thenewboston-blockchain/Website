@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Commands from 'components/Commands';
+import {Commands} from 'components';
 
 const InstallDependencies = () => {
   return (
@@ -15,7 +15,7 @@ sudo apt -y update && sudo apt -y upgrade
 
 sudo apt -y install build-essential nginx python3-pip redis-server
 `}
-        comment="Update and install packages"
+        heading="Update and install packages"
       />
     </>
   );

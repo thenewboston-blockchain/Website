@@ -1,6 +1,6 @@
 import React from 'react';
 
-import RequestResponse from 'components/RequestResponse';
+import {RequestResponse} from 'components';
 
 import './ConfirmationBlocks.scss';
 
