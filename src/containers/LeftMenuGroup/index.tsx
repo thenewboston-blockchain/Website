@@ -1,13 +1,15 @@
 import React, {FC, ReactNode, useState} from 'react';
+import {RouteComponentProps, withRouter} from 'react-router-dom';
 
-interface ComponentProps {
+interface ComponentProps extends RouteComponentProps {
   children: ReactNode;
   leftIcon: ReactNode;
   title: string;
+  urlBase: string;
 }
 
-const LeftMenuGroup: FC<ComponentProps> = ({children, leftIcon, title}) => {
-  const [expanded, toggleExpanded] = useState(false);
+const LeftMenuGroup: FC<ComponentProps> = ({children, leftIcon, location, title, urlBase}) => {
+  const [expanded, toggleExpanded] = useState(location.pathname.includes(urlBase));
 
   return (
     <div className="LeftMenuGroup">
@@ -23,4 +25,4 @@ const LeftMenuGroup: FC<ComponentProps> = ({children, leftIcon, title}) => {
   );
 };
 
-export default LeftMenuGroup;
+export default withRouter(LeftMenuGroup);
