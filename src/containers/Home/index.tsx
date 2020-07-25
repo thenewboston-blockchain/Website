@@ -95,7 +95,7 @@ const Home = () => {
         {renderComparisonCards()}
       </div>
       <svg className="background-graphic" viewBox="0 0 1366 659" fill="none">
-        <path d="M1366 0L0 147L0.5 659H1366.5L1366 0Z" fill="#131F41" />
+        <path d="M1366 0L0 147L0 659H1366.5L1366 0Z" fill="#131F41" />
       </svg>
     </div>
   );
