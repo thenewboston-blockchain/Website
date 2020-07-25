@@ -4,7 +4,7 @@
 
 ## Overview
 
-This repository contains the website and documentation for [thenewboston.com](https://thenewboston.com/)
+This repository contains the source code and documentation for [thenewboston.com](https://thenewboston.com/) website.
 
 ## Contributing
 
