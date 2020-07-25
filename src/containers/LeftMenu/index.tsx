@@ -8,20 +8,7 @@ import './LeftMenu.scss';
 export const LeftMenu = () => {
   return (
     <nav className="LeftMenu">
-      <NavLink className="menu-link heavy" exact to="/">
-        <span className="material-icons">home</span>
-        <span>Home</span>
-      </NavLink>
-      <NavLink className="menu-link heavy" to="/contribute">
-        <span className="material-icons">people</span>
-        <span>Contribute</span>
-      </NavLink>
-      <NavLink className="menu-link heavy" to="/roadmap">
-        <span className="material-icons">map</span>
-        <span>Roadmap</span>
-      </NavLink>
-
-      <LeftMenuGroup leftIcon={<span className="material-icons">description</span>} title="Guide">
+      <LeftMenuGroup leftIcon={<span className="material-icons">description</span>} title="Guide" urlBase="guide">
         <NavLink to="/guide/introduction">Introduction</NavLink>
         <NavLink to="/guide/accounts">Accounts</NavLink>
         <NavLink to="/guide/blocks">Blocks</NavLink>
@@ -39,7 +26,11 @@ export const LeftMenu = () => {
         <NavLink to="/guide/future-development">Future Development</NavLink>
       </LeftMenuGroup>
 
-      <LeftMenuGroup leftIcon={<span className="material-icons">account_balance</span>} title="Bank API">
+      <LeftMenuGroup
+        leftIcon={<span className="material-icons">account_balance</span>}
+        title="Bank API"
+        urlBase="bank-api"
+      >
         <NavLink to="/bank-api/accounts">Accounts</NavLink>
         <NavLink to="/bank-api/bank-transactions">Bank Transactions</NavLink>
         <NavLink to="/bank-api/banks">Banks</NavLink>
@@ -51,7 +42,11 @@ export const LeftMenu = () => {
         <NavLink to="/bank-api/validators">Validators</NavLink>
       </LeftMenuGroup>
 
-      <LeftMenuGroup leftIcon={<span className="material-icons">verified_user</span>} title="Primary Validator API">
+      <LeftMenuGroup
+        leftIcon={<span className="material-icons">verified_user</span>}
+        title="Primary Validator API"
+        urlBase="primary-validator-api"
+      >
         <NavLink to="/primary-validator-api/accounts">Accounts</NavLink>
         <NavLink to="/primary-validator-api/bank-blocks">Bank Blocks</NavLink>
         <NavLink to="/primary-validator-api/banks">Banks</NavLink>
@@ -61,7 +56,11 @@ export const LeftMenu = () => {
         <NavLink to="/primary-validator-api/validators">Validators</NavLink>
       </LeftMenuGroup>
 
-      <LeftMenuGroup leftIcon={<span className="material-icons">check_circle</span>} title="Confirmation Validator API">
+      <LeftMenuGroup
+        leftIcon={<span className="material-icons">check_circle</span>}
+        title="Confirmation Validator API"
+        urlBase="confirmation-validator-api"
+      >
         <NavLink to="/confirmation-validator-api/accounts">Accounts</NavLink>
         <NavLink to="/confirmation-validator-api/bank-confirmation-services">Confirmation Services</NavLink>
         <NavLink to="/confirmation-validator-api/banks">Banks</NavLink>
@@ -71,7 +70,11 @@ export const LeftMenu = () => {
         <NavLink to="/confirmation-validator-api/validators">Validators</NavLink>
       </LeftMenuGroup>
 
-      <LeftMenuGroup leftIcon={<span className="material-icons">dns</span>} title="Deployment Guides">
+      <LeftMenuGroup
+        leftIcon={<span className="material-icons">dns</span>}
+        title="Deployment Guides"
+        urlBase="deployment-guides"
+      >
         <NavLink to="/deployment-guides/bank">Bank</NavLink>
         <NavLink to="/deployment-guides/validator">Validator</NavLink>
       </LeftMenuGroup>

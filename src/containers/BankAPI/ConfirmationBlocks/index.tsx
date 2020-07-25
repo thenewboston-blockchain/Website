@@ -14,7 +14,7 @@ const ConfirmationBlocks = () => (
       their blockchain. The general flow from bank account to confirmation block is as follows:
     </p>
 
-    <ol>
+    <ol className="mb-20">
       <li>Accounts will send transactions to their bank</li>
       <li>
         The bank will create a bank block from the received transactions and send that bank block to the validator

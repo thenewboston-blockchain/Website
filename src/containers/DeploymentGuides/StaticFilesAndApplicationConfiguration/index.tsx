@@ -5,16 +5,20 @@ import Commands from 'components/Commands';
 interface ComponentProps {
   initializationCommand: ReactNode;
   name: string;
+  networkSigningKey: string;
 }
 
-const StaticFilesAndApplication: FC<ComponentProps> = ({initializationCommand, name}) => {
+const StaticFilesAndApplication: FC<ComponentProps> = ({initializationCommand, name, networkSigningKey}) => {
   return (
     <>
       <h2>Static files and Application Configuration</h2>
 
       <Commands code={`nano ~/.profile`} comment="Set environment variable" />
 
-      <Commands code={`export DJANGO_APPLICATION_ENVIRONMENT="production"`} />
+      <Commands
+        code={`export DJANGO_APPLICATION_ENVIRONMENT="production"
+export NETWORK_SIGNING_KEY="${networkSigningKey}"`}
+      />
 
       <Commands
         code={`logout

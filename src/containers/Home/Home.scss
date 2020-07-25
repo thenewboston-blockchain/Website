@@ -1,107 +1,216 @@
-$section-padding: 24px 42px;
+$content-padding: 128px 64px 128px 128px;
 
 .Home {
-  h3 {
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 10px;
-  }
-
-  p {
-    margin: 0 0 12px 0;
-  }
+  font-family: Helvetica, serif;
 
   .hero {
-    line-height: 1.4;
-    padding: 76px 12px;
-    text-align: center;
+    display: flex;
+    min-height: 700px;
+    position: relative;
 
-    h1,
-    h2 {
-      font-family: var(--font-family-mono);
+    svg.background-graphic {
+      position: absolute;
+      top: 0;
+      z-index: -1;
     }
 
-    h1 {
-      font-family: var(--font-family-roboto);
-      font-size: 24px;
-      font-weight: 300;
-    }
-
-    h2 {
-      font-family: var(--font-family-roboto);
-      font-size: 36px;
-      font-weight: 300;
-      margin-top: 2px;
-    }
-
-    .marketing-buttons {
+    &__left {
+      align-items: center;
       display: flex;
       justify-content: center;
-      margin: 24px 0 0 0;
+      max-width: 40%;
+      padding: $content-padding;
 
-      .MarketingButton {
-        margin: 0 8px;
+      .content-container {
+        h1 {
+          font-size: 48px;
+          font-weight: 300;
+          line-height: 110%;
+        }
+
+        h2 {
+          font-size: 16px;
+          font-weight: normal;
+          line-height: 150%;
+          margin-top: 30px;
+        }
+
+        .marketing-buttons {
+          display: flex;
+          margin: 30px 0 0;
+
+          .MarketingButton {
+            width: 114px;
+
+            &:first-of-type {
+              margin-right: 12px;
+            }
+          }
+        }
       }
     }
-  }
 
-  .features {
-    background: #2a2c34;
-    display: flex;
-    justify-content: space-evenly;
-    padding: $section-padding;
-  }
+    &__right {
+      align-items: center;
+      display: flex;
 
-  .performance {
-    display: flex;
-    padding: 12px 42px;
-
-    img.chart {
-      height: 100%;
-      margin-right: 24px;
-      width: 280px;
-    }
-
-    .performance-text {
-      margin-top: 24px;
-    }
-
-    @media (max-width: 760px) {
-      flex-direction: column-reverse;
-
-      img.chart {
-        align-self: center;
-        display: flex;
-        margin: 0;
-      }
-
-      .performance-text {
-        margin-top: 24px;
+      img.screenshot {
+        max-height: 100%;
+        max-width: 100%;
       }
     }
-  }
 
-  .security {
-    display: flex;
-    padding: $section-padding;
-
-    img.key-pair {
-      height: 100%;
-      width: 400px;
-    }
-
-    @media (max-width: 760px) {
+    @media (max-width: 1200px) {
       flex-direction: column;
 
-      img.key-pair {
-        align-self: center;
-        display: flex;
+      &__left {
+        max-width: 100%;
+        padding: 64px 128px 0 128px;
+
+        .content-container {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+
+      &__right {
+        img.screenshot {
+          padding: 64px;
+        }
       }
     }
   }
 
-  .trust {
-    background: #e6e6e6;
-    padding: $section-padding;
+  .instant-transactions {
+    background: #f6f9fc;
+    display: flex;
+    min-height: 1440px;
+    padding: $content-padding;
+    position: relative;
+
+    svg.background-graphic {
+      bottom: 0;
+      left: -2px;
+      position: absolute;
+      right: -2px;
+    }
+
+    .content-container {
+      width: 100%;
+      z-index: 1;
+
+      h1 {
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 120%;
+        margin-top: 30px;
+      }
+
+      .comparison-card-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+
+        .arrow-container {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          width: 60px;
+        }
+
+        .comparison-card {
+          background: white;
+          border-radius: 12px;
+          box-shadow: 0 20px 40px rgba(11, 38, 63, 0.15);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          min-height: 390px;
+          padding: 30px 32px 60px;
+          width: 360px;
+
+          img.crypto-logo {
+            height: 30px;
+          }
+
+          .comparison-card-stat {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            margin-top: 60px;
+
+            .attribute {
+              font-size: 20px;
+              font-weight: 500;
+              margin-top: 12px;
+            }
+
+            .value {
+              font-size: 36px;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+
+      .instant-transactions-mini {
+        color: #556cd6;
+        font-weight: 500;
+        line-height: 120%;
+      }
+
+      .text-snippets {
+        display: flex;
+        margin-top: 30px;
+
+        .left-block,
+        .right-block {
+          flex: 1;
+          font-size: 16px;
+          line-height: 150%;
+        }
+
+        .left-block {
+          margin-right: 30px;
+        }
+
+        .right-block {
+          margin-left: 30px;
+        }
+      }
+    }
+
+    @media (max-width: 1200px) {
+      padding: 128px;
+
+      .content-container {
+        .comparison-card-container {
+          align-items: center;
+          flex-direction: column;
+
+          .arrow-container {
+            height: 60px;
+            transform: rotate(90deg);
+            width: auto;
+          }
+        }
+
+        .text-snippets {
+          @media (max-width: 1200px) {
+            flex-direction: column;
+
+            .left-block {
+              margin: 0 0 30px 0;
+            }
+
+            .right-block {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
   }
 }
