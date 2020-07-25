@@ -44,10 +44,10 @@ const Home = () => {
 
       <div className="hero__left">
         <div className="content-container">
-          <h1>Transact in seconds with cryptocurrency</h1>
+          <h1>We are building the impossible</h1>
           <h2>
-            An open source project built and maintained by thenewboston community to give the world the ability to send
-            transactions in seconds with cryptocurrency and give value to the people.
+            Join us in building a cryptocurrency that will soon change the world by allowing transactions to be
+            processed in less than a second.
           </h2>
           <div className="marketing-buttons">
             <MarketingButton website="slack" />
