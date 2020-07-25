@@ -5,9 +5,35 @@ import PrimaryValidatorUpgradeRequest from './PrimaryValidatorUpgradeRequest.png
 import './Resyncing.scss';
 
 const Resyncing = () => {
-  const renderPrimaryValidatorUpgradeRequest = () => (
+  const renderPrimaryValidatorUpdateNotice = () => (
     <>
-      <h2>Primary Validator Upgrade Request</h2>
+      <h2>Primary Validator Update Notice</h2>
+
+      <p>
+        This notice is sent from banks to confirmation validators to indicate that the requesting bank is leaving the
+        current network and switching to a new primary validator (a new network).
+      </p>
+      <p>Banks will always set their primary validator to the validator that is the:</p>
+      <ul className="mb-20">
+        <li>most trusted</li>
+        <li>online</li>
+        <li>configured as a primary validator</li>
+      </ul>
+      <p>
+        When a bank changes primary validators, any confirmation validators who have that bank set as their most trusted
+        need to be made aware of the change in order to correctly sync to the new primary validator.
+      </p>
+      <p>
+        Any confirmation validators that receive this request who do not have the requesting bank set as their most
+        trusted will delete the requesting bank. This is because the bank is indicating that it is leaving the network,
+        and therefore a connection is no longer needed.
+      </p>
+    </>
+  );
+
+  const renderUpgradeRequest = () => (
+    <>
+      <h2>Upgrade Request</h2>
 
       <p>
         When a bank alters the trust levels of their validators, if the results indicate that there are now confirmation
@@ -59,7 +85,7 @@ const Resyncing = () => {
 
       <p>
         Starting with the most trusted CV and continuing until their current PV is reached, the bank will send out a{' '}
-        <strong>/primary_validator_upgrade_request</strong> where the following logic will be performed:
+        <strong>/upgrade_request</strong> where the following logic will be performed:
       </p>
       <ul className="mb-20">
         <li>
@@ -74,37 +100,11 @@ const Resyncing = () => {
       <p>If and when a CV responds "yes", the requesting bank will:</p>
       <ul className="mb-20">
         <li>
-          break out of the loop (stop sending <strong>/primary_validator_upgrade_request</strong>)
+          break out of the loop (stop sending <strong>/upgrade_request</strong>)
         </li>
         <li>wait for that CV to upgrade themselves to a PV</li>
         <li>switch to their new PV</li>
       </ul>
-    </>
-  );
-
-  const renderPrimaryValidatorUpdateNotice = () => (
-    <>
-      <h2>Primary Validator Update Notice</h2>
-
-      <p>
-        This notice is sent from banks to confirmation validators to indicate that the requesting bank is leaving the
-        current network and switching to a new primary validator (a new network).
-      </p>
-      <p>Banks will always set their primary validator to the validator that is the:</p>
-      <ul className="mb-20">
-        <li>most trusted</li>
-        <li>online</li>
-        <li>configured as a primary validator</li>
-      </ul>
-      <p>
-        When a bank changes primary validators, any confirmation validators who have that bank set as their most trusted
-        need to be made aware of the change in order to correctly sync to the new primary validator.
-      </p>
-      <p>
-        Any confirmation validators that receive this request who do not have the requesting bank set as their most
-        trusted will delete the requesting bank. This is because the bank is indicating that it is leaving the network,
-        and therefore a connection is no longer needed.
-      </p>
     </>
   );
 
@@ -116,7 +116,7 @@ const Resyncing = () => {
         confirmation validators need to remain aware whenever certain changes occur at their most trusted banks. These
         changes will be sent to them from their connected banks and include:
       </p>
-      {renderPrimaryValidatorUpgradeRequest()}
+      {renderUpgradeRequest()}
       {renderPrimaryValidatorUpdateNotice()}
     </section>
   );
