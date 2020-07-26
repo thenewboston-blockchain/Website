@@ -1,16 +1,13 @@
-import React from 'react';
+import React, {FC} from 'react';
 
-import {RequestResponse} from 'components';
+import {DocContainer, DocEndpoint, RequestResponse} from 'components';
 
-import './Banks.scss';
-
-const Banks = () => {
+const ConfirmationValidatorApiBanks: FC = () => {
   return (
-    <section className="Banks">
-      <h1 className="page-title">Banks</h1>
+    <DocContainer className="ConfirmationValidatorApiBanks" title="Banks">
       <p>The confirmation validators will maintain a record of all connected banks.</p>
 
-      <h2 className="endpoint">GET /banks</h2>
+      <DocEndpoint endpoint="/banks" method="GET" />
       <RequestResponse
         code={`[
   {
@@ -27,8 +24,8 @@ const Banks = () => {
 ]`}
         heading="Response"
       />
-    </section>
+    </DocContainer>
   );
 };
 
-export default Banks;
+export default ConfirmationValidatorApiBanks;

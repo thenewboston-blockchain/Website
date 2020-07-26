@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom
 
 import AdminLayout from './AdminLayout';
 import BankApi from './BankApi';
-import ConfirmationValidatorAPI from './ConfirmationValidatorAPI';
+import ConfirmationValidatorApi from './ConfirmationValidatorApi';
 import Contribute from './Contribute';
 import DeploymentGuides from './DeploymentGuides';
 import Guide from './Guide';
@@ -46,7 +46,7 @@ const App = () => {
           <Redirect to="/confirmation-validator-api/accounts" />
         </Route>
         <Route path="/confirmation-validator-api/:chapter">
-          <AdminLayout left={<LeftMenu />} right={<ConfirmationValidatorAPI />} />
+          <AdminLayout left={<LeftMenu />} right={<ConfirmationValidatorApi />} />
         </Route>
 
         <Route exact path="/deployment-guides">

@@ -1,16 +1,13 @@
-import React from 'react';
+import React, {FC} from 'react';
 
-import {RequestResponse} from 'components';
+import {DocContainer, DocEndpoint, RequestResponse} from 'components';
 
-import './Validators.scss';
-
-const Validators = () => {
+const ConfirmationValidatorApiValidators: FC = () => {
   return (
-    <section className="Validators">
-      <h1 className="page-title">Validators</h1>
+    <DocContainer className="ConfirmationValidatorApiValidators" title="Validators">
       <p>Confirmation validators will maintain a record of all connected validators.</p>
 
-      <h2 className="endpoint">GET /validators</h2>
+      <DocEndpoint endpoint="/validators" method="GET" />
       <RequestResponse
         code={`[
   {
@@ -44,8 +41,8 @@ const Validators = () => {
 ]`}
         heading="Response"
       />
-    </section>
+    </DocContainer>
   );
 };
 
-export default Validators;
+export default ConfirmationValidatorApiValidators;

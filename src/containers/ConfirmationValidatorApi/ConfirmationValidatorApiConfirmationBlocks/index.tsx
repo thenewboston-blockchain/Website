@@ -1,20 +1,18 @@
-import React from 'react';
+import React, {FC} from 'react';
 
-import {RequestResponse} from 'components';
+import {DocContainer, DocEndpoint, RequestResponse} from 'components';
 
-import './ConfirmationBlocks.scss';
+const ConfirmationValidatorApiConfirmationBlocks: FC = () => {
+  return (
+    <DocContainer className="ConfirmationValidatorApiConfirmationBlocks" title="Confirmation Blocks">
+      <p>
+        Primary validators will send confirmation blocks to confirmation validators for re-validation after a block has
+        been added to the blockchain.
+      </p>
 
-const ConfirmationBlocks = () => (
-  <div className="ConfirmationBlocks">
-    <h1 className="page-title">Confirmation Blocks</h1>
-    <p>
-      Primary validators will send confirmation blocks to confirmation validators for re-validation after a block has
-      been added to the blockchain.
-    </p>
-
-    <h2 className="endpoint">POST /confirmation_blocks</h2>
-    <RequestResponse
-      code={`{
+      <DocEndpoint endpoint="/confirmation_blocks" method="POST" />
+      <RequestResponse
+        code={`{
   "message": {
     "block": {
       "account_number": "0cdd4ba04456ca169baca3d66eace869520c62fe84421329086e03d91a68acdb",
@@ -61,10 +59,10 @@ const ConfirmationBlocks = () => (
   "node_identifier": "3afdf37573f1a511def0bd85553404b7091a76bcd79cdcebba1310527b167521",
   "signature": "b4d335fa7662216acba06c18d93c6cfb688c8057cbe9193ddc8e6fb3702ba1d979e43b09e06c6c7c38358bbee5243dc37a52c5212298c2259be48285e3da130c"
 }`}
-      heading="Request"
-    />
-    <RequestResponse
-      code={`{
+        heading="Request"
+      />
+      <RequestResponse
+        code={`{
   "block": {
     "account_number": "0cdd4ba04456ca169baca3d66eace869520c62fe84421329086e03d91a68acdb",
     "message": {
@@ -107,12 +105,12 @@ const ConfirmationBlocks = () => (
     }
   ]
 }`}
-      heading="Response"
-    />
+        heading="Response"
+      />
 
-    <h2 className="endpoint">{'GET confirmation_blocks/<block_identifier>'}</h2>
-    <RequestResponse
-      code={`{
+      <DocEndpoint endpoint="/confirmation_blocks/<block_identifier>" method="GET" />
+      <RequestResponse
+        code={`{
   "message": {
     "block": {
       "account_number": "0cdd4ba04456ca169baca3d66eace869520c62fe84421329086e03d91a68acdb",
@@ -159,9 +157,10 @@ const ConfirmationBlocks = () => (
   "node_identifier": "3afdf37573f1a511def0bd85553404b7091a76bcd79cdcebba1310527b167521",
   "signature": "b4d335fa7662216acba06c18d93c6cfb688c8057cbe9193ddc8e6fb3702ba1d979e43b09e06c6c7c38358bbee5243dc37a52c5212298c2259be48285e3da130c"
 }`}
-      heading="Response"
-    />
-  </div>
-);
+        heading="Response"
+      />
+    </DocContainer>
+  );
+};
 
-export default ConfirmationBlocks;
+export default ConfirmationValidatorApiConfirmationBlocks;
