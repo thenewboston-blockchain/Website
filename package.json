@@ -12,7 +12,7 @@
     "@types/react-dom": "^16.9.0",
     "@types/react-syntax-highlighter": "^11.0.4",
     "clsx": "^1.1.1",
-    "lodash": "^4.17.15",
+    "lodash-es": "^4.17.15",
     "material-icons": "^0.3.1",
     "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
@@ -21,11 +21,12 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-syntax-highlighter": "^12.2.1",
-    "typescript": "~3.7.2"
+    "typescript": "^3.9.5"
   },
   "scripts": {
     "build": "react-scripts build",
     "eject": "react-scripts eject",
+    "lint": "tsc --noEmit && eslint './src/**/*.{js,ts,tsx}'",
     "prettier": "prettier --write \"{,!(node_modules)/**/}*.{ts,tsx,js,json,css,less,scss}\"",
     "start": "react-scripts start",
     "test": "react-scripts test"
@@ -46,15 +47,19 @@
     ]
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.155",
+    "@types/lodash-es": "^4.17.3",
     "@types/react-router-dom": "^5.1.5",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-airbnb-typescript": "^9.0.0",
     "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.18.2",
+    "eslint-plugin-jsx-a11y": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.3",
-    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^2.5.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.9",
@@ -66,6 +71,12 @@
     }
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix"
+    "{,!(node_modules)/**/}*.{ts,tsx,js}": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ],
+    "{,!(node_modules)/**/}*.{css,scss}": [
+      "prettier --write"
+    ]
   }
 }
