@@ -1,8 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
-import LeftMenuGroup from 'containers/LeftMenuGroup';
-
+import LeftMenuGroup from '../LeftMenuGroup';
 import './LeftMenu.scss';
 
 export const LeftMenu = () => {
