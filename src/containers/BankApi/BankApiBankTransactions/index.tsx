@@ -1,13 +1,10 @@
-import React from 'react';
+import React, {FC} from 'react';
 
-import {RequestResponse} from 'components';
+import {DocContainer, DocEndpoint, RequestResponse} from 'components';
 
-import './BankTransactions.scss';
-
-const BankTransactions = () => {
+const BankApiBankTransactions: FC = () => {
   return (
-    <section className="BankTransactions">
-      <h1 className="page-title">Bank Transactions</h1>
+    <DocContainer className="BankApiBankTransactions" title="Bank Transactions">
       <p>
         Bank transactions represent a single transaction within a block. They reference both the recipient account and
         the parent block. Bank transactions are stored separate from the block due to the fact that when viewing an
@@ -16,7 +13,7 @@ const BankTransactions = () => {
       </p>
       <p>Bank transactions are created automatically by the bank during block processing.</p>
 
-      <h2 className="endpoint">GET /bank_transactions</h2>
+      <DocEndpoint>GET /bank_transactions</DocEndpoint>
       <RequestResponse
         code={`[
   {
@@ -61,8 +58,8 @@ const BankTransactions = () => {
 ]`}
         heading="Response"
       />
-    </section>
+    </DocContainer>
   );
 };
 
-export default BankTransactions;
+export default BankApiBankTransactions;

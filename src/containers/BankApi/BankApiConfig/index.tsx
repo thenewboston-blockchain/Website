@@ -1,20 +1,17 @@
-import React from 'react';
+import React, {FC} from 'react';
 
-import {RequestResponse} from 'components';
+import {DocContainer, DocEndpoint, RequestResponse} from 'components';
 
-import './Config.scss';
-
-const Config = () => {
+const BankApiConfig: FC = () => {
   return (
-    <section className="Config">
-      <h1 className="page-title">Config</h1>
+    <DocContainer className="BankApiConfig" title="Config">
       <p>
         All nodes will provide config data detailing their current configuration details as well as their primary
         validator selection. This information is used not only by connecting clients but also by all other nodes in
         order to ensure proper connection settings.
       </p>
 
-      <h2 className="endpoint">GET /config</h2>
+      <DocEndpoint>GET /config</DocEndpoint>
       <RequestResponse
         code={`{
   "primary_validator": {
@@ -42,8 +39,8 @@ const Config = () => {
 }`}
         heading="Response"
       />
-    </section>
+    </DocContainer>
   );
 };
 
-export default Config;
+export default BankApiConfig;

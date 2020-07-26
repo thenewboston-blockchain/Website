@@ -1,12 +1,11 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {RequestResponse, TableParams} from 'components';
+import {DocContainer, DocEndpoint, RequestResponse, TableParams} from 'components';
 
-const Blocks = () => {
+const BankApiBlocks: FC = () => {
   return (
-    <section className="Blocks">
-      <h1 className="page-title">Blocks</h1>
+    <DocContainer className="BankApiBlocks" title="Blocks">
       <p>
         A block is a group of one or more transactions. There are often multiple transactions (usually fees) to
         different recipients within a single block.
@@ -16,7 +15,7 @@ const Blocks = () => {
         guide.
       </p>
 
-      <h2 className="endpoint">GET /blocks</h2>
+      <DocEndpoint>GET /blocks</DocEndpoint>
       <RequestResponse
         code={`[
   {
@@ -47,7 +46,7 @@ const Blocks = () => {
         heading="Response"
       />
 
-      <h2 className="endpoint">POST /blocks</h2>
+      <DocEndpoint>POST /blocks</DocEndpoint>
       <TableParams
         items={[
           {
@@ -102,8 +101,8 @@ const Blocks = () => {
 }`}
         heading="Response"
       />
-    </section>
+    </DocContainer>
   );
 };
 
-export default Blocks;
+export default BankApiBlocks;

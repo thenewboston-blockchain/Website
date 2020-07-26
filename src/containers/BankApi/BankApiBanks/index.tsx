@@ -1,12 +1,11 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {RequestResponse, TableParams} from 'components';
+import {DocContainer, DocEndpoint, RequestResponse, TableParams} from 'components';
 
-const Banks = () => {
+const BankApiBanks: FC = () => {
   return (
-    <section className="Banks">
-      <h1 className="page-title">Banks</h1>
+    <DocContainer className="BankApiBanks" title="Banks">
       <p>
         All banks have the option of connecting to other banks. Although it is not a requirement, it is often useful for
         a bank to inspect the trust levels assigned by other banks. This data is used primarily in determining which
@@ -17,7 +16,7 @@ const Banks = () => {
         guide.
       </p>
 
-      <h2 className="endpoint">GET /banks</h2>
+      <DocEndpoint>GET /banks</DocEndpoint>
       <RequestResponse
         code={`[
   {
@@ -44,7 +43,7 @@ const Banks = () => {
         heading="Response"
       />
 
-      <h2 className="endpoint">{'PATCH /banks/<node_identifier>'}</h2>
+      <DocEndpoint>{'PATCH /banks/<node_identifier>'}</DocEndpoint>
       <TableParams
         items={[
           {
@@ -77,8 +76,8 @@ const Banks = () => {
 }`}
         heading="Response"
       />
-    </section>
+    </DocContainer>
   );
 };
 
-export default Banks;
+export default BankApiBanks;

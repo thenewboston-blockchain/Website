@@ -1,12 +1,11 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {RequestResponse, TableParams} from 'components';
+import {DocContainer, DocEndpoint, RequestResponse, TableParams} from 'components';
 
-const Accounts = () => {
+const BankApiAccounts: FC = () => {
   return (
-    <section className="Accounts">
-      <h1 className="page-title">Accounts</h1>
+    <DocContainer className="BankApiAccounts" title="Accounts">
       <p>
         Banks will store information of all accounts that have sent blocks through them. Banks will also assign a trust
         level to each account they are tracking in order to determine future transactions fees. More trusted accounts
@@ -17,7 +16,7 @@ const Accounts = () => {
         the guide.
       </p>
 
-      <h2 className="endpoint">GET /accounts</h2>
+      <DocEndpoint>GET /accounts</DocEndpoint>
       <RequestResponse
         code={`[
   {
@@ -38,7 +37,7 @@ const Accounts = () => {
         heading="Response"
       />
 
-      <h2 className="endpoint">{'PATCH /accounts/<account_number>'}</h2>
+      <DocEndpoint>{'PATCH /accounts/<account_number>'}</DocEndpoint>
       <TableParams
         items={[
           {
@@ -68,8 +67,8 @@ const Accounts = () => {
 }`}
         heading="Response"
       />
-    </section>
+    </DocContainer>
   );
 };
 
-export default Accounts;
+export default BankApiAccounts;

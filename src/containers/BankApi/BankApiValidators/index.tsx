@@ -1,21 +1,18 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {RequestResponse, TableParams} from 'components';
+import {DocContainer, DocEndpoint, RequestResponse, TableParams} from 'components';
 
-import './Validators.scss';
-
-const Validators = () => {
+const BankApiValidators: FC = () => {
   return (
-    <section className="Validators">
-      <h1 className="page-title">Validators</h1>
+    <DocContainer className="BankApiValidators" title="Validators">
       <p>Banks will maintain a record of all validators, both primary and confirmation, that they are connected to.</p>
       <p>
         More information about validators can be found in the <NavLink to="/guide/validators">Validators</NavLink>{' '}
         section of the guide.
       </p>
 
-      <h2 className="endpoint">GET /validators</h2>
+      <DocEndpoint>GET /validators</DocEndpoint>
       <RequestResponse
         code={`[
   {
@@ -50,7 +47,7 @@ const Validators = () => {
         heading="Response"
       />
 
-      <h2 className="endpoint">{'PATCH /validators/<node_identifier>'}</h2>
+      <DocEndpoint>{'PATCH /validators/<node_identifier>'}</DocEndpoint>
       <TableParams
         items={[
           {
@@ -87,8 +84,8 @@ const Validators = () => {
 }`}
         heading="Response"
       />
-    </section>
+    </DocContainer>
   );
 };
 
-export default Validators;
+export default BankApiValidators;

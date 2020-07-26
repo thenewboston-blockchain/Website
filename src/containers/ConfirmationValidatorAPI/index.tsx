@@ -1,7 +1,7 @@
 import React, {useMemo} from 'react';
 import {useParams} from 'react-router-dom';
 
-import ConnectionRequests from 'containers/NodeAPI/ConnectionRequests';
+import NodeApiConnectionRequests from 'containers/NodeApi/NodeApiConnectionRequests';
 
 import Accounts from './Accounts';
 import BankConfirmationServices from './BankConfirmationServices';
@@ -25,7 +25,7 @@ const getPageContent = (chapter: string) => {
     case 'confirmation-blocks':
       return <ConfirmationBlocks />;
     case 'connection-requests':
-      return <ConnectionRequests />;
+      return <NodeApiConnectionRequests />;
     case 'validators':
       return <Validators />;
     default:

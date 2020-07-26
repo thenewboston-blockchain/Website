@@ -1,14 +1,11 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {RequestResponse} from 'components';
+import {DocContainer, DocEndpoint, RequestResponse} from 'components';
 
-import './ValidatorConfirmationServices.scss';
-
-const ValidatorConfirmationServices = () => {
+const BankApiValidatorConfirmationServices: FC = () => {
   return (
-    <section className="Validator Confirmation Services">
-      <h1 className="page-title">Validator Confirmation Services</h1>
+    <DocContainer className="BankApiValidatorConfirmationServices" title="Validator Confirmation Services">
       <p>
         Validator confirmation services represent an agreement between a confirmation validator and a bank. They state
         that the confirmation validator will sign and send all confirmed blocks to the bank for a specified period of
@@ -19,7 +16,7 @@ const ValidatorConfirmationServices = () => {
         <NavLink to="/guide/confirmation-services">Confirmation Services</NavLink> section of the guide.
       </p>
 
-      <h2 className="endpoint">GET /validator_confirmation_services</h2>
+      <DocEndpoint>GET /validator_confirmation_services</DocEndpoint>
       <RequestResponse
         code={`[
   {
@@ -51,7 +48,7 @@ const ValidatorConfirmationServices = () => {
         received and the agreement has been accepted.
       </p>
 
-      <h2 className="endpoint">POST /validator_confirmation_services</h2>
+      <DocEndpoint>POST /validator_confirmation_services</DocEndpoint>
       <RequestResponse
         code={`{
   "message": {
@@ -74,8 +71,8 @@ const ValidatorConfirmationServices = () => {
 }`}
         heading="Response"
       />
-    </section>
+    </DocContainer>
   );
 };
 
-export default ValidatorConfirmationServices;
+export default BankApiValidatorConfirmationServices;

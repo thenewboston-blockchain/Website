@@ -1,22 +1,17 @@
-import React from 'react';
+import React, {FC} from 'react';
 
-import {RequestResponse} from 'components';
+import {DocContainer, DocEndpoint, DocImage, RequestResponse} from 'components';
 
 import ConnectionRequestDiagram from './ConnectionRequest.png';
 
-import './ConnectionRequests.scss';
-
-const ConnectionRequests = () => {
+const NodeApiConnectionRequests: FC = () => {
   return (
-    <section className="ConnectionRequests">
-      <h1 className="page-title">Connection Requests</h1>
+    <DocContainer className="NodeApiConnectionRequests" title="Connection Requests">
       <p>To connect with another node on the network, a signed connection request can be sent to the target node.</p>
 
-      <div className="img-container">
-        <img alt="connection request" className="connection-request" src={ConnectionRequestDiagram} />
-      </div>
+      <DocImage alt="connection request" maxWidth={640} src={ConnectionRequestDiagram} />
 
-      <h2 className="endpoint">POST /connection_requests</h2>
+      <DocEndpoint>POST /connection_requests</DocEndpoint>
       <RequestResponse
         code={`{
   "message": {
@@ -44,8 +39,8 @@ const ConnectionRequests = () => {
       </p>
 
       <RequestResponse code={`{}`} heading="Response" />
-    </section>
+    </DocContainer>
   );
 };
 
-export default ConnectionRequests;
+export default NodeApiConnectionRequests;
