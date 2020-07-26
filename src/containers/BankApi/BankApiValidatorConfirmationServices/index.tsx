@@ -16,7 +16,7 @@ const BankApiValidatorConfirmationServices: FC = () => {
         <NavLink to="/guide/confirmation-services">Confirmation Services</NavLink> section of the guide.
       </p>
 
-      <DocEndpoint>GET /validator_confirmation_services</DocEndpoint>
+      <DocEndpoint endpoint="/validator_confirmation_services" method="GET" />
       <RequestResponse
         code={`[
   {
@@ -48,7 +48,7 @@ const BankApiValidatorConfirmationServices: FC = () => {
         received and the agreement has been accepted.
       </p>
 
-      <DocEndpoint>POST /validator_confirmation_services</DocEndpoint>
+      <DocEndpoint endpoint="/validator_confirmation_services" method="POST" />
       <RequestResponse
         code={`{
   "message": {

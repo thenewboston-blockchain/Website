@@ -1,20 +1,17 @@
-import React from 'react';
+import React, {FC} from 'react';
 
-import {RequestResponse} from 'components';
+import {DocContainer, DocEndpoint, RequestResponse} from 'components';
 
-import './BankBlocks.scss';
-
-const BankBlocks = () => {
+const PrimaryValidatorApiBankBlocks: FC = () => {
   return (
-    <section className="BankBlocks">
-      <h1 className="page-title">Bank Blocks</h1>
+    <DocContainer className="PrimaryValidatorApiBankBlocks" title="Bank Blocks">
       <p>
         Bank blocks are blocks that have been signed by banks as a way of indicating that the block has passed initial
         validation. Blocks will be sent from end users to banks, and upon initial validation of those blocks the bank
         will sign the block and forward it to the primary validator for final validation.
       </p>
 
-      <h2 className="endpoint">POST /bank_blocks</h2>
+      <DocEndpoint endpoint="/bank_blocks" method="POST" />
       <RequestResponse
         code={`{
   "block": {
@@ -44,8 +41,8 @@ const BankBlocks = () => {
         heading="Request"
       />
       <RequestResponse code={`{}`} heading="Response" />
-    </section>
+    </DocContainer>
   );
 };
 
-export default BankBlocks;
+export default PrimaryValidatorApiBankBlocks;

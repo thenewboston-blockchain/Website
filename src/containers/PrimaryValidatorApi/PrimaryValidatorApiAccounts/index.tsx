@@ -1,19 +1,16 @@
-import React from 'react';
+import React, {FC} from 'react';
 
-import {RequestResponse} from 'components';
+import {DocContainer, DocEndpoint, RequestResponse} from 'components';
 
-import './Accounts.scss';
-
-const Accounts = () => {
+const PrimaryValidatorApiAccounts: FC = () => {
   return (
-    <section className="Accounts">
-      <h1 className="page-title">Accounts</h1>
+    <DocContainer className="PrimaryValidatorApiAccounts" title="Accounts">
       <p>
         The primary validator will maintain the account numbers, balances, and balance locks for all accounts on the
         network. New accounts are created as needed when funds are first sent.
       </p>
 
-      <h2 className="endpoint">GET /accounts</h2>
+      <DocEndpoint endpoint="/accounts" method="GET" />
       <RequestResponse
         code={`[
   {
@@ -44,7 +41,7 @@ const Accounts = () => {
         heading="Response"
       />
 
-      <h2 className="endpoint">{'GET /account_balance/<account_number>'}</h2>
+      <DocEndpoint endpoint="/account_balance/<account_number>" method="GET" />
       <RequestResponse
         code={`{
   "balance": "4294967051.0000000000000000"
@@ -52,15 +49,15 @@ const Accounts = () => {
         heading="Response"
       />
 
-      <h2 className="endpoint">{'GET /account_balance_lock/<account_number>'}</h2>
+      <DocEndpoint endpoint="/account_balance_lock/<account_number>" method="GET" />
       <RequestResponse
         code={`{
   "balance_lock": "21cfd80a31930e801e97d34e3f00a7d9b5c01b2fb531a5ac14cd59d10ab446c8"
 }`}
         heading="Response"
       />
-    </section>
+    </DocContainer>
   );
 };
 
-export default Accounts;
+export default PrimaryValidatorApiAccounts;

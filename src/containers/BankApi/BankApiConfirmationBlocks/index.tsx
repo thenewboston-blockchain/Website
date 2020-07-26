@@ -24,7 +24,7 @@ const BankApiConfirmationBlocks: FC = () => {
         <NavLink to="/guide/confirmation-services">Confirmation Services</NavLink> section of the guide.
       </p>
 
-      <DocEndpoint>GET /confirmation_blocks</DocEndpoint>
+      <DocEndpoint endpoint="/confirmation_blocks" method="GET" />
       <RequestResponse
         code={`[
   {

@@ -11,7 +11,7 @@ const NodeApiConnectionRequests: FC = () => {
 
       <DocImage alt="connection request" maxWidth={640} src={ConnectionRequestDiagram} />
 
-      <DocEndpoint>POST /connection_requests</DocEndpoint>
+      <DocEndpoint endpoint="/connection_requests" method="POST" />
       <RequestResponse
         code={`{
   "message": {

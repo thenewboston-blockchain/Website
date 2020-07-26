@@ -15,7 +15,7 @@ const BankApiBlocks: FC = () => {
         guide.
       </p>
 
-      <DocEndpoint>GET /blocks</DocEndpoint>
+      <DocEndpoint endpoint="/blocks" method="GET" />
       <RequestResponse
         code={`[
   {
@@ -46,7 +46,7 @@ const BankApiBlocks: FC = () => {
         heading="Response"
       />
 
-      <DocEndpoint>POST /blocks</DocEndpoint>
+      <DocEndpoint endpoint="/blocks" method="POST" />
       <TableParams
         items={[
           {

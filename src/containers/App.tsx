@@ -10,7 +10,7 @@ import Guide from './Guide';
 import Home from './Home';
 import Layout from './Layout';
 import LeftMenu from './LeftMenu';
-import PrimaryValidatorAPI from './PrimaryValidatorAPI';
+import PrimaryValidatorApi from './PrimaryValidatorApi';
 import Roadmap from './Roadmap';
 
 const App = () => {
@@ -67,7 +67,7 @@ const App = () => {
           <Redirect to="/primary-validator-api/accounts" />
         </Route>
         <Route path="/primary-validator-api/:chapter">
-          <AdminLayout left={<LeftMenu />} right={<PrimaryValidatorAPI />} />
+          <AdminLayout left={<LeftMenu />} right={<PrimaryValidatorApi />} />
         </Route>
 
         <Redirect to="/" />

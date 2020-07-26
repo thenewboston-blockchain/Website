@@ -12,7 +12,7 @@ const BankApiValidators: FC = () => {
         section of the guide.
       </p>
 
-      <DocEndpoint>GET /validators</DocEndpoint>
+      <DocEndpoint endpoint="/validators" method="GET" />
       <RequestResponse
         code={`[
   {
@@ -47,7 +47,7 @@ const BankApiValidators: FC = () => {
         heading="Response"
       />
 
-      <DocEndpoint>{'PATCH /validators/<node_identifier>'}</DocEndpoint>
+      <DocEndpoint endpoint="/validators/<node_identifier>" method="PATCH" />
       <TableParams
         items={[
           {

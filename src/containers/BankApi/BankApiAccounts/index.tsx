@@ -16,7 +16,7 @@ const BankApiAccounts: FC = () => {
         the guide.
       </p>
 
-      <DocEndpoint>GET /accounts</DocEndpoint>
+      <DocEndpoint endpoint="/accounts" method="GET" />
       <RequestResponse
         code={`[
   {
@@ -37,7 +37,7 @@ const BankApiAccounts: FC = () => {
         heading="Response"
       />
 
-      <DocEndpoint>{'PATCH /accounts/<account_number>'}</DocEndpoint>
+      <DocEndpoint endpoint="/accounts/<account_number>" method="PATCH" />
       <TableParams
         items={[
           {

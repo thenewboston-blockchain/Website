@@ -13,7 +13,7 @@ const BankApiBankTransactions: FC = () => {
       </p>
       <p>Bank transactions are created automatically by the bank during block processing.</p>
 
-      <DocEndpoint>GET /bank_transactions</DocEndpoint>
+      <DocEndpoint endpoint="/bank_transactions" method="GET" />
       <RequestResponse
         code={`[
   {

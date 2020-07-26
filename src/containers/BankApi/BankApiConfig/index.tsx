@@ -11,7 +11,7 @@ const BankApiConfig: FC = () => {
         order to ensure proper connection settings.
       </p>
 
-      <DocEndpoint>GET /config</DocEndpoint>
+      <DocEndpoint endpoint="/config" method="GET" />
       <RequestResponse
         code={`{
   "primary_validator": {
