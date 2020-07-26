@@ -1,10 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {RequestResponse} from 'components';
-import ParamsTable from 'components/ParamsTable';
-
-import './Blocks.scss';
+import {RequestResponse, TableParams} from 'components';
 
 const Blocks = () => {
   return (
@@ -51,7 +48,7 @@ const Blocks = () => {
       />
 
       <h2 className="endpoint">POST /blocks</h2>
-      <ParamsTable
+      <TableParams
         items={[
           {
             param: 'account_number',

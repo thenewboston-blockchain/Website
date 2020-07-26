@@ -1,8 +1,9 @@
 import React from 'react';
 
+import {TableBorderGrid} from 'components';
+
 import BalanceLockAndKey from './BalanceLockAndKey.png';
 import BlockDetails from './BlockDetails.png';
-
 import './Blocks.scss';
 
 const Blocks = () => {
@@ -15,26 +16,14 @@ const Blocks = () => {
         simplified overview below. In this example, Amy is sending 100 points to her friend Brian.
       </p>
 
-      <table className="border-grid">
-        <tbody>
-          <tr>
-            <td>Points being sent to Brian</td>
-            <td>100.00</td>
-          </tr>
-          <tr>
-            <td>Bank fees</td>
-            <td className="light">2 points</td>
-          </tr>
-          <tr>
-            <td>Validator fees</td>
-            <td className="light">1 point</td>
-          </tr>
-          <tr>
-            <td>Total</td>
-            <td>103.00</td>
-          </tr>
-        </tbody>
-      </table>
+      <TableBorderGrid
+        rows={[
+          ['Points being sent to Brian', '100.00'],
+          ['Bank fees', <span className="Blocks__text-light">2 points</span>],
+          ['Validator fees', <span className="Blocks__text-light">1 point</span>],
+          ['Total', '103.00'],
+        ]}
+      />
 
       <p>
         After Amy creates the block shown above, the network must validate several aspects of the block and all related

@@ -1,13 +1,10 @@
 .TransactionFees {
-  table {
-    tr {
-      td {
-        &:first-child {
-          font-weight: 700;
-          padding-right: 16px;
-          white-space: nowrap;
-        }
-      }
-    }
+  &__text-placeholder {
+    color: #9b9b9b;
+    font-style: italic;
+  }
+
+  &__text-light {
+    color: #9b9b9b;
   }
 }

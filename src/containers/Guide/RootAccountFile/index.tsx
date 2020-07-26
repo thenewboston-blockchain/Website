@@ -1,7 +1,8 @@
 import React from 'react';
 
-import RootAccountFileDiagram from './RootAccountFile.png';
+import {TableBorderGrid} from 'components';
 
+import RootAccountFileDiagram from './RootAccountFile.png';
 import './RootAccountFile.scss';
 
 const RootAccountFile = () => {
@@ -34,52 +35,20 @@ const RootAccountFile = () => {
         transactions and account file would look like this.
       </p>
 
-      <div className="table-title">Transaction Log</div>
-      <table className="border-grid">
-        <tbody>
-          <tr className="heavy">
-            <td>Tx ID</td>
-            <td>From</td>
-            <td>To</td>
-            <td>Description</td>
-            <td>Amount</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Amy</td>
-            <td>Carl</td>
-            <td>ham sandwich</td>
-            <td>$2</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div className="table-title">Account File</div>
-      <table className="border-grid">
-        <tbody>
-          <tr className="heavy">
-            <td>Last Tx Id</td>
-            <td>User</td>
-            <td>Balance</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Amy</td>
-            <td>$8</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Bucky</td>
-            <td>$10</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Carl</td>
-            <td>$12</td>
-          </tr>
-        </tbody>
-      </table>
-
+      <TableBorderGrid
+        headers={['Tx ID', 'From', 'To', 'Description', 'Amount']}
+        rows={[[1, 'Amy', 'Carl', 'ham sandwich', '$2']]}
+        title="Transaction Log"
+      />
+      <TableBorderGrid
+        headers={['Last Tx ID', 'User', 'Balance']}
+        rows={[
+          [1, 'Amy', '$8'],
+          [1, 'Bucky', '$10'],
+          [1, 'Carl', '$12'],
+        ]}
+        title="Account File"
+      />
       <p>
         After the transaction takes place, all members of the economy (even those who were not involved in the
         transaction) are able to view both the transaction log and account file to verify that everything is legitimate.
@@ -92,66 +61,28 @@ const RootAccountFile = () => {
         The next day, after Bucky comes home from work he takes a look at the account file again and notices some
         changes.
       </p>
-
-      <div className="table-title">Account File</div>
-      <table className="border-grid">
-        <tbody>
-          <tr className="heavy">
-            <td>Last Tx Id</td>
-            <td>User</td>
-            <td>Balance</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Amy</td>
-            <td>$13</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Bucky</td>
-            <td>$10</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Carl</td>
-            <td>$7</td>
-          </tr>
-        </tbody>
-      </table>
-
+      <TableBorderGrid
+        headers={['Last Tx ID', 'User', 'Balance']}
+        rows={[
+          [1, 'Amy', '$13'],
+          [1, 'Bucky', '$10'],
+          [1, 'Carl', '$7'],
+        ]}
+        title="Account File"
+      />
       <p>
         Bucky is skeptical about the balances. He believes that the balances are not legitimate and suspects that Amy
         may have hacked the bank and changed her account balance. So Bucky views the transaction log and notices some
         changes there as well.
       </p>
-
-      <div className="table-title">Transaction Log</div>
-      <table className="border-grid">
-        <tbody>
-          <tr className="heavy">
-            <td>Tx ID</td>
-            <td>From</td>
-            <td>To</td>
-            <td>Description</td>
-            <td>Amount</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Amy</td>
-            <td>Carl</td>
-            <td>tuna sandwich</td>
-            <td>$1</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Carl</td>
-            <td>Amy</td>
-            <td>gold watch</td>
-            <td>$6</td>
-          </tr>
-        </tbody>
-      </table>
-
+      <TableBorderGrid
+        headers={['Tx ID', 'From', 'To', 'Description', 'Amount']}
+        rows={[
+          [2, 'Amy', 'Carl', 'tuna sandwich', '$1'],
+          [3, 'Carl', 'Amy', 'gold watch', '$6'],
+        ]}
+        title="Transaction Log"
+      />
       <p>
         Unfortunately, the bank has not updated it's database in years and is only able to store up to 2 rows in the
         transaction table (it's a very primitive economy after all). The historical log of the first transaction is lost
@@ -180,62 +111,30 @@ const RootAccountFile = () => {
         account file must have been:
       </p>
 
-      <div className="table-title">Account File</div>
-      <table className="border-grid">
-        <tbody>
-          <tr className="heavy">
-            <td>Last Tx Id</td>
-            <td>User</td>
-            <td>Balance</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Amy</td>
-            <td>$7</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Bucky</td>
-            <td>$10</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Carl</td>
-            <td>$13</td>
-          </tr>
-        </tbody>
-      </table>
+      <TableBorderGrid
+        headers={['Last Tx ID', 'User', 'Balance']}
+        rows={[
+          [2, 'Amy', '$7'],
+          [2, 'Bucky', '$10'],
+          [2, 'Carl', '$13'],
+        ]}
+        title="Account File"
+      />
 
       <p>
         Also, after the third transaction in which Carl bought a gold watch from Amy for $6 that the account file would
         then be:
       </p>
 
-      <div className="table-title">Account File</div>
-      <table className="border-grid">
-        <tbody>
-          <tr className="heavy">
-            <td>Last Tx Id</td>
-            <td>User</td>
-            <td>Balance</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Amy</td>
-            <td>$13</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Bucky</td>
-            <td>$10</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Carl</td>
-            <td>$6</td>
-          </tr>
-        </tbody>
-      </table>
+      <TableBorderGrid
+        headers={['Last Tx ID', 'User', 'Balance']}
+        rows={[
+          [2, 'Amy', '$7'],
+          [2, 'Bucky', '$10'],
+          [2, 'Carl', '$6'],
+        ]}
+        title="Account File"
+      />
 
       <p>
         Therefore, Bucky is able to conclude that the account file of the economy is correct. He makes an updated copy

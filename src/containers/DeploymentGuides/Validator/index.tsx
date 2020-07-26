@@ -1,12 +1,11 @@
 import React from 'react';
 
-import {Commands} from 'components';
+import {Commands, TableParams} from 'components';
 import Celery from 'containers/DeploymentGuides/Celery';
 import Firewall from 'containers/DeploymentGuides/Firewall';
 import GatewayInterface from 'containers/DeploymentGuides/GatewayInterface';
 import InstallDependencies from 'containers/DeploymentGuides/InstallDependencies';
 import NGINX from 'containers/DeploymentGuides/NGINX';
-import ParamsTable from 'components/ParamsTable';
 import ProjectSetup from 'containers/DeploymentGuides/ProjectSetup';
 import Redis from 'containers/DeploymentGuides/Redis';
 import StaticFilesAndApplicationConfiguration from 'containers/DeploymentGuides/StaticFilesAndApplicationConfiguration';
@@ -17,7 +16,8 @@ const Validator = () => {
   const renderInitializationCommands = () => (
     <>
       <Commands code={`python3 manage.py initialize_validator`} heading="Initialize validator node" />
-      <ParamsTable
+      <TableParams
+        headers={['Parameter', 'Description', 'Sample Value']}
         items={[
           {
             param: 'node_identifier',
@@ -82,13 +82,6 @@ const Validator = () => {
             sampleValue: 'v1.0',
           },
         ]}
-        tableHeading={
-          <tr>
-            <th>Parameter</th>
-            <th>Description</th>
-            <th>Sample Value</th>
-          </tr>
-        }
       />
       <Commands
         code={`python3 manage.py initialize_confirmation_validator`}

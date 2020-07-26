@@ -1,66 +1,40 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import OverviewDiagram from './Overview.png';
+import {TableVertical} from 'components';
 
+import OverviewDiagram from './Overview.png';
 import './Introduction.scss';
 
 const Introduction = () => {
-  const renderGlossary = () => (
-    <table className="glossary">
-      <tbody>
-        <tr>
-          <td>Account</td>
-          <td>an anonymous digital identity on the network where points may be sent to and from</td>
-        </tr>
-        <tr>
-          <td>Transaction</td>
-          <td>the transfer of points from one account to another</td>
-        </tr>
-        <tr>
-          <td>Block</td>
-          <td>a group of one or more transactions along with the senders account number and a signature</td>
-        </tr>
-        <tr>
-          <td>Signature</td>
-          <td>
-            unique value used to verify the authenticity of a digital document (included with every block to prove that
-            the related transactions have been authorized by the account owner)
-          </td>
-        </tr>
-        <tr>
-          <td>Bank</td>
-          <td>a network server that has several responsibilities such as electing a validator and routing blocks</td>
-        </tr>
-        <tr>
-          <td>Bank Block</td>
-          <td>a block that has been signed by a bank</td>
-        </tr>
-        <tr>
-          <td>Validator</td>
-          <td>
-            a central server that accepts blocks from multiple banks and after successful validation/confirmation of
-            each block, creates a new confirmation block which is added to the blockchain
-          </td>
-        </tr>
-        <tr>
-          <td>Confirmation Block</td>
-          <td>
-            often referred to as a "confirmation", a block that has been signed by a validator as confirmation it has
-            been added to their blockchain, indicating that the transactions have been validated and that the points
-            have been successfully transferred
-          </td>
-        </tr>
-        <tr>
-          <td>Blockchain</td>
-          <td>an ordered list of confirmation blocks</td>
-        </tr>
-        <tr>
-          <td>Root Balance Sheet</td>
-          <td>a historic record (snapshot) of all account balances at a given point in time</td>
-        </tr>
-      </tbody>
-    </table>
+  const renderGlossary = (): ReactNode => (
+    <TableVertical
+      altColors
+      rows={[
+        ['Account', 'an anonymous digital identity on the network where points may be sent to and from'],
+        ['Transaction', 'the transfer of points from one account to another'],
+        ['Block', 'a group of one or more transactions along with the senders account number and a signature'],
+        [
+          'Signature',
+          'unique value used to verify the authenticity of a digital document (included with every block to prove that the related transactions have been authorized by the account owner)',
+        ],
+        ['Bank', 'a network server that has several responsibilities such as electing a validator and routing blocks'],
+        [
+          'Bank Block',
+          'a network server that has several responsibilities such as electing a validator and routing blocks',
+        ],
+        [
+          'Validator',
+          'a central server that accepts blocks from multiple banks and after successful validation/confirmation of each block, creates a new confirmation block which is added to the blockchain',
+        ],
+        [
+          'Confirmation Block',
+          'often referred to as a "confirmation", a block that has been signed by a validator as confirmation it has been added to their blockchain, indicating that the transactions have been validated and that the points have been successfully transferred',
+        ],
+        ['Blockchain', 'an ordered list of confirmation blocks'],
+        ['Root Balance Sheet', 'a historic record (snapshot) of all account balances at a given point in time'],
+      ]}
+    />
   );
 
   return (

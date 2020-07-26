@@ -1,7 +1,8 @@
 import React from 'react';
 
-import PrimaryValidatorUpgradeRequest from './PrimaryValidatorUpgradeRequest.png';
+import {TableBorderGrid} from 'components';
 
+import PrimaryValidatorUpgradeRequest from './PrimaryValidatorUpgradeRequest.png';
 import './Resyncing.scss';
 
 const Resyncing = () => {
@@ -42,28 +43,14 @@ const Resyncing = () => {
         prefer the most trusted validator to be the primary validator for the network.
       </p>
 
-      <table className="border-grid">
-        <thead>
-          <tr className="heavy">
-            <td>Validator</td>
-            <td>Trust</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>CV_001</td>
-            <td>98.21</td>
-          </tr>
-          <tr>
-            <td>CV_002</td>
-            <td>93.87</td>
-          </tr>
-          <tr>
-            <td>PV</td>
-            <td>86.04</td>
-          </tr>
-        </tbody>
-      </table>
+      <TableBorderGrid
+        headers={['Validator', 'Trust']}
+        rows={[
+          ['CV_001', '98.21'],
+          ['CV_002', '93.87'],
+          ['PV', '86.04'],
+        ]}
+      />
 
       <p>
         A confirmation validator will accept the request if they themselves have the requesting bank set as their most

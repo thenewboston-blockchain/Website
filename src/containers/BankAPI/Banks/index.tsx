@@ -1,10 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {RequestResponse} from 'components';
-import ParamsTable from 'components/ParamsTable';
-
-import './Banks.scss';
+import {RequestResponse, TableParams} from 'components';
 
 const Banks = () => {
   return (
@@ -48,7 +45,7 @@ const Banks = () => {
       />
 
       <h2 className="endpoint">{'PATCH /banks/<node_identifier>'}</h2>
-      <ParamsTable
+      <TableParams
         items={[
           {
             param: 'trust',

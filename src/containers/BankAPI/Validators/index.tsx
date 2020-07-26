@@ -1,8 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {RequestResponse} from 'components';
-import ParamsTable from 'components/ParamsTable';
+import {RequestResponse, TableParams} from 'components';
 
 import './Validators.scss';
 
@@ -52,7 +51,7 @@ const Validators = () => {
       />
 
       <h2 className="endpoint">{'PATCH /validators/<node_identifier>'}</h2>
-      <ParamsTable
+      <TableParams
         items={[
           {
             param: 'trust',

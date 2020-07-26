@@ -1,7 +1,9 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
+
+import {TableVertical} from 'components';
 
 import './TransactionFees.scss';
-import {NavLink} from 'react-router-dom';
 
 const TransactionFees = () => {
   return (
@@ -30,52 +32,32 @@ const TransactionFees = () => {
         this:
       </p>
 
-      <table className="border-grid">
-        <tbody>
-          <tr>
-            <td>Points being sent to Brian</td>
-            <td className="light placeholder">Enter the amount of points here...</td>
-          </tr>
-          <tr>
-            <td>Bank fees</td>
-            <td className="light">2 points</td>
-          </tr>
-          <tr>
-            <td>Validator fees</td>
-            <td className="light">1 point</td>
-          </tr>
-          <tr>
-            <td>Total</td>
-            <td />
-          </tr>
-        </tbody>
-      </table>
+      <TableVertical
+        innerBorders
+        rows={[
+          [
+            'Points being sent to Brian',
+            <span className="TransactionFees__text-placeholder">Enter the amount of points here...</span>,
+          ],
+          ['Bank fees', <span className="TransactionFees__text-light">2 points</span>],
+          ['Validator fees', <span className="TransactionFees__text-light">1 point</span>],
+        ]}
+      />
 
       <p>
         After typing in the amount of points, Amy is able to see the total cost of her transaction and verify that the
         amount is acceptable before signing and sending the block to her bank.
       </p>
 
-      <table className="border-grid">
-        <tbody>
-          <tr>
-            <td>Points being sent to Brian</td>
-            <td>100</td>
-          </tr>
-          <tr>
-            <td>Bank fees</td>
-            <td className="light">2 points</td>
-          </tr>
-          <tr>
-            <td>Validator fees</td>
-            <td className="light">1 point</td>
-          </tr>
-          <tr>
-            <td>Total</td>
-            <td>103</td>
-          </tr>
-        </tbody>
-      </table>
+      <TableVertical
+        innerBorders
+        rows={[
+          ['Points being sent to Brian', 100],
+          ['Bank fees', <span className="TransactionFees__text-light">2 points</span>],
+          ['Validator fees', <span className="TransactionFees__text-light">1 point</span>],
+          ['Total', 103],
+        ]}
+      />
 
       <p>
         Once the block has been reviewed, signed, and sent to the bank by Amy, the following functions will be
