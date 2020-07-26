@@ -1,6 +1,7 @@
 $quarter-circle-size: 75px;
 
 .Roadmap {
+  $self: &;
   display: grid;
   grid-auto-rows: 42px;
   grid-template-columns: [team] minmax(80px, max-content) [task] minmax(120px, 1fr) repeat(
@@ -9,35 +10,23 @@ $quarter-circle-size: 75px;
     );
   grid-template-rows: 100px;
   overflow-x: auto;
+  padding: 32px 32px 96px;
 
-  .empty-cell {
+  &__empty-cell {
     border-bottom: 1px solid var(--color-gray-3);
     grid-row: 1 / span 1;
     grid-column: 1 / span 2;
   }
 
-  .header {
+  &__header {
     border-bottom: 1px solid var(--color-gray-3);
     grid-row: 1 / span 1;
     position: relative;
 
-    &__circle {
-      align-items: center;
-      border-radius: 50%;
-      color: var(--color-white);
-      display: flex;
-      font-size: 16px;
-      font-weight: bold;
-      height: $quarter-circle-size;
-      justify-content: center;
-      margin: auto;
-      width: $quarter-circle-size;
-    }
-
-    &.q1 {
+    &--q1 {
       grid-column: quarter 1 / span 1;
 
-      .header__circle {
+      #{$self}__circle {
         background-color: var(--color-gray-1);
       }
 
@@ -47,26 +36,26 @@ $quarter-circle-size: 75px;
       }
     }
 
-    &.q2 {
+    &--q2 {
       grid-column: quarter 2 / span 1;
 
-      .header__circle {
+      #{$self}__circle {
         background-color: var(--color-gray-2);
       }
     }
 
-    &.q3 {
+    &--q3 {
       grid-column: quarter 3 / span 1;
 
-      .header__circle {
+      #{$self}__circle {
         background-color: var(--color-gray-3);
       }
     }
 
-    &.q4 {
+    &--q4 {
       grid-column: quarter 4 / span 1;
 
-      .header__circle {
+      #{$self}__circle {
         background-color: var(--color-gray-4);
       }
     }
@@ -92,7 +81,20 @@ $quarter-circle-size: 75px;
     }
   }
 
-  .team {
+  &__circle {
+    align-items: center;
+    border-radius: 50%;
+    color: var(--color-white);
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    height: $quarter-circle-size;
+    justify-content: center;
+    margin: auto;
+    width: $quarter-circle-size;
+  }
+
+  &__team {
     align-items: center;
     background-color: var(--color-gray-2);
     border: 2px solid var(--color-gray-3);
@@ -105,7 +107,7 @@ $quarter-circle-size: 75px;
     padding: 6px;
   }
 
-  .task {
+  &__task {
     align-items: center;
     border-bottom: 1px solid var(--color-gray-3);
     border-right: 1px solid var(--color-gray-3);
@@ -115,26 +117,26 @@ $quarter-circle-size: 75px;
     justify-content: center;
     padding: 6px;
     position: relative;
-
-    .card {
-      align-items: center;
-      border-radius: 6px;
-      display: flex;
-      font-style: normal;
-      height: calc(100% - 12px);
-      justify-content: center;
-      padding: 0 6px;
-      position: absolute;
-    }
   }
 
-  .cell {
+  &__card {
+    align-items: center;
+    border-radius: 6px;
+    display: flex;
+    font-style: normal;
+    height: calc(100% - 12px);
+    justify-content: center;
+    padding: 0 6px;
+    position: absolute;
+  }
+
+  &__cell {
     background: var(--color-white);
     border-bottom: 1px solid var(--color-gray-3);
     border-right: 1px solid var(--color-gray-3);
     padding: 6px;
 
-    &.alt-bg {
+    &--alt-bg {
       background: var(--color-gray-5);
     }
   }
