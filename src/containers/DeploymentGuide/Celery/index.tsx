@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {Commands} from 'components';
+import {Commands, DocSubSection} from 'components';
 
 interface ComponentProps {
   name: string;
@@ -9,9 +9,7 @@ interface ComponentProps {
 
 const Celery: FC<ComponentProps> = ({name, networkSigningKey}) => {
   return (
-    <>
-      <h2>Celery</h2>
-
+    <DocSubSection className="Celery" title="Celery">
       <Commands
         code={`cd /etc/
 sudo mkdir ${name.toLowerCase()}
@@ -84,7 +82,7 @@ WantedBy=multi-user.target
         heading="Reload systemd and enable both services"
       />
       <Commands code={`ls /etc/systemd/system/multi-user.target.wants/`} heading="Verify it is enabled" />
-    </>
+    </DocSubSection>
   );
 };
 

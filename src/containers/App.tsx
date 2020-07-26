@@ -5,7 +5,7 @@ import AdminLayout from './AdminLayout';
 import BankApi from './BankApi';
 import ConfirmationValidatorApi from './ConfirmationValidatorApi';
 import Contribute from './Contribute';
-import DeploymentGuides from './DeploymentGuides';
+import DeploymentGuide from './DeploymentGuide';
 import Guide from './Guide';
 import Home from './Home';
 import Layout from './Layout';
@@ -53,7 +53,7 @@ const App = () => {
           <Redirect to="/deployment-guides/bank" />
         </Route>
         <Route path="/deployment-guides/:chapter">
-          <AdminLayout left={<LeftMenu />} right={<DeploymentGuides />} />
+          <AdminLayout left={<LeftMenu />} right={<DeploymentGuide />} />
         </Route>
 
         <Route exact path="/guide">

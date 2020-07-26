@@ -1,19 +1,20 @@
-import React from 'react';
+import React, {FC, ReactNode} from 'react';
 
-import {Commands, TableParams} from 'components';
-import Celery from 'containers/DeploymentGuides/Celery';
-import Firewall from 'containers/DeploymentGuides/Firewall';
-import GatewayInterface from 'containers/DeploymentGuides/GatewayInterface';
-import InstallDependencies from 'containers/DeploymentGuides/InstallDependencies';
-import NGINX from 'containers/DeploymentGuides/NGINX';
-import ProjectSetup from 'containers/DeploymentGuides/ProjectSetup';
-import Redis from 'containers/DeploymentGuides/Redis';
-import StaticFilesAndApplicationConfiguration from 'containers/DeploymentGuides/StaticFilesAndApplicationConfiguration';
-import SystemServices from 'containers/DeploymentGuides/SystemServices';
-import Troubleshooting from 'containers/DeploymentGuides/Troubleshooting';
+import {Commands, DocContainer, TableParams} from 'components';
 
-const Validator = () => {
-  const renderInitializationCommands = () => (
+import Celery from '../Celery';
+import Firewall from '../Firewall';
+import GatewayInterface from '../GatewayInterface';
+import InstallDependencies from '../InstallDependencies';
+import Nginx from '../Nginx';
+import ProjectSetup from '../ProjectSetup';
+import Redis from '../Redis';
+import StaticFilesAndApplicationConfiguration from '../StaticFilesAndApplicationConfiguration';
+import SystemServices from '../SystemServices';
+import Troubleshooting from '../Troubleshooting';
+
+const DeploymentGuideValidator: FC = () => {
+  const renderInitializationCommands = (): ReactNode => (
     <>
       <Commands code={`python3 manage.py initialize_validator`} heading="Initialize validator node" />
       <TableParams
@@ -91,13 +92,12 @@ const Validator = () => {
   );
 
   return (
-    <section>
-      <h1 className="page-title">Validator Deployment Guide</h1>
+    <DocContainer className="DeploymentGuideValidator" title="Validator Deployment Guide">
       <p>This guide will detail the deployment instructions for both primary validators and confirmation validators.</p>
       <InstallDependencies />
       <Firewall />
       <ProjectSetup name="Validator" />
-      <NGINX name="Validator" />
+      <Nginx name="Validator" />
       <Redis />
       <GatewayInterface name="Validator" />
       <Celery name="Validator" networkSigningKey="6f812a35643b55a77f71c3b722504fbc5918e83ec72965f7fd33865ed0be8f81" />
@@ -108,8 +108,8 @@ const Validator = () => {
         networkSigningKey="6f812a35643b55a77f71c3b722504fbc5918e83ec72965f7fd33865ed0be8f81"
       />
       <Troubleshooting />
-    </section>
+    </DocContainer>
   );
 };
 
-export default Validator;
+export default DeploymentGuideValidator;

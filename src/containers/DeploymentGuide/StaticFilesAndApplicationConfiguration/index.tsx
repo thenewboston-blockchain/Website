@@ -1,6 +1,6 @@
 import React, {FC, ReactNode} from 'react';
 
-import {Commands} from 'components';
+import {Commands, DocSubSection} from 'components';
 
 interface ComponentProps {
   initializationCommand: ReactNode;
@@ -10,9 +10,7 @@ interface ComponentProps {
 
 const StaticFilesAndApplication: FC<ComponentProps> = ({initializationCommand, name, networkSigningKey}) => {
   return (
-    <>
-      <h2>Static files and Application Configuration</h2>
-
+    <DocSubSection className="StaticFilesAndApplication" title="Static Files and Application Configuration">
       <Commands code={`nano ~/.profile`} heading="Set environment variable" />
 
       <Commands
@@ -38,7 +36,7 @@ python3 manage.py collectstatic
       />
       {initializationCommand}
       <Commands code={`http://[IP_ADDRESS]/config`} heading="Verify everything is working correctly by visiting" />
-    </>
+    </DocSubSection>
   );
 };
 

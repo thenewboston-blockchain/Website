@@ -1,19 +1,20 @@
-import React from 'react';
+import React, {FC, ReactNode} from 'react';
 
-import {Commands, TableParams} from 'components';
-import Celery from 'containers/DeploymentGuides/Celery';
-import Firewall from 'containers/DeploymentGuides/Firewall';
-import GatewayInterface from 'containers/DeploymentGuides/GatewayInterface';
-import InstallDependencies from 'containers/DeploymentGuides/InstallDependencies';
-import NGINX from 'containers/DeploymentGuides/NGINX';
-import ProjectSetup from 'containers/DeploymentGuides/ProjectSetup';
-import Redis from 'containers/DeploymentGuides/Redis';
-import StaticFilesAndApplicationConfiguration from 'containers/DeploymentGuides/StaticFilesAndApplicationConfiguration';
-import SystemServices from 'containers/DeploymentGuides/SystemServices';
-import Troubleshooting from 'containers/DeploymentGuides/Troubleshooting';
+import {Commands, DocContainer, TableParams} from 'components';
 
-const Bank = () => {
-  const renderInitializationCommands = () => (
+import Celery from '../Celery';
+import Firewall from '../Firewall';
+import GatewayInterface from '../GatewayInterface';
+import InstallDependencies from '../InstallDependencies';
+import Nginx from '../Nginx';
+import ProjectSetup from '../ProjectSetup';
+import Redis from '../Redis';
+import StaticFilesAndApplicationConfiguration from '../StaticFilesAndApplicationConfiguration';
+import SystemServices from '../SystemServices';
+import Troubleshooting from '../Troubleshooting';
+
+const DeploymentGuideBank: FC = () => {
+  const renderInitializationCommands = (): ReactNode => (
     <>
       <Commands code={`python3 manage.py initialize_bank`} heading="Initialize server as bank" />
       <TableParams
@@ -68,13 +69,12 @@ const Bank = () => {
   );
 
   return (
-    <section>
-      <h1 className="page-title">Bank Deployment Guide</h1>
+    <DocContainer className="DeploymentGuideBank" title="Bank Deployment Guide">
       <p>This guide will detail the deployment instructions for banks.</p>
       <InstallDependencies />
       <Firewall />
       <ProjectSetup name="Bank" />
-      <NGINX name="Bank" />
+      <Nginx name="Bank" />
       <Redis />
       <GatewayInterface name="Bank" />
       <Celery name="Bank" networkSigningKey="e5e5fec0dcbbd8b0a76c67204823678d3f243de7a0a1042bb3ecf66285cd9fd4" />
@@ -85,8 +85,8 @@ const Bank = () => {
         networkSigningKey="e5e5fec0dcbbd8b0a76c67204823678d3f243de7a0a1042bb3ecf66285cd9fd4"
       />
       <Troubleshooting />
-    </section>
+    </DocContainer>
   );
 };
 
-export default Bank;
+export default DeploymentGuideBank;

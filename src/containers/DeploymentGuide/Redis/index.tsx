@@ -1,12 +1,10 @@
-import React from 'react';
+import React, {FC} from 'react';
 
-import {Commands} from 'components';
+import {Commands, DocSubSection} from 'components';
 
-const Redis = () => {
+const Redis: FC = () => {
   return (
-    <>
-      <h2>Redis</h2>
-
+    <DocSubSection className="Redis" title="Redis">
       <Commands
         code={`sudo nano /etc/redis/redis.conf`}
         heading="Since we are running Ubuntu, which uses the systemd init system, change this to systemd"
@@ -22,7 +20,7 @@ supervised systemd`}
         heading="Restart the Redis service to reflect the changes you made to the configuration file"
       />
       <Commands code={`sudo systemctl status redis`} heading="Check status to make sure Redis is running correctly" />
-    </>
+    </DocSubSection>
   );
 };
 

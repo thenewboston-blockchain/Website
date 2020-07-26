@@ -1,16 +1,14 @@
 import React, {FC} from 'react';
 
-import {Commands} from 'components';
+import {Commands, DocSubSection} from 'components';
 
 interface ComponentProps {
   name: string;
 }
 
-const NGINX: FC<ComponentProps> = ({name}) => {
+const Nginx: FC<ComponentProps> = ({name}) => {
   return (
-    <>
-      <h2>NGINX</h2>
-
+    <DocSubSection className="Nginx" title="NGINX">
       <Commands
         code={`sudo rm /etc/nginx/sites-available/default
 sudo nano /etc/nginx/sites-available/default
@@ -47,8 +45,8 @@ server {
         heading="Paste in the following and save"
       />
       <Commands code={`sudo nginx -t`} heading="Test configuration" />
-    </>
+    </DocSubSection>
   );
 };
 
-export default NGINX;
+export default Nginx;

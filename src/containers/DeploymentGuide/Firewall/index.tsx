@@ -1,12 +1,10 @@
-import React from 'react';
+import React, {FC} from 'react';
 
-import {Commands} from 'components';
+import {Commands, DocSubSection} from 'components';
 
-const Firewall = () => {
+const Firewall: FC = () => {
   return (
-    <>
-      <h2>Firewall</h2>
-
+    <DocSubSection className="Firewall" title="Firewall">
       <Commands
         code={`sudo ufw app list
 sudo ufw allow 'Nginx Full' && sudo ufw allow OpenSSH && sudo ufw enable
@@ -25,7 +23,7 @@ sudo ufw allow 'Nginx Full' && sudo ufw allow OpenSSH && sudo ufw enable
       <Commands code={`visudo`} heading="Allow this user to use sudo" />
       <Commands code={`deploy ALL=(ALL) NOPASSWD:ALL`} heading="Add following line into the opened file" />
       <Commands code={`su - deploy`} heading="Switch to that new user" />
-    </>
+    </DocSubSection>
   );
 };
 

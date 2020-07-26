@@ -1,12 +1,10 @@
-import React from 'react';
+import React, {FC} from 'react';
 
-import {Commands} from 'components';
+import {Commands, DocSubSection} from 'components';
 
-const Troubleshooting = () => {
+const Troubleshooting: FC = () => {
   return (
-    <>
-      <h2>Troubleshooting</h2>
-
+    <DocSubSection className="Troubleshooting" title="Troubleshooting">
       <Commands code={`sudo systemctl status api celery nginx redis`} heading="Check the status of the services" />
       <Commands
         code={`sudo journalctl -u api.service
@@ -15,7 +13,7 @@ sudo journalctl -u nginx.service
 `}
         heading="View the logs"
       />
-    </>
+    </DocSubSection>
   );
 };
 

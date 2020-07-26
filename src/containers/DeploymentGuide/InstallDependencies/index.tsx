@@ -1,12 +1,10 @@
-import React from 'react';
+import React, {FC} from 'react';
 
-import {Commands} from 'components';
+import {Commands, DocSubSection} from 'components';
 
-const InstallDependencies = () => {
+const InstallDependencies: FC = () => {
   return (
-    <>
-      <h2>Install Dependencies</h2>
-
+    <DocSubSection className="InstallDependencies" title="Install Dependencies">
       <Commands
         code={`sudo add-apt-repository universe
 sudo apt -y update && sudo apt -y upgrade
@@ -17,7 +15,7 @@ sudo apt -y install build-essential nginx python3-pip redis-server
 `}
         heading="Update and install packages"
       />
-    </>
+    </DocSubSection>
   );
 };
 
