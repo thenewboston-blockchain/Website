@@ -1,6 +1,8 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
+
 import {Icon, IconType} from 'components';
+
 import LeftMenuGroup from '../LeftMenuGroup';
 import './LeftMenu.scss';
 
