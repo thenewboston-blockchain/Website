@@ -12,7 +12,7 @@ import GuideInitialFunds from './GuideInitialFunds';
 import GuideIntroduction from './GuideIntroduction';
 import GuideNodeIdentifier from './GuideNodeIdentifier';
 import GuideResyncProcess from './GuideResyncProcess';
-import GuideResyncing from './GuideResyncTriggers';
+import GuideResyncTriggers from './GuideResyncTriggers';
 import GuideRootAccountFile from './GuideRootAccountFile';
 import GuideTransactionFees from './GuideTransactionFees';
 import GuideTrust from './GuideTrust';
@@ -43,7 +43,7 @@ const getPageContent = (chapter: string): ReactNode => {
     case 'resync-process':
       return <GuideResyncProcess />;
     case 'resync-triggers':
-      return <GuideResyncing />;
+      return <GuideResyncTriggers />;
     case 'root-account-file':
       return <GuideRootAccountFile />;
     case 'transaction-fees':
