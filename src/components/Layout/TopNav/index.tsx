@@ -15,7 +15,7 @@ const TopNav: FC<ComponentProps> = ({toggleLeftMenu}) => {
     <div className="TopNav__left">
       {toggleLeftMenu ? (
         <div className="TopNav__left-menu-toggle-container" onClick={toggleLeftMenu} role="button" tabIndex={0}>
-          <Icon className="react-icons" icon={IconType.menu} size={24} />
+          <Icon icon={IconType.menu} size={24} />
         </div>
       ) : null}
       <NavLink className="TopNav__tnb-logo-nav" to="/">
