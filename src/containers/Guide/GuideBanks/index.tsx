@@ -67,13 +67,11 @@ const GuideBanks: FC = () => {
         account balances are maintained and updated by the primary validator and both the root balance sheet and
         blockchain are continuously backed up by several confirmation validators in the case where the primary validator
         goes down. Banks act simply as routers and initial validation mechanisms to enhance the performance of the
-        network by distributing the processing power that would otherwise be required by a single node. When a bank
-        server fails, the network will become aware of the failed server and acknowledge that those accounts are now
-        free to join a new bank without incurring any trust penalty.
+        network by distributing the processing power that would otherwise be required by a single node.
       </p>
       <p>
-        This architecture does not imply that a single human individual should only ever have one account. It is
-        perfectly acceptable and even encouraged for individuals to have multiple accounts.
+        This architecture does not imply that a single individual should only ever have one account. It is perfectly
+        acceptable and even encouraged for individuals to have multiple accounts.
       </p>
       <p>
         Although the documentation has not yet covered the topic of{' '}

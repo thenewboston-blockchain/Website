@@ -23,6 +23,7 @@ const GuideIntroduction: FC = () => {
           'Validator',
           'a central server that accepts blocks from multiple banks and after successful validation/confirmation of each block, creates a new confirmation block which is added to the blockchain',
         ],
+        ['Node', 'any network server (Bank or Validator)'],
         [
           'Confirmation Block',
           'often referred to as a "confirmation", a block that has been signed by a validator as confirmation it has been added to their blockchain, indicating that the transactions have been validated and that the points have been successfully transferred',

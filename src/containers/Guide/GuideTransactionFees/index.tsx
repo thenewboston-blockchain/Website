@@ -93,8 +93,8 @@ const GuideTransactionFees: FC = () => {
         </li>
         <li>
           The validator will then send the confirmation block back to Amy's bank where the bank can then notify both
-          users of the successful transaction. If the recipient (Brian) is registered at another bank, that bank will
-          receive a confirmation block from the confirmation validators.
+          users of the successful transaction. If the recipient (Brian) is using another bank, that bank will receive a
+          confirmation block from the confirmation validators.
         </li>
       </DocList>
 
