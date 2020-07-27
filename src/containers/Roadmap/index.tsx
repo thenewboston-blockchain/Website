@@ -14,8 +14,8 @@ const taskColors = [
 const Roadmap: FC = () => {
   const renderQuarters = (): ReactNode => {
     return ['Q1', 'Q2', 'Q3', 'Q4'].map((quarter) => (
-      <div className={clsx('header', quarter.toLowerCase())} key={quarter}>
-        <div className="header__circle">{quarter}</div>
+      <div className={clsx('Roadmap__header', `Roadmap__header--${quarter.toLowerCase()}`)} key={quarter}>
+        <div className="Roadmap__circle">{quarter}</div>
       </div>
     ));
   };
@@ -26,16 +26,16 @@ const Roadmap: FC = () => {
 
       return (
         <Fragment key={teamName}>
-          <div className="team" style={{gridRowEnd: `span ${rowCount || 1}`}}>
+          <div className="Roadmap__team" style={{gridRowEnd: `span ${rowCount || 1}`}}>
             {teamName}
           </div>
           {teamData.map(({taskName, taskCards}, taskIndex) => {
             const altBg = (teamIndex + taskIndex) % 2 === 0;
             return (
               <Fragment key={taskName}>
-                <div className={clsx('task cell', {'alt-bg': altBg})}>
+                <div className={clsx('Roadmap__task Roadmap__cell', {'Roadmap__cell--alt-bg': altBg})}>
                   {taskName}
-                  {taskCards.map(({description, start, stop}, taskIndex) => {
+                  {taskCards.map(({description, start, stop}, taskCardIndex) => {
                     const taskColor = taskColors[teamIndex];
                     const cardSize = stop - start;
                     const cardStyle: CSSProperties = {
@@ -45,16 +45,16 @@ const Roadmap: FC = () => {
                       width: `${100 * cardSize}%`,
                     };
                     return (
-                      <div className="card" key={taskIndex} style={cardStyle}>
+                      <div className="Roadmap__card" key={taskCardIndex} style={cardStyle}>
                         {description || ''}
                       </div>
                     );
                   })}
                 </div>
-                <div className={clsx('quarter q1 cell', {'alt-bg': altBg})} />
-                <div className={clsx('quarter q2 cell', {'alt-bg': altBg})} />
-                <div className={clsx('quarter q3 cell', {'alt-bg': altBg})} />
-                <div className={clsx('quarter q4 cell', {'alt-bg': altBg})} />
+                <div className={clsx('Roadmap__cell', {'Roadmap__cell--alt-bg': altBg})} />
+                <div className={clsx('Roadmap__cell', {'Roadmap__cell--alt-bg': altBg})} />
+                <div className={clsx('Roadmap__cell', {'Roadmap__cell--alt-bg': altBg})} />
+                <div className={clsx('Roadmap__cell', {'Roadmap__cell--alt-bg': altBg})} />
               </Fragment>
             );
           })}
@@ -64,12 +64,10 @@ const Roadmap: FC = () => {
   };
 
   return (
-    <div className="Documentation">
-      <div className="Roadmap">
-        <div className="empty-cell" />
-        {renderQuarters()}
-        {renderTeams()}
-      </div>
+    <div className="Roadmap">
+      <div className="Roadmap__empty-cell" />
+      {renderQuarters()}
+      {renderTeams()}
     </div>
   );
 };

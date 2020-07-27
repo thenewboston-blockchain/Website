@@ -1,0 +1,13 @@
+.DocContainer {
+  padding: 32px 32px 96px;
+
+  &__page-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+
+  &__divider {
+    height: 12px;
+  }
+}

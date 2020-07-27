@@ -1,0 +1,25 @@
+.TableVertical {
+  border: 1px solid #e6e6e6;
+  margin-bottom: 20px;
+
+  &__tr {
+    &--even {
+      background: #f6f6f6;
+    }
+  }
+
+  &__td {
+    min-width: 90px;
+    padding: 2px 8px;
+
+    &:first-child {
+      font-weight: 700;
+      padding-right: 16px;
+      white-space: nowrap;
+    }
+
+    &--border {
+      border: 1px solid #e6e6e6;
+    }
+  }
+}

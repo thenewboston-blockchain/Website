@@ -1,0 +1,41 @@
+import React, {FC, ReactNode, useMemo} from 'react';
+import {useParams} from 'react-router-dom';
+
+import NodeApiConnectionRequests from 'containers/NodeApi/NodeApiConnectionRequests';
+
+import ConfirmationValidatorApiAccounts from './ConfirmationValidatorApiAccounts';
+import ConfirmationValidatorApiBankConfirmationServices from './ConfirmationValidatorApiBankConfirmationServices';
+import ConfirmationValidatorApiBanks from './ConfirmationValidatorApiBanks';
+import ConfirmationValidatorApiConfig from './ConfirmationValidatorApiConfig';
+import ConfirmationValidatorApiConfirmationBlocks from './ConfirmationValidatorApiConfirmationBlocks';
+import ConfirmationValidatorApiValidators from './ConfirmationValidatorApiValidators';
+
+const getPageContent = (chapter: string): ReactNode => {
+  switch (chapter) {
+    case 'accounts':
+      return <ConfirmationValidatorApiAccounts />;
+    case 'bank-confirmation-services':
+      return <ConfirmationValidatorApiBankConfirmationServices />;
+    case 'banks':
+      return <ConfirmationValidatorApiBanks />;
+    case 'config':
+      return <ConfirmationValidatorApiConfig />;
+    case 'confirmation-blocks':
+      return <ConfirmationValidatorApiConfirmationBlocks />;
+    case 'connection-requests':
+      return <NodeApiConnectionRequests />;
+    case 'validators':
+      return <ConfirmationValidatorApiValidators />;
+    default:
+      return <ConfirmationValidatorApiAccounts />;
+  }
+};
+
+const ConfirmationValidatorApi: FC = () => {
+  const {chapter} = useParams();
+  const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
+
+  return <>{pageContent}</>;
+};
+
+export default ConfirmationValidatorApi;
