@@ -70,7 +70,7 @@ const GuideResyncing: FC = () => {
       </p>
       <p>
         Invalid blocks are blocks sent from confirmation validators to their banks as an indication that a block that
-        had been received from the primary validator is unable to be validated. This may be due to improper formatting,
+        had been received from the primary validator was unable to be validated. This may be due to improper formatting,
         an invalid signature, incorrect calculations, or an intentional attempt by the primary validator to cheat the
         system by providing inaccurate account balances.
       </p>
@@ -90,8 +90,8 @@ const GuideResyncing: FC = () => {
           <strong>whether or not to switch primary validators</strong>
         </li>
         <li>
-          the weighted trust of a CV is calculated as a ratio and is equal to the trust of that CV vs the total trust
-          for all CV's
+          the weighted trust of a CV is calculated as a ratio and is equal to the trust of that CV vs. the total trust
+          of all CV's
         </li>
         <li>for example, if a Bank was connected to four CV's then the weighted trust for each may look like this:</li>
       </DocList>
@@ -113,11 +113,11 @@ const GuideResyncing: FC = () => {
         <strong>Network Error</strong>
       </p>
       <p>
-        The last remaining event that may trigger an automated decrease in a bank's trust level of their primary
-        validator is a network error. The most common of which is when the primary validator goes offline, but can also
-        occur if the primary validator becomes misconfigured in any way. When this occurs and the bank becomes unable to
-        communicate with their primary validator, the bank will automatically set the trust level of the primary
-        validator to 0 and initiate the resync process to choose a new primary validator.
+        The last remaining event that may trigger an automated decrease in the primary validator trust is a network
+        error. The most common of which is when the primary validator goes offline, but can also occur if the primary
+        validator becomes misconfigured in any way. When this occurs and the bank becomes unable to communicate with
+        their primary validator, the bank will automatically set the trust level of the primary validator to 0 and
+        initiate the resync process to choose a new primary validator.
       </p>
 
       <DocImage alt="resync trigger network error" maxWidth={900} src={ResyncTriggerNetworkError} />
@@ -167,12 +167,12 @@ const GuideResyncing: FC = () => {
 
       <DocList variant="ul">
         <li>
-          if the CV does not have that bank set as their most trusted bank, the CV will respond "no" to the upgrade
-          request and the bank will continue along with their next most trusted CV
+          if the CV does not have that bank set as their most trusted bank, the CV will respond "no" and the bank will
+          continue along with their next most trusted CV
         </li>
         <li>
-          if the CV does have that bank set as their most trusted bank, the CV will respond "yes" to the upgrade request
-          and upgrade themselves to a PV
+          if the CV does have that bank set as their most trusted bank, the CV will respond "yes" and upgrade themselves
+          to a PV
         </li>
       </DocList>
 
