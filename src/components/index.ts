@@ -1,19 +1,21 @@
 import {Commands, RequestResponse} from './CodeHighlighter';
 import {DocContainer, DocEndpoint, DocList, DocImage, DocSubSection} from './DocWrapper';
 import {Button} from './FormElements';
+import Icon, {IconType} from './Icon';
 import {LayoutBasic, LayoutDashboard} from './Layout';
 import MarketingButton from './MarketingButton';
 import {TableBorderGrid, TableParams, TableVertical} from './Table';
-import Icon, {IconType} from './Icon';
 
 export {
   Button,
   Commands,
   DocContainer,
   DocEndpoint,
-  DocList,
   DocImage,
+  DocList,
   DocSubSection,
+  Icon,
+  IconType,
   LayoutBasic,
   LayoutDashboard,
   MarketingButton,
@@ -21,6 +23,4 @@ export {
   TableBorderGrid,
   TableParams,
   TableVertical,
-  Icon,
-  IconType,
 };
