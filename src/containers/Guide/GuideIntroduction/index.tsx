@@ -18,10 +18,7 @@ const GuideIntroduction: FC = () => {
           'unique value used to verify the authenticity of a digital document (included with every block to prove that the related transactions have been authorized by the account owner)',
         ],
         ['Bank', 'a network server that has several responsibilities such as electing a validator and routing blocks'],
-        [
-          'Bank Block',
-          'a network server that has several responsibilities such as electing a validator and routing blocks',
-        ],
+        ['Bank Block', 'a block that has been signed by a bank'],
         [
           'Validator',
           'a central server that accepts blocks from multiple banks and after successful validation/confirmation of each block, creates a new confirmation block which is added to the blockchain',
