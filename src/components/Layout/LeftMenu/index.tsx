@@ -18,7 +18,8 @@ const LeftMenu: FC = () => {
         <NavLink to="/guide/confirmation-validators">Confirmation Validators</NavLink>
         <NavLink to="/guide/confirmation-services">Confirmation Services</NavLink>
         <NavLink to="/guide/node-identifiers">Node Identifiers</NavLink>
-        <NavLink to="/guide/resyncing">Resyncing</NavLink>
+        <NavLink to="/guide/resync-triggers">Resync Triggers</NavLink>
+        <NavLink to="/guide/resync-process">Resync Process</NavLink>
         <NavLink to="/guide/trust">Trust</NavLink>
         <NavLink to="/guide/initial-funds">Initial Funds</NavLink>
         <NavLink to="/guide/best-practices">Best Practices</NavLink>
