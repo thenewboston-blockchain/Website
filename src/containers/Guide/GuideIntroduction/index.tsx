@@ -18,20 +18,18 @@ const GuideIntroduction: FC = () => {
           'unique value used to verify the authenticity of a digital document (included with every block to prove that the related transactions have been authorized by the account owner)',
         ],
         ['Bank', 'a network server that has several responsibilities such as electing a validator and routing blocks'],
-        [
-          'Bank Block',
-          'a network server that has several responsibilities such as electing a validator and routing blocks',
-        ],
+        ['Bank Block', 'a block that has been signed by a bank'],
         [
           'Validator',
           'a central server that accepts blocks from multiple banks and after successful validation/confirmation of each block, creates a new confirmation block which is added to the blockchain',
         ],
+        ['Node', 'any network server (Bank or Validator)'],
         [
           'Confirmation Block',
           'often referred to as a "confirmation", a block that has been signed by a validator as confirmation it has been added to their blockchain, indicating that the transactions have been validated and that the points have been successfully transferred',
         ],
         ['Blockchain', 'an ordered list of confirmation blocks'],
-        ['Root Balance Sheet', 'a historic record (snapshot) of all account balances at a given point in time'],
+        ['Root Account File', 'a historic record (snapshot) of all account balances at a given point in time'],
       ]}
     />
   );

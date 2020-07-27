@@ -22,7 +22,7 @@ const GuideAccounts: FC = () => {
       <p>
         When users first download an account manager, it will take the user through the process of creating a{' '}
         <strong>key pair</strong>. A key pair consists of two keys, a <strong>signing key</strong> and an{' '}
-        <strong>account number</strong>. These keys serve many different purposes in the network.
+        <strong>account number</strong>.
       </p>
 
       <DocImage alt="key pair" maxWidth={380} src={KeyPair} />

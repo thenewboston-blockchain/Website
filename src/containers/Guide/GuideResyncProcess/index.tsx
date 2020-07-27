@@ -51,7 +51,8 @@ const GuideResyncProcess: FC = () => {
       </p>
       <p>
         A confirmation validator will accept the request if they themselves have the requesting bank set as their most
-        trusted bank. Confirmation validators will always follow the guidance of their most trusted bank.
+        trusted bank.{' '}
+        <strong>Confirmation validators will always follow the guidance of their most trusted bank.</strong>
       </p>
       <p>
         In order to prevent multiple confirmation validators from upgrading to primary validators at the same time (in
@@ -73,7 +74,7 @@ const GuideResyncProcess: FC = () => {
         </li>
         <li>
           if the CV does have that bank set as their most trusted bank, the CV will respond "yes" and upgrade themselves
-          to a PV
+          to a PV (as shown above)
         </li>
       </DocList>
 
