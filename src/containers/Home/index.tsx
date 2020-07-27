@@ -1,7 +1,7 @@
 import React, {FC, ReactNode} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {MarketingButton} from 'components';
+import {Button, MarketingButton} from 'components';
 
 import Bitcoin from 'assets/svgs/bitcoin.svg';
 import Logo from 'assets/svgs/thenewboston.svg';
@@ -78,7 +78,7 @@ const Home: FC = () => {
               continue to accumulate until the entire block eventually becomes verified.
             </p>
             <NavLink to="/guide/introduction">
-              <button className="primary">View Guide</button>
+              <Button>View Guide</Button>
             </NavLink>
           </div>
           <div className="right-block">
