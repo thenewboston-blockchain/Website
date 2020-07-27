@@ -1,6 +1,8 @@
 import React, {FC, ReactNode, useState} from 'react';
 import {RouteComponentProps, withRouter} from 'react-router-dom';
 
+import {Icon, IconType} from 'components';
+
 interface ComponentProps extends RouteComponentProps {
   children: ReactNode;
   leftIcon: ReactNode;
@@ -23,7 +25,7 @@ const LeftMenuGroup: FC<ComponentProps> = ({children, leftIcon, location, title,
           {leftIcon}
           <span className="heavy">{title}</span>
         </div>
-        <span className="material-icons arrow">keyboard_arrow_right</span>
+        <Icon className="react-icons arrow" icon={IconType.keyboardArrowRight} size={24} />
       </div>
       <div className={`submenu ${expanded ? 'expanded' : ''}`}>{children}</div>
     </div>

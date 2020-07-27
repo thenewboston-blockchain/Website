@@ -1,13 +1,19 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
+import {Icon, IconType} from 'components';
+
 import LeftMenuGroup from '../LeftMenuGroup';
 import './LeftMenu.scss';
 
 const LeftMenu: FC = () => {
   return (
     <nav className="LeftMenu">
-      <LeftMenuGroup leftIcon={<span className="material-icons">description</span>} title="Guide" urlBase="guide">
+      <LeftMenuGroup
+        leftIcon={<Icon className="react-icons" icon={IconType.document} size={20} />}
+        title="Guide"
+        urlBase="guide"
+      >
         <NavLink to="/guide/introduction">Introduction</NavLink>
         <NavLink to="/guide/accounts">Accounts</NavLink>
         <NavLink to="/guide/blocks">Blocks</NavLink>
@@ -27,7 +33,7 @@ const LeftMenu: FC = () => {
       </LeftMenuGroup>
 
       <LeftMenuGroup
-        leftIcon={<span className="material-icons">account_balance</span>}
+        leftIcon={<Icon className="react-icons" icon={IconType.accountBalance} size={20} />}
         title="Bank API"
         urlBase="bank-api"
       >
@@ -43,7 +49,7 @@ const LeftMenu: FC = () => {
       </LeftMenuGroup>
 
       <LeftMenuGroup
-        leftIcon={<span className="material-icons">verified_user</span>}
+        leftIcon={<Icon className="react-icons" icon={IconType.verifiedUser} size={20} />}
         title="Primary Validator API"
         urlBase="primary-validator-api"
       >
@@ -57,7 +63,7 @@ const LeftMenu: FC = () => {
       </LeftMenuGroup>
 
       <LeftMenuGroup
-        leftIcon={<span className="material-icons">check_circle</span>}
+        leftIcon={<Icon className="react-icons" icon={IconType.checkCircle} size={20} />}
         title="Confirmation Validator API"
         urlBase="confirmation-validator-api"
       >
@@ -71,7 +77,7 @@ const LeftMenu: FC = () => {
       </LeftMenuGroup>
 
       <LeftMenuGroup
-        leftIcon={<span className="material-icons">dns</span>}
+        leftIcon={<Icon className="react-icons" icon={IconType.dns} size={20} />}
         title="Deployment Guides"
         urlBase="deployment-guides"
       >
