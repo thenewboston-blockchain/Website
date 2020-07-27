@@ -1,7 +1,59 @@
 {
-  "extends": ["airbnb", "prettier", "prettier/react"],
-  "plugins": ["prettier"],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jest/recommended",
+    "prettier",
+    "prettier/react",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["react", "@typescript-eslint", "jest"],
   "rules": {
-    "prettier/prettier": ["error"]
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        "allowExpressions": true
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "consistent-return": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/control-has-associated-label": "off",
+    "no-param-reassign": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "react/button-has-type": "off",
+    "react/no-array-index-key": "off",
+    "react/no-unescaped-entities": "off",
+    "react/prop-types": "off",
+    "sort-keys": "error"
   }
 }

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {FC, ReactNode} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import MarketingButton from 'components/MarketingButton';
+import {Button, MarketingButton} from 'components';
 
 import Bitcoin from 'assets/svgs/bitcoin.svg';
 import Logo from 'assets/svgs/thenewboston.svg';
@@ -10,15 +10,15 @@ import Screenshot from './Screenshot.png';
 
 import './Home.scss';
 
-const Home = () => {
-  const renderComparisonCardStat = (attribute: string, value: string) => (
+const Home: FC = () => {
+  const renderComparisonCardStat = (attribute: string, value: string): ReactNode => (
     <div className="comparison-card-stat">
       <div className="value">{value}</div>
       <div className="attribute">{attribute}</div>
     </div>
   );
 
-  const renderComparisonCards = () => (
+  const renderComparisonCards = (): ReactNode => (
     <div className="comparison-card-container">
       <div className="comparison-card">
         <img alt="logo" className="crypto-logo" src={Bitcoin} />
@@ -36,7 +36,7 @@ const Home = () => {
     </div>
   );
 
-  const renderHero = () => (
+  const renderHero = (): ReactNode => (
     <div className="hero">
       <svg className="background-graphic" viewBox="0 0 1366 396">
         <path fill="#F6F9FC" fillRule="nonzero" d="M0 395.5L1366 106V0H0v395.5z" />
@@ -64,11 +64,8 @@ const Home = () => {
     </div>
   );
 
-  const renderInstantTransactions = () => (
+  const renderInstantTransactions = (): ReactNode => (
     <div className="instant-transactions">
-      <svg className="background-graphic" viewBox="0 0 1366 659" fill="none">
-        <path d="M1366 0L0 147L0.5 659H1366.5L1366 0Z" fill="#131F41" />
-      </svg>
       <div className="content-container">
         <div className="instant-transactions-mini">INSTANT TRANSACTIONS</div>
         <h1>Say goodbye to 10 minute block times</h1>
@@ -81,7 +78,7 @@ const Home = () => {
               continue to accumulate until the entire block eventually becomes verified.
             </p>
             <NavLink to="/guide/introduction">
-              <button className="primary">View Guide</button>
+              <Button>View Guide</Button>
             </NavLink>
           </div>
           <div className="right-block">
@@ -97,6 +94,9 @@ const Home = () => {
         </div>
         {renderComparisonCards()}
       </div>
+      <svg className="background-graphic" viewBox="0 0 1366 659" fill="none">
+        <path d="M1366 0L0 147L0 659H1366.5L1366 0Z" fill="#131F41" />
+      </svg>
     </div>
   );
 

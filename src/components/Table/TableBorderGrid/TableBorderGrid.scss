@@ -1,0 +1,23 @@
+.TableBorderGrid {
+  margin-bottom: 20px;
+
+  &__title {
+    color: #069;
+    font-weight: 700;
+  }
+
+  &__thead {
+    text-align: left;
+  }
+
+  &__th {
+    border: 1px solid #e6e6e6;
+    padding: 4px 8px;
+  }
+
+  &__td {
+    border: 1px solid #e6e6e6;
+    min-width: 90px;
+    padding: 2px 8px;
+  }
+}

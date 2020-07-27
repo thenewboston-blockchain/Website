@@ -1,0 +1,47 @@
+.TableParams {
+  border: 1px solid #e6e6e6;
+  display: inline-block;
+  margin: 0 0 20px;
+  max-width: 100%;
+  overflow-x: auto;
+
+  &__thead {
+    text-align: left;
+  }
+
+  &__tr {
+    &--even {
+      background-color: #f6f6f6;
+    }
+  }
+
+  &__th {
+    padding: 4px 8px;
+  }
+
+  &__td {
+    min-width: 260px;
+    padding: 2px 8px;
+
+    &--param {
+      font-family: var(--font-family-mono-roboto);
+      font-weight: 700;
+      padding-right: 12px;
+      white-space: nowrap;
+    }
+
+    &--sample-value {
+      color: #9b9b9b;
+      font-family: var(--font-family-mono-roboto);
+      font-size: 13px;
+    }
+  }
+
+  &__data-type {
+    color: #9b9b9b;
+    font-family: var(--font-family-mono-roboto);
+    font-size: 12px;
+    font-weight: 400;
+    padding-left: 6px;
+  }
+}

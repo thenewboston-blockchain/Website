@@ -1,20 +1,41 @@
 import React, {FC} from 'react';
+import clsx from 'clsx';
+
+import {getCustomClassNames} from 'utils/components';
 
 import GitHubLogo from './GitHubLogo.png';
 import RedditLogo from './RedditLogo.png';
 import SlackLogo from './SlackLogo.png';
-
 import './MarketingButton.scss';
 
 interface ComponentProps {
+  className?: string;
   website: 'github' | 'reddit' | 'slack';
 }
 
-const MarketingButton: FC<ComponentProps> = ({website}) => {
+const MarketingButton: FC<ComponentProps> = ({className, website}) => {
   const images = {
-    github: <img alt={website} src={GitHubLogo} />,
-    reddit: <img alt={website} src={RedditLogo} />,
-    slack: <img alt={website} src={SlackLogo} />,
+    github: (
+      <img
+        alt={website}
+        className={clsx('MarketingButton__img', {...getCustomClassNames(className, '__img', true)})}
+        src={GitHubLogo}
+      />
+    ),
+    reddit: (
+      <img
+        alt={website}
+        className={clsx('MarketingButton__img', {...getCustomClassNames(className, '__img', true)})}
+        src={RedditLogo}
+      />
+    ),
+    slack: (
+      <img
+        alt={website}
+        className={clsx('MarketingButton__img', {...getCustomClassNames(className, '__img', true)})}
+        src={SlackLogo}
+      />
+    ),
   };
 
   const urls = {
@@ -25,7 +46,7 @@ const MarketingButton: FC<ComponentProps> = ({website}) => {
   };
 
   return (
-    <a className="MarketingButton" href={urls[website]} target="_blank" rel="noopener noreferrer">
+    <a className={clsx('MarketingButton', className)} href={urls[website]} target="_blank" rel="noopener noreferrer">
       {images[website]}
     </a>
   );
