@@ -4,6 +4,7 @@ import {Button} from './FormElements';
 import {LayoutBasic, LayoutDashboard} from './Layout';
 import MarketingButton from './MarketingButton';
 import {TableBorderGrid, TableParams, TableVertical} from './Table';
+import Icon, {IconType} from './Icon';
 
 export {
   Button,
@@ -20,4 +21,6 @@ export {
   TableBorderGrid,
   TableParams,
   TableVertical,
+  Icon,
+  IconType,
 };

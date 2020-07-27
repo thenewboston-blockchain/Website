@@ -20,7 +20,7 @@ $item-padding: 10px 16px;
     align-items: center;
     display: flex;
 
-    .material-icons {
+    .react-icons {
       font-size: 20px;
       opacity: 0.8;
       width: 32px;
@@ -57,10 +57,11 @@ $item-padding: 10px 16px;
         align-items: center;
         display: flex;
 
-        .material-icons {
+        .react-icons {
           font-size: 20px;
           opacity: 0.8;
           width: 32px;
+          justify-content: left;
         }
       }
     }
