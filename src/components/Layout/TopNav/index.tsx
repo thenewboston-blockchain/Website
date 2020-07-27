@@ -2,6 +2,7 @@ import React, {FC, ReactNode} from 'react';
 import {NavLink} from 'react-router-dom';
 
 import Logo from 'assets/svgs/thenewboston.svg';
+import {Icon, IconType} from 'components';
 
 import './TopNav.scss';
 
@@ -14,7 +15,7 @@ const TopNav: FC<ComponentProps> = ({toggleLeftMenu}) => {
     <div className="TopNav__left">
       {toggleLeftMenu ? (
         <div className="TopNav__left-menu-toggle-container" onClick={toggleLeftMenu} role="button" tabIndex={0}>
-          <span className="material-icons left-menu-toggle">menu</span>
+          <Icon icon={IconType.menu} size={24} />
         </div>
       ) : null}
       <NavLink className="TopNav__tnb-logo-nav" to="/">
