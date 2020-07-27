@@ -20,10 +20,7 @@ const GuideConfirmationValidators: FC = () => {
       <DocList variant="ul">
         <li>Root account file</li>
         <ul>
-          <li>
-            this is the flattened representation of all account balances at the moment in time that the validator was
-            first set to "primary"
-          </li>
+          <li>this is the flattened representation of all account balances at a given point in time</li>
         </ul>
         <li>Root account file hash</li>
         <ul>
@@ -32,6 +29,7 @@ const GuideConfirmationValidators: FC = () => {
             downloaded copy and compare it to the root account file hash provided by the primary validator to ensure the
             values match
           </li>
+          <li>this process is used to ensure that data integrity is maintained during the download process</li>
         </ul>
         <li>Seed block identifier</li>
         <ul>
@@ -40,7 +38,7 @@ const GuideConfirmationValidators: FC = () => {
         </ul>
         <li>Head block hash</li>
         <ul>
-          <li>Hashed message of the primary validators most recently verified block</li>
+          <li>value representing the message hash of the primary validators most recently verified block</li>
           <li>used by the confirmation validators to know when syncing is complete</li>
         </ul>
       </DocList>
@@ -52,7 +50,8 @@ const GuideConfirmationValidators: FC = () => {
       <DocList variant="ol">
         <li>Download the root account file from the primary validator</li>
         <li>
-          Hash that account file and compare it to the hash provided by the primary validator to ensure they match
+          Hash the downloaded root account file and compare it to the hash provided by the primary validator to ensure
+          they match
         </li>
         <li>
           Store the block hash of the primary validators last validated block, also known as the HEAD block hash, for
@@ -62,13 +61,13 @@ const GuideConfirmationValidators: FC = () => {
 
       <p>
         After the confirmation validator has all data downloaded and has made their own copy of the account file, the
-        confirmation validator will begin processing blocks beginning with the seed block and continuing until it
-        reaches the address of the HEAD block. The iteration logic is as follows:
+        confirmation validator will begin processing blocks starting with the seed block and continuing until it reaches
+        the address of the HEAD block. The iteration logic is as follows:
       </p>
 
       <DocList variant="ol">
-        <li>Download the confirmed block from the primary validator</li>
-        <li>Verify the block against their own copy of the account file</li>
+        <li>Fetch the next confirmation block from the primary validator</li>
+        <li>Verify the block against their own account data</li>
         <ol type="a">
           <li>
             if the confirmation validators results match the updated balances given by the primary validator (the block
@@ -87,7 +86,7 @@ const GuideConfirmationValidators: FC = () => {
       <DocImage alt="confirmation validator block syncing" maxWidth={740} src={ConfirmationValidatorBlockSyncing} />
 
       <p>
-        The process in which existing confirmation validators must re-sync with a new primary validator is as follows:
+        The process in which existing confirmation validators must resync with a new primary validator is as follows:
       </p>
 
       <DocList variant="ol">
@@ -116,7 +115,7 @@ const GuideConfirmationValidators: FC = () => {
         When a new block is verified by the primary validator, the primary validator will send a POST request to all
         confirmation validators. This will inform the confirmation validators of the updated data immediately, and
         prevent the confirmation validators from needing to continuously make GET requests to the primary validator to
-        check for new blocks. The primary validator has incentive to reliably forward all confirmed blocks to the
+        check for new blocks. The primary validator has incentive to reliably forward all confirmation blocks to the
         confirmation validators since this will help the primary validators trust level remain high among all banks.
       </p>
       <p>
