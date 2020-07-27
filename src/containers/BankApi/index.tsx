@@ -1,4 +1,4 @@
-import React, {FC, useMemo} from 'react';
+import React, {FC, ReactNode, useMemo} from 'react';
 import {useParams} from 'react-router-dom';
 
 import NodeApiConnectionRequests from 'containers/NodeApi/NodeApiConnectionRequests';
@@ -12,7 +12,7 @@ import BankApiConfirmationBlocks from './BankApiConfirmationBlocks';
 import BankApiValidatorConfirmationServices from './BankApiValidatorConfirmationServices';
 import BankApiValidators from './BankApiValidators';
 
-const getPageContent = (chapter: string) => {
+const getPageContent = (chapter: string): ReactNode => {
   switch (chapter) {
     case 'accounts':
       return <BankApiAccounts />;

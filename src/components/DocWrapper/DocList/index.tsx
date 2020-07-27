@@ -13,7 +13,10 @@ interface ComponentProps {
 const DocList: FC<ComponentProps> = ({children, className, variant}) => {
   const mainClassName = useMemo(
     () =>
-      clsx('DocList', className, {[`DocList--${variant}`]: true, ...getCustomClassNames(className, `--${variant}`, true)}),
+      clsx('DocList', className, {
+        [`DocList--${variant}`]: true,
+        ...getCustomClassNames(className, `--${variant}`, true),
+      }),
     [className, variant],
   );
 

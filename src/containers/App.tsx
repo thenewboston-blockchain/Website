@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom';
 
 import {LayoutBasic, LayoutDashboard} from 'components';
@@ -12,7 +12,7 @@ import Home from './Home';
 import PrimaryValidatorApi from './PrimaryValidatorApi';
 import Roadmap from './Roadmap';
 
-const App = () => {
+const App: FC = () => {
   return (
     <Router>
       <Switch>

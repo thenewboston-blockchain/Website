@@ -51,9 +51,9 @@ const BankApiValidators: FC = () => {
       <TableParams
         items={[
           {
-            param: 'trust',
             dataType: 'decimal',
             description: 'amount of trust',
+            param: 'trust',
           },
         ]}
       />

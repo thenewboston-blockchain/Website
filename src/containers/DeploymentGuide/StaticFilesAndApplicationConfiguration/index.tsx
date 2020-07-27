@@ -11,7 +11,7 @@ interface ComponentProps {
 const StaticFilesAndApplication: FC<ComponentProps> = ({initializationCommand, name, networkSigningKey}) => {
   return (
     <DocSubSection className="StaticFilesAndApplication" title="Static Files and Application Configuration">
-      <Commands code={`nano ~/.profile`} heading="Set environment variable" />
+      <Commands code="nano ~/.profile" heading="Set environment variable" />
 
       <Commands
         code={`export DJANGO_APPLICATION_ENVIRONMENT="production"
@@ -35,7 +35,7 @@ python3 manage.py collectstatic
         heading="Set up database"
       />
       {initializationCommand}
-      <Commands code={`http://[IP_ADDRESS]/config`} heading="Verify everything is working correctly by visiting" />
+      <Commands code="http://[IP_ADDRESS]/config" heading="Verify everything is working correctly by visiting" />
     </DocSubSection>
   );
 };

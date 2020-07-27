@@ -16,76 +16,76 @@ import Troubleshooting from '../Troubleshooting';
 const DeploymentGuideValidator: FC = () => {
   const renderInitializationCommands = (): ReactNode => (
     <>
-      <Commands code={`python3 manage.py initialize_validator`} heading="Initialize validator node" />
+      <Commands code="python3 manage.py initialize_validator" heading="Initialize validator node" />
       <TableParams
         headers={['Parameter', 'Description', 'Sample Value']}
         items={[
           {
-            param: 'node_identifier',
             dataType: 'string',
             description: 'Public key used to sign requests to other nodes',
+            param: 'node_identifier',
             sampleValue: '3afdf37573f1a511def0bd85553404b7091a76bcd79cdcebba1310527b167521',
           },
           {
-            param: 'account_number',
             dataType: 'string',
             description: 'The account number where Tx fees will be sent',
+            param: 'account_number',
             sampleValue: 'ad1f8845c6a1abb6011a2a434a079a087c460657aad54329a84b406dce8bf314',
           },
           {
-            param: 'default_transaction_fee',
             dataType: 'decimal',
             description: 'Tx fee cost',
+            param: 'default_transaction_fee',
             sampleValue: '4.0',
           },
           {
-            param: 'node_type',
             dataType: 'string',
             description: 'Network standardized type of node (PRIMARY_VALIDATOR or CONFIRMATION_VALIDATOR)',
+            param: 'node_type',
             sampleValue: 'PRIMARY_VALIDATOR',
           },
           {
-            param: 'seed_block_identifier',
             dataType: 'string',
             description: 'Identifier of the last block that was used when the root account file was generated',
+            param: 'seed_block_identifier',
             sampleValue: ' ',
           },
           {
-            param: 'root_account_file',
             dataType: 'URL',
             description:
               'Record of all account balances at the moment in time that the validator was first set to "primary"',
+            param: 'root_account_file',
             sampleValue:
               'https://gist.githubusercontent.com/buckyroberts/519b5cb82a0a5b5d4ae8a2175b722520/raw/9237deb449e27cab93cb89ea3346ecdfc61fe9ea/0.json',
           },
           {
-            param: 'protocol',
             dataType: 'string',
             description: 'Protocol other nodes will use to connect (http or https)',
+            param: 'protocol',
             sampleValue: 'http',
           },
           {
-            param: 'ip_address',
             dataType: 'IP',
             description: 'Public IP address',
+            param: 'ip_address',
             sampleValue: '64.225.47.205',
           },
           {
-            param: 'port',
             dataType: 'integer',
             description: 'Port number',
+            param: 'port',
             sampleValue: '80',
           },
           {
-            param: 'version',
             dataType: 'string',
             description: 'API version',
+            param: 'version',
             sampleValue: 'v1.0',
           },
         ]}
       />
       <Commands
-        code={`python3 manage.py initialize_confirmation_validator`}
+        code="python3 manage.py initialize_confirmation_validator"
         heading="If setting up confirmation validator, run this script to connect to the primary validator"
       />
     </>

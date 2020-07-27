@@ -37,7 +37,7 @@ CELERYD_LOG_LEVEL="DEBUG"
 DJANGO_APPLICATION_ENVIRONMENT=production
 NETWORK_SIGNING_KEY=${networkSigningKey}`}
       />
-      <Commands code={`sudo nano /etc/systemd/system/api.service`} heading="Create service" />
+      <Commands code="sudo nano /etc/systemd/system/api.service" heading="Create service" />
       <Commands
         code={`[Unit]
 Description = Service to run Django API
@@ -52,8 +52,8 @@ ExecStart = /usr/local/bin/start_api.sh
 WantedBy = multi-user.target
 `}
       />
-      <Commands code={`sudo chmod a+x /etc/systemd/system/api.service`} heading="Update permissions for file" />
-      <Commands code={`sudo nano /etc/systemd/system/celery.service`} heading="Create service for celery" />
+      <Commands code="sudo chmod a+x /etc/systemd/system/api.service" heading="Update permissions for file" />
+      <Commands code="sudo nano /etc/systemd/system/celery.service" heading="Create service for celery" />
       <Commands
         code={`[Unit]
 Description=${name} Celery Service
@@ -78,10 +78,10 @@ WantedBy=multi-user.target
 `}
       />
       <Commands
-        code={`sudo systemctl daemon-reload && sudo systemctl enable api && sudo systemctl enable celery`}
+        code="sudo systemctl daemon-reload && sudo systemctl enable api && sudo systemctl enable celery"
         heading="Reload systemd and enable both services"
       />
-      <Commands code={`ls /etc/systemd/system/multi-user.target.wants/`} heading="Verify it is enabled" />
+      <Commands code="ls /etc/systemd/system/multi-user.target.wants/" heading="Verify it is enabled" />
     </DocSubSection>
   );
 };

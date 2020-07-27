@@ -35,7 +35,7 @@ const Roadmap: FC = () => {
               <Fragment key={taskName}>
                 <div className={clsx('Roadmap__task Roadmap__cell', {'Roadmap__cell--alt-bg': altBg})}>
                   {taskName}
-                  {taskCards.map(({description, start, stop}, taskIndex) => {
+                  {taskCards.map(({description, start, stop}, taskCardIndex) => {
                     const taskColor = taskColors[teamIndex];
                     const cardSize = stop - start;
                     const cardStyle: CSSProperties = {
@@ -45,7 +45,7 @@ const Roadmap: FC = () => {
                       width: `${100 * cardSize}%`,
                     };
                     return (
-                      <div className="Roadmap__card" key={taskIndex} style={cardStyle}>
+                      <div className="Roadmap__card" key={taskCardIndex} style={cardStyle}>
                         {description || ''}
                       </div>
                     );

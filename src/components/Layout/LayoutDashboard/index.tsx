@@ -6,7 +6,7 @@ import LeftMenu from '../LeftMenu';
 import TopNav from '../TopNav';
 import './LayoutDashboard.scss';
 
-export const LayoutDashboard: FC = ({children}) => {
+const LayoutDashboard: FC = ({children}) => {
   const [leftMenuOpen, toggleLeftMenuOpen] = useState(window.innerWidth > 1200);
   const {pathname} = useLocation();
   const rightDiv = useRef<HTMLDivElement>(null);

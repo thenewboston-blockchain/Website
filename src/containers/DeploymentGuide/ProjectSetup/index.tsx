@@ -9,7 +9,7 @@ interface ComponentProps {
 const ProjectSetup: FC<ComponentProps> = ({name}) => {
   return (
     <DocSubSection className="ProjectSetup" title="Project Setup">
-      <Commands code={`sudo chmod go+w /var/www`} heading="Update /var/www/ permissions" />
+      <Commands code="sudo chmod go+w /var/www" heading="Update /var/www/ permissions" />
       <Commands
         code={`git clone https://github.com/thenewboston-developers/${name}.git /var/www/${name}
 cd /var/www/${name}/

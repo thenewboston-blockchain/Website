@@ -50,19 +50,19 @@ const BankApiBlocks: FC = () => {
       <TableParams
         items={[
           {
-            param: 'account_number',
             dataType: 'string',
             description: 'senders account number',
+            param: 'account_number',
           },
           {
-            param: 'message',
             dataType: 'object',
             description: 'balance_key matching the sending accounts balance_lock and a list of transactions',
+            param: 'message',
           },
           {
-            param: 'signature',
             dataType: 'string',
             description: 'hex value of the signed message',
+            param: 'signature',
           },
         ]}
       />

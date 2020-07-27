@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC, ReactNode} from 'react';
 import {NavLink} from 'react-router-dom';
 
 import {MarketingButton} from 'components';
@@ -10,15 +10,15 @@ import Screenshot from './Screenshot.png';
 
 import './Home.scss';
 
-const Home = () => {
-  const renderComparisonCardStat = (attribute: string, value: string) => (
+const Home: FC = () => {
+  const renderComparisonCardStat = (attribute: string, value: string): ReactNode => (
     <div className="comparison-card-stat">
       <div className="value">{value}</div>
       <div className="attribute">{attribute}</div>
     </div>
   );
 
-  const renderComparisonCards = () => (
+  const renderComparisonCards = (): ReactNode => (
     <div className="comparison-card-container">
       <div className="comparison-card">
         <img alt="logo" className="crypto-logo" src={Bitcoin} />
@@ -36,7 +36,7 @@ const Home = () => {
     </div>
   );
 
-  const renderHero = () => (
+  const renderHero = (): ReactNode => (
     <div className="hero">
       <svg className="background-graphic" viewBox="0 0 1366 396">
         <path fill="#F6F9FC" fillRule="nonzero" d="M0 395.5L1366 106V0H0v395.5z" />
@@ -64,7 +64,7 @@ const Home = () => {
     </div>
   );
 
-  const renderInstantTransactions = () => (
+  const renderInstantTransactions = (): ReactNode => (
     <div className="instant-transactions">
       <div className="content-container">
         <div className="instant-transactions-mini">INSTANT TRANSACTIONS</div>

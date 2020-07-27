@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
 import LeftMenuGroup from '../LeftMenuGroup';
 import './LeftMenu.scss';
 
-export const LeftMenu = () => {
+const LeftMenu: FC = () => {
   return (
     <nav className="LeftMenu">
       <LeftMenuGroup leftIcon={<span className="material-icons">description</span>} title="Guide" urlBase="guide">

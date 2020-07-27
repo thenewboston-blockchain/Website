@@ -9,11 +9,11 @@ interface ComponentProps {
   toggleLeftMenu?(): void;
 }
 
-export const TopNav: FC<ComponentProps> = ({toggleLeftMenu}) => {
+const TopNav: FC<ComponentProps> = ({toggleLeftMenu}) => {
   const renderLeftItems = (): ReactNode => (
     <div className="TopNav__left">
       {toggleLeftMenu ? (
-        <div className="TopNav__left-menu-toggle-container" onClick={toggleLeftMenu}>
+        <div className="TopNav__left-menu-toggle-container" onClick={toggleLeftMenu} role="button" tabIndex={0}>
           <span className="material-icons left-menu-toggle">menu</span>
         </div>
       ) : null}

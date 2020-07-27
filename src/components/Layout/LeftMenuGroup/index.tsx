@@ -13,7 +13,12 @@ const LeftMenuGroup: FC<ComponentProps> = ({children, leftIcon, location, title,
 
   return (
     <div className="LeftMenuGroup">
-      <div className={`toggle ${expanded ? 'expanded' : ''}`} onClick={() => toggleExpanded(!expanded)}>
+      <div
+        className={`toggle ${expanded ? 'expanded' : ''}`}
+        onClick={() => toggleExpanded(!expanded)}
+        role="button"
+        tabIndex={0}
+      >
         <div className="left-elements">
           {leftIcon}
           <span className="heavy">{title}</span>

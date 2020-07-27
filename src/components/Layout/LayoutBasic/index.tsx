@@ -7,7 +7,7 @@ interface ComponentProps {
   children: ReactNode;
 }
 
-export const LayoutBasic: FC<ComponentProps> = ({children}) => {
+const LayoutBasic: FC<ComponentProps> = ({children}) => {
   return (
     <div className="LayoutBasic">
       <div className="LayoutBasic__top">

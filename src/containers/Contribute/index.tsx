@@ -86,7 +86,7 @@ const Contribute: FC = () => {
     </div>
   );
 
-  const renderReactFE = () => (
+  const renderReactFE = (): ReactNode => (
     <div className="Contribute__navigation-column">
       <h2 className="Contribute__navigation-column-header">React / FE</h2>
 

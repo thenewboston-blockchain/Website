@@ -9,7 +9,7 @@ interface ComponentProps {
 const GatewayInterface: FC<ComponentProps> = ({name}) => {
   return (
     <DocSubSection className="GatewayInterface" title="Gateway Interface (uwsgi)">
-      <Commands code={`sudo nano /usr/local/bin/start_api.sh`} heading="Create script to run uwsgi" />
+      <Commands code="sudo nano /usr/local/bin/start_api.sh" heading="Create script to run uwsgi" />
       <Commands
         code={`#!/bin/bash
 
@@ -18,7 +18,7 @@ uwsgi --ini app.ini
 `}
         heading="Paste in the following and save"
       />
-      <Commands code={`sudo chmod a+x /usr/local/bin/start_api.sh`} heading="Update permissions for the shell script" />
+      <Commands code="sudo chmod a+x /usr/local/bin/start_api.sh" heading="Update permissions for the shell script" />
     </DocSubSection>
   );
 };

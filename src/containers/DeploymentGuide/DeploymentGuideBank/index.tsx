@@ -16,55 +16,55 @@ import Troubleshooting from '../Troubleshooting';
 const DeploymentGuideBank: FC = () => {
   const renderInitializationCommands = (): ReactNode => (
     <>
-      <Commands code={`python3 manage.py initialize_bank`} heading="Initialize server as bank" />
+      <Commands code="python3 manage.py initialize_bank" heading="Initialize server as bank" />
       <TableParams
         headers={['Parameter', 'Description', 'Sample Value']}
         items={[
           {
-            param: 'node_identifier',
             dataType: 'string',
             description: 'Public key used to sign requests to other nodes',
+            param: 'node_identifier',
             sampleValue: 'd5356888dc9303e44ce52b1e06c3165a7759b9df1e6a6dfbd33ee1c3df1ab4d1',
           },
           {
-            param: 'account_number',
             dataType: 'string',
             description: 'The account number where Tx fees will be sent',
+            param: 'account_number',
             sampleValue: '5e12967707909e62b2bb2036c209085a784fabbc3deccefee70052b6181c8ed8',
           },
           {
-            param: 'default_transaction_fee',
             dataType: 'decimal',
             description: 'Tx fee cost',
+            param: 'default_transaction_fee',
             sampleValue: '1.0',
           },
           {
-            param: 'protocol',
             dataType: 'string',
             description: 'Protocol other nodes will use to connect (http or https)',
+            param: 'protocol',
             sampleValue: 'http',
           },
           {
-            param: 'ip_address',
             dataType: 'IP',
             description: 'Public IP address',
+            param: 'ip_address',
             sampleValue: '64.225.47.205',
           },
           {
-            param: 'port',
             dataType: 'integer',
             description: 'Port number',
+            param: 'port',
             sampleValue: '80',
           },
           {
-            param: 'version',
             dataType: 'string',
             description: 'API version',
+            param: 'version',
             sampleValue: 'v1.0',
           },
         ]}
       />
-      <Commands code={`python3 manage.py connect_to_primary_validator`} heading="Connect to the primary validator" />
+      <Commands code="python3 manage.py connect_to_primary_validator" heading="Connect to the primary validator" />
     </>
   );
 

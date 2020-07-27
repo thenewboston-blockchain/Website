@@ -44,7 +44,7 @@ server {
 `}
         heading="Paste in the following and save"
       />
-      <Commands code={`sudo nginx -t`} heading="Test configuration" />
+      <Commands code="sudo nginx -t" heading="Test configuration" />
     </DocSubSection>
   );
 };

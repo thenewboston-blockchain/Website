@@ -43,24 +43,24 @@ const BankApiConfirmationBlocks: FC = () => {
       <TableParams
         items={[
           {
-            param: 'block_identifier',
             dataType: 'string',
             description: 'hashed head block of the validators blockchain',
+            param: 'block_identifier',
           },
           {
-            param: 'message',
             dataType: 'object',
             description: 'original bank block and a list of updated account balances of all accounts involved',
+            param: 'message',
           },
           {
-            param: 'node_identifier',
             dataType: 'string',
             description: 'validators node identifier',
+            param: 'node_identifier',
           },
           {
-            param: 'signature',
             dataType: 'string',
             description: 'hex value of the signed message',
+            param: 'signature',
           },
         ]}
       />

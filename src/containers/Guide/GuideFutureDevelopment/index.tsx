@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {FC} from 'react';
 
 import {DocContainer} from 'components';
 
-const GuideFutureDevelopment = () => {
+const GuideFutureDevelopment: FC = () => {
   return (
     <DocContainer className="GuideFutureDevelopment" title="Future Development">
       <p>
