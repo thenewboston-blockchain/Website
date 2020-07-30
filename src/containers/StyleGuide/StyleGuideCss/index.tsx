@@ -399,27 +399,27 @@ const LeftMenu: FC = () => {
           <DocInlineCode>.red-text</DocInlineCode> or <DocInlineCode>.fancy-table</DocInlineCode>). Instead, we will
           either have these classes defined within each component that needs to use them (following our other
           conventions, of course), or if used enough, we will create into a separate React component.
-          <ScssCode
-            code={`.red {
+        </p>
+        <ScssCode
+          code={`.red {
   color: red;
 }
 
 .fancy-table {
   // some fancy table styling
 }`}
-            heading="Bad"
-          />
-          <TypescriptCode
-            code={`const FancyTable: FC = ({props}) => {
+          heading="Bad"
+        />
+        <TypescriptCode
+          code={`const FancyTable: FC = ({props}) => {
   return (
     <table className="FancyTable">
       {/* ... */}
     </table>
   );
 }`}
-            heading="Good"
-          />
-        </p>
+          heading="Good"
+        />
       </DocSubSection>
       <DocSubSection title="Only use Class & Pseudo-Class/Element Selectors*">
         <p>These are not allowed:</p>
