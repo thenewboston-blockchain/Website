@@ -436,8 +436,8 @@ const LeftMenu: FC = () => {
           heading="Bad"
         />
         <p>
-          The only exception to this rule is when dealing with nested HTML Elements that always go hand-in-hand, such as
-          a <DocInlineCode>table</DocInlineCode> that always has accomodating elements such as{' '}
+          *The only exception to this rule is when dealing with nested HTML Elements that always go hand-in-hand, such
+          as a <DocInlineCode>table</DocInlineCode> that always has accomodating elements such as{' '}
           <DocInlineCode>thead</DocInlineCode>, <DocInlineCode>tbody</DocInlineCode>, <DocInlineCode>tr</DocInlineCode>,{' '}
           <DocInlineCode>th</DocInlineCode>, <DocInlineCode>td</DocInlineCode>. Or a{' '}
           <DocInlineCode>ol/ul</DocInlineCode>, with it's accompanying <DocInlineCode>li</DocInlineCode> element. In

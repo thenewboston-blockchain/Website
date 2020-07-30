@@ -86,7 +86,7 @@ const LeftMenu: FC = () => {
       </LeftMenuGroup>
 
       <LeftMenuGroup
-        leftIcon={<Icon className="react-icons" icon={IconType.seatReclineExtra} size={20} />}
+        leftIcon={<Icon className="react-icons" icon={IconType.eslint} size={20} />}
         title="Style Guides"
         urlBase="deployment-guides"
       >
