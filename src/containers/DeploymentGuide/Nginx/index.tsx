@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {Commands, DocSubSection} from 'components';
+import {CodeSnippet, DocSubSection} from 'components';
 
 interface ComponentProps {
   name: string;
@@ -9,13 +9,13 @@ interface ComponentProps {
 const Nginx: FC<ComponentProps> = ({name}) => {
   return (
     <DocSubSection className="Nginx" title="NGINX">
-      <Commands
+      <CodeSnippet
         code={`sudo rm /etc/nginx/sites-available/default
 sudo nano /etc/nginx/sites-available/default
 `}
         heading="Create NGINX configuration"
       />
-      <Commands
+      <CodeSnippet
         code={`upstream django {
     server 127.0.0.1:8001;
 }
@@ -44,7 +44,7 @@ server {
 `}
         heading="Paste in the following and save"
       />
-      <Commands code="sudo nginx -t" heading="Test configuration" />
+      <CodeSnippet code="sudo nginx -t" heading="Test configuration" />
     </DocSubSection>
   );
 };

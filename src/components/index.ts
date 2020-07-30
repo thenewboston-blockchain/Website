@@ -1,4 +1,4 @@
-import {Commands, JsxCode, RequestResponse, ScssCode, TypescriptCode} from './CodeHighlighter';
+import {CodeSnippet, RequestResponseSnippet, SnippetLang} from './CodeSnippet';
 import {DocContainer, DocEndpoint, DocInlineCode, DocList, DocImage, DocSubSection} from './DocWrapper';
 import {Button} from './FormElements';
 import Icon, {IconType} from './Icon';
@@ -10,7 +10,7 @@ import {TableBorderGrid, TableParams, TableVertical} from './Table';
 export {
   A,
   Button,
-  Commands,
+  CodeSnippet,
   DocContainer,
   DocEndpoint,
   DocImage,
@@ -19,14 +19,12 @@ export {
   DocSubSection,
   Icon,
   IconType,
-  JsxCode,
   LayoutBasic,
   LayoutDashboard,
   MarketingButton,
-  RequestResponse,
-  ScssCode,
+  RequestResponseSnippet,
+  SnippetLang,
   TableBorderGrid,
   TableParams,
   TableVertical,
-  TypescriptCode,
 };

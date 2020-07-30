@@ -1,16 +1,6 @@
 import React, {FC} from 'react';
 
-import {
-  A,
-  DocContainer,
-  DocImage,
-  DocInlineCode,
-  DocList,
-  DocSubSection,
-  JsxCode,
-  ScssCode,
-  TypescriptCode,
-} from 'components';
+import {A, CodeSnippet, DocContainer, DocImage, DocInlineCode, DocList, DocSubSection, SnippetLang} from 'components';
 
 import FigmaImage from './figma.png';
 
@@ -81,7 +71,7 @@ const StyleGuideCss: FC = () => {
           In <DocInlineCode>BEM</DocInlineCode> terminology, this className will be a{' '}
           <DocInlineCode>Block</DocInlineCode>.
         </p>
-        <TypescriptCode
+        <CodeSnippet
           code={`import React, {FC} from 'react';
         
 import './LeftMenu.scss';
@@ -94,12 +84,14 @@ const LeftMenu: FC = () => {
   );
 };`}
           heading="Good (TSX File)"
+          language={SnippetLang.typescript}
         />
-        <ScssCode
+        <CodeSnippet
           code={`.LeftMenu {
   // All other selectors will be nested in here
 }`}
           heading="Good (SCSS File)"
+          language={SnippetLang.scss}
         />
       </DocSubSection>
       <DocSubSection title="kebab-casing for every other classNames">
@@ -107,7 +99,7 @@ const LeftMenu: FC = () => {
           With the exception of the previously mentioned CapitalCasing for a component's root DOM Element, every other
           Block, Element, or Modifier in a className should follow kebab-casing.
         </p>
-        <JsxCode
+        <CodeSnippet
           code={`return (
   <div className="TopNav">
     <div className="TopNav__buttonContainer">
@@ -116,8 +108,9 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Bad"
+          language={SnippetLang.jsx}
         />
-        <JsxCode
+        <CodeSnippet
           code={`return (
   <div className="TopNav">
     <div className="TopNav__button-container">
@@ -126,23 +119,26 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Good"
+          language={SnippetLang.jsx}
         />
       </DocSubSection>
       <DocSubSection title="CLSX for conditional classNames">
         <p>
           We use the <A href="https://www.npmjs.com/package/clsx">CLSX</A> package to deal with conditional classNames.
         </p>
-        <JsxCode
+        <CodeSnippet
           code={`<div className={\`LeftNav__nav \${selected === 'home' ? 'LeftNav__nav--active' : ''}\`}>Home</div>`}
           heading="Bad"
+          language={SnippetLang.jsx}
         />
-        <JsxCode
+        <CodeSnippet
           code={`<div 
    className={clsx("LeftNav__nav", {
       "LeftNav__nav--active": selected === "home"
    })}
 >Home</div>`}
           heading="Good"
+          language={SnippetLang.jsx}
         />
       </DocSubSection>
       <DocSubSection title="SASS Ampersand + BEM">
@@ -155,7 +151,7 @@ const LeftMenu: FC = () => {
           </A>
           . Let's see why this combination reduces specificity. Suppose we had this component:
         </p>
-        <JsxCode
+        <CodeSnippet
           code={`return (
    <div className="LeftNav">
       <div 
@@ -166,13 +162,14 @@ const LeftMenu: FC = () => {
    </div>
 );`}
           heading="LeftMenu.tsx"
+          language={SnippetLang.jsx}
         />
         <p>
           There are three classNames we have to deal with: <DocInlineCode>.LeftNav</DocInlineCode>,{' '}
           <DocInlineCode>.LeftNav__nav</DocInlineCode>, and <DocInlineCode>.LeftNav__nav--active</DocInlineCode>. If you
           don't use SASS Ampersands, here is what the (bad) code will look like, and what it will transpile down to:
         </p>
-        <ScssCode
+        <CodeSnippet
           code={`.LeftMenu {
   color: var(--color-1);      
   
@@ -185,8 +182,9 @@ const LeftMenu: FC = () => {
   }
 }`}
           heading="Bad (SCSS)"
+          language={SnippetLang.scss}
         />
-        <ScssCode
+        <CodeSnippet
           code={`.LeftMenu {
   color: var(--color-1);
 }
@@ -199,6 +197,7 @@ const LeftMenu: FC = () => {
   color: var(--color-3);
 }`}
           heading="Bad (compiled CSS)"
+          language={SnippetLang.scss}
         />
         <p>
           As you can see from this (bad) example, <DocInlineCode>.LeftMenu__nav</DocInlineCode> has a class level-2
@@ -207,7 +206,7 @@ const LeftMenu: FC = () => {
           (not allowed), or do some CSS specificity gymnastics.
         </p>
         <p>This is what a good example looks like:</p>
-        <ScssCode
+        <CodeSnippet
           code={`.LeftMenu {
   color: var(--color-1);      
   
@@ -220,8 +219,9 @@ const LeftMenu: FC = () => {
   }
 }`}
           heading="Good (SCSS)"
+          language={SnippetLang.scss}
         />
-        <ScssCode
+        <CodeSnippet
           code={`.LeftMenu {
   color: var(--color-1);
 }
@@ -234,6 +234,7 @@ const LeftMenu: FC = () => {
   color: var(--color-3);
 }`}
           heading="Good (compiled CSS)"
+          language={SnippetLang.scss}
         />
       </DocSubSection>
       <DocSubSection title="Blocks vs. Elements">
@@ -260,7 +261,7 @@ const LeftMenu: FC = () => {
             won't be too confusing:
           </strong>
         </p>
-        <JsxCode
+        <CodeSnippet
           code={`return (
   <div className="Component">
     <div className="header"> {/* Should I be considered a Block, since I have a span inside me? */}
@@ -270,8 +271,9 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Bad"
+          language={SnippetLang.jsx}
         />
-        <JsxCode
+        <CodeSnippet
           code={`return (
   <div className="Component">
     <div className="Component__header"> {/* Probably not */}
@@ -282,6 +284,7 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Good"
+          language={SnippetLang.jsx}
         />
         <p>
           <strong>
@@ -289,7 +292,7 @@ const LeftMenu: FC = () => {
             safely introduce a new block:
           </strong>
         </p>
-        <JsxCode
+        <CodeSnippet
           code={`return (
   <div className="Component">
     <div className="Component__left">
@@ -308,8 +311,9 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Bad"
+          language={SnippetLang.jsx}
         />
-        <JsxCode
+        <CodeSnippet
           code={`return (
   <div className="Component">
     <div className="left-container"> {/* a new block */}
@@ -328,6 +332,7 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Good"
+          language={SnippetLang.jsx}
         />
         <p>
           One note about above: you should only introduce one level of new blocks for a given component. If you need to
@@ -342,7 +347,7 @@ const LeftMenu: FC = () => {
           it doesn't need any blocks, but this is not always realistic. This is to ensure we don't have selectors within
           our SCSS that have too high of a specificity.
         </p>
-        <ScssCode
+        <CodeSnippet
           code={`.Component {
   .new-block {
     .new-new-block {
@@ -351,8 +356,9 @@ const LeftMenu: FC = () => {
   }      
 }`}
           heading="Bad"
+          language={SnippetLang.scss}
         />
-        <ScssCode
+        <CodeSnippet
           code={`.Component {
   .new-block {
     &__element { // The 2-level nested block is converted to an element
@@ -361,6 +367,7 @@ const LeftMenu: FC = () => {
   }      
 }`}
           heading="Good"
+          language={SnippetLang.scss}
         />
       </DocSubSection>
       <DocSubSection title="A component should only style DOM elements it knows about">
@@ -369,7 +376,7 @@ const LeftMenu: FC = () => {
           Component, it shouldn't expect to know that there is going to be an DOM element with a specific className and
           add styling to that class.
         </p>
-        <JsxCode
+        <CodeSnippet
           code={`return (
   <div className="PresentationalComponent>
     <div className="PresentationalComponent__left">{leftComponentProp}</div>
@@ -377,8 +384,9 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="TSX Component"
+          language={SnippetLang.jsx}
         />
-        <ScssCode
+        <CodeSnippet
           code={`.PresentationalComponent {
   &__left {
     .i-know-this-class-is-in-here { // This is a class inside leftComponentProp
@@ -387,6 +395,7 @@ const LeftMenu: FC = () => {
   }
 }`}
           heading="Bad"
+          language={SnippetLang.scss}
         />
       </DocSubSection>
       <DocSubSection title="No global selectors (AKA Bootstrap-like selectors)">
@@ -399,31 +408,33 @@ const LeftMenu: FC = () => {
           <DocInlineCode>.red-text</DocInlineCode> or <DocInlineCode>.fancy-table</DocInlineCode>). Instead, we will
           either have these classes defined within each component that needs to use them (following our other
           conventions, of course), or if used enough, we will create into a separate React component.
-          <ScssCode
-            code={`.red {
+        </p>
+        <CodeSnippet
+          code={`.red {
   color: red;
 }
 
 .fancy-table {
   // some fancy table styling
 }`}
-            heading="Bad"
-          />
-          <TypescriptCode
-            code={`const FancyTable: FC = ({props}) => {
+          heading="Bad"
+          language={SnippetLang.scss}
+        />
+        <CodeSnippet
+          code={`const FancyTable: FC = ({props}) => {
   return (
     <table className="FancyTable">
       {/* ... */}
     </table>
   );
 }`}
-            heading="Good"
-          />
-        </p>
+          heading="Good"
+          language={SnippetLang.typescript}
+        />
       </DocSubSection>
       <DocSubSection title="Only use Class & Pseudo-Class/Element Selectors*">
         <p>These are not allowed:</p>
-        <ScssCode
+        <CodeSnippet
           code={`#left-nav { // No id selectors
   // ...  
 }
@@ -434,6 +445,7 @@ const LeftMenu: FC = () => {
   }
 }`}
           heading="Bad"
+          language={SnippetLang.scss}
         />
         <p>
           *The only exception to this rule is when dealing with nested HTML Elements that always go hand-in-hand, such
@@ -445,7 +457,7 @@ const LeftMenu: FC = () => {
           <DocInlineCode>ol</DocInlineCode>) a className, and put all the HTML element selectors inside that class
           selector.
         </p>
-        <JsxCode
+        <CodeSnippet
           code={`return (
   <div className="Component">
     <table className="Component__table">
@@ -464,8 +476,9 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="TSX Component"
+          language={SnippetLang.jsx}
         />
-        <ScssCode
+        <CodeSnippet
           code={`.Component {
   &__table {
     th, td {  // These HTML element selectors are okay, since they are inside .Component__table
@@ -474,10 +487,11 @@ const LeftMenu: FC = () => {
   }
 }`}
           heading="Good"
+          language={SnippetLang.scss}
         />
       </DocSubSection>
       <DocSubSection title="CSS Selectors & CSS Properties should be alphabetized">
-        <ScssCode
+        <CodeSnippet
           code={`.Component {
   &__banana {
     // ...
@@ -490,6 +504,7 @@ const LeftMenu: FC = () => {
   }
 }`}
           heading="Bad"
+          language={SnippetLang.scss}
         />
       </DocSubSection>
       <DocSubSection title="No !important">

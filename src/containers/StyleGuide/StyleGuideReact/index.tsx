@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {A, DocContainer, DocInlineCode, DocList, DocSubSection, JsxCode, TypescriptCode} from 'components';
+import {A, CodeSnippet, DocContainer, DocInlineCode, DocList, DocSubSection, SnippetLang} from 'components';
 
 const StyleGuideReact: FC = () => {
   return (
@@ -26,7 +26,7 @@ const StyleGuideReact: FC = () => {
         <p>
           We will always use absolute imports, except when importing files that is contained within the same directory.
         </p>
-        <TypescriptCode
+        <CodeSnippet
           code={`import React, {FC, ReactNode, useRef, useState} from 'react'; // 'react' imports come first
 import {Redirect, NavLink} from 'react-router-dom';
 import clsx from 'clsx'; // Then comes other 3rd party packages
@@ -39,8 +39,9 @@ import {getCustomClassNames} from 'utils/components';
 import FancyImage from './FancyImage.png'; // Then, files in the same directory
 import './MyComponent.scss'; // Lastly, local style file import`}
           heading="Good"
+          language={SnippetLang.typescript}
         />
-        <TypescriptCode
+        <CodeSnippet
           code={`import React, {useState, useRef, FC} from 'react'; // useState, useRef, FC not in alphabetical order
 import clsx from 'clsx';
 import {Redirect, NavLink} from 'react-router-dom'; // packages with react name should come before other packages
@@ -49,6 +50,7 @@ import noop from 'lodash/noop';
 import {DocContainer} from '../../components'; // no relative imports outside of current directory
 import {getCustomClassNames} from 'utils/components';`}
           heading="Bad"
+          language={SnippetLang.typescript}
         />
       </DocSubSection>
       <DocSubSection title="React components">
@@ -75,7 +77,7 @@ import {getCustomClassNames} from 'utils/components';`}
             <DocInlineCode>div</DocInlineCode> when it could've been done with just one.
           </li>
         </DocList>
-        <JsxCode
+        <CodeSnippet
           code={`return (
   <div>
     <div>
@@ -84,6 +86,7 @@ import {getCustomClassNames} from 'utils/components';`}
   </div>
 );`}
           heading="Bad"
+          language={SnippetLang.jsx}
         />
       </DocSubSection>
       <DocSubSection title="Component Type">
@@ -100,13 +103,14 @@ import {getCustomClassNames} from 'utils/components';`}
           which props a component has access to. The only exception to this rule is when you are making a reusable base
           component in which other components will extend from, such as a <DocInlineCode>BaseButton</DocInlineCode>.
         </p>
-        <JsxCode
+        <CodeSnippet
           code={`return (
   <SomeComponent {...props} />
 );`}
           heading="Bad"
+          language={SnippetLang.jsx}
         />
-        <JsxCode
+        <CodeSnippet
           code={`return (
   <SomeComponent
     propA={propA}
@@ -115,6 +119,7 @@ import {getCustomClassNames} from 'utils/components';`}
   />
 );`}
           heading="Good"
+          language={SnippetLang.jsx}
         />
       </DocSubSection>
       <DocSubSection title="Libraries We Use">

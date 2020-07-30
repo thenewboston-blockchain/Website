@@ -1,6 +1,6 @@
 import React, {FC, ReactNode} from 'react';
 
-import {Commands, DocContainer, TableParams} from 'components';
+import {CodeSnippet, DocContainer, TableParams} from 'components';
 
 import Celery from '../Celery';
 import Firewall from '../Firewall';
@@ -16,7 +16,7 @@ import Troubleshooting from '../Troubleshooting';
 const DeploymentGuideValidator: FC = () => {
   const renderInitializationCommands = (): ReactNode => (
     <>
-      <Commands code="python3 manage.py initialize_validator" heading="Initialize validator node" />
+      <CodeSnippet code="python3 manage.py initialize_validator" heading="Initialize validator node" />
       <TableParams
         headers={['Parameter', 'Description', 'Sample Value']}
         items={[
@@ -84,7 +84,7 @@ const DeploymentGuideValidator: FC = () => {
           },
         ]}
       />
-      <Commands
+      <CodeSnippet
         code="python3 manage.py initialize_confirmation_validator"
         heading="If setting up confirmation validator, run this script to connect to the primary validator"
       />

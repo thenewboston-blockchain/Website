@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, RequestResponse} from 'components';
+import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
 
 const BankApiBankTransactions: FC = () => {
   return (
@@ -14,7 +14,7 @@ const BankApiBankTransactions: FC = () => {
       <p>Bank transactions are created automatically by the bank during block processing.</p>
 
       <DocEndpoint endpoint="/bank_transactions" method="GET" />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`[
   {
     "id": "a85a4692-e03d-4419-8b25-813598b367bd",

@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {DocContainer, DocImage, RequestResponse} from 'components';
+import {DocContainer, DocImage, RequestResponseSnippet} from 'components';
 
 import ConnectionNID from './ConnectionNID.png';
 import NID from './NID.png';
@@ -26,7 +26,7 @@ const GuideNodeIdentifier: FC = () => {
         body can be seen below.
       </p>
 
-      <RequestResponse
+      <RequestResponseSnippet
         code={`{
   "message": {
     "ip_address": "167.99.173.247",
@@ -59,7 +59,7 @@ const GuideNodeIdentifier: FC = () => {
         authorized by the owner of that node.
       </p>
 
-      <RequestResponse
+      <RequestResponseSnippet
         code={`{
   "primary_validator": {
     "account_number": "ad1f8845c6a1abb6011a2a434a079a087c460657aad54329a84b406dce8bf314",
