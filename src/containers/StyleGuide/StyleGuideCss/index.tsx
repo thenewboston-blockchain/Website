@@ -476,6 +476,22 @@ const LeftMenu: FC = () => {
           heading="Good"
         />
       </DocSubSection>
+      <DocSubSection title="CSS Selectors & CSS Properties should be alphabetized">
+        <ScssCode
+          code={`.Component {
+  &__banana {
+    // ...
+  }
+  
+  &__apple { // '&__apple' should come before '&__banana'
+    display: flex;
+    align-items: center;  // 'align-items' should come before 'display' property
+    justify-content: center;
+  }
+}`}
+          heading="Bad"
+        />
+      </DocSubSection>
       <DocSubSection title="No !important">
         <p>
           Ideally, if all the rules within this style guide is properly followed, there should never be a reason to use{' '}
