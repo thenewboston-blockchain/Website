@@ -95,30 +95,27 @@ import {getCustomClassNames} from 'utils/components';`}
         </p>
       </DocSubSection>
       <DocSubSection title="Prop Spreading">
-        <DocList variant="ol">
-          <p>
-            We are generally <strong>against prop spreading</strong>, as they make it really difficult to keep track of
-            which props a component has access to. The only exception to this rule is when you are making a reusable
-            base component in which other components will extend from, such as a{' '}
-            <DocInlineCode>BaseButton</DocInlineCode>.
-          </p>
-          <JsxCode
-            code={`return (
+        <p>
+          We are generally <strong>against prop spreading</strong>, as they make it really difficult to keep track of
+          which props a component has access to. The only exception to this rule is when you are making a reusable base
+          component in which other components will extend from, such as a <DocInlineCode>BaseButton</DocInlineCode>.
+        </p>
+        <JsxCode
+          code={`return (
   <SomeComponent {...props} />
 );`}
-            heading="Bad"
-          />
-          <JsxCode
-            code={`return (
+          heading="Bad"
+        />
+        <JsxCode
+          code={`return (
   <SomeComponent
     propA={propA}
     propB={propB}
     propC={propC}
   />
 );`}
-            heading="Good"
-          />
-        </DocList>
+          heading="Good"
+        />
       </DocSubSection>
       <DocSubSection title="Libraries We Use">
         <DocList variant="ul">
