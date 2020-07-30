@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, RequestResponse} from 'components';
+import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
 
 const PrimaryValidatorApiConfig: FC = () => {
   return (
@@ -11,7 +11,7 @@ const PrimaryValidatorApiConfig: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/config" method="GET" />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`{
   "primary_validator": null,
   "account_number": "ad1f8845c6a1abb6011a2a434a079a087c460657aad54329a84b406dce8bf314",

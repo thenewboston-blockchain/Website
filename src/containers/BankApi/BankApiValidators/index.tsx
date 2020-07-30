@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {DocContainer, DocEndpoint, RequestResponse, TableParams} from 'components';
+import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
 
 const BankApiValidators: FC = () => {
   return (
@@ -13,7 +13,7 @@ const BankApiValidators: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/validators" method="GET" />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`[
   {
     "account_number": "ad1f8845c6a1abb6011a2a434a079a087c460657aad54329a84b406dce8bf314",
@@ -57,7 +57,7 @@ const BankApiValidators: FC = () => {
           },
         ]}
       />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`{
   "message": {
     "trust": 76.28
@@ -67,7 +67,7 @@ const BankApiValidators: FC = () => {
 }`}
         heading="Request"
       />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`{
   "account_number": "ad1f8845c6a1abb6011a2a434a079a087c460657aad54329a84b406dce8bf314",
   "ip_address": "192.168.1.75",

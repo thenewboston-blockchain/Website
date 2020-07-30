@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, RequestResponse} from 'components';
+import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
 
 const PrimaryValidatorApiAccounts: FC = () => {
   return (
@@ -11,7 +11,7 @@ const PrimaryValidatorApiAccounts: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/accounts" method="GET" />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`[
   {
     "id": "82bb14ab-00eb-41ba-8120-99ba80a74f5a",
@@ -42,7 +42,7 @@ const PrimaryValidatorApiAccounts: FC = () => {
       />
 
       <DocEndpoint endpoint="/account_balance/<account_number>" method="GET" />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`{
   "balance": "4294967051.0000000000000000"
 }`}
@@ -50,7 +50,7 @@ const PrimaryValidatorApiAccounts: FC = () => {
       />
 
       <DocEndpoint endpoint="/account_balance_lock/<account_number>" method="GET" />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`{
   "balance_lock": "21cfd80a31930e801e97d34e3f00a7d9b5c01b2fb531a5ac14cd59d10ab446c8"
 }`}

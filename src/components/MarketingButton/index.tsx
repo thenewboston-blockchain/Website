@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import clsx from 'clsx';
 
+import {A} from 'components';
 import {getCustomClassNames} from 'utils/components';
 
 import GitHubLogo from './GitHubLogo.png';
@@ -46,9 +47,9 @@ const MarketingButton: FC<ComponentProps> = ({className, website}) => {
   };
 
   return (
-    <a className={clsx('MarketingButton', className)} href={urls[website]} target="_blank" rel="noopener noreferrer">
+    <A className={clsx('MarketingButton', className)} href={urls[website]}>
       {images[website]}
-    </a>
+    </A>
   );
 };
 

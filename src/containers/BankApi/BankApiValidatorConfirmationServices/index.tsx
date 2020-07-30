@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {DocContainer, DocEndpoint, RequestResponse} from 'components';
+import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
 
 const BankApiValidatorConfirmationServices: FC = () => {
   return (
@@ -17,7 +17,7 @@ const BankApiValidatorConfirmationServices: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/validator_confirmation_services" method="GET" />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`[
   {
     "id": "be9fbc3b-d4df-43d5-9bea-9882a6dd27f6",
@@ -49,7 +49,7 @@ const BankApiValidatorConfirmationServices: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/validator_confirmation_services" method="POST" />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`{
   "message": {
     "end": "2020-07-09T22:10:25Z",
@@ -60,7 +60,7 @@ const BankApiValidatorConfirmationServices: FC = () => {
 }`}
         heading="Request"
       />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`{
   "id": "2558fd55-e132-4667-8d39-d3b5e8eb9c4d",
   "created_date": "2020-07-10T02:38:44.917554Z",

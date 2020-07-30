@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {Commands, DocSubSection} from 'components';
+import {CodeSnippet, DocSubSection} from 'components';
 
 interface ComponentProps {
   name: string;
@@ -9,8 +9,8 @@ interface ComponentProps {
 const ProjectSetup: FC<ComponentProps> = ({name}) => {
   return (
     <DocSubSection className="ProjectSetup" title="Project Setup">
-      <Commands code="sudo chmod go+w /var/www" heading="Update /var/www/ permissions" />
-      <Commands
+      <CodeSnippet code="sudo chmod go+w /var/www" heading="Update /var/www/ permissions" />
+      <CodeSnippet
         code={`git clone https://github.com/thenewboston-developers/${name}.git /var/www/${name}
 cd /var/www/${name}/
 sudo pip3 install -r requirements/production.txt

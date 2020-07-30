@@ -8,23 +8,26 @@ This repository contains the source code and documentation for [thenewboston.com
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any 
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any
 contributions you make are **greatly appreciated**.
 
 1. Fork the project
 2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a pull request
+3. Run `npm run lint` and make sure you have no errors.
+4. Commit your changes
+5. Push to the branch
+6. Open a pull request
 
 ## Getting Started
 
 After cloning the repo, run the following command to install the project dependencies:
+
 ```bash
 npm install
 ```
 
 Then to run the code, run the following command:
+
 ```bash
 npm start
 ```

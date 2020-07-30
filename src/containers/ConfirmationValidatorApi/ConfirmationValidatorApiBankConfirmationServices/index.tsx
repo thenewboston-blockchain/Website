@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, RequestResponse} from 'components';
+import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
 
 const ConfirmationValidatorApiBankConfirmationServices: FC = () => {
   return (
@@ -8,7 +8,7 @@ const ConfirmationValidatorApiBankConfirmationServices: FC = () => {
       <p>TODO: In Progress...</p>
 
       <DocEndpoint endpoint="/sample" method="GET" />
-      <RequestResponse code={`{}`} heading="Response" />
+      <RequestResponseSnippet code={`{}`} heading="Response" />
     </DocContainer>
   );
 };
