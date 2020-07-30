@@ -74,17 +74,17 @@ import {getCustomClassNames} from 'utils/components';`}
             Use just the amount of JSX/HTML tags needed to get the job done. No need to have 2{' '}
             <DocInlineCode>div</DocInlineCode> when it could've been done with just one.
           </li>
-          <JsxCode
-            code={`return (
+        </DocList>
+        <JsxCode
+          code={`return (
   <div>
     <div>
       Why am I in two divs?
     </div>
   </div>
 );`}
-            heading="Bad"
-          />
-        </DocList>
+          heading="Bad"
+        />
       </DocSubSection>
       <DocSubSection title="Component Type">
         <p>
