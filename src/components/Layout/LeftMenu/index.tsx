@@ -84,6 +84,14 @@ const LeftMenu: FC = () => {
         <NavLink to="/deployment-guides/bank">Bank</NavLink>
         <NavLink to="/deployment-guides/validator">Validator</NavLink>
       </LeftMenuGroup>
+
+      <LeftMenuGroup
+        leftIcon={<Icon className="react-icons" icon={IconType.seatReclineExtra} size={20} />}
+        title="Style Guides"
+        urlBase="deployment-guides"
+      >
+        <NavLink to="/style-guides/html-css">HTML / CSS</NavLink>
+      </LeftMenuGroup>
     </nav>
   );
 };

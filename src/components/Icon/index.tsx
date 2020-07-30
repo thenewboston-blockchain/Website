@@ -11,6 +11,7 @@ import CheckCircleIcon from 'mdi-react/CheckCircleIcon';
 import DnsIcon from 'mdi-react/DnsIcon';
 import KeyboardArrowRightIcon from 'mdi-react/KeyboardArrowRightIcon';
 import MenuIcon from 'mdi-react/MenuIcon';
+import SeatReclineExtraIcon from 'mdi-react/SeatReclineExtraIcon';
 
 import {getCustomClassNames} from 'utils/components';
 import TnbIcon from './TnbIcon';
@@ -26,6 +27,7 @@ export enum IconType {
   dns,
   keyboardArrowRight,
   menu,
+  seatReclineExtra,
 }
 
 interface ComponentProps {
@@ -60,6 +62,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
         return <KeyboardArrowRightIcon {...iconProps} />;
       case IconType.menu:
         return <MenuIcon {...iconProps} />;
+      case IconType.seatReclineExtra:
+        return <SeatReclineExtraIcon {...iconProps} />;
       default:
         return null;
     }
