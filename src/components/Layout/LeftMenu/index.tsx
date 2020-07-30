@@ -90,7 +90,8 @@ const LeftMenu: FC = () => {
         title="Style Guides"
         urlBase="deployment-guides"
       >
-        <NavLink to="/style-guides/html-css">HTML / CSS</NavLink>
+        <NavLink to="/style-guide/react">React / JSX</NavLink>
+        <NavLink to="/style-guide/css">CSS / SASS</NavLink>
       </LeftMenuGroup>
     </nav>
   );

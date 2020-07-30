@@ -15,7 +15,7 @@ const Commands: FC<ComponentProps> = ({className, code, heading}) => {
   return (
     <div className="Commands">
       {heading ? (
-        <div className={clsx('Commands__heading', {...getCustomClassNames(className, '__comment', true)})}>
+        <div className={clsx('Commands__heading', {...getCustomClassNames(className, '__heading', true)})}>
           {heading}:
         </div>
       ) : null}
