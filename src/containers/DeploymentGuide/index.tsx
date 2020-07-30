@@ -11,7 +11,7 @@ const getPageContent = (chapter: string): ReactNode => {
     case 'validator':
       return <DeploymentGuideValidator />;
     default:
-      return <Redirect to="/deployment-guides/bank" />;
+      return <Redirect to="/deployment-guide/bank" />;
   }
 };
 

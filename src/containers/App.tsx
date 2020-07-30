@@ -47,7 +47,7 @@ const App: FC = () => {
           </LayoutDashboard>
         </Route>
 
-        <Route path="/deployment-guides/:chapter?">
+        <Route path="/deployment-guide/:chapter?">
           <LayoutDashboard>
             <DeploymentGuide />
           </LayoutDashboard>
