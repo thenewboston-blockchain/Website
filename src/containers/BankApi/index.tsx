@@ -1,5 +1,5 @@
 import React, {FC, ReactNode, useMemo} from 'react';
-import {useParams} from 'react-router-dom';
+import {Redirect, useParams} from 'react-router-dom';
 
 import NodeApiConnectionRequests from 'containers/NodeApi/NodeApiConnectionRequests';
 
@@ -33,7 +33,7 @@ const getPageContent = (chapter: string): ReactNode => {
     case 'validators':
       return <BankApiValidators />;
     default:
-      return <BankApiAccounts />;
+      return <Redirect to="/bank-api/accounts" />;
   }
 };
 

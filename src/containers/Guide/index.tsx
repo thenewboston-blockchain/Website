@@ -1,5 +1,5 @@
 import React, {FC, ReactNode, useMemo} from 'react';
-import {useParams} from 'react-router-dom';
+import {Redirect, useParams} from 'react-router-dom';
 
 import GuideAccounts from './GuideAccounts';
 import GuideBanks from './GuideBanks';
@@ -53,7 +53,7 @@ const getPageContent = (chapter: string): ReactNode => {
     case 'validators':
       return <GuideValidators />;
     default:
-      return null;
+      return <Redirect to="/guide/introduction" />;
   }
 };
 

@@ -1,6 +1,6 @@
 import React, {FC, ReactNode} from 'react';
 
-import {Commands, DocContainer, TableParams} from 'components';
+import {CodeSnippet, DocContainer, TableParams} from 'components';
 
 import Celery from '../Celery';
 import Firewall from '../Firewall';
@@ -16,7 +16,7 @@ import Troubleshooting from '../Troubleshooting';
 const DeploymentGuideBank: FC = () => {
   const renderInitializationCommands = (): ReactNode => (
     <>
-      <Commands code="python3 manage.py initialize_bank" heading="Initialize server as bank" />
+      <CodeSnippet code="python3 manage.py initialize_bank" heading="Initialize server as bank" />
       <TableParams
         headers={['Parameter', 'Description', 'Sample Value']}
         items={[
@@ -64,7 +64,7 @@ const DeploymentGuideBank: FC = () => {
           },
         ]}
       />
-      <Commands code="python3 manage.py connect_to_primary_validator" heading="Connect to the primary validator" />
+      <CodeSnippet code="python3 manage.py connect_to_primary_validator" heading="Connect to the primary validator" />
     </>
   );
 

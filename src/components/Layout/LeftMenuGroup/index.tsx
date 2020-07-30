@@ -2,6 +2,7 @@ import React, {FC, ReactNode, useState} from 'react';
 import {RouteComponentProps, withRouter} from 'react-router-dom';
 
 import {Icon, IconType} from 'components';
+import {getFirstPathParam} from 'utils/urls';
 
 interface ComponentProps extends RouteComponentProps {
   children: ReactNode;
@@ -11,7 +12,7 @@ interface ComponentProps extends RouteComponentProps {
 }
 
 const LeftMenuGroup: FC<ComponentProps> = ({children, leftIcon, location, title, urlBase}) => {
-  const [expanded, toggleExpanded] = useState(location.pathname.includes(urlBase));
+  const [expanded, toggleExpanded] = useState(getFirstPathParam(location.pathname) === urlBase);
 
   return (
     <div className="LeftMenuGroup">

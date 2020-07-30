@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, RequestResponse} from 'components';
+import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
 
 const ConfirmationValidatorApiValidators: FC = () => {
   return (
@@ -8,7 +8,7 @@ const ConfirmationValidatorApiValidators: FC = () => {
       <p>Confirmation validators will maintain a record of all connected validators.</p>
 
       <DocEndpoint endpoint="/validators" method="GET" />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`[
   {
     "account_number": "4d2ec91f37bc553bc538e91195669b666e26b2ea3e4e31507e38102a758d4f86",

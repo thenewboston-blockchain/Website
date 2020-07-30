@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, RequestResponse} from 'components';
+import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
 
 const PrimaryValidatorApiBankBlocks: FC = () => {
   return (
@@ -12,7 +12,7 @@ const PrimaryValidatorApiBankBlocks: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/bank_blocks" method="POST" />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`{
   "block": {
     "account_number": "0cdd4ba04456ca169baca3d66eace869520c62fe84421329086e03d91a68acdb",
@@ -40,7 +40,7 @@ const PrimaryValidatorApiBankBlocks: FC = () => {
 }`}
         heading="Request"
       />
-      <RequestResponse code={`{}`} heading="Response" />
+      <RequestResponseSnippet code={`{}`} heading="Response" />
     </DocContainer>
   );
 };

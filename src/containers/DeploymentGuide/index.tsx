@@ -1,5 +1,5 @@
 import React, {FC, ReactNode, useMemo} from 'react';
-import {useParams} from 'react-router-dom';
+import {Redirect, useParams} from 'react-router-dom';
 
 import DeploymentGuideBank from './DeploymentGuideBank';
 import DeploymentGuideValidator from './DeploymentGuideValidator';
@@ -11,7 +11,7 @@ const getPageContent = (chapter: string): ReactNode => {
     case 'validator':
       return <DeploymentGuideValidator />;
     default:
-      return <DeploymentGuideBank />;
+      return <Redirect to="/deployment-guide/bank" />;
   }
 };
 
