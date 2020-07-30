@@ -1,5 +1,7 @@
 import Commands from './Commands';
+import JsxCode from './JsxCode';
 import RequestResponse from './RequestResponse';
-import TypescriptJsxCode from './TypescriptJsxCode';
+import ScssCode from './ScssCode';
+import TypescriptCode from './TypescriptCode';
 
-export {Commands, RequestResponse, TypescriptJsxCode};
+export {Commands, JsxCode, RequestResponse, ScssCode, TypescriptCode};

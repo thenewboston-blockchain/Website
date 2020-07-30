@@ -1,124 +1,487 @@
 import React, {FC} from 'react';
-import {NavLink} from 'react-router-dom';
 
-import {A, DocContainer, DocInlineCode, DocList, DocSubSection, TypescriptJsxCode} from 'components';
+import {
+  A,
+  DocContainer,
+  DocImage,
+  DocInlineCode,
+  DocList,
+  DocSubSection,
+  JsxCode,
+  ScssCode,
+  TypescriptCode,
+} from 'components';
+
+import FigmaImage from './figma.png';
 
 const StyleGuideCss: FC = () => {
   return (
     <DocContainer className="StyleGuideCss" title="CSS / SASS Style Guide">
       <p>
-        Here are the rules that we should follow when working with React. We have{' '}
-        <A href="https://eslint.org">ESLint</A> and <A href="https://prettier.io/">Prettier</A> configured, so for the
-        sake of brevity, any rules that they enforce, we won't repeat here. If you are here to learn about how we decide
-        on classNames for our JSX elements, please check out our <NavLink to="/style-guide/css">CSS/SASS</NavLink>{' '}
-        section.
+        One of our primary motivators when choosing a technology is to pick technologies that are widespread in
+        professional use, as well as it being relatively easy to learn. For that reason, we chose to go with{' '}
+        <A href="https://sass-lang.com/">SASS/SCSS</A> over other CSS Frameworks.
       </p>
-      <DocSubSection title="Imports">
+      <p>
+        In terms of class naming conventions, we chose to go with a somewhat modified version of the{' '}
+        <A href="http://getbem.com/">BEM (Block__Element--Modifier)</A> naming convention. If you're not familiar with{' '}
+        <DocInlineCode>BEM</DocInlineCode>, you can read more about it{' '}
+        <A href="https://css-tricks.com/bem-101/">here</A>. BEM, in particular, works great with SASS because of the{' '}
+        <A href="https://css-tricks.com/the-sass-ampersand/">SASS Ampersand (&) Operator</A>. You can read more about
+        the benefits of why SASS+BEM in this{' '}
+        <A href="https://css-tricks.com/using-sass-control-scope-bem-naming/">article</A>.
+      </p>
+      <p>
+        We chose not to use any CSS Frameworks that provides global selectors (such as Bootstrap). Some of the reasons
+        for this decision is that:
+      </p>
+      <DocList variant="ul">
+        <li>CSS Frameworks are great for prototyping, but we already have designs built for us (in Figma).</li>
+        <li>
+          CSS Frameworks adds extra complexity to our code, and it becomes an additional barrier for developers to
+          learn.
+        </li>
+        <li>
+          Modern CSS (such as <A href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox</A> and{' '}
+          <A href="https://css-tricks.com/snippets/css/complete-guide-grid/">CSS Grids</A>) are more than sufficient to
+          solve the CSS challenges.
+        </li>
+        <li>Refactoring becomes a headache when there is an over-reliance on a CSS Framework.</li>
+      </DocList>
+      <DocSubSection title="Figma">
         <p>
-          Imports from 3rd party packages will always be listed first. Dependencies with the word{' '}
-          <DocInlineCode>react</DocInlineCode> will come first, followed by every other packages, alphabetically ordered
-          by the package names.
+          <A href="https://www.figma.com/">Figma</A> is a interface design tool that is widely used in the professional
+          sphere, and we use it to design how our app/website should exactly look. It is free to sign up. You can find
+          the links to our Figma designs{' '}
+          <A href="https://docs.google.com/document/d/1gRy71vQrHGDk2bZ4Wcz3ha4xHjNmOtcXCkDXtLeqt-4/edit">here</A>.
         </p>
         <p>
-          Then the local imports will come next, grouped by the type of the import (
-          <DocInlineCode>components/containers/utils/types</DocInlineCode>), and each will be alphabetized.
+          The designs you find here <strong>shouldn't be taken as suggestions</strong>. Our goal as developers is to
+          make it look as closely as possible with the designs. Fortunately, Figma makes that very easy to use for
+          developers. You can see the exact dimensions of a given element, the colors of the background/borders/font,
+          and so on.
+        </p>
+        <DocImage alt="figma example" maxWidth={1000} src={FigmaImage} />
+      </DocSubSection>
+      <DocSubSection title="CapitalCase className for the root DOM element of a component">
+        <p>
+          Every React component should have it's root DOM element have it's className be the CapitalCased version of the
+          component name. Since every React Component should already follow the CapitalCase convention, this implies
+          that the className should be completely identical with the name of the component. If the component need's it
+          own custom styling, there should be an accompanying <DocInlineCode>SCSS</DocInlineCode> file with the same
+          name.
         </p>
         <p>
-          We will always use absolute imports, except when importing files that is contained within the same directory.
+          The <DocInlineCode>SCSS</DocInlineCode> file will have the CapitalCase class selector, and all accompanying
+          selectors you need for that component will be nested inside the base selector. This, in conjunction with our
+          other rule that every React Component should have an unique name, will ensure that there will never be CSS
+          styling conflicts across different components.
         </p>
-        <TypescriptJsxCode
-          code={`import React, {FC, ReactNode, useRef, useState} from 'react'; // 'react' imports come first
-import {Redirect, NavLink} from 'react-router-dom';
-import clsx from 'clsx'; // Then comes other 3rd party packages
-import isEqual from 'lodash/isEqual';
-import noop from 'lodash/noop';
+        <p>
+          In <DocInlineCode>BEM</DocInlineCode> terminology, this className will be a{' '}
+          <DocInlineCode>Block</DocInlineCode>.
+        </p>
+        <TypescriptCode
+          code={`import React, {FC} from 'react';
+        
+import './LeftMenu.scss';
 
-import {DocContainer} from 'components'; // Importing local files
-import {getCustomClassNames} from 'utils/components';
-
-import FancyImage from './FancyImage.png'; // Then, files in the same directory
-import './MyComponent.scss'; // Lastly, local style file import`}
+const LeftMenu: FC = () => {
+  return (
+    <div className="LeftMenu">
+      {/* ... */}
+    </div>
+  );
+};`}
+          heading="Good (TSX File)"
+        />
+        <ScssCode
+          code={`.LeftMenu {
+  // All other selectors will be nested in here
+}`}
+          heading="Good (SCSS File)"
+        />
+      </DocSubSection>
+      <DocSubSection title="kebab-casing for every other classNames">
+        <p>
+          With the exception of the previously mentioned CapitalCasing for a component's root DOM Element, every other
+          Block, Element, or Modifier in a className should follow kebab-casing.
+        </p>
+        <JsxCode
+          code={`return (
+  <div className="TopNav">
+    <div className="TopNav__buttonContainer">
+      {/* ... */}
+    </div>
+  </div>
+);`}
+          heading="Bad"
+        />
+        <JsxCode
+          code={`return (
+  <div className="TopNav">
+    <div className="TopNav__button-container">
+      {/* ... */}
+    </div>
+  </div>
+);`}
           heading="Good"
         />
-        <TypescriptJsxCode
-          code={`import React, {useState, useRef, FC} from 'react'; // useState, useRef, FC not in alphabetical order
-import clsx from 'clsx';
-import {Redirect, NavLink} from 'react-router-dom'; // packages with react name should come before other packages
-import noop from 'lodash/noop';
-
-import {DocContainer} from '../../components'; // no relative imports outside of current directory
-import {getCustomClassNames} from 'utils/components';`}
+      </DocSubSection>
+      <DocSubSection title="CLSX for conditional classNames">
+        <p>
+          We use the <A href="https://www.npmjs.com/package/clsx">CLSX</A> package to deal with conditional classNames.
+        </p>
+        <JsxCode
+          code={`<div 
+   className={clsx("LeftNav__nav", {
+      "LeftNav__nav--active": selected === "home"
+   })}
+>Home</div>`}
+          heading="Good"
+        />
+        <JsxCode
+          code={`<div className={\`LeftNav__nav \${selected === 'home' ? 'LeftNav__nav--active' : ''}\`}>Home</div>`}
           heading="Bad"
         />
       </DocSubSection>
-      <DocSubSection title="React components">
-        <DocList variant="ol">
-          <li>Only Functional Components. No Class-based components.</li>
-          <li>
-            Reusable components that doesn't connect to the redux store belong in the{' '}
-            <DocInlineCode>components</DocInlineCode> directory. Components that connects to the store belong in the{' '}
-            <DocInlineCode>containers</DocInlineCode> directory.
-          </li>
-          <li>Every React Component should have an unique name, even if it means being a little wordy.</li>
-          <li>Props should always be alphabetized.</li>
-          <li>
-            DRY vs WET? Neither. We subscribe to the <A href="https://kentcdodds.com/blog/aha-programming">AHA</A>{' '}
-            principle. Don't abstract for the sake of abstracting; abstract when it is appropriate.
-          </li>
-          <li>
-            Use just the amount of JSX/HTML tags needed to get the job done. No need to have 2{' '}
-            <DocInlineCode>div</DocInlineCode> when it could've been done with just one.
-          </li>
-          <TypescriptJsxCode
-            code={`return (
-<div>
-  <div>
-    Why am I in two divs?
-  </div>
-</div>
-)`}
-            heading="Bad"
-          />
-        </DocList>
+      <DocSubSection title="SASS Ampersand + BEM">
+        <p>
+          In order to have a consistent rule in how we write our CSS, as well as to avoid common problems such as{' '}
+          <A href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">high CSS specificity</A>, we will be
+          using the power of{' '}
+          <A href="https://css-tricks.com/using-sass-control-scope-bem-naming/">
+            SASS Ampersand + BEM Naming convention
+          </A>
+          . Let's see why this combination reduces specificity. Suppose we had this component:
+        </p>
+        <JsxCode
+          code={`return (
+   <div className="LeftNav">
+      <div 
+         className={clsx("LeftNav__nav", {
+            "LeftNav__nav--active": selected === "home"
+         })}
+      >Home</div>
+   </div>
+);`}
+          heading="LeftMenu.tsx"
+        />
+        <p>
+          There are three classNames we have to deal with: <DocInlineCode>.LeftNav</DocInlineCode>,{' '}
+          <DocInlineCode>.LeftNav__nav</DocInlineCode>, and <DocInlineCode>.LeftNav__nav--active</DocInlineCode>. If you
+          don't use SASS Ampersands, here is what the (bad) code will look like, and what it will transpile down to:
+        </p>
+        <ScssCode
+          code={`.LeftMenu {
+  color: var(--color-1);      
+  
+  .LeftMenu__nav {
+    color: var(--color-2);
+    
+    .LeftMenu__nav--active {
+      color: var(--color-3);
+    }
+  }
+}`}
+          heading="Bad (SCSS)"
+        />
+        <ScssCode
+          code={`.LeftMenu {
+  color: var(--color-1);
+}
+
+.LeftMenu .LeftMenu__nav {
+  color: var(--color-2);
+}
+
+.LeftMenu .LeftMenu__nav .LeftMenu__nav--active {
+  color: var(--color-3);
+}`}
+          heading="Bad (compiled CSS)"
+        />
+        <p>
+          As you can see from this (bad) example, <DocInlineCode>.LeftMenu__nav</DocInlineCode> has a class level-2
+          specificity, while <DocInlineCode>.LeftMenu__nav--active</DocInlineCode> has class level-3 specificity. If you
+          ever need to override this, you will typically either have to use <DocInlineCode>!important</DocInlineCode>{' '}
+          (not allowed), or do some CSS specificity gymnastics.
+        </p>
+        <p>This is what a good example looks like:</p>
+        <ScssCode
+          code={`.LeftMenu {
+  color: var(--color-1);      
+  
+  &__nav {
+    color: var(--color-2);
+    
+    &--active {
+      color: var(--color-3);
+    }
+  }
+}`}
+          heading="Good (SCSS)"
+        />
+        <ScssCode
+          code={`.LeftMenu {
+  color: var(--color-1);
+}
+
+.LeftMenu__nav {
+  color: var(--color-2);
+}
+
+.LeftMenu__nav--active {
+  color: var(--color-3);
+}`}
+          heading="Good (compiled CSS)"
+        />
       </DocSubSection>
-      <DocSubSection title="Prop Spreading">
-        <DocList variant="ol">
-          <p>
-            We are generally <strong>against prop spreading</strong>, as they make it really difficult to keep track of
-            which props a component has access to. The only exception to this rule is when you are making a reusable
-            base component in which other components will extend from, such as a{' '}
-            <DocInlineCode>BaseButton</DocInlineCode>.
-          </p>
-          <TypescriptJsxCode
-            code={`return (
-  <SomeComponent {...props} />
-)`}
-            heading="Bad"
-          />
-          <TypescriptJsxCode
-            code={`return (
-  <SomeComponent
-    propA={propA}
-    propB={propB}
-    propC={propC}
-  />
-)`}
-            heading="Good"
-          />
-        </DocList>
-      </DocSubSection>
-      <DocSubSection title="Libraries We Use">
+      <DocSubSection title="Blocks vs. Elements">
+        <p>
+          One of the pain-points of <DocInlineCode>BEM</DocInlineCode> is the ambiguity of the distinction between
+          Blocks and Elements. In order to keep it simple, this is the rule we are going to follow:
+        </p>
         <DocList variant="ul">
           <li>
-            To handle forms, we use <A href="https://formik.org/">Formik</A> with{' '}
-            <A href="https://github.com/jquense/yup">Yup</A> validation.
+            Root component level DOM element (the one with CapitalCasing className) will always be treated as a{' '}
+            <DocInlineCode>Block</DocInlineCode>.
           </li>
           <li>
-            We use <A href="https://redux-toolkit.js.org/">Redux Toolkit</A> to manage our application state. This is
-            the official, recommended way to incorporate redux to a React application, and we favor it over traditional
-            Redux architecture for it's compactness and ease-of-use.
+            Every other (non-modifiers) DOM elements contained within that root DOM element should try to be considered
+            as <DocInlineCode>Elements</DocInlineCode>, unless the said <DocInlineCode>Element</DocInlineCode> has so
+            many sub-elements that needs styling, in which case it will be converted to a{' '}
+            <DocInlineCode>Block</DocInlineCode>.
           </li>
         </DocList>
+        <p>This is probably best explained with a couple examples:</p>
+        <p>
+          <strong>
+            1. A given DOM element with more elements inside doesn't need to be considered as Blocks if the naming won't
+            won't be too confusing:
+          </strong>
+        </p>
+        <JsxCode
+          code={`return (
+  <div className="Component">
+    <div className="header"> {/* Should I be considered a Block, since I have a span inside me? */}
+      Hello <span className="header__color-text">WORLD!</span>
+    </div>
+    {/* ... */}
+  </div>
+);`}
+          heading="Bad"
+        />
+        <JsxCode
+          code={`return (
+  <div className="Component">
+    <div className="Component__header"> {/* Probably not */}
+      Hello <span className="Component__header-bold">WORLD!</span> {/* I can just be considered another element of 
+                                                                       Component without too much confusion */}
+    </div>
+    {/* ... */}
+  </div>
+);`}
+          heading="Good"
+        />
+        <p>
+          <strong>
+            2. However, if you are dealing with a complex component, this may not always be ideal. In this case, you can
+            safely introduce a new block:
+          </strong>
+        </p>
+        <JsxCode
+          code={`return (
+  <div className="Component">
+    <div className="Component__left">
+      {/* ... */}
+      <div className="Component__left-button-container">
+        <button className="Component__button-inside-left-button-container">Button</button> {/* This is too much */}
+      </div>
+    </div>
+    <div className="Component__right">
+      {/* ... */}
+      <div className="Component__right-button-container">
+        <button className="Component__button-inside-right-button-container">Button</button> {/* This is too much */}
+      </div>
+    </div>
+    {/* ... */}
+  </div>
+);`}
+          heading="Bad"
+        />
+        <JsxCode
+          code={`return (
+  <div className="Component">
+    <div className="left-container"> {/* a new block */}
+      {/* ... */}
+      <div className="left-container__button-container">
+        <button className="left-container__button">Button</button> {/* now it's manageable */}
+      </div>
+    </div>
+    <div className="Component__right">
+      {/* ... */}
+      <div className="right-container">
+        <button className="right-container__button">Button</button>
+      </div>
+    </div>
+    {/* ... */}
+  </div>
+);`}
+          heading="Good"
+        />
+        <p>
+          One note about above: you should only introduce one level of new blocks for a given component. If you need to
+          use 2-level or more nested blocks within a given component, the component is (probably) better off being
+          separated into multiple components. This point probably deserves a new section:
+        </p>
+      </DocSubSection>
+      <DocSubSection title="Blocks and level of SASS Nesting">
+        <p>
+          Continuing on with the previous point, each component should have at most one level of nested{' '}
+          <DocInlineCode>blocks</DocInlineCode> within it's root DOM element. Ideally, if the component is small enough,
+          it doesn't need any blocks, but this is not always realistic. This is to ensure we don't have selectors within
+          our SCSS that have too high of a specificity.
+        </p>
+        <ScssCode
+          code={`.Component {
+  .new-block {
+    .new-new-block {
+      // ...
+    }
+  }      
+}`}
+          heading="Bad"
+        />
+        <ScssCode
+          code={`.Component {
+  .new-block {
+    &__element { // The 2-level nested block is converted to an element
+      // ...
+    }
+  }      
+}`}
+          heading="Good"
+        />
+      </DocSubSection>
+      <DocSubSection title="A component should only style DOM elements it knows about">
+        <p>
+          For example, if a given container-component is to receive (either as a prop or a children) another React
+          Component, it shouldn't expect to know that there is going to be an DOM element with a specific className and
+          add styling to that class.
+        </p>
+        <JsxCode
+          code={`return (
+  <div className="PresentationalComponent>
+    <div className="PresentationalComponent__left">{leftComponentProp}</div>
+    {children}
+  </div>
+);`}
+          heading="TSX Component"
+        />
+        <ScssCode
+          code={`.PresentationalComponent {
+  &__left {
+    .i-know-this-class-is-in-here { // This is a class inside leftComponentProp
+      // ...
+    }
+  }
+}`}
+          heading="Bad"
+        />
+      </DocSubSection>
+      <DocSubSection title="No global selectors (AKA Bootstrap-like selectors)">
+        <p>
+          The only 'global' stylings we should have are the ones that override the defaults. These will be contained
+          within the <DocInlineCode>styles</DocInlineCode> folder, and should rarely be touched.
+        </p>
+        <p>
+          No matter how convenient it may be, we won't use global selectors (such as{' '}
+          <DocInlineCode>.red-text</DocInlineCode> or <DocInlineCode>.fancy-table</DocInlineCode>). Instead, we will
+          either have these classes defined within each component that needs to use them (following our other
+          conventions, of course), or if used enough, we will create into a separate React component.
+          <ScssCode
+            code={`.red {
+  color: red;
+}
+
+.fancy-table {
+  // some fancy table styling
+}`}
+            heading="Bad"
+          />
+          <TypescriptCode
+            code={`const FancyTable: FC = ({props}) => {
+  return (
+    <table className="FancyTable">
+      {/* ... */}
+    </table>
+  );
+}`}
+            heading="Good"
+          />
+        </p>
+      </DocSubSection>
+      <DocSubSection title="Only use Class & Pseudo-Class/Element Selectors*">
+        <p>These are not allowed:</p>
+        <ScssCode
+          code={`#left-nav { // No id selectors
+  // ...  
+}
+
+.LeftNav {
+  a { // No HTML Element selectors
+    // ...
+  }
+}`}
+          heading="Bad"
+        />
+        <p>
+          The only exception to this rule is when dealing with nested HTML Elements that always go hand-in-hand, such as
+          a <DocInlineCode>table</DocInlineCode> that always has accomodating elements such as{' '}
+          <DocInlineCode>thead</DocInlineCode>, <DocInlineCode>tbody</DocInlineCode>, <DocInlineCode>tr</DocInlineCode>,{' '}
+          <DocInlineCode>th</DocInlineCode>, <DocInlineCode>td</DocInlineCode>. Or a{' '}
+          <DocInlineCode>ol/ul</DocInlineCode>, with it's accompanying <DocInlineCode>li</DocInlineCode> element. In
+          this case, you must give the root HTML element (such as <DocInlineCode>table</DocInlineCode> or{' '}
+          <DocInlineCode>ol</DocInlineCode>) a className, and put all the HTML element selectors inside that class
+          selector.
+        </p>
+        <JsxCode
+          code={`return (
+  <div className="Component">
+    <table className="Component__table">
+      <thead>
+        <tr>
+          <th>header 1</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>body 1</td>
+        </tr>
+      </tbody>
+    </table>
+    {/* ... */}
+  </div>
+);`}
+          heading="TSX Component"
+        />
+        <ScssCode
+          code={`.Component {
+  &__table {
+    th, td {  // These HTML element selectors are okay, since they are inside .Component__table
+      // ...
+    }
+  }
+}`}
+          heading="Good"
+        />
+      </DocSubSection>
+      <DocSubSection title="No !important">
+        <p>
+          Ideally, if all the rules within this style guide is properly followed, there should never be a reason to use{' '}
+          <DocInlineCode>!important</DocInlineCode>. There may arise special-cased exceptions in the future, but we will
+          try our very best to never use this in our codebase.
+        </p>
       </DocSubSection>
     </DocContainer>
   );

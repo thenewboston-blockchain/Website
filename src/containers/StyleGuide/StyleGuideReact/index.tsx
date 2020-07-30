@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {A, DocContainer, DocInlineCode, DocList, DocSubSection, TypescriptJsxCode} from 'components';
+import {A, DocContainer, DocInlineCode, DocList, DocSubSection, JsxCode, TypescriptCode} from 'components';
 
 const StyleGuideReact: FC = () => {
   return (
@@ -26,7 +26,7 @@ const StyleGuideReact: FC = () => {
         <p>
           We will always use absolute imports, except when importing files that is contained within the same directory.
         </p>
-        <TypescriptJsxCode
+        <TypescriptCode
           code={`import React, {FC, ReactNode, useRef, useState} from 'react'; // 'react' imports come first
 import {Redirect, NavLink} from 'react-router-dom';
 import clsx from 'clsx'; // Then comes other 3rd party packages
@@ -40,7 +40,7 @@ import FancyImage from './FancyImage.png'; // Then, files in the same directory
 import './MyComponent.scss'; // Lastly, local style file import`}
           heading="Good"
         />
-        <TypescriptJsxCode
+        <TypescriptCode
           code={`import React, {useState, useRef, FC} from 'react'; // useState, useRef, FC not in alphabetical order
 import clsx from 'clsx';
 import {Redirect, NavLink} from 'react-router-dom'; // packages with react name should come before other packages
@@ -74,14 +74,14 @@ import {getCustomClassNames} from 'utils/components';`}
             Use just the amount of JSX/HTML tags needed to get the job done. No need to have 2{' '}
             <DocInlineCode>div</DocInlineCode> when it could've been done with just one.
           </li>
-          <TypescriptJsxCode
+          <JsxCode
             code={`return (
-<div>
   <div>
-    Why am I in two divs?
+    <div>
+      Why am I in two divs?
+    </div>
   </div>
-</div>
-)`}
+);`}
             heading="Bad"
           />
         </DocList>
@@ -102,20 +102,20 @@ import {getCustomClassNames} from 'utils/components';`}
             base component in which other components will extend from, such as a{' '}
             <DocInlineCode>BaseButton</DocInlineCode>.
           </p>
-          <TypescriptJsxCode
+          <JsxCode
             code={`return (
   <SomeComponent {...props} />
-)`}
+);`}
             heading="Bad"
           />
-          <TypescriptJsxCode
+          <JsxCode
             code={`return (
   <SomeComponent
     propA={propA}
     propB={propB}
     propC={propC}
   />
-)`}
+);`}
             heading="Good"
           />
         </DocList>

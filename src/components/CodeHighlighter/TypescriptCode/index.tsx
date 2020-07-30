@@ -2,8 +2,9 @@ import React, {FC} from 'react';
 import clsx from 'clsx';
 
 import {getCustomClassNames} from 'utils/components';
+
 import BaseCodeHighlighter from '../BaseCodeHighlighter';
-import './TypescriptJsxCode.scss';
+import './TypescriptCode.scss';
 
 interface ComponentProps {
   className?: string;
@@ -11,11 +12,11 @@ interface ComponentProps {
   heading?: string;
 }
 
-const TypescriptJsxCode: FC<ComponentProps> = ({className, code, heading}) => {
+const TypescriptCode: FC<ComponentProps> = ({className, code, heading}) => {
   return (
-    <div className="TypescriptJsxCode">
+    <div className="TypescriptCode">
       {heading ? (
-        <div className={clsx('TypescriptJsxCode__heading', {...getCustomClassNames(className, '__heading', true)})}>
+        <div className={clsx('TypescriptCode__heading', {...getCustomClassNames(className, '__heading', true)})}>
           {heading}:
         </div>
       ) : null}
@@ -24,4 +25,4 @@ const TypescriptJsxCode: FC<ComponentProps> = ({className, code, heading}) => {
   );
 };
 
-export default TypescriptJsxCode;
+export default TypescriptCode;
