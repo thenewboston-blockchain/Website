@@ -13,7 +13,7 @@ contributions you make are **greatly appreciated**.
 
 1. Fork the project
 2. Create your feature branch
-3. Run `npm run lint` and make sure you have no errors.
+3. Run `npm run lint` and make sure you have no errors
 4. Commit your changes
 5. Push to the branch
 6. Open a pull request
