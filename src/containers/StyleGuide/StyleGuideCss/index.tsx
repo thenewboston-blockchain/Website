@@ -4,6 +4,21 @@ import {A, CodeSnippet, DocContainer, DocImage, DocInlineCode, DocList, DocSubSe
 
 import FigmaImage from './figma.png';
 
+enum StyleGuideCssNav {
+  blocksElements = 'blocks-elements',
+  blocksSassNesting = 'blocks-sass-nesting',
+  capitalCase = 'capital-case',
+  classPseudoSelectors = 'class-pseudo-selectors',
+  clsx = 'clsx',
+  componentScope = 'component-scope',
+  cssAlphabetized = 'css-alphabetized',
+  figma = 'figma',
+  kebabCase = 'kebab-case',
+  noGlobalSelectors = 'no-global-selectors',
+  noImportant = 'no-important',
+  sassAmpBem = 'sass-amp-bem',
+}
+
 const StyleGuideCss: FC = () => {
   return (
     <DocContainer className="StyleGuideCss" title="CSS / SASS Style Guide">
@@ -38,7 +53,7 @@ const StyleGuideCss: FC = () => {
         </li>
         <li>Refactoring becomes a headache when there is an over-reliance on a CSS Framework.</li>
       </DocList>
-      <DocSubSection title="Figma">
+      <DocSubSection id={StyleGuideCssNav.figma} title="Figma">
         <p>
           <A href="https://www.figma.com/">Figma</A> is a interface design tool that is widely used in the professional
           sphere, and we use it to design how our app/website should exactly look. It is free to sign up. You can find
@@ -53,7 +68,10 @@ const StyleGuideCss: FC = () => {
         </p>
         <DocImage alt="figma example" maxWidth={1000} src={FigmaImage} />
       </DocSubSection>
-      <DocSubSection title="CapitalCase className for the root DOM element of a component">
+      <DocSubSection
+        id={StyleGuideCssNav.capitalCase}
+        title="CapitalCase className for the root DOM element of a component"
+      >
         <p>
           Every React component should have it's root DOM element have it's className be the CapitalCased version of the
           component name. Since every React Component should already follow the CapitalCase convention, this implies
@@ -94,7 +112,7 @@ const LeftMenu: FC = () => {
           language={SnippetLang.scss}
         />
       </DocSubSection>
-      <DocSubSection title="kebab-casing for every other classNames">
+      <DocSubSection id={StyleGuideCssNav.kebabCase} title="kebab-casing for every other classNames">
         <p>
           With the exception of the previously mentioned CapitalCasing for a component's root DOM Element, every other
           Block, Element, or Modifier in a className should follow kebab-casing.
@@ -122,7 +140,7 @@ const LeftMenu: FC = () => {
           language={SnippetLang.jsx}
         />
       </DocSubSection>
-      <DocSubSection title="CLSX for conditional classNames">
+      <DocSubSection id={StyleGuideCssNav.clsx} title="CLSX for conditional classNames">
         <p>
           We use the <A href="https://www.npmjs.com/package/clsx">CLSX</A> package to deal with conditional classNames.
         </p>
@@ -141,7 +159,7 @@ const LeftMenu: FC = () => {
           language={SnippetLang.jsx}
         />
       </DocSubSection>
-      <DocSubSection title="SASS Ampersand + BEM">
+      <DocSubSection id={StyleGuideCssNav.sassAmpBem} title="SASS Ampersand + BEM">
         <p>
           In order to have a consistent rule in how we write our CSS, as well as to avoid common problems such as{' '}
           <A href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">high CSS specificity</A>, we will be
@@ -237,7 +255,7 @@ const LeftMenu: FC = () => {
           language={SnippetLang.scss}
         />
       </DocSubSection>
-      <DocSubSection title="Blocks vs. Elements">
+      <DocSubSection id={StyleGuideCssNav.blocksElements} title="Blocks vs. Elements">
         <p>
           One of the pain-points of <DocInlineCode>BEM</DocInlineCode> is the ambiguity of the distinction between
           Blocks and Elements. In order to keep it simple, this is the rule we are going to follow:
@@ -340,7 +358,7 @@ const LeftMenu: FC = () => {
           separated into multiple components. This point probably deserves a new section:
         </p>
       </DocSubSection>
-      <DocSubSection title="Blocks and level of SASS Nesting">
+      <DocSubSection id={StyleGuideCssNav.blocksSassNesting} title="Blocks and level of SASS Nesting">
         <p>
           Continuing on with the previous point, each component should have at most one level of nested{' '}
           <DocInlineCode>blocks</DocInlineCode> within it's root DOM element. Ideally, if the component is small enough,
@@ -370,7 +388,10 @@ const LeftMenu: FC = () => {
           language={SnippetLang.scss}
         />
       </DocSubSection>
-      <DocSubSection title="A component should only style DOM elements it knows about">
+      <DocSubSection
+        id={StyleGuideCssNav.componentScope}
+        title="A component should only style DOM elements it knows about"
+      >
         <p>
           For example, if a given container-component is to receive (either as a prop or a children) another React
           Component, it shouldn't expect to know that there is going to be an DOM element with a specific className and
@@ -398,7 +419,7 @@ const LeftMenu: FC = () => {
           language={SnippetLang.scss}
         />
       </DocSubSection>
-      <DocSubSection title="No global selectors (AKA Bootstrap-like selectors)">
+      <DocSubSection id={StyleGuideCssNav.noGlobalSelectors} title="No global selectors (AKA Bootstrap-like selectors)">
         <p>
           The only 'global' stylings we should have are the ones that override the defaults. These will be contained
           within the <DocInlineCode>styles</DocInlineCode> folder, and should rarely be touched.
@@ -432,7 +453,10 @@ const LeftMenu: FC = () => {
           language={SnippetLang.typescript}
         />
       </DocSubSection>
-      <DocSubSection title="Only use Class & Pseudo-Class/Element Selectors*">
+      <DocSubSection
+        id={StyleGuideCssNav.classPseudoSelectors}
+        title="Only use Class & Pseudo-Class/Element Selectors*"
+      >
         <p>These are not allowed:</p>
         <CodeSnippet
           code={`#left-nav { // No id selectors
@@ -490,7 +514,10 @@ const LeftMenu: FC = () => {
           language={SnippetLang.scss}
         />
       </DocSubSection>
-      <DocSubSection title="CSS Selectors & CSS Properties should be alphabetized">
+      <DocSubSection
+        id={StyleGuideCssNav.cssAlphabetized}
+        title="CSS Selectors & CSS Properties should be alphabetized"
+      >
         <CodeSnippet
           code={`.Component {
   &__banana {
@@ -507,7 +534,7 @@ const LeftMenu: FC = () => {
           language={SnippetLang.scss}
         />
       </DocSubSection>
-      <DocSubSection title="No !important">
+      <DocSubSection id={StyleGuideCssNav.noImportant} title="No !important">
         <p>
           Ideally, if all the rules within this style guide is properly followed, there should never be a reason to use{' '}
           <DocInlineCode>!important</DocInlineCode>. There may arise special-cased exceptions in the future, but we will

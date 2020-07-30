@@ -3,6 +3,14 @@ import {NavLink} from 'react-router-dom';
 
 import {A, CodeSnippet, DocContainer, DocInlineCode, DocList, DocSubSection, SnippetLang} from 'components';
 
+enum StyleGuideReactNav {
+  componentTypes = 'component-types',
+  imports = 'imports',
+  libraries = 'libraries',
+  propSpreading = 'prop-spreading',
+  reactComponents = 'react-components',
+}
+
 const StyleGuideReact: FC = () => {
   return (
     <DocContainer className="StyleGuideReact" title="React / JSX Style Guide">
@@ -13,7 +21,7 @@ const StyleGuideReact: FC = () => {
         on classNames for our JSX elements, please check out our <NavLink to="/style-guide/css">CSS/SASS</NavLink>{' '}
         section.
       </p>
-      <DocSubSection title="Imports">
+      <DocSubSection id={StyleGuideReactNav.imports} title="Imports">
         <p>
           Imports from 3rd party packages will always be listed first. Dependencies with the word{' '}
           <DocInlineCode>react</DocInlineCode> will come first, followed by every other packages, alphabetically ordered
@@ -53,7 +61,7 @@ import {getCustomClassNames} from 'utils/components';`}
           language={SnippetLang.typescript}
         />
       </DocSubSection>
-      <DocSubSection title="React components">
+      <DocSubSection id={StyleGuideReactNav.reactComponents} title="React components">
         <DocList variant="ol">
           <li>Only Functional Components. No Class-based components.</li>
           <li>
@@ -89,7 +97,7 @@ import {getCustomClassNames} from 'utils/components';`}
           language={SnippetLang.jsx}
         />
       </DocSubSection>
-      <DocSubSection title="Component Type">
+      <DocSubSection id={StyleGuideReactNav.componentTypes} title="Component Types">
         <p>
           Every component that receives types should be properly typed. The <DocInlineCode>interface</DocInlineCode>{' '}
           that contains the types should be named <DocInlineCode>ComponentProps</DocInlineCode>, unless the Component's
@@ -97,7 +105,7 @@ import {getCustomClassNames} from 'utils/components';`}
           <DocInlineCode>{`{NameOfComponent}Props`}</DocInlineCode>
         </p>
       </DocSubSection>
-      <DocSubSection title="Prop Spreading">
+      <DocSubSection id={StyleGuideReactNav.propSpreading} title="Prop Spreading">
         <p>
           We are generally <strong>against prop spreading</strong>, as they make it really difficult to keep track of
           which props a component has access to. The only exception to this rule is when you are making a reusable base
@@ -122,7 +130,7 @@ import {getCustomClassNames} from 'utils/components';`}
           language={SnippetLang.jsx}
         />
       </DocSubSection>
-      <DocSubSection title="Libraries We Use">
+      <DocSubSection id={StyleGuideReactNav.libraries} title="Libraries We Use">
         <DocList variant="ul">
           <li>
             To handle forms, we use <A href="https://formik.org/">Formik</A> with{' '}
