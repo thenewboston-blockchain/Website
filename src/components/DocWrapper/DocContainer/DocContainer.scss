@@ -1,5 +1,17 @@
 .DocContainer {
   padding: 32px 32px 96px;
+  margin: 0 auto;
+
+  > * {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .DocImage {
+    width: 100%;
+    height: auto;
+    max-width: unset;
+  }
 
   &__page-title {
     font-size: 24px;
@@ -9,5 +21,9 @@
 
   &__divider {
     height: 12px;
+  }
+
+  @media (max-width: 769px) {
+    padding: 32px 12px 92px;
   }
 }

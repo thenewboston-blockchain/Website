@@ -78,7 +78,12 @@ const Home: FC = () => {
               continue to accumulate until the entire block eventually becomes verified.
             </p>
             <NavLink to="/guide/introduction">
-              <Button>View Guide</Button>
+              <Button>
+                View Guide{' '}
+                <svg width="17" height="22" viewBox="0 0 17 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 0H0L11 11L0 22H6L17 11L6 0Z" fill="white" />
+                </svg>
+              </Button>
             </NavLink>
           </div>
           <div className="right-block">

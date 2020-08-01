@@ -1,4 +1,4 @@
-$content-padding: 128px 64px 128px 128px;
+$content-padding: 60px 64px 128px 128px;
 
 .Home {
   font-family: Helvetica, serif;
@@ -26,6 +26,7 @@ $content-padding: 128px 64px 128px 128px;
           font-size: 48px;
           font-weight: 300;
           line-height: 110%;
+          color: #042235;
         }
 
         h2 {
@@ -57,6 +58,10 @@ $content-padding: 128px 64px 128px 128px;
       img.screenshot {
         max-height: 100%;
         max-width: 100%;
+
+        @media (min-width: 769px) {
+          margin-top: 50px;
+        }
       }
     }
 
@@ -81,6 +86,39 @@ $content-padding: 128px 64px 128px 128px;
         }
       }
     }
+
+    @media (max-width: 769px) {
+      svg.background-graphic {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        height: 232px;
+      }
+      &__left {
+        padding: 64px 12px 0 12px;
+
+        .content-container {
+          .marketing-buttons {
+            margin: 30px auto 0 0;
+          }
+        }
+      }
+      &__right {
+        img.screenshot {
+          width: 932px;
+          height: auto;
+          max-height: unset;
+          max-width: unset;
+          padding: 40px 0 0 12px;
+        }
+      }
+    }
+
+    @media (min-width: 767px) and (max-width: 1024px) {
+      .marketing-buttons {
+        margin: 30px auto 0 !important;
+      }
+    }
   }
 
   .instant-transactions {
@@ -92,12 +130,12 @@ $content-padding: 128px 64px 128px 128px;
 
     svg.background-graphic {
       display: block;
-      width: 100%;
+      width: 120%;
       z-index: 0;
+      margin-top: -20rem;
     }
 
     .content-container {
-      margin-bottom: -18rem;
       padding: $content-padding;
       width: 100%;
       z-index: 1;
@@ -175,10 +213,33 @@ $content-padding: 128px 64px 128px 128px;
 
         .left-block {
           margin-right: 30px;
+
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 3px #c2a2a4, 0px 4px 4px rgba(3, 33, 55, 0.25);
+
+            svg {
+              margin-left: 6px;
+            }
+          }
+
+          @media (max-width: 769px) {
+            a {
+              position: absolute;
+              bottom: 0;
+            }
+          }
         }
 
         .right-block {
           margin-left: 30px;
+        }
+
+        @media (max-width: 769px) {
+          position: relative;
+          padding-bottom: 46px;
         }
       }
     }
@@ -196,21 +257,40 @@ $content-padding: 128px 64px 128px 128px;
             transform: rotate(90deg);
             width: auto;
           }
+          .comparison-card {
+            max-width: 360px;
+          }
         }
 
         .text-snippets {
-          @media (max-width: 1200px) {
-            flex-direction: column;
+          flex-direction: column;
 
-            .left-block {
-              margin: 0 0 30px 0;
-            }
+          .left-block {
+            margin: 0 0 30px 0;
+          }
 
-            .right-block {
-              margin: 0;
-            }
+          .right-block {
+            margin: 0;
           }
         }
+      }
+    }
+
+    @media (max-width: 769px) {
+      .content-container {
+        padding: 60px 12px;
+
+        .comparison-card-container .comparison-card {
+          width: 100%;
+          margin: 12px;
+        }
+      }
+      svg.background-graphic {
+        margin-top: 112px;
+        position: relative;
+        width: 175%;
+        top: -25rem;
+        margin-bottom: -25rem;
       }
     }
   }

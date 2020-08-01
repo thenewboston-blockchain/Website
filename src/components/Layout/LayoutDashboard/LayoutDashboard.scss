@@ -1,30 +1,37 @@
 .LayoutDashboard {
-  display: grid;
-  grid-template-columns: 0 auto;
-  grid-template-rows: fit-content(0) auto;
-  height: 100vh;
-
-  &--open {
-    grid-template-columns: 270px auto;
+  @media (max-width: 769px) {
+    display: flex;
+    flex-direction: column;
   }
+  @media (min-width: 769px) {
+    display: grid;
+    grid-template-columns: 0 auto;
+    grid-template-rows: fit-content(0) auto;
+    height: 100vh;
 
-  &__top {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 1;
-  }
+    &--open {
+      grid-template-columns: 270px auto;
+    }
 
-  &__left {
-    background: var(--color-blue-gray-800);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
-    overflow-y: auto;
-  }
+    &__top {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 1;
+      z-index: 2;
+    }
 
-  &__right {
-    grid-column: 2 / span 1;
-    grid-row: 2 / span 1;
-    overflow-y: auto;
+    &__left {
+      background: #fff;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+      grid-column: 1 / span 1;
+      grid-row: 2 / span 1;
+      overflow-y: auto;
+    }
+
+    &__right {
+      grid-column: 2 / span 1;
+      grid-row: 2 / span 1;
+      overflow-y: auto;
+    }
   }
 }

@@ -35,13 +35,17 @@ $item-padding: 10px 16px;
       justify-content: space-between;
       padding: $item-padding;
       transition-duration: 0.2s;
+      background: #fff;
+      color: #8792a2;
 
       &:hover {
-        background: var(--color-blue-gray-900);
+        background: #ededed;
+        color: #042235;
       }
 
       &.expanded {
-        background: var(--color-blue-gray-700);
+        background: #fff;
+        color: #042235;
 
         .arrow {
           transform: rotate(90deg);
@@ -56,6 +60,7 @@ $item-padding: 10px 16px;
       .left-elements {
         align-items: center;
         display: flex;
+        line-height: 21px;
 
         .react-icons {
           font-size: 20px;
@@ -75,17 +80,74 @@ $item-padding: 10px 16px;
       }
 
       a {
-        background: var(--color-blue-gray-900);
+        color: #8792a2;
         padding: 10px 16px 10px 48px;
+        background: #fff;
 
         &:hover {
-          background: var(--color-blue-gray-800);
+          color: #042235;
+          background: #ededed;
         }
 
         &.active {
-          background: var(--color-blue-gray-800);
+          color: #042235;
+          background: #fff;
+        }
+
+        &.focus {
+          color: #042235;
+          background: #fff;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .LeftMenu {
+    padding: 0 0 12px 0;
+    border-top: 1px solid #ededed;
+
+    & > .LeftMenuGroup {
+      box-shadow: 0px 3px 3px rgba(4, 34, 53, 0.06);
+    }
+  }
+
+  .LeftMenuGroup-wrapper > .submenu {
+    height: 0 !important;
+    overflow: hidden;
+  }
+
+  .LeftMenuGroup-wrapper > .toggle.expanded + .submenu {
+    height: AUTO !important;
+  }
+  .LeftMenu .LeftMenuGroup .toggle .react-icons {
+    display: none;
+  }
+  .LeftMenu .LeftMenuGroup .toggle,
+  .LeftMenuGroup-wrapper > .LeftMenuGroup > .toggle.expanded + .submenu,
+  .LeftMenu .LeftMenuGroup .submenu a {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .LeftMenu .LeftMenuGroup .toggle .react-icons:last-child {
+    display: flex;
+    justify-content: center;
+  }
+  .LeftMenuGroup-wrapper .toggle > .left-elements span {
+    display: flex;
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) {
+  .LeftMenu > .LeftMenuGroup {
+    > .toggle {
+      display: none !important;
+    }
+
+    > .toggle.expanded {
+      display: flex !important;
     }
   }
 }
