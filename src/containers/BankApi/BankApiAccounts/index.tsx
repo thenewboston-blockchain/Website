@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {DocContainer, DocEndpoint, RequestResponse, TableParams} from 'components';
+import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
 
 const BankApiAccounts: FC = () => {
   return (
@@ -17,7 +17,7 @@ const BankApiAccounts: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/accounts" method="GET" />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`[
   {
     "id": "9eca00a5-d925-454c-a8d6-ecbb26ec2f76",
@@ -47,7 +47,7 @@ const BankApiAccounts: FC = () => {
           },
         ]}
       />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`{
   "message": {
     "trust": 99.98
@@ -57,7 +57,7 @@ const BankApiAccounts: FC = () => {
 }`}
         heading="Request"
       />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`{
   "id": "64426fc5-b3ac-42fb-b75b-d5ccfcdc6872",
   "created_date": "2020-07-14T02:59:22.204580Z",

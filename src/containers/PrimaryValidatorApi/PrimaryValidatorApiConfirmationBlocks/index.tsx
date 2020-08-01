@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, RequestResponse} from 'components';
+import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
 
 const PrimaryValidatorApiConfirmationBlocks: FC = () => {
   return (
@@ -12,7 +12,7 @@ const PrimaryValidatorApiConfirmationBlocks: FC = () => {
 
       <DocEndpoint endpoint="/confirmation_blocks/<block_identifier>" method="GET" />
       <p>View details of an individual confirmation block.</p>
-      <RequestResponse
+      <RequestResponseSnippet
         code={`{
   "message": {
     "block": {

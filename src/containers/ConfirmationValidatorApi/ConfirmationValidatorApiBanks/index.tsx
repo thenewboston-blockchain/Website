@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, RequestResponse} from 'components';
+import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
 
 const ConfirmationValidatorApiBanks: FC = () => {
   return (
@@ -8,7 +8,7 @@ const ConfirmationValidatorApiBanks: FC = () => {
       <p>The confirmation validators will maintain a record of all connected banks.</p>
 
       <DocEndpoint endpoint="/banks" method="GET" />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`[
   {
     "account_number": "5e12967707909e62b2bb2036c209085a784fabbc3deccefee70052b6181c8ed8",

@@ -1,11 +1,11 @@
 import React, {FC} from 'react';
 
-import {Commands, DocSubSection} from 'components';
+import {CodeSnippet, DocSubSection} from 'components';
 
 const InstallDependencies: FC = () => {
   return (
     <DocSubSection className="InstallDependencies" title="Install Dependencies">
-      <Commands
+      <CodeSnippet
         code={`sudo add-apt-repository universe
 sudo apt -y update && sudo apt -y upgrade
 

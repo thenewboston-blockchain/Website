@@ -2,8 +2,8 @@ import React, {FC} from 'react';
 import clsx from 'clsx';
 
 import {getCustomClassNames} from 'utils/components';
-import BaseCodeHighlighter from '../BaseCodeHighlighter';
-import './RequestResponse.scss';
+import BaseCodeSnippet, {SnippetLang} from '../BaseCodeSnippet';
+import './RequestResponseSnippet.scss';
 
 interface ComponentProps {
   className?: string;
@@ -13,13 +13,15 @@ interface ComponentProps {
 
 const RequestResponse: FC<ComponentProps> = ({className, code, heading}) => {
   return (
-    <div className="RequestResponse">
+    <div className="RequestResponseSnippet">
       {heading ? (
-        <div className={clsx('RequestResponse__heading', {...getCustomClassNames(className, '__heading', true)})}>
+        <div
+          className={clsx('RequestResponseSnippet__heading', {...getCustomClassNames(className, '__heading', true)})}
+        >
           {heading}:
         </div>
       ) : null}
-      <BaseCodeHighlighter code={code} language="json" showLineNumbers={false} />
+      <BaseCodeSnippet code={code} language={SnippetLang.json} showLineNumbers={false} />
     </div>
   );
 };

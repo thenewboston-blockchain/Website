@@ -99,14 +99,22 @@ const LeftMenu: FC = () => {
             <NavLink to="/confirmation-validator-api/connection-requests">Connection Requests</NavLink>
             <NavLink to="/confirmation-validator-api/validators">Validators</NavLink>
           </LeftMenuGroup>
-
           <LeftMenuGroup
             leftIcon={<Icon className="react-icons" icon={IconType.dns} size={20} />}
             title="Deployment Guides"
-            urlBase="deployment-guides"
+            urlBase="deployment-guide"
           >
-            <NavLink to="/deployment-guides/bank">Bank</NavLink>
-            <NavLink to="/deployment-guides/validator">Validator</NavLink>
+            <NavLink to="/deployment-guide/bank">Bank</NavLink>
+            <NavLink to="/deployment-guide/validator">Validator</NavLink>
+          </LeftMenuGroup>
+
+          <LeftMenuGroup
+            leftIcon={<Icon className="react-icons" icon={IconType.eslint} size={20} />}
+            title="Style Guides"
+            urlBase="style-guide"
+          >
+            <NavLink to="/style-guide/react">React / JSX</NavLink>
+            <NavLink to="/style-guide/css">CSS / SASS</NavLink>
           </LeftMenuGroup>
         </div>
       </div>

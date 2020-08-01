@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, DocImage, RequestResponse} from 'components';
+import {DocContainer, DocEndpoint, DocImage, RequestResponseSnippet} from 'components';
 
 import ConnectionRequestDiagram from './ConnectionRequest.png';
 
@@ -12,7 +12,7 @@ const NodeApiConnectionRequests: FC = () => {
       <DocImage alt="connection request" maxWidth={640} src={ConnectionRequestDiagram} />
 
       <DocEndpoint endpoint="/connection_requests" method="POST" />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`{
   "message": {
     "ip_address": "192.168.1.232",
@@ -38,7 +38,7 @@ const NodeApiConnectionRequests: FC = () => {
         key. They do not have to be sent from the node itself.
       </p>
 
-      <RequestResponse code={`{}`} heading="Response" />
+      <RequestResponseSnippet code={`{}`} heading="Response" />
     </DocContainer>
   );
 };

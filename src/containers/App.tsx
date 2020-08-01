@@ -11,6 +11,7 @@ import Guide from './Guide';
 import Home from './Home';
 import PrimaryValidatorApi from './PrimaryValidatorApi';
 import Roadmap from './Roadmap';
+import StyleGuide from './StyleGuide';
 
 const App: FC = () => {
   return (
@@ -34,48 +35,39 @@ const App: FC = () => {
           </LayoutBasic>
         </Route>
 
-        <Route exact path="/bank-api">
-          <Redirect to="/bank-api/accounts" />
-        </Route>
-        <Route path="/bank-api/:chapter">
+        <Route path="/bank-api/:chapter?">
           <LayoutDashboard>
             <BankApi />
           </LayoutDashboard>
         </Route>
 
-        <Route exact path="/confirmation-validator-api">
-          <Redirect to="/confirmation-validator-api/accounts" />
-        </Route>
-        <Route path="/confirmation-validator-api/:chapter">
+        <Route path="/confirmation-validator-api/:chapter?">
           <LayoutDashboard>
             <ConfirmationValidatorApi />
           </LayoutDashboard>
         </Route>
 
-        <Route exact path="/deployment-guides">
-          <Redirect to="/deployment-guides/bank" />
-        </Route>
-        <Route path="/deployment-guides/:chapter">
+        <Route path="/deployment-guide/:chapter?">
           <LayoutDashboard>
             <DeploymentGuide />
           </LayoutDashboard>
         </Route>
 
-        <Route exact path="/guide">
-          <Redirect to="/guide/introduction" />
-        </Route>
-        <Route path="/guide/:chapter">
+        <Route path="/guide/:chapter?">
           <LayoutDashboard>
             <Guide />
           </LayoutDashboard>
         </Route>
 
-        <Route exact path="/primary-validator-api">
-          <Redirect to="/primary-validator-api/accounts" />
-        </Route>
-        <Route path="/primary-validator-api/:chapter">
+        <Route path="/primary-validator-api/:chapter?">
           <LayoutDashboard>
             <PrimaryValidatorApi />
+          </LayoutDashboard>
+        </Route>
+
+        <Route path="/style-guide/:chapter?">
+          <LayoutDashboard>
+            <StyleGuide />
           </LayoutDashboard>
         </Route>
 

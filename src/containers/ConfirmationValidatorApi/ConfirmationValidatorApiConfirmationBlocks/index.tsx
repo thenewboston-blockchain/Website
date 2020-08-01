@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, RequestResponse} from 'components';
+import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
 
 const ConfirmationValidatorApiConfirmationBlocks: FC = () => {
   return (
@@ -11,7 +11,7 @@ const ConfirmationValidatorApiConfirmationBlocks: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/confirmation_blocks" method="POST" />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`{
   "message": {
     "block": {
@@ -61,7 +61,7 @@ const ConfirmationValidatorApiConfirmationBlocks: FC = () => {
 }`}
         heading="Request"
       />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`{
   "block": {
     "account_number": "0cdd4ba04456ca169baca3d66eace869520c62fe84421329086e03d91a68acdb",
@@ -109,7 +109,7 @@ const ConfirmationValidatorApiConfirmationBlocks: FC = () => {
       />
 
       <DocEndpoint endpoint="/confirmation_blocks/<block_identifier>" method="GET" />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`{
   "message": {
     "block": {

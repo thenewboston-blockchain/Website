@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {DocContainer, DocEndpoint, DocList, RequestResponse, TableParams} from 'components';
+import {DocContainer, DocEndpoint, DocList, RequestResponseSnippet, TableParams} from 'components';
 
 const BankApiConfirmationBlocks: FC = () => {
   return (
@@ -25,7 +25,7 @@ const BankApiConfirmationBlocks: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/confirmation_blocks" method="GET" />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`[
   {
     "id": 1,
@@ -64,7 +64,7 @@ const BankApiConfirmationBlocks: FC = () => {
           },
         ]}
       />
-      <RequestResponse
+      <RequestResponseSnippet
         code={`{
   "block_identifier": "65ae26192dfb9ec41f88c6d582b374a9b42ab58833e1612452d7a8f685dcd4d5",
   "message": {

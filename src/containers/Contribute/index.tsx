@@ -1,12 +1,34 @@
 import React, {FC, ReactNode} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {Button, MarketingButton} from 'components';
+import {A, Button, MarketingButton} from 'components';
 
 import Arm from './Arm.png';
 import './Contribute.scss';
 
 const Contribute: FC = () => {
+  const renderDesign = (): ReactNode => (
+    <div className="Contribute__navigation-column">
+      <h2 className="Contribute__navigation-column-header">Design</h2>
+
+      <div className="Contribute__navigation-group">
+        <h2 className="Contribute__navigation-group-header">Resources</h2>
+        <A
+          className="Contribute__a"
+          href="https://www.figma.com/file/ZLQBaMEsAQIdnfg5qtL384/TNB-System?node-id=12%3A113"
+        >
+          Style Guide
+        </A>
+        <A
+          className="Contribute__a"
+          href="https://docs.google.com/document/d/1gRy71vQrHGDk2bZ4Wcz3ha4xHjNmOtcXCkDXtLeqt-4/edit"
+        >
+          Figma Links
+        </A>
+      </div>
+    </div>
+  );
+
   const renderPythonDjango = (): ReactNode => (
     <div className="Contribute__navigation-column">
       <h2 className="Contribute__navigation-column-header">Python / Django</h2>
@@ -16,22 +38,12 @@ const Contribute: FC = () => {
         <NavLink className="Contribute__a" to="/bank-api/accounts">
           Bank API Docs
         </NavLink>
-        <a
-          className="Contribute__a"
-          href="https://github.com/thenewboston-developers/Bank"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <A className="Contribute__a" href="https://github.com/thenewboston-developers/Bank">
           Repository
-        </a>
-        <a
-          className="Contribute__a"
-          href="https://github.com/thenewboston-developers/Bank/issues"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </A>
+        <A className="Contribute__a" href="https://github.com/thenewboston-developers/Bank/issues">
           Issues / Tasks
-        </a>
+        </A>
       </div>
 
       <h2 className="Contribute__navigation-group-header">Validator</h2>
@@ -41,22 +53,12 @@ const Contribute: FC = () => {
       <NavLink className="Contribute__a" to="/primary-validator-api/accounts">
         Primary Validator API Docs
       </NavLink>
-      <a
-        className="Contribute__a"
-        href="https://github.com/thenewboston-developers/Validator"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <A className="Contribute__a" href="https://github.com/thenewboston-developers/Validator">
         Repository
-      </a>
-      <a
-        className="Contribute__a"
-        href="https://github.com/thenewboston-developers/Validator/issues"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      </A>
+      <A className="Contribute__a" href="https://github.com/thenewboston-developers/Validator/issues">
         Issues / Tasks
-      </a>
+      </A>
     </div>
   );
 
@@ -65,22 +67,12 @@ const Contribute: FC = () => {
       <h2 className="Contribute__navigation-column-header">React / FE</h2>
       <div className="Contribute__navigation-group">
         <h2 className="Contribute__navigation-group-header">Account Manager</h2>
-        <a
-          className="Contribute__a"
-          href="https://github.com/thenewboston-developers/Account-Manager"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <A className="Contribute__a" href="https://github.com/thenewboston-developers/Account-Manager">
           Repository
-        </a>
-        <a
-          className="Contribute__a"
-          href="https://github.com/thenewboston-developers/Account-Manager/issues"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </A>
+        <A className="Contribute__a" href="https://github.com/thenewboston-developers/Account-Manager/issues">
           Issues / Tasks
-        </a>
+        </A>
       </div>
       <div className="Contribute__navigation-group">
         <h2 className="Contribute__navigation-group-header">Website</h2>
