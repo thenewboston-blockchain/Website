@@ -36,8 +36,8 @@ const GuideBanks: FC = () => {
         In addition to the responsibilities to the network, banks also have responsibilities to their users (account
         owners). When users first download account manager applications and create their accounts, they will then select
         a bank in which they wish to use. They are then able to connect to the network through that bank and may begin
-        sending blocks. Users are able to send blocks through any bank of their choosing at any time, however due to the
-        fact that banks will typically only keep the transaction history of the accounts who have sent transactions
+        sending blocks. Users are able to send blocks through any bank of their choosing at any time. However, due to
+        the fact that banks will typically only keep the transaction history of the accounts who have sent transactions
         through them, users will generally use the same bank for extended periods of time.
       </p>
       <p>
