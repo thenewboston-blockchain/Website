@@ -10,15 +10,15 @@ const GuideBanks: FC = () => {
     <DocContainer className="GuideBanks" title="Banks">
       <p>
         Banks play a critical role regarding several aspects of the network. They act as the bond between end users and
-        the network, and have several responsibilities to each. Regarding network related responsibilities, banks are
+        the network and have several responsibilities to each. Regarding network-related responsibilities, banks are
         responsible for assigning trust levels to validators. Banks automatically set their primary validator to the
         connected node that is the:
       </p>
 
       <DocList variant="ul">
-        <li>most trusted</li>
-        <li>online</li>
-        <li>configured as a primary validator</li>
+        <li>Most trusted</li>
+        <li>Online</li>
+        <li>Configured as a primary validator</li>
       </DocList>
 
       <p>
