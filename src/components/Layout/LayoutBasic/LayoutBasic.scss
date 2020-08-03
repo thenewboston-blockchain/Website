@@ -11,5 +11,6 @@
   &__content {
     grid-row: 2 / span 1;
     overflow-y: auto;
+    width: 100vw;
   }
 }
