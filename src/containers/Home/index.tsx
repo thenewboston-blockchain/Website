@@ -1,13 +1,13 @@
 import React, {FC, ReactNode} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {Button, MarketingButton} from 'components';
+import {Button} from 'components';
 
 import Bitcoin from 'assets/svgs/bitcoin.svg';
 import Logo from 'assets/svgs/thenewboston.svg';
 import RightArrow from 'assets/svgs/right-arrow.svg';
-import DesktopUI from './DesktopUI.jpg';
-import SendPointsModal from './SendPointsModal.jpg';
+
+import HomeHero from './HomeHero';
 
 import './Home.scss';
 
@@ -33,33 +33,6 @@ const Home: FC = () => {
         <img alt="logo" className="crypto-logo" src={Logo} />
         {renderComparisonCardStat('txs per second', '3,238')}
         {renderComparisonCardStat('avg. tx time', '0.015 seconds')}
-      </div>
-    </div>
-  );
-
-  const renderHero = (): ReactNode => (
-    <div className="hero">
-      <svg className="background-graphic" viewBox="0 0 1366 396">
-        <path fill="#F6F9FC" fillRule="nonzero" d="M0 395.5L1366 106V0H0v395.5z" />
-      </svg>
-      <div className="hero__wrapper">
-        <div className="hero__left">
-          <div className="content-container">
-            <h1>We are building the impossible</h1>
-            <h2>
-              Join us in building a cryptocurrency that will soon change the world by allowing transactions to be
-              processed in less than a second.
-            </h2>
-            <div className="marketing-buttons">
-              <MarketingButton website="slack" />
-              <MarketingButton website="github" />
-            </div>
-          </div>
-        </div>
-        <div className="hero__right">
-          <img alt="desktop" className="hero__desktop-ui" src={DesktopUI} />
-          <img alt="send points modal" className="hero__send-points-modal" src={SendPointsModal} />
-        </div>
       </div>
     </div>
   );
@@ -102,7 +75,7 @@ const Home: FC = () => {
 
   return (
     <div className="Home">
-      {renderHero()}
+      <HomeHero />
       {renderInstantTransactions()}
     </div>
   );
