@@ -11,8 +11,8 @@ const GuideTrust: FC = () => {
         The single most important concept in this network architecture is the concept of trust. It is also where this
         network deviates most from traditional Blockchain based cryptocurrencies that abide by common consensus
         mechanisms such as Proof of Work (PoW) or Proof of Stake (PoS). In order to understand the reasoning behind a
-        trust based distributed network it is first important to understand the problem that all existing mechanisms are
-        attempting to solve, the problem of consensus.
+        trust-based distributed network, it is first important to understand the problem that all existing mechanisms
+        are attempting to solve: the problem of consensus.
       </p>
       <p>
         The use of the Blockchain as a distributed ledger was the foundation that allowed for the rapid growth of
@@ -27,18 +27,18 @@ const GuideTrust: FC = () => {
         In a Blockchain, every new block added is dependent on the last. As new transactions occur all across the world,
         Bitcoin nodes known as "miners" attempt to validate these transactions, bundle them together into a block, and
         append it to the Blockchain. However, when several miners simultaneously announce that their block is the block
-        that all other nodes should append to their copy of the Blockchain, the network must reach a consensus in order
-        to decide which miner to trust. Given that the purpose of the Blockchain is to act as a record of all
-        transactions and therefore account balances of the network, it is critical that consensus is achieved.
+        that all other nodes should append to, the network must reach a consensus to decide which miner to trust. Given
+        that the purpose of the Blockchain is to act as a record of all transactions and therefore account balances of
+        the network, it is critical that consensus is achieved.
       </p>
       <p>
         The first attempt to solve this problem came in the form of Proof of Work. Proof of Work limits the simultaneous
         announcements from miners by adding an additional requirement to each and every block that is produced. This new
-        requirement can be thought of as a solution to a puzzle that is difficult to compute. On average across the
+        requirement can be thought of as a solution to a puzzle that is difficult to compute. On average, across the
         entire Bitcoin network (which consists of an incredible amount of computing power) a new solution is only found
         approximately every 10 minutes. This is why the median confirmation time for a Bitcoin transaction is 10
-        minutes. It is not due to the amount of time required to confirm the transactions, that time only takes a
-        fraction of a second. Rather, it is the time required to solve the puzzle.
+        minutes. It is not due to the amount of time required to confirm the transactions, which only takes a fraction
+        of a second. Rather, it is the time required to solve the puzzle.
       </p>
       <p>
         Although PoW is an appropriate consensus mechanism in many use cases, such as purchasing items online when a 10
@@ -55,11 +55,11 @@ const GuideTrust: FC = () => {
       <p>
         Proof of Stake states that rather than solving puzzles, network nodes would instead vote for the block that
         would be added as the next block on the Blockchain. To ensure that the voting process was fair, voting power
-        (technically "mining power") is proportional to the amount of coins held by a node. This is supported by the
+        (technically "mining power") is proportional to the number of coins held by a node. This is supported by the
         philosophy that nodes with the most coins would also have the most incentive to maintain a secure and reliable
         network. While PoS provides many benefits over PoW such as confirmation time improvements and lower energy
         requirements for miners, it also comes with challenges of its own. The most well known being a network attack,
-        commonly referred to as a "51% attack".
+        commonly referred to as a "51% attack."
       </p>
       <p>
         A 51% attack occurs when a single entity controls 51% or more of the network's currency. Since voting power is
@@ -70,13 +70,13 @@ const GuideTrust: FC = () => {
         familiar road that many wish to avoid.
       </p>
       <p>
-        In understanding the challenges that existing consensus mechanisms are attempting to solve, as well as
-        acknowledging the new issues that these mechanisms have brought forward, it is apparent that a new method of
-        reaching network consensus must be found. In order to find an elegant solution to a very difficult problem, it
-        is often helpful to simplify the problem itself. Although the motivation for this problem arises out of the need
-        to maintain a fair peer-to-peer distributed network, the true problem has very little to do with networking or
-        technology at all. The challenges can be seen more clearly by taking a look at one of the most well known issues
-        in cryptocurrency, the double-spend problem.
+        In understanding the challenges that existing consensus mechanisms are attempting to solve, and acknowledging
+        the new issues that these mechanisms have brought forward, it is apparent that a new method of reaching network
+        consensus must be found. To find an elegant solution to a very difficult problem, it is often helpful to
+        simplify the problem itself. Although the motivation for this problem arises out of the need to maintain a fair
+        peer-to-peer distributed network, the true problem has very little to do with networking or technology at all.
+        The challenges can be seen more clearly by taking a look at one of the most well-known issues in cryptocurrency,
+        the double-spend problem.
       </p>
       <p>
         Double-spend is the issue that arises in a distributed network when validation is split across multiple nodes,
@@ -94,12 +94,12 @@ const GuideTrust: FC = () => {
         For the bank node that first receives both transactions (Bank 3), it will be clear that both transactions can
         not be valid. In addition, given that in a peer-to-peer network different nodes are often spread out all across
         the world, the order in which transactions are received is largely dependent on the physical distance between
-        the two servers making it difficult to determine exactly which transaction truly happened first.
+        the two servers. This makes it difficult to determine exactly which transaction truly happened first.
       </p>
       <p>
-        When we view the problem as Bank 3 needing to decide between two valid transactions, one from Bank 1 and the
-        other from Bank 2, since both transactions can indeed be independently viewed as "valid" they can therefore be
-        cancelled out and removed from the equation entirely. What we are left with is a rather straightforward problem,
+        When we view the problem as Bank 3, we need to decide between two valid transactions, one from Bank 1 and the
+        other from Bank 2. Since both transactions can indeed be independently viewed as "valid," they can therefore be
+        canceled out and removed from the equation entirely. What we are left with is a rather straightforward problem,
         one in which Bank 3 must decide between Bank 1 and Bank 2. In the end, the question for Bank 3 is not about the
         transactions at all, but a much more simplified one:
       </p>
@@ -108,10 +108,10 @@ const GuideTrust: FC = () => {
         Since the creation of the very first distributed Blockchain, this seemingly simple question has become one of
         the most difficult challenges in all of computer science. We have already reviewed the two most widely used
         answers to this question, those being "the nodes with the most computing power" and "the nodes with the most
-        money". However, in an effort to find a mathematical formula that is capable of quantifying the level of "trust"
+        money." However, in an effort to find a mathematical formula that is capable of quantifying the level of "trust"
         needed to support a distributed peer-to-peer payment network, it is important to remember the purpose behind any
-        such formula at all. It is not a formula itself that is needed, but merely a method in which computers are able
-        to quickly provide an answer to the much familiar question:
+        such formula at all. It is not a formula itself that is needed, but merely a method in which computers can
+        quickly provide an answer to the very familiar question:
       </p>
       <p>"Who do I trust?"</p>
       <p>
@@ -119,7 +119,7 @@ const GuideTrust: FC = () => {
         answer this question as human beings. Only then may we then attempt to translate that solution into a
         mathematical formula or programmable function. As an individual viewing a network composed of multiple computers
         spread out across the world, all working towards achieving consensus regarding transaction validation, the
-        question that each and every one of us must answer on our own is:
+        question that every one of us must answer on our own is:
       </p>
       <p>"Who do we trust?" </p>
       <p>
@@ -133,20 +133,20 @@ const GuideTrust: FC = () => {
         In creating a computer network designed not only to expedite, but more importantly accurately reflect the
         unified consensus of global human decision making, it is critical that humans remain in control of the
         foundation in which the network is built. Only then are we able to build a network in which the trust between
-        nodes may remain flexible. A network in which trust may not only be strengthened over time, but more importantly
+        nodes may remain flexible. A network in which trust may not only be strengthened over time but more importantly,
         one which will allow for that trust to be broken.
       </p>
       <p>
         To maintain efficiency of an automated distributed network, nodes must still be given a value that will allow
         them to answer the question of "Who do I trust?", but the value provided should not stem from a mathematical
-        equation or predefined formula. This value must always originate from humans. It should remain flexible to allow
-        for adjustment as needed over time. The method in which this value is determined will be different for each and
+        equation or pre-defined formula. This value must always originate from humans. It should remain flexible to
+        allow for adjustment as needed over time. The method in which this value is determined will be different for
         every individual, yet this is the method that most accurately reflects true human nature.
       </p>
       <p>
         By establishing a network architecture in which discrepancies in transactions are able to be solved quickly and
         efficiently through the use of human quantified trust, it is possible to construct a highly scalable, highly
-        reliable, and highly performant globally distributed network. A trust based network architecture would
+        reliable, and highly performant globally distributed network. A trust-based network architecture would
         immediately reject any node deemed untrustworthy, regardless of computing power or the amount of wealth that
         node controlled.
       </p>
