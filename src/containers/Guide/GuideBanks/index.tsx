@@ -48,9 +48,9 @@ const GuideBanks: FC = () => {
       </p>
 
       <DocList variant="ul">
-        <li>time (older accounts are generally more trusted)</li>
-        <li>previous attempts to pay with insufficient funds</li>
-        <li>improper formatting of Txs</li>
+        <li>Time (older accounts are generally more trusted)</li>
+        <li>Previous attempts to pay with insufficient funds</li>
+        <li>Improper formatting of Txs</li>
       </DocList>
 
       <p>
@@ -58,16 +58,16 @@ const GuideBanks: FC = () => {
         determined by the individual banks. This will give users the ability to choose banks with the most reliable
         service and who offer the lowest transaction fees. Transaction fees are also determined on a per account basis,
         allowing the banks to reward their most trustworthy users. Transaction fees charged to user accounts will often
-        be tier based, as determined by the users trust level, rather than determining the fees for each individual
+        be tier based, as determined by the user's trust level, rather than determining the fees for each individual
         account one by one.
       </p>
       <p>
         <strong>Important Note:</strong> If and when a bank server goes down, the points of all accounts using that bank
         will always remain secure. This is because unlike a real-world bank, network banks do not store points. All
-        account balances are maintained and updated by the primary validator and both the root balance sheet and
-        blockchain are continuously backed up by several confirmation validators in the case where the primary validator
-        goes down. Banks act simply as routers and initial validation mechanisms to enhance the performance of the
-        network by distributing the processing power that would otherwise be required by a single node.
+        account balances are maintained and updated by the primary validator. Both the root balance sheet and blockchain
+        are continuously backed up by several confirmation validators, in the case where the primary validator goes
+        down. Banks act simply as routers and initial validation mechanisms to enhance the performance of the network by
+        distributing the processing power that would otherwise be required by a single node.
       </p>
       <p>
         This architecture does not imply that a single individual should only ever have one account. It is perfectly
@@ -80,10 +80,10 @@ const GuideBanks: FC = () => {
       </p>
 
       <DocList variant="ul">
-        <li>users choose their banks</li>
-        <li>banks choose their primary validators</li>
+        <li>Users choose their banks</li>
+        <li>Banks choose their primary validators</li>
         <li>
-          the banks confirmation validators will tell the bank when to switch primary validators (if/when the primary
+          The banks confirmation validators will tell the bank when to switch primary validators (if/when the primary
           validator becomes untrustworthy)
         </li>
       </DocList>
