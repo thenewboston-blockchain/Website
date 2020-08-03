@@ -17,10 +17,10 @@ const GuideResyncProcess: FC = () => {
       <DocImage alt="primary validator updated" maxWidth={580} src={ResyncPrimaryValidatorUpdated} />
 
       <p>
-        Any confirmation validators that receive this request who do not have the requesting bank set as their most
-        trusted will delete the requesting bank. This is because the bank is indicating that it is leaving the network,
-        and therefore a connection is no longer needed. Any confirmation validators that do have the requesting bank set
-        as their most trusted bank will follow the guidance of that bank and sync to the new primary validator.
+        Any confirmation validators that receive this request, who do not have the requesting bank set as their most
+        trusted, will delete the requesting bank. This is because the bank is indicating that it is leaving the network,
+        and therefore a connection is no longer needed. Any confirmation validators that have the requesting bank set as
+        their most trusted bank will follow the guidance of that bank and sync to the new primary validator.
       </p>
     </>
   );
@@ -30,11 +30,11 @@ const GuideResyncProcess: FC = () => {
       <p>
         After a confirmation validator has upgraded to the primary validator, it will send out an upgrade notice to all
         connected banks. This is a notice from a previous CV that they are now a PV. If the requesting validator is more
-        trusted than the banks current PV, the bank will switch to the new PV. This is because the banks always prefer
+        trusted than the bank's current PV, the bank will switch to the new PV. This is because the banks always prefer
         the most trusted validator to be the PV for the network.
       </p>
       <p>
-        If the requesting validator is less trusted than the banks current PV, the bank will delete the requesting
+        If the requesting validator is less trusted than the bank's current PV, the bank will delete the requesting
         validator. This is because banks can only have one PV.
       </p>
       <DocImage alt="upgrade notice" maxWidth={400} src={ResyncUpgradeNotice} />
@@ -44,8 +44,8 @@ const GuideResyncProcess: FC = () => {
   const renderUpgradeRequest = (): ReactNode => (
     <>
       <p>
-        When a bank alters the trust levels of their validators, if the results indicate that there are now confirmation
-        validators that are more trusted than the banks primary validator, the bank will send out a request to the
+        When a bank alters the trust levels of their validators and the results indicate that there are now confirmation
+        validators that are more trusted than the bank's primary validator, the bank will send out a request to the
         confirmation validators requesting one of them upgrade to a primary validator. This is because the banks always
         prefer the most trusted validator to be the primary validator for the network.
       </p>
@@ -56,7 +56,7 @@ const GuideResyncProcess: FC = () => {
       </p>
       <p>
         In order to prevent multiple confirmation validators from upgrading to primary validators at the same time (in
-        the case that multiple CV's view that bank as their most trusted), the bank will send out these request one by
+        the case that multiple CV's view that bank as their most trusted), the bank will send out these requests one by
         one rather than sending out several requests to all CV's simultaneously.
       </p>
 
@@ -69,21 +69,21 @@ const GuideResyncProcess: FC = () => {
 
       <DocList variant="ul">
         <li>
-          if the CV does not have that bank set as their most trusted bank, the CV will respond "no" and the bank will
-          continue along with their next most trusted CV
+          If the CV does not have that bank set as their most trusted bank, the CV will respond "no" and the bank will
+          continue along with their next most trusted CV.
         </li>
         <li>
-          if the CV does have that bank set as their most trusted bank, the CV will respond "yes" and upgrade themselves
-          to a PV (as shown above)
+          If the CV does have that bank set as their most trusted bank, the CV will respond "yes" and upgrade themselves
+          to a PV (as shown above).
         </li>
       </DocList>
 
-      <p>If and when a CV responds "yes", the requesting bank will:</p>
+      <p>If and when a CV responds "yes," the requesting bank will:</p>
       <DocList variant="ul">
         <li>
-          break out of the loop (stop sending <strong>/upgrade_request</strong>)
+          Break out of the loop (stop sending <strong>/upgrade_request</strong>)
         </li>
-        <li>set that CV as their new PV</li>
+        <li>Set that CV as their new PV</li>
       </DocList>
     </>
   );

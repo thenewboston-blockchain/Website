@@ -9,14 +9,14 @@ const GuideTransactionFees: FC = () => {
   return (
     <DocContainer className="GuideTransactionFees" title="Transaction Fees">
       <p>
-        Users are incentivized to maintain bank and validator nodes through the collection of transaction fees. The fee
-        amounts and fee structures are set entirely by the owners of the nodes.
+        Users are incentivized to maintain bank and validator nodes through the collection of transaction fees. The
+        owners of the nodes set the fee amounts and fee structures entirely.
       </p>
       <p>
         As banks and validators join the network, they will announce their transaction fees. This is the amount (in
         points) that nodes will charge per block processed. Nodes may charge a fixed transaction fee for all users, or
-        offer tier based fees based on trust levels. This is one way in which more trusted user accounts and more
-        trusted banks may be rewarded by the network.
+        offer tier-based fees based on trust levels. This is one way in which the network may reward more trusted user
+        accounts and more trusted banks.
       </p>
       <p>
         Users will likely attempt to join the banks that offer the lowest transaction fees. There are also additional
@@ -58,21 +58,18 @@ const GuideTransactionFees: FC = () => {
         ]}
       />
 
-      <p>
-        Once the block has been reviewed, signed, and sent to the bank by Amy, the following functions will be
-        performed:
-      </p>
+      <p>Once Amy has reviewed, signed, and sent the block to the bank, the following functions will be performed:</p>
 
       <DocList variant="ol">
         <li>Amy's bank will validate that:</li>
         <ol type="a">
-          <li>The transaction (Tx) is formatted properly (according to network protocol)</li>
+          <li>The transaction (Tx) is formatted properly (according to network protocol).</li>
           <li>
-            The Tx fees included in Amy's signed block are in agreement with the expected fee structure of the network
+            The Tx fees included in Amy's signed block are in agreement with the expected fee structure of the network.
           </li>
           <li>
             If any aspect of the block can not be validated, an error will be returned to Amy and the process will not
-            continue
+            continue.
           </li>
         </ol>
         <li>
@@ -82,10 +79,10 @@ const GuideTransactionFees: FC = () => {
         <ol type="a">
           <li>
             The block and all transactions are formatted properly (necessary to store the data on the blockchain and
-            update account balances)
+            update account balances).
           </li>
-          <li>The correct fees to the validator are included</li>
-          <li>Amy has enough funds to cover the total cost of all Txs</li>
+          <li>The correct fees to the validator are included.</li>
+          <li>Amy has enough funds to cover the total cost of all Txs.</li>
         </ol>
         <li>
           After the block is confirmed by the validator, the validator will add a confirmation block to the blockchain
