@@ -1,0 +1,131 @@
+$content-padding: 128px 64px 128px 128px;
+
+.HomeInstantTransactions {
+  background: #f6f9fc;
+  display: flex;
+  flex-direction: column;
+  min-height: 1440px;
+  position: relative;
+
+  svg.background-graphic {
+    display: block;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .content-container {
+    margin-bottom: -18rem;
+    padding: $content-padding;
+    width: 100%;
+    z-index: 1;
+
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      line-height: 120%;
+      margin-top: 30px;
+    }
+
+    .comparison-card-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 60px;
+
+      .arrow-container {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 60px;
+      }
+
+      .comparison-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 20px 40px rgba(11, 38, 63, 0.15);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 390px;
+        padding: 30px 32px 60px;
+        width: 360px;
+
+        img.crypto-logo {
+          height: 30px;
+        }
+
+        .comparison-card-stat {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          margin-top: 60px;
+
+          .attribute {
+            font-size: 20px;
+            font-weight: 500;
+            margin-top: 12px;
+          }
+
+          .value {
+            font-size: 36px;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+
+    .HomeInstantTransactions-mini {
+      color: #556cd6;
+      font-weight: 500;
+      line-height: 120%;
+    }
+
+    .text-snippets {
+      display: flex;
+      margin-top: 30px;
+
+      .left-block,
+      .right-block {
+        flex: 1;
+        font-size: 16px;
+        line-height: 150%;
+      }
+
+      .left-block {
+        margin-right: 30px;
+      }
+
+      .right-block {
+        margin-left: 30px;
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .content-container {
+      padding: 32px 32px 128px;
+
+      .comparison-card-container {
+        align-items: center;
+        flex-direction: column;
+
+        .arrow-container {
+          height: 60px;
+          transform: rotate(90deg);
+          width: auto;
+        }
+      }
+
+      .text-snippets {
+        flex-direction: column;
+
+        .left-block {
+          margin: 0 0 30px 0;
+        }
+
+        .right-block {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
