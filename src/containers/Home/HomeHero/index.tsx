@@ -9,7 +9,7 @@ import './HomeHero.scss';
 const HomeHero: FC = () => {
   return (
     <div className="HomeHero">
-      <svg className="background-graphic" viewBox="0 0 1366 396">
+      <svg className="HomeHero__background-graphic" viewBox="0 0 1366 396">
         <path fill="#F6F9FC" fillRule="nonzero" d="M0 395.5L1366 106V0H0v395.5z" />
       </svg>
       <div className="HomeHero__wrapper">

@@ -48,7 +48,7 @@ const HomeInstantTransactions: FC = () => {
               within any given block, the earliest transactions experience significant delays as later transactions
               continue to accumulate until the entire block eventually becomes verified.
             </p>
-            <NavLink to="/guide/introduction">
+            <NavLink className="display-large" to="/guide/introduction">
               <Button>View Guide</Button>
             </NavLink>
           </div>
@@ -61,6 +61,9 @@ const HomeInstantTransactions: FC = () => {
               results that requires distribution among peers. This allows for highly performant transaction validation
               within a decentralized network.
             </p>
+            <NavLink className="display-small" to="/guide/introduction">
+              <Button>View Guide</Button>
+            </NavLink>
           </div>
         </div>
         {renderComparisonCards()}

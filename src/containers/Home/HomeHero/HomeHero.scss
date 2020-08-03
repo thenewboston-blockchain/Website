@@ -6,7 +6,7 @@ $content-padding: 128px 64px 128px 128px;
   min-height: 700px;
   position: relative;
 
-  svg.background-graphic {
+  &__background-graphic {
     position: absolute;
     top: 0;
     z-index: -1;
