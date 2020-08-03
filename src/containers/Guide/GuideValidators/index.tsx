@@ -13,25 +13,25 @@ const GuideValidators: FC = () => {
         the balances of all accounts involved.
       </p>
       <p>
-        The validators root account file and blockchain (record of all confirmed transactions since the account file
+        The validator's root account file and blockchain (record of all confirmed transactions since the account file
         creation) are always made publicly available for the following purposes:
       </p>
       <DocList variant="ul">
-        <li>allowing all network participants (users, banks, and validators) to audit all data</li>
+        <li>Allowing all network participants (users, banks, and validators) to audit all data</li>
         <li>
-          allowing confirmation validators to continuously confirm all account balances and maintain frequent backups
+          Allowing confirmation validators to continuously confirm all account balances and maintain frequent backups
         </li>
       </DocList>
       <p>
-        Validators will also assign trust levels to banks. The assignment of banks trust will be based on any number of
-        criteria as determined by the validator, but common factors may include improperly formatted transactions and
-        server reliability. Validators will also collect transaction fees from transactions sent to them from the banks
-        using a tier based fee structure based on bank trust levels. This is why it is important to build and maintain
-        trust with all nodes in the network.
+        Validators will also assign trust levels to banks. A bank's trust will be based on any number of criteria as
+        determined by the validator, but common factors may include improperly formatted transactions and server
+        reliability. Validators will also collect transaction fees from transactions sent to them from the banks using a
+        tier-based fee structure based on bank trust levels. This is why it is important to build and maintain trust
+        with all nodes in the network.
       </p>
       <p>
         In addition to the elected primary validator for the network, the network will also be composed of several
-        confirmation validators. The purpose of confirmation validators are to both continuously validate and backup all
+        confirmation validators. The purpose of confirmation validators is to both continuously validate and back up all
         account balances, as well as serve as backups in the case where the primary validator were to go offline.
       </p>
 
@@ -48,9 +48,9 @@ const GuideValidators: FC = () => {
       <p>
         <strong>Important Note:</strong> While syncing, if a confirmation validator ever receives data from the primary
         validator that is inaccurate or otherwise unable to be verified, the confirmation validator will reject the
-        updates and immediately end synchronization with the primary validator. The banks, upon notification of the
-        inaccurate data (sent to them from the confirmation validators) will switch primary validators as well as punish
-        the original validator in the form of reduced trust.
+        updates and immediately end synchronization with the primary validator. Upon notification of the inaccurate data
+        (sent to them from the confirmation validators), the banks will switch primary validators as well as punish the
+        original validator in the form of reduced trust.
       </p>
     </DocContainer>
   );
