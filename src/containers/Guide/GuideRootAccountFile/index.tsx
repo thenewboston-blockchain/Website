@@ -11,16 +11,15 @@ const GuideRootAccountFile: FC = () => {
         The root account file is a historic snapshot of all account balances at a given point in time. Every validator
         in the network, both primary and confirmation validators, generate and maintain their own root account file.
         Different validators may have different account files depending on when the snapshot was taken (which is usually
-        when the node first comes online). However given the architecture of the blockchain, all validator account files
-        are able to be downloaded and verified by all other nodes in the network regardless of when the snapshot was
-        taken.
+        when the node first comes online). However, given the architecture of the blockchain, all other nodes in the
+        network can download and verify all validator account files regardless of when the snapshot was taken.
       </p>
 
       <DocImage alt="root account file" maxWidth={440} src={RootAccountFileDiagram} />
 
       <p>
         A key distinction between the architecture outlined above and the Bitcoin Blockchain (as well as many others) is
-        that the entire transaction history of Bitcoin is maintained by it's Blockchain, while in this network
+        that the entire transaction history of Bitcoin is maintained by its Blockchain, while in this network
         architecture it is not. But how then is the network able to verify the integrity of the account file in order to
         validate transactions without access to the complete transaction history? The answer to this can be given
         through a simplified example.
@@ -28,7 +27,7 @@ const GuideRootAccountFile: FC = () => {
       <p>
         Imagine a very primitive economy that consisted of only three people. We can call them Amy, Bucky, and Carl. Now
         let's give each of them $10. The first transaction is Amy buying a sandwich from Carl for $2. The resulting
-        transactions and account file would look like this.
+        transactions and account file would look like this:
       </p>
 
       <TableBorderGrid
@@ -53,9 +52,9 @@ const GuideRootAccountFile: FC = () => {
         It is in Bucky's best interest to verify that the economy, in which he is a part of, is fair.
       </p>
       <p>
-        After verifying all of the transactions are legitimate, Bucky makes a copy of the account file in his notebook.
-        The next day, after Bucky comes home from work he takes a look at the account file again and notices some
-        changes.
+        After verifying that all of the transactions are legitimate, Bucky makes a copy of the account file in his
+        notebook. The next day, after Bucky comes home from work, he takes a look at the account file again and notices
+        some changes.
       </p>
       <TableBorderGrid
         headers={['Last Tx ID', 'User', 'Balance']}
@@ -80,8 +79,8 @@ const GuideRootAccountFile: FC = () => {
         title="Transaction Log"
       />
       <p>
-        Unfortunately, the bank has not updated it's database in years and is only able to store up to 2 rows in the
-        transaction table (it's a very primitive economy after all). The historical log of the first transaction is lost
+        Unfortunately, the bank has not updated its database in years and is only able to store up to two rows in the
+        transaction table; it's a very primitive economy after all. The historical log of the first transaction is lost,
         and Bucky never wrote it down. However, since Bucky had already verified the first transaction and also made a
         copy of the account file at that point in time, he does not need to view the first transaction again to ensure
         that the economy is still fair. In fact, even if Bucky did have a record of the first transaction, he would not
@@ -90,20 +89,20 @@ const GuideRootAccountFile: FC = () => {
       </p>
 
       <DocList variant="ol">
-        <li>start with the most recent verified account file (from his notebook)</li>
+        <li>Start with the most recent verified account file (from his notebook).</li>
         <li>
-          beginning with the first unverified transaction (in this case Tx ID: 2) apply each transaction to the verified
-          account file
+          Beginning with the first unverified transaction (in this case Tx ID: 2), apply each transaction to the
+          verified account file.
         </li>
-        <li>compare his results with the public account file</li>
+        <li>Compare his results with the public account file.</li>
         <ol type="a">
-          <li>if all balances match, the economy is still fair</li>
-          <li>if they don't match, someone must be cheating</li>
+          <li>If all balances match, the economy is still fair.</li>
+          <li>If they don't match, someone must be cheating.</li>
         </ol>
       </DocList>
 
       <p>
-        Bucky concludes that after the second transaction in which Amy bought a tuna sandwich from Carl for $1 that the
+        Bucky concludes that after the second transaction, in which Amy bought a tuna sandwich from Carl for $1, the
         account file must have been:
       </p>
 
@@ -118,7 +117,7 @@ const GuideRootAccountFile: FC = () => {
       />
 
       <p>
-        Also, after the third transaction in which Carl bought a gold watch from Amy for $6 that the account file would
+        Also, after the third transaction, in which Carl bought a gold watch from Amy for $6, the account file would
         then be:
       </p>
 
@@ -149,13 +148,13 @@ const GuideRootAccountFile: FC = () => {
       </p>
       <p>
         This is why in the real network, it is important for all nodes to maintain a copy of the transaction history
-        (via the blockchain) for as far back as they are able to. In practice, nodes will never need to maintain a
-        record of transactions more than a few hours old. This is because every node in the system is always in constant
-        communication with each other, and every node is always verifying the transactions of others. Even though the
-        architecture is structured around a central primary validator, if the account file or blockchain produced by
-        that validator is ever deemed "invalid" by the confirmation validators who are continuously verifying the data,
-        all nodes will reject the updated balances, decrease trust in that validator, and switch over to a new primary
-        validator as a replacement.
+        (via the blockchain) for as far back as they can. In practice, nodes will never need to maintain a record of
+        transactions more than a few hours old. This is because every node in the system is always in constant
+        communication with each other, and every node is always verifying the transactions of others. Overall, the
+        architecture is structured around a central primary validator. Despite this, if the account file or blockchain
+        produced by that validator is ever deemed "invalid" by the confirmation validators who are continuously
+        verifying the data, all nodes will reject the updated balances, decrease trust in that validator, and switch
+        over to a new primary validator as a replacement.
       </p>
       <p>
         We will cover the concept of "trust" in much more detail later on, but for now we can simplify the concept down
@@ -163,15 +162,15 @@ const GuideRootAccountFile: FC = () => {
       </p>
 
       <DocList variant="ul">
-        <li>nodes always want to connect to other nodes that they trust</li>
-        <li>trust is increased when you can prove that a given node is telling the truth</li>
+        <li>Nodes always want to connect to other nodes that they trust.</li>
+        <li>Trust is increased when you can prove that a given node is telling the truth.</li>
         <ul>
-          <li>meaning that the data received from that node can be validated</li>
+          <li>Meaning that the data received from that node can be validated</li>
         </ul>
         <li>
-          the further back in time a node is able to provide a transaction history via the blockchain, the more
+          The further back in time a node is able to provide a transaction history via the blockchain, the more
           transactions are able to be verified (by comparing them against your own) and the more trust can be
-          established between nodes
+          established between nodes.
         </li>
       </DocList>
     </DocContainer>

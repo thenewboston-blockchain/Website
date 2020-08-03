@@ -15,7 +15,7 @@ const GuideNodeIdentifier: FC = () => {
 
       <p>
         When a node is first deployed, it will provide a unique NID to the network. As nodes become connected, they will
-        keep record of each others NID as a method of identification. Later on as requests are sent between nodes, the
+        keep record of each other's NID as a method of identification. Later on, as requests are sent between nodes, the
         receiving node is able to inspect the digital signature to verify the authenticity of both the sending node and
         the message itself. This system also provides an additional benefit in allowing requests to be sent on behalf of
         the node maintainer without requiring the request to originate from the node itself.
@@ -23,7 +23,7 @@ const GuideNodeIdentifier: FC = () => {
       <p>
         An example of where this is useful is during the{' '}
         <NavLink to="/bank-api/connection-requests">connection request</NavLink> process. A sample connection request
-        body can be seen below.
+        body can be seen below:
       </p>
 
       <RequestResponseSnippet
@@ -50,7 +50,7 @@ const GuideNodeIdentifier: FC = () => {
 
       <p>
         Although all nodes are already configured with an account number (the public key from a separate key-pair), the
-        purposes of the two key-pair systems are quite different. A servers NID should never change after deployment.
+        purposes of the two key-pair systems are quite different. A server's NID should never change after deployment.
         However, users are free to change the account number where they wish to receive their Tx fees at any time.
       </p>
       <p>

@@ -9,14 +9,14 @@ const GuideResyncTriggers: FC = () => {
     <>
       <p>Banks will always set their primary validator to the validator that is:</p>
       <DocList variant="ul">
-        <li>the most trusted</li>
-        <li>online</li>
-        <li>configured as a primary validator</li>
+        <li>The most trusted</li>
+        <li>Online</li>
+        <li>Configured as a primary validator</li>
       </DocList>
 
       <p>Confirmation validators will always:</p>
       <DocList variant="ul">
-        <li>follow the guidance of their most trusted bank</li>
+        <li>Follow the guidance of their most trusted bank</li>
       </DocList>
     </>
   );
@@ -24,7 +24,7 @@ const GuideResyncTriggers: FC = () => {
   const renderResyncTriggers = (): ReactNode => (
     <>
       <p>
-        A resync may be triggered by a bank when the trust levels of it's validators are changed. Each of the following
+        A resync may be triggered by a bank when the trust levels of its validators are changed. Each of the following
         actions may result in a change in trust.
       </p>
 
@@ -57,14 +57,14 @@ const GuideResyncTriggers: FC = () => {
 
       <DocList variant="ul">
         <li>
-          weighted trust is the measure of influence that a CV has on a banks decision{' '}
+          Weighted trust is the measure of influence that a CV has on a bank's decision{' '}
           <strong>whether or not to switch primary validators</strong>
         </li>
         <li>
-          the weighted trust of a CV is calculated as a ratio and is equal to the trust of that CV vs. the total trust
-          of all CV's
+          The weighted trust of a CV is calculated as a ratio and is equal to the trust of that CV vs the total trust of
+          all CV's
         </li>
-        <li>for example, if a Bank was connected to four CV's then the weighted trust for each may look like this:</li>
+        <li>For example, if a bank was connected to four CV's, then the weighted trust for each may look like this:</li>
       </DocList>
 
       <TableBorderGrid
@@ -85,10 +85,10 @@ const GuideResyncTriggers: FC = () => {
       </p>
       <p>
         The last remaining event that may trigger an automated decrease in the primary validator trust is a network
-        error. The most common of which is when the primary validator goes offline, but can also occur if the primary
-        validator becomes misconfigured in any way. When this occurs and the bank becomes unable to communicate with
-        their primary validator, the bank will automatically set the trust level of the primary validator to 0 and
-        initiate the resync process to choose a new primary validator.
+        error. The most common is when the primary validator goes offline, but can also occur if the primary validator
+        becomes misconfigured in any way. When this occurs and the bank becomes unable to communicate with their primary
+        validator, the bank will automatically set the trust level of the primary validator to 0 and initiate the resync
+        process to choose a new primary validator.
       </p>
 
       <DocImage alt="resync trigger network error" maxWidth={900} src={ResyncTriggerNetworkError} />
@@ -99,7 +99,7 @@ const GuideResyncTriggers: FC = () => {
     <DocContainer className="GuideResyncTriggers" title="Resync Triggers">
       <p>
         The process in which banks switch to a new primary validator is referred to as a <strong>resync</strong>. In
-        reviewing the resync process, it is important to keep in mind the following notes.
+        reviewing the resync process, it is important to keep in mind the following notes:
       </p>
       {renderOverview()}
       {renderResyncTriggers()}
