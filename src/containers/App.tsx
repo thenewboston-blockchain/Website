@@ -36,37 +36,37 @@ const App: FC = () => {
         </Route>
 
         <Route path="/bank-api/:chapter?">
-          <LayoutDashboard>
+          <LayoutDashboard leftMenuType="apis">
             <BankApi />
           </LayoutDashboard>
         </Route>
 
         <Route path="/confirmation-validator-api/:chapter?">
-          <LayoutDashboard>
+          <LayoutDashboard leftMenuType="apis">
             <ConfirmationValidatorApi />
           </LayoutDashboard>
         </Route>
 
         <Route path="/deployment-guide/:chapter?">
-          <LayoutDashboard>
+          <LayoutDashboard leftMenuType="guides">
             <DeploymentGuide />
           </LayoutDashboard>
         </Route>
 
         <Route path="/guide/:chapter?">
-          <LayoutDashboard>
+          <LayoutDashboard leftMenuType="guides">
             <Guide />
           </LayoutDashboard>
         </Route>
 
         <Route path="/primary-validator-api/:chapter?">
-          <LayoutDashboard>
+          <LayoutDashboard leftMenuType="apis">
             <PrimaryValidatorApi />
           </LayoutDashboard>
         </Route>
 
         <Route path="/style-guide/:chapter?">
-          <LayoutDashboard>
+          <LayoutDashboard leftMenuType="guides">
             <StyleGuide />
           </LayoutDashboard>
         </Route>

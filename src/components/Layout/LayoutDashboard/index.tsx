@@ -6,7 +6,11 @@ import LeftMenu from '../LeftMenu';
 import TopNav from '../TopNav';
 import './LayoutDashboard.scss';
 
-const LayoutDashboard: FC = ({children}) => {
+interface ComponentProps {
+  leftMenuType: 'apis' | 'guides';
+}
+
+const LayoutDashboard: FC<ComponentProps> = ({children, leftMenuType}) => {
   const [leftMenuOpen, toggleLeftMenuOpen] = useState(window.innerWidth > 1200);
   const {pathname} = useLocation();
   const rightDiv = useRef<HTMLDivElement>(null);
@@ -29,7 +33,7 @@ const LayoutDashboard: FC = ({children}) => {
         <TopNav toggleLeftMenu={toggleLeftMenu} />
       </div>
       <div className="LayoutDashboard__left">
-        <LeftMenu />
+        <LeftMenu leftMenuType={leftMenuType} />
       </div>
       <div className="LayoutDashboard__right" ref={rightDiv}>
         {children}

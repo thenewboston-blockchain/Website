@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, ReactNode} from 'react';
 import {NavLink} from 'react-router-dom';
 
 import {Icon, IconType} from 'components';
@@ -6,32 +6,13 @@ import {Icon, IconType} from 'components';
 import LeftMenuGroup from '../LeftMenuGroup';
 import './LeftMenu.scss';
 
-const LeftMenu: FC = () => {
-  return (
-    <nav className="LeftMenu">
-      <LeftMenuGroup
-        leftIcon={<Icon className="react-icons" icon={IconType.document} size={20} />}
-        title="Guide"
-        urlBase="guide"
-      >
-        <NavLink to="/guide/introduction">Introduction</NavLink>
-        <NavLink to="/guide/accounts">Accounts</NavLink>
-        <NavLink to="/guide/blocks">Blocks</NavLink>
-        <NavLink to="/guide/transaction-fees">Transaction Fees</NavLink>
-        <NavLink to="/guide/root-account-file">Root Account File</NavLink>
-        <NavLink to="/guide/banks">Banks</NavLink>
-        <NavLink to="/guide/validators">Validators</NavLink>
-        <NavLink to="/guide/confirmation-validators">Confirmation Validators</NavLink>
-        <NavLink to="/guide/confirmation-services">Confirmation Services</NavLink>
-        <NavLink to="/guide/node-identifiers">Node Identifiers</NavLink>
-        <NavLink to="/guide/resync-triggers">Resync Triggers</NavLink>
-        <NavLink to="/guide/resync-process">Resync Process</NavLink>
-        <NavLink to="/guide/trust">Trust</NavLink>
-        <NavLink to="/guide/initial-funds">Initial Funds</NavLink>
-        <NavLink to="/guide/best-practices">Best Practices</NavLink>
-        <NavLink to="/guide/future-development">Future Development</NavLink>
-      </LeftMenuGroup>
+interface ComponentProps {
+  leftMenuType: 'apis' | 'guides';
+}
 
+const LeftMenu: FC<ComponentProps> = ({leftMenuType}) => {
+  const renderApiItems = (): ReactNode => (
+    <>
       <LeftMenuGroup
         leftIcon={<Icon className="react-icons" icon={IconType.accountBalance} size={20} />}
         title="Bank API"
@@ -75,6 +56,33 @@ const LeftMenu: FC = () => {
         <NavLink to="/confirmation-validator-api/connection-requests">Connection Requests</NavLink>
         <NavLink to="/confirmation-validator-api/validators">Validators</NavLink>
       </LeftMenuGroup>
+    </>
+  );
+
+  const renderGuideItems = (): ReactNode => (
+    <>
+      <LeftMenuGroup
+        leftIcon={<Icon className="react-icons" icon={IconType.document} size={20} />}
+        title="Guide"
+        urlBase="guide"
+      >
+        <NavLink to="/guide/introduction">Introduction</NavLink>
+        <NavLink to="/guide/accounts">Accounts</NavLink>
+        <NavLink to="/guide/blocks">Blocks</NavLink>
+        <NavLink to="/guide/transaction-fees">Transaction Fees</NavLink>
+        <NavLink to="/guide/root-account-file">Root Account File</NavLink>
+        <NavLink to="/guide/banks">Banks</NavLink>
+        <NavLink to="/guide/validators">Validators</NavLink>
+        <NavLink to="/guide/confirmation-validators">Confirmation Validators</NavLink>
+        <NavLink to="/guide/confirmation-services">Confirmation Services</NavLink>
+        <NavLink to="/guide/node-identifiers">Node Identifiers</NavLink>
+        <NavLink to="/guide/resync-triggers">Resync Triggers</NavLink>
+        <NavLink to="/guide/resync-process">Resync Process</NavLink>
+        <NavLink to="/guide/trust">Trust</NavLink>
+        <NavLink to="/guide/initial-funds">Initial Funds</NavLink>
+        <NavLink to="/guide/best-practices">Best Practices</NavLink>
+        <NavLink to="/guide/future-development">Future Development</NavLink>
+      </LeftMenuGroup>
 
       <LeftMenuGroup
         leftIcon={<Icon className="react-icons" icon={IconType.dns} size={20} />}
@@ -93,8 +101,17 @@ const LeftMenu: FC = () => {
         <NavLink to="/style-guide/react">React / JSX</NavLink>
         <NavLink to="/style-guide/css">CSS / SASS</NavLink>
       </LeftMenuGroup>
-    </nav>
+    </>
   );
+
+  const renderMenuItems = (): ReactNode => {
+    return {
+      apis: renderApiItems(),
+      guides: renderGuideItems(),
+    }[leftMenuType];
+  };
+
+  return <nav className="LeftMenu">{renderMenuItems()}</nav>;
 };
 
 export default LeftMenu;

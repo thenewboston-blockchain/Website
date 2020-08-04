@@ -30,7 +30,10 @@ const TopNav: FC<ComponentProps> = ({toggleLeftMenu}) => {
         Contribute
       </NavLink>
       <NavLink className="TopNav__a" to="/guide/introduction">
-        Developers
+        Guides
+      </NavLink>
+      <NavLink className="TopNav__a" to="/bank-api/accounts">
+        APIs
       </NavLink>
       <NavLink className="TopNav__a" to="/roadmap">
         Roadmap
