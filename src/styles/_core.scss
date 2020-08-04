@@ -2,15 +2,20 @@
   box-sizing: border-box;
 }
 
+body,
+html {
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
 body {
   background: var(--color-bg);
   color: var(--color-gray-2);
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 22px;
-  margin: auto;
   max-height: 100vh;
-  overflow: hidden;
 }
 
 h1,

@@ -1,40 +1,13 @@
-import React, {FC, ReactNode} from 'react';
+import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
 import {Button} from 'components';
 
-import Bitcoin from 'assets/svgs/bitcoin.svg';
-import Logo from 'assets/svgs/thenewboston.svg';
-import RightArrow from 'assets/svgs/right-arrow.svg';
+import HomeComparisonCards from 'containers/Home/HomeComparisonCards';
 
 import './HomeInstantTransactions.scss';
 
 const HomeInstantTransactions: FC = () => {
-  const renderComparisonCardStat = (attribute: string, value: string): ReactNode => (
-    <div className="comparison-card-stat">
-      <div className="value">{value}</div>
-      <div className="attribute">{attribute}</div>
-    </div>
-  );
-
-  const renderComparisonCards = (): ReactNode => (
-    <div className="HomeInstantTransactions__comparison-card-container">
-      <div className="comparison-card">
-        <img alt="logo" className="crypto-logo" src={Bitcoin} />
-        {renderComparisonCardStat('txs per second', '7')}
-        {renderComparisonCardStat('avg. tx time', '~5 min')}
-      </div>
-      <div className="arrow-container">
-        <img alt="right arrow" className="right-arrow" src={RightArrow} />
-      </div>
-      <div className="comparison-card">
-        <img alt="logo" className="crypto-logo" src={Logo} />
-        {renderComparisonCardStat('txs per second', '3,238')}
-        {renderComparisonCardStat('avg. tx time', '0.015 seconds')}
-      </div>
-    </div>
-  );
-
   return (
     <div className="HomeInstantTransactions">
       <div className="HomeInstantTransactions__content-container">
@@ -66,11 +39,12 @@ const HomeInstantTransactions: FC = () => {
             </NavLink>
           </div>
         </div>
-        {renderComparisonCards()}
+        <HomeComparisonCards />
       </div>
       <svg className="HomeInstantTransactions__background-graphic" viewBox="0 0 1366 659" fill="none">
         <path d="M1366 0L0 147L0 659H1366.5L1366 0Z" fill="#131F41" />
       </svg>
+      <div className="HomeInstantTransactions__blue-block" />
     </div>
   );
 };
