@@ -1,9 +1,8 @@
 import React, {FC, ReactNode} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {Icon, IconType} from 'components';
-
 import LeftMenuGroup from '../LeftMenuGroup';
+
 import './LeftMenu.scss';
 
 interface ComponentProps {
@@ -13,11 +12,7 @@ interface ComponentProps {
 const LeftMenu: FC<ComponentProps> = ({leftMenuType}) => {
   const renderApiItems = (): ReactNode => (
     <>
-      <LeftMenuGroup
-        leftIcon={<Icon className="react-icons" icon={IconType.accountBalance} size={20} />}
-        title="Bank API"
-        urlBase="bank-api"
-      >
+      <LeftMenuGroup title="Bank API" urlBase="bank-api">
         <NavLink to="/bank-api/accounts">Accounts</NavLink>
         <NavLink to="/bank-api/bank-transactions">Bank Transactions</NavLink>
         <NavLink to="/bank-api/banks">Banks</NavLink>
@@ -29,11 +24,7 @@ const LeftMenu: FC<ComponentProps> = ({leftMenuType}) => {
         <NavLink to="/bank-api/validators">Validators</NavLink>
       </LeftMenuGroup>
 
-      <LeftMenuGroup
-        leftIcon={<Icon className="react-icons" icon={IconType.verifiedUser} size={20} />}
-        title="Primary Validator API"
-        urlBase="primary-validator-api"
-      >
+      <LeftMenuGroup title="Primary Validator API" urlBase="primary-validator-api">
         <NavLink to="/primary-validator-api/accounts">Accounts</NavLink>
         <NavLink to="/primary-validator-api/bank-blocks">Bank Blocks</NavLink>
         <NavLink to="/primary-validator-api/banks">Banks</NavLink>
@@ -43,11 +34,7 @@ const LeftMenu: FC<ComponentProps> = ({leftMenuType}) => {
         <NavLink to="/primary-validator-api/validators">Validators</NavLink>
       </LeftMenuGroup>
 
-      <LeftMenuGroup
-        leftIcon={<Icon className="react-icons" icon={IconType.checkCircle} size={20} />}
-        title="Confirmation Validator API"
-        urlBase="confirmation-validator-api"
-      >
+      <LeftMenuGroup title="Confirmation Validator API" urlBase="confirmation-validator-api">
         <NavLink to="/confirmation-validator-api/accounts">Accounts</NavLink>
         <NavLink to="/confirmation-validator-api/bank-confirmation-services">Confirmation Services</NavLink>
         <NavLink to="/confirmation-validator-api/banks">Banks</NavLink>
@@ -61,11 +48,7 @@ const LeftMenu: FC<ComponentProps> = ({leftMenuType}) => {
 
   const renderGuideItems = (): ReactNode => (
     <>
-      <LeftMenuGroup
-        leftIcon={<Icon className="react-icons" icon={IconType.document} size={20} />}
-        title="Guide"
-        urlBase="guide"
-      >
+      <LeftMenuGroup title="Guide" urlBase="guide">
         <NavLink to="/guide/introduction">Introduction</NavLink>
         <NavLink to="/guide/accounts">Accounts</NavLink>
         <NavLink to="/guide/blocks">Blocks</NavLink>
@@ -84,20 +67,12 @@ const LeftMenu: FC<ComponentProps> = ({leftMenuType}) => {
         <NavLink to="/guide/future-development">Future Development</NavLink>
       </LeftMenuGroup>
 
-      <LeftMenuGroup
-        leftIcon={<Icon className="react-icons" icon={IconType.dns} size={20} />}
-        title="Deployment Guides"
-        urlBase="deployment-guide"
-      >
+      <LeftMenuGroup title="Deployment Guides" urlBase="deployment-guide">
         <NavLink to="/deployment-guide/bank">Bank</NavLink>
         <NavLink to="/deployment-guide/validator">Validator</NavLink>
       </LeftMenuGroup>
 
-      <LeftMenuGroup
-        leftIcon={<Icon className="react-icons" icon={IconType.eslint} size={20} />}
-        title="Style Guides"
-        urlBase="style-guide"
-      >
+      <LeftMenuGroup title="Style Guides" urlBase="style-guide">
         <NavLink to="/style-guide/react">React / JSX</NavLink>
         <NavLink to="/style-guide/css">CSS / SASS</NavLink>
       </LeftMenuGroup>

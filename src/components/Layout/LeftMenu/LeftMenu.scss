@@ -1,13 +1,12 @@
 $item-padding: 10px 16px;
 
 .LeftMenu {
-  color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 12px 0;
+  line-height: 120%;
+  padding: 20px 0;
 
   a {
-    color: #fff;
     padding: $item-padding;
     text-decoration: none;
   }
@@ -24,68 +23,6 @@ $item-padding: 10px 16px;
       font-size: 20px;
       opacity: 0.8;
       width: 32px;
-    }
-  }
-
-  .LeftMenuGroup {
-    .toggle {
-      align-items: center;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      padding: $item-padding;
-      transition-duration: 0.2s;
-
-      &:hover {
-        background: var(--color-blue-gray-900);
-      }
-
-      &.expanded {
-        background: var(--color-blue-gray-700);
-
-        .arrow {
-          transform: rotate(90deg);
-        }
-      }
-
-      .arrow {
-        transform: rotate(0deg);
-        transition-duration: 0.2s;
-      }
-
-      .left-elements {
-        align-items: center;
-        display: flex;
-
-        .react-icons {
-          font-size: 20px;
-          opacity: 0.8;
-          width: 32px;
-          justify-content: left;
-        }
-      }
-    }
-
-    .submenu {
-      display: none;
-      flex-direction: column;
-
-      &.expanded {
-        display: flex;
-      }
-
-      a {
-        background: var(--color-blue-gray-900);
-        padding: 10px 16px 10px 48px;
-
-        &:hover {
-          background: var(--color-blue-gray-800);
-        }
-
-        &.active {
-          background: var(--color-blue-gray-800);
-        }
-      }
     }
   }
 }
