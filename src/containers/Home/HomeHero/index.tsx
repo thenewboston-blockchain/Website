@@ -14,13 +14,13 @@ const HomeHero: FC = () => {
       </svg>
       <div className="HomeHero__wrapper">
         <div className="HomeHero__left">
-          <div className="content-container">
+          <div className="HomeHero__left-content-container">
             <h1>We are building the impossible</h1>
             <h2>
               Join us in building a cryptocurrency that will soon change the world by allowing transactions to be
               processed in less than a second.
             </h2>
-            <div className="marketing-buttons">
+            <div className="HomeHero__marketing-buttons">
               <MarketingButton website="slack" />
               <MarketingButton website="github" />
             </div>
