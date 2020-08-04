@@ -43,7 +43,7 @@
   &__right {
     display: flex;
     flex: 1;
-    justify-content: center;
+    justify-content: flex-end;
   }
 
   &__a,
@@ -51,7 +51,11 @@
     color: var(--color-text);
     font-family: Helvetica Neue, serif;
     font-weight: 500;
-    padding: 0 24px;
+    margin-left: 26px;
     text-decoration: none;
+
+    &:last-of-type {
+      margin-right: 12px;
+    }
   }
 }
