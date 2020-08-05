@@ -1,8 +1,9 @@
 import React, {FC, ReactNode, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
+import {DashboardLayout} from 'components';
+import ApiLeftMenuItems from 'components/ApiLeftMenuItems';
 import NodeApiConnectionRequests from 'containers/NodeApi/NodeApiConnectionRequests';
-
 import BankApiAccounts from './BankApiAccounts';
 import BankApiBankTransactions from './BankApiBankTransactions';
 import BankApiBanks from './BankApiBanks';
@@ -41,7 +42,7 @@ const BankApi: FC = () => {
   const {chapter} = useParams();
   const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
 
-  return <>{pageContent}</>;
+  return <DashboardLayout leftMenuItems={<ApiLeftMenuItems />}>{pageContent}</DashboardLayout>;
 };
 
 export default BankApi;

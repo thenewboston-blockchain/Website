@@ -101,8 +101,7 @@
     margin-right: 6px;
   }
 
-  // TODO: 768px
-  @media (max-width: 1600px) {
+  @media (max-width: 768px) {
     &__a,
     &__a:visited {
       display: none;
