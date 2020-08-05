@@ -21,7 +21,11 @@ const StyleGuide: FC = () => {
   const {chapter} = useParams();
   const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
 
-  return <DashboardLayout leftMenuItems={<GuideLeftMenuItems />}>{pageContent}</DashboardLayout>;
+  return (
+    <DashboardLayout leftMenuItems={<GuideLeftMenuItems />} pageName="Sample" sectionName="Style Guide">
+      {pageContent}
+    </DashboardLayout>
+  );
 };
 
 export default StyleGuide;
