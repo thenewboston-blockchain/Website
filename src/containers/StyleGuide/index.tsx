@@ -22,7 +22,7 @@ const StyleGuide: FC = () => {
   const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
 
   return (
-    <DashboardLayout leftMenuItems={<GuideLeftMenuItems />} pageName="Sample" sectionName="Style Guide">
+    <DashboardLayout menuItems={<GuideLeftMenuItems />} pageName="Sample" sectionName="Style Guide">
       {pageContent}
     </DashboardLayout>
   );

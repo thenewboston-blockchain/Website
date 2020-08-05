@@ -1,4 +1,4 @@
-.LeftMenuGroup {
+.MenuGroup {
   .toggle {
     align-items: center;
     cursor: pointer;
@@ -32,8 +32,7 @@
     }
 
     a {
-      border-top-right-radius: 8px;
-      border-bottom-right-radius: 8px;
+      border-radius: 8px;
       color: #8792a2;
       margin-right: 16px;
       padding: 6px 0 6px 56px;

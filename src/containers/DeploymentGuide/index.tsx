@@ -22,7 +22,7 @@ const DeploymentGuide: FC = () => {
   const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
 
   return (
-    <DashboardLayout leftMenuItems={<GuideLeftMenuItems />} pageName="Sample" sectionName="Deployment Guide">
+    <DashboardLayout menuItems={<GuideLeftMenuItems />} pageName="Sample" sectionName="Deployment Guide">
       {pageContent}
     </DashboardLayout>
   );

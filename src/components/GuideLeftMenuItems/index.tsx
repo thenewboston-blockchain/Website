@@ -1,12 +1,12 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import LeftMenuGroup from 'components/LeftMenuGroup';
+import MenuGroup from 'components/MenuGroup';
 
 const GuideLeftMenuItems: FC = () => {
   return (
     <>
-      <LeftMenuGroup title="Guide" urlBase="guide">
+      <MenuGroup title="Guide" urlBase="guide">
         <NavLink to="/guide/introduction">Introduction</NavLink>
         <NavLink to="/guide/accounts">Accounts</NavLink>
         <NavLink to="/guide/blocks">Blocks</NavLink>
@@ -23,17 +23,17 @@ const GuideLeftMenuItems: FC = () => {
         <NavLink to="/guide/initial-funds">Initial Funds</NavLink>
         <NavLink to="/guide/best-practices">Best Practices</NavLink>
         <NavLink to="/guide/future-development">Future Development</NavLink>
-      </LeftMenuGroup>
+      </MenuGroup>
 
-      <LeftMenuGroup title="Deployment Guides" urlBase="deployment-guide">
+      <MenuGroup title="Deployment Guides" urlBase="deployment-guide">
         <NavLink to="/deployment-guide/bank">Bank</NavLink>
         <NavLink to="/deployment-guide/validator">Validator</NavLink>
-      </LeftMenuGroup>
+      </MenuGroup>
 
-      <LeftMenuGroup title="Style Guides" urlBase="style-guide">
+      <MenuGroup title="Style Guides" urlBase="style-guide">
         <NavLink to="/style-guide/react">React / JSX</NavLink>
         <NavLink to="/style-guide/css">CSS / SASS</NavLink>
-      </LeftMenuGroup>
+      </MenuGroup>
     </>
   );
 };

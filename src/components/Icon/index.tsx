@@ -6,6 +6,7 @@ import noop from 'lodash/noop';
 
 import AccountBalanceIcon from 'mdi-react/AccountBalanceIcon';
 import CheckCircleIcon from 'mdi-react/CheckCircleIcon';
+import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
 import DnsIcon from 'mdi-react/DnsIcon';
 import EslintIcon from 'mdi-react/EslintIcon';
 import FileDocumentIcon from 'mdi-react/FileDocumentIcon';
@@ -21,6 +22,7 @@ import './Icon.scss';
 export enum IconType {
   accountBalance,
   checkCircle,
+  chevronDown,
   dns,
   document,
   eslint,
@@ -50,6 +52,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
         return <AccountBalanceIcon {...iconProps} />;
       case IconType.checkCircle:
         return <CheckCircleIcon {...iconProps} />;
+      case IconType.chevronDown:
+        return <ChevronDownIcon {...iconProps} />;
       case IconType.document:
         return <FileDocumentIcon {...iconProps} />;
       case IconType.dns:

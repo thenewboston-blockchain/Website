@@ -37,7 +37,7 @@ const ConfirmationValidatorApi: FC = () => {
   const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
 
   return (
-    <DashboardLayout leftMenuItems={<ApiLeftMenuItems />} pageName="Sample" sectionName="Confirmation Validator API">
+    <DashboardLayout menuItems={<ApiLeftMenuItems />} pageName="Sample" sectionName="Confirmation Validator API">
       {pageContent}
     </DashboardLayout>
   );

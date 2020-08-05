@@ -37,7 +37,7 @@ const PrimaryValidatorApi: FC = () => {
   const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
 
   return (
-    <DashboardLayout leftMenuItems={<ApiLeftMenuItems />} pageName="Sample" sectionName="Primary Validator API">
+    <DashboardLayout menuItems={<ApiLeftMenuItems />} pageName="Sample" sectionName="Primary Validator API">
       {pageContent}
     </DashboardLayout>
   );

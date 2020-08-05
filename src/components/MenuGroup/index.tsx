@@ -4,7 +4,7 @@ import {RouteComponentProps, withRouter} from 'react-router-dom';
 import {Icon, IconType} from 'components';
 import {getFirstPathParam} from 'utils/urls';
 
-import './LeftMenuGroup.scss';
+import './MenuGroup.scss';
 
 interface ComponentProps extends RouteComponentProps {
   children: ReactNode;
@@ -12,11 +12,11 @@ interface ComponentProps extends RouteComponentProps {
   urlBase: string;
 }
 
-const LeftMenuGroup: FC<ComponentProps> = ({children, location, title, urlBase}) => {
+const MenuGroup: FC<ComponentProps> = ({children, location, title, urlBase}) => {
   const [expanded, toggleExpanded] = useState(getFirstPathParam(location.pathname) === urlBase);
 
   return (
-    <div className="LeftMenuGroup">
+    <div className="MenuGroup">
       <div
         className={`toggle ${expanded ? 'expanded' : ''}`}
         onClick={() => toggleExpanded(!expanded)}
@@ -31,4 +31,4 @@ const LeftMenuGroup: FC<ComponentProps> = ({children, location, title, urlBase})
   );
 };
 
-export default withRouter(LeftMenuGroup);
+export default withRouter(MenuGroup);

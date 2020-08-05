@@ -111,7 +111,7 @@ const Guide: FC = () => {
   const pageName = useMemo(() => getPageData(chapter).name, [chapter]);
 
   return (
-    <DashboardLayout leftMenuItems={<GuideLeftMenuItems />} pageName={pageName} sectionName="Guide">
+    <DashboardLayout menuItems={<GuideLeftMenuItems />} pageName={pageName} sectionName="Guide">
       {pageContent}
     </DashboardLayout>
   );

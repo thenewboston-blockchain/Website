@@ -5,12 +5,12 @@ import BreadcrumbMenu from 'components/BreadcrumbMenu';
 import './DashboardLayout.scss';
 
 interface ComponentProps {
-  leftMenuItems: ReactNode;
+  menuItems: ReactNode;
   pageName: string;
   sectionName: string;
 }
 
-const DashboardLayout: FC<ComponentProps> = ({children, leftMenuItems, pageName, sectionName}) => {
+const DashboardLayout: FC<ComponentProps> = ({children, menuItems, pageName, sectionName}) => {
   const {pathname} = useLocation();
   const rightDiv = useRef<HTMLDivElement>(null);
 
@@ -21,9 +21,9 @@ const DashboardLayout: FC<ComponentProps> = ({children, leftMenuItems, pageName,
   return (
     <div className="DashboardLayout">
       <div className="DashboardLayout__breadcrumbs">
-        <BreadcrumbMenu pageName={pageName} sectionName={sectionName} />
+        <BreadcrumbMenu menuItems={menuItems} pageName={pageName} sectionName={sectionName} />
       </div>
-      <div className="DashboardLayout__left-menu">{leftMenuItems}</div>
+      <div className="DashboardLayout__left-menu">{menuItems}</div>
       <div className="DashboardLayout__main-content" ref={rightDiv}>
         {children}
       </div>

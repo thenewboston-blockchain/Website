@@ -1,2 +1,61 @@
 .BreadcrumbMenu {
+  &__dropdown-menu {
+    background: #fff;
+    box-shadow: 0 3px 3px rgba(4, 34, 53, 0.06);
+    font-weight: normal;
+    position: absolute;
+    right: 0;
+    top: 100px; // TopNav.height + BreadcrumbMenu.height
+    width: 100vw;
+    z-index: 2;
+  }
+
+  &__dropdown-menu-item-container {
+    cursor: auto;
+    padding: 32px;
+  }
+
+  &__toggle-container {
+    align-items: center;
+    display: flex;
+    transition-duration: 0.2s;
+
+    &.dropdownOpen {
+      .toggle-arrow {
+        transform: rotate(180deg);
+      }
+    }
+
+    .toggle-arrow {
+      margin-right: 16px;
+      transform: rotate(0deg);
+      transition-duration: 0.4s;
+    }
+  }
+
+  .breadcrumbs {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-weight: 500;
+    padding: 0 12px;
+    height: 40px;
+    justify-content: space-between;
+
+    &:focus {
+      outline: 0;
+    }
+
+    .breadcrumb-navigation {
+      align-items: center;
+      display: flex;
+    }
+  }
+
+  .shadow {
+    background: var(--color-gray-5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+    height: 1px;
+    width: 100vw;
+  }
 }

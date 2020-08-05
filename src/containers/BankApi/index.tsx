@@ -43,7 +43,7 @@ const BankApi: FC = () => {
   const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
 
   return (
-    <DashboardLayout leftMenuItems={<ApiLeftMenuItems />} pageName="Sample" sectionName="Bank API">
+    <DashboardLayout menuItems={<ApiLeftMenuItems />} pageName="Sample" sectionName="Bank API">
       {pageContent}
     </DashboardLayout>
   );
