@@ -1,4 +1,5 @@
 import {CodeSnippet, RequestResponseSnippet, SnippetLang} from './CodeSnippet';
+import DashboardLayout from './DashboardLayout';
 import {DocContainer, DocEndpoint, DocInlineCode, DocList, DocImage, DocSubSection} from './DocWrapper';
 import {Button} from './FormElements';
 import Icon, {IconType} from './Icon';
@@ -11,6 +12,7 @@ export {
   A,
   Button,
   CodeSnippet,
+  DashboardLayout,
   DocContainer,
   DocEndpoint,
   DocImage,

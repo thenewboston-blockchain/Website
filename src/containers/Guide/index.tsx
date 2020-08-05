@@ -1,6 +1,7 @@
 import React, {FC, ReactNode, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
+import {DashboardLayout} from 'components';
 import GuideAccounts from './GuideAccounts';
 import GuideBanks from './GuideBanks';
 import GuideBestPractices from './GuideBestPractices';
@@ -61,7 +62,7 @@ const Guide: FC = () => {
   const {chapter} = useParams();
   const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
 
-  return <>{pageContent}</>;
+  return <DashboardLayout>{pageContent}</DashboardLayout>;
 };
 
 export default Guide;
