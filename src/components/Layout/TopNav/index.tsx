@@ -16,7 +16,7 @@ const TopNav: FC = () => {
   const renderDropdownMenu = (): ReactNode => {
     if (!dropdownOpen) return null;
     return (
-      <div className="TopNav__dropdown-menu" ref={ref}>
+      <div className="TopNav__dropdown-menu">
         <div className="shadow" />
         <div className="TopNav__dropdown-menu-item-container">
           <NavLink className="TopNav__dropdown-menu-item" to="/contribute">
@@ -65,6 +65,7 @@ const TopNav: FC = () => {
     <div
       className="TopNav__right-menu-toggle-container"
       onClick={() => setDropdownOpen(!dropdownOpen)}
+      ref={ref}
       role="button"
       tabIndex={0}
     >

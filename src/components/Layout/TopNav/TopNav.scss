@@ -6,11 +6,13 @@
 
   &__a,
   &__a:visited {
-    color: var(--color-text);
-    font-family: Helvetica Neue, serif;
-    font-weight: 500;
-    margin-left: 26px;
-    text-decoration: none;
+    color: #8792a2;
+    margin-right: 16px;
+    transition: color 0.1s ease;
+
+    &:hover {
+      color: var(--color-primary);
+    }
 
     &:last-of-type {
       margin-right: 12px;
@@ -35,12 +37,18 @@
   }
 
   &__dropdown-menu-item {
-    color: red;
+    color: #8792a2;
+    display: block;
+    padding: 6px 0;
+    transition: color 0.1s ease;
+
+    &:hover {
+      color: var(--color-primary);
+    }
   }
 
   &__dropdown-menu-item-container {
-    display: flex;
-    flex-direction: column;
+    cursor: auto;
     padding: 32px;
   }
 
@@ -95,8 +103,14 @@
 
   // TODO: 768px
   @media (max-width: 1600px) {
-    &__a {
+    &__a,
+    &__a:visited {
       display: none;
+      margin: 0;
+
+      &:last-of-type {
+        margin-right: 12px;
+      }
     }
 
     &__right-menu-toggle-container {
