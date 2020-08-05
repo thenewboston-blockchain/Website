@@ -1,9 +1,9 @@
-.LayoutBasic {
+.Layout {
   display: grid;
   grid-template-rows: fit-content(0) auto;
   height: 100vh;
 
-  &__top {
+  .TopNav {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     grid-row: 1 / span 1;
   }

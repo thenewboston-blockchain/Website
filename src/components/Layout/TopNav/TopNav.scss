@@ -2,7 +2,47 @@
   align-items: center;
   background: white;
   display: flex;
-  height: 46px;
+  height: 60px;
+
+  &__a,
+  &__a:visited {
+    color: var(--color-text);
+    font-family: Helvetica Neue, serif;
+    font-weight: 500;
+    margin-left: 26px;
+    text-decoration: none;
+
+    &:last-of-type {
+      margin-right: 12px;
+    }
+  }
+
+  .shadow {
+    background: var(--color-gray-5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 1px;
+    width: 100vw;
+  }
+
+  &__dropdown-menu {
+    background: #fff;
+    box-shadow: 0 3px 3px rgba(4, 34, 53, 0.06);
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 100vw;
+    z-index: 2;
+  }
+
+  &__dropdown-menu-item {
+    color: red;
+  }
+
+  &__dropdown-menu-item-container {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+  }
 
   &__left {
     align-items: center;
@@ -10,13 +50,26 @@
     height: 100%;
   }
 
-  &__left-menu-toggle-container {
+  &__right {
     align-items: center;
-    border-right: 1px solid var(--color-gray-4);
-    cursor: pointer;
     display: flex;
+    flex: 1;
+    height: 100%;
+    justify-content: flex-end;
+  }
+
+  &__right-menu-toggle-container {
+    align-items: center;
+    border-left: 1px solid var(--color-gray-4);
+    cursor: pointer;
+    display: none;
     height: 100%;
     padding: 0 12px;
+    position: relative;
+
+    &:focus {
+      outline: 0;
+    }
 
     &:hover {
       background: rgba(0, 0, 0, 0.02);
@@ -40,22 +93,14 @@
     margin-right: 6px;
   }
 
-  &__right {
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
-  }
+  // TODO: 768px
+  @media (max-width: 1600px) {
+    &__a {
+      display: none;
+    }
 
-  &__a,
-  &__a:visited {
-    color: var(--color-text);
-    font-family: Helvetica Neue, serif;
-    font-weight: 500;
-    margin-left: 26px;
-    text-decoration: none;
-
-    &:last-of-type {
-      margin-right: 12px;
+    &__right-menu-toggle-container {
+      display: flex;
     }
   }
 }

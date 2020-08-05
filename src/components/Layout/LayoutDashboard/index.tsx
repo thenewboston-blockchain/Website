@@ -30,7 +30,7 @@ const LayoutDashboard: FC<ComponentProps> = ({children, leftMenuType}) => {
   return (
     <div className={clsx('LayoutDashboard', {'LayoutDashboard--open': leftMenuOpen})}>
       <div className="LayoutDashboard__top">
-        <TopNav toggleLeftMenu={toggleLeftMenu} />
+        <TopNav />
       </div>
       <div className="LayoutDashboard__left">
         <LeftMenu leftMenuType={leftMenuType} />

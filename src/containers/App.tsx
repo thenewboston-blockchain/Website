@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom';
 
-import {LayoutBasic, LayoutDashboard} from 'components';
+import {Layout} from 'components';
 
 import BankApi from './BankApi';
 import ConfirmationValidatorApi from './ConfirmationValidatorApi';
@@ -16,63 +16,47 @@ import StyleGuide from './StyleGuide';
 const App: FC = () => {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/">
-          <LayoutBasic>
+      <Layout>
+        <Switch>
+          <Route exact path="/">
             <Home />
-          </LayoutBasic>
-        </Route>
+          </Route>
 
-        <Route exact path="/contribute">
-          <LayoutBasic>
+          <Route exact path="/contribute">
             <Contribute />
-          </LayoutBasic>
-        </Route>
+          </Route>
 
-        <Route exact path="/roadmap">
-          <LayoutBasic>
+          <Route exact path="/roadmap">
             <Roadmap />
-          </LayoutBasic>
-        </Route>
+          </Route>
 
-        <Route path="/bank-api/:chapter?">
-          <LayoutDashboard leftMenuType="apis">
+          <Route path="/bank-api/:chapter?">
             <BankApi />
-          </LayoutDashboard>
-        </Route>
+          </Route>
 
-        <Route path="/confirmation-validator-api/:chapter?">
-          <LayoutDashboard leftMenuType="apis">
+          <Route path="/confirmation-validator-api/:chapter?">
             <ConfirmationValidatorApi />
-          </LayoutDashboard>
-        </Route>
+          </Route>
 
-        <Route path="/deployment-guide/:chapter?">
-          <LayoutDashboard leftMenuType="guides">
+          <Route path="/deployment-guide/:chapter?">
             <DeploymentGuide />
-          </LayoutDashboard>
-        </Route>
+          </Route>
 
-        <Route path="/guide/:chapter?">
-          <LayoutDashboard leftMenuType="guides">
+          <Route path="/guide/:chapter?">
             <Guide />
-          </LayoutDashboard>
-        </Route>
+          </Route>
 
-        <Route path="/primary-validator-api/:chapter?">
-          <LayoutDashboard leftMenuType="apis">
+          <Route path="/primary-validator-api/:chapter?">
             <PrimaryValidatorApi />
-          </LayoutDashboard>
-        </Route>
+          </Route>
 
-        <Route path="/style-guide/:chapter?">
-          <LayoutDashboard leftMenuType="guides">
+          <Route path="/style-guide/:chapter?">
             <StyleGuide />
-          </LayoutDashboard>
-        </Route>
+          </Route>
 
-        <Redirect to="/" />
-      </Switch>
+          <Redirect to="/" />
+        </Switch>
+      </Layout>
     </Router>
   );
 };
