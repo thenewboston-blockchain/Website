@@ -35,7 +35,7 @@ const BreadcrumbMenu: FC<ComponentProps> = ({menuItems, pageName, sectionName}) 
     return (
       <div className="BreadcrumbMenu__dropdown-menu" ref={ref}>
         <div className="shadow" />
-        <div className="BreadcrumbMenu__dropdown-menu-item-container">{menuItems}</div>
+        {menuItems}
       </div>
     );
   };

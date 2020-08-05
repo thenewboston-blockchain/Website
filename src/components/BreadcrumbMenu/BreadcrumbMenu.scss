@@ -1,18 +1,20 @@
+$navigation-bars-height: 100px; // TopNav.height + BreadcrumbMenu.height
+
 .BreadcrumbMenu {
   &__dropdown-menu {
     background: #fff;
     box-shadow: 0 3px 3px rgba(4, 34, 53, 0.06);
+    cursor: auto;
     font-weight: normal;
+    max-height: calc(100vh - #{$navigation-bars-height});
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 10px;
     position: absolute;
     right: 0;
-    top: 100px; // TopNav.height + BreadcrumbMenu.height
+    top: $navigation-bars-height;
     width: 100vw;
     z-index: 2;
-  }
-
-  &__dropdown-menu-item-container {
-    cursor: auto;
-    padding: 32px;
   }
 
   &__toggle-container {
