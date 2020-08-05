@@ -1,6 +1,8 @@
 import React, {FC, ReactNode, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
+import {DashboardLayout} from 'components';
+import GuideLeftMenuItems from 'components/GuideLeftMenuItems';
 import StyleGuideCss from './StyleGuideCss';
 import StyleGuideReact from './StyleGuideReact';
 
@@ -19,7 +21,7 @@ const StyleGuide: FC = () => {
   const {chapter} = useParams();
   const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
 
-  return <>{pageContent}</>;
+  return <DashboardLayout leftMenuItems={<GuideLeftMenuItems />}>{pageContent}</DashboardLayout>;
 };
 
 export default StyleGuide;

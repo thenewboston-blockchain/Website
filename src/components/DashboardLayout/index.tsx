@@ -1,9 +1,13 @@
-import React, {FC, useEffect, useRef} from 'react';
+import React, {FC, ReactNode, useEffect, useRef} from 'react';
 import {useLocation} from 'react-router-dom';
 
 import './DashboardLayout.scss';
 
-const DashboardLayout: FC = ({children}) => {
+interface ComponentProps {
+  leftMenuItems: ReactNode;
+}
+
+const DashboardLayout: FC<ComponentProps> = ({children, leftMenuItems}) => {
   const {pathname} = useLocation();
   const rightDiv = useRef<HTMLDivElement>(null);
 
@@ -16,9 +20,7 @@ const DashboardLayout: FC = ({children}) => {
       <div className="DashboardLayout__breadcrumbs">
         <h1>I am breadcrumbs</h1>
       </div>
-      <div className="DashboardLayout__left-menu">
-        <span>left menu here</span>
-      </div>
+      <div className="DashboardLayout__left-menu">{leftMenuItems}</div>
       <div className="DashboardLayout__main-content" ref={rightDiv}>
         {children}
       </div>
