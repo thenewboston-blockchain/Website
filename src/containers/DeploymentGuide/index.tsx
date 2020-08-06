@@ -2,7 +2,7 @@ import React, {FC, ReactNode, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
 import {DashboardLayout} from 'components';
-import GuideLeftMenuItems from 'components/GuideLeftMenuItems';
+import GuideMenuItems from 'components/GuideMenuItems';
 import DeploymentGuideBank from './DeploymentGuideBank';
 import DeploymentGuideValidator from './DeploymentGuideValidator';
 
@@ -22,7 +22,7 @@ const DeploymentGuide: FC = () => {
   const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
 
   return (
-    <DashboardLayout menuItems={<GuideLeftMenuItems />} pageName="Sample" sectionName="Deployment Guide">
+    <DashboardLayout menuItems={<GuideMenuItems />} pageName="Sample" sectionName="Deployment Guide">
       {pageContent}
     </DashboardLayout>
   );

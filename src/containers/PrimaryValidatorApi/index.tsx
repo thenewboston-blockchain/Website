@@ -2,7 +2,7 @@ import React, {FC, ReactNode, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
 import {DashboardLayout} from 'components';
-import ApiLeftMenuItems from 'components/ApiLeftMenuItems';
+import ApiMenuItems from 'components/ApiMenuItems';
 import NodeApiConnectionRequests from 'containers/NodeApi/NodeApiConnectionRequests';
 import PrimaryValidatorApiAccounts from './PrimaryValidatorApiAccounts';
 import PrimaryValidatorApiBankBlocks from './PrimaryValidatorApiBankBlocks';
@@ -37,7 +37,7 @@ const PrimaryValidatorApi: FC = () => {
   const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
 
   return (
-    <DashboardLayout menuItems={<ApiLeftMenuItems />} pageName="Sample" sectionName="Primary Validator API">
+    <DashboardLayout menuItems={<ApiMenuItems />} pageName="Sample" sectionName="Primary Validator API">
       {pageContent}
     </DashboardLayout>
   );

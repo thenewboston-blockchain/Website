@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom';
 
 import MenuGroup from 'components/MenuGroup';
 
-const ApiLeftMenuItems: FC = () => {
+const ApiMenuItems: FC = () => {
   return (
     <>
       <MenuGroup title="Bank API" urlBase="bank-api">
@@ -41,4 +41,4 @@ const ApiLeftMenuItems: FC = () => {
   );
 };
 
-export default ApiLeftMenuItems;
+export default ApiMenuItems;

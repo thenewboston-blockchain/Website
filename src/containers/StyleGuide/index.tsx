@@ -2,7 +2,7 @@ import React, {FC, ReactNode, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
 import {DashboardLayout} from 'components';
-import GuideLeftMenuItems from 'components/GuideLeftMenuItems';
+import GuideMenuItems from 'components/GuideMenuItems';
 import StyleGuideCss from './StyleGuideCss';
 import StyleGuideReact from './StyleGuideReact';
 
@@ -22,7 +22,7 @@ const StyleGuide: FC = () => {
   const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
 
   return (
-    <DashboardLayout menuItems={<GuideLeftMenuItems />} pageName="Sample" sectionName="Style Guide">
+    <DashboardLayout menuItems={<GuideMenuItems />} pageName="Sample" sectionName="Style Guide">
       {pageContent}
     </DashboardLayout>
   );

@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom';
 
 import MenuGroup from 'components/MenuGroup';
 
-const GuideLeftMenuItems: FC = () => {
+const GuideMenuItems: FC = () => {
   return (
     <>
       <MenuGroup title="Guide" urlBase="guide">
@@ -38,4 +38,4 @@ const GuideLeftMenuItems: FC = () => {
   );
 };
 
-export default GuideLeftMenuItems;
+export default GuideMenuItems;
