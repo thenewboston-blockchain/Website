@@ -4,32 +4,18 @@ import React, {forwardRef, ReactNode} from 'react';
 import clsx from 'clsx';
 import noop from 'lodash/noop';
 
-import AccountBalanceIcon from 'mdi-react/AccountBalanceIcon';
-import CheckCircleIcon from 'mdi-react/CheckCircleIcon';
 import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
-import DnsIcon from 'mdi-react/DnsIcon';
-import EslintIcon from 'mdi-react/EslintIcon';
-import FileDocumentIcon from 'mdi-react/FileDocumentIcon';
 import MenuIcon from 'mdi-react/MenuIcon';
 import MenuRightIcon from 'mdi-react/MenuRightIcon';
-import VerifiedUserIcon from 'mdi-react/VerifiedUserIcon';
 
 import {getCustomClassNames} from 'utils/components';
-import TnbIcon from './TnbIcon';
 import './Icon.scss';
 
 // These names are camelCased versions of the names found in https://materialdesignicons.com/
 export enum IconType {
-  accountBalance,
-  checkCircle,
   chevronDown,
-  dns,
-  document,
-  eslint,
   menu,
   menuRight,
-  tnb,
-  verifiedUser,
 }
 
 interface ComponentProps {
@@ -47,30 +33,12 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
   };
 
   const renderIcon = (): ReactNode => {
-    switch (icon) {
-      case IconType.accountBalance:
-        return <AccountBalanceIcon {...iconProps} />;
-      case IconType.checkCircle:
-        return <CheckCircleIcon {...iconProps} />;
-      case IconType.chevronDown:
-        return <ChevronDownIcon {...iconProps} />;
-      case IconType.document:
-        return <FileDocumentIcon {...iconProps} />;
-      case IconType.dns:
-        return <DnsIcon {...iconProps} />;
-      case IconType.eslint:
-        return <EslintIcon {...iconProps} />;
-      case IconType.menu:
-        return <MenuIcon {...iconProps} />;
-      case IconType.menuRight:
-        return <MenuRightIcon {...iconProps} />;
-      case IconType.tnb:
-        return <TnbIcon {...iconProps} />;
-      case IconType.verifiedUser:
-        return <VerifiedUserIcon {...iconProps} />;
-      default:
-        return null;
-    }
+    const icons = {
+      [IconType.chevronDown]: <ChevronDownIcon {...iconProps} />,
+      [IconType.menu]: <MenuIcon {...iconProps} />,
+      [IconType.menuRight]: <MenuRightIcon {...iconProps} />,
+    };
+    return icons[icon] || null;
   };
 
   return (

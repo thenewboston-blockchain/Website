@@ -10,7 +10,7 @@ interface ComponentProps {
 const Layout: FC<ComponentProps> = ({children}) => {
   return (
     <div className="Layout">
-      <TopNav />
+      <TopNav className="Layout__TopNav" />
       <div className="Layout__content">{children}</div>
     </div>
   );

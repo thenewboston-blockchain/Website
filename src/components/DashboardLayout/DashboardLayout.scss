@@ -19,8 +19,7 @@
     overflow-y: auto;
   }
 
-  // TODO: 768px
-  @media (max-width: 1200px) {
+  @media (max-width: 768px) {
     grid-template-columns: auto;
     grid-template-rows: fit-content(0) auto;
 

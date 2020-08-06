@@ -1,6 +1,7 @@
 import React, {FC, ReactNode, useState} from 'react';
 import {NavLink} from 'react-router-dom';
 import useOnclickOutside from 'react-cool-onclickoutside';
+import clsx from 'clsx';
 
 import Logo from 'assets/svgs/thenewboston.svg';
 import Shadow from 'components/Shadow';
@@ -8,7 +9,11 @@ import {Icon, IconType} from 'components';
 
 import './TopNav.scss';
 
-const TopNav: FC = () => {
+interface ComponentProps {
+  className?: string;
+}
+
+const TopNav: FC<ComponentProps> = ({className}) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const ref = useOnclickOutside(() => {
     setDropdownOpen(false);
@@ -83,7 +88,7 @@ const TopNav: FC = () => {
   );
 
   return (
-    <div className="TopNav">
+    <div className={clsx('TopNav', className)}>
       {renderLeftItems()}
       {renderRightItems()}
     </div>
