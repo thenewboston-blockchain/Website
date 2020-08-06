@@ -1,6 +1,20 @@
 $navigation-bars-height: 100px; // TopNav.height + BreadcrumbMenu.height
 
 .BreadcrumbMenu {
+  &__bar {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-weight: 500;
+    padding: 0 12px;
+    height: 40px;
+    justify-content: space-between;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
   &__dropdown-menu {
     background: #fff;
     box-shadow: 0 3px 3px rgba(4, 34, 53, 0.06);
@@ -17,47 +31,26 @@ $navigation-bars-height: 100px; // TopNav.height + BreadcrumbMenu.height
     z-index: 2;
   }
 
+  &__navigation {
+    align-items: center;
+    display: flex;
+  }
+
+  &__toggle-arrow {
+    margin-right: 16px;
+    transform: rotate(0deg);
+    transition-duration: 0.4s;
+  }
+
   &__toggle-container {
     align-items: center;
     display: flex;
     transition-duration: 0.2s;
 
-    &.dropdownOpen {
-      .toggle-arrow {
+    &--open {
+      .BreadcrumbMenu__toggle-arrow {
         transform: rotate(180deg);
       }
     }
-
-    .toggle-arrow {
-      margin-right: 16px;
-      transform: rotate(0deg);
-      transition-duration: 0.4s;
-    }
-  }
-
-  .breadcrumbs {
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    font-weight: 500;
-    padding: 0 12px;
-    height: 40px;
-    justify-content: space-between;
-
-    &:focus {
-      outline: 0;
-    }
-
-    .breadcrumb-navigation {
-      align-items: center;
-      display: flex;
-    }
-  }
-
-  .shadow {
-    background: var(--color-gray-5);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
-    height: 1px;
-    width: 100vw;
   }
 }

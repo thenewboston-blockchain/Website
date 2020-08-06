@@ -3,6 +3,7 @@ import {NavLink} from 'react-router-dom';
 import useOnclickOutside from 'react-cool-onclickoutside';
 
 import Logo from 'assets/svgs/thenewboston.svg';
+import Shadow from 'components/Shadow';
 import {Icon, IconType} from 'components';
 
 import './TopNav.scss';
@@ -17,7 +18,7 @@ const TopNav: FC = () => {
     if (!dropdownOpen) return null;
     return (
       <div className="TopNav__dropdown-menu">
-        <div className="shadow" />
+        <Shadow />
         <div className="TopNav__dropdown-menu-item-container">
           <NavLink className="TopNav__dropdown-menu-item" to="/contribute">
             Contribute

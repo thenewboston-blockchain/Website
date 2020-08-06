@@ -19,13 +19,6 @@
     }
   }
 
-  .shadow {
-    background: var(--color-gray-5);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
-    height: 1px;
-    width: 100vw;
-  }
-
   &__dropdown-menu {
     background: #fff;
     box-shadow: 0 3px 3px rgba(4, 34, 53, 0.06);

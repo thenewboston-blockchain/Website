@@ -5,6 +5,7 @@ import {useLocation} from 'react-router-dom';
 import useOnclickOutside from 'react-cool-onclickoutside';
 
 import {Icon, IconType} from 'components';
+import Shadow from 'components/Shadow';
 import './BreadcrumbMenu.scss';
 
 interface ComponentProps {
@@ -15,35 +16,25 @@ interface ComponentProps {
 
 const BreadcrumbMenu: FC<ComponentProps> = ({menuItems, pageName, sectionName}) => {
   const {pathname} = useLocation();
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    setDropdownOpen(false);
+    setOpen(false);
   }, [pathname]);
 
   const ref = useOnclickOutside(
     () => {
-      if (dropdownOpen) setDropdownOpen(false);
+      if (open) setOpen(false);
     },
     {
-      ignoreClass: 'breadcrumbs',
+      ignoreClass: 'BreadcrumbMenu__bar',
     },
   );
 
-  const renderDropdownMenu = (): ReactNode => {
-    if (!dropdownOpen) return null;
+  const renderBreadcrumbBar = (): ReactNode => {
     return (
-      <div className="BreadcrumbMenu__dropdown-menu" ref={ref}>
-        <div className="shadow" />
-        {menuItems}
-      </div>
-    );
-  };
-
-  const renderBreadcrumbs = (): ReactNode => {
-    return (
-      <div className="breadcrumbs" onClick={() => setDropdownOpen(!dropdownOpen)} role="button" tabIndex={0}>
-        <div className="breadcrumb-navigation">
+      <div className="BreadcrumbMenu__bar" onClick={() => setOpen(!open)} role="button" tabIndex={0}>
+        <div className="BreadcrumbMenu__navigation">
           {sectionName}
           <Icon className="react-icons" icon={IconType.menuRight} size={24} />
           {pageName}
@@ -53,17 +44,27 @@ const BreadcrumbMenu: FC<ComponentProps> = ({menuItems, pageName, sectionName}) 
     );
   };
 
+  const renderDropdownMenu = (): ReactNode => {
+    if (!open) return null;
+    return (
+      <div className="BreadcrumbMenu__dropdown-menu" ref={ref}>
+        <Shadow />
+        {menuItems}
+      </div>
+    );
+  };
+
   const renderToggle = (): ReactNode => {
     return (
-      <div className={`BreadcrumbMenu__toggle-container ${dropdownOpen ? 'dropdownOpen' : ''}`}>
-        <Icon className="react-icons toggle-arrow" icon={IconType.chevronDown} size={24} />
+      <div className={`BreadcrumbMenu__toggle-container ${open ? 'BreadcrumbMenu__toggle-container--open' : ''}`}>
+        <Icon className="react-icons BreadcrumbMenu__toggle-arrow" icon={IconType.chevronDown} size={24} />
       </div>
     );
   };
 
   return (
     <div className="BreadcrumbMenu">
-      {renderBreadcrumbs()}
+      {renderBreadcrumbBar()}
       {renderDropdownMenu()}
     </div>
   );

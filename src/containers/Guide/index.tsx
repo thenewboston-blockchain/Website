@@ -1,8 +1,10 @@
-import React, {FC, ReactNode, useMemo} from 'react';
+import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
 import {DashboardLayout} from 'components';
 import GuideMenuItems from 'components/GuideMenuItems';
+import {PageData, PageDataObject} from 'types/page-data';
+
 import GuideAccounts from './GuideAccounts';
 import GuideBanks from './GuideBanks';
 import GuideBestPractices from './GuideBestPractices';
@@ -19,15 +21,6 @@ import GuideRootAccountFile from './GuideRootAccountFile';
 import GuideTransactionFees from './GuideTransactionFees';
 import GuideTrust from './GuideTrust';
 import GuideValidators from './GuideValidators';
-
-interface PageData {
-  content: ReactNode;
-  name: string;
-}
-
-interface PageDataObject {
-  [key: string]: PageData;
-}
 
 const getPageData = (chapter: string): PageData => {
   const defaultPageData: PageData = {
