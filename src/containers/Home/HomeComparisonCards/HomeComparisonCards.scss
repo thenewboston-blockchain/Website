@@ -32,13 +32,13 @@
     flex-direction: column;
     margin-top: 60px;
 
-    .attribute {
+    &-attribute {
       font-size: 20px;
       font-weight: 500;
       margin-top: 12px;
     }
 
-    .value {
+    &-value {
       font-size: 36px;
       font-weight: 300;
     }

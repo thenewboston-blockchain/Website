@@ -4,8 +4,7 @@ import React, {FC, ReactNode, useEffect, useState} from 'react';
 import {useLocation} from 'react-router-dom';
 import useOnclickOutside from 'react-cool-onclickoutside';
 
-import {Icon, IconType} from 'components';
-import Shadow from 'components/Shadow';
+import {Icon, IconType, Shadow} from 'components';
 import './BreadcrumbMenu.scss';
 
 interface ComponentProps {

@@ -13,19 +13,19 @@ const HomeInstantTransactions: FC = () => {
       <div className="HomeInstantTransactions__content-container">
         <div className="HomeInstantTransactions-mini">INSTANT TRANSACTIONS</div>
         <h1>Say goodbye to 10 minute block times</h1>
-        <div className="text-snippets">
-          <div className="left-block">
+        <div className="HomeInstantTransactions__text-snippets">
+          <div className="HomeInstantTransactions__text-snippets-left-block">
             <p>
               An inherent defect in the traditional Blockchain architecture is the inefficient composition of blocks.
               Blocks in the Bitcoin Blockchain are composed of multiple unrelated transactions. This indicates that
               within any given block, the earliest transactions experience significant delays as later transactions
               continue to accumulate until the entire block eventually becomes verified.
             </p>
-            <NavLink className="display-large" to="/guide/introduction">
+            <NavLink className="HomeInstantTransactions__content-container--display-large" to="/guide/introduction">
               <Button>View Guide</Button>
             </NavLink>
           </div>
-          <div className="right-block">
+          <div className="HomeInstantTransactions__text-snippets-right-block">
             <p>
               Our architecture was built on the idea that when building a distributed payment ledger, it is not the
               transaction processing itself that requires distribution across multiple servers, for this often results
@@ -34,7 +34,7 @@ const HomeInstantTransactions: FC = () => {
               results that requires distribution among peers. This allows for highly performant transaction validation
               within a decentralized network.
             </p>
-            <NavLink className="display-small" to="/guide/introduction">
+            <NavLink className="HomeInstantTransactions__content-container--display-small" to="/guide/introduction">
               <Button>View Guide</Button>
             </NavLink>
           </div>

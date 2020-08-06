@@ -18,42 +18,15 @@ const App: FC = () => {
     <Router>
       <Layout>
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-
-          <Route exact path="/contribute">
-            <Contribute />
-          </Route>
-
-          <Route exact path="/roadmap">
-            <Roadmap />
-          </Route>
-
-          <Route path="/bank-api/:chapter?">
-            <BankApi />
-          </Route>
-
-          <Route path="/confirmation-validator-api/:chapter?">
-            <ConfirmationValidatorApi />
-          </Route>
-
-          <Route path="/deployment-guide/:chapter?">
-            <DeploymentGuide />
-          </Route>
-
-          <Route path="/guide/:chapter?">
-            <Guide />
-          </Route>
-
-          <Route path="/primary-validator-api/:chapter?">
-            <PrimaryValidatorApi />
-          </Route>
-
-          <Route path="/style-guide/:chapter?">
-            <StyleGuide />
-          </Route>
-
+          <Route exact path="/" component={Home} />
+          <Route exact path="/contribute" component={Contribute} />
+          <Route exact path="/roadmap" component={Roadmap} />
+          <Route path="/bank-api/:chapter?" component={BankApi} />
+          <Route path="/confirmation-validator-api/:chapter?" component={ConfirmationValidatorApi} />
+          <Route path="/deployment-guide/:chapter?" component={DeploymentGuide} />
+          <Route path="/guide/:chapter?" component={Guide} />
+          <Route path="/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
+          <Route path="/style-guide/:chapter?" component={StyleGuide} />
           <Redirect to="/" />
         </Switch>
       </Layout>

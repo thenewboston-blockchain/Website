@@ -1,6 +1,6 @@
 import React, {FC, ReactNode} from 'react';
 
-import TopNav from 'components/TopNav';
+import {TopNav} from 'components';
 import './Layout.scss';
 
 interface ComponentProps {

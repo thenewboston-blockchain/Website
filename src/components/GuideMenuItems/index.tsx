@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import MenuGroup from 'components/MenuGroup';
+import {MenuGroup} from 'components';
 
 const GuideMenuItems: FC = () => {
   return (

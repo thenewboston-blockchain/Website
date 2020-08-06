@@ -1,7 +1,7 @@
 import React, {FC, ReactNode, useEffect, useRef} from 'react';
 import {useLocation} from 'react-router-dom';
 
-import BreadcrumbMenu from 'components/BreadcrumbMenu';
+import {BreadcrumbMenu} from 'components';
 import './DashboardLayout.scss';
 
 interface ComponentProps {

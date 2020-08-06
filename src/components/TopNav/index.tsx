@@ -4,8 +4,7 @@ import useOnclickOutside from 'react-cool-onclickoutside';
 import clsx from 'clsx';
 
 import Logo from 'assets/svgs/thenewboston.svg';
-import Shadow from 'components/Shadow';
-import {Icon, IconType} from 'components';
+import {Icon, IconType, Shadow} from 'components';
 
 import './TopNav.scss';
 

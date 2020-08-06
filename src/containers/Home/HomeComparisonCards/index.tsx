@@ -9,8 +9,8 @@ import './HomeComparisonCards.scss';
 const HomeComparisonCards: FC = () => {
   const renderComparisonCardStat = (attribute: string, value: string): ReactNode => (
     <div className="HomeComparisonCards__stat">
-      <div className="value">{value}</div>
-      <div className="attribute">{attribute}</div>
+      <div className="HomeComparisonCards__stat-value">{value}</div>
+      <div className="HomeComparisonCards__stat-attribute">{attribute}</div>
     </div>
   );
 

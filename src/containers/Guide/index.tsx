@@ -1,8 +1,7 @@
 import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
-import {DashboardLayout} from 'components';
-import GuideMenuItems from 'components/GuideMenuItems';
+import {DashboardLayout, GuideMenuItems} from 'components';
 import {PageData, PageDataObject} from 'types/page-data';
 
 import GuideAccounts from './GuideAccounts';

@@ -1,33 +1,9 @@
 .MenuGroup {
-  .toggle {
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    padding: 10px 16px 0;
-    transition-duration: 0.2s;
-
-    &:focus {
-      outline: 0;
-    }
-
-    &.expanded {
-      .arrow {
-        transform: rotate(90deg);
-      }
-    }
-
-    .arrow {
-      margin-right: 16px;
-      transform: rotate(0deg);
-      transition-duration: 0.2s;
-    }
-  }
-
-  .submenu {
+  &__submenu {
     display: none;
     flex-direction: column;
 
-    &.expanded {
+    &--expanded {
       display: flex;
     }
 
@@ -47,5 +23,29 @@
         color: #556cd6;
       }
     }
+  }
+
+  &__toggle {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    padding: 10px 16px 0;
+    transition-duration: 0.2s;
+
+    &:focus {
+      outline: 0;
+    }
+
+    &--expanded {
+      .MenuGroup__toggle-arrow {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__toggle-arrow {
+    margin-right: 16px;
+    transform: rotate(0deg);
+    transition-duration: 0.2s;
   }
 }

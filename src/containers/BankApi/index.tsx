@@ -1,8 +1,7 @@
 import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
-import {DashboardLayout} from 'components';
-import ApiMenuItems from 'components/ApiMenuItems';
+import {ApiMenuItems, DashboardLayout} from 'components';
 import NodeApiConnectionRequests from 'containers/NodeApi/NodeApiConnectionRequests';
 import {PageData, PageDataObject} from 'types/page-data';
 
