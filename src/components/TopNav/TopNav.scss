@@ -7,7 +7,7 @@
   &__a,
   &__a:visited {
     color: #8792a2;
-    margin-right: 16px;
+    margin-right: 36px;
     transition: color 0.1s ease;
 
     &:hover {
@@ -15,7 +15,7 @@
     }
 
     &:last-of-type {
-      margin-right: 12px;
+      margin-right: 24px;
     }
   }
 
@@ -61,7 +61,6 @@
 
   &__right-menu-toggle-container {
     align-items: center;
-    border-left: 1px solid var(--color-gray-4);
     cursor: pointer;
     display: none;
     height: 100%;

@@ -2,8 +2,10 @@
   padding: 32px 32px 96px;
 
   &__page-title {
-    font-size: 24px;
-    font-weight: 500;
+    font-family: var(--font-family-helvetica-neue-light);
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 120%;
     margin-bottom: 24px;
   }
 
