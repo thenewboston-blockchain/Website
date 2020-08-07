@@ -1,6 +1,8 @@
 $navigation-bars-height: 100px; // TopNav.height + BreadcrumbMenu__bar.height
 
 .BreadcrumbMenu {
+  $self: &;
+
   &__bar {
     align-items: center;
     cursor: pointer;
@@ -47,7 +49,7 @@ $navigation-bars-height: 100px; // TopNav.height + BreadcrumbMenu__bar.height
     transition-duration: 0.2s;
 
     &--open {
-      .BreadcrumbMenu__toggle-arrow {
+      #{$self}__toggle-arrow {
         transform: rotate(180deg);
       }
     }
