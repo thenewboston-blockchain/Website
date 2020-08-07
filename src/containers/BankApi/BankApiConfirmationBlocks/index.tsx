@@ -39,7 +39,7 @@ const BankApiConfirmationBlocks: FC = () => {
         heading="Response (Bank > client)"
       />
 
-      <h2 className="endpoint">POST /confirmation_blocks</h2>
+      <DocEndpoint endpoint="/confirmation_blocks" method="POST" />
       <TableParams
         items={[
           {
@@ -66,28 +66,51 @@ const BankApiConfirmationBlocks: FC = () => {
       />
       <RequestResponseSnippet
         code={`{
-  "block_identifier": "65ae26192dfb9ec41f88c6d582b374a9b42ab58833e1612452d7a8f685dcd4d5",
   "message": {
     "block": {
-      "account_number": "484b3176c63d5f37d808404af1a12c4b9649cd6f6769f35bdf5a816133623fbc",
-      "signature": "194308c4e6df46e17fa0b4fd2f460727d7a93eb622d2071a4aa53923f8fc5b88a750bd20eafe119cdb6f7e554dcb52c96b1a6d02ec614d3cefb2118bc4ea1d0d",
-      "txs": [
-        {
-          "amount": 2,
-          "balance_key": "484b3176c63d5f37d808404af1a12c4b9649cd6f6769f35bdf5a816133623fbc",
-          "recipient": "bank_001"
-        },
-        {
-          "amount": 2,
-          "balance_key": "dd131b8345f7e1b4b1f61106058fc8ae037e8ee8529acc444fa7d1c189f8cfc6",
-          "recipient": "validator_001"
-        }
-      ]
+      "account_number": "0cdd4ba04456ca169baca3d66eace869520c62fe84421329086e03d91a68acdb",
+      "message": {
+        "balance_key": "e6a41b658e17ab2db4355176c8160de6a66b07e5cbdd85244b55b38b4fd26e92",
+        "txs": [
+          {
+            "amount": 4.125,
+            "recipient": "484b3176c63d5f37d808404af1a12c4b9649cd6f6769f35bdf5a816133623fbc"
+          },
+          {
+            "amount": 1,
+            "recipient": "5e12967707909e62b2bb2036c209085a784fabbc3deccefee70052b6181c8ed8"
+          },
+          {
+            "amount": 4,
+            "recipient": "ad1f8845c6a1abb6011a2a434a079a087c460657aad54329a84b406dce8bf314"
+          }
+        ]
+      },
+      "signature": "d857184b7d3121a8f9dccab09062fafc82dd0fb30a5d53e19ab25a587171bb9c6b33858353cd3ff7ddc1ad2bfc59a885e85827799bcfc082fd048f9bf34bd404"
     },
-    "updated_balances": []
+    "block_identifier": "4c9595b2b661a23e665256d6826ae940bd4ea82bef0c1ba7b3104e40a4c42b91",
+    "updated_balances": [
+      {
+        "account_number": "0cdd4ba04456ca169baca3d66eace869520c62fe84421329086e03d91a68acdb",
+        "balance": "4294967014.5000000000000000",
+        "balance_lock": "729ce6ce619aeedf260221c7687c51d8a6845fbb5407b11c8cd26eaa7c8a6125"
+      },
+      {
+        "account_number": "484b3176c63d5f37d808404af1a12c4b9649cd6f6769f35bdf5a816133623fbc",
+        "balance": "191.5000000000000000"
+      },
+      {
+        "account_number": "5e12967707909e62b2bb2036c209085a784fabbc3deccefee70052b6181c8ed8",
+        "balance": "18.0000000000000000"
+      },
+      {
+        "account_number": "ad1f8845c6a1abb6011a2a434a079a087c460657aad54329a84b406dce8bf314",
+        "balance": "72.0000000000000000"
+      }
+    ]
   },
   "node_identifier": "3afdf37573f1a511def0bd85553404b7091a76bcd79cdcebba1310527b167521",
-  "signature": "9fb251dc4952ffcd35d52718558885e766f90821893eef9e940200a7a3c4bb40f6eb74d8a6e8b362e596c8d398480b0979993de588e1e5b034f34a50644a3503"
+  "signature": "b4d335fa7662216acba06c18d93c6cfb688c8057cbe9193ddc8e6fb3702ba1d979e43b09e06c6c7c38358bbee5243dc37a52c5212298c2259be48285e3da130c"
 }`}
         heading="Request (Validator > Bank)"
       />
