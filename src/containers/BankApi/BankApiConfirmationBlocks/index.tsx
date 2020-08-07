@@ -43,11 +43,6 @@ const BankApiConfirmationBlocks: FC = () => {
       <TableParams
         items={[
           {
-            dataType: 'string',
-            description: 'hashed head block of the validators blockchain',
-            param: 'block_identifier',
-          },
-          {
             dataType: 'object',
             description: 'original bank block and a list of updated account balances of all accounts involved',
             param: 'message',
