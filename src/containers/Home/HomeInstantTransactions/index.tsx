@@ -11,8 +11,8 @@ const HomeInstantTransactions: FC = () => {
   return (
     <div className="HomeInstantTransactions">
       <div className="HomeInstantTransactions__content-container">
-        <div className="HomeInstantTransactions-mini">INSTANT TRANSACTIONS</div>
-        <h1>Say goodbye to 10 minute block times</h1>
+        <div className="HomeInstantTransactions__mini-text">INSTANT TRANSACTIONS</div>
+        <h1 className="HomeInstantTransactions__title">Say goodbye to 10 minute block times</h1>
         <div className="HomeInstantTransactions__text-snippets">
           <div className="HomeInstantTransactions__text-snippets-left-block">
             <p>

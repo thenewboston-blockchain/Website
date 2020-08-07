@@ -17,7 +17,7 @@ const HomeComparisonCards: FC = () => {
   return (
     <div className="HomeComparisonCards">
       <div className="HomeComparisonCards__card">
-        <img alt="logo" className="crypto-logo" src={Bitcoin} />
+        <img alt="logo" className="HomeComparisonCards__crypto-logo" src={Bitcoin} />
         {renderComparisonCardStat('txs per second', '7')}
         {renderComparisonCardStat('avg. tx time', '~5 min')}
       </div>
@@ -25,7 +25,7 @@ const HomeComparisonCards: FC = () => {
         <img alt="right arrow" className="right-arrow" src={RightArrow} />
       </div>
       <div className="HomeComparisonCards__card">
-        <img alt="logo" className="crypto-logo" src={Logo} />
+        <img alt="logo" className="HomeComparisonCards__crypto-logo" src={Logo} />
         {renderComparisonCardStat('txs per second', '3,238')}
         {renderComparisonCardStat('avg. tx time', '0.015 seconds')}
       </div>

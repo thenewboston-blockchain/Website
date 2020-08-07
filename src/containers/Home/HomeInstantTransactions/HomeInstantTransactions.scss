@@ -6,13 +6,6 @@
   min-height: 1440px;
   position: relative;
 
-  h1 {
-    font-size: 36px;
-    font-weight: bold;
-    line-height: 120%;
-    margin-top: 30px;
-  }
-
   &__background-graphic {
     display: block;
     width: 100%;
@@ -33,12 +26,6 @@
     width: 100%;
     z-index: 1;
 
-    .HomeInstantTransactions-mini {
-      color: #556cd6;
-      font-weight: 500;
-      line-height: 120%;
-    }
-
     &--display-large {
       display: block;
     }
@@ -46,6 +33,12 @@
     &--display-small {
       display: none;
     }
+  }
+
+  &__mini-text {
+    color: #556cd6;
+    font-weight: 500;
+    line-height: 120%;
   }
 
   &__text-snippets {
@@ -66,6 +59,13 @@
     &-right-block {
       margin-left: 30px;
     }
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 120%;
+    margin-top: 30px;
   }
 
   @media (max-width: 1440px) {
