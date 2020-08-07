@@ -1,5 +1,8 @@
-import React, {FC, ReactNode, useMemo} from 'react';
+import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
+
+import {DashboardLayout, GuideMenuItems} from 'components';
+import {PageData, PageDataObject} from 'types/page-data';
 
 import GuideAccounts from './GuideAccounts';
 import GuideBanks from './GuideBanks';
@@ -18,50 +21,91 @@ import GuideTransactionFees from './GuideTransactionFees';
 import GuideTrust from './GuideTrust';
 import GuideValidators from './GuideValidators';
 
-const getPageContent = (chapter: string): ReactNode => {
-  switch (chapter) {
-    case 'accounts':
-      return <GuideAccounts />;
-    case 'banks':
-      return <GuideBanks />;
-    case 'best-practices':
-      return <GuideBestPractices />;
-    case 'blocks':
-      return <GuideBlocks />;
-    case 'confirmation-services':
-      return <GuideConfirmationServices />;
-    case 'confirmation-validators':
-      return <GuideConfirmationValidators />;
-    case 'future-development':
-      return <GuideFutureDevelopment />;
-    case 'initial-funds':
-      return <GuideInitialFunds />;
-    case 'introduction':
-      return <GuideIntroduction />;
-    case 'node-identifiers':
-      return <GuideNodeIdentifier />;
-    case 'resync-process':
-      return <GuideResyncProcess />;
-    case 'resync-triggers':
-      return <GuideResyncTriggers />;
-    case 'root-account-file':
-      return <GuideRootAccountFile />;
-    case 'transaction-fees':
-      return <GuideTransactionFees />;
-    case 'trust':
-      return <GuideTrust />;
-    case 'validators':
-      return <GuideValidators />;
-    default:
-      return <Redirect to="/guide/introduction" />;
-  }
+const defaultPageData: PageData = {
+  content: <Redirect to="/guide/introduction" />,
+  name: '',
+};
+
+const pageData: PageDataObject = {
+  accounts: {
+    content: <GuideAccounts />,
+    name: 'Accounts',
+  },
+  banks: {
+    content: <GuideBanks />,
+    name: 'Banks',
+  },
+  'best-practices': {
+    content: <GuideBestPractices />,
+    name: 'Best Practices',
+  },
+  blocks: {
+    content: <GuideBlocks />,
+    name: 'Blocks',
+  },
+  'confirmation-services': {
+    content: <GuideConfirmationServices />,
+    name: 'Confirmation Services',
+  },
+  'confirmation-validators': {
+    content: <GuideConfirmationValidators />,
+    name: 'Confirmation Validators',
+  },
+  'future-development': {
+    content: <GuideFutureDevelopment />,
+    name: 'Future Development',
+  },
+  'initial-funds': {
+    content: <GuideInitialFunds />,
+    name: 'Initial Funds',
+  },
+  introduction: {
+    content: <GuideIntroduction />,
+    name: 'Introduction',
+  },
+  'node-identifiers': {
+    content: <GuideNodeIdentifier />,
+    name: 'Node Identifiers',
+  },
+  'resync-process': {
+    content: <GuideResyncProcess />,
+    name: 'Resync Process',
+  },
+  'resync-triggers': {
+    content: <GuideResyncTriggers />,
+    name: 'Resync Triggers',
+  },
+  'root-account-file': {
+    content: <GuideRootAccountFile />,
+    name: 'Root Account File',
+  },
+  'transaction-fees': {
+    content: <GuideTransactionFees />,
+    name: 'Transaction Fees',
+  },
+  trust: {
+    content: <GuideTrust />,
+    name: 'Trust',
+  },
+  validators: {
+    content: <GuideValidators />,
+    name: 'Validators',
+  },
+};
+
+const getPageData = (chapter: string): PageData => {
+  return pageData[chapter] || defaultPageData;
 };
 
 const Guide: FC = () => {
   const {chapter} = useParams();
-  const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
+  const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
 
-  return <>{pageContent}</>;
+  return (
+    <DashboardLayout menuItems={<GuideMenuItems />} pageName={name} sectionName="Guide">
+      {content}
+    </DashboardLayout>
+  );
 };
 
 export default Guide;

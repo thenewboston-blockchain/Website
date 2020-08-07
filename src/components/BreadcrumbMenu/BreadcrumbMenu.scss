@@ -1,0 +1,57 @@
+$navigation-bars-height: 100px; // TopNav.height + BreadcrumbMenu__bar.height
+
+.BreadcrumbMenu {
+  $self: &;
+
+  &__bar {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-weight: 500;
+    padding: 0 12px;
+    height: 40px;
+    justify-content: space-between;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__dropdown-menu {
+    background: #fff;
+    box-shadow: 0 3px 3px rgba(4, 34, 53, 0.06);
+    cursor: auto;
+    font-weight: normal;
+    max-height: calc(100vh - #{$navigation-bars-height});
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 10px;
+    position: absolute;
+    right: 0;
+    top: $navigation-bars-height;
+    width: 100vw;
+    z-index: 2;
+  }
+
+  &__navigation {
+    align-items: center;
+    display: flex;
+  }
+
+  &__toggle-arrow {
+    transform: rotate(0deg);
+    transition-duration: 0.4s;
+  }
+
+  &__toggle-container {
+    align-items: center;
+    display: flex;
+    transition-duration: 0.2s;
+
+    &--open {
+      #{$self}__toggle-arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

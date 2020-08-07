@@ -1,7 +1,9 @@
-import React, {FC, ReactNode, useMemo} from 'react';
+import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
+import {ApiMenuItems, DashboardLayout} from 'components';
 import NodeApiConnectionRequests from 'containers/NodeApi/NodeApiConnectionRequests';
+import {PageData, PageDataObject} from 'types/page-data';
 
 import BankApiAccounts from './BankApiAccounts';
 import BankApiBankTransactions from './BankApiBankTransactions';
@@ -12,36 +14,63 @@ import BankApiConfirmationBlocks from './BankApiConfirmationBlocks';
 import BankApiValidatorConfirmationServices from './BankApiValidatorConfirmationServices';
 import BankApiValidators from './BankApiValidators';
 
-const getPageContent = (chapter: string): ReactNode => {
-  switch (chapter) {
-    case 'accounts':
-      return <BankApiAccounts />;
-    case 'bank-transactions':
-      return <BankApiBankTransactions />;
-    case 'banks':
-      return <BankApiBanks />;
-    case 'blocks':
-      return <BankApiBlocks />;
-    case 'config':
-      return <BankApiConfig />;
-    case 'confirmation-blocks':
-      return <BankApiConfirmationBlocks />;
-    case 'connection-requests':
-      return <NodeApiConnectionRequests />;
-    case 'validator-confirmation-services':
-      return <BankApiValidatorConfirmationServices />;
-    case 'validators':
-      return <BankApiValidators />;
-    default:
-      return <Redirect to="/bank-api/accounts" />;
-  }
+const defaultPageData: PageData = {
+  content: <Redirect to="/bank-api/accounts" />,
+  name: '',
+};
+
+const pageData: PageDataObject = {
+  accounts: {
+    content: <BankApiAccounts />,
+    name: 'Accounts',
+  },
+  'bank-transactions': {
+    content: <BankApiBankTransactions />,
+    name: 'Bank Transactions',
+  },
+  banks: {
+    content: <BankApiBanks />,
+    name: 'Banks',
+  },
+  blocks: {
+    content: <BankApiBlocks />,
+    name: 'Blocks',
+  },
+  config: {
+    content: <BankApiConfig />,
+    name: 'Config',
+  },
+  'confirmation-blocks': {
+    content: <BankApiConfirmationBlocks />,
+    name: 'Confirmation Blocks',
+  },
+  'connection-requests': {
+    content: <NodeApiConnectionRequests />,
+    name: 'Connection Requests',
+  },
+  'validator-confirmation-services': {
+    content: <BankApiValidatorConfirmationServices />,
+    name: 'Validator Confirmation Services',
+  },
+  validators: {
+    content: <BankApiValidators />,
+    name: 'Validators',
+  },
+};
+
+const getPageData = (chapter: string): PageData => {
+  return pageData[chapter] || defaultPageData;
 };
 
 const BankApi: FC = () => {
   const {chapter} = useParams();
-  const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
+  const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
 
-  return <>{pageContent}</>;
+  return (
+    <DashboardLayout menuItems={<ApiMenuItems />} pageName={name} sectionName="Bank API">
+      {content}
+    </DashboardLayout>
+  );
 };
 
 export default BankApi;
