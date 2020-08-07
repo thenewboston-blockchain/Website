@@ -1,25 +1,42 @@
-import React, {FC, ReactNode, useMemo} from 'react';
+import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
+
+import {DashboardLayout} from 'components';
+import GuideMenuItems from 'components/GuideMenuItems';
+import {PageData, PageDataObject} from 'types/page-data';
 
 import DeploymentGuideBank from './DeploymentGuideBank';
 import DeploymentGuideValidator from './DeploymentGuideValidator';
 
-const getPageContent = (chapter: string): ReactNode => {
-  switch (chapter) {
-    case 'bank':
-      return <DeploymentGuideBank />;
-    case 'validator':
-      return <DeploymentGuideValidator />;
-    default:
-      return <Redirect to="/deployment-guide/bank" />;
-  }
+const defaultPageData: PageData = {
+  content: <Redirect to="/deployment-guide/bank" />,
+  name: '',
+};
+
+const pageData: PageDataObject = {
+  bank: {
+    content: <DeploymentGuideBank />,
+    name: 'Bank',
+  },
+  validator: {
+    content: <DeploymentGuideValidator />,
+    name: 'Validator',
+  },
+};
+
+const getPageData = (chapter: string): PageData => {
+  return pageData[chapter] || defaultPageData;
 };
 
 const DeploymentGuide: FC = () => {
   const {chapter} = useParams();
-  const pageContent = useMemo(() => getPageContent(chapter), [chapter]);
+  const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
 
-  return <>{pageContent}</>;
+  return (
+    <DashboardLayout menuItems={<GuideMenuItems />} pageName={name} sectionName="Deployment Guide">
+      {content}
+    </DashboardLayout>
+  );
 };
 
 export default DeploymentGuide;
