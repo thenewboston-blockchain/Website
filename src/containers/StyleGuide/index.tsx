@@ -8,34 +8,33 @@ import {PageData, PageDataObject} from 'types/page-data';
 import StyleGuideCss from './StyleGuideCss';
 import StyleGuideReact from './StyleGuideReact';
 
+const defaultPageData: PageData = {
+  content: <Redirect to="/style-guide/react" />,
+  name: '',
+};
+
+const pageData: PageDataObject = {
+  css: {
+    content: <StyleGuideCss />,
+    name: 'CSS / SASS',
+  },
+  react: {
+    content: <StyleGuideReact />,
+    name: 'React / JSX',
+  },
+};
+
 const getPageData = (chapter: string): PageData => {
-  const defaultPageData: PageData = {
-    content: <Redirect to="/style-guide/react" />,
-    name: '',
-  };
-
-  const pageData: PageDataObject = {
-    css: {
-      content: <StyleGuideCss />,
-      name: 'CSS / SASS',
-    },
-    react: {
-      content: <StyleGuideReact />,
-      name: 'React / JSX',
-    },
-  };
-
   return pageData[chapter] || defaultPageData;
 };
 
 const StyleGuide: FC = () => {
   const {chapter} = useParams();
-  const pageContent = useMemo(() => getPageData(chapter).content, [chapter]);
-  const pageName = useMemo(() => getPageData(chapter).name, [chapter]);
+  const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
 
   return (
-    <DashboardLayout menuItems={<GuideMenuItems />} pageName={pageName} sectionName="Style Guide">
-      {pageContent}
+    <DashboardLayout menuItems={<GuideMenuItems />} pageName={name} sectionName="Style Guide">
+      {content}
     </DashboardLayout>
   );
 };

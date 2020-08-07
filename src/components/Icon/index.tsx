@@ -33,12 +33,16 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
   };
 
   const renderIcon = (): ReactNode => {
-    const icons = {
-      [IconType.chevronDown]: <ChevronDownIcon {...iconProps} />,
-      [IconType.menu]: <MenuIcon {...iconProps} />,
-      [IconType.menuRight]: <MenuRightIcon {...iconProps} />,
-    };
-    return icons[icon] || null;
+    switch (icon) {
+      case IconType.chevronDown:
+        return <ChevronDownIcon {...iconProps} />;
+      case IconType.menu:
+        return <MenuIcon {...iconProps} />;
+      case IconType.menuRight:
+        return <MenuRightIcon {...iconProps} />;
+      default:
+        return null;
+    }
   };
 
   return (

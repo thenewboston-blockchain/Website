@@ -8,34 +8,33 @@ import {PageData, PageDataObject} from 'types/page-data';
 import DeploymentGuideBank from './DeploymentGuideBank';
 import DeploymentGuideValidator from './DeploymentGuideValidator';
 
+const defaultPageData: PageData = {
+  content: <Redirect to="/deployment-guide/bank" />,
+  name: '',
+};
+
+const pageData: PageDataObject = {
+  bank: {
+    content: <DeploymentGuideBank />,
+    name: 'Bank',
+  },
+  validator: {
+    content: <DeploymentGuideValidator />,
+    name: 'Validator',
+  },
+};
+
 const getPageData = (chapter: string): PageData => {
-  const defaultPageData: PageData = {
-    content: <Redirect to="/deployment-guide/bank" />,
-    name: '',
-  };
-
-  const pageData: PageDataObject = {
-    bank: {
-      content: <DeploymentGuideBank />,
-      name: 'Bank',
-    },
-    validator: {
-      content: <DeploymentGuideValidator />,
-      name: 'Validator',
-    },
-  };
-
   return pageData[chapter] || defaultPageData;
 };
 
 const DeploymentGuide: FC = () => {
   const {chapter} = useParams();
-  const pageContent = useMemo(() => getPageData(chapter).content, [chapter]);
-  const pageName = useMemo(() => getPageData(chapter).name, [chapter]);
+  const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
 
   return (
-    <DashboardLayout menuItems={<GuideMenuItems />} pageName={pageName} sectionName="Deployment Guide">
-      {pageContent}
+    <DashboardLayout menuItems={<GuideMenuItems />} pageName={name} sectionName="Deployment Guide">
+      {content}
     </DashboardLayout>
   );
 };

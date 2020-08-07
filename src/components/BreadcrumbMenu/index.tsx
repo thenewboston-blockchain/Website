@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/no-use-before-define */
-
 import React, {FC, ReactNode, useEffect, useState} from 'react';
-import {useLocation} from 'react-router-dom';
 import useOnclickOutside from 'react-cool-onclickoutside';
+import {useLocation} from 'react-router-dom';
+import clsx from 'clsx';
 
 import {Icon, IconType, Shadow} from 'components';
 import './BreadcrumbMenu.scss';
@@ -35,7 +34,7 @@ const BreadcrumbMenu: FC<ComponentProps> = ({menuItems, pageName, sectionName}) 
       <div className="BreadcrumbMenu__bar" onClick={() => setOpen(!open)} role="button" tabIndex={0}>
         <div className="BreadcrumbMenu__navigation">
           {sectionName}
-          <Icon className="react-icons" icon={IconType.menuRight} size={24} />
+          <Icon icon={IconType.menuRight} size={24} />
           {pageName}
         </div>
         {renderToggle()}
@@ -55,8 +54,8 @@ const BreadcrumbMenu: FC<ComponentProps> = ({menuItems, pageName, sectionName}) 
 
   const renderToggle = (): ReactNode => {
     return (
-      <div className={`BreadcrumbMenu__toggle-container ${open ? 'BreadcrumbMenu__toggle-container--open' : ''}`}>
-        <Icon className="react-icons BreadcrumbMenu__toggle-arrow" icon={IconType.chevronDown} size={24} />
+      <div className={clsx('BreadcrumbMenu__toggle-container', {'BreadcrumbMenu__toggle-container--open': open})}>
+        <Icon className="BreadcrumbMenu__toggle-arrow" icon={IconType.chevronDown} size={24} />
       </div>
     );
   };

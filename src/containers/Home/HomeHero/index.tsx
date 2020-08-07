@@ -15,14 +15,14 @@ const HomeHero: FC = () => {
       <div className="HomeHero__wrapper">
         <div className="HomeHero__left">
           <div className="HomeHero__left-content-container">
-            <h1>We are building the impossible</h1>
-            <h2>
+            <h1 className="HomeHero__title">We are building the impossible</h1>
+            <h2 className="HomeHero__subtitle">
               Join us in building a cryptocurrency that will soon change the world by allowing transactions to be
               processed in less than a second.
             </h2>
             <div className="HomeHero__marketing-buttons">
-              <MarketingButton website="slack" />
-              <MarketingButton website="github" />
+              <MarketingButton className="HomeHero__MarketingButton" website="slack" />
+              <MarketingButton className="HomeHero__MarketingButton" website="github" />
             </div>
           </div>
         </div>
