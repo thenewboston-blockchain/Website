@@ -11,8 +11,8 @@ html {
 
 body {
   background: var(--color-bg);
-  color: var(--color-gray-2);
-  font-family: 'Roboto', sans-serif;
+  color: var(--color-primary);
+  font-family: var(--font-family-helvetica-neue);
   font-size: 14px;
   line-height: 22px;
   max-height: 100vh;
@@ -24,7 +24,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--color-gray-1);
+  line-height: 1;
   margin: 0;
 }
 
