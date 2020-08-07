@@ -21,90 +21,89 @@ import GuideTransactionFees from './GuideTransactionFees';
 import GuideTrust from './GuideTrust';
 import GuideValidators from './GuideValidators';
 
+const defaultPageData: PageData = {
+  content: <Redirect to="/guide/introduction" />,
+  name: '',
+};
+
+const pageData: PageDataObject = {
+  accounts: {
+    content: <GuideAccounts />,
+    name: 'Accounts',
+  },
+  banks: {
+    content: <GuideBanks />,
+    name: 'Banks',
+  },
+  'best-practices': {
+    content: <GuideBestPractices />,
+    name: 'Best Practices',
+  },
+  blocks: {
+    content: <GuideBlocks />,
+    name: 'Blocks',
+  },
+  'confirmation-services': {
+    content: <GuideConfirmationServices />,
+    name: 'Confirmation Services',
+  },
+  'confirmation-validators': {
+    content: <GuideConfirmationValidators />,
+    name: 'Confirmation Validators',
+  },
+  'future-development': {
+    content: <GuideFutureDevelopment />,
+    name: 'Future Development',
+  },
+  'initial-funds': {
+    content: <GuideInitialFunds />,
+    name: 'Initial Funds',
+  },
+  introduction: {
+    content: <GuideIntroduction />,
+    name: 'Introduction',
+  },
+  'node-identifiers': {
+    content: <GuideNodeIdentifier />,
+    name: 'Node Identifiers',
+  },
+  'resync-process': {
+    content: <GuideResyncProcess />,
+    name: 'Resync Process',
+  },
+  'resync-triggers': {
+    content: <GuideResyncTriggers />,
+    name: 'Resync Triggers',
+  },
+  'root-account-file': {
+    content: <GuideRootAccountFile />,
+    name: 'Root Account File',
+  },
+  'transaction-fees': {
+    content: <GuideTransactionFees />,
+    name: 'Transaction Fees',
+  },
+  trust: {
+    content: <GuideTrust />,
+    name: 'Trust',
+  },
+  validators: {
+    content: <GuideValidators />,
+    name: 'Validators',
+  },
+};
+
 const getPageData = (chapter: string): PageData => {
-  const defaultPageData: PageData = {
-    content: <Redirect to="/guide/introduction" />,
-    name: '',
-  };
-
-  const pageData: PageDataObject = {
-    accounts: {
-      content: <GuideAccounts />,
-      name: 'Accounts',
-    },
-    banks: {
-      content: <GuideBanks />,
-      name: 'Banks',
-    },
-    'best-practices': {
-      content: <GuideBestPractices />,
-      name: 'Best Practices',
-    },
-    blocks: {
-      content: <GuideBlocks />,
-      name: 'Blocks',
-    },
-    'confirmation-services': {
-      content: <GuideConfirmationServices />,
-      name: 'Confirmation Services',
-    },
-    'confirmation-validators': {
-      content: <GuideConfirmationValidators />,
-      name: 'Confirmation Validators',
-    },
-    'future-development': {
-      content: <GuideFutureDevelopment />,
-      name: 'Future Development',
-    },
-    'initial-funds': {
-      content: <GuideInitialFunds />,
-      name: 'Initial Funds',
-    },
-    introduction: {
-      content: <GuideIntroduction />,
-      name: 'Introduction',
-    },
-    'node-identifiers': {
-      content: <GuideNodeIdentifier />,
-      name: 'Node Identifiers',
-    },
-    'resync-process': {
-      content: <GuideResyncProcess />,
-      name: 'Resync Process',
-    },
-    'resync-triggers': {
-      content: <GuideResyncTriggers />,
-      name: 'Resync Triggers',
-    },
-    'root-account-file': {
-      content: <GuideRootAccountFile />,
-      name: 'Root Account File',
-    },
-    'transaction-fees': {
-      content: <GuideTransactionFees />,
-      name: 'Transaction Fees',
-    },
-    trust: {
-      content: <GuideTrust />,
-      name: 'Trust',
-    },
-    validators: {
-      content: <GuideValidators />,
-      name: 'Validators',
-    },
-  };
-
   return pageData[chapter] || defaultPageData;
 };
 
 const Guide: FC = () => {
   const {chapter} = useParams();
-  const pageContent = useMemo(() => getPageData(chapter).content, [chapter]);
-  const pageName = useMemo(() => getPageData(chapter).name, [chapter]);
+  const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
 
   return (
-    <DashboardLayout menuItems={<GuideMenuItems />} pageName={pageName} sectionName="Guide">
-      {pageContent}
+    <DashboardLayout menuItems={<GuideMenuItems />} pageName={name} sectionName="Guide">
+      {content}
     </DashboardLayout>
   );
 };

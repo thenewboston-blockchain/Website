@@ -12,54 +12,53 @@ import ConfirmationValidatorApiConfig from './ConfirmationValidatorApiConfig';
 import ConfirmationValidatorApiConfirmationBlocks from './ConfirmationValidatorApiConfirmationBlocks';
 import ConfirmationValidatorApiValidators from './ConfirmationValidatorApiValidators';
 
+const defaultPageData: PageData = {
+  content: <Redirect to="/confirmation-validator-api/accounts" />,
+  name: '',
+};
+
+const pageData: PageDataObject = {
+  accounts: {
+    content: <ConfirmationValidatorApiAccounts />,
+    name: 'Accounts',
+  },
+  'bank-confirmation-services': {
+    content: <ConfirmationValidatorApiBankConfirmationServices />,
+    name: 'Bank Confirmation Services',
+  },
+  banks: {
+    content: <ConfirmationValidatorApiBanks />,
+    name: 'Banks',
+  },
+  config: {
+    content: <ConfirmationValidatorApiConfig />,
+    name: 'Config',
+  },
+  'confirmation-blocks': {
+    content: <ConfirmationValidatorApiConfirmationBlocks />,
+    name: 'Confirmation Blocks',
+  },
+  'connection-requests': {
+    content: <NodeApiConnectionRequests />,
+    name: 'Connection Requests',
+  },
+  validators: {
+    content: <ConfirmationValidatorApiValidators />,
+    name: 'Validators',
+  },
+};
+
 const getPageData = (chapter: string): PageData => {
-  const defaultPageData: PageData = {
-    content: <Redirect to="/confirmation-validator-api/accounts" />,
-    name: '',
-  };
-
-  const pageData: PageDataObject = {
-    accounts: {
-      content: <ConfirmationValidatorApiAccounts />,
-      name: 'Accounts',
-    },
-    'bank-confirmation-services': {
-      content: <ConfirmationValidatorApiBankConfirmationServices />,
-      name: 'Bank Confirmation Services',
-    },
-    banks: {
-      content: <ConfirmationValidatorApiBanks />,
-      name: 'Banks',
-    },
-    config: {
-      content: <ConfirmationValidatorApiConfig />,
-      name: 'Config',
-    },
-    'confirmation-blocks': {
-      content: <ConfirmationValidatorApiConfirmationBlocks />,
-      name: 'Confirmation Blocks',
-    },
-    'connection-requests': {
-      content: <NodeApiConnectionRequests />,
-      name: 'Connection Requests',
-    },
-    validators: {
-      content: <ConfirmationValidatorApiValidators />,
-      name: 'Validators',
-    },
-  };
-
   return pageData[chapter] || defaultPageData;
 };
 
 const ConfirmationValidatorApi: FC = () => {
   const {chapter} = useParams();
-  const pageContent = useMemo(() => getPageData(chapter).content, [chapter]);
-  const pageName = useMemo(() => getPageData(chapter).name, [chapter]);
+  const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
 
   return (
-    <DashboardLayout menuItems={<ApiMenuItems />} pageName={pageName} sectionName="Confirmation Validator API">
-      {pageContent}
+    <DashboardLayout menuItems={<ApiMenuItems />} pageName={name} sectionName="Confirmation Validator API">
+      {content}
     </DashboardLayout>
   );
 };
