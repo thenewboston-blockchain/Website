@@ -7,28 +7,6 @@ import Arm from './Arm.png';
 import './Contribute.scss';
 
 const Contribute: FC = () => {
-  const renderDesign = (): ReactNode => (
-    <div className="Contribute__navigation-column">
-      <h2 className="Contribute__navigation-column-header">Design</h2>
-
-      <div className="Contribute__navigation-group">
-        <h2 className="Contribute__navigation-group-header">Resources</h2>
-        <A
-          className="Contribute__a"
-          href="https://www.figma.com/file/ZLQBaMEsAQIdnfg5qtL384/TNB-System?node-id=12%3A113"
-        >
-          Style Guide
-        </A>
-        <A
-          className="Contribute__a"
-          href="https://docs.google.com/document/d/1gRy71vQrHGDk2bZ4Wcz3ha4xHjNmOtcXCkDXtLeqt-4/edit"
-        >
-          Figma Links
-        </A>
-      </div>
-    </div>
-  );
-
   const renderPythonDjango = (): ReactNode => (
     <div className="Contribute__navigation-column">
       <h2 className="Contribute__navigation-column-header">Python / Django</h2>
@@ -46,19 +24,21 @@ const Contribute: FC = () => {
         </A>
       </div>
 
-      <h2 className="Contribute__navigation-group-header">Validator</h2>
-      <NavLink className="Contribute__a" to="/confirmation-validator-api/accounts">
-        Confirmation Validator API Docs
-      </NavLink>
-      <NavLink className="Contribute__a" to="/primary-validator-api/accounts">
-        Primary Validator API Docs
-      </NavLink>
-      <A className="Contribute__a" href="https://github.com/thenewboston-developers/Validator">
-        Repository
-      </A>
-      <A className="Contribute__a" href="https://github.com/thenewboston-developers/Validator/issues">
-        Issues / Tasks
-      </A>
+      <div className="Contribute__navigation-group">
+        <h2 className="Contribute__navigation-group-header">Validator</h2>
+        <NavLink className="Contribute__a" to="/confirmation-validator-api/accounts">
+          Confirmation Validator API Docs
+        </NavLink>
+        <NavLink className="Contribute__a" to="/primary-validator-api/accounts">
+          Primary Validator API Docs
+        </NavLink>
+        <A className="Contribute__a" href="https://github.com/thenewboston-developers/Validator">
+          Repository
+        </A>
+        <A className="Contribute__a" href="https://github.com/thenewboston-developers/Validator/issues">
+          Issues / Tasks
+        </A>
+      </div>
     </div>
   );
 
@@ -76,13 +56,31 @@ const Contribute: FC = () => {
         </A>
       </div>
 
-      <h2 className="Contribute__navigation-group-header">Website</h2>
-      <A className="Contribute__a" href="https://github.com/thenewboston-developers/Website">
-        Repository
-      </A>
-      <A className="Contribute__a" href="https://github.com/thenewboston-developers/Website/issues">
-        Issues / Tasks
-      </A>
+      <div className="Contribute__navigation-group">
+        <h2 className="Contribute__navigation-group-header">Website</h2>
+        <A className="Contribute__a" href="https://github.com/thenewboston-developers/Website">
+          Repository
+        </A>
+        <A className="Contribute__a" href="https://github.com/thenewboston-developers/Website/issues">
+          Issues / Tasks
+        </A>
+      </div>
+
+      <div className="Contribute__navigation-group">
+        <h2 className="Contribute__navigation-group-header">Resources</h2>
+        <A
+          className="Contribute__a"
+          href="https://www.figma.com/file/ZLQBaMEsAQIdnfg5qtL384/TNB-System?node-id=12%3A113"
+        >
+          Style Guide
+        </A>
+        <A
+          className="Contribute__a"
+          href="https://docs.google.com/document/d/1gRy71vQrHGDk2bZ4Wcz3ha4xHjNmOtcXCkDXtLeqt-4/edit"
+        >
+          Figma Links
+        </A>
+      </div>
     </div>
   );
 
@@ -115,7 +113,6 @@ const Contribute: FC = () => {
       <div className="Contribute__navigation-section">
         {renderPythonDjango()}
         {renderReactFE()}
-        {renderDesign()}
       </div>
     </div>
   );
