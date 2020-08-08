@@ -84,32 +84,30 @@ const Contribute: FC = () => {
     </div>
   );
 
-  const renderStepIndicator = (color: string, number: number, text: string): ReactNode => (
+  const renderStepIndicator = (number: number, text: string): ReactNode => (
     <div className="Contribute__step-indicator">
-      <div className="Contribute__step-bubble" style={{backgroundColor: color}}>
-        {number}
-      </div>
+      <div className="Contribute__step-bubble">{number}</div>
       <div className="Contribute__step-text">{text}</div>
     </div>
   );
 
   const renderStepOne = (): ReactNode => (
     <div className="Contribute__step-one">
-      {renderStepIndicator('#f4c2c4', 1, 'Get started on thenewboston')}
+      {renderStepIndicator(1, 'Get started on thenewboston')}
       <div className="Contribute__button-container">
-        <NavLink to="/guide/introduction">
-          <Button className="Contribute__doc-button">Documentation</Button>
-        </NavLink>
         <MarketingButton website="slack" />
         <MarketingButton website="github" />
         <MarketingButton website="reddit" />
+        <NavLink to="/guide/introduction">
+          <Button className="Contribute__doc-button">View Guide</Button>
+        </NavLink>
       </div>
     </div>
   );
 
   const renderStepTwo = (): ReactNode => (
     <div className="Contribute__step-two">
-      {renderStepIndicator('#b7d6ff', 2, 'Choose your weapon')}
+      {renderStepIndicator(2, 'Choose your weapon')}
       <div className="Contribute__navigation-section">
         {renderPythonDjango()}
         {renderReactFE()}

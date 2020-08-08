@@ -18,22 +18,24 @@
     z-index: -1;
   }
 
+  &__step-bubble {
+    align-items: center;
+    background-color: var(--color-tertiary);
+    border-radius: 18px;
+    color: #fff;
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    margin-right: 18px;
+    width: 36px;
+  }
+
   &__step-indicator {
     align-items: center;
     display: flex;
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 42px;
-  }
-
-  &__step-bubble {
-    align-items: center;
-    border-radius: 18px;
-    display: flex;
-    height: 36px;
-    justify-content: center;
-    margin-right: 18px;
-    width: 36px;
   }
 
   &__step-one,
