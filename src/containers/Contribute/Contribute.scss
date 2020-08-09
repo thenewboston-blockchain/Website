@@ -10,14 +10,6 @@
     margin-bottom: 6px;
   }
 
-  //&__arm {
-  //  bottom: 0;
-  //  max-height: 500px;
-  //  position: absolute;
-  //  right: 0;
-  //  z-index: -1;
-  //}
-
   &__step-bubble {
     align-items: center;
     background-color: var(--color-tertiary);
@@ -103,11 +95,4 @@
     flex-direction: column;
     padding: 36px;
   }
-
-  //@media (max-width: 500px) {
-  //  &__arm {
-  //    max-height: 250px;
-  //    top: -20px;
-  //  }
-  //}
 }
