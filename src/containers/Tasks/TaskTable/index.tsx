@@ -35,7 +35,7 @@ const TaskTable: FC<ComponentProps> = ({repoName, tableTitle}) => {
   };
 
   const renderLabels = (labels: any[]) => {
-    return labels.map(({color, name}) => <Label color={color} name={name} />);
+    return labels.map(({color, name}) => <Label color={color} key={name} name={name} />);
   };
 
   if (!rows.length) return null;
