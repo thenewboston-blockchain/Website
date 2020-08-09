@@ -16,11 +16,13 @@ const TaskTable: FC<ComponentProps> = ({repoName, tableTitle}) => {
     const fetchData = async (): Promise<void> => {
       const {data} = await axios.get(`https://api.github.com/repos/thenewboston-developers/${repoName}/issues`);
       setRows(
-        data.map(({assignee, html_url, labels, title}: any) => [
-          <A href={html_url}>{title}</A>,
-          renderLabels(labels),
-          renderAssignee(assignee),
-        ]),
+        data
+          .filter(({pull_request}: any) => !pull_request)
+          .map(({assignee, html_url, labels, title}: any) => [
+            <A href={html_url}>{title}</A>,
+            renderLabels(labels),
+            renderAssignee(assignee),
+          ]),
       );
     };
 
