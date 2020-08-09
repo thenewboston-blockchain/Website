@@ -7,6 +7,7 @@ import {DocContainer, DocEndpoint, DocInlineCode, DocList, DocImage, DocSubSecti
 import {Button} from './FormElements';
 import GuideMenuItems from './GuideMenuItems';
 import Icon, {IconType} from './Icon';
+import Label from './Label';
 import Layout from './Layout';
 import MarketingButton from './MarketingButton';
 import MenuGroup from './MenuGroup';
@@ -30,6 +31,7 @@ export {
   GuideMenuItems,
   Icon,
   IconType,
+  Label,
   Layout,
   MarketingButton,
   MenuGroup,

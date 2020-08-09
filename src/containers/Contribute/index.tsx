@@ -2,8 +2,8 @@ import React, {FC, ReactNode} from 'react';
 import {NavLink} from 'react-router-dom';
 
 import {A, Button, MarketingButton} from 'components';
+import Tasks from 'containers/Tasks';
 
-import Arm from './Arm.png';
 import './Contribute.scss';
 
 const Contribute: FC = () => {
@@ -116,11 +116,13 @@ const Contribute: FC = () => {
   );
 
   return (
-    <div className="Contribute">
-      {renderStepOne()}
-      {renderStepTwo()}
-      <img alt="arm" className="Contribute__arm" src={Arm} />
-    </div>
+    <>
+      <div className="Contribute">
+        {renderStepOne()}
+        {renderStepTwo()}
+      </div>
+      <Tasks />
+    </>
   );
 };
 
