@@ -5,6 +5,8 @@ import clsx from 'clsx';
 import noop from 'lodash/noop';
 
 import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
+import ChevronLeftIcon from 'mdi-react/ChevronLeftIcon';
+import ChevronRightIcon from 'mdi-react/ChevronRightIcon';
 import MenuIcon from 'mdi-react/MenuIcon';
 import MenuRightIcon from 'mdi-react/MenuRightIcon';
 
@@ -14,6 +16,8 @@ import './Icon.scss';
 // These names are camelCased versions of the names found in https://materialdesignicons.com/
 export enum IconType {
   chevronDown,
+  chevronLeft,
+  chevronRight,
   menu,
   menuRight,
 }
@@ -36,6 +40,10 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
     switch (icon) {
       case IconType.chevronDown:
         return <ChevronDownIcon {...iconProps} />;
+      case IconType.chevronLeft:
+        return <ChevronLeftIcon {...iconProps} />;
+      case IconType.chevronRight:
+        return <ChevronRightIcon {...iconProps} />;
       case IconType.menu:
         return <MenuIcon {...iconProps} />;
       case IconType.menuRight:

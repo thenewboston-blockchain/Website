@@ -4,21 +4,6 @@
   display: flex;
   height: 60px;
 
-  &__a,
-  &__a:visited {
-    color: #8792a2;
-    margin-right: 36px;
-    transition: color 0.1s ease;
-
-    &:hover {
-      color: var(--color-primary);
-    }
-
-    &:last-of-type {
-      margin-right: 24px;
-    }
-  }
-
   &__dropdown-menu {
     background: #fff;
     box-shadow: 0 3px 3px rgba(4, 34, 53, 0.06);
@@ -27,17 +12,6 @@
     top: 60px;
     width: 100vw;
     z-index: 2;
-  }
-
-  &__dropdown-menu-item {
-    color: #8792a2;
-    display: block;
-    padding: 6px 0;
-    transition: color 0.1s ease;
-
-    &:hover {
-      color: var(--color-primary);
-    }
   }
 
   &__dropdown-menu-item-container {
@@ -94,16 +68,6 @@
   }
 
   @media (max-width: 768px) {
-    &__a,
-    &__a:visited {
-      display: none;
-      margin: 0;
-
-      &:last-of-type {
-        margin-right: 12px;
-      }
-    }
-
     &__right-menu-toggle-container {
       display: flex;
     }

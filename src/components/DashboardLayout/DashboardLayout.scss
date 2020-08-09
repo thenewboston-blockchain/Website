@@ -17,6 +17,7 @@
   &__main-content {
     grid-column: 2 / span 1;
     overflow-y: auto;
+    padding-bottom: 96px;
   }
 
   @media (max-width: 768px) {

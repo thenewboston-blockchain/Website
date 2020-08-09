@@ -6,6 +6,8 @@ import clsx from 'clsx';
 import Logo from 'assets/svgs/thenewboston.svg';
 import {Icon, IconType, Shadow} from 'components';
 
+import TopNavDropdownMenuItem from './TopNavDropdownMenuItem';
+import TopNavMenuItem from './TopNavMenuItem';
 import './TopNav.scss';
 
 interface ComponentProps {
@@ -24,18 +26,18 @@ const TopNav: FC<ComponentProps> = ({className}) => {
       <div className="TopNav__dropdown-menu">
         <Shadow />
         <div className="TopNav__dropdown-menu-item-container">
-          <NavLink className="TopNav__dropdown-menu-item" to="/contribute">
-            Contribute
-          </NavLink>
-          <NavLink className="TopNav__dropdown-menu-item" to="/guide/introduction">
-            Guides
-          </NavLink>
-          <NavLink className="TopNav__dropdown-menu-item" to="/bank-api/accounts">
-            APIs
-          </NavLink>
-          <NavLink className="TopNav__dropdown-menu-item" to="/roadmap">
-            Roadmap
-          </NavLink>
+          <TopNavDropdownMenuItem activePatterns={['/contribute']} name="Contribute" url="/contribute" />
+          <TopNavDropdownMenuItem
+            activePatterns={['/deployment-guide', '/guide', '/style-guide']}
+            name="Guides"
+            url="/guide/introduction"
+          />
+          <TopNavDropdownMenuItem
+            activePatterns={['/bank-api', '/confirmation-validator-api', '/primary-validator-api']}
+            name="APIs"
+            url="/bank-api/accounts"
+          />
+          <TopNavDropdownMenuItem activePatterns={['/roadmap']} name="Roadmap" url="/roadmap" />
         </div>
       </div>
     );
@@ -51,18 +53,18 @@ const TopNav: FC<ComponentProps> = ({className}) => {
 
   const renderMenuItems = (): ReactNode => (
     <>
-      <NavLink className="TopNav__a" to="/contribute">
-        Contribute
-      </NavLink>
-      <NavLink className="TopNav__a" to="/guide/introduction">
-        Guides
-      </NavLink>
-      <NavLink className="TopNav__a" to="/bank-api/accounts">
-        APIs
-      </NavLink>
-      <NavLink className="TopNav__a" to="/roadmap">
-        Roadmap
-      </NavLink>
+      <TopNavMenuItem activePatterns={['/contribute']} name="Contribute" url="/contribute" />
+      <TopNavMenuItem
+        activePatterns={['/deployment-guide', '/guide', '/style-guide']}
+        name="Guides"
+        url="/guide/introduction"
+      />
+      <TopNavMenuItem
+        activePatterns={['/bank-api', '/confirmation-validator-api', '/primary-validator-api']}
+        name="APIs"
+        url="/bank-api/accounts"
+      />
+      <TopNavMenuItem activePatterns={['/roadmap']} name="Roadmap" url="/roadmap" />
     </>
   );
 

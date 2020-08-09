@@ -2,41 +2,134 @@ import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
 import {MenuGroup} from 'components';
+import {NavigationItem} from 'types/navigation';
+
+export const bankApiNavigationData = [
+  {
+    name: 'Accounts',
+    url: '/bank-api/accounts',
+  },
+  {
+    name: 'Bank Transactions',
+    url: '/bank-api/bank-transactions',
+  },
+  {
+    name: 'Banks',
+    url: '/bank-api/banks',
+  },
+  {
+    name: 'Blocks',
+    url: '/bank-api/blocks',
+  },
+  {
+    name: 'Config',
+    url: '/bank-api/config',
+  },
+  {
+    name: 'Confirmation Blocks',
+    url: '/bank-api/confirmation-blocks',
+  },
+  {
+    name: 'Invalid Blocks',
+    url: '/bank-api/invalid-blocks',
+  },
+  {
+    name: 'Connection Requests',
+    url: '/bank-api/connection-requests',
+  },
+  {
+    name: 'Confirmation Services',
+    url: '/bank-api/validator-confirmation-services',
+  },
+  {
+    name: 'Validators',
+    url: '/bank-api/validators',
+  },
+];
+
+export const primaryValidatorApiNavigationData = [
+  {
+    name: 'Accounts',
+    url: '/primary-validator-api/accounts',
+  },
+  {
+    name: 'Bank Blocks',
+    url: '/primary-validator-api/bank-blocks',
+  },
+  {
+    name: 'Banks',
+    url: '/primary-validator-api/banks',
+  },
+  {
+    name: 'Config',
+    url: '/primary-validator-api/config',
+  },
+  {
+    name: 'Confirmation Blocks',
+    url: '/primary-validator-api/confirmation-blocks',
+  },
+  {
+    name: 'Connection Requests',
+    url: '/primary-validator-api/connection-requests',
+  },
+  {
+    name: 'Validators',
+    url: '/primary-validator-api/validators',
+  },
+];
+
+export const confirmationValidatorApiNavigationData = [
+  {
+    name: 'Accounts',
+    url: '/confirmation-validator-api/accounts',
+  },
+  {
+    name: 'Confirmation Services',
+    url: '/confirmation-validator-api/bank-confirmation-services',
+  },
+  {
+    name: 'Banks',
+    url: '/confirmation-validator-api/banks',
+  },
+  {
+    name: 'Config',
+    url: '/confirmation-validator-api/config',
+  },
+  {
+    name: 'Confirmation Blocks',
+    url: '/confirmation-validator-api/confirmation-blocks',
+  },
+  {
+    name: 'Connection Requests',
+    url: '/confirmation-validator-api/connection-requests',
+  },
+  {
+    name: 'Validators',
+    url: '/confirmation-validator-api/validators',
+  },
+];
 
 const ApiMenuItems: FC = () => {
+  const renderNavLinks = (navigationData: NavigationItem[]) => {
+    return navigationData.map(({name, url}) => (
+      <NavLink key={url} to={url}>
+        {name}
+      </NavLink>
+    ));
+  };
+
   return (
     <>
       <MenuGroup title="Bank API" urlBase="bank-api">
-        <NavLink to="/bank-api/accounts">Accounts</NavLink>
-        <NavLink to="/bank-api/bank-transactions">Bank Transactions</NavLink>
-        <NavLink to="/bank-api/banks">Banks</NavLink>
-        <NavLink to="/bank-api/blocks">Blocks</NavLink>
-        <NavLink to="/bank-api/config">Config</NavLink>
-        <NavLink to="/bank-api/confirmation-blocks">Confirmation Blocks</NavLink>
-        <NavLink to="/bank-api/invalid-blocks">Invalid Blocks</NavLink>
-        <NavLink to="/bank-api/connection-requests">Connection Requests</NavLink>
-        <NavLink to="/bank-api/validator-confirmation-services">Confirmation Services</NavLink>
-        <NavLink to="/bank-api/validators">Validators</NavLink>
+        {renderNavLinks(bankApiNavigationData)}
       </MenuGroup>
 
       <MenuGroup title="Primary Validator API" urlBase="primary-validator-api">
-        <NavLink to="/primary-validator-api/accounts">Accounts</NavLink>
-        <NavLink to="/primary-validator-api/bank-blocks">Bank Blocks</NavLink>
-        <NavLink to="/primary-validator-api/banks">Banks</NavLink>
-        <NavLink to="/primary-validator-api/config">Config</NavLink>
-        <NavLink to="/primary-validator-api/confirmation-blocks">Confirmation Blocks</NavLink>
-        <NavLink to="/primary-validator-api/connection-requests">Connection Requests</NavLink>
-        <NavLink to="/primary-validator-api/validators">Validators</NavLink>
+        {renderNavLinks(primaryValidatorApiNavigationData)}
       </MenuGroup>
 
       <MenuGroup title="Confirmation Validator API" urlBase="confirmation-validator-api">
-        <NavLink to="/confirmation-validator-api/accounts">Accounts</NavLink>
-        <NavLink to="/confirmation-validator-api/bank-confirmation-services">Confirmation Services</NavLink>
-        <NavLink to="/confirmation-validator-api/banks">Banks</NavLink>
-        <NavLink to="/confirmation-validator-api/config">Config</NavLink>
-        <NavLink to="/confirmation-validator-api/confirmation-blocks">Confirmation Blocks</NavLink>
-        <NavLink to="/confirmation-validator-api/connection-requests">Connection Requests</NavLink>
-        <NavLink to="/confirmation-validator-api/validators">Validators</NavLink>
+        {renderNavLinks(confirmationValidatorApiNavigationData)}
       </MenuGroup>
     </>
   );
