@@ -1,21 +1,13 @@
 .Contribute {
   display: flex;
   justify-content: center;
-  padding: 48px;
+  padding: 48px 48px 0;
 
   &__a {
     display: block;
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 6px;
-  }
-
-  &__arm {
-    bottom: 0;
-    max-height: 500px;
-    position: absolute;
-    right: 0;
-    z-index: -1;
   }
 
   &__step-bubble {
@@ -102,12 +94,5 @@
   @media (max-width: 768px) {
     flex-direction: column;
     padding: 36px;
-  }
-
-  @media (max-width: 500px) {
-    &__arm {
-      max-height: 250px;
-      top: -20px;
-    }
   }
 }
