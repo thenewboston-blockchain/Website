@@ -73,7 +73,11 @@ export const guideNavigationData = [
 
 const GuideMenuItems: FC = () => {
   const renderNavLinks = (navigationData: NavigationItem[]) => {
-    return navigationData.map(({name, url}) => <NavLink to={url}>{name}</NavLink>);
+    return navigationData.map(({name, url}) => (
+      <NavLink key={url} to={url}>
+        {name}
+      </NavLink>
+    ));
   };
 
   return (
