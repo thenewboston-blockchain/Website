@@ -11,6 +11,7 @@ import BankApiBanks from './BankApiBanks';
 import BankApiBlocks from './BankApiBlocks';
 import BankApiConfig from './BankApiConfig';
 import BankApiConfirmationBlocks from './BankApiConfirmationBlocks';
+import BankApiInvalidBlocks from './BankApiInvalidBlocks';
 import BankApiValidatorConfirmationServices from './BankApiValidatorConfirmationServices';
 import BankApiValidators from './BankApiValidators';
 
@@ -47,6 +48,10 @@ const pageData: PageDataObject = {
   'connection-requests': {
     content: <NodeApiConnectionRequests />,
     name: 'Connection Requests',
+  },
+  'invalid-blocks': {
+    content: <BankApiInvalidBlocks />,
+    name: 'Invalid Blocks',
   },
   'validator-confirmation-services': {
     content: <BankApiValidatorConfirmationServices />,

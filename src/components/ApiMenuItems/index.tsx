@@ -13,6 +13,7 @@ const ApiMenuItems: FC = () => {
         <NavLink to="/bank-api/blocks">Blocks</NavLink>
         <NavLink to="/bank-api/config">Config</NavLink>
         <NavLink to="/bank-api/confirmation-blocks">Confirmation Blocks</NavLink>
+        <NavLink to="/bank-api/invalid-blocks">Invalid Blocks</NavLink>
         <NavLink to="/bank-api/connection-requests">Connection Requests</NavLink>
         <NavLink to="/bank-api/validator-confirmation-services">Confirmation Services</NavLink>
         <NavLink to="/bank-api/validators">Validators</NavLink>
