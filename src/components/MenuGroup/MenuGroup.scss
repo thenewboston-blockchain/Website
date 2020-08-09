@@ -19,8 +19,7 @@
       }
 
       &.active {
-        background: #f5fbff;
-        color: #556cd6;
+        color: var(--color-primary);
       }
     }
   }
