@@ -14,17 +14,6 @@
     z-index: 2;
   }
 
-  &__dropdown-menu-item {
-    color: #8792a2;
-    display: block;
-    padding: 6px 0;
-    transition: color 0.1s ease;
-
-    &:hover {
-      color: var(--color-primary);
-    }
-  }
-
   &__dropdown-menu-item-container {
     cursor: auto;
     padding: 32px;
