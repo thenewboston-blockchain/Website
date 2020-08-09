@@ -29,7 +29,7 @@ const Tasks = () => {
     return (
       <TableBorderGrid
         className="Tasks__TableBorderGrid"
-        headers={['Title', 'URL', 'Labels', 'Assignee', 'State']}
+        headers={['Task', 'Labels', 'Assignee', 'State']}
         rows={rows}
         title={title}
       />
@@ -38,8 +38,7 @@ const Tasks = () => {
 
   const renderWebsiteIssues = () => {
     const rows = websiteIssues.map(({assignee, html_url, labels, state, title}: any) => [
-      title,
-      <A href={html_url}>{html_url}</A>,
+      <A href={html_url}>{title}</A>,
       renderLabels(labels),
       renderAssignee(assignee),
       state,
