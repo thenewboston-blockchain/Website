@@ -1,7 +1,8 @@
 import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
-import {DashboardLayout, GuideMenuItems} from 'components';
+import {DashboardLayout, GuideMenuItems, Pagination} from 'components';
+import {guideNavigationData} from 'components/GuideMenuItems';
 import {PageData, PageDataObject} from 'types/page-data';
 
 import GuideAccounts from './GuideAccounts';
@@ -104,6 +105,7 @@ const Guide: FC = () => {
   return (
     <DashboardLayout menuItems={<GuideMenuItems />} pageName={name} sectionName="Guide">
       {content}
+      <Pagination navigationData={guideNavigationData} />
     </DashboardLayout>
   );
 };

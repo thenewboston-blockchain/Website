@@ -1,0 +1,10 @@
+.Pagination {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 0 32px;
+
+  &__a {
+    margin: 0 16px;
+  }
+}

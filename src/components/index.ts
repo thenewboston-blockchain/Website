@@ -11,6 +11,7 @@ import Label from './Label';
 import Layout from './Layout';
 import MarketingButton from './MarketingButton';
 import MenuGroup from './MenuGroup';
+import Pagination from './Pagination';
 import Shadow from './Shadow';
 import {TableBorderGrid, TableParams, TableVertical} from './Table';
 import TopNav from './TopNav';
@@ -35,6 +36,7 @@ export {
   Layout,
   MarketingButton,
   MenuGroup,
+  Pagination,
   RequestResponseSnippet,
   Shadow,
   SnippetLang,
