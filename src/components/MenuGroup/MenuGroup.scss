@@ -1,4 +1,6 @@
 .MenuGroup {
+  font-family: var(--font-family-helvetica-neue-medium);
+
   &__submenu {
     display: none;
     flex-direction: column;
