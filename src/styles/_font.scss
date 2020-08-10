@@ -15,11 +15,17 @@
   src: url('./fonts/HelveticaNeue/HelveticaNeueLight.ttf') format('ttf');
 }
 
+@font-face {
+  font-family: 'HelveticaNeueMedium';
+  src: url('./fonts/HelveticaNeue/HelveticaNeueMedium.ttf') format('ttf');
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
 
 :root {
   --font-family-helvetica-neue: 'HelveticaNeue', sans-serif;
   --font-family-helvetica-neue-light: 'HelveticaNeueLight', sans-serif;
+  --font-family-helvetica-neue-medium: 'HelveticaNeueMedium', sans-serif;
   --font-family-mono: 'JetBrainsMono', monospace;
   --font-family-mono-roboto: 'Roboto Mono', monospace;
   --font-size-large: 24px;

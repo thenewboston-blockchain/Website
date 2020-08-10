@@ -2,27 +2,88 @@ import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
 import {MenuGroup} from 'components';
+import {NavigationItem} from 'types/navigation';
+
+export const guideNavigationData = [
+  {
+    name: 'Introduction',
+    url: '/guide/introduction',
+  },
+  {
+    name: 'Accounts',
+    url: '/guide/accounts',
+  },
+  {
+    name: 'Blocks',
+    url: '/guide/blocks',
+  },
+  {
+    name: 'Transaction Fees',
+    url: '/guide/transaction-fees',
+  },
+  {
+    name: 'Root Account File',
+    url: '/guide/root-account-file',
+  },
+  {
+    name: 'Banks',
+    url: '/guide/banks',
+  },
+  {
+    name: 'Validators',
+    url: '/guide/validators',
+  },
+  {
+    name: 'Confirmation Validators',
+    url: '/guide/confirmation-validators',
+  },
+  {
+    name: 'Confirmation Services',
+    url: '/guide/confirmation-services',
+  },
+  {
+    name: 'Node Identifiers',
+    url: '/guide/node-identifiers',
+  },
+  {
+    name: 'Resync Triggers',
+    url: '/guide/resync-triggers',
+  },
+  {
+    name: 'Resync Process',
+    url: '/guide/resync-process',
+  },
+  {
+    name: 'Trust',
+    url: '/guide/trust',
+  },
+  {
+    name: 'Initial Funds',
+    url: '/guide/initial-funds',
+  },
+  {
+    name: 'Best Practices',
+    url: '/guide/best-practices',
+  },
+  {
+    name: 'Future Development',
+    url: '/guide/future-development',
+  },
+];
 
 const GuideMenuItems: FC = () => {
+  const renderNavLinks = (navigationData: NavigationItem[]) => {
+    return navigationData.map(({name, url}) => (
+      <NavLink key={url} to={url}>
+        {name}
+      </NavLink>
+    ));
+  };
+
   return (
     <>
       <MenuGroup title="Guide" urlBase="guide">
-        <NavLink to="/guide/introduction">Introduction</NavLink>
-        <NavLink to="/guide/accounts">Accounts</NavLink>
-        <NavLink to="/guide/blocks">Blocks</NavLink>
-        <NavLink to="/guide/transaction-fees">Transaction Fees</NavLink>
-        <NavLink to="/guide/root-account-file">Root Account File</NavLink>
-        <NavLink to="/guide/banks">Banks</NavLink>
-        <NavLink to="/guide/validators">Validators</NavLink>
-        <NavLink to="/guide/confirmation-validators">Confirmation Validators</NavLink>
-        <NavLink to="/guide/confirmation-services">Confirmation Services</NavLink>
-        <NavLink to="/guide/node-identifiers">Node Identifiers</NavLink>
-        <NavLink to="/guide/resync-triggers">Resync Triggers</NavLink>
-        <NavLink to="/guide/resync-process">Resync Process</NavLink>
-        <NavLink to="/guide/trust">Trust</NavLink>
-        <NavLink to="/guide/initial-funds">Initial Funds</NavLink>
-        <NavLink to="/guide/best-practices">Best Practices</NavLink>
-        <NavLink to="/guide/future-development">Future Development</NavLink>
+        {renderNavLinks(guideNavigationData)}
       </MenuGroup>
 
       <MenuGroup title="Deployment Guides" urlBase="deployment-guide">

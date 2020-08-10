@@ -1,0 +1,25 @@
+.TopNavMenuItem,
+.TopNavMenuItem:visited {
+  color: var(--color-sail-gray-400);
+  font-family: var(--font-family-helvetica-neue-medium);
+  font-size: 16px;
+  margin-right: 36px;
+  transition: color 0.1s ease;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+
+  &:last-of-type {
+    margin-right: 24px;
+  }
+
+  &.active {
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+    margin: 0;
+  }
+}
