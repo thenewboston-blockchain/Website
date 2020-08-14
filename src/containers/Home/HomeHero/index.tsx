@@ -15,7 +15,7 @@ const HomeHero: FC = () => {
       <div className="HomeHero__wrapper">
         <div className="HomeHero__left">
           <div className="HomeHero__left-content-container">
-            <h1 className="HomeHero__title">We are building the impossible</h1>
+            <h1 className="HomeHero__title">Transact in less than a second with digital currency</h1>
             <h2 className="HomeHero__subtitle">
               Join us in building a cryptocurrency that will soon change the world by allowing transactions to be
               processed in less than a second.
