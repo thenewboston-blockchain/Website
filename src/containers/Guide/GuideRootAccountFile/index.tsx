@@ -110,7 +110,7 @@ const GuideRootAccountFile: FC = () => {
         headers={['Last Tx ID', 'User', 'Balance']}
         rows={[
           [2, 'Amy', '$7'],
-          [2, 'Bucky', '$10'],
+          [1, 'Bucky', '$10'],
           [2, 'Carl', '$13'],
         ]}
         title="Account File"
@@ -124,9 +124,9 @@ const GuideRootAccountFile: FC = () => {
       <TableBorderGrid
         headers={['Last Tx ID', 'User', 'Balance']}
         rows={[
-          [2, 'Amy', '$7'],
-          [2, 'Bucky', '$10'],
-          [2, 'Carl', '$6'],
+          [3, 'Amy', '$13'],
+          [1, 'Bucky', '$10'],
+          [3, 'Carl', '$7'],
         ]}
         title="Account File"
       />
