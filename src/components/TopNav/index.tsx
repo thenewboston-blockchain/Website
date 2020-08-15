@@ -37,7 +37,6 @@ const TopNav: FC<ComponentProps> = ({className}) => {
             name="APIs"
             url="/bank-api/accounts"
           />
-          <TopNavDropdownMenuItem activePatterns={['/roadmap']} name="Roadmap" url="/roadmap" />
         </div>
       </div>
     );
@@ -64,7 +63,6 @@ const TopNav: FC<ComponentProps> = ({className}) => {
         name="APIs"
         url="/bank-api/accounts"
       />
-      <TopNavMenuItem activePatterns={['/roadmap']} name="Roadmap" url="/roadmap" />
     </>
   );
 
