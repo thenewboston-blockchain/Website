@@ -10,7 +10,6 @@ import DeploymentGuide from './DeploymentGuide';
 import Guide from './Guide';
 import Home from './Home';
 import PrimaryValidatorApi from './PrimaryValidatorApi';
-import Roadmap from './Roadmap';
 import StyleGuide from './StyleGuide';
 
 const App: FC = () => {
@@ -20,7 +19,6 @@ const App: FC = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/contribute" component={Contribute} />
-          <Route exact path="/roadmap" component={Roadmap} />
           <Route path="/bank-api/:chapter?" component={BankApi} />
           <Route path="/confirmation-validator-api/:chapter?" component={ConfirmationValidatorApi} />
           <Route path="/deployment-guide/:chapter?" component={DeploymentGuide} />
