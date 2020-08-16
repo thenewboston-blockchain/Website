@@ -41,7 +41,7 @@ const PrimaryValidatorApiAccounts: FC = () => {
         heading="Response"
       />
 
-      <DocEndpoint endpoint="/account_balance/<account_number>" method="GET" />
+      <DocEndpoint endpoint="/accounts/<account_number>/balance" method="GET" />
       <RequestResponseSnippet
         code={`{
   "balance": "4294967051.0000000000000000"
@@ -49,7 +49,7 @@ const PrimaryValidatorApiAccounts: FC = () => {
         heading="Response"
       />
 
-      <DocEndpoint endpoint="/account_balance_lock/<account_number>" method="GET" />
+      <DocEndpoint endpoint="/accounts/<account_number>/balance_lock" method="GET" />
       <RequestResponseSnippet
         code={`{
   "balance_lock": "21cfd80a31930e801e97d34e3f00a7d9b5c01b2fb531a5ac14cd59d10ab446c8"
