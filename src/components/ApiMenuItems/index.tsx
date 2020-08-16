@@ -109,6 +109,10 @@ export const confirmationValidatorApiNavigationData = [
     url: '/confirmation-validator-api/connection-requests',
   },
   {
+    name: 'Primary Validator Updated',
+    url: '/confirmation-validator-api/primary-validator-updated',
+  },
+  {
     name: 'Upgrade Request',
     url: '/confirmation-validator-api/upgrade-request',
   },
