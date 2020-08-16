@@ -42,6 +42,10 @@ export const bankApiNavigationData = [
     url: '/bank-api/validator-confirmation-services',
   },
   {
+    name: 'Upgrade Notice',
+    url: '/bank-api/upgrade-notice',
+  },
+  {
     name: 'Validators',
     url: '/bank-api/validators',
   },
