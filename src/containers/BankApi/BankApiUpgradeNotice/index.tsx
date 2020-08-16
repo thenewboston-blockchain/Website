@@ -7,7 +7,7 @@ const BankApiUpgradeNotice: FC = () => {
   return (
     <DocContainer className="BankApiUpgradeNotice" title="Upgrade Notice">
       <p>
-        After a confirmation validator has upgraded to the primary validator, it will send out an upgrade notice to all
+        After a confirmation validator has upgraded to a primary validator, it will send out an upgrade notice to all
         connected banks.
       </p>
       <p>
