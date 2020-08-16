@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
+import sortBy from 'lodash/sortBy';
 
 import {MenuGroup} from 'components';
 import {NavigationItem} from 'types/navigation';
@@ -115,7 +116,7 @@ export const confirmationValidatorApiNavigationData = [
 
 const ApiMenuItems: FC = () => {
   const renderNavLinks = (navigationData: NavigationItem[]) => {
-    return navigationData.map(({name, url}) => (
+    return sortBy(navigationData, ['name']).map(({name, url}) => (
       <NavLink key={url} to={url}>
         {name}
       </NavLink>
