@@ -1,8 +1,9 @@
 import React, {FC, ReactNode} from 'react';
 
-import {DocContainer, DocImage, DocList, DocSubSection, UpgradeNotice} from 'components';
+import {DocContainer, DocImage, DocList, DocSubSection} from 'components';
 
 import ResyncPrimaryValidatorUpdated from './ResyncPrimaryValidatorUpdated.png';
+import ResyncUpgradeNotice from './ResyncUpgradeNotice.png';
 import ResyncUpgradeRequest from './ResyncUpgradeRequest.png';
 
 const GuideResyncProcess: FC = () => {
@@ -21,6 +22,22 @@ const GuideResyncProcess: FC = () => {
         and therefore a connection is no longer needed. Any confirmation validators that have the requesting bank set as
         their most trusted bank will follow the guidance of that bank and sync to the new primary validator.
       </p>
+    </>
+  );
+
+  const renderUpgradeNotice = (): ReactNode => (
+    <>
+      <p>
+        After a confirmation validator has upgraded to the primary validator, it will send out an upgrade notice to all
+        connected banks. This is a notice from a previous CV that they are now a PV. If the requesting validator is more
+        trusted than the bank's current PV, the bank will switch to the new PV. This is because the banks always prefer
+        the most trusted validator to be the PV for the network.
+      </p>
+      <p>
+        If the requesting validator is less trusted than the bank's current PV, the bank will delete the requesting
+        validator. This is because banks can only have one PV.
+      </p>
+      <DocImage alt="upgrade notice" maxWidth={400} src={ResyncUpgradeNotice} />
     </>
   );
 
@@ -75,9 +92,7 @@ const GuideResyncProcess: FC = () => {
     <DocContainer className="GuideResyncProcess" title="Resync Process">
       <p>The resync process is the same no matter which resync trigger initiated the event.</p>
       <DocSubSection title="Upgrade Request">{renderUpgradeRequest()}</DocSubSection>
-      <DocSubSection title="Upgrade Notice">
-        <UpgradeNotice />
-      </DocSubSection>
+      <DocSubSection title="Upgrade Notice">{renderUpgradeNotice()}</DocSubSection>
       <DocSubSection title="Primary Validator Updated">{renderPrimaryValidatorUpdated()}</DocSubSection>
     </DocContainer>
   );

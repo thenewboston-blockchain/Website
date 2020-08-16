@@ -15,7 +15,6 @@ import Pagination from './Pagination';
 import Shadow from './Shadow';
 import {TableBorderGrid, TableParams, TableVertical} from './Table';
 import TopNav from './TopNav';
-import UpgradeNotice from './UpgradeNotice';
 
 export {
   A,
@@ -45,5 +44,4 @@ export {
   TableParams,
   TableVertical,
   TopNav,
-  UpgradeNotice,
 };
