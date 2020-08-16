@@ -13,6 +13,7 @@ import BankApiBlocks from './BankApiBlocks';
 import BankApiConfig from './BankApiConfig';
 import BankApiConfirmationBlocks from './BankApiConfirmationBlocks';
 import BankApiInvalidBlocks from './BankApiInvalidBlocks';
+import BankApiUpgradeNotice from './BankApiUpgradeNotice';
 import BankApiValidatorConfirmationServices from './BankApiValidatorConfirmationServices';
 import BankApiValidators from './BankApiValidators';
 
@@ -53,6 +54,10 @@ const pageData: PageDataObject = {
   'invalid-blocks': {
     content: <BankApiInvalidBlocks />,
     name: 'Invalid Blocks',
+  },
+  'upgrade-notice': {
+    content: <BankApiUpgradeNotice />,
+    name: 'Upgrade Notice',
   },
   'validator-confirmation-services': {
     content: <BankApiValidatorConfirmationServices />,

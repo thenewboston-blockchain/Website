@@ -48,7 +48,7 @@ const BankApiBanks: FC = () => {
         items={[
           {
             dataType: 'decimal',
-            description: 'amount of trust',
+            description: 'Amount of trust',
             param: 'trust',
           },
         ]}
