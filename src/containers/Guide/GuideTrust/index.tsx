@@ -9,7 +9,7 @@ const GuideTrust: FC = () => {
     <DocContainer className="GuideTrust" title="Trust">
       <p>
         The single most important concept in this network architecture is the concept of trust. It is also where this
-        network deviates most from traditional Blockchain based cryptocurrencies that abide by common consensus
+        network deviates most from traditional Blockchain based digital currencies that abide by common consensus
         mechanisms such as Proof of Work (PoW) or Proof of Stake (PoS). In order to understand the reasoning behind a
         trust-based distributed network, it is first important to understand the problem that all existing mechanisms
         are attempting to solve: the problem of consensus.
@@ -45,7 +45,7 @@ const GuideTrust: FC = () => {
         minute transaction confirmation time is adequate, it is not practical when considering more common day-to-day
         transactions. If you were to imagine purchasing a candy bar from a vending machine and needing to wait 10
         minutes for the network to validate your transaction before receiving the candy bar, it is clear to see why
-        widespread adoption of a cryptocurrency utilizing PoW is unrealistic.
+        widespread adoption of a digital currency utilizing PoW is unrealistic.
       </p>
       <p>
         In acknowledgement of the challenges brought forth with PoW, including not only the long transaction times but
@@ -75,8 +75,8 @@ const GuideTrust: FC = () => {
         consensus must be found. To find an elegant solution to a very difficult problem, it is often helpful to
         simplify the problem itself. Although the motivation for this problem arises out of the need to maintain a fair
         peer-to-peer distributed network, the true problem has very little to do with networking or technology at all.
-        The challenges can be seen more clearly by taking a look at one of the most well-known issues in cryptocurrency,
-        the double-spend problem.
+        The challenges can be seen more clearly by taking a look at one of the most well-known issues in digital
+        currency, the double-spend problem.
       </p>
       <p>
         Double-spend is the issue that arises in a distributed network when validation is split across multiple nodes,
