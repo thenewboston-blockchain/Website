@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
+import sortBy from 'lodash/sortBy';
 
 import {MenuGroup} from 'components';
 import {NavigationItem} from 'types/navigation';
@@ -40,6 +41,10 @@ export const bankApiNavigationData = [
   {
     name: 'Confirmation Services',
     url: '/bank-api/validator-confirmation-services',
+  },
+  {
+    name: 'Upgrade Notice',
+    url: '/bank-api/upgrade-notice',
   },
   {
     name: 'Validators',
@@ -104,6 +109,14 @@ export const confirmationValidatorApiNavigationData = [
     url: '/confirmation-validator-api/connection-requests',
   },
   {
+    name: 'Primary Validator Updated',
+    url: '/confirmation-validator-api/primary-validator-updated',
+  },
+  {
+    name: 'Upgrade Request',
+    url: '/confirmation-validator-api/upgrade-request',
+  },
+  {
     name: 'Validators',
     url: '/confirmation-validator-api/validators',
   },
@@ -111,7 +124,7 @@ export const confirmationValidatorApiNavigationData = [
 
 const ApiMenuItems: FC = () => {
   const renderNavLinks = (navigationData: NavigationItem[]) => {
-    return navigationData.map(({name, url}) => (
+    return sortBy(navigationData, ['name']).map(({name, url}) => (
       <NavLink key={url} to={url}>
         {name}
       </NavLink>
