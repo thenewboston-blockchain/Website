@@ -43,17 +43,17 @@ const BankApiInvalidBlocks: FC = () => {
         items={[
           {
             dataType: 'object',
-            description: 'original block, block identifier, and primary validator NID',
+            description: 'Original block, block identifier, and primary validator NID',
             param: 'message',
           },
           {
             dataType: 'string',
-            description: 'validators node identifier',
+            description: 'Validators node identifier',
             param: 'node_identifier',
           },
           {
             dataType: 'string',
-            description: 'hex value of the signed message',
+            description: 'Hex value of the signed message',
             param: 'signature',
           },
         ]}

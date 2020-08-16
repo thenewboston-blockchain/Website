@@ -51,7 +51,7 @@ const BankApiBlocks: FC = () => {
         items={[
           {
             dataType: 'string',
-            description: 'senders account number',
+            description: 'Senders account number',
             param: 'account_number',
           },
           {
@@ -61,7 +61,7 @@ const BankApiBlocks: FC = () => {
           },
           {
             dataType: 'string',
-            description: 'hex value of the signed message',
+            description: 'Hex value of the signed message',
             param: 'signature',
           },
         ]}

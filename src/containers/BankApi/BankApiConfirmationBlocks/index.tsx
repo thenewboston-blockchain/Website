@@ -44,17 +44,17 @@ const BankApiConfirmationBlocks: FC = () => {
         items={[
           {
             dataType: 'object',
-            description: 'original bank block and a list of updated account balances of all accounts involved',
+            description: 'Original bank block and a list of updated account balances of all accounts involved',
             param: 'message',
           },
           {
             dataType: 'string',
-            description: 'validators node identifier',
+            description: 'Validators node identifier',
             param: 'node_identifier',
           },
           {
             dataType: 'string',
-            description: 'hex value of the signed message',
+            description: 'Hex value of the signed message',
             param: 'signature',
           },
         ]}

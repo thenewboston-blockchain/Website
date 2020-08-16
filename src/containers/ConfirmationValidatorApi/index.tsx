@@ -11,6 +11,7 @@ import ConfirmationValidatorApiBankConfirmationServices from './ConfirmationVali
 import ConfirmationValidatorApiBanks from './ConfirmationValidatorApiBanks';
 import ConfirmationValidatorApiConfig from './ConfirmationValidatorApiConfig';
 import ConfirmationValidatorApiConfirmationBlocks from './ConfirmationValidatorApiConfirmationBlocks';
+import ConfirmationValidatorApiUpgradeRequest from './ConfirmationValidatorApiUpgradeRequest';
 import ConfirmationValidatorApiValidators from './ConfirmationValidatorApiValidators';
 
 const defaultPageData: PageData = {
@@ -42,6 +43,10 @@ const pageData: PageDataObject = {
   'connection-requests': {
     content: <NodeApiConnectionRequests />,
     name: 'Connection Requests',
+  },
+  'upgrade-request': {
+    content: <ConfirmationValidatorApiUpgradeRequest />,
+    name: 'Upgrade Request',
   },
   validators: {
     content: <ConfirmationValidatorApiValidators />,
