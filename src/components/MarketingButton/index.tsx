@@ -42,8 +42,7 @@ const MarketingButton: FC<ComponentProps> = ({className, website}) => {
   const urls = {
     github: 'https://github.com/thenewboston-developers',
     reddit: 'https://www.reddit.com/r/thenewboston/',
-    slack:
-      'https://thenewboston.slack.com/join/shared_invite/zt-fmj4j8af-reXJKdQADo7QIvAp92Ro5w?fbclid=IwAR1AKKWJ_ljPi8SpfEuQW2oCcZ8r_ho9ebanqH0fDvuppQKxSiN-k5VY4jk#/',
+    slack: 'https://join.slack.com/t/thenewboston/shared_invite/zt-gyodq1sw-OYiKy4sy_rmREHIlisFjLA',
   };
 
   return (
