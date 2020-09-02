@@ -6,6 +6,17 @@
 
 This repository contains the source code and documentation for [thenewboston.com](https://thenewboston.com/) website.
 
+## Community
+
+Join the community to stay updated on the most recent developments, project roadmaps, and random discussions about 
+completely unrelated topics.
+
+- [thenewboston.com](https://thenewboston.com/)
+- [Slack](https://join.slack.com/t/thenewboston/shared_invite/zt-gyodq1sw-OYiKy4sy_rmREHIlisFjLA)
+- [reddit](https://www.reddit.com/r/thenewboston/)
+- [Facebook](https://www.facebook.com/TheNewBoston-464114846956315/)
+- [Twitter](https://twitter.com/bucky_roberts)
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any
