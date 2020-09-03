@@ -36,7 +36,7 @@ const DeploymentGuideBank: FC = () => {
             dataType: 'decimal',
             description: 'Tx fee cost',
             param: 'default_transaction_fee',
-            sampleValue: '1.0',
+            sampleValue: '1',
           },
           {
             dataType: 'string',
@@ -64,7 +64,7 @@ const DeploymentGuideBank: FC = () => {
           },
         ]}
       />
-      <CodeSnippet code="python3 manage.py connect_to_primary_validator" heading="Connect to the primary validator" />
+      <CodeSnippet code="python3 manage.py set_primary_validator" heading="Connect to the primary validator" />
     </>
   );
 

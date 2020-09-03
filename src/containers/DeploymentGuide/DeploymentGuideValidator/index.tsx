@@ -36,7 +36,7 @@ const DeploymentGuideValidator: FC = () => {
             dataType: 'decimal',
             description: 'Tx fee cost',
             param: 'default_transaction_fee',
-            sampleValue: '4.0',
+            sampleValue: '4',
           },
           {
             dataType: 'string',
