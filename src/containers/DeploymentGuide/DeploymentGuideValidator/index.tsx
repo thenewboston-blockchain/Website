@@ -97,9 +97,9 @@ const DeploymentGuideValidator: FC = () => {
       <InstallDependencies />
       <Firewall />
       <ProjectSetup name="Validator" />
-      <Nginx name="Validator" />
+      <NginxWSGI name="Validator" />
       <Redis />
-      <GatewayInterface name="Validator" />
+      <GatewayInterfaceWSGI name="Validator" />
       <Celery name="Validator" networkSigningKey="6f812a35643b55a77f71c3b722504fbc5918e83ec72965f7fd33865ed0be8f81" />
       <SystemServices />
       <StaticFilesAndApplicationConfiguration
