@@ -6,9 +6,9 @@ interface ComponentProps {
   name: string;
 }
 
-const Nginx: FC<ComponentProps> = ({name}) => {
+const NginxWSGI: FC<ComponentProps> = ({name}) => {
   return (
-    <DocSubSection className="Nginx" title="NGINX">
+    <DocSubSection className="NginxWSGI" title="NGINX">
       <CodeSnippet
         code={`sudo rm /etc/nginx/sites-available/default
 sudo nano /etc/nginx/sites-available/default
@@ -49,4 +49,4 @@ server {
   );
 };
 
-export default Nginx;
+export default NginxWSGI;

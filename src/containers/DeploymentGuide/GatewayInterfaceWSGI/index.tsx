@@ -6,9 +6,9 @@ interface ComponentProps {
   name: string;
 }
 
-const GatewayInterface: FC<ComponentProps> = ({name}) => {
+const GatewayInterfaceWSGI: FC<ComponentProps> = ({name}) => {
   return (
-    <DocSubSection className="GatewayInterface" title="Gateway Interface (uwsgi)">
+    <DocSubSection className="GatewayInterfaceWSGI" title="Gateway Interface (uwsgi)">
       <CodeSnippet code="sudo nano /usr/local/bin/start_api.sh" heading="Create script to run uwsgi" />
       <CodeSnippet
         code={`#!/bin/bash
@@ -26,4 +26,4 @@ uwsgi --ini app.ini
   );
 };
 
-export default GatewayInterface;
+export default GatewayInterfaceWSGI;
