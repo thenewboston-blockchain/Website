@@ -85,7 +85,7 @@ const DeploymentGuideValidator: FC = () => {
         ]}
       />
       <CodeSnippet
-        code="python3 manage.py initialize_confirmation_validator"
+        code="python3 manage.py set_primary_validator"
         heading="If setting up confirmation validator, run this script to connect to the primary validator"
       />
     </>
