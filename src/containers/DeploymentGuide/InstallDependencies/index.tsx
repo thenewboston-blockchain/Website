@@ -8,9 +8,6 @@ const InstallDependencies: FC = () => {
       <CodeSnippet
         code={`sudo add-apt-repository universe
 sudo apt -y update && sudo apt -y upgrade
-
-> keep the local version currently installed
-
 sudo apt -y install build-essential nginx python3-pip redis-server
 `}
         heading="Update and install packages"
