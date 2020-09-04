@@ -4,9 +4,9 @@ import {CodeSnippet, DocContainer, TableParams} from 'components';
 
 import Celery from '../Celery';
 import Firewall from '../Firewall';
-import GatewayInterface from '../GatewayInterface';
+import GatewayInterfaceASGI from '../GatewayInterfaceASGI';
 import InstallDependencies from '../InstallDependencies';
-import Nginx from '../Nginx';
+import NginxASGI from '../NginxASGI';
 import ProjectSetup from '../ProjectSetup';
 import Redis from '../Redis';
 import StaticFilesAndApplicationConfiguration from '../StaticFilesAndApplicationConfiguration';
@@ -74,9 +74,9 @@ const DeploymentGuideBank: FC = () => {
       <InstallDependencies />
       <Firewall />
       <ProjectSetup name="Bank" />
-      <Nginx name="Bank" />
+      <NginxASGI name="Bank" />
       <Redis />
-      <GatewayInterface name="Bank" />
+      <GatewayInterfaceASGI name="Bank" />
       <Celery name="Bank" networkSigningKey="e5e5fec0dcbbd8b0a76c67204823678d3f243de7a0a1042bb3ecf66285cd9fd4" />
       <SystemServices />
       <StaticFilesAndApplicationConfiguration

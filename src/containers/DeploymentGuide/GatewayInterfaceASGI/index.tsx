@@ -6,15 +6,15 @@ interface ComponentProps {
   name: string;
 }
 
-const GatewayInterface: FC<ComponentProps> = ({name}) => {
+const GatewayInterfaceASGI: FC<ComponentProps> = ({name}) => {
   return (
-    <DocSubSection className="GatewayInterface" title="Gateway Interface (uwsgi)">
-      <CodeSnippet code="sudo nano /usr/local/bin/start_api.sh" heading="Create script to run uwsgi" />
+    <DocSubSection className="GatewayInterfaceASGI" title="Gateway Interface (daphne)">
+      <CodeSnippet code="sudo nano /usr/local/bin/start_api.sh" heading="Create script to run daphne" />
       <CodeSnippet
         code={`#!/bin/bash
 
 cd /var/www/${name}
-uwsgi --ini app.ini
+daphne -p 8001 config.asgi:application
 `}
         heading="Paste in the following and save"
       />
@@ -26,4 +26,4 @@ uwsgi --ini app.ini
   );
 };
 
-export default GatewayInterface;
+export default GatewayInterfaceASGI;
