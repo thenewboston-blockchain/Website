@@ -4,9 +4,9 @@ import {CodeSnippet, DocContainer, TableParams} from 'components';
 
 import Celery from '../Celery';
 import Firewall from '../Firewall';
-import GatewayInterface from '../GatewayInterface';
+import GatewayInterfaceASGI from '../GatewayInterfaceASGI';
 import InstallDependencies from '../InstallDependencies';
-import Nginx from '../Nginx';
+import NginxASGI from '../NginxASGI';
 import ProjectSetup from '../ProjectSetup';
 import Redis from '../Redis';
 import StaticFilesAndApplicationConfiguration from '../StaticFilesAndApplicationConfiguration';
