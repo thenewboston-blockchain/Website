@@ -28,6 +28,11 @@
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 42px;
+    
+    @media (max-width: 768px) {
+      width: 310px;
+      margin-left: -20px;
+    }
   }
 
   &__step-one,
