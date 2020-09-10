@@ -4,9 +4,9 @@ import {CodeSnippet, DocContainer, TableParams} from 'components';
 
 import Celery from '../Celery';
 import Firewall from '../Firewall';
-import GatewayInterfaceWSGI from '../GatewayInterfaceWSGI';
+import GatewayInterfaceASGI from '../GatewayInterfaceASGI';
 import InstallDependencies from '../InstallDependencies';
-import NginxWSGI from '../NginxWSGI';
+import NginxASGI from '../NginxASGI';
 import ProjectSetup from '../ProjectSetup';
 import Redis from '../Redis';
 import StaticFilesAndApplicationConfiguration from '../StaticFilesAndApplicationConfiguration';
@@ -97,9 +97,9 @@ const DeploymentGuideValidator: FC = () => {
       <InstallDependencies />
       <Firewall />
       <ProjectSetup name="Validator" />
-      <NginxWSGI name="Validator" />
+      <NginxASGI name="Validator" />
       <Redis />
-      <GatewayInterfaceWSGI name="Validator" />
+      <GatewayInterfaceASGI name="Validator" />
       <Celery name="Validator" networkSigningKey="6f812a35643b55a77f71c3b722504fbc5918e83ec72965f7fd33865ed0be8f81" />
       <SystemServices />
       <StaticFilesAndApplicationConfiguration
