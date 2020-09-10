@@ -6,9 +6,9 @@ interface ComponentProps {
   name: string;
 }
 
-const GatewayInterfaceASGI: FC<ComponentProps> = ({name}) => {
+const GatewayInterface: FC<ComponentProps> = ({name}) => {
   return (
-    <DocSubSection className="GatewayInterfaceASGI" title="Gateway Interface (daphne)">
+    <DocSubSection className="GatewayInterface" title="Gateway Interface (daphne)">
       <CodeSnippet code="sudo nano /usr/local/bin/start_api.sh" heading="Create script to run daphne" />
       <CodeSnippet
         code={`#!/bin/bash
@@ -26,4 +26,4 @@ daphne -p 8001 config.asgi:application
   );
 };
 
-export default GatewayInterfaceASGI;
+export default GatewayInterface;
