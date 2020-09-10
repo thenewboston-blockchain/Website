@@ -16,6 +16,7 @@
     border-radius: 18px;
     color: #fff;
     display: flex;
+    flex-shrink: 0;
     height: 36px;
     justify-content: center;
     margin-right: 18px;
@@ -28,11 +29,6 @@
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 42px;
-    
-    @media (max-width: 768px) {
-      width: 310px;
-      margin-left: -20px;
-    }
   }
 
   &__step-one,
@@ -99,5 +95,15 @@
   @media (max-width: 768px) {
     flex-direction: column;
     padding: 36px;
+
+    &__step-one,
+    &__step-two {
+      align-items: center;
+      margin: 0;
+    }
+
+    &__step-one {
+      margin-bottom: 60px;
+    }
   }
 }
