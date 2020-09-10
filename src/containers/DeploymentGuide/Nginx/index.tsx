@@ -6,9 +6,9 @@ interface ComponentProps {
   name: string;
 }
 
-const NginxWSGI: FC<ComponentProps> = ({name}) => {
+const Nginx: FC<ComponentProps> = ({name}) => {
   return (
-    <DocSubSection className="NginxWSGI" title="NGINX">
+    <DocSubSection className="Nginx" title="NGINX">
       <CodeSnippet
         code={`sudo rm /etc/nginx/sites-available/default
 sudo nano /etc/nginx/sites-available/default
@@ -36,8 +36,17 @@ server {
 
     # Send all non-media requests to the Django server
     location / {
-        uwsgi_pass django;
-        include /var/www/${name}/uwsgi_params;
+        proxy_pass http://django;
+
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Host $server_name;
     }
 
 }
@@ -49,4 +58,4 @@ server {
   );
 };
 
-export default NginxWSGI;
+export default Nginx;
