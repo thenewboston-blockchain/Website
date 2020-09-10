@@ -1,5 +1,12 @@
 $navigation-bars-height: 100px; // TopNav.height + BreadcrumbMenu__bar.height
 
+.bcrum-truncate {
+  margin: 0 !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .BreadcrumbMenu {
   $self: &;
 

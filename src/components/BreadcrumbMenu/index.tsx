@@ -33,9 +33,9 @@ const BreadcrumbMenu: FC<ComponentProps> = ({menuItems, pageName, sectionName}) 
     return (
       <div className="BreadcrumbMenu__bar" onClick={() => setOpen(!open)} role="button" tabIndex={0}>
         <div className="BreadcrumbMenu__navigation">
-          {sectionName}
+          <p className="bcrum-truncate">{sectionName}</p>
           <Icon icon={IconType.menuRight} size={24} />
-          {pageName}
+          <p className="bcrum-truncate">{pageName}</p>
         </div>
         {renderToggle()}
       </div>
