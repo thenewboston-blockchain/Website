@@ -6,9 +6,17 @@ interface ComponentProps {
   name: string;
 }
 
+enum GatewayInterfaceNav {
+  gatewayInterface = 'gateway-interface',
+}
+
 const GatewayInterface: FC<ComponentProps> = ({name}) => {
   return (
-    <DocSubSection className="GatewayInterface" title="Gateway Interface (daphne)">
+    <DocSubSection
+      className="GatewayInterface"
+      id={GatewayInterfaceNav.gatewayInterface}
+      title="Gateway Interface (daphne)"
+    >
       <CodeSnippet code="sudo nano /usr/local/bin/start_api.sh" heading="Create script to run daphne" />
       <CodeSnippet
         code={`#!/bin/bash

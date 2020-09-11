@@ -8,9 +8,17 @@ interface ComponentProps {
   networkSigningKey: string;
 }
 
+enum StaticFilesAndApplicationNav {
+  staticFilesAndApplication = 'static-files-and-application',
+}
+
 const StaticFilesAndApplication: FC<ComponentProps> = ({initializationCommand, name, networkSigningKey}) => {
   return (
-    <DocSubSection className="StaticFilesAndApplication" title="Static Files and Application Configuration">
+    <DocSubSection
+      className="StaticFilesAndApplication"
+      id={StaticFilesAndApplicationNav.staticFilesAndApplication}
+      title="Static Files and Application Configuration"
+    >
       <CodeSnippet code="nano ~/.profile" heading="Set environment variable" />
 
       <CodeSnippet
