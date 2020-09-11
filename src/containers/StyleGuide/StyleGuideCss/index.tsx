@@ -13,6 +13,7 @@ enum StyleGuideCssNav {
   componentScope = 'component-scope',
   cssAlphabetized = 'css-alphabetized',
   figma = 'figma',
+  header = 'header',
   kebabCase = 'kebab-case',
   noGlobalSelectors = 'no-global-selectors',
   noImportant = 'no-important',
@@ -21,7 +22,7 @@ enum StyleGuideCssNav {
 
 const StyleGuideCss: FC = () => {
   return (
-    <DocContainer className="StyleGuideCss" title="CSS / SASS Style Guide">
+    <DocContainer className="StyleGuideCss" id={StyleGuideCssNav.header} title="CSS / SASS Style Guide">
       <p>
         One of our primary motivators when choosing a technology is to pick technologies that are widespread in
         professional use, as well as it being relatively easy to learn. For that reason, we chose to go with{' '}

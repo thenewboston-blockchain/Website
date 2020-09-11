@@ -1,8 +1,14 @@
 .DocContainer {
+  $self: &;
   padding: 32px 32px 16px;
 
   &__divider {
     height: 12px;
+  }
+
+  &__HashLink {
+    display: none;
+    padding-left: 8px;
   }
 
   &__page-title {
@@ -11,5 +17,11 @@
     font-weight: 300;
     line-height: 120%;
     margin-bottom: 24px;
+
+    &:hover {
+      #{$self}__HashLink {
+        display: inline;
+      }
+    }
   }
 }

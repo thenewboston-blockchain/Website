@@ -2,9 +2,13 @@ import React, {FC} from 'react';
 
 import {CodeSnippet, DocSubSection} from 'components';
 
+enum RedisNav {
+  redis = 'redis',
+}
+
 const Redis: FC = () => {
   return (
-    <DocSubSection className="Redis" title="Redis">
+    <DocSubSection className="Redis" id={RedisNav.redis} title="Redis">
       <CodeSnippet
         code="sudo nano /etc/redis/redis.conf"
         heading="Since we are running Ubuntu, which uses the systemd init system, change this to systemd"

@@ -1,7 +1,20 @@
 .DocSubSection {
+  $self: &;
+
   &__h2 {
     font-size: var(--font-size-medium);
     font-weight: 500;
     margin: 36px 0 18px;
+
+    &:hover {
+      #{$self}__HashLink {
+        display: inline;
+      }
+    }
+  }
+
+  &__HashLink {
+    display: none;
+    padding-left: 4px;
   }
 }

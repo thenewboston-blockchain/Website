@@ -5,6 +5,7 @@ import {A, CodeSnippet, DocContainer, DocInlineCode, DocList, DocSubSection, Sni
 
 enum StyleGuideReactNav {
   componentTypes = 'component-types',
+  header = 'header',
   imports = 'imports',
   libraries = 'libraries',
   propSpreading = 'prop-spreading',
@@ -13,7 +14,7 @@ enum StyleGuideReactNav {
 
 const StyleGuideReact: FC = () => {
   return (
-    <DocContainer className="StyleGuideReact" title="React / JSX Style Guide">
+    <DocContainer className="StyleGuideReact" id={StyleGuideReactNav.header} title="React / JSX Style Guide">
       <p>
         Here are the rules that we should follow when working with React. We have{' '}
         <A href="https://eslint.org">ESLint</A> and <A href="https://prettier.io/">Prettier</A> configured, so for the

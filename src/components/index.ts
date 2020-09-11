@@ -6,6 +6,7 @@ import DashboardLayout from './DashboardLayout';
 import {DocContainer, DocEndpoint, DocInlineCode, DocList, DocImage, DocSubSection} from './DocWrapper';
 import {Button} from './FormElements';
 import GuideMenuItems from './GuideMenuItems';
+import HashLink from './HashLink';
 import Icon, {IconType} from './Icon';
 import Label from './Label';
 import Layout from './Layout';
@@ -30,6 +31,7 @@ export {
   DocList,
   DocSubSection,
   GuideMenuItems,
+  HashLink,
   Icon,
   IconType,
   Label,
