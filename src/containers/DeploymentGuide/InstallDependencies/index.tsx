@@ -2,9 +2,17 @@ import React, {FC} from 'react';
 
 import {CodeSnippet, DocSubSection} from 'components';
 
+enum InstallDependenciesNav {
+  installDependencies = 'install-dependencies',
+}
+
 const InstallDependencies: FC = () => {
   return (
-    <DocSubSection className="InstallDependencies" title="Install Dependencies">
+    <DocSubSection
+      className="InstallDependencies"
+      id={InstallDependenciesNav.installDependencies}
+      title="Install Dependencies"
+    >
       <CodeSnippet
         code={`sudo add-apt-repository universe
 sudo apt -y update && sudo apt -y upgrade

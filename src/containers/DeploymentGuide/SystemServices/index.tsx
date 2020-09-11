@@ -2,9 +2,13 @@ import React, {FC} from 'react';
 
 import {CodeSnippet, DocSubSection} from 'components';
 
+enum SystemServicesNav {
+  systemServices = 'system-services',
+}
+
 const SystemServices: FC = () => {
   return (
-    <DocSubSection className="SystemServices" title="System Services">
+    <DocSubSection className="SystemServices" id={SystemServicesNav.systemServices} title="System Services">
       <CodeSnippet
         code="sudo systemctl start api && sudo systemctl start celery && sudo systemctl restart nginx"
         heading="Start API service, restart NGINX, and verify services are active"

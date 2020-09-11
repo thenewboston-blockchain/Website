@@ -6,6 +6,12 @@ import ResyncPrimaryValidatorUpdated from './ResyncPrimaryValidatorUpdated.png';
 import ResyncUpgradeNotice from './ResyncUpgradeNotice.png';
 import ResyncUpgradeRequest from './ResyncUpgradeRequest.png';
 
+enum GuideResyncProcessNav {
+  primaryValidatorUpdated = 'primary-validator-updated',
+  upgradeNotice = 'upgrade-notice',
+  upgradeRequest = 'upgrade-request',
+}
+
 const GuideResyncProcess: FC = () => {
   const renderPrimaryValidatorUpdated = (): ReactNode => (
     <>
@@ -91,9 +97,15 @@ const GuideResyncProcess: FC = () => {
   return (
     <DocContainer className="GuideResyncProcess" title="Resync Process">
       <p>The resync process is the same no matter which resync trigger initiated the event.</p>
-      <DocSubSection title="Upgrade Request">{renderUpgradeRequest()}</DocSubSection>
-      <DocSubSection title="Upgrade Notice">{renderUpgradeNotice()}</DocSubSection>
-      <DocSubSection title="Primary Validator Updated">{renderPrimaryValidatorUpdated()}</DocSubSection>
+      <DocSubSection id={GuideResyncProcessNav.upgradeRequest} title="Upgrade Request">
+        {renderUpgradeRequest()}
+      </DocSubSection>
+      <DocSubSection id={GuideResyncProcessNav.upgradeNotice} title="Upgrade Notice">
+        {renderUpgradeNotice()}
+      </DocSubSection>
+      <DocSubSection id={GuideResyncProcessNav.primaryValidatorUpdated} title="Primary Validator Updated">
+        {renderPrimaryValidatorUpdated()}
+      </DocSubSection>
     </DocContainer>
   );
 };
