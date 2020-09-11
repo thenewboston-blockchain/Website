@@ -2,9 +2,13 @@ import React, {FC} from 'react';
 
 import {CodeSnippet, DocSubSection} from 'components';
 
+enum FirewallNav {
+  firewall = 'firewall',
+}
+
 const Firewall: FC = () => {
   return (
-    <DocSubSection className="Firewall" title="Firewall">
+    <DocSubSection className="Firewall" id={FirewallNav.firewall} title="Firewall">
       <CodeSnippet
         code={`sudo ufw app list
 sudo ufw allow 'Nginx Full' && sudo ufw allow OpenSSH && sudo ufw enable

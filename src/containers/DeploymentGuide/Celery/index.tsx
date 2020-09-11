@@ -7,9 +7,13 @@ interface ComponentProps {
   networkSigningKey: string;
 }
 
+enum CeleryNav {
+  celery = 'celery',
+}
+
 const Celery: FC<ComponentProps> = ({name, networkSigningKey}) => {
   return (
-    <DocSubSection className="Celery" title="Celery">
+    <DocSubSection className="Celery" id={CeleryNav.celery} title="Celery">
       <CodeSnippet
         code={`cd /etc/
 sudo mkdir ${name.toLowerCase()}

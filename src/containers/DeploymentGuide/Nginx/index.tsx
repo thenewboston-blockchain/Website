@@ -6,9 +6,13 @@ interface ComponentProps {
   name: string;
 }
 
+enum NginxNav {
+  nginx = 'nginx',
+}
+
 const Nginx: FC<ComponentProps> = ({name}) => {
   return (
-    <DocSubSection className="Nginx" title="NGINX">
+    <DocSubSection className="Nginx" id={NginxNav.nginx} title="NGINX">
       <CodeSnippet
         code={`sudo rm /etc/nginx/sites-available/default
 sudo nano /etc/nginx/sites-available/default
