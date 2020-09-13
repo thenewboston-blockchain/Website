@@ -21,6 +21,10 @@
         color: var(--color-primary);
       }
 
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+
       &.active {
         color: var(--color-primary);
       }
