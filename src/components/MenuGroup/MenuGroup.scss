@@ -1,5 +1,5 @@
 .MenuGroup {
-  font-family: var(--font-family-helvetica-neue-medium);
+  font-family: var(--font-family-inter-medium);
   font-size: 16px;
 
   &__submenu {
@@ -17,8 +17,16 @@
       padding: 6px 0 6px 56px;
       transition: color 0.1s ease;
 
+      &:first-of-type {
+        padding-top: 8px;
+      }
+
       &:hover {
         color: var(--color-primary);
+      }
+
+      &:last-of-type {
+        padding-bottom: 10px;
       }
 
       &.active {

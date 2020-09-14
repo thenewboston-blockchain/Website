@@ -4,6 +4,29 @@ import {NavLink} from 'react-router-dom';
 import {MenuGroup} from 'components';
 import {NavigationItem} from 'types/navigation';
 
+export const accountManagerNavigationData = [
+  {
+    name: 'Connect to the Network',
+    url: '/account-manager/connect-to-the-network',
+  },
+  {
+    name: 'Create an Account',
+    url: '/account-manager/create-an-account',
+  },
+  {
+    name: 'Add Friends',
+    url: '/account-manager/add-friends',
+  },
+  {
+    name: 'Send Points',
+    url: '/account-manager/send-points',
+  },
+  {
+    name: 'Edit Nicknames',
+    url: '/account-manager/edit-nicknames',
+  },
+];
+
 export const guideNavigationData = [
   {
     name: 'Introduction',
@@ -82,6 +105,10 @@ const GuideMenuItems: FC = () => {
 
   return (
     <>
+      <MenuGroup title="Account Manager" urlBase="account-manager">
+        {renderNavLinks(accountManagerNavigationData)}
+      </MenuGroup>
+
       <MenuGroup title="Guide" urlBase="guide">
         {renderNavLinks(guideNavigationData)}
       </MenuGroup>
