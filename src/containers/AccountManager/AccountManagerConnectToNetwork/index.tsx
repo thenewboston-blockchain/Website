@@ -4,9 +4,9 @@ import {DocContainer, DocImage} from 'components';
 
 import ConnectToTheNetworkForm from './ConnectToTheNetworkForm.png';
 
-const ConnectToNetwork: FC = () => {
+const AccountManagerConnectToNetwork: FC = () => {
   return (
-    <DocContainer className="ConnectToNetwork" title="Connect to the Network">
+    <DocContainer className="AccountManagerConnectToNetwork" title="Connect to the Network">
       <p>
         When the application is first started, you will be prompted to enter the address of a bank to connect to. The
         application may pre-populate the form with a suggested bank which you may use. You may also assign a nickname to
@@ -23,4 +23,4 @@ const ConnectToNetwork: FC = () => {
   );
 };
 
-export default ConnectToNetwork;
+export default AccountManagerConnectToNetwork;

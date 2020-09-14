@@ -4,9 +4,9 @@ import {DocContainer, DocImage} from 'components';
 
 import SendPointsModal from './SendPointsModal.png';
 
-const SendPoints: FC = () => {
+const AccountManagerSendPoints: FC = () => {
   return (
-    <DocContainer className="SendPoints" title="Send Points">
+    <DocContainer className="AccountManagerSendPoints" title="Send Points">
       <p>
         To send points, first click on the "Send Points" button at the top of any account page (yours or your friends).
         A form will appear asking from which one of your accounts you would like to send points from as well as for the
@@ -20,4 +20,4 @@ const SendPoints: FC = () => {
   );
 };
 
-export default SendPoints;
+export default AccountManagerSendPoints;

@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom
 
 import {Layout} from 'components';
 
-import AccountManagerGuide from './AccountManagerGuide';
+import AccountManager from './AccountManager';
 import BankApi from './BankApi';
 import ConfirmationValidatorApi from './ConfirmationValidatorApi';
 import Contribute from './Contribute';
@@ -20,7 +20,7 @@ const App: FC = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/contribute" component={Contribute} />
-          <Route path="/account-manager/:chapter?" component={AccountManagerGuide} />
+          <Route path="/account-manager/:chapter?" component={AccountManager} />
           <Route path="/bank-api/:chapter?" component={BankApi} />
           <Route path="/confirmation-validator-api/:chapter?" component={ConfirmationValidatorApi} />
           <Route path="/deployment-guide/:chapter?" component={DeploymentGuide} />

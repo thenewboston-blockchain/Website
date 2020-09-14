@@ -9,9 +9,9 @@ enum CreateAccountNav {
   accountOverview = 'account-overview',
 }
 
-const CreateAccount: FC = () => {
+const AccountManagerCreateAccount: FC = () => {
   return (
-    <DocContainer className="CreateAccount" title="Create an Account">
+    <DocContainer className="AccountManagerCreateAccount" title="Create an Account">
       <p>
         <strong>Accounts</strong> are anonymous digital identities on the network where points may be sent to and from.
         To create an account, click the plus button to the right of "Accounts" on the left side menu. After filling out
@@ -39,4 +39,4 @@ const CreateAccount: FC = () => {
   );
 };
 
-export default CreateAccount;
+export default AccountManagerCreateAccount;

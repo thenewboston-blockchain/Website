@@ -5,10 +5,10 @@ import {DashboardLayout, GuideMenuItems, Pagination} from 'components';
 import {accountManagerNavigationData} from 'components/GuideMenuItems';
 import {PageData, PageDataObject} from 'types/page-data';
 
-import AddFriends from './AddFriends';
-import ConnectToNetwork from './ConnectToNetwork';
-import CreateAccount from './CreateAccount';
-import SendPoints from './SendPoints';
+import AccountManagerAddFriends from './AccountManagerAddFriends';
+import AccountManagerConnectToNetwork from './AccountManagerConnectToNetwork';
+import AccountManagerCreateAccount from './AccountManagerCreateAccount';
+import AccountManagerSendPoints from './AccountManagerSendPoints';
 
 const defaultPageData: PageData = {
   content: <Redirect to="/account-manager/connect-to-the-network" />,
@@ -17,19 +17,19 @@ const defaultPageData: PageData = {
 
 const pageData: PageDataObject = {
   'add-friends': {
-    content: <AddFriends />,
+    content: <AccountManagerAddFriends />,
     name: 'Add Friends',
   },
   'connect-to-the-network': {
-    content: <ConnectToNetwork />,
+    content: <AccountManagerConnectToNetwork />,
     name: 'Connect to the Network',
   },
   'create-an-account': {
-    content: <CreateAccount />,
+    content: <AccountManagerCreateAccount />,
     name: 'Create an Account',
   },
   'send-points': {
-    content: <SendPoints />,
+    content: <AccountManagerSendPoints />,
     name: 'Send Points',
   },
 };
@@ -38,7 +38,7 @@ const getPageData = (chapter: string): PageData => {
   return pageData[chapter] || defaultPageData;
 };
 
-const AccountManagerGuide: FC = () => {
+const AccountManager: FC = () => {
   const {chapter} = useParams();
   const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
 
@@ -50,4 +50,4 @@ const AccountManagerGuide: FC = () => {
   );
 };
 
-export default AccountManagerGuide;
+export default AccountManager;

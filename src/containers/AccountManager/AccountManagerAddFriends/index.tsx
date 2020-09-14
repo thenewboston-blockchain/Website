@@ -9,9 +9,9 @@ enum AddFriendsNav {
   friendOverview = 'account-overview',
 }
 
-const AddFriends: FC = () => {
+const AccountManagerAddFriends: FC = () => {
   return (
-    <DocContainer className="AddFriends" title="Add Friends">
+    <DocContainer className="AccountManagerAddFriends" title="Add Friends">
       <p>
         To add friends, click the plus button to the right of "Friends" on the left side menu. After entering their
         nickname and account number, click "Add" to add them to your friends list. Once added, you will be taken to
@@ -34,4 +34,4 @@ const AddFriends: FC = () => {
   );
 };
 
-export default AddFriends;
+export default AccountManagerAddFriends;
