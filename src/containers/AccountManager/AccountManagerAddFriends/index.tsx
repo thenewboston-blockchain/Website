@@ -5,7 +5,7 @@ import {DocContainer, DocImage, DocSubSection} from 'components';
 import AddFriend from './AddFriend.png';
 import FriendOverview from './FriendOverview.png';
 
-enum AddFriendsNav {
+enum AccountManagerAddFriendsNav {
   friendOverview = 'account-overview',
 }
 
@@ -21,14 +21,14 @@ const AccountManagerAddFriends: FC = () => {
 
       <DocImage alt="add friend" maxWidth={1200} src={AddFriend} />
 
-      <DocSubSection id={AddFriendsNav.friendOverview} title="Friend Overview">
+      <DocSubSection id={AccountManagerAddFriendsNav.friendOverview} title="Friend Overview">
         <p>
           After creating an account, you will be taken to your account overview page. Here you can see your balance,
           account number, and signing key. Your account number is what you will share with anyone who wishes to send you
           points.
         </p>
 
-        <DocImage alt="friend overview" maxWidth={1200} src={FriendOverview} />
+        <DocImage alt="friend overview" bordered maxWidth={1200} src={FriendOverview} />
       </DocSubSection>
     </DocContainer>
   );

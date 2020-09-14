@@ -8,6 +8,7 @@ import {PageData, PageDataObject} from 'types/page-data';
 import AccountManagerAddFriends from './AccountManagerAddFriends';
 import AccountManagerConnectToNetwork from './AccountManagerConnectToNetwork';
 import AccountManagerCreateAccount from './AccountManagerCreateAccount';
+import AccountManagerEditNicknames from './AccountManagerEditNicknames';
 import AccountManagerSendPoints from './AccountManagerSendPoints';
 
 const defaultPageData: PageData = {
@@ -27,6 +28,10 @@ const pageData: PageDataObject = {
   'create-an-account': {
     content: <AccountManagerCreateAccount />,
     name: 'Create an Account',
+  },
+  'edit-nicknames': {
+    content: <AccountManagerEditNicknames />,
+    name: 'Edit Nicknames',
   },
   'send-points': {
     content: <AccountManagerSendPoints />,

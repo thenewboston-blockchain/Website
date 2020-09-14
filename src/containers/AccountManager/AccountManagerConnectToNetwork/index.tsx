@@ -18,7 +18,7 @@ const AccountManagerConnectToNetwork: FC = () => {
         additional form information, click the "Connect" button to connect to the network.
       </p>
 
-      <DocImage alt="connect to the network form" maxWidth={580} src={ConnectToTheNetworkForm} />
+      <DocImage alt="connect to the network form" bordered maxWidth={580} src={ConnectToTheNetworkForm} />
     </DocContainer>
   );
 };

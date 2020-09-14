@@ -21,6 +21,10 @@ export const accountManagerNavigationData = [
     name: 'Send Points',
     url: '/account-manager/send-points',
   },
+  {
+    name: 'Edit Nicknames',
+    url: '/account-manager/edit-nicknames',
+  },
 ];
 
 export const guideNavigationData = [

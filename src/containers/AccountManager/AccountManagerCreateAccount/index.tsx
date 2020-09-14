@@ -5,7 +5,7 @@ import {DocContainer, DocImage, DocSubSection} from 'components';
 import CreateNewAccountModal from './CreateNewAccountModal.png';
 import AccountOverview from './AccountOverview.png';
 
-enum CreateAccountNav {
+enum AccountManagerCreateAccountNav {
   accountOverview = 'account-overview',
 }
 
@@ -20,7 +20,7 @@ const AccountManagerCreateAccount: FC = () => {
 
       <DocImage alt="create new account modal" maxWidth={1200} src={CreateNewAccountModal} />
 
-      <DocSubSection id={CreateAccountNav.accountOverview} title="Account Overview">
+      <DocSubSection id={AccountManagerCreateAccountNav.accountOverview} title="Account Overview">
         <p>
           After creating an account, you will be taken to your account overview page. Here you can see your balance,
           account number, and signing key. Your account number is what you will share with anyone who wishes to send you
@@ -33,7 +33,7 @@ const AccountManagerCreateAccount: FC = () => {
           secure.
         </p>
 
-        <DocImage alt="account overview" maxWidth={1200} src={AccountOverview} />
+        <DocImage alt="account overview" bordered maxWidth={1200} src={AccountOverview} />
       </DocSubSection>
     </DocContainer>
   );
