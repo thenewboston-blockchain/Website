@@ -7,9 +7,18 @@ import ConnectToTheNetworkForm from './ConnectToTheNetworkForm.png';
 const ConnectToNetwork: FC = () => {
   return (
     <DocContainer className="ConnectToNetwork" title="Connect to the Network">
-      <p>Connect</p>
-      <DocImage alt="connect to the network form" maxWidth={600} src={ConnectToTheNetworkForm} />
-      <p>Now</p>
+      <p>
+        When the application is first started, you will be prompted to enter the address of a bank to connect to. The
+        application may pre-populate the form with a suggested bank which you may use. You may also assign a nickname to
+        the given bank. If a nickname is given, the application will refer to this bank by its nickname rather than its
+        IP Address.
+      </p>
+      <p>
+        You are always free to change your active bank at anytime while using the application. After filling in any
+        additional form information, click the "Connect" button to connect to the network.
+      </p>
+
+      <DocImage alt="connect to the network form" maxWidth={580} src={ConnectToTheNetworkForm} />
     </DocContainer>
   );
 };

@@ -11,7 +11,7 @@ import CreateAccount from './CreateAccount';
 import SendPoints from './SendPoints';
 
 const defaultPageData: PageData = {
-  content: <Redirect to="/account-manager/create-an-account" />,
+  content: <Redirect to="/account-manager/connect-to-the-network" />,
   name: '',
 };
 
