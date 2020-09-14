@@ -1,6 +1,10 @@
 .DocImage {
   text-align: center;
 
+  &__bordered {
+    border: 1px solid #e3e8ee;
+  }
+
   &__img {
     margin-bottom: 20px;
     width: 100%;

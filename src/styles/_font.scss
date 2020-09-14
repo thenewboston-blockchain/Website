@@ -1,33 +1,39 @@
 @font-face {
+  font-family: InterRegular;
+  src: url('./fonts/Inter/ttf/Inter-Regular.ttf') format('truetype'),
+    url('./fonts/Inter/web/woff/Inter-Regular.woff') format('woff'),
+    url('./fonts/Inter/web/woff2/Inter-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: InterLight;
+  src: url('./fonts/Inter/ttf/Inter-Light.ttf') format('truetype'),
+    url('./fonts/Inter/web/woff/Inter-Light.woff') format('woff'),
+    url('./fonts/Inter/web/woff2/Inter-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: InterMedium;
+  src: url('./fonts/Inter/ttf/Inter-Medium.ttf') format('truetype'),
+    url('./fonts/Inter/web/woff/Inter-Medium.woff') format('woff'),
+    url('./fonts/Inter/web/woff2/Inter-Medium.woff2') format('woff2');
+}
+
+@font-face {
   font-family: 'JetBrainsMono';
   src: url('./fonts/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
     url('./fonts/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff') format('woff'),
     url('./fonts/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf') format('ttf');
 }
 
-@font-face {
-  font-family: 'HelveticaNeue';
-  src: url('./fonts/HelveticaNeue/HelveticaNeueRegular.otf') format('otf');
-}
-
-@font-face {
-  font-family: 'HelveticaNeueLight';
-  src: url('./fonts/HelveticaNeue/HelveticaNeueLight.ttf') format('ttf');
-}
-
-@font-face {
-  font-family: 'HelveticaNeueMedium';
-  src: url('./fonts/HelveticaNeue/HelveticaNeueMedium.ttf') format('ttf');
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
 
 :root {
-  --font-family-helvetica-neue: 'HelveticaNeue', sans-serif;
-  --font-family-helvetica-neue-light: 'HelveticaNeueLight', sans-serif;
-  --font-family-helvetica-neue-medium: 'HelveticaNeueMedium', sans-serif;
-  --font-family-mono: 'JetBrainsMono', monospace;
+  --font-family-inter-light: InterLight, sans-serif;
+  --font-family-inter-medium: InterMedium, sans-serif;
+  --font-family-inter: InterRegular, sans-serif;
   --font-family-mono-roboto: 'Roboto Mono', monospace;
+  --font-family-mono: JetBrainsMono, monospace;
   --font-size-large: 24px;
   --font-size-medium: 20px;
   --font-size-regular: 14px;
