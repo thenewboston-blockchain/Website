@@ -16,26 +16,23 @@ const HomeInstantTransactions: FC = () => {
         <div className="HomeInstantTransactions__text-snippets">
           <div className="HomeInstantTransactions__text-snippets-left-block">
             <p>
-              An inherent defect in the traditional Blockchain architecture is the inefficient composition of blocks.
-              Blocks in the Bitcoin Blockchain are composed of multiple unrelated transactions. This indicates that
-              within any given block, the earliest transactions experience significant delays as later transactions
-              continue to accumulate until the entire block eventually becomes verified.
+              We rebuilt the Blockchain from the ground up. We kissed those outdated Proof of Work and Proof of Stake
+              consensus algorithms goodbye and replaced them with an innovative trust based architecture.
             </p>
             <NavLink className="HomeInstantTransactions__content-container--display-large" to="/guide/introduction">
-              <Button>View Guide</Button>
+              <Button>View Docs</Button>
             </NavLink>
           </div>
           <div className="HomeInstantTransactions__text-snippets-right-block">
             <p>
-              Our architecture was built on the idea that when building a distributed payment ledger, it is not the
-              transaction processing itself that requires distribution across multiple servers, for this often results
-              in duplicate work being done by several servers causing an inherent inefficiency in the system. It is
-              rather the ability to fairly elect a single validation server and consensual acceptance of the produced
-              results that requires distribution among peers. This allows for highly performant transaction validation
-              within a decentralized network.
+              Join our open source development community as we reinvent digital currency. Help us build the worlds first
+              peer-to-peer (yet blazing fast) distributed payment network using Python and JavaScript.
+            </p>
+            <p>
+              <b>Now in alpha!</b>
             </p>
             <NavLink className="HomeInstantTransactions__content-container--display-small" to="/guide/introduction">
-              <Button>View Guide</Button>
+              <Button>View Docs</Button>
             </NavLink>
           </div>
         </div>
