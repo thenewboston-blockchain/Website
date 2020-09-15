@@ -20,4 +20,16 @@
     font-size: 36px;
     line-height: 1;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    &__os {
+      margin-bottom: 72px;
+    }
+
+    &__os-download-button {
+      margin-top: 32px;
+    }
+  }
 }
