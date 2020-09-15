@@ -1,0 +1,35 @@
+.Download {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 200px 32px;
+
+  &__os {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 60px;
+  }
+
+  &__os-download-button {
+    margin-top: 60px;
+  }
+
+  &__os-name {
+    font-family: var(--font-family-inter-light);
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    &__os {
+      margin-bottom: 72px;
+    }
+
+    &__os-download-button {
+      margin-top: 32px;
+    }
+  }
+}

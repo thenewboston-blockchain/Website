@@ -4,7 +4,7 @@ import useOnclickOutside from 'react-cool-onclickoutside';
 import clsx from 'clsx';
 
 import Logo from 'assets/svgs/thenewboston.svg';
-import {Icon, IconType, Shadow} from 'components';
+import {Button, Icon, IconType, Shadow} from 'components';
 
 import TopNavDropdownMenuItem from './TopNavDropdownMenuItem';
 import TopNavMenuItem from './TopNavMenuItem';
@@ -28,7 +28,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
         <div className="TopNav__dropdown-menu-item-container">
           <TopNavDropdownMenuItem activePatterns={['/contribute']} name="Contribute" url="/contribute" />
           <TopNavDropdownMenuItem
-            activePatterns={['/deployment-guide', '/guide', '/style-guide']}
+            activePatterns={['/account-manager', '/deployment-guide', '/guide', '/style-guide']}
             name="Guides"
             url="/guide/introduction"
           />
@@ -37,6 +37,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
             name="APIs"
             url="/bank-api/accounts"
           />
+          <TopNavDropdownMenuItem activePatterns={['/download']} name="Download" url="/download" />
         </div>
       </div>
     );
@@ -54,7 +55,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
     <>
       <TopNavMenuItem activePatterns={['/contribute']} name="Contribute" url="/contribute" />
       <TopNavMenuItem
-        activePatterns={['/deployment-guide', '/guide', '/style-guide']}
+        activePatterns={['/account-manager', '/deployment-guide', '/guide', '/style-guide']}
         name="Guides"
         url="/guide/introduction"
       />
@@ -63,6 +64,9 @@ const TopNav: FC<ComponentProps> = ({className}) => {
         name="APIs"
         url="/bank-api/accounts"
       />
+      <NavLink className="TopNav__download-button" to="/download">
+        <Button>Download</Button>
+      </NavLink>
     </>
   );
 
