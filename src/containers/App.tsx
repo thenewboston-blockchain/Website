@@ -8,6 +8,7 @@ import BankApi from './BankApi';
 import ConfirmationValidatorApi from './ConfirmationValidatorApi';
 import Contribute from './Contribute';
 import DeploymentGuide from './DeploymentGuide';
+import Download from './Download';
 import Guide from './Guide';
 import Home from './Home';
 import PrimaryValidatorApi from './PrimaryValidatorApi';
@@ -24,6 +25,7 @@ const App: FC = () => {
           <Route path="/bank-api/:chapter?" component={BankApi} />
           <Route path="/confirmation-validator-api/:chapter?" component={ConfirmationValidatorApi} />
           <Route path="/deployment-guide/:chapter?" component={DeploymentGuide} />
+          <Route path="/download" component={Download} />
           <Route path="/guide/:chapter?" component={Guide} />
           <Route path="/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
           <Route path="/style-guide/:chapter?" component={StyleGuide} />

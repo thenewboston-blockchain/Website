@@ -4,6 +4,10 @@
   display: flex;
   height: 60px;
 
+  &__download-button {
+    margin-right: 24px;
+  }
+
   &__dropdown-menu {
     background: #fff;
     box-shadow: 0 3px 3px rgba(4, 34, 53, 0.06);
@@ -68,6 +72,10 @@
   }
 
   @media (max-width: 768px) {
+    button {
+      display: none;
+    }
+
     &__right-menu-toggle-container {
       display: flex;
     }
