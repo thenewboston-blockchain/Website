@@ -37,6 +37,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
             name="APIs"
             url="/bank-api/accounts"
           />
+          <TopNavDropdownMenuItem activePatterns={['/download']} name="Download" url="/download" />
         </div>
       </div>
     );
