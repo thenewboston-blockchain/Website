@@ -25,12 +25,12 @@ const contributeProps = {
 const docsProps = {
   activePatterns: [
     '/account-manager',
-    '/deployment-guide',
-    '/guide',
-    '/style-guide',
     '/bank-api',
     '/confirmation-validator-api',
+    '/deployment-guide',
+    '/guide',
     '/primary-validator-api',
+    '/style-guide',
   ],
   name: 'Docs',
   url: '/guide/introduction',
