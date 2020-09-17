@@ -16,8 +16,8 @@ const HomeInstantTransactions: FC = () => {
         <div className="HomeInstantTransactions__text-snippets">
           <div className="HomeInstantTransactions__text-snippets-left-block">
             <p>
-              We rebuilt the Blockchain from the ground up. We kissed those outdated Proof of Work and Proof of Stake
-              consensus algorithms goodbye and replaced them with an innovative trust based architecture.
+              We rebuilt the Blockchain from the ground up. We kissed those outdated PoW and PoS algorithms goodbye and
+              replaced them with an innovative trust based architecture.
             </p>
             <NavLink className="HomeInstantTransactions__content-container--display-large" to="/guide/introduction">
               <Button>View Docs</Button>
@@ -25,8 +25,8 @@ const HomeInstantTransactions: FC = () => {
           </div>
           <div className="HomeInstantTransactions__text-snippets-right-block">
             <p>
-              Join our open source development community as we reinvent digital currency. Help us build the worlds first
-              peer-to-peer (yet blazing fast) distributed payment network using Python and JavaScript.
+              Join the team as we reinvent digital currency and build the worlds first{' '}
+              <NavLink to="/guide/introduction">instant</NavLink> peer-to-peer open source payment network.
             </p>
             <p>
               <b>Now in alpha!</b>
