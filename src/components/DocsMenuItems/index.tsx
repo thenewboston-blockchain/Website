@@ -4,73 +4,6 @@ import {NavLink} from 'react-router-dom';
 import {MenuGroup} from 'components';
 import {NavigationItem} from 'types/navigation';
 
-export const guideNavigationData = [
-  {
-    name: 'Introduction',
-    url: '/guide/introduction',
-  },
-  {
-    name: 'Accounts',
-    url: '/guide/accounts',
-  },
-  {
-    name: 'Blocks',
-    url: '/guide/blocks',
-  },
-  {
-    name: 'Transaction Fees',
-    url: '/guide/transaction-fees',
-  },
-  {
-    name: 'Root Account File',
-    url: '/guide/root-account-file',
-  },
-  {
-    name: 'Banks',
-    url: '/guide/banks',
-  },
-  {
-    name: 'Validators',
-    url: '/guide/validators',
-  },
-  {
-    name: 'Confirmation Validators',
-    url: '/guide/confirmation-validators',
-  },
-  {
-    name: 'Confirmation Services',
-    url: '/guide/confirmation-services',
-  },
-  {
-    name: 'Node Identifiers',
-    url: '/guide/node-identifiers',
-  },
-  {
-    name: 'Resync Triggers',
-    url: '/guide/resync-triggers',
-  },
-  {
-    name: 'Resync Process',
-    url: '/guide/resync-process',
-  },
-  {
-    name: 'Trust',
-    url: '/guide/trust',
-  },
-  {
-    name: 'Initial Funds',
-    url: '/guide/initial-funds',
-  },
-  {
-    name: 'Best Practices',
-    url: '/guide/best-practices',
-  },
-  {
-    name: 'Future Development',
-    url: '/guide/future-development',
-  },
-];
-
 export const accountManagerNavigationData = [
   {
     name: 'Connect to the Network',
@@ -141,37 +74,6 @@ export const bankApiNavigationData = [
   },
 ];
 
-export const primaryValidatorApiNavigationData = [
-  {
-    name: 'Accounts',
-    url: '/primary-validator-api/accounts',
-  },
-  {
-    name: 'Bank Blocks',
-    url: '/primary-validator-api/bank-blocks',
-  },
-  {
-    name: 'Banks',
-    url: '/primary-validator-api/banks',
-  },
-  {
-    name: 'Config',
-    url: '/primary-validator-api/config',
-  },
-  {
-    name: 'Confirmation Blocks',
-    url: '/primary-validator-api/confirmation-blocks',
-  },
-  {
-    name: 'Connection Requests',
-    url: '/primary-validator-api/connection-requests',
-  },
-  {
-    name: 'Validators',
-    url: '/primary-validator-api/validators',
-  },
-];
-
 export const confirmationValidatorApiNavigationData = [
   {
     name: 'Accounts',
@@ -208,6 +110,104 @@ export const confirmationValidatorApiNavigationData = [
   {
     name: 'Validators',
     url: '/confirmation-validator-api/validators',
+  },
+];
+
+export const guideNavigationData = [
+  {
+    name: 'Introduction',
+    url: '/guide/introduction',
+  },
+  {
+    name: 'Accounts',
+    url: '/guide/accounts',
+  },
+  {
+    name: 'Blocks',
+    url: '/guide/blocks',
+  },
+  {
+    name: 'Transaction Fees',
+    url: '/guide/transaction-fees',
+  },
+  {
+    name: 'Root Account File',
+    url: '/guide/root-account-file',
+  },
+  {
+    name: 'Banks',
+    url: '/guide/banks',
+  },
+  {
+    name: 'Validators',
+    url: '/guide/validators',
+  },
+  {
+    name: 'Confirmation Validators',
+    url: '/guide/confirmation-validators',
+  },
+  {
+    name: 'Confirmation Services',
+    url: '/guide/confirmation-services',
+  },
+  {
+    name: 'Node Identifiers',
+    url: '/guide/node-identifiers',
+  },
+  {
+    name: 'Resync Triggers',
+    url: '/guide/resync-triggers',
+  },
+  {
+    name: 'Resync Process',
+    url: '/guide/resync-process',
+  },
+  {
+    name: 'Trust',
+    url: '/guide/trust',
+  },
+  {
+    name: 'Initial Funds',
+    url: '/guide/initial-funds',
+  },
+  {
+    name: 'Best Practices',
+    url: '/guide/best-practices',
+  },
+  {
+    name: 'Future Development',
+    url: '/guide/future-development',
+  },
+];
+
+export const primaryValidatorApiNavigationData = [
+  {
+    name: 'Accounts',
+    url: '/primary-validator-api/accounts',
+  },
+  {
+    name: 'Bank Blocks',
+    url: '/primary-validator-api/bank-blocks',
+  },
+  {
+    name: 'Banks',
+    url: '/primary-validator-api/banks',
+  },
+  {
+    name: 'Config',
+    url: '/primary-validator-api/config',
+  },
+  {
+    name: 'Confirmation Blocks',
+    url: '/primary-validator-api/confirmation-blocks',
+  },
+  {
+    name: 'Connection Requests',
+    url: '/primary-validator-api/connection-requests',
+  },
+  {
+    name: 'Validators',
+    url: '/primary-validator-api/validators',
   },
 ];
 
