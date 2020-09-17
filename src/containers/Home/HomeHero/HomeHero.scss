@@ -65,14 +65,24 @@
 
   &__title {
     font-family: var(--font-family-inter-light);
-    font-size: 48px;
+    font-size: 42px;
     font-weight: 300;
-    line-height: 110%;
+    line-height: 125%;
   }
 
   &__wrapper {
     align-items: center;
     display: flex;
+  }
+
+  @media (max-width: 1560px) {
+    &__left {
+      max-width: 55vw;
+    }
+
+    &__right {
+      max-width: 45vw;
+    }
   }
 
   @media (max-width: 1200px) {
