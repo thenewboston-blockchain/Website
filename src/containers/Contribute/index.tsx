@@ -1,7 +1,7 @@
 import React, {FC, ReactNode} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {A, Button, MarketingButton} from 'components';
+import {A, Button, MarketingButton, StepIndicator} from 'components';
 import Tasks from 'containers/Tasks';
 
 import './Contribute.scss';
@@ -84,16 +84,9 @@ const Contribute: FC = () => {
     </div>
   );
 
-  const renderStepIndicator = (number: number, text: string): ReactNode => (
-    <div className="Contribute__step-indicator">
-      <div className="Contribute__step-bubble">{number}</div>
-      <div className="Contribute__step-text">{text}</div>
-    </div>
-  );
-
   const renderStepOne = (): ReactNode => (
     <div className="Contribute__step-one">
-      {renderStepIndicator(1, 'Get started on thenewboston')}
+      <StepIndicator className="Contribute__StepIndicator" number={1} text="Join the community" />
       <div className="Contribute__button-container">
         <MarketingButton website="slack" />
         <MarketingButton website="github" />
@@ -107,7 +100,7 @@ const Contribute: FC = () => {
 
   const renderStepTwo = (): ReactNode => (
     <div className="Contribute__step-two">
-      {renderStepIndicator(2, 'Choose your weapon')}
+      <StepIndicator className="Contribute__StepIndicator" number={2} text="Start building" />
       <div className="Contribute__navigation-section">
         {renderPythonDjango()}
         {renderReactFE()}
