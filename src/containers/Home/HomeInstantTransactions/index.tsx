@@ -25,8 +25,8 @@ const HomeInstantTransactions: FC = () => {
           </div>
           <div className="HomeInstantTransactions__text-snippets-right-block">
             <p>
-              Join the team as we reinvent digital currency and build the worlds first{' '}
-              <NavLink to="/guide/introduction">instant</NavLink> peer-to-peer open source payment network.
+              Get in on the ground floor as we reinvent digital currency and build the world's first instant,
+              peer-to-peer, open source payment network.
             </p>
             <p>
               <b>Now in alpha!</b>
