@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     max-width: 1020px;
-    padding: 128px 0;
+    padding: 64px 0 72px;
     width: 100%;
   }
 
@@ -27,6 +27,18 @@
 
     &:last-of-type {
       margin-right: 0;
+    }
+  }
+
+  @media (max-width: 1080px) {
+    &__content-container {
+      align-items: center;
+      flex-direction: column;
+      padding: 64px 0 24px;
+    }
+
+    &__Step {
+      margin: 0 0 48px 0;
     }
   }
 }
