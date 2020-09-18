@@ -6,13 +6,13 @@ import {accountManagerNavigationData} from 'components/GuideMenuItems';
 import {PageData, PageDataObject} from 'types/page-data';
 
 import AccountManagerAddFriends from './AccountManagerAddFriends';
-import AccountManagerConnectToNetwork from './AccountManagerConnectToNetwork';
 import AccountManagerCreateAccount from './AccountManagerCreateAccount';
 import AccountManagerEditNicknames from './AccountManagerEditNicknames';
+import AccountManagerGetStarted from './AccountManagerGetStarted';
 import AccountManagerSendPoints from './AccountManagerSendPoints';
 
 const defaultPageData: PageData = {
-  content: <Redirect to="/account-manager/connect-to-the-network" />,
+  content: <Redirect to="/account-manager/get-started" />,
   name: '',
 };
 
@@ -21,10 +21,6 @@ const pageData: PageDataObject = {
     content: <AccountManagerAddFriends />,
     name: 'Add Friends',
   },
-  'connect-to-the-network': {
-    content: <AccountManagerConnectToNetwork />,
-    name: 'Connect to the Network',
-  },
   'create-an-account': {
     content: <AccountManagerCreateAccount />,
     name: 'Create an Account',
@@ -32,6 +28,10 @@ const pageData: PageDataObject = {
   'edit-nicknames': {
     content: <AccountManagerEditNicknames />,
     name: 'Edit Nicknames',
+  },
+  'get-started': {
+    content: <AccountManagerGetStarted />,
+    name: 'Get Started',
   },
   'send-points': {
     content: <AccountManagerSendPoints />,

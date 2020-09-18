@@ -6,8 +6,8 @@ import {NavigationItem} from 'types/navigation';
 
 export const accountManagerNavigationData = [
   {
-    name: 'Connect to the Network',
-    url: '/account-manager/connect-to-the-network',
+    name: 'Get Started',
+    url: '/account-manager/get-started',
   },
   {
     name: 'Create an Account',
