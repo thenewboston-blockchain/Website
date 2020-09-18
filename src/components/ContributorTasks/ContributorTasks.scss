@@ -1,0 +1,19 @@
+.ContributorTasks {
+  &__amount,
+  &__amount-header {
+    text-align: right;
+  }
+
+  &__amount {
+    color: var(--color-tertiary);
+  }
+
+  &__table-header {
+    font-family: var(--font-family-inter-medium);
+  }
+
+  &__task-title {
+    font-family: var(--font-family-inter);
+    font-weight: normal;
+  }
+}
