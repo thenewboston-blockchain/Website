@@ -5,9 +5,9 @@ import {DocContainer, DocImage} from 'components';
 import ConnectToTheNetworkForm from './ConnectToTheNetworkForm.png';
 import GetStarted from './GetStarted.png';
 
-const AccountManagerConnectToNetwork: FC = () => {
+const AccountManagerGetStarted: FC = () => {
   return (
-    <DocContainer className="AccountManagerConnectToNetwork" title="Connect to the Network">
+    <DocContainer className="AccountManagerGetStarted" title="Get Started">
       <p>
         When the application is first started, it will attempt to automatically connect to the network. If successful
         you will be prompted to either create a new account or add an existing account. To create a new account, simply
@@ -29,4 +29,4 @@ const AccountManagerConnectToNetwork: FC = () => {
   );
 };
 
-export default AccountManagerConnectToNetwork;
+export default AccountManagerGetStarted;
