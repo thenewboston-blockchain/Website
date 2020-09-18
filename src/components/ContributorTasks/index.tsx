@@ -1,8 +1,6 @@
 import React, {FC} from 'react';
 import clsx from 'clsx';
 
-import {TableVertical} from 'components/Table';
-
 import './ContributorTasks.scss';
 
 interface ComponentProps {
@@ -10,18 +8,7 @@ interface ComponentProps {
 }
 
 const ContributorTasks: FC<ComponentProps> = ({className}) => {
-  const getRecentTaskRows = () => {
-    const headerRow = {
-      amount: (
-        <div className="ContributorTasks__amount-header">
-          <span className="ContributorTasks__table-header">Amount</span>
-        </div>
-      ),
-      dateCompleted: <span className="ContributorTasks__table-header">Completed</span>,
-      repository: <span className="ContributorTasks__table-header">Repository</span>,
-      title: <span className="ContributorTasks__table-header">Recent Task</span>,
-    };
-
+  const renderRows = () => {
     const taskRows = [
       {
         amount: 25000,
@@ -53,22 +40,30 @@ const ContributorTasks: FC<ComponentProps> = ({className}) => {
         repository: 'Account-Manager',
         title: 'Import/export signing keys',
       },
-    ].map(({amount, dateCompleted, repository, title}) => ({
-      amount: <div className="ContributorTasks__amount">+ {amount.toLocaleString()}</div>,
-      dateCompleted: <span className="ContributorTasks__date-completed">{dateCompleted}</span>,
-      repository: <span className="ContributorTasks__repository">{repository}</span>,
-      title: <span className="ContributorTasks__task-title">{title}</span>,
-    }));
-
-    return [headerRow, ...taskRows].map(({amount, dateCompleted, repository, title}) => [
-      title,
-      repository,
-      dateCompleted,
-      amount,
-    ]);
+    ];
+    return taskRows.map(({amount, dateCompleted, repository, title}) => (
+      <tr>
+        <td className="ContributorTasks__task-title">{title}</td>
+        <td className="ContributorTasks__repository">{repository}</td>
+        <td className="ContributorTasks__date-completed">{dateCompleted}</td>
+        <td className="ContributorTasks__amount">+ {amount.toLocaleString()}</td>
+      </tr>
+    ));
   };
 
-  return <TableVertical altColors className={clsx('ContributorTasks', className)} rows={getRecentTaskRows()} />;
+  return (
+    <table className={clsx('ContributorTasks', className)}>
+      <thead>
+        <tr>
+          <th>Recent Task</th>
+          <th>Repository</th>
+          <th>Completed</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>{renderRows()}</tbody>
+    </table>
+  );
 };
 
 export default ContributorTasks;

@@ -1,21 +1,37 @@
 .ContributorTasks {
-  &__amount,
-  &__amount-header {
-    text-align: right;
+  border: 1px solid #e6e6e6;
+
+  td,
+  th {
+    min-width: 90px;
+    padding: 2px 8px;
+  }
+
+  thead {
+    background: #f6f6f6;
+  }
+
+  th {
+    border-bottom: 1px solid #e6e6e6;
+    font-family: var(--font-family-inter-medium);
+    text-align: left;
+  }
+
+  tr {
+    &:nth-child(even) {
+      background: #f6f6f6;
+    }
   }
 
   &__amount {
     color: var(--color-tertiary);
+    text-align: right;
   }
 
   &__amount,
   &__date-completed,
   &__repository {
     white-space: nowrap;
-  }
-
-  &__table-header {
-    font-family: var(--font-family-inter-medium);
   }
 
   &__task-title {
