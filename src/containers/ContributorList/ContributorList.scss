@@ -2,7 +2,8 @@
   &__contributor {
     border-bottom: 1px solid #e3e8ee;
     display: flex;
-    padding: 24px;
+    margin: 0 24px;
+    padding: 24px 0;
 
     &:last-of-type {
       border-bottom: none;

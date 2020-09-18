@@ -28,18 +28,6 @@ const ContributorTasks: FC<ComponentProps> = ({className}) => {
         repository: 'Account-Manager',
         title: "Create Jest Tests for 'formatPath' and 'formatPathFromNode'",
       },
-      {
-        amount: 30000,
-        dateCompleted: '6/19/2020',
-        repository: 'Bank',
-        title: 'Import and export entire account manager profile',
-      },
-      {
-        amount: 20000,
-        dateCompleted: '6/19/2020',
-        repository: 'Account-Manager',
-        title: 'Import/export signing keys',
-      },
     ];
     return taskRows.map(({amount, dateCompleted, repository, title}) => (
       <tr>
