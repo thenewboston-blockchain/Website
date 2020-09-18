@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
+import {A} from 'components';
 import './Leaderboard.scss';
 
 const REPOSITORIES = ['Account-Manager', 'Bank', 'thenewboston-python', 'Validator', 'Website'];
@@ -67,9 +68,14 @@ const Leaderboard = () => {
   const renderContributorList = () => {
     if (!contributors.length) return null;
     const formattedContributors: object = getFormattedContributors();
-    return Object.values(formattedContributors).map(({avatar_url, id, login}) => (
+    return Object.values(formattedContributors).map(({avatar_url, html_url, id, login}) => (
       <div className="Leaderboard__contributor" key={id}>
         <img className="Leaderboard__user-avatar" src={avatar_url} alt={login} />
+        <div className="Leaderboard__user-overview">
+          <A className="Leaderboard__user-login" href={html_url}>
+            {login}
+          </A>
+        </div>
       </div>
     ));
   };

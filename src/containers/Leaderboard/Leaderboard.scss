@@ -3,7 +3,8 @@
 
   &__contributor {
     border-top: 1px solid #e3e8ee;
-    padding: 12px 0;
+    display: flex;
+    padding: 16px 0;
   }
 
   &__contributor-list {
@@ -37,7 +38,20 @@
   }
 
   &__user-avatar {
+    border-radius: 6px;
     height: auto;
-    max-width: 230px;
+    max-width: 160px;
+  }
+
+  &__user-login {
+    color: #0366d6;
+    font-family: var(--font-family-inter-medium);
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__user-overview {
+    display: flex;
+    margin-left: 16px;
   }
 }
