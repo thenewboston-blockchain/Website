@@ -1,0 +1,35 @@
+.CopyableAccountNumber {
+  $self: &;
+
+  &__account-number {
+    word-break: break-word;
+  }
+
+  &__copy-container {
+    align-items: center;
+    color: var(--color-secondary);
+    cursor: pointer;
+    display: flex;
+
+    &:hover {
+      #{$self}__copy-text {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__copy-icon {
+    margin-right: 6px;
+  }
+
+  &__label {
+    color: var(--color-sail-gray-400);
+  }
+
+  &__top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+}

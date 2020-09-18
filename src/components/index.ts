@@ -1,6 +1,7 @@
 import A from './A';
 import BreadcrumbMenu from './BreadcrumbMenu';
 import {CodeSnippet, RequestResponseSnippet, SnippetLang} from './CodeSnippet';
+import CopyableAccountNumber from './CopyableAccountNumber';
 import DashboardLayout from './DashboardLayout';
 import DocsMenuItems from './DocsMenuItems';
 import {DocContainer, DocEndpoint, DocInlineCode, DocList, DocImage, DocSubSection} from './DocWrapper';
@@ -23,6 +24,7 @@ export {
   BreadcrumbMenu,
   Button,
   CodeSnippet,
+  CopyableAccountNumber,
   DashboardLayout,
   DocContainer,
   DocEndpoint,

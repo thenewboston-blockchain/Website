@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import CopyToClipboard from 'react-copy-to-clipboard';
 import axios from 'axios';
 
-import {A, Icon, IconType, Qr, TableVertical} from 'components';
+import {A, CopyableAccountNumber, Qr, TableVertical} from 'components';
 import './Leaderboard.scss';
 
 const REPOSITORIES = ['Account-Manager', 'Bank', 'thenewboston-python', 'Validator', 'Website'];
@@ -370,26 +369,12 @@ const Leaderboard = () => {
           <A className="Leaderboard__user-login" href={html_url}>
             {login}
           </A>
-
-          <div className="Leaderboard__above-account-number">
-            <div className="Leaderboard__account-number-label">Account Number</div>
-            <CopyToClipboard onCopy={() => {}} text="dfddf07ec15cbf363ecb52eedd7133b70b3ec896b488460bcecaba63e8e36be5">
-              <div className="Leaderboard__copy-container">
-                <Icon className="Leaderboard__copy-icon" icon={IconType.contentCopy} size={22} />
-                <div className="Leaderboard__copy-text">Copy</div>
-              </div>
-            </CopyToClipboard>
-          </div>
-
-          <div className="Leaderboard__account-number">
-            dfddf07ec15cbf363ecb52eedd7133b70b3ec896b488460bcecaba63e8e36be5
-          </div>
-          <div>
-            <Qr
-              className="Leaderboard__qr"
-              text="dfddf07ec15cbf363ecb52eedd7133b70b3ec896b488460bcecaba63e8e36be5"
-              width={100}
-            />
+          <CopyableAccountNumber
+            accountNumber="dfddf07ec15cbf363ecb52eedd7133b70b3ec896b488460bcecaba63e8e36be5"
+            className="Leaderboard__CopyableAccountNumber"
+          />
+          <div className="Leaderboard__qr-container">
+            <Qr text="dfddf07ec15cbf363ecb52eedd7133b70b3ec896b488460bcecaba63e8e36be5" width={100} />
           </div>
         </div>
         <TableVertical altColors className="Leaderboard__recent-tasks" rows={getRecentTaskRows()} />

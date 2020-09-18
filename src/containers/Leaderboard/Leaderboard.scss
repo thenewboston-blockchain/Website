@@ -1,39 +1,5 @@
 .Leaderboard {
-  $self: &;
   padding: 32px 32px 16px;
-
-  &__account-number {
-    margin-bottom: 12px;
-    word-break: break-word;
-  }
-
-  &__copy-container {
-    align-items: center;
-    color: var(--color-secondary);
-    cursor: pointer;
-    display: flex;
-
-    &:hover {
-      #{$self}__copy-text {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  &__copy-icon {
-    margin-right: 6px;
-  }
-
-  &__account-number-label {
-    color: var(--color-sail-gray-400);
-  }
-
-  &__above-account-number {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 12px;
-  }
 
   &__contributor {
     border-top: 1px solid #e3e8ee;
@@ -46,8 +12,16 @@
     width: 100%;
   }
 
+  &__CopyableAccountNumber {
+    margin-top: 18px;
+  }
+
   &__main-content {
     display: flex;
+  }
+
+  &__qr-container {
+    margin-top: 6px;
   }
 
   &__rank {
@@ -58,8 +32,8 @@
   }
 
   &__recent-tasks {
+    flex: 1;
     margin-left: 32px;
-    width: 580px;
   }
 
   &__repository-filter {
@@ -119,5 +93,9 @@
     font-family: var(--font-family-inter-medium);
     font-size: 20px;
     font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
