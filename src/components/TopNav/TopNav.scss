@@ -54,23 +54,6 @@
     }
   }
 
-  &__tnb-logo-nav {
-    align-items: center;
-    background-color: transparent;
-    border-right: none;
-    display: flex;
-    font-family: var(--font-family-mono);
-    font-size: 16px;
-    font-weight: 700;
-    margin-left: 12px;
-    padding: 8px 0;
-  }
-
-  &__tnb-logo {
-    height: 24px;
-    margin-right: 6px;
-  }
-
   @media (max-width: 768px) {
     &__download-button {
       display: none;

@@ -1,8 +1,8 @@
 import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
-import {DashboardLayout, GuideMenuItems, Pagination} from 'components';
-import {accountManagerNavigationData} from 'components/GuideMenuItems';
+import {DashboardLayout, Pagination} from 'components';
+import {accountManagerNavigationData} from 'components/DocsMenuItems';
 import {PageData, PageDataObject} from 'types/page-data';
 
 import AccountManagerAddFriends from './AccountManagerAddFriends';
@@ -48,7 +48,7 @@ const AccountManager: FC = () => {
   const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
 
   return (
-    <DashboardLayout menuItems={<GuideMenuItems />} pageName={name} sectionName="Account Manager">
+    <DashboardLayout pageName={name} sectionName="Account Manager">
       {content}
       <Pagination navigationData={accountManagerNavigationData} />
     </DashboardLayout>

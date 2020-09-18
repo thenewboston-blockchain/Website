@@ -1,11 +1,10 @@
 import A from './A';
-import ApiMenuItems from './ApiMenuItems';
 import BreadcrumbMenu from './BreadcrumbMenu';
 import {CodeSnippet, RequestResponseSnippet, SnippetLang} from './CodeSnippet';
 import DashboardLayout from './DashboardLayout';
+import DocsMenuItems from './DocsMenuItems';
 import {DocContainer, DocEndpoint, DocInlineCode, DocList, DocImage, DocSubSection} from './DocWrapper';
 import {Button} from './FormElements';
-import GuideMenuItems from './GuideMenuItems';
 import HashLink from './HashLink';
 import Icon, {IconType} from './Icon';
 import Label from './Label';
@@ -19,7 +18,6 @@ import TopNav from './TopNav';
 
 export {
   A,
-  ApiMenuItems,
   BreadcrumbMenu,
   Button,
   CodeSnippet,
@@ -29,8 +27,8 @@ export {
   DocImage,
   DocInlineCode,
   DocList,
+  DocsMenuItems,
   DocSubSection,
-  GuideMenuItems,
   HashLink,
   Icon,
   IconType,
