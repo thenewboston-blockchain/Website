@@ -12,6 +12,7 @@ import Layout from './Layout';
 import MarketingButton from './MarketingButton';
 import MenuGroup from './MenuGroup';
 import Pagination from './Pagination';
+import Qr from './Qr';
 import Shadow from './Shadow';
 import StepIndicator from './StepIndicator';
 import {TableBorderGrid, TableParams, TableVertical} from './Table';
@@ -38,6 +39,7 @@ export {
   MarketingButton,
   MenuGroup,
   Pagination,
+  Qr,
   RequestResponseSnippet,
   Shadow,
   SnippetLang,

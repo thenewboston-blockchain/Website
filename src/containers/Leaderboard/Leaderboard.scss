@@ -1,5 +1,39 @@
 .Leaderboard {
+  $self: &;
   padding: 32px 32px 16px;
+
+  &__account-number {
+    margin-bottom: 12px;
+    word-break: break-word;
+  }
+
+  &__copy-container {
+    align-items: center;
+    color: var(--color-secondary);
+    cursor: pointer;
+    display: flex;
+
+    &:hover {
+      #{$self}__copy-text {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__copy-icon {
+    margin-right: 6px;
+  }
+
+  &__account-number-label {
+    color: var(--color-sail-gray-400);
+  }
+
+  &__above-account-number {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
 
   &__contributor {
     border-top: 1px solid #e3e8ee;
@@ -70,12 +104,13 @@
     border-radius: 6px;
     height: auto;
     margin-left: 32px;
-    max-width: 160px;
+    max-width: 210px;
   }
 
   &__user-details {
     display: flex;
-    flex: 1;
+    flex-basis: 270px;
+    flex-direction: column;
     margin-left: 18px;
   }
 

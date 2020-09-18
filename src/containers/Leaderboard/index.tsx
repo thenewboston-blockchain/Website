@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
+import CopyToClipboard from 'react-copy-to-clipboard';
 import axios from 'axios';
 
-import {A, TableVertical} from 'components';
+import {A, Icon, IconType, Qr, TableVertical} from 'components';
 import './Leaderboard.scss';
 
 const REPOSITORIES = ['Account-Manager', 'Bank', 'thenewboston-python', 'Validator', 'Website'];
@@ -362,11 +363,34 @@ const Leaderboard = () => {
     return Object.values(formattedContributors).map(({avatar_url, html_url, id, login}) => (
       <div className="Leaderboard__contributor" key={id}>
         <div className="Leaderboard__rank">#1</div>
-        <img className="Leaderboard__user-avatar" src={avatar_url} alt={login} />
+        <div>
+          <img className="Leaderboard__user-avatar" src={avatar_url} alt={login} />
+        </div>
         <div className="Leaderboard__user-details">
           <A className="Leaderboard__user-login" href={html_url}>
             {login}
           </A>
+
+          <div className="Leaderboard__above-account-number">
+            <div className="Leaderboard__account-number-label">Account Number</div>
+            <CopyToClipboard onCopy={() => {}} text="dfddf07ec15cbf363ecb52eedd7133b70b3ec896b488460bcecaba63e8e36be5">
+              <div className="Leaderboard__copy-container">
+                <Icon className="Leaderboard__copy-icon" icon={IconType.contentCopy} size={22} />
+                <div className="Leaderboard__copy-text">Copy</div>
+              </div>
+            </CopyToClipboard>
+          </div>
+
+          <div className="Leaderboard__account-number">
+            dfddf07ec15cbf363ecb52eedd7133b70b3ec896b488460bcecaba63e8e36be5
+          </div>
+          <div>
+            <Qr
+              className="Leaderboard__qr"
+              text="dfddf07ec15cbf363ecb52eedd7133b70b3ec896b488460bcecaba63e8e36be5"
+              width={100}
+            />
+          </div>
         </div>
         <TableVertical altColors className="Leaderboard__recent-tasks" rows={getRecentTaskRows()} />
         <div className="Leaderboard__total-points">
