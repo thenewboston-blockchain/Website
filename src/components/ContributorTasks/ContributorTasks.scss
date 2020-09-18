@@ -8,6 +8,12 @@
     color: var(--color-tertiary);
   }
 
+  &__amount,
+  &__date-completed,
+  &__repository {
+    white-space: nowrap;
+  }
+
   &__table-header {
     font-family: var(--font-family-inter-medium);
   }
