@@ -1,8 +1,8 @@
 import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
-import {ApiMenuItems, DashboardLayout, Pagination} from 'components';
-import {primaryValidatorApiNavigationData} from 'components/ApiMenuItems';
+import {DashboardLayout, Pagination} from 'components';
+import {primaryValidatorApiNavigationData} from 'components/DocsMenuItems';
 import NodeApiConnectionRequests from 'containers/NodeApi/NodeApiConnectionRequests';
 import {PageData, PageDataObject} from 'types/page-data';
 
@@ -58,7 +58,7 @@ const PrimaryValidatorApi: FC = () => {
   const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
 
   return (
-    <DashboardLayout menuItems={<ApiMenuItems />} pageName={name} sectionName="Primary Validator API">
+    <DashboardLayout pageName={name} sectionName="Primary Validator API">
       {content}
       <Pagination navigationData={primaryValidatorApiNavigationData} />
     </DashboardLayout>

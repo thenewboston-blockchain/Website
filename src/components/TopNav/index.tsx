@@ -1,18 +1,40 @@
+/* eslint-disable react/jsx-props-no-spreading */
+
 import React, {FC, ReactNode, useState} from 'react';
 import {NavLink} from 'react-router-dom';
 import useOnclickOutside from 'react-cool-onclickoutside';
 import clsx from 'clsx';
 
-import Logo from 'assets/svgs/thenewboston.svg';
 import {Button, Icon, IconType, Shadow} from 'components';
 
 import TopNavDropdownMenuItem from './TopNavDropdownMenuItem';
+import TopNavLogo from './TopNavLogo';
 import TopNavMenuItem from './TopNavMenuItem';
 import './TopNav.scss';
 
 interface ComponentProps {
   className?: string;
 }
+
+const contributeProps = {
+  activePatterns: ['/contribute'],
+  name: 'Contribute',
+  url: '/contribute',
+};
+
+const docsProps = {
+  activePatterns: [
+    '/account-manager',
+    '/bank-api',
+    '/confirmation-validator-api',
+    '/deployment-guide',
+    '/guide',
+    '/primary-validator-api',
+    '/style-guide',
+  ],
+  name: 'Docs',
+  url: '/guide/introduction',
+};
 
 const TopNav: FC<ComponentProps> = ({className}) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -26,44 +48,18 @@ const TopNav: FC<ComponentProps> = ({className}) => {
       <div className="TopNav__dropdown-menu">
         <Shadow />
         <div className="TopNav__dropdown-menu-item-container">
-          <TopNavDropdownMenuItem activePatterns={['/contribute']} name="Contribute" url="/contribute" />
-          <TopNavDropdownMenuItem
-            activePatterns={['/account-manager', '/deployment-guide', '/guide', '/style-guide']}
-            name="Guides"
-            url="/guide/introduction"
-          />
-          <TopNavDropdownMenuItem
-            activePatterns={['/bank-api', '/confirmation-validator-api', '/primary-validator-api']}
-            name="APIs"
-            url="/bank-api/accounts"
-          />
+          <TopNavDropdownMenuItem {...contributeProps} />
+          <TopNavDropdownMenuItem {...docsProps} />
           <TopNavDropdownMenuItem activePatterns={['/download']} name="Download" url="/download" />
         </div>
       </div>
     );
   };
 
-  const renderLeftItems = (): ReactNode => (
-    <div className="TopNav__left">
-      <NavLink className="TopNav__tnb-logo-nav" to="/">
-        <img alt="thenewboston Logo" className="TopNav__tnb-logo" src={Logo} />
-      </NavLink>
-    </div>
-  );
-
   const renderMenuItems = (): ReactNode => (
     <>
-      <TopNavMenuItem activePatterns={['/contribute']} name="Contribute" url="/contribute" />
-      <TopNavMenuItem
-        activePatterns={['/account-manager', '/deployment-guide', '/guide', '/style-guide']}
-        name="Guides"
-        url="/guide/introduction"
-      />
-      <TopNavMenuItem
-        activePatterns={['/bank-api', '/confirmation-validator-api', '/primary-validator-api']}
-        name="APIs"
-        url="/bank-api/accounts"
-      />
+      <TopNavMenuItem {...contributeProps} />
+      <TopNavMenuItem {...docsProps} />
       <NavLink className="TopNav__download-button" to="/download">
         <Button>Download</Button>
       </NavLink>
@@ -92,7 +88,9 @@ const TopNav: FC<ComponentProps> = ({className}) => {
 
   return (
     <div className={clsx('TopNav', className)}>
-      {renderLeftItems()}
+      <div className="TopNav__left">
+        <TopNavLogo />
+      </div>
       {renderRightItems()}
     </div>
   );
