@@ -16,6 +16,18 @@
     display: flex;
   }
 
+  &__rank {
+    align-items: center;
+    display: flex;
+    font-family: var(--font-family-inter-medium);
+    font-size: 20px;
+  }
+
+  &__recent-tasks {
+    margin-left: 32px;
+    width: 580px;
+  }
+
   &__repository-filter {
     flex-basis: 230px;
   }
@@ -37,10 +49,34 @@
     justify-content: flex-end;
   }
 
+  &__total-points {
+    margin-left: 32px;
+    white-space: nowrap;
+  }
+
+  &__total-points-label {
+    color: var(--color-sail-gray-500);
+    cursor: default;
+  }
+
+  &__total-points-value {
+    color: var(--color-tertiary);
+    font-family: var(--font-family-inter-medium);
+    font-size: var(--font-size-large);
+    margin-top: 4px;
+  }
+
   &__user-avatar {
     border-radius: 6px;
     height: auto;
+    margin-left: 32px;
     max-width: 160px;
+  }
+
+  &__user-details {
+    display: flex;
+    flex: 1;
+    margin-left: 18px;
   }
 
   &__user-login {
@@ -48,10 +84,5 @@
     font-family: var(--font-family-inter-medium);
     font-size: 20px;
     font-weight: 600;
-  }
-
-  &__user-overview {
-    display: flex;
-    margin-left: 16px;
   }
 }
