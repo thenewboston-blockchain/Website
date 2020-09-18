@@ -30,7 +30,7 @@ const ContributorTasks: FC<ComponentProps> = ({className}) => {
       },
     ];
     return taskRows.map(({amount, dateCompleted, repository, title}) => (
-      <tr>
+      <tr key={title}>
         <td className="ContributorTasks__task-title">{title}</td>
         <td className="ContributorTasks__repository">{repository}</td>
         <td className="ContributorTasks__date-completed">{dateCompleted}</td>
