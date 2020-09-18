@@ -11,6 +11,7 @@ import DeploymentGuide from './DeploymentGuide';
 import Download from './Download';
 import Guide from './Guide';
 import Home from './Home';
+import Leaderboard from './Leaderboard';
 import PrimaryValidatorApi from './PrimaryValidatorApi';
 import StyleGuide from './StyleGuide';
 
@@ -21,6 +22,7 @@ const App: FC = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/contribute" component={Contribute} />
+          <Route exact path="/leaderboard" component={Leaderboard} />
           <Route path="/account-manager/:chapter?" component={AccountManager} />
           <Route path="/bank-api/:chapter?" component={BankApi} />
           <Route path="/confirmation-validator-api/:chapter?" component={ConfirmationValidatorApi} />
