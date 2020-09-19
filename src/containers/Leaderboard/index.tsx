@@ -5,6 +5,7 @@ import sub from 'date-fns/sub';
 
 import ContributorList from 'containers/ContributorList';
 import {Contributor, ContributorWithTasks, Repository, RepositoryFilterType, Task} from 'types/github';
+import {sortByDateKey} from 'utils/sort';
 import './Leaderboard.scss';
 
 import contributors from 'data/contributors.json';
@@ -68,6 +69,9 @@ const Leaderboard = () => {
         (task: Task) => parse(task.completed_date, 'L/d/yy', new Date()) > past,
       );
     }
+
+    if (!contributorsTasks.length) return null;
+    contributorsTasks = contributorsTasks.sort(sortByDateKey('completed_date', 'desc'));
 
     return contributorsTasks;
   };
