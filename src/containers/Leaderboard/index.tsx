@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import clsx from 'clsx';
+import parse from 'date-fns/parse';
+import sub from 'date-fns/sub';
 
 import ContributorList from 'containers/ContributorList';
 import {Contributor, ContributorWithTasks, Repository, RepositoryFilterType, Task} from 'types/github';
@@ -16,6 +18,12 @@ enum Time {
 
 type TimeFilterType = Time.days7 | Time.days30 | Time.all;
 
+const timeFilterMap = {
+  [Time.days7]: 7,
+  [Time.days30]: 730,
+  [Time.all]: null,
+};
+
 const REPOSITORIES = [
   Repository.accountManager,
   Repository.bank,
@@ -28,7 +36,7 @@ const REPOSITORY_FILTERS = [Repository.all, ...REPOSITORIES];
 
 const Leaderboard = () => {
   const [repositoryFilter, setRepositoryFilter] = useState<RepositoryFilterType>(Repository.all);
-  const [timeFilter, setTimeFilter] = useState<TimeFilterType>(Time.days7);
+  const [timeFilter, setTimeFilter] = useState<TimeFilterType>(Time.all);
 
   const getContributorsWithTasks = (): ContributorWithTasks[] => {
     return (contributors as any)
@@ -44,11 +52,24 @@ const Leaderboard = () => {
   };
 
   const getContributorsTasks = (github_username: string): Task[] | null => {
-    const contributorsTasks = (tasks as any)[github_username];
+    let contributorsTasks = (tasks as any)[github_username];
     if (!contributorsTasks || !contributorsTasks.length) return null;
-    return repositoryFilter === Repository.all
-      ? contributorsTasks
-      : contributorsTasks.filter((task: Task) => task.repository === repositoryFilter);
+
+    contributorsTasks =
+      repositoryFilter === Repository.all
+        ? contributorsTasks
+        : contributorsTasks.filter((task: Task) => task.repository === repositoryFilter);
+
+    if (timeFilter !== Time.all) {
+      const now = new Date();
+      const days = timeFilterMap[timeFilter];
+      const past = sub(now, {days});
+      contributorsTasks = contributorsTasks.filter(
+        (task: Task) => parse(task.completed_date, 'L/d/yy', new Date()) > past,
+      );
+    }
+
+    return contributorsTasks;
   };
 
   const handleRepositoryFilterClick = (i: RepositoryFilterType): any => (): void => {
