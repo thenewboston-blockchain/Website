@@ -11,7 +11,7 @@
     },
     {
       "repository": "Account-Manager",
-      "title": "Apples2",
+      "title": "Apples",
       "issue_id": "323",
       "pr_id": "",
       "completed_by": "angle943",
@@ -21,6 +21,24 @@
     {
       "repository": "Website",
       "title": "Apples",
+      "issue_id": "323",
+      "pr_id": "123",
+      "completed_by": "angle943",
+      "completed_date": "9/20/20",
+      "amount_paid": "3000"
+    },
+    {
+      "repository": "Validator",
+      "title": "hello",
+      "issue_id": "301",
+      "pr_id": "302",
+      "completed_by": "angle943",
+      "completed_date": "9/18/20",
+      "amount_paid": "1500"
+    },
+    {
+      "repository": "thenewboston-python",
+      "title": "there",
       "issue_id": "323",
       "pr_id": "123",
       "completed_by": "angle943",
@@ -39,11 +57,40 @@
       "amount_paid": "500"
     },
     {
-      "repository": "Account-Manager",
+      "repository": "Bank",
       "title": "Some account manager task",
       "issue_id": "433",
       "pr_id": "546",
       "completed_by": "buckyroberts",
+      "completed_date": "9/20/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "out there",
+      "issue_id": "433",
+      "pr_id": "546",
+      "completed_by": "buckyroberts",
+      "completed_date": "9/20/20",
+      "amount_paid": "500"
+    }
+  ],
+  "kristykjlee": [
+    {
+      "repository": "Account-Manager",
+      "title": "is",
+      "issue_id": "323",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "9/19/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "thenewboston-python",
+      "title": "anybody",
+      "issue_id": "456",
+      "pr_id": "546",
+      "completed_by": "kristykjlee",
       "completed_date": "9/20/20",
       "amount_paid": "500"
     }

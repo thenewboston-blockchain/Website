@@ -34,7 +34,7 @@ const Leaderboard = () => {
     return (contributors as any)
       .map((contributor: Contributor) => {
         const contributorsTasks = getContributorsTasks(contributor.github_username);
-        if (!contributorsTasks) return null;
+        if (!contributorsTasks || !contributorsTasks.length) return null;
         return {
           ...contributor,
           tasks: contributorsTasks,
@@ -46,7 +46,9 @@ const Leaderboard = () => {
   const getContributorsTasks = (github_username: string): Task[] | null => {
     const contributorsTasks = (tasks as any)[github_username];
     if (!contributorsTasks || !contributorsTasks.length) return null;
-    return contributorsTasks;
+    return repositoryFilter === Repository.all
+      ? contributorsTasks
+      : contributorsTasks.filter((task: Task) => task.repository === repositoryFilter);
   };
 
   const handleRepositoryFilterClick = (i: RepositoryFilterType): any => (): void => {
