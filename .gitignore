@@ -93,31 +93,3 @@ out/
 
 # VS Code
 .vscode/
-
-# Unit test / coverage reports
-*.cover
-*.py,cover
-.coverage
-.coverage.*
-.hypothesis/
-.nox/
-.pytest_cache/
-.tox/
-coverage.xml
-htmlcov/
-nosetests.xml
-
-# pytest
-.pytest_cache
-
-# pyenv
-.python-version
-
-# Environments
-.venv
-ENV/
-env.bak/
-env/
-venv
-venv.bak/
-venv/
