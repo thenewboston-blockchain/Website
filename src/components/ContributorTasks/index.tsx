@@ -16,7 +16,7 @@ const ContributorTasks: FC<ComponentProps> = ({className, tasks}) => {
         <td className="ContributorTasks__task-title">{title}</td>
         <td className="ContributorTasks__repository">{repository}</td>
         <td className="ContributorTasks__date-completed">{completed_date}</td>
-        <td className="ContributorTasks__amount">+ {amount_paid}</td>
+        <td className="ContributorTasks__amount">+ {parseInt(amount_paid, 10).toLocaleString()}</td>
       </tr>
     ));
   };
