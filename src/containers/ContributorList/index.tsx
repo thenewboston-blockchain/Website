@@ -54,7 +54,7 @@ const ContributorList: FC<ComponentProps> = ({className, contributors}) => {
         </div>
         <ContributorTasks className="ContributorList__ContributorTasks" />
         <div className="ContributorList__total-points">
-          <div className="ContributorList__total-points-label">Total Points Earned</div>
+          <div className="ContributorList__total-points-label">Total Earnings</div>
           <div className="ContributorList__total-points-value">{(1876500).toLocaleString()}</div>
         </div>
       </div>
