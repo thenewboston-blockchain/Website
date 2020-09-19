@@ -25,5 +25,5 @@ export const initGA = () => {
 };
 
 export const GApageView = (page: string) => {
-  ReactGA.pageview(page);
+  if (process.env.NODE_ENV === 'production') ReactGA.pageview(page);
 };
