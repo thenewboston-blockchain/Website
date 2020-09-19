@@ -14,3 +14,13 @@ export type RepositoryFilterType =
   | Repository.thenewbostonPython
   | Repository.validator
   | Repository.website;
+
+export interface Task {
+  amount_paid: string;
+  completed_by: string;
+  completed_date: string;
+  issue_id: string;
+  pr_id: string;
+  repository: string;
+  title: string;
+}

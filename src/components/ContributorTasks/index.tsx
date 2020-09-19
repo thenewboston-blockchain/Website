@@ -1,40 +1,22 @@
 import React, {FC} from 'react';
 import clsx from 'clsx';
 
+import {Task} from 'types/github';
 import './ContributorTasks.scss';
 
 interface ComponentProps {
   className?: string;
+  tasks: Task[];
 }
 
-const ContributorTasks: FC<ComponentProps> = ({className}) => {
+const ContributorTasks: FC<ComponentProps> = ({className, tasks}) => {
   const renderRows = () => {
-    const taskRows = [
-      {
-        amount: 25000,
-        dateCompleted: '6/19/2020',
-        repository: 'Account-Manager',
-        title: 'Tab responsiveness',
-      },
-      {
-        amount: 50000,
-        dateCompleted: '6/19/2020',
-        repository: 'Validator',
-        title: 'When points are sent to friend the from sender account balance should get reduced',
-      },
-      {
-        amount: 500,
-        dateCompleted: '6/19/2020',
-        repository: 'Account-Manager',
-        title: "Create Jest Tests for 'formatPath' and 'formatPathFromNode'",
-      },
-    ];
-    return taskRows.map(({amount, dateCompleted, repository, title}) => (
+    return tasks.map(({amount_paid, completed_date, repository, title}: Task) => (
       <tr key={title}>
         <td className="ContributorTasks__task-title">{title}</td>
         <td className="ContributorTasks__repository">{repository}</td>
-        <td className="ContributorTasks__date-completed">{dateCompleted}</td>
-        <td className="ContributorTasks__amount">+ {amount.toLocaleString()}</td>
+        <td className="ContributorTasks__date-completed">{completed_date}</td>
+        <td className="ContributorTasks__amount">+ {amount_paid}</td>
       </tr>
     ));
   };

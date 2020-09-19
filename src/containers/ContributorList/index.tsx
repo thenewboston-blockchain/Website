@@ -5,6 +5,7 @@ import {A, ContributorTasks, CopyableAccountNumber, Qr} from 'components';
 import './ContributorList.scss';
 
 import contributors from 'data/contributors.json';
+import tasks from 'data/tasks.json';
 
 export interface Contributor {
   account_number: string;
@@ -17,6 +18,8 @@ interface ComponentProps {
 }
 
 const ContributorList: FC<ComponentProps> = ({className}) => {
+  if (!contributors || !tasks) return null;
+
   const renderContributors = () => {
     return contributors.map(({account_number, github_avatar_url, github_username}, index) => (
       <div className="ContributorList__contributor" key={github_username}>
@@ -33,7 +36,7 @@ const ContributorList: FC<ComponentProps> = ({className}) => {
             <Qr text={account_number} width={100} />
           </div>
         </div>
-        <ContributorTasks className="ContributorList__ContributorTasks" />
+        <ContributorTasks className="ContributorList__ContributorTasks" tasks={(tasks as any)[github_username] || []} />
         <div className="ContributorList__total-points">
           <div className="ContributorList__total-points-label">Total Earnings</div>
           <div className="ContributorList__total-points-value">{(1876500).toLocaleString()}</div>
