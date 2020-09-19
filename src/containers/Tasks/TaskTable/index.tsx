@@ -9,6 +9,8 @@ interface ComponentProps {
   tableTitle: string;
 }
 
+const AMOUNT_COLOR = '09825d';
+
 const TaskTable: FC<ComponentProps> = ({repoName, tableTitle}) => {
   const [rows, setRows] = useState([]);
 
@@ -20,7 +22,8 @@ const TaskTable: FC<ComponentProps> = ({repoName, tableTitle}) => {
           .filter(({pull_request}: any) => !pull_request)
           .map(({assignee, html_url, labels, title}: any) => [
             <A href={html_url}>{title}</A>,
-            renderLabels(labels),
+            renderStandardLabels(labels),
+            renderAmountLabels(labels),
             renderAssignee(assignee),
           ]),
       );
@@ -29,13 +32,21 @@ const TaskTable: FC<ComponentProps> = ({repoName, tableTitle}) => {
     fetchData();
   }, [repoName]);
 
+  const renderAmountLabels = (labels: any[]) => {
+    return labels
+      .filter(({color}) => color.toLowerCase() === AMOUNT_COLOR)
+      .map(({color, name}) => <Label color={color} key={name} name={parseInt(name, 10).toLocaleString()} />);
+  };
+
   const renderAssignee = (assignee: any) => {
     if (!assignee || !assignee.login || !assignee.avatar_url) return null;
     return <img alt={assignee.login} className="TaskTable__assignee" src={assignee.avatar_url} />;
   };
 
-  const renderLabels = (labels: any[]) => {
-    return labels.map(({color, name}) => <Label color={color} key={name} name={name} />);
+  const renderStandardLabels = (labels: any[]) => {
+    return labels
+      .filter(({color}) => color.toLowerCase() !== AMOUNT_COLOR)
+      .map(({color, name}) => <Label color={color} key={name} name={name} />);
   };
 
   if (!rows.length) return null;
@@ -44,7 +55,7 @@ const TaskTable: FC<ComponentProps> = ({repoName, tableTitle}) => {
     <div className="TaskTable">
       <TableBorderGrid
         className="TaskTable__TableBorderGrid"
-        headers={['Task', 'Labels', 'Assignee']}
+        headers={['Task', 'Labels', 'Reward', 'Assignee']}
         rows={rows}
         title={tableTitle}
       />

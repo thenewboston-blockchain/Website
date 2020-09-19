@@ -16,6 +16,26 @@
     white-space: nowrap;
     width: 100%;
 
+    // Title (name of task)
+    td:nth-child(1) {
+      width: 55%;
+    }
+
+    // Labels
+    td:nth-child(2) {
+      width: 25%;
+    }
+
+    // Reward
+    td:nth-child(3) {
+      width: 10%;
+    }
+
+    // Assignee
+    td:nth-child(4) {
+      width: 10%;
+    }
+
     &__title {
       color: var(--color-primary);
       font-size: var(--font-size-medium);
