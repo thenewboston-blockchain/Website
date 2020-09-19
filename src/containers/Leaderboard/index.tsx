@@ -2,9 +2,11 @@ import React, {useState} from 'react';
 import clsx from 'clsx';
 
 import ContributorList from 'containers/ContributorList';
-import {Repository, RepositoryFilterType} from 'types/github';
-
+import {Contributor, ContributorWithTasks, Repository, RepositoryFilterType, Task} from 'types/github';
 import './Leaderboard.scss';
+
+import contributors from 'data/contributors.json';
+import tasks from 'data/tasks.json';
 
 enum Time {
   days7 = '7d',
@@ -27,6 +29,25 @@ const REPOSITORY_FILTERS = [Repository.all, ...REPOSITORIES];
 const Leaderboard = () => {
   const [repositoryFilter, setRepositoryFilter] = useState<RepositoryFilterType>(Repository.all);
   const [timeFilter, setTimeFilter] = useState<TimeFilterType>(Time.days7);
+
+  const getContributorsWithTasks = (): ContributorWithTasks[] => {
+    return (contributors as any)
+      .map((contributor: Contributor) => {
+        const contributorsTasks = getContributorsTasks(contributor.github_username);
+        if (!contributorsTasks) return null;
+        return {
+          ...contributor,
+          tasks: contributorsTasks,
+        };
+      })
+      .filter((contributor: Contributor | null) => !!contributor);
+  };
+
+  const getContributorsTasks = (github_username: string): Task[] | null => {
+    const contributorsTasks = (tasks as any)[github_username];
+    if (!contributorsTasks || !contributorsTasks.length) return null;
+    return contributorsTasks;
+  };
 
   const handleRepositoryFilterClick = (i: RepositoryFilterType): any => (): void => {
     setRepositoryFilter(i);
@@ -72,7 +93,7 @@ const Leaderboard = () => {
     <div className="Leaderboard">
       <div className="Leaderboard__time-filter">{renderTimeFilterOptions()}</div>
       <div className="Leaderboard__repository-filter">{renderRepositoryFilterOptions()}</div>
-      <ContributorList className="Leaderboard__ContributorList" />
+      <ContributorList className="Leaderboard__ContributorList" contributorsWithTasks={getContributorsWithTasks()} />
     </div>
   );
 };
