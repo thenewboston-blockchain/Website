@@ -11,6 +11,24 @@
     },
     {
       "repository": "Account-Manager",
+      "title": "Accounts semantics Update & Side Menu update",
+      "issue_id": "333",
+      "pr_id": "302",
+      "completed_by": "angle943",
+      "completed_date": "1/1/16",
+      "amount_paid": "1500"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Accounts semantics Update & Side Menu update",
+      "issue_id": "444",
+      "pr_id": "302",
+      "completed_by": "angle943",
+      "completed_date": "1/3/17",
+      "amount_paid": "1500"
+    },
+    {
+      "repository": "Account-Manager",
       "title": "Apples",
       "issue_id": "323",
       "pr_id": "",
@@ -93,6 +111,15 @@
       "completed_by": "kristykjlee",
       "completed_date": "9/20/20",
       "amount_paid": "500"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "is",
+      "issue_id": "222",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "9/20/20",
+      "amount_paid": "10000"
     }
   ]
 }

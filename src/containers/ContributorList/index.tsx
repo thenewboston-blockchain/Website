@@ -2,7 +2,8 @@ import React, {FC} from 'react';
 import clsx from 'clsx';
 
 import {A, ContributorTasks, CopyableAccountNumber, Qr} from 'components';
-import {ContributorWithTasks} from 'types/github';
+import {ContributorWithTasks, Task} from 'types/github';
+import {sortByNumberKey} from 'utils/sort';
 import './ContributorList.scss';
 
 interface ComponentProps {
@@ -11,9 +12,24 @@ interface ComponentProps {
 }
 
 const ContributorList: FC<ComponentProps> = ({className, contributorsWithTasks}) => {
+  const getContributorsWithTotalEarnings = () => {
+    return contributorsWithTasks.map((contributor: ContributorWithTasks) => ({
+      ...contributor,
+      total_earnings: getTotalEarnings(contributor.tasks),
+    }));
+  };
+
+  const getTotalEarnings = (tasks: Task[]) => {
+    const amounts = tasks.map(({amount_paid}: Task) => parseInt(amount_paid, 10));
+    return amounts.reduce((a, b) => a + b, 0);
+  };
+
   const renderContributors = () => {
-    return contributorsWithTasks.map(
-      ({account_number, github_avatar_url, github_username, tasks}: ContributorWithTasks, index) => (
+    const contributorsWithTotalEarnings = getContributorsWithTotalEarnings();
+
+    return contributorsWithTotalEarnings
+      .sort(sortByNumberKey('total_earnings', 'desc'))
+      .map(({account_number, github_avatar_url, github_username, tasks, total_earnings}, index) => (
         <div className="ContributorList__contributor" key={github_username}>
           <div className="ContributorList__rank">#{index + 1}</div>
           <div>
@@ -31,11 +47,10 @@ const ContributorList: FC<ComponentProps> = ({className, contributorsWithTasks})
           <ContributorTasks className="ContributorList__ContributorTasks" tasks={tasks} />
           <div className="ContributorList__total-points">
             <div className="ContributorList__total-points-label">Total Earnings</div>
-            <div className="ContributorList__total-points-value">{(1876500).toLocaleString()}</div>
+            <div className="ContributorList__total-points-value">{total_earnings.toLocaleString()}</div>
           </div>
         </div>
-      ),
-    );
+      ));
   };
 
   return <div className={clsx('ContributorList', className)}>{renderContributors()}</div>;
