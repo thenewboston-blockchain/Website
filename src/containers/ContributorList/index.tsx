@@ -4,52 +4,33 @@ import clsx from 'clsx';
 import {A, ContributorTasks, CopyableAccountNumber, Qr} from 'components';
 import './ContributorList.scss';
 
+import contributors from 'data/contributors.json';
+
 export interface Contributor {
-  avatar_url: string;
-  contributions: number;
-  html_url: string;
-  id: number;
-  login: string;
-  type: string;
+  account_number: string;
+  github_avatar_url: string;
+  github_username: string;
 }
 
 interface ComponentProps {
   className?: string;
-  contributors: Contributor[];
 }
 
-const ContributorList: FC<ComponentProps> = ({className, contributors}) => {
-  const getFormattedContributors = () => {
-    const results: any = {};
-    contributors.forEach((contributor) => {
-      if (contributor.id in results) {
-        results[contributor.id].contributions += contributor.contributions;
-      } else {
-        results[contributor.id] = contributor;
-      }
-    });
-    return results;
-  };
-
+const ContributorList: FC<ComponentProps> = ({className}) => {
   const renderContributors = () => {
-    const formattedContributors: object = getFormattedContributors();
-
-    return Object.values(formattedContributors).map(({avatar_url, html_url, id, login}, index) => (
-      <div className="ContributorList__contributor" key={id}>
+    return contributors.map(({account_number, github_avatar_url, github_username}, index) => (
+      <div className="ContributorList__contributor" key={github_username}>
         <div className="ContributorList__rank">#{index + 1}</div>
         <div>
-          <img className="ContributorList__user-avatar" src={avatar_url} alt={login} />
+          <img className="ContributorList__user-avatar" src={github_avatar_url} alt={github_username} />
         </div>
         <div className="ContributorList__user-details">
-          <A className="ContributorList__user-login" href={html_url}>
-            {login}
+          <A className="ContributorList__user-login" href={`https://github.com/${github_username}`}>
+            {github_username}
           </A>
-          <CopyableAccountNumber
-            accountNumber="dfddf07ec15cbf363ecb52eedd7133b70b3ec896b488460bcecaba63e8e36be5"
-            className="ContributorList__CopyableAccountNumber"
-          />
+          <CopyableAccountNumber accountNumber={account_number} className="ContributorList__CopyableAccountNumber" />
           <div className="ContributorList__qr-container">
-            <Qr text="dfddf07ec15cbf363ecb52eedd7133b70b3ec896b488460bcecaba63e8e36be5" width={100} />
+            <Qr text={account_number} width={100} />
           </div>
         </div>
         <ContributorTasks className="ContributorList__ContributorTasks" />

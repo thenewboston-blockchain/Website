@@ -1,0 +1,51 @@
+{
+  "angle943": [
+    {
+      "repository": "Account-Manager",
+      "title": "Accounts semantics Update & Side Menu update",
+      "issue_id": "301",
+      "pr_id": "302",
+      "completed_by": "angle943",
+      "completed_date": "9/18/20",
+      "amount_paid": "1500"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Apples",
+      "issue_id": "323",
+      "pr_id": "",
+      "completed_by": "angle943",
+      "completed_date": "9/19/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Apples",
+      "issue_id": "323",
+      "pr_id": "123",
+      "completed_by": "angle943",
+      "completed_date": "9/20/20",
+      "amount_paid": "3000"
+    }
+  ],
+  "buckyroberts": [
+    {
+      "repository": "Website",
+      "title": "Another Website Task",
+      "issue_id": "456",
+      "pr_id": "546",
+      "completed_by": "buckyroberts",
+      "completed_date": "9/20/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Some account manager task",
+      "issue_id": "433",
+      "pr_id": "546",
+      "completed_by": "buckyroberts",
+      "completed_date": "9/20/20",
+      "amount_paid": "500"
+    }
+  ]
+}

@@ -1,8 +1,7 @@
-import React, {useEffect, useState} from 'react';
-import axios from 'axios';
+import React, {useState} from 'react';
 import clsx from 'clsx';
 
-import ContributorList, {Contributor} from 'containers/ContributorList';
+import ContributorList from 'containers/ContributorList';
 import {Repository, RepositoryFilterType} from 'types/github';
 
 import './Leaderboard.scss';
@@ -26,23 +25,8 @@ const REPOSITORIES = [
 const REPOSITORY_FILTERS = [Repository.all, ...REPOSITORIES];
 
 const Leaderboard = () => {
-  const [contributors, setContributors] = useState<Contributor[]>([]);
   const [repositoryFilter, setRepositoryFilter] = useState<RepositoryFilterType>(Repository.all);
   const [timeFilter, setTimeFilter] = useState<TimeFilterType>(Time.days7);
-
-  useEffect(() => {
-    const fetchData = async (): Promise<void> => {
-      const promises = REPOSITORIES.map((repositoryName) =>
-        axios.get(`https://api.github.com/repos/thenewboston-developers/${repositoryName}/contributors`),
-      );
-      const responses = await Promise.all(promises);
-      const results = responses
-        .reduce((acc: Contributor[], cur) => [...acc, ...cur.data], [])
-        .filter((contributor) => contributor.type === 'User');
-      setContributors(results);
-    };
-    fetchData();
-  }, []);
 
   const handleRepositoryFilterClick = (i: RepositoryFilterType): any => (): void => {
     setRepositoryFilter(i);
@@ -88,7 +72,7 @@ const Leaderboard = () => {
     <div className="Leaderboard">
       <div className="Leaderboard__time-filter">{renderTimeFilterOptions()}</div>
       <div className="Leaderboard__repository-filter">{renderRepositoryFilterOptions()}</div>
-      <ContributorList className="Leaderboard__ContributorList" contributors={contributors} />
+      <ContributorList className="Leaderboard__ContributorList" />
     </div>
   );
 };
