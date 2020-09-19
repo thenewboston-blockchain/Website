@@ -1,0 +1,32 @@
+.Toast {
+  border-left-width: 3px;
+  border-left-style: solid;
+  display: flex;
+  padding: 12px;
+
+  &--success {
+    border-left-color: var(--color-tertiary);
+  }
+
+  &--warning {
+    border-left-color: var(--color-danger);
+  }
+
+  &__icon {
+    margin-right: 14px;
+
+    &--success {
+      color: var(--color-tertiary);
+    }
+
+    &--warning {
+      color: var(--color-danger);
+    }
+  }
+
+  &__text {
+    color: var(--color-black);
+    font-family: var(--font-family-inter);
+    font-weight: bold;
+  }
+}
