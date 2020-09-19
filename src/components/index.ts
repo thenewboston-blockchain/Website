@@ -1,6 +1,8 @@
 import A from './A';
 import BreadcrumbMenu from './BreadcrumbMenu';
 import {CodeSnippet, RequestResponseSnippet, SnippetLang} from './CodeSnippet';
+import ContributorTasks from './ContributorTasks';
+import CopyableAccountNumber from './CopyableAccountNumber';
 import DashboardLayout from './DashboardLayout';
 import DocsMenuItems from './DocsMenuItems';
 import {DocContainer, DocEndpoint, DocInlineCode, DocList, DocImage, DocSubSection} from './DocWrapper';
@@ -12,6 +14,7 @@ import Layout from './Layout';
 import MarketingButton from './MarketingButton';
 import MenuGroup from './MenuGroup';
 import Pagination from './Pagination';
+import Qr from './Qr';
 import Shadow from './Shadow';
 import StepIndicator from './StepIndicator';
 import {TableBorderGrid, TableParams, TableVertical} from './Table';
@@ -22,6 +25,8 @@ export {
   BreadcrumbMenu,
   Button,
   CodeSnippet,
+  ContributorTasks,
+  CopyableAccountNumber,
   DashboardLayout,
   DocContainer,
   DocEndpoint,
@@ -38,6 +43,7 @@ export {
   MarketingButton,
   MenuGroup,
   Pagination,
+  Qr,
   RequestResponseSnippet,
   Shadow,
   SnippetLang,

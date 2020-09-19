@@ -7,6 +7,7 @@ import noop from 'lodash/noop';
 import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
 import ChevronLeftIcon from 'mdi-react/ChevronLeftIcon';
 import ChevronRightIcon from 'mdi-react/ChevronRightIcon';
+import ContentCopyIcon from 'mdi-react/ContentCopyIcon';
 import MenuIcon from 'mdi-react/MenuIcon';
 import MenuRightIcon from 'mdi-react/MenuRightIcon';
 
@@ -18,6 +19,7 @@ export enum IconType {
   chevronDown,
   chevronLeft,
   chevronRight,
+  contentCopy,
   menu,
   menuRight,
 }
@@ -44,6 +46,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
         return <ChevronLeftIcon {...iconProps} />;
       case IconType.chevronRight:
         return <ChevronRightIcon {...iconProps} />;
+      case IconType.contentCopy:
+        return <ContentCopyIcon {...iconProps} />;
       case IconType.menu:
         return <MenuIcon {...iconProps} />;
       case IconType.menuRight:

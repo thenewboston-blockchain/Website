@@ -36,6 +36,12 @@ const docsProps = {
   url: '/guide/introduction',
 };
 
+const leaderboardProps = {
+  activePatterns: ['/leaderboard'],
+  name: 'Leaderboard',
+  url: '/leaderboard',
+};
+
 const TopNav: FC<ComponentProps> = ({className}) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const ref = useOnclickOutside(() => {
@@ -48,6 +54,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
       <div className="TopNav__dropdown-menu">
         <Shadow />
         <div className="TopNav__dropdown-menu-item-container">
+          <TopNavDropdownMenuItem {...leaderboardProps} />
           <TopNavDropdownMenuItem {...contributeProps} />
           <TopNavDropdownMenuItem {...docsProps} />
           <TopNavDropdownMenuItem activePatterns={['/download']} name="Download" url="/download" />
@@ -58,6 +65,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
 
   const renderMenuItems = (): ReactNode => (
     <>
+      <TopNavMenuItem {...leaderboardProps} />
       <TopNavMenuItem {...contributeProps} />
       <TopNavMenuItem {...docsProps} />
       <NavLink className="TopNav__download-button" to="/download">
