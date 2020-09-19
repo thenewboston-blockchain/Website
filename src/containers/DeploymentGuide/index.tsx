@@ -1,9 +1,10 @@
-import React, {FC, useMemo} from 'react';
+import React, {FC, useEffect, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
 import {DashboardLayout} from 'components';
 import {PageData, PageDataObject} from 'types/page-data';
 
+import {GApageView} from 'utils/components';
 import DeploymentGuideBank from './DeploymentGuideBank';
 import DeploymentGuideValidator from './DeploymentGuideValidator';
 
@@ -30,6 +31,10 @@ const getPageData = (chapter: string): PageData => {
 const DeploymentGuide: FC = () => {
   const {chapter} = useParams();
   const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
+
+  useEffect(() => {
+    GApageView('DeploymentGuide');
+  }, []);
 
   return (
     <DashboardLayout pageName={name} sectionName="Deployment Guide">

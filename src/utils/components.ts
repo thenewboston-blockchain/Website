@@ -1,3 +1,5 @@
+import ReactGA from 'react-ga';
+
 export const getCustomClassNames = (
   classNames: string | undefined,
   suffix: string,
@@ -16,4 +18,12 @@ export const getCustomClassNames = (
   }
 
   return {};
+};
+
+export const initGA = () => {
+  ReactGA.initialize('UA-56989641-1');
+};
+
+export const GApageView = (page: string) => {
+  ReactGA.pageview(page);
 };

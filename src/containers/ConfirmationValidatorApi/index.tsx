@@ -1,4 +1,4 @@
-import React, {FC, useMemo} from 'react';
+import React, {FC, useEffect, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
 import {DashboardLayout, Pagination} from 'components';
@@ -6,6 +6,7 @@ import {confirmationValidatorApiNavigationData} from 'components/DocsMenuItems';
 import NodeApiConnectionRequests from 'containers/NodeApi/NodeApiConnectionRequests';
 import {PageData, PageDataObject} from 'types/page-data';
 
+import {GApageView} from 'utils/components';
 import ConfirmationValidatorApiAccounts from './ConfirmationValidatorApiAccounts';
 import ConfirmationValidatorApiBankConfirmationServices from './ConfirmationValidatorApiBankConfirmationServices';
 import ConfirmationValidatorApiBanks from './ConfirmationValidatorApiBanks';
@@ -66,6 +67,10 @@ const getPageData = (chapter: string): PageData => {
 const ConfirmationValidatorApi: FC = () => {
   const {chapter} = useParams();
   const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
+
+  useEffect(() => {
+    GApageView('ConfirmationValidatorApi');
+  }, []);
 
   return (
     <DashboardLayout pageName={name} sectionName="Confirmation Validator API">

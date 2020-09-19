@@ -1,4 +1,4 @@
-import React, {FC, useMemo} from 'react';
+import React, {FC, useEffect, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
 import {DashboardLayout, Pagination} from 'components';
@@ -6,6 +6,7 @@ import {bankApiNavigationData} from 'components/DocsMenuItems';
 import NodeApiConnectionRequests from 'containers/NodeApi/NodeApiConnectionRequests';
 import {PageData, PageDataObject} from 'types/page-data';
 
+import {GApageView} from 'utils/components';
 import BankApiAccounts from './BankApiAccounts';
 import BankApiBankTransactions from './BankApiBankTransactions';
 import BankApiBanks from './BankApiBanks';
@@ -76,6 +77,10 @@ const getPageData = (chapter: string): PageData => {
 const BankApi: FC = () => {
   const {chapter} = useParams();
   const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
+
+  useEffect(() => {
+    GApageView('BankApi');
+  }, []);
 
   return (
     <DashboardLayout pageName={name} sectionName="Bank API">

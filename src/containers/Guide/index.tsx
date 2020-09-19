@@ -1,10 +1,11 @@
-import React, {FC, useMemo} from 'react';
+import React, {FC, useEffect, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
 import {DashboardLayout, Pagination} from 'components';
 import {guideNavigationData} from 'components/DocsMenuItems';
 import {PageData, PageDataObject} from 'types/page-data';
 
+import {GApageView} from 'utils/components';
 import GuideAccounts from './GuideAccounts';
 import GuideBanks from './GuideBanks';
 import GuideBestPractices from './GuideBestPractices';
@@ -101,6 +102,10 @@ const getPageData = (chapter: string): PageData => {
 const Guide: FC = () => {
   const {chapter} = useParams();
   const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
+
+  useEffect(() => {
+    GApageView('Guide');
+  }, []);
 
   return (
     <DashboardLayout pageName={name} sectionName="Guide">

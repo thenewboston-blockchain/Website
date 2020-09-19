@@ -1,12 +1,17 @@
-import React, {FC, ReactNode} from 'react';
+import React, {FC, ReactNode, useEffect} from 'react';
 import {NavLink} from 'react-router-dom';
 
 import {A, Button, MarketingButton} from 'components';
 import Tasks from 'containers/Tasks';
 
 import './Contribute.scss';
+import {GApageView} from 'utils/components';
 
 const Contribute: FC = () => {
+  useEffect(() => {
+    GApageView('Contribute');
+  }, []);
+
   const renderPythonDjango = (): ReactNode => (
     <div className="Contribute__navigation-column">
       <h2 className="Contribute__navigation-column-header">Python / Django</h2>

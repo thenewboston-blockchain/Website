@@ -1,9 +1,10 @@
-import React, {FC, useMemo} from 'react';
+import React, {FC, useEffect, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
 import {DashboardLayout} from 'components';
 import {PageData, PageDataObject} from 'types/page-data';
 
+import {GApageView} from 'utils/components';
 import StyleGuideCss from './StyleGuideCss';
 import StyleGuideReact from './StyleGuideReact';
 
@@ -30,6 +31,10 @@ const getPageData = (chapter: string): PageData => {
 const StyleGuide: FC = () => {
   const {chapter} = useParams();
   const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
+
+  useEffect(() => {
+    GApageView('StyleGuide');
+  }, []);
 
   return (
     <DashboardLayout pageName={name} sectionName="Style Guide">

@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import {Button} from 'components';
 
 import './Download.scss';
+import {GApageView} from 'utils/components';
 
 const Download = () => {
+  useEffect(() => {
+    GApageView('Download');
+  }, []);
+
   const renderOS = (name: string, link: string) => {
     return (
       <div className="Download__os">

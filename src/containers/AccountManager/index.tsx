@@ -1,10 +1,11 @@
-import React, {FC, useMemo} from 'react';
+import React, {FC, useEffect, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
 import {DashboardLayout, Pagination} from 'components';
 import {accountManagerNavigationData} from 'components/DocsMenuItems';
 import {PageData, PageDataObject} from 'types/page-data';
 
+import {GApageView} from 'utils/components';
 import AccountManagerAddFriends from './AccountManagerAddFriends';
 import AccountManagerCreateAccount from './AccountManagerCreateAccount';
 import AccountManagerEditNicknames from './AccountManagerEditNicknames';
@@ -46,6 +47,10 @@ const getPageData = (chapter: string): PageData => {
 const AccountManager: FC = () => {
   const {chapter} = useParams();
   const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
+
+  useEffect(() => {
+    GApageView('AccountManager');
+  }, []);
 
   return (
     <DashboardLayout pageName={name} sectionName="Account Manager">

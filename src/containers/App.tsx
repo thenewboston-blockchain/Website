@@ -1,8 +1,9 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect} from 'react';
 import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom';
 
 import {Layout} from 'components';
 
+import {initGA} from 'utils/components';
 import AccountManager from './AccountManager';
 import BankApi from './BankApi';
 import ConfirmationValidatorApi from './ConfirmationValidatorApi';
@@ -15,6 +16,10 @@ import PrimaryValidatorApi from './PrimaryValidatorApi';
 import StyleGuide from './StyleGuide';
 
 const App: FC = () => {
+  useEffect(() => {
+    initGA();
+  }, []);
+
   return (
     <Router>
       <Layout>
