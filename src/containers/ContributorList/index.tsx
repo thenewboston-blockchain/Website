@@ -2,16 +2,11 @@ import React, {FC} from 'react';
 import clsx from 'clsx';
 
 import {A, ContributorTasks, CopyableAccountNumber, Qr} from 'components';
+import {Contributor} from 'types/github';
 import './ContributorList.scss';
 
 import contributors from 'data/contributors.json';
 import tasks from 'data/tasks.json';
-
-export interface Contributor {
-  account_number: string;
-  github_avatar_url: string;
-  github_username: string;
-}
 
 interface ComponentProps {
   className?: string;
@@ -21,7 +16,7 @@ const ContributorList: FC<ComponentProps> = ({className}) => {
   if (!contributors || !tasks) return null;
 
   const renderContributors = () => {
-    return contributors.map(({account_number, github_avatar_url, github_username}, index) => (
+    return contributors.map(({account_number, github_avatar_url, github_username}: Contributor, index) => (
       <div className="ContributorList__contributor" key={github_username}>
         <div className="ContributorList__rank">#{index + 1}</div>
         <div>

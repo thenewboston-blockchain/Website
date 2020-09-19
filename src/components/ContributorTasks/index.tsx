@@ -11,8 +11,8 @@ interface ComponentProps {
 
 const ContributorTasks: FC<ComponentProps> = ({className, tasks}) => {
   const renderRows = () => {
-    return tasks.map(({amount_paid, completed_date, repository, title}: Task) => (
-      <tr key={title}>
+    return tasks.map(({amount_paid, completed_date, repository, title}: Task, index) => (
+      <tr key={index}>
         <td className="ContributorTasks__task-title">{title}</td>
         <td className="ContributorTasks__repository">{repository}</td>
         <td className="ContributorTasks__date-completed">{completed_date}</td>

@@ -1,3 +1,9 @@
+export interface Contributor {
+  account_number: string;
+  github_avatar_url: string;
+  github_username: string;
+}
+
 export enum Repository {
   all = 'All',
   accountManager = 'Account-Manager',
