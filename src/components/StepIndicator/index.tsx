@@ -1,8 +1,8 @@
 import React, {FC, memo} from 'react';
 import clsx from 'clsx';
 
+import {getCustomClassNames} from 'utils/components';
 import './StepIndicator.scss';
-import {getCustomClassNames} from '../../utils/components';
 
 interface ComponentProps {
   className?: string;
