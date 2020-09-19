@@ -3,24 +3,9 @@ import axios from 'axios';
 import clsx from 'clsx';
 
 import ContributorList, {Contributor} from 'containers/ContributorList';
+import {Repository, RepositoryFilterType} from 'types/github';
+
 import './Leaderboard.scss';
-
-enum Repository {
-  all = 'All',
-  accountManager = 'Account-Manager',
-  bank = 'Bank',
-  thenewbostonPython = 'thenewboston-python',
-  validator = 'Validator',
-  website = 'Website',
-}
-
-type RepositoryFilterType =
-  | Repository.all
-  | Repository.accountManager
-  | Repository.bank
-  | Repository.thenewbostonPython
-  | Repository.validator
-  | Repository.website;
 
 enum Time {
   days7 = '7d',
@@ -37,6 +22,7 @@ const REPOSITORIES = [
   Repository.validator,
   Repository.website,
 ];
+
 const REPOSITORY_FILTERS = [Repository.all, ...REPOSITORIES];
 
 const Leaderboard = () => {

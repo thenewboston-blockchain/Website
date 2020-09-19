@@ -1,5 +1,6 @@
 .CopyableAccountNumber {
   $self: &;
+  max-width: 270px;
 
   &__account-number {
     word-break: break-word;
