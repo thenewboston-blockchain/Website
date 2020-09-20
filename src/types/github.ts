@@ -114,13 +114,9 @@ export interface BaseIssue {
   updated_at: Date;
 }
 
-export interface RawIssue extends BaseIssue {
-  created_at: Date;
-}
-
 export interface Issue extends BaseIssue {
   amount: number;
-  created_at: string;
+  repositoryName: string;
 }
 
 interface BaseTask {

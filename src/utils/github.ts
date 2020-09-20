@@ -18,6 +18,11 @@ export const fetchGithubIssues = async (): Promise<Issue[]> => {
     return {
       ...issue,
       amount: amountLabels.length ? parseInt(amountLabels[0].name, 10) : 0,
+      repositoryName: getRepositoryName(issue.repository_url),
     };
   });
+};
+
+const getRepositoryName = (repositoryUrl: string) => {
+  return repositoryUrl.replace('https://api.github.com/repos/thenewboston-developers/', '');
 };

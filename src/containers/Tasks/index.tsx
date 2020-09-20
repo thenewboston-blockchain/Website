@@ -25,15 +25,10 @@ const Tasks = () => {
     return issues.filter(({amount}) => amount !== 0);
   };
 
-  const getRepositoryName = (repositoryUrl: string) => {
-    return repositoryUrl.replace('https://api.github.com/repos/thenewboston-developers/', '');
-  };
-
   const renderTasks = () => {
     const filteredIssues = getFilteredIssues();
-    console.log(filteredIssues);
     return filteredIssues.map(
-      ({amount, assignees, created_at, html_url, labels, number, repository_url, title, user}) => {
+      ({amount, assignees, created_at, html_url, labels, number, repositoryName, title, user}) => {
         const createdStr = formatDistanceToNow(parseISO(created_at), {includeSeconds: true});
         return (
           <Task
@@ -46,7 +41,7 @@ const Tasks = () => {
             htmlUrl={html_url}
             key={html_url}
             number={number}
-            repositoryName={getRepositoryName(repository_url)}
+            repositoryName={repositoryName}
             title={title}
           />
         );
