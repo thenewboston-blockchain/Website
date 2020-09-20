@@ -30,6 +30,14 @@ export type RepositoryFilterType =
   | Repository.validator
   | Repository.website;
 
+export enum Time {
+  days7 = '7d',
+  days30 = '30d',
+  all = 'All',
+}
+
+export type TimeFilterType = Time.days7 | Time.days30 | Time.all;
+
 interface BaseTask {
   amount_paid: string;
   completed_by: string;

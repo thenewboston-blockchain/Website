@@ -1,0 +1,21 @@
+.RepositoryFilter {
+  &__option {
+    color: var(--color-sail-gray-400);
+    cursor: pointer;
+    font-family: var(--font-family-inter-medium);
+    font-size: 16px;
+    padding: 4px 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &--active {
+      color: var(--color-primary);
+    }
+  }
+}

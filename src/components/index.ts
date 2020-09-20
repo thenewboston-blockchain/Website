@@ -5,7 +5,7 @@ import ContributorTasks from './ContributorTasks';
 import CopyableAccountNumber from './CopyableAccountNumber';
 import DashboardLayout from './DashboardLayout';
 import DocsMenuItems from './DocsMenuItems';
-import {DocContainer, DocEndpoint, DocInlineCode, DocList, DocImage, DocSubSection} from './DocWrapper';
+import {DocContainer, DocEndpoint, DocImage, DocInlineCode, DocList, DocSubSection} from './DocWrapper';
 import {Button} from './FormElements';
 import HashLink from './HashLink';
 import Icon, {IconType} from './Icon';
@@ -14,10 +14,12 @@ import Layout from './Layout';
 import MarketingButton from './MarketingButton';
 import MenuGroup from './MenuGroup';
 import Pagination from './Pagination';
+import RepositoryFilter from './RepositoryFilter';
 import Qr from './Qr';
 import Shadow from './Shadow';
 import StepIndicator from './StepIndicator';
 import {TableBorderGrid, TableParams, TableVertical} from './Table';
+import TimeFilter from './TimeFilter';
 import TopNav from './TopNav';
 
 export {
@@ -44,6 +46,7 @@ export {
   MenuGroup,
   Pagination,
   Qr,
+  RepositoryFilter,
   RequestResponseSnippet,
   Shadow,
   SnippetLang,
@@ -51,5 +54,6 @@ export {
   TableBorderGrid,
   TableParams,
   TableVertical,
+  TimeFilter,
   TopNav,
 };
