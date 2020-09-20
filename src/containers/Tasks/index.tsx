@@ -3,7 +3,6 @@ import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import parseISO from 'date-fns/parseISO';
 
 import {RepositoryFilter} from 'components';
-import {AMOUNT_COLOR} from 'constants/github';
 import {Repository, RepositoryFilterType} from 'types/github';
 import {fetchGithubIssues} from 'utils/github';
 
@@ -23,11 +22,7 @@ const Tasks = () => {
   }, []);
 
   const getFilteredIssues = () => {
-    const issuesWithAmounts = issues.filter(({labels}) => {
-      const amountLabels = labels.filter(({color}: any) => color.toLowerCase() === AMOUNT_COLOR);
-      return !!amountLabels.length;
-    });
-    return issuesWithAmounts;
+    return issues.filter(({amount}) => amount !== 0);
   };
 
   const getRepositoryName = (repositoryUrl: string) => {
@@ -36,23 +31,27 @@ const Tasks = () => {
 
   const renderTasks = () => {
     const filteredIssues = getFilteredIssues();
-    return filteredIssues.map(({assignees, created_at, html_url, labels, number, repository_url, title, user}) => {
-      const createdStr = formatDistanceToNow(parseISO(created_at), {includeSeconds: true});
-      return (
-        <Task
-          assignees={assignees}
-          className="Tasks__Task"
-          createdAt={`${createdStr} ago`}
-          creator={user}
-          githubLabels={labels}
-          htmlUrl={html_url}
-          key={html_url}
-          number={number}
-          repositoryName={getRepositoryName(repository_url)}
-          title={title}
-        />
-      );
-    });
+    console.log(filteredIssues);
+    return filteredIssues.map(
+      ({amount, assignees, created_at, html_url, labels, number, repository_url, title, user}) => {
+        const createdStr = formatDistanceToNow(parseISO(created_at), {includeSeconds: true});
+        return (
+          <Task
+            amount={amount}
+            assignees={assignees}
+            className="Tasks__Task"
+            createdAt={`${createdStr} ago`}
+            creator={user}
+            githubLabels={labels}
+            htmlUrl={html_url}
+            key={html_url}
+            number={number}
+            repositoryName={getRepositoryName(repository_url)}
+            title={title}
+          />
+        );
+      },
+    );
   };
 
   return (

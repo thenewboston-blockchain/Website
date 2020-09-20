@@ -8,6 +8,7 @@ import {Assignee, GitHubLabel, GitHubUser} from 'types/github';
 import './Task.scss';
 
 interface ComponentProps {
+  amount: number;
   assignees: Assignee[];
   className?: string;
   creator: GitHubUser;
@@ -20,6 +21,7 @@ interface ComponentProps {
 }
 
 const Task: FC<ComponentProps> = ({
+  amount,
   assignees,
   className,
   creator,
@@ -36,14 +38,6 @@ const Task: FC<ComponentProps> = ({
     return assignedUsers.map(({avatar_url, login}) => (
       <img alt={login} className="Task__assignee" key={login} src={avatar_url} />
     ));
-  };
-
-  const renderAmount = () => {
-    const amountLabel = githubLabels.filter(({color}) => color.toLowerCase() === AMOUNT_COLOR);
-    if (!amountLabel.length) return null;
-    return amountLabel.map(({name}) => (
-      <TotalAmount amount={parseInt(name, 10)} className="Task__TotalAmount" key={name} title="Reward" />
-    ))[0];
   };
 
   const renderLabels = () => {
@@ -73,7 +67,9 @@ const Task: FC<ComponentProps> = ({
           </>
         )}
       </div>
-      <div className="Task__right">{renderAmount()}</div>
+      <div className="Task__right">
+        <TotalAmount amount={amount} className="Task__TotalAmount" title="Reward" />
+      </div>
     </div>
   );
 };
