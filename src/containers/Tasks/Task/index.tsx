@@ -18,10 +18,12 @@ interface ComponentProps {
 }
 
 const Task: FC<ComponentProps> = ({assignees, className, githubLabels, htmlUrl, number, title}) => {
+  const assignedUsers = assignees.filter((assignee) => !!assignee.login && !!assignee.avatar_url);
+
   const renderAssignees = () => {
-    return assignees
-      .filter((assignee) => !!assignee.login && !!assignee.avatar_url)
-      .map(({avatar_url, login}) => <img alt={login} className="Task__assignee" key={login} src={avatar_url} />);
+    return assignedUsers.map(({avatar_url, login}) => (
+      <img alt={login} className="Task__assignee" key={login} src={avatar_url} />
+    ));
   };
 
   const renderAmount = () => {
@@ -49,7 +51,14 @@ const Task: FC<ComponentProps> = ({assignees, className, githubLabels, htmlUrl, 
         </div>
         <div className="Task__issue-bottom">{`#${number}`}</div>
       </div>
-      <div className="Task__middle">{renderAssignees()}</div>
+      <div className="Task__middle">
+        {!!assignedUsers.length && (
+          <>
+            <div className="Task__assignees-title">Assignees</div>
+            {renderAssignees()}
+          </>
+        )}
+      </div>
       <div className="Task__right">{renderAmount()}</div>
     </div>
   );
