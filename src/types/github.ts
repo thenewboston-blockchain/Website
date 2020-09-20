@@ -10,7 +10,7 @@ export interface ContributorWithTasks {
   account_number: string;
   github_avatar_url: string;
   github_username: string;
-  tasks: FormattedTask[];
+  tasks: Task[];
 }
 
 export enum Repository {
@@ -39,12 +39,12 @@ interface BaseTask {
   title: string;
 }
 
-export interface FormattedTask extends BaseTask {
-  completed_date: Date;
-}
-
-export type FormattedTaskDict = Dict<FormattedTask[]>;
-
 export interface RawTask extends BaseTask {
   completed_date: string;
 }
+
+export interface Task extends BaseTask {
+  completed_date: Date;
+}
+
+export type TaskDict = Dict<Task[]>;

@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import clsx from 'clsx';
 
 import {A, ContributorTasks, CopyableAccountNumber, Qr} from 'components';
-import {ContributorWithTasks, FormattedTask} from 'types/github';
+import {ContributorWithTasks, Task} from 'types/github';
 import {sortByNumberKey} from 'utils/sort';
 import './ContributorList.scss';
 
@@ -19,8 +19,8 @@ const ContributorList: FC<ComponentProps> = ({className, contributorsWithTasks})
     }));
   };
 
-  const getTotalEarnings = (tasks: FormattedTask[]) => {
-    const amounts = tasks.map(({amount_paid}: FormattedTask) => parseInt(amount_paid, 10));
+  const getTotalEarnings = (tasks: Task[]) => {
+    const amounts = tasks.map(({amount_paid}: Task) => parseInt(amount_paid, 10));
     return amounts.reduce((a, b) => a + b, 0);
   };
 

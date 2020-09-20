@@ -4,14 +4,7 @@ import sub from 'date-fns/sub';
 
 import ContributorList from 'containers/ContributorList';
 import {GenericVoidFunction} from 'types/generic';
-import {
-  Contributor,
-  ContributorWithTasks,
-  FormattedTask,
-  FormattedTaskDict,
-  Repository,
-  RepositoryFilterType,
-} from 'types/github';
+import {Contributor, ContributorWithTasks, Task, TaskDict, Repository, RepositoryFilterType} from 'types/github';
 import {getContributors, getTasks} from 'utils/data';
 import {sortByDateKey} from 'utils/sort';
 
@@ -62,20 +55,20 @@ const Leaderboard = () => {
       .filter((contributor: ContributorWithTasks) => !!contributor.tasks.length);
   };
 
-  const getContributorsTasks = (tasks: FormattedTaskDict, github_username: string): FormattedTask[] => {
-    let contributorsTasks: FormattedTask[] = tasks[github_username];
+  const getContributorsTasks = (tasks: TaskDict, github_username: string): Task[] => {
+    let contributorsTasks: Task[] = tasks[github_username];
     if (!contributorsTasks || !contributorsTasks.length) return [];
 
     contributorsTasks =
       repositoryFilter === Repository.all
         ? contributorsTasks
-        : contributorsTasks.filter((task: FormattedTask) => task.repository === repositoryFilter);
+        : contributorsTasks.filter((task: Task) => task.repository === repositoryFilter);
 
     if (timeFilter !== Time.all) {
       const now = new Date();
       const days = timeFilterMap[timeFilter];
       const past = sub(now, {days});
-      contributorsTasks = contributorsTasks.filter((task: FormattedTask) => task.completed_date > past);
+      contributorsTasks = contributorsTasks.filter((task: Task) => task.completed_date > past);
     }
 
     if (!contributorsTasks.length) return [];

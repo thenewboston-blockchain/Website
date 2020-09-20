@@ -2,17 +2,17 @@ import React, {FC} from 'react';
 import clsx from 'clsx';
 import format from 'date-fns/format';
 
-import {FormattedTask} from 'types/github';
+import {Task} from 'types/github';
 import './ContributorTasks.scss';
 
 interface ComponentProps {
   className?: string;
-  tasks: FormattedTask[];
+  tasks: Task[];
 }
 
 const ContributorTasks: FC<ComponentProps> = ({className, tasks}) => {
   const renderRows = () => {
-    return tasks.map(({amount_paid, completed_date, repository, title}: FormattedTask, index) => (
+    return tasks.map(({amount_paid, completed_date, repository, title}: Task, index) => (
       <tr key={index}>
         <td className="ContributorTasks__task-title">{title}</td>
         <td className="ContributorTasks__repository">{repository}</td>
