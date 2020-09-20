@@ -2,11 +2,10 @@ import React, {FC} from 'react';
 import clsx from 'clsx';
 
 import {A, Label, TotalAmount} from 'components';
+import {AMOUNT_COLOR} from 'constants/github';
 import {Assignee, GitHubLabel, GitHubUser} from 'types/github';
 
 import './Task.scss';
-
-const AMOUNT_COLOR = '09825d';
 
 interface ComponentProps {
   assignees: Assignee[];

@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import axios from 'axios';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import parseISO from 'date-fns/parseISO';
 
 import {RepositoryFilter} from 'components';
-import {REPOSITORIES} from 'constants/github';
+import {AMOUNT_COLOR} from 'constants/github';
 import {Repository, RepositoryFilterType} from 'types/github';
+import {fetchGithubIssues} from 'utils/github';
 
 import Task from './Task';
 import './Tasks.scss';
@@ -16,24 +16,18 @@ const Tasks = () => {
 
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
-      const promises = REPOSITORIES.map((repoName) =>
-        axios.get(`https://api.github.com/repos/thenewboston-developers/${repoName}/issues`),
-      );
-
-      const results = await Promise.all(promises);
-      setIssues(
-        results.reduce(
-          (acc: any[], items: any) => [...acc, ...items.data.filter(({pull_request}: any) => !pull_request)],
-          [],
-        ),
-      );
+      const results = await fetchGithubIssues();
+      setIssues(results);
     };
-
     fetchData();
   }, []);
 
   const getFilteredIssues = () => {
-    return issues;
+    const issuesWithAmounts = issues.filter(({labels}) => {
+      const amountLabels = labels.filter(({color}: any) => color.toLowerCase() === AMOUNT_COLOR);
+      return !!amountLabels.length;
+    });
+    return issuesWithAmounts;
   };
 
   const getRepositoryName = (repositoryUrl: string) => {

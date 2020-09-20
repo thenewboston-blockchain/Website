@@ -90,6 +90,39 @@ export enum Time {
 
 export type TimeFilterType = Time.days7 | Time.days30 | Time.all;
 
+export interface BaseIssue {
+  id: number;
+  node_id: string;
+  url: string;
+  repository_url: string;
+  labels_url: string;
+  comments_url: string;
+  events_url: string;
+  html_url: string;
+  number: number;
+  state: string;
+  title: string;
+  body: string;
+  user: GitHubUser;
+  labels: GitHubLabel[];
+  assignee: Assignee;
+  assignees: Assignee[];
+  locked: boolean;
+  active_lock_reason: string;
+  comments: number;
+  closed_at?: any;
+  updated_at: Date;
+}
+
+export interface RawIssue extends BaseIssue {
+  created_at: Date;
+}
+
+export interface Issue extends BaseIssue {
+  amount: number;
+  created_at: string;
+}
+
 interface BaseTask {
   amount_paid: string;
   completed_by: string;
