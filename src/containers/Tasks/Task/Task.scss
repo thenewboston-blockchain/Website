@@ -7,6 +7,7 @@
   &__assignee {
     border-radius: 50%;
     height: 22px;
+    margin-top: 4px;
     width: 22px;
   }
 
@@ -19,8 +20,8 @@
   }
 
   &__issue-bottom {
-    color: var(--color-sail-gray-400);
-    margin-top: 8px;
+    color: var(--color-sail-gray-500);
+    margin-top: 6px;
   }
 
   &__issue-top {
@@ -35,14 +36,14 @@
 
   // Assignees
   &__middle {
-    flex-basis: 80px;
-    margin-left: 32px;
+    flex-basis: 120px;
+    margin-left: 48px;
   }
 
   // Points
   &__right {
-    flex-basis: 120px;
-    margin-left: 32px;
+    flex-basis: 100px;
+    margin-left: 48px;
     white-space: nowrap;
   }
 
@@ -51,5 +52,9 @@
     font-family: var(--font-family-inter-medium);
     font-size: 18px;
     font-weight: 600;
+
+    &:hover {
+      color: var(--color-github-blue);
+    }
   }
 }

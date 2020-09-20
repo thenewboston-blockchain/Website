@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import clsx from 'clsx';
 
 import {A, Label, TotalAmount} from 'components';
-import {Assignee, GitHubLabel} from 'types/github';
+import {Assignee, GitHubLabel, GitHubUser} from 'types/github';
 
 import './Task.scss';
 
@@ -11,13 +11,26 @@ const AMOUNT_COLOR = '09825d';
 interface ComponentProps {
   assignees: Assignee[];
   className?: string;
+  creator: GitHubUser;
+  createdAt: string;
   githubLabels: GitHubLabel[];
   htmlUrl: string;
   number: number;
+  repositoryName: string;
   title: string;
 }
 
-const Task: FC<ComponentProps> = ({assignees, className, githubLabels, htmlUrl, number, title}) => {
+const Task: FC<ComponentProps> = ({
+  assignees,
+  className,
+  creator,
+  createdAt,
+  githubLabels,
+  htmlUrl,
+  number,
+  repositoryName,
+  title,
+}) => {
   const assignedUsers = assignees.filter((assignee) => !!assignee.login && !!assignee.avatar_url);
 
   const renderAssignees = () => {
@@ -49,7 +62,9 @@ const Task: FC<ComponentProps> = ({assignees, className, githubLabels, htmlUrl, 
           </A>
           {renderLabels()}
         </div>
-        <div className="Task__issue-bottom">{`#${number}`}</div>
+        <div className="Task__issue-bottom">
+          {repositoryName} &middot; {`#${number}`} &middot; Opened {createdAt} by {creator.login}
+        </div>
       </div>
       <div className="Task__middle">
         {!!assignedUsers.length && (

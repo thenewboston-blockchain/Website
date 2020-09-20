@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
+import formatDistanceToNow from 'date-fns/formatDistanceToNow';
+import parseISO from 'date-fns/parseISO';
 
 import {RepositoryFilter} from 'components';
 import {REPOSITORIES} from 'constants/github';
@@ -34,18 +36,25 @@ const Tasks = () => {
     return issues;
   };
 
+  const getRepositoryName = (repositoryUrl: string) => {
+    return repositoryUrl.replace('https://api.github.com/repos/thenewboston-developers/', '');
+  };
+
   const renderTasks = () => {
     const filteredIssues = getFilteredIssues();
-    console.log(filteredIssues);
-    return filteredIssues.map(({assignees, html_url, labels, number, title}) => {
+    return filteredIssues.map(({assignees, created_at, html_url, labels, number, repository_url, title, user}) => {
+      const createdStr = formatDistanceToNow(parseISO(created_at), {includeSeconds: true});
       return (
         <Task
           assignees={assignees}
           className="Tasks__Task"
+          createdAt={`${createdStr} ago`}
+          creator={user}
           githubLabels={labels}
           htmlUrl={html_url}
           key={html_url}
           number={number}
+          repositoryName={getRepositoryName(repository_url)}
           title={title}
         />
       );

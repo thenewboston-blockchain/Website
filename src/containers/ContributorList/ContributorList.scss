@@ -48,7 +48,7 @@
   }
 
   &__user-login {
-    color: #0366d6;
+    color: var(--color-github-blue);
     font-family: var(--font-family-inter-medium);
     font-size: 20px;
     font-weight: 600;
