@@ -17,6 +17,26 @@
     text-align: left;
   }
 
+  // Recent Task (name of task)
+  td:nth-child(1) {
+    width: 50%;
+  }
+
+  // Repository
+  td:nth-child(2) {
+    width: 30%;
+  }
+
+  // Completed
+  td:nth-child(3) {
+    width: 10%;
+  }
+
+  // Amount
+  td:nth-child(4) {
+    width: 10%;
+  }
+
   tr {
     &:nth-child(even) {
       background: #f6f6f6;
