@@ -16,12 +16,6 @@ interface ComponentProps {
   className?: string;
 }
 
-const contributeProps = {
-  activePatterns: ['/contribute'],
-  name: 'Contribute',
-  url: '/contribute',
-};
-
 const docsProps = {
   activePatterns: [
     '/account-manager',
@@ -36,10 +30,22 @@ const docsProps = {
   url: '/guide/introduction',
 };
 
+const helpProps = {
+  activePatterns: ['/help'],
+  name: 'Help',
+  url: '/help',
+};
+
 const leaderboardProps = {
   activePatterns: ['/leaderboard'],
   name: 'Leaderboard',
   url: '/leaderboard',
+};
+
+const tasksProps = {
+  activePatterns: ['/tasks'],
+  name: 'Tasks',
+  url: '/tasks',
 };
 
 const TopNav: FC<ComponentProps> = ({className}) => {
@@ -55,8 +61,9 @@ const TopNav: FC<ComponentProps> = ({className}) => {
         <Shadow />
         <div className="TopNav__dropdown-menu-item-container">
           <TopNavDropdownMenuItem {...leaderboardProps} />
-          <TopNavDropdownMenuItem {...contributeProps} />
+          <TopNavDropdownMenuItem {...tasksProps} />
           <TopNavDropdownMenuItem {...docsProps} />
+          <TopNavDropdownMenuItem {...helpProps} />
           <TopNavDropdownMenuItem activePatterns={['/download']} name="Download" url="/download" />
         </div>
       </div>
@@ -66,8 +73,9 @@ const TopNav: FC<ComponentProps> = ({className}) => {
   const renderMenuItems = (): ReactNode => (
     <>
       <TopNavMenuItem {...leaderboardProps} />
-      <TopNavMenuItem {...contributeProps} />
+      <TopNavMenuItem {...tasksProps} />
       <TopNavMenuItem {...docsProps} />
+      <TopNavMenuItem {...helpProps} />
       <NavLink className="TopNav__download-button" to="/download">
         <Button>Download</Button>
       </NavLink>
