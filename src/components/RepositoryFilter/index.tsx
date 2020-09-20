@@ -1,17 +1,10 @@
 import React, {FC} from 'react';
 import clsx from 'clsx';
 
+import {REPOSITORIES} from 'constants/github';
 import {GenericVoidFunction} from 'types/generic';
 import {Repository, RepositoryFilterType} from 'types/github';
 import './RepositoryFilter.scss';
-
-const REPOSITORIES = [
-  Repository.accountManager,
-  Repository.bank,
-  Repository.thenewbostonPython,
-  Repository.validator,
-  Repository.website,
-];
 
 const REPOSITORY_FILTERS = [Repository.all, ...REPOSITORIES];
 
