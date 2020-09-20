@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
-import {A, RepositoryFilter} from 'components';
+import {RepositoryFilter} from 'components';
 import {REPOSITORIES} from 'constants/github';
 import {Repository, RepositoryFilterType} from 'types/github';
 
-import TaskTable from './TaskTable';
+import Task from './Task';
 import './Tasks.scss';
 
 const Tasks = () => {
@@ -34,18 +34,13 @@ const Tasks = () => {
     return issues;
   };
 
-  const renderTaskList = () => {
+  const renderTasks = () => {
     const filteredIssues = getFilteredIssues();
-    console.log(filteredIssues);
-    return (
-      <div className="Tasks__TaskList">
-        <TaskTable repoName="Website" tableTitle="Website Tasks" />
-        <TaskTable repoName="Account-Manager" tableTitle="Account Manager Tasks" />
-        <TaskTable repoName="Bank" tableTitle="Bank Tasks" />
-        <TaskTable repoName="Validator" tableTitle="Validator Tasks" />
-        <TaskTable repoName="thenewboston-python" tableTitle="Python Library Tasks" />
-      </div>
-    );
+    return filteredIssues.map(({assignees, html_url, labels, title}) => {
+      return (
+        <Task assignees={assignees} className="Tasks__Task" githubLabels={labels} htmlUrl={html_url} title={title} />
+      );
+    });
   };
 
   return (
@@ -55,7 +50,7 @@ const Tasks = () => {
         selectedFilter={repositoryFilter}
         setSelectedFilter={setRepositoryFilter}
       />
-      {renderTaskList()}
+      <div className="Tasks__TaskList">{renderTasks()}</div>
     </div>
   );
 };

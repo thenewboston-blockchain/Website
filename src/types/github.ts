@@ -1,5 +1,26 @@
 import {Dict} from 'types/generic';
 
+export interface Assignee {
+  avatar_url: string;
+  events_url: string;
+  followers_url: string;
+  following_url: string;
+  gists_url: string;
+  gravatar_id: string;
+  html_url: string;
+  id: number;
+  login: string;
+  node_id: string;
+  organizations_url: string;
+  received_events_url: string;
+  repos_url: string;
+  site_admin: boolean;
+  starred_url: string;
+  subscriptions_url: string;
+  type: string;
+  url: string;
+}
+
 export interface Contributor {
   account_number: string;
   github_avatar_url: string;
@@ -11,6 +32,16 @@ export interface ContributorWithTasks {
   github_avatar_url: string;
   github_username: string;
   tasks: Task[];
+}
+
+export interface GitHubLabel {
+  color: string;
+  default: boolean;
+  description: string;
+  id: number;
+  name: string;
+  node_id: string;
+  url: string;
 }
 
 export enum Repository {
