@@ -40,10 +40,37 @@ const Task: FC<ComponentProps> = ({
     ));
   };
 
+  const renderCreatorLink = () => {
+    const url = `https://github.com/${creator.login}`;
+    return (
+      <A className="Task__issue-bottom-link" href={url}>
+        {creator.login}
+      </A>
+    );
+  };
+
+  const renderIssueLink = () => {
+    const url = `https://github.com/thenewboston-developers/${repositoryName}/issues/${number}`;
+    return (
+      <A className="Task__issue-bottom-link" href={url}>
+        {`#${number}`}
+      </A>
+    );
+  };
+
   const renderLabels = () => {
     return githubLabels
       .filter(({color}) => color.toLowerCase() !== AMOUNT_COLOR)
       .map(({color, name}) => <Label className="Task__Label" color={color} key={name} name={name} />);
+  };
+
+  const renderRepositoryLink = () => {
+    const url = `https://github.com/thenewboston-developers/${repositoryName}`;
+    return (
+      <A className="Task__issue-bottom-link" href={url}>
+        {repositoryName}
+      </A>
+    );
   };
 
   return (
@@ -56,7 +83,7 @@ const Task: FC<ComponentProps> = ({
           {renderLabels()}
         </div>
         <div className="Task__issue-bottom">
-          {repositoryName} &middot; {`#${number}`} &middot; Opened {createdAt} by {creator.login}
+          {renderRepositoryLink()} &middot; {renderIssueLink()} &middot; Opened {createdAt} by {renderCreatorLink()}
         </div>
       </div>
       <div className="Task__middle">

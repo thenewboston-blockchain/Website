@@ -24,6 +24,14 @@
     margin-top: 6px;
   }
 
+  &__issue-bottom-link {
+    color: var(--color-sail-gray-500);
+
+    &:hover {
+      color: var(--color-github-blue);
+    }
+  }
+
   &__issue-top {
     align-items: center;
     display: flex;
