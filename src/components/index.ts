@@ -13,6 +13,7 @@ import Label from './Label';
 import Layout from './Layout';
 import MarketingButton from './MarketingButton';
 import MenuGroup from './MenuGroup';
+import Loader from './Loader';
 import Pagination from './Pagination';
 import RepositoryFilter from './RepositoryFilter';
 import Qr from './Qr';
@@ -43,6 +44,7 @@ export {
   IconType,
   Label,
   Layout,
+  Loader,
   MarketingButton,
   MenuGroup,
   Pagination,

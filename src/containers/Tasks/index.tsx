@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import parseISO from 'date-fns/parseISO';
 
-import {RepositoryFilter} from 'components';
-import {Repository, RepositoryFilterType} from 'types/github';
+import {Loader, RepositoryFilter} from 'components';
+import {Issue, Repository, RepositoryFilterType} from 'types/github';
 import {fetchGithubIssues} from 'utils/github';
 
 import Task from './Task';
@@ -11,12 +11,19 @@ import './Tasks.scss';
 
 const Tasks = () => {
   const [repositoryFilter, setRepositoryFilter] = useState<RepositoryFilterType>(Repository.all);
-  const [issues, setIssues] = useState<any[]>([]);
+  const [issues, setIssues] = useState<Issue[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
-      const results = await fetchGithubIssues();
-      setIssues(results);
+      try {
+        const results = await fetchGithubIssues();
+        setIssues(results);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
     };
     fetchData();
   }, []);
@@ -56,7 +63,7 @@ const Tasks = () => {
         selectedFilter={repositoryFilter}
         setSelectedFilter={setRepositoryFilter}
       />
-      <div className="Tasks__TaskList">{renderTasks()}</div>
+      <div className="Tasks__TaskList">{loading ? <Loader /> : renderTasks()}</div>
     </div>
   );
 };

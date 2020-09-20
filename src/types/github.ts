@@ -111,7 +111,7 @@ export interface BaseIssue {
   active_lock_reason: string;
   comments: number;
   closed_at?: any;
-  updated_at: Date;
+  created_at: string;
 }
 
 export interface Issue extends BaseIssue {
