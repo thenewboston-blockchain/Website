@@ -38,7 +38,14 @@ const Tasks = () => {
     const filteredIssues = getFilteredIssues();
     return filteredIssues.map(({assignees, html_url, labels, title}) => {
       return (
-        <Task assignees={assignees} className="Tasks__Task" githubLabels={labels} htmlUrl={html_url} title={title} />
+        <Task
+          assignees={assignees}
+          className="Tasks__Task"
+          githubLabels={labels}
+          htmlUrl={html_url}
+          key={html_url}
+          title={title}
+        />
       );
     });
   };

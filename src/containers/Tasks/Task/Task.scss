@@ -1,7 +1,30 @@
 .Task {
+  border-bottom: 1px solid #e3e8ee;
+  display: flex;
+  margin: 0 24px;
+  padding: 24px 0;
+
   &__assignee {
     border-radius: 50%;
     height: 22px;
     width: 22px;
+  }
+
+  // Issue information
+  &__left {
+    flex: 1;
+  }
+
+  // Assignees
+  &__middle {
+    flex-basis: 80px;
+    margin-left: 32px;
+  }
+
+  // Points
+  &__right {
+    flex-basis: 120px;
+    margin-left: 32px;
+    white-space: nowrap;
   }
 }

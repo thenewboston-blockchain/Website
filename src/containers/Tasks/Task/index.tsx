@@ -37,10 +37,12 @@ const Task: FC<ComponentProps> = ({assignees, className, githubLabels, htmlUrl, 
 
   return (
     <div className={clsx('Task', className)} key={htmlUrl}>
-      <A href={htmlUrl}>{title}</A>
-      {renderAssignees()}
-      {renderStandardLabels()}
-      {renderAmountLabels()}
+      <div className="Task__left">
+        <A href={htmlUrl}>{title}</A>
+        {renderStandardLabels()}
+      </div>
+      <div className="Task__middle">{renderAssignees()}</div>
+      <div className="Task__right">{renderAmountLabels()}</div>
     </div>
   );
 };
