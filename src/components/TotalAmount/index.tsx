@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
+import clsx from 'clsx';
 
 import './TotalAmount.scss';
-import clsx from 'clsx';
 
 interface ComponentProps {
   amount: number;

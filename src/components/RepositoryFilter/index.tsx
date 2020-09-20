@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import {REPOSITORIES} from 'constants/github';
 import {GenericVoidFunction} from 'types/generic';
 import {Repository, RepositoryFilterType} from 'types/github';
+
 import './RepositoryFilter.scss';
 
 const REPOSITORY_FILTERS = [Repository.all, ...REPOSITORIES];

@@ -3,6 +3,7 @@ import clsx from 'clsx';
 
 import {GenericVoidFunction} from 'types/generic';
 import {Time, TimeFilterType} from 'types/github';
+
 import './TimeFilter.scss';
 
 interface ComponentProps {
