@@ -13,10 +13,11 @@ interface ComponentProps {
   className?: string;
   githubLabels: GitHubLabel[];
   htmlUrl: string;
+  number: number;
   title: string;
 }
 
-const Task: FC<ComponentProps> = ({assignees, className, githubLabels, htmlUrl, title}) => {
+const Task: FC<ComponentProps> = ({assignees, className, githubLabels, htmlUrl, number, title}) => {
   const renderAssignees = () => {
     return assignees
       .filter((assignee) => !!assignee.login && !!assignee.avatar_url)
@@ -31,17 +32,22 @@ const Task: FC<ComponentProps> = ({assignees, className, githubLabels, htmlUrl, 
     ))[0];
   };
 
-  const renderStandardLabels = () => {
+  const renderLabels = () => {
     return githubLabels
       .filter(({color}) => color.toLowerCase() !== AMOUNT_COLOR)
-      .map(({color, name}) => <Label color={color} key={name} name={name} />);
+      .map(({color, name}) => <Label className="Task__Label" color={color} key={name} name={name} />);
   };
 
   return (
     <div className={clsx('Task', className)} key={htmlUrl}>
       <div className="Task__left">
-        <A href={htmlUrl}>{title}</A>
-        {renderStandardLabels()}
+        <div className="Task__issue-top">
+          <A className="Task__title" href={htmlUrl}>
+            {title}
+          </A>
+          {renderLabels()}
+        </div>
+        <div className="Task__issue-bottom">{`#${number}`}</div>
       </div>
       <div className="Task__middle">{renderAssignees()}</div>
       <div className="Task__right">{renderAmount()}</div>

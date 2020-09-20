@@ -1,19 +1,21 @@
 import React, {FC} from 'react';
+import clsx from 'clsx';
 
 import {isLight} from 'utils/colors';
 import './Label.scss';
 
 interface ComponentProps {
+  className?: string;
   color: string;
   name: string;
 }
 
-const Label: FC<ComponentProps> = ({color, name}) => {
+const Label: FC<ComponentProps> = ({className, color, name}) => {
   const hexColor = `#${color}`;
 
   return (
     <span
-      className="Label"
+      className={clsx('Label', className)}
       style={{
         backgroundColor: hexColor,
         color: isLight(hexColor) ? '#000' : '#fff',

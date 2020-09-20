@@ -36,7 +36,8 @@ const Tasks = () => {
 
   const renderTasks = () => {
     const filteredIssues = getFilteredIssues();
-    return filteredIssues.map(({assignees, html_url, labels, title}) => {
+    console.log(filteredIssues);
+    return filteredIssues.map(({assignees, html_url, labels, number, title}) => {
       return (
         <Task
           assignees={assignees}
@@ -44,6 +45,7 @@ const Tasks = () => {
           githubLabels={labels}
           htmlUrl={html_url}
           key={html_url}
+          number={number}
           title={title}
         />
       );

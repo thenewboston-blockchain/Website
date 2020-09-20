@@ -10,6 +10,20 @@
     width: 22px;
   }
 
+  &__Label {
+    margin-left: 4px;
+  }
+
+  &__issue-bottom {
+    color: var(--color-sail-gray-400);
+    margin-top: 8px;
+  }
+
+  &__issue-top {
+    align-items: center;
+    display: flex;
+  }
+
   // Issue information
   &__left {
     flex: 1;
@@ -26,5 +40,12 @@
     flex-basis: 120px;
     margin-left: 32px;
     white-space: nowrap;
+  }
+
+  &__title {
+    color: var(--color-primary);
+    font-family: var(--font-family-inter-medium);
+    font-size: 18px;
+    font-weight: 600;
   }
 }
