@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import clsx from 'clsx';
 
-import {A, ContributorTasks, CopyableAccountNumber, Qr} from 'components';
+import {A, ContributorTasks, CopyableAccountNumber, Qr, TotalAmount} from 'components';
 import {ContributorWithTasks, Task} from 'types/github';
 import {sortByNumberKey} from 'utils/sort';
 import './ContributorList.scss';
@@ -45,10 +45,7 @@ const ContributorList: FC<ComponentProps> = ({className, contributorsWithTasks})
             </div>
           </div>
           <ContributorTasks className="ContributorList__ContributorTasks" tasks={tasks} />
-          <div className="ContributorList__total-points">
-            <div className="ContributorList__total-points-label">Total Earnings</div>
-            <div className="ContributorList__total-points-value">{total_earnings.toLocaleString()}</div>
-          </div>
+          <TotalAmount amount={total_earnings} className="ContributorList__TotalAmount" title="Total Earnings" />
         </div>
       ));
   };

@@ -20,6 +20,7 @@ import Shadow from './Shadow';
 import StepIndicator from './StepIndicator';
 import {TableBorderGrid, TableParams, TableVertical} from './Table';
 import TimeFilter from './TimeFilter';
+import TotalAmount from './TotalAmount';
 import TopNav from './TopNav';
 
 export {
@@ -55,5 +56,6 @@ export {
   TableParams,
   TableVertical,
   TimeFilter,
+  TotalAmount,
   TopNav,
 };

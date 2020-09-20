@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import clsx from 'clsx';
 
-import {A, Label} from 'components';
+import {A, Label, TotalAmount} from 'components';
 import {Assignee, GitHubLabel} from 'types/github';
 
 import './Task.scss';
@@ -23,10 +23,12 @@ const Task: FC<ComponentProps> = ({assignees, className, githubLabels, htmlUrl, 
       .map(({avatar_url, login}) => <img alt={login} className="Task__assignee" key={login} src={avatar_url} />);
   };
 
-  const renderAmountLabels = () => {
-    return githubLabels
-      .filter(({color}) => color.toLowerCase() === AMOUNT_COLOR)
-      .map(({color, name}) => <Label color={color} key={name} name={parseInt(name, 10).toLocaleString()} />);
+  const renderAmount = () => {
+    const amountLabel = githubLabels.filter(({color}) => color.toLowerCase() === AMOUNT_COLOR);
+    if (!amountLabel.length) return null;
+    return amountLabel.map(({name}) => (
+      <TotalAmount amount={parseInt(name, 10)} className="Task__TotalAmount" key={name} title="Reward" />
+    ))[0];
   };
 
   const renderStandardLabels = () => {
@@ -42,7 +44,7 @@ const Task: FC<ComponentProps> = ({assignees, className, githubLabels, htmlUrl, 
         {renderStandardLabels()}
       </div>
       <div className="Task__middle">{renderAssignees()}</div>
-      <div className="Task__right">{renderAmountLabels()}</div>
+      <div className="Task__right">{renderAmount()}</div>
     </div>
   );
 };

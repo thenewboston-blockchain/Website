@@ -29,21 +29,8 @@
     font-size: 20px;
   }
 
-  &__total-points {
+  &__TotalAmount {
     margin-left: 32px;
-    white-space: nowrap;
-  }
-
-  &__total-points-label {
-    color: var(--color-sail-gray-500);
-    cursor: default;
-  }
-
-  &__total-points-value {
-    color: var(--color-tertiary);
-    font-family: var(--font-family-inter-medium);
-    font-size: var(--font-size-large);
-    margin-top: 4px;
   }
 
   &__user-avatar {
