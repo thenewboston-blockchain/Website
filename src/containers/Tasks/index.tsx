@@ -10,10 +10,10 @@ import Task from './Task';
 import './Tasks.scss';
 
 const Tasks = () => {
-  const [repositoryFilter, setRepositoryFilter] = useState<RepositoryFilterType>(Repository.all);
   const [error, setError] = useState<boolean>(false);
   const [issues, setIssues] = useState<Issue[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [repositoryFilter, setRepositoryFilter] = useState<RepositoryFilterType>(Repository.all);
 
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
@@ -30,7 +30,14 @@ const Tasks = () => {
   }, []);
 
   const getFilteredIssues = () => {
-    return issues.filter(({amount}) => amount !== 0);
+    let filteredIssues = issues.filter(({amount}) => amount !== 0);
+
+    filteredIssues =
+      repositoryFilter === Repository.all
+        ? filteredIssues
+        : filteredIssues.filter(({repositoryName}) => repositoryName === repositoryFilter);
+
+    return filteredIssues;
   };
 
   const renderEmptyState = () => (
