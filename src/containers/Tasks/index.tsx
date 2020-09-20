@@ -11,6 +11,7 @@ import './Tasks.scss';
 
 const Tasks = () => {
   const [repositoryFilter, setRepositoryFilter] = useState<RepositoryFilterType>(Repository.all);
+  const [error, setError] = useState<boolean>(false);
   const [issues, setIssues] = useState<Issue[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -19,8 +20,8 @@ const Tasks = () => {
       try {
         const results = await fetchGithubIssues();
         setIssues(results);
-      } catch (error) {
-        console.error(error);
+      } catch (err) {
+        setError(true);
       } finally {
         setLoading(false);
       }
@@ -32,8 +33,15 @@ const Tasks = () => {
     return issues.filter(({amount}) => amount !== 0);
   };
 
+  const renderEmptyState = () => (
+    <div className="Tasks__empty-state">
+      <h1>No items to display</h1>
+    </div>
+  );
+
   const renderTasks = () => {
     const filteredIssues = getFilteredIssues();
+    if (error || !filteredIssues.length) return renderEmptyState();
     return filteredIssues.map(
       ({amount, assignees, created_at, html_url, labels, number, repositoryName, title, user}) => {
         const createdStr = formatDistanceToNow(parseISO(created_at), {includeSeconds: true});
@@ -63,7 +71,7 @@ const Tasks = () => {
         selectedFilter={repositoryFilter}
         setSelectedFilter={setRepositoryFilter}
       />
-      <div className="Tasks__TaskList">{loading ? <Loader /> : renderTasks()}</div>
+      <div className="Tasks__TaskList">{loading ? <Loader className="Tasks__Loader" /> : renderTasks()}</div>
     </div>
   );
 };

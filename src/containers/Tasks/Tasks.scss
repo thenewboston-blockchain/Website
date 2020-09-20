@@ -4,6 +4,17 @@
   height: 100%;
   overflow: hidden;
 
+  &__empty-state {
+    display: flex;
+    font-family: var(--font-family-inter-light);
+    justify-content: center;
+    margin-top: 64px;
+  }
+
+  &__Loader {
+    margin-top: 64px;
+  }
+
   // Grid (left)
   &__RepositoryFilter {
     border-right: 1px solid #e3e8ee;
