@@ -1,3 +1,5 @@
+import {Dict} from 'types/generic';
+
 export interface Contributor {
   account_number: string;
   github_avatar_url: string;
@@ -28,12 +30,21 @@ export type RepositoryFilterType =
   | Repository.validator
   | Repository.website;
 
-export interface Task {
+interface BaseTask {
   amount_paid: string;
   completed_by: string;
-  completed_date: string;
   issue_id: string;
   pr_id: string;
   repository: string;
   title: string;
 }
+
+export interface RawTask extends BaseTask {
+  completed_date: string;
+}
+
+export interface Task extends BaseTask {
+  completed_date: Date;
+}
+
+export type TaskDict = Dict<Task[]>;

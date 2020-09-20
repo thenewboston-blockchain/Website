@@ -1,15 +1,14 @@
 import React, {useState} from 'react';
 import clsx from 'clsx';
-import parse from 'date-fns/parse';
 import sub from 'date-fns/sub';
 
 import ContributorList from 'containers/ContributorList';
-import {Contributor, ContributorWithTasks, Repository, RepositoryFilterType, Task} from 'types/github';
+import {GenericVoidFunction} from 'types/generic';
+import {Contributor, ContributorWithTasks, Task, TaskDict, Repository, RepositoryFilterType} from 'types/github';
+import {getContributors, getTasks} from 'utils/data';
 import {sortByDateKey} from 'utils/sort';
-import './Leaderboard.scss';
 
-import contributors from 'data/contributors.json';
-import tasks from 'data/tasks.json';
+import './Leaderboard.scss';
 
 enum Time {
   days7 = '7d',
@@ -40,21 +39,25 @@ const Leaderboard = () => {
   const [timeFilter, setTimeFilter] = useState<TimeFilterType>(Time.all);
 
   const getContributorsWithTasks = (): ContributorWithTasks[] => {
-    return (contributors as any)
-      .map((contributor: Contributor) => {
-        const contributorsTasks = getContributorsTasks(contributor.github_username);
-        if (!contributorsTasks || !contributorsTasks.length) return null;
-        return {
-          ...contributor,
-          tasks: contributorsTasks,
-        };
-      })
-      .filter((contributor: Contributor | null) => !!contributor);
+    const contributors = getContributors();
+    const tasks = getTasks();
+
+    return contributors
+      .map(
+        (contributor: Contributor): ContributorWithTasks => {
+          const contributorsTasks = getContributorsTasks(tasks, contributor.github_username);
+          return {
+            ...contributor,
+            tasks: contributorsTasks,
+          };
+        },
+      )
+      .filter((contributor: ContributorWithTasks) => !!contributor.tasks.length);
   };
 
-  const getContributorsTasks = (github_username: string): Task[] | null => {
-    let contributorsTasks = (tasks as any)[github_username];
-    if (!contributorsTasks || !contributorsTasks.length) return null;
+  const getContributorsTasks = (tasks: TaskDict, github_username: string): Task[] => {
+    let contributorsTasks: Task[] = tasks[github_username];
+    if (!contributorsTasks || !contributorsTasks.length) return [];
 
     contributorsTasks =
       repositoryFilter === Repository.all
@@ -65,22 +68,20 @@ const Leaderboard = () => {
       const now = new Date();
       const days = timeFilterMap[timeFilter];
       const past = sub(now, {days});
-      contributorsTasks = contributorsTasks.filter(
-        (task: Task) => parse(task.completed_date, 'L/d/yy', new Date()) > past,
-      );
+      contributorsTasks = contributorsTasks.filter((task: Task) => task.completed_date > past);
     }
 
-    if (!contributorsTasks.length) return null;
+    if (!contributorsTasks.length) return [];
     contributorsTasks = contributorsTasks.sort(sortByDateKey('completed_date', 'desc'));
 
     return contributorsTasks;
   };
 
-  const handleRepositoryFilterClick = (i: RepositoryFilterType): any => (): void => {
+  const handleRepositoryFilterClick = (i: RepositoryFilterType): GenericVoidFunction => (): void => {
     setRepositoryFilter(i);
   };
 
-  const handleTimeFilterClick = (i: TimeFilterType): any => (): void => {
+  const handleTimeFilterClick = (i: TimeFilterType): GenericVoidFunction => (): void => {
     setTimeFilter(i);
   };
 
