@@ -1,3 +1,5 @@
+import {Dict} from 'types/generic';
+
 export interface Contributor {
   account_number: string;
   github_avatar_url: string;
@@ -8,7 +10,7 @@ export interface ContributorWithTasks {
   account_number: string;
   github_avatar_url: string;
   github_username: string;
-  tasks: Task[];
+  tasks: FormattedTask[];
 }
 
 export enum Repository {
@@ -28,12 +30,21 @@ export type RepositoryFilterType =
   | Repository.validator
   | Repository.website;
 
-export interface Task {
+interface BaseTask {
   amount_paid: string;
   completed_by: string;
-  completed_date: string;
   issue_id: string;
   pr_id: string;
   repository: string;
   title: string;
+}
+
+export interface FormattedTask extends BaseTask {
+  completed_date: Date;
+}
+
+export type FormattedTaskDict = Dict<FormattedTask[]>;
+
+export interface RawTask extends BaseTask {
+  completed_date: string;
 }
