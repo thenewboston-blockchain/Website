@@ -1,0 +1,70 @@
+.ContributorTasks {
+  border: 1px solid #e6e6e6;
+
+  td,
+  th {
+    min-width: 90px;
+    padding: 2px 8px;
+  }
+
+  thead {
+    background: #f6f6f6;
+  }
+
+  th {
+    border-bottom: 1px solid #e6e6e6;
+    font-family: var(--font-family-inter-medium);
+    text-align: left;
+  }
+
+  // Recent Task (name of task)
+  td:nth-child(1) {
+    width: 50%;
+  }
+
+  // Repository
+  td:nth-child(2) {
+    width: 30%;
+  }
+
+  // Completed
+  td:nth-child(3) {
+    width: 10%;
+  }
+
+  // Amount
+  td:nth-child(4) {
+    width: 10%;
+  }
+
+  tr {
+    &:nth-child(even) {
+      background: #f6f6f6;
+    }
+  }
+
+  &__amount {
+    color: var(--color-tertiary);
+    text-align: right;
+  }
+
+  &__amount,
+  &__date-completed,
+  &__repository {
+    white-space: nowrap;
+  }
+
+  &__issue-link {
+    color: var(--color-primary);
+    font-family: var(--font-family-inter-medium);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__task-title {
+    font-family: var(--font-family-inter);
+    font-weight: normal;
+  }
+}

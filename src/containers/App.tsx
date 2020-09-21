@@ -6,13 +6,15 @@ import {Layout} from 'components';
 import AccountManager from './AccountManager';
 import BankApi from './BankApi';
 import ConfirmationValidatorApi from './ConfirmationValidatorApi';
-import Contribute from './Contribute';
 import DeploymentGuide from './DeploymentGuide';
 import Download from './Download';
 import Guide from './Guide';
+import Help from './Help';
 import Home from './Home';
+import Leaderboard from './Leaderboard';
 import PrimaryValidatorApi from './PrimaryValidatorApi';
 import StyleGuide from './StyleGuide';
+import Tasks from './Tasks';
 
 interface GoogleAnalyticsWindow extends Window {
   ga: any;
@@ -47,7 +49,9 @@ const App: FC = () => {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/contribute" component={Contribute} />
+          <Route exact path="/help" component={Help} />
+          <Route exact path="/leaderboard" component={Leaderboard} />
+          <Route exact path="/tasks" component={Tasks} />
           <Route path="/account-manager/:chapter?" component={AccountManager} />
           <Route path="/bank-api/:chapter?" component={BankApi} />
           <Route path="/confirmation-validator-api/:chapter?" component={ConfirmationValidatorApi} />

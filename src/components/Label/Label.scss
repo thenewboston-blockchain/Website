@@ -1,9 +1,11 @@
 .Label {
   border-radius: 2em;
   display: inline-block;
-  font-size: 12px;
   font-weight: 600;
   line-height: 20px;
-  margin: 1px;
-  padding: 0 8px;
+  padding: 2px 8px;
+
+  &:focus {
+    outline: none;
+  }
 }

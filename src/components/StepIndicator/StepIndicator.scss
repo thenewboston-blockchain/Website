@@ -1,0 +1,19 @@
+.StepIndicator {
+  align-items: center;
+  display: flex;
+  font-family: var(--font-family-inter-bold);
+  font-size: 20px;
+
+  &__bubble {
+    align-items: center;
+    background-color: var(--color-tertiary);
+    border-radius: 18px;
+    color: var(--color-white);
+    display: flex;
+    flex-shrink: 0;
+    height: 36px;
+    justify-content: center;
+    margin-right: 12px;
+    width: 36px;
+  }
+}
