@@ -11,9 +11,9 @@ enum CeleryNav {
   celery = 'celery',
 }
 
-const Celery: FC<ComponentProps> = ({name, networkSigningKey}) => {
+const CeleryBank: FC<ComponentProps> = ({name, networkSigningKey}) => {
   return (
-    <DocSubSection className="Celery" id={CeleryNav.celery} title="Celery">
+    <DocSubSection className="CeleryBank" id={CeleryNav.celery} title="Celery">
       <CodeSnippet
         code={`cd /etc/
 sudo mkdir ${name.toLowerCase()}
@@ -90,4 +90,4 @@ WantedBy=multi-user.target
   );
 };
 
-export default Celery;
+export default CeleryBank;

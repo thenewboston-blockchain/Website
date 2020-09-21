@@ -2,7 +2,7 @@ import React, {FC, ReactNode} from 'react';
 
 import {CodeSnippet, DocContainer, TableParams} from 'components';
 
-import Celery from '../Celery';
+import CeleryValidator from '../CeleryValidator';
 import Firewall from '../Firewall';
 import GatewayInterface from '../GatewayInterface';
 import InstallDependencies from '../InstallDependencies';
@@ -100,7 +100,10 @@ const DeploymentGuideValidator: FC = () => {
       <Nginx name="Validator" />
       <Redis />
       <GatewayInterface name="Validator" />
-      <Celery name="Validator" networkSigningKey="6f812a35643b55a77f71c3b722504fbc5918e83ec72965f7fd33865ed0be8f81" />
+      <CeleryValidator
+        name="Validator"
+        networkSigningKey="6f812a35643b55a77f71c3b722504fbc5918e83ec72965f7fd33865ed0be8f81"
+      />
       <SystemServices />
       <StaticFilesAndApplicationConfiguration
         initializationCommand={renderInitializationCommands()}
