@@ -90,6 +90,7 @@ const Leaderboard = () => {
           account_number={account_number}
           github_avatar_url={github_avatar_url}
           github_username={github_username}
+          key={github_username}
           rank={index + 1}
           tasks={tasks}
           total_earnings={total_earnings}
