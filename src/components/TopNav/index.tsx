@@ -16,12 +16,6 @@ interface ComponentProps {
   className?: string;
 }
 
-const contributeProps = {
-  activePatterns: ['/contribute'],
-  name: 'Contribute',
-  url: '/contribute',
-};
-
 const docsProps = {
   activePatterns: [
     '/account-manager',
@@ -36,6 +30,24 @@ const docsProps = {
   url: '/guide/introduction',
 };
 
+const helpProps = {
+  activePatterns: ['/help'],
+  name: 'Help',
+  url: '/help',
+};
+
+const leaderboardProps = {
+  activePatterns: ['/leaderboard'],
+  name: 'Leaderboard',
+  url: '/leaderboard',
+};
+
+const tasksProps = {
+  activePatterns: ['/tasks'],
+  name: 'Tasks',
+  url: '/tasks',
+};
+
 const TopNav: FC<ComponentProps> = ({className}) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const ref = useOnclickOutside(() => {
@@ -48,8 +60,10 @@ const TopNav: FC<ComponentProps> = ({className}) => {
       <div className="TopNav__dropdown-menu">
         <Shadow />
         <div className="TopNav__dropdown-menu-item-container">
-          <TopNavDropdownMenuItem {...contributeProps} />
+          <TopNavDropdownMenuItem {...leaderboardProps} />
+          <TopNavDropdownMenuItem {...tasksProps} />
           <TopNavDropdownMenuItem {...docsProps} />
+          <TopNavDropdownMenuItem {...helpProps} />
           <TopNavDropdownMenuItem activePatterns={['/download']} name="Download" url="/download" />
         </div>
       </div>
@@ -58,8 +72,10 @@ const TopNav: FC<ComponentProps> = ({className}) => {
 
   const renderMenuItems = (): ReactNode => (
     <>
-      <TopNavMenuItem {...contributeProps} />
+      <TopNavMenuItem {...leaderboardProps} />
+      <TopNavMenuItem {...tasksProps} />
       <TopNavMenuItem {...docsProps} />
+      <TopNavMenuItem {...helpProps} />
       <NavLink className="TopNav__download-button" to="/download">
         <Button>Download</Button>
       </NavLink>

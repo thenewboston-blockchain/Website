@@ -1,0 +1,9 @@
+.LabelFilter {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    cursor: pointer;
+    margin-top: 8px;
+  }
+}

@@ -15,9 +15,13 @@ const HomeHero: FC = () => {
       <div className="HomeHero__wrapper">
         <div className="HomeHero__left">
           <div className="HomeHero__left-content-container">
-            <h1 className="HomeHero__title">Worlds Coolest Open Source Development Community</h1>
+            <h1 className="HomeHero__title">
+              <span>Build software.</span>
+              <br />
+              <span>Earn digital currency.</span>
+            </h1>
             <h2 className="HomeHero__subtitle">
-              Come check out our latest project, a digital currency that can process transactions in under a second.
+              Join our development community and start earning points, our open source digital currency.
             </h2>
             <div className="HomeHero__marketing-buttons">
               <MarketingButton className="HomeHero__MarketingButton" website="slack" />

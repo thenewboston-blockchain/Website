@@ -1,4 +1,4 @@
-.Contribute {
+.Help {
   display: flex;
   justify-content: center;
   padding: 48px 48px 0;
@@ -10,24 +10,7 @@
     margin-bottom: 6px;
   }
 
-  &__step-bubble {
-    align-items: center;
-    background-color: var(--color-tertiary);
-    border-radius: 18px;
-    color: #fff;
-    display: flex;
-    flex-shrink: 0;
-    height: 36px;
-    justify-content: center;
-    margin-right: 18px;
-    width: 36px;
-  }
-
-  &__step-indicator {
-    align-items: center;
-    display: flex;
-    font-size: 20px;
-    font-weight: 500;
+  &__StepIndicator {
     margin-bottom: 42px;
   }
 

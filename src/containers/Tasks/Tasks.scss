@@ -1,3 +1,29 @@
 .Tasks {
-  padding: 0 32px 96px;
+  display: grid;
+  grid-template-columns: 240px auto;
+  height: 100%;
+  overflow: hidden;
+
+  // Grid (left)
+  &__FilterMenu {
+    border-right: 1px solid #e3e8ee;
+    grid-column: 1 / span 1;
+    overflow-y: auto;
+    padding: 16px 24px;
+  }
+
+  &__LabelFilter {
+    margin-top: 16px;
+  }
+
+  &__Loader {
+    margin-top: 64px;
+  }
+
+  // Grid (right)
+  &__task-list {
+    grid-column: 2 / span 1;
+    overflow-y: auto;
+    padding: 12px 0 48px;
+  }
 }

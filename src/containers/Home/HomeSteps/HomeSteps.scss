@@ -1,0 +1,44 @@
+.HomeSteps {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  &__content-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1020px;
+    padding: 64px 0 72px;
+    width: 100%;
+  }
+
+  &__instructional-text {
+    font-size: 16px;
+    line-height: 150%;
+    margin-top: 8px;
+    padding-left: 48px;
+  }
+
+  &__Step {
+    margin: 0 48px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 1080px) {
+    &__content-container {
+      align-items: center;
+      flex-direction: column;
+      padding: 64px 0 24px;
+    }
+
+    &__Step {
+      margin: 0 0 48px 0;
+    }
+  }
+}

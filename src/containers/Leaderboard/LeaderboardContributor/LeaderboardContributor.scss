@@ -1,0 +1,58 @@
+.LeaderboardContributor {
+  border-bottom: 1px solid #e3e8ee;
+  display: flex;
+  margin: 0 24px;
+  padding: 24px 0;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  &__ContributorTasks {
+    flex: 1;
+    margin-left: 32px;
+  }
+
+  &__CopyableAccountNumber {
+    margin-top: 12px;
+  }
+
+  &__qr-container {
+    margin-top: 6px;
+  }
+
+  &__rank {
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+  }
+
+  &__TotalAmount {
+    margin-left: 32px;
+  }
+
+  &__user-avatar {
+    border-radius: 6px;
+    height: auto;
+    margin-left: 32px;
+    max-width: 210px;
+  }
+
+  &__user-details {
+    display: flex;
+    flex-basis: 270px;
+    flex-direction: column;
+    margin-left: 18px;
+  }
+
+  &__user-login {
+    color: var(--color-github-blue);
+    font-family: var(--font-family-inter-medium);
+    font-size: 20px;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
