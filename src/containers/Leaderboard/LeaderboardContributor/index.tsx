@@ -1,13 +1,12 @@
 import React, {FC} from 'react';
-import clsx from 'clsx';
 
 import {A, ContributorTasks, CopyableAccountNumber, Qr, TotalAmount} from 'components';
 import {Task} from 'types/github';
+
 import './LeaderboardContributor.scss';
 
 interface ComponentProps {
   account_number: string;
-  className?: string;
   github_avatar_url: string;
   github_username: string;
   rank: number;
@@ -17,7 +16,6 @@ interface ComponentProps {
 
 const LeaderboardContributor: FC<ComponentProps> = ({
   account_number,
-  className,
   github_avatar_url,
   github_username,
   rank,
@@ -25,7 +23,7 @@ const LeaderboardContributor: FC<ComponentProps> = ({
   total_earnings,
 }) => {
   return (
-    <div className={clsx('LeaderboardContributor', className)}>
+    <div className="LeaderboardContributor">
       <div className="LeaderboardContributor__rank">#{rank}</div>
       <div>
         <img className="LeaderboardContributor__user-avatar" src={github_avatar_url} alt={github_username} />

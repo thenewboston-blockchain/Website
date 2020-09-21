@@ -88,7 +88,6 @@ const Leaderboard = () => {
       .map(({account_number, github_avatar_url, github_username, tasks, total_earnings}, index) => (
         <LeaderboardContributor
           account_number={account_number}
-          className="Leaderboard__LeaderboardContributor"
           github_avatar_url={github_avatar_url}
           github_username={github_username}
           rank={index + 1}
