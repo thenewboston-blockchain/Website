@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import sub from 'date-fns/sub';
 
-import {RepositoryFilter, TimeFilter} from 'components';
+import {EmptyPage, RepositoryFilter, TimeFilter} from 'components';
 import {
   Contributor,
   ContributorWithTasks,
@@ -82,7 +82,7 @@ const Leaderboard = () => {
 
   const renderContributors = () => {
     const contributorsWithTotalEarnings = getContributorsWithTotalEarnings();
-    if (!contributorsWithTotalEarnings.length) return renderEmptyState();
+    if (!contributorsWithTotalEarnings.length) return <EmptyPage />;
     return contributorsWithTotalEarnings
       .sort(sortByNumberKey('total_earnings', 'desc'))
       .map(({account_number, github_avatar_url, github_username, tasks, total_earnings}, index) => (
@@ -96,12 +96,6 @@ const Leaderboard = () => {
         />
       ));
   };
-
-  const renderEmptyState = () => (
-    <div className="Leaderboard__empty-state">
-      <h1>No items to display</h1>
-    </div>
-  );
 
   return (
     <div className="Leaderboard">

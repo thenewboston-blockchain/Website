@@ -3,7 +3,7 @@ import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import parseISO from 'date-fns/parseISO';
 import intersection from 'lodash/intersection';
 
-import {LabelFilter, Loader, RepositoryFilter} from 'components';
+import {EmptyPage, LabelFilter, Loader, RepositoryFilter} from 'components';
 import {GenericVoidFunction} from 'types/generic';
 import {Issue, Repository, RepositoryFilterType} from 'types/github';
 import {fetchGithubIssues} from 'utils/github';
@@ -58,15 +58,9 @@ const Tasks = () => {
     setSelectedLabelNames(results);
   };
 
-  const renderEmptyState = () => (
-    <div className="Tasks__empty-state">
-      <h1>No items to display</h1>
-    </div>
-  );
-
   const renderTasks = () => {
     const filteredIssues = getFilteredIssues();
-    if (error || !filteredIssues.length) return renderEmptyState();
+    if (error || !filteredIssues.length) return <EmptyPage />;
     return filteredIssues.map(
       ({amount, assignees, created_at, html_url, labels, number, repositoryName, title, user}) => {
         const createdStr = formatDistanceToNow(parseISO(created_at), {includeSeconds: true});

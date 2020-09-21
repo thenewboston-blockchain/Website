@@ -6,6 +6,7 @@ import CopyableAccountNumber from './CopyableAccountNumber';
 import DashboardLayout from './DashboardLayout';
 import DocsMenuItems from './DocsMenuItems';
 import {DocContainer, DocEndpoint, DocImage, DocInlineCode, DocList, DocSubSection} from './DocWrapper';
+import EmptyPage from './EmptyPage';
 import {Button} from './FormElements';
 import HashLink from './HashLink';
 import Icon, {IconType} from './Icon';
@@ -40,6 +41,7 @@ export {
   DocList,
   DocsMenuItems,
   DocSubSection,
+  EmptyPage,
   HashLink,
   Icon,
   IconType,
