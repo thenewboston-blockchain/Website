@@ -13,6 +13,7 @@ import Label from './Label';
 import Layout from './Layout';
 import MarketingButton from './MarketingButton';
 import MenuGroup from './MenuGroup';
+import LabelFilter from './LabelFilter';
 import Loader from './Loader';
 import Pagination from './Pagination';
 import RepositoryFilter from './RepositoryFilter';
@@ -43,6 +44,7 @@ export {
   Icon,
   IconType,
   Label,
+  LabelFilter,
   Layout,
   Loader,
   MarketingButton,

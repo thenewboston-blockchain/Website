@@ -14,7 +14,7 @@ $navigation-bars-height: 100px; // TopNav.height + BreadcrumbMenu__bar.height
     max-width: 100vw;
 
     &:focus {
-      outline: 0;
+      outline: none;
     }
   }
 

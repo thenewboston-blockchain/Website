@@ -2,7 +2,8 @@ import React, {useEffect, useState} from 'react';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import parseISO from 'date-fns/parseISO';
 
-import {Loader, RepositoryFilter} from 'components';
+import {LabelFilter, Loader, RepositoryFilter} from 'components';
+import {GenericVoidFunction} from 'types/generic';
 import {Issue, Repository, RepositoryFilterType} from 'types/github';
 import {fetchGithubIssues} from 'utils/github';
 
@@ -14,6 +15,7 @@ const Tasks = () => {
   const [issues, setIssues] = useState<Issue[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [repositoryFilter, setRepositoryFilter] = useState<RepositoryFilterType>(Repository.all);
+  const [selectedLabelNames, setSelectedLabelNames] = useState<string[]>([]);
 
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
@@ -38,6 +40,13 @@ const Tasks = () => {
         : filteredIssues.filter(({repositoryName}) => repositoryName === repositoryFilter);
 
     return filteredIssues;
+  };
+
+  const handleLabelClick = (labelName: string): GenericVoidFunction => (): void => {
+    const results = selectedLabelNames.includes(labelName)
+      ? selectedLabelNames.filter((name) => name !== labelName)
+      : [...selectedLabelNames, labelName];
+    setSelectedLabelNames(results);
   };
 
   const renderEmptyState = () => (
@@ -73,11 +82,14 @@ const Tasks = () => {
 
   return (
     <div className="Tasks">
-      <RepositoryFilter
-        className="Tasks__RepositoryFilter"
-        selectedFilter={repositoryFilter}
-        setSelectedFilter={setRepositoryFilter}
-      />
+      <div className="Tasks__FilterMenu">
+        <RepositoryFilter selectedFilter={repositoryFilter} setSelectedFilter={setRepositoryFilter} />
+        <LabelFilter
+          className="Tasks__LabelFilter"
+          handleLabelClick={handleLabelClick}
+          selectedLabelNames={selectedLabelNames}
+        />
+      </div>
       <div className="Tasks__TaskList">{loading ? <Loader className="Tasks__Loader" /> : renderTasks()}</div>
     </div>
   );
