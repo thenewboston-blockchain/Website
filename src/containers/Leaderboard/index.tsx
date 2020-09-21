@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import sub from 'date-fns/sub';
 
 import {RepositoryFilter, TimeFilter} from 'components';
-import ContributorList from 'containers/ContributorList';
 import {
   Contributor,
   ContributorWithTasks,
@@ -14,8 +13,9 @@ import {
   TimeFilterType,
 } from 'types/github';
 import {getContributors, getTasks} from 'utils/data';
-import {sortByDateKey} from 'utils/sort';
+import {sortByDateKey, sortByNumberKey} from 'utils/sort';
 
+import LeaderboardContributor from './LeaderboardContributor';
 import './Leaderboard.scss';
 
 const timeFilterMap = {
@@ -67,6 +67,43 @@ const Leaderboard = () => {
     return contributorsTasks;
   };
 
+  const getContributorsWithTotalEarnings = () => {
+    const contributorsWithTasks = getContributorsWithTasks();
+    return contributorsWithTasks.map((contributor: ContributorWithTasks) => ({
+      ...contributor,
+      total_earnings: getTotalEarnings(contributor.tasks),
+    }));
+  };
+
+  const getTotalEarnings = (tasks: Task[]) => {
+    const amounts = tasks.map(({amount_paid}: Task) => parseInt(amount_paid, 10));
+    return amounts.reduce((a, b) => a + b, 0);
+  };
+
+  const renderContributors = () => {
+    const contributorsWithTotalEarnings = getContributorsWithTotalEarnings();
+    if (!contributorsWithTotalEarnings.length) return renderEmptyState();
+    return contributorsWithTotalEarnings
+      .sort(sortByNumberKey('total_earnings', 'desc'))
+      .map(({account_number, github_avatar_url, github_username, tasks, total_earnings}, index) => (
+        <LeaderboardContributor
+          account_number={account_number}
+          className="Leaderboard__LeaderboardContributor"
+          github_avatar_url={github_avatar_url}
+          github_username={github_username}
+          rank={index + 1}
+          tasks={tasks}
+          total_earnings={total_earnings}
+        />
+      ));
+  };
+
+  const renderEmptyState = () => (
+    <div className="Leaderboard__empty-state">
+      <h1>No items to display</h1>
+    </div>
+  );
+
   return (
     <div className="Leaderboard">
       <TimeFilter className="Leaderboard__TimeFilter" selectedFilter={timeFilter} setSelectedFilter={setTimeFilter} />
@@ -75,7 +112,7 @@ const Leaderboard = () => {
         selectedFilter={repositoryFilter}
         setSelectedFilter={setRepositoryFilter}
       />
-      <ContributorList className="Leaderboard__ContributorList" contributorsWithTasks={getContributorsWithTasks()} />
+      <div className="Leaderboard__ContributorList">{renderContributors()}</div>
     </div>
   );
 };

@@ -4,6 +4,10 @@
   margin: 0 24px;
   padding: 16px 0;
 
+  &:last-of-type {
+    border-bottom: none;
+  }
+
   &__assignee {
     border-radius: 50%;
     height: 22px;
