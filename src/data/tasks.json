@@ -1,4 +1,24 @@
 {
+  "Niekon01": [
+    {
+      "repository": "Account-Manager",
+      "title": "Should say Friend's Account instead of My Account",
+      "issue_id": "306",
+      "pr_id": "",
+      "completed_by": "Niekon01",
+      "completed_date": "9/21/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Create new account modal button should say \"Create\" instead of \"Add\"",
+      "issue_id": "307",
+      "pr_id": "",
+      "completed_by": "Niekon01",
+      "completed_date": "9/21/20",
+      "amount_paid": "5000"
+    }
+  ],
   "angle943": [
     {
       "repository": "Account-Manager",
