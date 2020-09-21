@@ -6,11 +6,18 @@
   overflow: hidden;
 
   // Grid (right)
-  &__ContributorList {
+  &__contributor-list {
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
     overflow-y: auto;
     padding-bottom: 48px;
+  }
+
+  &__empty-state {
+    display: flex;
+    font-family: var(--font-family-inter-light);
+    justify-content: center;
+    margin-top: 64px;
   }
 
   // Grid (left)

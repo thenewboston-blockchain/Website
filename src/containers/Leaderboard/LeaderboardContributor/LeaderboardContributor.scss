@@ -1,13 +1,11 @@
-.ContributorList {
-  &__contributor {
-    border-bottom: 1px solid #e3e8ee;
-    display: flex;
-    margin: 0 24px;
-    padding: 24px 0;
+.LeaderboardContributor {
+  border-bottom: 1px solid #e3e8ee;
+  display: flex;
+  margin: 0 24px;
+  padding: 24px 0;
 
-    &:last-of-type {
-      border-bottom: none;
-    }
+  &:last-of-type {
+    border-bottom: none;
   }
 
   &__ContributorTasks {

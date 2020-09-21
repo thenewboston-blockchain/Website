@@ -8,7 +8,7 @@ import {GenericVoidFunction} from 'types/generic';
 import {Issue, Repository, RepositoryFilterType} from 'types/github';
 import {fetchGithubIssues} from 'utils/github';
 
-import Task from './Task';
+import TasksTask from './TasksTask';
 import './Tasks.scss';
 
 const Tasks = () => {
@@ -71,10 +71,9 @@ const Tasks = () => {
       ({amount, assignees, created_at, html_url, labels, number, repositoryName, title, user}) => {
         const createdStr = formatDistanceToNow(parseISO(created_at), {includeSeconds: true});
         return (
-          <Task
+          <TasksTask
             amount={amount}
             assignees={assignees}
-            className="Tasks__Task"
             createdAt={`${createdStr} ago`}
             creator={user}
             githubLabels={labels}
@@ -99,7 +98,7 @@ const Tasks = () => {
           selectedLabelNames={selectedLabelNames}
         />
       </div>
-      <div className="Tasks__TaskList">{loading ? <Loader className="Tasks__Loader" /> : renderTasks()}</div>
+      <div className="Tasks__task-list">{loading ? <Loader className="Tasks__Loader" /> : renderTasks()}</div>
     </div>
   );
 };

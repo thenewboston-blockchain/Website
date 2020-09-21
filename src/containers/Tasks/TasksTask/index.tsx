@@ -1,16 +1,14 @@
 import React, {FC} from 'react';
-import clsx from 'clsx';
 
 import {A, Label, TotalAmount} from 'components';
 import {AMOUNT_COLOR} from 'constants/github';
 import {Assignee, GitHubLabel, GitHubUser} from 'types/github';
 
-import './Task.scss';
+import './TasksTask.scss';
 
 interface ComponentProps {
   amount: number;
   assignees: Assignee[];
-  className?: string;
   creator: GitHubUser;
   createdAt: string;
   githubLabels: GitHubLabel[];
@@ -20,10 +18,9 @@ interface ComponentProps {
   title: string;
 }
 
-const Task: FC<ComponentProps> = ({
+const TasksTask: FC<ComponentProps> = ({
   amount,
   assignees,
-  className,
   creator,
   createdAt,
   githubLabels,
@@ -36,14 +33,14 @@ const Task: FC<ComponentProps> = ({
 
   const renderAssignees = () => {
     return assignedUsers.map(({avatar_url, login}) => (
-      <img alt={login} className="Task__assignee" key={login} src={avatar_url} />
+      <img alt={login} className="TasksTask__assignee" key={login} src={avatar_url} />
     ));
   };
 
   const renderCreatorLink = () => {
     const url = `https://github.com/${creator.login}`;
     return (
-      <A className="Task__issue-details-link" href={url}>
+      <A className="TasksTask__issue-details-link" href={url}>
         {creator.login}
       </A>
     );
@@ -52,7 +49,7 @@ const Task: FC<ComponentProps> = ({
   const renderIssueLink = () => {
     const url = `https://github.com/thenewboston-developers/${repositoryName}/issues/${number}`;
     return (
-      <A className="Task__issue-details-link" href={url}>
+      <A className="TasksTask__issue-details-link" href={url}>
         {`#${number}`}
       </A>
     );
@@ -61,42 +58,42 @@ const Task: FC<ComponentProps> = ({
   const renderLabels = () => {
     return githubLabels
       .filter(({color}) => color.toLowerCase() !== AMOUNT_COLOR)
-      .map(({color, name}) => <Label className="Task__Label" color={color} key={name} name={name} />);
+      .map(({color, name}) => <Label className="TasksTask__Label" color={color} key={name} name={name} />);
   };
 
   const renderRepositoryLink = () => {
     const url = `https://github.com/thenewboston-developers/${repositoryName}`;
     return (
-      <A className="Task__issue-details-link" href={url}>
+      <A className="TasksTask__issue-details-link" href={url}>
         {repositoryName}
       </A>
     );
   };
 
   return (
-    <div className={clsx('Task', className)} key={htmlUrl}>
-      <div className="Task__left">
-        <A className="Task__title" href={htmlUrl}>
+    <div className="TasksTask">
+      <div className="TasksTask__left">
+        <A className="TasksTask__title" href={htmlUrl}>
           {title}
         </A>
-        <div className="Task__issue-details">
+        <div className="TasksTask__issue-details">
           {renderRepositoryLink()} &middot; {renderIssueLink()} &middot; Opened {createdAt} by {renderCreatorLink()}
         </div>
         {renderLabels()}
       </div>
-      <div className="Task__middle">
+      <div className="TasksTask__middle">
         {!!assignedUsers.length && (
           <>
-            <div className="Task__assignees-title">Assignees</div>
+            <div className="TasksTask__assignees-title">Assignees</div>
             {renderAssignees()}
           </>
         )}
       </div>
-      <div className="Task__right">
-        <TotalAmount amount={amount} className="Task__TotalAmount" title="Reward" />
+      <div className="TasksTask__right">
+        <TotalAmount amount={amount} className="TasksTask__TotalAmount" title="Reward" />
       </div>
     </div>
   );
 };
 
-export default Task;
+export default TasksTask;
