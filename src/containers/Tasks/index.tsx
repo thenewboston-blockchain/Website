@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import parseISO from 'date-fns/parseISO';
+import intersection from 'lodash/intersection';
 
 import {LabelFilter, Loader, RepositoryFilter} from 'components';
 import {GenericVoidFunction} from 'types/generic';
@@ -38,6 +39,14 @@ const Tasks = () => {
       repositoryFilter === Repository.all
         ? filteredIssues
         : filteredIssues.filter(({repositoryName}) => repositoryName === repositoryFilter);
+
+    filteredIssues =
+      selectedLabelNames.length === 0
+        ? filteredIssues
+        : filteredIssues.filter(({labels}) => {
+            const labelNames = labels.map(({name}) => name);
+            return !!intersection(labelNames, selectedLabelNames).length;
+          });
 
     return filteredIssues;
   };
