@@ -1,38 +1,28 @@
 import React, {useState} from 'react';
-import clsx from 'clsx';
 import sub from 'date-fns/sub';
 
-import ContributorList from 'containers/ContributorList';
-import {GenericVoidFunction} from 'types/generic';
-import {Contributor, ContributorWithTasks, Task, TaskDict, Repository, RepositoryFilterType} from 'types/github';
+import {EmptyPage, RepositoryFilter, TimeFilter} from 'components';
+import {
+  Contributor,
+  ContributorWithTasks,
+  Repository,
+  RepositoryFilterType,
+  Task,
+  TaskDict,
+  Time,
+  TimeFilterType,
+} from 'types/github';
 import {getContributors, getTasks} from 'utils/data';
-import {sortByDateKey} from 'utils/sort';
+import {sortByDateKey, sortByNumberKey} from 'utils/sort';
 
+import LeaderboardContributor from './LeaderboardContributor';
 import './Leaderboard.scss';
-
-enum Time {
-  days7 = '7d',
-  days30 = '30d',
-  all = 'All',
-}
-
-type TimeFilterType = Time.days7 | Time.days30 | Time.all;
 
 const timeFilterMap = {
   [Time.days7]: 7,
   [Time.days30]: 730,
   [Time.all]: null,
 };
-
-const REPOSITORIES = [
-  Repository.accountManager,
-  Repository.bank,
-  Repository.thenewbostonPython,
-  Repository.validator,
-  Repository.website,
-];
-
-const REPOSITORY_FILTERS = [Repository.all, ...REPOSITORIES];
 
 const Leaderboard = () => {
   const [repositoryFilter, setRepositoryFilter] = useState<RepositoryFilterType>(Repository.all);
@@ -77,51 +67,45 @@ const Leaderboard = () => {
     return contributorsTasks;
   };
 
-  const handleRepositoryFilterClick = (i: RepositoryFilterType): GenericVoidFunction => (): void => {
-    setRepositoryFilter(i);
+  const getContributorsWithTotalEarnings = () => {
+    const contributorsWithTasks = getContributorsWithTasks();
+    return contributorsWithTasks.map((contributor: ContributorWithTasks) => ({
+      ...contributor,
+      total_earnings: getTotalEarnings(contributor.tasks),
+    }));
   };
 
-  const handleTimeFilterClick = (i: TimeFilterType): GenericVoidFunction => (): void => {
-    setTimeFilter(i);
+  const getTotalEarnings = (tasks: Task[]) => {
+    const amounts = tasks.map(({amount_paid}: Task) => parseInt(amount_paid, 10));
+    return amounts.reduce((a, b) => a + b, 0);
   };
 
-  const renderRepositoryFilterOptions = () => {
-    return REPOSITORY_FILTERS.map((option) => (
-      <div
-        className={clsx('Leaderboard__repository-filter-option', {
-          'Leaderboard__repository-filter-option--active': option === repositoryFilter,
-        })}
-        key={option}
-        onClick={handleRepositoryFilterClick(option)}
-        role="button"
-        tabIndex={0}
-      >
-        {option}
-      </div>
-    ));
-  };
-
-  const renderTimeFilterOptions = () => {
-    return [Time.days7, Time.days30, Time.all].map((option) => (
-      <span
-        className={clsx('Leaderboard__time-filter-option', {
-          'Leaderboard__time-filter-option--active': option === timeFilter,
-        })}
-        key={option}
-        onClick={handleTimeFilterClick(option)}
-        role="button"
-        tabIndex={0}
-      >
-        {option}
-      </span>
-    ));
+  const renderContributors = () => {
+    const contributorsWithTotalEarnings = getContributorsWithTotalEarnings();
+    if (!contributorsWithTotalEarnings.length) return <EmptyPage />;
+    return contributorsWithTotalEarnings
+      .sort(sortByNumberKey('total_earnings', 'desc'))
+      .map(({account_number, github_avatar_url, github_username, tasks, total_earnings}, index) => (
+        <LeaderboardContributor
+          account_number={account_number}
+          github_avatar_url={github_avatar_url}
+          github_username={github_username}
+          rank={index + 1}
+          tasks={tasks}
+          total_earnings={total_earnings}
+        />
+      ));
   };
 
   return (
     <div className="Leaderboard">
-      <div className="Leaderboard__time-filter">{renderTimeFilterOptions()}</div>
-      <div className="Leaderboard__repository-filter">{renderRepositoryFilterOptions()}</div>
-      <ContributorList className="Leaderboard__ContributorList" contributorsWithTasks={getContributorsWithTasks()} />
+      <TimeFilter className="Leaderboard__TimeFilter" selectedFilter={timeFilter} setSelectedFilter={setTimeFilter} />
+      <RepositoryFilter
+        className="Leaderboard__RepositoryFilter"
+        selectedFilter={repositoryFilter}
+        setSelectedFilter={setRepositoryFilter}
+      />
+      <div className="Leaderboard__contributor-list">{renderContributors()}</div>
     </div>
   );
 };

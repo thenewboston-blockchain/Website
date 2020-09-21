@@ -2,124 +2,83 @@
   "angle943": [
     {
       "repository": "Account-Manager",
-      "title": "Accounts semantics Update & Side Menu update",
-      "issue_id": "301",
-      "pr_id": "302",
-      "completed_by": "angle943",
-      "completed_date": "1/1/16",
-      "amount_paid": "1500"
-    },
-    {
-      "repository": "Account-Manager",
-      "title": "Accounts semantics Update & Side Menu update",
-      "issue_id": "333",
-      "pr_id": "302",
-      "completed_by": "angle943",
-      "completed_date": "1/1/16",
-      "amount_paid": "1500"
-    },
-    {
-      "repository": "Account-Manager",
-      "title": "Accounts semantics Update & Side Menu update",
-      "issue_id": "444",
-      "pr_id": "302",
-      "completed_by": "angle943",
-      "completed_date": "1/3/17",
-      "amount_paid": "1500"
-    },
-    {
-      "repository": "Account-Manager",
-      "title": "Apples",
-      "issue_id": "323",
-      "pr_id": "",
-      "completed_by": "angle943",
-      "completed_date": "1/1/16",
-      "amount_paid": "2500"
-    },
-    {
-      "repository": "Website",
-      "title": "Apples",
-      "issue_id": "323",
-      "pr_id": "123",
-      "completed_by": "angle943",
-      "completed_date": "9/9/20",
-      "amount_paid": "3000"
-    },
-    {
-      "repository": "Validator",
-      "title": "hello",
+      "title": "Accounts Semantics & Side Menu Update",
       "issue_id": "301",
       "pr_id": "302",
       "completed_by": "angle943",
       "completed_date": "9/18/20",
-      "amount_paid": "1500"
-    },
-    {
-      "repository": "thenewboston-python",
-      "title": "there",
-      "issue_id": "323",
-      "pr_id": "123",
-      "completed_by": "angle943",
-      "completed_date": "9/20/20",
-      "amount_paid": "3000"
+      "amount_paid": "2500"
     }
   ],
   "buckyroberts": [
     {
       "repository": "Website",
-      "title": "Another Website Task",
-      "issue_id": "456",
-      "pr_id": "546",
-      "completed_by": "buckyroberts",
-      "completed_date": "9/10/20",
-      "amount_paid": "500"
-    },
-    {
-      "repository": "Bank",
-      "title": "Some account manager task",
-      "issue_id": "433",
-      "pr_id": "546",
+      "title": "Homepage Update (1-2-3 Bubbles)",
+      "issue_id": "184",
+      "pr_id": "186",
       "completed_by": "buckyroberts",
       "completed_date": "9/20/20",
-      "amount_paid": "500"
+      "amount_paid": "2500"
     },
     {
-      "repository": "Account-Manager",
-      "title": "out there",
-      "issue_id": "433",
-      "pr_id": "546",
+      "repository": "Website",
+      "title": "Add Basic Leaderboard Page",
+      "issue_id": "191",
+      "pr_id": "186",
       "completed_by": "buckyroberts",
       "completed_date": "9/20/20",
-      "amount_paid": "500"
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Create Tasks and Help Pages",
+      "issue_id": "200",
+      "pr_id": "201",
+      "completed_by": "buckyroberts",
+      "completed_date": "9/20/20",
+      "amount_paid": "2500"
     }
   ],
   "kristykjlee": [
     {
-      "repository": "Account-Manager",
-      "title": "is",
-      "issue_id": "323",
+      "repository": "Website",
+      "title": "Design 1-2-3 Bubbles",
+      "issue_id": "182",
       "pr_id": "",
       "completed_by": "kristykjlee",
-      "completed_date": "9/19/20",
+      "completed_date": "9/16/20",
       "amount_paid": "2500"
-    },
+    }
+  ],
+  "leelatanniru": [
     {
-      "repository": "thenewboston-python",
-      "title": "anybody",
-      "issue_id": "456",
-      "pr_id": "546",
-      "completed_by": "kristykjlee",
-      "completed_date": "9/20/20",
-      "amount_paid": "500"
+      "repository": "Account-Manager",
+      "title": "Add Success Toast",
+      "issue_id": "232",
+      "pr_id": "246",
+      "completed_by": "leelatanniru",
+      "completed_date": "9/3/20",
+      "amount_paid": "2500"
+    }
+  ],
+  "webdeveloperswj": [
+    {
+      "repository": "Account-Manager",
+      "title": "When points are sent to friend the from sender account balance should get reduced",
+      "issue_id": "296",
+      "pr_id": "",
+      "completed_by": "webdeveloperswj",
+      "completed_date": "9/17/20",
+      "amount_paid": "5000"
     },
     {
       "repository": "Account-Manager",
-      "title": "is",
-      "issue_id": "222",
+      "title": "No notification received when points sent or received",
+      "issue_id": "299",
       "pr_id": "",
-      "completed_by": "kristykjlee",
-      "completed_date": "9/20/20",
-      "amount_paid": "10000"
+      "completed_by": "webdeveloperswj",
+      "completed_date": "9/17/20",
+      "amount_paid": "5000"
     }
   ]
 }

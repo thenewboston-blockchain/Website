@@ -1,0 +1,68 @@
+.TasksTask {
+  border-bottom: 1px solid #e3e8ee;
+  display: flex;
+  margin: 0 24px;
+  padding: 16px 0;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  &__assignee {
+    border-radius: 50%;
+    height: 22px;
+    margin-top: 4px;
+    width: 22px;
+  }
+
+  &__assignees-title {
+    color: var(--color-sail-gray-500);
+  }
+
+  &__Label {
+    margin: 6px 6px 0 0;
+  }
+
+  &__issue-details {
+    color: var(--color-sail-gray-500);
+    margin-top: 4px;
+  }
+
+  &__issue-details-link {
+    color: var(--color-sail-gray-500);
+
+    &:hover {
+      color: var(--color-github-blue);
+    }
+  }
+
+  // Issue information
+  &__left {
+    flex: 1;
+  }
+
+  // Assignees
+  &__middle {
+    flex-basis: 120px;
+    margin-left: 48px;
+  }
+
+  // Points
+  &__right {
+    flex-basis: 100px;
+    margin-left: 48px;
+    white-space: nowrap;
+  }
+
+  &__title {
+    color: var(--color-primary);
+    display: block;
+    font-family: var(--font-family-inter-medium);
+    font-size: 18px;
+    font-weight: 600;
+
+    &:hover {
+      color: var(--color-github-blue);
+    }
+  }
+}

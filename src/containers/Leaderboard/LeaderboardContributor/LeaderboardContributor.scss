@@ -1,13 +1,11 @@
-.ContributorList {
-  &__contributor {
-    border-bottom: 1px solid #e3e8ee;
-    display: flex;
-    margin: 0 24px;
-    padding: 24px 0;
+.LeaderboardContributor {
+  border-bottom: 1px solid #e3e8ee;
+  display: flex;
+  margin: 0 24px;
+  padding: 24px 0;
 
-    &:last-of-type {
-      border-bottom: none;
-    }
+  &:last-of-type {
+    border-bottom: none;
   }
 
   &__ContributorTasks {
@@ -29,21 +27,8 @@
     font-size: 20px;
   }
 
-  &__total-points {
+  &__TotalAmount {
     margin-left: 32px;
-    white-space: nowrap;
-  }
-
-  &__total-points-label {
-    color: var(--color-sail-gray-500);
-    cursor: default;
-  }
-
-  &__total-points-value {
-    color: var(--color-tertiary);
-    font-family: var(--font-family-inter-medium);
-    font-size: var(--font-size-large);
-    margin-top: 4px;
   }
 
   &__user-avatar {
@@ -61,7 +46,7 @@
   }
 
   &__user-login {
-    color: #0366d6;
+    color: var(--color-github-blue);
     font-family: var(--font-family-inter-medium);
     font-size: 20px;
     font-weight: 600;

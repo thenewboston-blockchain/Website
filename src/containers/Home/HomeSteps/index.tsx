@@ -18,7 +18,7 @@ const HomeSteps = () => {
         <div className="HomeSteps__Step">
           <StepIndicator number={2} text="Complete tasks" />
           <div className="HomeSteps__instructional-text">
-            The more difficult the <NavLink to="/contribute">task</NavLink>, the bigger the reward.
+            The more difficult the <NavLink to="/tasks">task</NavLink>, the bigger the reward.
           </div>
         </div>
         <div className="HomeSteps__Step">

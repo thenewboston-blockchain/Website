@@ -1,5 +1,26 @@
 import {Dict} from 'types/generic';
 
+export interface Assignee {
+  avatar_url: string;
+  events_url: string;
+  followers_url: string;
+  following_url: string;
+  gists_url: string;
+  gravatar_id: string;
+  html_url: string;
+  id: number;
+  login: string;
+  node_id: string;
+  organizations_url: string;
+  received_events_url: string;
+  repos_url: string;
+  site_admin: boolean;
+  starred_url: string;
+  subscriptions_url: string;
+  type: string;
+  url: string;
+}
+
 export interface Contributor {
   account_number: string;
   github_avatar_url: string;
@@ -11,6 +32,37 @@ export interface ContributorWithTasks {
   github_avatar_url: string;
   github_username: string;
   tasks: Task[];
+}
+
+export interface GitHubLabel {
+  color: string;
+  default: boolean;
+  description: string;
+  id: number;
+  name: string;
+  node_id: string;
+  url: string;
+}
+
+export interface GitHubUser {
+  avatar_url: string;
+  events_url: string;
+  followers_url: string;
+  following_url: string;
+  gists_url: string;
+  gravatar_id: string;
+  html_url: string;
+  id: number;
+  login: string;
+  node_id: string;
+  organizations_url: string;
+  received_events_url: string;
+  repos_url: string;
+  site_admin: boolean;
+  starred_url: string;
+  subscriptions_url: string;
+  type: string;
+  url: string;
 }
 
 export enum Repository {
@@ -29,6 +81,43 @@ export type RepositoryFilterType =
   | Repository.thenewbostonPython
   | Repository.validator
   | Repository.website;
+
+export enum Time {
+  days7 = '7d',
+  days30 = '30d',
+  all = 'All',
+}
+
+export type TimeFilterType = Time.days7 | Time.days30 | Time.all;
+
+export interface BaseIssue {
+  id: number;
+  node_id: string;
+  url: string;
+  repository_url: string;
+  labels_url: string;
+  comments_url: string;
+  events_url: string;
+  html_url: string;
+  number: number;
+  state: string;
+  title: string;
+  body: string;
+  user: GitHubUser;
+  labels: GitHubLabel[];
+  assignee: Assignee;
+  assignees: Assignee[];
+  locked: boolean;
+  active_lock_reason: string;
+  comments: number;
+  closed_at?: any;
+  created_at: string;
+}
+
+export interface Issue extends BaseIssue {
+  amount: number;
+  repositoryName: string;
+}
 
 interface BaseTask {
   amount_paid: string;
