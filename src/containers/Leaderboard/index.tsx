@@ -112,7 +112,7 @@ const Leaderboard = () => {
         selectedFilter={repositoryFilter}
         setSelectedFilter={setRepositoryFilter}
       />
-      <div className="Leaderboard__ContributorList">{renderContributors()}</div>
+      <div className="Leaderboard__contributor-list">{renderContributors()}</div>
     </div>
   );
 };

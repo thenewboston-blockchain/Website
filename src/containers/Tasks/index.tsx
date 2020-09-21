@@ -99,7 +99,7 @@ const Tasks = () => {
           selectedLabelNames={selectedLabelNames}
         />
       </div>
-      <div className="Tasks__TaskList">{loading ? <Loader className="Tasks__Loader" /> : renderTasks()}</div>
+      <div className="Tasks__task-list">{loading ? <Loader className="Tasks__Loader" /> : renderTasks()}</div>
     </div>
   );
 };
