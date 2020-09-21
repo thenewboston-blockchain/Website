@@ -54,6 +54,14 @@
     white-space: nowrap;
   }
 
+  &__issue-link {
+    color: var(--color-primary);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &__task-title {
     font-family: var(--font-family-inter);
     font-weight: normal;
