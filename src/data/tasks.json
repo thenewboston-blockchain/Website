@@ -17,6 +17,15 @@
       "completed_by": "Niekon01",
       "completed_date": "9/21/20",
       "amount_paid": "5000"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Closes #306 and fixed a wording issue",
+      "issue_id": "306",
+      "pr_id": "308",
+      "completed_by": "Niekon01",
+      "completed_date": "9/21/20",
+      "amount_paid": "5000"
     }
   ],
   "angle943": [
