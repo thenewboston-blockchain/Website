@@ -34,7 +34,7 @@ NETWORK_SIGNING_KEY=${networkSigningKey}
 CELERY_BIN="/usr/local/bin/celery"
 CELERY_APP="config.settings"
 CELERYD_MULTI="multi"
-CELERYD_OPTS="--time-limit=1800 -Q:w1=celery -c:w1=2 -Q:w2=block_queue -P:w2=solo"
+CELERYD_OPTS="--time-limit=1800 -Q:w1 celery -c:w1 2 -Q:w2 block_queue -P:w2 solo"
 CELERYD_PID_FILE="/var/log/celery/%n.pid"
 CELERYD_LOG_FILE="/var/log/celery/%n%I.log"
 CELERYD_LOG_LEVEL="DEBUG"
