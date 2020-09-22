@@ -82,6 +82,10 @@ export type RepositoryFilterType =
   | Repository.validator
   | Repository.website;
 
+export interface RepositoryURLParams {
+  repository: string;
+}
+
 export enum Time {
   days7 = '7d',
   days30 = '30d',

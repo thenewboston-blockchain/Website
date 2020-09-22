@@ -1,17 +1,21 @@
 import React, {useEffect, useState} from 'react';
+import {useHistory, useParams} from 'react-router-dom';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import parseISO from 'date-fns/parseISO';
 import intersection from 'lodash/intersection';
 
 import {EmptyPage, LabelFilter, Loader, RepositoryFilter} from 'components';
 import {GenericVoidFunction} from 'types/generic';
-import {Issue, Repository, RepositoryFilterType} from 'types/github';
+import {Issue, Repository, RepositoryFilterType, RepositoryURLParams} from 'types/github';
 import {fetchGithubIssues} from 'utils/github';
 
 import TasksTask from './TasksTask';
 import './Tasks.scss';
 
 const Tasks = () => {
+  const params: RepositoryURLParams = useParams();
+  const history = useHistory();
+
   const [error, setError] = useState<boolean>(false);
   const [issues, setIssues] = useState<Issue[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -31,6 +35,14 @@ const Tasks = () => {
     };
     fetchData();
   }, []);
+
+  useEffect(() => {
+    if (params.repository) {
+      setRepositoryFilter(params.repository as RepositoryFilterType);
+    } else {
+      history.push('/tasks/All');
+    }
+  }, [params, history]);
 
   const getFilteredIssues = () => {
     let filteredIssues = issues.filter(({amount}) => amount !== 0);
@@ -85,7 +97,7 @@ const Tasks = () => {
   return (
     <div className="Tasks">
       <div className="Tasks__FilterMenu">
-        <RepositoryFilter selectedFilter={repositoryFilter} setSelectedFilter={setRepositoryFilter} />
+        <RepositoryFilter />
         <LabelFilter
           className="Tasks__LabelFilter"
           handleLabelClick={handleLabelClick}
