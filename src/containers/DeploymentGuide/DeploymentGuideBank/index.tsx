@@ -2,7 +2,7 @@ import React, {FC, ReactNode} from 'react';
 
 import {CodeSnippet, DocContainer, TableParams} from 'components';
 
-import Celery from '../Celery';
+import CeleryBank from '../CeleryBank';
 import Firewall from '../Firewall';
 import GatewayInterface from '../GatewayInterface';
 import InstallDependencies from '../InstallDependencies';
@@ -77,7 +77,7 @@ const DeploymentGuideBank: FC = () => {
       <Nginx name="Bank" />
       <Redis />
       <GatewayInterface name="Bank" />
-      <Celery name="Bank" networkSigningKey="e5e5fec0dcbbd8b0a76c67204823678d3f243de7a0a1042bb3ecf66285cd9fd4" />
+      <CeleryBank name="Bank" networkSigningKey="e5e5fec0dcbbd8b0a76c67204823678d3f243de7a0a1042bb3ecf66285cd9fd4" />
       <SystemServices />
       <StaticFilesAndApplicationConfiguration
         initializationCommand={renderInitializationCommands()}

@@ -11,9 +11,9 @@ enum CeleryNav {
   celery = 'celery',
 }
 
-const Celery: FC<ComponentProps> = ({name, networkSigningKey}) => {
+const CeleryValidator: FC<ComponentProps> = ({name, networkSigningKey}) => {
   return (
-    <DocSubSection className="Celery" id={CeleryNav.celery} title="Celery">
+    <DocSubSection className="CeleryValidator" id={CeleryNav.celery} title="Celery">
       <CodeSnippet
         code={`cd /etc/
 sudo mkdir ${name.toLowerCase()}
@@ -30,11 +30,11 @@ NETWORK_SIGNING_KEY=${networkSigningKey}
       />
       <CodeSnippet code={`sudo nano /etc/${name.toLowerCase()}/celery.conf`} heading="Create celery env config" />
       <CodeSnippet
-        code={`CELERYD_NODES="w1"
+        code={`CELERYD_NODES="w1 w2"
 CELERY_BIN="/usr/local/bin/celery"
 CELERY_APP="config.settings"
 CELERYD_MULTI="multi"
-CELERYD_OPTS="--time-limit=1800 --concurrency=2"
+CELERYD_OPTS="--time-limit=1800 -Q:w1 celery -c:w1 2 -Q:w2 block_queue -P:w2 solo"
 CELERYD_PID_FILE="/var/log/celery/%n.pid"
 CELERYD_LOG_FILE="/var/log/celery/%n%I.log"
 CELERYD_LOG_LEVEL="DEBUG"
@@ -90,4 +90,4 @@ WantedBy=multi-user.target
   );
 };
 
-export default Celery;
+export default CeleryValidator;
