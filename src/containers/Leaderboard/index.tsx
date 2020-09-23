@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import {useParams} from 'react-router-dom';
 import sub from 'date-fns/sub';
 
 import {EmptyPage, RepositoryFilter, TimeFilter} from 'components';
@@ -6,7 +7,7 @@ import {
   Contributor,
   ContributorWithTasks,
   Repository,
-  RepositoryFilterType,
+  RepositoryUrlParams,
   Task,
   TaskDict,
   Time,
@@ -25,8 +26,13 @@ const timeFilterMap = {
 };
 
 const Leaderboard = () => {
-  const [repositoryFilter, setRepositoryFilter] = useState<RepositoryFilterType>(Repository.all);
+  const {repository} = useParams<RepositoryUrlParams>();
+  const [repositoryFilter, setRepositoryFilter] = useState<Repository>(repository);
   const [timeFilter, setTimeFilter] = useState<TimeFilterType>(Time.all);
+
+  useEffect(() => {
+    setRepositoryFilter(repository);
+  }, [repository]);
 
   const getContributorsWithTasks = (): ContributorWithTasks[] => {
     const contributors = getContributors();
@@ -101,11 +107,7 @@ const Leaderboard = () => {
   return (
     <div className="Leaderboard">
       <TimeFilter className="Leaderboard__TimeFilter" selectedFilter={timeFilter} setSelectedFilter={setTimeFilter} />
-      <RepositoryFilter
-        className="Leaderboard__RepositoryFilter"
-        selectedFilter={repositoryFilter}
-        setSelectedFilter={setRepositoryFilter}
-      />
+      <RepositoryFilter className="Leaderboard__RepositoryFilter" />
       <div className="Leaderboard__contributor-list">{renderContributors()}</div>
     </div>
   );

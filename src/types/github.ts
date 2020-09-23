@@ -74,13 +74,9 @@ export enum Repository {
   website = 'Website',
 }
 
-export type RepositoryFilterType =
-  | Repository.all
-  | Repository.accountManager
-  | Repository.bank
-  | Repository.thenewbostonPython
-  | Repository.validator
-  | Repository.website;
+export interface RepositoryUrlParams {
+  repository: Repository;
+}
 
 export enum Time {
   days7 = '7d',

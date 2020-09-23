@@ -39,6 +39,62 @@
       "amount_paid": "2500"
     }
   ],
+  "avgust13": [
+    {
+      "repository": "Account-Manager",
+      "title": "Create Jest Tests for 'formatAddressFromNode'",
+      "issue_id": "221",
+      "pr_id": "313",
+      "completed_by": "avgust13",
+      "completed_date": "9/22/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Create Jest Tests for 'formatQueryParams'",
+      "issue_id": "222",
+      "pr_id": "313",
+      "completed_by": "avgust13",
+      "completed_date": "9/22/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Create Jest Tests for 'formatPath' and 'formatPathFromNode'",
+      "issue_id": "223",
+      "pr_id": "313",
+      "completed_by": "avgust13",
+      "completed_date": "9/22/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Create Jest Tests for 'parseAddressData'",
+      "issue_id": "224",
+      "pr_id": "313",
+      "completed_by": "avgust13",
+      "completed_date": "9/22/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Create Jest Tests for 'parseQueryParams'",
+      "issue_id": "225",
+      "pr_id": "313",
+      "completed_by": "avgust13",
+      "completed_date": "9/22/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Simple Text Update for Table Column Headers",
+      "issue_id": "269",
+      "pr_id": "313",
+      "completed_by": "avgust13",
+      "completed_date": "9/22/20",
+      "amount_paid": "2500"
+    }
+  ],
   "buckyroberts": [
     {
       "repository": "Website",
@@ -90,6 +146,17 @@
       "amount_paid": "2500"
     }
   ],
+  "thesanjeevsharma": [
+    {
+      "repository": "Website",
+      "title": "Leaderboard and Tasks Repository Filter URLs",
+      "issue_id": "204",
+      "pr_id": "226",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "9/22/20",
+      "amount_paid": "10000"
+    }
+  ],
   "webdeveloperswj": [
     {
       "repository": "Account-Manager",
@@ -107,6 +174,15 @@
       "pr_id": "",
       "completed_by": "webdeveloperswj",
       "completed_date": "9/17/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "Website",
+      "title": "[iPhone SE] Page moved horizontally",
+      "issue_id": "220",
+      "pr_id": "",
+      "completed_by": "webdeveloperswj",
+      "completed_date": "9/22/20",
       "amount_paid": "5000"
     }
   ]
