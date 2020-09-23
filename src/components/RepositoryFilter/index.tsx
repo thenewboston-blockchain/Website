@@ -1,9 +1,10 @@
 import React, {FC} from 'react';
+import {useHistory, useLocation, useParams} from 'react-router-dom';
 import clsx from 'clsx';
 
 import {REPOSITORIES} from 'constants/github';
 import {GenericVoidFunction} from 'types/generic';
-import {Repository, RepositoryFilterType} from 'types/github';
+import {Repository, RepositoryUrlParams} from 'types/github';
 
 import './RepositoryFilter.scss';
 
@@ -11,20 +12,23 @@ const REPOSITORY_FILTERS = [Repository.all, ...REPOSITORIES];
 
 interface ComponentProps {
   className?: string;
-  selectedFilter: RepositoryFilterType;
-  setSelectedFilter: GenericVoidFunction;
 }
 
-const RepositoryFilter: FC<ComponentProps> = ({className, selectedFilter, setSelectedFilter}) => {
-  const handleOptionClick = (i: RepositoryFilterType): GenericVoidFunction => (): void => {
-    setSelectedFilter(i);
+const RepositoryFilter: FC<ComponentProps> = ({className}) => {
+  const location = useLocation();
+  const {repository} = useParams<RepositoryUrlParams>();
+  const history = useHistory();
+
+  const handleOptionClick = (i: Repository): GenericVoidFunction => (): void => {
+    const route = location.pathname.split('/')[1];
+    history.push(`/${route}/${i}`);
   };
 
   const renderOptions = () => {
     return REPOSITORY_FILTERS.map((option) => (
       <div
         className={clsx('RepositoryFilter__option', {
-          'RepositoryFilter__option--active': option === selectedFilter,
+          'RepositoryFilter__option--active': option === repository,
         })}
         key={option}
         onClick={handleOptionClick(option)}
