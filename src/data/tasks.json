@@ -146,6 +146,17 @@
       "amount_paid": "2500"
     }
   ],
+  "thesanjeevsharma": [
+    {
+      "repository": "Website",
+      "title": "Leaderboard and Tasks Repository Filter URLs",
+      "issue_id": "204",
+      "pr_id": "226",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "9/22/20",
+      "amount_paid": "10000"
+    }
+  ],
   "webdeveloperswj": [
     {
       "repository": "Account-Manager",
