@@ -10,7 +10,7 @@ const PrimaryValidatorApiConfirmationBlocks: FC = () => {
         been added to the blockchain. No confirmation blocks will be sent to the primary validator directly.
       </p>
 
-      <DocEndpoint endpoint="/confirmation_blocks/<block_identifier>" method="GET" />
+      <DocEndpoint endpoint="/confirmation_blocks/<block_identifier>/valid" method="GET" />
       <p>View details of an individual confirmation block.</p>
       <RequestResponseSnippet
         code={`{
