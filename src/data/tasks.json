@@ -108,6 +108,15 @@
       "completed_by": "webdeveloperswj",
       "completed_date": "9/17/20",
       "amount_paid": "5000"
+    },
+    {
+      "repository": "Website",
+      "title": "[iPhone SE] Page moved horizontally",
+      "issue_id": "220",
+      "pr_id": "",
+      "completed_by": "webdeveloperswj",
+      "completed_date": "9/22/20",
+      "amount_paid": "5000"
     }
   ]
 }
