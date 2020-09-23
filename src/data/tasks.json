@@ -37,6 +37,15 @@
       "completed_by": "angle943",
       "completed_date": "9/18/20",
       "amount_paid": "2500"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Create new account modal button should say \"Create\" instead of \"Add\"",
+      "issue_id": "307",
+      "pr_id": "314",
+      "completed_by": "angle943",
+      "completed_date": "9/22/20",
+      "amount_paid": "5000"
     }
   ],
   "avgust13": [
