@@ -8,7 +8,7 @@ import {
   ContributorWithTasks,
   Repository,
   RepositoryFilterType,
-  RepositoryURLParams,
+  RepositoryUrlParams,
   Task,
   TaskDict,
   Time,
@@ -27,19 +27,19 @@ const timeFilterMap = {
 };
 
 const Leaderboard = () => {
-  const params: RepositoryURLParams = useParams();
+  const {repository} = useParams<RepositoryUrlParams>();
   const history = useHistory();
 
   const [repositoryFilter, setRepositoryFilter] = useState<RepositoryFilterType>(Repository.all);
   const [timeFilter, setTimeFilter] = useState<TimeFilterType>(Time.all);
 
   useEffect(() => {
-    if (params.repository) {
-      setRepositoryFilter(params.repository as RepositoryFilterType);
+    if (repository) {
+      setRepositoryFilter(repository);
     } else {
-      history.push('/leaderboard/All');
+      history.replace(`/leaderboard/${Repository.all}`);
     }
-  }, [params, history]);
+  }, [history, repository]);
 
   const getContributorsWithTasks = (): ContributorWithTasks[] => {
     const contributors = getContributors();

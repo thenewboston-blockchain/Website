@@ -66,12 +66,12 @@ export interface GitHubUser {
 }
 
 export enum Repository {
-  all = 'All',
-  accountManager = 'Account-Manager',
-  bank = 'Bank',
+  all = 'all',
+  accountManager = 'account-manager',
+  bank = 'bank',
   thenewbostonPython = 'thenewboston-python',
-  validator = 'Validator',
-  website = 'Website',
+  validator = 'validator',
+  website = 'website',
 }
 
 export type RepositoryFilterType =
@@ -82,8 +82,8 @@ export type RepositoryFilterType =
   | Repository.validator
   | Repository.website;
 
-export interface RepositoryURLParams {
-  repository: string;
+export interface RepositoryUrlParams {
+  repository: RepositoryFilterType;
 }
 
 export enum Time {

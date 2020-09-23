@@ -6,14 +6,14 @@ import intersection from 'lodash/intersection';
 
 import {EmptyPage, LabelFilter, Loader, RepositoryFilter} from 'components';
 import {GenericVoidFunction} from 'types/generic';
-import {Issue, Repository, RepositoryFilterType, RepositoryURLParams} from 'types/github';
+import {Issue, Repository, RepositoryFilterType, RepositoryUrlParams} from 'types/github';
 import {fetchGithubIssues} from 'utils/github';
 
 import TasksTask from './TasksTask';
 import './Tasks.scss';
 
 const Tasks = () => {
-  const params: RepositoryURLParams = useParams();
+  const params = useParams<RepositoryUrlParams>();
   const history = useHistory();
 
   const [error, setError] = useState<boolean>(false);
@@ -38,9 +38,9 @@ const Tasks = () => {
 
   useEffect(() => {
     if (params.repository) {
-      setRepositoryFilter(params.repository as RepositoryFilterType);
+      setRepositoryFilter(params.repository);
     } else {
-      history.push('/tasks/All');
+      history.push(`/tasks/${Repository.all}`);
     }
   }, [params, history]);
 

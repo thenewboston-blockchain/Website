@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 import {REPOSITORIES} from 'constants/github';
 import {GenericVoidFunction} from 'types/generic';
-import {Repository, RepositoryFilterType, RepositoryURLParams} from 'types/github';
+import {Repository, RepositoryFilterType, RepositoryUrlParams} from 'types/github';
 
 import './RepositoryFilter.scss';
 
@@ -16,7 +16,7 @@ interface ComponentProps {
 
 const RepositoryFilter: FC<ComponentProps> = ({className}) => {
   const location = useLocation();
-  const params: RepositoryURLParams = useParams();
+  const {repository} = useParams<RepositoryUrlParams>();
   const history = useHistory();
 
   const handleOptionClick = (i: RepositoryFilterType): GenericVoidFunction => (): void => {
@@ -28,7 +28,7 @@ const RepositoryFilter: FC<ComponentProps> = ({className}) => {
     return REPOSITORY_FILTERS.map((option) => (
       <div
         className={clsx('RepositoryFilter__option', {
-          'RepositoryFilter__option--active': option === params.repository,
+          'RepositoryFilter__option--active': option === repository,
         })}
         key={option}
         onClick={handleOptionClick(option)}
