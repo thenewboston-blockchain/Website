@@ -6,7 +6,7 @@ import intersection from 'lodash/intersection';
 
 import {EmptyPage, LabelFilter, Loader, RepositoryFilter} from 'components';
 import {GenericVoidFunction} from 'types/generic';
-import {Issue, Repository, RepositoryFilterType, RepositoryUrlParams} from 'types/github';
+import {Issue, Repository, RepositoryUrlParams} from 'types/github';
 import {fetchGithubIssues} from 'utils/github';
 
 import TasksTask from './TasksTask';
@@ -19,7 +19,7 @@ const Tasks = () => {
   const [error, setError] = useState<boolean>(false);
   const [issues, setIssues] = useState<Issue[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const [repositoryFilter, setRepositoryFilter] = useState<RepositoryFilterType>(Repository.all);
+  const [repositoryFilter, setRepositoryFilter] = useState<Repository>(Repository.all);
   const [selectedLabelNames, setSelectedLabelNames] = useState<string[]>([]);
 
   useEffect(() => {

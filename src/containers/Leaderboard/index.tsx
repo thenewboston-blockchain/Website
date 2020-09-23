@@ -7,7 +7,6 @@ import {
   Contributor,
   ContributorWithTasks,
   Repository,
-  RepositoryFilterType,
   RepositoryUrlParams,
   Task,
   TaskDict,
@@ -30,7 +29,7 @@ const Leaderboard = () => {
   const {repository} = useParams<RepositoryUrlParams>();
   const history = useHistory();
 
-  const [repositoryFilter, setRepositoryFilter] = useState<RepositoryFilterType>(Repository.all);
+  const [repositoryFilter, setRepositoryFilter] = useState<Repository>(Repository.all);
   const [timeFilter, setTimeFilter] = useState<TimeFilterType>(Time.all);
 
   useEffect(() => {

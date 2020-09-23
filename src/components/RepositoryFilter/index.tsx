@@ -4,7 +4,7 @@ import clsx from 'clsx';
 
 import {REPOSITORIES} from 'constants/github';
 import {GenericVoidFunction} from 'types/generic';
-import {Repository, RepositoryFilterType, RepositoryUrlParams} from 'types/github';
+import {Repository, RepositoryUrlParams} from 'types/github';
 
 import './RepositoryFilter.scss';
 
@@ -19,7 +19,7 @@ const RepositoryFilter: FC<ComponentProps> = ({className}) => {
   const {repository} = useParams<RepositoryUrlParams>();
   const history = useHistory();
 
-  const handleOptionClick = (i: RepositoryFilterType): GenericVoidFunction => (): void => {
+  const handleOptionClick = (i: Repository): GenericVoidFunction => (): void => {
     const route = location.pathname.split('/')[1];
     history.push(`/${route}/${i}`);
   };
