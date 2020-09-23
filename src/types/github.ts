@@ -66,12 +66,12 @@ export interface GitHubUser {
 }
 
 export enum Repository {
-  all = 'all',
-  accountManager = 'account-manager',
-  bank = 'bank',
+  all = 'All',
+  accountManager = 'Account-Manager',
+  bank = 'Bank',
   thenewbostonPython = 'thenewboston-python',
-  validator = 'validator',
-  website = 'website',
+  validator = 'Validator',
+  website = 'Website',
 }
 
 export interface RepositoryUrlParams {
