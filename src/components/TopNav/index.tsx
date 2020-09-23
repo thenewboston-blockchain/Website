@@ -6,6 +6,7 @@ import useOnclickOutside from 'react-cool-onclickoutside';
 import clsx from 'clsx';
 
 import {Button, Icon, IconType, Shadow} from 'components';
+import {Repository} from 'types/github';
 
 import TopNavDropdownMenuItem from './TopNavDropdownMenuItem';
 import TopNavLogo from './TopNavLogo';
@@ -39,13 +40,13 @@ const helpProps = {
 const leaderboardProps = {
   activePatterns: ['/leaderboard'],
   name: 'Leaderboard',
-  url: '/leaderboard',
+  url: `/leaderboard/${Repository.all}`,
 };
 
 const tasksProps = {
   activePatterns: ['/tasks'],
   name: 'Tasks',
-  url: '/tasks',
+  url: `/tasks/${Repository.all}`,
 };
 
 const TopNav: FC<ComponentProps> = ({className}) => {

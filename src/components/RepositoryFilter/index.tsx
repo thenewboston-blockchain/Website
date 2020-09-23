@@ -15,9 +15,9 @@ interface ComponentProps {
 }
 
 const RepositoryFilter: FC<ComponentProps> = ({className}) => {
-  const location = useLocation();
   const {repository} = useParams<RepositoryUrlParams>();
   const history = useHistory();
+  const location = useLocation();
 
   const handleOptionClick = (i: Repository): GenericVoidFunction => (): void => {
     const route = location.pathname.split('/')[1];

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {useHistory, useParams} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import parseISO from 'date-fns/parseISO';
 import intersection from 'lodash/intersection';
@@ -13,9 +13,7 @@ import TasksTask from './TasksTask';
 import './Tasks.scss';
 
 const Tasks = () => {
-  const params = useParams<RepositoryUrlParams>();
-  const history = useHistory();
-
+  const {repository} = useParams<RepositoryUrlParams>();
   const [error, setError] = useState<boolean>(false);
   const [issues, setIssues] = useState<Issue[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -37,12 +35,8 @@ const Tasks = () => {
   }, []);
 
   useEffect(() => {
-    if (params.repository) {
-      setRepositoryFilter(params.repository);
-    } else {
-      history.push(`/tasks/${Repository.all}`);
-    }
-  }, [params, history]);
+    setRepositoryFilter(repository);
+  }, [repository]);
 
   const getFilteredIssues = () => {
     let filteredIssues = issues.filter(({amount}) => amount !== 0);

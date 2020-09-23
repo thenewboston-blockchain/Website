@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import {useParams, useHistory} from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import {useParams} from 'react-router-dom';
 import sub from 'date-fns/sub';
 
 import {EmptyPage, RepositoryFilter, TimeFilter} from 'components';
@@ -27,18 +27,12 @@ const timeFilterMap = {
 
 const Leaderboard = () => {
   const {repository} = useParams<RepositoryUrlParams>();
-  const history = useHistory();
-
-  const [repositoryFilter, setRepositoryFilter] = useState<Repository>(Repository.all);
+  const [repositoryFilter, setRepositoryFilter] = useState<Repository>(repository);
   const [timeFilter, setTimeFilter] = useState<TimeFilterType>(Time.all);
 
   useEffect(() => {
-    if (repository) {
-      setRepositoryFilter(repository);
-    } else {
-      history.replace(`/leaderboard/${Repository.all}`);
-    }
-  }, [history, repository]);
+    setRepositoryFilter(repository);
+  }, [repository]);
 
   const getContributorsWithTasks = (): ContributorWithTasks[] => {
     const contributors = getContributors();
