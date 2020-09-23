@@ -50,8 +50,8 @@ const App: FC = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/help" component={Help} />
-          <Route exact path="/leaderboard/:repository?" component={Leaderboard} />
-          <Route exact path="/tasks/:repository?" component={Tasks} />
+          <Route exact path="/leaderboard/:repository" component={Leaderboard} />
+          <Route exact path="/tasks/:repository" component={Tasks} />
           <Route path="/account-manager/:chapter?" component={AccountManager} />
           <Route path="/bank-api/:chapter?" component={BankApi} />
           <Route path="/confirmation-validator-api/:chapter?" component={ConfirmationValidatorApi} />
