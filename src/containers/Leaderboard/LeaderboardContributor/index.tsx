@@ -36,24 +36,35 @@ const LeaderboardContributor: FC<ComponentProps> = ({
     </div>
   );
 
-  const renderUserDetails = () => (
-    <div className="LeaderboardContributor__user-details">
+  const renderMainDetails = () => (
+    <div className="LeaderboardContributor__main-details">
+      <div className="LeaderboardContributor__account-details">
+        <CopyableAccountNumber
+          accountNumber={account_number}
+          className="LeaderboardContributor__CopyableAccountNumber"
+        />
+        <div className="LeaderboardContributor__qr-container">
+          <Qr text={account_number} width={80} />
+        </div>
+      </div>
+      <ContributorTasks className="LeaderboardContributor__ContributorTasks" tasks={tasks} />
+      <TotalAmount amount={total_earnings} className="LeaderboardContributor__TotalAmount" title="Total Earnings" />
+    </div>
+  );
+
+  const renderRight = () => (
+    <div className="LeaderboardContributor__right">
       <A className="LeaderboardContributor__user-login" href={`https://github.com/${github_username}`}>
         {github_username}
       </A>
-      <CopyableAccountNumber accountNumber={account_number} className="LeaderboardContributor__CopyableAccountNumber" />
-      <div className="LeaderboardContributor__qr-container">
-        <Qr text={account_number} width={80} />
-      </div>
+      {renderMainDetails()}
     </div>
   );
 
   return (
     <div className="LeaderboardContributor">
       {renderAvatar()}
-      {renderUserDetails()}
-      <ContributorTasks className="LeaderboardContributor__ContributorTasks" tasks={tasks} />
-      <TotalAmount amount={total_earnings} className="LeaderboardContributor__TotalAmount" title="Total Earnings" />
+      {renderRight()}
     </div>
   );
 };

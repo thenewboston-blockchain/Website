@@ -15,6 +15,12 @@
     border-bottom: none;
   }
 
+  &__account-details {
+    display: flex;
+    flex-basis: 240px;
+    flex-direction: column;
+  }
+
   &__ContributorTasks {
     flex: 1;
     margin-left: 32px;
@@ -24,12 +30,26 @@
     margin-top: 12px;
   }
 
+  &__main-details {
+    display: flex;
+  }
+
   &__qr-container {
     margin-top: 12px;
   }
 
+  &__right {
+    flex: 1;
+    margin-left: 24px;
+  }
+
   &__TotalAmount {
-    margin-left: 32px;
+    align-items: flex-end;
+    display: flex;
+    flex-basis: 150px;
+    flex-direction: column;
+    line-height: 1;
+    margin-left: 40px;
   }
 
   &__user-avatar {
@@ -61,17 +81,12 @@
     }
   }
 
-  &__user-details {
-    display: flex;
-    flex-basis: 270px;
-    flex-direction: column;
-    margin-left: 18px;
-  }
-
   &__user-login {
+    display: block;
     font-family: var(--font-family-inter-medium);
     font-size: 20px;
     font-weight: 500;
+    line-height: 125%;
 
     &:hover {
       text-decoration: underline;
