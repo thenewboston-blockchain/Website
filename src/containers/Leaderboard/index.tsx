@@ -122,10 +122,10 @@ const Leaderboard = () => {
     <>
       <div className="Leaderboard">
         {renderTopSections()}
-        <div className="Leaderboard__LeftMenu">
+        <div className="Leaderboard__left-menu">
           <RepositoryFilter className="Leaderboard__RepositoryFilter" />
         </div>
-        <div className="Leaderboard__ContributorList">{renderContributors()}</div>
+        <div className="Leaderboard__contributor-list">{renderContributors()}</div>
       </div>
     </>
   );

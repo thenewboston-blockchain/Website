@@ -20,7 +20,7 @@ const DashboardLayout: FC<ComponentProps> = ({children, pageName, sectionName}) 
   return (
     <div className="DashboardLayout">
       <BreadcrumbMenu
-        className="DashboardLayout__breadcrumbs"
+        className="DashboardLayout__BreadcrumbMenu"
         menuItems={<DocsMenuItems />}
         pageName={pageName}
         sectionName={sectionName}

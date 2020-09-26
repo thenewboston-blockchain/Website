@@ -36,7 +36,7 @@ const TimeFilter: FC<ComponentProps> = ({className, selectedFilter, setSelectedF
   return (
     <div className={clsx('TimeFilter', className)}>
       <h2>Top Contributors</h2>
-      <div className="TimeFilter__dropdown-menu">{renderOptions()}</div>
+      <div className="TimeFilter__option-container">{renderOptions()}</div>
     </div>
   );
 };

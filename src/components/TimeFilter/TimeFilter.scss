@@ -6,12 +6,6 @@
     white-space: nowrap;
   }
 
-  &__dropdown-menu {
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
-  }
-
   &__option {
     color: var(--color-sail-gray-400);
     cursor: pointer;
@@ -30,5 +24,11 @@
     &--active {
       color: var(--color-primary);
     }
+  }
+
+  &__option-container {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
   }
 }

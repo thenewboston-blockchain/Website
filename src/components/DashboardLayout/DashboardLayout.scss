@@ -4,7 +4,7 @@
   height: 100%;
   overflow: hidden;
 
-  &__breadcrumbs {
+  &__BreadcrumbMenu {
     display: none;
   }
 
@@ -24,7 +24,7 @@
     grid-template-columns: auto;
     grid-template-rows: fit-content(0) auto;
 
-    &__breadcrumbs {
+    &__BreadcrumbMenu {
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
       display: block;
       grid-column: 1 / span 1;
