@@ -121,6 +121,14 @@
   }
 
   @media (max-width: 768px) {
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 8px 20px 8px rgba(85, 108, 214, 0.18);
+      transform: scale(1.003);
+    }
+
     &__account-details {
       display: none;
     }
