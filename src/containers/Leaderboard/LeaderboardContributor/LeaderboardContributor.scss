@@ -86,6 +86,7 @@
     }
   }
 
+  &__slide-up-user-login,
   &__user-login {
     display: block;
     font-family: var(--font-family-inter-medium);
@@ -117,6 +118,14 @@
       align-items: center;
       display: flex;
       justify-content: space-between;
+    }
+
+    &__slide-up-account-details {
+      display: flex;
+    }
+
+    &__slide-up-right {
+      margin-left: 12px;
     }
 
     &__TotalAmount__amount {

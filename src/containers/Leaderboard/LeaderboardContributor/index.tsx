@@ -71,12 +71,28 @@ const LeaderboardContributor: FC<ComponentProps> = ({
 
   const renderSlideUp = () => {
     if (!displaySlideUp) return null;
-    return (
-      <SlideUp close={() => setDisplaySlideUp(false)}>
-        <h1>What</h1>
-      </SlideUp>
-    );
+    return <SlideUp close={() => setDisplaySlideUp(false)}>{renderSlideUpAccountDetails()}</SlideUp>;
   };
+
+  const renderSlideUpAccountDetails = () => (
+    <div className="LeaderboardContributor__slide-up-account-details">
+      <div>
+        <img className="LeaderboardContributor__user-avatar" src={github_avatar_url} alt={github_username} />
+      </div>
+      <div className="LeaderboardContributor__slide-up-right">
+        <A className="LeaderboardContributor__slide-up-user-login" href={`https://github.com/${github_username}`}>
+          {github_username}
+        </A>
+        <CopyableAccountNumber
+          accountNumber={account_number}
+          className="LeaderboardContributor__CopyableAccountNumber"
+        />
+        <div className="LeaderboardContributor__qr-container">
+          <Qr text={account_number} width={80} />
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <>
