@@ -1,11 +1,11 @@
 .SlideUpAccountDetails {
-  &__account-details {
-    display: flex;
-    justify-content: center;
-  }
-
   &__CopyableAccountNumber {
     margin-top: 12px;
+  }
+
+  &__inner-wrapper {
+    display: flex;
+    justify-content: center;
   }
 
   &__qr-container {

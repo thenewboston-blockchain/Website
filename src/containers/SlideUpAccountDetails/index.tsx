@@ -12,24 +12,25 @@ interface ComponentProps {
 }
 
 const SlideUpAccountDetails: FC<ComponentProps> = ({account_number, close, github_avatar_url, github_username}) => {
+  const renderRight = () => (
+    <div className="SlideUpAccountDetails__right">
+      <A className="SlideUpAccountDetails__user-login" href={`https://github.com/${github_username}`}>
+        {github_username}
+      </A>
+      <CopyableAccountNumber accountNumber={account_number} className="SlideUpAccountDetails__CopyableAccountNumber" />
+      <div className="SlideUpAccountDetails__qr-container">
+        <Qr text={account_number} width={80} />
+      </div>
+    </div>
+  );
+
   return (
     <SlideUp className="SlideUpAccountDetails__SlideUp" close={close}>
-      <div className="SlideUpAccountDetails__account-details">
+      <div className="SlideUpAccountDetails__inner-wrapper">
         <div>
           <img className="SlideUpAccountDetails__user-avatar" src={github_avatar_url} alt={github_username} />
         </div>
-        <div className="SlideUpAccountDetails__right">
-          <A className="SlideUpAccountDetails__user-login" href={`https://github.com/${github_username}`}>
-            {github_username}
-          </A>
-          <CopyableAccountNumber
-            accountNumber={account_number}
-            className="SlideUpAccountDetails__CopyableAccountNumber"
-          />
-          <div className="SlideUpAccountDetails__qr-container">
-            <Qr text={account_number} width={80} />
-          </div>
-        </div>
+        {renderRight()}
       </div>
     </SlideUp>
   );
