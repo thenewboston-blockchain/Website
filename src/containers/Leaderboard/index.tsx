@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import sub from 'date-fns/sub';
 
-import {BreadcrumbMenu, EmptyPage, RepositoryFilter, TimeFilter} from 'components';
+import {BreadcrumbMenu, EmptyPage, RepositoryFilter, SlideUp, TimeFilter} from 'components';
 import {
   Contributor,
   ContributorWithTasks,
@@ -119,13 +119,18 @@ const Leaderboard = () => {
   );
 
   return (
-    <div className="Leaderboard">
-      {renderTopSections()}
-      <div className="Leaderboard__LeftMenu">
-        <RepositoryFilter className="Leaderboard__RepositoryFilter" />
+    <>
+      <div className="Leaderboard">
+        <SlideUp>
+          <h1>Hey</h1>
+        </SlideUp>
+        {renderTopSections()}
+        <div className="Leaderboard__LeftMenu">
+          <RepositoryFilter className="Leaderboard__RepositoryFilter" />
+        </div>
+        <div className="Leaderboard__ContributorList">{renderContributors()}</div>
       </div>
-      <div className="Leaderboard__ContributorList">{renderContributors()}</div>
-    </div>
+    </>
   );
 };
 
