@@ -7,12 +7,13 @@ import {Icon, IconType, Shadow} from 'components';
 import './BreadcrumbMenu.scss';
 
 interface ComponentProps {
+  className?: string;
   menuItems: ReactNode;
   pageName: string;
   sectionName: string;
 }
 
-const BreadcrumbMenu: FC<ComponentProps> = ({menuItems, pageName, sectionName}) => {
+const BreadcrumbMenu: FC<ComponentProps> = ({className, menuItems, pageName, sectionName}) => {
   const {pathname} = useLocation();
   const [open, setOpen] = useState(false);
 
@@ -61,7 +62,7 @@ const BreadcrumbMenu: FC<ComponentProps> = ({menuItems, pageName, sectionName}) 
   };
 
   return (
-    <div className="BreadcrumbMenu">
+    <div className={clsx('BreadcrumbMenu', className)}>
       {renderBreadcrumbBar()}
       {renderDropdownMenu()}
     </div>

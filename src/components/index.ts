@@ -20,6 +20,7 @@ import Pagination from './Pagination';
 import RepositoryFilter from './RepositoryFilter';
 import Qr from './Qr';
 import Shadow from './Shadow';
+import SlideUp from './SlideUp';
 import StepIndicator from './StepIndicator';
 import {TableBorderGrid, TableParams, TableVertical} from './Table';
 import TimeFilter from './TimeFilter';
@@ -56,6 +57,7 @@ export {
   RepositoryFilter,
   RequestResponseSnippet,
   Shadow,
+  SlideUp,
   SnippetLang,
   StepIndicator,
   TableBorderGrid,

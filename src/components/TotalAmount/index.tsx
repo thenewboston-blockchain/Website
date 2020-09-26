@@ -1,6 +1,8 @@
 import React, {FC} from 'react';
 import clsx from 'clsx';
 
+import {getCustomClassNames} from 'utils/components';
+
 import './TotalAmount.scss';
 
 interface ComponentProps {
@@ -12,8 +14,10 @@ interface ComponentProps {
 const TotalAmount: FC<ComponentProps> = ({amount, className, title}) => {
   return (
     <div className={clsx('TotalAmount', className)}>
-      <div className="TotalAmount__title">{title}</div>
-      <div className="TotalAmount__amount">{amount.toLocaleString()}</div>
+      <div className={clsx('TotalAmount__title', {...getCustomClassNames(className, '__title', true)})}>{title}</div>
+      <div className={clsx('TotalAmount__amount', {...getCustomClassNames(className, '__amount', true)})}>
+        {amount.toLocaleString()}
+      </div>
     </div>
   );
 };

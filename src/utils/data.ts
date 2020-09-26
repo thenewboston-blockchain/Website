@@ -1,5 +1,5 @@
 import parse from 'date-fns/parse';
-import {Contributor, Task, TaskDict, RawTask} from 'types/github';
+import {Contributor, RawTask, Task, TaskDict} from 'types/github';
 
 import contributors from 'data/contributors.json';
 import tasks from 'data/tasks.json';

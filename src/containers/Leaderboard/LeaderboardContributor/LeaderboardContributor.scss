@@ -1,11 +1,28 @@
 .LeaderboardContributor {
-  border-bottom: 1px solid #e3e8ee;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(85, 108, 214, 0.18);
   display: flex;
-  margin: 0 24px;
-  padding: 24px 0;
+  font-size: var(--font-size-small);
+  line-height: 125%;
+  margin: 0 24px 12px;
+  padding: 12px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:first-of-type {
+    margin-top: 24px;
+  }
 
   &:last-of-type {
     border-bottom: none;
+  }
+
+  &__account-details {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
   }
 
   &__ContributorTasks {
@@ -17,42 +34,120 @@
     margin-top: 12px;
   }
 
-  &__qr-container {
-    margin-top: 6px;
+  &__main-details {
+    display: flex;
+    justify-content: space-between;
   }
 
-  &__rank {
-    align-items: center;
-    display: flex;
-    font-size: 20px;
+  &__qr-container {
+    margin-top: 12px;
+  }
+
+  &__right {
+    flex: 1;
+    margin-left: 24px;
   }
 
   &__TotalAmount {
-    margin-left: 32px;
+    align-items: flex-end;
+    display: flex;
+    flex-basis: 150px;
+    flex-direction: column;
+    line-height: 1;
+    margin-left: 40px;
   }
 
   &__user-avatar {
-    border-radius: 6px;
+    border-radius: 50%;
     height: auto;
-    margin-left: 32px;
-    max-width: 210px;
+    max-width: 178px;
   }
 
-  &__user-details {
+  &__user-avatar-container {
+    position: relative;
+  }
+
+  &__user-avatar-rank {
+    align-items: center;
+    background-color: var(--color-sail-gray-100);
+    border: 2px solid var(--color-white);
+    border-radius: 50%;
+    color: var(--color-primary);
     display: flex;
-    flex-basis: 270px;
-    flex-direction: column;
-    margin-left: 18px;
+    font-size: 20px;
+    height: 42px;
+    justify-content: center;
+    position: absolute;
+    width: 42px;
+
+    &--top-3 {
+      background-color: var(--color-tertiary);
+      color: var(--color-white);
+    }
   }
 
   &__user-login {
-    color: var(--color-github-blue);
+    display: block;
     font-family: var(--font-family-inter-medium);
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
+    line-height: 125%;
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    &__ContributorTasks {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 8px 20px 8px rgba(85, 108, 214, 0.18);
+      transform: scale(1.003);
+    }
+
+    &__account-details {
+      display: none;
+    }
+
+    &__ContributorTasks {
+      display: none;
+    }
+
+    &__right {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__TotalAmount__amount {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    &__TotalAmount__title {
+      display: none;
+    }
+
+    &__user-avatar {
+      max-width: 54px;
+    }
+
+    &__user-avatar-rank {
+      font-size: 14px;
+      height: 24px;
+      width: 24px;
+    }
+
+    &__user-login {
+      font-size: 14px;
     }
   }
 }
