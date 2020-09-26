@@ -1,0 +1,38 @@
+import React, {FC} from 'react';
+
+import {A, CopyableAccountNumber, Qr, SlideUp} from 'components';
+
+import './SlideUpAccountDetails.scss';
+
+interface ComponentProps {
+  account_number: string;
+  close(): void;
+  github_avatar_url: string;
+  github_username: string;
+}
+
+const SlideUpAccountDetails: FC<ComponentProps> = ({account_number, close, github_avatar_url, github_username}) => {
+  return (
+    <SlideUp className="SlideUpAccountDetails__SlideUp" close={close}>
+      <div className="SlideUpAccountDetails__account-details">
+        <div>
+          <img className="SlideUpAccountDetails__user-avatar" src={github_avatar_url} alt={github_username} />
+        </div>
+        <div className="SlideUpAccountDetails__right">
+          <A className="SlideUpAccountDetails__user-login" href={`https://github.com/${github_username}`}>
+            {github_username}
+          </A>
+          <CopyableAccountNumber
+            accountNumber={account_number}
+            className="SlideUpAccountDetails__CopyableAccountNumber"
+          />
+          <div className="SlideUpAccountDetails__qr-container">
+            <Qr text={account_number} width={80} />
+          </div>
+        </div>
+      </div>
+    </SlideUp>
+  );
+};
+
+export default SlideUpAccountDetails;

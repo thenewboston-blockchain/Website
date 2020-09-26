@@ -1,7 +1,8 @@
 import React, {FC, useState} from 'react';
 import clsx from 'clsx';
 
-import {A, ContributorTasks, CopyableAccountNumber, Qr, SlideUp, TotalAmount} from 'components';
+import {A, ContributorTasks, CopyableAccountNumber, Qr, TotalAmount} from 'components';
+import SlideUpAccountDetails from 'containers/SlideUpAccountDetails';
 import {Task} from 'types/github';
 
 import './LeaderboardContributor.scss';
@@ -71,28 +72,15 @@ const LeaderboardContributor: FC<ComponentProps> = ({
 
   const renderSlideUp = () => {
     if (!displaySlideUp) return null;
-    return <SlideUp close={() => setDisplaySlideUp(false)}>{renderSlideUpAccountDetails()}</SlideUp>;
+    return (
+      <SlideUpAccountDetails
+        account_number={account_number}
+        close={() => setDisplaySlideUp(false)}
+        github_avatar_url={github_avatar_url}
+        github_username={github_username}
+      />
+    );
   };
-
-  const renderSlideUpAccountDetails = () => (
-    <div className="LeaderboardContributor__slide-up-account-details">
-      <div>
-        <img className="LeaderboardContributor__slide-up-user-avatar" src={github_avatar_url} alt={github_username} />
-      </div>
-      <div className="LeaderboardContributor__slide-up-right">
-        <A className="LeaderboardContributor__slide-up-user-login" href={`https://github.com/${github_username}`}>
-          {github_username}
-        </A>
-        <CopyableAccountNumber
-          accountNumber={account_number}
-          className="LeaderboardContributor__CopyableAccountNumber"
-        />
-        <div className="LeaderboardContributor__qr-container">
-          <Qr text={account_number} width={80} />
-        </div>
-      </div>
-    </div>
-  );
 
   return (
     <>

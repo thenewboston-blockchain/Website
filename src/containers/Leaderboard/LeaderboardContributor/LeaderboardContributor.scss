@@ -48,21 +48,6 @@
     margin-left: 24px;
   }
 
-  &__slide-up-account-details {
-    display: flex;
-    justify-content: center;
-  }
-
-  &__slide-up-right {
-    margin-left: 12px;
-  }
-
-  &__slide-up-user-avatar {
-    border-radius: 50%;
-    height: auto;
-    max-width: 54px;
-  }
-
   &__TotalAmount {
     align-items: flex-end;
     display: flex;
@@ -101,7 +86,6 @@
     }
   }
 
-  &__slide-up-user-login,
   &__user-login {
     display: block;
     font-family: var(--font-family-inter-medium);

@@ -1,0 +1,41 @@
+.SlideUpAccountDetails {
+  &__account-details {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__CopyableAccountNumber {
+    margin-top: 12px;
+  }
+
+  &__qr-container {
+    margin-top: 12px;
+  }
+
+  &__right {
+    margin-left: 12px;
+  }
+
+  &__SlideUp {
+    font-size: var(--font-size-small);
+    line-height: 125%;
+  }
+
+  &__user-avatar {
+    border-radius: 50%;
+    height: auto;
+    max-width: 54px;
+  }
+
+  &__user-login {
+    display: block;
+    font-family: var(--font-family-inter-medium);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 125%;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
