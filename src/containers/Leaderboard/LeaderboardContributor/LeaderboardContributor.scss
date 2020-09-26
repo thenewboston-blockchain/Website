@@ -48,6 +48,21 @@
     margin-left: 24px;
   }
 
+  &__slide-up-account-details {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__slide-up-right {
+    margin-left: 12px;
+  }
+
+  &__slide-up-user-avatar {
+    border-radius: 50%;
+    height: auto;
+    max-width: 54px;
+  }
+
   &__TotalAmount {
     align-items: flex-end;
     display: flex;
@@ -118,14 +133,6 @@
       align-items: center;
       display: flex;
       justify-content: space-between;
-    }
-
-    &__slide-up-account-details {
-      display: flex;
-    }
-
-    &__slide-up-right {
-      margin-left: 12px;
     }
 
     &__TotalAmount__amount {

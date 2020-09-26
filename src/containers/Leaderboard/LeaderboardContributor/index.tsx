@@ -77,7 +77,7 @@ const LeaderboardContributor: FC<ComponentProps> = ({
   const renderSlideUpAccountDetails = () => (
     <div className="LeaderboardContributor__slide-up-account-details">
       <div>
-        <img className="LeaderboardContributor__user-avatar" src={github_avatar_url} alt={github_username} />
+        <img className="LeaderboardContributor__slide-up-user-avatar" src={github_avatar_url} alt={github_username} />
       </div>
       <div className="LeaderboardContributor__slide-up-right">
         <A className="LeaderboardContributor__slide-up-user-login" href={`https://github.com/${github_username}`}>
