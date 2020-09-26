@@ -72,4 +72,20 @@
     font-family: var(--font-family-inter);
     font-weight: normal;
   }
+
+  @media (max-width: 1400px) {
+    // Repository
+    td:nth-child(2),
+    th:nth-child(2) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    // Completed
+    td:nth-child(3),
+    th:nth-child(3) {
+      display: none;
+    }
+  }
 }
