@@ -1,6 +1,7 @@
 .TimeFilter {
   display: flex;
   justify-content: space-between;
+  z-index: 1;
 
   h2 {
     white-space: nowrap;
