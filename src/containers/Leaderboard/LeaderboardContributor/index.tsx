@@ -25,7 +25,8 @@ const LeaderboardContributor: FC<ComponentProps> = ({
 }) => {
   const [displaySlideUp, setDisplaySlideUp] = useState(false);
 
-  const handleClick = (): void => {
+  const handleClick = (e: any): void => {
+    if (e.target.nodeName === 'A') return;
     if (window.innerWidth > 768) return;
     setDisplaySlideUp(true);
   };
