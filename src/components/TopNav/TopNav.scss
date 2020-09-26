@@ -1,8 +1,9 @@
 .TopNav {
   align-items: center;
-  background: white;
+  background: var(--color-white);
   display: flex;
   height: 60px;
+  z-index: 1;
 
   &__download-button {
     margin-right: 24px;

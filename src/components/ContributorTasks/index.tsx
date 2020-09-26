@@ -31,17 +31,19 @@ const ContributorTasks: FC<ComponentProps> = ({className, tasks}) => {
   };
 
   return (
-    <table className={clsx('ContributorTasks', className)}>
-      <thead>
-        <tr>
-          <th>Recent Task</th>
-          <th>Repository</th>
-          <th>Completed</th>
-          <th>Amount</th>
-        </tr>
-      </thead>
-      <tbody>{renderRows()}</tbody>
-    </table>
+    <div className={clsx('ContributorTasks', className)}>
+      <table>
+        <thead>
+          <tr>
+            <th>Recent Task</th>
+            <th>Repository</th>
+            <th>Completed</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>{renderRows()}</tbody>
+      </table>
+    </div>
   );
 };
 

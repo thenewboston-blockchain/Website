@@ -1,4 +1,12 @@
 .TimeFilter {
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+
+  h2 {
+    white-space: nowrap;
+  }
+
   &__option {
     color: var(--color-sail-gray-400);
     cursor: pointer;
@@ -17,5 +25,11 @@
     &--active {
       color: var(--color-primary);
     }
+  }
+
+  &__option-container {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
   }
 }

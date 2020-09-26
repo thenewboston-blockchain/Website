@@ -1,6 +1,6 @@
 .CopyableAccountNumber {
   $self: &;
-  max-width: 270px;
+  max-width: 240px;
 
   &__account-number {
     word-break: break-word;
@@ -24,7 +24,7 @@
   }
 
   &__label {
-    color: var(--color-sail-gray-400);
+    color: var(--color-sail-gray-500);
   }
 
   &__top {
