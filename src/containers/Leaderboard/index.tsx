@@ -112,9 +112,7 @@ const Leaderboard = () => {
         pageName={repository}
         sectionName="Leaderboard"
       />
-      <div className="Leaderboard__TopContributorsFilterHeader">
-        <TimeFilter className="Leaderboard__TimeFilter" selectedFilter={timeFilter} setSelectedFilter={setTimeFilter} />
-      </div>
+      <TimeFilter className="Leaderboard__TimeFilter" selectedFilter={timeFilter} setSelectedFilter={setTimeFilter} />
     </>
   );
 
