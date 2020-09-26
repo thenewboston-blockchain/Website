@@ -99,4 +99,43 @@
       display: none;
     }
   }
+
+  @media (max-width: 768px) {
+    &__account-details {
+      display: none;
+    }
+
+    &__ContributorTasks {
+      display: none;
+    }
+
+    &__right {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__TotalAmount__amount {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    &__TotalAmount__title {
+      display: none;
+    }
+
+    &__user-avatar {
+      max-width: 54px;
+    }
+
+    &__user-avatar-rank {
+      font-size: 14px;
+      height: 24px;
+      width: 24px;
+    }
+
+    &__user-login {
+      font-size: 14px;
+    }
+  }
 }
