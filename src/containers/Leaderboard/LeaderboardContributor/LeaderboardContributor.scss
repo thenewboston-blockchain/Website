@@ -7,6 +7,10 @@
   margin: 0 24px 12px;
   padding: 12px;
 
+  &:focus {
+    outline: none;
+  }
+
   &:first-of-type {
     margin-top: 24px;
   }

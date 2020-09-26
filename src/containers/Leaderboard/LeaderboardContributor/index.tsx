@@ -1,7 +1,7 @@
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
 import clsx from 'clsx';
 
-import {A, ContributorTasks, CopyableAccountNumber, Qr, TotalAmount} from 'components';
+import {A, ContributorTasks, CopyableAccountNumber, Qr, SlideUp, TotalAmount} from 'components';
 import {Task} from 'types/github';
 
 import './LeaderboardContributor.scss';
@@ -23,6 +23,13 @@ const LeaderboardContributor: FC<ComponentProps> = ({
   tasks,
   total_earnings,
 }) => {
+  const [displaySlideUp, setDisplaySlideUp] = useState(false);
+
+  const handleClick = (): void => {
+    if (window.innerWidth > 768) return;
+    setDisplaySlideUp(true);
+  };
+
   const renderAvatar = () => (
     <div className="LeaderboardContributor__user-avatar-container">
       <div
@@ -61,11 +68,23 @@ const LeaderboardContributor: FC<ComponentProps> = ({
     </div>
   );
 
+  const renderSlideUp = () => {
+    if (!displaySlideUp) return null;
+    return (
+      <SlideUp close={() => setDisplaySlideUp(false)}>
+        <h1>What</h1>
+      </SlideUp>
+    );
+  };
+
   return (
-    <div className="LeaderboardContributor">
-      {renderAvatar()}
-      {renderRight()}
-    </div>
+    <>
+      {renderSlideUp()}
+      <div className="LeaderboardContributor" onClick={handleClick} role="button" tabIndex={0}>
+        {renderAvatar()}
+        {renderRight()}
+      </div>
+    </>
   );
 };
 
