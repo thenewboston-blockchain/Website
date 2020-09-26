@@ -19,7 +19,7 @@ const TimeFilter: FC<ComponentProps> = ({className, selectedFilter, setSelectedF
 
   const renderOptions = () => {
     return [Time.days7, Time.days30, Time.all].map((option) => (
-      <span
+      <div
         className={clsx('TimeFilter__option', {
           'TimeFilter__option--active': option === selectedFilter,
         })}
@@ -29,11 +29,16 @@ const TimeFilter: FC<ComponentProps> = ({className, selectedFilter, setSelectedF
         tabIndex={0}
       >
         {option}
-      </span>
+      </div>
     ));
   };
 
-  return <div className={clsx('TimeFilter', className)}>{renderOptions()}</div>;
+  return (
+    <div className={clsx('TimeFilter', className)}>
+      <h2>Top Contributors</h2>
+      <div className="TimeFilter__dropdown-menu">{renderOptions()}</div>
+    </div>
+  );
 };
 
 export default TimeFilter;

@@ -1,4 +1,17 @@
 .TimeFilter {
+  display: flex;
+  justify-content: space-between;
+
+  h2 {
+    white-space: nowrap;
+  }
+
+  &__dropdown-menu {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
   &__option {
     color: var(--color-sail-gray-400);
     cursor: pointer;

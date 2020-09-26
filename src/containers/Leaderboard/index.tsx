@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import sub from 'date-fns/sub';
 
-import {EmptyPage, RepositoryFilter, TimeFilter} from 'components';
+import {BreadcrumbMenu, EmptyPage, RepositoryFilter, TimeFilter} from 'components';
 import {
   Contributor,
   ContributorWithTasks,
@@ -21,7 +21,7 @@ import './Leaderboard.scss';
 
 const timeFilterMap = {
   [Time.days7]: 7,
-  [Time.days30]: 730,
+  [Time.days30]: 30,
   [Time.all]: null,
 };
 
@@ -104,11 +104,27 @@ const Leaderboard = () => {
       ));
   };
 
+  const renderTopSections = () => (
+    <>
+      <BreadcrumbMenu
+        className="Leaderboard__BreadcrumbMenu"
+        menuItems={<RepositoryFilter className="Leaderboard__RepositoryFilter" />}
+        pageName={repository}
+        sectionName="Leaderboard"
+      />
+      <div className="Leaderboard__TopContributorsFilterHeader">
+        <TimeFilter className="Leaderboard__TimeFilter" selectedFilter={timeFilter} setSelectedFilter={setTimeFilter} />
+      </div>
+    </>
+  );
+
   return (
     <div className="Leaderboard">
-      <TimeFilter className="Leaderboard__TimeFilter" selectedFilter={timeFilter} setSelectedFilter={setTimeFilter} />
-      <RepositoryFilter className="Leaderboard__RepositoryFilter" />
-      <div className="Leaderboard__contributor-list">{renderContributors()}</div>
+      {renderTopSections()}
+      <div className="Leaderboard__LeftMenu">
+        <RepositoryFilter className="Leaderboard__RepositoryFilter" />
+      </div>
+      <div className="Leaderboard__ContributorList">{renderContributors()}</div>
     </div>
   );
 };
