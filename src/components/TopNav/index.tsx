@@ -7,6 +7,7 @@ import clsx from 'clsx';
 
 import {Button, Icon, IconType, Shadow} from 'components';
 import {Repository} from 'types/github';
+import {OpeningCategory} from 'types/openings';
 
 import TopNavDropdownMenuItem from './TopNavDropdownMenuItem';
 import TopNavLogo from './TopNavLogo';
@@ -43,6 +44,12 @@ const leaderboardProps = {
   url: `/leaderboard/${Repository.all}`,
 };
 
+const openingsProps = {
+  activePatterns: ['/openings'],
+  name: 'Openings',
+  url: `/openings/${OpeningCategory.all}`,
+};
+
 const tasksProps = {
   activePatterns: ['/tasks'],
   name: 'Tasks',
@@ -51,6 +58,7 @@ const tasksProps = {
 
 const TopNav: FC<ComponentProps> = ({className}) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+
   const ref = useOnclickOutside(() => {
     setDropdownOpen(false);
   });
@@ -63,6 +71,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
         <div className="TopNav__dropdown-menu-item-container">
           <TopNavDropdownMenuItem {...leaderboardProps} />
           <TopNavDropdownMenuItem {...tasksProps} />
+          <TopNavDropdownMenuItem {...openingsProps} />
           <TopNavDropdownMenuItem {...docsProps} />
           <TopNavDropdownMenuItem {...helpProps} />
           <TopNavDropdownMenuItem activePatterns={['/download']} name="Download" url="/download" />
@@ -75,6 +84,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
     <>
       <TopNavMenuItem {...leaderboardProps} />
       <TopNavMenuItem {...tasksProps} />
+      <TopNavMenuItem {...openingsProps} />
       <TopNavMenuItem {...docsProps} />
       <TopNavMenuItem {...helpProps} />
       <NavLink className="TopNav__download-button" to="/download">

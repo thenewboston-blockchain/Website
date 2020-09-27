@@ -2,6 +2,7 @@ import React, {FC, ReactNode} from 'react';
 import {NavLink} from 'react-router-dom';
 
 import {A, Button, MarketingButton, StepIndicator} from 'components';
+import {SocialMedia} from 'types/social-media';
 import './Help.scss';
 
 const Help: FC = () => {
@@ -83,9 +84,9 @@ const Help: FC = () => {
     <div className="Help__step-one">
       <StepIndicator className="Help__StepIndicator" number={1} text="Join the community" />
       <div className="Help__button-container">
-        <MarketingButton website="slack" />
-        <MarketingButton website="github" />
-        <MarketingButton website="reddit" />
+        <MarketingButton website={SocialMedia.slack} />
+        <MarketingButton website={SocialMedia.github} />
+        <MarketingButton website={SocialMedia.reddit} />
         <NavLink to="/guide/introduction">
           <Button className="Help__doc-button">View Guide</Button>
         </NavLink>
