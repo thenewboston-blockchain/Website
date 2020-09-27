@@ -1,5 +1,6 @@
 export interface Opening {
   description: string;
+  payNotes: string[];
   position: string;
   reportsTo: Reportee[];
   responsibilities: string[];

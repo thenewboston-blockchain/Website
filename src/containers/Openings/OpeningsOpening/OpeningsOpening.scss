@@ -45,6 +45,14 @@
     margin-right: 4px;
   }
 
+  &__github-username-link {
+    color: var(--color-secondary);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &__list-label {
     font-family: var(--font-family-inter-medium);
     margin-top: 16px;

@@ -1,10 +1,18 @@
 import React, {FC, useState} from 'react';
 
+import {A} from 'components';
 import Icon, {IconType} from 'components/Icon';
 import {Opening} from 'types/openings';
 import './OpeningsOpening.scss';
 
-const OpeningsOpening: FC<Opening> = ({description, position, reportsTo, responsibilities, technologyRequirements}) => {
+const OpeningsOpening: FC<Opening> = ({
+  description,
+  payNotes,
+  position,
+  reportsTo,
+  responsibilities,
+  technologyRequirements,
+}) => {
   const [expanded, setExpanded] = useState(false);
 
   const renderExpandCollapseToggle = () => (
@@ -27,8 +35,32 @@ const OpeningsOpening: FC<Opening> = ({description, position, reportsTo, respons
     <>
       {renderStringList(responsibilities, 'Responsibilities')}
       {renderStringList(technologyRequirements, 'Technology Requirements')}
+      {renderReportsToList()}
+      {renderStringList(payNotes, 'Pay')}
     </>
   );
+
+  const renderReportsToList = () => {
+    const listItems = reportsTo.map(({githubUsername, name}) => (
+      <li key={name}>
+        {name}{' '}
+        {githubUsername && (
+          <>
+            <span>-</span>{' '}
+            <A className="OpeningsOpening__github-username-link" href={`https://github.com/${githubUsername}`}>
+              {githubUsername}
+            </A>
+          </>
+        )}
+      </li>
+    ));
+    return (
+      <>
+        <div className="OpeningsOpening__list-label">Reports To</div>
+        <ul className="OpeningsOpening__ul">{listItems}</ul>
+      </>
+    );
+  };
 
   const renderStringList = (listData: string[], listLabel: string) => {
     const listItems = listData.map((item: string) => <li key={item}>{item}</li>);
