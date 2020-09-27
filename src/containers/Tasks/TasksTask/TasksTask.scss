@@ -65,4 +65,11 @@
       color: var(--color-github-blue);
     }
   }
+
+  @media (max-width: 768px) {
+    // Assignees
+    &__middle {
+      display: none;
+    }
+  }
 }
