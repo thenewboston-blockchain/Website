@@ -12,6 +12,8 @@ import ContentCopyIcon from 'mdi-react/ContentCopyIcon';
 import LoadingIcon from 'mdi-react/LoadingIcon';
 import MenuIcon from 'mdi-react/MenuIcon';
 import MenuRightIcon from 'mdi-react/MenuRightIcon';
+import MinusIcon from 'mdi-react/MinusIcon';
+import PlusIcon from 'mdi-react/PlusIcon';
 import ThumbsUpIcon from 'mdi-react/ThumbsUpIcon';
 
 import {getCustomClassNames} from 'utils/components';
@@ -27,6 +29,8 @@ export enum IconType {
   loading,
   menu,
   menuRight,
+  minus,
+  plus,
   thumbsUp,
 }
 
@@ -62,6 +66,10 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
         return <MenuIcon {...iconProps} />;
       case IconType.menuRight:
         return <MenuRightIcon {...iconProps} />;
+      case IconType.minus:
+        return <MinusIcon {...iconProps} />;
+      case IconType.plus:
+        return <PlusIcon {...iconProps} />;
       case IconType.thumbsUp:
         return <ThumbsUpIcon {...iconProps} />;
       default:

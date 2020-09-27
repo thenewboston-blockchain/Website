@@ -1,0 +1,95 @@
+.OpeningsOpening {
+  $self: &;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(85, 108, 214, 0.18);
+  display: flex;
+  flex-direction: column;
+  margin: 0 24px 12px;
+  padding: 16px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:first-of-type {
+    margin-top: 12px;
+  }
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  &__A {
+    color: var(--color-secondary);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__application-method-container {
+    margin-bottom: 16px;
+  }
+
+  &__application-method-note {
+    color: var(--color-sail-gray-500);
+  }
+
+  &__application-method-row {
+    align-items: center;
+    display: flex;
+    margin-top: 12px;
+
+    &:first-of-type {
+      margin-top: 16px;
+    }
+  }
+
+  &__description {
+    margin-top: 12px;
+  }
+
+  &__expand-collapse-container {
+    align-items: center;
+    color: var(--color-secondary);
+    cursor: pointer;
+    display: flex;
+    margin-top: 12px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      #{$self}__expand-collapse-text {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__expand-collapse-icon {
+    margin-right: 4px;
+  }
+
+  &__list-label {
+    font-family: var(--font-family-inter-medium);
+    margin-top: 16px;
+  }
+
+  &__MarketingButton {
+    margin-right: 12px;
+    width: 140px;
+  }
+
+  &__position {
+    color: var(--color-primary);
+    display: block;
+    font-family: var(--font-family-inter-medium);
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__ul {
+    margin-top: 4px;
+  }
+}
