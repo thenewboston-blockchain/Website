@@ -23,7 +23,7 @@ const Openings = () => {
     filteredOpenings =
       categoryFilter === OpeningCategory.all
         ? filteredOpenings
-        : filteredOpenings.filter(({categoryName}) => categoryName === categoryFilter);
+        : filteredOpenings.filter(({categories}) => categories.includes(categoryFilter));
 
     return filteredOpenings;
   };
@@ -34,7 +34,7 @@ const Openings = () => {
     return filteredOpenings.map(
       ({
         applicationMethods,
-        categoryName,
+        categories,
         description,
         payNotes,
         position,
@@ -44,7 +44,7 @@ const Openings = () => {
       }) => (
         <OpeningsOpening
           applicationMethods={applicationMethods}
-          categoryName={categoryName}
+          categories={categories}
           description={description}
           key={position}
           payNotes={payNotes}

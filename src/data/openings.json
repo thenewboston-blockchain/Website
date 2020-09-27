@@ -18,7 +18,7 @@
         "channel": "reddit"
       }
     ],
-    "categoryName": "Engineering",
+    "categories": ["Engineering"],
     "description": "We're looking for an experienced Front-end engineer who is able to lead a team of junior developers. You and your team will be working primarily on the Account Manager and Website repositories to help build the UI's needed for the applications used by our community.",
     "payNotes": ["2,800 points/day", "Ineligible for task points (you will be creating tasks for your team)"],
     "position": "Front-end Team Lead",
@@ -50,6 +50,48 @@
     "applicationMethods": [
       {
         "channel": "slack",
+        "note": "Message Bucky or Justin"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "facebook"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "categories": ["Engineering"],
+    "description": "We are looking for an experienced mobile developer to fill our opening of Mobile Lead who is able to lead a team of junior developers. You will be responsible for designing the core architecture, selecting the technologies/programming languages, and choosing team members to help build the mobile application that will be used by our community and after release, the world.",
+    "payNotes": ["2,800 points/day", "Ineligible for task points (you will be creating tasks for your team)"],
+    "position": "Mobile Team Lead",
+    "reportsTo": [
+      {
+        "githubUsername": "angle943",
+        "name": "Justin"
+      }
+    ],
+    "responsibilities": [
+      "Perform code reviews",
+      "Write job descriptions",
+      "Interview new candidates",
+      "Provide guidance to other developers when assistance is needed",
+      "Coach team members on best practices and industry standards",
+      "Regular calls with Bucky, Justin, and Kristy to discuss new projects, design improvements, and future roadmap"
+    ],
+    "technologyRequirements": [
+      "Experience in mobile development",
+      "Knowledge of App Store distribution (for both Android and iOS)"
+    ]
+  },
+  {
+    "applicationMethods": [
+      {
+        "channel": "slack",
         "note": "Message Bucky or Kristy"
       },
       {
@@ -65,7 +107,7 @@
         "channel": "reddit"
       }
     ],
-    "categoryName": "Accounting",
+    "categories": ["Accounting"],
     "description": "We are looking for an Accounting Manager to be responsible for sending payments to all contributors on a weekly basis, as well as sending daily reward payments for all tasks completed by developers.",
     "payNotes": ["2,800 points/day"],
     "position": "Accounting Manager",
@@ -84,5 +126,60 @@
       "High attention to detail and accuracy"
     ],
     "technologyRequirements": ["Experience with the Account Manager desktop application (training provided)"]
+  },
+  {
+    "applicationMethods": [
+      {
+        "channel": "linkedin"
+      }
+    ],
+    "categories": ["Community", "Marketing"],
+    "description": "We are looking for a LinkedIn Manager to help manage thenewboston LinkedIn page.",
+    "payNotes": ["2,800 points/day"],
+    "position": "LinkedIn Manager",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Post relevant content / project updates frequently",
+      "Promote the page",
+      "Engage with other related communities",
+      "Respond to comments and questions from the community",
+      "Provide weekly updates to the community regarding analytics, common questions, as well as any additional relevant information"
+    ],
+    "technologyRequirements": ["LinkedIn account"]
+  },
+  {
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Kristy or Bucky"
+      }
+    ],
+    "categories": ["Community"],
+    "description": "We are looking for a Slack Community Manager to help provide guidance to any new users who join our Slack channel. As the community grows as we approach release (and especially after) there will be more users joining our Slack who will need assistance and help with questions about contributing, the project, and the community.",
+    "payNotes": ["2,800 points/day"],
+    "position": "Slack Community Manager",
+    "reportsTo": [
+      {
+        "githubUsername": "kristykjlee",
+        "name": "Kristy"
+      }
+    ],
+    "responsibilities": [
+      "Greet new users to ensure they feel welcomed",
+      "Guide new users to the correct rooms, tutorials, documentation, etc... based on what they are looking for",
+      "Answer questions from users regarding the technology, terminology, as well as guidance on how to contribute",
+      "Participate in community discussions",
+      "Post frequently regarding project updates",
+      "Create new rooms as needed"
+    ],
+    "technologyRequirements": [
+      "Slack account",
+      "Familiarity with the website and documentation (to provide to new users as needed)"
+    ]
   }
 ]

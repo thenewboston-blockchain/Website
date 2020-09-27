@@ -7,7 +7,7 @@ export interface ApplicationMethod {
 
 export interface Opening {
   applicationMethods: ApplicationMethod[];
-  categoryName: OpeningCategory;
+  categories: OpeningCategory[];
   description: string;
   payNotes: string[];
   position: string;
