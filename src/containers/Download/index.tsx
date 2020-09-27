@@ -20,15 +20,15 @@ const Download = () => {
     <div className="Download">
       {renderOS(
         'Windows',
-        'https://github.com/thenewboston-developers/Account-Manager/releases/download/v1.0.0-alpha.17/TNB-Account-Manager-1.0.0-alpha.17-win.exe',
+        'https://github.com/thenewboston-developers/Account-Manager/releases/download/v1.0.0-alpha.19/TNB-Account-Manager-1.0.0-alpha.19-win.exe',
       )}
       {renderOS(
         'Mac',
-        'https://github.com/thenewboston-developers/Account-Manager/releases/download/v1.0.0-alpha.17/TNB-Account-Manager-1.0.0-alpha.17-mac.dmg',
+        'https://github.com/thenewboston-developers/Account-Manager/releases/download/v1.0.0-alpha.19/TNB-Account-Manager-1.0.0-alpha.19-mac.dmg',
       )}
       {renderOS(
         'Linux',
-        'https://github.com/thenewboston-developers/Account-Manager/releases/download/v1.0.0-alpha.17/TNB-Account-Manager-1.0.0-alpha.17-linux.AppImage',
+        'https://github.com/thenewboston-developers/Account-Manager/releases/download/v1.0.0-alpha.19/TNB-Account-Manager-1.0.0-alpha.19-linux.AppImage',
       )}
     </div>
   );
