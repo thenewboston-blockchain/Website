@@ -16,7 +16,7 @@ const OpeningsOpening: FC<Opening> = ({
   responsibilities,
   technologyRequirements,
 }) => {
-  const [expanded, setExpanded] = useState(true);
+  const [expanded, setExpanded] = useState(false);
 
   const renderApplicationMethodList = () => {
     const customLinks = {
@@ -82,7 +82,7 @@ const OpeningsOpening: FC<Opening> = ({
         {githubUsername && (
           <>
             <span>-</span>{' '}
-            <A className="OpeningsOpening__github-username-link" href={`https://github.com/${githubUsername}`}>
+            <A className="OpeningsOpening__A" href={`https://github.com/${githubUsername}`}>
               {githubUsername}
             </A>
           </>

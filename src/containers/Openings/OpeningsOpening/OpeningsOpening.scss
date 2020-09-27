@@ -19,6 +19,14 @@
     border-bottom: none;
   }
 
+  &__A {
+    color: var(--color-secondary);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &__application-method-container {
     margin-bottom: 16px;
   }
@@ -61,14 +69,6 @@
 
   &__expand-collapse-icon {
     margin-right: 4px;
-  }
-
-  &__github-username-link {
-    color: var(--color-secondary);
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 
   &__list-label {
