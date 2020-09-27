@@ -5,10 +5,12 @@ import {A} from 'components';
 import {SocialMedia} from 'types/social-media';
 import {getCustomClassNames} from 'utils/components';
 
+import FacebookLogo from './FacebookLogo.png';
 import GitHubLogo from './GitHubLogo.png';
 import LinkedInLogo from './LinkedInLogo.png';
 import RedditLogo from './RedditLogo.png';
 import SlackLogo from './SlackLogo.png';
+import TwitterLogo from './TwitterLogo.png';
 
 import './MarketingButton.scss';
 
@@ -28,17 +30,21 @@ const MarketingButton: FC<ComponentProps> = ({className, customLink, website}) =
   );
 
   const images = {
+    facebook: renderImage(FacebookLogo),
     github: renderImage(GitHubLogo),
     linkedin: renderImage(LinkedInLogo),
     reddit: renderImage(RedditLogo),
     slack: renderImage(SlackLogo),
+    twitter: renderImage(TwitterLogo),
   };
 
   const urls = {
+    [SocialMedia.facebook]: 'https://www.facebook.com/TheNewBoston-464114846956315/',
     [SocialMedia.github]: 'https://github.com/thenewboston-developers',
     [SocialMedia.linkedin]: 'https://www.linkedin.com/company/thenewboston-developers/',
     [SocialMedia.reddit]: 'https://www.reddit.com/r/thenewboston/',
     [SocialMedia.slack]: 'https://join.slack.com/t/thenewboston/shared_invite/zt-hkw1b98m-X3oe6VPX6xenHvQeaXQbfg',
+    [SocialMedia.twitter]: 'https://twitter.com/bucky_roberts',
   };
 
   return (

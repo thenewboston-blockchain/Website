@@ -9,6 +9,12 @@
         "channel": "linkedin"
       },
       {
+        "channel": "facebook"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
         "channel": "reddit"
       }
     ],

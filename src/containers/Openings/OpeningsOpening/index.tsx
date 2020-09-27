@@ -20,10 +20,12 @@ const OpeningsOpening: FC<Opening> = ({
 
   const renderApplicationMethodList = () => {
     const customLinks = {
+      [SocialMedia.facebook]: '',
       [SocialMedia.github]: '',
       [SocialMedia.linkedin]: '',
       [SocialMedia.reddit]: 'https://www.reddit.com/message/compose?to=/r/thenewboston',
       [SocialMedia.slack]: '',
+      [SocialMedia.twitter]: '',
     };
 
     const rows = applicationMethods.map(({channel, note}: ApplicationMethod) => (
