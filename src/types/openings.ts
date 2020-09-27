@@ -1,5 +1,7 @@
+import {SocialMedia} from 'types/social-media';
+
 export interface ApplicationMethod {
-  channel: 'github' | 'reddit' | 'slack';
+  channel: SocialMedia;
   note?: string;
 }
 

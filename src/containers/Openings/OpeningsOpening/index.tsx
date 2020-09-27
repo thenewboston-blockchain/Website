@@ -2,7 +2,9 @@ import React, {FC, useState} from 'react';
 
 import {A, MarketingButton} from 'components';
 import Icon, {IconType} from 'components/Icon';
-import {Opening} from 'types/openings';
+import {ApplicationMethod, Opening} from 'types/openings';
+import {SocialMedia} from 'types/social-media';
+
 import './OpeningsOpening.scss';
 
 const OpeningsOpening: FC<Opening> = ({
@@ -17,12 +19,24 @@ const OpeningsOpening: FC<Opening> = ({
   const [expanded, setExpanded] = useState(true);
 
   const renderApplicationMethodList = () => {
-    const rows = applicationMethods.map(({channel, note}) => (
+    const customLinks = {
+      [SocialMedia.github]: '',
+      [SocialMedia.linkedin]: '',
+      [SocialMedia.reddit]: 'https://www.reddit.com/message/compose?to=/r/thenewboston',
+      [SocialMedia.slack]: '',
+    };
+
+    const rows = applicationMethods.map(({channel, note}: ApplicationMethod) => (
       <div className="OpeningsOpening__application-method-row" key={channel}>
-        <MarketingButton className="OpeningsOpening__MarketingButton" website={channel} />
+        <MarketingButton
+          className="OpeningsOpening__MarketingButton"
+          customLink={customLinks[channel]}
+          website={channel}
+        />
         {note && <span>{note}</span>}
       </div>
     ));
+
     return (
       <>
         <div className="OpeningsOpening__list-label">
