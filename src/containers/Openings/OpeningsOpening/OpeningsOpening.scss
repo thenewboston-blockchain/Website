@@ -30,7 +30,11 @@
   &__application-method-row {
     align-items: center;
     display: flex;
-    margin-top: 10px;
+    margin-top: 12px;
+
+    &:first-of-type {
+      margin-top: 16px;
+    }
   }
 
   &__description {
