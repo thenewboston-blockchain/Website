@@ -33,7 +33,7 @@ const OpeningsOpening: FC<Opening> = ({
           customLink={customLinks[channel]}
           website={channel}
         />
-        {note && <span>{note}</span>}
+        {note && <span className="OpeningsOpening__application-method-note">{note}</span>}
       </div>
     ));
 
@@ -42,7 +42,7 @@ const OpeningsOpening: FC<Opening> = ({
         <div className="OpeningsOpening__list-label">
           To apply, send us a message through any of the following channels:
         </div>
-        {rows}
+        <div className="OpeningsOpening__application-method-container">{rows}</div>
       </>
     );
   };

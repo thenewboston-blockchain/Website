@@ -6,8 +6,10 @@ import {SocialMedia} from 'types/social-media';
 import {getCustomClassNames} from 'utils/components';
 
 import GitHubLogo from './GitHubLogo.png';
+import LinkedInLogo from './LinkedInLogo.png';
 import RedditLogo from './RedditLogo.png';
 import SlackLogo from './SlackLogo.png';
+
 import './MarketingButton.scss';
 
 interface ComponentProps {
@@ -17,35 +19,19 @@ interface ComponentProps {
 }
 
 const MarketingButton: FC<ComponentProps> = ({className, customLink, website}) => {
+  const renderImage = (src: any) => (
+    <img
+      alt={website}
+      className={clsx('MarketingButton__img', {...getCustomClassNames(className, '__img', true)})}
+      src={src}
+    />
+  );
+
   const images = {
-    github: (
-      <img
-        alt={website}
-        className={clsx('MarketingButton__img', {...getCustomClassNames(className, '__img', true)})}
-        src={GitHubLogo}
-      />
-    ),
-    linkedin: (
-      <img
-        alt={website}
-        className={clsx('MarketingButton__img', {...getCustomClassNames(className, '__img', true)})}
-        src={GitHubLogo}
-      />
-    ),
-    reddit: (
-      <img
-        alt={website}
-        className={clsx('MarketingButton__img', {...getCustomClassNames(className, '__img', true)})}
-        src={RedditLogo}
-      />
-    ),
-    slack: (
-      <img
-        alt={website}
-        className={clsx('MarketingButton__img', {...getCustomClassNames(className, '__img', true)})}
-        src={SlackLogo}
-      />
-    ),
+    github: renderImage(GitHubLogo),
+    linkedin: renderImage(LinkedInLogo),
+    reddit: renderImage(RedditLogo),
+    slack: renderImage(SlackLogo),
   };
 
   const urls = {

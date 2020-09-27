@@ -2,14 +2,14 @@
   {
     "applicationMethods": [
       {
+        "channel": "slack",
+        "note": "Message Bucky or Justin"
+      },
+      {
         "channel": "linkedin"
       },
       {
         "channel": "reddit"
-      },
-      {
-        "channel": "slack",
-        "note": "Message Bucky or Justin"
       }
     ],
     "categoryName": "Engineering",

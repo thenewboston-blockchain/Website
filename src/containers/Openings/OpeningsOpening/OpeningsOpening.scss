@@ -12,17 +12,25 @@
   }
 
   &:first-of-type {
-    margin-top: 24px;
+    margin-top: 12px;
   }
 
   &:last-of-type {
     border-bottom: none;
   }
 
+  &__application-method-container {
+    margin-bottom: 16px;
+  }
+
+  &__application-method-note {
+    color: var(--color-sail-gray-500);
+  }
+
   &__application-method-row {
     align-items: center;
     display: flex;
-    margin-top: 12px;
+    margin-top: 10px;
   }
 
   &__description {
