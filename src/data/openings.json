@@ -45,5 +45,44 @@
       "Electron",
       "Webpack"
     ]
+  },
+  {
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky or Kristy"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "facebook"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "categoryName": "Accounting",
+    "description": "We are looking for an Accounting Manager to be responsible for sending payments to all contributors on a weekly basis, as well as sending daily reward payments for all tasks completed by developers.",
+    "payNotes": ["2,800 points/day"],
+    "position": "Accounting Manager",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Maintain a clear, publicly auditable history of all payments sent",
+      "Send out payments daily",
+      "Improve payment systems and procedures",
+      "Provide suggestions on how to automate repetitive tasks to improve reliability and consistency",
+      "Work with the development team to build new accounting tools and features",
+      "High attention to detail and accuracy"
+    ],
+    "technologyRequirements": ["Experience with the Account Manager desktop application (training provided)"]
   }
 ]

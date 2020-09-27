@@ -46,6 +46,7 @@ const Openings = () => {
           applicationMethods={applicationMethods}
           categoryName={categoryName}
           description={description}
+          key={position}
           payNotes={payNotes}
           position={position}
           reportsTo={reportsTo}
