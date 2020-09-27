@@ -32,9 +32,19 @@ const Openings = () => {
     const filteredOpenings = getFilteredOpenings();
     if (!filteredOpenings.length) return <EmptyPage />;
     return filteredOpenings.map(
-      ({applicationMethods, description, payNotes, position, reportsTo, responsibilities, technologyRequirements}) => (
+      ({
+        applicationMethods,
+        categoryName,
+        description,
+        payNotes,
+        position,
+        reportsTo,
+        responsibilities,
+        technologyRequirements,
+      }) => (
         <OpeningsOpening
           applicationMethods={applicationMethods}
+          categoryName={categoryName}
           description={description}
           payNotes={payNotes}
           position={position}

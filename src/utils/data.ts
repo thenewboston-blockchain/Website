@@ -1,5 +1,6 @@
 import parse from 'date-fns/parse';
 import {Contributor, RawTask, Task, TaskDict} from 'types/github';
+import {Opening} from 'types/openings';
 
 import contributors from 'data/contributors.json';
 import openings from 'data/openings.json';
@@ -9,8 +10,8 @@ export const getContributors = (): Contributor[] => {
   return contributors;
 };
 
-export const getOpenings = (): any[] => {
-  return openings;
+export const getOpenings = (): Opening[] => {
+  return openings as Opening[];
 };
 
 export const getTasks = (): TaskDict => {
