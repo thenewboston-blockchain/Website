@@ -6,6 +6,7 @@ import {Opening} from 'types/openings';
 import './OpeningsOpening.scss';
 
 const OpeningsOpening: FC<Opening> = ({
+  applicationMethods,
   description,
   payNotes,
   position,
@@ -14,6 +15,21 @@ const OpeningsOpening: FC<Opening> = ({
   technologyRequirements,
 }) => {
   const [expanded, setExpanded] = useState(false);
+
+  const renderApplicationMethodList = () => {
+    const listItems = applicationMethods.map(({channel, note}) => (
+      <li key={channel}>
+        {channel}
+        {note && <span> - {note}</span>}
+      </li>
+    ));
+    return (
+      <>
+        <div className="OpeningsOpening__list-label">Reports To</div>
+        <ul className="OpeningsOpening__ul">{listItems}</ul>
+      </>
+    );
+  };
 
   const renderExpandCollapseToggle = () => (
     <div
@@ -37,6 +53,7 @@ const OpeningsOpening: FC<Opening> = ({
       {renderStringList(technologyRequirements, 'Technology Requirements')}
       {renderReportsToList()}
       {renderStringList(payNotes, 'Pay')}
+      {renderApplicationMethodList()}
     </>
   );
 

@@ -1,15 +1,16 @@
+export interface ApplicationMethod {
+  channel: string;
+  note?: string;
+}
+
 export interface Opening {
+  applicationMethods: ApplicationMethod[];
   description: string;
   payNotes: string[];
   position: string;
   reportsTo: Reportee[];
   responsibilities: string[];
   technologyRequirements: string[];
-}
-
-export interface Reportee {
-  githubUsername?: string;
-  name: string;
 }
 
 export enum OpeningCategory {
@@ -22,4 +23,9 @@ export enum OpeningCategory {
 
 export interface OpeningCategoryUrlParams {
   category: OpeningCategory;
+}
+
+export interface Reportee {
+  githubUsername?: string;
+  name: string;
 }
