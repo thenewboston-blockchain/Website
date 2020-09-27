@@ -4,7 +4,7 @@ import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import parseISO from 'date-fns/parseISO';
 import intersection from 'lodash/intersection';
 
-import {EmptyPage, LabelFilter, Loader, RepositoryFilter} from 'components';
+import {BreadcrumbMenu, EmptyPage, LabelFilter, Loader, RepositoryFilter} from 'components';
 import {GenericVoidFunction} from 'types/generic';
 import {Issue, Repository, RepositoryUrlParams} from 'types/github';
 import {fetchGithubIssues} from 'utils/github';
@@ -64,6 +64,17 @@ const Tasks = () => {
     setSelectedLabelNames(results);
   };
 
+  const renderFilters = () => (
+    <>
+      <RepositoryFilter className="Tasks__RepositoryFilter" />
+      <LabelFilter
+        className="Tasks__LabelFilter"
+        handleLabelClick={handleLabelClick}
+        selectedLabelNames={selectedLabelNames}
+      />
+    </>
+  );
+
   const renderTasks = () => {
     const filteredIssues = getFilteredIssues();
     if (error || !filteredIssues.length) return <EmptyPage />;
@@ -90,14 +101,13 @@ const Tasks = () => {
 
   return (
     <div className="Tasks">
-      <div className="Tasks__FilterMenu">
-        <RepositoryFilter />
-        <LabelFilter
-          className="Tasks__LabelFilter"
-          handleLabelClick={handleLabelClick}
-          selectedLabelNames={selectedLabelNames}
-        />
-      </div>
+      <BreadcrumbMenu
+        className="Tasks__BreadcrumbMenu"
+        menuItems={renderFilters()}
+        pageName={repository}
+        sectionName="Tasks"
+      />
+      <div className="Tasks__left-menu">{renderFilters()}</div>
       <div className="Tasks__task-list">{loading ? <Loader className="Tasks__Loader" /> : renderTasks()}</div>
     </div>
   );
