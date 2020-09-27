@@ -31,8 +31,14 @@ const Openings = () => {
   const renderOpenings = () => {
     const filteredOpenings = getFilteredOpenings();
     if (!filteredOpenings.length) return <EmptyPage />;
-    return filteredOpenings.map(({description, position, responsibilities}) => (
-      <OpeningsOpening description={description} position={position} responsibilities={responsibilities} />
+    return filteredOpenings.map(({description, position, reportsTo, responsibilities, technologyRequirements}) => (
+      <OpeningsOpening
+        description={description}
+        position={position}
+        reportsTo={reportsTo}
+        responsibilities={responsibilities}
+        technologyRequirements={technologyRequirements}
+      />
     ));
   };
 

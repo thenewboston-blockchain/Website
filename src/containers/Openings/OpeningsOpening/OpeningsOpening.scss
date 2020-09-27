@@ -4,8 +4,6 @@
   box-shadow: 0 0 10px rgba(85, 108, 214, 0.18);
   display: flex;
   flex-direction: column;
-  font-size: var(--font-size-small);
-  line-height: 125%;
   margin: 0 24px 12px;
   padding: 16px;
 
@@ -22,7 +20,7 @@
   }
 
   &__description {
-    margin-top: 8px;
+    margin-top: 12px;
   }
 
   &__expand-collapse-container {
@@ -30,7 +28,7 @@
     color: var(--color-secondary);
     cursor: pointer;
     display: flex;
-    margin-top: 8px;
+    margin-top: 12px;
 
     &:focus {
       outline: none;
@@ -47,8 +45,9 @@
     margin-right: 4px;
   }
 
-  &__expanded-content {
-    margin-top: 8px;
+  &__list-label {
+    font-family: var(--font-family-inter-medium);
+    margin-top: 16px;
   }
 
   &__position {
@@ -57,5 +56,9 @@
     font-family: var(--font-family-inter-medium);
     font-size: 18px;
     font-weight: 600;
+  }
+
+  &__ul {
+    margin-top: 4px;
   }
 }

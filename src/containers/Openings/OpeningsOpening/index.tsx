@@ -1,15 +1,10 @@
 import React, {FC, useState} from 'react';
 
 import Icon, {IconType} from 'components/Icon';
+import {Opening} from 'types/openings';
 import './OpeningsOpening.scss';
 
-interface ComponentProps {
-  description: string;
-  position: string;
-  responsibilities: string[];
-}
-
-const OpeningsOpening: FC<ComponentProps> = ({description, position, responsibilities}) => {
+const OpeningsOpening: FC<Opening> = ({description, position, reportsTo, responsibilities, technologyRequirements}) => {
   const [expanded, setExpanded] = useState(false);
 
   const renderExpandCollapseToggle = () => (
@@ -29,10 +24,21 @@ const OpeningsOpening: FC<ComponentProps> = ({description, position, responsibil
   );
 
   const renderExpandedContent = () => (
-    <div className="OpeningsOpening__expanded-content">{renderResponsibilities()}</div>
+    <>
+      {renderStringList(responsibilities, 'Responsibilities')}
+      {renderStringList(technologyRequirements, 'Technology Requirements')}
+    </>
   );
 
-  const renderResponsibilities = () => responsibilities.map((item) => <div>{item}</div>);
+  const renderStringList = (listData: string[], listLabel: string) => {
+    const listItems = listData.map((item: string) => <li key={item}>{item}</li>);
+    return (
+      <>
+        <div className="OpeningsOpening__list-label">{listLabel}</div>
+        <ul className="OpeningsOpening__ul">{listItems}</ul>
+      </>
+    );
+  };
 
   return (
     <div className="OpeningsOpening">

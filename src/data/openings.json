@@ -3,6 +3,28 @@
     "categoryName": "Engineering",
     "description": "We're looking for an experienced Front-end engineer who is able to lead a team of junior developers. You and your team will be working primarily on the Account Manager and Website repositories to help build the UI's needed for the applications used by our community.",
     "position": "Front-end Team Lead",
-    "responsibilities": ["Perform code reviews", "Write job descriptions"]
+    "reportsTo": [
+      {
+        "githubUsername": "angle943",
+        "name": "Justin"
+      }
+    ],
+    "responsibilities": [
+      "Perform code reviews",
+      "Write job descriptions",
+      "Interview new candidates",
+      "Provide guidance to other developers when assistance is needed",
+      "Coach team members on best practices and industry standards",
+      "Regular calls with Bucky, Justin, and Kristy to discuss new projects, design improvements, and future roadmap"
+    ],
+    "technologyRequirements": [
+      "JavaScript (ES6+)",
+      "React",
+      "Redux",
+      "TypeScript",
+      "Sass / SCSS",
+      "Electron",
+      "Webpack"
+    ]
   }
 ]
