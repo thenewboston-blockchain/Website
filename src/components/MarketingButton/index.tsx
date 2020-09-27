@@ -5,12 +5,12 @@ import {A} from 'components';
 import {SocialMedia} from 'types/social-media';
 import {getCustomClassNames} from 'utils/components';
 
-import FacebookLogo from './FacebookLogo.png';
-import GitHubLogo from './GitHubLogo.png';
-import LinkedInLogo from './LinkedInLogo.png';
-import RedditLogo from './RedditLogo.png';
-import SlackLogo from './SlackLogo.png';
-import TwitterLogo from './TwitterLogo.png';
+import FacebookLogo from './logos/FacebookLogo.png';
+import GitHubLogo from './logos/GitHubLogo.png';
+import LinkedInLogo from './logos/LinkedInLogo.png';
+import RedditLogo from './logos/RedditLogo.png';
+import SlackLogo from './logos/SlackLogo.png';
+import TwitterLogo from './logos/TwitterLogo.png';
 
 import './MarketingButton.scss';
 
