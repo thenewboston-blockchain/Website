@@ -1,5 +1,5 @@
 export interface ApplicationMethod {
-  channel: string;
+  channel: 'github' | 'reddit' | 'slack';
   note?: string;
 }
 

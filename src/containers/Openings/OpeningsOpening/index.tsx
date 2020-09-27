@@ -1,6 +1,6 @@
 import React, {FC, useState} from 'react';
 
-import {A} from 'components';
+import {A, MarketingButton} from 'components';
 import Icon, {IconType} from 'components/Icon';
 import {Opening} from 'types/openings';
 import './OpeningsOpening.scss';
@@ -14,19 +14,21 @@ const OpeningsOpening: FC<Opening> = ({
   responsibilities,
   technologyRequirements,
 }) => {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
 
   const renderApplicationMethodList = () => {
-    const listItems = applicationMethods.map(({channel, note}) => (
-      <li key={channel}>
-        {channel}
-        {note && <span> - {note}</span>}
-      </li>
+    const rows = applicationMethods.map(({channel, note}) => (
+      <div className="OpeningsOpening__application-method-row" key={channel}>
+        <MarketingButton className="OpeningsOpening__MarketingButton" website={channel} />
+        {note && <span>{note}</span>}
+      </div>
     ));
     return (
       <>
-        <div className="OpeningsOpening__list-label">Reports To</div>
-        <ul className="OpeningsOpening__ul">{listItems}</ul>
+        <div className="OpeningsOpening__list-label">
+          To apply, send us a message through any of the following channels:
+        </div>
+        {rows}
       </>
     );
   };

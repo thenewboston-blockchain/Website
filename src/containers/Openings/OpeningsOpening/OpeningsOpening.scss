@@ -19,6 +19,12 @@
     border-bottom: none;
   }
 
+  &__application-method-row {
+    align-items: center;
+    display: flex;
+    margin-top: 12px;
+  }
+
   &__description {
     margin-top: 12px;
   }
@@ -56,6 +62,11 @@
   &__list-label {
     font-family: var(--font-family-inter-medium);
     margin-top: 16px;
+  }
+
+  &__MarketingButton {
+    margin-right: 12px;
+    width: 140px;
   }
 
   &__position {

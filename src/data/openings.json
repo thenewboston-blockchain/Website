@@ -2,8 +2,8 @@
   {
     "applicationMethods": [
       {
-        "channel": "Slack",
-        "note": "message Bucky or Justin"
+        "channel": "slack",
+        "note": "Message Bucky or Justin"
       },
       {
         "channel": "LinkedIn"
