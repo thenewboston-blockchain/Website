@@ -58,6 +58,7 @@
 
   &__amount {
     color: var(--color-tertiary);
+    font-size: var(--font-size-regular);
   }
 
   &__issue-link {
@@ -71,6 +72,15 @@
   &__task-title {
     font-family: var(--font-family-inter);
     font-weight: normal;
+    font-size: var(--font-size-regular);
+  }
+
+  &__repository {
+    font-size: var(--font-size-regular);
+  }
+
+  &__date-completed {
+    font-size: var(--font-size-regular);
   }
 
   @media (max-width: 1400px) {
