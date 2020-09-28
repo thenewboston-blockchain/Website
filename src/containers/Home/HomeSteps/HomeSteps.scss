@@ -43,15 +43,14 @@
     }
   }
 
-  @media (max-width: 470px) {
+  @media (max-width: 480px) {
     &__Step {
-      margin: 0px 15px 40px 15px;
-    }
-    &__Step:first-of-type {
-      margin-left: 15px;
-    }
-    &__Step:last-of-type {
-      margin-right: 15px;
+      margin: 0 32px 32px;
+
+      &:first-of-type,
+      &:last-of-type {
+        margin: 0 32px 32px;
+      }
     }
   }
 }
