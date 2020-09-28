@@ -19,7 +19,7 @@ const AccountManagerAddFriends: FC = () => {
         them points.
       </p>
 
-      <DocImage alt="add friend" maxWidth={1200} src={AddFriend} />
+      <DocImage alt="add friend" bordered maxWidth={1200} src={AddFriend} />
 
       <DocSubSection id={AccountManagerAddFriendsNav.friendOverview} title="Friend Overview">
         <p>
