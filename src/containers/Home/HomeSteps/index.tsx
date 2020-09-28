@@ -13,7 +13,7 @@ const HomeSteps = () => {
         <div className="HomeSteps__Step">
           <StepIndicator number={1} text="Sign up for GitHub" />
           <div className="HomeSteps__instructional-text">
-            <A href="https://github.com/">Create a GitHub account</A> if you dont already one.
+            <A href="https://github.com/">Create a GitHub account</A> if you don't already have one.
           </div>
         </div>
         <div className="HomeSteps__Step">

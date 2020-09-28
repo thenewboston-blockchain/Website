@@ -39,6 +39,19 @@
 
     &__Step {
       margin: 0 0 48px 0;
+      max-width: 430px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    &__Step {
+      margin: 0px 15px 30px 15px;
+    }
+    &__Step:first-of-type {
+      margin-left: 15px;
+    }
+    &__Step:last-of-type {
+      margin-right: 15px;
     }
   }
 }
