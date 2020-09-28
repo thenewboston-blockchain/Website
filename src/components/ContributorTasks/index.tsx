@@ -37,7 +37,7 @@ const ContributorTasks: FC<ComponentProps> = ({className, tasks}) => {
           <tr>
             <th>Recent Task</th>
             <th>Repository</th>
-            <th>Completed</th>
+            <th>Issued Date</th>
             <th>Amount</th>
           </tr>
         </thead>
