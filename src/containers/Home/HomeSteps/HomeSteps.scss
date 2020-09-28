@@ -39,6 +39,18 @@
 
     &__Step {
       margin: 0 0 48px 0;
+      max-width: 430px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__Step {
+      margin: 0 32px 32px;
+
+      &:first-of-type,
+      &:last-of-type {
+        margin: 0 32px 32px;
+      }
     }
   }
 }
