@@ -2,6 +2,8 @@ import React, {FC} from 'react';
 
 import {DocContainer} from 'components';
 
+import './GuideFutureDevelopment.scss';
+
 const GuideFutureDevelopment: FC = () => {
   return (
     <DocContainer className="GuideFutureDevelopment" title="Future Development">
@@ -10,7 +12,7 @@ const GuideFutureDevelopment: FC = () => {
         for inclusion into the network. These features require additional discussion with the development community.
       </p>
 
-      <strong>Interest Rates</strong>
+      <h3>Interest Rates</h3>
       <p>
         As the network grows, additional points must be created to match the natural growth of the economy in order to
         remain an effective means for exchange of value for goods and services. A fixed interest rate structure is
@@ -20,7 +22,7 @@ const GuideFutureDevelopment: FC = () => {
         among the development community are required before integration into the network.
       </p>
 
-      <strong>Payment Library</strong>
+      <h3>Payment Library</h3>
       <p>
         A payment library is necessary to allow for the widespread adoption of the network. This will allow individuals
         and businesses to make and receive points over the network through simple integration. These libraries should be

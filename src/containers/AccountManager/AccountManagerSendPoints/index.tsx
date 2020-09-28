@@ -15,7 +15,7 @@ const AccountManagerSendPoints: FC = () => {
       </p>
       <p>After reviewing the payment details, click the "Send" button to send the transaction.</p>
 
-      <DocImage alt="send points modal" maxWidth={1200} src={SendPointsModal} />
+      <DocImage alt="send points modal" bordered maxWidth={1200} src={SendPointsModal} />
     </DocContainer>
   );
 };

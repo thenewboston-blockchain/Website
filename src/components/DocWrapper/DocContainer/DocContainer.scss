@@ -1,6 +1,16 @@
+@mixin center-block {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+}
+
 .DocContainer {
   $self: &;
   padding: 32px 32px 16px;
+
+  > *:not(.DocImage) {
+    @include center-block;
+  }
 
   &__divider {
     height: 12px;
