@@ -22,7 +22,7 @@ const AccountManagerEditNicknames: FC = () => {
 
       <DocSubSection id={AccountManagerEditNicknamesNav.editNicknameModal} title="Edit Nickname Form">
         <p>After you have edited the nickname for that object, click the "Save" button to save the changes.</p>
-        <DocImage alt="edit nickname modal" maxWidth={1200} src={EditNicknameModal} />
+        <DocImage alt="edit nickname modal" bordered maxWidth={1200} src={EditNicknameModal} />
       </DocSubSection>
 
       <DocSubSection id={AccountManagerEditNicknamesNav.editNicknameResults} title="Edit Nickname Results">

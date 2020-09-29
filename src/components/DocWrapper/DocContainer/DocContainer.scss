@@ -2,6 +2,12 @@
   $self: &;
   padding: 32px 32px 16px;
 
+  > *:not(.DocImage) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 720px;
+  }
+
   &__divider {
     height: 12px;
   }

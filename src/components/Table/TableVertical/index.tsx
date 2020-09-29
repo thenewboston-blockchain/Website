@@ -43,7 +43,11 @@ const TableVertical: FC<ComponentProps> = ({altColors = false, className, innerB
     );
   };
 
-  return <table className={clsx('TableVertical', className)}>{renderBody()}</table>;
+  return (
+    <div>
+      <table className={clsx('TableVertical', className)}>{renderBody()}</table>
+    </div>
+  );
 };
 
 export default TableVertical;

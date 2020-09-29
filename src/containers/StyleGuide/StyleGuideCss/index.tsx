@@ -67,7 +67,7 @@ const StyleGuideCss: FC = () => {
           developers. You can see the exact dimensions of a given element, the colors of the background/borders/font,
           and so on.
         </p>
-        <DocImage alt="figma example" maxWidth={780} src={FigmaImage} />
+        <DocImage alt="figma example" bordered maxWidth={780} src={FigmaImage} />
       </DocSubSection>
       <DocSubSection
         id={StyleGuideCssNav.capitalCase}
