@@ -22,7 +22,7 @@ const OpeningsOpening: FC<Opening> = ({
     const customLinks = {
       [SocialMedia.facebook]: '',
       [SocialMedia.github]: '',
-      [SocialMedia.linkedin]: '',
+      [SocialMedia.linkedin]: 'https://www.linkedin.com/in/buckyroberts/',
       [SocialMedia.reddit]: 'https://www.reddit.com/message/compose?to=/r/thenewboston',
       [SocialMedia.slack]: '',
       [SocialMedia.twitter]: '',
