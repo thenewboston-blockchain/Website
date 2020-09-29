@@ -13,7 +13,7 @@ const AccountManagerGetStarted: FC = () => {
         you will be prompted to either create a new account or add an existing account. To create a new account, simply
         input a nickname for the account and then click the "Add" button.
       </p>
-      <DocImage alt="get started modal" maxWidth={1200} src={GetStarted} />
+      <DocImage alt="get started modal" bordered maxWidth={1200} src={GetStarted} />
 
       <p>
         If the application can not automatically connect to the network then you will be prompted to enter the address

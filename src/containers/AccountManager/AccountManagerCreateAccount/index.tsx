@@ -18,7 +18,7 @@ const AccountManagerCreateAccount: FC = () => {
         a Nickname for your account, click the "Create" button to create the account.
       </p>
 
-      <DocImage alt="create new account modal" maxWidth={1200} src={CreateNewAccountModal} />
+      <DocImage alt="create new account modal" bordered maxWidth={1200} src={CreateNewAccountModal} />
 
       <DocSubSection id={AccountManagerCreateAccountNav.accountOverview} title="Account Overview">
         <p>
