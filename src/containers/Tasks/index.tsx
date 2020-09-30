@@ -8,6 +8,7 @@ import {BreadcrumbMenu, EmptyPage, LabelFilter, Loader, RepositoryFilter} from '
 import {GenericVoidFunction} from 'types/generic';
 import {Issue, Repository, RepositoryUrlParams} from 'types/github';
 import {fetchGithubIssues} from 'utils/github';
+import {sortByNumberKey} from 'utils/sort';
 
 import TasksTask from './TasksTask';
 import './Tasks.scss';
@@ -53,6 +54,8 @@ const Tasks = () => {
             const labelNames = labels.map(({name}) => name);
             return !!intersection(labelNames, selectedLabelNames).length;
           });
+
+    filteredIssues = filteredIssues.sort(sortByNumberKey('amount', 'desc'));
 
     return filteredIssues;
   };
