@@ -3,6 +3,45 @@
     "applicationMethods": [
       {
         "channel": "slack",
+        "note": "Message Kristy or Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "facebook"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "categories": ["Design"],
+    "description": "We’re looking for an experienced UI/UX designer who wants to be a part of designing the future of digital currency. You will lead a team of junior designers and be a part of designing the responsive desktop app, mobile app, and the responsive marketing site.",
+    "payNotes": ["2,800 points/day"],
+    "position": "Lead UI/UX Designer",
+    "reportsTo": [
+      {
+        "githubUsername": "kristykjlee",
+        "name": "Kristy"
+      }
+    ],
+    "responsibilities": [
+      "Collaboration with product managers and engineers on user requirements",
+      "Help develop the style guide and pattern library",
+      "Develop UI mockups or prototypes that clearly illustrate how sites functions and looks",
+      "Prepare and present rough drafts to teammates",
+      "Identify and troubleshoot UX problems (e.g. responsiveness)",
+      "Conduct layout adjustments based on user feedback"
+    ],
+    "technologyRequirements": ["Figma"]
+  },
+  {
+    "applicationMethods": [
+      {
+        "channel": "slack",
         "note": "Message Bucky or Kristy"
       },
       {

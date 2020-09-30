@@ -20,6 +20,7 @@ export enum OpeningCategory {
   all = 'All',
   accounting = 'Accounting',
   community = 'Community',
+  design = 'Design',
   engineering = 'Engineering',
   marketing = 'Marketing',
 }
