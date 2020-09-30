@@ -130,13 +130,26 @@
   {
     "applicationMethods": [
       {
+        "channel": "slack",
+        "note": "Message Bucky or Kristy"
+      },
+      {
         "channel": "linkedin"
+      },
+      {
+        "channel": "facebook"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
       }
     ],
-    "categories": ["Community", "Marketing"],
-    "description": "We are looking for a LinkedIn Manager to help manage thenewboston LinkedIn page.",
-    "payNotes": ["2,800 points/day"],
-    "position": "LinkedIn Manager",
+    "categories": ["Marketing"],
+    "description": "Seeking a Director of Marketing to focus on acquiring new users by creating, executing, and testing marketing strategies.",
+    "payNotes": ["2,800 points/day", "Ineligible for task points (you will be creating tasks for your team)"],
+    "position": "Director of Marketing",
     "reportsTo": [
       {
         "githubUsername": "buckyroberts",
@@ -144,13 +157,15 @@
       }
     ],
     "responsibilities": [
-      "Post relevant content / project updates frequently",
-      "Promote the page",
-      "Engage with other related communities",
-      "Respond to comments and questions from the community",
-      "Provide weekly updates to the community regarding analytics, common questions, as well as any additional relevant information"
+      "Work with our different teams (design, social media, SEO, etc...) to plan and discuss marketing goals",
+      "Brainstorm new and creative growth strategies",
+      "Plan, execute, and measure experiments and conversion tests"
     ],
-    "technologyRequirements": ["LinkedIn account"]
+    "technologyRequirements": [
+      "Strong understanding of Blockchain and our project architecture",
+      "Strong analytical skills",
+      "Background in digital marketing and SEO"
+    ]
   },
   {
     "applicationMethods": [
@@ -180,6 +195,34 @@
     "technologyRequirements": [
       "Slack account",
       "Familiarity with the website and documentation (to provide to new users as needed)"
+    ]
+  },
+  {
+    "applicationMethods": [
+      {
+        "channel": "reddit"
+      }
+    ],
+    "categories": ["Community", "Marketing"],
+    "description": "Seeking a Reddit Moderator to help manage thenewboston subreddit. New users are joining the community quickly now that the network is getting closer to release and we need someone to help answer questions, participate in discussions, and to post frequent updates about the project for the community.",
+    "payNotes": ["2,800 points/day"],
+    "position": "Reddit Moderator",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Manage users, posts, flair, rules, the Wiki, and all other aspects of the subreddit",
+      "Post relevant content / project updates frequently",
+      "Engage with users and related subreddits",
+      "Respond to comments and questions from the community",
+      "Provide weekly updates to the community regarding answers to common questions as well as any additional relevant information that you feel would be helpful to the community"
+    ],
+    "technologyRequirements": [
+      "Reddit account",
+      "Understanding of Blockchain technology and our project to better assist users with their questions"
     ]
   }
 ]
