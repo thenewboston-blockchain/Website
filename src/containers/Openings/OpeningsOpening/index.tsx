@@ -91,7 +91,7 @@ const OpeningsOpening: FC<Opening> = ({
     ));
     return (
       <>
-        <div className="OpeningsOpening__list-label">Reports To</div>
+        <div className="OpeningsOpening__list-label">Report To</div>
         <ul className="OpeningsOpening__ul">{listItems}</ul>
       </>
     );
