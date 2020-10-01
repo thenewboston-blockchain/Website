@@ -44,7 +44,7 @@ const OpeningsOpening: FC<Opening> = ({
         <div className="OpeningsOpening__list-label">
           {rows.length > 1
             ? 'To apply, send us a message through any of the following channels:'
-            : 'To apply, send us a message the through following channel:'}
+            : 'To apply, send us a message through the following channel:'}
         </div>
         <div className="OpeningsOpening__application-method-container">{rows}</div>
       </>
