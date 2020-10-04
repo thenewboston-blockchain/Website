@@ -71,7 +71,10 @@ const Openings = () => {
       {openingSlug ? (
         <div className="Openings__opening-details">{renderOpeningDetails()}</div>
       ) : (
-        <div className="Openings__opening-list">{renderOpenings()}</div>
+        <div className="Openings__opening-list">
+          <h1 className="Openings__opening-list-heading"> Openings </h1>
+          {renderOpenings()}
+        </div>
       )}
     </div>
   );

@@ -26,6 +26,13 @@
     padding: 12px 0 48px;
   }
 
+  &__opening-list-heading {
+    font-family: var(--font-family-inter-light);
+    font-size: 36px;
+    line-height: 125%;
+    margin: 16px 54px;
+  }
+
   @media (max-width: 992px) {
     grid-template-columns: auto;
     grid-template-rows: fit-content(0) auto;
