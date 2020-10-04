@@ -1,10 +1,10 @@
 import React, {FC} from 'react';
 
-import {Opening} from 'types/openings';
+import {OpeningBasicDetails} from 'types/openings';
 
 import './OpeningsOpening.scss';
 
-const OpeningsOpening: FC<Opening> = ({description, position}) => {
+const OpeningsOpening: FC<OpeningBasicDetails> = ({description, position}) => {
   return (
     <div className="OpeningsOpening">
       <div className="OpeningsOpening__position">{position}</div>

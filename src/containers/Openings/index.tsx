@@ -31,30 +31,9 @@ const Openings = () => {
   const renderOpenings = () => {
     const filteredOpenings = getFilteredOpenings();
     if (!filteredOpenings.length) return <EmptyPage />;
-    return filteredOpenings.map(
-      ({
-        applicationMethods,
-        categories,
-        description,
-        payNotes,
-        position,
-        reportsTo,
-        responsibilities,
-        technologyRequirements,
-      }) => (
-        <OpeningsOpening
-          applicationMethods={applicationMethods}
-          categories={categories}
-          description={description}
-          key={position}
-          payNotes={payNotes}
-          position={position}
-          reportsTo={reportsTo}
-          responsibilities={responsibilities}
-          technologyRequirements={technologyRequirements}
-        />
-      ),
-    );
+    return filteredOpenings.map(({description, position}) => (
+      <OpeningsOpening description={description} key={position} position={position} />
+    ));
   };
 
   return (

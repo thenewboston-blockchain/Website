@@ -5,6 +5,11 @@ export interface ApplicationMethod {
   note?: string;
 }
 
+export interface OpeningBasicDetails {
+  description: string;
+  position: string;
+}
+
 export interface Opening {
   applicationMethods: ApplicationMethod[];
   categories: OpeningCategory[];
