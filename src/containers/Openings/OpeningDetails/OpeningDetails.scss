@@ -33,13 +33,8 @@
   }
 
   &__BackButton {
-    background: none;
-    border: none;
     color: var(--color-secondary);
-    cursor: pointer;
     font-family: var(--font-family-inter);
-    outline: none;
-    width: 100px;
   }
 
   &__description {

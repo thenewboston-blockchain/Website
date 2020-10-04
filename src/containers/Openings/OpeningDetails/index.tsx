@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {useHistory, useParams} from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 import {A, MarketingButton} from 'components';
 
 import {ApplicationMethod, Opening, OpeningCategoryUrlParams} from 'types/openings';
@@ -18,12 +18,7 @@ const OpeningDetails: FC<Opening> = ({
   slug,
   technologyRequirements,
 }) => {
-  const history = useHistory();
   const {category} = useParams<OpeningCategoryUrlParams>();
-
-  const goToListing = () => {
-    history.push(`/openings/${category}`);
-  };
 
   const renderApplicationMethodList = () => {
     const customLinks = {
@@ -104,9 +99,9 @@ const OpeningDetails: FC<Opening> = ({
 
   return (
     <div className="OpeningDetails">
-      <button className="OpeningDetails__BackButton" onClick={goToListing}>
+      <Link className="OpeningDetails__BackButton" to={`/openings/${category}`}>
         Back
-      </button>
+      </Link>
       {renderContent()}
     </div>
   );
