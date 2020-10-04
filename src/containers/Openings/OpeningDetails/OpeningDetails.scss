@@ -1,0 +1,72 @@
+.OpeningDetails {
+  $self: &;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 38px 12px;
+  padding: 16px;
+
+  &__A {
+    color: var(--color-secondary);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__application-method-container {
+    margin-bottom: 16px;
+  }
+
+  &__application-method-note {
+    color: var(--color-sail-gray-500);
+  }
+
+  &__application-method-row {
+    align-items: center;
+    display: flex;
+    margin-top: 12px;
+
+    &:first-of-type {
+      margin-top: 16px;
+    }
+  }
+
+  &__BackButton {
+    background: none;
+    border: none;
+    color: var(--color-secondary);
+    cursor: pointer;
+    font-family: var(--font-family-inter);
+    outline: none;
+    width: 100px;
+  }
+
+  &__description {
+    margin-top: 24px;
+  }
+
+  &__list-label {
+    font-family: var(--font-family-inter-bold);
+    margin-top: 24px;
+  }
+
+  &__MarketingButton {
+    margin-right: 12px;
+    width: 140px;
+  }
+
+  &__position {
+    color: var(--color-primary);
+    display: block;
+    font-family: var(--font-family-inter);
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 125%;
+    margin-top: 36px;
+  }
+
+  &__ul {
+    margin-top: 4px;
+  }
+}

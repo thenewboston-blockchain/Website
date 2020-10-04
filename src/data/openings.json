@@ -1,5 +1,6 @@
 [
   {
+    "slug": "design-uxui",
     "applicationMethods": [
       {
         "channel": "slack",
@@ -39,6 +40,7 @@
     "technologyRequirements": ["Figma"]
   },
   {
+    "slug": "community-product-manager",
     "applicationMethods": [
       {
         "channel": "slack",
@@ -78,6 +80,7 @@
     ]
   },
   {
+    "slug": "engineering-front-end-team-lead",
     "applicationMethods": [
       {
         "channel": "slack",
@@ -125,6 +128,7 @@
     ]
   },
   {
+    "slug": "community-hiring-manager",
     "applicationMethods": [
       {
         "channel": "slack",
@@ -161,6 +165,7 @@
     "technologyRequirements": ["LinkedIn account", "Background in technology"]
   },
   {
+    "slug": "engineering-accounting-manager",
     "applicationMethods": [
       {
         "channel": "slack",
@@ -200,6 +205,7 @@
     "technologyRequirements": ["Experience with the Account Manager desktop application (training provided)"]
   },
   {
+    "slug": "marketing-director",
     "applicationMethods": [
       {
         "channel": "slack",
@@ -240,6 +246,7 @@
     ]
   },
   {
+    "slug": "community-slack-manager",
     "applicationMethods": [
       {
         "channel": "slack",
@@ -270,6 +277,7 @@
     ]
   },
   {
+    "slug": "community-reddit-moderator",
     "applicationMethods": [
       {
         "channel": "reddit"
@@ -298,6 +306,7 @@
     ]
   },
   {
+    "slug": "engineering-mobile-lead",
     "applicationMethods": [
       {
         "channel": "slack",

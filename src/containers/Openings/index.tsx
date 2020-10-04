@@ -2,15 +2,16 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 
 import {BreadcrumbMenu, EmptyPage} from 'components';
-import {OpeningCategory, OpeningCategoryUrlParams} from 'types/openings';
+import {OpeningCategory, OpeningsUrlParams} from 'types/openings';
 import {getOpenings} from 'utils/data';
 
 import OpeningsCategoryFilter from './OpeningsCategoryFilter';
 import OpeningsOpening from './OpeningsOpening';
 import './Openings.scss';
+import OpeningDetails from './OpeningDetails';
 
 const Openings = () => {
-  const {category} = useParams<OpeningCategoryUrlParams>();
+  const {category, slug: openingSlug} = useParams<OpeningsUrlParams>();
   const [categoryFilter, setOpeningsCategoryFilter] = useState<OpeningCategory>(OpeningCategory.all);
 
   useEffect(() => {
@@ -31,9 +32,35 @@ const Openings = () => {
   const renderOpenings = () => {
     const filteredOpenings = getFilteredOpenings();
     if (!filteredOpenings.length) return <EmptyPage />;
-    return filteredOpenings.map(({description, position}) => (
-      <OpeningsOpening description={description} key={position} position={position} />
+    return filteredOpenings.map(({categories, description, position, slug}) => (
+      <OpeningsOpening
+        categories={categories}
+        description={description}
+        key={position}
+        position={position}
+        slug={slug}
+      />
     ));
+  };
+
+  const renderOpeningDetails = () => {
+    const filteredOpenings = getFilteredOpenings();
+    const opening = filteredOpenings.find(({slug}) => slug === openingSlug);
+    if (!opening) return <EmptyPage />;
+    return (
+      <OpeningDetails
+        applicationMethods={opening.applicationMethods}
+        categories={opening.categories}
+        description={opening.description}
+        key={opening.position}
+        payNotes={opening.payNotes}
+        position={opening.position}
+        reportsTo={opening.reportsTo}
+        responsibilities={opening.responsibilities}
+        slug={opening.slug}
+        technologyRequirements={opening.technologyRequirements}
+      />
+    );
   };
 
   return (
@@ -47,7 +74,11 @@ const Openings = () => {
       <div className="Openings__left-menu">
         <OpeningsCategoryFilter className="Openings__OpeningsCategoryFilter" />
       </div>
-      <div className="Openings__opening-list">{renderOpenings()}</div>
+      {openingSlug ? (
+        <div className="Openings__opening-details">{renderOpeningDetails()}</div>
+      ) : (
+        <div className="Openings__opening-list">{renderOpenings()}</div>
+      )}
     </div>
   );
 };

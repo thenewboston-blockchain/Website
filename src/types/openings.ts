@@ -6,8 +6,10 @@ export interface ApplicationMethod {
 }
 
 export interface OpeningBasicDetails {
+  categories: OpeningCategory[];
   description: string;
   position: string;
+  slug: string;
 }
 
 export interface Opening {
@@ -18,6 +20,7 @@ export interface Opening {
   position: string;
   reportsTo: Reportee[];
   responsibilities: string[];
+  slug: string;
   technologyRequirements: string[];
 }
 
@@ -34,9 +37,9 @@ export interface OpeningCategoryUrlParams {
   category: OpeningCategory;
 }
 
-export interface OpeningUrlParams {
+export interface OpeningsUrlParams {
   category: OpeningCategory;
-  id: string;
+  slug: string;
 }
 
 export interface Reportee {
