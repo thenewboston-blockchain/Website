@@ -5,10 +5,10 @@ import {BreadcrumbMenu, EmptyPage} from 'components';
 import {OpeningCategory, OpeningsUrlParams} from 'types/openings';
 import {getOpenings} from 'utils/data';
 
+import OpeningDetails from './OpeningDetails';
 import OpeningsCategoryFilter from './OpeningsCategoryFilter';
 import OpeningsOpening from './OpeningsOpening';
 import './Openings.scss';
-import OpeningDetails from './OpeningDetails';
 
 const Openings = () => {
   const {category, slug: openingSlug} = useParams<OpeningsUrlParams>();
@@ -32,14 +32,8 @@ const Openings = () => {
   const renderOpenings = () => {
     const filteredOpenings = getFilteredOpenings();
     if (!filteredOpenings.length) return <EmptyPage />;
-    return filteredOpenings.map(({categories, description, position, slug}) => (
-      <OpeningsOpening
-        categories={categories}
-        description={description}
-        key={position}
-        position={position}
-        slug={slug}
-      />
+    return filteredOpenings.map(({description, position, slug}) => (
+      <OpeningsOpening description={description} key={position} position={position} slug={slug} />
     ));
   };
 

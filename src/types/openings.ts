@@ -6,7 +6,6 @@ export interface ApplicationMethod {
 }
 
 export interface OpeningBasicDetails {
-  categories: OpeningCategory[];
   description: string;
   position: string;
   slug: string;
