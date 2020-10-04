@@ -34,6 +34,11 @@ export interface OpeningCategoryUrlParams {
   category: OpeningCategory;
 }
 
+export interface OpeningUrlParams {
+  category: OpeningCategory;
+  id: string;
+}
+
 export interface Reportee {
   githubUsername?: string;
   name: string;
