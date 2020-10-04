@@ -2,6 +2,7 @@
   $self: &;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(85, 108, 214, 0.18);
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   margin: 0 24px 12px;
@@ -13,6 +14,10 @@
 
   &:first-of-type {
     margin-top: 12px;
+  }
+
+  &:hover {
+    box-shadow: 0px 15px 40px 15px rgba(85, 108, 214, 0.18);
   }
 
   &:last-of-type {
