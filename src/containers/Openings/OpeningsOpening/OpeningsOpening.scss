@@ -79,6 +79,7 @@
   &__MarketingButton {
     margin-right: 12px;
     width: 140px;
+    flex-shrink: 0;
   }
 
   &__position {
