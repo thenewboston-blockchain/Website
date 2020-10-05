@@ -1,6 +1,6 @@
 .TopNav {
   align-items: center;
-  background: var(--color-white);
+  background: var(--color-white, #ffffff);
   display: flex;
   height: 60px;
   z-index: 2;

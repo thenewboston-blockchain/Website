@@ -1,3 +1,5 @@
+import 'react-app-polyfill/ie11';
+import 'react-app-polyfill/stable';
 import A from './A';
 import BreadcrumbMenu from './BreadcrumbMenu';
 import {CodeSnippet, RequestResponseSnippet, SnippetLang} from './CodeSnippet';

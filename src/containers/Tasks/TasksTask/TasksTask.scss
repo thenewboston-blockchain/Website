@@ -1,5 +1,5 @@
 .TasksTask {
-  border-bottom: 1px solid var(--color-sail-gray-100);
+  border-bottom: 1px solid var(--color-sail-gray-100, #e3e8ee);
   display: flex;
   margin: 0 24px;
   padding: 16px 0;
@@ -16,7 +16,7 @@
   }
 
   &__assignees-title {
-    color: var(--color-sail-gray-500);
+    color: var(--color-sail-gray-500, #697386);
   }
 
   &__Label {
@@ -24,15 +24,15 @@
   }
 
   &__issue-details {
-    color: var(--color-sail-gray-500);
+    color: var(--color-sail-gray-500, #697386);
     margin-top: 4px;
   }
 
   &__issue-details-link {
-    color: var(--color-sail-gray-500);
+    color: var(--color-sail-gray-500, #697386);
 
     &:hover {
-      color: var(--color-github-blue);
+      color: var(--color-github-blue, #0366d6);
     }
   }
 
@@ -55,14 +55,14 @@
   }
 
   &__title {
-    color: var(--color-primary);
+    color: var(--color-primary, #042235);
     display: block;
-    font-family: var(--font-family-inter-medium);
+    font-family: var(--font-family-inter-medium, 'InterMedium', sans-serif);
     font-size: 18px;
     font-weight: 600;
 
     &:hover {
-      color: var(--color-github-blue);
+      color: var(--color-github-blue, #0366d6);
     }
   }
 

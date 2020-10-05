@@ -1,14 +1,14 @@
 .StepIndicator {
   align-items: center;
   display: flex;
-  font-family: var(--font-family-inter-bold);
+  font-family: var(--font-family-inter-bold, 'InterBold', serif);
   font-size: 20px;
 
   &__bubble {
     align-items: center;
-    background-color: var(--color-tertiary);
+    background-color: var(--color-tertiary, #1ea672);
     border-radius: 18px;
-    color: var(--color-white);
+    color: var(--color-white, #ffffff);
     display: flex;
     flex-shrink: 0;
     height: 36px;

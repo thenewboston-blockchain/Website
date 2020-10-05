@@ -1,17 +1,17 @@
 .TopNavDropdownMenuItem,
 .TopNavDropdownMenuItem:visited {
-  color: var(--color-sail-gray-400);
+  color: var(--color-sail-gray-400, #8792a2);
   display: block;
-  font-family: var(--font-family-inter-medium);
+  font-family: var(--font-family-inter-medium, 'InterMedium', sans-serif);
   font-size: 16px;
   padding: 6px 0;
   transition: color 0.1s ease;
 
   &:hover {
-    color: var(--color-primary);
+    color: var(--color-primary, #042235);
   }
 
   &.active {
-    color: var(--color-primary);
+    color: var(--color-primary, #042235);
   }
 }

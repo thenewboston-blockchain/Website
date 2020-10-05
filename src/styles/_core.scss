@@ -5,21 +5,21 @@
 body,
 html {
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   padding: 0;
 }
 
 body {
-  background: var(--color-bg);
-  color: var(--color-primary);
-  font-family: var(--font-family-inter);
+  background: var(--color-bg, #ffffff);
+  color: var(--color-primary, #042235);
+  font-family: var(--font-family-inter, 'InterRegular', sans-serif);
   font-size: 14px;
   line-height: 22px;
   max-height: 100vh;
 }
 
 b {
-  font-family: var(--font-family-inter-bold);
+  font-family: var(--font-family-inter-bold, 'InterBold', serif);
   font-weight: 700;
 }
 
@@ -34,7 +34,7 @@ h6 {
 }
 
 a {
-  color: var(--color-secondary);
+  color: var(--color-secondary, #556cd6);
   text-decoration: none;
 }
 

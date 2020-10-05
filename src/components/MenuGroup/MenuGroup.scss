@@ -1,5 +1,5 @@
 .MenuGroup {
-  font-family: var(--font-family-inter-medium);
+  font-family: var(--font-family-inter-medium, 'InterMedium', sans-serif);
   font-size: 16px;
 
   &__submenu {
@@ -12,7 +12,7 @@
 
     a {
       border-radius: 8px;
-      color: var(--color-sail-gray-400);
+      color: var(--color-sail-gray-400, #8792a2);
       margin-right: 16px;
       padding: 6px 0 6px 56px;
       transition: color 0.1s ease;
@@ -22,7 +22,7 @@
       }
 
       &:hover {
-        color: var(--color-primary);
+        color: var(--color-primary, #042235);
       }
 
       &:last-of-type {
@@ -30,7 +30,7 @@
       }
 
       &.active {
-        color: var(--color-primary);
+        color: var(--color-primary, #042235);
       }
     }
   }

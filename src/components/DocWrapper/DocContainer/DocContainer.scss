@@ -18,7 +18,7 @@
   }
 
   &__page-title {
-    font-family: var(--font-family-inter-light);
+    font-family: var(--font-family-inter-light, 'InterLight', sans-serif);
     font-size: 36px;
     font-weight: 300;
     line-height: 120%;

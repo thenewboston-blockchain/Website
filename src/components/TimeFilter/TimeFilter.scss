@@ -8,9 +8,9 @@
   }
 
   &__option {
-    color: var(--color-sail-gray-400);
+    color: var(--color-sail-gray-400, #8792a2);
     cursor: pointer;
-    font-family: var(--font-family-inter-medium);
+    font-family: var(--font-family-inter-medium, 'InterMedium', sans-serif);
     font-size: 16px;
     margin-left: 12px;
 
@@ -19,11 +19,11 @@
     }
 
     &:hover {
-      color: var(--color-primary);
+      color: var(--color-primary, #042235);
     }
 
     &--active {
-      color: var(--color-primary);
+      color: var(--color-primary, #042235);
     }
   }
 

@@ -5,27 +5,27 @@
   padding: 12px;
 
   &--success {
-    border-left-color: var(--color-tertiary);
+    border-left-color: var(--color-tertiary, #1ea672);
   }
 
   &--warning {
-    border-left-color: var(--color-danger);
+    border-left-color: var(--color-danger, #d30c15);
   }
 
   &__icon {
     margin-right: 14px;
 
     &--success {
-      color: var(--color-tertiary);
+      color: var(--color-tertiary, #1ea672);
     }
 
     &--warning {
-      color: var(--color-danger);
+      color: var(--color-danger, #d30c15);
     }
   }
 
   &__text {
-    color: var(--color-black);
+    color: var(--color-black, #000000);
     font-family: var(--font-family-inter);
     font-weight: bold;
   }

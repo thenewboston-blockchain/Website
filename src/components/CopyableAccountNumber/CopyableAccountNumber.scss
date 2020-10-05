@@ -8,7 +8,7 @@
 
   &__copy-container {
     align-items: center;
-    color: var(--color-secondary);
+    color: var(--color-secondary, #556cd6);
     cursor: pointer;
     display: flex;
 
@@ -24,7 +24,7 @@
   }
 
   &__label {
-    color: var(--color-sail-gray-500);
+    color: var(--color-sail-gray-500, #697386);
   }
 
   &__top {

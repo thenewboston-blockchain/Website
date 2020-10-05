@@ -5,7 +5,7 @@
 
   &__a {
     display: block;
-    font-family: var(--font-family-inter-medium);
+    font-family: var(--font-family-inter-medium, 'InterMedium', sans-serif);
     font-size: 16px;
     margin-bottom: 6px;
   }
@@ -64,7 +64,7 @@
   }
 
   &__navigation-group-header {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-medium, 20px);
     font-weight: 500;
     margin-bottom: 18px;
   }

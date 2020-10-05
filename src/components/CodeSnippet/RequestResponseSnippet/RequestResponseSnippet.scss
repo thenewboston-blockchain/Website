@@ -1,6 +1,6 @@
 .RequestResponseSnippet {
   &__heading {
-    font-family: var(--font-family-mono-roboto);
+    font-family: var(--font-family-mono-roboto, 'Roboto Mono', monospace);
     font-weight: 700;
     margin-bottom: 4px;
   }

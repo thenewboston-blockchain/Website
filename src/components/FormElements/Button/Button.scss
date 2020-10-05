@@ -14,41 +14,41 @@
   }
 
   &--contained {
-    color: var(--color-white);
+    color: var(--color-white, #ffffff);
 
     &#{$self}--primary {
-      background: var(--color-primary);
-      border-color: var(--color-primary);
+      background: var(--color-primary, #042235);
+      border-color: var(--color-primary, #042235);
 
       &:hover {
-        background: var(--color-primary-hover);
-        border-color: var(--color-primary-hover);
+        background: var(--color-primary-hover, #06457a);
+        border-color: var(--color-primary-hover, #06457a);
       }
 
       &#{$self}--disabled,
       &#{$self}--disabled:hover {
-        background: var(--color-primary);
-        border-color: var(--color-primary);
+        background: var(--color-primary, #042235);
+        border-color: var(--color-primary, #042235);
       }
     }
 
     &#{$self}--secondary {
-      background: var(--color-secondary);
-      border-color: var(--color-secondary);
+      background: var(--color-secondary, #556cd6);
+      border-color: var(--color-secondary, #556cd6);
 
       &:hover {
-        background: var(--color-secondary);
-        border-color: var(--color-secondary);
+        background: var(--color-secondary, #556cd6);
+        border-color: var(--color-secondary, #556cd6);
       }
     }
 
     &#{$self}--tertiary {
-      background: var(--color-tertiary);
-      border-color: var(--color-tertiary);
+      background: var(--color-tertiary, #1ea672);
+      border-color: var(--color-tertiary, #1ea672);
 
       &:hover {
-        background: var(--color-tertiary);
-        border-color: var(--color-tertiary);
+        background: var(--color-tertiary, #1ea672);
+        border-color: var(--color-tertiary, #1ea672);
       }
     }
   }
@@ -57,38 +57,38 @@
     background: transparent;
 
     &#{$self}--primary {
-      border-color: var(--color-primary);
-      color: var(--color-primary);
+      border-color: var(--color-primary, #042235);
+      color: var(--color-primary, #042235);
 
       &:hover {
-        background: var(--color-primary);
+        background: var(--color-primary, #042235);
       }
 
       &#{$self}--disabled,
       &#{$self}--disabled:hover {
-        background: var(--color-primary);
-        border-color: var(--color-primary);
-        color: var(--color-primary);
+        background: var(--color-primary, #042235);
+        border-color: var(--color-primary, #042235);
+        color: var(--color-primary, #042235);
       }
     }
 
     &#{$self}--secondary {
-      border-color: var(--color-secondary);
-      color: var(--color-secondary);
+      border-color: var(--color-secondary, #556cd6);
+      color: var(--color-secondary, #556cd6);
 
       &:hover {
-        border-color: var(--color-secondary);
-        color: var(--color-secondary);
+        border-color: var(--color-secondary, #556cd6);
+        color: var(--color-secondary, #556cd6);
       }
     }
 
     &#{$self}--tertiary {
-      border-color: var(--color-tertiary);
-      color: var(--color-tertiary);
+      border-color: var(--color-tertiary, #1ea672);
+      color: var(--color-tertiary, #1ea672);
 
       &:hover {
-        border-color: var(--color-tertiary);
-        color: var(--color-tertiary);
+        border-color: var(--color-tertiary, #1ea672);
+        color: var(--color-tertiary, #1ea672);
       }
     }
   }
@@ -102,11 +102,11 @@
     }
 
     &#{$self}--primary {
-      color: var(--color-primary);
+      color: var(--color-primary, #042235);
 
       &#{$self}--disabled,
       &#{$self}--disabled:hover {
-        color: var(--color-primary);
+        color: var(--color-primary, #042235);
         text-decoration: none;
       }
     }

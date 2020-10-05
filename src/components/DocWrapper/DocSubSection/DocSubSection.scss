@@ -2,7 +2,7 @@
   $self: &;
 
   &__h2 {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-medium, 20px);
     font-weight: 500;
     margin: 36px 0 18px;
 

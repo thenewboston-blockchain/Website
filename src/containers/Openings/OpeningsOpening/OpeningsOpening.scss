@@ -20,7 +20,7 @@
   }
 
   &__A {
-    color: var(--color-secondary);
+    color: var(--color-secondary, #556cd6);
 
     &:hover {
       text-decoration: underline;
@@ -32,7 +32,7 @@
   }
 
   &__application-method-note {
-    color: var(--color-sail-gray-500);
+    color: var(--color-sail-gray-500, #697386);
   }
 
   &__application-method-row {
@@ -51,7 +51,7 @@
 
   &__expand-collapse-container {
     align-items: center;
-    color: var(--color-secondary);
+    color: var(--color-secondary, #556cd6);
     cursor: pointer;
     display: flex;
     margin-top: 12px;
@@ -72,7 +72,7 @@
   }
 
   &__list-label {
-    font-family: var(--font-family-inter-medium);
+    font-family: var(--font-family-inter-medium, 'InterMedium', sans-serif);
     margin-top: 16px;
   }
 
@@ -82,9 +82,9 @@
   }
 
   &__position {
-    color: var(--color-primary);
+    color: var(--color-primary, #042235);
     display: block;
-    font-family: var(--font-family-inter-medium);
+    font-family: var(--font-family-inter-medium, 'InterMedium', sans-serif);
     font-size: 18px;
     font-weight: 600;
   }

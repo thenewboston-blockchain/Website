@@ -2,13 +2,13 @@
   white-space: nowrap;
 
   &__amount {
-    color: var(--color-tertiary);
-    font-family: var(--font-family-inter-medium);
-    font-size: var(--font-size-medium);
+    color: var(--color-tertiary, #1ea672);
+    font-family: var(--font-family-inter-medium, 'InterMedium', sans-serif);
+    font-size: var(--font-size-medium, 20px);
     margin-top: 8px;
   }
 
   &__title {
-    color: var(--color-sail-gray-500);
+    color: var(--color-sail-gray-500, #697386);
   }
 }

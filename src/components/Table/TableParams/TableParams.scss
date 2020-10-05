@@ -23,7 +23,7 @@
     padding: 2px 8px;
 
     &--param {
-      font-family: var(--font-family-mono-roboto);
+      font-family: var(--font-family-mono-roboto, 'Roboto Mono', monospace);
       font-weight: 700;
       padding-right: 12px;
       white-space: nowrap;
@@ -31,14 +31,14 @@
 
     &--sample-value {
       color: #9b9b9b;
-      font-family: var(--font-family-mono-roboto);
+      font-family: var(--font-family-mono-roboto, 'Roboto Mono', monospace);
       font-size: 13px;
     }
   }
 
   &__data-type {
     color: #9b9b9b;
-    font-family: var(--font-family-mono-roboto);
+    font-family: var(--font-family-mono-roboto, 'Roboto Mono', monospace);
     font-size: 12px;
     font-weight: 400;
     padding-left: 6px;
