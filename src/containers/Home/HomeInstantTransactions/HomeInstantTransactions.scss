@@ -3,7 +3,6 @@
   background: #f6f9fc;
   display: flex;
   flex-direction: column;
-  min-height: 1440px;
   position: relative;
 
   &__background-graphic {
@@ -20,7 +19,7 @@
   }
 
   &__content-container {
-    margin-bottom: -150px;
+    margin-bottom: -230px;
     max-width: 1148px; // (480px * 2) + 60px gutter + 128px padding
     padding: 128px 64px 0;
     width: 100%;
