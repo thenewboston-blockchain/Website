@@ -3,7 +3,9 @@
   font-size: 16px;
 
   &:last-of-type {
-    padding-bottom: 32px;
+    .MenuGroup__toggle:not(.MenuGroup__toggle--expanded) {
+      padding-bottom: 10px;
+    }
   }
 
   &__submenu {
