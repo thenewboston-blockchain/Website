@@ -39,7 +39,10 @@ const Openings = () => {
 
   const renderOpeningDetails = () => {
     const filteredOpenings = getFilteredOpenings();
-    const opening = filteredOpenings.find(({slug}) => slug === openingSlug);
+    const opening = filteredOpenings.find(
+      ({categories, slug}) =>
+        (categories.includes(category) || category === OpeningCategory.all) && slug === openingSlug,
+    );
     if (!opening) return <EmptyPage />;
     return (
       <OpeningDetails
