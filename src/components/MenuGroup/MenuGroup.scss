@@ -1,6 +1,13 @@
 .MenuGroup {
+  $self: &;
   font-family: var(--font-family-inter-medium, 'InterMedium', sans-serif);
   font-size: 16px;
+
+  &:last-of-type {
+    #{$self}__toggle:not(#{$self}__toggle--expanded) {
+      padding-bottom: 10px;
+    }
+  }
 
   &__submenu {
     display: none;
