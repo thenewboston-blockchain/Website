@@ -1,9 +1,10 @@
 .MenuGroup {
+  $self: &;
   font-family: var(--font-family-inter-medium);
   font-size: 16px;
 
   &:last-of-type {
-    .MenuGroup__toggle:not(.MenuGroup__toggle--expanded) {
+    #{$self}__toggle:not(#{$self}__toggle--expanded) {
       padding-bottom: 10px;
     }
   }
