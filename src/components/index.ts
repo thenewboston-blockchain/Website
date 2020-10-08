@@ -26,6 +26,7 @@ import {TableBorderGrid, TableParams, TableVertical} from './Table';
 import TimeFilter from './TimeFilter';
 import TotalAmount from './TotalAmount';
 import TopNav from './TopNav';
+import Tabbing from './Tabbing';
 
 export {
   A,
@@ -66,4 +67,5 @@ export {
   TimeFilter,
   TotalAmount,
   TopNav,
+  Tabbing,
 };

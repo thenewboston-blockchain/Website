@@ -1,9 +1,6 @@
 .Download {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  padding: 200px 32px;
-
+  flex-direction: column;
+  counter-reset: section;
   &__os {
     align-items: center;
     display: flex;
@@ -11,14 +8,72 @@
     padding: 0 60px;
   }
 
-  &__os-download-button {
-    margin-top: 60px;
+  &__os-link {
+    margin-bottom: 70px;
+    display: inline-block;
   }
 
-  &__os-name {
-    font-family: var(--font-family-inter-light);
-    font-size: 36px;
-    line-height: 1;
+  &__os-download-button {
+    padding: 15px 12px;
+    display: flex;
+    line-height: 24px;
+    font-size: 16px;
+    .Icon {
+      margin-left: 15px;
+    }
+  }
+
+  &__instructionCon {
+    h4 {
+      margin-top: 0;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+  }
+  &__instructions {
+    list-style: none;
+    padding: 0;
+    li {
+      overflow: auto;
+      margin-bottom: 18px;
+      .insCon {
+        display: flex;
+        flex-direction: column;
+        p {
+          font-size: 16px;
+          line-height: 16px;
+          float: left;
+          margin: 0;
+          line-height: 36px;
+        }
+        .code {
+          background: #f7fafc;
+          border: 1px solid #c1c9d2;
+          border-radius: 3px;
+          padding: 5px 18px;
+        }
+      }
+
+      &:before {
+        counter-increment: section;
+        content: counter(section);
+        display: inline-block;
+        float: left;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        background: #1ea672;
+        text-align: center;
+        line-height: 36px;
+        margin-right: 18px;
+        position: relative;
+      }
+    }
   }
 
   @media (max-width: 768px) {

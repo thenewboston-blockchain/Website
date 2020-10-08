@@ -15,6 +15,7 @@ import MenuRightIcon from 'mdi-react/MenuRightIcon';
 import MinusIcon from 'mdi-react/MinusIcon';
 import PlusIcon from 'mdi-react/PlusIcon';
 import ThumbsUpIcon from 'mdi-react/ThumbsUpIcon';
+import ArrowCollapseDownIcon from 'mdi-react/ArrowCollapseDownIcon';
 
 import {getCustomClassNames} from 'utils/components';
 import './Icon.scss';
@@ -32,6 +33,7 @@ export enum IconType {
   minus,
   plus,
   thumbsUp,
+  arrowCollapseDown,
 }
 
 interface ComponentProps {
@@ -72,6 +74,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
         return <PlusIcon {...iconProps} />;
       case IconType.thumbsUp:
         return <ThumbsUpIcon {...iconProps} />;
+      case IconType.arrowCollapseDown:
+        return <ArrowCollapseDownIcon {...iconProps} />;
       default:
         return null;
     }
