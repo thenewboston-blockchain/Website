@@ -92,22 +92,17 @@ const Download = () => {
         </a>
         <div className="Download__instructionCon">
           <h4>Installation Instructions</h4>
-          {renderInstructions(instructions[name as keyof InstructionsType])}
+          <ul className="Download__instructions">{renderInstructions(instructions[name as keyof InstructionsType])}</ul>
         </div>
       </div>
     );
   };
 
   const renderInstructions = (ins: string[]) => {
-    return (
-      <ul className="Download__instructions">
-        {ins.map((item, index) => (
-          /* eslint-disable react/no-danger */
-          <li dangerouslySetInnerHTML={{__html: item}} key={index} />
-        ))}
-        ;
-      </ul>
-    );
+    return ins.map((item, index) => (
+      /* eslint-disable react/no-danger */
+      <li dangerouslySetInnerHTML={{__html: item}} key={index} />
+    ));
   };
 
   const generateTabContent = () => {
