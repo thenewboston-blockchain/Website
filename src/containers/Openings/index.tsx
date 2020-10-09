@@ -1,18 +1,24 @@
-import React, {FC, ReactNode, useMemo, useState} from 'react';
+import React, {FC, ReactNode, useCallback, useMemo, useState} from 'react';
 import {useParams} from 'react-router-dom';
 
-import {BreadcrumbMenu, EmptyPage} from 'components';
+import {BreadcrumbMenu, EmptyPage, FlatNavLinks} from 'components';
 import {OpeningCategory, OpeningsUrlParams} from 'types/openings';
 import {getOpenings} from 'utils/data';
 
 import OpeningDetails from './OpeningDetails';
-import OpeningsCategoryFilter from './OpeningsCategoryFilter';
 import OpeningsOpening from './OpeningsOpening';
 import './Openings.scss';
 
 const openings = getOpenings();
 
-// TODO
+const OPENING_CATEGORY_FILTERS = [
+  OpeningCategory.all,
+  OpeningCategory.accounting,
+  OpeningCategory.community,
+  OpeningCategory.design,
+  OpeningCategory.engineering,
+  OpeningCategory.marketing,
+];
 
 const Openings: FC = () => {
   const {openingId: openingIdParam} = useParams<OpeningsUrlParams>();
@@ -26,8 +32,21 @@ const Openings: FC = () => {
 
   const opening = useMemo(() => openings.find(({openingId}) => openingId === openingIdParam) || null, [openingIdParam]);
 
+  const handleNavOptionClick = useCallback(
+    (option: OpeningCategory) => (): void => {
+      setCategoryFilter(option);
+    },
+    [setCategoryFilter],
+  );
+
   const renderCategoryFilter = (): ReactNode => {
-    return <OpeningsCategoryFilter categoryFilter={categoryFilter} setCategoryFilter={setCategoryFilter} />;
+    return (
+      <FlatNavLinks<OpeningCategory>
+        handleOptionClick={handleNavOptionClick}
+        options={OPENING_CATEGORY_FILTERS}
+        selectedOption={categoryFilter}
+      />
+    );
   };
 
   const renderOpenings = (): ReactNode => {

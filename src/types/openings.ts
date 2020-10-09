@@ -26,10 +26,6 @@ export enum OpeningCategory {
   marketing = 'Marketing',
 }
 
-export interface OpeningCategoryUrlParams {
-  category: OpeningCategory;
-}
-
 export interface OpeningsUrlParams {
   openingId: OpeningCategory;
 }

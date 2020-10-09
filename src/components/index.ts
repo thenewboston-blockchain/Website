@@ -7,6 +7,7 @@ import DashboardLayout from './DashboardLayout';
 import DocsMenuItems from './DocsMenuItems';
 import {DocContainer, DocEndpoint, DocImage, DocInlineCode, DocList, DocSubSection} from './DocWrapper';
 import EmptyPage from './EmptyPage';
+import FlatNavLinks from './FlatNavLinks';
 import {Button} from './FormElements';
 import HashLink from './HashLink';
 import Icon, {IconType} from './Icon';
@@ -17,7 +18,6 @@ import MenuGroup from './MenuGroup';
 import LabelFilter from './LabelFilter';
 import Loader from './Loader';
 import Pagination from './Pagination';
-import RepositoryFilter from './RepositoryFilter';
 import Qr from './Qr';
 import Shadow from './Shadow';
 import SlideUp from './SlideUp';
@@ -43,6 +43,7 @@ export {
   DocsMenuItems,
   DocSubSection,
   EmptyPage,
+  FlatNavLinks,
   HashLink,
   Icon,
   IconType,
@@ -54,7 +55,6 @@ export {
   MenuGroup,
   Pagination,
   Qr,
-  RepositoryFilter,
   RequestResponseSnippet,
   Shadow,
   SlideUp,
