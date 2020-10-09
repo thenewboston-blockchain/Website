@@ -1,6 +1,6 @@
 [
   {
-    "slug": "design-uxui",
+    "openingId": "design-uxui",
     "applicationMethods": [
       {
         "channel": "slack",
@@ -19,7 +19,7 @@
         "channel": "reddit"
       }
     ],
-    "categories": ["Design"],
+    "category": "Design",
     "description": "We're looking for an experienced UI/UX designer who wants to be a part of designing the future of digital currency. You will lead a team of junior designers and be a part of designing the responsive desktop app, mobile app, and the responsive marketing site.",
     "payNotes": ["2,800 points/day"],
     "position": "UI/UX Design Lead",
@@ -40,7 +40,7 @@
     "technologyRequirements": ["Figma"]
   },
   {
-    "slug": "community-product-manager",
+    "openingId": "community-product-manager",
     "applicationMethods": [
       {
         "channel": "slack",
@@ -59,7 +59,7 @@
         "channel": "reddit"
       }
     ],
-    "categories": ["Community"],
+    "category": "Community",
     "description": "Looking for a dedicated Product Manager to help guide the success of our project and help lead the team in doing so. As the project nears release, the team is growing rapidly and we are looking for someone to help manage our goals and strategy.",
     "payNotes": ["2,800 points/day", "Ineligible for task points (you will be creating tasks for your team)"],
     "position": "Product Manager",
@@ -80,7 +80,7 @@
     ]
   },
   {
-    "slug": "engineering-front-end-team-lead",
+    "openingId": "engineering-front-end-team-lead",
     "applicationMethods": [
       {
         "channel": "slack",
@@ -99,7 +99,7 @@
         "channel": "reddit"
       }
     ],
-    "categories": ["Engineering"],
+    "category": "Engineering",
     "description": "We're looking for an experienced Front-end engineer who is able to lead a team of junior developers. You and your team will be working primarily on the Account Manager and Website repositories to help build the UI's needed for the applications used by our community.",
     "payNotes": ["2,800 points/day", "Ineligible for task points (you will be creating tasks for your team)"],
     "position": "Front-end Team Lead (React/Redux)",
@@ -128,7 +128,7 @@
     ]
   },
   {
-    "slug": "community-hiring-manager",
+    "openingId": "community-hiring-manager",
     "applicationMethods": [
       {
         "channel": "slack",
@@ -147,7 +147,7 @@
         "channel": "reddit"
       }
     ],
-    "categories": ["Community"],
+    "category": "Community",
     "description": "Looking for a Hiring Manager to help grow our team. We are a rapidly growing community and are looking for an individual who can identify areas where new team members are needed and also manage incoming applicants.",
     "payNotes": ["2,800 points/day"],
     "position": "Hiring Manager",
@@ -165,7 +165,7 @@
     "technologyRequirements": ["LinkedIn account", "Background in technology"]
   },
   {
-    "slug": "engineering-accounting-manager",
+    "openingId": "engineering-accounting-manager",
     "applicationMethods": [
       {
         "channel": "slack",
@@ -184,7 +184,7 @@
         "channel": "reddit"
       }
     ],
-    "categories": ["Accounting", "Engineering"],
+    "category": "Accounting",
     "description": "We are looking for an Accounting Manager to be responsible for sending payments to all contributors on a weekly basis, as well as sending daily reward payments for all tasks completed by developers.",
     "payNotes": ["2,800 points/day"],
     "position": "Accounting Manager (Python)",
@@ -205,7 +205,7 @@
     "technologyRequirements": ["Experience with the Account Manager desktop application (training provided)"]
   },
   {
-    "slug": "marketing-director",
+    "openingId": "marketing-director",
     "applicationMethods": [
       {
         "channel": "slack",
@@ -224,7 +224,7 @@
         "channel": "reddit"
       }
     ],
-    "categories": ["Marketing"],
+    "category": "Marketing",
     "description": "Seeking a Director of Marketing to focus on acquiring new users by creating, executing, and testing marketing strategies.",
     "payNotes": ["2,800 points/day", "Ineligible for task points (you will be creating tasks for your team)"],
     "position": "Director of Marketing",
@@ -246,14 +246,14 @@
     ]
   },
   {
-    "slug": "community-slack-manager",
+    "openingId": "community-slack-manager",
     "applicationMethods": [
       {
         "channel": "slack",
         "note": "Message Kristy or Bucky"
       }
     ],
-    "categories": ["Community"],
+    "category": "Community",
     "description": "We are looking for a Slack Community Manager to help provide guidance to any new users who join our Slack channel. As the community grows as we approach release (and especially after) there will be more users joining our Slack who will need assistance and help with questions about contributing, the project, and the community.",
     "payNotes": ["2,800 points/day"],
     "position": "Slack Community Manager",
@@ -277,13 +277,13 @@
     ]
   },
   {
-    "slug": "community-reddit-moderator",
+    "openingId": "community-reddit-moderator",
     "applicationMethods": [
       {
         "channel": "reddit"
       }
     ],
-    "categories": ["Community", "Marketing"],
+    "category": "Community",
     "description": "Seeking a Reddit Moderator to help manage thenewboston subreddit. New users are joining the community quickly now that the network is getting closer to release and we need someone to help answer questions, participate in discussions, and to post frequent updates about the project for the community.",
     "payNotes": ["2,800 points/day"],
     "position": "Reddit Moderator",
@@ -306,7 +306,7 @@
     ]
   },
   {
-    "slug": "engineering-mobile-lead",
+    "openingId": "engineering-mobile-lead",
     "applicationMethods": [
       {
         "channel": "slack",
@@ -325,7 +325,7 @@
         "channel": "reddit"
       }
     ],
-    "categories": ["Engineering"],
+    "category": "Engineering",
     "description": "We are looking for an experienced mobile developer to fill our opening of Mobile Lead who is able to lead a team of junior developers. You will be responsible for designing the core architecture, selecting the technologies/programming languages, and choosing team members to help build the mobile application that will be used by our community and after release, the world.",
     "payNotes": ["2,800 points/day", "Ineligible for task points (you will be creating tasks for your team)"],
     "position": "Mobile Team Lead",

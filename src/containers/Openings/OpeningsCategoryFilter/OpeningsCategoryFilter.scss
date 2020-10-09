@@ -18,4 +18,8 @@
       color: var(--color-primary);
     }
   }
+
+  @media (max-width: 992px) {
+    padding: 16px 24px 0;
+  }
 }

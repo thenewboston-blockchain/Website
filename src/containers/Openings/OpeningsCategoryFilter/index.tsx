@@ -1,34 +1,34 @@
 import React, {FC} from 'react';
-import {useHistory, useLocation, useParams} from 'react-router-dom';
 import clsx from 'clsx';
 
-import {OPENING_CATEGORIES} from 'constants/openings';
-import {GenericVoidFunction} from 'types/generic';
-import {OpeningCategory, OpeningCategoryUrlParams} from 'types/openings';
+import {OpeningCategory} from 'types/openings';
 
 import './OpeningsCategoryFilter.scss';
 
-const OPENING_CATEGORY_FILTERS = [OpeningCategory.all, ...OPENING_CATEGORIES];
+const OPENING_CATEGORY_FILTERS = [
+  OpeningCategory.all,
+  OpeningCategory.accounting,
+  OpeningCategory.community,
+  OpeningCategory.design,
+  OpeningCategory.engineering,
+  OpeningCategory.marketing,
+];
 
 interface ComponentProps {
-  className?: string;
+  categoryFilter: OpeningCategory;
+  setCategoryFilter(categoryFilter: OpeningCategory): void;
 }
 
-const OpeningsCategoryFilter: FC<ComponentProps> = ({className}) => {
-  const {category} = useParams<OpeningCategoryUrlParams>();
-  const history = useHistory();
-  const location = useLocation();
-
-  const handleOptionClick = (i: OpeningCategory): GenericVoidFunction => (): void => {
-    const route = location.pathname.split('/')[1];
-    history.push(`/${route}/${i}`);
+const OpeningsCategoryFilter: FC<ComponentProps> = ({categoryFilter, setCategoryFilter}) => {
+  const handleOptionClick = (category: OpeningCategory) => (): void => {
+    setCategoryFilter(category);
   };
 
   const renderOptions = () => {
     return OPENING_CATEGORY_FILTERS.map((option) => (
       <div
         className={clsx('OpeningsCategoryFilter__option', {
-          'OpeningsCategoryFilter__option--active': option === category,
+          'OpeningsCategoryFilter__option--active': option === categoryFilter,
         })}
         key={option}
         onClick={handleOptionClick(option)}
@@ -40,7 +40,7 @@ const OpeningsCategoryFilter: FC<ComponentProps> = ({className}) => {
     ));
   };
 
-  return <div className={clsx('OpeningsCategoryFilter', className)}>{renderOptions()}</div>;
+  return <div className="OpeningsCategoryFilter">{renderOptions()}</div>;
 };
 
 export default OpeningsCategoryFilter;

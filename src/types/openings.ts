@@ -5,21 +5,15 @@ export interface ApplicationMethod {
   note?: string;
 }
 
-export interface OpeningBasicDetails {
-  description: string;
-  position: string;
-  slug: string;
-}
-
 export interface Opening {
   applicationMethods: ApplicationMethod[];
-  categories: OpeningCategory[];
+  category: OpeningCategory;
   description: string;
+  openingId: string;
   payNotes: string[];
   position: string;
   reportsTo: Reportee[];
   responsibilities: string[];
-  slug: string;
   technologyRequirements: string[];
 }
 
@@ -37,8 +31,7 @@ export interface OpeningCategoryUrlParams {
 }
 
 export interface OpeningsUrlParams {
-  category: OpeningCategory;
-  slug: string;
+  openingId: OpeningCategory;
 }
 
 export interface Reportee {

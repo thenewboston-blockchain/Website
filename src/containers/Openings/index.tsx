@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {FC, ReactNode, useMemo, useState} from 'react';
 import {useParams} from 'react-router-dom';
 
 import {BreadcrumbMenu, EmptyPage} from 'components';
@@ -10,72 +10,52 @@ import OpeningsCategoryFilter from './OpeningsCategoryFilter';
 import OpeningsOpening from './OpeningsOpening';
 import './Openings.scss';
 
-const Openings = () => {
-  const {category, slug: openingSlug} = useParams<OpeningsUrlParams>();
-  const [categoryFilter, setOpeningsCategoryFilter] = useState<OpeningCategory>(OpeningCategory.all);
+const openings = getOpenings();
 
-  useEffect(() => {
-    setOpeningsCategoryFilter(category);
-  }, [category]);
+// TODO
 
-  const getFilteredOpenings = () => {
-    let filteredOpenings = getOpenings();
+const Openings: FC = () => {
+  const {openingId: openingIdParam} = useParams<OpeningsUrlParams>();
+  const [categoryFilter, setCategoryFilter] = useState<OpeningCategory>(OpeningCategory.all);
 
-    filteredOpenings =
-      categoryFilter === OpeningCategory.all
-        ? filteredOpenings
-        : filteredOpenings.filter(({categories}) => categories.includes(categoryFilter));
+  const filteredOpenings = useMemo(
+    () =>
+      categoryFilter === OpeningCategory.all ? openings : openings.filter(({category}) => category === categoryFilter),
+    [categoryFilter],
+  );
 
-    return filteredOpenings;
+  const opening = useMemo(() => openings.find(({openingId}) => openingId === openingIdParam) || null, [openingIdParam]);
+
+  const renderCategoryFilter = (): ReactNode => {
+    return <OpeningsCategoryFilter categoryFilter={categoryFilter} setCategoryFilter={setCategoryFilter} />;
   };
 
-  const renderOpenings = () => {
-    const filteredOpenings = getFilteredOpenings();
+  const renderOpenings = (): ReactNode => {
     if (!filteredOpenings.length) return <EmptyPage />;
-    return filteredOpenings.map(({description, position, slug}) => (
-      <OpeningsOpening description={description} key={position} position={position} slug={slug} />
+    return filteredOpenings.map(({description, openingId, position}) => (
+      <OpeningsOpening description={description} key={position} openingId={openingId} position={position} />
     ));
   };
 
-  const renderOpeningDetails = () => {
-    const filteredOpenings = getFilteredOpenings();
-    const opening = filteredOpenings.find(
-      ({categories, slug}) =>
-        (categories.includes(category) || category === OpeningCategory.all) && slug === openingSlug,
-    );
+  const renderOpeningDetails = (): ReactNode => {
     if (!opening) return <EmptyPage />;
-    return (
-      <OpeningDetails
-        applicationMethods={opening.applicationMethods}
-        categories={opening.categories}
-        description={opening.description}
-        key={opening.position}
-        payNotes={opening.payNotes}
-        position={opening.position}
-        reportsTo={opening.reportsTo}
-        responsibilities={opening.responsibilities}
-        slug={opening.slug}
-        technologyRequirements={opening.technologyRequirements}
-      />
-    );
+    return <OpeningDetails opening={opening} />;
   };
 
   return (
     <div className="Openings">
       <BreadcrumbMenu
         className="Openings__BreadcrumbMenu"
-        menuItems={<OpeningsCategoryFilter className="Openings__OpeningsCategoryFilter" />}
-        pageName={category}
+        menuItems={renderCategoryFilter()}
+        pageName={categoryFilter}
         sectionName="Open Positions"
       />
-      <div className="Openings__left-menu">
-        <OpeningsCategoryFilter className="Openings__OpeningsCategoryFilter" />
-      </div>
-      {openingSlug ? (
+      <div className="Openings__left-menu">{renderCategoryFilter()}</div>
+      {openingIdParam ? (
         <div className="Openings__opening-details">{renderOpeningDetails()}</div>
       ) : (
         <div className="Openings__opening-list">
-          <h1 className="Openings__opening-list-heading"> Openings </h1>
+          <h1 className="Openings__opening-list-heading">Openings</h1>
           {renderOpenings()}
         </div>
       )}

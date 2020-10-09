@@ -1,19 +1,21 @@
-import React, {FC} from 'react';
-import {Link, useParams} from 'react-router-dom';
-
-import {OpeningBasicDetails, OpeningCategoryUrlParams} from 'types/openings';
+import React, {FC, memo} from 'react';
+import {Link} from 'react-router-dom';
 
 import './OpeningsOpening.scss';
 
-const OpeningsOpening: FC<OpeningBasicDetails> = ({description, position, slug}) => {
-  const {category} = useParams<OpeningCategoryUrlParams>();
+interface ComponentProps {
+  description: string;
+  openingId: string;
+  position: string;
+}
 
+const OpeningsOpening: FC<ComponentProps> = ({description, openingId, position}) => {
   return (
-    <Link className="OpeningsOpening" to={`${category}/${slug}`}>
+    <Link className="OpeningsOpening" to={`/openings/${openingId}`}>
       <div className="OpeningsOpening__position">{position}</div>
       <div className="OpeningsOpening__description">{description}</div>
     </Link>
   );
 };
 
-export default OpeningsOpening;
+export default memo(OpeningsOpening);
