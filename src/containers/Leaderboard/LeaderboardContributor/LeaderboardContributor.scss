@@ -81,8 +81,11 @@
     display: block;
     font-family: var(--font-family-inter-medium);
     font-size: 20px;
-    font-weight: 500;
-    line-height: 125%;
+    line-height: 1.25;
+    max-width: calc(100vw - 529px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     &:hover {
       text-decoration: underline;
@@ -150,6 +153,7 @@
     &__user-login {
       font-size: 18px;
       margin-top: 4px;
+      max-width: calc(100vw - 162px);
     }
   }
 }
