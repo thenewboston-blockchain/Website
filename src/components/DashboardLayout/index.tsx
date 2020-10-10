@@ -1,7 +1,8 @@
-import React, {FC, useEffect, useRef} from 'react';
+import React, {FC} from 'react';
 import {useLocation} from 'react-router-dom';
 
 import {BreadcrumbMenu, DocsMenuItems} from 'components';
+import {useScrollToTopContainer} from 'hooks';
 import './DashboardLayout.scss';
 
 interface ComponentProps {
@@ -11,11 +12,7 @@ interface ComponentProps {
 
 const DashboardLayout: FC<ComponentProps> = ({children, pageName, sectionName}) => {
   const {pathname} = useLocation();
-  const rightDiv = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    rightDiv.current?.scrollTo(0, 0);
-  }, [pathname]);
+  const rightDiv = useScrollToTopContainer<HTMLDivElement>([pathname]);
 
   return (
     <div className="DashboardLayout">

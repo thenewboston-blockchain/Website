@@ -1,7 +1,8 @@
-import React, {FC, ReactNode, useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import React, {FC, ReactNode, useCallback, useMemo, useState} from 'react';
 import {useParams} from 'react-router-dom';
 
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks} from 'components';
+import {useScrollToTopContainer} from 'hooks';
 import {OpeningCategory, OpeningsUrlParams} from 'types/openings';
 import {getOpenings} from 'utils/data';
 
@@ -23,16 +24,7 @@ const OPENING_CATEGORY_FILTERS = [
 const Openings: FC = () => {
   const {openingId: openingIdParam} = useParams<OpeningsUrlParams>();
   const [categoryFilter, setCategoryFilter] = useState<OpeningCategory>(OpeningCategory.all);
-  const openingDetailsContainer = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!openingDetailsContainer.current) return;
-    try {
-      openingDetailsContainer.current.scrollTo({behavior: 'smooth', top: 0});
-    } catch (error) {
-      openingDetailsContainer.current.scrollTo(0, 0);
-    }
-  }, [openingIdParam]);
+  const openingDetailsContainer = useScrollToTopContainer<HTMLDivElement>([openingIdParam]);
 
   const filteredOpenings = useMemo(
     () =>
