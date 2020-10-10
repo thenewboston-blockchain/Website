@@ -2,7 +2,7 @@
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(85, 108, 214, 0.18);
   display: flex;
-  font-size: var(--font-size-small, 12px);
+  font-size: var(--font-size-small);
   line-height: 125%;
   margin: 0 24px 12px;
   padding: 12px;
@@ -69,10 +69,10 @@
 
   &__user-avatar-rank {
     align-items: center;
-    background-color: var(--color-sail-gray-100, #e3e8ee);
-    border: 2px solid var(--color-white, #ffffff);
+    background-color: var(--color-sail-gray-100);
+    border: 2px solid var(--color-white);
     border-radius: 50%;
-    color: var(--color-primary, #042235);
+    color: var(--color-primary);
     display: flex;
     font-size: 20px;
     height: 42px;
@@ -81,14 +81,14 @@
     width: 42px;
 
     &--top-3 {
-      background-color: var(--color-tertiary, #1ea672);
+      background-color: var(--color-tertiary);
       color: var(--color-white);
     }
   }
 
   &__user-login {
     display: block;
-    font-family: var(--font-family-inter-medium, 'InterMedium', sans-serif);
+    font-family: var(--font-family-inter-medium);
     font-size: 20px;
     font-weight: 500;
     line-height: 125%;
@@ -126,7 +126,7 @@
 
     &__TotalAmount {
       display: block;
-      margin-left: 0px;
+      margin-left: 0;
     }
 
     &__TotalAmount__amount {
