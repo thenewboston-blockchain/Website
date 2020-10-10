@@ -69,4 +69,8 @@
     margin-top: 4px;
     padding-inline-start: 18px;
   }
+
+  @media (max-width: 768px) {
+    margin: 16px 24px;
+  }
 }

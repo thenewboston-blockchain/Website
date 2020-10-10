@@ -7,8 +7,8 @@ $opening-card-box-shadow: 0 15px 40px 15px rgba(85, 108, 214, 0.18);
   color: var(--color-primary);
   cursor: pointer;
   display: block;
-  margin: 0 24px 12px;
-  padding: 16px;
+  margin: 0 36px 12px;
+  padding: 18px;
 
   &:hover {
     box-shadow: $opening-card-box-shadow;
@@ -22,5 +22,9 @@ $opening-card-box-shadow: 0 15px 40px 15px rgba(85, 108, 214, 0.18);
     color: var(--color-primary);
     font-family: var(--font-family-inter-medium);
     font-size: 18px;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0 24px 12px;
   }
 }

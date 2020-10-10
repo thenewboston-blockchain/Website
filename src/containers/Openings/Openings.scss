@@ -51,4 +51,10 @@
       grid-row: 2 / span 1;
     }
   }
+
+  @media (max-width: 768px) {
+    &__opening-list-heading {
+      margin: 16px 42px 36px;
+    }
+  }
 }
