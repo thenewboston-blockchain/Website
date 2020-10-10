@@ -6,12 +6,7 @@ function useScrollToTopContainer<E extends HTMLElement>(dependencies: any[] = []
   const containerRef = useRef<E>(null);
 
   useEffect(() => {
-    if (!containerRef.current) return;
-    try {
-      containerRef.current.scrollTo({behavior: 'smooth', top: 0});
-    } catch (error) {
-      containerRef.current.scrollTo(0, 0);
-    }
+    containerRef.current?.scrollTo(0, 0);
   }, dependencies);
 
   return containerRef;
