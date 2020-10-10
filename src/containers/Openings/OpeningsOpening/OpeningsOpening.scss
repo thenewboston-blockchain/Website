@@ -1,28 +1,17 @@
+$opening-card-box-shadow: 0 15px 40px 15px rgba(85, 108, 214, 0.18);
+
 .OpeningsOpening {
   $self: &;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(85, 108, 214, 0.18);
   color: var(--color-primary);
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
+  display: block;
   margin: 0 24px 12px;
   padding: 16px;
 
-  &:focus {
-    outline: none;
-  }
-
-  &:first-of-type {
-    margin-top: 36px;
-  }
-
   &:hover {
-    box-shadow: 0 15px 40px 15px rgba(85, 108, 214, 0.18);
-  }
-
-  &:last-of-type {
-    border-bottom: none;
+    box-shadow: $opening-card-box-shadow;
   }
 
   &__description {
@@ -31,9 +20,7 @@
 
   &__position {
     color: var(--color-primary);
-    display: block;
     font-family: var(--font-family-inter-medium);
     font-size: 18px;
-    font-weight: 600;
   }
 }
