@@ -1,8 +1,8 @@
-import React, {FC} from 'react';
-import {Link} from 'react-router-dom';
-import {A, MarketingButton} from 'components';
+import React, {FC, ReactNode} from 'react';
+import {useHistory, useLocation} from 'react-router-dom';
+import {A, Icon, IconType, MarketingButton} from 'components';
 
-import {ApplicationMethod, Opening} from 'types/openings';
+import {Opening} from 'types/openings';
 import {SocialMedia} from 'types/social-media';
 
 import './OpeningDetails.scss';
@@ -21,8 +21,20 @@ interface ComponentProps {
 }
 
 const OpeningDetails: FC<ComponentProps> = ({opening}) => {
-  const renderApplicationMethodList = () => {
-    const rows = opening.applicationMethods.map(({channel, note}: ApplicationMethod) => (
+  const history = useHistory();
+  const location = useLocation<{from?: string}>();
+
+  const handleBackClick = (): void => {
+    if (location.state?.from) {
+      history.goBack();
+      return;
+    }
+
+    history.replace('/openings');
+  };
+
+  const renderApplicationMethodList = (): ReactNode => {
+    const rows = opening.applicationMethods.map(({channel, note}) => (
       <div className="OpeningDetails__application-method-row" key={channel}>
         <MarketingButton
           className="OpeningDetails__MarketingButton"
@@ -45,7 +57,7 @@ const OpeningDetails: FC<ComponentProps> = ({opening}) => {
     );
   };
 
-  const renderContent = () => (
+  const renderContent = (): ReactNode => (
     <>
       <div className="OpeningDetails__position">{opening.position}</div>
       <div className="OpeningDetails__description">{opening.description}</div>
@@ -57,7 +69,7 @@ const OpeningDetails: FC<ComponentProps> = ({opening}) => {
     </>
   );
 
-  const renderReportsToList = () => {
+  const renderReportsToList = (): ReactNode => {
     const listItems = opening.reportsTo.map(({githubUsername, name}) => (
       <li key={name}>
         {name}{' '}
@@ -79,21 +91,25 @@ const OpeningDetails: FC<ComponentProps> = ({opening}) => {
     );
   };
 
-  const renderStringList = (listData: string[], listLabel: string) => {
-    const listItems = listData.map((item: string) => <li key={item}>{item}</li>);
+  const renderStringList = (listData: string[], listLabel: string): ReactNode => {
     return (
       <>
         <div className="OpeningDetails__list-label">{listLabel}</div>
-        <ul className="OpeningDetails__ul">{listItems}</ul>
+        <ul className="OpeningDetails__ul">
+          {listData.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
       </>
     );
   };
 
   return (
     <div className="OpeningDetails">
-      <Link className="OpeningDetails__BackButton" to="/openings/TODO">
-        Back
-      </Link>
+      <div className="OpeningDetails__back-container" onClick={handleBackClick} role="button" tabIndex={0}>
+        <Icon className="OpeningDetails__back-icon" icon={IconType.arrowLeft} />
+        <span className="OpeningDetails__back-text">Back</span>
+      </div>
       {renderContent()}
     </div>
   );

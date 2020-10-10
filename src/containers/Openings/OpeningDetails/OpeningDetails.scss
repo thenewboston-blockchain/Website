@@ -1,10 +1,6 @@
 .OpeningDetails {
   $self: &;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  margin: 0 38px 12px;
-  padding: 16px;
+  margin: 36px 54px;
 
   &__A {
     color: var(--color-secondary);
@@ -32,9 +28,19 @@
     }
   }
 
-  &__BackButton {
+  &__back-container {
+    align-items: center;
     color: var(--color-secondary);
-    font-family: var(--font-family-inter);
+    cursor: pointer;
+    display: inline-flex;
+
+    &:hover #{$self}__back-text {
+      text-decoration: underline;
+    }
+  }
+
+  &__back-icon {
+    margin-right: 15px;
   }
 
   &__description {
@@ -53,15 +59,14 @@
 
   &__position {
     color: var(--color-primary);
-    display: block;
-    font-family: var(--font-family-inter);
+    font-family: var(--font-family-inter-light);
     font-size: 36px;
-    font-weight: 300;
-    line-height: 125%;
+    line-height: 1.25;
     margin-top: 36px;
   }
 
   &__ul {
     margin-top: 4px;
+    padding-inline-start: 18px;
   }
 }
