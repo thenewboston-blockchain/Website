@@ -35,9 +35,8 @@
   }
 
   &__mini-text {
-    color: #556cd6;
-    font-weight: 500;
-    line-height: 120%;
+    color: var(--color-secondary);
+    line-height: 1.2;
   }
 
   &__text-snippets {
@@ -48,7 +47,7 @@
     &-right-block {
       flex: 1;
       font-size: 16px;
-      line-height: 150%;
+      line-height: 1.5;
     }
 
     &-left-block {
@@ -62,7 +61,6 @@
 
   &__title {
     font-size: 36px;
-    font-weight: bold;
     line-height: 120%;
     margin-top: 30px;
     max-width: 480px;
