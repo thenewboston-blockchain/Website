@@ -1,44 +1,44 @@
 import React, {useEffect, useMemo, useState, ReactNode} from 'react';
 import max from 'lodash/max';
 
-import {Button, Tabbing, Icon, IconType} from 'components';
+import {Button, Icon, IconType, Tabs} from 'components';
 import {Release} from 'types/github';
 import {fetchGithubReleases} from 'utils/github';
 
 import './Download.scss';
 
 interface InstructionsType {
-  Linix: string[];
+  Linux: string[];
   Mac: string[];
   Window: string[];
 }
 
 interface TabsType {
+  component: ReactNode;
   fileExt: string;
-  tabComponent: ReactNode;
-  tabLabel: string;
+  label: string;
 }
 
 const tabs: TabsType[] = [
   {
+    component: 'any',
     fileExt: 'linux.AppImage',
-    tabComponent: 'any',
-    tabLabel: 'Linix',
+    label: 'Linux',
   },
   {
+    component: 'any',
     fileExt: 'mac.dmg',
-    tabComponent: 'any',
-    tabLabel: 'Mac',
+    label: 'Mac',
   },
   {
+    component: 'any',
     fileExt: 'win.exe',
-    tabComponent: 'any',
-    tabLabel: 'Window',
+    label: 'Window',
   },
 ];
 
 const instructions: InstructionsType = {
-  Linix: [
+  Linux: [
     "<div class='insCon'><p>Download thenewboston</p></div>",
     "<div class='insCon'><p>To run thenewboston, make it executable</p><p class='code'>$ sudo chmod a+x TNB-Account-Manager-1.0.0-alpha.20-linux*.AppImage</p></div>",
     "<div class='insCon'><p>Run!</p><p class='code'>$ ./TNB-Account-Manager-1.0.0-alpha.20-linux*.AppImage</p></div>",
@@ -107,8 +107,8 @@ const Download = () => {
 
   const generateTabContent = () => {
     tabs.forEach((item, index) => {
-      tabs[index].tabComponent = renderOS(
-        item.tabLabel,
+      tabs[index].component = renderOS(
+        item.label,
         `https://github.com/thenewboston-developers/Account-Manager/releases/download/v1.0.0-alpha.${latestReleaseNumber}/TNB-Account-Manager-1.0.0-alpha.${latestReleaseNumber}-${item.fileExt}`,
       );
     });
@@ -117,7 +117,7 @@ const Download = () => {
 
   if (error) return <h1>Error</h1>;
   if (loading) return null;
-  return <Tabbing tabsData={generateTabContent()} />;
+  return <Tabs tabs={generateTabContent()} />;
 };
 
 export default Download;
