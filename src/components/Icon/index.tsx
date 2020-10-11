@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import noop from 'lodash/noop';
 
 import AlertCircleOutlineIcon from 'mdi-react/AlertCircleOutlineIcon';
+import ArrowCollapseDownIcon from 'mdi-react/ArrowCollapseDownIcon';
 import ArrowLeftIcon from 'mdi-react/ArrowLeftIcon';
 import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
 import ChevronLeftIcon from 'mdi-react/ChevronLeftIcon';
@@ -16,7 +17,6 @@ import MenuRightIcon from 'mdi-react/MenuRightIcon';
 import MinusIcon from 'mdi-react/MinusIcon';
 import PlusIcon from 'mdi-react/PlusIcon';
 import ThumbsUpIcon from 'mdi-react/ThumbsUpIcon';
-import ArrowCollapseDownIcon from 'mdi-react/ArrowCollapseDownIcon';
 
 import {getCustomClassNames} from 'utils/components';
 import './Icon.scss';
@@ -24,6 +24,7 @@ import './Icon.scss';
 // These names are camelCased versions of the names found in https://materialdesignicons.com/
 export enum IconType {
   alertCircleOutline,
+  arrowCollapseDown,
   arrowLeft,
   chevronDown,
   chevronLeft,
@@ -35,7 +36,6 @@ export enum IconType {
   minus,
   plus,
   thumbsUp,
-  arrowCollapseDown,
 }
 
 interface ComponentProps {
@@ -56,6 +56,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
     switch (icon) {
       case IconType.alertCircleOutline:
         return <AlertCircleOutlineIcon {...iconProps} />;
+      case IconType.arrowCollapseDown:
+        return <ArrowCollapseDownIcon {...iconProps} />;
       case IconType.arrowLeft:
         return <ArrowLeftIcon {...iconProps} />;
       case IconType.chevronDown:
@@ -78,8 +80,6 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
         return <PlusIcon {...iconProps} />;
       case IconType.thumbsUp:
         return <ThumbsUpIcon {...iconProps} />;
-      case IconType.arrowCollapseDown:
-        return <ArrowCollapseDownIcon {...iconProps} />;
       default:
         return null;
     }
