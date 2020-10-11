@@ -9,3 +9,5 @@ export const REPOSITORIES = [
   Repository.validator,
   Repository.website,
 ];
+
+export const REPOSITORY_FILTERS = [Repository.all, ...REPOSITORIES];

@@ -1,0 +1,28 @@
+.FlatNavLinks {
+  margin-top: 30px;
+
+  &__option {
+    align-items: center;
+    color: var(--color-sail-gray-400);
+    cursor: pointer;
+    display: flex;
+    font-family: var(--font-family-inter-medium);
+    font-size: 16px;
+    height: 36px;
+    outline: none;
+    padding: 4px 0 4px 36px;
+
+    &:hover {
+      background: var(--color-sail-gray-100);
+    }
+
+    &--active {
+      background: var(--color-sail-gray-100);
+      color: var(--color-primary);
+    }
+  }
+
+  @media (max-width: 992px) {
+    margin-top: 16px;
+  }
+}
