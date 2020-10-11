@@ -46,6 +46,7 @@
   &__right {
     flex: 1;
     margin-left: 24px;
+    overflow: hidden;
   }
 
   &__user-avatar {
@@ -82,7 +83,6 @@
     font-family: var(--font-family-inter-medium);
     font-size: 20px;
     line-height: 1.25;
-    max-width: calc(100vw - 529px);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -105,7 +105,7 @@
       margin-left: 0;
 
       &__amount {
-        font-size: 18px;
+        font-size: var(--font-size-regular);
       }
 
       &__title {
@@ -145,15 +145,14 @@
     }
 
     &__user-avatar-rank {
-      font-size: 14px;
+      font-size: var(--font-size-regular);
       height: 24px;
       width: 24px;
     }
 
     &__user-login {
-      font-size: 18px;
+      font-size: var(--font-size-regular);
       margin-top: 4px;
-      max-width: calc(100vw - 162px);
     }
   }
 }
