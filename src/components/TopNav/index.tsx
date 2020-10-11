@@ -7,7 +7,6 @@ import clsx from 'clsx';
 
 import {Button, Icon, IconType, Shadow} from 'components';
 import {Repository} from 'types/github';
-import {OpeningCategory} from 'types/openings';
 
 import TopNavDropdownMenuItem from './TopNavDropdownMenuItem';
 import TopNavLogo from './TopNavLogo';
@@ -47,7 +46,7 @@ const leaderboardProps = {
 const openingsProps = {
   activePatterns: ['/openings'],
   name: 'Openings',
-  url: `/openings/${OpeningCategory.all}`,
+  url: '/openings',
 };
 
 const tasksProps = {

@@ -19,7 +19,7 @@ const BreadcrumbMenu: FC<ComponentProps> = ({className, menuItems, pageName, sec
 
   useEffect(() => {
     setOpen(false);
-  }, [pathname]);
+  }, [pageName, pathname]);
 
   const ref = useOnclickOutside(
     () => {
