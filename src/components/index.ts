@@ -23,7 +23,7 @@ import Shadow from './Shadow';
 import SlideUp from './SlideUp';
 import StepIndicator from './StepIndicator';
 import {TableBorderGrid, TableParams, TableVertical} from './Table';
-import Tabs from './Tabs';
+import Tabs, {Tab} from './Tabs';
 import TimeFilter from './TimeFilter';
 import TopNav from './TopNav';
 import TotalAmount from './TotalAmount';
@@ -69,3 +69,5 @@ export {
   TopNav,
   TotalAmount,
 };
+
+export type {Tab};

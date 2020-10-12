@@ -1,74 +1,29 @@
-import React, {useEffect, useMemo, useState, ReactNode} from 'react';
-import max from 'lodash/max';
+import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'react';
 
-import {Button, Icon, IconType, Tabs} from 'components';
+import {Button, CodeSnippet, Icon, IconType, Loader, Tab, Tabs} from 'components';
 import {Release} from 'types/github';
 import {fetchGithubReleases} from 'utils/github';
+import {displayToast} from 'utils/toast';
 
 import './Download.scss';
 
-interface InstructionsType {
-  Linux: string[];
-  Mac: string[];
-  Window: string[];
+enum Os {
+  'Windows' = 'Windows',
+  'Mac' = 'Mac',
+  'Linux' = 'Linux',
 }
 
-interface TabsType {
-  component: ReactNode;
-  fileExt: string;
-  label: string;
-}
-
-const tabs: TabsType[] = [
-  {
-    component: 'any',
-    fileExt: 'linux.AppImage',
-    label: 'Linux',
-  },
-  {
-    component: 'any',
-    fileExt: 'mac.dmg',
-    label: 'Mac',
-  },
-  {
-    component: 'any',
-    fileExt: 'win.exe',
-    label: 'Window',
-  },
-];
-
-const instructions: InstructionsType = {
-  Linux: [
-    "<div class='insCon'><p>Download thenewboston</p></div>",
-    "<div class='insCon'><p>To run thenewboston, make it executable</p><p class='code'>$ sudo chmod a+x TNB-Account-Manager-1.0.0-alpha.20-linux*.AppImage</p></div>",
-    "<div class='insCon'><p>Run!</p><p class='code'>$ ./TNB-Account-Manager-1.0.0-alpha.20-linux*.AppImage</p></div>",
-  ],
-  Mac: [
-    "<div class='insCon'><p>Download thenewboston</p></div>",
-    "<div class='insCon'><p>Click on the downloaded file</p></div>",
-    "<div class='insCon'><p>Drag and drop the app to the Applications folder</p></div>",
-    "<div class='insCon'><p>Open the app</p>",
-  ],
-  Window: [
-    "<div class='insCon'><p>Download thenewboston</p></div>",
-    "<div class='insCon'><p>Click on the downloaded file</p></div>",
-    "<div class='insCon'><p>You will get a modal that says ‘Windows protected your PC’. Click <b>More info</b></p></div>",
-    "<div class='insCon'><p>Then click <b>Run anyway</b></p></div>",
-  ],
-};
-
-const Download = () => {
-  const [error, setError] = useState<boolean>(false);
-  const [releases, setReleases] = useState<Release[]>([]);
+const Download: FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
+  const [releases, setReleases] = useState<Release[]>([]);
 
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
       try {
-        const results = await fetchGithubReleases();
-        setReleases(results);
-      } catch (err) {
-        setError(true);
+        const response = await fetchGithubReleases();
+        setReleases(response);
+      } catch (error) {
+        displayToast('Network Error');
       } finally {
         setLoading(false);
       }
@@ -76,48 +31,144 @@ const Download = () => {
     fetchData();
   }, []);
 
-  const latestReleaseNumber = useMemo(() => {
+  const latestReleaseNumber = useMemo<number | null>(() => {
+    if (!releases.length) return null;
+
     const releaseNumbers = releases.map(({alphaVersion}) => alphaVersion);
-    return max(releaseNumbers);
+    return Math.max(...releaseNumbers);
   }, [releases]);
 
-  const renderOS = (name: string, link: string) => {
-    return (
-      <div className="Download">
-        <a href={link} className="Download__os-link">
-          <Button className="Download__os-download-button">
-            Download for {name}
-            <Icon icon={IconType.arrowCollapseDown} size={24} />
+  const getOsExtension = useCallback((os: Os): string => {
+    if (os === Os.Windows) return 'win.exe';
+    if (os === Os.Mac) return 'mac.dmg';
+    if (os === Os.Linux) return 'linux.AppImage';
+    return '';
+  }, []);
+
+  const getDownloadLink = useCallback(
+    (os: Os): string =>
+      latestReleaseNumber
+        ? `https://github.com/thenewboston-developers/Account-Manager/releases/download/v1.0.0-alpha.${latestReleaseNumber}/TNB-Account-Manager-1.0.0-alpha.${latestReleaseNumber}-${getOsExtension(
+            os,
+          )}`
+        : '',
+    [getOsExtension, latestReleaseNumber],
+  );
+
+  const renderInstructions = useCallback((os: Os): ReactNode => {
+    if (os === Os.Windows) {
+      return (
+        <>
+          <div className="instruction-container__li">
+            <span className="instruction-container__instruction">Download thenewboston</span>
+          </div>
+          <div className="instruction-container__li">
+            <span className="instruction-container__instruction">Click on the downloaded file</span>
+          </div>
+          <div className="instruction-container__li">
+            <span className="instruction-container__instruction">
+              You will get a modal that says 'Windows protected your PC'. Click <strong>More info</strong>
+            </span>
+          </div>
+          <div className="instruction-container__li">
+            <span className="instruction-container__instruction">
+              Then click <strong>Run anyway</strong>
+            </span>
+          </div>
+        </>
+      );
+    }
+    if (os === Os.Mac) {
+      return (
+        <>
+          <div className="instruction-container__li">
+            <span className="instruction-container__instruction">Download thenewboston</span>
+          </div>
+          <div className="instruction-container__li">
+            <span className="instruction-container__instruction">Click on the downloaded file</span>
+          </div>
+          <div className="instruction-container__li">
+            <span className="instruction-container__instruction">Drag and drop the app to the Applications folder</span>
+          </div>
+          <div className="instruction-container__li">
+            <span className="instruction-container__instruction">Open the app</span>
+          </div>
+        </>
+      );
+    }
+    if (os === Os.Linux) {
+      return (
+        <>
+          <div className="instruction-container__li">
+            <span className="instruction-container__instruction">Download thenewboston</span>
+          </div>
+          <div className="instruction-container__li">
+            <span className="instruction-container__instruction">To run thenewboston, make it executable</span>
+          </div>
+          <CodeSnippet
+            className="instruction-container__code"
+            code="$  sudo chmod a+x TNB-Account-Manager-1.0.0-alpha.20-linux*.AppImage"
+          />
+          <div className="instruction-container__li">
+            <span className="instruction-container__instruction">Run!</span>
+          </div>
+          <CodeSnippet
+            className="instruction-container__code"
+            code="$  ./TNB-Account-Manager-1.0.0-alpha.20-linux*.AppImage"
+          />
+        </>
+      );
+    }
+    return null;
+  }, []);
+
+  const renderTabPanel = useCallback(
+    (os: Os) => (
+      <div className="Download__tab-panel">
+        <a className="Download__download-link" href={getDownloadLink(os)}>
+          <Button className="Download__download-button" disabled={!latestReleaseNumber}>
+            Download for {os} <Icon className="Download__download-icon" icon={IconType.arrowCollapseDown} size={18} />
           </Button>
         </a>
-        <div className="Download__instructionCon">
-          <h4>Installation Instructions</h4>
-          <ul className="Download__instructions">{renderInstructions(instructions[name as keyof InstructionsType])}</ul>
+        <div className="instruction-container">
+          <h2 className="instruction-container__title">Installation Instructions</h2>
+          {renderInstructions(os)}
         </div>
       </div>
-    );
-  };
+    ),
+    [getDownloadLink, latestReleaseNumber, renderInstructions],
+  );
 
-  const renderInstructions = (ins: string[]) => {
-    return ins.map((item, index) => (
-      /* eslint-disable react/no-danger */
-      <li dangerouslySetInnerHTML={{__html: item}} key={index} />
-    ));
-  };
+  const tabs = useMemo<Tab[]>(
+    () => [
+      {
+        component: renderTabPanel(Os.Windows),
+        label: Os.Windows,
+      },
+      {
+        component: renderTabPanel(Os.Mac),
+        label: Os.Mac,
+      },
+      {
+        component: renderTabPanel(Os.Linux),
+        label: Os.Linux,
+      },
+    ],
+    [renderTabPanel],
+  );
 
-  const generateTabContent = () => {
-    tabs.forEach((item, index) => {
-      tabs[index].component = renderOS(
-        item.label,
-        `https://github.com/thenewboston-developers/Account-Manager/releases/download/v1.0.0-alpha.${latestReleaseNumber}/TNB-Account-Manager-1.0.0-alpha.${latestReleaseNumber}-${item.fileExt}`,
-      );
-    });
-    return tabs;
-  };
-
-  if (error) return <h1>Error</h1>;
-  if (loading) return null;
-  return <Tabs tabs={generateTabContent()} />;
+  return (
+    <div className="Download">
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <span className="Download__latest-version">Latest Version: 1.0.0-alpha.{latestReleaseNumber}</span>
+          <Tabs tabs={tabs} />
+        </>
+      )}
+    </div>
+  );
 };
 
 export default Download;

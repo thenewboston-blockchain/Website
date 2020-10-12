@@ -1,37 +1,25 @@
 .Tabs {
-  padding: 0 40px;
-  display: flex;
-  justify-content: center;
-  &__innerContainer {
-    max-width: 1126px;
-    display: flex;
-    width: 100%;
-    margin: 40px 0;
-    flex-direction: column;
-  }
-  &__tabs {
-    border-bottom: 1px solid #e3e8ee;
-    display: flex;
-    width: 100%;
-  }
-  &__tabBtn {
-    font-size: 20px;
-    font-weight: 500;
-    color: #697386;
-    border-bottom: solid 3px #fff;
-    margin-right: 36px;
-    padding: 6px 0;
+  &__tab {
+    border: 3px solid transparent;
+    color: var(--color-sail-gray-500);
     cursor: pointer;
-    transition: all linear 0.1s 0s;
+    font-size: var(--font-size-medium);
+    margin-right: 42px;
+    outline: none;
+    padding-bottom: 6px;
+
     &:hover {
-      color: #042235;
+      border-bottom-color: var(--color-sail-gray-500);
     }
-    &.active {
-      color: #042235;
-      border-color: #042235;
+
+    &--active {
+      border-bottom-color: var(--color-primary);
+      color: var(--color-primary);
     }
   }
-  &__tabContent {
-    padding: 40px 0;
+
+  &__tabs-container {
+    border-bottom: 1px solid var(--color-sail-gray-100);
+    display: flex;
   }
 }

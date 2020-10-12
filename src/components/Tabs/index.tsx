@@ -1,45 +1,47 @@
 import React, {FC, useState, ReactNode} from 'react';
+import clsx from 'clsx';
 
 import './Tabs.scss';
 
-interface Tab {
+export interface Tab {
   component: ReactNode;
   label: string;
 }
 
 interface ComponentProps {
+  defaultTab?: number;
   tabs: Tab[];
 }
 
-const Tabs: FC<ComponentProps> = ({tabs}) => {
-  const [currentTab, setCurrentTab] = useState(0);
+const Tabs: FC<ComponentProps> = ({defaultTab = 0, tabs}) => {
+  const [activeTab, setActiveTab] = useState<number>(defaultTab);
 
-  const renderTabs = () => {
-    return tabs.map((item, index) => (
-      <div
-        className={`Tabs__tabBtn ${currentTab === index && 'active'}`}
-        key={index}
-        onClick={() => setCurrentTab(index)}
-        role="button"
-        tabIndex={0}
-      >
-        {item.label}
+  const renderTabs = (): ReactNode => {
+    return (
+      <div className="Tabs__tabs-container">
+        {tabs.map(({label}, index) => (
+          <div
+            className={clsx('Tabs__tab', {'Tabs__tab--active': activeTab === index})}
+            key={label}
+            onClick={() => setActiveTab(index)}
+            role="button"
+            tabIndex={0}
+          >
+            {label}
+          </div>
+        ))}
       </div>
-    ));
+    );
   };
 
-  const renderTabContent = () => {
-    if (tabs.length) {
-      return tabs[currentTab].component;
-    }
+  const renderTabPanel = (): ReactNode => {
+    return tabs[activeTab]?.component || null;
   };
 
   return (
     <div className="Tabs">
-      <div className="Tabs__innerContainer">
-        <div className="Tabs__tabs">{renderTabs()}</div>
-        <div className="Tabs__tabContent">{renderTabContent()}</div>
-      </div>
+      {renderTabs()}
+      {renderTabPanel()}
     </div>
   );
 };
