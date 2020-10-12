@@ -1,0 +1,25 @@
+.Tabs {
+  &__tab {
+    border: 3px solid transparent;
+    color: var(--color-sail-gray-500);
+    cursor: pointer;
+    font-size: var(--font-size-medium);
+    margin-right: 42px;
+    outline: none;
+    padding-bottom: 6px;
+
+    &:hover {
+      border-bottom-color: var(--color-sail-gray-500);
+    }
+
+    &--active {
+      border-bottom-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+  }
+
+  &__tabs-container {
+    border-bottom: 1px solid var(--color-sail-gray-100);
+    display: flex;
+  }
+}
