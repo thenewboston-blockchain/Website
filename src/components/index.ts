@@ -23,9 +23,10 @@ import Shadow from './Shadow';
 import SlideUp from './SlideUp';
 import StepIndicator from './StepIndicator';
 import {TableBorderGrid, TableParams, TableVertical} from './Table';
+import Tabs, {Tab} from './Tabs';
 import TimeFilter from './TimeFilter';
-import TotalAmount from './TotalAmount';
 import TopNav from './TopNav';
+import TotalAmount from './TotalAmount';
 
 export {
   A,
@@ -40,8 +41,8 @@ export {
   DocImage,
   DocInlineCode,
   DocList,
-  DocsMenuItems,
   DocSubSection,
+  DocsMenuItems,
   EmptyPage,
   FlatNavLinks,
   HashLink,
@@ -63,7 +64,10 @@ export {
   TableBorderGrid,
   TableParams,
   TableVertical,
+  Tabs,
   TimeFilter,
-  TotalAmount,
   TopNav,
+  TotalAmount,
 };
+
+export type {Tab};

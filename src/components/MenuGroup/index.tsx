@@ -1,4 +1,4 @@
-import React, {FC, ReactNode, useState} from 'react';
+import React, {FC, useState} from 'react';
 import {RouteComponentProps, withRouter} from 'react-router-dom';
 import clsx from 'clsx';
 
@@ -8,7 +8,6 @@ import {getFirstPathParam} from 'utils/urls';
 import './MenuGroup.scss';
 
 interface ComponentProps extends RouteComponentProps {
-  children: ReactNode;
   title: string;
   urlBase: string;
 }

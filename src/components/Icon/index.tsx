@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import noop from 'lodash/noop';
 
 import AlertCircleOutlineIcon from 'mdi-react/AlertCircleOutlineIcon';
+import ArrowCollapseDownIcon from 'mdi-react/ArrowCollapseDownIcon';
 import ArrowLeftIcon from 'mdi-react/ArrowLeftIcon';
 import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
 import ChevronLeftIcon from 'mdi-react/ChevronLeftIcon';
@@ -23,6 +24,7 @@ import './Icon.scss';
 // These names are camelCased versions of the names found in https://materialdesignicons.com/
 export enum IconType {
   alertCircleOutline,
+  arrowCollapseDown,
   arrowLeft,
   chevronDown,
   chevronLeft,
@@ -54,6 +56,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
     switch (icon) {
       case IconType.alertCircleOutline:
         return <AlertCircleOutlineIcon {...iconProps} />;
+      case IconType.arrowCollapseDown:
+        return <ArrowCollapseDownIcon {...iconProps} />;
       case IconType.arrowLeft:
         return <ArrowLeftIcon {...iconProps} />;
       case IconType.chevronDown:
