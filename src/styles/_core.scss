@@ -13,8 +13,8 @@ body {
   background: var(--color-bg);
   color: var(--color-primary);
   font-family: var(--font-family-inter);
-  font-size: 14px;
-  line-height: 22px;
+  font-size: var(--font-size-regular);
+  line-height: 1.5;
   max-height: 100vh;
 }
 

@@ -46,8 +46,6 @@
     &-left-block,
     &-right-block {
       flex: 1;
-      font-size: 16px;
-      line-height: 1.5;
     }
 
     &-left-block {
@@ -61,7 +59,7 @@
 
   &__title {
     font-size: 36px;
-    line-height: 120%;
+    line-height: 1.2;
     margin-top: 30px;
     max-width: 480px;
   }

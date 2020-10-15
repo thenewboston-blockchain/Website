@@ -21,7 +21,6 @@
   }
 
   &__latest-version {
-    font-size: 16px;
     position: absolute;
     right: 120px;
 
@@ -52,7 +51,6 @@
 
     &__li {
       display: flex;
-      font-size: 16px;
       margin-bottom: 18px;
 
       &::before {
