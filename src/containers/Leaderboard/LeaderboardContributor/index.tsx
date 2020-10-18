@@ -57,7 +57,7 @@ const LeaderboardContributor: FC<ComponentProps> = ({
         </div>
       </div>
       <ContributorTasks className="LeaderboardContributor__ContributorTasks" tasks={tasks} />
-      <TotalAmount amount={total_earnings} className="LeaderboardContributor__TotalAmount" title="Total Earnings" />
+      <TotalAmount amount={total_earnings} title="Total Earnings" />
     </div>
   );
 

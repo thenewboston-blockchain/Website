@@ -3,7 +3,7 @@
   box-shadow: 0 0 10px rgba(85, 108, 214, 0.18);
   display: flex;
   font-size: var(--font-size-small);
-  line-height: 125%;
+  line-height: 1.25;
   margin: 0 24px 12px;
   padding: 12px;
 
@@ -46,15 +46,7 @@
   &__right {
     flex: 1;
     margin-left: 24px;
-  }
-
-  &__TotalAmount {
-    align-items: flex-end;
-    display: flex;
-    flex-basis: 150px;
-    flex-direction: column;
-    line-height: 1;
-    margin-left: 40px;
+    overflow: hidden;
   }
 
   &__user-avatar {
@@ -90,11 +82,35 @@
     display: block;
     font-family: var(--font-family-inter-medium);
     font-size: 20px;
-    font-weight: 500;
-    line-height: 125%;
+    line-height: 1.25;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  .TotalAmount {
+    align-items: flex-end;
+    display: flex;
+    flex-basis: 150px;
+    flex-direction: column;
+    line-height: 1;
+    margin-left: 40px;
+
+    @media (max-width: 768px) {
+      display: block;
+      margin-left: 0;
+
+      &__amount {
+        font-size: var(--font-size-regular);
+      }
+
+      &__title {
+        display: none;
+      }
     }
   }
 
@@ -121,18 +137,7 @@
     }
 
     &__right {
-      align-items: center;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    &__TotalAmount__amount {
-      font-size: 14px;
-      margin: 0;
-    }
-
-    &__TotalAmount__title {
-      display: none;
+      display: block;
     }
 
     &__user-avatar {
@@ -140,13 +145,14 @@
     }
 
     &__user-avatar-rank {
-      font-size: 14px;
+      font-size: var(--font-size-regular);
       height: 24px;
       width: 24px;
     }
 
     &__user-login {
-      font-size: 14px;
+      font-size: var(--font-size-regular);
+      margin-top: 4px;
     }
   }
 }

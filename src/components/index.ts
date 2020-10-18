@@ -7,6 +7,7 @@ import DashboardLayout from './DashboardLayout';
 import DocsMenuItems from './DocsMenuItems';
 import {DocContainer, DocEndpoint, DocImage, DocInlineCode, DocList, DocSubSection} from './DocWrapper';
 import EmptyPage from './EmptyPage';
+import FlatNavLinks from './FlatNavLinks';
 import {Button} from './FormElements';
 import HashLink from './HashLink';
 import Icon, {IconType} from './Icon';
@@ -17,15 +18,15 @@ import MenuGroup from './MenuGroup';
 import LabelFilter from './LabelFilter';
 import Loader from './Loader';
 import Pagination from './Pagination';
-import RepositoryFilter from './RepositoryFilter';
 import Qr from './Qr';
 import Shadow from './Shadow';
 import SlideUp from './SlideUp';
 import StepIndicator from './StepIndicator';
 import {TableBorderGrid, TableParams, TableVertical} from './Table';
+import Tabs, {Tab} from './Tabs';
 import TimeFilter from './TimeFilter';
-import TotalAmount from './TotalAmount';
 import TopNav from './TopNav';
+import TotalAmount from './TotalAmount';
 
 export {
   A,
@@ -40,9 +41,10 @@ export {
   DocImage,
   DocInlineCode,
   DocList,
-  DocsMenuItems,
   DocSubSection,
+  DocsMenuItems,
   EmptyPage,
+  FlatNavLinks,
   HashLink,
   Icon,
   IconType,
@@ -54,7 +56,6 @@ export {
   MenuGroup,
   Pagination,
   Qr,
-  RepositoryFilter,
   RequestResponseSnippet,
   Shadow,
   SlideUp,
@@ -63,7 +64,10 @@ export {
   TableBorderGrid,
   TableParams,
   TableVertical,
+  Tabs,
   TimeFilter,
-  TotalAmount,
   TopNav,
+  TotalAmount,
 };
+
+export type {Tab};

@@ -3,7 +3,6 @@
   background: #f6f9fc;
   display: flex;
   flex-direction: column;
-  min-height: 1440px;
   position: relative;
 
   &__background-graphic {
@@ -20,7 +19,7 @@
   }
 
   &__content-container {
-    margin-bottom: -150px;
+    margin-bottom: -230px;
     max-width: 1148px; // (480px * 2) + 60px gutter + 128px padding
     padding: 128px 64px 0;
     width: 100%;
@@ -36,9 +35,8 @@
   }
 
   &__mini-text {
-    color: #556cd6;
-    font-weight: 500;
-    line-height: 120%;
+    color: var(--color-secondary);
+    line-height: 1.2;
   }
 
   &__text-snippets {
@@ -48,8 +46,6 @@
     &-left-block,
     &-right-block {
       flex: 1;
-      font-size: 16px;
-      line-height: 150%;
     }
 
     &-left-block {
@@ -63,8 +59,7 @@
 
   &__title {
     font-size: 36px;
-    font-weight: bold;
-    line-height: 120%;
+    line-height: 1.2;
     margin-top: 30px;
     max-width: 480px;
   }

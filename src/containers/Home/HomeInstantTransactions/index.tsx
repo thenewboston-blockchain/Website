@@ -38,8 +38,8 @@ const HomeInstantTransactions: FC = () => {
         </div>
         <HomeComparisonCards />
       </div>
-      <svg className="HomeInstantTransactions__background-graphic" viewBox="0 0 1366 659" fill="none">
-        <path d="M1366 0L0 147L0 659H1366.5L1366 0Z" fill="#131F41" />
+      <svg className="HomeInstantTransactions__background-graphic" viewBox="0 0 1366 300" fill="none">
+        <path d="M1366 0L0 270L0 300H1366.5L1366 0Z" fill="#131F41" />
       </svg>
       <div className="HomeInstantTransactions__blue-block" />
     </div>

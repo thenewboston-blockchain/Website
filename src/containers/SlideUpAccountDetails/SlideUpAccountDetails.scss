@@ -17,7 +17,7 @@
   }
 
   &__SlideUp {
-    line-height: 125%;
+    line-height: 1.25;
   }
 
   &__user-avatar {
@@ -31,7 +31,7 @@
     font-family: var(--font-family-inter-medium);
     font-size: 20px;
     font-weight: 500;
-    line-height: 125%;
+    line-height: 1.25;
 
     &:hover {
       text-decoration: underline;

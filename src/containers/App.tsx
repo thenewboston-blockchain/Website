@@ -52,7 +52,7 @@ const App: FC = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/help" component={Help} />
           <Route exact path="/leaderboard/:repository" component={Leaderboard} />
-          <Route exact path="/openings/:category" component={Openings} />
+          <Route exact path="/openings/:openingId?" component={Openings} />
           <Route exact path="/tasks/:repository" component={Tasks} />
           <Route path="/account-manager/:chapter?" component={AccountManager} />
           <Route path="/bank-api/:chapter?" component={BankApi} />
