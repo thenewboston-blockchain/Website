@@ -8,5 +8,9 @@ pre {
     font-family: var(--font-family-mono);
     font-size: 13px;
     line-height: 1.4;
+
+    @media (max-width: 1440px) {
+      white-space: normal;
+    }
   }
 }
