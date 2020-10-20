@@ -3,4 +3,8 @@
   font-size: var(--font-size-medium);
   font-weight: 700;
   margin: 32px 0 12px;
+
+  @media (max-width: 1440px) {
+    word-break: break-all;
+  }
 }
