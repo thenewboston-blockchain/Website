@@ -34,17 +34,6 @@
   .instruction-container {
     counter-reset: instruction;
 
-    &__code {
-      display: inline-block;
-      margin-bottom: 24px;
-      margin-left: 54px;
-      margin-top: -12px;
-
-      @media (max-width: 768px) {
-        margin-left: 0;
-      }
-    }
-
     &__instruction {
       margin-top: 7px;
     }
