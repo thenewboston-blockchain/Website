@@ -4,16 +4,15 @@
   min-height: 700px;
   position: relative;
 
-  &__background-graphic {
-    position: absolute;
-    top: 0;
-    z-index: -1;
-  }
-
   &__desktop-ui {
     box-shadow: 15px 15px 40px rgba(4, 34, 53, 0.25);
-    height: 95%;
+    height: 491px;
     margin-left: 130px;
+    width: 875px;
+  }
+
+  &__earn-text {
+    color: var(--color-tertiary);
   }
 
   &__left {
@@ -46,9 +45,10 @@
   &__send-points-modal {
     bottom: 0;
     box-shadow: 15px 15px 40px rgba(4, 34, 53, 0.25);
-    height: 75%;
+    height: 414px;
     left: 0;
     position: absolute;
+    width: 326px;
   }
 
   &__subtitle,

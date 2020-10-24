@@ -3,23 +3,16 @@
   justify-content: center;
   margin-top: 60px;
 
-  &__arrow-container {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    width: 60px;
-  }
-
   &__card {
     background: var(--color-white);
     border-radius: 12px;
     box-shadow: 0 20px 40px rgba(11, 38, 63, 0.15);
     display: flex;
     flex-direction: column;
+    height: 396px;
     justify-content: center;
     min-height: 390px;
-    padding: 30px 32px 60px;
-    width: 360px;
+    width: 300px;
   }
 
   &__crypto-logo {
@@ -44,13 +37,20 @@
     }
   }
 
+  &__versus-container {
+    align-items: center;
+    color: var(--color-sail-gray-500);
+    display: flex;
+    justify-content: center;
+    width: 60px;
+  }
+
   @media (max-width: 768px) {
     align-items: center;
     flex-direction: column;
 
-    &__arrow-container {
+    &__versus-container {
       height: 60px;
-      transform: rotate(90deg);
       width: auto;
     }
   }

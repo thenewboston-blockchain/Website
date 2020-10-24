@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 
+import HomeFooter from './HomeFooter';
 import HomeHero from './HomeHero';
 import HomeInstantTransactions from './HomeInstantTransactions';
 import HomeSteps from './HomeSteps';
@@ -11,6 +12,7 @@ const Home: FC = () => (
     <HomeHero />
     <HomeSteps />
     <HomeInstantTransactions />
+    <HomeFooter />
   </div>
 );
 

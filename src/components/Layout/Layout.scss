@@ -13,4 +13,12 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
     grid-row: 1 / span 1;
   }
+
+  @media (min-width: 1366px) {
+    &__TopNav {
+      margin-left: auto;
+      margin-right: auto;
+      width: 1366px;
+    }
+  }
 }

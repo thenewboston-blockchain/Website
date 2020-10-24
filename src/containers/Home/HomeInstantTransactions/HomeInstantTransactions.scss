@@ -1,25 +1,10 @@
 .HomeInstantTransactions {
   align-items: center;
-  background: #f6f9fc;
   display: flex;
   flex-direction: column;
   position: relative;
 
-  &__background-graphic {
-    display: block;
-    width: 100%;
-    z-index: 0;
-  }
-
-  &__blue-block {
-    background: #131f41;
-    display: none;
-    height: 0;
-    width: 100%;
-  }
-
   &__content-container {
-    margin-bottom: -230px;
     max-width: 1148px; // (480px * 2) + 60px gutter + 128px padding
     padding: 128px 64px 0;
     width: 100%;
@@ -35,26 +20,22 @@
   }
 
   &__mini-text {
-    color: var(--color-secondary);
+    color: var(--color-sail-green-500);
+    font-size: 16px;
     line-height: 1.2;
+  }
+
+  &__summary-container {
+    display: flex;
+  }
+
+  &__summary-snippet-container {
+    margin-right: 30px;
   }
 
   &__text-snippets {
     display: flex;
     margin-top: 30px;
-
-    &-left-block,
-    &-right-block {
-      flex: 1;
-    }
-
-    &-left-block {
-      margin-right: 30px;
-    }
-
-    &-right-block {
-      margin-left: 30px;
-    }
   }
 
   &__title {
@@ -64,17 +45,20 @@
     max-width: 480px;
   }
 
-  @media (max-width: 1440px) {
-    &__blue-block {
+  @media (max-width: 1200px) {
+    &__summary-container {
       display: block;
-      height: 180px;
+    }
+
+    &__summary-snippet-container {
+      margin-right: 0px;
     }
   }
 
   @media (max-width: 768px) {
     &__content-container {
       max-width: 480px;
-      padding: 32px 32px 128px;
+      padding: 32px 32px 0px 32px;
 
       &--display-large {
         display: none;
@@ -87,10 +71,6 @@
 
     &__text-snippets {
       flex-direction: column;
-
-      &-right-block {
-        margin: 0;
-      }
     }
   }
 }
