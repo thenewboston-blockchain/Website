@@ -20,7 +20,7 @@
     display: flex;
     justify-content: center;
     max-width: 40vw;
-    padding: 128px 64px 128px 128px;
+    padding: 128px 64px 128px 64px;
   }
 
   &__MarketingButton {
@@ -73,6 +73,7 @@
   &__wrapper {
     align-items: center;
     display: flex;
+    max-width: 1148px;
   }
 
   @media (max-width: 1560px) {
