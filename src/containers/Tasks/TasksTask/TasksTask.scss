@@ -57,9 +57,9 @@
   &__title {
     color: var(--color-primary);
     display: block;
-    font-family: var(--font-family-inter-medium);
+    font-family: Inter;
+    font-weight: 700;
     font-size: 18px;
-    font-weight: 600;
 
     &:hover {
       color: var(--color-github-blue);

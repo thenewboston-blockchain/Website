@@ -1,7 +1,8 @@
 .StepIndicator {
   align-items: center;
   display: flex;
-  font-family: var(--font-family-inter-bold);
+  font-family: Inter;
+  font-weight: 800;
   font-size: 20px;
 
   &__bubble {

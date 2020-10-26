@@ -1,6 +1,7 @@
 .MenuGroup {
   $self: &;
-  font-family: var(--font-family-inter-medium);
+  font-family: Inter;
+  font-weight: 700;
 
   &:last-of-type {
     #{$self}__toggle:not(#{$self}__toggle--expanded) {

@@ -2,7 +2,8 @@
 .TopNavDropdownMenuItem:visited {
   color: var(--color-sail-gray-400);
   display: block;
-  font-family: var(--font-family-inter-medium);
+  font-family: Inter;
+  font-weight: 700;
   padding: 6px 0;
   transition: color 0.1s ease;
 
