@@ -8,7 +8,7 @@
   &__img {
     max-width: 60px;
     filter: invert(13%) sepia(20%) saturate(1646%) hue-rotate(160deg) brightness(97%) contrast(105%)
-      drop-shadow(0px 4px 5px #b3b3b3);
+      drop-shadow(0px 4px 4px rgba(4, 34, 53, 0.25));
   }
 
   // based on --color-primary-hover
