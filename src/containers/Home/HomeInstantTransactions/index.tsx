@@ -18,7 +18,7 @@ const HomeInstantTransactions: FC = () => {
               <b>Say goodbye to 10 minute block times</b>
             </h1>
             <div className="HomeInstantTransactions__text-snippets">
-              <div>
+              <span>
                 <p>
                   We rebuilt the Blockchain from the ground up. We kissed those outdated PoW and PoS algorithms goodbye
                   and replaced them with an innovative trust based architecture.
@@ -28,12 +28,12 @@ const HomeInstantTransactions: FC = () => {
                   peer-to-peer, open source payment network.
                 </p>
                 <p>
-                  <b>Now in alpha!</b>
+                  <strong>Now in alpha!</strong>
                 </p>
                 <NavLink className="HomeInstantTransactions__content-container--display-large" to="/guide/introduction">
                   <Button>View Docs</Button>
                 </NavLink>
-              </div>
+              </span>
               <NavLink className="HomeInstantTransactions__content-container--display-small" to="/guide/introduction">
                 <Button>View Docs</Button>
               </NavLink>

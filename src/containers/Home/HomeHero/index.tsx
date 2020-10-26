@@ -15,16 +15,12 @@ const HomeHero: FC = () => {
         <div className="HomeHero__left">
           <div className="HomeHero__left-content-container">
             <h1 className="HomeHero__title">
-              <span>
-                <b>Build</b> software.
-              </span>
+              <strong>Build</strong> software.
               <br />
-              <span>
-                <span className="HomeHero__earn-text">
-                  <b>Earn</b>
-                </span>{' '}
-                digital currency.
-              </span>
+              <span className="HomeHero__earn-text">
+                <strong>Earn</strong>
+              </span>{' '}
+              digital currency.
             </h1>
             <h2 className="HomeHero__subtitle">
               Join our development community and start earning points, our open source digital currency.
