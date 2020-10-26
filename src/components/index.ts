@@ -14,6 +14,7 @@ import Icon, {IconType} from './Icon';
 import Label from './Label';
 import Layout from './Layout';
 import MarketingButton from './MarketingButton';
+import MarketingButtonCircular from './MarketingButtonCircular';
 import MenuGroup from './MenuGroup';
 import LabelFilter from './LabelFilter';
 import Loader from './Loader';
@@ -53,6 +54,7 @@ export {
   Layout,
   Loader,
   MarketingButton,
+  MarketingButtonCircular,
   MenuGroup,
   Pagination,
   Qr,
