@@ -12,7 +12,7 @@ html {
 body {
   background: var(--color-bg);
   color: var(--color-primary);
-  font-family: Inter;
+  font-family: var(--font-family-default);
   font-weight: normal;
   font-size: var(--font-size-regular);
   line-height: 1.5;
@@ -21,7 +21,6 @@ body {
 
 b,
 strong {
-  font-family: Inter;
   font-weight: 800;
 }
 

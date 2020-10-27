@@ -1,9 +1,8 @@
 .StepIndicator {
   align-items: center;
   display: flex;
-  font-family: Inter;
   font-weight: 800;
-  font-size: 20px;
+  font-size: var(--font-size-medium);
 
   &__bubble {
     align-items: center;
