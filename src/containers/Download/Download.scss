@@ -51,8 +51,8 @@
         counter-increment: instruction;
         display: inline-flex;
         flex-shrink: 0;
-        font-family: var(--font-family-inter-bold);
         font-size: var(--font-size-medium);
+        font-weight: 800;
         height: 36px;
         justify-content: center;
         margin-right: 18px;
@@ -61,8 +61,8 @@
     }
 
     &__title {
-      font-family: var(--font-family-inter-bold);
       font-size: 20px;
+      font-weight: 800;
       margin-bottom: 30px;
     }
   }

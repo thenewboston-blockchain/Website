@@ -48,7 +48,7 @@
   }
 
   &__list-label {
-    font-family: var(--font-family-inter-bold);
+    font-weight: 800;
     margin-top: 24px;
   }
 
@@ -59,8 +59,8 @@
 
   &__position {
     color: var(--color-primary);
-    font-family: var(--font-family-inter-light);
     font-size: 36px;
+    font-weight: 300;
     line-height: 1.25;
     margin-top: 36px;
   }
