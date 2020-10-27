@@ -5,7 +5,7 @@
 
   &__a {
     display: block;
-    font-family: var(--font-family-inter-medium);
+    font-weight: 700;
     margin-bottom: 6px;
   }
 
@@ -80,7 +80,7 @@
 
     &__step-one,
     &__step-two {
-      align-items: center;
+      align-items: flex-start;
       margin: 0;
     }
 

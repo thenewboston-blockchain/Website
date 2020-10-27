@@ -105,17 +105,11 @@ const Download: FC = () => {
           <div className="instruction-container__li">
             <span className="instruction-container__instruction">To run thenewboston, make it executable</span>
           </div>
-          <CodeSnippet
-            className="instruction-container__code"
-            code="$  sudo chmod a+x TNB-Account-Manager-1.0.0-alpha.20-linux*.AppImage"
-          />
+          <CodeSnippet code="$ sudo chmod a+x TNB-Account-Manager-1.0.0-alpha.20-linux*.AppImage" />
           <div className="instruction-container__li">
             <span className="instruction-container__instruction">Run!</span>
           </div>
-          <CodeSnippet
-            className="instruction-container__code"
-            code="$  ./TNB-Account-Manager-1.0.0-alpha.20-linux*.AppImage"
-          />
+          <CodeSnippet code="$ ./TNB-Account-Manager-1.0.0-alpha.20-linux*.AppImage" />
         </>
       );
     }

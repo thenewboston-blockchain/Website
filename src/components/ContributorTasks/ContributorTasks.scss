@@ -68,11 +68,6 @@
     }
   }
 
-  &__task-title {
-    font-family: var(--font-family-inter);
-    font-weight: normal;
-  }
-
   @media (max-width: 1400px) {
     // Repository
     td:nth-child(2),
