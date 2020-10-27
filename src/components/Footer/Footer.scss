@@ -4,9 +4,6 @@
   grid-template-columns: 40% 60%;
   padding: 60px 60px 120px 60px;
 
-  &__left {
-  }
-
   &__right {
     display: flex;
     flex-direction: row;
@@ -21,5 +18,15 @@
     display: flex;
     flex-direction: row;
     margin-top: 60px;
+  }
+
+  @media (max-width: 992px) {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    padding: 60px 36px 120px 36px;
+
+    &__right {
+      margin-top: 60px;
+    }
   }
 }

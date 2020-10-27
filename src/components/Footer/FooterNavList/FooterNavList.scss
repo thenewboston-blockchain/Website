@@ -1,6 +1,7 @@
 .FooterNavList {
   margin-right: 60px;
   list-style-type: none;
+  padding-inline-start: none;
 
   &__header {
     color: var(--color-sail-gray-400);

@@ -80,7 +80,7 @@ const Footer: FC = () => {
 
   return (
     <footer className="Footer">
-      <div className="Footer__left">
+      <div>
         <Link to="/">
           <img src={Logo} alt="thenewboston logo" />
         </Link>
