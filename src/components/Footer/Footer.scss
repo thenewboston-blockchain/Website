@@ -1,40 +1,25 @@
 .Footer {
-  display: grid;
-  padding: 60px 60px 120px 60px;
   background: var(--color-primary);
+  display: grid;
   grid-template-columns: 40% 60%;
+  padding: 60px 60px 120px 60px;
 
   &__left {
   }
 
-  &__brand {
-    display: flex;
-    align-items: center;
-  }
-
-  &__brand-logo {
-    width: 30px;
-    height: 30px;
-    margin-right: 12px;
-  }
-
-  &__social-media-links {
+  &__right {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    margin-top: 60px;
   }
 
   &__social-media-link:not(:last-child) {
     margin-right: 18px;
   }
 
-  &__right {
-  }
-
-  &__navlist {
-  }
-
-  &__navlist-header {
+  &__social-media-links {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
   }
 }

@@ -1,0 +1,16 @@
+.FooterNavList {
+  margin-right: 60px;
+  list-style-type: none;
+
+  &__header {
+    color: var(--color-sail-gray-400);
+  }
+
+  &__item {
+    margin-top: 24px;
+  }
+
+  &__itemLink {
+    color: #fff;
+  }
+}
