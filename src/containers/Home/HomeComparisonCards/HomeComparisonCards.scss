@@ -33,14 +33,14 @@
     margin-top: 60px;
 
     &-attribute {
-      font-size: 20px;
+      font-size: var(--font-size-medium);
       font-weight: 500;
       margin-top: 12px;
     }
 
     &-value {
-      font-weight: 300;
       font-size: 36px;
+      font-weight: 300;
     }
   }
 
