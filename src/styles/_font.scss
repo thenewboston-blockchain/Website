@@ -1,29 +1,33 @@
 @font-face {
-  font-family: InterBold;
-  src: url('./fonts/Inter/ttf/Inter-Bold.ttf') format('truetype'),
-    url('./fonts/Inter/web/woff/Inter-Bold.woff') format('woff'),
-    url('./fonts/Inter/web/woff2/Inter-Bold.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: InterLight;
+  font-family: Inter;
   src: url('./fonts/Inter/ttf/Inter-Light.ttf') format('truetype'),
     url('./fonts/Inter/web/woff/Inter-Light.woff') format('woff'),
     url('./fonts/Inter/web/woff2/Inter-Light.woff2') format('woff2');
+  font-weight: 300;
 }
 
 @font-face {
-  font-family: InterMedium;
-  src: url('./fonts/Inter/ttf/Inter-Medium.ttf') format('truetype'),
-    url('./fonts/Inter/web/woff/Inter-Medium.woff') format('woff'),
-    url('./fonts/Inter/web/woff2/Inter-Medium.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: InterRegular;
+  font-family: Inter;
   src: url('./fonts/Inter/ttf/Inter-Regular.ttf') format('truetype'),
     url('./fonts/Inter/web/woff/Inter-Regular.woff') format('woff'),
     url('./fonts/Inter/web/woff2/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url('./fonts/Inter/ttf/Inter-Medium.ttf') format('truetype'),
+    url('./fonts/Inter/web/woff/Inter-Medium.woff') format('woff'),
+    url('./fonts/Inter/web/woff2/Inter-Medium.woff2') format('woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url('./fonts/Inter/ttf/Inter-Bold.ttf') format('truetype'),
+    url('./fonts/Inter/web/woff/Inter-Bold.woff') format('woff'),
+    url('./fonts/Inter/web/woff2/Inter-Bold.woff2') format('woff2');
+  font-weight: 800;
 }
 
 @font-face {
@@ -36,10 +40,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
 
 :root {
-  --font-family-inter-bold: InterBold, serif;
-  --font-family-inter-light: InterLight, sans-serif;
-  --font-family-inter-medium: InterMedium, sans-serif;
-  --font-family-inter: InterRegular, sans-serif;
+  --font-family-default: Inter, sans-serif;
   --font-family-mono-roboto: 'Roboto Mono', monospace;
   --font-family-mono: JetBrainsMono, monospace;
   --font-size-large: 24px;

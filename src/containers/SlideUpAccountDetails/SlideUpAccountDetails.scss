@@ -28,9 +28,8 @@
 
   &__user-login {
     display: block;
-    font-family: var(--font-family-inter-medium);
-    font-size: 20px;
-    font-weight: 500;
+    font-size: var(--font-size-medium);
+    font-weight: 700;
     line-height: 1.25;
 
     &:hover {

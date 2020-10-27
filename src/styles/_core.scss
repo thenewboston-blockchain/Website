@@ -12,15 +12,15 @@ html {
 body {
   background: var(--color-bg);
   color: var(--color-primary);
-  font-family: var(--font-family-inter);
+  font-family: var(--font-family-default);
   font-size: var(--font-size-regular);
   line-height: 1.5;
   max-height: 100vh;
 }
 
-b {
-  font-family: var(--font-family-inter-bold);
-  font-weight: 700;
+b,
+strong {
+  font-weight: 800;
 }
 
 h1,
@@ -46,8 +46,4 @@ ol,
 ul {
   margin: 0;
   padding-inline-start: 32px;
-}
-
-strong {
-  font-family: var(--font-family-inter-bold);
 }
