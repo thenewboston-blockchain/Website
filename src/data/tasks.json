@@ -299,6 +299,17 @@
       "amount_paid": "5000"
     }
   ],
+  "colfax23": [
+    {
+      "repository": "Website",
+      "title": "Add the functionality to use font-weight with our Inter Font",
+      "issue_id": "293",
+      "pr_id": "313",
+      "completed_by": "colfax23",
+      "completed_date": "10/26/20",
+      "amount_paid": "10000"
+    }
+  ],
   "dahelg": [
     {
       "repository": "Website",
