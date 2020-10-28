@@ -9,11 +9,11 @@ import ConfirmationValidatorApi from './ConfirmationValidatorApi';
 import DeploymentGuide from './DeploymentGuide';
 import Download from './Download';
 import Guide from './Guide';
-import Help from './Help';
 import Home from './Home';
 import Leaderboard from './Leaderboard';
 import Openings from './Openings';
 import PrimaryValidatorApi from './PrimaryValidatorApi';
+import Social from './Social';
 import StyleGuide from './StyleGuide';
 import Tasks from './Tasks';
 
@@ -50,7 +50,7 @@ const App: FC = () => {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/help" component={Help} />
+          <Route exact path="/social" component={Social} />
           <Route exact path="/leaderboard/:repository" component={Leaderboard} />
           <Route exact path="/openings/:openingId?" component={Openings} />
           <Route exact path="/tasks/:repository" component={Tasks} />

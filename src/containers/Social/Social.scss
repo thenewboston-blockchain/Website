@@ -1,0 +1,54 @@
+.Social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 48px 0;
+
+  &__button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    max-width: 600px;
+  }
+
+  &__doc-button,
+  .MarketingButton {
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(156, 156, 156, 0.3);
+    height: 120px;
+    margin-bottom: 12px;
+    margin-left: 12px;
+    width: 180px;
+
+    &__img {
+      max-width: 105px;
+    }
+  }
+
+  &__heading {
+    color: #042235;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 125%;
+    margin-bottom: 30px;
+  }
+
+  &__heading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 60px;
+    max-width: 500 px;
+    text-align: center;
+  }
+
+  &__subtext {
+    font-size: var(--font-size-regular);
+    font-weight: 300;
+    line-height: 150%;
+    margin: auto;
+    max-width: 425px;
+  }
+}

@@ -11,6 +11,7 @@ import LinkedInLogo from './logos/LinkedInLogo.png';
 import RedditLogo from './logos/RedditLogo.png';
 import SlackLogo from './logos/SlackLogo.png';
 import TwitterLogo from './logos/TwitterLogo.png';
+import YouTubeLogo from './logos/YouTubeLogo.png';
 
 import './MarketingButton.scss';
 
@@ -36,6 +37,7 @@ const MarketingButton: FC<ComponentProps> = ({className, customLink, website}) =
     reddit: renderImage(RedditLogo),
     slack: renderImage(SlackLogo),
     twitter: renderImage(TwitterLogo),
+    youtube: renderImage(YouTubeLogo),
   };
 
   const urls = {
@@ -45,6 +47,7 @@ const MarketingButton: FC<ComponentProps> = ({className, customLink, website}) =
     [SocialMedia.reddit]: 'https://www.reddit.com/r/thenewboston/',
     [SocialMedia.slack]: 'https://join.slack.com/t/thenewboston/shared_invite/zt-hkw1b98m-X3oe6VPX6xenHvQeaXQbfg',
     [SocialMedia.twitter]: 'https://twitter.com/bucky_roberts',
+    [SocialMedia.youtube]: 'https://www.youtube.com/user/thenewboston',
   };
 
   return (
