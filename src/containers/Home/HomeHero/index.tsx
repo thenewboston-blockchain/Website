@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 
-import {MarketingButton} from 'components';
-import {SocialMedia} from 'types/social-media';
+import {MarketingButtonCircular} from 'components';
+import {SocialMediaIcon} from 'types/social-media';
 
 import DesktopUI from './DesktopUI.jpg';
 import SendPointsModal from './SendPointsModal.jpg';
@@ -26,8 +26,9 @@ const HomeHero: FC = () => {
               Join our development community and start earning points, our open source digital currency.
             </h2>
             <div className="HomeHero__marketing-buttons">
-              <MarketingButton className="HomeHero__MarketingButton" website={SocialMedia.slack} />
-              <MarketingButton className="HomeHero__MarketingButton" website={SocialMedia.github} />
+              <MarketingButtonCircular className="HomeHero__MarketingButton" website={SocialMediaIcon.slack} />
+              <MarketingButtonCircular className="HomeHero__MarketingButton" website={SocialMediaIcon.github} />
+              <MarketingButtonCircular className="HomeHero__MarketingButton" website={SocialMediaIcon.youtube} />
             </div>
           </div>
         </div>
