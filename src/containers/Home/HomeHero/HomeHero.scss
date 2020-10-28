@@ -19,8 +19,7 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    margin-right: 90px;
-    max-width: 40vw;
+    margin-right: 50px;
     padding: 128px 0px 128px 64px;
   }
 
@@ -40,7 +39,7 @@
   &__right {
     height: 500px;
     position: relative;
-    max-width: 60vw;
+    max-width: 714px;
   }
 
   &__send-points-modal {
@@ -73,17 +72,7 @@
   &__wrapper {
     align-items: center;
     display: flex;
-    max-width: 1308px;
-  }
-
-  @media (max-width: 1560px) {
-    &__left {
-      max-width: 55vw;
-    }
-
-    &__right {
-      max-width: 45vw;
-    }
+    max-width: 1308px; // (480px) + (714px) + (50px) gutter + 64px padding-left
   }
 
   @media (max-width: 1200px) {
