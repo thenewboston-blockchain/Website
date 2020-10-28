@@ -19,10 +19,6 @@ const navLists = [
         url: '/guide/introduction',
       },
       {
-        title: 'Tutorials',
-        url: '/tutorials',
-      },
-      {
         title: 'Tasks',
         url: '/tasks/All',
       },
@@ -36,29 +32,12 @@ const navLists = [
     header: 'Community',
     links: [
       {
-        title: 'Join the Community!',
-        url: '/community',
-      },
-      {
         title: 'Openings',
         url: '/openings',
       },
       {
-        title: 'Team',
-        url: '/team',
-      },
-      {
         title: 'Leaderboard',
         url: '/leaderboard/All',
-      },
-    ],
-  },
-  {
-    header: 'More',
-    links: [
-      {
-        title: 'FAQ',
-        url: '/',
       },
     ],
   },
