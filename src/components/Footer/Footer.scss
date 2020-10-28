@@ -2,11 +2,10 @@
   background: var(--color-primary);
   display: grid;
   grid-template-columns: 40% 60%;
-  padding: 60px 60px 120px 60px;
+  padding: 60px 60px 120px;
 
   &__right {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
   }
 
@@ -24,6 +23,6 @@
   @media (max-width: 992px) {
     grid-template-columns: auto;
     grid-template-rows: auto;
-    padding: 60px 36px 120px 36px;
+    padding: 60px 36px 120px;
   }
 }

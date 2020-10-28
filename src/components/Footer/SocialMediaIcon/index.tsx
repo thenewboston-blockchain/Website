@@ -1,4 +1,5 @@
 import React, {FC} from 'react';
+import clsx from 'clsx';
 
 import FacebookLogo from 'assets/svgs/facebook.svg';
 import GithubLogo from 'assets/svgs/github.svg';
@@ -30,7 +31,7 @@ const SocialMediaIcon: FC<ComponentProps> = ({className, website}) => {
   };
 
   return (
-    <A className={className} href={socialMediaUrls[website]}>
+    <A className={clsx('SocialMediaIcon', className)} href={socialMediaUrls[website]}>
       <img alt={`${website} link`} src={images[website]} />
     </A>
   );

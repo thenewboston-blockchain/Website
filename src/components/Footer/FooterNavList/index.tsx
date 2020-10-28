@@ -19,7 +19,7 @@ const FooterNavList: FC<ComponentProps> = ({header, links}) => {
       <li className="FooterNavList__header">{header}</li>
       {links.map((link) => (
         <li className="FooterNavList__item" key={link.title}>
-          <Link className="FooterNavList__itemLink" to={link.url}>
+          <Link className="FooterNavList__item-link" to={link.url}>
             {link.title}
           </Link>
         </li>
