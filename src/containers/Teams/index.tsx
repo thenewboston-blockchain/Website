@@ -26,7 +26,7 @@ const Teams: FC = () => {
   const [teamFilter, setTeamFilter] = useState<TeamName>(TeamName.all);
 
   useEffect(() => {
-    const getFilteredMembers = () => {
+    const getFilteredMembers = (): TeamMember[] => {
       const teamLeads: TeamMember[] = [];
       const otherMembers: TeamMember[] = [];
       teamMembers.forEach((member) => {

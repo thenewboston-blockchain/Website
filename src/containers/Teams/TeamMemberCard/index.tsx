@@ -40,7 +40,7 @@ const TeamMemberCard: FC<ComponentProps> = ({
         Github: <A href={`https://github.com/${githubUsername}`}>{githubUsername}</A>
       </div>
       <div>
-        Pay Per Day: <span className="TeamMemberCard__details-pay">{payPerDay}</span>
+        Pay Per Day: <span className="TeamMemberCard__details-pay">{payPerDay.toLocaleString()}</span>
       </div>
     </div>
   );
