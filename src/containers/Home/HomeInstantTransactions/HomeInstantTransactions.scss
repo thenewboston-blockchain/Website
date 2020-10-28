@@ -5,7 +5,7 @@
   position: relative;
 
   &__content-container {
-    max-width: 1148px; // (480px * 2) + 60px gutter + 128px padding
+    max-width: 1308px; // (420px) + (300px * 2) + (70px + 90px) gutter + 128px padding
     padding: 128px 64px 0;
     width: 100%;
     z-index: 1;
@@ -30,7 +30,7 @@
   }
 
   &__summary-snippet-container {
-    margin-right: 30px;
+    margin-right: 70px;
   }
 
   &__text-snippets {

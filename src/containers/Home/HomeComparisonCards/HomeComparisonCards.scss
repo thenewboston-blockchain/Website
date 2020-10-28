@@ -42,7 +42,7 @@
     color: var(--color-sail-gray-500);
     display: flex;
     justify-content: center;
-    width: 60px;
+    width: 90px;
   }
 
   @media (max-width: 768px) {
@@ -50,7 +50,7 @@
     flex-direction: column;
 
     &__versus-container {
-      height: 60px;
+      height: 90px;
       width: auto;
     }
   }

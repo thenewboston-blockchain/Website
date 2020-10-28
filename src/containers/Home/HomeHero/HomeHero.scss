@@ -19,8 +19,9 @@
     align-items: center;
     display: flex;
     justify-content: center;
+    margin-right: 90px;
     max-width: 40vw;
-    padding: 128px 64px 128px 64px;
+    padding: 128px 0px 128px 64px;
   }
 
   &__MarketingButton {
@@ -72,7 +73,7 @@
   &__wrapper {
     align-items: center;
     display: flex;
-    max-width: 1148px;
+    max-width: 1308px;
   }
 
   @media (max-width: 1560px) {
@@ -91,6 +92,7 @@
 
     &__left {
       max-width: 100vw;
+      margin-right: 0px;
       padding: 64px 32px 0 32px;
     }
 
