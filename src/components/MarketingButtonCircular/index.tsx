@@ -1,8 +1,8 @@
-import React, {FC} from 'react';
+import React, {FC, memo} from 'react';
 import clsx from 'clsx';
 
 import {A} from 'components';
-import {SocialMediaIcons} from 'types/social-media';
+import {SocialMediaIcon} from 'types/social-media';
 import {getCustomClassNames} from 'utils/components';
 
 import GitHubIcon from './icons/GitHubIcon.png';
@@ -14,11 +14,11 @@ import './MarketingButtonCircular.scss';
 interface ComponentProps {
   className?: string;
   customLink?: string;
-  website: SocialMediaIcons;
+  website: SocialMediaIcon;
 }
 
 const MarketingButtonCircular: FC<ComponentProps> = ({className, customLink, website}) => {
-  const renderImage = (src: any) => (
+  const renderImage = (src: string) => (
     <img
       alt={website}
       className={clsx('MarketingButtonCircular__img', {...getCustomClassNames(className, '__img', true)})}
@@ -33,10 +33,9 @@ const MarketingButtonCircular: FC<ComponentProps> = ({className, customLink, web
   };
 
   const urls = {
-    [SocialMediaIcons.githubIcon]: 'https://github.com/thenewboston-developers',
-    [SocialMediaIcons.slackIcon]:
-      'https://join.slack.com/t/thenewboston/shared_invite/zt-hkw1b98m-X3oe6VPX6xenHvQeaXQbfg',
-    [SocialMediaIcons.youtubeIcon]: 'https://www.youtube.com/thenewboston',
+    [SocialMediaIcon.github]: 'https://github.com/thenewboston-developers',
+    [SocialMediaIcon.slack]: 'https://join.slack.com/t/thenewboston/shared_invite/zt-hkw1b98m-X3oe6VPX6xenHvQeaXQbfg',
+    [SocialMediaIcon.youtube]: 'https://www.youtube.com/thenewboston',
   };
 
   return (
@@ -46,4 +45,4 @@ const MarketingButtonCircular: FC<ComponentProps> = ({className, customLink, web
   );
 };
 
-export default MarketingButtonCircular;
+export default memo(MarketingButtonCircular);
