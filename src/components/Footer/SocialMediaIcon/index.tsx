@@ -11,6 +11,7 @@ import YoutubeLogo from 'assets/svgs/youtube.svg';
 import {A} from 'components';
 
 import {SocialMedia} from 'types/social-media';
+import {socialMediaUrls} from 'utils/social-media';
 
 interface ComponentProps {
   className?: string;
@@ -18,16 +19,6 @@ interface ComponentProps {
 }
 
 const SocialMediaIcon: FC<ComponentProps> = ({className, website}) => {
-  const urls = {
-    [SocialMedia.facebook]: 'https://www.facebook.com/TheNewBoston-464114846956315/',
-    [SocialMedia.github]: 'https://github.com/thenewboston-developers',
-    [SocialMedia.linkedin]: 'https://www.linkedin.com/company/thenewboston-developers/',
-    [SocialMedia.reddit]: 'https://www.reddit.com/r/thenewboston/',
-    [SocialMedia.slack]: 'https://join.slack.com/t/thenewboston/shared_invite/zt-hkw1b98m-X3oe6VPX6xenHvQeaXQbfg',
-    [SocialMedia.twitter]: 'https://twitter.com/bucky_roberts',
-    [SocialMedia.youtube]: 'https://www.youtube.com/user/thenewboston',
-  };
-
   const images = {
     [SocialMedia.facebook]: FacebookLogo,
     [SocialMedia.github]: GithubLogo,
@@ -39,7 +30,7 @@ const SocialMediaIcon: FC<ComponentProps> = ({className, website}) => {
   };
 
   return (
-    <A className={className} href={urls[website]}>
+    <A className={className} href={socialMediaUrls[website]}>
       <img alt={`${website} link`} src={images[website]} />
     </A>
   );
