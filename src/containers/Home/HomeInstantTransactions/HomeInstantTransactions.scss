@@ -5,25 +5,10 @@
   flex-direction: column;
   position: relative;
 
-  &__background-graphic {
-    display: block;
-    width: 100%;
-    z-index: 0;
-  }
-
-  &__blue-block {
-    background: #131f41;
-    display: none;
-    height: 0;
-    width: 100%;
-  }
-
   &__content-container {
-    margin-bottom: -230px;
     max-width: 1148px; // (480px * 2) + 60px gutter + 128px padding
-    padding: 128px 64px 0;
+    padding: 128px 64px;
     width: 100%;
-    z-index: 1;
 
     &--display-large {
       display: block;

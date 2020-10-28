@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, memo} from 'react';
 import {Link} from 'react-router-dom';
 
 import Logo from 'assets/svgs/thenewboston-white.svg';
@@ -91,4 +91,4 @@ const Footer: FC = () => {
   );
 };
 
-export default Footer;
+export default memo(Footer);

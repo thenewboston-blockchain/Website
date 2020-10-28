@@ -1,7 +1,11 @@
 .FooterNavList {
   margin-right: 60px;
   list-style-type: none;
-  padding-inline-start: none;
+  padding-inline-start: 0;
+
+  @media (max-width: 992px) {
+    margin-top: 60px;
+  }
 
   &__header {
     color: var(--color-sail-gray-400);

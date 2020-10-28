@@ -7,6 +7,7 @@
   &__right {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   &__social-media-link:not(:last-child) {
@@ -24,9 +25,5 @@
     grid-template-columns: auto;
     grid-template-rows: auto;
     padding: 60px 36px 120px 36px;
-
-    &__right {
-      margin-top: 60px;
-    }
   }
 }
