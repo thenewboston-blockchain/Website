@@ -8,12 +8,14 @@ import DocsMenuItems from './DocsMenuItems';
 import {DocContainer, DocEndpoint, DocImage, DocInlineCode, DocList, DocSubSection} from './DocWrapper';
 import EmptyPage from './EmptyPage';
 import FlatNavLinks from './FlatNavLinks';
+import Footer from './Footer';
 import {Button} from './FormElements';
 import HashLink from './HashLink';
 import Icon, {IconType} from './Icon';
 import Label from './Label';
 import Layout from './Layout';
 import MarketingButton from './MarketingButton';
+import MarketingButtonCircular from './MarketingButtonCircular';
 import MenuGroup from './MenuGroup';
 import LabelFilter from './LabelFilter';
 import Loader from './Loader';
@@ -45,6 +47,7 @@ export {
   DocsMenuItems,
   EmptyPage,
   FlatNavLinks,
+  Footer,
   HashLink,
   Icon,
   IconType,
@@ -53,6 +56,7 @@ export {
   Layout,
   Loader,
   MarketingButton,
+  MarketingButtonCircular,
   MenuGroup,
   Pagination,
   Qr,

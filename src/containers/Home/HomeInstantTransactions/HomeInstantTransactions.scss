@@ -6,9 +6,8 @@
 
   &__content-container {
     max-width: 1308px; // (420px) + (300px * 2) + (70px + 90px) gutter + 128px padding
-    padding: 128px 64px 0;
+    padding: 128px 64px;
     width: 100%;
-    z-index: 1;
 
     &--display-large {
       display: block;
@@ -52,7 +51,7 @@
     }
 
     &__summary-snippet-container {
-      margin-right: 0px;
+      margin-right: 0;
     }
   }
 
