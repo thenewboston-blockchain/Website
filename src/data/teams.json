@@ -1,0 +1,121 @@
+[
+  {
+    "title": "Analytics",
+    "contributors": [
+      {
+        "title": "Data Analyst",
+        "isLead": false,
+        "payPerDay": 3800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "1",
+          "displayName": "Justin Kim",
+          "githubUsername": "angle943",
+          "profileImage": "https://placehold.it/200X200",
+          "slackUsername": "angle943"
+        }
+      },
+      {
+        "title": "Data Analyst",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-08-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "2",
+          "displayName": "Albert Kuliński",
+          "githubUsername": "akulinski",
+          "profileImage": "https://placehold.it/200X200",
+          "slackUsername": "akulinski"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Back-End Developers",
+    "contributors": [
+      {
+        "title": "Back End Lead",
+        "isLead": true,
+        "payPerDay": 3800,
+        "createdDate": "2020-06-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "3",
+          "displayName": "Bucky Roberts",
+          "githubUsername": "buckyroberts",
+          "profileImage": "https://placehold.it/200X200",
+          "slackUsername": "buckyroberts"
+        }
+      },
+      {
+        "title": "Back End Developer",
+        "isLead": false,
+        "payPerDay": 3800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "1",
+          "displayName": "Justin Kim",
+          "githubUsername": "angle943",
+          "profileImage": "https://placehold.it/200X200",
+          "slackUsername": "angle943"
+        }
+      },
+      {
+        "title": "Back End Developer",
+        "isLead": false,
+        "payPerDay": 3800,
+        "createdDate": "2020-05-09T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "4",
+          "displayName": "Mikhail",
+          "githubUsername": "fonar",
+          "profileImage": "https://placehold.it/200X200",
+          "slackUsername": "fonar"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Front-End Developers",
+    "contributors": [
+      {
+        "title": "Front End Developer",
+        "isLead": false,
+        "payPerDay": 3800,
+        "createdDate": "2020-06-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "3",
+          "displayName": "Bucky Roberts",
+          "githubUsername": "buckyroberts",
+          "profileImage": "https://placehold.it/200X200",
+          "slackUsername": "buckyroberts"
+        }
+      },
+      {
+        "title": "FE Lead Developer",
+        "isLead": true,
+        "payPerDay": 3800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "1",
+          "displayName": "Justin Kim",
+          "githubUsername": "angle943",
+          "profileImage": "https://placehold.it/200X200",
+          "slackUsername": "angle943"
+        }
+      },
+      {
+        "title": "Front End Developer",
+        "isLead": false,
+        "payPerDay": 3800,
+        "createdDate": "2020-05-09T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "4",
+          "displayName": "Mikhail",
+          "githubUsername": "fonar",
+          "profileImage": "https://placehold.it/200X200",
+          "slackUsername": "fonar"
+        }
+      }
+    ]
+  }
+]

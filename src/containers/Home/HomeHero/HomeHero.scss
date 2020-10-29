@@ -1,59 +1,60 @@
+$gap-width: 50px;
+$left-pl: 64px;
+$right-width: 714px;
+$title-width: 480px;
+
 .HomeHero {
   display: flex;
   justify-content: center;
   min-height: 700px;
   position: relative;
 
-  &__background-graphic {
-    position: absolute;
-    top: 0;
-    z-index: -1;
-  }
-
   &__desktop-ui {
     box-shadow: 15px 15px 40px rgba(4, 34, 53, 0.25);
-    height: 95%;
+    height: 491px;
     margin-left: 130px;
+    width: 875px;
+  }
+
+  &__earn-text {
+    color: var(--color-tertiary);
   }
 
   &__left {
     align-items: center;
     display: flex;
     justify-content: center;
-    max-width: 40vw;
-    padding: 128px 64px 128px 128px;
+    margin-right: $gap-width;
+    padding: 128px 0 128px $left-pl;
   }
 
   &__MarketingButton {
-    width: 114px;
-
-    &:first-of-type {
-      margin-right: 12px;
-    }
+    margin-right: 25px;
   }
 
   &__marketing-buttons {
     display: flex;
-    margin: 30px 0 0;
+    margin-top: 42px;
   }
 
   &__right {
     height: 500px;
     position: relative;
-    max-width: 60vw;
+    max-width: $right-width;
   }
 
   &__send-points-modal {
     bottom: 0;
     box-shadow: 15px 15px 40px rgba(4, 34, 53, 0.25);
-    height: 75%;
+    height: 414px;
     left: 0;
     position: absolute;
+    width: 326px;
   }
 
   &__subtitle,
   &__title {
-    max-width: 480px;
+    max-width: $title-width;
   }
 
   &__subtitle {
@@ -72,16 +73,7 @@
   &__wrapper {
     align-items: center;
     display: flex;
-  }
-
-  @media (max-width: 1560px) {
-    &__left {
-      max-width: 55vw;
-    }
-
-    &__right {
-      max-width: 45vw;
-    }
+    max-width: $title-width + $gap-width + $right-width + $left-pl;
   }
 
   @media (max-width: 1200px) {
@@ -90,6 +82,7 @@
 
     &__left {
       max-width: 100vw;
+      margin-right: 0;
       padding: 64px 32px 0 32px;
     }
 

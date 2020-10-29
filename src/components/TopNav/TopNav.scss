@@ -10,7 +10,7 @@
   }
 
   &__dropdown-menu {
-    background: #fff;
+    background: var(--color-white);
     box-shadow: 0 3px 3px rgba(4, 34, 53, 0.06);
     position: absolute;
     right: 0;
@@ -40,6 +40,7 @@
 
   &__right-menu-toggle-container {
     align-items: center;
+    color: var(--color-sail-gray-500);
     cursor: pointer;
     display: none;
     height: 100%;

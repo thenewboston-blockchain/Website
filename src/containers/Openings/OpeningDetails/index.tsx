@@ -14,6 +14,7 @@ const customLinks = {
   [SocialMedia.reddit]: 'https://www.reddit.com/message/compose?to=/r/thenewboston',
   [SocialMedia.slack]: '',
   [SocialMedia.twitter]: '',
+  [SocialMedia.youtube]: '',
 };
 
 interface ComponentProps {
