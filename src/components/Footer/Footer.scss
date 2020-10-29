@@ -1,8 +1,17 @@
 .Footer {
-  background: var(--color-primary);
   display: grid;
   grid-template-columns: 40% 60%;
-  padding: 60px 60px 120px;
+
+  @media (min-width: 1366px) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1366px;
+  }
+
+  &__container {
+    background: var(--color-primary);
+    padding: 60px 60px 120px;
+  }
 
   &__right {
     display: flex;

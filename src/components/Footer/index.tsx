@@ -58,15 +58,17 @@ const Footer: FC = () => {
   const renderNavLists = () => navLists.map((list) => <FooterNavList header={list.header} links={list.links} />);
 
   return (
-    <footer className="Footer">
-      <div>
-        <Link to="/">
-          <img src={Logo} alt="thenewboston logo" />
-        </Link>
-        <div className="Footer__social-media-links">{renderSocialMediaLinks()}</div>
-      </div>
-      <div className="Footer__right">{renderNavLists()}</div>
-    </footer>
+    <div className="Footer__container">
+      <footer className="Footer">
+        <div className="Footer__left">
+          <Link to="/">
+            <img src={Logo} alt="thenewboston logo" />
+          </Link>
+          <div className="Footer__social-media-links">{renderSocialMediaLinks()}</div>
+        </div>
+        <div className="Footer__right">{renderNavLists()}</div>
+      </footer>
+    </div>
   );
 };
 
