@@ -5,6 +5,7 @@
   font-size: var(--font-size-regular);
   line-height: 1.25;
   margin: 0 0 12px;
+  min-width: 0;
   padding: 12px;
   position: relative;
 
@@ -18,6 +19,7 @@
 
   &__details {
     padding: 18px 15px 18px 24px;
+    min-width: 0;
 
     & > div {
       margin-top: 6px;
@@ -26,6 +28,16 @@
     &-name {
       font-size: var(--font-size-medium);
       font-weight: 500;
+      line-height: 25px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     &-pay {

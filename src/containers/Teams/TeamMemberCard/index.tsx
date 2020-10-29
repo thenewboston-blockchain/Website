@@ -34,7 +34,7 @@ const TeamMemberCard: FC<ComponentProps> = ({
   const renderMemberDetails = () => (
     <div className="TeamMemberCard__details">
       <h2 className="TeamMemberCard__details-name">{displayName}</h2>
-      <div>{titles.join(', ')}</div>
+      <div className="TeamMemberCard__details-title">{titles.join(', ')}</div>
       <div>Slack: {slackUsername}</div>
       <div>
         Github: <A href={`https://github.com/${githubUsername}`}>{githubUsername}</A>
