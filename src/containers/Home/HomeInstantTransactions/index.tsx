@@ -12,31 +12,30 @@ const HomeInstantTransactions: FC = () => {
     <div className="HomeInstantTransactions">
       <div className="HomeInstantTransactions__content-container">
         <div className="HomeInstantTransactions__mini-text">INSTANT TRANSACTIONS</div>
-        <h1 className="HomeInstantTransactions__title">Say goodbye to 10 minute block times</h1>
-        <div className="HomeInstantTransactions__text-snippets">
-          <div className="HomeInstantTransactions__text-snippets-left-block">
-            <p>
-              We rebuilt the Blockchain from the ground up. We kissed those outdated PoW and PoS algorithms goodbye and
-              replaced them with an innovative trust based architecture.
-            </p>
-            <NavLink className="HomeInstantTransactions__content-container--display-large" to="/guide/introduction">
-              <Button>View Docs</Button>
-            </NavLink>
+        <div className="HomeInstantTransactions__summary-container">
+          <div className="HomeInstantTransactions__summary-snippet-container">
+            <h1 className="HomeInstantTransactions__title">Say goodbye to 10 minute block times</h1>
+            <div className="HomeInstantTransactions__text-snippets">
+              <p>
+                We rebuilt the Blockchain from the ground up. We kissed those outdated PoW and PoS algorithms goodbye
+                and replaced them with an innovative trust based architecture.
+              </p>
+              <p>
+                Get in on the ground floor as we reinvent digital currency and build the world's first instant,
+                peer-to-peer, open source payment network.
+              </p>
+              <p>
+                <strong>Now in alpha!</strong>
+              </p>
+              <NavLink className="HomeInstantTransactions__content-container--display-large" to="/guide/introduction">
+                <Button>View Docs</Button>
+              </NavLink>
+            </div>
           </div>
-          <div className="HomeInstantTransactions__text-snippets-right-block">
-            <p>
-              Get in on the ground floor as we reinvent digital currency and build the world's first instant,
-              peer-to-peer, open source payment network.
-            </p>
-            <p>
-              <b>Now in alpha!</b>
-            </p>
-            <NavLink className="HomeInstantTransactions__content-container--display-small" to="/guide/introduction">
-              <Button>View Docs</Button>
-            </NavLink>
+          <div className="HomeInstantTransactions__comparison-cards-container">
+            <HomeComparisonCards />
           </div>
         </div>
-        <HomeComparisonCards />
       </div>
     </div>
   );

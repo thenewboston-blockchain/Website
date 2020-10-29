@@ -1,13 +1,14 @@
 .HomeSteps {
   align-items: center;
+  background-color: var(--color-sail-gray-50);
   display: flex;
   justify-content: center;
 
   &__content-container {
     display: flex;
     justify-content: space-between;
-    max-width: 1020px;
-    padding: 64px 0 72px;
+    max-width: 1308px;
+    padding: 64px 64px 72px;
     width: 100%;
   }
 

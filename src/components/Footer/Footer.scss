@@ -1,8 +1,17 @@
 .Footer {
-  background: var(--color-primary);
   display: grid;
   grid-template-columns: 40% 60%;
-  padding: 60px 60px 120px;
+
+  @media (min-width: 1366px) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1366px;
+  }
+
+  @media (max-width: 992px) {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
 
   &__right {
     display: flex;
@@ -20,9 +29,12 @@
     margin-top: 60px;
   }
 
-  @media (max-width: 992px) {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    padding: 60px 36px 120px;
+  &__wrapper {
+    background: var(--color-primary);
+    padding: 60px 60px 120px;
+
+    @media (max-width: 992px) {
+      padding: 60px 36px 120px;
+    }
   }
 }
