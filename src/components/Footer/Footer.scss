@@ -8,9 +8,10 @@
     width: 1366px;
   }
 
-  &__container {
-    background: var(--color-primary);
-    padding: 60px 60px 120px;
+  @media (max-width: 992px) {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    padding: 60px 36px 120px;
   }
 
   &__right {
@@ -29,9 +30,8 @@
     margin-top: 60px;
   }
 
-  @media (max-width: 992px) {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    padding: 60px 36px 120px;
+  &__wrapper {
+    background: var(--color-primary);
+    padding: 60px 60px 120px;
   }
 }

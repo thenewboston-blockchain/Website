@@ -58,7 +58,7 @@ const Footer: FC = () => {
   const renderNavLists = () => navLists.map((list) => <FooterNavList header={list.header} links={list.links} />);
 
   return (
-    <div className="Footer__container">
+    <div className="Footer__wrapper">
       <footer className="Footer">
         <div className="Footer__left">
           <Link to="/">
