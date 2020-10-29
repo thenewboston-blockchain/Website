@@ -14,32 +14,25 @@ const HomeInstantTransactions: FC = () => {
         <div className="HomeInstantTransactions__mini-text">INSTANT TRANSACTIONS</div>
         <div className="HomeInstantTransactions__summary-container">
           <div className="HomeInstantTransactions__summary-snippet-container">
-            <h1 className="HomeInstantTransactions__title">
-              <b>Say goodbye to 10 minute block times</b>
-            </h1>
+            <h1 className="HomeInstantTransactions__title">Say goodbye to 10 minute block times</h1>
             <div className="HomeInstantTransactions__text-snippets">
-              <span>
-                <p>
-                  We rebuilt the Blockchain from the ground up. We kissed those outdated PoW and PoS algorithms goodbye
-                  and replaced them with an innovative trust based architecture.
-                </p>
-                <p>
-                  Get in on the ground floor as we reinvent digital currency and build the world's first instant,
-                  peer-to-peer, open source payment network.
-                </p>
-                <p>
-                  <strong>Now in alpha!</strong>
-                </p>
-                <NavLink className="HomeInstantTransactions__content-container--display-large" to="/guide/introduction">
-                  <Button>View Docs</Button>
-                </NavLink>
-              </span>
-              <NavLink className="HomeInstantTransactions__content-container--display-small" to="/guide/introduction">
+              <p>
+                We rebuilt the Blockchain from the ground up. We kissed those outdated PoW and PoS algorithms goodbye
+                and replaced them with an innovative trust based architecture.
+              </p>
+              <p>
+                Get in on the ground floor as we reinvent digital currency and build the world's first instant,
+                peer-to-peer, open source payment network.
+              </p>
+              <p>
+                <strong>Now in alpha!</strong>
+              </p>
+              <NavLink className="HomeInstantTransactions__content-container--display-large" to="/guide/introduction">
                 <Button>View Docs</Button>
               </NavLink>
             </div>
           </div>
-          <div>
+          <div className="HomeInstantTransactions__comparison-cards-container">
             <HomeComparisonCards />
           </div>
         </div>

@@ -1,20 +1,30 @@
+$comparison-cards-container: 690px;
+$content-container-padding-lr: 64px;
+$summary-mr: 70px;
+$summary-width: 420px;
+
 .HomeInstantTransactions {
   align-items: center;
   display: flex;
   flex-direction: column;
   position: relative;
 
+  &__comparison-cards-container {
+    width: $comparison-cards-container;
+
+    @media (max-width: 1200px) {
+      width: unset;
+    }
+  }
+
   &__content-container {
-    max-width: 1308px; // (420px) + (300px * 2) + (70px + 90px) gutter + 128px padding
+    max-width: $summary-width + $summary-mr + $comparison-cards-container + $content-container-padding-lr * 2;
     padding: 128px 64px;
     width: 100%;
 
-    &--display-large {
-      display: block;
-    }
-
-    &--display-small {
-      display: none;
+    @media (max-width: 768px) {
+      max-width: 480px;
+      padding: 32px;
     }
   }
 
@@ -26,51 +36,36 @@
 
   &__summary-container {
     display: flex;
+
+    @media (max-width: 1200px) {
+      display: block;
+    }
   }
 
   &__summary-snippet-container {
-    margin-right: 70px;
+    margin-right: $summary-mr;
+    width: $summary-width;
+
+    @media (max-width: 1200px) {
+      margin-right: 0;
+      width: unset;
+    }
   }
 
   &__text-snippets {
-    display: flex;
     margin-top: 30px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   &__title {
     font-family: var(--font-family-inter-bold);
     font-size: 36px;
+    font-weight: 800;
     line-height: 1.2;
     margin-top: 30px;
     max-width: 480px;
-  }
-
-  @media (max-width: 1200px) {
-    &__summary-container {
-      display: block;
-    }
-
-    &__summary-snippet-container {
-      margin-right: 0;
-    }
-  }
-
-  @media (max-width: 768px) {
-    &__content-container {
-      max-width: 480px;
-      padding: 32px 32px 0px 32px;
-
-      &--display-large {
-        display: none;
-      }
-
-      &--display-small {
-        display: block;
-      }
-    }
-
-    &__text-snippets {
-      flex-direction: column;
-    }
   }
 }
