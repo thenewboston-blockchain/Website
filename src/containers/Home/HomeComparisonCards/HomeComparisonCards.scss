@@ -3,6 +3,11 @@
   justify-content: center;
   margin-top: 60px;
 
+  @media (max-width: 768px) {
+    align-items: center;
+    flex-direction: column;
+  }
+
   &__card {
     background: var(--color-white);
     border-radius: 12px;
@@ -43,13 +48,8 @@
     display: flex;
     justify-content: center;
     width: 90px;
-  }
 
-  @media (max-width: 768px) {
-    align-items: center;
-    flex-direction: column;
-
-    &__versus-container {
+    @media (max-width: 768px) {
       height: 90px;
       width: auto;
     }

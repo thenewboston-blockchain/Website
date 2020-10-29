@@ -20,9 +20,7 @@ const HomeComparisonCards: FC = () => {
         {renderComparisonCardStat('txs per second', '7')}
         {renderComparisonCardStat('avg. tx time', '~5 min')}
       </div>
-      <div className="HomeComparisonCards__versus-container">
-        <p>vs</p>
-      </div>
+      <div className="HomeComparisonCards__versus-container">vs</div>
       <div className="HomeComparisonCards__card">
         <img alt="logo" className="HomeComparisonCards__crypto-logo" src={Logo} />
         {renderComparisonCardStat('txs per second', '3,238')}
