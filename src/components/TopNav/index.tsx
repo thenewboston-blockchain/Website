@@ -31,6 +31,12 @@ const docsProps = {
   url: '/guide/introduction',
 };
 
+const faqProps = {
+  activePatterns: ['/faq'],
+  name: 'FAQ',
+  url: '/faq',
+};
+
 const helpProps = {
   activePatterns: ['/help'],
   name: 'Help',
@@ -68,6 +74,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
       <div className="TopNav__dropdown-menu">
         <Shadow />
         <div className="TopNav__dropdown-menu-item-container">
+          <TopNavDropdownMenuItem {...faqProps} />
           <TopNavDropdownMenuItem {...leaderboardProps} />
           <TopNavDropdownMenuItem {...tasksProps} />
           <TopNavDropdownMenuItem {...openingsProps} />
@@ -81,6 +88,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
 
   const renderMenuItems = (): ReactNode => (
     <>
+      <TopNavMenuItem {...faqProps} />
       <TopNavMenuItem {...leaderboardProps} />
       <TopNavMenuItem {...tasksProps} />
       <TopNavMenuItem {...openingsProps} />
