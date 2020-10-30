@@ -8,6 +8,7 @@ import BankApi from './BankApi';
 import ConfirmationValidatorApi from './ConfirmationValidatorApi';
 import DeploymentGuide from './DeploymentGuide';
 import Download from './Download';
+import Faq from './Faq';
 import Guide from './Guide';
 import Help from './Help';
 import Home from './Home';
@@ -50,6 +51,7 @@ const App: FC = () => {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/faq" component={Faq} />
           <Route exact path="/help" component={Help} />
           <Route exact path="/leaderboard/:repository" component={Leaderboard} />
           <Route exact path="/openings/:openingId?" component={Openings} />
