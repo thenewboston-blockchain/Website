@@ -1,0 +1,67 @@
+.TeamMemberCard {
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(85, 108, 214, 0.18);
+  display: flex;
+  font-size: var(--font-size-regular);
+  line-height: 1.25;
+  margin: 0 0 12px;
+  min-width: 0;
+  padding: 12px;
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  &__details {
+    padding: 18px 15px 18px 24px;
+    min-width: 0;
+
+    & > div {
+      margin-top: 6px;
+    }
+
+    &-name {
+      font-size: var(--font-size-medium);
+      font-weight: 500;
+      line-height: 25px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &-pay {
+      color: var(--color-tertiary);
+    }
+  }
+
+  &__lead-flag {
+    background: var(--color-secondary);
+    border-radius: 100px;
+    color: var(--color-bg);
+    font-size: 14px;
+    height: 24px;
+    line-height: 17px;
+    padding: 3px 0px 0px 9px;
+    position: absolute;
+    right: 18px;
+    top: -7px;
+    width: 91px;
+  }
+
+  &__user-avatar {
+    border-radius: 50%;
+    height: auto;
+    width: 144px;
+  }
+}

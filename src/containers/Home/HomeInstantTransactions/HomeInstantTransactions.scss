@@ -1,96 +1,71 @@
+$comparison-cards-container: 690px;
+$content-container-padding-lr: 64px;
+$summary-mr: 70px;
+$summary-width: 420px;
+
 .HomeInstantTransactions {
   align-items: center;
-  background: #f6f9fc;
   display: flex;
   flex-direction: column;
   position: relative;
 
-  &__background-graphic {
-    display: block;
-    width: 100%;
-    z-index: 0;
-  }
+  &__comparison-cards-container {
+    width: $comparison-cards-container;
 
-  &__blue-block {
-    background: #131f41;
-    display: none;
-    height: 0;
-    width: 100%;
+    @media (max-width: 1200px) {
+      width: unset;
+    }
   }
 
   &__content-container {
-    margin-bottom: -230px;
-    max-width: 1148px; // (480px * 2) + 60px gutter + 128px padding
-    padding: 128px 64px 0;
+    max-width: $summary-width + $summary-mr + $comparison-cards-container + $content-container-padding-lr * 2;
+    padding: 128px 64px;
     width: 100%;
-    z-index: 1;
 
-    &--display-large {
-      display: block;
-    }
-
-    &--display-small {
-      display: none;
+    @media (max-width: 768px) {
+      max-width: 480px;
+      padding: 32px;
     }
   }
 
   &__mini-text {
-    color: var(--color-secondary);
+    color: var(--color-sail-green-500);
+    font-size: 16px;
     line-height: 1.2;
   }
 
-  &__text-snippets {
+  &__summary-container {
     display: flex;
+
+    @media (max-width: 1200px) {
+      display: block;
+    }
+  }
+
+  &__summary-snippet-container {
+    margin-right: $summary-mr;
+    width: $summary-width;
+
+    @media (max-width: 1200px) {
+      margin-right: 0;
+      width: unset;
+    }
+  }
+
+  &__text-snippets {
     margin-top: 30px;
 
-    &-left-block,
-    &-right-block {
-      flex: 1;
-    }
-
-    &-left-block {
-      margin-right: 30px;
-    }
-
-    &-right-block {
-      margin-left: 30px;
+    @media (max-width: 768px) {
+      flex-direction: column;
     }
   }
 
   &__title {
+    font-family: var(--font-family-inter-bold);
     font-size: 36px;
+    font-weight: 800;
     line-height: 1.2;
     margin-top: 30px;
     max-width: 480px;
-  }
-
-  @media (max-width: 1440px) {
-    &__blue-block {
-      display: block;
-      height: 180px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    &__content-container {
-      max-width: 480px;
-      padding: 32px 32px 128px;
-
-      &--display-large {
-        display: none;
-      }
-
-      &--display-small {
-        display: block;
-      }
-    }
-
-    &__text-snippets {
-      flex-direction: column;
-
-      &-right-block {
-        margin: 0;
-      }
-    }
   }
 }

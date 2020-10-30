@@ -7,3 +7,9 @@ export enum SocialMedia {
   twitter = 'twitter',
   youtube = 'youtube',
 }
+
+export enum SocialMediaIcon {
+  github = 'githubIcon',
+  slack = 'slackIcon',
+  youtube = 'youtubeIcon',
+}
