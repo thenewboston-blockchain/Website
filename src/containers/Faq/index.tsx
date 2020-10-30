@@ -52,14 +52,14 @@ const questionsAnswers: FaqContent[] = [
 
 const Faq: FC = () => {
   const renderQuestionAnswers = () => {
-    return questionsAnswers.map((qa) => (
-      <>
-        <h2 className="Faq__question" id={qa.id}>
-          {qa.question}
-          {qa.id ? <HashLink className="Faq__HashLink" id={qa.id} /> : null}
+    return questionsAnswers.map(({answer, id, question}) => (
+      <div key={id}>
+        <h2 className="Faq__question" id={id}>
+          {question}
+          {id ? <HashLink className="Faq__HashLink" id={id} /> : null}
         </h2>
-        <p className="Faq__answer">{qa.answer}</p>
-      </>
+        <p className="Faq__answer">{answer}</p>
+      </div>
     ));
   };
   return (
