@@ -1,12 +1,12 @@
-import React, {FC} from 'react';
-import {HashLink} from 'components';
+import React, {FC, ReactNode} from 'react';
+import {A, HashLink} from 'components';
 
 import './Faq.scss';
 
 interface FaqContent {
-  answer: string;
+  answer: ReactNode;
   id: string;
-  question: string;
+  question: ReactNode;
 }
 
 const questionsAnswers: FaqContent[] = [
@@ -36,6 +36,17 @@ const questionsAnswers: FaqContent[] = [
       'Rather than needing to reach a consensus for every single block (which is why the traditional blockchain is so slow), thenewboston uses network consensus to instead determine which server is responsible for validating all blocks. This not only solves the double spend problem but also allows every block across the entire network to be processed in real time.',
     id: 'why-is-tnb-faster',
     question: 'Why is thenewboston faster and better than the traditional blockchain?',
+  },
+  {
+    answer: (
+      <>
+        Download the <A href="https://thenewboston.com/download">TNB Account Manager</A> app, create an{' '}
+        <A href="https://thenewboston.com/account-manager/create-an-account">account</A> and complete any of these{' '}
+        <A href="https://thenewboston.com/tasks/All">tasks</A>.
+      </>
+    ),
+    id: 'how-do-i-start-earning',
+    question: 'How do I start earning?',
   },
 ];
 
