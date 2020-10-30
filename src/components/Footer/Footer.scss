@@ -18,8 +18,12 @@
     flex-wrap: wrap;
   }
 
-  &__social-media-link:not(:last-child) {
-    margin-right: 18px;
+  &__social-media-link {
+    color: #fff;
+
+    &:not(:last-child) {
+      margin-right: 18px;
+    }
   }
 
   &__social-media-links {

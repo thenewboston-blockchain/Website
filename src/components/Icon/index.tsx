@@ -11,12 +11,19 @@ import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
 import ChevronLeftIcon from 'mdi-react/ChevronLeftIcon';
 import ChevronRightIcon from 'mdi-react/ChevronRightIcon';
 import ContentCopyIcon from 'mdi-react/ContentCopyIcon';
+import FacebookIcon from 'mdi-react/FacebookIcon';
+import GithubIcon from 'mdi-react/GithubIcon';
+import LinkedinIcon from 'mdi-react/LinkedinIcon';
 import LoadingIcon from 'mdi-react/LoadingIcon';
 import MenuIcon from 'mdi-react/MenuIcon';
 import MenuRightIcon from 'mdi-react/MenuRightIcon';
 import MinusIcon from 'mdi-react/MinusIcon';
 import PlusIcon from 'mdi-react/PlusIcon';
+import RedditIcon from 'mdi-react/RedditIcon';
+import SlackIcon from 'mdi-react/SlackIcon';
 import ThumbsUpIcon from 'mdi-react/ThumbsUpIcon';
+import TwitterIcon from 'mdi-react/TwitterIcon';
+import YoutubeIcon from 'mdi-react/YoutubeIcon';
 
 import {getCustomClassNames} from 'utils/components';
 import './Icon.scss';
@@ -30,12 +37,19 @@ export enum IconType {
   chevronLeft,
   chevronRight,
   contentCopy,
+  facebook,
+  github,
+  linkedin,
   loading,
   menu,
   menuRight,
   minus,
   plus,
+  reddit,
+  slack,
   thumbsUp,
+  twitter,
+  youtube,
 }
 
 interface ComponentProps {
@@ -68,6 +82,12 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
         return <ChevronRightIcon {...iconProps} />;
       case IconType.contentCopy:
         return <ContentCopyIcon {...iconProps} />;
+      case IconType.facebook:
+        return <FacebookIcon {...iconProps} />;
+      case IconType.github:
+        return <GithubIcon {...iconProps} />;
+      case IconType.linkedin:
+        return <LinkedinIcon {...iconProps} />;
       case IconType.loading:
         return <LoadingIcon {...iconProps} />;
       case IconType.menu:
@@ -78,8 +98,16 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
         return <MinusIcon {...iconProps} />;
       case IconType.plus:
         return <PlusIcon {...iconProps} />;
+      case IconType.reddit:
+        return <RedditIcon {...iconProps} />;
+      case IconType.slack:
+        return <SlackIcon {...iconProps} />;
       case IconType.thumbsUp:
         return <ThumbsUpIcon {...iconProps} />;
+      case IconType.twitter:
+        return <TwitterIcon {...iconProps} />;
+      case IconType.youtube:
+        return <YoutubeIcon {...iconProps} />;
       default:
         return null;
     }
