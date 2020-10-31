@@ -41,6 +41,15 @@ const navLists = [
       },
     ],
   },
+  {
+    header: 'Community',
+    links: [
+      {
+        title: 'FAQ',
+        url: '/faq',
+      },
+    ],
+  },
 ];
 
 const Footer: FC = () => {
