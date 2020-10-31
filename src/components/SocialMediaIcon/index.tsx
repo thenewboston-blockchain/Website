@@ -9,13 +9,13 @@ import {socialMediaUrls} from 'utils/social-media';
 interface ComponentProps {
   className?: string;
   website: SocialMedia;
-  size: number;
+  iconSize: number;
 }
 
-const SocialMediaIcon: FC<ComponentProps> = ({className, website, size}) => {
+const SocialMediaIcon: FC<ComponentProps> = ({className, website, iconSize}) => {
   return (
     <A className={clsx('SocialMediaIcon', className)} href={socialMediaUrls[website]}>
-      <Icon icon={IconType[website]} size={size} />
+      <Icon icon={IconType[website]} size={iconSize} />
     </A>
   );
 };

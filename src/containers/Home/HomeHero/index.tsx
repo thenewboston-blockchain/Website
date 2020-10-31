@@ -11,7 +11,7 @@ import './HomeHero.scss';
 const HomeHero: FC = () => {
   const renderSocialMediaLinks = () =>
     [SocialMedia.slack, SocialMedia.github, SocialMedia.youtube].map((website) => (
-      <SocialMediaIcon className="HomeHero__SocialMediaLink" website={website} size={48} key={website} />
+      <SocialMediaIcon className="HomeHero__SocialMediaLink" website={website} iconSize={30} key={website} />
     ));
 
   return (
