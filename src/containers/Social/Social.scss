@@ -30,22 +30,15 @@
     font-size: 36px;
     font-weight: 800;
     line-height: 1.25;
-    margin-bottom: 30px;
-  }
-
-  &__heading-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 60px;
-    text-align: center;
+    margin: 0 auto 30px;
   }
 
   &__subtext {
     font-size: var(--font-size-regular);
     font-weight: 300;
     line-height: 1.5;
-    margin: auto;
+    margin: 0 auto 60px;
     max-width: 425px;
+    text-align: center;
   }
 }
