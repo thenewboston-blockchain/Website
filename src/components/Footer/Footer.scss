@@ -19,7 +19,7 @@
   }
 
   &__social-media-link {
-    color: #fff;
+    color: var(--color-white);
 
     &:not(:last-child) {
       margin-right: 18px;
