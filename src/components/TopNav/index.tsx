@@ -1,9 +1,9 @@
-import React, {FC, ReactNode} from 'react';
+import React, {FC, ReactNode, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import clsx from 'clsx';
 
 import {Button, Icon, IconType} from 'components';
-import {useBooleanState} from 'hooks';
+import {useBooleanState, useWindowDimensions} from 'hooks';
 
 import TopNavLogo from './TopNavLogo';
 import TopNavPopoverButton from './TopNavPopoverButton';
@@ -16,6 +16,13 @@ interface ComponentProps {
 
 const TopNav: FC<ComponentProps> = ({className}) => {
   const [mobileMenuOpen, toggleMobileMenu, , closeMobileMenu] = useBooleanState(false);
+  const {width} = useWindowDimensions();
+
+  useEffect(() => {
+    if (width > 992 && mobileMenuOpen) {
+      closeMobileMenu();
+    }
+  }, [closeMobileMenu, mobileMenuOpen, width]);
 
   const renderMobileMenu = (): ReactNode => {
     return (
