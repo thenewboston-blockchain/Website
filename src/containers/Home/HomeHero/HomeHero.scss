@@ -31,7 +31,7 @@ $title-width: 480px;
   &__SocialMediaLink {
     background: var(--color-sail-gray-900);
     border-radius: 50%;
-    box-shadow: 0px 4px 4px 0px #042235 25%;
+    box-shadow: 0px 4px 4px rgba(4, 34, 53, 0.25);
     color: var(--color-white);
     display: flex;
     height: 42px;
