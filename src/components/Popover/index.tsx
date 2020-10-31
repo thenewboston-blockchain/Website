@@ -3,7 +3,7 @@ import {createPortal} from 'react-dom';
 import {useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 
-import {useWindowDimensions} from 'hooks';
+import {useEventListener, useWindowDimensions} from 'hooks';
 import {getCustomClassNames} from 'utils/components';
 import './Popover.scss';
 
@@ -35,22 +35,43 @@ const Popover: FC<ComponentProps> = ({
   children,
   className,
   closePopover,
-  id,
-  open = false,
+  id = 'popover',
+  open: openProp = false,
   transformOrigin = {horizontal: 'left', vertical: 'top'},
   transformOffset = {horizontal: 0, vertical: 0},
 }) => {
-  // TODO: Update popover so that it maintains its own open state
   const {pathname} = useLocation();
   const anchorRef = useRef<HTMLDivElement>(null);
   const portalRef = useRef<HTMLDivElement>(null);
+  const [open, setOpen] = useState<boolean>(openProp);
   const [parentDomRect, setParentDomRect] = useState<DomRect>(initialDomRect);
   const [portalDomRect, setPortalDomRect] = useState<DomRect>(initialDomRect);
   const windowDimensions = useWindowDimensions();
 
+  useEventListener(
+    'mousedown',
+    (e: any): void => {
+      let targetElement = e.target;
+
+      do {
+        if (targetElement.id === id) {
+          return;
+        }
+        targetElement = targetElement.parentNode;
+      } while (targetElement);
+
+      setOpen(false);
+    },
+    document,
+  );
+
   useEffect(() => {
     closePopover?.();
   }, [closePopover, pathname]);
+
+  useEffect(() => {
+    setOpen(openProp);
+  }, [openProp]);
 
   useEffect(() => {
     if (anchorRef.current) {
