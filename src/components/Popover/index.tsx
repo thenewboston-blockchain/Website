@@ -1,0 +1,150 @@
+import React, {FC, ReactNode, useEffect, useMemo, useRef, useState} from 'react';
+import {createPortal} from 'react-dom';
+import clsx from 'clsx';
+
+import {useWindowDimensions} from 'hooks';
+import {getCustomClassNames} from 'utils/components';
+import './Popover.scss';
+
+interface DomRect {
+  height: number;
+  left: number;
+  top: number;
+  width: number;
+}
+
+export type HorizontalPosition = 'center' | 'left' | 'right';
+export type VerticalPosition = 'bottom' | 'center' | 'top';
+
+const initialDomRect = {height: 0, left: 0, top: 0, width: 0};
+
+interface ComponentProps {
+  anchorOrigin?: {horizontal: HorizontalPosition | number; vertical: VerticalPosition | number};
+  children: ReactNode;
+  className?: string;
+  closePopover?(): void;
+  id?: string;
+  open?: boolean;
+  transformOrigin?: {horizontal: HorizontalPosition | number; vertical: VerticalPosition | number};
+  transformOffset?: {horizontal: number; vertical: number};
+}
+
+const Popover: FC<ComponentProps> = ({
+  anchorOrigin = {horizontal: 'left', vertical: 'top'},
+  children,
+  className,
+  id,
+  open = false,
+  transformOrigin = {horizontal: 'left', vertical: 'top'},
+  transformOffset = {horizontal: 0, vertical: 0},
+}) => {
+  const anchorRef = useRef<HTMLDivElement>(null);
+  const portalRef = useRef<HTMLDivElement>(null);
+  const [parentDomRect, setParentDomRect] = useState<DomRect>(initialDomRect);
+  const [portalDomRect, setPortalDomRect] = useState<DomRect>(initialDomRect);
+  const windowDimensions = useWindowDimensions();
+
+  useEffect(() => {
+    if (anchorRef.current) {
+      const parent = anchorRef.current.parentElement!;
+      const {height, left, top, width} = parent.getBoundingClientRect();
+      setParentDomRect({height, left, top, width});
+    }
+  }, [anchorRef, windowDimensions]);
+
+  useEffect(() => {
+    if (portalRef.current) {
+      const {height, left, top, width} = portalRef.current.getBoundingClientRect();
+      setPortalDomRect({height, left, top, width});
+    }
+  }, [portalRef, windowDimensions]);
+
+  const handleStopFromClosing = (e: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
+    e.stopPropagation();
+  };
+
+  const portalStyle = useMemo(() => {
+    let left: number;
+    let top: number;
+
+    if (anchorOrigin.horizontal === 'left') {
+      left = parentDomRect.left;
+    } else if (anchorOrigin.horizontal === 'right') {
+      left = parentDomRect.left + parentDomRect.width;
+    } else if (anchorOrigin.horizontal === 'center') {
+      left = parentDomRect.left + parentDomRect.width / 2;
+    } else {
+      left = anchorOrigin.horizontal;
+    }
+
+    if (transformOrigin.horizontal === 'left') {
+      left += transformOffset.horizontal;
+    } else if (transformOrigin.horizontal === 'right') {
+      left -= portalDomRect.width;
+      left -= transformOffset.horizontal;
+    } else if (transformOrigin.horizontal === 'center') {
+      left -= portalDomRect.width / 2;
+      left += transformOffset.horizontal;
+    } else {
+      left -= transformOrigin.horizontal;
+    }
+
+    if (anchorOrigin.vertical === 'bottom') {
+      top = parentDomRect.top + parentDomRect.height;
+    } else if (anchorOrigin.vertical === 'top') {
+      top = parentDomRect.top;
+    } else if (anchorOrigin.vertical === 'center') {
+      top = parentDomRect.top + parentDomRect.height / 2;
+    } else {
+      top = anchorOrigin.vertical;
+    }
+
+    if (transformOrigin.vertical === 'bottom') {
+      top -= portalDomRect.height;
+      top -= transformOffset.vertical;
+    } else if (transformOrigin.vertical === 'top') {
+      top += transformOffset.vertical;
+    } else if (transformOrigin.vertical === 'center') {
+      top -= portalDomRect.width / 2;
+      top += transformOffset.vertical;
+    } else {
+      top -= transformOrigin.vertical;
+    }
+
+    return {left, top};
+  }, [
+    anchorOrigin.horizontal,
+    anchorOrigin.vertical,
+    parentDomRect,
+    portalDomRect,
+    transformOrigin.horizontal,
+    transformOrigin.vertical,
+    transformOffset.horizontal,
+    transformOffset.vertical,
+  ]);
+
+  return (
+    <>
+      <div className="Popover__anchor" ref={anchorRef} />
+      {createPortal(
+        <div
+          className={clsx('Popover', className, {
+            'Popover--open': open,
+            ...getCustomClassNames(className, '--open', open),
+          })}
+          id={id}
+          onClick={handleStopFromClosing}
+          ref={portalRef}
+          role="dialog"
+          style={portalStyle}
+          tabIndex={open ? undefined : -1}
+        >
+          {children}
+        </div>,
+        document.getElementById('popover-root')!,
+      )}
+    </>
+  );
+};
+
+export default Popover;

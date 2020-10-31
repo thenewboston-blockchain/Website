@@ -13,6 +13,7 @@ import ChevronRightIcon from 'mdi-react/ChevronRightIcon';
 import ChevronUpIcon from 'mdi-react/ChevronUpIcon';
 import ContentCopyIcon from 'mdi-react/ContentCopyIcon';
 import FacebookIcon from 'mdi-react/FacebookIcon';
+import FileDocumentIcon from 'mdi-react/FileDocumentIcon';
 import GithubIcon from 'mdi-react/GithubIcon';
 import LinkedinIcon from 'mdi-react/LinkedinIcon';
 import LoadingIcon from 'mdi-react/LoadingIcon';
@@ -40,6 +41,7 @@ export enum IconType {
   chevronUp,
   contentCopy,
   facebook,
+  fileDocument,
   github,
   linkedin,
   loading,
@@ -88,6 +90,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
         return <ContentCopyIcon {...iconProps} />;
       case IconType.facebook:
         return <FacebookIcon {...iconProps} />;
+      case IconType.fileDocument:
+        return <FileDocumentIcon {...iconProps} />;
       case IconType.github:
         return <GithubIcon {...iconProps} />;
       case IconType.linkedin:

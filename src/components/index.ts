@@ -20,6 +20,7 @@ import MenuGroup from './MenuGroup';
 import LabelFilter from './LabelFilter';
 import Loader from './Loader';
 import Pagination from './Pagination';
+import Popover from './Popover';
 import Qr from './Qr';
 import Shadow from './Shadow';
 import SlideUp from './SlideUp';
@@ -60,6 +61,7 @@ export {
   MarketingButtonCircular,
   MenuGroup,
   Pagination,
+  Popover,
   Qr,
   RequestResponseSnippet,
   Shadow,
