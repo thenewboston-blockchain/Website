@@ -4,9 +4,8 @@ import {Link} from 'react-router-dom';
 import Logo from 'assets/svgs/thenewboston-white.svg';
 
 import {SocialMedia} from 'types/social-media';
-
+import SocialMediaIcon from 'components/SocialMediaIcon';
 import FooterNavList from './FooterNavList';
-import SocialMediaIcon from './SocialMediaIcon';
 
 import './Footer.scss';
 
@@ -66,7 +65,9 @@ const Footer: FC = () => {
       SocialMedia.linkedin,
       SocialMedia.facebook,
       SocialMedia.twitter,
-    ].map((website) => <SocialMediaIcon className="Footer__social-media-link" website={website} />);
+    ].map((website) => (
+      <SocialMediaIcon className="Footer__SocialMediaLink" website={website} size={28} key={website} />
+    ));
 
   const renderNavLists = () => navLists.map((list) => <FooterNavList header={list.header} links={list.links} />);
 

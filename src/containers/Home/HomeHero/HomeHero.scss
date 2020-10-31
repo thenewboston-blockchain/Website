@@ -28,13 +28,18 @@ $title-width: 480px;
     padding: 128px 0 128px $left-pl;
   }
 
-  &__MarketingButton {
-    margin-right: 25px;
+  &__SocialMediaLink {
+    max-width: 48px;
+    color: var(--color-primary);
+
+    &:not(:last-child) {
+      margin-right: 18px;
+    }
   }
 
-  &__marketing-buttons {
+  &__social-media-links {
     display: flex;
-    margin-top: 42px;
+    margin-top: 32px;
   }
 
   &__right {
