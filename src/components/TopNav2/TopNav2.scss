@@ -1,0 +1,41 @@
+.TopNav2 {
+  align-items: center;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+
+  &__anchor-button {
+    align-items: center;
+    color: var(--color-sail-gray-500);
+    cursor: pointer;
+    display: flex;
+    font-weight: 700;
+    justify-content: center;
+    transition: color 0.1s ease;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &--active {
+      color: var(--color-primary);
+    }
+  }
+
+  &__download-button {
+    margin-right: 24px;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  &__right {
+    align-items: center;
+    display: flex;
+  }
+
+  &__right-item {
+    margin-left: 42px;
+  }
+}

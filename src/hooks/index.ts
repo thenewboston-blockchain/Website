@@ -1,3 +1,4 @@
+import useBooleanState from './useBooleanState';
 import useScrollToTopContainer from './useScrollToTopContainer';
 
-export {useScrollToTopContainer};
+export {useBooleanState, useScrollToTopContainer};

@@ -1,0 +1,24 @@
+.TopNavPopoverButton {
+  align-items: center;
+  background: var(--color-white);
+  border: none;
+  color: var(--color-sail-gray-500);
+  cursor: pointer;
+  display: flex;
+  font-weight: 700;
+  justify-content: center;
+  outline: none;
+  transition: color 0.1s ease;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+
+  &--active {
+    color: var(--color-primary);
+  }
+
+  &__chevron-icon {
+    margin-left: 3px;
+  }
+}
