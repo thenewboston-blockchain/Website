@@ -17,7 +17,10 @@ const TopNavPopoverButton: FC<ComponentProps> = ({buttonText, className}) => {
   return (
     <button className={clsx('TopNavPopoverButton', className)} onClick={toggleOpen}>
       {buttonText}
-      <Icon className="TopNavPopoverButton__chevron-icon" icon={open ? IconType.chevronUp : IconType.chevronDown} />
+      <Icon
+        className={clsx('TopNavPopoverButton__chevron-icon', {'TopNavPopoverButton__chevron-icon--open': open})}
+        icon={IconType.chevronDown}
+      />
     </button>
   );
 };

@@ -20,5 +20,10 @@
 
   &__chevron-icon {
     margin-left: 3px;
+    transition: transform 0.3s ease-in-out;
+
+    &--open {
+      transform: rotateX(180deg);
+    }
   }
 }
