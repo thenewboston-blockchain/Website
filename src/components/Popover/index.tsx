@@ -1,5 +1,6 @@
 import React, {FC, ReactNode, useEffect, useMemo, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
+import {useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 
 import {useWindowDimensions} from 'hooks';
@@ -33,16 +34,23 @@ const Popover: FC<ComponentProps> = ({
   anchorOrigin = {horizontal: 'left', vertical: 'top'},
   children,
   className,
+  closePopover,
   id,
   open = false,
   transformOrigin = {horizontal: 'left', vertical: 'top'},
   transformOffset = {horizontal: 0, vertical: 0},
 }) => {
+  // TODO: Update popover so that it maintains its own open state
+  const {pathname} = useLocation();
   const anchorRef = useRef<HTMLDivElement>(null);
   const portalRef = useRef<HTMLDivElement>(null);
   const [parentDomRect, setParentDomRect] = useState<DomRect>(initialDomRect);
   const [portalDomRect, setPortalDomRect] = useState<DomRect>(initialDomRect);
   const windowDimensions = useWindowDimensions();
+
+  useEffect(() => {
+    closePopover?.();
+  }, [closePopover, pathname]);
 
   useEffect(() => {
     if (anchorRef.current) {
