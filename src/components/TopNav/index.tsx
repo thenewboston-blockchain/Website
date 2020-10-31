@@ -1,132 +1,154 @@
-/* eslint-disable react/jsx-props-no-spreading */
-
-import React, {FC, ReactNode, useState} from 'react';
-import {NavLink} from 'react-router-dom';
-import useOnclickOutside from 'react-cool-onclickoutside';
+import React, {FC, ReactNode} from 'react';
+import {Link} from 'react-router-dom';
 import clsx from 'clsx';
 
-import {Button, Icon, IconType, Shadow} from 'components';
-import {Repository} from 'types/github';
+import {Button, Icon, IconType} from 'components';
+import {useBooleanState} from 'hooks';
 
-import TopNavDropdownMenuItem from './TopNavDropdownMenuItem';
 import TopNavLogo from './TopNavLogo';
-import TopNavMenuItem from './TopNavMenuItem';
+import TopNavPopoverButton from './TopNavPopoverButton';
+import TopNavPopoverItem from './TopNavPopoverItem';
 import './TopNav.scss';
 
 interface ComponentProps {
   className?: string;
 }
 
-const docsProps = {
-  activePatterns: [
-    '/account-manager',
-    '/bank-api',
-    '/confirmation-validator-api',
-    '/deployment-guide',
-    '/guide',
-    '/primary-validator-api',
-    '/style-guide',
-  ],
-  name: 'Docs',
-  url: '/guide/introduction',
-};
-
-const faqProps = {
-  activePatterns: ['/faq'],
-  name: 'FAQ',
-  url: '/faq',
-};
-
-const leaderboardProps = {
-  activePatterns: ['/leaderboard'],
-  name: 'Leaderboard',
-  url: `/leaderboard/${Repository.all}`,
-};
-
-const openingsProps = {
-  activePatterns: ['/openings'],
-  name: 'Openings',
-  url: '/openings',
-};
-
-const socialProps = {
-  activePatterns: ['/social'],
-  name: 'Social',
-  url: '/social',
-};
-
-const tasksProps = {
-  activePatterns: ['/tasks'],
-  name: 'Tasks',
-  url: `/tasks/${Repository.all}`,
-};
-
 const TopNav: FC<ComponentProps> = ({className}) => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileMenuOpen, toggleMobileMenu, , closeMobileMenu] = useBooleanState(false);
 
-  const ref = useOnclickOutside(() => {
-    setDropdownOpen(false);
-  });
-
-  const renderDropdownMenu = (): ReactNode => {
-    if (!dropdownOpen) return null;
+  const renderMobileMenu = (): ReactNode => {
     return (
-      <div className="TopNav__dropdown-menu">
-        <Shadow />
-        <div className="TopNav__dropdown-menu-item-container">
-          <TopNavDropdownMenuItem {...faqProps} />
-          <TopNavDropdownMenuItem {...leaderboardProps} />
-          <TopNavDropdownMenuItem {...tasksProps} />
-          <TopNavDropdownMenuItem {...openingsProps} />
-          <TopNavDropdownMenuItem {...docsProps} />
-          <TopNavDropdownMenuItem {...socialProps} />
-          <TopNavDropdownMenuItem activePatterns={['/download']} name="Download" url="/download" />
-        </div>
+      <div className="mobile-menu">
+        <button className="mobile-menu__button" onClick={toggleMobileMenu}>
+          <Icon icon={IconType.menu} size={24} />
+        </button>
+        {renderMobileDropdownMenu()}
       </div>
     );
   };
 
-  const renderMenuItems = (): ReactNode => (
-    <>
-      <TopNavMenuItem {...faqProps} />
-      <TopNavMenuItem {...leaderboardProps} />
-      <TopNavMenuItem {...tasksProps} />
-      <TopNavMenuItem {...openingsProps} />
-      <TopNavMenuItem {...docsProps} />
-      <TopNavMenuItem {...socialProps} />
-      <NavLink className="TopNav__download-button" to="/download">
-        <Button>Download</Button>
-      </NavLink>
-    </>
-  );
+  const renderCommunityPopover = (): ReactNode => {
+    return (
+      <>
+        <TopNavPopoverItem
+          description="Slack, GitHub, YouTube, LinkedIn, etc"
+          iconType={IconType.earth}
+          title="Join the Community!"
+          to="/social"
+        />
+        <TopNavPopoverItem
+          description="Join the team building the app"
+          iconType={IconType.humanHandsUp}
+          title="Openings"
+          to="/openings"
+        />
+        <TopNavPopoverItem
+          description="View the highest ranked contributors"
+          iconType={IconType.trophy}
+          title="Leaderboard"
+          to="/leaderboard/All"
+        />
+      </>
+    );
+  };
 
-  const renderToggle = (): ReactNode => (
-    <div
-      className="TopNav__right-menu-toggle-container"
-      onClick={() => setDropdownOpen(!dropdownOpen)}
-      ref={ref}
-      role="button"
-      tabIndex={0}
-    >
-      <Icon icon={IconType.menu} size={24} />
-      {renderDropdownMenu()}
-    </div>
-  );
+  const renderGetStartedPopover = (): ReactNode => {
+    return (
+      <>
+        <TopNavPopoverItem
+          description="Start reading into Guides and APIs"
+          iconType={IconType.fileDocument}
+          title="Documentation"
+          to="/guide/introduction"
+        />
+        <TopNavPopoverItem
+          description="Pick up tasks within GitHub and earn points"
+          iconSize={28}
+          iconType={IconType.github}
+          title="Tasks"
+          to="/tasks/All"
+        />
+      </>
+    );
+  };
 
-  const renderRightItems = (): ReactNode => (
-    <div className="TopNav__right">
-      {renderMenuItems()}
-      {renderToggle()}
-    </div>
-  );
+  const renderMenuItems = (): ReactNode => {
+    return (
+      <>
+        <TopNavPopoverButton buttonText="Get Started" className="TopNav__right-item" popoverId="get-started-popover">
+          {renderGetStartedPopover()}
+        </TopNavPopoverButton>
+        <TopNavPopoverButton buttonText="Community" className="TopNav__right-item" popoverId="community-popover">
+          {renderCommunityPopover()}
+        </TopNavPopoverButton>
+        <Link className={clsx('TopNav__right-item', 'TopNav__anchor-button')} to="/faq">
+          FAQ
+        </Link>
+        <Link className={clsx('TopNav__right-item', 'TopNav__download-button')} to="/download">
+          <Button>Download</Button>
+        </Link>
+      </>
+    );
+  };
+
+  const renderMobileDropdownMenu = (): ReactNode => {
+    if (!mobileMenuOpen) return null;
+    return (
+      <>
+        <div className="mobile-menu__dropdown-container">
+          <div className="mobile-menu__column">
+            <div className="mobile-menu__column-title">Get Started</div>
+            <Link className="mobile-menu__link" to="/guide/introduction">
+              Documentation
+            </Link>
+            <Link className="mobile-menu__link" to="/tasks/All">
+              Tasks
+            </Link>
+            <Link className="mobile-menu__link" to="/download">
+              Download
+            </Link>
+          </div>
+          <div className="mobile-menu__column">
+            <div className="mobile-menu__column-title">Community</div>
+            <Link className="mobile-menu__link" to="/social">
+              Join the Community!
+            </Link>
+            <Link className="mobile-menu__link" to="/openings">
+              Openings
+            </Link>
+            <Link className="mobile-menu__link" to="/leaderboard">
+              Leaderboard
+            </Link>
+          </div>
+          <div className="mobile-menu__column">
+            <div className="mobile-menu__column-title">More</div>
+            <Link className="mobile-menu__link" to="/faq">
+              FAQ
+            </Link>
+          </div>
+        </div>
+        <div className={clsx('mobile-menu__overlay')} onClick={closeMobileMenu} role="button" tabIndex={0} />
+      </>
+    );
+  };
+
+  const renderRightItems = (): ReactNode => {
+    return (
+      <div className="TopNav__right">
+        {renderMenuItems()}
+        {renderMobileMenu()}
+      </div>
+    );
+  };
 
   return (
-    <div className={clsx('TopNav', className)}>
+    <header className={clsx('TopNav', className)}>
       <div className="TopNav__left">
         <TopNavLogo />
       </div>
       {renderRightItems()}
-    </div>
+    </header>
   );
 };
 

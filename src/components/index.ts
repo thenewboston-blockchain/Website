@@ -29,7 +29,6 @@ import {TableBorderGrid, TableParams, TableVertical} from './Table';
 import Tabs, {Tab} from './Tabs';
 import TimeFilter from './TimeFilter';
 import TopNav from './TopNav';
-import TopNav2 from './TopNav2';
 import TotalAmount from './TotalAmount';
 
 export {
@@ -74,7 +73,6 @@ export {
   Tabs,
   TimeFilter,
   TopNav,
-  TopNav2,
   TotalAmount,
 };
 

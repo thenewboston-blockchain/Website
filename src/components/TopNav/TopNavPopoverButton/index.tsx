@@ -1,8 +1,8 @@
-import React, {FC, ReactNode} from 'react';
+import React, {FC, ReactNode, useEffect} from 'react';
 import clsx from 'clsx';
 
 import {Icon, IconType, Popover} from 'components';
-import {useBooleanState} from 'hooks';
+import {useBooleanState, useWindowDimensions} from 'hooks';
 
 import './TopNavPopoverButton.scss';
 
@@ -15,6 +15,13 @@ interface ComponentProps {
 
 const TopNavPopoverButton: FC<ComponentProps> = ({buttonText, children, className, popoverId}) => {
   const [popoverIsOpen, togglePopover, , closePopover] = useBooleanState(false);
+  const {width} = useWindowDimensions();
+
+  useEffect(() => {
+    if (width < 992 && popoverIsOpen) {
+      closePopover();
+    }
+  }, [closePopover, popoverIsOpen, width]);
 
   return (
     <button className={clsx('TopNavPopoverButton', className)} onClick={togglePopover}>
