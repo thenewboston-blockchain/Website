@@ -18,13 +18,13 @@ const HomeComparisonCards: FC = () => {
       <div className="HomeComparisonCards__card">
         <img alt="logo" className="HomeComparisonCards__crypto-logo" src={Bitcoin} />
         {renderComparisonCardStat('txs per second', '7')}
-        {renderComparisonCardStat('avg. tx time', '~5 min')}
+        {renderComparisonCardStat('avg. block time', '10 minutes')}
       </div>
       <div className="HomeComparisonCards__versus-container">vs</div>
       <div className="HomeComparisonCards__card">
         <img alt="logo" className="HomeComparisonCards__crypto-logo" src={Logo} />
         {renderComparisonCardStat('txs per second', '3,238')}
-        {renderComparisonCardStat('avg. tx time', '0.015 seconds')}
+        {renderComparisonCardStat('avg. block time', '0.015 seconds')}
       </div>
     </div>
   );

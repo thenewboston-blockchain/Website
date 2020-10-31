@@ -32,12 +32,25 @@ const navLists = [
     header: 'Community',
     links: [
       {
+        title: 'Join the Community!',
+        url: '/social',
+      },
+      {
         title: 'Openings',
         url: '/openings',
       },
       {
         title: 'Leaderboard',
         url: '/leaderboard/All',
+      },
+    ],
+  },
+  {
+    header: 'Community',
+    links: [
+      {
+        title: 'FAQ',
+        url: '/faq',
       },
     ],
   },

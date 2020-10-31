@@ -57,6 +57,17 @@
       "amount_paid": "5000"
     }
   ],
+  "aayushi14": [
+    {
+      "repository": "Website",
+      "title": "Update social media buttons on the main marketing page",
+      "issue_id": "321",
+      "pr_id": "323",
+      "completed_by": "aayushi14",
+      "completed_date": "10/27/20",
+      "amount_paid": "1000"
+    }
+  ],
   "angle943": [
     {
       "repository": "Account-Manager",
@@ -308,6 +319,24 @@
       "completed_by": "colfax23",
       "completed_date": "10/26/20",
       "amount_paid": "10000"
+    },
+    {
+      "repository": "Website",
+      "title": "Update Account Manager Guide Pages",
+      "issue_id": "280",
+      "pr_id": "328",
+      "completed_by": "colfax23",
+      "completed_date": "10/27/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Add the functionality to use font-weight with our Inter Font",
+      "issue_id": "416",
+      "pr_id": "419",
+      "completed_by": "colfax23",
+      "completed_date": "10/27/20",
+      "amount_paid": "7500"
     }
   ],
   "dahelg": [
@@ -457,6 +486,15 @@
       "completed_by": "moki298",
       "completed_date": "10/20/20",
       "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Landing Page Style Update",
+      "issue_id": "283",
+      "pr_id": "314",
+      "completed_by": "moki298",
+      "completed_date": "10/28/20",
+      "amount_paid": "7500"
     }
   ],
   "thesanjeevsharma": [
@@ -486,6 +524,15 @@
       "completed_by": "thesanjeevsharma",
       "completed_date": "10/10/20",
       "amount_paid": "10000"
+    },
+    {
+      "repository": "Website",
+      "title": "Updated Footer",
+      "issue_id": "318",
+      "pr_id": "325",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "10/27/20",
+      "amount_paid": "2500"
     }
   ],
   "tpikachu": [

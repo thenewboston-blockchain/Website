@@ -1,0 +1,43 @@
+.Faq {
+  $self: &;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+  min-height: 700px;
+  padding-bottom: 120px;
+
+  &__answer {
+    line-height: 24px;
+    margin-top: 6px;
+  }
+
+  &__content {
+    @media (max-width: 768px) {
+      margin: 0 24px 12px;
+    }
+  }
+
+  &__HashLink {
+    display: none;
+    padding-left: 8px;
+  }
+
+  &__question {
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 60px;
+
+    &:hover {
+      #{$self}__HashLink {
+        display: inline;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 1.25;
+    margin-top: 60px;
+  }
+}
