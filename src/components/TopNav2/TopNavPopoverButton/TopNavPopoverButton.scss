@@ -29,5 +29,9 @@
 
   &__Popover {
     padding: 18px;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
   }
 }

@@ -1,8 +1,9 @@
 import React, {FC, ReactNode} from 'react';
-import {NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import clsx from 'clsx';
 
-import {Button, IconType} from 'components';
+import {Button, Icon, IconType} from 'components';
+import {useBooleanState} from 'hooks';
 
 import TopNavLogo from './TopNavLogo';
 import TopNavPopoverButton from './TopNavPopoverButton';
@@ -14,6 +15,19 @@ interface ComponentProps {
 }
 
 const TopNav2: FC<ComponentProps> = ({className}) => {
+  const [mobileMenuOpen, toggleMobileMenu, , closeMobileMenu] = useBooleanState(false);
+
+  const renderMobileMenu = (): ReactNode => {
+    return (
+      <div className="mobile-menu">
+        <button className="mobile-menu__button" onClick={toggleMobileMenu}>
+          <Icon icon={IconType.menu} size={24} />
+        </button>
+        {renderMobileDropdownMenu()}
+      </div>
+    );
+  };
+
   const renderCommunityPopover = (): ReactNode => {
     return (
       <>
@@ -68,18 +82,64 @@ const TopNav2: FC<ComponentProps> = ({className}) => {
         <TopNavPopoverButton buttonText="Community" className="TopNav2__right-item" popoverId="community-popover">
           {renderCommunityPopover()}
         </TopNavPopoverButton>
-        <NavLink className={clsx('TopNav2__right-item', 'TopNav2__anchor-button')} to="/faq">
+        <Link className={clsx('TopNav2__right-item', 'TopNav2__anchor-button')} to="/faq">
           FAQ
-        </NavLink>
-        <NavLink className={clsx('TopNav2__right-item', 'TopNav2__download-button')} to="/download">
+        </Link>
+        <Link className={clsx('TopNav2__right-item', 'TopNav2__download-button')} to="/download">
           <Button>Download</Button>
-        </NavLink>
+        </Link>
+      </>
+    );
+  };
+
+  const renderMobileDropdownMenu = (): ReactNode => {
+    if (!mobileMenuOpen) return null;
+    return (
+      <>
+        <div className="mobile-menu__dropdown-container">
+          <div className="mobile-menu__column">
+            <div className="mobile-menu__column-title">Get Started</div>
+            <Link className="mobile-menu__link" to="/guide/introduction">
+              Documentation
+            </Link>
+            <Link className="mobile-menu__link" to="/tasks/All">
+              Tasks
+            </Link>
+            <Link className="mobile-menu__link" to="/download">
+              Download
+            </Link>
+          </div>
+          <div className="mobile-menu__column">
+            <div className="mobile-menu__column-title">Community</div>
+            <Link className="mobile-menu__link" to="/social">
+              Join the Community!
+            </Link>
+            <Link className="mobile-menu__link" to="/openings">
+              Openings
+            </Link>
+            <Link className="mobile-menu__link" to="/leaderboard">
+              Leaderboard
+            </Link>
+          </div>
+          <div className="mobile-menu__column">
+            <div className="mobile-menu__column-title">More</div>
+            <Link className="mobile-menu__link" to="/faq">
+              FAQ
+            </Link>
+          </div>
+        </div>
+        <div className={clsx('mobile-menu__overlay')} onClick={closeMobileMenu} role="button" tabIndex={0} />
       </>
     );
   };
 
   const renderRightItems = (): ReactNode => {
-    return <div className="TopNav2__right">{renderMenuItems()}</div>;
+    return (
+      <div className="TopNav2__right">
+        {renderMenuItems()}
+        {renderMobileMenu()}
+      </div>
+    );
   };
 
   return (
