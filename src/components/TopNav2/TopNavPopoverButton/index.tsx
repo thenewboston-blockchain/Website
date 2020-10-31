@@ -14,10 +14,10 @@ interface ComponentProps {
 }
 
 const TopNavPopoverButton: FC<ComponentProps> = ({buttonText, children, className, popoverId}) => {
-  const [popoverIsOpen, togglePopoverIsOpen, , closePopover] = useBooleanState(false);
+  const [popoverIsOpen, togglePopover, , closePopover] = useBooleanState(false);
 
   return (
-    <button className={clsx('TopNavPopoverButton', className)} onClick={togglePopoverIsOpen}>
+    <button className={clsx('TopNavPopoverButton', className)} onClick={togglePopover}>
       {buttonText}
       <Icon
         className={clsx('TopNavPopoverButton__chevron-icon', {

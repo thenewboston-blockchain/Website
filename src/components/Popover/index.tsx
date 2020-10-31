@@ -61,6 +61,7 @@ const Popover: FC<ComponentProps> = ({
       } while (targetElement);
 
       setOpen(false);
+      closePopover?.();
     },
     document,
   );

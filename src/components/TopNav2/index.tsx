@@ -14,6 +14,31 @@ interface ComponentProps {
 }
 
 const TopNav2: FC<ComponentProps> = ({className}) => {
+  const renderCommunityPopover = (): ReactNode => {
+    return (
+      <>
+        <TopNavPopoverItem
+          description="Slack, GitHub, YouTube, LinkedIn, etc"
+          iconType={IconType.earth}
+          title="Join the Community!"
+          to="/social"
+        />
+        <TopNavPopoverItem
+          description="Join the team building the app"
+          iconType={IconType.humanHandsUp}
+          title="Openings"
+          to="/openings"
+        />
+        <TopNavPopoverItem
+          description="View the highest ranked contributors"
+          iconType={IconType.trophy}
+          title="Leaderboard"
+          to="/leaderboard/All"
+        />
+      </>
+    );
+  };
+
   const renderGetStartedPopover = (): ReactNode => {
     return (
       <>
@@ -41,7 +66,7 @@ const TopNav2: FC<ComponentProps> = ({className}) => {
           {renderGetStartedPopover()}
         </TopNavPopoverButton>
         <TopNavPopoverButton buttonText="Community" className="TopNav2__right-item" popoverId="community-popover">
-          ERRR
+          {renderCommunityPopover()}
         </TopNavPopoverButton>
         <NavLink className={clsx('TopNav2__right-item', 'TopNav2__anchor-button')} to="/faq">
           FAQ
