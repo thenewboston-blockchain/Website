@@ -30,6 +30,8 @@ interface ComponentProps {
   transformOffset?: {horizontal: number; vertical: number};
 }
 
+// TODO: Look into anchorEl. Does this component really need to keep it's own state? I don't think so
+
 const Popover: FC<ComponentProps> = ({
   anchorOrigin = {horizontal: 'left', vertical: 'top'},
   children,
