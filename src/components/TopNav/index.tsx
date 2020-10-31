@@ -37,12 +37,6 @@ const faqProps = {
   url: '/faq',
 };
 
-const helpProps = {
-  activePatterns: ['/help'],
-  name: 'Help',
-  url: '/help',
-};
-
 const leaderboardProps = {
   activePatterns: ['/leaderboard'],
   name: 'Leaderboard',
@@ -53,6 +47,12 @@ const openingsProps = {
   activePatterns: ['/openings'],
   name: 'Openings',
   url: '/openings',
+};
+
+const socialProps = {
+  activePatterns: ['/social'],
+  name: 'Social',
+  url: '/social',
 };
 
 const tasksProps = {
@@ -79,7 +79,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
           <TopNavDropdownMenuItem {...tasksProps} />
           <TopNavDropdownMenuItem {...openingsProps} />
           <TopNavDropdownMenuItem {...docsProps} />
-          <TopNavDropdownMenuItem {...helpProps} />
+          <TopNavDropdownMenuItem {...socialProps} />
           <TopNavDropdownMenuItem activePatterns={['/download']} name="Download" url="/download" />
         </div>
       </div>
@@ -93,7 +93,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
       <TopNavMenuItem {...tasksProps} />
       <TopNavMenuItem {...openingsProps} />
       <TopNavMenuItem {...docsProps} />
-      <TopNavMenuItem {...helpProps} />
+      <TopNavMenuItem {...socialProps} />
       <NavLink className="TopNav__download-button" to="/download">
         <Button>Download</Button>
       </NavLink>

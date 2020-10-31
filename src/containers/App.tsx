@@ -10,11 +10,11 @@ import DeploymentGuide from './DeploymentGuide';
 import Download from './Download';
 import Faq from './Faq';
 import Guide from './Guide';
-import Help from './Help';
 import Home from './Home';
 import Leaderboard from './Leaderboard';
 import Openings from './Openings';
 import PrimaryValidatorApi from './PrimaryValidatorApi';
+import Social from './Social';
 import StyleGuide from './StyleGuide';
 import Tasks from './Tasks';
 import Teams from './Teams';
@@ -53,9 +53,9 @@ const App: FC = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/faq" component={Faq} />
-          <Route exact path="/help" component={Help} />
           <Route exact path="/leaderboard/:repository" component={Leaderboard} />
           <Route exact path="/openings/:openingId?" component={Openings} />
+          <Route exact path="/social" component={Social} />
           <Route exact path="/tasks/:repository" component={Tasks} />
           <Route exact path="/teams" component={Teams} />
           <Route path="/account-manager/:chapter?" component={AccountManager} />
