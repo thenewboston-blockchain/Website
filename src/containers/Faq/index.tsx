@@ -1,4 +1,4 @@
-import React, {FC, ReactNode} from 'react';
+import React, {FC, memo, ReactNode} from 'react';
 import {A, HashLink} from 'components';
 
 import './Faq.scss';
@@ -51,7 +51,7 @@ const questionsAnswers: FaqContent[] = [
 ];
 
 const Faq: FC = () => {
-  const renderQuestionAnswers = () => {
+  const renderQuestionAnswers = (): ReactNode => {
     return questionsAnswers.map(({answer, id, question}) => (
       <div key={id}>
         <h2 className="Faq__question" id={id}>
@@ -62,6 +62,7 @@ const Faq: FC = () => {
       </div>
     ));
   };
+
   return (
     <div className="Faq">
       <div className="Faq__content">
@@ -72,4 +73,4 @@ const Faq: FC = () => {
   );
 };
 
-export default Faq;
+export default memo(Faq);

@@ -11,6 +11,12 @@
     margin-top: 6px;
   }
 
+  &__content {
+    @media (max-width: 768px) {
+      margin: 0 24px 12px;
+    }
+  }
+
   &__HashLink {
     display: none;
     padding-left: 8px;
@@ -33,11 +39,5 @@
     font-size: 36px;
     line-height: 1.25;
     margin-top: 60px;
-  }
-
-  @media (max-width: 768px) {
-    &__content {
-      margin: 0 24px 12px;
-    }
   }
 }
