@@ -6,7 +6,6 @@
 
   &__button-container {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
@@ -28,10 +27,9 @@
   }
 
   &__heading {
-    color: #042235;
     font-size: 36px;
-    font-weight: 700;
-    line-height: 125%;
+    font-weight: 800;
+    line-height: 1.25;
     margin-bottom: 30px;
   }
 
@@ -40,14 +38,13 @@
     flex-direction: column;
     justify-content: center;
     margin-bottom: 60px;
-    max-width: 500 px;
     text-align: center;
   }
 
   &__subtext {
     font-size: var(--font-size-regular);
     font-weight: 300;
-    line-height: 150%;
+    line-height: 1.5;
     margin: auto;
     max-width: 425px;
   }

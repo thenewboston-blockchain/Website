@@ -21,9 +21,7 @@ const Social: FC = () => {
   return (
     <div className="Social">
       <div className="Social__heading-container">
-        <h1 className="Social__heading">
-          <b>Join the Community</b>
-        </h1>
+        <h1 className="Social__heading">Join the Community</h1>
         <h2 className="Social__subtext">
           Explore ways to get involved, and stay up-to-date with the latest announcements and events.
         </h2>
