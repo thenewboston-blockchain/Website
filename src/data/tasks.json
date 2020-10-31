@@ -57,6 +57,17 @@
       "amount_paid": "5000"
     }
   ],
+  "aayushi14": [
+    {
+      "repository": "Website",
+      "title": "Update social media buttons on the main marketing page",
+      "issue_id": "321",
+      "pr_id": "323",
+      "completed_by": "aayushi14",
+      "completed_date": "10/27/20",
+      "amount_paid": "1000"
+    }
+  ],
   "angle943": [
     {
       "repository": "Account-Manager",
@@ -93,6 +104,15 @@
       "completed_by": "angle943",
       "completed_date": "10/19/20",
       "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Documentation CSS issue.",
+      "issue_id": "295",
+      "pr_id": "312",
+      "completed_by": "angle943",
+      "completed_date": "10/21/20",
+      "amount_paid": "1000"
     }
   ],
   "avgust13": [
@@ -290,6 +310,46 @@
       "amount_paid": "5000"
     }
   ],
+  "colfax23": [
+    {
+      "repository": "Website",
+      "title": "Add the functionality to use font-weight with our Inter Font",
+      "issue_id": "293",
+      "pr_id": "313",
+      "completed_by": "colfax23",
+      "completed_date": "10/26/20",
+      "amount_paid": "10000"
+    },
+    {
+      "repository": "Website",
+      "title": "Update Account Manager Guide Pages",
+      "issue_id": "280",
+      "pr_id": "328",
+      "completed_by": "colfax23",
+      "completed_date": "10/27/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Add the functionality to use font-weight with our Inter Font",
+      "issue_id": "416",
+      "pr_id": "419",
+      "completed_by": "colfax23",
+      "completed_date": "10/27/20",
+      "amount_paid": "7500"
+    }
+  ],
+  "dahelg": [
+    {
+      "repository": "Website",
+      "title": "Highlighted section should be less in height",
+      "issue_id": "206",
+      "pr_id": "290",
+      "completed_by": "dahelg",
+      "completed_date": "10/11/20",
+      "amount_paid": "2500"
+    }
+  ],
   "hawyar": [
     {
       "repository": "Account-Manager",
@@ -310,6 +370,17 @@
       "amount_paid": "2500"
     }
   ],
+  "itsnikhil": [
+    {
+      "repository": "Website",
+      "title": "[iPhone 320Px] Text goes out of section",
+      "issue_id": "248",
+      "pr_id": "289",
+      "completed_by": "itsnikhil",
+      "completed_date": "10/10/20",
+      "amount_paid": "1000"
+    }
+  ],
   "kristykjlee": [
     {
       "repository": "Website",
@@ -319,6 +390,62 @@
       "completed_by": "kristykjlee",
       "completed_date": "9/16/20",
       "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Update social media buttons on the main marketing page",
+      "issue_id": "321",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "10/24/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "FAQ page",
+      "issue_id": "320",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "10/24/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Updated Top Navigation",
+      "issue_id": "317",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "10/24/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Updated Footer",
+      "issue_id": "318",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "10/24/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Social Media page",
+      "issue_id": "319",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "10/24/20",
+      "amount_paid": "2500"
+    }
+  ],
+  "lapstjup": [
+    {
+      "repository": "Website",
+      "title": "[iPhone SE] Page moved horizontally",
+      "issue_id": "220",
+      "pr_id": "266",
+      "completed_by": "lapstjup",
+      "completed_date": "10/2/20",
+      "amount_paid": "5000"
     }
   ],
   "leelatanniru": [
@@ -359,6 +486,15 @@
       "completed_by": "moki298",
       "completed_date": "10/20/20",
       "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Landing Page Style Update",
+      "issue_id": "283",
+      "pr_id": "314",
+      "completed_by": "moki298",
+      "completed_date": "10/28/20",
+      "amount_paid": "7500"
     }
   ],
   "thesanjeevsharma": [
@@ -388,6 +524,15 @@
       "completed_by": "thesanjeevsharma",
       "completed_date": "10/10/20",
       "amount_paid": "10000"
+    },
+    {
+      "repository": "Website",
+      "title": "Updated Footer",
+      "issue_id": "318",
+      "pr_id": "325",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "10/27/20",
+      "amount_paid": "2500"
     }
   ],
   "tpikachu": [
