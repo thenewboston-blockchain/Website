@@ -1,5 +1,6 @@
 .StepIndicator {
   align-items: center;
+  color: var(--color-white);
   display: flex;
   font-size: var(--font-size-medium);
   font-weight: 800;
@@ -8,7 +9,6 @@
     align-items: center;
     background-color: var(--color-tertiary);
     border-radius: 18px;
-    color: var(--color-white);
     display: flex;
     flex-shrink: 0;
     height: 36px;

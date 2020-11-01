@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import Logo from 'assets/svgs/thenewboston.svg';
+import Logo from 'assets/svgs/thenewboston-primary.svg';
 import './TopNavLogo.scss';
 
 const TopNavLogo: FC = () => (

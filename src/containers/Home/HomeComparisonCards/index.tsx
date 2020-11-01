@@ -1,7 +1,7 @@
 import React, {FC, ReactNode} from 'react';
 
 import Bitcoin from 'assets/svgs/bitcoin.svg';
-import Logo from 'assets/svgs/thenewboston.svg';
+import Logo from 'assets/svgs/thenewboston-primary.svg';
 
 import './HomeComparisonCards.scss';
 
