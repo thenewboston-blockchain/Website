@@ -66,7 +66,7 @@ const Footer: FC = () => {
       SocialMedia.facebook,
       SocialMedia.twitter,
     ].map((website) => (
-      <SocialMediaIcon className="Footer__SocialMediaLink" website={website} iconSize={28} key={website} />
+      <SocialMediaIcon className="Footer__SocialMediaLink" iconSize={28} key={website} website={website} />
     ));
 
   const renderNavLists = () => navLists.map((list) => <FooterNavList header={list.header} links={list.links} />);
