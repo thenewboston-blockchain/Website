@@ -1,5 +1,5 @@
 import React, {FC, ReactNode, useEffect} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 
 import {Button, Icon, IconType} from 'components';
@@ -16,7 +16,12 @@ interface ComponentProps {
 
 const TopNav: FC<ComponentProps> = ({className}) => {
   const [mobileMenuOpen, toggleMobileMenu, , closeMobileMenu] = useBooleanState(false);
+  const {pathname} = useLocation();
   const {width} = useWindowDimensions();
+
+  useEffect(() => {
+    closeMobileMenu();
+  }, [closeMobileMenu, pathname]);
 
   useEffect(() => {
     if (width > 992 && mobileMenuOpen) {

@@ -60,13 +60,13 @@ const Popover: FC<ComponentProps> = ({
         targetElement = targetElement.parentNode;
       } while (targetElement);
 
-      closePopover?.();
+      closePopover();
     },
     document,
   );
 
   useEffect(() => {
-    closePopover?.();
+    closePopover();
   }, [closePopover, pathname]);
 
   useEffect(() => {
