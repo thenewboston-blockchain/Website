@@ -1,8 +1,8 @@
-import React, {FC, ReactNode, useEffect} from 'react';
+import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
 import clsx from 'clsx';
 
 import {Icon, IconType, Popover} from 'components';
-import {useBooleanState, useWindowDimensions} from 'hooks';
+import {useWindowDimensions} from 'hooks';
 
 import './TopNavPopoverButton.scss';
 
@@ -14,28 +14,45 @@ interface ComponentProps {
 }
 
 const TopNavPopoverButton: FC<ComponentProps> = ({buttonText, children, className, popoverId}) => {
-  const [popoverIsOpen, togglePopover, , closePopover] = useBooleanState(false);
+  const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
   const {width} = useWindowDimensions();
+
+  const popoverIsOpen = !!anchorEl;
+
+  const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
+    if (!anchorEl) {
+      setAnchorEl(e.currentTarget);
+      return;
+    }
+    setAnchorEl(null);
+  };
+
+  const handleClosePopover = useCallback(() => {
+    setAnchorEl(null);
+  }, [setAnchorEl]);
 
   useEffect(() => {
     if (width < 992 && popoverIsOpen) {
-      closePopover();
+      handleClosePopover();
     }
-  }, [closePopover, popoverIsOpen, width]);
+  }, [handleClosePopover, popoverIsOpen, width]);
 
   return (
-    <button className={clsx('TopNavPopoverButton', className)} onClick={togglePopover}>
-      {buttonText}
-      <Icon
-        className={clsx('TopNavPopoverButton__chevron-icon', {
-          'TopNavPopoverButton__chevron-icon--open': popoverIsOpen,
-        })}
-        icon={IconType.chevronDown}
-      />
+    <>
+      <button className={clsx('TopNavPopoverButton', className)} onClick={handleButtonClick}>
+        {buttonText}
+        <Icon
+          className={clsx('TopNavPopoverButton__chevron-icon', {
+            'TopNavPopoverButton__chevron-icon--open': popoverIsOpen,
+          })}
+          icon={IconType.chevronDown}
+        />
+      </button>
       <Popover
+        anchorEl={anchorEl}
         anchorOrigin={{horizontal: 'center', vertical: 'bottom'}}
         className="TopNavPopoverButton__Popover"
-        closePopover={closePopover}
+        closePopover={handleClosePopover}
         id={popoverId}
         open={popoverIsOpen}
         transformOrigin={{horizontal: 'center', vertical: 'top'}}
@@ -43,7 +60,7 @@ const TopNavPopoverButton: FC<ComponentProps> = ({buttonText, children, classNam
       >
         {children}
       </Popover>
-    </button>
+    </>
   );
 };
 

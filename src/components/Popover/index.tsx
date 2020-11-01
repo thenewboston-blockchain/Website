@@ -21,32 +21,30 @@ const initialDomRect = {height: 0, left: 0, top: 0, width: 0};
 
 interface ComponentProps {
   anchorOrigin?: {horizontal: HorizontalPosition | number; vertical: VerticalPosition | number};
+  anchorEl: HTMLElement | null;
   children: ReactNode;
   className?: string;
-  closePopover?(): void;
+  closePopover(): void;
   id?: string;
-  open?: boolean;
+  open: boolean;
   transformOrigin?: {horizontal: HorizontalPosition | number; vertical: VerticalPosition | number};
   transformOffset?: {horizontal: number; vertical: number};
 }
 
-// TODO: Look into anchorEl. Does this component really need to keep it's own state? I don't think so
-
 const Popover: FC<ComponentProps> = ({
+  anchorEl,
   anchorOrigin = {horizontal: 'left', vertical: 'top'},
   children,
   className,
   closePopover,
   id = 'popover',
-  open: openProp = false,
+  open,
   transformOrigin = {horizontal: 'left', vertical: 'top'},
   transformOffset = {horizontal: 0, vertical: 0},
 }) => {
   const {pathname} = useLocation();
-  const anchorRef = useRef<HTMLDivElement>(null);
   const portalRef = useRef<HTMLDivElement>(null);
-  const [open, setOpen] = useState<boolean>(openProp);
-  const [parentDomRect, setParentDomRect] = useState<DomRect>(initialDomRect);
+  const [anchorDomRef, setAnchorDomRect] = useState<DomRect>(initialDomRect);
   const [portalDomRect, setPortalDomRect] = useState<DomRect>(initialDomRect);
   const windowDimensions = useWindowDimensions();
 
@@ -56,13 +54,12 @@ const Popover: FC<ComponentProps> = ({
       let targetElement = e.target;
 
       do {
-        if (targetElement.id === id) {
+        if (targetElement.id === id || targetElement === anchorEl) {
           return;
         }
         targetElement = targetElement.parentNode;
       } while (targetElement);
 
-      setOpen(false);
       closePopover?.();
     },
     document,
@@ -73,16 +70,11 @@ const Popover: FC<ComponentProps> = ({
   }, [closePopover, pathname]);
 
   useEffect(() => {
-    setOpen(openProp);
-  }, [openProp]);
-
-  useEffect(() => {
-    if (anchorRef.current) {
-      const parent = anchorRef.current.parentElement!;
-      const {height, left, top, width} = parent.getBoundingClientRect();
-      setParentDomRect({height, left, top, width});
+    if (anchorEl) {
+      const {height, left, top, width} = anchorEl.getBoundingClientRect();
+      setAnchorDomRect({height, left, top, width});
     }
-  }, [anchorRef, windowDimensions]);
+  }, [anchorEl, windowDimensions]);
 
   useEffect(() => {
     if (portalRef.current) {
@@ -100,11 +92,11 @@ const Popover: FC<ComponentProps> = ({
     let top: number;
 
     if (anchorOrigin.horizontal === 'left') {
-      left = parentDomRect.left;
+      left = anchorDomRef.left;
     } else if (anchorOrigin.horizontal === 'right') {
-      left = parentDomRect.left + parentDomRect.width;
+      left = anchorDomRef.left + anchorDomRef.width;
     } else if (anchorOrigin.horizontal === 'center') {
-      left = parentDomRect.left + parentDomRect.width / 2;
+      left = anchorDomRef.left + anchorDomRef.width / 2;
     } else {
       left = anchorOrigin.horizontal;
     }
@@ -122,11 +114,11 @@ const Popover: FC<ComponentProps> = ({
     }
 
     if (anchorOrigin.vertical === 'bottom') {
-      top = parentDomRect.top + parentDomRect.height;
+      top = anchorDomRef.top + anchorDomRef.height;
     } else if (anchorOrigin.vertical === 'top') {
-      top = parentDomRect.top;
+      top = anchorDomRef.top;
     } else if (anchorOrigin.vertical === 'center') {
-      top = parentDomRect.top + parentDomRect.height / 2;
+      top = anchorDomRef.top + anchorDomRef.height / 2;
     } else {
       top = anchorOrigin.vertical;
     }
@@ -147,7 +139,7 @@ const Popover: FC<ComponentProps> = ({
   }, [
     anchorOrigin.horizontal,
     anchorOrigin.vertical,
-    parentDomRect,
+    anchorDomRef,
     portalDomRect,
     transformOrigin.horizontal,
     transformOrigin.vertical,
@@ -157,7 +149,6 @@ const Popover: FC<ComponentProps> = ({
 
   return (
     <>
-      <div className="Popover__anchor" ref={anchorRef} />
       {createPortal(
         <div
           className={clsx('Popover', className, {
