@@ -18,9 +18,7 @@ const HomeHero: FC = () => {
       <div className="HomeHero__wrapper">
         <div className="HomeHero__left">
           <div className="HomeHero__left-content-container">
-            <h1 className="HomeHero__title">
-              <strong>Open-source community for creators</strong>
-            </h1>
+            <h1 className="HomeHero__title">Open-source community for creators</h1>
             <h2 className="HomeHero__subtitle">
               Learn to code, collaborate on projects, gain experience, build a community, and earn coins by
               contributing.
