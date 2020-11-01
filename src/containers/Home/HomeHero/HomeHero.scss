@@ -6,8 +6,20 @@ $title-width: 480px;
 .HomeHero {
   display: flex;
   justify-content: center;
-  min-height: 700px;
+  height: 687px;
+  padding-top: 33px;
   position: relative;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    height: unset;
+    padding-bottom: 60px;
+  }
+
+  &__image {
+    max-width: 695px;
+    width: 100%;
+  }
 
   &__left {
     align-items: center;
@@ -15,12 +27,27 @@ $title-width: 480px;
     justify-content: center;
     margin-right: $gap-width;
     padding: 128px 0 128px $left-pl;
+
+    @media (max-width: 1200px) {
+      max-width: 100vw;
+      margin-right: 0;
+      padding: 64px 32px 0 32px;
+    }
+  }
+
+  &__left-content-container {
+    @media (max-width: 1200px) {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
   }
 
   &__SocialMediaLink {
     background: var(--color-sail-gray-900);
     border-radius: 50%;
-    box-shadow: 0px 4px 4px rgba(4, 34, 53, 0.25);
+    box-shadow: 0 4px 4px rgba(4, 34, 53, 0.25);
     color: var(--color-white);
     display: flex;
     height: 42px;
@@ -43,9 +70,15 @@ $title-width: 480px;
   }
 
   &__right {
-    height: 600px;
+    height: 100%;
     position: relative;
     max-width: $right-width;
+
+    @media (max-width: 1200px) {
+      margin: 60px 12px 0;
+      max-width: 100vw;
+      text-align: center;
+    }
   }
 
   &__subtitle,
@@ -66,46 +99,12 @@ $title-width: 480px;
     line-height: 1.25;
   }
 
-  &__web-design {
-    height: 654px;
-    width: 695px;
-  }
-
   &__wrapper {
     align-items: center;
     display: flex;
     max-width: $title-width + $gap-width + $right-width + $left-pl;
-  }
 
-  @media (max-width: 1200px) {
-    flex-direction: column;
-    padding-bottom: 60px;
-
-    &__left {
-      max-width: 100vw;
-      margin-right: 0;
-      padding: 64px 32px 0 32px;
-    }
-
-    &__left-content-container {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-    }
-
-    &__right {
-      margin: 60px 0 0 12px;
-      max-width: 100vw;
-      text-align: center;
-    }
-
-    &__web-design {
-      height: 300px;
-      width: 319px;
-    }
-
-    &__wrapper {
+    @media (max-width: 1200px) {
       align-items: inherit;
       flex-direction: column;
     }

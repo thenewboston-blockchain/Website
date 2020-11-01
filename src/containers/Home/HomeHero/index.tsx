@@ -3,7 +3,7 @@ import React, {FC} from 'react';
 import SocialMediaIcon from 'components/SocialMediaIcon';
 import {SocialMedia} from 'types/social-media';
 
-import WebDesign from './WebDesign.svg';
+import Hero from './Hero.svg';
 
 import './HomeHero.scss';
 
@@ -27,7 +27,7 @@ const HomeHero: FC = () => {
           </div>
         </div>
         <div className="HomeHero__right">
-          <img alt="web design" className="HomeHero__web-design" src={WebDesign} />
+          <img alt="hero" className="HomeHero__image" src={Hero} />
         </div>
       </div>
     </div>
