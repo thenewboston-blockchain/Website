@@ -2,11 +2,10 @@ import React, {FC, memo} from 'react';
 import {Link} from 'react-router-dom';
 
 import Logo from 'assets/svgs/thenewboston-white.svg';
-
-import {SocialMedia} from 'types/social-media';
 import SocialMediaIcon from 'components/SocialMediaIcon';
-import FooterNavList from './FooterNavList';
+import {SocialMedia} from 'types/social-media';
 
+import FooterNavList from './FooterNavList';
 import './Footer.scss';
 
 const navLists = [
