@@ -12,6 +12,7 @@ import LinkedInLogo from './logos/LinkedInLogo.png';
 import RedditLogo from './logos/RedditLogo.png';
 import SlackLogo from './logos/SlackLogo.png';
 import TwitterLogo from './logos/TwitterLogo.png';
+import YouTubeLogo from './logos/YouTubeLogo.png';
 
 import './MarketingButton.scss';
 
@@ -37,7 +38,7 @@ const MarketingButton: FC<ComponentProps> = ({className, customLink, website}) =
     reddit: renderImage(RedditLogo),
     slack: renderImage(SlackLogo),
     twitter: renderImage(TwitterLogo),
-    youtube: null,
+    youtube: renderImage(YouTubeLogo),
   };
 
   return (

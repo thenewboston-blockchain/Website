@@ -2,12 +2,10 @@ import React, {FC, memo} from 'react';
 import {Link} from 'react-router-dom';
 
 import Logo from 'assets/svgs/thenewboston-white.svg';
-
+import SocialMediaIcon from 'components/SocialMediaIcon';
 import {SocialMedia} from 'types/social-media';
 
 import FooterNavList from './FooterNavList';
-import SocialMediaIcon from './SocialMediaIcon';
-
 import './Footer.scss';
 
 const navLists = [
@@ -31,6 +29,10 @@ const navLists = [
   {
     header: 'Community',
     links: [
+      {
+        title: 'Join the Community!',
+        url: '/social',
+      },
       {
         title: 'Openings',
         url: '/openings',
@@ -62,7 +64,9 @@ const Footer: FC = () => {
       SocialMedia.linkedin,
       SocialMedia.facebook,
       SocialMedia.twitter,
-    ].map((website) => <SocialMediaIcon className="Footer__social-media-link" website={website} />);
+    ].map((website) => (
+      <SocialMediaIcon className="Footer__SocialMediaLink" iconSize={28} key={website} website={website} />
+    ));
 
   const renderNavLists = () => navLists.map((list) => <FooterNavList header={list.header} links={list.links} />);
 

@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 
-import {MarketingButtonCircular} from 'components';
-import {SocialMediaIcon} from 'types/social-media';
+import SocialMediaIcon from 'components/SocialMediaIcon';
+import {SocialMedia} from 'types/social-media';
 
 import DesktopUI from './DesktopUI.png';
 import SendPointsModal from './SendPointsModal.png';
@@ -9,6 +9,11 @@ import SendPointsModal from './SendPointsModal.png';
 import './HomeHero.scss';
 
 const HomeHero: FC = () => {
+  const renderSocialMediaLinks = () =>
+    [SocialMedia.slack, SocialMedia.github, SocialMedia.youtube].map((website) => (
+      <SocialMediaIcon className="HomeHero__SocialMediaLink" iconSize={30} key={website} website={website} />
+    ));
+
   return (
     <div className="HomeHero">
       <div className="HomeHero__wrapper">
@@ -25,11 +30,7 @@ const HomeHero: FC = () => {
             <h2 className="HomeHero__subtitle">
               Join our development community and start earning points, our open source digital currency
             </h2>
-            <div className="HomeHero__marketing-buttons">
-              <MarketingButtonCircular className="HomeHero__MarketingButton" website={SocialMediaIcon.slack} />
-              <MarketingButtonCircular className="HomeHero__MarketingButton" website={SocialMediaIcon.github} />
-              <MarketingButtonCircular className="HomeHero__MarketingButton" website={SocialMediaIcon.youtube} />
-            </div>
+            <div className="HomeHero__social-media-links">{renderSocialMediaLinks()}</div>
           </div>
         </div>
         <div className="HomeHero__right">
