@@ -7,7 +7,7 @@
   padding: 12px;
   position: absolute;
   transition: opacity 0.3s ease-in-out;
-  z-index: 0;
+  z-index: -1;
 
   &--open {
     opacity: 1;
