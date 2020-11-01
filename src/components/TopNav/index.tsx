@@ -129,7 +129,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
             <Link className="mobile-menu__link" to="/openings">
               Openings
             </Link>
-            <Link className="mobile-menu__link" to="/leaderboard">
+            <Link className="mobile-menu__link" to="/leaderboard/All">
               Leaderboard
             </Link>
           </div>
