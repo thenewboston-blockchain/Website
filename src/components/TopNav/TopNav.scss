@@ -98,6 +98,10 @@ $top-nav-height: 60px;
     &__column {
       &:not(:last-child) {
         margin-right: 60px;
+
+        @media (max-width: 576px) {
+          margin-right: 0;
+        }
       }
 
       @media (max-width: 576px) {
@@ -132,9 +136,13 @@ $top-nav-height: 60px;
     }
 
     &__link {
+      background: var(--color-white);
+      border: none;
       color: var(--color-primary);
       display: block;
       margin-bottom: 24px;
+      padding: 0;
+      text-align: unset;
 
       &:hover {
         text-decoration: underline;

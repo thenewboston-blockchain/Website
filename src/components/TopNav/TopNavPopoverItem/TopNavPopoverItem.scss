@@ -9,6 +9,7 @@
   display: flex;
   height: 81px;
   padding: 18px;
+  text-align: unset;
   transition: background 0.1s ease-in;
   width: 427px;
 
@@ -42,5 +43,6 @@
     color: var(--color-sail-gray-800);
     display: block;
     font-weight: 500;
+    margin-bottom: 6px;
   }
 }

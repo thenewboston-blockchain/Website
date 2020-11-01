@@ -1,5 +1,5 @@
 import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
-import {Link, useLocation} from 'react-router-dom';
+import {Link, useHistory, useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 
 import {Button, Icon, IconType} from 'components';
@@ -16,6 +16,7 @@ interface ComponentProps {
 
 const TopNav: FC<ComponentProps> = ({className}) => {
   const [mobileMenuOpen, toggleMobileMenu, , closeMobileMenu] = useBooleanState(false);
+  const history = useHistory();
   const {pathname} = useLocation();
   const [communityAnchorEl, setCommunityAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [getStartedAnchorEl, setGetStartedAnchorEl] = useState<HTMLButtonElement | null>(null);
@@ -30,6 +31,11 @@ const TopNav: FC<ComponentProps> = ({className}) => {
       closeMobileMenu();
     }
   }, [closeMobileMenu, mobileMenuOpen, width]);
+
+  const handleMobileLinkClick = (to: string) => (): void => {
+    history.push(to);
+    closeMobileMenu();
+  };
 
   const renderMobileMenu = (): ReactNode => {
     return (
@@ -132,37 +138,31 @@ const TopNav: FC<ComponentProps> = ({className}) => {
         <div className="mobile-menu__dropdown-container">
           <div className="mobile-menu__column">
             <div className="mobile-menu__column-title">Get Started</div>
-            <Link className="mobile-menu__link" to="/guide/introduction">
-              Documentation
-            </Link>
-            <Link className="mobile-menu__link" to="/tasks/All">
-              Tasks
-            </Link>
-            <Link className="mobile-menu__link" to="/download">
-              Download
-            </Link>
+            {renderMobileLink('Documentation', '/guide/introduction')}
+            {renderMobileLink('Tasks', '/tasks/All')}
+            {renderMobileLink('Download', '/download')}
           </div>
           <div className="mobile-menu__column">
             <div className="mobile-menu__column-title">Community</div>
-            <Link className="mobile-menu__link" to="/social">
-              Join the Community!
-            </Link>
-            <Link className="mobile-menu__link" to="/openings">
-              Openings
-            </Link>
-            <Link className="mobile-menu__link" to="/leaderboard/All">
-              Leaderboard
-            </Link>
+            {renderMobileLink('Join the Community!', '/social')}
+            {renderMobileLink('Openings', '/openings')}
+            {renderMobileLink('Leaderboard', '/leaderboard/All')}
           </div>
           <div className="mobile-menu__column">
             <div className="mobile-menu__column-title">More</div>
-            <Link className="mobile-menu__link" to="/faq">
-              FAQ
-            </Link>
+            {renderMobileLink('FAQ', '/faq')}
           </div>
         </div>
         <div className={clsx('mobile-menu__overlay')} onClick={closeMobileMenu} role="button" tabIndex={0} />
       </>
+    );
+  };
+
+  const renderMobileLink = (label: string, to: string): ReactNode => {
+    return (
+      <button className="mobile-menu__link" onClick={handleMobileLinkClick(to)}>
+        {label}
+      </button>
     );
   };
 
