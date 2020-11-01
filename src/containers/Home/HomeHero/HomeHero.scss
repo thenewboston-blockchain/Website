@@ -3,6 +3,24 @@ $left-pl: 64px;
 $right-width: 714px;
 $title-width: 480px;
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .HomeHero {
   display: flex;
   justify-content: center;
@@ -14,6 +32,21 @@ $title-width: 480px;
     flex-direction: column;
     height: unset;
     padding-bottom: 60px;
+  }
+
+  &__hello-world {
+    display: block;
+    margin-bottom: 30px;
+
+    &--fade-in {
+      animation: fadeIn 1s ease-in-out;
+      opacity: 1;
+    }
+
+    &--fade-out {
+      animation: fadeOut 1s ease-in-out;
+      opacity: 0;
+    }
   }
 
   &__image {
