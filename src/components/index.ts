@@ -15,7 +15,6 @@ import Icon, {IconType} from './Icon';
 import Label from './Label';
 import Layout from './Layout';
 import MarketingButton from './MarketingButton';
-import MarketingButtonCircular from './MarketingButtonCircular';
 import MenuGroup from './MenuGroup';
 import LabelFilter from './LabelFilter';
 import Loader from './Loader';
@@ -24,6 +23,7 @@ import Popover from './Popover';
 import Qr from './Qr';
 import Shadow from './Shadow';
 import SlideUp from './SlideUp';
+import SocialMediaIcon from './SocialMediaIcon';
 import StepIndicator from './StepIndicator';
 import {TableBorderGrid, TableParams, TableVertical} from './Table';
 import Tabs, {Tab} from './Tabs';
@@ -57,7 +57,6 @@ export {
   Layout,
   Loader,
   MarketingButton,
-  MarketingButtonCircular,
   MenuGroup,
   Pagination,
   Popover,
@@ -66,6 +65,7 @@ export {
   Shadow,
   SlideUp,
   SnippetLang,
+  SocialMediaIcon,
   StepIndicator,
   TableBorderGrid,
   TableParams,
