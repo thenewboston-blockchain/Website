@@ -3,8 +3,6 @@ import React, {FC} from 'react';
 import SocialMediaIcon from 'components/SocialMediaIcon';
 import {SocialMedia} from 'types/social-media';
 
-import DesktopUI from './DesktopUI.png';
-import SendPointsModal from './SendPointsModal.png';
 import WebDesign from './WebDesign.svg';
 
 import './HomeHero.scss';
