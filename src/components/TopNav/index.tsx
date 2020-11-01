@@ -1,4 +1,4 @@
-import React, {FC, ReactNode, useEffect} from 'react';
+import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
 import {Link, useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 
@@ -17,6 +17,8 @@ interface ComponentProps {
 const TopNav: FC<ComponentProps> = ({className}) => {
   const [mobileMenuOpen, toggleMobileMenu, , closeMobileMenu] = useBooleanState(false);
   const {pathname} = useLocation();
+  const [communityAnchorEl, setCommunityAnchorEl] = useState<HTMLButtonElement | null>(null);
+  const [getStartedAnchorEl, setGetStartedAnchorEl] = useState<HTMLButtonElement | null>(null);
   const {width} = useWindowDimensions();
 
   useEffect(() => {
@@ -44,18 +46,21 @@ const TopNav: FC<ComponentProps> = ({className}) => {
     return (
       <>
         <TopNavPopoverItem
+          closePopover={unsetCommunityAnchorEl}
           description="Slack, GitHub, YouTube, LinkedIn, etc"
           iconType={IconType.earth}
           title="Join the Community!"
           to="/social"
         />
         <TopNavPopoverItem
+          closePopover={unsetCommunityAnchorEl}
           description="Join the team building the app"
           iconType={IconType.humanHandsUp}
           title="Openings"
           to="/openings"
         />
         <TopNavPopoverItem
+          closePopover={unsetCommunityAnchorEl}
           description="View the highest ranked contributors"
           iconType={IconType.trophy}
           title="Leaderboard"
@@ -69,12 +74,14 @@ const TopNav: FC<ComponentProps> = ({className}) => {
     return (
       <>
         <TopNavPopoverItem
+          closePopover={unsetGetStartedAnchorEl}
           description="Start reading into Guides and APIs"
           iconType={IconType.fileDocument}
           title="Documentation"
           to="/guide/introduction"
         />
         <TopNavPopoverItem
+          closePopover={unsetGetStartedAnchorEl}
           description="Pick up tasks within GitHub and earn points"
           iconSize={28}
           iconType={IconType.github}
@@ -88,10 +95,24 @@ const TopNav: FC<ComponentProps> = ({className}) => {
   const renderMenuItems = (): ReactNode => {
     return (
       <>
-        <TopNavPopoverButton buttonText="Get Started" className="TopNav__right-item" popoverId="get-started-popover">
+        <TopNavPopoverButton
+          anchorEl={getStartedAnchorEl}
+          buttonText="Get Started"
+          className="TopNav__right-item"
+          popoverId="get-started-popover"
+          setAnchorEl={setGetStartedAnchorEl}
+          unsetAnchorEl={unsetGetStartedAnchorEl}
+        >
           {renderGetStartedPopover()}
         </TopNavPopoverButton>
-        <TopNavPopoverButton buttonText="Community" className="TopNav__right-item" popoverId="community-popover">
+        <TopNavPopoverButton
+          anchorEl={communityAnchorEl}
+          buttonText="Community"
+          className="TopNav__right-item"
+          popoverId="community-popover"
+          setAnchorEl={setCommunityAnchorEl}
+          unsetAnchorEl={unsetCommunityAnchorEl}
+        >
           {renderCommunityPopover()}
         </TopNavPopoverButton>
         <Link className={clsx('TopNav__right-item', 'TopNav__anchor-button')} to="/faq">
@@ -153,6 +174,14 @@ const TopNav: FC<ComponentProps> = ({className}) => {
       </div>
     );
   };
+
+  const unsetCommunityAnchorEl = useCallback((): void => {
+    setCommunityAnchorEl(null);
+  }, [setCommunityAnchorEl]);
+
+  const unsetGetStartedAnchorEl = useCallback((): void => {
+    setGetStartedAnchorEl(null);
+  }, [setGetStartedAnchorEl]);
 
   return (
     <header className={clsx('TopNav', className)}>

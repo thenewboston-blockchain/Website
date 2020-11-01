@@ -1,4 +1,4 @@
-import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
+import React, {FC, ReactNode, useEffect} from 'react';
 import clsx from 'clsx';
 
 import {Icon, IconType, Popover} from 'components';
@@ -7,14 +7,24 @@ import {useWindowDimensions} from 'hooks';
 import './TopNavPopoverButton.scss';
 
 interface ComponentProps {
+  anchorEl: HTMLButtonElement | null;
   buttonText: string;
   children: ReactNode;
   className?: string;
   popoverId: string;
+  setAnchorEl(newEl: HTMLButtonElement | null): void;
+  unsetAnchorEl(): void;
 }
 
-const TopNavPopoverButton: FC<ComponentProps> = ({buttonText, children, className, popoverId}) => {
-  const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
+const TopNavPopoverButton: FC<ComponentProps> = ({
+  anchorEl,
+  buttonText,
+  children,
+  className,
+  popoverId,
+  setAnchorEl,
+  unsetAnchorEl,
+}) => {
   const {width} = useWindowDimensions();
 
   const popoverIsOpen = !!anchorEl;
@@ -27,15 +37,11 @@ const TopNavPopoverButton: FC<ComponentProps> = ({buttonText, children, classNam
     setAnchorEl(null);
   };
 
-  const handleClosePopover = useCallback(() => {
-    setAnchorEl(null);
-  }, [setAnchorEl]);
-
   useEffect(() => {
     if (width < 992 && popoverIsOpen) {
-      handleClosePopover();
+      unsetAnchorEl();
     }
-  }, [handleClosePopover, popoverIsOpen, width]);
+  }, [popoverIsOpen, unsetAnchorEl, width]);
 
   return (
     <>
@@ -52,7 +58,7 @@ const TopNavPopoverButton: FC<ComponentProps> = ({buttonText, children, classNam
         anchorEl={anchorEl}
         anchorOrigin={{horizontal: 'center', vertical: 'bottom'}}
         className="TopNavPopoverButton__Popover"
-        closePopover={handleClosePopover}
+        closePopover={unsetAnchorEl}
         id={popoverId}
         open={popoverIsOpen}
         transformOrigin={{horizontal: 'center', vertical: 'top'}}

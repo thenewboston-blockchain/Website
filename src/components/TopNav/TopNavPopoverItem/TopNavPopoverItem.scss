@@ -1,6 +1,8 @@
 .TopNavPopoverItem {
   $self: &;
   align-items: center;
+  background: var(--color-white);
+  border: none;
   border-radius: 6px;
   color: var(--color-primary);
   cursor: pointer;
