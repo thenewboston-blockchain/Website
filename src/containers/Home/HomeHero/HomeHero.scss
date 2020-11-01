@@ -9,15 +9,9 @@ $title-width: 480px;
   min-height: 700px;
   position: relative;
 
-  &__desktop-ui {
-    box-shadow: 15px 15px 40px rgba(4, 34, 53, 0.25);
-    height: 491px;
-    margin-left: 130px;
-    width: 875px;
-  }
-
-  &__earn-text {
-    color: var(--color-tertiary);
+  &__web-design {
+    height: 654px;
+    width: 695px;
   }
 
   &__left {
@@ -54,18 +48,9 @@ $title-width: 480px;
   }
 
   &__right {
-    height: 500px;
+    height: 600px;
     position: relative;
     max-width: $right-width;
-  }
-
-  &__send-points-modal {
-    bottom: 0;
-    box-shadow: 15px 15px 40px rgba(4, 34, 53, 0.25);
-    height: 414px;
-    left: 0;
-    position: absolute;
-    width: 326px;
   }
 
   &__subtitle,
@@ -107,10 +92,6 @@ $title-width: 480px;
       display: flex;
       flex-direction: column;
       text-align: center;
-    }
-
-    &__MarketingButton:last-of-type {
-      margin-right: 0;
     }
 
     &__right {
