@@ -9,11 +9,6 @@ $title-width: 480px;
   min-height: 700px;
   position: relative;
 
-  &__web-design {
-    height: 654px;
-    width: 695px;
-  }
-
   &__left {
     align-items: center;
     display: flex;
@@ -69,6 +64,11 @@ $title-width: 480px;
     font-size: 42px;
     font-weight: 300;
     line-height: 1.25;
+  }
+
+  &__web-design {
+    height: 654px;
+    width: 695px;
   }
 
   &__wrapper {
