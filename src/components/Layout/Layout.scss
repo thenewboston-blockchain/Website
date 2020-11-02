@@ -1,10 +1,13 @@
+$top-nav-height: 60px;
+$footer-height: 348px;
+
 .Layout {
   $self: &;
   height: 100vh;
   overflow-y: auto;
 
   &__content {
-    min-height: calc(100vh - 408px);
+    min-height: calc(100vh - #{$top-nav-height + $footer-height});
   }
 
   &__content,
