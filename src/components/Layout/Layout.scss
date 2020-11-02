@@ -3,6 +3,10 @@
   height: 100vh;
   overflow-y: auto;
 
+  &__content {
+    min-height: calc(100vh - 408px);
+  }
+
   &__content,
   &__Footer,
   &__TopNav {
