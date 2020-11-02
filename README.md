@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="thenewboston logo" src="./src/assets/svgs/thenewboston.svg" width="400">
+  <img alt="thenewboston logo" src="./src/assets/svgs/thenewboston-primary.svg" width="400">
 </p>
 
 ## Overview
