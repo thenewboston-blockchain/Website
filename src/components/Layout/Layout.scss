@@ -16,6 +16,8 @@
   &__footer-wrapper {
     background: var(--color-sail-blue-900);
     padding: 60px 60px 120px;
+    box-shadow: 0 100vh 0 100vh var(--color-sail-blue-900);
+    min-height: 420px;
 
     @media (max-width: 992px) {
       padding: 60px 36px 120px;
