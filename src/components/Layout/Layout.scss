@@ -1,13 +1,12 @@
+@import 'src/styles/mixins';
+
 .Layout {
+  $self: &;
   height: 100vh;
   overflow-y: auto;
 
-  @media (min-width: 1366px) {
-    &__content,
-    &__TopNav {
-      margin-left: auto;
-      margin-right: auto;
-      width: 1366px;
-    }
+  &__content,
+  &__TopNav {
+    @include center-layout;
   }
 }
