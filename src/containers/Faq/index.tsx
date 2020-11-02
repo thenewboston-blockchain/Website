@@ -41,9 +41,19 @@ const questionsAnswers: FaqContent[] = [
   {
     answer: (
       <>
-        Download the <Link to="/download">TNB Account Manager</Link> app, create an{' '}
-        <Link to="/account-manager/create-an-account">account</Link> and complete any of these{' '}
-        <Link to="/tasks">tasks</Link>.
+        Download the{' '}
+        <Link to="/download" target="_self">
+          TNB Account Manager
+        </Link>{' '}
+        app, create an{' '}
+        <Link to="/account-manager/create-an-account" target="_self">
+          account
+        </Link>{' '}
+        and complete any of these{' '}
+        <Link to="/tasks" target="_self">
+          tasks
+        </Link>
+        .
       </>
     ),
     id: 'how-do-i-start-earning',
