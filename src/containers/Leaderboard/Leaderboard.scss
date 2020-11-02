@@ -17,14 +17,12 @@
   }
 
   &__left-menu {
-    border-right: 1px solid var(--color-sail-gray-100);
     grid-column: 1 / span 1;
     grid-row: 1 / span 2;
     overflow-y: auto;
   }
 
   &__TimeFilter {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
     padding: 42px 16px 18px;

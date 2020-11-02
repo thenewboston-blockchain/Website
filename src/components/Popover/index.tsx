@@ -65,6 +65,24 @@ const Popover: FC<ComponentProps> = ({
     document,
   );
 
+  useEventListener(
+    'scroll',
+    (e: any): void => {
+      let targetElement = e.target;
+
+      do {
+        if (targetElement.id === id) {
+          return;
+        }
+        targetElement = targetElement.parentNode;
+      } while (targetElement);
+
+      closePopover();
+    },
+    document,
+    true,
+  );
+
   useEffect(() => {
     closePopover();
   }, [closePopover, pathname]);

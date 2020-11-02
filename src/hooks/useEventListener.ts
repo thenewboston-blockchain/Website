@@ -1,8 +1,13 @@
 import {useEffect, useRef} from 'react';
 
-type EventName = 'mousedown';
+type EventName = 'mousedown' | 'scroll';
 
-const useEventListener = (eventName: EventName, handler: (e: Event) => any, element: EventTarget = window): void => {
+const useEventListener = (
+  eventName: EventName,
+  handler: (e: Event) => any,
+  element: EventTarget = window,
+  capture = false,
+): void => {
   const handlerRef = useRef(handler);
 
   useEffect(() => {
@@ -12,12 +17,12 @@ const useEventListener = (eventName: EventName, handler: (e: Event) => any, elem
   useEffect(() => {
     const eventListener = (e: Event) => handlerRef.current(e);
 
-    element.addEventListener(eventName, eventListener);
+    element.addEventListener(eventName, eventListener, capture);
 
     return () => {
       element.removeEventListener(eventName, eventListener);
     };
-  }, [element, eventName]);
+  }, [capture, element, eventName]);
 };
 
 export default useEventListener;
