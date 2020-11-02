@@ -1,11 +1,3 @@
-@mixin center-layout {
-  @media (min-width: 1366px) {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1366px;
-  }
-}
-
 @mixin word-wrap {
   hyphens: auto;
   overflow-wrap: break-word;
