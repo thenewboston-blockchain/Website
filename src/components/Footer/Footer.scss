@@ -18,12 +18,23 @@
     &:not(:last-child) {
       margin-right: 18px;
     }
+
+    @media (max-width: 400px) {
+      &:not(:last-child) {
+        margin-right: 0px;
+      }
+    }
   }
 
   &__social-media-links {
     align-items: center;
     display: flex;
-    flex-direction: row;
     margin-top: 60px;
+  }
+
+  @media (max-width: 400px) {
+    &__social-media-links {
+      justify-content: space-between;
+    }
   }
 }
