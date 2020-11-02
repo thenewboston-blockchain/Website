@@ -5,7 +5,7 @@ const HelloWorld: {[isoLangCode: string]: string} = {
   ko: '여보세요 세계',
   te: 'హలో ప్రపంచం',
   uk: 'Привіт, світе',
-  ur: 'ہیلو ورلڈ!'
+  ur: 'ہیلو ورلڈ',
 };
 
 export const defaultHelloWorld = HelloWorld.en;
