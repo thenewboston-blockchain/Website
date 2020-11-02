@@ -42,7 +42,7 @@ const questionsAnswers: FaqContent[] = [
       <>
         Download the <A href="https://thenewboston.com/download">TNB Account Manager</A> app, create an{' '}
         <A href="https://thenewboston.com/account-manager/create-an-account">account</A> and complete any of these{' '}
-        <A href="https://thenewboston.com/tasks/All">tasks</A>.
+        <A href="https://thenewboston.com/tasks">tasks</A>.
       </>
     ),
     id: 'how-do-i-start-earning',
