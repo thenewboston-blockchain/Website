@@ -1,13 +1,24 @@
 .Layout {
+  $self: &;
   height: 100vh;
   overflow-y: auto;
 
-  @media (min-width: 1366px) {
-    &__content,
-    &__TopNav {
+  &__content,
+  &__Footer,
+  &__TopNav {
+    @media (min-width: 1366px) {
       margin-left: auto;
       margin-right: auto;
       width: 1366px;
+    }
+  }
+
+  &__footer-wrapper {
+    background: var(--color-sail-blue-900);
+    padding: 60px 60px 120px;
+
+    @media (max-width: 992px) {
+      padding: 60px 36px 120px;
     }
   }
 }

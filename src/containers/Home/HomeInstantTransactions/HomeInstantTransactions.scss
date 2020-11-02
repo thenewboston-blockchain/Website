@@ -60,6 +60,10 @@ $summary-width: 420px;
     font-weight: 800;
     line-height: 1.2;
     margin-top: 30px;
-    max-width: 480px;
+    max-width: 290px;
+
+    @media (max-width: 1200px) {
+      max-width: unset;
+    }
   }
 }
