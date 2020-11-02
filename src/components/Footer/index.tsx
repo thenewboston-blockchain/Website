@@ -23,7 +23,7 @@ const navLists = [
       },
       {
         title: 'Tasks',
-        url: '/tasks/All',
+        url: '/tasks',
       },
       {
         title: 'Download',

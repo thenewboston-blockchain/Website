@@ -56,6 +56,7 @@ const App: FC = () => {
           <Route exact path="/leaderboard/:repository" component={Leaderboard} />
           <Route exact path="/openings/:openingId?" component={Openings} />
           <Route exact path="/social" component={Social} />
+          <Redirect exact from="/tasks" to="/tasks/All" />
           <Route exact path="/tasks/:repository" component={Tasks} />
           <Route exact path="/teams" component={Teams} />
           <Route path="/account-manager/:chapter?" component={AccountManager} />

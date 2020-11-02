@@ -1,4 +1,5 @@
 import React, {FC, memo, ReactNode} from 'react';
+import {Link} from 'react-router-dom';
 import {A, HashLink} from 'components';
 
 import './Faq.scss';
@@ -40,9 +41,9 @@ const questionsAnswers: FaqContent[] = [
   {
     answer: (
       <>
-        Download the <A href="https://thenewboston.com/download">TNB Account Manager</A> app, create an{' '}
-        <A href="https://thenewboston.com/account-manager/create-an-account">account</A> and complete any of these{' '}
-        <A href="https://thenewboston.com/tasks/All">tasks</A>.
+        Download the <Link to="/download">TNB Account Manager</Link> app, create an{' '}
+        <Link to="/account-manager/create-an-account">account</Link> and complete any of these{' '}
+        <Link to="/tasks">tasks</Link>.
       </>
     ),
     id: 'how-do-i-start-earning',
