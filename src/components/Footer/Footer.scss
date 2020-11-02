@@ -23,7 +23,7 @@
   &__social-media-links {
     align-items: center;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     margin-top: 60px;
   }
 }

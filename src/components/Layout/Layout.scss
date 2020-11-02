@@ -2,6 +2,8 @@
   $self: &;
   height: 100vh;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 
   &__content,
   &__Footer,
@@ -16,6 +18,7 @@
   &__footer-wrapper {
     background: var(--color-sail-blue-900);
     padding: 60px 60px 120px;
+    flex: 1;
 
     @media (max-width: 992px) {
       padding: 60px 36px 120px;
