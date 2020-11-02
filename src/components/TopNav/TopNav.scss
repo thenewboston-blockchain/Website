@@ -32,7 +32,7 @@ $top-nav-height: 60px;
 .TopNav {
   align-items: center;
   display: flex;
-  height: $top-nav-height;
+  min-height: $top-nav-height;
   justify-content: space-between;
   position: relative;
 
