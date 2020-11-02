@@ -1,5 +1,6 @@
 import React, {FC, memo} from 'react';
 import {Link} from 'react-router-dom';
+import clsx from 'clsx';
 
 import Logo from 'assets/svgs/thenewboston-white.svg';
 import SocialMediaIcon from 'components/SocialMediaIcon';
@@ -7,6 +8,10 @@ import {SocialMedia} from 'types/social-media';
 
 import FooterNavList from './FooterNavList';
 import './Footer.scss';
+
+interface ComponentProps {
+  className?: string;
+}
 
 const navLists = [
   {
@@ -54,7 +59,7 @@ const navLists = [
   },
 ];
 
-const Footer: FC = () => {
+const Footer: FC<ComponentProps> = ({className}) => {
   const renderSocialMediaLinks = () =>
     [
       SocialMedia.slack,
@@ -68,20 +73,19 @@ const Footer: FC = () => {
       <SocialMediaIcon className="Footer__SocialMediaLink" iconSize={28} key={website} website={website} />
     ));
 
-  const renderNavLists = () => navLists.map((list) => <FooterNavList header={list.header} links={list.links} />);
+  const renderNavLists = () =>
+    navLists.map((list) => <FooterNavList header={list.header} key={list.header} links={list.links} />);
 
   return (
-    <div className="Footer__wrapper">
-      <footer className="Footer">
-        <div className="Footer__left">
-          <Link to="/">
-            <img src={Logo} alt="thenewboston logo" />
-          </Link>
-          <div className="Footer__social-media-links">{renderSocialMediaLinks()}</div>
-        </div>
-        <div className="Footer__right">{renderNavLists()}</div>
-      </footer>
-    </div>
+    <footer className={clsx('Footer', className)}>
+      <div className="Footer__left">
+        <Link to="/">
+          <img src={Logo} alt="thenewboston logo" />
+        </Link>
+        <div className="Footer__social-media-links">{renderSocialMediaLinks()}</div>
+      </div>
+      <div className="Footer__right">{renderNavLists()}</div>
+    </footer>
   );
 };
 

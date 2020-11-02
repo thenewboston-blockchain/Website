@@ -6,7 +6,17 @@
   overflow-y: auto;
 
   &__content,
+  &__Footer,
   &__TopNav {
     @include center-layout;
+  }
+
+  &__footer-wrapper {
+    background: var(--color-sail-blue-900);
+    padding: 60px 60px 120px;
+
+    @media (max-width: 992px) {
+      padding: 60px 36px 120px;
+    }
   }
 }

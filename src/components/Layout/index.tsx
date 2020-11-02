@@ -2,7 +2,7 @@ import React, {FC, ReactNode} from 'react';
 import {useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 
-import {TopNav} from 'components';
+import {Footer, TopNav} from 'components';
 import './Layout.scss';
 
 interface ComponentProps {
@@ -17,6 +17,9 @@ const Layout: FC<ComponentProps> = ({children}) => {
     <div className="Layout">
       <TopNav className="Layout__TopNav" />
       <div className={clsx({Layout__content: !isHomepage, Layout__home: isHomepage})}>{children}</div>
+      <div className="Layout__footer-wrapper">
+        <Footer className="Layout__Footer" />
+      </div>
     </div>
   );
 };
