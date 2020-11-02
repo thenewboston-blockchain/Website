@@ -50,28 +50,26 @@ const questionsAnswers: FaqContent[] = [
   },
   {
     answer: (
-      <>
-        <ol>
-          <li>
-            <A href="https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo">
-              Fork the repository
-            </A>{' '}
-            from GitHub into your account
-          </li>
-          <li>Create a local clone of your fork</li>
-          <li>Complete a task, add, commit and push your changes to your fork.</li>
-          <li>
-            <A href="https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request#creating-the-pull-request">
-              Create a pull request
-            </A>{' '}
-            from the main page of your GitHub repository
-          </li>
-          <li>
-            Type suitable title and description, in description you can write "fixes #issueNumber", "closes
-            #issueNumber" or simply "#issueNumber" of the issue you have resolved, to link your PR with the issue.
-          </li>
-        </ol>
-      </>
+      <ol>
+        <li>
+          <A href="https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo">
+            Fork the repository
+          </A>{' '}
+          from GitHub into your account
+        </li>
+        <li>Create a local clone of your fork</li>
+        <li>Complete a task, add, commit and push your changes to your fork.</li>
+        <li>
+          <A href="https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request#creating-the-pull-request">
+            Create a pull request
+          </A>{' '}
+          from the main page of your GitHub repository
+        </li>
+        <li>
+          Type suitable title and description, in description you can write "fixes #issueNumber", "closes #issueNumber"
+          or simply "#issueNumber" of the issue you have resolved, to link your PR with the issue.
+        </li>
+      </ol>
     ),
     id: 'how-to-create-pull-request',
     question: 'How to create a pull request (PR)?',
