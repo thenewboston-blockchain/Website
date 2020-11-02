@@ -11,10 +11,9 @@ const HomeInstantTransactions: FC = () => {
   return (
     <div className="HomeInstantTransactions">
       <div className="HomeInstantTransactions__content-container">
-        <div className="HomeInstantTransactions__mini-text">INSTANT TRANSACTIONS</div>
         <div className="HomeInstantTransactions__summary-container">
           <div className="HomeInstantTransactions__summary-snippet-container">
-            <h1 className="HomeInstantTransactions__title">Say goodbye to 10 minute block times</h1>
+            <h1 className="HomeInstantTransactions__title">About our digital currency</h1>
             <div className="HomeInstantTransactions__text-snippets">
               <p>
                 We rebuilt the Blockchain from the ground up. We kissed those outdated PoW and PoS algorithms goodbye

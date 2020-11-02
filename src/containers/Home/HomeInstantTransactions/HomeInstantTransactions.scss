@@ -28,12 +28,6 @@ $summary-width: 420px;
     }
   }
 
-  &__mini-text {
-    color: var(--color-sail-green-500);
-    font-size: 16px;
-    line-height: 1.2;
-  }
-
   &__summary-container {
     display: flex;
 
@@ -66,6 +60,10 @@ $summary-width: 420px;
     font-weight: 800;
     line-height: 1.2;
     margin-top: 30px;
-    max-width: 480px;
+    max-width: 290px;
+
+    @media (max-width: 1200px) {
+      max-width: unset;
+    }
   }
 }
