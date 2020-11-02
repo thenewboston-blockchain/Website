@@ -1,4 +1,5 @@
 import React, {FC, memo, ReactNode} from 'react';
+import {Link} from 'react-router-dom';
 import {A, HashLink} from 'components';
 
 import './Faq.scss';
@@ -40,13 +41,39 @@ const questionsAnswers: FaqContent[] = [
   {
     answer: (
       <>
-        Download the <A href="https://thenewboston.com/download">TNB Account Manager</A> app, create an{' '}
-        <A href="https://thenewboston.com/account-manager/create-an-account">account</A> and complete any of these{' '}
-        <A href="https://thenewboston.com/tasks/All">tasks</A>.
+        Download the <Link to="/download">TNB Account Manager</Link> app, create an{' '}
+        <Link to="/account-manager/create-an-account">account</Link> and complete any of these{' '}
+        <Link to="/tasks">tasks</Link>.
       </>
     ),
     id: 'how-do-i-start-earning',
     question: 'How do I start earning?',
+  },
+  {
+    answer: (
+      <ol>
+        <li>
+          <A href="https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/fork-a-repo">
+            Fork the repository
+          </A>{' '}
+          from GitHub into your account
+        </li>
+        <li>Create a local clone of your fork</li>
+        <li>Complete a task, add, commit and push your changes to your fork.</li>
+        <li>
+          <A href="https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request#creating-the-pull-request">
+            Create a pull request
+          </A>{' '}
+          from the main page of your GitHub repository
+        </li>
+        <li>
+          Type suitable title and description, in description you can write "fixes #issueNumber", "closes #issueNumber"
+          or simply "#issueNumber" of the issue you have resolved, to link your PR with the issue.
+        </li>
+      </ol>
+    ),
+    id: 'how-to-create-pull-request',
+    question: 'How to create a pull request (PR)?',
   },
 ];
 

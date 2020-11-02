@@ -23,7 +23,7 @@ const HomeSteps = () => {
           <StepIndicator number={2} text="Complete tasks" />
           <div className="HomeSteps__instructional-text">
             The more difficult the{' '}
-            <NavLink to={`/tasks/${Repository.all}`} className="HomeSteps__instructional-link">
+            <NavLink to="/tasks" className="HomeSteps__instructional-link">
               task
             </NavLink>
             , the bigger the reward.

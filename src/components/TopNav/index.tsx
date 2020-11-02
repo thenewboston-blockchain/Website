@@ -92,7 +92,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
           iconSize={28}
           iconType={IconType.github}
           title="Tasks"
-          to="/tasks/All"
+          to="/tasks"
         />
       </>
     );
@@ -139,7 +139,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
           <div className="mobile-menu__column">
             <div className="mobile-menu__column-title">Get Started</div>
             {renderMobileLink('Documentation', '/guide/introduction')}
-            {renderMobileLink('Tasks', '/tasks/All')}
+            {renderMobileLink('Tasks', '/tasks')}
             {renderMobileLink('Download', '/download')}
           </div>
           <div className="mobile-menu__column">
