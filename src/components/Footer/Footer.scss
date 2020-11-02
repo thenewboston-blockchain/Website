@@ -10,6 +10,10 @@
   &__right {
     display: flex;
     flex-wrap: wrap;
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+    }
   }
 
   &__SocialMediaLink {
@@ -18,6 +22,12 @@
     &:not(:last-child) {
       margin-right: 18px;
     }
+
+    @media (max-width: 400px) {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
   }
 
   &__social-media-links {
@@ -25,5 +35,9 @@
     display: flex;
     flex-direction: row;
     margin-top: 60px;
+
+    @media (max-width: 400px) {
+      justify-content: space-between;
+    }
   }
 }
