@@ -1,39 +1,68 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect, useState} from 'react';
+import clsx from 'clsx';
+import shuffle from 'lodash/shuffle';
 
-import {MarketingButton} from 'components';
+import SocialMediaIcon from 'components/SocialMediaIcon';
 import {SocialMedia} from 'types/social-media';
 
-import DesktopUI from './DesktopUI.jpg';
-import SendPointsModal from './SendPointsModal.jpg';
-
+import HelloWorld, {HelloWorldKeys, defaultHelloWorld} from './hello-world';
+import Hero from './Hero.png';
 import './HomeHero.scss';
 
+const shuffledHelloKeys = shuffle(HelloWorldKeys);
+
+enum HelloFadeClass {
+  fadeIn = 'HomeHero__hello-world--fade-in',
+  fadeOut = 'HomeHero__hello-world--fade-out',
+}
+
 const HomeHero: FC = () => {
+  const [helloFadeClass, setHelloFadeClass] = useState<HelloFadeClass>(HelloFadeClass.fadeIn);
+  const [helloText, setHelloText] = useState<string>(defaultHelloWorld);
+
+  useEffect(() => {
+    let i = 0;
+
+    const interval = setInterval(() => {
+      setHelloFadeClass(HelloFadeClass.fadeOut);
+
+      setTimeout(() => {
+        const key = shuffledHelloKeys[i];
+        setHelloText(HelloWorld[key]);
+        i += 1;
+        if (i === shuffledHelloKeys.length) {
+          i = 0;
+        }
+        setHelloFadeClass(HelloFadeClass.fadeIn);
+      }, 1000);
+    }, 5000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [setHelloFadeClass]);
+
+  const renderSocialMediaLinks = () =>
+    [SocialMedia.slack, SocialMedia.github, SocialMedia.youtube].map((website) => (
+      <SocialMediaIcon className="HomeHero__SocialMediaLink" iconSize={30} key={website} website={website} />
+    ));
+
   return (
     <div className="HomeHero">
-      <svg className="HomeHero__background-graphic" viewBox="0 0 1366 396">
-        <path fill="#F6F9FC" fillRule="nonzero" d="M0 395.5L1366 106V0H0v395.5z" />
-      </svg>
       <div className="HomeHero__wrapper">
         <div className="HomeHero__left">
           <div className="HomeHero__left-content-container">
-            <h1 className="HomeHero__title">
-              <span>Build software.</span>
-              <br />
-              <span>Earn digital currency.</span>
-            </h1>
+            <span className={clsx('HomeHero__hello-world', helloFadeClass)}>{helloText}</span>
+            <h1 className="HomeHero__title">Open-source community for creators</h1>
             <h2 className="HomeHero__subtitle">
-              Join our development community and start earning points, our open source digital currency.
+              Learn to code, collaborate on projects, gain experience, build a community, and earn coins by
+              contributing.
             </h2>
-            <div className="HomeHero__marketing-buttons">
-              <MarketingButton className="HomeHero__MarketingButton" website={SocialMedia.slack} />
-              <MarketingButton className="HomeHero__MarketingButton" website={SocialMedia.github} />
-            </div>
+            <div className="HomeHero__social-media-links">{renderSocialMediaLinks()}</div>
           </div>
         </div>
         <div className="HomeHero__right">
-          <img alt="desktop" className="HomeHero__desktop-ui" src={DesktopUI} />
-          <img alt="send points modal" className="HomeHero__send-points-modal" src={SendPointsModal} />
+          <img alt="hero" className="HomeHero__image" src={Hero} />
         </div>
       </div>
     </div>

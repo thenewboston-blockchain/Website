@@ -1,35 +1,69 @@
 .Download {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  padding: 200px 32px;
-
-  &__os {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: 0 60px;
-  }
-
-  &__os-download-button {
-    margin-top: 60px;
-  }
-
-  &__os-name {
-    font-family: var(--font-family-inter-light);
-    font-size: 36px;
-    line-height: 1;
-  }
+  padding: 60px 120px;
+  position: relative;
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    padding: 30px 60px;
+  }
 
-    &__os {
-      margin-bottom: 72px;
+  &__tab-panel {
+    margin-top: 43px;
+  }
+
+  &__download-button {
+    align-items: center;
+    display: flex;
+    margin-bottom: 60px;
+  }
+
+  &__download-icon {
+    margin-left: 12px;
+  }
+
+  &__latest-version {
+    position: absolute;
+    right: 120px;
+
+    @media (max-width: 768px) {
+      right: unset;
+      left: 60px;
+      top: 82px;
+    }
+  }
+
+  .instruction-container {
+    counter-reset: instruction;
+
+    &__instruction {
+      margin-top: 7px;
     }
 
-    &__os-download-button {
-      margin-top: 32px;
+    &__li {
+      display: flex;
+      margin-bottom: 18px;
+
+      &::before {
+        align-items: center;
+        background: var(--color-tertiary);
+        border-radius: 50%;
+        color: var(--color-white);
+        content: counter(instruction);
+        counter-increment: instruction;
+        display: inline-flex;
+        flex-shrink: 0;
+        font-size: var(--font-size-medium);
+        font-weight: 800;
+        height: 36px;
+        justify-content: center;
+        margin-right: 18px;
+        width: 36px;
+      }
+    }
+
+    &__title {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 30px;
     }
   }
 }

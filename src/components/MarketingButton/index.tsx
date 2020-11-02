@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import {A} from 'components';
 import {SocialMedia} from 'types/social-media';
 import {getCustomClassNames} from 'utils/components';
+import {socialMediaUrls} from 'utils/social-media';
 
 import FacebookLogo from './logos/FacebookLogo.png';
 import GitHubLogo from './logos/GitHubLogo.png';
@@ -11,6 +12,7 @@ import LinkedInLogo from './logos/LinkedInLogo.png';
 import RedditLogo from './logos/RedditLogo.png';
 import SlackLogo from './logos/SlackLogo.png';
 import TwitterLogo from './logos/TwitterLogo.png';
+import YouTubeLogo from './logos/YouTubeLogo.png';
 
 import './MarketingButton.scss';
 
@@ -36,19 +38,11 @@ const MarketingButton: FC<ComponentProps> = ({className, customLink, website}) =
     reddit: renderImage(RedditLogo),
     slack: renderImage(SlackLogo),
     twitter: renderImage(TwitterLogo),
-  };
-
-  const urls = {
-    [SocialMedia.facebook]: 'https://www.facebook.com/TheNewBoston-464114846956315/',
-    [SocialMedia.github]: 'https://github.com/thenewboston-developers',
-    [SocialMedia.linkedin]: 'https://www.linkedin.com/company/thenewboston-developers/',
-    [SocialMedia.reddit]: 'https://www.reddit.com/r/thenewboston/',
-    [SocialMedia.slack]: 'https://join.slack.com/t/thenewboston/shared_invite/zt-hkw1b98m-X3oe6VPX6xenHvQeaXQbfg',
-    [SocialMedia.twitter]: 'https://twitter.com/bucky_roberts',
+    youtube: renderImage(YouTubeLogo),
   };
 
   return (
-    <A className={clsx('MarketingButton', className)} href={customLink || urls[website]}>
+    <A className={clsx('MarketingButton', className)} href={customLink || socialMediaUrls[website]}>
       {images[website]}
     </A>
   );

@@ -59,10 +59,12 @@ const TableBorderGrid: FC<ComponentProps> = ({className, headers, rows, title}) 
           {title}
         </div>
       ) : null}
-      <table className={clsx('TableBorderGrid', className)}>
-        {renderHeaders()}
-        {renderBody()}
-      </table>
+      <div className={clsx('TableBorderGrid', className)}>
+        <table className={clsx('TableBorderGrid__table', {...getCustomClassNames(className, '__table', true)})}>
+          {renderHeaders()}
+          {renderBody()}
+        </table>
+      </div>
     </div>
   );
 };

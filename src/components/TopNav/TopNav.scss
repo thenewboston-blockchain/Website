@@ -1,67 +1,167 @@
+$dropdown-height: 316px;
+$mobile-dropdown-height: 450px;
+$top-nav-height: 60px;
+
+@keyframes addOverlay {
+  from {
+    background: rgba(0, 0, 0, 0);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    top: $top-nav-height - $dropdown-height;
+  }
+  to {
+    top: $top-nav-height;
+  }
+}
+
+@keyframes mobileSlideDown {
+  from {
+    top: $top-nav-height - $mobile-dropdown-height;
+  }
+  to {
+    top: $top-nav-height;
+  }
+}
+
 .TopNav {
   align-items: center;
-  background: var(--color-white);
   display: flex;
-  height: 60px;
-  z-index: 2;
+  height: $top-nav-height;
+  justify-content: space-between;
+  position: relative;
+
+  &__anchor-button {
+    align-items: center;
+    color: var(--color-sail-gray-500);
+    cursor: pointer;
+    display: flex;
+    font-weight: 700;
+    justify-content: center;
+    transition: color 0.1s ease;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &--active {
+      color: var(--color-primary);
+    }
+  }
 
   &__download-button {
     margin-right: 24px;
-  }
 
-  &__dropdown-menu {
-    background: #fff;
-    box-shadow: 0 3px 3px rgba(4, 34, 53, 0.06);
-    position: absolute;
-    right: 0;
-    top: 60px;
-    width: 100vw;
-    z-index: 2;
-  }
-
-  &__dropdown-menu-item-container {
-    cursor: auto;
-    padding: 32px;
-  }
-
-  &__left {
-    align-items: center;
-    display: flex;
-    height: 100%;
+    @media (max-width: 992px) {
+      display: none;
+    }
   }
 
   &__right {
     align-items: center;
     display: flex;
-    flex: 1;
-    height: 100%;
-    justify-content: flex-end;
   }
 
-  &__right-menu-toggle-container {
-    align-items: center;
-    cursor: pointer;
-    display: none;
-    height: 100%;
-    padding: 0 12px;
-    position: relative;
+  &__right-item {
+    margin-left: 42px;
 
-    &:focus {
-      outline: none;
-    }
-
-    &:hover {
-      background: rgba(0, 0, 0, 0.02);
-    }
-  }
-
-  @media (max-width: 992px) {
-    &__download-button {
+    @media (max-width: 992px) {
       display: none;
     }
+  }
 
-    &__right-menu-toggle-container {
+  .mobile-menu {
+    display: none;
+
+    @media (max-width: 992px) {
+      display: block;
+    }
+
+    &__button {
+      background: var(--color-white);
+      border: none;
+      height: $top-nav-height;
+      outline: none;
+      transition: background 0.1s ease-in;
+      width: $top-nav-height;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &__column {
+      &:not(:last-child) {
+        margin-right: 60px;
+
+        @media (max-width: 576px) {
+          margin-right: 0;
+        }
+      }
+
+      @media (max-width: 576px) {
+        margin-bottom: 18px;
+      }
+    }
+
+    &__column-title {
+      color: var(--color-sail-gray-300);
+      margin-bottom: 12px;
+    }
+
+    &__dropdown-container {
+      animation: slideDown 0.3s forwards;
+      background: var(--color-white);
+      box-shadow: 0 6px 6px rgba(4, 34, 53, 0.3);
       display: flex;
+      height: $dropdown-height;
+      padding: 60px;
+      position: fixed;
+      top: $top-nav-height;
+      left: 0;
+      width: 100vw;
+      z-index: 2;
+
+      @media (max-width: 576px) {
+        animation: mobileSlideDown 0.3s forwards;
+        padding: 18px 36px;
+        flex-direction: column;
+        height: $mobile-dropdown-height;
+      }
+    }
+
+    &__link {
+      background: var(--color-white);
+      border: none;
+      color: var(--color-primary);
+      display: block;
+      margin-bottom: 24px;
+      padding: 0;
+      text-align: unset;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 576px) {
+        margin-bottom: 12px;
+      }
+    }
+
+    &__overlay {
+      animation: addOverlay 0.3s forwards;
+      height: calc(100vh - #{$top-nav-height});
+      left: 0;
+      outline: none;
+      position: fixed;
+      top: $top-nav-height;
+      width: 100vw;
+      z-index: 1;
     }
   }
 }

@@ -15,7 +15,7 @@ interface ComponentProps {
 
 const CodeSnippet: FC<ComponentProps> = ({className, code, heading, language = SnippetLang.bash}) => {
   return (
-    <div className="CodeSnippet">
+    <div className={clsx('CodeSnippet', className)}>
       {heading ? (
         <div
           className={clsx('CodeSnippet__heading', {

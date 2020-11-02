@@ -1,3 +1,5 @@
+@import 'src/styles/mixins';
+
 .TableVertical {
   border: 1px solid #e6e6e6;
   margin-bottom: 20px;
@@ -20,6 +22,14 @@
 
     &--border {
       border: 1px solid #e6e6e6;
+    }
+  }
+
+  @media (max-width: 400px) {
+    &__td {
+      &:last-child {
+        @include word-wrap;
+      }
     }
   }
 }

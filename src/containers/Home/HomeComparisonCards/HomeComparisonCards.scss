@@ -3,23 +3,21 @@
   justify-content: center;
   margin-top: 60px;
 
-  &__arrow-container {
+  @media (max-width: 768px) {
     align-items: center;
-    display: flex;
-    justify-content: center;
-    width: 60px;
+    flex-direction: column;
   }
 
   &__card {
     background: var(--color-white);
     border-radius: 12px;
-    box-shadow: 0 20px 40px rgba(11, 38, 63, 0.15);
+    box-shadow: 0 15px 40px rgba(85, 108, 214, 0.25);
     display: flex;
     flex-direction: column;
+    height: 396px;
     justify-content: center;
     min-height: 390px;
-    padding: 30px 32px 60px;
-    width: 360px;
+    width: 300px;
   }
 
   &__crypto-logo {
@@ -33,24 +31,26 @@
     margin-top: 60px;
 
     &-attribute {
-      font-size: 20px;
+      font-size: var(--font-size-medium);
       font-weight: 500;
       margin-top: 12px;
     }
 
     &-value {
-      font-family: var(--font-family-inter-light);
       font-size: 36px;
+      font-weight: 300;
     }
   }
 
-  @media (max-width: 768px) {
+  &__versus-container {
     align-items: center;
-    flex-direction: column;
+    color: var(--color-sail-gray-500);
+    display: flex;
+    justify-content: center;
+    width: 90px;
 
-    &__arrow-container {
-      height: 60px;
-      transform: rotate(90deg);
+    @media (max-width: 768px) {
+      height: 90px;
       width: auto;
     }
   }

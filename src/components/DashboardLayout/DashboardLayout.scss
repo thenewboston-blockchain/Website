@@ -9,7 +9,6 @@
   }
 
   &__left-menu {
-    border-right: 1px solid var(--color-sail-gray-100);
     grid-column: 1 / span 1;
     overflow-y: auto;
   }
@@ -17,7 +16,7 @@
   &__main-content {
     grid-column: 2 / span 1;
     overflow-y: auto;
-    padding-bottom: 96px;
+    padding-bottom: 120px;
   }
 
   @media (max-width: 768px) {

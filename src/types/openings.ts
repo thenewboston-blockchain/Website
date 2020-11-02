@@ -7,8 +7,9 @@ export interface ApplicationMethod {
 
 export interface Opening {
   applicationMethods: ApplicationMethod[];
-  categories: OpeningCategory[];
+  category: OpeningCategory;
   description: string;
+  openingId: string;
   payNotes: string[];
   position: string;
   reportsTo: Reportee[];
@@ -25,8 +26,8 @@ export enum OpeningCategory {
   marketing = 'Marketing',
 }
 
-export interface OpeningCategoryUrlParams {
-  category: OpeningCategory;
+export interface OpeningsUrlParams {
+  openingId: OpeningCategory;
 }
 
 export interface Reportee {

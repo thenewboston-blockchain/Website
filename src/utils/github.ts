@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 import {AMOUNT_COLOR, REPOSITORIES} from 'constants/github';
-import {Issue} from 'types/github';
+import {BaseRelease, Issue, Release} from 'types/github';
 
 export const fetchGithubIssues = async (): Promise<Issue[]> => {
   const promises = REPOSITORIES.map((repoName) =>
@@ -19,6 +19,20 @@ export const fetchGithubIssues = async (): Promise<Issue[]> => {
       ...issue,
       amount: amountLabels.length ? parseInt(amountLabels[0].name, 10) : 0,
       repositoryName: getRepositoryName(issue.repository_url),
+    };
+  });
+};
+
+export const fetchGithubReleases = async (): Promise<Release[]> => {
+  const {data} = await axios.get<BaseRelease[]>(
+    'https://api.github.com/repos/thenewboston-developers/Account-Manager/releases',
+  );
+  return data.map((release: BaseRelease) => {
+    const {tag_name: tagName} = release;
+    const alphaVersion = tagName.replace('v1.0.0-alpha.', '');
+    return {
+      ...release,
+      alphaVersion: parseInt(alphaVersion, 10),
     };
   });
 };

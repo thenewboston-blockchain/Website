@@ -1,0 +1,29 @@
+.Footer {
+  display: grid;
+  grid-template-columns: 40% 60%;
+
+  @media (max-width: 992px) {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+
+  &__right {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__SocialMediaLink {
+    color: var(--color-white);
+
+    &:not(:last-child) {
+      margin-right: 18px;
+    }
+  }
+
+  &__social-media-links {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+  }
+}

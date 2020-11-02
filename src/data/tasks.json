@@ -1,4 +1,33 @@
 {
+  "GermaVinsmoke": [
+    {
+      "repository": "Website",
+      "title": "[All mobile devices] Page is not responsive it moves horizontally",
+      "issue_id": "301",
+      "pr_id": "306",
+      "completed_by": "GermaVinsmoke",
+      "completed_date": "10/19/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "[All mobile devices] Section should be aligned inline with other section above it",
+      "issue_id": "305",
+      "pr_id": "307",
+      "completed_by": "GermaVinsmoke",
+      "completed_date": "10/19/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "[All mobile Devices] Page is not responsive",
+      "issue_id": "298",
+      "pr_id": "310",
+      "completed_by": "GermaVinsmoke",
+      "completed_date": "10/20/20",
+      "amount_paid": "2500"
+    }
+  ],
   "Niekon01": [
     {
       "repository": "Account-Manager",
@@ -28,6 +57,35 @@
       "amount_paid": "5000"
     }
   ],
+  "aayushi14": [
+    {
+      "repository": "Website",
+      "title": "Update social media buttons on the main marketing page",
+      "issue_id": "321",
+      "pr_id": "323",
+      "completed_by": "aayushi14",
+      "completed_date": "10/27/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "Replace Homepage Social Media Hero icons to use SVG Icons",
+      "issue_id": "336",
+      "pr_id": "344",
+      "completed_by": "aayushi14",
+      "completed_date": "10/31/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Landing Page V2",
+      "issue_id": "333",
+      "pr_id": "346",
+      "completed_by": "aayushi14",
+      "completed_date": "11/1/20",
+      "amount_paid": "2500"
+    }
+  ],
   "angle943": [
     {
       "repository": "Account-Manager",
@@ -46,6 +104,69 @@
       "completed_by": "angle943",
       "completed_date": "9/22/20",
       "amount_paid": "5000"
+    },
+    {
+      "repository": "Website",
+      "title": "[All mobile devices] Page is not responsive",
+      "issue_id": "299",
+      "pr_id": "308",
+      "completed_by": "angle943",
+      "completed_date": "10/19/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "[All mobile devices] Page is not responsive",
+      "issue_id": "300",
+      "pr_id": "308",
+      "completed_by": "angle943",
+      "completed_date": "10/19/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Documentation CSS issue.",
+      "issue_id": "295",
+      "pr_id": "312",
+      "completed_by": "angle943",
+      "completed_date": "10/21/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "Updated Top Navigation",
+      "issue_id": "317",
+      "pr_id": "343",
+      "completed_by": "angle943",
+      "completed_date": "10/31/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "Website",
+      "title": "Hello World in Different Languages for Marketing Site",
+      "issue_id": "322",
+      "pr_id": "350",
+      "completed_by": "angle943",
+      "completed_date": "11/1/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "no more stickies on website",
+      "issue_id": "357",
+      "pr_id": "358",
+      "completed_by": "angle943",
+      "completed_date": "11/1/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Footer Update V2",
+      "issue_id": "330",
+      "pr_id": "359",
+      "completed_by": "angle943",
+      "completed_date": "11/1/20",
+      "amount_paid": "500"
     }
   ],
   "avgust13": [
@@ -102,6 +223,118 @@
       "completed_by": "avgust13",
       "completed_date": "9/22/20",
       "amount_paid": "2500"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Unable to switch to Bank of different network (different PV)",
+      "issue_id": "309",
+      "pr_id": "319",
+      "completed_by": "avgust13",
+      "completed_date": "9/23/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "[Desktop Windows] In user friend list , user should not get added with same nickname while editing nickname",
+      "issue_id": "318",
+      "pr_id": "325",
+      "completed_by": "avgust13",
+      "completed_date": "9/24/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Connection Status Logic",
+      "issue_id": "276",
+      "pr_id": "334",
+      "completed_by": "avgust13",
+      "completed_date": "9/26/20",
+      "amount_paid": "10000"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "[Windows] When user try to add already existing bank then error message displayed should be modified",
+      "issue_id": "329",
+      "pr_id": "336",
+      "completed_by": "avgust13",
+      "completed_date": "9/27/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "[Windows] Error message can be changed",
+      "issue_id": "344",
+      "pr_id": "345",
+      "completed_by": "avgust13",
+      "completed_date": "9/30/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "[Windows] User should not be able to add himself as friend",
+      "issue_id": "337",
+      "pr_id": "350",
+      "completed_by": "avgust13",
+      "completed_date": "9/30/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "No error message displayed when already present Validator is added",
+      "issue_id": "351",
+      "pr_id": "357",
+      "completed_by": "avgust13",
+      "completed_date": "9/30/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Add Signing Keys Update for Banks & Validators",
+      "issue_id": "353",
+      "pr_id": "379",
+      "completed_by": "avgust13",
+      "completed_date": "10/6/20",
+      "amount_paid": "50000"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Bank OVERVIEW UI update",
+      "issue_id": "354",
+      "pr_id": "379",
+      "completed_by": "avgust13",
+      "completed_date": "10/6/20",
+      "amount_paid": "5000"
+    }
+  ],
+  "brian316": [
+    {
+      "repository": "Account-Manager",
+      "title": "[Windows] When right clicked on any text under Validators, Banks, My Accounts and My Friend gives option for copy link",
+      "issue_id": "360",
+      "pr_id": "403",
+      "completed_by": "brian316",
+      "completed_date": "10/14/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Error message can be improved when user enters invalid IP Address for bank account",
+      "issue_id": "395",
+      "pr_id": "405",
+      "completed_by": "brian316",
+      "completed_date": "10/17/20",
+      "amount_paid": "1000"
+    }
+  ],
+  "brmendez": [
+    {
+      "repository": "Website",
+      "title": "FAQ page",
+      "issue_id": "320",
+      "pr_id": "338",
+      "completed_by": "brmendez",
+      "completed_date": "10/30/20",
+      "amount_paid": "2500"
     }
   ],
   "buckyroberts": [
@@ -131,6 +364,106 @@
       "completed_by": "buckyroberts",
       "completed_date": "9/20/20",
       "amount_paid": "2500"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Standardize all dates in tables",
+      "issue_id": "348",
+      "pr_id": "364",
+      "completed_by": "buckyroberts",
+      "completed_date": "10/2/20",
+      "amount_paid": "5000"
+    }
+  ],
+  "colfax23": [
+    {
+      "repository": "Website",
+      "title": "Add the functionality to use font-weight with our Inter Font",
+      "issue_id": "293",
+      "pr_id": "313",
+      "completed_by": "colfax23",
+      "completed_date": "10/26/20",
+      "amount_paid": "10000"
+    },
+    {
+      "repository": "Website",
+      "title": "Update Account Manager Guide Pages",
+      "issue_id": "280",
+      "pr_id": "328",
+      "completed_by": "colfax23",
+      "completed_date": "10/27/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Add the functionality to use font-weight with our Inter Font",
+      "issue_id": "416",
+      "pr_id": "419",
+      "completed_by": "colfax23",
+      "completed_date": "10/27/20",
+      "amount_paid": "7500"
+    },
+    {
+      "repository": "Website",
+      "title": "Help to Social page",
+      "issue_id": "319",
+      "pr_id": "339",
+      "completed_by": "colfax23",
+      "completed_date": "10/30/20",
+      "amount_paid": "2500"
+    }
+  ],
+  "dahelg": [
+    {
+      "repository": "Website",
+      "title": "Highlighted section should be less in height",
+      "issue_id": "206",
+      "pr_id": "290",
+      "completed_by": "dahelg",
+      "completed_date": "10/11/20",
+      "amount_paid": "2500"
+    }
+  ],
+  "dorlivniopen": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "354",
+      "completed_by": "dorlivniopen",
+      "completed_date": "11/1/20",
+      "amount_paid": "500"
+    }
+  ],
+  "hawyar": [
+    {
+      "repository": "Account-Manager",
+      "title": "Up/down arrows should work even after focusing on a disabled option",
+      "issue_id": "349",
+      "pr_id": "362",
+      "completed_by": "hawyar",
+      "completed_date": "10/2/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "[Windows] When there is no unread notification, Mark all as read text is not needed",
+      "issue_id": "361",
+      "pr_id": "373",
+      "completed_by": "hawyar",
+      "completed_date": "10/4/20",
+      "amount_paid": "2500"
+    }
+  ],
+  "itsnikhil": [
+    {
+      "repository": "Website",
+      "title": "[iPhone 320Px] Text goes out of section",
+      "issue_id": "248",
+      "pr_id": "289",
+      "completed_by": "itsnikhil",
+      "completed_date": "10/10/20",
+      "amount_paid": "1000"
     }
   ],
   "kristykjlee": [
@@ -142,6 +475,80 @@
       "completed_by": "kristykjlee",
       "completed_date": "9/16/20",
       "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Update social media buttons on the main marketing page",
+      "issue_id": "321",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "10/24/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "FAQ page",
+      "issue_id": "320",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "10/24/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Updated Top Navigation",
+      "issue_id": "317",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "10/24/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Updated Footer",
+      "issue_id": "318",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "10/24/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Social Media page",
+      "issue_id": "319",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "10/24/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Landing Page V2",
+      "issue_id": "333",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "10/31/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "no more stickies on website",
+      "issue_id": "357",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "11/1/20",
+      "amount_paid": "500"
+    }
+  ],
+  "lapstjup": [
+    {
+      "repository": "Website",
+      "title": "[iPhone SE] Page moved horizontally",
+      "issue_id": "220",
+      "pr_id": "266",
+      "completed_by": "lapstjup",
+      "completed_date": "10/2/20",
+      "amount_paid": "5000"
     }
   ],
   "leelatanniru": [
@@ -153,6 +560,44 @@
       "completed_by": "leelatanniru",
       "completed_date": "9/3/20",
       "amount_paid": "2500"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Add copy button for My Signing Key",
+      "issue_id": "369",
+      "pr_id": "374",
+      "completed_by": "leelatanniru",
+      "completed_date": "10/4/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Move Daily Rate\" to separate panel\"",
+      "issue_id": "399",
+      "pr_id": "401",
+      "completed_by": "leelatanniru",
+      "completed_date": "10/14/20",
+      "amount_paid": "5000"
+    }
+  ],
+  "moki298": [
+    {
+      "repository": "Account-Manager",
+      "title": "Success message coming should be aligned at center of icon aside to it",
+      "issue_id": "411",
+      "pr_id": "412",
+      "completed_by": "moki298",
+      "completed_date": "10/20/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Landing Page Style Update",
+      "issue_id": "283",
+      "pr_id": "314",
+      "completed_by": "moki298",
+      "completed_date": "10/28/20",
+      "amount_paid": "7500"
     }
   ],
   "thesanjeevsharma": [
@@ -164,6 +609,62 @@
       "completed_by": "thesanjeevsharma",
       "completed_date": "9/22/20",
       "amount_paid": "10000"
+    },
+    {
+      "repository": "Website",
+      "title": "When there are more than one channel then only text should be: To apply, send us a message through any of the following channels: otherwise text should be: To apply, send us a message through the following channel:",
+      "issue_id": "255",
+      "pr_id": "264",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "10/2/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Openings Page Update",
+      "issue_id": "273",
+      "pr_id": "278",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "10/10/20",
+      "amount_paid": "10000"
+    },
+    {
+      "repository": "Website",
+      "title": "Updated Footer",
+      "issue_id": "318",
+      "pr_id": "325",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "10/27/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Replace Footer icons with mdi-icons",
+      "issue_id": "335",
+      "pr_id": "340",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "10/30/20",
+      "amount_paid": "1000"
+    }
+  ],
+  "tpikachu": [
+    {
+      "repository": "Account-Manager",
+      "title": "[Desktop] While sending points, Point should not accept decimal values",
+      "issue_id": "339",
+      "pr_id": "352",
+      "completed_by": "tpikachu",
+      "completed_date": "9/30/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Build a 32-bit app",
+      "issue_id": "366",
+      "pr_id": "376",
+      "completed_by": "tpikachu",
+      "completed_date": "10/4/20",
+      "amount_paid": "5000"
     }
   ],
   "webdeveloperswj": [

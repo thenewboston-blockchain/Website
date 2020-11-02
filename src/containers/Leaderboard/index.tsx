@@ -1,8 +1,10 @@
-import React, {useEffect, useState} from 'react';
-import {useParams} from 'react-router-dom';
+import React, {ReactNode, useEffect, useState} from 'react';
+import {useHistory, useParams} from 'react-router-dom';
 import sub from 'date-fns/sub';
 
-import {BreadcrumbMenu, EmptyPage, RepositoryFilter, TimeFilter} from 'components';
+import {REPOSITORY_FILTERS} from 'constants/github';
+
+import {BreadcrumbMenu, EmptyPage, FlatNavLinks, TimeFilter} from 'components';
 import {
   Contributor,
   ContributorWithTasks,
@@ -26,6 +28,7 @@ const timeFilterMap = {
 };
 
 const Leaderboard = () => {
+  const history = useHistory();
   const {repository} = useParams<RepositoryUrlParams>();
   const [repositoryFilter, setRepositoryFilter] = useState<Repository>(repository);
   const [timeFilter, setTimeFilter] = useState<TimeFilterType>(Time.all);
@@ -86,6 +89,10 @@ const Leaderboard = () => {
     return amounts.reduce((a, b) => a + b, 0);
   };
 
+  const handleNavOptionClick = (option: Repository) => (): void => {
+    history.push(`/leaderboard/${option}`);
+  };
+
   const renderContributors = () => {
     const contributorsWithTotalEarnings = getContributorsWithTotalEarnings();
     if (!contributorsWithTotalEarnings.length) return <EmptyPage />;
@@ -104,11 +111,21 @@ const Leaderboard = () => {
       ));
   };
 
+  const renderNavLinks = (): ReactNode => {
+    return (
+      <FlatNavLinks<Repository>
+        handleOptionClick={handleNavOptionClick}
+        options={REPOSITORY_FILTERS}
+        selectedOption={repository}
+      />
+    );
+  };
+
   const renderTopSections = () => (
     <>
       <BreadcrumbMenu
         className="Leaderboard__BreadcrumbMenu"
-        menuItems={<RepositoryFilter className="Leaderboard__RepositoryFilter" />}
+        menuItems={renderNavLinks()}
         pageName={repository}
         sectionName="Leaderboard"
       />
@@ -120,9 +137,7 @@ const Leaderboard = () => {
     <>
       <div className="Leaderboard">
         {renderTopSections()}
-        <div className="Leaderboard__left-menu">
-          <RepositoryFilter className="Leaderboard__RepositoryFilter" />
-        </div>
+        <div className="Leaderboard__left-menu">{renderNavLinks()}</div>
         <div className="Leaderboard__contributor-list">{renderContributors()}</div>
       </div>
     </>

@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from 'react';
-import {useParams} from 'react-router-dom';
+import {useHistory, useParams} from 'react-router-dom';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import parseISO from 'date-fns/parseISO';
 import intersection from 'lodash/intersection';
 
-import {BreadcrumbMenu, EmptyPage, LabelFilter, Loader, RepositoryFilter} from 'components';
+import {REPOSITORY_FILTERS} from 'constants/github';
+
+import {BreadcrumbMenu, EmptyPage, FlatNavLinks, LabelFilter, Loader} from 'components';
 import {GenericVoidFunction} from 'types/generic';
 import {Issue, Repository, RepositoryUrlParams} from 'types/github';
 import {fetchGithubIssues} from 'utils/github';
@@ -14,6 +16,7 @@ import TasksTask from './TasksTask';
 import './Tasks.scss';
 
 const Tasks = () => {
+  const history = useHistory();
   const {repository} = useParams<RepositoryUrlParams>();
   const [error, setError] = useState<boolean>(false);
   const [issues, setIssues] = useState<Issue[]>([]);
@@ -67,9 +70,17 @@ const Tasks = () => {
     setSelectedLabelNames(results);
   };
 
+  const handleNavOptionClick = (option: Repository) => (): void => {
+    history.push(`/tasks/${option}`);
+  };
+
   const renderFilters = () => (
     <>
-      <RepositoryFilter className="Tasks__RepositoryFilter" />
+      <FlatNavLinks<Repository>
+        handleOptionClick={handleNavOptionClick}
+        options={REPOSITORY_FILTERS}
+        selectedOption={repository}
+      />
       <LabelFilter
         className="Tasks__LabelFilter"
         handleLabelClick={handleLabelClick}
@@ -111,7 +122,15 @@ const Tasks = () => {
         sectionName="Tasks"
       />
       <div className="Tasks__left-menu">{renderFilters()}</div>
-      <div className="Tasks__task-list">{loading ? <Loader className="Tasks__Loader" /> : renderTasks()}</div>
+      <div className="Tasks__task-list">
+        {loading ? (
+          <div className="Tasks__loader-container">
+            <Loader />
+          </div>
+        ) : (
+          renderTasks()
+        )}
+      </div>
     </div>
   );
 };
