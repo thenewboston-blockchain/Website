@@ -18,8 +18,9 @@
     overflow-y: auto;
   }
 
-  &__Loader {
+  &__loader-container {
     margin-top: 64px;
+    height: 80vh;
   }
 
   &__task-list {

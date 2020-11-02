@@ -49,7 +49,7 @@ const navLists = [
     ],
   },
   {
-    header: 'Community',
+    header: 'More',
     links: [
       {
         title: 'FAQ',
