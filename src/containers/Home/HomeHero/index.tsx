@@ -6,7 +6,7 @@ import SocialMediaIcon from 'components/SocialMediaIcon';
 import {SocialMedia} from 'types/social-media';
 
 import HelloWorld, {HelloWorldKeys, defaultHelloWorld} from './hello-world';
-import Hero from './Hero.svg';
+import Hero from './Hero.png';
 import './HomeHero.scss';
 
 const shuffledHelloKeys = shuffle(HelloWorldKeys);
