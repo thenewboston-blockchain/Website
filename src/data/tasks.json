@@ -66,6 +66,24 @@
       "completed_by": "aayushi14",
       "completed_date": "10/27/20",
       "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "Replace Homepage Social Media Hero icons to use SVG Icons",
+      "issue_id": "336",
+      "pr_id": "344",
+      "completed_by": "aayushi14",
+      "completed_date": "10/31/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Landing Page V2",
+      "issue_id": "333",
+      "pr_id": "346",
+      "completed_by": "aayushi14",
+      "completed_date": "11/1/20",
+      "amount_paid": "2500"
     }
   ],
   "angle943": [
@@ -113,6 +131,42 @@
       "completed_by": "angle943",
       "completed_date": "10/21/20",
       "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "Updated Top Navigation",
+      "issue_id": "317",
+      "pr_id": "343",
+      "completed_by": "angle943",
+      "completed_date": "10/31/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "Website",
+      "title": "Hello World in Different Languages for Marketing Site",
+      "issue_id": "322",
+      "pr_id": "350",
+      "completed_by": "angle943",
+      "completed_date": "11/1/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "no more stickies on website",
+      "issue_id": "357",
+      "pr_id": "358",
+      "completed_by": "angle943",
+      "completed_date": "11/1/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Footer Update V2",
+      "issue_id": "330",
+      "pr_id": "359",
+      "completed_by": "angle943",
+      "completed_date": "11/1/20",
+      "amount_paid": "500"
     }
   ],
   "avgust13": [
@@ -272,6 +326,17 @@
       "amount_paid": "1000"
     }
   ],
+  "brmendez": [
+    {
+      "repository": "Website",
+      "title": "FAQ page",
+      "issue_id": "320",
+      "pr_id": "338",
+      "completed_by": "brmendez",
+      "completed_date": "10/30/20",
+      "amount_paid": "2500"
+    }
+  ],
   "buckyroberts": [
     {
       "repository": "Website",
@@ -337,6 +402,15 @@
       "completed_by": "colfax23",
       "completed_date": "10/27/20",
       "amount_paid": "7500"
+    },
+    {
+      "repository": "Website",
+      "title": "Help to Social page",
+      "issue_id": "319",
+      "pr_id": "339",
+      "completed_by": "colfax23",
+      "completed_date": "10/30/20",
+      "amount_paid": "2500"
     }
   ],
   "dahelg": [
@@ -348,6 +422,17 @@
       "completed_by": "dahelg",
       "completed_date": "10/11/20",
       "amount_paid": "2500"
+    }
+  ],
+  "dorlivniopen": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "354",
+      "completed_by": "dorlivniopen",
+      "completed_date": "11/1/20",
+      "amount_paid": "500"
     }
   ],
   "hawyar": [
@@ -435,6 +520,24 @@
       "completed_by": "kristykjlee",
       "completed_date": "10/24/20",
       "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Landing Page V2",
+      "issue_id": "333",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "10/31/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "no more stickies on website",
+      "issue_id": "357",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "11/1/20",
+      "amount_paid": "500"
     }
   ],
   "lapstjup": [
@@ -533,6 +636,15 @@
       "completed_by": "thesanjeevsharma",
       "completed_date": "10/27/20",
       "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Replace Footer icons with mdi-icons",
+      "issue_id": "335",
+      "pr_id": "340",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "10/30/20",
+      "amount_paid": "1000"
     }
   ],
   "tpikachu": [

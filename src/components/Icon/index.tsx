@@ -4,15 +4,20 @@ import React, {forwardRef, ReactNode} from 'react';
 import clsx from 'clsx';
 import noop from 'lodash/noop';
 
+import AccountGroupIcon from 'mdi-react/AccountGroupIcon';
 import AlertCircleOutlineIcon from 'mdi-react/AlertCircleOutlineIcon';
 import ArrowCollapseDownIcon from 'mdi-react/ArrowCollapseDownIcon';
 import ArrowLeftIcon from 'mdi-react/ArrowLeftIcon';
 import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
 import ChevronLeftIcon from 'mdi-react/ChevronLeftIcon';
 import ChevronRightIcon from 'mdi-react/ChevronRightIcon';
+import ChevronUpIcon from 'mdi-react/ChevronUpIcon';
 import ContentCopyIcon from 'mdi-react/ContentCopyIcon';
+import EarthIcon from 'mdi-react/EarthIcon';
 import FacebookIcon from 'mdi-react/FacebookIcon';
+import FileDocumentIcon from 'mdi-react/FileDocumentIcon';
 import GithubIcon from 'mdi-react/GithubIcon';
+import HumanHandsupIcon from 'mdi-react/HumanHandsupIcon';
 import LinkedinIcon from 'mdi-react/LinkedinIcon';
 import LoadingIcon from 'mdi-react/LoadingIcon';
 import MenuIcon from 'mdi-react/MenuIcon';
@@ -22,6 +27,7 @@ import PlusIcon from 'mdi-react/PlusIcon';
 import RedditIcon from 'mdi-react/RedditIcon';
 import SlackIcon from 'mdi-react/SlackIcon';
 import ThumbsUpIcon from 'mdi-react/ThumbsUpIcon';
+import TrophyIcon from 'mdi-react/TrophyIcon';
 import TwitterIcon from 'mdi-react/TwitterIcon';
 import YoutubeIcon from 'mdi-react/YoutubeIcon';
 
@@ -30,15 +36,20 @@ import './Icon.scss';
 
 // These names are camelCased versions of the names found in https://materialdesignicons.com/
 export enum IconType {
+  accountGroup,
   alertCircleOutline,
   arrowCollapseDown,
   arrowLeft,
   chevronDown,
   chevronLeft,
   chevronRight,
+  chevronUp,
   contentCopy,
+  earth,
   facebook,
+  fileDocument,
   github,
+  humanHandsUp,
   linkedin,
   loading,
   menu,
@@ -48,6 +59,7 @@ export enum IconType {
   reddit,
   slack,
   thumbsUp,
+  trophy,
   twitter,
   youtube,
 }
@@ -68,6 +80,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
 
   const renderIcon = (): ReactNode => {
     switch (icon) {
+      case IconType.accountGroup:
+        return <AccountGroupIcon {...iconProps} />;
       case IconType.alertCircleOutline:
         return <AlertCircleOutlineIcon {...iconProps} />;
       case IconType.arrowCollapseDown:
@@ -80,12 +94,20 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
         return <ChevronLeftIcon {...iconProps} />;
       case IconType.chevronRight:
         return <ChevronRightIcon {...iconProps} />;
+      case IconType.chevronUp:
+        return <ChevronUpIcon {...iconProps} />;
       case IconType.contentCopy:
         return <ContentCopyIcon {...iconProps} />;
+      case IconType.earth:
+        return <EarthIcon {...iconProps} />;
       case IconType.facebook:
         return <FacebookIcon {...iconProps} />;
+      case IconType.fileDocument:
+        return <FileDocumentIcon {...iconProps} />;
       case IconType.github:
         return <GithubIcon {...iconProps} />;
+      case IconType.humanHandsUp:
+        return <HumanHandsupIcon {...iconProps} />;
       case IconType.linkedin:
         return <LinkedinIcon {...iconProps} />;
       case IconType.loading:
@@ -104,6 +126,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
         return <SlackIcon {...iconProps} />;
       case IconType.thumbsUp:
         return <ThumbsUpIcon {...iconProps} />;
+      case IconType.trophy:
+        return <TrophyIcon {...iconProps} />;
       case IconType.twitter:
         return <TwitterIcon {...iconProps} />;
       case IconType.youtube:

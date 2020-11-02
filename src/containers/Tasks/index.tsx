@@ -122,7 +122,15 @@ const Tasks = () => {
         sectionName="Tasks"
       />
       <div className="Tasks__left-menu">{renderFilters()}</div>
-      <div className="Tasks__task-list">{loading ? <Loader className="Tasks__Loader" /> : renderTasks()}</div>
+      <div className="Tasks__task-list">
+        {loading ? (
+          <div className="Tasks__loader-container">
+            <Loader />
+          </div>
+        ) : (
+          renderTasks()
+        )}
+      </div>
     </div>
   );
 };
