@@ -2,7 +2,7 @@
 name: Job description
 about: Post a job description
 title: ''
-labels: engineering, 5000
+labels: engineering, 2500
 assignees: ''
 
 ---
