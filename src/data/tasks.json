@@ -1,4 +1,37 @@
 {
+  "22": [
+    {
+      "repository": "thenewboston-python",
+      "title": "JSONDecodeError simplejson.decoder in raw_decode",
+      "issue_id": "shahraizali",
+      "pr_id": "",
+      "completed_by": "22",
+      "completed_date": "10/16/20",
+      "amount_paid": "5000"
+    }
+  ],
+  "397": [
+    {
+      "repository": "Account-Manager",
+      "title": "While Editing nickname duplicate name should not be accepted",
+      "issue_id": "shahraizali",
+      "pr_id": "400",
+      "completed_by": "397",
+      "completed_date": "10/13/20",
+      "amount_paid": "2500"
+    }
+  ],
+  "DucPhamTV": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "369",
+      "pr_id": "382",
+      "completed_by": "DucPhamTV",
+      "completed_date": "11/2/20",
+      "amount_paid": "500"
+    }
+  ],
   "GermaVinsmoke": [
     {
       "repository": "Website",
@@ -93,6 +126,24 @@
       "completed_by": "aayushi14",
       "completed_date": "11/1/20",
       "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Add a Q&A on how to open up a pull request",
+      "issue_id": "353",
+      "pr_id": "367",
+      "completed_by": "aayushi14",
+      "completed_date": "11/1/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "When going to `/tasks`, make it automatically default to `/tasks/All`",
+      "issue_id": "349",
+      "pr_id": "365",
+      "completed_by": "aayushi14",
+      "completed_date": "11/1/20",
+      "amount_paid": "2000"
     }
   ],
   "angle943": [
@@ -473,6 +524,24 @@
       "completed_by": "itsnikhil",
       "completed_date": "10/10/20",
       "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "Make the Footer's background color go all the way to the bottom",
+      "issue_id": "369",
+      "pr_id": "370",
+      "completed_by": "itsnikhil",
+      "completed_date": "11/2/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "369",
+      "pr_id": "351",
+      "completed_by": "itsnikhil",
+      "completed_date": "11/2/20",
+      "amount_paid": "500"
     }
   ],
   "kristykjlee": [
@@ -618,6 +687,28 @@
       "amount_paid": "500"
     }
   ],
+  "rizqyep": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "369",
+      "pr_id": "381",
+      "completed_by": "rizqyep",
+      "completed_date": "11/2/20",
+      "amount_paid": "500"
+    }
+  ],
+  "shahraizali": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "369",
+      "pr_id": "379",
+      "completed_by": "shahraizali",
+      "completed_date": "11/2/20",
+      "amount_paid": "500"
+    }
+  ],
   "thesanjeevsharma": [
     {
       "repository": "Website",
@@ -712,6 +803,17 @@
       "completed_by": "webdeveloperswj",
       "completed_date": "9/22/20",
       "amount_paid": "5000"
+    }
+  ],
+  "xmac11": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "369",
+      "pr_id": "380",
+      "completed_by": "xmac11",
+      "completed_date": "11/2/20",
+      "amount_paid": "500"
     }
   ]
 }
