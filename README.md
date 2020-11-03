@@ -2,11 +2,11 @@
   <img alt="thenewboston logo" src="./src/assets/svgs/thenewboston-primary.svg" width="400">
 </p>
 
+> This repository contains the source code and documentation for [thenewboston.com](https://thenewboston.com/) website.
+
 <p align="center">
   <img alt="screenshot of website" src="https://imgur.com/Nw7W49v.png">
 </p>
-
-> This repository contains the source code and documentation for [thenewboston.com](https://thenewboston.com/) website.
 
 [![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fthenewboston.com)](https://thenewboston.com) ![Activity](https://img.shields.io/github/commit-activity/m/thenewboston-developers/website) [![GitHub Issues](https://img.shields.io/github/issues/thenewboston-developers/website)](https://github.com/thenewboston-developers/website/issues) [![Contributors](https://img.shields.io/github/contributors/thenewboston-developers/website)](https://github.com/thenewboston-developers/Website/graphs/contributors) [![License](https://img.shields.io/github/license/thenewboston-developers/website)](http://opensource.org/licenses/MIT)
 
