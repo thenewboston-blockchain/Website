@@ -6,7 +6,7 @@ import './LabelFilter.scss';
 
 interface ComponentProps {
   className?: string;
-  handleLabelClick: Function;
+  handleLabelClick: any;
   selectedLabelNames: string[];
 }
 
