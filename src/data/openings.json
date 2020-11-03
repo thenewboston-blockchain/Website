@@ -387,5 +387,45 @@
       "Deep technical knowledge of AWS",
       "Security certification desired (e.g., CISSP, GIAC, CEH, etc)"
     ]
+  },
+  {
+    "openingId": "python-security-engineer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "As Python Security Engineer you'll be a key member of the security team. You'll be responsible for influencing engineering to adopt security and privacy by design and internal consulting on remediating security vulnerabilities.",
+    "payNotes": ["2,800 points/day"],
+    "position": "Python Security Engineer",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Help harden our infrastructure to avoid exploits and privilege escalation",
+      "Perform architecture reviews as part of product security process",
+      "Contribute to threat modeling and security risk assessments",
+      "Manage and implement security in assigned products"
+    ],
+    "technologyRequirements": [
+      "3+ years of experience in penetrating testing, including mobile & web applications",
+      "Experience with conducting threat assessments, building threat models, and creating remediation plans based on the results of threat assessments",
+      "Thorough understanding of vulnerability classes (OWASP), how they can be exploited",
+      "Knowledge of cryptography, including symmetric & asymmetric ciphers, hash functions, PKI, and certificates"
+    ]
   }
 ]
