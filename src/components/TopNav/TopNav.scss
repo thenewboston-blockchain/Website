@@ -31,8 +31,6 @@ $top-nav-height: 60px;
 
 .TopNav {
   align-items: center;
-  backdrop-filter: saturate(180%) blur(20px);
-  background: rgba(255, 255, 255, 0.8);
   display: flex;
   height: $top-nav-height;
   justify-content: space-between;

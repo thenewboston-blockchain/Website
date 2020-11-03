@@ -30,7 +30,9 @@ $footer-height: 348px;
     }
   }
 
-  .TopNav {
+  &__top-nav-wrapper {
+    backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(255, 255, 255, 0.8);
     position: sticky;
     top: 0;
     z-index: 1;
