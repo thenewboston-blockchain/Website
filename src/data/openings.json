@@ -1,4 +1,43 @@
-[
+[ 
+  {
+    "openingId": "engineering-backend-junior-python-dev",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "We are seeking a Junior Python (Django) Developer to work collaboratively with team members to develop and contribute to our digital currency network.",
+    "payNotes": ["2,800 points/day"],
+    "position": "Junior Python (Django) Developer",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Expand your Python skills by working on packages, services, scripts, and deployments in a collaborative work environment",
+      "Find, document and track bugs",
+      "Create test plans/test cases, write test scripts, and execute all tests"
+    ],
+    "technologyRequirements": [
+      "Able to manage source code using GitHub",
+      "Fast learner who is eager to face new technological challenges and come up with innovative solutions",
+      "Curious to learn how things really work",
+      "Excellent teamwork and interpersonal communication skills"
+    ]
+  },
   {
     "openingId": "design-uxui",
     "applicationMethods": [
