@@ -347,5 +347,40 @@
       "Experience in mobile development",
       "Knowledge of App Store distribution (for both Android and iOS)"
     ]
+  },
+  {
+    "openingId": "recruiter-youtube-educators",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Community",
+    "description": "Seeking a Recruiter for YouTube Educators who is able to recruit technology, programming, or cryptocurrency related YouTubers. You will be reaching out regarding collaboration with thenewboston as we continue to provide free high quality educational videos for the world.",
+    "payNotes": ["2,800 points/day"],
+    "position": "Recruiter for YouTube Educators",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Designing and implementing the overall recruiting strategy",
+      "Sourcing and attracting content creators through YouTube and other social media"
+    ],
+    "technologyRequirements": [
+      "A computer"
+    ]
   }
 ]
