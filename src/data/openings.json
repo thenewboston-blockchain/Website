@@ -1,5 +1,43 @@
 [
   {
+    "openingId": "engineering-client-library-head",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky or Justin"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "As Head of Python Client Library Development you will be responsible for leading the development efforts for our Python client library.",
+    "payNotes": ["2,800 points/day"],
+    "position": "Head of Python Client Library Development",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Writing technical documentation",
+      "Recruiting Python developers",
+      "Help assist other developers while managing work between team members",
+      "Respond to GitHub issues and review PR's"
+    ],
+    "technologyRequirements": [
+      "2+ years of experience in Python",
+      "Experience with Python web frameworks, ideally Django"
+    ]
+  },
+  {
     "openingId": "design-uxui",
     "applicationMethods": [
       {
