@@ -1,5 +1,5 @@
 import React, {FC, ReactNode, useCallback, useMemo, useState} from 'react';
-import {useParams} from 'react-router-dom';
+import {useHistory, useLocation, useParams} from 'react-router-dom';
 
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks} from 'components';
 import {useScrollToTopContainer} from 'hooks';
@@ -23,6 +23,8 @@ const OPENING_CATEGORY_FILTERS = [
 
 const Openings: FC = () => {
   const {openingId: openingIdParam} = useParams<OpeningsUrlParams>();
+  const location = useLocation();
+  const history = useHistory();
   const [categoryFilter, setCategoryFilter] = useState<OpeningCategory>(OpeningCategory.all);
   const openingDetailsContainer = useScrollToTopContainer<HTMLDivElement>([openingIdParam]);
 
@@ -36,9 +38,13 @@ const Openings: FC = () => {
 
   const handleNavOptionClick = useCallback(
     (option: OpeningCategory) => (): void => {
+      if (openingIdParam) {
+        const route = location.pathname.split('/')[1];
+        history.push(`/${route}`);
+      }
       setCategoryFilter(option);
     },
-    [setCategoryFilter],
+    [history, location.pathname, openingIdParam],
   );
 
   const renderCategoryFilter = (): ReactNode => {
