@@ -7,6 +7,10 @@ assignees: ''
 
 ---
 
+Add the following job opening to the website.
+
+***
+
 #### Job Title
 Sample Job Title
 
