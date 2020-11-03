@@ -8,10 +8,6 @@
     outline: none;
     padding-bottom: 6px;
 
-    @media (max-width: 400px) {
-      margin-right: auto;
-    }
-
     &:hover {
       border-bottom-color: var(--color-sail-gray-500);
     }

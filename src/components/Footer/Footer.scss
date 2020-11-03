@@ -14,27 +14,17 @@
 
   &__SocialMediaLink {
     color: var(--color-white);
+    margin-top: 18px;
 
     &:not(:last-child) {
       margin-right: 18px;
-    }
-
-    @media (max-width: 400px) {
-      &:not(:last-child) {
-        margin-right: 0px;
-      }
     }
   }
 
   &__social-media-links {
     align-items: center;
     display: flex;
-    margin-top: 60px;
-  }
-
-  @media (max-width: 400px) {
-    &__social-media-links {
-      justify-content: space-between;
-    }
+    flex-wrap: wrap;
+    margin-top: 42px;
   }
 }
