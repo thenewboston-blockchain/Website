@@ -538,5 +538,41 @@
     "technologyRequirements": [
       "A computer"
     ]
+  },
+  {
+    "openingId": "recruiter-cryptocurrency-partnerships",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Community",
+    "description": "Seeking a Recruiter for Cryptocurrency Partnerships as we continue to strategically grow our digital currency network.",
+    "payNotes": ["2,800 points/day"],
+    "position": "Recruiter for Cryptocurrency Partnerships",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Reaching out to other cryptocurrency related websites, businesses, and communities regarding strategic partnerships",
+      "Joining cryptocurrency related communities and discussions",
+      "Researching trends and offering suggestions on any areas that you feel would be beneficial to our community",
+      "Designing and implementing the overall recruiting strategy"    ],
+    "technologyRequirements": [
+      "Strong understanding of cryptocurrency and blockchain technology"
+    ]
   }
 ]
