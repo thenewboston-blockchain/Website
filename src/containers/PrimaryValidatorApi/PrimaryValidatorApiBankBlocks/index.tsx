@@ -40,7 +40,7 @@ const PrimaryValidatorApiBankBlocks: FC = () => {
 }`}
         heading="Request"
       />
-      <RequestResponseSnippet code="" heading="Response" />
+      <RequestResponseSnippet code={`{}`} heading="Response" />
     </DocContainer>
   );
 };

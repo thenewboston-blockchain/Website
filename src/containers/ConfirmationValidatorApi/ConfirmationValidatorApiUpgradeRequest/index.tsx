@@ -47,7 +47,7 @@ const ConfirmationValidatorApiUpgradeRequest: FC = () => {
 }`}
         heading="Request"
       />
-      <RequestResponseSnippet code="" heading="Response" />
+      <RequestResponseSnippet code={`{}`} heading="Response" />
       <TableParams
         items={[
           {

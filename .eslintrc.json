@@ -48,6 +48,7 @@
       }
     ],
     "react/button-has-type": "off",
+    "react/jsx-curly-brace-presence": "off",
     "react/no-array-index-key": "off",
     "react/no-unescaped-entities": "off",
     "react/prop-types": "off",

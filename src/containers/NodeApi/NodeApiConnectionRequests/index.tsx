@@ -38,7 +38,7 @@ const NodeApiConnectionRequests: FC = () => {
         key. They do not have to be sent from the node itself.
       </p>
 
-      <RequestResponseSnippet code="" heading="Response" />
+      <RequestResponseSnippet code={`{}`} heading="Response" />
     </DocContainer>
   );
 };

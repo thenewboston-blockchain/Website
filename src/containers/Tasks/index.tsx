@@ -15,7 +15,7 @@ import {sortByNumberKey} from 'utils/sort';
 import TasksTask from './TasksTask';
 import './Tasks.scss';
 
-const Tasks = () => {
+const Tasks = (): JSX.Element => {
   const history = useHistory();
   const {repository} = useParams<RepositoryUrlParams>();
   const [error, setError] = useState<boolean>(false);
