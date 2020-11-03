@@ -1,5 +1,42 @@
 [
   {
+    "openingId": "engineering-backend-django",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Buck"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "We are looking for a Python / Django Developer to help us build out both our digital currency network and Website API."],
+    "position": "Python / Django Developer",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Designing and creating RESTful APIs",
+      "Participating in architectural, design and product discussions",
+      "Working in an environment with an excellent team of engineers"
+    ],
+    "technologyRequirements": [
+      "Experience with Celery, DRF, and pytest",
+      "2+ years of experience in Django",
+      "4+ years of experience in Python"
+    ]
+  },
+  {
     "openingId": "design-uxui",
     "applicationMethods": [
       {
