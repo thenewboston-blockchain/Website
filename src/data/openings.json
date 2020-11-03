@@ -465,5 +465,43 @@
       "Significant experience in applied cryptography",
       "Experience in penetration testing and/or security auditing"
     ]
+  },
+  {
+    "openingId": "blockchain-cryptocurrency-researcher",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "Looking for a Blockchain Cryptocurrency Researcher who has the ability to proactively identify strategic opportunities and research new developments related to cryptocurrency. The candidate should have a deep understanding of computer science, distributed systems, consensus algorithms, networking, and other relevant fields to blockchain technology.",
+    "payNotes": ["2,800 points/day"],
+    "position": "Blockchain Cryptocurrency Researcher",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Researching emerging trends and identifying non-obvious opportunities",
+      "Working closely with technical teams on their crypto-economic model and other questions that come up around protocols and software",
+      "Work on designing and improving our core protocol architecture"
+    ],
+    "technologyRequirements": [
+      "Solid understanding of cryptography, crypto-economics, and blockchain technologies",
+      "Ability to identify unconventional trends and emerging technologies",
+      "An open minded research approach and genuine intellectual curiosity"
+    ]
   }
 ]
