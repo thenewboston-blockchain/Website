@@ -347,5 +347,45 @@
       "Experience in mobile development",
       "Knowledge of App Store distribution (for both Android and iOS)"
     ]
+  },
+  {
+    "openingId": "cloud-security-engineer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "Seeking a Cloud Security Engineer to provide cyber security expertise in the analysis, assessment, development, and evaluation of security solutions and architectures to secure applications, operating systems, databases, and networks.",
+    "payNotes": ["2,800 points/day"],
+    "position": "Cloud Security Engineer",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Develops standards, policies and procedures as well as best practices documentation",
+      "Provides Info security architecture & systems engineering consulting to other IT and business teams",
+      "Supports the monitoring and maintaining network security suite of tools",
+      "Identify new security threats by conducting continual monitoring, penetration testing, vulnerability assessments and log analysis"
+    ],
+    "technologyRequirements": [
+      "Minimum of 5-7 years of IT Security and/or security engineering experience",
+      "Expert knowledge of Cloud infrastructure, security architectures, and standards",
+      "Deep technical knowledge of AWS",
+      "Security certification desired (e.g., CISSP, GIAC, CEH, etc)"
+    ]
   }
 ]
