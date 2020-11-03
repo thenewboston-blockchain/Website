@@ -33,7 +33,6 @@ Write a few sentences describing the position here.
 
 #### Pay
 - [x] 2,800 points/day
-- [ ] Ineligible for task points (you will be creating tasks for your team)
 
 #### Application channels
 - [ ] Slack [SPECIFY WHO TO MESSAGE HERE]
