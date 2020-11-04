@@ -15,7 +15,9 @@ const Layout: FC<ComponentProps> = ({children}) => {
 
   return (
     <div className="Layout">
-      <TopNav className="Layout__TopNav" />
+      <div className="Layout__top-nav-wrapper">
+        <TopNav className="Layout__TopNav" />
+      </div>
       <div className={clsx({Layout__content: !isHomepage, Layout__home: isHomepage})}>{children}</div>
       <div className="Layout__footer-wrapper">
         <Footer className="Layout__Footer" />
