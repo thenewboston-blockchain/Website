@@ -53,6 +53,7 @@
     "react/no-array-index-key": "off",
     "react/no-unescaped-entities": "off",
     "react/prop-types": "off",
+    "react/require-default-props": "off",
     "sort-keys": "error"
   }
 }
