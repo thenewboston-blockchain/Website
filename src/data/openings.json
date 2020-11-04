@@ -74,10 +74,7 @@
       "Design, build, and maintain our social media presence",
       "Measure and report performance of all digital marketing campaigns"
     ],
-    "technologyRequirements": [
-      "Experience in digital marketing",
-      "Basic graphic design skills"
-    ]
+    "technologyRequirements": ["Experience in digital marketing", "Basic graphic design skills"]
   },
   {
     "openingId": "community-youtube-educator",
@@ -585,9 +582,7 @@
       "Designing and implementing the overall recruiting strategy",
       "Sourcing and attracting content creators through YouTube and other social media"
     ],
-    "technologyRequirements": [
-      "A computer"
-    ]
+    "technologyRequirements": ["A computer"]
   },
   {
     "openingId": "recruiter-cryptocurrency-partnerships",
@@ -620,9 +615,8 @@
       "Reaching out to other cryptocurrency related websites, businesses, and communities regarding strategic partnerships",
       "Joining cryptocurrency related communities and discussions",
       "Researching trends and offering suggestions on any areas that you feel would be beneficial to our community",
-      "Designing and implementing the overall recruiting strategy"    ],
-    "technologyRequirements": [
-      "Strong understanding of cryptocurrency and blockchain technology"
-    ]
+      "Designing and implementing the overall recruiting strategy"
+    ],
+    "technologyRequirements": ["Strong understanding of cryptocurrency and blockchain technology"]
   }
 ]
