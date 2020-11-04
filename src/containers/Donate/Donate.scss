@@ -1,0 +1,86 @@
+.Donate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 48px;
+
+  @media (max-width: 576px) {
+    padding: 60px 12px;
+  }
+
+  &__card {
+    border-radius: 12px;
+    box-shadow: 0 0 3px rgba(85, 108, 214, 0.3);
+    margin-right: 12px;
+    margin-top: 12px;
+    max-width: 357px;
+    padding: 18px;
+  }
+
+  &__cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 90px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__heading {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.25;
+    margin: 0 auto 30px;
+    text-align: center;
+  }
+
+  &__logo {
+    max-width: 100%;
+
+    &--bitcoin {
+      margin-top: 3px;
+      max-width: 114px;
+    }
+
+    &--ethereum {
+      max-width: 152px;
+    }
+
+    &--tnb {
+      max-width: 202px;
+    }
+  }
+
+  &__logo-container {
+    display: block;
+    height: 42px;
+    margin-bottom: 30px;
+  }
+
+  &__qr-code {
+    display: block;
+    height: 50px;
+    margin-bottom: 24px;
+    word-break: break-all;
+
+    @media (max-width: 576px) {
+      height: 100px;
+      margin-bottom: unset;
+    }
+  }
+
+  &__qr-image {
+    max-width: 120px;
+  }
+
+  &__subtext {
+    font-size: var(--font-size-regular);
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0 auto 48px;
+    max-width: 480px;
+    text-align: center;
+  }
+}

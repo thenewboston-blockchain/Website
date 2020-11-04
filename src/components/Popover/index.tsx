@@ -169,6 +169,7 @@ const Popover: FC<ComponentProps> = ({
     <>
       {createPortal(
         <div
+          aria-hidden={!open}
           className={clsx('Popover', className, {
             'Popover--open': open,
             ...getCustomClassNames(className, '--open', open),
