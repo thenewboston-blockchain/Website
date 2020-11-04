@@ -37,11 +37,10 @@
   }
 
   &__logo {
-    display: block;
-    margin-bottom: 30px;
     max-width: 100%;
 
     &--bitcoin {
+      margin-top: 3px;
       max-width: 114px;
     }
 
@@ -52,6 +51,12 @@
     &--tnb {
       max-width: 202px;
     }
+  }
+
+  &__logo-container {
+    display: block;
+    height: 42px;
+    margin-bottom: 30px;
   }
 
   &__qr-code {

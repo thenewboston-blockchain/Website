@@ -37,7 +37,13 @@ const Social: FC = () => {
   const renderCard = (crypto: Crypto): ReactNode => {
     return (
       <div className="Donate__card">
-        <img alt={`${crypto} logo`} className={clsx('Donate__logo', `Donate__logo--${crypto}`)} src={getLogo(crypto)} />
+        <div className="Donate__logo-container">
+          <img
+            alt={`${crypto} logo`}
+            className={clsx('Donate__logo', `Donate__logo--${crypto}`)}
+            src={getLogo(crypto)}
+          />
+        </div>
         <span className="Donate__qr-code">{getQrCode(crypto)}</span>
         <img alt={`${crypto} qr`} className="Donate__qr-image" src={getQrImage(crypto)} />
       </div>
