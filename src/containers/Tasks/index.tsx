@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {FC, ReactNode, useEffect, useState} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import parseISO from 'date-fns/parseISO';
@@ -15,7 +15,7 @@ import {sortByNumberKey} from 'utils/sort';
 import TasksTask from './TasksTask';
 import './Tasks.scss';
 
-const Tasks = (): JSX.Element => {
+const Tasks: FC = () => {
   const history = useHistory();
   const {repository} = useParams<RepositoryUrlParams>();
   const [error, setError] = useState<boolean>(false);
@@ -89,7 +89,7 @@ const Tasks = (): JSX.Element => {
     </>
   );
 
-  const renderTasks = () => {
+  const renderTasks = (): ReactNode => {
     const filteredIssues = getFilteredIssues();
     if (error || !filteredIssues.length) return <EmptyPage />;
     return filteredIssues.map(

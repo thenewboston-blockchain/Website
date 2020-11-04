@@ -3,7 +3,7 @@ import {toast} from 'react-toastify';
 
 import Toast, {ToastType} from 'components/Toast';
 
-export const displayErrorToast = (error: string | {response: {data: string}; message: string}): void => {
+export const displayErrorToast = (error: any): void => {
   let errorStr: string;
 
   if (typeof error === 'string') {

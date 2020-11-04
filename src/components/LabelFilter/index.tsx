@@ -27,7 +27,7 @@ const LabelFilter: FC<ComponentProps> = ({className, handleLabelClick, selectedL
           className="LabelFilter__label"
           color={selectedLabelNames.includes(labelName) ? hexColor : 'e3e8ee'}
           key={labelName}
-          onClick={() => handleLabelClick(labelName)}
+          onClick={handleLabelClick(labelName)}
           name={labelName}
         />
       </div>
