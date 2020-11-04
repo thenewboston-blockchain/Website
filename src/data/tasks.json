@@ -865,7 +865,7 @@
   "tpikachu": [
     {
       "repository": "Account-Manager",
-      "title": "[Desktop] While sending points, Point should not accept decimal values",
+      "title": "[Desktop] While sending coins, Coin should not accept decimal values",
       "issue_id": "339",
       "pr_id": "352",
       "completed_by": "tpikachu",
@@ -885,7 +885,7 @@
   "webdeveloperswj": [
     {
       "repository": "Account-Manager",
-      "title": "When points are sent to friend the from sender account balance should get reduced",
+      "title": "When coins are sent to friend the from sender account balance should get reduced",
       "issue_id": "296",
       "pr_id": "",
       "completed_by": "webdeveloperswj",
@@ -894,7 +894,7 @@
     },
     {
       "repository": "Account-Manager",
-      "title": "No notification received when points sent or received",
+      "title": "No notification received when coins sent or received",
       "issue_id": "299",
       "pr_id": "",
       "completed_by": "webdeveloperswj",

@@ -18,8 +18,8 @@ export const accountManagerNavigationData = [
     url: '/account-manager/add-friends',
   },
   {
-    name: 'Send Points',
-    url: '/account-manager/send-points',
+    name: 'Send Coins',
+    url: '/account-manager/send-coins',
   },
   {
     name: 'Edit Nicknames',

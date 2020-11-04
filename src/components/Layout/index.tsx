@@ -1,9 +1,8 @@
-import React, {FC, ReactNode} from 'react';
+import React, {FC, ReactNode, useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 
 import {Footer, TopNav} from 'components';
-import {useScrollToTopContainer} from 'hooks';
 import './Layout.scss';
 
 interface ComponentProps {
@@ -12,11 +11,14 @@ interface ComponentProps {
 
 const Layout: FC<ComponentProps> = ({children}) => {
   const {pathname} = useLocation();
-  const layoutDiv = useScrollToTopContainer<HTMLDivElement>([pathname]);
   const isHomepage = pathname === '/';
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
-    <div className="Layout" ref={layoutDiv}>
+    <div className="Layout">
       <div className="Layout__top-nav-wrapper">
         <TopNav className="Layout__TopNav" />
       </div>
