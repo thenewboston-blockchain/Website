@@ -3,8 +3,6 @@ $footer-height: 348px;
 
 .Layout {
   $self: &;
-  height: 100vh;
-  overflow-y: auto;
   position: relative;
 
   &__content {
