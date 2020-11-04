@@ -218,7 +218,7 @@
     ],
     "category": "Community",
     "description": "Looking for a dedicated Product Manager to help guide the success of our project and help lead the team in doing so. As the project nears release, the team is growing rapidly and we are looking for someone to help manage our goals and strategy.",
-    "payNotes": ["2,800 points/day", "Ineligible for task points (you will be creating tasks for your team)"],
+    "payNotes": ["2,800 points/day"],
     "position": "Product Manager",
     "reportsTo": [
       {
@@ -258,7 +258,7 @@
     ],
     "category": "Engineering",
     "description": "We're looking for an experienced Front-end engineer who is able to lead a team of junior developers. You and your team will be working primarily on the Account Manager and Website repositories to help build the UI's needed for the applications used by our community.",
-    "payNotes": ["2,800 points/day", "Ineligible for task points (you will be creating tasks for your team)"],
+    "payNotes": ["2,800 points/day"],
     "position": "Front-end Team Lead (React/Redux)",
     "reportsTo": [
       {
@@ -306,7 +306,7 @@
     ],
     "category": "Marketing",
     "description": "Seeking a Director of Marketing to focus on acquiring new users by creating, executing, and testing marketing strategies.",
-    "payNotes": ["2,800 points/day", "Ineligible for task points (you will be creating tasks for your team)"],
+    "payNotes": ["2,800 points/day"],
     "position": "Director of Marketing",
     "reportsTo": [
       {
@@ -416,7 +416,7 @@
     ],
     "category": "Engineering",
     "description": "We are looking for an experienced mobile developer to fill our opening of Mobile Lead who is able to lead a team of junior developers. You will be responsible for designing the core architecture, selecting the technologies/programming languages, and choosing team members to help build the mobile application that will be used by our community and after release, the world.",
-    "payNotes": ["2,800 points/day", "Ineligible for task points (you will be creating tasks for your team)"],
+    "payNotes": ["2,800 points/day"],
     "position": "Mobile Team Lead",
     "reportsTo": [
       {
