@@ -658,5 +658,40 @@
       "Designing and implementing the overall recruiting strategy"
     ],
     "technologyRequirements": ["Strong understanding of cryptocurrency and blockchain technology"]
+  },
+  {
+    "openingId": "frontend-responsiveness-expert",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Justin"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "We're looking for an experienced Front-end engineer who is able to test incoming PRs' design/responsive behavior. You will primarily be working on the Account Manager and Website repositories.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Front-end Responsiveness/UX expert",
+    "reportsTo": [
+      {
+        "githubUsername": "angle943",
+        "name": "Justin"
+      }
+    ],
+    "responsibilities": [
+      "Perform code reviews on incoming PRs, testing specifically for the UI",
+      "Test in various viewports to make sure it looks fine",
+      "Regularly test the applications to make sure there are no issues",
+      "Create new issues if there are issues"
+    ],
+    "technologyRequirements": ["JavaScript (ES6+)", "React", "Redux", "Typescript", "HTML/CSS", "Experience with Figma (preferred)"]
   }
 ]
