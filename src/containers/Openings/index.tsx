@@ -13,7 +13,6 @@ const openings = getOpenings();
 
 const OPENING_CATEGORY_FILTERS = [
   OpeningCategory.all,
-  OpeningCategory.accounting,
   OpeningCategory.community,
   OpeningCategory.design,
   OpeningCategory.engineering,
