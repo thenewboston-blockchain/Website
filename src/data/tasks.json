@@ -1,4 +1,15 @@
 {
+  "DucPhamTV": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "369",
+      "pr_id": "382",
+      "completed_by": "DucPhamTV",
+      "completed_date": "11/2/20",
+      "amount_paid": "500"
+    }
+  ],
   "GermaVinsmoke": [
     {
       "repository": "Website",
@@ -93,6 +104,44 @@
       "completed_by": "aayushi14",
       "completed_date": "11/1/20",
       "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Add a Q&A on how to open up a pull request",
+      "issue_id": "353",
+      "pr_id": "367",
+      "completed_by": "aayushi14",
+      "completed_date": "11/1/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "When going to `/tasks`, make it automatically default to `/tasks/All`",
+      "issue_id": "349",
+      "pr_id": "365",
+      "completed_by": "aayushi14",
+      "completed_date": "11/1/20",
+      "amount_paid": "2000"
+    },
+    {
+      "repository": "Website",
+      "title": "Cloud Security Engineer",
+      "issue_id": "390",
+      "pr_id": "425",
+      "completed_by": "aayushi14",
+      "completed_date": "11/3/20",
+      "amount_paid": "2500"
+    }
+  ],
+  "amarjeet987": [
+    {
+      "repository": "Website",
+      "title": "Upgrade A couple of our dependency libraries",
+      "issue_id": "368",
+      "pr_id": "376",
+      "completed_by": "amarjeet987",
+      "completed_date": "11/3/20",
+      "amount_paid": "2500"
     }
   ],
   "angle943": [
@@ -473,6 +522,87 @@
       "completed_by": "itsnikhil",
       "completed_date": "10/10/20",
       "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "Make the Footer's background color go all the way to the bottom",
+      "issue_id": "369",
+      "pr_id": "370",
+      "completed_by": "itsnikhil",
+      "completed_date": "11/2/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "369",
+      "pr_id": "351",
+      "completed_by": "itsnikhil",
+      "completed_date": "11/2/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Head of Python Client Library Development",
+      "issue_id": "401",
+      "pr_id": "404",
+      "completed_by": "itsnikhil",
+      "completed_date": "11/3/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Blockchain Cryptocurrency Researcher",
+      "issue_id": "400",
+      "pr_id": "405",
+      "completed_by": "itsnikhil",
+      "completed_date": "11/3/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "YouTube Educator",
+      "issue_id": "403",
+      "pr_id": "409",
+      "completed_by": "itsnikhil",
+      "completed_date": "11/3/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Head of Guerrilla Marketing",
+      "issue_id": "410",
+      "pr_id": "414",
+      "completed_by": "itsnikhil",
+      "completed_date": "11/3/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Opening Updates",
+      "issue_id": "387",
+      "pr_id": "418",
+      "completed_by": "itsnikhil",
+      "completed_date": "11/3/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "Remove a line in all of our job openings",
+      "issue_id": "395",
+      "pr_id": "419",
+      "completed_by": "itsnikhil",
+      "completed_date": "11/3/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Junior Python (Django) Developer",
+      "issue_id": "398",
+      "pr_id": "421",
+      "completed_by": "itsnikhil",
+      "completed_date": "11/3/20",
+      "amount_paid": "2500"
     }
   ],
   "kristykjlee": [
@@ -558,6 +688,33 @@
       "completed_by": "lapstjup",
       "completed_date": "10/2/20",
       "amount_paid": "5000"
+    },
+    {
+      "repository": "Website",
+      "title": "[iPhone5/SE] Site moves horizontally",
+      "issue_id": "371",
+      "pr_id": "384",
+      "completed_by": "lapstjup",
+      "completed_date": "11/2/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Senior DevOps Engineer",
+      "issue_id": "394",
+      "pr_id": "416",
+      "completed_by": "lapstjup",
+      "completed_date": "11/3/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Opening's starting content not in focus",
+      "issue_id": "417",
+      "pr_id": "422",
+      "completed_by": "lapstjup",
+      "completed_date": "11/3/20",
+      "amount_paid": "500"
     }
   ],
   "leelatanniru": [
@@ -616,6 +773,46 @@
       "completed_by": "moki298",
       "completed_date": "11/1/20",
       "amount_paid": "500"
+    }
+  ],
+  "rizqyep": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "369",
+      "pr_id": "381",
+      "completed_by": "rizqyep",
+      "completed_date": "11/2/20",
+      "amount_paid": "500"
+    }
+  ],
+  "shahraizali": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "369",
+      "pr_id": "379",
+      "completed_by": "shahraizali",
+      "completed_date": "11/2/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "While Editing nickname duplicate name should not be accepted",
+      "issue_id": "400",
+      "pr_id": "397",
+      "completed_by": "shahraizali",
+      "completed_date": "10/13/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "thenewboston-python",
+      "title": "JSONDecodeError simplejson.decoder in raw_decode",
+      "issue_id": "64",
+      "pr_id": "",
+      "completed_by": "shahraizali",
+      "completed_date": "10/16/20",
+      "amount_paid": "5000"
     }
   ],
   "thesanjeevsharma": [
@@ -712,6 +909,17 @@
       "completed_by": "webdeveloperswj",
       "completed_date": "9/22/20",
       "amount_paid": "5000"
+    }
+  ],
+  "xmac11": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "369",
+      "pr_id": "380",
+      "completed_by": "xmac11",
+      "completed_date": "11/2/20",
+      "amount_paid": "500"
     }
   ]
 }

@@ -1,7 +1,15 @@
+$top-nav-height: 60px;
+$footer-height: 348px;
+
 .Layout {
   $self: &;
   height: 100vh;
   overflow-y: auto;
+  position: relative;
+
+  &__content {
+    min-height: calc(100vh - #{$top-nav-height + $footer-height});
+  }
 
   &__content,
   &__Footer,
@@ -9,7 +17,7 @@
     @media (min-width: 1366px) {
       margin-left: auto;
       margin-right: auto;
-      width: 1366px;
+      max-width: 1366px;
     }
   }
 
@@ -20,5 +28,13 @@
     @media (max-width: 992px) {
       padding: 60px 36px 120px;
     }
+  }
+
+  &__top-nav-wrapper {
+    backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(255, 255, 255, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 1;
   }
 }

@@ -14,6 +14,7 @@
 
   &__SocialMediaLink {
     color: var(--color-white);
+    margin-top: 18px;
 
     &:not(:last-child) {
       margin-right: 18px;
@@ -23,7 +24,7 @@
   &__social-media-links {
     align-items: center;
     display: flex;
-    flex-direction: row;
-    margin-top: 60px;
+    flex-wrap: wrap;
+    margin-top: 42px;
   }
 }

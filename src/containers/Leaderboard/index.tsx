@@ -27,7 +27,7 @@ const timeFilterMap = {
   [Time.all]: null,
 };
 
-const Leaderboard = () => {
+const Leaderboard = (): JSX.Element => {
   const history = useHistory();
   const {repository} = useParams<RepositoryUrlParams>();
   const [repositoryFilter, setRepositoryFilter] = useState<Repository>(repository);
@@ -95,7 +95,7 @@ const Leaderboard = () => {
 
   const renderContributors = () => {
     const contributorsWithTotalEarnings = getContributorsWithTotalEarnings();
-    if (!contributorsWithTotalEarnings.length) return <EmptyPage />;
+    if (!contributorsWithTotalEarnings.length) return <EmptyPage className="Leaderboard__empty-page" />;
     return contributorsWithTotalEarnings
       .sort(sortByNumberKey('total_earnings', 'desc'))
       .map(({account_number, github_avatar_url, github_username, tasks, total_earnings}, index) => (
@@ -114,6 +114,7 @@ const Leaderboard = () => {
   const renderNavLinks = (): ReactNode => {
     return (
       <FlatNavLinks<Repository>
+        className="Leaderboard__left-menu"
         handleOptionClick={handleNavOptionClick}
         options={REPOSITORY_FILTERS}
         selectedOption={repository}
@@ -137,7 +138,7 @@ const Leaderboard = () => {
     <>
       <div className="Leaderboard">
         {renderTopSections()}
-        <div className="Leaderboard__left-menu">{renderNavLinks()}</div>
+        {renderNavLinks()}
         <div className="Leaderboard__contributor-list">{renderContributors()}</div>
       </div>
     </>
