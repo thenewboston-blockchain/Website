@@ -515,5 +515,43 @@
       "Thorough understanding of vulnerability classes (OWASP), how they can be exploited",
       "Knowledge of cryptography, including symmetric & asymmetric ciphers, hash functions, PKI, and certificates"
     ]
+  },
+  {
+    "openingId": "cryptography-security-engineer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "Seeking a Cryptography Security Engineer to help secure our digital currency network.",
+    "payNotes": ["2,800 points/day"],
+    "position": "Cryptography Security Engineer",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Security/privacy reviews of critical digital currency related code, both client-side and server-side",
+      "Reviewing, designing, and implementing cryptographic protocols",
+      "Working on automated tests and fuzzing"
+    ],
+    "technologyRequirements": [
+      "At least 2 years industry work experience in security engineering",
+      "Significant experience in applied cryptography",
+      "Experience in penetration testing and/or security auditing"
+    ]
   }
 ]
