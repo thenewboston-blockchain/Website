@@ -13,9 +13,11 @@ import ChevronLeftIcon from 'mdi-react/ChevronLeftIcon';
 import ChevronRightIcon from 'mdi-react/ChevronRightIcon';
 import ChevronUpIcon from 'mdi-react/ChevronUpIcon';
 import ContentCopyIcon from 'mdi-react/ContentCopyIcon';
+import CurrencyUsdIcon from 'mdi-react/CurrencyUsdIcon';
 import EarthIcon from 'mdi-react/EarthIcon';
 import FacebookIcon from 'mdi-react/FacebookIcon';
 import FileDocumentIcon from 'mdi-react/FileDocumentIcon';
+import ForumIcon from 'mdi-react/ForumIcon';
 import GithubIcon from 'mdi-react/GithubIcon';
 import HumanHandsupIcon from 'mdi-react/HumanHandsupIcon';
 import LinkedinIcon from 'mdi-react/LinkedinIcon';
@@ -45,9 +47,11 @@ export enum IconType {
   chevronRight,
   chevronUp,
   contentCopy,
+  currencyUsd,
   earth,
   facebook,
   fileDocument,
+  forum,
   github,
   humanHandsUp,
   linkedin,
@@ -98,12 +102,16 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
         return <ChevronUpIcon {...iconProps} />;
       case IconType.contentCopy:
         return <ContentCopyIcon {...iconProps} />;
+      case IconType.currencyUsd:
+        return <CurrencyUsdIcon {...iconProps} />;
       case IconType.earth:
         return <EarthIcon {...iconProps} />;
       case IconType.facebook:
         return <FacebookIcon {...iconProps} />;
       case IconType.fileDocument:
         return <FileDocumentIcon {...iconProps} />;
+      case IconType.forum:
+        return <ForumIcon {...iconProps} />;
       case IconType.github:
         return <GithubIcon {...iconProps} />;
       case IconType.humanHandsUp:
