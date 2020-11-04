@@ -2,7 +2,6 @@ import React, {FC, ReactNode, useCallback, useMemo, useState} from 'react';
 import {useParams} from 'react-router-dom';
 
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks} from 'components';
-import {useScrollToTopContainer} from 'hooks';
 import {OpeningCategory, OpeningsUrlParams} from 'types/openings';
 import {getOpenings} from 'utils/data';
 
@@ -14,7 +13,6 @@ const openings = getOpenings();
 
 const OPENING_CATEGORY_FILTERS = [
   OpeningCategory.all,
-  OpeningCategory.accounting,
   OpeningCategory.community,
   OpeningCategory.design,
   OpeningCategory.engineering,
@@ -24,7 +22,6 @@ const OPENING_CATEGORY_FILTERS = [
 const Openings: FC = () => {
   const {openingId: openingIdParam} = useParams<OpeningsUrlParams>();
   const [categoryFilter, setCategoryFilter] = useState<OpeningCategory>(OpeningCategory.all);
-  const openingDetailsContainer = useScrollToTopContainer<HTMLDivElement>([openingIdParam]);
 
   const filteredOpenings = useMemo(
     () =>
@@ -73,9 +70,7 @@ const Openings: FC = () => {
       />
       <div className="Openings__left-menu">{renderCategoryFilter()}</div>
       {openingIdParam ? (
-        <div className="Openings__opening-details" ref={openingDetailsContainer}>
-          {renderOpeningDetails()}
-        </div>
+        <div className="Openings__opening-details">{renderOpeningDetails()}</div>
       ) : (
         <div className="Openings__opening-list">
           <h1 className="Openings__opening-list-heading">Openings</h1>
