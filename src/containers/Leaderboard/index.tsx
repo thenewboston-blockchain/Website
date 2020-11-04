@@ -27,7 +27,7 @@ const timeFilterMap = {
   [Time.all]: null,
 };
 
-const Leaderboard = () => {
+const Leaderboard = (): JSX.Element => {
   const history = useHistory();
   const {repository} = useParams<RepositoryUrlParams>();
   const [repositoryFilter, setRepositoryFilter] = useState<Repository>(repository);

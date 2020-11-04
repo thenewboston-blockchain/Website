@@ -1,26 +1,4 @@
 {
-  "22": [
-    {
-      "repository": "thenewboston-python",
-      "title": "JSONDecodeError simplejson.decoder in raw_decode",
-      "issue_id": "shahraizali",
-      "pr_id": "",
-      "completed_by": "22",
-      "completed_date": "10/16/20",
-      "amount_paid": "5000"
-    }
-  ],
-  "397": [
-    {
-      "repository": "Account-Manager",
-      "title": "While Editing nickname duplicate name should not be accepted",
-      "issue_id": "shahraizali",
-      "pr_id": "400",
-      "completed_by": "397",
-      "completed_date": "10/13/20",
-      "amount_paid": "2500"
-    }
-  ],
   "DucPhamTV": [
     {
       "repository": "Website",
@@ -627,6 +605,15 @@
       "completed_by": "lapstjup",
       "completed_date": "10/2/20",
       "amount_paid": "5000"
+    },
+    {
+      "repository": "Website",
+      "title": "[iPhone5/SE] Site moves horizontally",
+      "issue_id": "371",
+      "pr_id": "384",
+      "completed_by": "lapstjup",
+      "completed_date": "11/2/20",
+      "amount_paid": "500"
     }
   ],
   "leelatanniru": [
@@ -707,6 +694,24 @@
       "completed_by": "shahraizali",
       "completed_date": "11/2/20",
       "amount_paid": "500"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "While Editing nickname duplicate name should not be accepted",
+      "issue_id": "400",
+      "pr_id": "397",
+      "completed_by": "shahraizali",
+      "completed_date": "10/13/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "thenewboston-python",
+      "title": "JSONDecodeError simplejson.decoder in raw_decode",
+      "issue_id": "64",
+      "pr_id": "",
+      "completed_by": "shahraizali",
+      "completed_date": "10/16/20",
+      "amount_paid": "5000"
     }
   ],
   "thesanjeevsharma": [
