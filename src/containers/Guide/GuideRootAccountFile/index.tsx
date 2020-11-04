@@ -8,8 +8,8 @@ const GuideRootAccountFile: FC = () => {
   return (
     <DocContainer className="GuideRootAccountFile" title="Root Account File">
       <p>
-        The root account file is a historic snapshot of all account balances at a given point in time. Every validator
-        in the network, both primary and confirmation validators, generate and maintain their own root account file.
+        The root account file is a historic snapshot of all account balances at a given coin in time. Every validator in
+        the network, both primary and confirmation validators, generate and maintain their own root account file.
         Different validators may have different account files depending on when the snapshot was taken (which is usually
         when the node first comes online). However, given the architecture of the blockchain, all other nodes in the
         network can download and verify all validator account files regardless of when the snapshot was taken.
@@ -82,7 +82,7 @@ const GuideRootAccountFile: FC = () => {
         Unfortunately, the bank has not updated its database in years and is only able to store up to two rows in the
         transaction table; it's a very primitive economy after all. The historical log of the first transaction is lost,
         and Bucky never wrote it down. However, since Bucky had already verified the first transaction and also made a
-        copy of the account file at that point in time, he does not need to view the first transaction again to ensure
+        copy of the account file at that coin in time, he does not need to view the first transaction again to ensure
         that the economy is still fair. In fact, even if Bucky did have a record of the first transaction, he would not
         use it because there is simply no use for it. If Bucky wants to verify the current account balances, the logic
         is simple.

@@ -258,8 +258,8 @@ const LeftMenu: FC = () => {
       </DocSubSection>
       <DocSubSection id={StyleGuideCssNav.blocksElements} title="Blocks vs. Elements">
         <p>
-          One of the pain-points of <DocInlineCode>BEM</DocInlineCode> is the ambiguity of the distinction between
-          Blocks and Elements. In order to keep it simple, this is the rule we are going to follow:
+          One of the pain-coins of <DocInlineCode>BEM</DocInlineCode> is the ambiguity of the distinction between Blocks
+          and Elements. In order to keep it simple, this is the rule we are going to follow:
         </p>
         <DocList variant="ul">
           <li>
@@ -356,12 +356,12 @@ const LeftMenu: FC = () => {
         <p>
           One note about above: you should only introduce one level of new blocks for a given component. If you need to
           use 2-level or more nested blocks within a given component, the component is (probably) better off being
-          separated into multiple components. This point probably deserves a new section:
+          separated into multiple components. This coin probably deserves a new section:
         </p>
       </DocSubSection>
       <DocSubSection id={StyleGuideCssNav.blocksSassNesting} title="Blocks and level of SASS Nesting">
         <p>
-          Continuing on with the previous point, each component should have at most one level of nested{' '}
+          Continuing on with the previous coin, each component should have at most one level of nested{' '}
           <DocInlineCode>blocks</DocInlineCode> within it's root DOM element. Ideally, if the component is small enough,
           it doesn't need any blocks, but this is not always realistic. This is to ensure we don't have selectors within
           our SCSS that have too high of a specificity.

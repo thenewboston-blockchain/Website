@@ -14,7 +14,7 @@ const GuideConfirmationServices: FC = () => {
         Confirmation validators are able to provide confirmation services to all banks in the network. These services
         are offered at a time based rate, which is determined by the confirmation validators themselves. Confirmation
         services are the confirmation validators method of confirming/re-validating blocks from the primary validator.
-        An example rate that a confirmation validator might give to the banks may be "100 points per week". When a bank
+        An example rate that a confirmation validator might give to the banks may be "100 coins per week". When a bank
         wishes to purchase confirmation services, the bank will send a transaction to the confirmation validator's
         account for an amount based on the length of time they wish to purchase.
       </p>
@@ -37,7 +37,7 @@ const GuideConfirmationServices: FC = () => {
         <li>Begin forwarding confirmation blocks to that bank</li>
         <ul>
           <li>
-            The amount of time this will continue for is based on the current rate of the validator and how many points
+            The amount of time this will continue for is based on the current rate of the validator and how many coins
             the bank spent.
           </li>
         </ul>
