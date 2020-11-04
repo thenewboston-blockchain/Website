@@ -1,5 +1,162 @@
 [
   {
+    "openingId": "marketing-guerrilla-head",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "facebook"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Marketing",
+    "description": "We are looking for a Head of Guerrilla Marketing to help grow our project. The ideal candidate must have a proven success record of developing, implementing, tracking and optimizing digital marketing strategies for our digital currency network. Experience working with actual gorillas not required (but preferred).",
+    "payNotes": ["2,800 points/day"],
+    "position": "Head of Guerrilla Marketing",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Concept, plan, and execute marketing initiatives",
+      "Build awareness of our digital currency",
+      "Design, build, and maintain our social media presence",
+      "Measure and report performance of all digital marketing campaigns"
+    ],
+    "technologyRequirements": [
+      "Experience in digital marketing",
+      "Basic graphic design skills"
+    ]
+  },
+  {
+    "openingId": "community-youtube-educator",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "facebook"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Community",
+    "description": "We are looking for YouTube Educators with technology, programming, or cryptocurrency related channels to collaborate with thenewboston",
+    "payNotes": ["2,800 points/day"],
+    "position": "YouTube Educator",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Create high quality educational tutorials",
+      "Listen to feedback from community on which topics they would like to see most",
+      "Optimize titles, descriptions, and tags for optimal SEO"
+    ],
+    "technologyRequirements": [
+      "YouTube channel with 1,000+ subscribers",
+      "YouTube channel related to technology, programming, or cryptocurrency"
+    ]
+  },
+  {
+    "openingId": "engineering-blockchain-research",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "Looking for a Blockchain Cryptocurrency Researcher who has the ability to proactively identify strategic opportunities and research new developments related to cryptocurrency. The candidate should have a deep understanding of computer science, distributed systems, consensus algorithms, networking, and other relevant fields to blockchain technology.",
+    "payNotes": ["2,800 points/day"],
+    "position": "Blockchain Cryptocurrency Researcher",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Researching emerging trends and identifying non-obvious opportunities",
+      "Working closely with technical teams on their crypto-economic model and other questions that come up around protocols and software",
+      "Work on designing and improving our core protocol architecture"
+    ],
+    "technologyRequirements": [
+      "Solid understanding of cryptography, crypto-economics, and blockchain technologies",
+      "Ability to identify unconventional trends and emerging technologies",
+      "An open minded research approach and genuine intellectual curiosity"
+    ]
+  },
+  {
+    "openingId": "engineering-client-library-head",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "As Head of Python Client Library Development you will be responsible for leading the development efforts for our Python client library.",
+    "payNotes": ["2,800 points/day"],
+    "position": "Head of Python Client Library Development",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Writing technical documentation",
+      "Recruiting Python developers",
+      "Help assist other developers while managing work between team members",
+      "Respond to GitHub issues and review PR's"
+    ],
+    "technologyRequirements": [
+      "2+ years of experience in Python",
+      "Experience with Python web frameworks, ideally Django"
+    ]
+  },
+  {
     "openingId": "design-uxui",
     "applicationMethods": [
       {
@@ -20,9 +177,9 @@
       }
     ],
     "category": "Design",
-    "description": "We're looking for an experienced UI/UX designer who wants to be a part of designing the future of digital currency. You will lead a team of junior designers and be a part of designing the responsive desktop app, mobile app, and the responsive marketing site.",
+    "description": "We're looking for an experienced UI/UX designer who wants to be a part of designing the future of digital currency. You will work with a team of designers responsible for designing responsive desktop app, mobile app, and the marketing site.",
     "payNotes": ["2,800 points/day"],
-    "position": "UI/UX Design Lead",
+    "position": "UI/UX Designer",
     "reportsTo": [
       {
         "githubUsername": "kristykjlee",
@@ -37,7 +194,7 @@
       "Identify and troubleshoot UX problems (e.g. responsiveness)",
       "Conduct layout adjustments based on user feedback"
     ],
-    "technologyRequirements": ["Figma"]
+    "technologyRequirements": ["Figma or Sketch"]
   },
   {
     "openingId": "community-product-manager",
@@ -128,83 +285,6 @@
     ]
   },
   {
-    "openingId": "community-hiring-manager",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Bucky or Kristy"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "facebook"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
-      }
-    ],
-    "category": "Community",
-    "description": "Looking for a Hiring Manager to help grow our team. We are a rapidly growing community and are looking for an individual who can identify areas where new team members are needed and also manage incoming applicants.",
-    "payNotes": ["2,800 points/day"],
-    "position": "Hiring Manager",
-    "reportsTo": [
-      {
-        "githubUsername": "buckyroberts",
-        "name": "Bucky"
-      }
-    ],
-    "responsibilities": [
-      "Create accurate and detailed job descriptions to attract the best candidates",
-      "Define the roles and responsibilities for new openings",
-      "Serve as the point person during the application and interview process"
-    ],
-    "technologyRequirements": ["LinkedIn account", "Background in technology"]
-  },
-  {
-    "openingId": "engineering-accounting-manager",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Bucky or Kristy"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "facebook"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
-      }
-    ],
-    "category": "Accounting",
-    "description": "We are looking for an Accounting Manager to be responsible for sending payments to all contributors on a weekly basis, as well as sending daily reward payments for all tasks completed by developers.",
-    "payNotes": ["2,800 points/day"],
-    "position": "Accounting Manager (Python)",
-    "reportsTo": [
-      {
-        "githubUsername": "buckyroberts",
-        "name": "Bucky"
-      }
-    ],
-    "responsibilities": [
-      "Maintain a clear, publicly auditable history of all payments sent",
-      "Send out payments daily",
-      "Improve payment systems and procedures",
-      "Work with the development team to build new accounting tools, scripts, and features",
-      "Provide suggestions on how to automate repetitive tasks to improve reliability and consistency",
-      "High attention to detail and accuracy"
-    ],
-    "technologyRequirements": ["Experience with the Account Manager desktop application (training provided)"]
-  },
-  {
     "openingId": "marketing-director",
     "applicationMethods": [
       {
@@ -246,37 +326,6 @@
     ]
   },
   {
-    "openingId": "community-slack-manager",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Kristy or Bucky"
-      }
-    ],
-    "category": "Community",
-    "description": "We are looking for a Slack Community Manager to help provide guidance to any new users who join our Slack channel. As the community grows as we approach release (and especially after) there will be more users joining our Slack who will need assistance and help with questions about contributing, the project, and the community.",
-    "payNotes": ["2,800 points/day"],
-    "position": "Slack Community Manager",
-    "reportsTo": [
-      {
-        "githubUsername": "kristykjlee",
-        "name": "Kristy"
-      }
-    ],
-    "responsibilities": [
-      "Greet new users to ensure they feel welcomed",
-      "Guide new users to the correct rooms, tutorials, documentation, etc... based on what they are looking for",
-      "Answer questions from users regarding the technology, terminology, as well as guidance on how to contribute",
-      "Participate in community discussions",
-      "Post frequently regarding project updates",
-      "Create new rooms as needed"
-    ],
-    "technologyRequirements": [
-      "Slack account",
-      "Familiarity with the website and documentation (to provide to new users as needed)"
-    ]
-  },
-  {
     "openingId": "community-reddit-moderator",
     "applicationMethods": [
       {
@@ -303,6 +352,46 @@
     "technologyRequirements": [
       "Reddit account",
       "Understanding of Blockchain technology and our project to better assist users with their questions"
+    ]
+  },
+  {
+    "openingId": "senior-devops-engineer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "As Senior DevOps Engineer you will be a key contributor to designing, building, testing, managing, and maintaining some of the key technology that powers our digital currency network.",
+    "payNotes": ["2,800 points/day"],
+    "position": "Senior DevOps Engineer",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Analyze, troubleshoot and resolve system, software, network, and storage failures",
+      "Configure, test, deploy, and upgrade software for production services in AWS",
+      "Author and recommend settings for applications, operating systems, networks, and cloud services to improve performance, security, and reliability",
+      "Design and develop monitoring and 100% uptime solutions for our digital currency network"
+    ],
+    "technologyRequirements": [
+      "3+ years experience with both software engineering and sysops or 6+ years experience as a DevOps engineer or similar",
+      "Extensive experience with cloud computing and virtualization",
+      "Expert knowledge of Linux",
+      "Proven understanding of networking (TCP/IP, DNS, etc)"
     ]
   },
   {
