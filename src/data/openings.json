@@ -1,4 +1,4 @@
-[ 
+[
   {
     "openingId": "engineering-backend-junior-python-dev",
     "applicationMethods": [
@@ -74,10 +74,7 @@
       "Design, build, and maintain our social media presence",
       "Measure and report performance of all digital marketing campaigns"
     ],
-    "technologyRequirements": [
-      "Experience in digital marketing",
-      "Basic graphic design skills"
-    ]
+    "technologyRequirements": ["Experience in digital marketing", "Basic graphic design skills"]
   },
   {
     "openingId": "community-youtube-educator",
@@ -435,5 +432,191 @@
       "Experience in mobile development",
       "Knowledge of App Store distribution (for both Android and iOS)"
     ]
+  },
+  {
+    "openingId": "cloud-security-engineer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "Seeking a Cloud Security Engineer to provide cyber security expertise in the analysis, assessment, development, and evaluation of security solutions and architectures to secure applications, operating systems, databases, and networks.",
+    "payNotes": ["2,800 points/day"],
+    "position": "Cloud Security Engineer",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Develops standards, policies and procedures as well as best practices documentation",
+      "Provides Info security architecture & systems engineering consulting to other IT and business teams",
+      "Supports the monitoring and maintaining network security suite of tools",
+      "Identify new security threats by conducting continual monitoring, penetration testing, vulnerability assessments and log analysis"
+    ],
+    "technologyRequirements": [
+      "Minimum of 5-7 years of IT Security and/or security engineering experience",
+      "Expert knowledge of Cloud infrastructure, security architectures, and standards",
+      "Deep technical knowledge of AWS",
+      "Security certification desired (e.g., CISSP, GIAC, CEH, etc)"
+    ]
+  },
+  {
+    "openingId": "python-security-engineer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "As Python Security Engineer you'll be a key member of the security team. You'll be responsible for influencing engineering to adopt security and privacy by design and internal consulting on remediating security vulnerabilities.",
+    "payNotes": ["2,800 points/day"],
+    "position": "Python Security Engineer",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Help harden our infrastructure to avoid exploits and privilege escalation",
+      "Perform architecture reviews as part of product security process",
+      "Contribute to threat modeling and security risk assessments",
+      "Manage and implement security in assigned products"
+    ],
+    "technologyRequirements": [
+      "3+ years of experience in penetrating testing, including mobile & web applications",
+      "Experience with conducting threat assessments, building threat models, and creating remediation plans based on the results of threat assessments",
+      "Thorough understanding of vulnerability classes (OWASP), how they can be exploited",
+      "Knowledge of cryptography, including symmetric & asymmetric ciphers, hash functions, PKI, and certificates"
+    ]
+  },
+  {
+    "openingId": "cryptography-security-engineer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "Seeking a Cryptography Security Engineer to help secure our digital currency network.",
+    "payNotes": ["2,800 points/day"],
+    "position": "Cryptography Security Engineer",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Security/privacy reviews of critical digital currency related code, both client-side and server-side",
+      "Reviewing, designing, and implementing cryptographic protocols",
+      "Working on automated tests and fuzzing"
+    ],
+    "technologyRequirements": [
+      "At least 2 years industry work experience in security engineering",
+      "Significant experience in applied cryptography",
+      "Experience in penetration testing and/or security auditing"
+    ]
+  },
+  {
+    "openingId": "recruiter-youtube-educators",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Community",
+    "description": "Seeking a Recruiter for YouTube Educators who is able to recruit technology, programming, or cryptocurrency related YouTubers. You will be reaching out regarding collaboration with thenewboston as we continue to provide free high quality educational videos for the world.",
+    "payNotes": ["2,800 points/day"],
+    "position": "Recruiter for YouTube Educators",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Designing and implementing the overall recruiting strategy",
+      "Sourcing and attracting content creators through YouTube and other social media"
+    ],
+    "technologyRequirements": ["A computer"]
+  },
+  {
+    "openingId": "recruiter-cryptocurrency-partnerships",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Community",
+    "description": "Seeking a Recruiter for Cryptocurrency Partnerships as we continue to strategically grow our digital currency network.",
+    "payNotes": ["2,800 points/day"],
+    "position": "Recruiter for Cryptocurrency Partnerships",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Reaching out to other cryptocurrency related websites, businesses, and communities regarding strategic partnerships",
+      "Joining cryptocurrency related communities and discussions",
+      "Researching trends and offering suggestions on any areas that you feel would be beneficial to our community",
+      "Designing and implementing the overall recruiting strategy"
+    ],
+    "technologyRequirements": ["Strong understanding of cryptocurrency and blockchain technology"]
   }
 ]

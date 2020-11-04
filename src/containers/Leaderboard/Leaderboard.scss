@@ -16,10 +16,13 @@
     padding-bottom: 48px;
   }
 
+  &__empty-page {
+    margin-bottom: 48px;
+  }
+
   &__left-menu {
     grid-column: 1 / span 1;
-    grid-row: 1 / span 2;
-    overflow-y: auto;
+    grid-row: 1 / -1;
   }
 
   &__TimeFilter {
