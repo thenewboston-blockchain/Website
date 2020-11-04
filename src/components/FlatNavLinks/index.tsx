@@ -9,7 +9,7 @@ interface ComponentProps<T> {
   selectedOption: T;
 }
 
-function FlatNavLinks<T = string>({handleOptionClick, options, selectedOption}: ComponentProps<T>) {
+function FlatNavLinks<T = string>({handleOptionClick, options, selectedOption}: ComponentProps<T>): JSX.Element {
   const renderOptions = () => {
     return options.map((option) => (
       <div
