@@ -95,7 +95,7 @@ const Leaderboard = (): JSX.Element => {
 
   const renderContributors = () => {
     const contributorsWithTotalEarnings = getContributorsWithTotalEarnings();
-    if (!contributorsWithTotalEarnings.length) return <EmptyPage />;
+    if (!contributorsWithTotalEarnings.length) return <EmptyPage className="Leaderboard__empty-page" />;
     return contributorsWithTotalEarnings
       .sort(sortByNumberKey('total_earnings', 'desc'))
       .map(({account_number, github_avatar_url, github_username, tasks, total_earnings}, index) => (
@@ -114,6 +114,7 @@ const Leaderboard = (): JSX.Element => {
   const renderNavLinks = (): ReactNode => {
     return (
       <FlatNavLinks<Repository>
+        className="Leaderboard__left-menu"
         handleOptionClick={handleNavOptionClick}
         options={REPOSITORY_FILTERS}
         selectedOption={repository}
@@ -137,7 +138,7 @@ const Leaderboard = (): JSX.Element => {
     <>
       <div className="Leaderboard">
         {renderTopSections()}
-        <div className="Leaderboard__left-menu">{renderNavLinks()}</div>
+        {renderNavLinks()}
         <div className="Leaderboard__contributor-list">{renderContributors()}</div>
       </div>
     </>
