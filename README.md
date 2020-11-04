@@ -33,7 +33,7 @@ completely unrelated topics.
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any
 contributions you make are **greatly appreciated**.
 
-To start, you can always check the [open issues](https://github.com/thenewboston-developers/Website/issues) in this repository. You can filter issues using the labels and find the ones that suit your domain. Mostly, you'll see issues labeled with the coins you'll get, if you fix that particular issue.
+To start, you can always check the [open issues](https://github.com/thenewboston-developers/Website/issues) in this repository. You can filter issues using the labels and find the ones that suit your domain. Mostly, you'll see issues labeled with the coins you'll get, if you fix that particular issue. Earning coins improves your rank on the [leaderboard](https://thenewboston.com/leaderboard/All).
 
 Before starting, add a comment to let others know that you'll be working on that issue.
 
@@ -55,6 +55,10 @@ Next steps:
 For further help, you can checkout the [FAQs](https://thenewboston.com/faq).
 
 Finally, feel free to shoot any queries or suggestions. Don't hesitate. ;)
+
+Thanks to these amazing people:
+
+[![](https://sourcerer.io/fame/angle943/thenewboston-developers/Website/images/0)](https://sourcerer.io/fame/angle943/thenewboston-developers/Website/links/0)[![](https://sourcerer.io/fame/angle943/thenewboston-developers/Website/images/1)](https://sourcerer.io/fame/angle943/thenewboston-developers/Website/links/1)[![](https://sourcerer.io/fame/angle943/thenewboston-developers/Website/images/2)](https://sourcerer.io/fame/angle943/thenewboston-developers/Website/links/2)[![](https://sourcerer.io/fame/angle943/thenewboston-developers/Website/images/3)](https://sourcerer.io/fame/angle943/thenewboston-developers/Website/links/3)[![](https://sourcerer.io/fame/angle943/thenewboston-developers/Website/images/4)](https://sourcerer.io/fame/angle943/thenewboston-developers/Website/links/4)[![](https://sourcerer.io/fame/angle943/thenewboston-developers/Website/images/5)](https://sourcerer.io/fame/angle943/thenewboston-developers/Website/links/5)[![](https://sourcerer.io/fame/angle943/thenewboston-developers/Website/images/6)](https://sourcerer.io/fame/angle943/thenewboston-developers/Website/links/6)[![](https://sourcerer.io/fame/angle943/thenewboston-developers/Website/images/7)](https://sourcerer.io/fame/angle943/thenewboston-developers/Website/links/7)
 
 ## Getting Started
 
