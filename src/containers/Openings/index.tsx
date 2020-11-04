@@ -34,7 +34,10 @@ const Openings: FC = () => {
     [categoryFilter],
   );
 
-  const opening = useMemo(() => openings.find(({openingId}) => openingId === openingIdParam) || null, [openingIdParam]);
+  const opening = useMemo(
+    () => openings.find(({category, openingId}) => category === categoryParam && openingId === openingIdParam) || null,
+    [categoryParam, openingIdParam],
+  );
 
   const handleNavOptionClick = useCallback(
     (option: OpeningCategory) => (): void => {
