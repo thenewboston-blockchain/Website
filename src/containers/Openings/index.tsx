@@ -1,5 +1,5 @@
-import React, {FC, ReactNode, useCallback, useMemo, useState} from 'react';
-import {useParams} from 'react-router-dom';
+import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'react';
+import {useHistory, useParams} from 'react-router-dom';
 
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks} from 'components';
 import {OpeningCategory, OpeningsUrlParams} from 'types/openings';
@@ -20,8 +20,13 @@ const OPENING_CATEGORY_FILTERS = [
 ];
 
 const Openings: FC = () => {
-  const {openingId: openingIdParam} = useParams<OpeningsUrlParams>();
+  const history = useHistory();
+  const {category: categoryParam, openingId: openingIdParam} = useParams<OpeningsUrlParams>();
   const [categoryFilter, setCategoryFilter] = useState<OpeningCategory>(OpeningCategory.all);
+
+  useEffect(() => {
+    setCategoryFilter(categoryParam);
+  }, [categoryParam]);
 
   const filteredOpenings = useMemo(
     () =>
@@ -33,9 +38,9 @@ const Openings: FC = () => {
 
   const handleNavOptionClick = useCallback(
     (option: OpeningCategory) => (): void => {
-      setCategoryFilter(option);
+      history.push(`/openings/${option}`);
     },
-    [setCategoryFilter],
+    [history],
   );
 
   const renderCategoryFilter = (): ReactNode => {

@@ -63,7 +63,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
           description="Join the team building the app"
           iconType={IconType.humanHandsUp}
           title="Openings"
-          to="/openings"
+          to="/openings/All"
         />
         <TopNavPopoverItem
           closePopover={unsetCommunityAnchorEl}
