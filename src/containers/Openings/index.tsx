@@ -1,5 +1,5 @@
-import React, {FC, ReactNode, useCallback, useMemo, useState} from 'react';
-import {useParams} from 'react-router-dom';
+import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'react';
+import {useHistory, useParams} from 'react-router-dom';
 
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks} from 'components';
 import {OpeningCategory, OpeningsUrlParams} from 'types/openings';
@@ -20,8 +20,13 @@ const OPENING_CATEGORY_FILTERS = [
 ];
 
 const Openings: FC = () => {
-  const {openingId: openingIdParam} = useParams<OpeningsUrlParams>();
+  const history = useHistory();
+  const {category: categoryParam, openingId: openingIdParam} = useParams<OpeningsUrlParams>();
   const [categoryFilter, setCategoryFilter] = useState<OpeningCategory>(OpeningCategory.all);
+
+  useEffect(() => {
+    setCategoryFilter(categoryParam);
+  }, [categoryParam]);
 
   const filteredOpenings = useMemo(
     () =>
@@ -29,13 +34,16 @@ const Openings: FC = () => {
     [categoryFilter],
   );
 
-  const opening = useMemo(() => openings.find(({openingId}) => openingId === openingIdParam) || null, [openingIdParam]);
+  const opening = useMemo(
+    () => openings.find(({category, openingId}) => category === categoryParam && openingId === openingIdParam) || null,
+    [categoryParam, openingIdParam],
+  );
 
   const handleNavOptionClick = useCallback(
     (option: OpeningCategory) => (): void => {
-      setCategoryFilter(option);
+      history.push(`/openings/${option}`);
     },
-    [setCategoryFilter],
+    [history],
   );
 
   const renderCategoryFilter = (): ReactNode => {
@@ -50,8 +58,14 @@ const Openings: FC = () => {
 
   const renderOpenings = (): ReactNode => {
     if (!filteredOpenings.length) return <EmptyPage />;
-    return filteredOpenings.map(({description, openingId, position}) => (
-      <OpeningsOpening description={description} key={position} openingId={openingId} position={position} />
+    return filteredOpenings.map(({category, description, openingId, position}) => (
+      <OpeningsOpening
+        category={category}
+        description={description}
+        key={position}
+        openingId={openingId}
+        position={position}
+      />
     ));
   };
 
