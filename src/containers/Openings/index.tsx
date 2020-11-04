@@ -55,8 +55,14 @@ const Openings: FC = () => {
 
   const renderOpenings = (): ReactNode => {
     if (!filteredOpenings.length) return <EmptyPage />;
-    return filteredOpenings.map(({description, openingId, position}) => (
-      <OpeningsOpening description={description} key={position} openingId={openingId} position={position} />
+    return filteredOpenings.map(({category, description, openingId, position}) => (
+      <OpeningsOpening
+        category={category}
+        description={description}
+        key={position}
+        openingId={openingId}
+        position={position}
+      />
     ));
   };
 
