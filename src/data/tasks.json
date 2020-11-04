@@ -66,6 +66,15 @@
       "completed_by": "Niekon01",
       "completed_date": "9/21/20",
       "amount_paid": "5000"
+    },
+    {
+      "repository": "Website",
+      "title": "[Laptop Devices] Site is not responsive moves horizontally",
+      "issue_id": "366",
+      "pr_id": "435",
+      "completed_by": "Niekon01",
+      "completed_date": "11/3/20",
+      "amount_paid": "1000"
     }
   ],
   "aayushi14": [
@@ -142,6 +151,15 @@
       "completed_by": "amarjeet987",
       "completed_date": "11/3/20",
       "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Rename 'Points' to 'Coins'",
+      "issue_id": "438",
+      "pr_id": "442",
+      "completed_by": "amarjeet987",
+      "completed_date": "11/4/20",
+      "amount_paid": "7500"
     }
   ],
   "angle943": [
@@ -224,6 +242,24 @@
       "pr_id": "359",
       "completed_by": "angle943",
       "completed_date": "11/1/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Vertical scrollbar appearing in left menu",
+      "issue_id": "423",
+      "pr_id": "436",
+      "completed_by": "angle943",
+      "completed_date": "11/3/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Overlapping of text on top of expanded navbar",
+      "issue_id": "437",
+      "pr_id": "439",
+      "completed_by": "angle943",
+      "completed_date": "11/3/20",
       "amount_paid": "500"
     }
   ],
@@ -715,6 +751,15 @@
       "completed_by": "lapstjup",
       "completed_date": "11/3/20",
       "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "iPhone clicking on top of the iphone doesn't scroll the website up",
+      "issue_id": "402",
+      "pr_id": "443",
+      "completed_by": "lapstjup",
+      "completed_date": "11/4/20",
+      "amount_paid": "2500"
     }
   ],
   "leelatanniru": [
@@ -860,6 +905,24 @@
       "completed_by": "thesanjeevsharma",
       "completed_date": "10/30/20",
       "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "Update our README.md",
+      "issue_id": "420",
+      "pr_id": "424",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "11/4/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "Website",
+      "title": "Opening Left Menu Logic",
+      "issue_id": "388",
+      "pr_id": "444",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "11/4/20",
+      "amount_paid": "10000"
     }
   ],
   "tpikachu": [

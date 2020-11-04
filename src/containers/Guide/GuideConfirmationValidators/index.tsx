@@ -20,7 +20,7 @@ const GuideConfirmationValidators: FC = () => {
       <DocList variant="ul">
         <li>Root account file</li>
         <ul>
-          <li>This is the flattened representation of all account balances at a given point in time</li>
+          <li>This is the flattened representation of all account balances at a given coin in time</li>
         </ul>
         <li>Root account file hash</li>
         <ul>
@@ -119,7 +119,7 @@ const GuideConfirmationValidators: FC = () => {
         since this will help the primary validator's trust level remain high among all banks.
       </p>
       <p>
-        Given that confirmation validators do not earn points through transaction fees like the primary validator, the
+        Given that confirmation validators do not earn coins through transaction fees like the primary validator, the
         incentive for individuals to deploy and maintain confirmation validators is achieved through separate means.
         Confirmation validators provide confirmation services which can be purchased by banks. This topic will be
         discussed in more detail in the following section.

@@ -3,8 +3,6 @@ $footer-height: 348px;
 
 .Layout {
   $self: &;
-  height: 100vh;
-  overflow-y: auto;
   position: relative;
 
   &__content {
@@ -17,7 +15,7 @@ $footer-height: 348px;
     @media (min-width: 1366px) {
       margin-left: auto;
       margin-right: auto;
-      width: 1366px;
+      max-width: 1366px;
     }
   }
 

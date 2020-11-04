@@ -41,12 +41,12 @@ const GuideInitialFunds: FC = () => {
       <DocList variant="ol">
         <li>
           The ledger will be initialized with a single account belonging to the Treasury with a value of
-          281,474,976,710,656 (2^48) points.
+          281,474,976,710,656 (2^48) coins.
         </li>
         <li>
           As new developers join the GitHub organization, their GitHub accounts will be inspected to ensure certain
           criteria is met. If and when all criteria is met, users will receive their initial funds (often referred to as
-          "seed funds") of 4,096 (2^12) points. The criteria for receiving seed funds through ownership of a GitHub
+          "seed funds") of 4,096 (2^12) coins. The criteria for receiving seed funds through ownership of a GitHub
           account is as follows:
         </li>
         <ol type="a">
@@ -88,7 +88,7 @@ const GuideInitialFunds: FC = () => {
         <li>
           Additional seed funds will be awarded to any users that contribute to the network through the creation of a
           bank. When the following criteria regarding a bank node is met, owners of the bank will receive funds of
-          65,536 (2^16) points. These funds will act as an incentive for any individuals that help create the initial
+          65,536 (2^16) coins. These funds will act as an incentive for any individuals that help create the initial
           decentralized network, as well as reflect the additional amount of effort and cost necessary to deploy and
           maintain servers. The criteria for receiving seed funds through the creation of a trusted bank node as well as
           distribution details is as follows:
@@ -111,12 +111,12 @@ const GuideInitialFunds: FC = () => {
           <ol type="i">
             <li>This will ensure that banks nodes are not terminated immediately after receiving their funds</li>
           </ol>
-          <li>The distribution schedule of the entire 65,536 (216) point bank seed funds are as follows:</li>
+          <li>The distribution schedule of the entire 65,536 (216) coin bank seed funds are as follows:</li>
           <ol type="i">
-            <li>At the end of the first week, the bank will receive 8,192 points.</li>
-            <li>At the end of the second week, the bank will receive an additional 8,192 points.</li>
-            <li>At the end of the third week, the bank will receive 16,384 points.</li>
-            <li>At the end of the fourth week, the bank will receive 32,768 points.</li>
+            <li>At the end of the first week, the bank will receive 8,192 coins.</li>
+            <li>At the end of the second week, the bank will receive an additional 8,192 coins.</li>
+            <li>At the end of the third week, the bank will receive 16,384 coins.</li>
+            <li>At the end of the fourth week, the bank will receive 32,768 coins.</li>
           </ol>
           <li>
             Note that trusted banks must maintain their trust level throughout the four weeks to remain eligible for
@@ -129,7 +129,7 @@ const GuideInitialFunds: FC = () => {
           <ol type="i">
             <li>
               There is also the inherit incentive of helping the network, given the more efficient the network, the more
-              valuable the underlying points
+              valuable the underlying coins
             </li>
           </ol>
         </ol>
@@ -157,7 +157,7 @@ const GuideInitialFunds: FC = () => {
         for their actions. Any attempt to use the Treasury for personal gain would result in the immediate loss, both in
         terms of trust and value, of the entire network. It is also advised that any accusations of dishonest behavior
         by the Treasury be personally verified by all users on the network. This will prevent malicious individuals from
-        attempting to manipulate the price or underlying value of points through the spread of misleading information or
+        attempting to manipulate the price or underlying value of coins through the spread of misleading information or
         false accusations. Until the final Treasury funds are distributed, this will be the most important role of all
         users on the network.
       </p>
@@ -166,18 +166,18 @@ const GuideInitialFunds: FC = () => {
         will never be sent directly from the Treasury account. This is because the signing key for the Treasury account
         is never stored on a traditional account manager (such as a laptop or a mobile phone app) but rather stored
         using a non-traditional yet highly secure method. However, since an account's signing key is needed to allow for
-        the sending of points via a signed transaction, the Treasury will instead deposit limited amounts of points into
-        a trusted account on an as-needed basis. Those points will then be further distributed to others. All
-        transactions from the Treasury to trusted accounts, as well as transactions from those trusted accounts to
-        others, will be documented via transaction descriptions which are visible to the public.
+        the sending of coins via a signed transaction, the Treasury will instead deposit limited amounts of coins into a
+        trusted account on an as-needed basis. Those coins will then be further distributed to others. All transactions
+        from the Treasury to trusted accounts, as well as transactions from those trusted accounts to others, will be
+        documented via transaction descriptions which are visible to the public.
       </p>
 
       <DocImage alt="treasury" maxWidth={640} src={Treasury} />
 
       <p>
         After the Treasury account has distributed all initial funds, the purpose of the Treasury will cease to exist.
-        There will be no additional Treasury funds ever created. All future points will be created solely through
-        interest earned on already existing points (more on interest in the Future Development section).
+        There will be no additional Treasury funds ever created. All future coins will be created solely through
+        interest earned on already existing coins (more on interest in the Future Development section).
       </p>
     </DocContainer>
   );

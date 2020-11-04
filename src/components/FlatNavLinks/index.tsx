@@ -1,20 +1,29 @@
 import React from 'react';
 import clsx from 'clsx';
 
+import {getCustomClassNames} from 'utils/components';
 import './FlatNavLinks.scss';
 
 interface ComponentProps<T> {
+  className?: string;
   handleOptionClick(option: T): () => void;
   options: T[];
   selectedOption: T;
 }
 
-function FlatNavLinks<T = string>({handleOptionClick, options, selectedOption}: ComponentProps<T>): JSX.Element {
+function FlatNavLinks<T = string>({
+  className,
+  handleOptionClick,
+  options,
+  selectedOption,
+}: ComponentProps<T>): JSX.Element {
   const renderOptions = () => {
     return options.map((option) => (
       <div
         className={clsx('FlatNavLinks__option', {
           'FlatNavLinks__option--active': option === selectedOption,
+          ...getCustomClassNames(className, '__option', true),
+          ...getCustomClassNames(className, '__option--active', option === selectedOption),
         })}
         key={option as any}
         onClick={handleOptionClick(option)}
@@ -26,7 +35,7 @@ function FlatNavLinks<T = string>({handleOptionClick, options, selectedOption}: 
     ));
   };
 
-  return <div className="FlatNavLinks">{renderOptions()}</div>;
+  return <div className={clsx('FlatNavLinks', className)}>{renderOptions()}</div>;
 }
 
 export default FlatNavLinks;
