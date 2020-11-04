@@ -88,7 +88,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
         />
         <TopNavPopoverItem
           closePopover={unsetGetStartedAnchorEl}
-          description="Pick up tasks within GitHub and earn points"
+          description="Pick up tasks within GitHub and earn coins"
           iconSize={28}
           iconType={IconType.github}
           title="Tasks"
