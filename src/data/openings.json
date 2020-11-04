@@ -658,5 +658,42 @@
       "Designing and implementing the overall recruiting strategy"
     ],
     "technologyRequirements": ["Strong understanding of cryptocurrency and blockchain technology"]
+  },
+  {
+    "openingId": "python-django-developer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "We are looking for a Python / Django Developer to help us build out both our digital currency network and Website API.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Python / Django Developer",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Designing and creating RESTful APIs",
+      "Participating in architectural, design and product discussions",
+      "Working in an environment with an excellent team of engineers"
+    ],
+    "technologyRequirements": ["Experience with Celery, DRF, and pytest",
+      "2+ years of experience in Django",
+      "4+ years of experience in Python"
+    ]
   }
 ]
