@@ -1,5 +1,46 @@
 [
   {
+    "openingId": "marketing-guerrilla-head",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "facebook"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Marketing",
+    "description": "We are looking for a Head of Guerrilla Marketing to help grow our project. The ideal candidate must have a proven success record of developing, implementing, tracking and optimizing digital marketing strategies for our digital currency network. Experience working with actual gorillas not required (but preferred).",
+    "payNotes": ["2,800 points/day"],
+    "position": "Head of Guerrilla Marketing",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Concept, plan, and execute marketing initiatives",
+      "Build awareness of our digital currency",
+      "Design, build, and maintain our social media presence",
+      "Measure and report performance of all digital marketing campaigns"
+    ],
+    "technologyRequirements": [
+      "Experience in digital marketing",
+      "Basic graphic design skills"
+    ]
+  },
+  {
     "openingId": "community-youtube-educator",
     "applicationMethods": [
       {
