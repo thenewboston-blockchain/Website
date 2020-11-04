@@ -99,7 +99,7 @@ const getPageData = (chapter: string): PageData => {
 };
 
 const Guide: FC = () => {
-  const {chapter} = useParams();
+  const {chapter} = useParams<{chapter: string}>();
   const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
 
   return (
