@@ -6,7 +6,7 @@ import {Repository} from 'types/github';
 
 import './HomeSteps.scss';
 
-const HomeSteps = () => {
+const HomeSteps = (): JSX.Element => {
   return (
     <div className="HomeSteps">
       <div className="HomeSteps__content-container">
