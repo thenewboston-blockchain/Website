@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {FC} from 'react';
 
 import './EmptyPage.scss';
 
-const EmptyPage = () => {
+const EmptyPage: FC = () => {
   return (
     <div className="EmptyPage">
       <h1>No items to display</h1>
