@@ -1,5 +1,45 @@
 [
   {
+    "openingId": "community-youtube-educator",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "facebook"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Community",
+    "description": "We are looking for YouTube Educators with technology, programming, or cryptocurrency related channels to collaborate with thenewboston",
+    "payNotes": ["2,800 points/day"],
+    "position": "YouTube Educator",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Create high quality educational tutorials",
+      "Listen to feedback from community on which topics they would like to see most",
+      "Optimize titles, descriptions, and tags for optimal SEO"
+    ],
+    "technologyRequirements": [
+      "YouTube channel with 1,000+ subscribers",
+      "YouTube channel related to technology, programming, or cryptocurrency"
+    ]
+  },
+  {
     "openingId": "engineering-blockchain-research",
     "applicationMethods": [
       {
