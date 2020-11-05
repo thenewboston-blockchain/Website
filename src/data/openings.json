@@ -692,7 +692,14 @@
       "Regularly test the applications to make sure there are no issues",
       "Create new issues if there are issues"
     ],
-    "technologyRequirements": ["JavaScript (ES6+)", "React", "Redux", "Typescript", "HTML/CSS", "Experience with Figma (preferred)"]
+    "technologyRequirements": [
+      "JavaScript (ES6+)",
+      "React",
+      "Redux",
+      "Typescript",
+      "HTML/CSS",
+      "Experience with Figma (preferred)"
+    ]
   },
   {
     "openingId": "python-django-developer",
@@ -726,7 +733,8 @@
       "Participating in architectural, design and product discussions",
       "Working in an environment with an excellent team of engineers"
     ],
-    "technologyRequirements": ["Experience with Celery, DRF, and pytest",
+    "technologyRequirements": [
+      "Experience with Celery, DRF, and pytest",
       "2+ years of experience in Django",
       "4+ years of experience in Python"
     ]
