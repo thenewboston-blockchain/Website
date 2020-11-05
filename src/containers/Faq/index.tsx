@@ -12,7 +12,8 @@ interface FaqContent {
 
 const questionsAnswers: FaqContent[] = [
   {
-    answer: 'New digital currency',
+    answer:
+      'The YouTube channel thenewboston was launched in February 2008 with the focus on computer programming and various other educational tutorials. It has since expanded and is now an open source development community. One of the largest community projects is a digital currency network where all contributors are paid in coins, the official digital currency of thenewboston.',
     id: 'what-is-tnb',
     question: 'What is thenewboston?',
   },
@@ -24,11 +25,10 @@ const questionsAnswers: FaqContent[] = [
   {
     answer: 'To build the most reliable, secure, fastest digital currency in the world.',
     id: 'what-is-the-goal',
-    question: 'What is the goal?',
+    question: 'What is the goal of the digital currency project?',
   },
   {
-    answer:
-      '281,474,976,710,656 coins. It’s a higher amount than other coins because people need more of it. When they only have a couple of them like “2 Bitcoin” they will be more likely to want to hold onto them rather than spend them.',
+    answer: '281,474,976,710,656 coins',
     id: 'is-there-a-max-supply',
     question: 'Is there a max supply?',
   },
