@@ -11,22 +11,11 @@
 [![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fthenewboston.com)](https://thenewboston.com) ![Activity](https://img.shields.io/github/commit-activity/m/thenewboston-developers/website) [![GitHub Issues](https://img.shields.io/github/issues/thenewboston-developers/website)](https://github.com/thenewboston-developers/website/issues) [![Contributors](https://img.shields.io/github/contributors/thenewboston-developers/website)](https://github.com/thenewboston-developers/Website/graphs/contributors) [![License](https://img.shields.io/github/license/thenewboston-developers/website)](http://opensource.org/licenses/MIT)
 
 ## Table of Contents
-- [Community](#community)
 - [Contributing](#contributing)
 - [Getting Started](#getting-started)
+- [Community](#community)
+- [Donate](#donate)
 - [License](#license)
-
-## Community
-
-Join the community to stay updated on the most recent developments, project roadmaps, and random discussions about 
-completely unrelated topics.
-
-- [thenewboston.com](https://thenewboston.com/)
-- [Slack](https://join.slack.com/t/thenewboston/shared_invite/zt-hkw1b98m-X3oe6VPX6xenHvQeaXQbfg)
-- [reddit](https://www.reddit.com/r/thenewboston/)
-- [Facebook](https://www.facebook.com/TheNewBoston-464114846956315/)
-- [Twitter](https://twitter.com/bucky_roberts)
-- [YouTube](https://www.youtube.com/user/thenewboston)
 
 ## Contributing
 
@@ -73,6 +62,19 @@ Then to run the code, run the following command:
 ```bash
 npm start
 ```
+
+## Community
+
+Join the community to stay updated on the most recent developments, project roadmaps, and random discussions about 
+completely unrelated topics.
+
+- [thenewboston.com](https://thenewboston.com/)
+- [Slack](https://join.slack.com/t/thenewboston/shared_invite/zt-hkw1b98m-X3oe6VPX6xenHvQeaXQbfg)
+- [reddit](https://www.reddit.com/r/thenewboston/)
+- [LinkedIn](https://www.linkedin.com/company/thenewboston-developers/)
+- [Facebook](https://www.facebook.com/TheNewBoston-464114846956315/)
+- [Twitter](https://twitter.com/bucky_roberts)
+- [YouTube](https://www.youtube.com/user/thenewboston)
 
 ## Donate
 
