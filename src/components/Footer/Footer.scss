@@ -1,8 +1,10 @@
+@import 'src/styles/mixins';
+
 .Footer {
   display: grid;
   grid-template-columns: 40% 60%;
 
-  @media (max-width: 992px) {
+  @include single-media-query(max-width, 992px) {
     grid-template-columns: auto;
     grid-template-rows: auto;
   }

@@ -4,3 +4,9 @@
   word-break: break-word;
   word-wrap: break-word;
 }
+
+@mixin single-media-query($property, $value) {
+  @media only screen and (#{$property}: #{$value}) {
+    @content;
+  }
+}
