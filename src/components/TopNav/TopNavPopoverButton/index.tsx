@@ -2,7 +2,6 @@ import React, {FC, ReactNode, useEffect} from 'react';
 import clsx from 'clsx';
 
 import {Icon, IconType, Popover} from 'components';
-import {useWindowDimensions} from 'hooks';
 
 import './TopNavPopoverButton.scss';
 
@@ -25,8 +24,6 @@ const TopNavPopoverButton: FC<ComponentProps> = ({
   setAnchorEl,
   unsetAnchorEl,
 }) => {
-  const {width} = useWindowDimensions();
-
   const popoverIsOpen = !!anchorEl;
 
   const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
@@ -38,10 +35,10 @@ const TopNavPopoverButton: FC<ComponentProps> = ({
   };
 
   useEffect(() => {
-    if (width < 992 && popoverIsOpen) {
+    if (document.documentElement.clientWidth < 992 && popoverIsOpen) {
       unsetAnchorEl();
     }
-  }, [popoverIsOpen, unsetAnchorEl, width]);
+  }, [popoverIsOpen, unsetAnchorEl]);
 
   return (
     <>
