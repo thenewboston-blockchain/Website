@@ -12,7 +12,7 @@
 
   &__td {
     min-width: 90px;
-    padding: 2px 8px;
+    padding: 8px;
 
     &:first-child {
       font-weight: 700;
@@ -25,7 +25,7 @@
     }
   }
 
-  @media (max-width: 400px) {
+  @include single-media-query(max-width, 400px) {
     &__td:last-child {
       @include word-wrap;
     }
