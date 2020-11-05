@@ -16,15 +16,15 @@ const HomeComparisonCards: FC = () => {
   return (
     <div className="HomeComparisonCards">
       <div className="HomeComparisonCards__card">
-        <img alt="logo" className="HomeComparisonCards__crypto-logo" src={Bitcoin} />
-        {renderComparisonCardStat('txs per second', '7')}
-        {renderComparisonCardStat('avg. block time', '10 minutes')}
-      </div>
-      <div className="HomeComparisonCards__versus-container">vs</div>
-      <div className="HomeComparisonCards__card">
         <img alt="logo" className="HomeComparisonCards__crypto-logo" src={Logo} />
         {renderComparisonCardStat('txs per second', '3,238')}
         {renderComparisonCardStat('avg. block time', '0.015 seconds')}
+      </div>
+      <div className="HomeComparisonCards__versus-container">vs</div>
+      <div className="HomeComparisonCards__card">
+        <img alt="logo" className="HomeComparisonCards__crypto-logo" src={Bitcoin} />
+        {renderComparisonCardStat('txs per second', '7')}
+        {renderComparisonCardStat('avg. block time', '10 minutes')}
       </div>
     </div>
   );

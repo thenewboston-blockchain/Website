@@ -20,6 +20,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
   const {pathname} = useLocation();
   const [communityAnchorEl, setCommunityAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [getStartedAnchorEl, setGetStartedAnchorEl] = useState<HTMLButtonElement | null>(null);
+  const [moreAnchorEl, setMoreAnchorEl] = useState<HTMLButtonElement | null>(null);
   const {width} = useWindowDimensions();
 
   useEffect(() => {
@@ -98,6 +99,27 @@ const TopNav: FC<ComponentProps> = ({className}) => {
     );
   };
 
+  const renderMorePopover = (): ReactNode => {
+    return (
+      <>
+        <TopNavPopoverItem
+          closePopover={unsetMoreAnchorEl}
+          description="Frequently asked questions"
+          iconType={IconType.forum}
+          title="FAQ"
+          to="/faq"
+        />
+        <TopNavPopoverItem
+          closePopover={unsetMoreAnchorEl}
+          description="Support thenewboston"
+          iconType={IconType.currencyUsd}
+          title="Donate"
+          to="/donate"
+        />
+      </>
+    );
+  };
+
   const renderMenuItems = (): ReactNode => {
     return (
       <>
@@ -121,9 +143,16 @@ const TopNav: FC<ComponentProps> = ({className}) => {
         >
           {renderCommunityPopover()}
         </TopNavPopoverButton>
-        <Link className={clsx('TopNav__right-item', 'TopNav__anchor-button')} to="/faq">
-          FAQ
-        </Link>
+        <TopNavPopoverButton
+          anchorEl={moreAnchorEl}
+          buttonText="More"
+          className="TopNav__right-item"
+          popoverId="more-popover"
+          setAnchorEl={setMoreAnchorEl}
+          unsetAnchorEl={unsetMoreAnchorEl}
+        >
+          {renderMorePopover()}
+        </TopNavPopoverButton>
         <Link className={clsx('TopNav__right-item', 'TopNav__download-button')} to="/download">
           <Button>Download</Button>
         </Link>
@@ -151,6 +180,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
           <div className="mobile-menu__column">
             <div className="mobile-menu__column-title">More</div>
             {renderMobileLink('FAQ', '/faq')}
+            {renderMobileLink('Donate', '/donate')}
           </div>
         </div>
         <div className={clsx('mobile-menu__overlay')} onClick={closeMobileMenu} role="button" tabIndex={0} />
@@ -182,6 +212,10 @@ const TopNav: FC<ComponentProps> = ({className}) => {
   const unsetGetStartedAnchorEl = useCallback((): void => {
     setGetStartedAnchorEl(null);
   }, [setGetStartedAnchorEl]);
+
+  const unsetMoreAnchorEl = useCallback((): void => {
+    setMoreAnchorEl(null);
+  }, [setMoreAnchorEl]);
 
   return (
     <header className={clsx('TopNav', className)}>

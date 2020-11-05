@@ -26,7 +26,8 @@ export enum OpeningCategory {
 }
 
 export interface OpeningsUrlParams {
-  openingId: OpeningCategory;
+  category: OpeningCategory;
+  openingId: string;
 }
 
 export interface Reportee {

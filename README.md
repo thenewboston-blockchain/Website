@@ -74,6 +74,16 @@ Then to run the code, run the following command:
 npm start
 ```
 
+## Donate
+
+All donations will go to thenewboston to help fund the team to continue to develop the community and create new content.
+
+| Coin | Address |
+|-|-|
+| ![thenewboston Logo](./src/assets/images/thenewboston.png) | b6e21072b6ba2eae6f78bc3ade17f6a561fa4582d5494a5120617f2027d38797 |
+| ![Bitcoin Logo](./src/assets/images/bitcoin.png) | 3GZYi3w3BXQfyb868K2phHjrS4i8LooaHh |
+| ![Ethereum Logo](./src/assets/images/ethereum.png) | 0x0E38e2a838F0B20872E5Ff55c82c2EE7509e6d4A |
+
 ## License
 
 thenewboston is [MIT licensed](http://opensource.org/licenses/MIT).

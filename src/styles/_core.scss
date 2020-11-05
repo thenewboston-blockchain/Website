@@ -19,11 +19,13 @@ body {
 #popover-root {
   position: fixed;
   top: 0;
+  z-index: 200;
 }
 
 #slide-up-root {
   position: fixed;
   bottom: 0;
+  z-index: 150;
 }
 
 b,
