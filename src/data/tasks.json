@@ -261,6 +261,24 @@
       "completed_by": "angle943",
       "completed_date": "11/3/20",
       "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Donations page",
+      "issue_id": "440",
+      "pr_id": "453",
+      "completed_by": "angle943",
+      "completed_date": "11/4/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "Website",
+      "title": "Switch thenewboston & bitcoin block on landing page",
+      "issue_id": "441",
+      "pr_id": "449",
+      "completed_by": "angle943",
+      "completed_date": "11/4/20",
+      "amount_paid": "500"
     }
   ],
   "avgust13": [
@@ -713,6 +731,33 @@
       "completed_by": "kristykjlee",
       "completed_date": "11/1/20",
       "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Sign In, Sign Out, Profile Page",
+      "issue_id": "315",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "11/3/20",
+      "amount_paid": "25000"
+    },
+    {
+      "repository": "Website",
+      "title": "Switch thenewboston & bitcoin block on landing page",
+      "issue_id": "441",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "11/4/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Donations page",
+      "issue_id": "440",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "11/4/20",
+      "amount_paid": "5000"
     }
   ],
   "lapstjup": [
@@ -756,6 +801,15 @@
       "repository": "Website",
       "title": "iPhone clicking on top of the iphone doesn't scroll the website up",
       "issue_id": "402",
+      "pr_id": "443",
+      "completed_by": "lapstjup",
+      "completed_date": "11/4/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "iPad homepage scrolling issue",
+      "issue_id": "355",
       "pr_id": "443",
       "completed_by": "lapstjup",
       "completed_date": "11/4/20",
@@ -828,6 +882,17 @@
       "pr_id": "381",
       "completed_by": "rizqyep",
       "completed_date": "11/2/20",
+      "amount_paid": "500"
+    }
+  ],
+  "robMakasi": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "369",
+      "pr_id": "457",
+      "completed_by": "robMakasi",
+      "completed_date": "11/4/20",
       "amount_paid": "500"
     }
   ],
@@ -923,6 +988,15 @@
       "completed_by": "thesanjeevsharma",
       "completed_date": "11/4/20",
       "amount_paid": "10000"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Rename 'Points' to 'Coins'",
+      "issue_id": "422",
+      "pr_id": "424",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "11/4/20",
+      "amount_paid": "5000"
     }
   ],
   "tpikachu": [
