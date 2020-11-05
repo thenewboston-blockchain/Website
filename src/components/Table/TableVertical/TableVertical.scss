@@ -26,10 +26,8 @@
   }
 
   @media (max-width: 400px) {
-    &__td {
-      &:last-child {
-        @include word-wrap;
-      }
+    &__td:last-child {
+      @include word-wrap;
     }
   }
 }
