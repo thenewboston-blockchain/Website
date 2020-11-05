@@ -31,7 +31,7 @@ const OpeningDetails: FC<ComponentProps> = ({opening}) => {
       return;
     }
 
-    history.replace('/openings');
+    history.replace(`/openings/${opening.category}`);
   };
 
   const renderApplicationMethodList = (): ReactNode => {

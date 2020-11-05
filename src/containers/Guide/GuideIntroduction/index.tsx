@@ -10,8 +10,8 @@ const GuideIntroduction: FC = () => {
     <TableVertical
       altColors
       rows={[
-        ['Account', 'An anonymous digital identity on the network where points may be sent to and from'],
-        ['Transaction', 'The transfer of points from one account to another'],
+        ['Account', 'An anonymous digital identity on the network where coins may be sent to and from'],
+        ['Transaction', 'The transfer of coins from one account to another'],
         ['Block', "A group of one or more transactions along with the sender's account number and a signature"],
         [
           'Signature',
@@ -26,10 +26,10 @@ const GuideIntroduction: FC = () => {
         ['Node', 'Any network server (Bank or Validator)'],
         [
           'Confirmation Block',
-          'Often referred to as a "confirmation," a block that a validator signs as confirmation that it has been added to their blockchain; indicates that the transactions have been validated and that the points have been successfully transferred',
+          'Often referred to as a "confirmation," a block that a validator signs as confirmation that it has been added to their blockchain; indicates that the transactions have been validated and that the coins have been successfully transferred',
         ],
         ['Blockchain', 'An ordered list of confirmation blocks'],
-        ['Root Account File', 'A historic record (snapshot) of all account balances at a given point in time'],
+        ['Root Account File', 'A historic record (snapshot) of all account balances at a given coin in time'],
       ]}
     />
   );
@@ -58,7 +58,7 @@ const GuideIntroduction: FC = () => {
   return (
     <DocContainer className="GuideIntroduction" introSection={renderIntro()} introTitle="Introduction" title="Overview">
       <p>
-        The system has many components, each of which plays a specific role in allowing the transfer of points (the
+        The system has many components, each of which plays a specific role in allowing the transfer of coins (the
         currency of the system) securely between accounts. Future sections will discuss each of these elements in more
         detail, but for now we will examine a simplified network composed of the core components.
       </p>
@@ -69,7 +69,7 @@ const GuideIntroduction: FC = () => {
 
       <p>
         All transactions on the network will begin with a user account. The owner of the account will create a block
-        (group of transactions), indicating the number of points they would like to send to each recipient and then send
+        (group of transactions), indicating the number of coins they would like to send to each recipient and then send
         that block to their bank. The bank will then forward the block (now a bank block) along to the validator which,
         upon successful validation of the transaction, appends it onto the blockchain while updating account balances.
         There are several key differences between the network structure outlined above and the traditional Blockchain

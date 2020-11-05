@@ -19,7 +19,6 @@ export interface Opening {
 
 export enum OpeningCategory {
   all = 'All',
-  accounting = 'Accounting',
   community = 'Community',
   design = 'Design',
   engineering = 'Engineering',
@@ -27,7 +26,8 @@ export enum OpeningCategory {
 }
 
 export interface OpeningsUrlParams {
-  openingId: OpeningCategory;
+  category: OpeningCategory;
+  openingId: string;
 }
 
 export interface Reportee {

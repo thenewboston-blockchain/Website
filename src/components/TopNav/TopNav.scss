@@ -36,24 +36,6 @@ $top-nav-height: 60px;
   justify-content: space-between;
   position: relative;
 
-  &__anchor-button {
-    align-items: center;
-    color: var(--color-sail-gray-500);
-    cursor: pointer;
-    display: flex;
-    font-weight: 700;
-    justify-content: center;
-    transition: color 0.1s ease;
-
-    &:hover {
-      color: var(--color-primary);
-    }
-
-    &--active {
-      color: var(--color-primary);
-    }
-  }
-
   &__download-button {
     margin-right: 24px;
 
@@ -83,7 +65,7 @@ $top-nav-height: 60px;
     }
 
     &__button {
-      background: var(--color-white);
+      background: transparent;
       border: none;
       height: $top-nav-height;
       outline: none;
