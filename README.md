@@ -80,9 +80,9 @@ All donations will go to thenewboston to help fund the team to continue to devel
 
 | Coin | Address |
 |-|-|
-| ![thenewboston Logo](https://thenewboston.com/static/media/thenewboston-primary.52b925da.svg) | b6e21072b6ba2eae6f78bc3ade17f6a561fa4582d5494a5120617f2027d38797 |
-| ![Bitcoin Logo](https://thenewboston.com/static/media/bitcoin.56ebfbc5.svg) | 3GZYi3w3BXQfyb868K2phHjrS4i8LooaHh |
-| ![Ethereum Logo](https://thenewboston.com/static/media/ethereum.5f367b46.svg) | 0x0E38e2a838F0B20872E5Ff55c82c2EE7509e6d4A |
+| ![thenewboston Logo](./src/assets/images/thenewboston.png) | b6e21072b6ba2eae6f78bc3ade17f6a561fa4582d5494a5120617f2027d38797 |
+| ![Bitcoin Logo](./src/assets/images/bitcoin.png) | 3GZYi3w3BXQfyb868K2phHjrS4i8LooaHh |
+| ![Ethereum Logo](./src/assets/images/ethereum.png) | 0x0E38e2a838F0B20872E5Ff55c82c2EE7509e6d4A |
 
 ## License
 
