@@ -2,7 +2,7 @@
 name: Job description
 about: Post a job description
 title: ''
-labels: engineering, Job Description, 2500
+labels: engineering, Job Description, 1000
 assignees: ''
 
 ---
@@ -32,7 +32,7 @@ Write a few sentences describing the position here.
 - Slack Name: [SLACK NAME HERE]
 
 #### Pay
-- 2,800 points/day
+- 2,800 coins/day
 
 #### Application channels
 - Slack - Message [SLACK NAME HERE]

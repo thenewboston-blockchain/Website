@@ -5,7 +5,6 @@
 body,
 html {
   margin: 0;
-  overflow: hidden;
   padding: 0;
 }
 
@@ -15,7 +14,18 @@ body {
   font-family: var(--font-family-default);
   font-size: var(--font-size-regular);
   line-height: 1.5;
-  max-height: 100vh;
+}
+
+#popover-root {
+  position: fixed;
+  top: 0;
+  z-index: 200;
+}
+
+#slide-up-root {
+  position: fixed;
+  bottom: 0;
+  z-index: 150;
 }
 
 b,

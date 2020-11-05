@@ -9,11 +9,11 @@ const GuideAccounts: FC = () => {
   return (
     <DocContainer className="GuideAccounts" title="Accounts">
       <p>
-        <strong>Accounts</strong> are anonymous digital identities on the network where points may be sent to and from.{' '}
+        <strong>Accounts</strong> are anonymous digital identities on the network where coins may be sent to and from.{' '}
         <strong>Account managers</strong> are software applications (such as a mobile application or desktop software)
-        that individuals use to create new accounts, manage existing accounts, and to send points. When sending points,
+        that individuals use to create new accounts, manage existing accounts, and to send coins. When sending coins,
         users enter the amount they wish to send along with the account number of the recipient and submit it to the
-        network for processing. To receive points, users share their own account number with other users on the network
+        network for processing. To receive coins, users share their own account number with other users on the network
         who will then be able to form blocks themselves.
       </p>
 
@@ -29,7 +29,7 @@ const GuideAccounts: FC = () => {
 
       <p>
         The account number of an account is like a username, but is unique across the entire network (rather than a
-        single website). The use of signing keys secures all accounts. Signing keys can prove ownership of points. They
+        single website). The use of signing keys secures all accounts. Signing keys can prove ownership of coins. They
         are also used in the process of "signing" a block. This allows for the ability of users to create secure
         transactions that the network can further validate without revealing the signing key itself. The signing key
         should always remain private to the account owner.
@@ -43,7 +43,7 @@ const GuideAccounts: FC = () => {
 
       <DocList variant="ul">
         <li>Must remain private to the owner</li>
-        <li>Allows the account owner to securely sign (authorize) the sending of points</li>
+        <li>Allows the account owner to securely sign (authorize) the sending of coins</li>
       </DocList>
 
       <p>
@@ -54,7 +54,7 @@ const GuideAccounts: FC = () => {
         <li>Made public to the network</li>
         <li>Acts as a receiving address</li>
         <ul>
-          <li>Other users can send points to you using your account number</li>
+          <li>Other users can send coins to you using your account number</li>
         </ul>
         <li>Used in verifying the sender when validating transactions</li>
         <ul>
