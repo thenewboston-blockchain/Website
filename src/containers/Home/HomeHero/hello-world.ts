@@ -4,6 +4,7 @@ const HelloWorld: {[isoLangCode: string]: string} = {
   el: 'Γεια σου κόσμε',
   en: 'Hello World',
   eu: 'Kaixo Mundua',
+  fa: 'سلام دنیا',
   fj: 'Bula Vuravura',
   fr: 'Bonjour monde',
   he: 'שלום עולם',
