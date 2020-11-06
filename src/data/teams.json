@@ -207,6 +207,24 @@
     ]
   },
   {
+    "title": "QA",
+    "contributors": [
+      {
+        "title": "QA Lead",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "22",
+          "displayName": "Snehal Ingale",
+          "githubUsername": null,
+          "profileImage": "https://avatars2.githubusercontent.com/u/59204822?s=460&v=4",
+          "slackUsername": "Snehal Ingale"
+        }
+      }
+    ]
+  },
+  {
     "title": "Reddit Moderators",
     "contributors": [
       {

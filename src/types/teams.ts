@@ -5,6 +5,7 @@ export enum TeamName {
   design = 'Design',
   frontEndDevelopers = 'Front-End Developers',
   marketing = 'Marketing',
+  qa = 'QA',
   redditModerators = 'Reddit Moderators',
   slackManagers = 'Slack Managers',
   youtubers = 'YouTubers',

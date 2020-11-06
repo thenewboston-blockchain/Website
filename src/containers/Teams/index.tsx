@@ -16,6 +16,7 @@ const TEAM_NAME_FILTERS = [
   TeamName.design,
   TeamName.frontEndDevelopers,
   TeamName.marketing,
+  TeamName.qa,
   TeamName.redditModerators,
   TeamName.slackManagers,
   TeamName.youtubers,
