@@ -64,4 +64,13 @@
     height: auto;
     width: 144px;
   }
+  $breakpoint-tablet: 540px;
+@media (max-width: $breakpoint-tablet) {
+    &__user-avatar {
+    border-radius: 50%;
+    height: auto;
+    width: 70px;
+    margin-top:50px;
+  }
+}
 }
