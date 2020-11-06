@@ -70,7 +70,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
           closePopover={unsetCommunityAnchorEl}
           description="Meet the growing team"
           iconType={IconType.accountGroup}
-          title="Team"
+          title="Teams"
           to="/team"
         />
         <TopNavPopoverItem
