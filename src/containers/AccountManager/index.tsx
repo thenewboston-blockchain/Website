@@ -9,7 +9,7 @@ import AccountManagerAddFriends from './AccountManagerAddFriends';
 import AccountManagerCreateAccount from './AccountManagerCreateAccount';
 import AccountManagerEditNicknames from './AccountManagerEditNicknames';
 import AccountManagerGetStarted from './AccountManagerGetStarted';
-import AccountManagerSendPoints from './AccountManagerSendPoints';
+import AccountManagerSendCoins from './AccountManagerSendCoins';
 
 const defaultPageData: PageData = {
   content: <Redirect to="/account-manager/get-started" />,
@@ -33,9 +33,9 @@ const pageData: PageDataObject = {
     content: <AccountManagerGetStarted />,
     name: 'Get Started',
   },
-  'send-points': {
-    content: <AccountManagerSendPoints />,
-    name: 'Send Points',
+  'send-coins': {
+    content: <AccountManagerSendCoins />,
+    name: 'Send Coins',
   },
 };
 

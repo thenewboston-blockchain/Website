@@ -14,7 +14,7 @@ const GuideTransactionFees: FC = () => {
       </p>
       <p>
         As banks and validators join the network, they will announce their transaction fees. This is the amount (in
-        points) that nodes will charge per block processed. Nodes may charge a fixed transaction fee for all users, or
+        coins) that nodes will charge per block processed. Nodes may charge a fixed transaction fee for all users, or
         offer tier-based fees based on trust levels. This is one way in which the network may reward more trusted user
         accounts and more trusted banks.
       </p>
@@ -24,10 +24,10 @@ const GuideTransactionFees: FC = () => {
         be a large consideration. When bank fees become too high, users will look for a new bank to join.
       </p>
       <p>
-        In the following example, Amy is sending 100 points to Brian. Before the block is even created, Amy's bank is
+        In the following example, Amy is sending 100 coins to Brian. Before the block is even created, Amy's bank is
         aware of the validators transaction fee. The transaction fees of both the bank and the validator will be
         displayed on her user interface. When creating a transaction, Amy will first choose the desired recipient and
-        then the amount of points she wishes to send. A very simple UI that Amy may see at that point might look like
+        then the amount of coins she wishes to send. A very simple UI that Amy may see at that coin might look like
         this:
       </p>
 
@@ -35,25 +35,25 @@ const GuideTransactionFees: FC = () => {
         innerBorders
         rows={[
           [
-            'Points being sent to Brian',
-            <span className="GuideTransactionFees__text-placeholder">Enter the amount of points here...</span>,
+            'Coins being sent to Brian',
+            <span className="GuideTransactionFees__text-placeholder">Enter the amount of coins here...</span>,
           ],
-          ['Bank fees', <span className="GuideTransactionFees__text-light">2 points</span>],
-          ['Validator fees', <span className="GuideTransactionFees__text-light">1 point</span>],
+          ['Bank fees', <span className="GuideTransactionFees__text-light">2 coins</span>],
+          ['Validator fees', <span className="GuideTransactionFees__text-light">1 coin</span>],
         ]}
       />
 
       <p>
-        After typing in the amount of points, Amy is able to see the total cost of her transaction and verify that the
+        After typing in the amount of coins, Amy is able to see the total cost of her transaction and verify that the
         amount is acceptable before signing and sending the block to her bank.
       </p>
 
       <TableVertical
         innerBorders
         rows={[
-          ['Points being sent to Brian', 100],
-          ['Bank fees', <span className="TransactionFees__text-light">2 points</span>],
-          ['Validator fees', <span className="TransactionFees__text-light">1 point</span>],
+          ['Coins being sent to Brian', 100],
+          ['Bank fees', <span className="TransactionFees__text-light">2 coins</span>],
+          ['Validator fees', <span className="TransactionFees__text-light">1 coin</span>],
           ['Total', 103],
         ]}
       />
@@ -86,7 +86,7 @@ const GuideTransactionFees: FC = () => {
         </ol>
         <li>
           After the block is confirmed by the validator, the validator will add a confirmation block to the blockchain
-          and update the point balances for Amy, Brian, the bank, and the validator (itself).
+          and update the coin balances for Amy, Brian, the bank, and the validator (itself).
         </li>
         <li>
           The validator will then send the confirmation block back to Amy's bank where the bank can then notify both

@@ -12,14 +12,14 @@ const GuideBlocks: FC = () => {
       <p>
         A block is a group of one or more transactions. There are often multiple transactions (usually fees) to
         different recipients within a single block. We can inspect the structure of a block by first examining a
-        simplified overview below. In this example, Amy is sending 100 points to her friend Brian.
+        simplified overview below. In this example, Amy is sending 100 coins to her friend Brian.
       </p>
 
       <TableBorderGrid
         rows={[
-          ['Points being sent to Brian', '100.00'],
-          ['Bank fees', <span className="GuideBlocks__text-light">2 points</span>],
-          ['Validator fees', <span className="GuideBlocks__text-light">1 point</span>],
+          ['Coins being sent to Brian', '100.00'],
+          ['Bank fees', <span className="GuideBlocks__text-light">2 coins</span>],
+          ['Validator fees', <span className="GuideBlocks__text-light">1 coin</span>],
           ['Total', '103.00'],
         ]}
       />
@@ -40,7 +40,7 @@ const GuideBlocks: FC = () => {
             <li>For example, a shopping website that builds the block as Amy adds items to her cart</li>
           </ol>
         </ol>
-        <li>Amy has enough points in her account.</li>
+        <li>Amy has enough coins in her account.</li>
         <li>The block is not being validated more than once.</li>
         <ol type="a">
           <li>
@@ -59,7 +59,7 @@ const GuideBlocks: FC = () => {
       </p>
       <p>
         The account number (often referred to as the "public-key" in public-key cryptography) is not only used to
-        identify your account when other users wish to send you points, but it is also used during the verification
+        identify your account when other users wish to send you coins, but it is also used during the verification
         process in which blocks must be correctly verified to ensure that the sender (account owner) has authorized the
         related transactions. Therefore, a more realistic representation of a block would be as follows.
       </p>
@@ -70,8 +70,8 @@ const GuideBlocks: FC = () => {
         Before we can go into more detail regarding exactly how a block is created, we first need to understand an
         integral aspect of the network balance sheet called the balance lock. Every account on the balance sheet
         includes a related balance lock. This is a value that the account owner must provide in order to "unlock" or
-        spend their point balance. The method to unlock a balance lock is done through the use of balance keys, which
-        are provided within the message of every block.
+        spend their coin balance. The method to unlock a balance lock is done through the use of balance keys, which are
+        provided within the message of every block.
       </p>
       <p>
         Every message within a block will be hashed and that hash value will be used as the next balance lock. Since
@@ -85,15 +85,15 @@ const GuideBlocks: FC = () => {
       <p>
         Note that there is one exception to the method in which balance locks are determined. The majority of the time
         the hash value of the account owner's last sent block message determines this. This does, however, leave out the
-        scenario in which the account owner must access their point balance for the very first time before a block has
+        scenario in which the account owner must access their coin balance for the very first time before a block has
         ever been sent. This occurs when a separate user has sent funds to an account for the very first time, but
-        before that recipient has sent any points (created any blocks) themselves. In this case, the balance lock for
-        the account will be set to the recipient's account number. Therefore, the rules of how balance locks are
-        determined can be simplified as follows:
+        before that recipient has sent any coins (created any blocks) themselves. In this case, the balance lock for the
+        account will be set to the recipient's account number. Therefore, the rules of how balance locks are determined
+        can be simplified as follows:
       </p>
 
       <DocList variant="ol">
-        <li>If an owner has never sent points before, the balance lock is equal to their account number.</li>
+        <li>If an owner has never sent coins before, the balance lock is equal to their account number.</li>
         <li>Otherwise, the balance lock is equal to the hash value of their most recently sent blocks message.</li>
       </DocList>
 
