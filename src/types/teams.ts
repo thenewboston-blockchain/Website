@@ -1,13 +1,12 @@
 export enum TeamName {
   all = 'All',
-  analytics = 'Analytics',
   backEndDevelopers = 'Back-End Developers',
-  frontEndDevelopers = 'Front-End Developers',
+  community = 'Community',
   design = 'Design',
-  marketing = 'Marketing',
-  linkedinManager = 'LinkedIn Manager',
-  seo = 'SEO',
-  slackManager = 'Slack Manager',
+  frontEndDevelopers = 'Front-End Developers',
+  redditModerators = 'Reddit Moderators',
+  slackManagers = 'Slack Managers',
+  youtubers = 'YouTubers',
 }
 
 interface Contributor {

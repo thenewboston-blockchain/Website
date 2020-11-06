@@ -11,14 +11,13 @@ const teamMembers = getTeamMembers();
 
 const TEAM_NAME_FILTERS = [
   TeamName.all,
-  TeamName.analytics,
   TeamName.backEndDevelopers,
-  TeamName.frontEndDevelopers,
+  TeamName.community,
   TeamName.design,
-  TeamName.marketing,
-  TeamName.linkedinManager,
-  TeamName.seo,
-  TeamName.slackManager,
+  TeamName.frontEndDevelopers,
+  TeamName.redditModerators,
+  TeamName.slackManagers,
+  TeamName.youtubers,
 ];
 
 const Teams: FC = () => {
