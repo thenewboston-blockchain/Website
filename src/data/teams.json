@@ -176,6 +176,24 @@
     ]
   },
   {
+    "title": "Marketing",
+    "contributors": [
+      {
+        "title": "SEO Manager",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "20",
+          "displayName": "Sunil Chauhan",
+          "githubUsername": "Sunil-Chauhan",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01C14HRXFT-g90d1fb3c0c1-512",
+          "slackUsername": "Sunil Chauhan"
+        }
+      }
+    ]
+  },
+  {
     "title": "Reddit Moderators",
     "contributors": [
       {
