@@ -1,4 +1,4 @@
-import React, {FC, memo, ReactNode, useEffect} from 'react';
+import React, {FC, memo, ReactNode} from 'react';
 import {Link} from 'react-router-dom';
 import {A, HashLink} from 'components';
 
@@ -77,33 +77,7 @@ const questionsAnswers: FaqContent[] = [
   },
 ];
 
-const setUpHashlinksListeners = () => {
-  const hashLinkEls = document.querySelectorAll('.HashLink');
-  const topNavigationHeight = (document.querySelector('.Layout__top-nav-wrapper') as HTMLDivElement).offsetHeight;
-  const hashlinkClickHandler = (e: any) => {
-    e.preventDefault();
-    const linkelTopDistance = e.target.getBoundingClientRect().top + window.scrollY;
-    const scrollLocation = linkelTopDistance - topNavigationHeight;
-    window.scrollTo({
-      top: scrollLocation,
-    });
-  };
-
-  hashLinkEls.forEach((linkEl) => {
-    linkEl.addEventListener('click', hashlinkClickHandler);
-  });
-
-  return function cleanupListeners() {
-    hashLinkEls.forEach((linkEl) => linkEl.removeEventListener('click', hashlinkClickHandler));
-  };
-};
-
 const Faq: FC = () => {
-  useEffect(() => {
-    const cleanupListeners = setUpHashlinksListeners();
-    return cleanupListeners;
-  }, []);
-
   const renderQuestionAnswers = (): ReactNode => {
     return questionsAnswers.map(({answer, id, question}) => (
       <div key={id}>
