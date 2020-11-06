@@ -32,7 +32,7 @@
   "scripts": {
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "lint": "tsc --noEmit && eslint './src/**/*.{js,ts,tsx}'",
+    "lint": "tsc --noEmit && eslint \"./src/**/*.{js,ts,tsx}\"",
     "prettier": "prettier --write \"{,!(node_modules)/**/}*.{ts,tsx,js,json,css,less,scss}\"",
     "start": "react-scripts start",
     "test": "jest --passWithNoTests"
