@@ -65,3 +65,21 @@
     width: 144px;
   }
 }
+
+@media (max-width: 700px){
+	.TeamMemberCard{
+		display: block!important;
+	
+	&__user-avatar{
+		width:90px;
+		margin-top:25%;
+	}
+	&__details{
+		font-size: 14px;
+		margin: 0 auto;
+	}
+	&__details h2{
+		font-size:18px;
+	}
+  }
+}
