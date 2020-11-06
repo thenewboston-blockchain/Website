@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'react-app-polyfill/stable';
 import {Flip, ToastContainer} from 'react-toastify';
 
 // Styles
