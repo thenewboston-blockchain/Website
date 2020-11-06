@@ -6,6 +6,10 @@
     padding: 30px 60px;
   }
 
+  &--contained {
+    color: var(--color-white);
+  }
+
   &__tab-panel {
     margin-top: 43px;
   }
@@ -14,6 +18,10 @@
     align-items: center;
     display: flex;
     margin-bottom: 60px;
+  }
+
+  &__download-link {
+    display: flex;
   }
 
   &__download-icon {

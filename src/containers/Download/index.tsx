@@ -119,11 +119,11 @@ const Download: FC = () => {
   const renderTabPanel = useCallback(
     (os: Os) => (
       <div className="Download__tab-panel">
-        <a className="Download__download-link" href={getDownloadLink(os)}>
-          <Button className="Download__download-button" disabled={!latestReleaseNumber}>
+        <Button className="Download__download-button" disabled={!latestReleaseNumber}>
+          <a className="Download__download-link Download--contained" href={getDownloadLink(os)}>
             Download for {os} <Icon className="Download__download-icon" icon={IconType.arrowCollapseDown} size={18} />
-          </Button>
-        </a>
+          </a>
+        </Button>
         <div className="instruction-container">
           <h2 className="instruction-container__title">Installation Instructions</h2>
           {renderInstructions(os)}
