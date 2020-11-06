@@ -40,6 +40,19 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01BPK991R7-8dac7d9c0d9c-512",
           "slackUsername": "Abhi"
         }
+      },
+      {
+        "title": "Head of Python Client Library Development",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-05-09T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "23",
+          "displayName": "Shahraiz Ali",
+          "githubUsername": "shahraizali",
+          "profileImage": "https://avatars3.githubusercontent.com/u/15216270?s=460&u=d417978e0163fb544caf74293278fac7ebf1dabf&v=4",
+          "slackUsername": "Shahraiz Ali"
+        }
       }
     ]
   },
