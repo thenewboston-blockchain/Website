@@ -68,6 +68,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
         />
         <TopNavPopoverItem
           closePopover={unsetCommunityAnchorEl}
+
           description="Meet the growing team"
           iconType={IconType.accountGroup}
           title="Teams"
@@ -182,7 +183,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
             <div className="mobile-menu__column-title">Community</div>
             {renderMobileLink('Join the Community!', '/social')}
             {renderMobileLink('Openings', '/openings')}
-            {renderMobileLink('Team', '/team')}
+            {renderMobileLink('Teams', '/team')}
             {renderMobileLink('Leaderboard', '/leaderboard/All')}
           </div>
           <div className="mobile-menu__column">

@@ -40,6 +40,7 @@ export const getTeamMembers = (): TeamMember[] => {
       const {contributorId, ...otherProps} = contributor;
       if (!members[contributorId]) {
         members[contributorId] = {
+          contributorId,
           createdDate,
           isLead,
           payPerDay,
