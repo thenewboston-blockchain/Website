@@ -6,7 +6,7 @@ const HelloWorld: {[isoLangCode: string]: string} = {
   he: 'שלום עולם',
   hi: 'नमस्ते दुनिया',
   id: 'Halo Dunia',
-  ko: '여보세요 세계',
+  ko: '안녕 세계야',
   mk: 'Здраво Свету',
   te: 'హలో ప్రపంచం',
   uk: 'Привіт, світе',
