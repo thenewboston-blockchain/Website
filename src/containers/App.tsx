@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom
 import {Layout} from 'components';
 
 import AccountManager from './AccountManager';
+import Auth from './Auth';
 import BankApi from './BankApi';
 import ConfirmationValidatorApi from './ConfirmationValidatorApi';
 import DeploymentGuide from './DeploymentGuide';
@@ -70,6 +71,7 @@ const App: FC = () => {
           <Route path="/guide/:chapter?" component={Guide} />
           <Route path="/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
           <Route path="/style-guide/:chapter?" component={StyleGuide} />
+          <Route path="/user/signin/callback" component={Auth} />
           <Redirect to="/" />
         </Switch>
       </Layout>
