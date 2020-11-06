@@ -148,8 +148,8 @@
         }
       },
       {
-        "title": "Front-End Lead",
-        "isLead": true,
+        "title": "Front-End Developer",
+        "isLead": false,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
@@ -158,6 +158,19 @@
           "githubUsername": "thesanjeevsharma",
           "profileImage": "https://avatars3.githubusercontent.com/u/29539278?s=460&u=c949af33256607d5e1d93958398a139ff1d67227&v=4",
           "slackUsername": "Sanjeev Sharma"
+        }
+      },
+      {
+        "title": "Front-End Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "20",
+          "displayName": "Amarjeet Sarma",
+          "githubUsername": "amarjeet987",
+          "profileImage": "https://avatars1.githubusercontent.com/u/38986305?v=4",
+          "slackUsername": "Amarjeet"
         }
       },
       {
