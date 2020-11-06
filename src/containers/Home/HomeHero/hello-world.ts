@@ -10,6 +10,7 @@ const HelloWorld: {[isoLangCode: string]: string} = {
   fa: 'سلام دنیا',
   fj: 'Bula Vuravura',
   fr: 'Bonjour monde',
+  gu: 'કેમ છો દુનિયા',
   he: 'שלום עולם',
   hi: 'नमस्ते दुनिया',
   id: 'Halo Dunia',
