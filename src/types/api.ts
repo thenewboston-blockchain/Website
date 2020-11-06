@@ -1,7 +1,7 @@
 export interface AuthResponse {
-  success: boolean;
-  message: string;
   data?: Token;
+  message: string;
+  success: boolean;
 }
 
 export interface Token {
