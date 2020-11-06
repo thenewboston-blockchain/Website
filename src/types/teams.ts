@@ -38,6 +38,7 @@ interface TeamLead {
 }
 
 export interface TeamMember {
+  contributorId: string;
   displayName: string;
   githubUsername: string;
   isLead: boolean;

@@ -62,12 +62,12 @@ const Teams: FC = () => {
 
   const renderTeamMembers = (): ReactNode => {
     return filteredMembers.map(
-      ({displayName, githubUsername, isLead, payPerDay, profileImage, slackUsername, titles}) => (
+      ({contributorId, displayName, githubUsername, isLead, payPerDay, profileImage, slackUsername, titles}) => (
         <TeamMemberCard
           displayName={displayName}
           githubUsername={githubUsername}
           isLead={isLead}
-          key={githubUsername}
+          key={contributorId}
           payPerDay={payPerDay}
           profileImage={profileImage}
           slackUsername={slackUsername}

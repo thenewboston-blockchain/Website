@@ -36,7 +36,7 @@
         "contributor": {
           "contributorId": "18",
           "displayName": "Abhi",
-          "githubUsername": "Abhi",
+          "githubUsername": "-",
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01BPK991R7-8dac7d9c0d9c-512",
           "slackUsername": "Abhi"
         }
@@ -67,7 +67,7 @@
         "contributor": {
           "contributorId": "6",
           "displayName": "Francisca",
-          "githubUsername": "Francisca",
+          "githubUsername": null,
           "profileImage": "https://media-exp1.licdn.com/dms/image/C4E03AQFEnGzSqKQd8g/profile-displayphoto-shrink_400_400/0?e=1609977600&v=beta&t=DKNgaI0rUhYkkYc9cUQ7cJos0GFMbhzXpNyZyIXfSs8",
           "slackUsername": "Francisca"
         }
@@ -80,7 +80,7 @@
         "contributor": {
           "contributorId": "7",
           "displayName": "Martin Nwafor",
-          "githubUsername": "Martin",
+          "githubUsername": null,
           "profileImage": "https://media-exp1.licdn.com/dms/image/C4D03AQEsxV5J1Hi9QQ/profile-displayphoto-shrink_400_400/0?e=1609977600&v=beta&t=4jG6hRfnY9P5t0wrhrbuosLRRTWvxaxStZzdtYr5rdc",
           "slackUsername": "Martin Nwafor"
         }
@@ -124,7 +124,7 @@
         "contributor": {
           "contributorId": "13",
           "displayName": "David Yap",
-          "githubUsername": "David-Yap",
+          "githubUsername": "-",
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01C3UKRM2M-e036dfe7aec6-512",
           "slackUsername": "David Yap"
         }
@@ -186,7 +186,7 @@
         "contributor": {
           "contributorId": "20",
           "displayName": "Sunil Chauhan",
-          "githubUsername": "Sunil-Chauhan",
+          "githubUsername": "-",
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01C14HRXFT-g90d1fb3c0c1-512",
           "slackUsername": "Sunil Chauhan"
         }
@@ -204,7 +204,7 @@
         "contributor": {
           "contributorId": "8",
           "displayName": "Shivam Yadav",
-          "githubUsername": "Shivam",
+          "githubUsername": "-",
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U017J4SDBM4-49405606e0d2-512",
           "slackUsername": "Shivam Yadav"
         }
@@ -217,7 +217,7 @@
         "contributor": {
           "contributorId": "9",
           "displayName": "Bojan Ilijevski",
-          "githubUsername": "Bojan",
+          "githubUsername": "-",
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01B1PFRMH7-df88a64aa7ba-512",
           "slackUsername": "Bojan Ilijevski"
         }
@@ -235,7 +235,7 @@
         "contributor": {
           "contributorId": "10",
           "displayName": "Benjamin Thorpe",
-          "githubUsername": "Benjamin-Thorpe",
+          "githubUsername": "-",
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01BWTU729Z-b2ae1378a598-512",
           "slackUsername": "Benjamin Thorpe"
         }
@@ -261,7 +261,7 @@
         "contributor": {
           "contributorId": "12",
           "displayName": "KryptoZero",
-          "githubUsername": "KryptoZero",
+          "githubUsername": "-",
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E2FN4D1S-4688c60ed154-512",
           "slackUsername": "KryptoZero"
         }
