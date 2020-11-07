@@ -29,7 +29,7 @@ const GuideIntroduction: FC = () => {
           'Often referred to as a "confirmation," a block that a validator signs as confirmation that it has been added to their blockchain; indicates that the transactions have been validated and that the coins have been successfully transferred',
         ],
         ['Blockchain', 'An ordered list of confirmation blocks'],
-        ['Root Account File', 'A historic record (snapshot) of all account balances at a given coin in time'],
+        ['Root Account File', 'A historic record (snapshot) of all account balances at a given point in time'],
       ]}
     />
   );

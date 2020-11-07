@@ -865,6 +865,15 @@
       "completed_by": "itsnikhil",
       "completed_date": "11/3/20",
       "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Task page margin",
+      "issue_id": "413",
+      "pr_id": "469",
+      "completed_by": "itsnikhil",
+      "completed_date": "11/6/20",
+      "amount_paid": "1000"
     }
   ],
   "jagdisharma": [
