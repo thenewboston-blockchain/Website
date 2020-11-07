@@ -1,12 +1,4 @@
 .GoToTop {
-  display: grid;
-  grid-template-columns: 40% 60%;
-
-  @media (max-width: 992px) {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-  }
-
   &__go-to-top {
   cursor:pointer;
   z-index:1000;
