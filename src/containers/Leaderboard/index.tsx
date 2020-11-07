@@ -31,7 +31,7 @@ const Leaderboard = (): JSX.Element => {
   const history = useHistory();
   const {repository} = useParams<RepositoryUrlParams>();
   const [repositoryFilter, setRepositoryFilter] = useState<Repository>(repository);
-  const [timeFilter, setTimeFilter] = useState<TimeFilterType>(Time.all);
+  const [timeFilter, setTimeFilter] = useState<TimeFilterType>(Time.days7);
 
   useEffect(() => {
     setRepositoryFilter(repository);
