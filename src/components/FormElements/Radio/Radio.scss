@@ -1,0 +1,12 @@
+.Radio {
+  color: var(--color-gray-700);
+  display: inline-flex;
+
+  &--error {
+    color: var(--color-alert);
+  }
+
+  &__input {
+    display: none;
+  }
+}

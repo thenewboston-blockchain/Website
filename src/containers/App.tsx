@@ -19,6 +19,7 @@ import Social from './Social';
 import StyleGuide from './StyleGuide';
 import Tasks from './Tasks';
 import Teams from './Teams';
+import AccountComponent from './Account';
 
 interface GoogleAnalyticsWindow extends Window {
   ga: any;
@@ -70,6 +71,7 @@ const App: FC = () => {
           <Route path="/guide/:chapter?" component={Guide} />
           <Route path="/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
           <Route path="/style-guide/:chapter?" component={StyleGuide} />
+          <Route path="/account" component={AccountComponent} />
           <Redirect to="/" />
         </Switch>
       </Layout>

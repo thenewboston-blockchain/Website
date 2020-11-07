@@ -1,0 +1,150 @@
+.Select {
+  $self: &;
+
+  // This is to override React-Select's specificity
+  &.Select {
+    height: 30px;
+
+    &#{$self}--error {
+      #{$self}__control {
+        &,
+        &:active,
+        &:hover,
+        &--is-focused {
+          border-color: var(--color-alert);
+        }
+      }
+
+      #{$self}__indicator {
+        &:hover {
+          color: var(--color-alert);
+        }
+      }
+    }
+
+    #{$self}--is-disabled {
+      pointer-events: unset;
+    }
+
+    #{$self}__control {
+      border-radius: 3px;
+      border: 1px solid var(--color-gray-300);
+      box-shadow: unset !important;
+      height: 100%;
+      min-height: unset;
+
+      &:active,
+      &:hover,
+      &--is-focused {
+        border-color: var(--color-secondary);
+      }
+
+      &--is-disabled {
+        background: var(--color-white);
+        border-color: var(--color-gray-300);
+
+        &:hover {
+          border-color: var(--color-gray-300);
+        }
+
+        #{$self}__indicator {
+          color: var(--color-gray-300);
+
+          &:hover {
+            color: var(--color-gray-300);
+          }
+        }
+
+        #{$self}__single-value {
+          color: var(--color-gray-300);
+        }
+
+        #{$self}__placeholder {
+          color: var(--color-gray-500);
+        }
+      }
+    }
+
+    #{$self}__value-container {
+      cursor: text;
+      height: 100%;
+      padding: 0 6px;
+
+      & > div:last-child:not(#{$self}__single-value) {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    #{$self}__input {
+      height: 100%;
+      margin-top: 6px;
+
+      input {
+        color: var(--color-primary);
+        transition: none;
+      }
+    }
+
+    #{$self}__placeholder {
+      color: var(--color-gray-500);
+      margin: 0;
+    }
+
+    #{$self}__single-value {
+      color: var(--color-primary);
+      margin: 0;
+    }
+
+    #{$self}__indicators {
+      height: 100%;
+    }
+
+    #{$self}__indicator-separator {
+      display: none;
+    }
+
+    #{$self}__indicator {
+      color: var(--color-gray-500);
+
+      &:hover {
+        color: var(--color-secondary);
+      }
+    }
+  }
+}
+
+#dropdown-root {
+  .Select__menu {
+    margin-top: 3px;
+  }
+
+  .Select__option {
+    $self: &;
+    color: var(--color-primary);
+    height: 30px;
+    padding: 4px 24px 4px 6px;
+    position: relative;
+
+    &--is-focused {
+      background: var(--color-gray-050);
+    }
+
+    &--is-selected {
+      background: var(--color-gray-100);
+    }
+
+    &--is-disabled {
+      color: var(--color-gray-300);
+
+      #{$self}--is-focused {
+        color: var(--color-white);
+      }
+
+      #{$self}--is-selected {
+        color: var(--color-primary);
+      }
+    }
+  }
+}
