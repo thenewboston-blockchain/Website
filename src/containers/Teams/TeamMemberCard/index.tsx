@@ -6,7 +6,7 @@ import './TeamMemberCard.scss';
 
 interface ComponentProps {
   displayName: string;
-  githubUsername: string;
+  githubUsername?: string;
   isLead: boolean;
   payPerDay: number;
   profileImage: string;
@@ -36,9 +36,7 @@ const TeamMemberCard: FC<ComponentProps> = ({
       <h2 className="TeamMemberCard__details-name">{displayName}</h2>
       <div className="TeamMemberCard__details-title">{titles.join(', ')}</div>
       <div>Slack: {slackUsername}</div>
-      <div>
-        Github: <A href={`https://github.com/${githubUsername}`}>{githubUsername}</A>
-      </div>
+      <div>Github: {githubUsername ? <A href={`https://github.com/${githubUsername}`}>{githubUsername}</A> : '-'}</div>
       <div>
         Pay Per Day: <span className="TeamMemberCard__details-pay">{payPerDay.toLocaleString()}</span>
       </div>
