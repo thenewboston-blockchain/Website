@@ -25,6 +25,7 @@ const HelloWorld: {[isoLangCode: string]: string} = {
   ko: '안녕 세상아',
   ku: 'Silav Dinya',
   ln: 'Mbote Mokili',
+  lt: 'Labas Pasauli',
   mk: 'Здраво Свету',
   mr: 'नमस्कार जग',
   nl: 'Hallo Wereld',
