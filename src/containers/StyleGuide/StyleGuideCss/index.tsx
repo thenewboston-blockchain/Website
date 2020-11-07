@@ -258,7 +258,7 @@ const LeftMenu: FC = () => {
       </DocSubSection>
       <DocSubSection id={StyleGuideCssNav.blocksElements} title="Blocks vs. Elements">
         <p>
-          One of the pain-coins of <DocInlineCode>BEM</DocInlineCode> is the ambiguity of the distinction between Blocks
+          One of the pain-point of <DocInlineCode>BEM</DocInlineCode> is the ambiguity of the distinction between Blocks
           and Elements. In order to keep it simple, this is the rule we are going to follow:
         </p>
         <DocList variant="ul">

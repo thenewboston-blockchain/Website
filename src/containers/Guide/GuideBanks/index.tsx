@@ -62,7 +62,7 @@ const GuideBanks: FC = () => {
         account one by one.
       </p>
       <p>
-        <strong>Important Note:</strong> If and when a bank server goes down, the coins of all accounts using that bank
+        <strong>Important Note:</strong> If and when a bank server goes down, the point of all accounts using that bank
         will always remain secure. This is because unlike a real-world bank, network banks do not store coins. All
         account balances are maintained and updated by the primary validator. Both the root balance sheet and blockchain
         are continuously backed up by several confirmation validators, in the case where the primary validator goes
