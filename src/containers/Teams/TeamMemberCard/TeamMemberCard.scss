@@ -69,16 +69,18 @@
 @media (max-width: 700px){
 	.TeamMemberCard{
 	
-	&__user-avatar{
-		width:90px;
-		margin-top:25%;
-	}
 	&__details{
 		font-size: 14px;
 		margin: 0 auto;
-	}
-	&__details h2{
+	
+	& > h2{
 		font-size:18px;
+	  }
+    }
+        
+    &__user-avatar{
+        width:90px;
+        margin-top:25%;
 	}
   }
 }
