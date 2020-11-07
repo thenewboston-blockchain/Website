@@ -1,0 +1,12 @@
+.GoToTop {
+  &__go-to-top {
+  cursor:pointer;
+  z-index:1000;
+  position:fixed;
+  right:7px;
+  bottom:18px;
+  width:42px;
+  height:42px;
+  }
+
+}
