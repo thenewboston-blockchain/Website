@@ -1,5 +1,175 @@
 [
   {
+    "openingId": "engineering-front-end-team-lead",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Sanjeev"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "facebook"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "We're looking for an experienced Front-end engineer who is able to lead a team of junior developers. You and your team will be working primarily on the Account Manager and Website repositories to help build the UI's needed for the applications used by our community.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Front-end Developer (React/Redux)",
+    "reportsTo": [
+      {
+        "githubUsername": "thesanjeevsharma",
+        "name": "Sanjeev"
+      }
+    ],
+    "responsibilities": [
+      "Perform code reviews",
+      "Write job descriptions",
+      "Interview new candidates",
+      "Provide guidance to other developers when assistance is needed",
+      "Coach team members on best practices and industry standards",
+      "Regular calls with Bucky, Sanjeev, and Kristy to discuss new projects, design improvements, and future roadmap"
+    ],
+    "technologyRequirements": [
+      "JavaScript (ES6+)",
+      "React",
+      "Redux",
+      "TypeScript",
+      "Sass / SCSS",
+      "Electron",
+      "Webpack"
+    ]
+  },
+  {
+    "openingId": "design-uxui",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Kristy or Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "facebook"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Design",
+    "description": "We're looking for an experienced UI/UX designer who wants to be a part of designing the future of digital currency. You will work with a team of designers responsible for designing responsive desktop app, mobile app, and the marketing site.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "UI/UX Designer",
+    "reportsTo": [
+      {
+        "githubUsername": "kristykjlee",
+        "name": "Kristy"
+      }
+    ],
+    "responsibilities": [
+      "Collaboration with product managers and engineers on user requirements",
+      "Help develop the style guide and pattern library",
+      "Develop UI mockups or prototypes that clearly illustrate how sites functions and looks",
+      "Prepare and present rough drafts to teammates",
+      "Identify and troubleshoot UX problems (e.g. responsiveness)",
+      "Conduct layout adjustments based on user feedback"
+    ],
+    "technologyRequirements": ["Figma or Sketch"]
+  },
+  {
+    "openingId": "community-product-manager",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Kristy"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "facebook"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Community",
+    "description": "Looking for a dedicated Product Manager to help guide the success of our project and help lead the team in doing so. As the project nears release, the team is growing rapidly and we are looking for someone to help manage our goals and strategy.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Product Manager",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Defines the product vision, strategy, and roadmap",
+      "Works closely with engineering, design, and marketing to ensure user satisfaction goals are met",
+      "Gather, manage, and prioritize user requirements"
+    ],
+    "technologyRequirements": [
+      "GitHub account",
+      "Experience in project management tools and software such as Jira and Trello"
+    ]
+  },
+  {
+    "openingId": "frontend-responsiveness-expert",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Sanjeev"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "We're looking for an experienced Front-end engineer who is able to test incoming PRs' design/responsive behavior. You will primarily be working on the Account Manager and Website repositories.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Front-end Responsiveness/UX expert",
+    "reportsTo": [
+      {
+        "githubUsername": "thesanjeevsharma",
+        "name": "Sanjeev"
+      }
+    ],
+    "responsibilities": [
+      "Perform code reviews on incoming PRs, testing specifically for the UI",
+      "Test in various viewports to make sure it looks fine",
+      "Regularly test the applications to make sure there are no issues",
+      "Create new issues if there are issues"
+    ],
+    "technologyRequirements": [
+      "JavaScript (ES6+)",
+      "React",
+      "Redux",
+      "Typescript",
+      "HTML/CSS",
+      "Experience with Figma (preferred)"
+    ]
+  },
+  {
     "openingId": "senior-devops-engineer",
     "applicationMethods": [
       {
@@ -233,134 +403,6 @@
     ]
   },
   {
-    "openingId": "design-uxui",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Kristy or Bucky"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "facebook"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
-      }
-    ],
-    "category": "Design",
-    "description": "We're looking for an experienced UI/UX designer who wants to be a part of designing the future of digital currency. You will work with a team of designers responsible for designing responsive desktop app, mobile app, and the marketing site.",
-    "payNotes": ["2,800 coins/day"],
-    "position": "UI/UX Designer",
-    "reportsTo": [
-      {
-        "githubUsername": "kristykjlee",
-        "name": "Kristy"
-      }
-    ],
-    "responsibilities": [
-      "Collaboration with product managers and engineers on user requirements",
-      "Help develop the style guide and pattern library",
-      "Develop UI mockups or prototypes that clearly illustrate how sites functions and looks",
-      "Prepare and present rough drafts to teammates",
-      "Identify and troubleshoot UX problems (e.g. responsiveness)",
-      "Conduct layout adjustments based on user feedback"
-    ],
-    "technologyRequirements": ["Figma or Sketch"]
-  },
-  {
-    "openingId": "community-product-manager",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Bucky or Kristy"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "facebook"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
-      }
-    ],
-    "category": "Community",
-    "description": "Looking for a dedicated Product Manager to help guide the success of our project and help lead the team in doing so. As the project nears release, the team is growing rapidly and we are looking for someone to help manage our goals and strategy.",
-    "payNotes": ["2,800 coins/day"],
-    "position": "Product Manager",
-    "reportsTo": [
-      {
-        "githubUsername": "buckyroberts",
-        "name": "Bucky"
-      }
-    ],
-    "responsibilities": [
-      "Defines the product vision, strategy, and roadmap",
-      "Works closely with engineering, design, and marketing to ensure user satisfaction goals are met",
-      "Gather, manage, and prioritize user requirements"
-    ],
-    "technologyRequirements": [
-      "GitHub account",
-      "Experience in project management tools and software such as Jira and Trello"
-    ]
-  },
-  {
-    "openingId": "engineering-front-end-team-lead",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Bucky or Justin"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "facebook"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
-      }
-    ],
-    "category": "Engineering",
-    "description": "We're looking for an experienced Front-end engineer who is able to lead a team of junior developers. You and your team will be working primarily on the Account Manager and Website repositories to help build the UI's needed for the applications used by our community.",
-    "payNotes": ["2,800 coins/day"],
-    "position": "Front-end Team Lead (React/Redux)",
-    "reportsTo": [
-      {
-        "githubUsername": "angle943",
-        "name": "Justin"
-      }
-    ],
-    "responsibilities": [
-      "Perform code reviews",
-      "Write job descriptions",
-      "Interview new candidates",
-      "Provide guidance to other developers when assistance is needed",
-      "Coach team members on best practices and industry standards",
-      "Regular calls with Bucky, Justin, and Kristy to discuss new projects, design improvements, and future roadmap"
-    ],
-    "technologyRequirements": [
-      "JavaScript (ES6+)",
-      "React",
-      "Redux",
-      "TypeScript",
-      "Sass / SCSS",
-      "Electron",
-      "Webpack"
-    ]
-  },
-  {
     "openingId": "marketing-director",
     "applicationMethods": [
       {
@@ -435,7 +477,7 @@
     "applicationMethods": [
       {
         "channel": "slack",
-        "note": "Message Bucky or Justin"
+        "note": "Message Sanjeev"
       },
       {
         "channel": "linkedin"
@@ -456,8 +498,8 @@
     "position": "Mobile Team Lead",
     "reportsTo": [
       {
-        "githubUsername": "angle943",
-        "name": "Justin"
+        "githubUsername": "thesanjeevsharma",
+        "name": "Sanjeev"
       }
     ],
     "responsibilities": [
@@ -466,7 +508,7 @@
       "Interview new candidates",
       "Provide guidance to other developers when assistance is needed",
       "Coach team members on best practices and industry standards",
-      "Regular calls with Bucky, Justin, and Kristy to discuss new projects, design improvements, and future roadmap"
+      "Regular calls with Bucky, Sanjeev, and Kristy to discuss new projects, design improvements, and future roadmap"
     ],
     "technologyRequirements": [
       "Experience in mobile development",
@@ -658,48 +700,6 @@
       "Designing and implementing the overall recruiting strategy"
     ],
     "technologyRequirements": ["Strong understanding of cryptocurrency and blockchain technology"]
-  },
-  {
-    "openingId": "frontend-responsiveness-expert",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Justin"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
-      }
-    ],
-    "category": "Engineering",
-    "description": "We're looking for an experienced Front-end engineer who is able to test incoming PRs' design/responsive behavior. You will primarily be working on the Account Manager and Website repositories.",
-    "payNotes": ["2,800 coins/day"],
-    "position": "Front-end Responsiveness/UX expert",
-    "reportsTo": [
-      {
-        "githubUsername": "angle943",
-        "name": "Justin"
-      }
-    ],
-    "responsibilities": [
-      "Perform code reviews on incoming PRs, testing specifically for the UI",
-      "Test in various viewports to make sure it looks fine",
-      "Regularly test the applications to make sure there are no issues",
-      "Create new issues if there are issues"
-    ],
-    "technologyRequirements": [
-      "JavaScript (ES6+)",
-      "React",
-      "Redux",
-      "Typescript",
-      "HTML/CSS",
-      "Experience with Figma (preferred)"
-    ]
   },
   {
     "openingId": "python-django-developer",
