@@ -21,6 +21,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
   const [communityAnchorEl, setCommunityAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [getStartedAnchorEl, setGetStartedAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [moreAnchorEl, setMoreAnchorEl] = useState<HTMLButtonElement | null>(null);
+  const [isFocused, setFocus] = useState(false);
   const {width} = useWindowDimensions();
 
   useEffect(() => {
@@ -49,13 +50,15 @@ const TopNav: FC<ComponentProps> = ({className}) => {
     );
   };
 
-  const renderCommunityPopover = (): ReactNode => {
+  const renderCommunityPopover = (anchorEl: HTMLButtonElement | null): ReactNode => {
     return (
       <>
         <TopNavPopoverItem
           closePopover={unsetCommunityAnchorEl}
           description="Slack, GitHub, YouTube, LinkedIn, etc"
           iconType={IconType.earth}
+          shouldFocus={!!anchorEl && isFocused}
+          shouldCloseOnShiftTab
           title="Join the Community!"
           to="/social"
         />
@@ -77,6 +80,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
           closePopover={unsetCommunityAnchorEl}
           description="View the highest ranked contributors"
           iconType={IconType.trophy}
+          shouldCloseOnTab
           title="Leaderboard"
           to="/leaderboard/All"
         />
@@ -84,13 +88,15 @@ const TopNav: FC<ComponentProps> = ({className}) => {
     );
   };
 
-  const renderGetStartedPopover = (): ReactNode => {
+  const renderGetStartedPopover = (anchorEl: HTMLButtonElement | null): ReactNode => {
     return (
       <>
         <TopNavPopoverItem
           closePopover={unsetGetStartedAnchorEl}
           description="Start reading into Guides and APIs"
           iconType={IconType.fileDocument}
+          shouldFocus={!!anchorEl && isFocused}
+          shouldCloseOnShiftTab
           title="Documentation"
           to="/guide/introduction"
         />
@@ -99,6 +105,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
           description="Pick up tasks within GitHub and earn coins"
           iconSize={28}
           iconType={IconType.github}
+          shouldCloseOnTab
           title="Tasks"
           to="/tasks"
         />
@@ -106,13 +113,15 @@ const TopNav: FC<ComponentProps> = ({className}) => {
     );
   };
 
-  const renderMorePopover = (): ReactNode => {
+  const renderMorePopover = (anchorEl: HTMLButtonElement | null): ReactNode => {
     return (
       <>
         <TopNavPopoverItem
           closePopover={unsetMoreAnchorEl}
           description="Frequently asked questions"
           iconType={IconType.forum}
+          shouldFocus={!!anchorEl && isFocused}
+          shouldCloseOnShiftTab
           title="FAQ"
           to="/faq"
         />
@@ -120,6 +129,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
           closePopover={unsetMoreAnchorEl}
           description="Support thenewboston"
           iconType={IconType.currencyUsd}
+          shouldCloseOnTab
           title="Donate"
           to="/donate"
         />
@@ -134,31 +144,34 @@ const TopNav: FC<ComponentProps> = ({className}) => {
           anchorEl={getStartedAnchorEl}
           buttonText="Get Started"
           className="TopNav__right-item"
+          setFocus={setFocus}
           popoverId="get-started-popover"
           setAnchorEl={setGetStartedAnchorEl}
           unsetAnchorEl={unsetGetStartedAnchorEl}
         >
-          {renderGetStartedPopover()}
+          {renderGetStartedPopover(getStartedAnchorEl)}
         </TopNavPopoverButton>
         <TopNavPopoverButton
           anchorEl={communityAnchorEl}
           buttonText="Community"
           className="TopNav__right-item"
+          setFocus={setFocus}
           popoverId="community-popover"
           setAnchorEl={setCommunityAnchorEl}
           unsetAnchorEl={unsetCommunityAnchorEl}
         >
-          {renderCommunityPopover()}
+          {renderCommunityPopover(communityAnchorEl)}
         </TopNavPopoverButton>
         <TopNavPopoverButton
           anchorEl={moreAnchorEl}
           buttonText="More"
           className="TopNav__right-item"
+          setFocus={setFocus}
           popoverId="more-popover"
           setAnchorEl={setMoreAnchorEl}
           unsetAnchorEl={unsetMoreAnchorEl}
         >
-          {renderMorePopover()}
+          {renderMorePopover(moreAnchorEl)}
         </TopNavPopoverButton>
         <Link className={clsx('TopNav__right-item', 'TopNav__download-button')} to="/download">
           <Button>Download</Button>
@@ -215,15 +228,18 @@ const TopNav: FC<ComponentProps> = ({className}) => {
 
   const unsetCommunityAnchorEl = useCallback((): void => {
     setCommunityAnchorEl(null);
-  }, [setCommunityAnchorEl]);
+    setFocus(false);
+  }, [setCommunityAnchorEl, setFocus]);
 
   const unsetGetStartedAnchorEl = useCallback((): void => {
     setGetStartedAnchorEl(null);
-  }, [setGetStartedAnchorEl]);
+    setFocus(false);
+  }, [setGetStartedAnchorEl, setFocus]);
 
   const unsetMoreAnchorEl = useCallback((): void => {
     setMoreAnchorEl(null);
-  }, [setMoreAnchorEl]);
+    setFocus(false);
+  }, [setMoreAnchorEl, setFocus]);
 
   return (
     <header className={clsx('TopNav', className)}>

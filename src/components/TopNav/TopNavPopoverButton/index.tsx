@@ -1,4 +1,4 @@
-import React, {FC, ReactNode, useEffect} from 'react';
+import React, {FC, ReactNode, useEffect, useRef} from 'react';
 import clsx from 'clsx';
 
 import {Icon, IconType, Popover} from 'components';
@@ -11,6 +11,7 @@ interface ComponentProps {
   buttonText: string;
   children: ReactNode;
   className?: string;
+  setFocus(isClickEvent: boolean): void;
   popoverId: string;
   setAnchorEl(newEl: HTMLButtonElement | null): void;
   unsetAnchorEl(): void;
@@ -21,20 +22,38 @@ const TopNavPopoverButton: FC<ComponentProps> = ({
   buttonText,
   children,
   className,
+  setFocus,
   popoverId,
   setAnchorEl,
   unsetAnchorEl,
 }) => {
   const {width} = useWindowDimensions();
 
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
   const popoverIsOpen = !!anchorEl;
 
   const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
+    // Focusing the button is needed for Firefox.
+    buttonRef.current?.focus();
     if (!anchorEl) {
       setAnchorEl(e.currentTarget);
       return;
     }
     setAnchorEl(null);
+    setFocus(false);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    const canFocusOnTabKey = e.key === 'Tab' && !e.shiftKey && !!anchorEl;
+    const shouldCloseOnShiftTabKey = e.key === 'Tab' && e.shiftKey && !!anchorEl;
+    if (canFocusOnTabKey) {
+      e.preventDefault();
+      setFocus(true);
+    }
+    if (shouldCloseOnShiftTabKey) {
+      unsetAnchorEl();
+    }
   };
 
   useEffect(() => {
@@ -42,10 +61,14 @@ const TopNavPopoverButton: FC<ComponentProps> = ({
       unsetAnchorEl();
     }
   }, [popoverIsOpen, unsetAnchorEl, width]);
-
   return (
     <>
-      <button className={clsx('TopNavPopoverButton', className)} onClick={handleButtonClick}>
+      <button
+        className={clsx('TopNavPopoverButton', className)}
+        onClick={handleButtonClick}
+        onKeyDown={handleKeyDown}
+        ref={buttonRef}
+      >
         {buttonText}
         <Icon
           className={clsx('TopNavPopoverButton__chevron-icon', {
