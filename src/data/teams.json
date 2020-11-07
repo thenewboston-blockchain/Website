@@ -1,75 +1,145 @@
 [
   {
-    "title": "Analytics",
+    "title": "Back-End Developers",
     "contributors": [
       {
-        "title": "Data Analyst",
-        "isLead": false,
-        "payPerDay": 3800,
+        "title": "Back-End Lead",
+        "isLead": true,
+        "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "1",
-          "displayName": "Justin Kim",
-          "githubUsername": "angle943",
-          "profileImage": "https://placehold.it/200X200",
-          "slackUsername": "angle943"
+          "contributorId": "4",
+          "displayName": "Volodymyr",
+          "githubUsername": "vosi",
+          "profileImage": "https://avatars0.githubusercontent.com/u/758024?s=460&v=4",
+          "slackUsername": "Volodymyr"
         }
       },
       {
-        "title": "Data Analyst",
+        "title": "Back-End Lead",
         "isLead": true,
         "payPerDay": 2800,
-        "createdDate": "2020-08-08T02:14:59.307535Z",
+        "createdDate": "2020-05-09T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "2",
-          "displayName": "Albert Kuliński",
-          "githubUsername": "akulinski",
-          "profileImage": "https://placehold.it/200X200",
-          "slackUsername": "akulinski"
+          "contributorId": "5",
+          "displayName": "Mikhail",
+          "githubUsername": "fonar",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01CTP5N98D-11bd9bb494f5-512",
+          "slackUsername": "Mikhail"
+        }
+      },
+      {
+        "title": "Junior Python (Django) Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-05-09T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "18",
+          "displayName": "Abhi",
+          "githubUsername": null,
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01BPK991R7-8dac7d9c0d9c-512",
+          "slackUsername": "Abhi"
+        }
+      },
+      {
+        "title": "Head of Python Client Library Development",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-05-09T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "23",
+          "displayName": "Shahraiz Ali",
+          "githubUsername": "shahraizali",
+          "profileImage": "https://avatars3.githubusercontent.com/u/15216270?s=460&u=d417978e0163fb544caf74293278fac7ebf1dabf&v=4",
+          "slackUsername": "Shahraiz Ali"
         }
       }
     ]
   },
   {
-    "title": "Back-End Developers",
+    "title": "Community",
     "contributors": [
       {
-        "title": "Back End Lead",
+        "title": "Head of Community",
         "isLead": true,
-        "payPerDay": 3800,
-        "createdDate": "2020-06-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "3",
-          "displayName": "Bucky Roberts",
-          "githubUsername": "buckyroberts",
-          "profileImage": "https://placehold.it/200X200",
-          "slackUsername": "buckyroberts"
-        }
-      },
-      {
-        "title": "Back End Developer",
-        "isLead": false,
-        "payPerDay": 3800,
+        "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "1",
-          "displayName": "Justin Kim",
-          "githubUsername": "angle943",
-          "profileImage": "https://placehold.it/200X200",
-          "slackUsername": "angle943"
+          "displayName": "Bucky Roberts",
+          "githubUsername": "buckyroberts",
+          "profileImage": "https://avatars2.githubusercontent.com/u/8547538?s=460&u=8a4be84ff4870a332fe94c11fca02b432fb9f83e&v=4",
+          "slackUsername": "Bucky"
         }
       },
       {
-        "title": "Back End Developer",
+        "title": "Hiring Manager",
         "isLead": false,
-        "payPerDay": 3800,
-        "createdDate": "2020-05-09T02:14:59.307535Z",
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "4",
-          "displayName": "Mikhail",
-          "githubUsername": "fonar",
-          "profileImage": "https://placehold.it/200X200",
-          "slackUsername": "fonar"
+          "contributorId": "6",
+          "displayName": "Francisca",
+          "githubUsername": null,
+          "profileImage": "https://media-exp1.licdn.com/dms/image/C4E03AQFEnGzSqKQd8g/profile-displayphoto-shrink_400_400/0?e=1609977600&v=beta&t=DKNgaI0rUhYkkYc9cUQ7cJos0GFMbhzXpNyZyIXfSs8",
+          "slackUsername": "Francisca"
+        }
+      },
+      {
+        "title": "LinkedIn Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "7",
+          "displayName": "Martin Nwafor",
+          "githubUsername": null,
+          "profileImage": "https://media-exp1.licdn.com/dms/image/C4D03AQEsxV5J1Hi9QQ/profile-displayphoto-shrink_400_400/0?e=1609977600&v=beta&t=4jG6hRfnY9P5t0wrhrbuosLRRTWvxaxStZzdtYr5rdc",
+          "slackUsername": "Martin Nwafor"
+        }
+      },
+      {
+        "title": "Blockchain Cryptocurrency Researcher",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "17",
+          "displayName": "Colfax",
+          "githubUsername": "colfax23",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01DDHVKK9S-5d84cd83bdb7-512",
+          "slackUsername": "Colfax"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Design",
+    "contributors": [
+      {
+        "title": "Design Lead",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "2",
+          "displayName": "Kristy Lee",
+          "githubUsername": "kristykjlee",
+          "profileImage": "https://avatars1.githubusercontent.com/u/68207101?s=460&u=f001c3eb8dfc9444d1abff7ec2ef5e4f0f1ccd5e&v=4",
+          "slackUsername": "Kristy KJ"
+        }
+      },
+      {
+        "title": "UI/UX Designer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "13",
+          "displayName": "David Yap",
+          "githubUsername": null,
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01C3UKRM2M-e036dfe7aec6-512",
+          "slackUsername": "David Yap"
         }
       }
     ]
@@ -78,42 +148,189 @@
     "title": "Front-End Developers",
     "contributors": [
       {
-        "title": "Front End Developer",
-        "isLead": false,
-        "payPerDay": 3800,
-        "createdDate": "2020-06-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "3",
-          "displayName": "Bucky Roberts",
-          "githubUsername": "buckyroberts",
-          "profileImage": "https://placehold.it/200X200",
-          "slackUsername": "buckyroberts"
-        }
-      },
-      {
-        "title": "FE Lead Developer",
+        "title": "Front-End Developer",
         "isLead": true,
-        "payPerDay": 3800,
+        "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "1",
-          "displayName": "Justin Kim",
-          "githubUsername": "angle943",
-          "profileImage": "https://placehold.it/200X200",
-          "slackUsername": "angle943"
+          "contributorId": "3",
+          "displayName": "Sanjeev Sharma",
+          "githubUsername": "thesanjeevsharma",
+          "profileImage": "https://avatars3.githubusercontent.com/u/29539278?s=460&u=c949af33256607d5e1d93958398a139ff1d67227&v=4",
+          "slackUsername": "Sanjeev Sharma"
         }
       },
       {
-        "title": "Front End Developer",
+        "title": "Front-End Developer",
         "isLead": false,
-        "payPerDay": 3800,
-        "createdDate": "2020-05-09T02:14:59.307535Z",
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "4",
-          "displayName": "Mikhail",
-          "githubUsername": "fonar",
-          "profileImage": "https://placehold.it/200X200",
-          "slackUsername": "fonar"
+          "contributorId": "19",
+          "displayName": "Amarjeet Sarma",
+          "githubUsername": "amarjeet987",
+          "profileImage": "https://avatars1.githubusercontent.com/u/38986305?v=4",
+          "slackUsername": "Amarjeet"
+        }
+      },
+      {
+        "title": "Front-End Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "21",
+          "displayName": "accessdeniedIT",
+          "githubUsername": "accessdeniedIT",
+          "profileImage": "https://avatars1.githubusercontent.com/u/59346347?s=460&u=aefefc6e52e3e0a6e43e19f5d08119aa76dd3c00&v=4",
+          "slackUsername": "accessdeniedIT"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Marketing",
+    "contributors": [
+      {
+        "title": "SEO Manager",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "20",
+          "displayName": "Sunil Chauhan",
+          "githubUsername": null,
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01C14HRXFT-g90d1fb3c0c1-512",
+          "slackUsername": "Sunil Chauhan"
+        }
+      }
+    ]
+  },
+  {
+    "title": "QA",
+    "contributors": [
+      {
+        "title": "QA Lead",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "22",
+          "displayName": "Snehal Ingale",
+          "githubUsername": null,
+          "profileImage": "https://avatars2.githubusercontent.com/u/59204822?s=460&v=4",
+          "slackUsername": "Snehal Ingale"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Reddit Moderators",
+    "contributors": [
+      {
+        "title": "Reddit Moderator",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "8",
+          "displayName": "Shivam Yadav",
+          "githubUsername": null,
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U017J4SDBM4-49405606e0d2-512",
+          "slackUsername": "Shivam Yadav"
+        }
+      },
+      {
+        "title": "Reddit Moderator",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "9",
+          "displayName": "Bojan Ilijevski",
+          "githubUsername": null,
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01B1PFRMH7-df88a64aa7ba-512",
+          "slackUsername": "Bojan Ilijevski"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Security",
+    "contributors": [
+      {
+        "title": "Cryptography Security Engineer",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "24",
+          "displayName": "Sarthak Mathur",
+          "githubUsername": "smash8tap",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EM1KM7DF-d0152ca4da07-512",
+          "slackUsername": "Sarthak Mathur"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Slack Managers",
+    "contributors": [
+      {
+        "title": "Slack Manager",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "10",
+          "displayName": "Benjamin Thorpe",
+          "githubUsername": null,
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01BWTU729Z-b2ae1378a598-512",
+          "slackUsername": "Benjamin Thorpe"
+        }
+      },
+      {
+        "title": "Slack Manager",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "11",
+          "displayName": "Aayushi Maheshwari",
+          "githubUsername": "aayushi14",
+          "profileImage": "https://avatars3.githubusercontent.com/u/33564949?s=460&u=90790eec3a04dfd58d08d0adeb18cba94e39685c&v=4",
+          "slackUsername": "Aayushi Maheshwari"
+        }
+      },
+      {
+        "title": "Slack Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "12",
+          "displayName": "KryptoZero",
+          "githubUsername": null,
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E2FN4D1S-4688c60ed154-512",
+          "slackUsername": "KryptoZero"
+        }
+      }
+    ]
+  },
+  {
+    "title": "YouTubers",
+    "contributors": [
+      {
+        "title": "YouTube Educator",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "15",
+          "displayName": "Caleb Curry",
+          "githubUsername": "CalebCurry",
+          "profileImage": "https://avatars0.githubusercontent.com/u/13798261?s=460&u=18b025b21e67878c26f81c554575378fd4cf6574&v=4",
+          "slackUsername": "Caleb Curry"
         }
       }
     ]
