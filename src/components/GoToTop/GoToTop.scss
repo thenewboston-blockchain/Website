@@ -7,11 +7,11 @@
     bottom: 12px;
     width: 42px;
     height: 42px;
-    background: #00000063;
+    background: #898fa0;
     border-radius: 50%;
     color: #fff;
-  }
-  &__go-to-top:hover {
-    background: #00000080;
+    animation: fadeIn 0.3s;
+    transition: opacity 0.4s;
+    opacity: 1;
   }
 }
