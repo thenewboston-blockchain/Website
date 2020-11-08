@@ -3,6 +3,7 @@ export enum TeamName {
   backEndDevelopers = 'Back-End Developers',
   community = 'Community',
   design = 'Design',
+  discordManagers = 'Discord Managers',
   frontEndDevelopers = 'Front-End Developers',
   marketing = 'Marketing',
   qa = 'QA',
