@@ -10,7 +10,7 @@ import {BreadcrumbMenu, EmptyPage, FlatNavLinks, LabelFilter, Loader} from 'comp
 import {GenericVoidFunction, SortBy} from 'types/generic';
 import {Issue, Repository, RepositoryUrlParams} from 'types/github';
 import {fetchGithubIssues} from 'utils/github';
-import {sortByNumberKey} from 'utils/sort';
+import {sortByDateKey, sortByNumberKey} from 'utils/sort';
 
 import TasksTask from './TasksTask';
 import './Tasks.scss';
@@ -23,7 +23,9 @@ const Tasks: FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [repositoryFilter, setRepositoryFilter] = useState<Repository>(Repository.all);
   const [selectedLabelNames, setSelectedLabelNames] = useState<string[]>([]);
-  const [sortBy, setSortBy] = useState<SortBy>(SortBy.rewardDesc);
+  const [sortByOptions, setSortByOptions] = useState<SortBy[]>([SortBy.time, SortBy.reward]);
+  const [sortByOrder, setSortByOrder] = useState<'asc' | 'desc'>('asc');
+
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
       try {
@@ -57,20 +59,13 @@ const Tasks: FC = () => {
             const labelNames = labels.map(({name}) => name);
             return !!intersection(labelNames, selectedLabelNames).length;
           });
-
-    switch (sortBy) {
-      case SortBy.none:
-      default:
-        return filteredIssues;
-      case SortBy.rewardDesc: {
-        filteredIssues = filteredIssues.sort(sortByNumberKey('amount', 'desc'));
-        return filteredIssues;
-      }
-      case SortBy.rewardAsc: {
-        filteredIssues = filteredIssues.sort(sortByNumberKey('amount', 'asc'));
-        return filteredIssues;
-      }
+    if (sortByOptions.includes(SortBy.reward)) {
+      filteredIssues = filteredIssues.sort(sortByNumberKey('amount', sortByOrder));
     }
+    if (sortByOptions.includes(SortBy.time)) {
+      filteredIssues = filteredIssues.sort(sortByDateKey('created_at', sortByOrder));
+    }
+    return filteredIssues;
   };
   const handleLabelClick = (labelName: string): GenericVoidFunction => (): void => {
     const results = selectedLabelNames.includes(labelName)
