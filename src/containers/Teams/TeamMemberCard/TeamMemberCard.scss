@@ -60,8 +60,13 @@
   }
 
   &__user-avatar {
-    border-radius: 50%;
-    height: auto;
-    width: 144px;
+    align-items: center;
+    display: flex;
+
+    img {
+      border-radius: 50%;
+      height: auto;
+      width: 144px;
+    }
   }
 }
