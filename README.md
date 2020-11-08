@@ -19,7 +19,7 @@
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any
 contributions you make are **greatly appreciated**.
 
 To start, you can always check the [open issues](https://github.com/thenewboston-developers/Website/issues) in this repository. You can filter issues using the labels and find the ones that suit your domain. Mostly, you'll see issues labeled with the coins you'll get, if you fix that particular issue. Earning coins improves your rank on the [leaderboard](https://thenewboston.com/leaderboard/All).
