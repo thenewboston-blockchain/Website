@@ -9,11 +9,14 @@
   &__tab-panel {
     margin-top: 43px;
   }
-
-  &__download-button {
+ &__download-button {
     align-items: center;
-    display: inline-flex;
-    margin-bottom: 60px;
+    display: flex;
+    margin-bottom: 43px;
+    @media (max-width: 768px) {
+      margin-bottom: 30px;
+    }
+
   }
 
   &__download-icon {
