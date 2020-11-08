@@ -1,3 +1,11 @@
+export enum SortBy {
+  none = 'None',
+  rewardAsc = 'RewardAsc',
+  rewardDesc = 'RewardDesc',
+  timeAsc = 'TimeAsc',
+  timeDesc = 'TimeDesc',
+}
+
 export interface Dict<T> {
   [key: string]: T;
 }

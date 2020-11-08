@@ -7,7 +7,7 @@ import intersection from 'lodash/intersection';
 import {REPOSITORY_FILTERS} from 'constants/github';
 
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks, LabelFilter, Loader} from 'components';
-import {GenericVoidFunction} from 'types/generic';
+import {GenericVoidFunction, SortBy} from 'types/generic';
 import {Issue, Repository, RepositoryUrlParams} from 'types/github';
 import {fetchGithubIssues} from 'utils/github';
 import {sortByNumberKey} from 'utils/sort';
@@ -23,7 +23,7 @@ const Tasks: FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [repositoryFilter, setRepositoryFilter] = useState<Repository>(Repository.all);
   const [selectedLabelNames, setSelectedLabelNames] = useState<string[]>([]);
-
+  const [sortBy, setSortBy] = useState<SortBy>(SortBy.rewardDesc);
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
       try {
@@ -58,11 +58,20 @@ const Tasks: FC = () => {
             return !!intersection(labelNames, selectedLabelNames).length;
           });
 
-    filteredIssues = filteredIssues.sort(sortByNumberKey('amount', 'desc'));
-
-    return filteredIssues;
+    switch (sortBy) {
+      case SortBy.none:
+      default:
+        return filteredIssues;
+      case SortBy.rewardDesc: {
+        filteredIssues = filteredIssues.sort(sortByNumberKey('amount', 'desc'));
+        return filteredIssues;
+      }
+      case SortBy.rewardAsc: {
+        filteredIssues = filteredIssues.sort(sortByNumberKey('amount', 'asc'));
+        return filteredIssues;
+      }
+    }
   };
-
   const handleLabelClick = (labelName: string): GenericVoidFunction => (): void => {
     const results = selectedLabelNames.includes(labelName)
       ? selectedLabelNames.filter((name) => name !== labelName)
