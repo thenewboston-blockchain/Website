@@ -20,7 +20,7 @@ const GuideConfirmationValidators: FC = () => {
       <DocList variant="ul">
         <li>Root account file</li>
         <ul>
-          <li>This is the flattened representation of all account balances at a given point in time</li>
+          <li>This is the flattened representation of all account balances at a given coin in time</li>
         </ul>
         <li>Root account file hash</li>
         <ul>
