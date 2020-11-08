@@ -110,6 +110,32 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01DDHVKK9S-5d84cd83bdb7-512",
           "slackUsername": "Colfax"
         }
+      },
+      {
+        "title": "Recruiter for Cryptocurrency Partnerships",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "25",
+          "displayName": "Siddhesh Kulthe",
+          "githubUsername": "iamsid47",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E65PEUFL-gecaf59a1c95-512",
+          "slackUsername": "Siddhesh Kulthe"
+        }
+      },
+      {
+        "title": "Product Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "26",
+          "displayName": "Steve Hedden",
+          "githubUsername": "-",
+          "profileImage": "https://avatars3.githubusercontent.com/u/5224821?s=460&v=4",
+          "slackUsername": "Steve Hedden"
+        }
       }
     ]
   },
@@ -122,7 +148,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "3",
+          "contributorId": "2",
           "displayName": "Kristy Lee",
           "githubUsername": "kristykjlee",
           "profileImage": "https://avatars1.githubusercontent.com/u/68207101?s=460&u=f001c3eb8dfc9444d1abff7ec2ef5e4f0f1ccd5e&v=4",
@@ -148,25 +174,12 @@
     "title": "Front-End Developers",
     "contributors": [
       {
-        "title": "Front-End Lead",
+        "title": "Front-End Developer",
         "isLead": true,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "2",
-          "displayName": "Justin Kim",
-          "githubUsername": "angle943",
-          "profileImage": "https://avatars1.githubusercontent.com/u/5943963?s=460&u=8e80845fc4eb8951ed2e43425ab304f24093b990&v=4",
-          "slackUsername": "Justin"
-        }
-      },
-      {
-        "title": "Front-End Developer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "16",
+          "contributorId": "3",
           "displayName": "Sanjeev Sharma",
           "githubUsername": "thesanjeevsharma",
           "profileImage": "https://avatars3.githubusercontent.com/u/29539278?s=460&u=c949af33256607d5e1d93958398a139ff1d67227&v=4",
@@ -179,7 +192,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "21",
+          "contributorId": "19",
           "displayName": "Amarjeet Sarma",
           "githubUsername": "amarjeet987",
           "profileImage": "https://avatars1.githubusercontent.com/u/38986305?v=4",
@@ -192,11 +205,24 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "19",
-          "displayName": "Devan Thakur",
-          "githubUsername": "iamplugged",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01CQKS0ZAN-abbb871e365a-512",
-          "slackUsername": "Devan Thakur"
+          "contributorId": "21",
+          "displayName": "Izsak",
+          "githubUsername": "accessdeniedIT",
+          "profileImage": "https://avatars1.githubusercontent.com/u/59346347?s=460&u=aefefc6e52e3e0a6e43e19f5d08119aa76dd3c00&v=4",
+          "slackUsername": "accessdeniedIT"
+        }
+      },
+      {
+        "title": "Head of JavaScript Library Development",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "27",
+          "displayName": "Carter",
+          "githubUsername": "sno2",
+          "profileImage": "https://avatars2.githubusercontent.com/u/43641633?s=460&u=33f06f961b604732bec844c107c279e080aa038b&v=4",
+          "slackUsername": "Carter"
         }
       }
     ]
@@ -264,6 +290,24 @@
           "githubUsername": null,
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01B1PFRMH7-df88a64aa7ba-512",
           "slackUsername": "Bojan Ilijevski"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Security",
+    "contributors": [
+      {
+        "title": "Cryptography Security Engineer",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "24",
+          "displayName": "Sarthak Mathur",
+          "githubUsername": "smash8tap",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EM1KM7DF-d0152ca4da07-512",
+          "slackUsername": "Sarthak Mathur"
         }
       }
     ]
