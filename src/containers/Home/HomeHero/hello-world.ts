@@ -22,6 +22,7 @@ const HelloWorld: {[isoLangCode: string]: string} = {
   ig: 'Ndewo Ụwa',
   it: 'Ciao Mondo',
   ja: 'こんにちは世界',
+  ki: 'Ũhoro thîî',
   kn: 'ನಮಸ್ಕಾರ ಪ್ರಪಂಚ',
   ko: '안녕 세상아',
   ku: 'Silav Dinya',
