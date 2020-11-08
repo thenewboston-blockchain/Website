@@ -130,7 +130,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "25",
+          "contributorId": "26",
           "displayName": "Steve Hedden",
           "githubUsername": "-",
           "profileImage": "https://avatars3.githubusercontent.com/u/5224821?s=460&v=4",
@@ -210,6 +210,19 @@
           "githubUsername": "accessdeniedIT",
           "profileImage": "https://avatars1.githubusercontent.com/u/59346347?s=460&u=aefefc6e52e3e0a6e43e19f5d08119aa76dd3c00&v=4",
           "slackUsername": "accessdeniedIT"
+        }
+      },
+      {
+        "title": "Head of JavaScript Library Development",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "27",
+          "displayName": "Carter",
+          "githubUsername": "sno2",
+          "profileImage": "https://avatars2.githubusercontent.com/u/43641633?s=460&u=33f06f961b604732bec844c107c279e080aa038b&v=4",
+          "slackUsername": "Carter"
         }
       }
     ]
