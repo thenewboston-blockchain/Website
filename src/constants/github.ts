@@ -6,6 +6,7 @@ export const REPOSITORIES = [
   Repository.accountManager,
   Repository.bank,
   Repository.thenewbostonPython,
+  Repository.thenewbostonPythonclient,
   Repository.validator,
   Repository.website,
 ];

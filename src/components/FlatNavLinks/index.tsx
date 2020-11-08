@@ -10,6 +10,25 @@ interface ComponentProps<T> {
   options: T[];
   selectedOption: T;
 }
+const thenewbostonpythonclient: any = 'thenewboston-python-client';
+const thenewbostonpython: any = 'thenewboston-python';
+
+const tnbpython: any = 'TNB-python';
+const tnbpythonclient: any = 'TNB-python-client';
+
+let setOption: any;
+function filterTheNewBoston(repo: any) {
+  if (repo === thenewbostonpython || repo === thenewbostonpythonclient) {
+    if (repo === thenewbostonpython) {
+      setOption = tnbpython;
+    } else {
+      setOption = tnbpythonclient;
+    }
+  } else {
+    setOption = repo;
+  }
+  return setOption;
+}
 
 function FlatNavLinks<T = string>({
   className,
@@ -30,7 +49,7 @@ function FlatNavLinks<T = string>({
         role="button"
         tabIndex={0}
       >
-        {option}
+        {filterTheNewBoston(option)}
       </div>
     ));
   };
