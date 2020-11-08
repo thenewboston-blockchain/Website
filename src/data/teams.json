@@ -136,6 +136,19 @@
           "profileImage": "https://avatars3.githubusercontent.com/u/5224821?s=460&v=4",
           "slackUsername": "Steve Hedden"
         }
+      },
+      {
+        "title": "Product Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "31",
+          "displayName": "Rahul Kothari",
+          "githubUsername": "-",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EUQ8SR2L-e347b1c404fa-512",
+          "slackUsername": "Rahul Kothari"
+        }
       }
     ]
   },
@@ -171,10 +184,28 @@
     ]
   },
   {
+    "title": "Discord Managers",
+    "contributors": [
+      {
+        "title": "Discord Manager",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "28",
+          "displayName": "Rajput Usman",
+          "githubUsername": null,
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E0FS4762-ge975c8b59da-512",
+          "slackUsername": "Rajput Usman"
+        }
+      }
+    ]
+  },
+  {
     "title": "Front-End Developers",
     "contributors": [
       {
-        "title": "Front-End Developer",
+        "title": "Front-End Lead",
         "isLead": true,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
@@ -184,6 +215,32 @@
           "githubUsername": "thesanjeevsharma",
           "profileImage": "https://avatars3.githubusercontent.com/u/29539278?s=460&u=c949af33256607d5e1d93958398a139ff1d67227&v=4",
           "slackUsername": "Sanjeev Sharma"
+        }
+      },
+      {
+        "title": "Front-End Lead",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "29",
+          "displayName": "Hristijan Ilieski",
+          "githubUsername": "Hristijan95",
+          "profileImage": "https://avatars1.githubusercontent.com/u/5727677?s=460&u=f1727e8f1efafdcd61661d6e4cc405d654025bb0&v=4",
+          "slackUsername": "Hristijan Ilieski"
+        }
+      },
+      {
+        "title": "Front-End Lead",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "30",
+          "displayName": "Lakshya Thakur",
+          "githubUsername": "lapstjup",
+          "profileImage": "https://avatars0.githubusercontent.com/u/29139815?s=460&u=51f8e3491ed8d26931a872a6dfb84281e368dc8d&v=4",
+          "slackUsername": "Lakshya Thakur"
         }
       },
       {
