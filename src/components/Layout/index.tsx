@@ -26,7 +26,7 @@ const Layout: FC<ComponentProps> = ({children}) => {
       <div className={clsx({Layout__content: !isHomepage, Layout__home: isHomepage})}>{children}</div>
       <div className="Layout__footer-wrapper">
         <Footer className="Layout__Footer" />
-        <GoToTop />
+        <GoToTop showBelow={250} />
       </div>
     </div>
   );

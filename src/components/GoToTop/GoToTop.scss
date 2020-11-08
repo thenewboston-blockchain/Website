@@ -1,17 +1,17 @@
 .GoToTop {
-  &__go-to-top {
-    cursor: pointer;
-    z-index: 1000;
-    position: fixed;
-    right: 7px;
-    bottom: 12px;
-    width: 42px;
-    height: 42px;
+  &__button {
+    animation: fadeIn 0.3s;
     background: #898fa0;
     border-radius: 50%;
+    bottom: 12px;
     color: #fff;
-    animation: fadeIn 0.3s;
-    transition: opacity 0.4s;
+    cursor: pointer;
+    height: 42px;
     opacity: 1;
+    position: fixed;
+    right: 7px;
+    transition: opacity 0.4s;
+    width: 42px;
+    z-index: 1000;
   }
 }
