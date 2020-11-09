@@ -1,32 +1,5 @@
 [
   {
-    "openingId": "buckys-assistant",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Bucky"
-      }
-    ],
-    "category": "Community",
-    "description": "Looking for an assistant to help Bucky with answering questions on social media, assisting community members, and helping with other daily tasks.",
-    "payNotes": ["2,800 coins/day"],
-    "position": "Bucky's Assistant",
-    "reportsTo": [
-      {
-        "githubUsername": "buckyroberts",
-        "name": "Bucky"
-      }
-    ],
-    "responsibilities": [
-      "Responding to users and answering questions on social media",
-      "Participating in roadmap meetings",
-      "Scheduling meetings and appointments",
-      "Gathering feedback from the community",
-      "Helping to improve communication between teams"
-    ],
-    "technologyRequirements": ["Excel", "GitHub"]
-  },
-  {
     "openingId": "engineering-front-end-team-lead",
     "applicationMethods": [
       {
