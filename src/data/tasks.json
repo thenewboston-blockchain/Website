@@ -266,6 +266,17 @@
       "amount_paid": "2500"
     }
   ],
+  "alexkimeu0": [
+    {
+      "repository": "Website",
+      "title": "Added Hello World in Swahili",
+      "issue_id": "351",
+      "pr_id": "635",
+      "completed_by": "alexkimeu0",
+      "completed_date": "11/9/20",
+      "amount_paid": "500"
+    }
+  ],
   "amarjeet987": [
     {
       "repository": "Website",
@@ -865,6 +876,15 @@
       "completed_by": "itsnikhil",
       "completed_date": "11/3/20",
       "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Task page margin",
+      "issue_id": "413",
+      "pr_id": "469",
+      "completed_by": "itsnikhil",
+      "completed_date": "11/6/20",
+      "amount_paid": "1000"
     }
   ],
   "jagdisharma": [
@@ -1133,6 +1153,17 @@
       "completed_by": "robMakasi",
       "completed_date": "11/4/20",
       "amount_paid": "500"
+    }
+  ],
+  "sdhiaeddine": [
+    {
+      "repository": "Website",
+      "title": "Docs need some language/grammatical fixes",
+      "issue_id": " 619",
+      "pr_id": " 624",
+      "completed_by": "sdhiaeddine",
+      "completed_date": "11/9/20",
+      "amount_paid": "1000"
     }
   ],
   "shahraizali": [
