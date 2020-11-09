@@ -14,13 +14,15 @@ const TEAM_NAME_FILTERS = [
   TeamName.backEndDevelopers,
   TeamName.community,
   TeamName.design,
+  TeamName.discordManagers,
   TeamName.frontEndDevelopers,
   TeamName.marketing,
+  TeamName.payments,
   TeamName.qa,
   TeamName.redditModerators,
   TeamName.security,
   TeamName.slackManagers,
-  TeamName.youtubers,
+  TeamName.youtube,
 ];
 
 const Teams: FC = () => {

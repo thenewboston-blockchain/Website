@@ -10,6 +10,7 @@ import EmptyPage from './EmptyPage';
 import FlatNavLinks from './FlatNavLinks';
 import Footer from './Footer';
 import {Button} from './FormElements';
+import GoToTop from './GoToTop';
 import HashLink from './HashLink';
 import Icon, {IconType} from './Icon';
 import Label from './Label';
@@ -50,6 +51,7 @@ export {
   EmptyPage,
   FlatNavLinks,
   Footer,
+  GoToTop,
   HashLink,
   Icon,
   IconType,
