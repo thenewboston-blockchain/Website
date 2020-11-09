@@ -16,6 +16,7 @@ const TEAM_NAME_FILTERS = [
   TeamName.design,
   TeamName.discordManagers,
   TeamName.frontEndDevelopers,
+  TeamName.kotlinSDK,
   TeamName.marketing,
   TeamName.payments,
   TeamName.qa,
