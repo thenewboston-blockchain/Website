@@ -119,7 +119,7 @@
         "contributor": {
           "contributorId": "26",
           "displayName": "Steve Hedden",
-          "githubUsername": "-",
+          "githubUsername": "SteveHedden",
           "profileImage": "https://avatars3.githubusercontent.com/u/5224821?s=460&v=4",
           "slackUsername": "Steve Hedden"
         }
@@ -156,8 +156,8 @@
         }
       },
       {
-        "title": "UI/UX Designer",
-        "isLead": false,
+        "title": "Design Lead",
+        "isLead": true,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
@@ -166,6 +166,45 @@
           "githubUsername": null,
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01C3UKRM2M-e036dfe7aec6-512",
           "slackUsername": "David Yap"
+        }
+      },
+      {
+        "title": "UX/UI Designer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "33",
+          "displayName": "Khairul Akmal",
+          "githubUsername": "mofodox",
+          "profileImage": "https://avatars0.githubusercontent.com/u/1651333?s=400&u=e72af3c47428f9f173b90d45a990e5631c37ea5d&v=4",
+          "slackUsername": "Khairul Akmal"
+        }
+      },
+      {
+        "title": "UX/UI Designer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "34",
+          "displayName": "Sush",
+          "githubUsername": "nsushman",
+          "profileImage": "https://avatars0.githubusercontent.com/u/18399270?s=400&v=4",
+          "slackUsername": "Sush"
+        }
+      },
+      {
+        "title": "UX/UI Designer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "35",
+          "displayName": "Manish Ram",
+          "githubUsername": "manishram",
+          "profileImage": "https://avatars0.githubusercontent.com/u/22790904?s=400&u=643810e6c9d5686df409132b01863f9e065df6c1&v=4",
+          "slackUsername": "Manish"
         }
       }
     ]
@@ -285,6 +324,19 @@
           "githubUsername": "iamsid47",
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E65PEUFL-gecaf59a1c95-512",
           "slackUsername": "Siddhesh Kulthe"
+        }
+      },
+      {
+        "title": "Marketing Director",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "36",
+          "displayName": "Pulkit Bajaj",
+          "githubUsername": "-",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01DYM56TQV-b28ea2d2e34d-72",
+          "slackUsername": "Pulkit Bajaj"
         }
       },
       {
