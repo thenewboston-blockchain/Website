@@ -112,19 +112,6 @@
         }
       },
       {
-        "title": "Recruiter for Cryptocurrency Partnerships",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "25",
-          "displayName": "Siddhesh Kulthe",
-          "githubUsername": "iamsid47",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E65PEUFL-gecaf59a1c95-512",
-          "slackUsername": "Siddhesh Kulthe"
-        }
-      },
-      {
         "title": "Product Manager",
         "isLead": false,
         "payPerDay": 2800,
@@ -288,12 +275,25 @@
     "title": "Marketing",
     "contributors": [
       {
-        "title": "SEO Manager",
+        "title": "Head of Marketing",
         "isLead": true,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "20",
+          "displayName": "Siddhesh Kulthe",
+          "githubUsername": "iamsid47",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E65PEUFL-gecaf59a1c95-512",
+          "slackUsername": "Siddhesh Kulthe"
+        }
+      },
+      {
+        "title": "SEO Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "25",
           "displayName": "Sunil Chauhan",
           "githubUsername": null,
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01C14HRXFT-g90d1fb3c0c1-512",
