@@ -1,5 +1,83 @@
 [
   {
+    "openingId": "senior-python-django-developer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "We are looking for a Senior Python / Django Developer to help us build out both our digital currency network and Website API.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Senior Python / Django Developer",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Designing and creating RESTful APIs",
+      "Participating in architectural, design and product discussions",
+      "Working in an environment with an excellent team of engineers"
+    ],
+    "technologyRequirements": [
+      "Experience with Celery, DRF, and pytest",
+      "2+ years of experience in Django",
+      "4+ years of experience in Python"
+    ]
+  },
+  {
+    "openingId": "python-security-engineer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "As Python Security Engineer you'll be a key member of the security team. You'll be responsible for influencing engineering to adopt security and privacy by design and internal consulting on remediating security vulnerabilities.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Python Security Engineer",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Help harden our infrastructure to avoid exploits and privilege escalation",
+      "Perform architecture reviews as part of product security process",
+      "Contribute to threat modeling and security risk assessments",
+      "Manage and implement security in assigned products"
+    ],
+    "technologyRequirements": [
+      "3+ years of experience in penetrating testing, including mobile & web applications",
+      "Experience with conducting threat assessments, building threat models, and creating remediation plans based on the results of threat assessments",
+      "Thorough understanding of vulnerability classes (OWASP), how they can be exploited",
+      "Knowledge of cryptography, including symmetric & asymmetric ciphers, hash functions, PKI, and certificates"
+    ]
+  },
+  {
     "openingId": "engineering-front-end-team-lead",
     "applicationMethods": [
       {
@@ -46,46 +124,6 @@
       "Electron",
       "Webpack"
     ]
-  },
-  {
-    "openingId": "design-uxui",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Kristy or Bucky"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "facebook"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
-      }
-    ],
-    "category": "Design",
-    "description": "We're looking for an experienced UI/UX designer who wants to be a part of designing the future of digital currency. You will work with a team of designers responsible for designing responsive desktop app, mobile app, and the marketing site.",
-    "payNotes": ["2,800 coins/day"],
-    "position": "UI/UX Designer",
-    "reportsTo": [
-      {
-        "githubUsername": "kristykjlee",
-        "name": "Kristy"
-      }
-    ],
-    "responsibilities": [
-      "Collaboration with product managers and engineers on user requirements",
-      "Help develop the style guide and pattern library",
-      "Develop UI mockups or prototypes that clearly illustrate how sites functions and looks",
-      "Prepare and present rough drafts to teammates",
-      "Identify and troubleshoot UX problems (e.g. responsiveness)",
-      "Conduct layout adjustments based on user feedback"
-    ],
-    "technologyRequirements": ["Figma or Sketch"]
   },
   {
     "openingId": "community-product-manager",
@@ -147,7 +185,7 @@
     "category": "Engineering",
     "description": "We're looking for an experienced Front-end engineer who is able to test incoming PRs' design/responsive behavior. You will primarily be working on the Account Manager and Website repositories.",
     "payNotes": ["2,800 coins/day"],
-    "position": "Front-end Responsiveness/UX expert",
+    "position": "Front-end Responsive UI Expert",
     "reportsTo": [
       {
         "githubUsername": "thesanjeevsharma",
@@ -556,46 +594,6 @@
     ]
   },
   {
-    "openingId": "python-security-engineer",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Bucky"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
-      }
-    ],
-    "category": "Engineering",
-    "description": "As Python Security Engineer you'll be a key member of the security team. You'll be responsible for influencing engineering to adopt security and privacy by design and internal consulting on remediating security vulnerabilities.",
-    "payNotes": ["2,800 coins/day"],
-    "position": "Python Security Engineer",
-    "reportsTo": [
-      {
-        "githubUsername": "buckyroberts",
-        "name": "Bucky"
-      }
-    ],
-    "responsibilities": [
-      "Help harden our infrastructure to avoid exploits and privilege escalation",
-      "Perform architecture reviews as part of product security process",
-      "Contribute to threat modeling and security risk assessments",
-      "Manage and implement security in assigned products"
-    ],
-    "technologyRequirements": [
-      "3+ years of experience in penetrating testing, including mobile & web applications",
-      "Experience with conducting threat assessments, building threat models, and creating remediation plans based on the results of threat assessments",
-      "Thorough understanding of vulnerability classes (OWASP), how they can be exploited",
-      "Knowledge of cryptography, including symmetric & asymmetric ciphers, hash functions, PKI, and certificates"
-    ]
-  },
-  {
     "openingId": "cryptography-security-engineer",
     "applicationMethods": [
       {
@@ -700,43 +698,5 @@
       "Designing and implementing the overall recruiting strategy"
     ],
     "technologyRequirements": ["Strong understanding of cryptocurrency and blockchain technology"]
-  },
-  {
-    "openingId": "python-django-developer",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Bucky"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
-      }
-    ],
-    "category": "Engineering",
-    "description": "We are looking for a Python / Django Developer to help us build out both our digital currency network and Website API.",
-    "payNotes": ["2,800 coins/day"],
-    "position": "Python / Django Developer",
-    "reportsTo": [
-      {
-        "githubUsername": "buckyroberts",
-        "name": "Bucky"
-      }
-    ],
-    "responsibilities": [
-      "Designing and creating RESTful APIs",
-      "Participating in architectural, design and product discussions",
-      "Working in an environment with an excellent team of engineers"
-    ],
-    "technologyRequirements": [
-      "Experience with Celery, DRF, and pytest",
-      "2+ years of experience in Django",
-      "4+ years of experience in Python"
-    ]
   }
 ]
