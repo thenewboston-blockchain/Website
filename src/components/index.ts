@@ -18,6 +18,7 @@ import MarketingButton from './MarketingButton';
 import MenuGroup from './MenuGroup';
 import LabelFilter from './LabelFilter';
 import Loader from './Loader';
+import PageTitle from './PageTitle';
 import Pagination from './Pagination';
 import Popover from './Popover';
 import Qr from './Qr';
@@ -58,6 +59,7 @@ export {
   Loader,
   MarketingButton,
   MenuGroup,
+  PageTitle,
   Pagination,
   Popover,
   Qr,

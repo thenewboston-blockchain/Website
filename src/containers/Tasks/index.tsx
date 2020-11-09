@@ -6,7 +6,7 @@ import intersection from 'lodash/intersection';
 
 import {REPOSITORY_FILTERS} from 'constants/github';
 
-import {BreadcrumbMenu, EmptyPage, FlatNavLinks, LabelFilter, Loader} from 'components';
+import {BreadcrumbMenu, EmptyPage, FlatNavLinks, LabelFilter, Loader, PageTitle} from 'components';
 import {GenericVoidFunction} from 'types/generic';
 import {Issue, Repository, RepositoryUrlParams} from 'types/github';
 import {fetchGithubIssues} from 'utils/github';
@@ -113,25 +113,30 @@ const Tasks: FC = () => {
     );
   };
 
+  const pageTitle = `Tasks | ${repository}`;
+
   return (
-    <div className="Tasks">
-      <BreadcrumbMenu
-        className="Tasks__BreadcrumbMenu"
-        menuItems={renderFilters()}
-        pageName={repository}
-        sectionName="Tasks"
-      />
-      <div className="Tasks__left-menu">{renderFilters()}</div>
-      <div className="Tasks__task-list">
-        {loading ? (
-          <div className="Tasks__loader-container">
-            <Loader />
-          </div>
-        ) : (
-          renderTasks()
-        )}
+    <>
+      <PageTitle title={pageTitle} />
+      <div className="Tasks">
+        <BreadcrumbMenu
+          className="Tasks__BreadcrumbMenu"
+          menuItems={renderFilters()}
+          pageName={repository}
+          sectionName="Tasks"
+        />
+        <div className="Tasks__left-menu">{renderFilters()}</div>
+        <div className="Tasks__task-list">
+          {loading ? (
+            <div className="Tasks__loader-container">
+              <Loader />
+            </div>
+          ) : (
+            renderTasks()
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

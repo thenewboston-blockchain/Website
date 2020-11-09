@@ -1,7 +1,7 @@
 import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
 
-import {BreadcrumbMenu, EmptyPage, FlatNavLinks} from 'components';
+import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
 import {OpeningCategory, OpeningsUrlParams} from 'types/openings';
 import {getOpenings} from 'utils/data';
 
@@ -74,24 +74,29 @@ const Openings: FC = () => {
     return <OpeningDetails opening={opening} />;
   };
 
+  const pageTitle = `Openings | ${categoryParam}`;
+
   return (
-    <div className="Openings">
-      <BreadcrumbMenu
-        className="Openings__BreadcrumbMenu"
-        menuItems={renderCategoryFilter()}
-        pageName={categoryFilter}
-        sectionName="Open Positions"
-      />
-      <div className="Openings__left-menu">{renderCategoryFilter()}</div>
-      {openingIdParam ? (
-        <div className="Openings__opening-details">{renderOpeningDetails()}</div>
-      ) : (
-        <div className="Openings__opening-list">
-          <h1 className="Openings__opening-list-heading">Openings</h1>
-          {renderOpenings()}
-        </div>
-      )}
-    </div>
+    <>
+      <PageTitle title={pageTitle} />
+      <div className="Openings">
+        <BreadcrumbMenu
+          className="Openings__BreadcrumbMenu"
+          menuItems={renderCategoryFilter()}
+          pageName={categoryFilter}
+          sectionName="Open Positions"
+        />
+        <div className="Openings__left-menu">{renderCategoryFilter()}</div>
+        {openingIdParam ? (
+          <div className="Openings__opening-details">{renderOpeningDetails()}</div>
+        ) : (
+          <div className="Openings__opening-list">
+            <h1 className="Openings__opening-list-heading">Openings</h1>
+            {renderOpenings()}
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 

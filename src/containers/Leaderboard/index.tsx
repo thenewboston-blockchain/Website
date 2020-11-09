@@ -4,7 +4,7 @@ import sub from 'date-fns/sub';
 
 import {REPOSITORY_FILTERS} from 'constants/github';
 
-import {BreadcrumbMenu, EmptyPage, FlatNavLinks, TimeFilter} from 'components';
+import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle, TimeFilter} from 'components';
 import {
   Contributor,
   ContributorWithTasks,
@@ -134,8 +134,11 @@ const Leaderboard = (): JSX.Element => {
     </>
   );
 
+  const pageTitle = `Leaderboard | ${repository}`;
+
   return (
     <>
+      <PageTitle title={pageTitle} />
       <div className="Leaderboard">
         {renderTopSections()}
         {renderNavLinks()}
