@@ -1,14 +1,17 @@
 import {useEffect, useState} from 'react';
 
 interface WindowDimension {
+  clientWidth: number;
   height: number;
   width: number;
 }
 
 const getWindowDimensions = (): WindowDimension => {
   const {innerHeight: height, innerWidth: width} = window;
+  const {clientWidth} = document.documentElement;
 
   return {
+    clientWidth,
     height,
     width,
   };
