@@ -1,6 +1,6 @@
 import React, {FC, ReactNode} from 'react';
 
-import {MarketingButton} from 'components';
+import {MarketingButton, PageTitle} from 'components';
 import {SocialMedia} from 'types/social-media';
 
 import './Social.scss';
@@ -19,13 +19,16 @@ const Social: FC = () => {
   );
 
   return (
-    <div className="Social">
-      <h1 className="Social__heading">Join the Community</h1>
-      <h2 className="Social__subtext">
-        Explore ways to get involved, and stay up-to-date with the latest announcements and events.
-      </h2>
-      {renderSocialButtons()}
-    </div>
+    <>
+      <PageTitle title="Social" />
+      <div className="Social">
+        <h1 className="Social__heading">Join the Community</h1>
+        <h2 className="Social__subtext">
+          Explore ways to get involved, and stay up-to-date with the latest announcements and events.
+        </h2>
+        {renderSocialButtons()}
+      </div>
+    </>
   );
 };
 
