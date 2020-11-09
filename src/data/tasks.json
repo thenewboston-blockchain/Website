@@ -1306,5 +1306,16 @@
       "completed_date": "11/2/20",
       "amount_paid": "500"
     }
+  ],
+  "singh-sarabjeet": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "623",
+      "completed_by": "singh-sarabjeet",
+      "completed_date": "11/9/20",
+      "amount_paid": "500"
+    }
   ]
 }
