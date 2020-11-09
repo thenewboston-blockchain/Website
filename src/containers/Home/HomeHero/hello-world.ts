@@ -46,7 +46,9 @@ const HelloWorld: {[isoLangCode: string]: string} = {
   ru: 'Привет мир',
   sa: 'नमस्कारः जीवलोक',
   sd: 'هيلو دنيا',
+  si: 'හෙලෝ ලෝකය',
   sk: 'Zdravo Svete',
+  sq: 'Përshendetje Botë',
   sr: 'Хало Свет',
   sv: 'Hej Värld',
   sw: 'Habari Dunia',
@@ -61,7 +63,6 @@ const HelloWorld: {[isoLangCode: string]: string} = {
   yi: 'העלא וועלט',
   yo: 'Mo ki Ile Aiye',
   zh: '你好 世界',
-  si: 'හෙලෝ ලෝකය',
 };
 
 export const defaultHelloWorld = HelloWorld.en;
