@@ -17,6 +17,7 @@ import CurrencyUsdIcon from 'mdi-react/CurrencyUsdIcon';
 import EarthIcon from 'mdi-react/EarthIcon';
 import FacebookIcon from 'mdi-react/FacebookIcon';
 import FileDocumentIcon from 'mdi-react/FileDocumentIcon';
+import FileDownloadIcon from 'mdi-react/FileDownloadIcon';
 import ForumIcon from 'mdi-react/ForumIcon';
 import GithubIcon from 'mdi-react/GithubIcon';
 import HumanHandsupIcon from 'mdi-react/HumanHandsupIcon';
@@ -51,6 +52,7 @@ export enum IconType {
   earth,
   facebook,
   fileDocument,
+  fileDownload,
   forum,
   github,
   humanHandsUp,
@@ -110,6 +112,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
         return <FacebookIcon {...iconProps} />;
       case IconType.fileDocument:
         return <FileDocumentIcon {...iconProps} />;
+      case IconType.fileDownload:
+        return <FileDownloadIcon {...iconProps} />;
       case IconType.forum:
         return <ForumIcon {...iconProps} />;
       case IconType.github:
