@@ -5,6 +5,7 @@ export enum TeamName {
   design = 'Design',
   discordManagers = 'Discord Managers',
   frontEndDevelopers = 'Front-End Developers',
+  kotlinSDK = 'Kotlin SDK',
   marketing = 'Marketing',
   payments = 'Payments',
   qa = 'QA',

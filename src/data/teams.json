@@ -311,6 +311,24 @@
     ]
   },
   {
+    "title": "Kotlin SDK",
+    "contributors": [
+      {
+        "title": "Kotlin SDK Lead",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "37",
+          "displayName": "Ian Arbuckle",
+          "githubUsername": "IanArb",
+          "profileImage": "https://avatars2.githubusercontent.com/u/6011914?s=460&u=9328434aef816ce5dfe5fbc12b64f2f498222ebc&v=4",
+          "slackUsername": "Ian Arbuckle"
+        }
+      }
+    ]
+  },
+  {
     "title": "Marketing",
     "contributors": [
       {
@@ -443,7 +461,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "34",
+          "contributorId": "35",
           "displayName": "Amol Bhure",
           "githubUsername": "codedevloper",
           "profileImage": "https://avatars1.githubusercontent.com/u/5453949?s=460&v=4",
