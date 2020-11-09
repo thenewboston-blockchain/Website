@@ -11,7 +11,7 @@ export enum TeamName {
   redditModerators = 'Reddit Moderators',
   security = 'Security',
   slackManagers = 'Slack Managers',
-  youtubers = 'YouTubers',
+  youtube = 'YouTube',
 }
 
 interface Contributor {

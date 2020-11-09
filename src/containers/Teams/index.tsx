@@ -22,7 +22,7 @@ const TEAM_NAME_FILTERS = [
   TeamName.redditModerators,
   TeamName.security,
   TeamName.slackManagers,
-  TeamName.youtubers,
+  TeamName.youtube,
 ];
 
 const Teams: FC = () => {
