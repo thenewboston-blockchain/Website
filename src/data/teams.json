@@ -432,7 +432,7 @@
     ]
   },
   {
-    "title": "YouTubers",
+    "title": "YouTube",
     "contributors": [
       {
         "title": "YouTube Educator",
@@ -445,6 +445,19 @@
           "githubUsername": "CalebCurry",
           "profileImage": "https://avatars0.githubusercontent.com/u/13798261?s=460&u=18b025b21e67878c26f81c554575378fd4cf6574&v=4",
           "slackUsername": "Caleb Curry"
+        }
+      },
+      {
+        "title": "Head of YouTube Outreach",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "33",
+          "displayName": "Nico y-crozier",
+          "githubUsername": "nicocrozier",
+          "profileImage": "https://avatars2.githubusercontent.com/u/41084465?s=460&u=e4bbc12b9d60ba1869da25809044eddc97733c1b&v=4",
+          "slackUsername": "Nico y-crozier"
         }
       }
     ]
