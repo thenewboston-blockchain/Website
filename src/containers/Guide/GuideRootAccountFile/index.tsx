@@ -8,8 +8,8 @@ const GuideRootAccountFile: FC = () => {
   return (
     <DocContainer className="GuideRootAccountFile" title="Root Account File">
       <p>
-        The root account file is a historic snapshot of all account balances at a given point in time. Every validator in
-        the network, both primary and confirmation validators, generate and maintain their own root account file.
+        The root account file is a historic snapshot of all account balances at a given point in time. Every validator
+        in the network, both primary and confirmation validators, generate and maintain their own root account file.
         Different validators may have different account files depending on when the snapshot was taken (which is usually
         when the node first comes online). However, given the architecture of the blockchain, all other nodes in the
         network can download and verify all validator account files regardless of when the snapshot was taken.

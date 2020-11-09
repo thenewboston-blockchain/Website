@@ -99,8 +99,8 @@ const GuideConfirmationValidators: FC = () => {
           </li>
         </ol>
         <li>
-          Beginning with the previous primary validator's root account file, apply the confirmed blocks (already verified
-          by the confirmation validator) until reaching the seed block from the new primary validator.
+          Beginning with the previous primary validator's root account file, apply the confirmed blocks (already
+          verified by the confirmation validator) until reaching the seed block from the new primary validator.
         </li>
         <li>Compare the updated account file to the root account file of the new primary validator</li>
         <ol type="a">
