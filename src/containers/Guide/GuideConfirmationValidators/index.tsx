@@ -20,7 +20,7 @@ const GuideConfirmationValidators: FC = () => {
       <DocList variant="ul">
         <li>Root account file</li>
         <ul>
-          <li>This is the flattened representation of all account balances at a given coin in time</li>
+          <li>This is the flattened representation of all account balances at a given point in time</li>
         </ul>
         <li>Root account file hash</li>
         <ul>
@@ -38,7 +38,7 @@ const GuideConfirmationValidators: FC = () => {
         </ul>
         <li>Head block hash</li>
         <ul>
-          <li>Value representing the message hash of the primary validators most recently verified block</li>
+          <li>Value representing the message hash of the primary validator's most recently verified block</li>
           <li>Used by the confirmation validators to know when syncing is complete</li>
         </ul>
       </DocList>
@@ -99,7 +99,7 @@ const GuideConfirmationValidators: FC = () => {
           </li>
         </ol>
         <li>
-          Beginning with the previous primary validators root account file, apply the confirmed blocks (already verified
+          Beginning with the previous primary validator's root account file, apply the confirmed blocks (already verified
           by the confirmation validator) until reaching the seed block from the new primary validator.
         </li>
         <li>Compare the updated account file to the root account file of the new primary validator</li>
