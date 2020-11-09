@@ -48,46 +48,6 @@
     ]
   },
   {
-    "openingId": "design-uxui",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Kristy or Bucky"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "facebook"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
-      }
-    ],
-    "category": "Design",
-    "description": "We're looking for an experienced UI/UX designer who wants to be a part of designing the future of digital currency. You will work with a team of designers responsible for designing responsive desktop app, mobile app, and the marketing site.",
-    "payNotes": ["2,800 coins/day"],
-    "position": "UI/UX Designer",
-    "reportsTo": [
-      {
-        "githubUsername": "kristykjlee",
-        "name": "Kristy"
-      }
-    ],
-    "responsibilities": [
-      "Collaboration with product managers and engineers on user requirements",
-      "Help develop the style guide and pattern library",
-      "Develop UI mockups or prototypes that clearly illustrate how sites functions and looks",
-      "Prepare and present rough drafts to teammates",
-      "Identify and troubleshoot UX problems (e.g. responsiveness)",
-      "Conduct layout adjustments based on user feedback"
-    ],
-    "technologyRequirements": ["Figma or Sketch"]
-  },
-  {
     "openingId": "community-product-manager",
     "applicationMethods": [
       {
@@ -147,7 +107,7 @@
     "category": "Engineering",
     "description": "We're looking for an experienced Front-end engineer who is able to test incoming PRs' design/responsive behavior. You will primarily be working on the Account Manager and Website repositories.",
     "payNotes": ["2,800 coins/day"],
-    "position": "Front-end Responsiveness/UX expert",
+    "position": "Front-end Responsive UI Expert",
     "reportsTo": [
       {
         "githubUsername": "thesanjeevsharma",
