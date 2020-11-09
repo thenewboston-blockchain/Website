@@ -22,7 +22,7 @@
     transition: transform 0.3s ease-in-out;
 
     &--open {
-      transform: rotateX(180deg);
+      transform: rotateX(180deg) translateZ(-1px);
     }
   }
 
