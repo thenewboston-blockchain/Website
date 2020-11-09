@@ -113,11 +113,9 @@ const Tasks: FC = () => {
     );
   };
 
-  const pageTitle = `Tasks | ${repository}`;
-
   return (
     <>
-      <PageTitle title={pageTitle} />
+      <PageTitle title="Tasks" />
       <div className="Tasks">
         <BreadcrumbMenu
           className="Tasks__BreadcrumbMenu"

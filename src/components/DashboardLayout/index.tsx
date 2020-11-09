@@ -9,11 +9,9 @@ interface ComponentProps {
 }
 
 const DashboardLayout: FC<ComponentProps> = ({children, pageName, sectionName}) => {
-  const pageTitle = `${sectionName} | ${pageName}`;
-
   return (
     <>
-      <PageTitle title={pageTitle} />
+      <PageTitle title={`${sectionName}`} />
       <div className="DashboardLayout">
         <BreadcrumbMenu
           className="DashboardLayout__BreadcrumbMenu"

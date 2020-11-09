@@ -8,7 +8,7 @@ interface ComponentProps {
 const PageTitle: FC<ComponentProps> = ({title}) => {
   return (
     <Helmet>
-      <title>{title} - thenewboston</title>
+      <title>{title} | thenewboston</title>
     </Helmet>
   );
 };

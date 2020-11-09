@@ -74,11 +74,9 @@ const Openings: FC = () => {
     return <OpeningDetails opening={opening} />;
   };
 
-  const pageTitle = `Openings | ${categoryParam}`;
-
   return (
     <>
-      <PageTitle title={pageTitle} />
+      <PageTitle title="Openings" />
       <div className="Openings">
         <BreadcrumbMenu
           className="Openings__BreadcrumbMenu"

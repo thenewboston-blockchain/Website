@@ -134,11 +134,9 @@ const Leaderboard = (): JSX.Element => {
     </>
   );
 
-  const pageTitle = `Leaderboard | ${repository}`;
-
   return (
     <>
-      <PageTitle title={pageTitle} />
+      <PageTitle title="Leaderboard" />
       <div className="Leaderboard">
         {renderTopSections()}
         {renderNavLinks()}

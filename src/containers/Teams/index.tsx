@@ -81,11 +81,9 @@ const Teams: FC = () => {
     );
   };
 
-  const pageTitle = `Teams | ${teamFilter}`;
-
   return (
     <>
-      <PageTitle title={pageTitle} />
+      <PageTitle title="Teams" />
       <div className="Teams">
         <BreadcrumbMenu
           className="Teams__BreadcrumbMenu"
