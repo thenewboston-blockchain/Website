@@ -384,6 +384,19 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EM1KM7DF-d0152ca4da07-512",
           "slackUsername": "Sarthak Mathur"
         }
+      },
+      {
+        "title": "Cryptography Security Engineer",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "34",
+          "displayName": "Amol Bhure",
+          "githubUsername": "codedevloper",
+          "profileImage": "https://avatars1.githubusercontent.com/u/5453949?s=460&v=4",
+          "slackUsername": "Amol Bhure"
+        }
       }
     ]
   },
