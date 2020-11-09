@@ -19,14 +19,14 @@
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any
 contributions you make are **greatly appreciated**.
 
-To start, you can always check the [open issues](https://github.com/thenewboston-developers/Website/issues) in this repository. You can filter issues using the labels and find the ones that suit your domain. Mostly, you'll see issues labeled with the coins you'll get, if you fix that particular issue. Earning coins improves your rank on the [leaderboard](https://thenewboston.com/leaderboard/All).
+To start, you can always check the [open issues](https://github.com/thenewboston-developers/Website/issues) in this repository. You can filter issues using the labels and find the ones that suit your domain. Mostly, you'll see issues labeled with the coins you'll get if you fix that particular issue. Earning coins improves your rank on the [leaderboard](https://thenewboston.com/leaderboard/All).
 
 Before starting, add a comment to let others know that you'll be working on that issue.
 
-It is strictly advised to **create single PR per issue**. In any case where two or more issues have the same root cause, you can club them in a single PR, otherwise refrain from doing so.
+It is strictly advised to **create a single PR per issue**. In any case, where two or more issues have the same root cause, you can club them in a single PR, otherwise, refrain from doing so.
 
 Also, while working make sure you follow these guidelines:
 - [React / JSX Style Guide](https://thenewboston.com/style-guide/react)
@@ -70,7 +70,7 @@ completely unrelated topics.
 
 - [thenewboston.com](https://thenewboston.com/)
 - [Slack](https://join.slack.com/t/thenewboston/shared_invite/zt-hkw1b98m-X3oe6VPX6xenHvQeaXQbfg)
-- [reddit](https://www.reddit.com/r/thenewboston/)
+- [Reddit](https://www.reddit.com/r/thenewboston/)
 - [LinkedIn](https://www.linkedin.com/company/thenewboston-developers/)
 - [Facebook](https://www.facebook.com/TheNewBoston-464114846956315/)
 - [Twitter](https://twitter.com/bucky_roberts)
