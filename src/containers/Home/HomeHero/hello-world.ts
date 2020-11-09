@@ -22,6 +22,7 @@ const HelloWorld: {[isoLangCode: string]: string} = {
   no: 'Hallo Verden',
   pt: 'Olá mundo',
   ru: 'Привет мир',
+  sl: 'Pozdravljen svet',
   sv: 'Hej Värld',
   ta: 'ஹலோ வேர்ல்ட்',
   te: 'హలో ప్రపంచం',
@@ -30,7 +31,6 @@ const HelloWorld: {[isoLangCode: string]: string} = {
   vi: 'Xin chào thế giới',
   yo: 'Mo ki Ile Aiye',
   zh: '你好 世界',
-  si: 'Pozdravljen svet,
 };
 
 export const defaultHelloWorld = HelloWorld.en;
