@@ -1,6 +1,6 @@
 import React, {FC, memo, ReactNode} from 'react';
 import {Link} from 'react-router-dom';
-import {A, HashLink} from 'components';
+import {A, HashLink, PageTitle} from 'components';
 
 import './Faq.scss';
 
@@ -91,12 +91,15 @@ const Faq: FC = () => {
   };
 
   return (
-    <div className="Faq">
-      <div className="Faq__content">
-        <h1 className="Faq__title">Frequently Asked Questions</h1>
-        {renderQuestionAnswers()}
+    <>
+      <PageTitle title="FAQ" />
+      <div className="Faq">
+        <div className="Faq__content">
+          <h1 className="Faq__title">Frequently Asked Questions</h1>
+          {renderQuestionAnswers()}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
