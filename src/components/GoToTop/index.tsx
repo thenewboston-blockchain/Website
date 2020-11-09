@@ -1,32 +1,31 @@
-import React, {useState, useEffect} from 'react';
-import Icon, {IconType} from 'components/Icon';
+import React, {FC, useCallback, useEffect, useState} from 'react';
+
+import {Icon, IconType} from 'components';
 
 import './GoToTop.scss';
 
-const GoToTopButton = ({showBelow}: any) => {
-  const [show, setShow] = useState(!showBelow);
+const GoToTopButton: FC = () => {
+  const [show, setShow] = useState<boolean>(false);
 
-  const handleScroll = () => {
-    if (window.pageYOffset > showBelow) {
+  const handleScroll = useCallback(() => {
+    if (window.pageYOffset > 100) {
       if (!show) setShow(true);
     } else {
       setShow(false);
     }
-  };
+  }, [show]);
 
   const scrollTop = () => {
     window.scrollTo({behavior: 'smooth', top: 0});
   };
 
   useEffect(() => {
-    if (showBelow) {
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
-    }
-  });
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
 
   return (
-    <div>{show && <Icon className="GoToTop__button" icon={IconType.chevronUp} size={50} onClick={scrollTop} />}</div>
+    <>{Boolean(show) && <Icon className="GoToTop__button" icon={IconType.chevronUp} size={50} onClick={scrollTop} />}</>
   );
 };
 export default GoToTopButton;
