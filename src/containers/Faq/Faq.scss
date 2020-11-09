@@ -28,12 +28,12 @@
     margin-top: 60px;
 
     &::before {
-      display: block;
       content: ' ';
-      margin-top: -100px;
-      height: 100px;
-      visibility: hidden;
+      display: block;
+      height: 60px;
+      margin-top: -60px;
       pointer-events: none;
+      visibility: hidden;
     }
 
     &:hover {
