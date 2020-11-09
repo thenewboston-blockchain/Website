@@ -1,13 +1,17 @@
 export enum TeamName {
   all = 'All',
-  analytics = 'Analytics',
   backEndDevelopers = 'Back-End Developers',
-  frontEndDevelopers = 'Front-End Developers',
+  community = 'Community',
   design = 'Design',
+  discordManagers = 'Discord Managers',
+  frontEndDevelopers = 'Front-End Developers',
   marketing = 'Marketing',
-  linkedinManager = 'LinkedIn Manager',
-  seo = 'SEO',
-  slackManager = 'Slack Manager',
+  payments = 'Payments',
+  qa = 'QA',
+  redditModerators = 'Reddit Moderators',
+  security = 'Security',
+  slackManagers = 'Slack Managers',
+  youtube = 'YouTube',
 }
 
 interface Contributor {
@@ -38,6 +42,7 @@ interface TeamLead {
 }
 
 export interface TeamMember {
+  contributorId: string;
   displayName: string;
   githubUsername: string;
   isLead: boolean;

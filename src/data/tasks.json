@@ -1,9 +1,20 @@
 {
+  "AntonFredrikSvensson": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "478",
+      "completed_by": "AntonFredrikSvensson",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
   "DucPhamTV": [
     {
       "repository": "Website",
       "title": "Put Hello World\" in your OWN language!\"",
-      "issue_id": "369",
+      "issue_id": "351",
       "pr_id": "382",
       "completed_by": "DucPhamTV",
       "completed_date": "11/2/20",
@@ -37,6 +48,37 @@
       "completed_by": "GermaVinsmoke",
       "completed_date": "10/20/20",
       "amount_paid": "2500"
+    }
+  ],
+  "Hristijan95": [
+    {
+      "repository": "Account-Manager",
+      "title": "Zoom function in the window tab not doing anything.",
+      "issue_id": "415",
+      "pr_id": "428",
+      "completed_by": "Hristijan95",
+      "completed_date": "11/5/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Update overall style guide/colors",
+      "issue_id": "55",
+      "pr_id": "59",
+      "completed_by": "Hristijan95",
+      "completed_date": "7/19/20",
+      "amount_paid": "7500"
+    }
+  ],
+  "JayBIOS": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "486",
+      "completed_by": "JayBIOS",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
     }
   ],
   "Niekon01": [
@@ -75,6 +117,70 @@
       "completed_by": "Niekon01",
       "completed_date": "11/3/20",
       "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "Update Send Coin\" image\"",
+      "issue_id": "445",
+      "pr_id": "467",
+      "completed_by": "Niekon01",
+      "completed_date": "11/5/20",
+      "amount_paid": "2500"
+    }
+  ],
+  "Ramin-RX7": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "477",
+      "completed_by": "Ramin-RX7",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
+  "VJKLFT": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "490",
+      "completed_by": "VJKLFT",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
+  "Vangaorth": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "466",
+      "completed_by": "Vangaorth",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
+  "VictorABoye": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "483",
+      "completed_by": "VictorABoye",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
+  "ZokaSoce": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "473",
+      "completed_by": "ZokaSoce",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
     }
   ],
   "aayushi14": [
@@ -140,6 +246,35 @@
       "completed_by": "aayushi14",
       "completed_date": "11/3/20",
       "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Front-end Responsiveness/UX expert",
+      "issue_id": "448",
+      "pr_id": "450",
+      "completed_by": "aayushi14",
+      "completed_date": "11/4/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Python / Django Developer",
+      "issue_id": "411",
+      "pr_id": "452",
+      "completed_by": "aayushi14",
+      "completed_date": "11/4/20",
+      "amount_paid": "2500"
+    }
+  ],
+  "alexkimeu0": [
+    {
+      "repository": "Website",
+      "title": "Added Hello World in Swahili",
+      "issue_id": "351",
+      "pr_id": "635",
+      "completed_by": "alexkimeu0",
+      "completed_date": "11/9/20",
+      "amount_paid": "500"
     }
   ],
   "amarjeet987": [
@@ -160,6 +295,15 @@
       "completed_by": "amarjeet987",
       "completed_date": "11/4/20",
       "amount_paid": "7500"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "upgrade react-scripts",
+      "issue_id": "423",
+      "pr_id": "427",
+      "completed_by": "amarjeet987",
+      "completed_date": "11/5/20",
+      "amount_paid": "2500"
     }
   ],
   "angle943": [
@@ -485,6 +629,15 @@
       "completed_by": "buckyroberts",
       "completed_date": "10/2/20",
       "amount_paid": "5000"
+    },
+    {
+      "repository": "Website",
+      "title": "Static Teams Page",
+      "issue_id": "503",
+      "pr_id": "508",
+      "completed_by": "buckyroberts",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
     }
   ],
   "colfax23": [
@@ -525,6 +678,17 @@
       "amount_paid": "2500"
     }
   ],
+  "cubedtear": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "476",
+      "completed_by": "cubedtear",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
   "dahelg": [
     {
       "repository": "Website",
@@ -536,6 +700,17 @@
       "amount_paid": "2500"
     }
   ],
+  "danielivert": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "481",
+      "completed_by": "danielivert",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
   "dorlivniopen": [
     {
       "repository": "Website",
@@ -544,6 +719,39 @@
       "pr_id": "354",
       "completed_by": "dorlivniopen",
       "completed_date": "11/1/20",
+      "amount_paid": "500"
+    }
+  ],
+  "fadyadal": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "474",
+      "completed_by": "fadyadal",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
+  "ganeshvicky": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "479",
+      "completed_by": "ganeshvicky",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
+  "hLudde": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "484",
+      "completed_by": "hLudde",
+      "completed_date": "11/5/20",
       "amount_paid": "500"
     }
   ],
@@ -565,6 +773,17 @@
       "completed_by": "hawyar",
       "completed_date": "10/4/20",
       "amount_paid": "2500"
+    }
+  ],
+  "henctv": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "475",
+      "completed_by": "henctv",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
     }
   ],
   "itsnikhil": [
@@ -589,7 +808,7 @@
     {
       "repository": "Website",
       "title": "Put Hello World\" in your OWN language!\"",
-      "issue_id": "369",
+      "issue_id": "351",
       "pr_id": "351",
       "completed_by": "itsnikhil",
       "completed_date": "11/2/20",
@@ -657,6 +876,26 @@
       "completed_by": "itsnikhil",
       "completed_date": "11/3/20",
       "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Task page margin",
+      "issue_id": "413",
+      "pr_id": "469",
+      "completed_by": "itsnikhil",
+      "completed_date": "11/6/20",
+      "amount_paid": "1000"
+    }
+  ],
+  "jagdisharma": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "470",
+      "completed_by": "jagdisharma",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
     }
   ],
   "kristykjlee": [
@@ -872,13 +1111,33 @@
       "completed_by": "moki298",
       "completed_date": "11/1/20",
       "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Make the command 'npm run lint' run for Windows/Linux users",
+      "issue_id": "455",
+      "pr_id": "458",
+      "completed_by": "moki298",
+      "completed_date": "11/5/20",
+      "amount_paid": "7500"
+    }
+  ],
+  "phase7": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "485",
+      "completed_by": "phase7",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
     }
   ],
   "rizqyep": [
     {
       "repository": "Website",
       "title": "Put Hello World\" in your OWN language!\"",
-      "issue_id": "369",
+      "issue_id": "351",
       "pr_id": "381",
       "completed_by": "rizqyep",
       "completed_date": "11/2/20",
@@ -889,18 +1148,29 @@
     {
       "repository": "Website",
       "title": "Put Hello World\" in your OWN language!\"",
-      "issue_id": "369",
+      "issue_id": "351",
       "pr_id": "457",
       "completed_by": "robMakasi",
       "completed_date": "11/4/20",
       "amount_paid": "500"
     }
   ],
+  "sdhiaeddine": [
+    {
+      "repository": "Website",
+      "title": "Docs need some language/grammatical fixes",
+      "issue_id": " 619",
+      "pr_id": " 624",
+      "completed_by": "sdhiaeddine",
+      "completed_date": "11/9/20",
+      "amount_paid": "1000"
+    }
+  ],
   "shahraizali": [
     {
       "repository": "Website",
       "title": "Put Hello World\" in your OWN language!\"",
-      "issue_id": "369",
+      "issue_id": "351",
       "pr_id": "379",
       "completed_by": "shahraizali",
       "completed_date": "11/2/20",
@@ -1052,7 +1322,7 @@
     {
       "repository": "Website",
       "title": "Put Hello World\" in your OWN language!\"",
-      "issue_id": "369",
+      "issue_id": "351",
       "pr_id": "380",
       "completed_by": "xmac11",
       "completed_date": "11/2/20",

@@ -1,6 +1,6 @@
 import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'react';
 
-import {Button, CodeSnippet, Icon, IconType, Loader, Tab, Tabs} from 'components';
+import {Button, CodeSnippet, Icon, IconType, Loader, PageTitle, Tab, Tabs} from 'components';
 import {Release} from 'types/github';
 import {fetchGithubReleases} from 'utils/github';
 import {displayToast} from 'utils/toast';
@@ -105,11 +105,11 @@ const Download: FC = () => {
           <div className="instruction-container__li">
             <span className="instruction-container__instruction">To run thenewboston, make it executable</span>
           </div>
-          <CodeSnippet code="$ sudo chmod a+x TNB-Account-Manager-1.0.0-alpha.20-linux*.AppImage" />
+          <CodeSnippet code="$ sudo chmod a+x TNB-Account-Manager-*.AppImage" />
           <div className="instruction-container__li">
             <span className="instruction-container__instruction">Run!</span>
           </div>
-          <CodeSnippet code="$ ./TNB-Account-Manager-1.0.0-alpha.20-linux*.AppImage" />
+          <CodeSnippet code="$ ./TNB-Account-Manager-*.AppImage" />
         </>
       );
     }
@@ -152,16 +152,19 @@ const Download: FC = () => {
   );
 
   return (
-    <div className="Download">
-      {loading ? (
-        <Loader />
-      ) : (
-        <>
-          <span className="Download__latest-version">Latest Version: 1.0.0-alpha.{latestReleaseNumber}</span>
-          <Tabs tabs={tabs} />
-        </>
-      )}
-    </div>
+    <>
+      <PageTitle title="Download" />
+      <div className="Download">
+        {loading ? (
+          <Loader />
+        ) : (
+          <>
+            <span className="Download__latest-version">Latest Version: 1.0.0-alpha.{latestReleaseNumber}</span>
+            <Tabs tabs={tabs} />
+          </>
+        )}
+      </div>
+    </>
   );
 };
 

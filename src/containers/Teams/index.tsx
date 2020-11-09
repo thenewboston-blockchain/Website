@@ -1,6 +1,6 @@
 import React, {FC, ReactNode, useEffect, useState} from 'react';
 
-import {BreadcrumbMenu, EmptyPage, FlatNavLinks} from 'components';
+import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
 import {TeamMember, TeamName} from 'types/teams';
 import {getTeamMembers} from 'utils/data';
 
@@ -11,14 +11,18 @@ const teamMembers = getTeamMembers();
 
 const TEAM_NAME_FILTERS = [
   TeamName.all,
-  TeamName.analytics,
   TeamName.backEndDevelopers,
-  TeamName.frontEndDevelopers,
+  TeamName.community,
   TeamName.design,
+  TeamName.discordManagers,
+  TeamName.frontEndDevelopers,
   TeamName.marketing,
-  TeamName.linkedinManager,
-  TeamName.seo,
-  TeamName.slackManager,
+  TeamName.payments,
+  TeamName.qa,
+  TeamName.redditModerators,
+  TeamName.security,
+  TeamName.slackManagers,
+  TeamName.youtube,
 ];
 
 const Teams: FC = () => {
@@ -62,12 +66,12 @@ const Teams: FC = () => {
 
   const renderTeamMembers = (): ReactNode => {
     return filteredMembers.map(
-      ({displayName, githubUsername, isLead, payPerDay, profileImage, slackUsername, titles}) => (
+      ({contributorId, displayName, githubUsername, isLead, payPerDay, profileImage, slackUsername, titles}) => (
         <TeamMemberCard
           displayName={displayName}
           githubUsername={githubUsername}
           isLead={isLead}
-          key={githubUsername}
+          key={contributorId}
           payPerDay={payPerDay}
           profileImage={profileImage}
           slackUsername={slackUsername}
@@ -78,20 +82,23 @@ const Teams: FC = () => {
   };
 
   return (
-    <div className="Teams">
-      <BreadcrumbMenu
-        className="Teams__BreadcrumbMenu"
-        menuItems={renderTeamFilter()}
-        pageName={teamFilter}
-        sectionName="Team"
-      />
-      <div className="Teams__left-menu">{renderTeamFilter()}</div>
-      <div className="Teams__right-list">
-        <h1 className="Teams__team-heading">{teamFilter === TeamName.all ? 'All Contributors' : teamFilter}</h1>
-        {!filteredMembers.length && <EmptyPage />}
-        <div className="Teams__team-list">{renderTeamMembers()}</div>
+    <>
+      <PageTitle title="Teams" />
+      <div className="Teams">
+        <BreadcrumbMenu
+          className="Teams__BreadcrumbMenu"
+          menuItems={renderTeamFilter()}
+          pageName={teamFilter}
+          sectionName="Team"
+        />
+        <div className="Teams__left-menu">{renderTeamFilter()}</div>
+        <div className="Teams__right-list">
+          <h1 className="Teams__team-heading">{teamFilter === TeamName.all ? 'All Contributors' : teamFilter}</h1>
+          {!filteredMembers.length && <EmptyPage />}
+          <div className="Teams__team-list">{renderTeamMembers()}</div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
