@@ -27,7 +27,7 @@ const GuideTransactionFees: FC = () => {
         In the following example, Amy is sending 100 coins to Brian. Before the block is even created, Amy's bank is
         aware of the validators transaction fee. The transaction fees of both the bank and the validator will be
         displayed on her user interface. When creating a transaction, Amy will first choose the desired recipient and
-        then the amount of coins she wishes to send. A very simple UI that Amy may see at that coin might look like
+        then the amount of coins she wishes to send. A very simple UI that Amy may see at that point might look like
         this:
       </p>
 
