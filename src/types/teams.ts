@@ -3,13 +3,15 @@ export enum TeamName {
   backEndDevelopers = 'Back-End Developers',
   community = 'Community',
   design = 'Design',
+  discordManagers = 'Discord Managers',
   frontEndDevelopers = 'Front-End Developers',
   marketing = 'Marketing',
+  payments = 'Payments',
   qa = 'QA',
   redditModerators = 'Reddit Moderators',
   security = 'Security',
   slackManagers = 'Slack Managers',
-  youtubers = 'YouTubers',
+  youtube = 'YouTube',
 }
 
 interface Contributor {
