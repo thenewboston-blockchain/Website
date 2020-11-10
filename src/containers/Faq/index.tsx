@@ -67,8 +67,8 @@ const questionsAnswers: FaqContent[] = [
           from the main page of your GitHub repository
         </li>
         <li>
-          Type a suitable title and description. In the description, you can write "fixes #issueNumber", "closes #issueNumber"
-          or simply "#issueNumber" of the issue you have resolved to link your PR with the issue.
+          Type a suitable title and description. In the description, you can write "fixes #issueNumber", "closes
+          #issueNumber" or simply "#issueNumber" of the issue you have resolved to link your PR with the issue.
         </li>
       </ol>
     ),
