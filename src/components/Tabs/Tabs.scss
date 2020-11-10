@@ -21,8 +21,9 @@
     border-bottom: 1px solid var(--color-sail-gray-100);
     display: flex;
     justify-content: flex-start;
+    position: relative;
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       justify-content: center;
     }
   }

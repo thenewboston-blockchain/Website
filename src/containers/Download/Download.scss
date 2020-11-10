@@ -20,8 +20,9 @@
   &__download-button {
     align-items: center;
     display: flex;
+    margin-top: 6vh;
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       margin: 0 auto;
     }
   }
@@ -32,19 +33,24 @@
 
   &__latest-version {
     text-align: end;
-    padding: 1% 0;
+    position: absolute;
+    padding: 18px 12px;
+    top: 0;
+    right: 0;
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       text-align: center;
       padding: 2% 0;
       margin-top: 4%;
+
+      position: initial;
     }
   }
 
   .instruction-container {
     counter-reset: instruction;
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       width: 100%;
       margin: 0 auto;
       margin-bottom: 3vh;
@@ -94,7 +100,7 @@
       margin-bottom: 3vh;
       text-align: start;
 
-      @media (max-width: 600px) {
+      @media (max-width: 768px) {
         text-align: center;
       }
     }
