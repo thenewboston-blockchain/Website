@@ -17,8 +17,7 @@
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(156, 156, 156, 0.3);
     height: 120px;
-    margin-bottom: 12px;
-    margin-left: 12px;
+    margin: 10px auto;
     width: 180px;
 
     &__img {
@@ -31,6 +30,7 @@
     font-weight: 800;
     line-height: 1.25;
     margin: 0 auto 30px;
+    text-align: center;
   }
 
   &__subtext {
