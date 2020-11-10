@@ -7,7 +7,7 @@
   &__button-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: auto;
     max-width: 600px;
   }
@@ -18,7 +18,6 @@
     box-shadow: 0 0 10px rgba(156, 156, 156, 0.3);
     height: 120px;
     margin-bottom: 12px;
-    margin-left: 12px;
     width: 180px;
 
     &__img {
