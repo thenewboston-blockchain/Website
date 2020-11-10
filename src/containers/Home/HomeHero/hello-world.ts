@@ -49,7 +49,7 @@ const HelloWorld: {[isoLangCode: string]: string} = {
   si: 'හෙලෝ ලෝකය',
   sk: 'Zdravo Svete',
   sl: 'Pozdravljen svet',
-  sq: 'Përshendetje Botë',
+  sq: 'Përshëndetje Botë',
   sr: 'Здраво свете',
   sv: 'Hej Värld',
   sw: 'Habari Dunia',
