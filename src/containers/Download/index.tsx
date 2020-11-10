@@ -1,6 +1,6 @@
 import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'react';
 
-import {Button, CodeSnippet, Icon, IconType, Loader, Tab, Tabs} from 'components';
+import {Button, CodeSnippet, Icon, IconType, Loader, PageTitle, Tab, Tabs} from 'components';
 import {Release} from 'types/github';
 import {fetchGithubReleases} from 'utils/github';
 import {displayToast} from 'utils/toast';
@@ -152,15 +152,19 @@ const Download: FC = () => {
   );
 
   return (
-    <div className="Download">
-      {loading ? (
-        <Loader />
-      ) : (
-        <>
-          <Tabs tabs={tabs} latestReleaseNumber={latestReleaseNumber} />
-        </>
-      )}
-    </div>
+    <>
+      <PageTitle title="Download" />
+      <div className="Download">
+        {loading ? (
+          <Loader />
+        ) : (
+          <>
+            <span className="Download__latest-version">Latest Version: 1.0.0-alpha.{latestReleaseNumber}</span>
+            <Tabs tabs={tabs} />
+          </>
+        )}
+      </div>
+    </>
   );
 };
 
