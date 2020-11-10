@@ -64,6 +64,7 @@ const HelloWorld: {[isoLangCode: string]: string} = {
   yi: 'העלא וועלט',
   yo: 'Mo ki Ile Aiye',
   zh: '你好 世界',
+  nd: 'Yebo Mhlaba',
 };
 
 export const defaultHelloWorld = HelloWorld.en;
