@@ -54,7 +54,7 @@ const HelloWorld: {[isoLangCode: string]: string} = {
   sr: 'Здраво свете',
   sv: 'Hej Värld',
   sw: 'Habari Dunia',
-  ta: 'ஹலோ வேர்ல்ட்',
+  ta: 'உலகிருக்கு வணக்கம்',
   te: 'హలో ప్రపంచం',
   th: 'สวัสดีโลก',
   tl: 'Kamusta Mundo',
