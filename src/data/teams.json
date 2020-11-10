@@ -314,6 +314,19 @@
         }
       },
       {
+        "title": "Front-end Responsive UI Expert",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "16",
+          "displayName": "Mahir Mersimoski",
+          "githubUsername": "mersimoski",
+          "profileImage": "https://avatars1.githubusercontent.com/u/62712311?s=400&u=8f07514eb932e75d41208491d9551b85c09d0c39&v=4",
+          "slackUsername": "Mahir Mersimoski"
+        }
+      },
+      {
         "title": "Head of JavaScript Library Development",
         "isLead": false,
         "payPerDay": 2800,
