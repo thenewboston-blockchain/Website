@@ -1,5 +1,42 @@
 [
   {
+    "openingId": "marketing-analyst",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Siddhesh Kulthe"
+      },
+      {
+        "channel": "linkedin", "note": "Connect & Message Siddhesh Kulthe (https://linkedin.com/in/siddheshkulthe)"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Marketing",
+    "description": "Seeking a Marketing Analyst to research user behavior, gaining partners, and executing various marketing strategies.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Marketing Analyst",
+    "reportsTo": [
+      {
+        "slackUsername": "Siddhesh Kulthe",
+        "name": "Siddhesh"
+      }
+    ],
+    "responsibilities": [
+      "Analyze sales funnels and customer intent",
+      "Measure the ROI of online and offline marketing campaigns",
+      "Reports on marketing KPIs like user base, web traffic, and social media engagement",
+      "Conduct competitive research and analyze benchmarking data",
+      "Recommend website and campaign optimizations",
+      "Research and implement marketing tools to support our promotional projects (automation software, social media scheduling, etc)"
+    ],
+    "technologyRequirements": ["Strong understanding of Blockchain and our project architecture", "Strong analytical and research skills"]
+  },
+  {
     "openingId": "senior-devops-engineer",
     "applicationMethods": [
       {
