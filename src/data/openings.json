@@ -7,7 +7,8 @@
         "note": "Message Siddhesh Kulthe"
       },
       {
-        "channel": "linkedin", "note": "Connect & Message Siddhesh Kulthe (https://linkedin.com/in/siddheshkulthe)"
+        "channel": "linkedin",
+        "note": "Connect & Message Siddhesh Kulthe (https://linkedin.com/in/siddheshkulthe)"
       },
       {
         "channel": "twitter"
@@ -34,7 +35,10 @@
       "Recommend website and campaign optimizations",
       "Research and implement marketing tools to support our promotional projects (automation software, social media scheduling, etc)"
     ],
-    "technologyRequirements": ["Strong understanding of Blockchain and our project architecture", "Strong analytical and research skills"]
+    "technologyRequirements": [
+      "Strong understanding of Blockchain and our project architecture",
+      "Strong analytical and research skills"
+    ]
   },
   {
     "openingId": "senior-devops-engineer",
@@ -146,7 +150,7 @@
     ]
   },
   {
-    "openingId": "engineering-front-end-team-lead",
+    "openingId": "front-end-developer-electron",
     "applicationMethods": [
       {
         "channel": "slack",
@@ -168,7 +172,7 @@
     "category": "Engineering",
     "description": "We're looking for an experienced Front-end engineer who is able to lead a team of junior developers. You and your team will be working primarily on the Account Manager and Website repositories to help build the UI's needed for the applications used by our community.",
     "payNotes": ["2,800 coins/day"],
-    "position": "Front-end Developer (React/Redux)",
+    "position": "Front-end Developer (React/Redux/Electron)",
     "reportsTo": [
       {
         "githubUsername": "thesanjeevsharma",
@@ -176,7 +180,7 @@
       }
     ],
     "responsibilities": [
-      "Perform code reviews",
+      "Perform code reviews(primarily on Account Manager)",
       "Write job descriptions",
       "Interview new candidates",
       "Provide guidance to other developers when assistance is needed",
@@ -185,11 +189,11 @@
     ],
     "technologyRequirements": [
       "JavaScript (ES6+)",
+      "Electron",
       "React",
       "Redux",
       "TypeScript",
       "Sass / SCSS",
-      "Electron",
       "Webpack"
     ]
   },
@@ -231,48 +235,6 @@
     "technologyRequirements": [
       "GitHub account",
       "Experience in project management tools and software such as Jira and Trello"
-    ]
-  },
-  {
-    "openingId": "frontend-responsiveness-expert",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Sanjeev"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
-      }
-    ],
-    "category": "Engineering",
-    "description": "We're looking for an experienced Front-end engineer who is able to test incoming PRs' design/responsive behavior. You will primarily be working on the Account Manager and Website repositories.",
-    "payNotes": ["2,800 coins/day"],
-    "position": "Front-end Responsive UI Expert",
-    "reportsTo": [
-      {
-        "githubUsername": "thesanjeevsharma",
-        "name": "Sanjeev"
-      }
-    ],
-    "responsibilities": [
-      "Perform code reviews on incoming PRs, testing specifically for the UI",
-      "Test in various viewports to make sure it looks fine",
-      "Regularly test the applications to make sure there are no issues",
-      "Create new issues if there are issues"
-    ],
-    "technologyRequirements": [
-      "JavaScript (ES6+)",
-      "React",
-      "Redux",
-      "Typescript",
-      "HTML/CSS",
-      "Experience with Figma (preferred)"
     ]
   },
   {
