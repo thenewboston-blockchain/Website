@@ -3,6 +3,7 @@ export enum TeamName {
   backEndDevelopers = 'Back-End Developers',
   community = 'Community',
   design = 'Design',
+  devOps = 'DevOps',
   discordManagers = 'Discord Managers',
   frontEndDevelopers = 'Front-End Developers',
   kotlinSDK = 'Kotlin SDK',
