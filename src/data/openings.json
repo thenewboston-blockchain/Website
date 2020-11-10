@@ -1,5 +1,36 @@
 [
   {
+    "openingId": "senior-devops-engineer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Mark"
+      }
+    ],
+    "category": "Engineering",
+    "description": "As Senior DevOps Engineer you will be a key contributor to designing, building, testing, managing, and maintaining some of the key technology that powers our digital currency network.",
+    "payNotes": ["2,800 points/day"],
+    "position": "Senior DevOps Engineer",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Analyze, troubleshoot and resolve system, software, network, and storage failures",
+      "Configure, test, deploy, and upgrade software for production services in AWS",
+      "Author and recommend settings for applications, operating systems, networks, and cloud services to improve performance, security, and reliability",
+      "Design and develop monitoring and 100% uptime solutions for our digital currency network"
+    ],
+    "technologyRequirements": [
+      "3+ years experience with both software engineering and sysops or 6+ years experience as a DevOps engineer or similar",
+      "Extensive experience with cloud computing and virtualization",
+      "Expert knowledge of Linux",
+      "Proven understanding of networking (TCP/IP, DNS, etc)"
+    ]
+  },
+  {
     "openingId": "senior-python-django-developer",
     "applicationMethods": [
       {
@@ -208,46 +239,6 @@
     ]
   },
   {
-    "openingId": "senior-devops-engineer",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Bucky"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
-      }
-    ],
-    "category": "Engineering",
-    "description": "As Senior DevOps Engineer you will be a key contributor to designing, building, testing, managing, and maintaining some of the key technology that powers our digital currency network.",
-    "payNotes": ["2,800 points/day"],
-    "position": "Senior DevOps Engineer",
-    "reportsTo": [
-      {
-        "githubUsername": "buckyroberts",
-        "name": "Bucky"
-      }
-    ],
-    "responsibilities": [
-      "Analyze, troubleshoot and resolve system, software, network, and storage failures",
-      "Configure, test, deploy, and upgrade software for production services in AWS",
-      "Author and recommend settings for applications, operating systems, networks, and cloud services to improve performance, security, and reliability",
-      "Design and develop monitoring and 100% uptime solutions for our digital currency network"
-    ],
-    "technologyRequirements": [
-      "3+ years experience with both software engineering and sysops or 6+ years experience as a DevOps engineer or similar",
-      "Extensive experience with cloud computing and virtualization",
-      "Expert knowledge of Linux",
-      "Proven understanding of networking (TCP/IP, DNS, etc)"
-    ]
-  },
-  {
     "openingId": "engineering-backend-junior-python-dev",
     "applicationMethods": [
       {
@@ -408,15 +399,6 @@
       {
         "channel": "slack",
         "note": "Message Bucky"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
       }
     ],
     "category": "Engineering",
@@ -599,15 +581,6 @@
       {
         "channel": "slack",
         "note": "Message Bucky"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
       }
     ],
     "category": "Engineering",
