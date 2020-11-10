@@ -21,6 +21,10 @@
     margin-left: 12px;
     width: 180px;
 
+    @media (max-width: 576px) {
+      margin-left: 0;
+    }
+
     &__img {
       max-width: 105px;
     }
@@ -31,6 +35,10 @@
     font-weight: 800;
     line-height: 1.25;
     margin: 0 auto 30px;
+
+    @media (max-width: 576px) {
+      font-size: 26px;
+    }
   }
 
   &__subtext {
