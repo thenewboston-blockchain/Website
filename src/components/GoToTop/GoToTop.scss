@@ -1,0 +1,25 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.GoToTop {
+  &__button {
+    animation: fadeIn 0.3s ease-out;
+    background: var(--color-sail-blue-900);
+    border-radius: 50%;
+    bottom: 24px;
+    color: var(--color-white);
+    cursor: pointer;
+    height: 36px;
+    opacity: 1;
+    position: fixed;
+    right: 24px;
+    width: 36px;
+    z-index: 1000;
+  }
+}

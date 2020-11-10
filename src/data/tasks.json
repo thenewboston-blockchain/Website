@@ -266,6 +266,17 @@
       "amount_paid": "2500"
     }
   ],
+  "alexkimeu0": [
+    {
+      "repository": "Website",
+      "title": "Added Hello World in Swahili",
+      "issue_id": "351",
+      "pr_id": "635",
+      "completed_by": "alexkimeu0",
+      "completed_date": "11/9/20",
+      "amount_paid": "500"
+    }
+  ],
   "amarjeet987": [
     {
       "repository": "Website",
@@ -411,6 +422,17 @@
       "pr_id": "449",
       "completed_by": "angle943",
       "completed_date": "11/4/20",
+      "amount_paid": "500"
+    }
+  ],
+  "askass": [
+    {
+      "repository": "Website",
+      "title": "Hellow World in Belarusian",
+      "issue_id": "351",
+      "pr_id": "652",
+      "completed_by": "askass",
+      "completed_date": "11/9/20",
       "amount_paid": "500"
     }
   ],
@@ -865,6 +887,26 @@
       "completed_by": "itsnikhil",
       "completed_date": "11/3/20",
       "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Task page margin",
+      "issue_id": "413",
+      "pr_id": "469",
+      "completed_by": "itsnikhil",
+      "completed_date": "11/6/20",
+      "amount_paid": "1000"
+    }
+  ],
+  "jaelee0409": [
+    {
+      "repository": "Website",
+      "title": "Updated the Team page",
+      "issue_id": "627",
+      "pr_id": "639",
+      "completed_by": "jaelee0409",
+      "completed_date": "11/9/20",
+      "amount_paid": "1000"
     }
   ],
   "jagdisharma": [
@@ -875,6 +917,17 @@
       "pr_id": "470",
       "completed_by": "jagdisharma",
       "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
+  "jamessspanggg": [
+    {
+      "repository": "Website",
+      "title": "Add hello world in javanese",
+      "issue_id": "351",
+      "pr_id": "642",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/9/20",
       "amount_paid": "500"
     }
   ],
@@ -1064,6 +1117,17 @@
       "amount_paid": "5000"
     }
   ],
+  "manishram": [
+    {
+      "repository": "Website",
+      "title": "Fixes: #399 Added go to top button",
+      "issue_id": "399",
+      "pr_id": "600",
+      "completed_by": "manishram",
+      "completed_date": "11/9/20",
+      "amount_paid": "1000"
+    }
+  ],
   "moki298": [
     {
       "repository": "Account-Manager",
@@ -1102,6 +1166,17 @@
       "amount_paid": "7500"
     }
   ],
+  "mthomas-io": [
+    {
+      "repository": "Website",
+      "title": "fix: Apply z-translation to make rotated chevron visible in Safari",
+      "issue_id": "446",
+      "pr_id": "504",
+      "completed_by": "mthomas-io",
+      "completed_date": "11/9/20",
+      "amount_paid": "1000"
+    }
+  ],
   "phase7": [
     {
       "repository": "Website",
@@ -1110,6 +1185,17 @@
       "pr_id": "485",
       "completed_by": "phase7",
       "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
+  "rasabel": [
+    {
+      "repository": "Website",
+      "title": "Add hello world in Amharic",
+      "issue_id": "351",
+      "pr_id": "649",
+      "completed_by": "rasabel",
+      "completed_date": "11/9/20",
       "amount_paid": "500"
     }
   ],
@@ -1133,6 +1219,17 @@
       "completed_by": "robMakasi",
       "completed_date": "11/4/20",
       "amount_paid": "500"
+    }
+  ],
+  "sdhiaeddine": [
+    {
+      "repository": "Website",
+      "title": "Docs need some language/grammatical fixes",
+      "issue_id": "619",
+      "pr_id": "624",
+      "completed_by": "sdhiaeddine",
+      "completed_date": "11/9/20",
+      "amount_paid": "1000"
     }
   ],
   "shahraizali": [
@@ -1162,6 +1259,17 @@
       "completed_by": "shahraizali",
       "completed_date": "10/16/20",
       "amount_paid": "5000"
+    }
+  ],
+  "singh-sarabjeet": [
+    {
+      "repository": "Website",
+      "title": "Added Hello World in Punjabi",
+      "issue_id": "351",
+      "pr_id": "623",
+      "completed_by": "singh-sarabjeet",
+      "completed_date": "11/9/20",
+      "amount_paid": "500"
     }
   ],
   "thesanjeevsharma": [
@@ -1256,6 +1364,17 @@
       "completed_by": "tpikachu",
       "completed_date": "10/4/20",
       "amount_paid": "5000"
+    }
+  ],
+  "vilihegyi": [
+    {
+      "repository": "Website",
+      "title": "Added Hello World in Hungarian language.",
+      "issue_id": "351",
+      "pr_id": "597",
+      "completed_by": "vilihegyi",
+      "completed_date": "11/9/20",
+      "amount_paid": "500"
     }
   ],
   "webdeveloperswj": [
