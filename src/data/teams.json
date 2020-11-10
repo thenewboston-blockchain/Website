@@ -36,7 +36,7 @@
         "contributor": {
           "contributorId": "18",
           "displayName": "Abhi",
-          "githubUsername": null,
+          "githubUsername": "Abhishek5101",
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01BPK991R7-8dac7d9c0d9c-512",
           "slackUsername": "Abhi"
         }
@@ -79,10 +79,10 @@
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "6",
-          "displayName": "Francisca",
+          "displayName": "Francisca Nwafor",
           "githubUsername": null,
-          "profileImage": "https://media-exp1.licdn.com/dms/image/C4E03AQFEnGzSqKQd8g/profile-displayphoto-shrink_400_400/0?e=1609977600&v=beta&t=DKNgaI0rUhYkkYc9cUQ7cJos0GFMbhzXpNyZyIXfSs8",
-          "slackUsername": "Francisca"
+          "profileImage": "https://media-exp1.licdn.com/dms/image/C4D03AQFRvpMONLCcdQ/profile-displayphoto-shrink_400_400/0?e=1610582400&v=beta&t=f69ny2IHWl5A2BAq6_UcDBn1lmhyNSsVhdjZn0SimoM",
+          "slackUsername": "Francisca Nwafor"
         }
       },
       {
@@ -92,10 +92,10 @@
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "7",
-          "displayName": "Martin Nwafor",
+          "displayName": "Martin",
           "githubUsername": null,
           "profileImage": "https://media-exp1.licdn.com/dms/image/C4D03AQEsxV5J1Hi9QQ/profile-displayphoto-shrink_400_400/0?e=1609977600&v=beta&t=4jG6hRfnY9P5t0wrhrbuosLRRTWvxaxStZzdtYr5rdc",
-          "slackUsername": "Martin Nwafor"
+          "slackUsername": "Martin"
         }
       },
       {
@@ -210,6 +210,24 @@
     ]
   },
   {
+    "title": "DevOps",
+    "contributors": [
+      {
+        "title": "DevOps",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "39",
+          "displayName": "Mark",
+          "githubUsername": null,
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EFN0FG04-291dc1f7a129-512",
+          "slackUsername": "Mark"
+        }
+      }
+    ]
+  },
+  {
     "title": "Discord Managers",
     "contributors": [
       {
@@ -296,6 +314,19 @@
         }
       },
       {
+        "title": "Front-end Responsive UI Expert",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "16",
+          "displayName": "Mahir Mersimoski",
+          "githubUsername": "mersimoski",
+          "profileImage": "https://avatars1.githubusercontent.com/u/62712311?s=400&u=8f07514eb932e75d41208491d9551b85c09d0c39&v=4",
+          "slackUsername": "Mahir Mersimoski"
+        }
+      },
+      {
         "title": "Head of JavaScript Library Development",
         "isLead": false,
         "payPerDay": 2800,
@@ -306,6 +337,24 @@
           "githubUsername": "sno2",
           "profileImage": "https://avatars2.githubusercontent.com/u/43641633?s=460&u=33f06f961b604732bec844c107c279e080aa038b&v=4",
           "slackUsername": "Carter"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Kotlin SDK",
+    "contributors": [
+      {
+        "title": "Kotlin SDK Lead",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "37",
+          "displayName": "Ian Arbuckle",
+          "githubUsername": "IanArb",
+          "profileImage": "https://avatars2.githubusercontent.com/u/6011914?s=460&u=9328434aef816ce5dfe5fbc12b64f2f498222ebc&v=4",
+          "slackUsername": "Ian Arbuckle"
         }
       }
     ]
@@ -443,7 +492,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "34",
+          "contributorId": "14",
           "displayName": "Amol Bhure",
           "githubUsername": "codedevloper",
           "profileImage": "https://avatars1.githubusercontent.com/u/5453949?s=460&v=4",
@@ -518,7 +567,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "33",
+          "contributorId": "38",
           "displayName": "Nico y-crozier",
           "githubUsername": "nicocrozier",
           "profileImage": "https://avatars2.githubusercontent.com/u/41084465?s=460&u=e4bbc12b9d60ba1869da25809044eddc97733c1b&v=4",
