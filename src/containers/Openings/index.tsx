@@ -77,7 +77,15 @@ const Openings: FC = () => {
   return (
     <>
       <PageTitle title="Openings" />
-      <div className="Openings">
+      <div className="hiring-freeze">
+        <h1>Openings</h1>
+        <br />
+        <h3>
+          We are on a <span>hiring freeze</span> till further notice
+        </h3>
+      </div>
+      {/* <div className="Openings">
+        
         <BreadcrumbMenu
           className="Openings__BreadcrumbMenu"
           menuItems={renderCategoryFilter()}
@@ -93,7 +101,7 @@ const Openings: FC = () => {
             {renderOpenings()}
           </div>
         )}
-      </div>
+      </div> */}
     </>
   );
 };
