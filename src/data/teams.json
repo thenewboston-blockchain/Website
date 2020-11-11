@@ -99,19 +99,6 @@
         }
       },
       {
-        "title": "Blockchain Cryptocurrency Researcher",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "17",
-          "displayName": "Colfax",
-          "githubUsername": "colfax23",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01DDHVKK9S-5d84cd83bdb7-512",
-          "slackUsername": "Colfax"
-        }
-      },
-      {
         "title": "Product Manager",
         "isLead": false,
         "payPerDay": 2800,
@@ -466,6 +453,24 @@
           "githubUsername": null,
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01B1PFRMH7-df88a64aa7ba-512",
           "slackUsername": "Bojan Ilijevski"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Research",
+    "contributors": [
+      {
+        "title": "Blockchain Cryptocurrency Researcher",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "17",
+          "displayName": "Colfax",
+          "githubUsername": "colfax23",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01DDHVKK9S-5d84cd83bdb7-512",
+          "slackUsername": "Colfax"
         }
       }
     ]
