@@ -7,7 +7,7 @@
   display: flex;
   font-weight: 700;
   justify-content: center;
-  outline: none;
+  outline: none!important;
   transition: color 0.1s ease;
 
   &:hover {
