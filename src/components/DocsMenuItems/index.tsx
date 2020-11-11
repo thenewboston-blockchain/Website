@@ -14,6 +14,14 @@ export const accountManagerNavigationData = [
     url: '/account-manager/create-an-account',
   },
   {
+    name: 'Create a Bank',
+    url: '/account-manager/create-bank',
+  },
+  {
+    name: 'Create a Validator',
+    url: '/account-manager/create-validator',
+  },
+  {
     name: 'Add Friends',
     url: '/account-manager/add-friends',
   },
