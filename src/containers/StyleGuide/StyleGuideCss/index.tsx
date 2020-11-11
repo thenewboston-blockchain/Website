@@ -400,7 +400,7 @@ const LeftMenu: FC = () => {
         </p>
         <CodeSnippet
           code={`return (
-  <div className="PresentationalComponent>
+  <div className="PresentationalComponent">
     <div className="PresentationalComponent__left">{leftComponentProp}</div>
     {children}
   </div>
