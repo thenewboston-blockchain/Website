@@ -25,7 +25,7 @@ const assets: Asset[] = [
 const Assets: FC = () => {
   const renderCard = (asset: Asset): ReactNode => {
     return (
-      <div className="Assets__card-wrapper">
+      <div key={asset.subtext} className="Assets__card-wrapper">
         <div className="Assets__logo-container">
           <a href={asset.downloadLink} rel="noreferrer" download>
             <Button className="Assets__downloadButton">
