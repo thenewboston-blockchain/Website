@@ -8,12 +8,11 @@ import TnbLogoAndWordmark from './TNBassets/TNB-LogoAndWordmark.png';
 import './Assets.scss';
 
 enum Image {
-  'tnb_Logo' = 'TNB Logo',
-  'tnb_LogoAndWordmark' = 'TNB Logo and Wordmark',
+  'tnb_Logo' = 'TNB-Logo.Zip',
+  'tnb_LogoAndWordmark' = 'TNB-Logo-and-Wordmark.Zip',
 }
-const tnbLogozip = 'https://github.com/thenewboston-developers/Marketing/raw/master/thenewboston%20logos.zip';
-const tnbLogoAndWordmarkzip =
-  'https://github.com/thenewboston-developers/Marketing/raw/master/thenewboston%20logos.zip';
+const tnbLogozip = 'https://github.com/thenewboston-developers/Marketing/raw/master/Logo.zip';
+const tnbLogoAndWordmarkzip = 'https://github.com/thenewboston-developers/Marketing/raw/master/Logo-and-Wordmark.zip';
 
 const getLogo = (image: Image): string => {
   if (image === Image.tnb_Logo) return TnbLogo;
