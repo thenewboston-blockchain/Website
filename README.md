@@ -1,11 +1,11 @@
 <p align="center">
-  <img alt="thenewboston logo" src="./src/assets/svgs/thenewboston-primary.svg" width="400">
+  <img alt="thenewboston logo" src="./src/assets/svgs/thenewboston-primary.svg" width="400">
 </p>
 
 > This repository contains the source code and documentation for [thenewboston.com](https://thenewboston.com/) website.
 
 <p align="center">
-  <img alt="screenshot of website" src="https://imgur.com/Nw7W49v.png">
+  <img alt="screenshot of website" src="https://imgur.com/Nw7W49v.png">
 </p>
 
 [![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fthenewboston.com)](https://thenewboston.com) ![Activity](https://img.shields.io/github/commit-activity/m/thenewboston-developers/website) [![GitHub Issues](https://img.shields.io/github/issues/thenewboston-developers/website)](https://github.com/thenewboston-developers/website/issues) [![Contributors](https://img.shields.io/github/contributors/thenewboston-developers/website)](https://github.com/thenewboston-developers/Website/graphs/contributors) [![License](https://img.shields.io/github/license/thenewboston-developers/website)](http://opensource.org/licenses/MIT)
@@ -43,7 +43,7 @@ Next steps:
 5. Push to the branch
 6. Open a pull request
 
-For further help, you can check out the [FAQs](https://thenewboston.com/faq).
+For further help, you can check out the [FAQs](https://thenewboston.com/faq).
 
 Finally, feel free to shoot any queries or suggestions. Don't hesitate. ;)
 
@@ -80,7 +80,7 @@ completely unrelated topics.
 
 ## Donate
 
-All donations will go to TheNewBoston to help fund the team to continue to develop the community and create new content.
+All donations will go to thenewboston to help fund the team to continue to develop the community and create new content.
 
 | Coin                                                       | Address                                                          |
 | ---------------------------------------------------------- | ---------------------------------------------------------------- |
