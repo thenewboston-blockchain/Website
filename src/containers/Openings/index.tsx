@@ -19,7 +19,11 @@ const OPENING_CATEGORY_FILTERS = [
   OpeningCategory.marketing,
 ];
 
-const Openings: FC = () => {
+interface ComponentProps {
+  openingsFrozen: boolean;
+}
+
+const Openings: FC<ComponentProps> = ({openingsFrozen}) => {
   const history = useHistory();
   const {category: categoryParam, openingId: openingIdParam} = useParams<OpeningsUrlParams>();
   const [categoryFilter, setCategoryFilter] = useState<OpeningCategory>(OpeningCategory.all);
@@ -74,18 +78,20 @@ const Openings: FC = () => {
     return <OpeningDetails opening={opening} />;
   };
 
-  return (
+  return openingsFrozen ? (
     <>
       <PageTitle title="Openings" />
       <div className="hiring-freeze">
         <h1>Openings</h1>
         <br />
         <h3>
-          We are on a <span>hiring freeze</span> till further notice
+          We are on a <span>hiring freeze</span> til further notice
         </h3>
       </div>
-      {/* <div className="Openings">
-        
+    </>
+  ) : (
+    <>
+      <div className="Openings">
         <BreadcrumbMenu
           className="Openings__BreadcrumbMenu"
           menuItems={renderCategoryFilter()}
@@ -101,7 +107,7 @@ const Openings: FC = () => {
             {renderOpenings()}
           </div>
         )}
-      </div> */}
+      </div>
     </>
   );
 };
