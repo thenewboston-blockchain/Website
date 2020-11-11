@@ -13,7 +13,7 @@ const AccountManagerCreateValidator: FC = () => {
   return (
     <DocContainer className="AccountManagerCreateValidator" title="Create a Validator">
       <p>
-        <strong>Validators</strong> purpose is most importantly to validate transactions. To create a Validator, click
+        <strong>Validator's</strong> purpose is most importantly to validate transactions. To create a Validator, click
         the plus button to the right of "Validators" on the left side menu. After choosing a protocol and filling out a
         IP Address, Port and a Nickname for your Validator, click the "Add" button to create/add the Validator.
       </p>
