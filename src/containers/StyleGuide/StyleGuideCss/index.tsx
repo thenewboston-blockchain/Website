@@ -146,18 +146,16 @@ const LeftMenu: FC = () => {
           We use the <A href="https://www.npmjs.com/package/clsx">CLSX</A> package to deal with conditional classNames.
         </p>
         <CodeSnippet
-          code={`return (
-  <div className={\`LeftNav__nav \${selected === 'home' ? 'LeftNav__nav--active' : ''}\`}>Home</div>
-);`}
+          code={`return <div className={\`LeftNav__nav \${selected === 'home' ? 'LeftNav__nav--active' : ''}\`}>Home</div>;`}
           heading="Bad"
           language={SnippetLang.typescript}
         />
         <CodeSnippet
           code={`return (
   <div 
-   className={clsx("LeftNav__nav", {
-      "LeftNav__nav--active": selected === "home"
-   })}
+     className={clsx("LeftNav__nav", {
+        "LeftNav__nav--active": selected === "home"
+     })}
   >Home</div>
 );`}
           heading="Good"
