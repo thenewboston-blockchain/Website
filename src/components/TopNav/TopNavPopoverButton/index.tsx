@@ -11,8 +11,6 @@ interface ComponentProps {
   buttonText: string;
   children: ReactNode;
   className?: string;
-  selectedDropdown: string;
-  setDropdownButton: any;
   setFocus(isClickEvent: boolean): void;
   popoverId: string;
   setAnchorEl(newEl: HTMLButtonElement | null): void;
@@ -24,8 +22,6 @@ const TopNavPopoverButton: FC<ComponentProps> = ({
   buttonText,
   children,
   className,
-  setDropdownButton,
-  selectedDropdown,
   setFocus,
   popoverId,
   setAnchorEl,
@@ -35,14 +31,9 @@ const TopNavPopoverButton: FC<ComponentProps> = ({
 
   const buttonRef = useRef<HTMLButtonElement>(null);
 
-  const isKeyEvent = useRef<boolean>(false);
-
   const popoverIsOpen = !!anchorEl;
 
   const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
-    isKeyEvent.current = false;
-    e.nativeEvent.stopImmediatePropagation();
-    console.log('click');
     // Focusing the button is needed for Firefox.
     buttonRef.current?.focus();
     if (!anchorEl) {
@@ -54,7 +45,6 @@ const TopNavPopoverButton: FC<ComponentProps> = ({
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => {
-    isKeyEvent.current = true;
     const canFocusOnTabKey = e.key === 'Tab' && !e.shiftKey && !!anchorEl;
     const shouldCloseOnShiftTabKey = e.key === 'Tab' && e.shiftKey && !!anchorEl;
     if (canFocusOnTabKey) {
@@ -64,13 +54,6 @@ const TopNavPopoverButton: FC<ComponentProps> = ({
     if (shouldCloseOnShiftTabKey) {
       unsetAnchorEl();
     }
-    setDropdownButton('');
-  };
-
-  const handleBlur = (e: React.FocusEvent<HTMLButtonElement>) => {
-    if (anchorEl && !isKeyEvent.current) {
-      unsetAnchorEl();
-    }
   };
 
   useEffect(() => {
@@ -78,21 +61,12 @@ const TopNavPopoverButton: FC<ComponentProps> = ({
       unsetAnchorEl();
     }
   }, [popoverIsOpen, unsetAnchorEl, clientWidth]);
-
-  useEffect(() => {
-    console.log(buttonText, selectedDropdown);
-    const isSelectedDropdown = buttonText === selectedDropdown;
-    if (isSelectedDropdown) {
-      buttonRef.current?.focus();
-    }
-  }, [buttonText, selectedDropdown]);
   return (
     <>
       <button
         className={clsx('TopNavPopoverButton', className)}
         onClick={handleButtonClick}
         onKeyDown={handleKeyDown}
-        onBlur={handleBlur}
         ref={buttonRef}
       >
         {buttonText}

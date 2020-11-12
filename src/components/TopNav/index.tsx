@@ -22,7 +22,6 @@ const TopNav: FC<ComponentProps> = ({className}) => {
   const [getStartedAnchorEl, setGetStartedAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [moreAnchorEl, setMoreAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [isFocused, setFocus] = useState(false);
-  const [dropdownButton, setDropdownButton] = useState('');
   const {width} = useWindowDimensions();
 
   useEffect(() => {
@@ -147,8 +146,6 @@ const TopNav: FC<ComponentProps> = ({className}) => {
           className="TopNav__right-item"
           setFocus={setFocus}
           popoverId="get-started-popover"
-          selectedDropdown={dropdownButton}
-          setDropdownButton={setDropdownButton}
           setAnchorEl={setGetStartedAnchorEl}
           unsetAnchorEl={unsetGetStartedAnchorEl}
         >
@@ -160,8 +157,6 @@ const TopNav: FC<ComponentProps> = ({className}) => {
           className="TopNav__right-item"
           setFocus={setFocus}
           popoverId="community-popover"
-          selectedDropdown={dropdownButton}
-          setDropdownButton={setDropdownButton}
           setAnchorEl={setCommunityAnchorEl}
           unsetAnchorEl={unsetCommunityAnchorEl}
         >
@@ -173,8 +168,6 @@ const TopNav: FC<ComponentProps> = ({className}) => {
           className="TopNav__right-item"
           setFocus={setFocus}
           popoverId="more-popover"
-          selectedDropdown={dropdownButton}
-          setDropdownButton={setDropdownButton}
           setAnchorEl={setMoreAnchorEl}
           unsetAnchorEl={unsetMoreAnchorEl}
         >
@@ -236,20 +229,17 @@ const TopNav: FC<ComponentProps> = ({className}) => {
   const unsetCommunityAnchorEl = useCallback((): void => {
     setCommunityAnchorEl(null);
     setFocus(false);
-    setDropdownButton('Community');
-  }, [setCommunityAnchorEl, setFocus, setDropdownButton]);
+  }, [setCommunityAnchorEl, setFocus]);
 
   const unsetGetStartedAnchorEl = useCallback((): void => {
     setGetStartedAnchorEl(null);
     setFocus(false);
-    setDropdownButton('Get Started');
-  }, [setGetStartedAnchorEl, setFocus, setDropdownButton]);
+  }, [setGetStartedAnchorEl, setFocus]);
 
   const unsetMoreAnchorEl = useCallback((): void => {
     setMoreAnchorEl(null);
     setFocus(false);
-    setDropdownButton('More');
-  }, [setMoreAnchorEl, setFocus, setDropdownButton]);
+  }, [setMoreAnchorEl, setFocus]);
 
   return (
     <header className={clsx('TopNav', className)}>

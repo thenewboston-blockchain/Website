@@ -1,6 +1,6 @@
 import {useEffect, useRef} from 'react';
 
-type EventName = 'click' | 'mousedown' | 'scroll';
+type EventName = 'mousedown' | 'scroll';
 
 const useEventListener = (
   eventName: EventName,
