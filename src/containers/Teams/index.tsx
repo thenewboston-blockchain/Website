@@ -22,6 +22,7 @@ const TEAM_NAME_FILTERS = [
   TeamName.payments,
   TeamName.qa,
   TeamName.redditModerators,
+  TeamName.research,
   TeamName.security,
   TeamName.slackManagers,
   TeamName.youtube,
