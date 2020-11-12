@@ -23,9 +23,9 @@ const AccountManagerAddFriends: FC = () => {
 
       <DocSubSection id={AccountManagerAddFriendsNav.friendOverview} title="Friend Overview">
         <p>
-          After creating an account, you will be taken to your account overview page. Here you can see your balance,
-          account number, and signing key. Your account number is what you will share with anyone who wishes to send you
-          coins.
+          After adding a friend, you will be taken to your friend's account overview page. Here you can see their
+          balance, account number, and signing key. But it is your account number that you will share with anyone who
+          wishes to send you coins.
         </p>
 
         <DocImage alt="friend overview" bordered maxWidth={1200} src={FriendOverview} />
