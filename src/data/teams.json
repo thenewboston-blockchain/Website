@@ -288,6 +288,19 @@
         }
       },
       {
+        "title": "Software Developer",
+        "isLead":false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+           "contributorId": "41",
+           "displayName": "Meharban Singh",
+           "githubUsername": "Meharban-Singh",
+           "profileImage": "https://avatars1.githubusercontent.com/u/33323725?s=460&u=da67fec9d0eacc6f5680c789265fb372a75d71c0&v=4",
+           "slackUsername": "Meharban Singh"
+        }
+      },
+      {
         "title": "Front-End Developer",
         "isLead": false,
         "payPerDay": 2800,
