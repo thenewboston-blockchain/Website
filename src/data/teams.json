@@ -53,6 +53,19 @@
           "profileImage": "https://avatars3.githubusercontent.com/u/15216270?s=460&u=d417978e0163fb544caf74293278fac7ebf1dabf&v=4",
           "slackUsername": "Shahraiz Ali"
         }
+      },
+      {
+        "title": "Python Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-05-09T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "42",
+          "displayName": "Dwayne Sordam",
+          "githubUsername": "CirXe0N",
+          "profileImage": "https://avatars3.githubusercontent.com/u/24738451?s=460&u=c1e3dc0dd9585a4cf877c453ec80f4af830c2fd5&v=4",
+          "slackUsername": "Dwayne"
+        }
       }
     ]
   },
