@@ -13,50 +13,59 @@
     display: flex;
     height: 160px;
     justify-content: center;
-    margin-bottom: 10px;
-    margin-top: 12px;
-    max-width: 357px;
-    min-width: 351px;
     text-align: center;
-    @media (min-width: 576px) {
-      margin-right: 12px;
-    }
+    width: 100%;
   }
+
   &__cards-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 90px;
 
     @media (max-width: 768px) {
+      align-items: center;
+      flex-direction: column;
       margin-bottom: 30px;
     }
   }
   &__card-wrapper {
     align-items: center;
     border-radius: 12px;
-
     box-shadow: 0 0 3px rgba(85, 108, 214, 0.3);
     height: 300px;
     justify-content: center;
     margin-bottom: 10px;
     margin-top: 12px;
     max-width: 357px;
-    min-width: 351px;
     text-align: center;
-    @media (min-width: 576px) {
-      margin-right: 12px;
+    width: 100%;
+
+    @media (min-width: 769px) {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
     }
   }
 
-  &__downloadButton {
+  &__download-button {
+    background: var(--color-primary);
     border-radius: 50%;
-    display: block;
+    box-shadow: 0 4px 4px rgba(4, 34, 53, 0.25);
+    color: var(--color-white);
+    display: flex;
     float: right;
     height: 48px;
+    justify-content: center;
     margin: 10px;
-    width: 50px;
+    transition: background-color 0.1s ease-in;
+    width: 48px;
+
+    &:hover {
+      background: var(--color-primary-hover);
+      border-color: var(--color-primary-hover);
+    }
   }
+
   &__heading {
     font-size: 36px;
     font-weight: 800;
@@ -66,11 +75,7 @@
   }
 
   &__logo {
-    max-width: 100%;
-
-    &--tnb {
-      max-width: 300px;
-    }
+    max-width: 90%;
   }
 
   &__subtext {
@@ -80,11 +85,5 @@
     margin: 0 auto 48px;
     max-width: 480px;
     text-align: center;
-  }
-
-  &__logo-container {
-    display: block;
-    height: 42px;
-    margin-bottom: 30px;
   }
 }
