@@ -338,6 +338,19 @@
           "profileImage": "https://avatars2.githubusercontent.com/u/43641633?s=460&u=33f06f961b604732bec844c107c279e080aa038b&v=4",
           "slackUsername": "Carter"
         }
+      },
+      {
+        "title": "Software Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "43",
+          "displayName": "Michael Lee",
+          "githubUsername": "tpikachu",
+          "profileImage": "https://avatars1.githubusercontent.com/u/46133358?s=460&u=d731694bb83f5f51df70fa1841ccedcd70efc7f7&v=4",
+          "slackUsername": "Michael"
+        }
       }
     ]
   },
