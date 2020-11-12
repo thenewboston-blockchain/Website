@@ -3,9 +3,10 @@ import {useHistory, useParams} from 'react-router-dom';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import parseISO from 'date-fns/parseISO';
 import intersection from 'lodash/intersection';
-import {BreadcrumbMenu, EmptyPage, FlatNavLinks, Icon, LabelFilter, Loader} from 'components';
-import {IconType} from 'components/Icon';
+import Icon, {IconType} from 'components/Icon';
 import {REPOSITORY_FILTERS} from 'constants/github';
+
+import {BreadcrumbMenu, EmptyPage, FlatNavLinks, LabelFilter, Loader, PageTitle} from 'components';
 import {GenericVoidFunction, SortBy} from 'types/generic';
 import {Issue, Repository, RepositoryUrlParams} from 'types/github';
 import {fetchGithubIssues} from 'utils/github';
@@ -153,28 +154,31 @@ const Tasks: FC = () => {
   };
 
   return (
-    <div className="Tasks">
-      <BreadcrumbMenu
-        className="Tasks__BreadcrumbMenu"
-        menuItems={renderFilters()}
-        pageName={repository}
-        sectionName="Tasks"
-      />
-      <div className="Tasks__left-menu">{renderFilters()}</div>
-      <div className="Tasks__task-list">
-        <div className="Tasks__sortby-container">
-          {renderOrder()}
-          <DropdownInput options={dropdownOptions} callbackOnChange={handleDropdownChange} />
-        </div>
-        {loading ? (
-          <div className="Tasks__loader-container">
-            <Loader />
+    <>
+      <PageTitle title="Tasks" />
+      <div className="Tasks">
+        <BreadcrumbMenu
+          className="Tasks__BreadcrumbMenu"
+          menuItems={renderFilters()}
+          pageName={repository}
+          sectionName="Tasks"
+        />
+        <div className="Tasks__left-menu">{renderFilters()}</div>
+        <div className="Tasks__task-list">
+          <div className="Tasks__sortby-container">
+            {renderOrder()}
+            <DropdownInput options={dropdownOptions} callbackOnChange={handleDropdownChange} />
           </div>
-        ) : (
-          renderTasks()
-        )}
+          {loading ? (
+            <div className="Tasks__loader-container">
+              <Loader />
+            </div>
+          ) : (
+            renderTasks()
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
