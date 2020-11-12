@@ -2,8 +2,8 @@ import React, {FC} from 'react';
 
 import {DocContainer, DocImage, DocSubSection} from 'components';
 
-import CreateBank from './CreateBank.png';
 import BankOverview from './BankOverview.png';
+import CreateBank from './CreateBank.png';
 
 enum AccountManagerCreateBankNav {
   accountOverview = 'account-overview',
