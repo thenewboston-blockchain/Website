@@ -94,7 +94,6 @@ const StyleGuideCss: FC = () => {
           code={`import React, {FC} from 'react';
         
 import './LeftMenu.scss';
-
 const LeftMenu: FC = () => {
   return (
     <div className="LeftMenu">
@@ -209,11 +208,9 @@ const LeftMenu: FC = () => {
           code={`.LeftMenu {
   color: var(--color-1);
 }
-
 .LeftMenu .LeftMenu__nav {
   color: var(--color-2);
 }
-
 .LeftMenu .LeftMenu__nav .LeftMenu__nav--active {
   color: var(--color-3);
 }`}
@@ -246,11 +243,9 @@ const LeftMenu: FC = () => {
           code={`.LeftMenu {
   color: var(--color-1);
 }
-
 .LeftMenu__nav {
   color: var(--color-2);
 }
-
 .LeftMenu__nav--active {
   color: var(--color-3);
 }`}
@@ -437,7 +432,6 @@ const LeftMenu: FC = () => {
           code={`.red {
   color: red;
 }
-
 .fancy-table {
   // some fancy table styling
 }`}
@@ -465,7 +459,6 @@ const LeftMenu: FC = () => {
           code={`#left-nav { // No id selectors
   // ...  
 }
-
 .LeftNav {
   a { // No HTML Element selectors
     // ...
