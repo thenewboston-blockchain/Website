@@ -73,12 +73,51 @@
         }
       },
       {
-        "title": "Hiring Manager",
+        "title": "Community Manager",
         "isLead": false,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "6",
+          "displayName": "Miss ChrishaPh",
+          "githubUsername": "MsChrishaph",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01ENH6SBMX-eadd7536195a-512",
+          "slackUsername": "MsChrishaPh"
+        }
+      },
+      {
+        "title": "Product Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "31",
+          "displayName": "Rahul Kothari",
+          "githubUsername": "-",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EUQ8SR2L-e347b1c404fa-512",
+          "slackUsername": "Rahul Kothari"
+        }
+      },
+      {
+        "title": "Product Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "26",
+          "displayName": "Steve Hedden",
+          "githubUsername": "SteveHedden",
+          "profileImage": "https://avatars3.githubusercontent.com/u/5224821?s=460&v=4",
+          "slackUsername": "Steve Hedden"
+        }
+      },
+      {
+        "title": "Hiring Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "40",
           "displayName": "Francisca Nwafor",
           "githubUsername": null,
           "profileImage": "https://media-exp1.licdn.com/dms/image/C4D03AQFRvpMONLCcdQ/profile-displayphoto-shrink_400_400/0?e=1610582400&v=beta&t=f69ny2IHWl5A2BAq6_UcDBn1lmhyNSsVhdjZn0SimoM",
@@ -96,45 +135,6 @@
           "githubUsername": null,
           "profileImage": "https://media-exp1.licdn.com/dms/image/C4D03AQEsxV5J1Hi9QQ/profile-displayphoto-shrink_400_400/0?e=1609977600&v=beta&t=4jG6hRfnY9P5t0wrhrbuosLRRTWvxaxStZzdtYr5rdc",
           "slackUsername": "Martin"
-        }
-      },
-      {
-        "title": "Blockchain Cryptocurrency Researcher",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "17",
-          "displayName": "Colfax",
-          "githubUsername": "colfax23",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01DDHVKK9S-5d84cd83bdb7-512",
-          "slackUsername": "Colfax"
-        }
-      },
-      {
-        "title": "Product Manager",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "26",
-          "displayName": "Steve Hedden",
-          "githubUsername": "SteveHedden",
-          "profileImage": "https://avatars3.githubusercontent.com/u/5224821?s=460&v=4",
-          "slackUsername": "Steve Hedden"
-        }
-      },
-      {
-        "title": "Product Manager",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "31",
-          "displayName": "Rahul Kothari",
-          "githubUsername": "-",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EUQ8SR2L-e347b1c404fa-512",
-          "slackUsername": "Rahul Kothari"
         }
       }
     ]
@@ -314,6 +314,19 @@
         }
       },
       {
+        "title": "Front-end Responsive UI Expert",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "16",
+          "displayName": "Mahir Mersimoski",
+          "githubUsername": "mersimoski",
+          "profileImage": "https://avatars1.githubusercontent.com/u/62712311?s=400&u=8f07514eb932e75d41208491d9551b85c09d0c39&v=4",
+          "slackUsername": "Mahir Mersimoski"
+        }
+      },
+      {
         "title": "Head of JavaScript Library Development",
         "isLead": false,
         "payPerDay": 2800,
@@ -324,6 +337,19 @@
           "githubUsername": "sno2",
           "profileImage": "https://avatars2.githubusercontent.com/u/43641633?s=460&u=33f06f961b604732bec844c107c279e080aa038b&v=4",
           "slackUsername": "Carter"
+        }
+      },
+      {
+        "title": "Software Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "43",
+          "displayName": "Michael Lee",
+          "githubUsername": "tpikachu",
+          "profileImage": "https://avatars1.githubusercontent.com/u/46133358?s=460&u=d731694bb83f5f51df70fa1841ccedcd70efc7f7&v=4",
+          "slackUsername": "Michael"
         }
       }
     ]
@@ -453,6 +479,24 @@
           "githubUsername": null,
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01B1PFRMH7-df88a64aa7ba-512",
           "slackUsername": "Bojan Ilijevski"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Research",
+    "contributors": [
+      {
+        "title": "Blockchain Cryptocurrency Researcher",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "17",
+          "displayName": "Colfax",
+          "githubUsername": "colfax23",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01DDHVKK9S-5d84cd83bdb7-512",
+          "slackUsername": "Colfax"
         }
       }
     ]

@@ -114,7 +114,6 @@ const Leaderboard = (): JSX.Element => {
   const renderNavLinks = (): ReactNode => {
     return (
       <FlatNavLinks<Repository>
-        className="Leaderboard__left-menu"
         handleOptionClick={handleNavOptionClick}
         options={REPOSITORY_FILTERS}
         selectedOption={repository}
@@ -139,7 +138,7 @@ const Leaderboard = (): JSX.Element => {
       <PageTitle title="Leaderboard" />
       <div className="Leaderboard">
         {renderTopSections()}
-        {renderNavLinks()}
+        <div className="Leaderboard__left-menu">{renderNavLinks()}</div>
         <div className="Leaderboard__contributor-list">{renderContributors()}</div>
       </div>
     </>
