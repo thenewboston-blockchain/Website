@@ -1,3 +1,26 @@
+.hiring-freeze {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+.hiring-freeze h1 {
+  font-weight: 400;
+}
+
+.hiring-freeze h3 {
+  font-weight: 900;
+}
+
+.hiring-freeze h3 span {
+  color: #ed5f74;
+}
+
 .Openings {
   display: grid;
   grid-template-columns: 240px auto;
