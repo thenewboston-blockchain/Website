@@ -6,7 +6,7 @@ import BankOverview from './BankOverview.png';
 import CreateBank from './CreateBank.png';
 
 enum AccountManagerCreateBankNav {
-  accountOverview = 'account-overview',
+  bankOverview = 'bank-overview',
 }
 
 const AccountManagerCreateBank: FC = () => {
@@ -21,7 +21,7 @@ const AccountManagerCreateBank: FC = () => {
 
       <DocImage alt="create bank modal" bordered maxWidth={1200} src={CreateBank} />
 
-      <DocSubSection id={AccountManagerCreateBankNav.accountOverview} title="Bank Overview">
+      <DocSubSection id={AccountManagerCreateBankNav.bankOverview} title="Bank Overview">
         <p>
           After creating a bank, you will be taken to your bank overview page. Here you can see your Tx Fee (Transaction
           Fee), how many confirmation services your bank has, the network ID and bank account number and an overview of

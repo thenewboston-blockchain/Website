@@ -6,7 +6,7 @@ import CreateValidator from './CreateValidator.png';
 import ValidatorOverview from './ValidatorOverview.png';
 
 enum AccountManagerCreateValidatorNav {
-  accountOverview = 'account-overview',
+  validatorOverview = 'validator-overview',
 }
 
 const AccountManagerCreateValidator: FC = () => {
@@ -20,7 +20,7 @@ const AccountManagerCreateValidator: FC = () => {
 
       <DocImage alt="create Validator modal" bordered maxWidth={1200} src={CreateValidator} />
 
-      <DocSubSection id={AccountManagerCreateValidatorNav.accountOverview} title="Validator Overview">
+      <DocSubSection id={AccountManagerCreateValidatorNav.validatorOverview} title="Validator Overview">
         <p>
           After creating a Validator, you will be taken to your Validator overview page. Here you can see your Tx Fee
           (Transaction Fee), the Daily Rate, the Validator network ID and Validator account number and an overview of
