@@ -49,18 +49,11 @@ const Popover: FC<ComponentProps> = ({
   const windowDimensions = useWindowDimensions();
 
   useEventListener(
-    'mousedown',
+    'click',
     (e: any): void => {
-      let targetElement = e.target;
-
-      do {
-        if (targetElement.id === id || targetElement === anchorEl) {
-          return;
-        }
-        targetElement = targetElement.parentNode;
-      } while (targetElement);
-
-      closePopover();
+      const targetElement = e.target;
+      console.log(targetElement.id);
+      if (anchorEl) closePopover();
     },
     document,
   );
@@ -82,10 +75,6 @@ const Popover: FC<ComponentProps> = ({
     document,
     true,
   );
-
-  useEffect(() => {
-    closePopover();
-  }, [closePopover, pathname]);
 
   useEffect(() => {
     if (anchorEl) {

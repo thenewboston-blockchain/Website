@@ -31,7 +31,8 @@ const TopNavPopoverItem: FC<ComponentProps> = ({
   const history = useHistory();
   const buttonRef = useRef<HTMLButtonElement>(null);
 
-  const handleButtonClick = (): void => {
+  const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>): void => {
+    e.nativeEvent.stopImmediatePropagation();
     history.push(to);
     closePopover();
   };
