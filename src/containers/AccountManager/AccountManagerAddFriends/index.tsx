@@ -6,7 +6,7 @@ import AddFriend from './AddFriend.png';
 import FriendOverview from './FriendOverview.png';
 
 enum AccountManagerAddFriendsNav {
-  friendOverview = 'account-overview',
+  friendOverview = 'friend-overview',
 }
 
 const AccountManagerAddFriends: FC = () => {
