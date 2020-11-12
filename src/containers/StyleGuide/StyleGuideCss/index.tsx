@@ -127,7 +127,7 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Bad"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <CodeSnippet
           code={`return (
@@ -138,7 +138,7 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Good"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
       </DocSubSection>
       <DocSubSection id={StyleGuideCssNav.clsx} title="CLSX for conditional classNames">
@@ -146,18 +146,22 @@ const LeftMenu: FC = () => {
           We use the <A href="https://www.npmjs.com/package/clsx">CLSX</A> package to deal with conditional classNames.
         </p>
         <CodeSnippet
-          code={`<div className={\`LeftNav__nav \${selected === 'home' ? 'LeftNav__nav--active' : ''}\`}>Home</div>`}
+          code={`return (
+  <div className={\`LeftNav__nav \${selected === 'home' ? 'LeftNav__nav--active' : ''}\`}>Home</div>
+);`}
           heading="Bad"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <CodeSnippet
-          code={`<div 
+          code={`return (
+  <div 
    className={clsx("LeftNav__nav", {
       "LeftNav__nav--active": selected === "home"
    })}
->Home</div>`}
+  >Home</div>
+);`}
           heading="Good"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
       </DocSubSection>
       <DocSubSection id={StyleGuideCssNav.sassAmpBem} title="SASS Ampersand + BEM">
@@ -181,7 +185,7 @@ const LeftMenu: FC = () => {
    </div>
 );`}
           heading="LeftMenu.tsx"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <p>
           There are three classNames we have to deal with: <DocInlineCode>.LeftNav</DocInlineCode>,{' '}
@@ -290,7 +294,7 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Bad"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <CodeSnippet
           code={`return (
@@ -303,7 +307,7 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Good"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <p>
           <strong>
@@ -330,7 +334,7 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Bad"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <CodeSnippet
           code={`return (
@@ -351,7 +355,7 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Good"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <p>
           One note about above: you should only introduce one level of new blocks for a given component. If you need to
@@ -406,7 +410,7 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="TSX Component"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <CodeSnippet
           code={`.PresentationalComponent {
@@ -501,7 +505,7 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="TSX Component"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <CodeSnippet
           code={`.Component {
