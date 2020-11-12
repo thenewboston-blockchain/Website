@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom
 import {Layout} from 'components';
 
 import AccountManager from './AccountManager';
+import Assets from './Assets';
 import BankApi from './BankApi';
 import ConfirmationValidatorApi from './ConfirmationValidatorApi';
 import DeploymentGuide from './DeploymentGuide';
@@ -55,6 +56,7 @@ const App: FC = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/donate" component={Donate} />
           <Route exact path="/faq" component={Faq} />
+          <Route exact path="/assets" component={Assets} />
           <Route exact path="/leaderboard/:repository" component={Leaderboard} />
           <Redirect exact from="/openings" to="/openings/All" />
           <Route exact path="/openings/:category/:openingId?" render={() => <Openings openingsFrozen />} />
