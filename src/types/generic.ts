@@ -1,7 +1,7 @@
 export enum SortBy {
-  none = 'None',
-  reward = 'Reward',
-  time = 'Time',
+  none = 'Sort By None',
+  reward = 'Sort By Reward',
+  created = 'Sort By Created Date',
 }
 
 export interface Dict<T> {

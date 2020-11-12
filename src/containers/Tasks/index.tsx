@@ -3,15 +3,14 @@ import {useHistory, useParams} from 'react-router-dom';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import parseISO from 'date-fns/parseISO';
 import intersection from 'lodash/intersection';
-
+import {BreadcrumbMenu, EmptyPage, FlatNavLinks, Icon, LabelFilter, Loader} from 'components';
+import {IconType} from 'components/Icon';
 import {REPOSITORY_FILTERS} from 'constants/github';
-
-import {BreadcrumbMenu, EmptyPage, FlatNavLinks, LabelFilter, Loader} from 'components';
 import {GenericVoidFunction, SortBy} from 'types/generic';
 import {Issue, Repository, RepositoryUrlParams} from 'types/github';
 import {fetchGithubIssues} from 'utils/github';
-import {sortByDateKey, sortByNumberKey} from 'utils/sort';
-
+import {sortByNumberKey} from 'utils/sort';
+import {DropdownInput} from 'components/DropdownInput';
 import TasksTask from './TasksTask';
 import './Tasks.scss';
 
@@ -23,8 +22,9 @@ const Tasks: FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [repositoryFilter, setRepositoryFilter] = useState<Repository>(Repository.all);
   const [selectedLabelNames, setSelectedLabelNames] = useState<string[]>([]);
-  const [sortByOptions, setSortByOptions] = useState<SortBy[]>([SortBy.time, SortBy.reward]);
+  const [sortByOptions, setSortByOptions] = useState<SortBy>(SortBy.none);
   const [sortByOrder, setSortByOrder] = useState<'asc' | 'desc'>('asc');
+  const [dropdownOptions] = useState<string[]>([SortBy.none, SortBy.created, SortBy.reward]);
 
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
@@ -59,14 +59,35 @@ const Tasks: FC = () => {
             const labelNames = labels.map(({name}) => name);
             return !!intersection(labelNames, selectedLabelNames).length;
           });
-    if (sortByOptions.includes(SortBy.reward)) {
+
+    // To support multiple sorting options together..
+    // if (sortByOptions.includes(SortBy.reward)) {
+    //   filteredIssues = filteredIssues.sort(sortByNumberKey('amount', sortByOrder));
+    // }
+
+    // if (sortByOptions.includes(SortBy.time)) {
+    //   filteredIssues = filteredIssues.sort(sortByDateKey('created_at', sortByOrder));
+    // }
+
+    if (sortByOptions === SortBy.none) {
+      return filteredIssues;
+    }
+
+    if (sortByOptions === SortBy.reward) {
       filteredIssues = filteredIssues.sort(sortByNumberKey('amount', sortByOrder));
     }
-    if (sortByOptions.includes(SortBy.time)) {
-      filteredIssues = filteredIssues.sort(sortByDateKey('created_at', sortByOrder));
+    if (sortByOptions === SortBy.created) {
+      // Works opposite for some reason
+      filteredIssues = filteredIssues.sort(sortByNumberKey('created_at', sortByOrder === 'asc' ? 'desc' : 'asc'));
     }
+
     return filteredIssues;
   };
+
+  const handleDropdownChange = (selectedOption: any) => {
+    setSortByOptions(selectedOption);
+  };
+
   const handleLabelClick = (labelName: string): GenericVoidFunction => (): void => {
     const results = selectedLabelNames.includes(labelName)
       ? selectedLabelNames.filter((name) => name !== labelName)
@@ -92,6 +113,20 @@ const Tasks: FC = () => {
       />
     </>
   );
+
+  const renderOrder = (): ReactNode => {
+    return (
+      <div>
+        <Icon
+          className="Tasks__sortby-icon"
+          icon={sortByOrder === 'asc' ? IconType.sortAscending : IconType.sortDescending}
+          onClick={() => {
+            setSortByOrder((order) => (order === 'asc' ? 'desc' : 'asc'));
+          }}
+        />
+      </div>
+    );
+  };
 
   const renderTasks = (): ReactNode => {
     const filteredIssues = getFilteredIssues();
@@ -127,6 +162,10 @@ const Tasks: FC = () => {
       />
       <div className="Tasks__left-menu">{renderFilters()}</div>
       <div className="Tasks__task-list">
+        <div className="Tasks__sortby-container">
+          {renderOrder()}
+          <DropdownInput options={dropdownOptions} callbackOnChange={handleDropdownChange} />
+        </div>
         {loading ? (
           <div className="Tasks__loader-container">
             <Loader />

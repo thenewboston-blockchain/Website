@@ -7,7 +7,9 @@ import noop from 'lodash/noop';
 import AccountGroupIcon from 'mdi-react/AccountGroupIcon';
 import AlertCircleOutlineIcon from 'mdi-react/AlertCircleOutlineIcon';
 import ArrowCollapseDownIcon from 'mdi-react/ArrowCollapseDownIcon';
+import ArrowDownIcon from 'mdi-react/ArrowDownIcon';
 import ArrowLeftIcon from 'mdi-react/ArrowLeftIcon';
+import ArrowUpIcon from 'mdi-react/ArrowUpIcon';
 import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
 import ChevronLeftIcon from 'mdi-react/ChevronLeftIcon';
 import ChevronRightIcon from 'mdi-react/ChevronRightIcon';
@@ -27,6 +29,8 @@ import MenuRightIcon from 'mdi-react/MenuRightIcon';
 import MinusIcon from 'mdi-react/MinusIcon';
 import PlusIcon from 'mdi-react/PlusIcon';
 import RedditIcon from 'mdi-react/RedditIcon';
+import SortAscendingIcon from 'mdi-react/SortAscendingIcon';
+import SortDescendingIcon from 'mdi-react/SortDescendingIcon';
 import SlackIcon from 'mdi-react/SlackIcon';
 import ThumbsUpIcon from 'mdi-react/ThumbsUpIcon';
 import TrophyIcon from 'mdi-react/TrophyIcon';
@@ -41,7 +45,9 @@ export enum IconType {
   accountGroup,
   alertCircleOutline,
   arrowCollapseDown,
+  arrowDown,
   arrowLeft,
+  arrowUp,
   chevronDown,
   chevronLeft,
   chevronRight,
@@ -62,6 +68,8 @@ export enum IconType {
   plus,
   reddit,
   slack,
+  sortAscending,
+  sortDescending,
   thumbsUp,
   trophy,
   twitter,
@@ -90,8 +98,12 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
         return <AlertCircleOutlineIcon {...iconProps} />;
       case IconType.arrowCollapseDown:
         return <ArrowCollapseDownIcon {...iconProps} />;
+      case IconType.arrowDown:
+        return <ArrowDownIcon {...iconProps} />;
       case IconType.arrowLeft:
         return <ArrowLeftIcon {...iconProps} />;
+      case IconType.arrowUp:
+        return <ArrowUpIcon {...iconProps} />;
       case IconType.chevronDown:
         return <ChevronDownIcon {...iconProps} />;
       case IconType.chevronLeft:
@@ -132,6 +144,10 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
         return <RedditIcon {...iconProps} />;
       case IconType.slack:
         return <SlackIcon {...iconProps} />;
+      case IconType.sortAscending:
+        return <SortAscendingIcon {...iconProps} />;
+      case IconType.sortDescending:
+        return <SortDescendingIcon {...iconProps} />;
       case IconType.thumbsUp:
         return <ThumbsUpIcon {...iconProps} />;
       case IconType.trophy:
