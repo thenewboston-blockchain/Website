@@ -51,6 +51,7 @@ const HelloWorld: {[isoLangCode: string]: string} = {
   ml: 'ഹലോ വേൾഡ്',
   mr: 'नमस्कार जग',
   ms: 'Hai Dunia',
+  mt: 'Hello Dinja',
   nd: 'Yebo Mhlaba',
   ne: 'नमस्कार संसार',
   nl: 'Hallo Wereld',
