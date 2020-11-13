@@ -617,6 +617,19 @@
           "profileImage": "https://avatars2.githubusercontent.com/u/41084465?s=460&u=e4bbc12b9d60ba1869da25809044eddc97733c1b&v=4",
           "slackUsername": "Nico y-crozier"
         }
+      },
+      {
+        "title": "Python Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-05-09T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "45",
+          "displayName": "Richard Starkey",
+          "githubUsername": "MathClassIsTough",
+          "profileImage": "https://avatars0.githubusercontent.com/u/74336482?s=460&v=4",
+          "slackUsername": "Richard (MathClassIsTough)"
+        }
       }
     ]
   }
