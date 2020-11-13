@@ -29,6 +29,19 @@
         }
       },
       {
+        "title": "Python Product Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-11-13",
+        "contributor": {
+          "contributorId": "44",
+          "displayName": "Andy Bajaras",
+          "githubUsername": "Barajas123",
+          "profileImage": "https://avatars2.githubusercontent.com/u/46165581?s=460&v=4",
+          "slackUsername": "Andy Bajaras"
+        }
+      },
+      {
         "title": "Junior Python (Django) Developer",
         "isLead": false,
         "payPerDay": 2800,
