@@ -24,8 +24,8 @@ const TeamMemberCard: FC<ComponentProps> = ({
   titles,
 }) => {
   const renderAvatar = () => (
-    <div>
-      <img className="TeamMemberCard__user-avatar" src={profileImage} alt={displayName} />
+    <div className="TeamMemberCard__user-avatar">
+      <img src={profileImage} alt={displayName} />
     </div>
   );
 
