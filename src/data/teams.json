@@ -53,7 +53,20 @@
           "profileImage": "https://avatars3.githubusercontent.com/u/15216270?s=460&u=d417978e0163fb544caf74293278fac7ebf1dabf&v=4",
           "slackUsername": "Shahraiz Ali"
         }
-      }
+      },
+      {
+        "title": "Python Product Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-11-13",
+        "contributor": {
+        "contributorId": null,
+        "displayName": "Andy Bajaras",
+        "githubUsername": "Barajas123",
+        "profileImage":"https://avatars2.githubusercontent.com/u/46165581?s=460&v=4",
+        "slackUsername": "Andy Bajaras"
+        }
+        }
     ]
   },
   {
@@ -604,20 +617,7 @@
           "profileImage": "https://avatars2.githubusercontent.com/u/41084465?s=460&u=e4bbc12b9d60ba1869da25809044eddc97733c1b&v=4",
           "slackUsername": "Nico y-crozier"
         }
-      },
-      {
-        "title": "Python Product Manager",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-11-13",
-        "contributor": {
-        "contributorId": null,
-        "displayName": "Andy Bajaras",
-        "githubUsername": "Barajas123",
-        "profileImage":"https://avatars2.githubusercontent.com/u/46165581?s=460&v=4",
-        "slackUsername": "Andy Bajaras"
-        }
-        }
+      }
     ]
   }
 ]
