@@ -66,7 +66,7 @@ import {getCustomClassNames} from 'utils/components';`}
         <DocList variant="ol">
           <li>Only Functional Components. No Class-based components.</li>
           <li>
-            Reusable components that doesn't connect to the redux store belong in the{' '}
+            Reusable components that don't connect to the redux store belong in the{' '}
             <DocInlineCode>components</DocInlineCode> directory. Components that connects to the store belong in the{' '}
             <DocInlineCode>containers</DocInlineCode> directory.
           </li>
