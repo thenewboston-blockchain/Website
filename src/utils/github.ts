@@ -4,8 +4,8 @@ import {AMOUNT_COLOR, REPOSITORIES} from 'constants/github';
 import {BaseRelease, Issue, Release} from 'types/github';
 
 export const fetchGithubIssues = async (): Promise<Issue[]> => {
-  const promises = REPOSITORIES.map((repoName) =>
-    axios.get(`https://api.github.com/repos/thenewboston-developers/${repoName}/issues`),
+  const promises = REPOSITORIES.map((repoName: any) =>
+    axios.get(`https://api.github.com/repos/thenewboston-developers/${repoName.url}/issues`),
   );
 
   const results = await Promise.all(promises);
