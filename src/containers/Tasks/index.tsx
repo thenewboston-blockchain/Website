@@ -24,7 +24,7 @@ const Tasks: FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [repositoryFilter, setRepositoryFilter] = useState<Repository>(Repository.all);
   const [selectedLabelNames, setSelectedLabelNames] = useState<string[]>([]);
-  const [sortByOptions, setSortByOptions] = useState<SortBy>(SortBy.none);
+  const [sortByOption, setSortByOption] = useState<SortBy>(SortBy.none);
   const [sortByOrder, setSortByOrder] = useState<'asc' | 'desc'>('asc');
   const [dropdownOptions] = useState<string[]>([SortBy.none, SortBy.created, SortBy.reward]);
 
@@ -62,24 +62,18 @@ const Tasks: FC = () => {
             return !!intersection(labelNames, selectedLabelNames).length;
           });
 
-    // To support multiple sorting options together..
-    // if (sortByOptions.includes(SortBy.reward)) {
-    //   filteredIssues = filteredIssues.sort(sortByNumberKey('amount', sortByOrder));
-    // }
-
-    // if (sortByOptions.includes(SortBy.time)) {
-    //   filteredIssues = filteredIssues.sort(sortByDateKey('created_at', sortByOrder));
-    // }
-
-    if (sortByOptions === SortBy.none) {
+    if (sortByOption === SortBy.none) {
       return filteredIssues;
     }
 
-    if (sortByOptions === SortBy.reward) {
+    if (sortByOption === SortBy.reward) {
       filteredIssues = filteredIssues.sort(sortByNumberKey('amount', sortByOrder));
     }
-    if (sortByOptions === SortBy.created) {
-      // Works opposite for some reason
+    if (sortByOption === SortBy.created) {
+      // Works opposite due to the way date/time is calculated, so Ascending would actually mean that the
+      // Date is less than the other date, so for example when comparing 12th and 13th december, it will say
+      // 12th dec is less than 13th dec, however for us 13th dec is the latest issue so that should come on the list above.
+      // Hence we are passing in Desc order in sort function when it is actually ascending selected..
       filteredIssues = filteredIssues.sort(sortByNumberKey('created_at', sortByOrder === 'asc' ? 'desc' : 'asc'));
     }
 
@@ -87,7 +81,7 @@ const Tasks: FC = () => {
   };
 
   const handleDropdownChange = (selectedOption: any) => {
-    setSortByOptions(selectedOption);
+    setSortByOption(selectedOption);
   };
 
   const handleLabelClick = (labelName: string): GenericVoidFunction => (): void => {
@@ -167,7 +161,7 @@ const Tasks: FC = () => {
         <div className="Tasks__left-menu">{renderFilters()}</div>
         <div className="Tasks__task-list">
           <div className="Tasks__sortby-container">
-            {renderOrder()}
+            {sortByOption !== SortBy.none ? renderOrder() : null}
             <DropdownInput options={dropdownOptions} callbackOnChange={handleDropdownChange} />
           </div>
           {loading ? (
