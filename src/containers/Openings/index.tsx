@@ -12,11 +12,11 @@ import './Openings.scss';
 const openings = getOpenings();
 
 const OPENING_CATEGORY_FILTERS = [
-  OpeningCategory.all,
-  OpeningCategory.community,
-  OpeningCategory.design,
-  OpeningCategory.engineering,
-  OpeningCategory.marketing,
+  {title: 'All', url: OpeningCategory.all},
+  {title: 'Community', url: OpeningCategory.community},
+  {title: 'Design', url: OpeningCategory.design},
+  {title: 'Engineering', url: OpeningCategory.engineering},
+  {title: 'Marketing', url: OpeningCategory.marketing},
 ];
 
 interface ComponentProps {

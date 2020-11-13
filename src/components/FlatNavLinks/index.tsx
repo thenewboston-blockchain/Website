@@ -6,9 +6,9 @@ import './FlatNavLinks.scss';
 
 interface ComponentProps<T> {
   className?: string;
-  handleOptionClick(option: T): () => void;
-  options: T[];
-  selectedOption: T;
+  handleOptionClick(option: any): () => void;
+  options: any;
+  selectedOption: any;
 }
 
 function FlatNavLinks<T = string>({
@@ -18,19 +18,19 @@ function FlatNavLinks<T = string>({
   selectedOption,
 }: ComponentProps<T>): JSX.Element {
   const renderOptions = () => {
-    return options.map((option) => (
+    return options.map((option: any) => (
       <div
         className={clsx('FlatNavLinks__option', {
-          'FlatNavLinks__option--active': option === selectedOption,
+          'FlatNavLinks__option--active': option.url === selectedOption,
           ...getCustomClassNames(className, '__option', true),
-          ...getCustomClassNames(className, '__option--active', option === selectedOption),
+          ...getCustomClassNames(className, '__option--active', option.url === selectedOption),
         })}
-        key={option as any}
-        onClick={handleOptionClick(option)}
+        key={option.url as any}
+        onClick={handleOptionClick(option.url)}
         role="button"
         tabIndex={0}
       >
-        {option}
+        {option.title}
       </div>
     ));
   };

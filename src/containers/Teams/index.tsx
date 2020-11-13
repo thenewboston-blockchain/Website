@@ -10,22 +10,22 @@ import './Teams.scss';
 const teamMembers = getTeamMembers();
 
 const TEAM_NAME_FILTERS = [
-  TeamName.all,
-  TeamName.backEndDevelopers,
-  TeamName.community,
-  TeamName.design,
-  TeamName.devOps,
-  TeamName.discordManagers,
-  TeamName.frontEndDevelopers,
-  TeamName.kotlinSDK,
-  TeamName.marketing,
-  TeamName.payments,
-  TeamName.qa,
-  TeamName.redditModerators,
-  TeamName.research,
-  TeamName.security,
-  TeamName.slackManagers,
-  TeamName.youtube,
+  {title: 'All', url: TeamName.all},
+  {title: 'Back-End Developers', url: TeamName.backEndDevelopers},
+  {title: 'Community', url: TeamName.community},
+  {title: 'Design', url: TeamName.design},
+  {title: 'DevOps', url: TeamName.devOps},
+  {title: 'Discord Managers', url: TeamName.discordManagers},
+  {title: 'Front-End Developers', url: TeamName.frontEndDevelopers},
+  {title: 'Kotlin SDK', url: TeamName.kotlinSDK},
+  {title: 'Marketing', url: TeamName.marketing},
+  {title: 'Payments', url: TeamName.payments},
+  {title: 'QA', url: TeamName.qa},
+  {title: 'Reddit Moderators', url: TeamName.redditModerators},
+  {title: 'Research', url: TeamName.research},
+  {title: 'Security', url: TeamName.security},
+  {title: 'Slack Manager', url: TeamName.slackManagers},
+  {title: 'TouTube', url: TeamName.youtube},
 ];
 
 const Teams: FC = () => {
