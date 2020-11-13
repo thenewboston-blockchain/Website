@@ -10,6 +10,17 @@
       "amount_paid": "500"
     }
   ],
+  "Akshit1311": [
+    {
+      "repository": "Website",
+      "title": "Openings - Hiring Freeze #738 Fixed!",
+      "issue_id": "738",
+      "pr_id": "739",
+      "completed_by": "Akshit1311",
+      "completed_date": "11/12/20",
+      "amount_paid": "1000"
+    }
+  ],
   "AntonFredrikSvensson": [
     {
       "repository": "Website",
@@ -32,6 +43,17 @@
       "amount_paid": "500"
     }
   ],
+  "BlueBlazin": [
+    {
+      "repository": "Website",
+      "title": "Links in the navbar cannot be opened in a new tab",
+      "issue_id": "752",
+      "pr_id": "753",
+      "completed_by": "BlueBlazin",
+      "completed_date": "11/12/20",
+      "amount_paid": "500"
+    }
+  ],
   "DenverCoder1": [
     {
       "repository": "Website",
@@ -40,6 +62,15 @@
       "pr_id": "655",
       "completed_by": "DenverCoder1",
       "completed_date": "11/9/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Fixed typos in FAQ page",
+      "issue_id": "705",
+      "pr_id": "653",
+      "completed_by": "DenverCoder1",
+      "completed_date": "11/10/20",
       "amount_paid": "500"
     }
   ],
@@ -330,6 +361,17 @@
       "amount_paid": "500"
     }
   ],
+  "Rosendo6": [
+    {
+      "repository": "Website",
+      "title": "Added Hello world in Catalan",
+      "issue_id": "351",
+      "pr_id": "766",
+      "completed_by": "Rosendo6",
+      "completed_date": "11/13/20",
+      "amount_paid": "500"
+    }
+  ],
   "RoyVoetman": [
     {
       "repository": "Website",
@@ -338,6 +380,17 @@
       "pr_id": "708",
       "completed_by": "RoyVoetman",
       "completed_date": "11/11/20",
+      "amount_paid": "500"
+    }
+  ],
+  "The-Veil": [
+    {
+      "repository": "Website",
+      "title": "Added Czech language",
+      "issue_id": "351",
+      "pr_id": "762",
+      "completed_by": "The-Veil",
+      "completed_date": "11/12/20",
       "amount_paid": "500"
     }
   ],
@@ -928,6 +981,17 @@
       "amount_paid": "500"
     }
   ],
+  "cfviotti": [
+    {
+      "repository": "Website",
+      "title": "Fix Social page heading and links alignment",
+      "issue_id": "686",
+      "pr_id": "716",
+      "completed_by": "cfviotti",
+      "completed_date": "11/11/20",
+      "amount_paid": "500"
+    }
+  ],
   "colfax23": [
     {
       "repository": "Website",
@@ -999,6 +1063,17 @@
       "amount_paid": "500"
     }
   ],
+  "danieloravec": [
+    {
+      "repository": "Website",
+      "title": "Add correct hello-world in Slovak",
+      "issue_id": "351",
+      "pr_id": "685",
+      "completed_by": "danieloravec",
+      "completed_date": "11/12/20",
+      "amount_paid": "500"
+    }
+  ],
   "ddyakov": [
     {
       "repository": "Website",
@@ -1007,6 +1082,15 @@
       "pr_id": "727",
       "completed_by": "ddyakov",
       "completed_date": "11/12/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "fixed typo in react/jsx style guide",
+      "issue_id": "756",
+      "pr_id": "759",
+      "completed_by": "ddyakov",
+      "completed_date": "11/13/20",
       "amount_paid": "500"
     }
   ],
@@ -1270,6 +1354,42 @@
       "completed_by": "jamessspanggg",
       "completed_date": "11/9/20",
       "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Prevent content jumping in leaderboard page",
+      "issue_id": "703",
+      "pr_id": "704",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/11/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "[#675] Fix hash link in documentations page",
+      "issue_id": "675",
+      "pr_id": "676",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/10/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "[#679] Fix leaderboard drop down",
+      "issue_id": "679",
+      "pr_id": "680",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/10/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "Fix code highlighting in documentation",
+      "issue_id": "733",
+      "pr_id": "734",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/13/20",
+      "amount_paid": "1000"
     }
   ],
   "jonathanlee06": [
@@ -1540,6 +1660,15 @@
       "completed_by": "manishram",
       "completed_date": "11/7/20",
       "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Fixes: #523 Assets page",
+      "issue_id": "523",
+      "pr_id": "641",
+      "completed_by": "manishram",
+      "completed_date": "11/12/20",
+      "amount_paid": "7500"
     }
   ],
   "moki298": [
@@ -1622,6 +1751,17 @@
       "completed_by": "nberic",
       "completed_date": "11/10/20",
       "amount_paid": "500"
+    }
+  ],
+  "nrednav": [
+    {
+      "repository": "Website",
+      "title": "Fixes #389: Download page needs design update for iPhone 5",
+      "issue_id": "389",
+      "pr_id": "560",
+      "completed_by": "nrednav",
+      "completed_date": "11/11/20",
+      "amount_paid": "2000"
     }
   ],
   "officialabdulrehman": [
@@ -1805,6 +1945,39 @@
       "amount_paid": "500"
     }
   ],
+  "sotheavuthnguon": [
+    {
+      "repository": "Website",
+      "title": "Added hello world in khmer language",
+      "issue_id": "351",
+      "pr_id": "742",
+      "completed_by": "sotheavuthnguon",
+      "completed_date": "11/12/20",
+      "amount_paid": "500"
+    }
+  ],
+  "subhamg": [
+    {
+      "repository": "Website",
+      "title": "feat: Add contributor to the team of front-end developers",
+      "issue_id": "750",
+      "pr_id": "755",
+      "completed_by": "subhamg",
+      "completed_date": "11/12/20",
+      "amount_paid": "500"
+    }
+  ],
+  "suhailpappu": [
+    {
+      "repository": "Website",
+      "title": "Changed hello in telugu to real form of hello i.e namaste",
+      "issue_id": "351",
+      "pr_id": "677",
+      "completed_by": "suhailpappu",
+      "completed_date": "11/13/20",
+      "amount_paid": "500"
+    }
+  ],
   "thesanjeevsharma": [
     {
       "repository": "Website",
@@ -1877,6 +2050,24 @@
       "completed_by": "thesanjeevsharma",
       "completed_date": "11/4/20",
       "amount_paid": "5000"
+    },
+    {
+      "repository": "Website",
+      "title": "added @mersimoski to front-end team",
+      "issue_id": "699",
+      "pr_id": "700",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "11/10/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "updated engineering openings",
+      "issue_id": "706",
+      "pr_id": "707",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "11/10/20",
+      "amount_paid": "500"
     }
   ],
   "tpikachu": [
@@ -2015,6 +2206,15 @@
       "completed_by": "whitelionx",
       "completed_date": "11/7/20",
       "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Feature/Account manager docs",
+      "issue_id": "761",
+      "pr_id": "737",
+      "completed_by": "whitelionx",
+      "completed_date": "11/12/20",
+      "amount_paid": "1000"
     }
   ],
   "wilsongayo": [
