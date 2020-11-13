@@ -7,7 +7,8 @@ import Icon, {IconType} from 'components/Icon';
 import {REPOSITORY_FILTERS} from 'constants/github';
 
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks, LabelFilter, Loader, PageTitle} from 'components';
-import {GenericVoidFunction, SortBy} from 'types/generic';
+import {GenericVoidFunction} from 'types/generic';
+import {SortBy} from 'types/tasks';
 import {Issue, Repository, RepositoryUrlParams} from 'types/github';
 import {fetchGithubIssues} from 'utils/github';
 import {sortByNumberKey} from 'utils/sort';
