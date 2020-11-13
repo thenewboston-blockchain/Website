@@ -84,8 +84,8 @@ const GuideIntroduction: FC = () => {
         as they were received rather than waiting to be bundled along with additional unrelated transactions.
       </p>
       <p>
-        By removing the inclusion of unrelated transactions into the blocks, we are able to substantially reduce the average
-        network block size. This is accomplished by constructing blocks that group related transactions only. Related
+        By removing the inclusion of unrelated transactions into the blocks, we are able to substantially reduce the
+        average network block size. This is accomplished by constructing blocks that group related transactions only.
         transactions refer to a set of transactions that must be processed together. This is discussed in more detail in
         the <NavLink to="/guide/blocks">Blocks</NavLink> section of the guide.
       </p>
