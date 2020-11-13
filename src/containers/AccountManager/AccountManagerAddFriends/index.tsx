@@ -23,9 +23,8 @@ const AccountManagerAddFriends: FC = () => {
 
       <DocSubSection id={AccountManagerAddFriendsNav.friendOverview} title="Friend Overview">
         <p>
-          After creating an account, you will be taken to your account overview page. Here you can see your balance,
-          account number, and signing key. Your account number is what you will share with anyone who wishes to send you
-          coins.
+          For sending coins to your friends or vice-versa, just ask them their <strong> Account Number </strong> which 
+          can be found in the account page of your TNB account manager and use it in the TO section of the send coins option.
         </p>
 
         <DocImage alt="friend overview" bordered maxWidth={1200} src={FriendOverview} />
