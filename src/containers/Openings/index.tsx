@@ -85,7 +85,7 @@ const Openings: FC<ComponentProps> = ({openingsFrozen}) => {
         <h1>Openings</h1>
         <br />
         <h3>
-          We are on a <span>hiring freeze</span> til further notice
+          We are on a <span>hiring freeze</span> 'til further notice
         </h3>
       </div>
     </>
