@@ -79,6 +79,19 @@
           "profileImage": "https://avatars3.githubusercontent.com/u/24738451?s=460&u=c1e3dc0dd9585a4cf877c453ec80f4af830c2fd5&v=4",
           "slackUsername": "Dwayne"
         }
+      },
+      {
+        "title": "Python Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-11-13T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "47",
+          "displayName": "Richard Starkey",
+          "githubUsername": "MathClassIsTough",
+          "profileImage": "https://avatars0.githubusercontent.com/u/74336482?s=460&v=4",
+          "slackUsername": "Richard (MathClassIsTough)"
+        }
       }
     ]
   },
