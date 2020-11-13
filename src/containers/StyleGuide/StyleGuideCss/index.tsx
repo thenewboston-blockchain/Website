@@ -208,9 +208,11 @@ const LeftMenu: FC = () => {
           code={`.LeftMenu {
   color: var(--color-1);
 }
+
 .LeftMenu .LeftMenu__nav {
   color: var(--color-2);
 }
+
 .LeftMenu .LeftMenu__nav .LeftMenu__nav--active {
   color: var(--color-3);
 }`}
@@ -243,9 +245,11 @@ const LeftMenu: FC = () => {
           code={`.LeftMenu {
   color: var(--color-1);
 }
+
 .LeftMenu__nav {
   color: var(--color-2);
 }
+
 .LeftMenu__nav--active {
   color: var(--color-3);
 }`}
