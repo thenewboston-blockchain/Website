@@ -4,7 +4,7 @@ import sub from 'date-fns/sub';
 
 import {REPOSITORY_FILTERS} from 'constants/github';
 
-import {BreadcrumbMenu, EmptyPage, FlatNavLinks, TimeFilter} from 'components';
+import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle, TimeFilter} from 'components';
 import {
   Contributor,
   ContributorWithTasks,
@@ -31,7 +31,7 @@ const Leaderboard = (): JSX.Element => {
   const history = useHistory();
   const {repository} = useParams<RepositoryUrlParams>();
   const [repositoryFilter, setRepositoryFilter] = useState<Repository>(repository);
-  const [timeFilter, setTimeFilter] = useState<TimeFilterType>(Time.all);
+  const [timeFilter, setTimeFilter] = useState<TimeFilterType>(Time.days7);
 
   useEffect(() => {
     setRepositoryFilter(repository);
@@ -114,7 +114,6 @@ const Leaderboard = (): JSX.Element => {
   const renderNavLinks = (): ReactNode => {
     return (
       <FlatNavLinks<Repository>
-        className="Leaderboard__left-menu"
         handleOptionClick={handleNavOptionClick}
         options={REPOSITORY_FILTERS}
         selectedOption={repository}
@@ -136,9 +135,10 @@ const Leaderboard = (): JSX.Element => {
 
   return (
     <>
+      <PageTitle title="Leaderboard" />
       <div className="Leaderboard">
         {renderTopSections()}
-        {renderNavLinks()}
+        <div className="Leaderboard__left-menu">{renderNavLinks()}</div>
         <div className="Leaderboard__contributor-list">{renderContributors()}</div>
       </div>
     </>
