@@ -16,7 +16,7 @@ const TableVertical: FC<ComponentProps> = ({altColors = false, className, innerB
   const renderBody = (): ReactNode => {
     return (
       <tbody className={clsx('TableVertical__tbody', {...getCustomClassNames(className, '__tbody', true)})}>
-        {rows.sort().map((row, rowIndex) => (
+        {rows.map((row, rowIndex) => (
           <tr
             key={rowIndex}
             className={clsx('TableVertical__tr', {

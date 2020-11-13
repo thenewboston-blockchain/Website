@@ -30,7 +30,7 @@ const GuideIntroduction: FC = () => {
         ],
         ['Blockchain', 'An ordered list of confirmation blocks'],
         ['Root Account File', 'A historic record (snapshot) of all account balances at a given point in time'],
-      ]}
+      ].sort()}
     />
   );
 
