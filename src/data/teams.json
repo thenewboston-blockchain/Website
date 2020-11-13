@@ -415,15 +415,15 @@
         }
       },
       {
-        "title": "",
+        "title": "Marketing Coordinator",
         "isLead": false,
         "payPerDay": 2800,
-        "createdDate": "2020-11-12T02:14:59.307535Z",
+        "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "46",
           "displayName": "Amy Burcham",
           "githubUsername": "Nevah422",
-          "profileImage": "https://avatars1.githubusercontent.com/u/74023881?s=460&v=4",
+          "profileImage": "https://avatars0.githubusercontent.com/u/74023881?s=400&v=4",
           "slackUsername": "Amy Burcham"
         }
       }
