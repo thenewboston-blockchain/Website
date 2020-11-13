@@ -413,6 +413,19 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01C14HRXFT-g90d1fb3c0c1-512",
           "slackUsername": "Sunil Chauhan"
         }
+      },
+      {
+        "title": "",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-11-12T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "46",
+          "displayName": "Amy Burcham",
+          "githubUsername": "Nevah422",
+          "profileImage": "https://avatars1.githubusercontent.com/u/74023881?s=460&v=4",
+          "slackUsername": "Amy Burcham"
+        }
       }
     ]
   },
