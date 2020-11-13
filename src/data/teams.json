@@ -480,6 +480,19 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01B1PFRMH7-df88a64aa7ba-512",
           "slackUsername": "Bojan Ilijevski"
         }
+      },
+      {
+        "title": "Reddit Moderator",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "44",
+          "displayName": "Landon Moon",
+          "githubUsername": "LunarDeveloper",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E879GB1Q-c93201d09399-512",
+          "slackUsername": "Moon"
+        }
       }
     ]
   },
