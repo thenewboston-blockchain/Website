@@ -14,7 +14,7 @@ import ChevronRightIcon from 'mdi-react/ChevronRightIcon';
 import ChevronUpIcon from 'mdi-react/ChevronUpIcon';
 import ContentCopyIcon from 'mdi-react/ContentCopyIcon';
 import CurrencyUsdIcon from 'mdi-react/CurrencyUsdIcon';
-import DiscordIcon from 'mdi-react/DiscordIcon';
+//import DiscordIcon from 'mdi-react/DiscordIcon';
 import EarthIcon from 'mdi-react/EarthIcon';
 import FacebookIcon from 'mdi-react/FacebookIcon';
 import FileDocumentIcon from 'mdi-react/FileDocumentIcon';
