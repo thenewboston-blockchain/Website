@@ -14,10 +14,11 @@ import ChevronRightIcon from 'mdi-react/ChevronRightIcon';
 import ChevronUpIcon from 'mdi-react/ChevronUpIcon';
 import ContentCopyIcon from 'mdi-react/ContentCopyIcon';
 import CurrencyUsdIcon from 'mdi-react/CurrencyUsdIcon';
-//import DiscordIcon from 'mdi-react/DiscordIcon';
+import DownloadIcon from 'mdi-react/DownloadIcon';
 import EarthIcon from 'mdi-react/EarthIcon';
 import FacebookIcon from 'mdi-react/FacebookIcon';
 import FileDocumentIcon from 'mdi-react/FileDocumentIcon';
+import FileDownloadIcon from 'mdi-react/FileDownloadIcon';
 import ForumIcon from 'mdi-react/ForumIcon';
 import GithubIcon from 'mdi-react/GithubIcon';
 import HumanHandsupIcon from 'mdi-react/HumanHandsupIcon';
@@ -49,10 +50,15 @@ export enum IconType {
   chevronUp,
   contentCopy,
   currencyUsd,
+<<<<<<< HEAD
   discord,
+=======
+  downloadIcon,
+>>>>>>> 29902411c25cc6e8887bdc2db24bea080b0dc32d
   earth,
   facebook,
   fileDocument,
+  fileDownload,
   forum,
   github,
   humanHandsUp,
@@ -106,14 +112,21 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
         return <ContentCopyIcon {...iconProps} />;
       case IconType.currencyUsd:
         return <CurrencyUsdIcon {...iconProps} />;
+<<<<<<< HEAD
       case IconType.discord:
         return <DiscordIcon {...iconProps} />;
+=======
+      case IconType.downloadIcon:
+        return <DownloadIcon {...iconProps} />;
+>>>>>>> 29902411c25cc6e8887bdc2db24bea080b0dc32d
       case IconType.earth:
         return <EarthIcon {...iconProps} />;
       case IconType.facebook:
         return <FacebookIcon {...iconProps} />;
       case IconType.fileDocument:
         return <FileDocumentIcon {...iconProps} />;
+      case IconType.fileDownload:
+        return <FileDownloadIcon {...iconProps} />;
       case IconType.forum:
         return <ForumIcon {...iconProps} />;
       case IconType.github:

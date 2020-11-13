@@ -56,6 +56,10 @@ const navLists = [
     header: 'More',
     links: [
       {
+        title: 'Assets',
+        url: '/assets',
+      },
+      {
         title: 'FAQ',
         url: '/faq',
       },

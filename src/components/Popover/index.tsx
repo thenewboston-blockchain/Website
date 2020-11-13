@@ -89,7 +89,8 @@ const Popover: FC<ComponentProps> = ({
 
   useEffect(() => {
     if (anchorEl) {
-      const {height, left, top, width} = anchorEl.getBoundingClientRect();
+      const {height, top, width} = anchorEl.getBoundingClientRect();
+      const left = anchorEl.offsetLeft;
       setAnchorDomRect({height, left, top, width});
     }
   }, [anchorEl, windowDimensions]);

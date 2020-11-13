@@ -1,7 +1,7 @@
 import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
 
-import {BreadcrumbMenu, EmptyPage, FlatNavLinks} from 'components';
+import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
 import {OpeningCategory, OpeningsUrlParams} from 'types/openings';
 import {getOpenings} from 'utils/data';
 
@@ -19,7 +19,11 @@ const OPENING_CATEGORY_FILTERS = [
   OpeningCategory.marketing,
 ];
 
-const Openings: FC = () => {
+interface ComponentProps {
+  openingsFrozen: boolean;
+}
+
+const Openings: FC<ComponentProps> = ({openingsFrozen}) => {
   const history = useHistory();
   const {category: categoryParam, openingId: openingIdParam} = useParams<OpeningsUrlParams>();
   const [categoryFilter, setCategoryFilter] = useState<OpeningCategory>(OpeningCategory.all);
@@ -74,24 +78,37 @@ const Openings: FC = () => {
     return <OpeningDetails opening={opening} />;
   };
 
-  return (
-    <div className="Openings">
-      <BreadcrumbMenu
-        className="Openings__BreadcrumbMenu"
-        menuItems={renderCategoryFilter()}
-        pageName={categoryFilter}
-        sectionName="Open Positions"
-      />
-      <div className="Openings__left-menu">{renderCategoryFilter()}</div>
-      {openingIdParam ? (
-        <div className="Openings__opening-details">{renderOpeningDetails()}</div>
-      ) : (
-        <div className="Openings__opening-list">
-          <h1 className="Openings__opening-list-heading">Openings</h1>
-          {renderOpenings()}
-        </div>
-      )}
-    </div>
+  return openingsFrozen ? (
+    <>
+      <PageTitle title="Openings" />
+      <div className="hiring-freeze">
+        <h1>Openings</h1>
+        <br />
+        <h3>
+          We are on a <span>hiring freeze</span> until further notice
+        </h3>
+      </div>
+    </>
+  ) : (
+    <>
+      <div className="Openings">
+        <BreadcrumbMenu
+          className="Openings__BreadcrumbMenu"
+          menuItems={renderCategoryFilter()}
+          pageName={categoryFilter}
+          sectionName="Open Positions"
+        />
+        <div className="Openings__left-menu">{renderCategoryFilter()}</div>
+        {openingIdParam ? (
+          <div className="Openings__opening-details">{renderOpeningDetails()}</div>
+        ) : (
+          <div className="Openings__opening-list">
+            <h1 className="Openings__opening-list-heading">Openings</h1>
+            {renderOpenings()}
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 
