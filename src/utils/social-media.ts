@@ -1,7 +1,7 @@
 import {SocialMedia} from 'types/social-media';
 
 export const socialMediaUrls = {
-  [SocialMedia.discord]: 'https://discord.gg/7rNNyK9btX',
+  [SocialMedia.discord]: 'https://discord.gg/r2JTTsF587',
   [SocialMedia.facebook]: 'https://www.facebook.com/TheNewBoston-464114846956315/',
   [SocialMedia.github]: 'https://github.com/thenewboston-developers',
   [SocialMedia.linkedin]: 'https://www.linkedin.com/company/thenewboston-developers/',
