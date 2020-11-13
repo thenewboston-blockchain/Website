@@ -8,7 +8,7 @@
   <img alt="screenshot of website" src="https://imgur.com/Nw7W49v.png">
 </p>
 
-[![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fthenewboston.com)](https://thenewboston.com) ![Activity](https://img.shields.io/github/commit-activity/m/thenewboston-developers/website) [![GitHub Issues](https://img.shields.io/github/issues/thenewboston-developers/website)](https://github.com/thenewboston-developers/website/issues) [![Contributors](https://img.shields.io/github/contributors/thenewboston-developers/website)](https://github.com/thenewboston-developers/Website/graphs/contributors) [![License](https://img.shields.io/github/license/thenewboston-developers/website)](http://opensource.org/licenses/MIT)
+[![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fthenewboston.com)](https://thenewboston.com) ![Activity](https://img.shields.io/github/commit-activity/m/thenewboston-developers/website) [![GitHub Issues](https://img.shields.io/github/issues/thenewboston-developers/website)](https://github.com/thenewboston-developers/website/issues) [![Contributors](https://img.shields.io/github/contributors/thenewboston-developers/website)](https://github.com/thenewboston-developers/Website/graphs/contributors) [![License](https://img.shields.io/github/license/thenewboston-developers/website)](http://opensource.org/licenses/MIT) [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/from-referrer/)
 
 ## Table of Contents
 
@@ -46,6 +46,12 @@ Next steps:
 For further help, you can check out the [FAQs](https://thenewboston.com/faq).
 
 Finally, feel free to shoot any queries or suggestions. Don't hesitate. ;)
+
+### Online one click setup for contributing
+
+You can use Gitpod (an online IDE which is free for opensource) for working on issues and making PRs, with a single click it will launch a workspace and automatically: clone the repo, install the dependencies, run `yarn build` and finally `yarn start` to start the devserver.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/from-referrer/)
 
 Thanks to these amazing people:
 
