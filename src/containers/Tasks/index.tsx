@@ -3,22 +3,31 @@ import {useHistory, useParams} from 'react-router-dom';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import parseISO from 'date-fns/parseISO';
 import intersection from 'lodash/intersection';
-import Icon, {IconType} from 'components/Icon';
+import {
+  BreadcrumbMenu,
+  EmptyPage,
+  FlatNavLinks,
+  LabelFilter,
+  Loader,
+  PageTitle,
+  DropdownInput,
+  Icon,
+  IconType,
+} from 'components';
 import {REPOSITORY_FILTERS} from 'constants/github';
-
-import {BreadcrumbMenu, EmptyPage, FlatNavLinks, LabelFilter, Loader, PageTitle} from 'components';
 import {GenericVoidFunction} from 'types/generic';
-import {SortBy} from 'types/tasks';
 import {Issue, Repository, RepositoryUrlParams} from 'types/github';
+import {SortBy} from 'types/tasks';
 import {fetchGithubIssues} from 'utils/github';
 import {sortByNumberKey} from 'utils/sort';
-import {DropdownInput} from 'components/DropdownInput';
 import TasksTask from './TasksTask';
+
 import './Tasks.scss';
 
 const Tasks: FC = () => {
   const history = useHistory();
   const {repository} = useParams<RepositoryUrlParams>();
+  const [dropdownOptions] = useState<string[]>([SortBy.none, SortBy.created, SortBy.reward]);
   const [error, setError] = useState<boolean>(false);
   const [issues, setIssues] = useState<Issue[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -26,7 +35,6 @@ const Tasks: FC = () => {
   const [selectedLabelNames, setSelectedLabelNames] = useState<string[]>([]);
   const [sortByOption, setSortByOption] = useState<SortBy>(SortBy.none);
   const [sortByOrder, setSortByOrder] = useState<'asc' | 'desc'>('asc');
-  const [dropdownOptions] = useState<string[]>([SortBy.none, SortBy.created, SortBy.reward]);
 
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
@@ -110,20 +118,6 @@ const Tasks: FC = () => {
     </>
   );
 
-  const renderOrder = (): ReactNode => {
-    return (
-      <div>
-        <Icon
-          className="Tasks__sortby-icon"
-          icon={sortByOrder === 'asc' ? IconType.sortAscending : IconType.sortDescending}
-          onClick={() => {
-            setSortByOrder((order) => (order === 'asc' ? 'desc' : 'asc'));
-          }}
-        />
-      </div>
-    );
-  };
-
   const renderTasks = (): ReactNode => {
     const filteredIssues = getFilteredIssues();
     if (error || !filteredIssues.length) return <EmptyPage />;
@@ -161,7 +155,15 @@ const Tasks: FC = () => {
         <div className="Tasks__left-menu">{renderFilters()}</div>
         <div className="Tasks__task-list">
           <div className="Tasks__sortby-container">
-            {sortByOption !== SortBy.none ? renderOrder() : null}
+            {sortByOption !== SortBy.none && (
+              <Icon
+                className="Tasks__sortby-icon"
+                icon={sortByOrder === 'asc' ? IconType.sortAscending : IconType.sortDescending}
+                onClick={() => {
+                  setSortByOrder((order) => (order === 'asc' ? 'desc' : 'asc'));
+                }}
+              />
+            )}
             <DropdownInput options={dropdownOptions} callbackOnChange={handleDropdownChange} />
           </div>
           {loading ? (

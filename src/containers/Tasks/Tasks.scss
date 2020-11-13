@@ -42,12 +42,12 @@
   }
 
   &__sortby-icon {
-    cursor: pointer;
     color: #2a2f45;
-    margin-right: 12px;
+    cursor: pointer;
     &:hover {
       color: #000;
     }
+    margin-right: 12px;
   }
 
   @media (max-width: 992px) {
