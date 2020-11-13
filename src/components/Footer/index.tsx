@@ -71,6 +71,7 @@ const Footer: FC<ComponentProps> = ({className}) => {
   const renderSocialMediaLinks = () =>
     [
       SocialMedia.slack,
+      SocialMedia.discord,
       SocialMedia.github,
       SocialMedia.youtube,
       SocialMedia.reddit,

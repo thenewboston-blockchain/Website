@@ -9,6 +9,7 @@ const Social: FC = () => {
   const renderSocialButtons = (): ReactNode => (
     <div className="Social__button-container">
       <MarketingButton website={SocialMedia.slack} />
+      <MarketingButton website={SocialMedia.discord} />
       <MarketingButton website={SocialMedia.github} />
       <MarketingButton website={SocialMedia.youtube} />
       <MarketingButton website={SocialMedia.reddit} />

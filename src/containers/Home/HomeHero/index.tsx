@@ -43,7 +43,7 @@ const HomeHero: FC = () => {
   }, [setHelloFadeClass]);
 
   const renderSocialMediaLinks = () =>
-    [SocialMedia.slack, SocialMedia.github, SocialMedia.youtube].map((website) => (
+    [SocialMedia.slack, SocialMedia.github, SocialMedia.youtube, SocialMedia.discord].map((website) => (
       <SocialMediaIcon className="HomeHero__SocialMediaLink" iconSize={30} key={website} website={website} />
     ));
 

@@ -6,6 +6,7 @@ import {SocialMedia} from 'types/social-media';
 import {getCustomClassNames} from 'utils/components';
 import {socialMediaUrls} from 'utils/social-media';
 
+import DiscordLogo from './logos/DiscordLogo.png';
 import FacebookLogo from './logos/FacebookLogo.png';
 import GitHubLogo from './logos/GitHubLogo.png';
 import LinkedInLogo from './logos/LinkedInLogo.png';
@@ -32,6 +33,7 @@ const MarketingButton: FC<ComponentProps> = ({className, customLink, website}) =
   );
 
   const images = {
+    discord: renderImage(DiscordLogo),
     facebook: renderImage(FacebookLogo),
     github: renderImage(GitHubLogo),
     linkedin: renderImage(LinkedInLogo),
