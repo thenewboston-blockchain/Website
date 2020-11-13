@@ -51,11 +51,8 @@ export enum IconType {
   chevronUp,
   contentCopy,
   currencyUsd,
-<<<<<<< HEAD
   discord,
-=======
   downloadIcon,
->>>>>>> 29902411c25cc6e8887bdc2db24bea080b0dc32d
   earth,
   facebook,
   fileDocument,
