@@ -1,22 +1,24 @@
 import React, {FC, useState} from 'react';
 import './DropdownInput.scss';
 
-interface ComponentProps {
-  callbackOnChange: (selectedOptionId: number) => void;
-  options: any[];
+interface ComponentProps<T> {
+  callbackOnChange: (selectedOption: string) => void;
+  defaultOption: T;
+  options: T[];
 }
 
-const DropdownInput: FC<ComponentProps> = ({callbackOnChange, options}) => {
-  const [selectedOption, setSelectedOption] = useState<string>('none');
-  const handleChange = (e: any) => {
-    setSelectedOption(e.target.value);
-    callbackOnChange(e.target.value);
+const DropdownInput: FC<ComponentProps<string>> = ({callbackOnChange, defaultOption, options}) => {
+  const [selectedOption, setSelectedOption] = useState<string>(defaultOption);
+  const handleChange = (e: React.FormEvent) => {
+    const {value} = e.target as HTMLSelectElement;
+    setSelectedOption(value);
+    callbackOnChange(value);
   };
   return (
     <div className="DropdownInput">
       <select className="DropdownInput__select-box" value={selectedOption} onChange={handleChange}>
-        {options.map((option, index) => (
-          <option key={index} className="DropdownInput__option" value={option}>
+        {options.map((option) => (
+          <option key={option} className="DropdownInput__option" value={option}>
             {option}
           </option>
         ))}

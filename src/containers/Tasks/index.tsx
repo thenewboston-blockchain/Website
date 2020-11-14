@@ -3,6 +3,7 @@ import {useHistory, useParams} from 'react-router-dom';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import parseISO from 'date-fns/parseISO';
 import intersection from 'lodash/intersection';
+
 import {
   BreadcrumbMenu,
   EmptyPage,
@@ -14,14 +15,14 @@ import {
   Icon,
   IconType,
 } from 'components';
-import {REPOSITORY_FILTERS} from 'constants/github';
+import {fetchGithubIssues} from 'utils/github';
 import {GenericVoidFunction} from 'types/generic';
 import {Issue, Repository, RepositoryUrlParams} from 'types/github';
+import {REPOSITORY_FILTERS} from 'constants/github';
 import {SortBy} from 'types/tasks';
-import {fetchGithubIssues} from 'utils/github';
-import {sortByNumberKey} from 'utils/sort';
-import TasksTask from './TasksTask';
+import {sortByDateKey, sortByNumberKey} from 'utils/sort';
 
+import TasksTask from './TasksTask';
 import './Tasks.scss';
 
 const Tasks: FC = () => {
@@ -33,7 +34,7 @@ const Tasks: FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [repositoryFilter, setRepositoryFilter] = useState<Repository>(Repository.all);
   const [selectedLabelNames, setSelectedLabelNames] = useState<string[]>([]);
-  const [sortByOption, setSortByOption] = useState<SortBy>(SortBy.none);
+  const [sortByOption, setSortByOption] = useState<string>(SortBy.none);
   const [sortByOrder, setSortByOrder] = useState<'asc' | 'desc'>('asc');
 
   useEffect(() => {
@@ -73,22 +74,17 @@ const Tasks: FC = () => {
     if (sortByOption === SortBy.none) {
       return filteredIssues;
     }
-
     if (sortByOption === SortBy.reward) {
-      filteredIssues = filteredIssues.sort(sortByNumberKey('amount', sortByOrder));
+      filteredIssues.sort(sortByNumberKey('amount', sortByOrder));
     }
     if (sortByOption === SortBy.created) {
-      // Works opposite due to the way date/time is calculated, so Ascending would actually mean that the
-      // Date is less than the other date, so for example when comparing 12th and 13th december, it will say
-      // 12th dec is less than 13th dec, however for us 13th dec is the latest issue so that should come on the list above.
-      // Hence we are passing in Desc order in sort function when it is actually ascending selected..
-      filteredIssues = filteredIssues.sort(sortByNumberKey('created_at', sortByOrder === 'asc' ? 'desc' : 'asc'));
+      filteredIssues.sort(sortByDateKey('created_at', sortByOrder));
     }
 
     return filteredIssues;
   };
 
-  const handleDropdownChange = (selectedOption: any) => {
+  const handleDropdownChange = (selectedOption: string) => {
     setSortByOption(selectedOption);
   };
 
@@ -97,6 +93,10 @@ const Tasks: FC = () => {
       ? selectedLabelNames.filter((name) => name !== labelName)
       : [...selectedLabelNames, labelName];
     setSelectedLabelNames(results);
+  };
+
+  const handleSorting = () => {
+    setSortByOrder((order) => (order === 'asc' ? 'desc' : 'asc'));
   };
 
   const handleNavOptionClick = (option: Repository) => (): void => {
@@ -159,12 +159,14 @@ const Tasks: FC = () => {
               <Icon
                 className="Tasks__sortby-icon"
                 icon={sortByOrder === 'asc' ? IconType.sortAscending : IconType.sortDescending}
-                onClick={() => {
-                  setSortByOrder((order) => (order === 'asc' ? 'desc' : 'asc'));
-                }}
+                onClick={handleSorting}
               />
             )}
-            <DropdownInput options={dropdownOptions} callbackOnChange={handleDropdownChange} />
+            <DropdownInput
+              callbackOnChange={handleDropdownChange}
+              defaultOption={SortBy.none}
+              options={dropdownOptions}
+            />
           </div>
           {loading ? (
             <div className="Tasks__loader-container">
