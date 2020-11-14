@@ -167,7 +167,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
         >
           {renderMorePopover()}
         </TopNavPopoverButton>
-        <Link className={clsx('TopNav__right-item', 'TopNav__download-button')} to="/download">
+        <Link className={clsx('TopNav__right-item', 'TopNav__download-button')} to="/download" tabIndex={-1}>
           <Button>Download</Button>
         </Link>
       </>
