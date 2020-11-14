@@ -1,5 +1,5 @@
 import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
-import {Link, useHistory, useLocation} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 
 import {Button, Icon, IconType} from 'components';
@@ -16,7 +16,6 @@ interface ComponentProps {
 
 const TopNav: FC<ComponentProps> = ({className}) => {
   const [mobileMenuOpen, toggleMobileMenu, , closeMobileMenu] = useBooleanState(false);
-  const history = useHistory();
   const {pathname} = useLocation();
   const [communityAnchorEl, setCommunityAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [getStartedAnchorEl, setGetStartedAnchorEl] = useState<HTMLButtonElement | null>(null);
@@ -32,11 +31,6 @@ const TopNav: FC<ComponentProps> = ({className}) => {
       closeMobileMenu();
     }
   }, [closeMobileMenu, mobileMenuOpen, width]);
-
-  const handleMobileLinkClick = (to: string) => (): void => {
-    history.push(to);
-    closeMobileMenu();
-  };
 
   const renderMobileMenu = (): ReactNode => {
     return (
@@ -206,9 +200,9 @@ const TopNav: FC<ComponentProps> = ({className}) => {
 
   const renderMobileLink = (label: string, to: string): ReactNode => {
     return (
-      <button className="mobile-menu__link" onClick={handleMobileLinkClick(to)}>
+      <Link to={to} className="mobile-menu__link">
         {label}
-      </button>
+      </Link>
     );
   };
 
