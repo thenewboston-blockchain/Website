@@ -58,6 +58,7 @@ const HelloWorld: {[isoLangCode: string]: string} = {
   no: 'Hallo Verden',
   or: 'ନମସ୍କାର ବିଶ୍ୱବାସି',
   pa: 'ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ ਸੰਸਾਰ',
+  pi: 'नमस्ते संसार'
   pl: 'Witaj świecie',
   ps: 'سلام نړی',
   pt: 'Olá mundo',
