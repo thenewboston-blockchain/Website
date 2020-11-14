@@ -281,6 +281,19 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E0FS4762-ge975c8b59da-512",
           "slackUsername": "Rajput Usman"
         }
+      },
+      {
+        "title": "Moderator",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "49",
+          "displayName": "DinShpati",
+          "githubUsername": "DinShpati",
+          "profileImage": "https://avatars2.githubusercontent.com/u/25906602",
+          "slackUsername": "DinShpati"
+        }
       }
     ]
   },
@@ -495,6 +508,24 @@
           "githubUsername": "odetolataiwo",
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EZHA7NQ0-91f6147e4788-512",
           "slackUsername": "Taiwo Odetola"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Penetration Testing",
+    "contributors": [
+      {
+        "title": "Penetration Testing Team Lead",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "48",
+          "displayName": "Spencer Dollahite",
+          "githubUsername": "spencer-dollahite",
+          "profileImage": "https://avatars0.githubusercontent.com/u/74439721?s=400&v=4",
+          "slackUsername": "Spencer Dollahite"
         }
       }
     ]
