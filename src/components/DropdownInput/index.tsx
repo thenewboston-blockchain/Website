@@ -1,4 +1,7 @@
 import React, {FC, useState} from 'react';
+
+import Icon, {IconType} from 'components/Icon';
+
 import './DropdownInput.scss';
 
 interface ComponentProps<T> {
@@ -23,6 +26,7 @@ const DropdownInput: FC<ComponentProps<string>> = ({callbackOnChange, defaultOpt
           </option>
         ))}
       </select>
+      <Icon className="DropdownInput__chevron-down" icon={IconType.chevronDown} />
     </div>
   );
 };
