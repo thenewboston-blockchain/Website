@@ -281,6 +281,19 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E0FS4762-ge975c8b59da-512",
           "slackUsername": "Rajput Usman"
         }
+      },
+      {
+        "title": "Moderator",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "45",
+          "displayName": "DinShpati",
+          "githubUsername": "DinShpati",
+          "profileImage": "https://avatars2.githubusercontent.com/u/25906602",
+          "slackUsername": "DinShpati"
+        }
       }
     ]
   },
