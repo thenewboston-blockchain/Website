@@ -159,8 +159,7 @@ const Download: FC = () => {
           <Loader />
         ) : (
           <>
-            <span className="Download__latest-version">Latest Version: 1.0.0-alpha.{latestReleaseNumber}</span>
-            <Tabs tabs={tabs} />
+            <Tabs tabs={tabs} latestReleaseNumber={latestReleaseNumber} />
           </>
         )}
       </div>

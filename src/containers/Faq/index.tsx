@@ -13,7 +13,7 @@ interface FaqContent {
 const questionsAnswers: FaqContent[] = [
   {
     answer:
-      'The YouTube channel thenewboston was launched in February 2008 with the focus on computer programming and various other educational tutorials. It has since expanded and is now an open source development community. One of the largest community projects is a digital currency network where all contributors are paid in coins, the official digital currency of thenewboston.',
+      'The YouTube channel thenewboston was launched in February 2008 with a focus on computer programming and various other educational tutorials. It has since expanded and is now an open source development community. One of the largest community projects is a digital currency network where all contributors are paid in coins, the official digital currency of thenewboston.',
     id: 'what-is-tnb',
     question: 'What is thenewboston?',
   },
@@ -34,7 +34,7 @@ const questionsAnswers: FaqContent[] = [
   },
   {
     answer:
-      'Rather than needing to reach a consensus for every single block (which is why the traditional blockchain is so slow), thenewboston uses network consensus to instead determine which server is responsible for validating all blocks. This not only solves the double spend problem but also allows every block across the entire network to be processed in real time.',
+      'Rather than needing to reach a consensus for every single block (which is why the traditional blockchain is so slow), thenewboston uses network consensus to instead determine which server is responsible for validating all blocks. This not only solves the double-spending problem but also allows every block across the entire network to be processed in real-time.',
     id: 'why-is-tnb-faster',
     question: 'Why is thenewboston faster and better than the traditional blockchain?',
   },
@@ -67,8 +67,8 @@ const questionsAnswers: FaqContent[] = [
           from the main page of your GitHub repository
         </li>
         <li>
-          Type suitable title and description, in description you can write "fixes #issueNumber", "closes #issueNumber"
-          or simply "#issueNumber" of the issue you have resolved, to link your PR with the issue.
+          Type a suitable title and description. In the description, you can write "fixes #issueNumber", "closes
+          #issueNumber" or simply "#issueNumber" of the issue you have resolved to link your PR with the issue.
         </li>
       </ol>
     ),
