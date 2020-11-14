@@ -38,7 +38,7 @@ Next steps:
 
 1. Fork the project
 2. Create your feature branch
-3. Run `npm run lint` and make sure you have no errors
+3. Run `yarn lint` and make sure you have no errors
 4. Commit your changes
 5. Push to the branch
 6. Open a pull request
@@ -56,13 +56,13 @@ Thanks to these amazing people:
 After cloning the repo, run the following command to install the project dependencies:
 
 ```bash
-npm install
+yarn
 ```
 
 Then to run the code, run the following command:
 
 ```bash
-npm start
+yarn start
 ```
 
 ## Community
