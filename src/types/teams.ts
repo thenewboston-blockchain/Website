@@ -10,6 +10,7 @@ export enum TeamName {
   marketing = 'Marketing',
   payments = 'Payments',
   qa = 'QA',
+  penetrationTesting = 'Penetration Testing',
   redditModerators = 'Reddit Moderators',
   research = 'Research',
   security = 'Security',

@@ -21,6 +21,7 @@ const TEAM_NAME_FILTERS = [
   TeamName.marketing,
   TeamName.payments,
   TeamName.qa,
+  TeamName.penetrationTesting,
   TeamName.redditModerators,
   TeamName.research,
   TeamName.security,
