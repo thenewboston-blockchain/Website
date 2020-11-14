@@ -20,6 +20,7 @@ const TEAM_NAME_FILTERS = [
   TeamName.kotlinSDK,
   TeamName.marketing,
   TeamName.payments,
+  TeamName.penetrationTesting,
   TeamName.qa,
   TeamName.redditModerators,
   TeamName.research,
