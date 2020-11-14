@@ -38,14 +38,14 @@ const GuideIntroduction: FC = () => {
     return (
       <>
         <p>
-          This documentation will outline the foundation of a trust-based distributed architecture in which our network
+          This documentation will outline the foundation of a trust-based distributed architecture on which our network
           is built upon. This architecture offers an efficient yet scalable peer-to-peer consensus mechanism through the
           election of a primary validation node by a distributed network of trusted nodes, where the amount of trust is
           quantified solely by human judgment.
         </p>
         <p>
           The architecture is based on the idea that when building a distributed payment ledger, it is not the
-          transaction processing itself that requires distribution across multiple servers. For this often results in
+          transaction processing itself that requires distribution across multiple servers. This often results in
           duplicate work being done by several network nodes, causing an inherent inefficiency in the system. It is
           rather the ability to elect fairly a single validation server and consensual acceptance of the produced
           results that require distribution among peers. This allows for highly performant transaction validation within
@@ -60,41 +60,40 @@ const GuideIntroduction: FC = () => {
       <p>
         The system has many components, each of which plays a specific role in allowing the transfer of coins (the
         currency of the system) securely between accounts. Future sections will discuss each of these elements in more
-        detail, but for now we will examine a simplified network composed of the core components.
+        detail, but for now, we will examine a simplified network composed of the core components.
       </p>
 
       {renderGlossary()}
 
-      <DocImage alt="overview diagram" maxWidth={720} src={OverviewDiagram} />
+      <DocImage alt="Overview Diagram" maxWidth={720} src={OverviewDiagram} />
 
       <p>
-        All transactions on the network will begin with a user account. The owner of the account will create a block
-        (group of transactions), indicating the number of coins they would like to send to each recipient and then send
+        All transactions on the network will begin with a user account. The owner of the account will create a block (a
+        group of transactions), indicating the number of coins they would like to send to each recipient, and then send
         that block to their bank. The bank will then forward the block (now a bank block) along to the validator which,
         upon successful validation of the transaction, appends it onto the blockchain while updating account balances.
         There are several key differences between the network structure outlined above and the traditional Blockchain
         architecture regarding the creation of a distributed public ledger.
       </p>
       <p>
-        An inherent defect in the modern Blockchain architecture is the inefficient composition of blocks. Blocks in the
-        Bitcoin Blockchain are composed of multiple unrelated transactions. This indicates that within any given block,
+        An inherent defect in modern Blockchain architecture is the inefficient composition of blocks. Blocks in the
+        Bitcoin Blockchain is composed of multiple unrelated transactions. This indicates that within any given block,
         the earliest transactions would have experienced significant delays as later transactions continued to
         accumulate until the entire block was verified. If one was only considering the performance of the Blockchain
-        and nothing else, they would arrive at the conclusion that in an ideal architecture transactions would be
-        validated immediately as they were received rather than waiting to be bundled along with additional unrelated
-        transactions.
+        and nothing else, they would conclude that in an ideal architecture transactions would be validated immediately
+        as they were received rather than waiting to be bundled along with additional unrelated transactions.
       </p>
       <p>
         By removing the inclusion of unrelated transactions into the blocks, we are able to substantially reduce the
-        average network block size. This is accomplished through constructing blocks that group related transactions
-        only. Related transactions refer to a set of transactions that must be processed together. This is discussed in
-        more detail in the <NavLink to="/guide/blocks">Blocks</NavLink> section of the guide.
+        average network block size. This is accomplished by constructing blocks that group related transactions only.
+        transactions refer to a set of transactions that must be processed together. This is discussed in more detail in
+        the <NavLink to="/guide/blocks">Blocks</NavLink> section of the guide.
       </p>
       <p>
-        These improvements, along with others discussed throughout this documentation, when implemented correctly,
-        reduce the overall energy consumption and processing power required by the network. This increased efficiency
-        not only enables transactions between accounts to be verified within seconds (or less) but allows developers to
-        utilize more popular programming languages (Python, JavaScript, etc.) towards expediting early development while
+        These improvements, along with others discussed throughout this documentation when implemented correctly, reduce
+        the overall energy consumption and processing power required by the network. This increased efficiency not only
+        enables transactions between accounts to be verified within seconds (or less) but allows developers to utilize
+        more popular programming languages (Python, JavaScript, etc.) towards expediting early development while
         encouraging rapid growth and innovation.
       </p>
     </DocContainer>
