@@ -1,8 +1,14 @@
 .LabelFilter {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 
-  &__label {
+  &__button {
+    background: transparent;
+    padding: 0;
+    border: 0;
+    text-align: left;
+    line-height: 1.5;
     cursor: pointer;
     margin-top: 8px;
   }

@@ -19,7 +19,7 @@ function FlatNavLinks<T = string>({
 }: ComponentProps<T>): JSX.Element {
   const renderOptions = () => {
     return options.map((option) => (
-      <div
+      <button
         className={clsx('FlatNavLinks__option', {
           'FlatNavLinks__option--active': option === selectedOption,
           ...getCustomClassNames(className, '__option', true),
@@ -27,11 +27,9 @@ function FlatNavLinks<T = string>({
         })}
         key={option as any}
         onClick={handleOptionClick(option)}
-        role="button"
-        tabIndex={0}
       >
         {option}
-      </div>
+      </button>
     ));
   };
 

@@ -11,10 +11,10 @@
     cursor: pointer;
     font-weight: 700;
     margin-left: 12px;
-
-    &:focus {
-      outline: none;
-    }
+    background: transparent;
+    border: 0;
+    padding: 0;
+    line-height: 1.5;
 
     &:hover {
       color: var(--color-primary);
