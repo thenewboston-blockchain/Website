@@ -3,6 +3,7 @@ import {useHistory, useParams} from 'react-router-dom';
 
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
 import {OpeningCategory, OpeningsUrlParams} from 'types/openings';
+import {NavOption} from 'types/option';
 import {getOpenings} from 'utils/data';
 
 import OpeningDetails from './OpeningDetails';
@@ -12,11 +13,11 @@ import './Openings.scss';
 const openings = getOpenings();
 
 const OPENING_CATEGORY_FILTERS = [
-  {title: 'All', url: OpeningCategory.all},
-  {title: 'Community', url: OpeningCategory.community},
-  {title: 'Design', url: OpeningCategory.design},
-  {title: 'Engineering', url: OpeningCategory.engineering},
-  {title: 'Marketing', url: OpeningCategory.marketing},
+  {pathname: OpeningCategory.all, title: 'All'},
+  {pathname: OpeningCategory.community, title: 'Community'},
+  {pathname: OpeningCategory.design, title: 'Design'},
+  {pathname: OpeningCategory.engineering, title: 'Engineering'},
+  {pathname: OpeningCategory.marketing, title: 'Marketing'},
 ];
 
 interface ComponentProps {
@@ -52,7 +53,7 @@ const Openings: FC<ComponentProps> = ({openingsFrozen}) => {
 
   const renderCategoryFilter = (): ReactNode => {
     return (
-      <FlatNavLinks<OpeningCategory>
+      <FlatNavLinks<NavOption, OpeningCategory>
         handleOptionClick={handleNavOptionClick}
         options={OPENING_CATEGORY_FILTERS}
         selectedOption={categoryFilter}

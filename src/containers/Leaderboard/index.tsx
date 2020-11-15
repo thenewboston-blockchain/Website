@@ -15,6 +15,7 @@ import {
   Time,
   TimeFilterType,
 } from 'types/github';
+import {NavOption} from 'types/option';
 import {getContributors, getTasks} from 'utils/data';
 import {sortByDateKey, sortByNumberKey} from 'utils/sort';
 
@@ -113,7 +114,7 @@ const Leaderboard = (): JSX.Element => {
 
   const renderNavLinks = (): ReactNode => {
     return (
-      <FlatNavLinks<Repository>
+      <FlatNavLinks<NavOption, Repository>
         handleOptionClick={handleNavOptionClick}
         options={REPOSITORY_FILTERS}
         selectedOption={repository}
