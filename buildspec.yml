@@ -3,11 +3,11 @@ version: 0.2
 phases:
   build:
     commands:
-      - yarn
-      - CI=true yarn test
-      - yarn build
+      - npm install
+      - CI=true npm test
+      - npm run build
 artifacts:
   files:
-    - '**/*'
+    - "**/*"
   discards-paths: no
-  base-directory: build
+  base-directory: build 
