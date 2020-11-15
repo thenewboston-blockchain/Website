@@ -1,8 +1,6 @@
 import React, {FC, memo} from 'react';
-import {Link} from 'react-router-dom';
 import clsx from 'clsx';
 
-import Logo from 'assets/svgs/thenewboston-white.svg';
 import SocialMediaIcon from 'components/SocialMediaIcon';
 import {SocialMedia} from 'types/social-media';
 
@@ -91,9 +89,6 @@ const Footer: FC<ComponentProps> = ({className}) => {
   return (
     <footer className={clsx('Footer', className)}>
       <div className="Footer__left">
-        <Link to="/">
-          <img src={Logo} alt="thenewboston logo" />
-        </Link>
         <div className="Footer__social-media-links">{renderSocialMediaLinks()}</div>
       </div>
       <div className="Footer__right">{renderNavLists()}</div>
