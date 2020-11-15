@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 import {AMOUNT_COLOR, REPOSITORIES} from 'constants/github';
-import {BaseRelease, Issue, Release} from 'types/github';
+import {BaseRelease, CommitsResponse, Issue, Release} from 'types/github';
 
 export const fetchGithubIssues = async (): Promise<Issue[]> => {
   const promises = REPOSITORIES.map((repoName) =>
@@ -35,6 +35,14 @@ export const fetchGithubReleases = async (): Promise<Release[]> => {
       alphaVersion: parseInt(alphaVersion, 10),
     };
   });
+};
+
+export const getFileLastModifiedDate = async (repo: string, filePath: string): Promise<Date> => {
+  const {data} = await axios.get<CommitsResponse>(
+    `https://api.github.com/repos/thenewboston-developers/${repo}/commits?path=${filePath}&page=1&per_page=1`,
+  );
+
+  return new Date(data[0].commit.committer.date);
 };
 
 const getRepositoryName = (repositoryUrl: string) => {

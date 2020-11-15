@@ -18,6 +18,7 @@ import {
 import {getContributors, getTasks} from 'utils/data';
 import {sortByDateKey, sortByNumberKey} from 'utils/sort';
 
+import LastModifiedLabel from 'components/LastModifiedLabel';
 import LeaderboardContributor from './LeaderboardContributor';
 import './Leaderboard.scss';
 
@@ -123,13 +124,18 @@ const Leaderboard = (): JSX.Element => {
 
   const renderTopSections = () => (
     <>
-      <BreadcrumbMenu
-        className="Leaderboard__BreadcrumbMenu"
-        menuItems={renderNavLinks()}
-        pageName={repository}
-        sectionName="Leaderboard"
-      />
-      <TimeFilter className="Leaderboard__TimeFilter" selectedFilter={timeFilter} setSelectedFilter={setTimeFilter} />
+      <div>
+        <BreadcrumbMenu
+          className="Leaderboard__BreadcrumbMenu"
+          menuItems={renderNavLinks()}
+          pageName={repository}
+          sectionName="Leaderboard"
+        />
+        <TimeFilter className="Leaderboard__TimeFilter" selectedFilter={timeFilter} setSelectedFilter={setTimeFilter} />
+        <div className="Leaderboard__LastModified">
+          <LastModifiedLabel filePath={'src/data/tasks.json'} />
+        </div>
+      </div>
     </>
   );
 

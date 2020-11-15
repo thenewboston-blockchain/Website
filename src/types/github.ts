@@ -216,3 +216,19 @@ export interface Task extends BaseTask {
 }
 
 export type TaskDict = Dict<Task[]>;
+
+export type CommitsResponse = BaseCommit[];
+
+export interface BaseCommit {
+  commit: BaseCommitInformation;
+}
+
+export interface BaseCommitInformation {
+  committer: BaseCommitter;
+}
+
+export interface BaseCommitter {
+  name: string;
+  email: string;
+  date: string;
+}
