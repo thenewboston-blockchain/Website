@@ -715,5 +715,62 @@
         }
       }
     ]
+  },
+  {
+    "title": ".NET Core SDK",
+    "contributors": [
+      {
+        "title": ".NET Developer",
+        "isLead": true,
+        "payPerDay": 3333,
+        "createdDate": "",
+        "contributor": {
+          "contributorId": "51",
+          "displayName": "Micrea Teodor Oprea",
+          "githubUsername": "Mirch",
+          "profileImage": "https://avatars0.githubusercontent.com/u/15807790?s=400&u=f57d0584774ac3865b4348f25627569795984b75&v=4",
+          "slackUsername": ""
+        }
+      },
+      {
+        "title": ".NET Developer",
+        "isLead": false,
+        "payPerDay": 3333,
+        "createdDate": "",
+        "contributor": {
+          "contributorId": "52",
+          "displayName": "Joshua Santiago",
+          "githubUsername": "joshman1019",
+          "profileImage": "https://avatars1.githubusercontent.com/u/36560776?s=400&u=4717f17221a9e29d480cb488106c0fbb0605a768&v=4",
+          "slackUsername": ""
+        }
+      },
+      {
+        "title": ".NET Developer",
+        "isLead": false,
+        "payPerDay": 3333,
+        "createdDate": "",
+        "contributor": {
+          "contributorId": "53",
+          "displayName": "Charalampos Makrylakis",
+          "githubUsername": "xmac11",
+          "profileImage": "https://avatars3.githubusercontent.com/u/55348322?s=400&u=0587106770b7b02d055b9f1de49f62f7f2f213c6&v=4",
+          "slackUsername": ""
+        }
+      },
+      {
+        "title": ".NET Developer",
+        "isLead": false,
+        "payPerDay": 3333,
+        "createdDate": "",
+        "contributor": {
+          "contributorId": "54",
+          "displayName": "Nish",
+          "githubUsername": "nishp77",
+          "profileImage": "https://avatars1.githubusercontent.com/u/35785259?s=400&v=4",
+          "slackUsername": ""
+        }
+      }
+    ]
   }
 ]

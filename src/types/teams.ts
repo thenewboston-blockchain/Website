@@ -16,6 +16,7 @@ export enum TeamName {
   security = 'Security',
   slackManagers = 'Slack Managers',
   youtube = 'YouTube',
+  dotnetcoresdk = '.NET Core SDK',
 }
 
 interface Contributor {

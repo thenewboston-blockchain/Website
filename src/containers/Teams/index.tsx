@@ -27,6 +27,7 @@ const TEAM_NAME_FILTERS: NavOption[] = [
   {pathname: TeamName.security, title: 'Security'},
   {pathname: TeamName.slackManagers, title: 'Slack Manager'},
   {pathname: TeamName.youtube, title: 'YouTube'},
+  {pathname: TeamName.dotnetcoresdk, title: '.NET Core Developers'},
 ];
 
 const Teams: FC = () => {
