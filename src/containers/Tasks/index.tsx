@@ -9,6 +9,7 @@ import {REPOSITORY_FILTERS} from 'constants/github';
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks, LabelFilter, Loader, PageTitle} from 'components';
 import {GenericVoidFunction} from 'types/generic';
 import {Issue, Repository, RepositoryUrlParams} from 'types/github';
+import {NavOption} from 'types/option';
 import {fetchGithubIssues} from 'utils/github';
 import {sortByNumberKey} from 'utils/sort';
 
@@ -76,7 +77,7 @@ const Tasks: FC = () => {
 
   const renderFilters = () => (
     <>
-      <FlatNavLinks<Repository>
+      <FlatNavLinks<NavOption, Repository>
         handleOptionClick={handleNavOptionClick}
         options={REPOSITORY_FILTERS}
         selectedOption={repository}

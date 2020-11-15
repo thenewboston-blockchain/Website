@@ -5,7 +5,7 @@ import {BaseRelease, Issue, Release} from 'types/github';
 
 export const fetchGithubIssues = async (): Promise<Issue[]> => {
   const promises = REPOSITORIES.map((repoName: any) =>
-    axios.get(`https://api.github.com/repos/thenewboston-developers/${repoName.url}/issues`),
+    axios.get(`https://api.github.com/repos/thenewboston-developers/${repoName.pathname}/issues`),
   );
 
   const results = await Promise.all(promises);

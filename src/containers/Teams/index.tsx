@@ -2,6 +2,7 @@ import React, {FC, ReactNode, useEffect, useState} from 'react';
 
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
 import {TeamMember, TeamName} from 'types/teams';
+import {NavOption} from 'types/option';
 import {getTeamMembers} from 'utils/data';
 
 import TeamMemberCard from './TeamMemberCard';
@@ -10,22 +11,22 @@ import './Teams.scss';
 const teamMembers = getTeamMembers();
 
 const TEAM_NAME_FILTERS = [
-  {title: 'All', url: TeamName.all},
-  {title: 'Back-End Developers', url: TeamName.backEndDevelopers},
-  {title: 'Community', url: TeamName.community},
-  {title: 'Design', url: TeamName.design},
-  {title: 'DevOps', url: TeamName.devOps},
-  {title: 'Discord Managers', url: TeamName.discordManagers},
-  {title: 'Front-End Developers', url: TeamName.frontEndDevelopers},
-  {title: 'Kotlin SDK', url: TeamName.kotlinSDK},
-  {title: 'Marketing', url: TeamName.marketing},
-  {title: 'Payments', url: TeamName.payments},
-  {title: 'QA', url: TeamName.qa},
-  {title: 'Reddit Moderators', url: TeamName.redditModerators},
-  {title: 'Research', url: TeamName.research},
-  {title: 'Security', url: TeamName.security},
-  {title: 'Slack Manager', url: TeamName.slackManagers},
-  {title: 'TouTube', url: TeamName.youtube},
+  {pathname: TeamName.all, title: 'All'},
+  {pathname: TeamName.backEndDevelopers, title: 'Back-End Developers'},
+  {pathname: TeamName.community, title: 'Community'},
+  {pathname: TeamName.design, title: 'Design'},
+  {pathname: TeamName.devOps, title: 'DevOps'},
+  {pathname: TeamName.discordManagers, title: 'Discord Managers'},
+  {pathname: TeamName.frontEndDevelopers, title: 'Front-End Developers'},
+  {pathname: TeamName.kotlinSDK, title: 'Kotlin SDK'},
+  {pathname: TeamName.marketing, title: 'Marketing'},
+  {pathname: TeamName.payments, title: 'Payments'},
+  {pathname: TeamName.qa, title: 'QA'},
+  {pathname: TeamName.redditModerators, title: 'Reddit Moderators'},
+  {pathname: TeamName.research, title: 'Research'},
+  {pathname: TeamName.security, title: 'Security'},
+  {pathname: TeamName.slackManagers, title: 'Slack Manager'},
+  {pathname: TeamName.youtube, title: 'TouTube'},
 ];
 
 const Teams: FC = () => {
@@ -59,7 +60,7 @@ const Teams: FC = () => {
 
   const renderTeamFilter = (): ReactNode => {
     return (
-      <FlatNavLinks<TeamName>
+      <FlatNavLinks<NavOption, TeamName>
         handleOptionClick={handleNavOptionClick}
         options={TEAM_NAME_FILTERS}
         selectedOption={teamFilter}
