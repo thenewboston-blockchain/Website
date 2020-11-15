@@ -85,7 +85,7 @@ const Faq: FC = () => {
           {question}
           {id ? <HashLink className="Faq__HashLink" id={id} /> : null}
         </h2>
-        <p className="Faq__answer">{answer}</p>
+        <div className="Faq__answer">{answer}</div>
       </div>
     ));
   };
