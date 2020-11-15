@@ -1,9 +1,8 @@
 import React, {FC, ReactNode, useEffect, useState} from 'react';
 
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
-import {TeamMember, TeamName} from 'types/teams';
-import {NavOption} from 'types/option';
 import {getTeamMembers} from 'utils/data';
+import {TeamMember, TeamName} from 'types/teams';
 
 import TeamMemberCard from './TeamMemberCard';
 import './Teams.scss';
@@ -60,11 +59,7 @@ const Teams: FC = () => {
 
   const renderTeamFilter = (): ReactNode => {
     return (
-      <FlatNavLinks<NavOption, TeamName>
-        handleOptionClick={handleNavOptionClick}
-        options={TEAM_NAME_FILTERS}
-        selectedOption={teamFilter}
-      />
+      <FlatNavLinks handleOptionClick={handleNavOptionClick} options={TEAM_NAME_FILTERS} selectedOption={teamFilter} />
     );
   };
 

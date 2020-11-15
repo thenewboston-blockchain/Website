@@ -4,13 +4,11 @@ import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import parseISO from 'date-fns/parseISO';
 import intersection from 'lodash/intersection';
 
-import {REPOSITORY_FILTERS} from 'constants/github';
-
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks, LabelFilter, Loader, PageTitle} from 'components';
+import {fetchGithubIssues} from 'utils/github';
 import {GenericVoidFunction} from 'types/generic';
 import {Issue, Repository, RepositoryUrlParams} from 'types/github';
-import {NavOption} from 'types/option';
-import {fetchGithubIssues} from 'utils/github';
+import {REPOSITORY_FILTERS} from 'constants/github';
 import {sortByNumberKey} from 'utils/sort';
 
 import TasksTask from './TasksTask';
@@ -77,11 +75,7 @@ const Tasks: FC = () => {
 
   const renderFilters = () => (
     <>
-      <FlatNavLinks<NavOption, Repository>
-        handleOptionClick={handleNavOptionClick}
-        options={REPOSITORY_FILTERS}
-        selectedOption={repository}
-      />
+      <FlatNavLinks handleOptionClick={handleNavOptionClick} options={REPOSITORY_FILTERS} selectedOption={repository} />
       <LabelFilter
         className="Tasks__LabelFilter"
         handleLabelClick={handleLabelClick}

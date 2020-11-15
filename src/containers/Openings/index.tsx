@@ -2,9 +2,8 @@ import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'r
 import {useHistory, useParams} from 'react-router-dom';
 
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
-import {OpeningCategory, OpeningsUrlParams} from 'types/openings';
-import {NavOption} from 'types/option';
 import {getOpenings} from 'utils/data';
+import {OpeningCategory, OpeningsUrlParams} from 'types/openings';
 
 import OpeningDetails from './OpeningDetails';
 import OpeningsOpening from './OpeningsOpening';
@@ -53,7 +52,7 @@ const Openings: FC<ComponentProps> = ({openingsFrozen}) => {
 
   const renderCategoryFilter = (): ReactNode => {
     return (
-      <FlatNavLinks<NavOption, OpeningCategory>
+      <FlatNavLinks
         handleOptionClick={handleNavOptionClick}
         options={OPENING_CATEGORY_FILTERS}
         selectedOption={categoryFilter}
