@@ -2,6 +2,7 @@ import React, {FC, ReactNode, useEffect, useState} from 'react';
 
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
 import {getTeamMembers} from 'utils/data';
+import {NavOption} from 'types/option';
 import {TeamMember, TeamName} from 'types/teams';
 
 import TeamMemberCard from './TeamMemberCard';
@@ -9,7 +10,7 @@ import './Teams.scss';
 
 const teamMembers = getTeamMembers();
 
-const TEAM_NAME_FILTERS = [
+const TEAM_NAME_FILTERS: NavOption[] = [
   {pathname: TeamName.all, title: 'All'},
   {pathname: TeamName.backEndDevelopers, title: 'Back-End Developers'},
   {pathname: TeamName.community, title: 'Community'},

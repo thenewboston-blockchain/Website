@@ -3,6 +3,7 @@ import {useHistory, useParams} from 'react-router-dom';
 
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
 import {getOpenings} from 'utils/data';
+import {NavOption} from 'types/option';
 import {OpeningCategory, OpeningsUrlParams} from 'types/openings';
 
 import OpeningDetails from './OpeningDetails';
@@ -11,7 +12,7 @@ import './Openings.scss';
 
 const openings = getOpenings();
 
-const OPENING_CATEGORY_FILTERS = [
+const OPENING_CATEGORY_FILTERS: NavOption[] = [
   {pathname: OpeningCategory.all, title: 'All'},
   {pathname: OpeningCategory.community, title: 'Community'},
   {pathname: OpeningCategory.design, title: 'Design'},

@@ -1,8 +1,9 @@
+import {NavOption} from 'types/option';
 import {Repository} from 'types/github';
 
 export const AMOUNT_COLOR = '09825d';
 
-export const REPOSITORIES = [
+export const REPOSITORIES: NavOption[] = [
   {pathname: Repository.accountManager, title: 'Account-Manager'},
   {pathname: Repository.bank, title: 'Bank'},
   {pathname: Repository.thenewbostonPython, title: 'TNB-python'},
