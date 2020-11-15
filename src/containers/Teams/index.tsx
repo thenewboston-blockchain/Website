@@ -26,7 +26,7 @@ const TEAM_NAME_FILTERS: NavOption[] = [
   {pathname: TeamName.research, title: 'Research'},
   {pathname: TeamName.security, title: 'Security'},
   {pathname: TeamName.slackManagers, title: 'Slack Manager'},
-  {pathname: TeamName.youtube, title: 'TouTube'},
+  {pathname: TeamName.youtube, title: 'YouTube'},
 ];
 
 const Teams: FC = () => {
