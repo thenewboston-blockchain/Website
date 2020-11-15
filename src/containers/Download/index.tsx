@@ -14,6 +14,17 @@ enum Os {
 }
 
 const Download: FC = () => {
+  const userOsMatcher = /Windows|Linux|Mac/gi.exec(navigator.userAgent);
+  let userOsTabIndex = 0;
+
+  if (userOsMatcher && userOsMatcher[0] === 'Mac') {
+    userOsTabIndex = 1;
+  }
+
+  if (userOsMatcher && userOsMatcher[0] === 'Linux') {
+    userOsTabIndex = 2;
+  }
+
   const [loading, setLoading] = useState<boolean>(true);
   const [releases, setReleases] = useState<Release[]>([]);
 
@@ -159,7 +170,7 @@ const Download: FC = () => {
           <Loader />
         ) : (
           <>
-            <Tabs tabs={tabs} latestReleaseNumber={latestReleaseNumber} />
+            <Tabs defaultTab={userOsTabIndex} tabs={tabs} latestReleaseNumber={latestReleaseNumber} />
           </>
         )}
       </div>

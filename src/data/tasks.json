@@ -361,6 +361,17 @@
       "amount_paid": "500"
     }
   ],
+  "Rosendo6": [
+    {
+      "repository": "Website",
+      "title": "Added Hello world in Catalan",
+      "issue_id": "351",
+      "pr_id": "766",
+      "completed_by": "Rosendo6",
+      "completed_date": "11/13/20",
+      "amount_paid": "500"
+    }
+  ],
   "RoyVoetman": [
     {
       "repository": "Website",
@@ -1370,6 +1381,15 @@
       "completed_by": "jamessspanggg",
       "completed_date": "11/10/20",
       "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "Fix code highlighting in documentation",
+      "issue_id": "733",
+      "pr_id": "734",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/13/20",
+      "amount_paid": "1000"
     }
   ],
   "jonathanlee06": [
@@ -1944,6 +1964,17 @@
       "pr_id": "755",
       "completed_by": "subhamg",
       "completed_date": "11/12/20",
+      "amount_paid": "500"
+    }
+  ],
+  "suhailpappu": [
+    {
+      "repository": "Website",
+      "title": "Changed hello in telugu to real form of hello i.e namaste",
+      "issue_id": "351",
+      "pr_id": "677",
+      "completed_by": "suhailpappu",
+      "completed_date": "11/13/20",
       "amount_paid": "500"
     }
   ],
