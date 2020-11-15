@@ -23,10 +23,15 @@ export const fetchGithubIssues = async (): Promise<Issue[]> => {
   });
 };
 
-export const fetchGithubReleases = async (): Promise<Release[]> => {
+type FetchGithubReleasesParams = {amount?: number};
+
+export const fetchGithubReleases = async ({amount}: FetchGithubReleasesParams): Promise<Release[]> => {
+  const pageQueryParam = amount != null ? `?page=1&per_page=${amount}` : '';
+
   const {data} = await axios.get<BaseRelease[]>(
-    'https://api.github.com/repos/thenewboston-developers/Account-Manager/releases',
+    `https://api.github.com/repos/thenewboston-developers/Account-Manager/releases${pageQueryParam}`,
   );
+
   return data.map((release: BaseRelease) => {
     const {tag_name: tagName} = release;
     const alphaVersion = tagName.replace('v1.0.0-alpha.', '');
