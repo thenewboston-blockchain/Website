@@ -4,7 +4,7 @@ import {AMOUNT_COLOR, REPOSITORIES} from 'constants/github';
 import {BaseRelease, Issue, Release} from 'types/github';
 
 export const fetchGithubIssues = async (): Promise<Issue[]> => {
-  const promises = REPOSITORIES.map((repoName: any) =>
+  const promises = REPOSITORIES.map((repoName) =>
     axios.get(`https://api.github.com/repos/thenewboston-developers/${repoName.pathname}/issues`),
   );
 
