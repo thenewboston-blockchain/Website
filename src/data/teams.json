@@ -434,6 +434,19 @@
           "profileImage": "https://avatars2.githubusercontent.com/u/6011914?s=460&u=9328434aef816ce5dfe5fbc12b64f2f498222ebc&v=4",
           "slackUsername": "Ian Arbuckle"
         }
+      },
+      {
+        "title": "Software Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "52",
+          "displayName": "Peter Sommerhoff",
+          "githubUsername": "https://github.com/petersommerhoff",
+          "profileImage": "https://avatars2.githubusercontent.com/u/2805791?s=460&u=5fcb7424015f63ae2194171c5649af332ab59f05&v=4",
+          "slackUsername": "Peter Sommerhoff"
+        }
       }
     ]
   },
