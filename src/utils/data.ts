@@ -65,9 +65,6 @@ export const getTeamMembers = (): TeamMember[] => {
   });
 
   return Object.entries(members)
-    .sort(
-      ([, a]: [string, any], [, b]: [string, any]) =>
-        new Date(b.createdDate).valueOf() - new Date(a.createdDate).valueOf(),
-    )
+    .sort(([, a]: [string, any], [, b]: [string, any]) => a.contributorId - b.contributorId)
     .map(([, member]) => member) as TeamMember[];
 };

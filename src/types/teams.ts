@@ -9,6 +9,7 @@ export enum TeamName {
   kotlinSDK = 'Kotlin SDK',
   marketing = 'Marketing',
   payments = 'Payments',
+  penetrationTesting = 'Penetration Testing',
   qa = 'QA',
   redditModerators = 'Reddit Moderators',
   research = 'Research',

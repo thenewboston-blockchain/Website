@@ -14,6 +14,17 @@ enum Os {
 }
 
 const Download: FC = () => {
+  const userOsMatcher = /Windows|Linux|Mac/gi.exec(navigator.userAgent);
+  let userOsTabIndex = 0;
+
+  if (userOsMatcher && userOsMatcher[0] === 'Mac') {
+    userOsTabIndex = 1;
+  }
+
+  if (userOsMatcher && userOsMatcher[0] === 'Linux') {
+    userOsTabIndex = 2;
+  }
+
   const [loading, setLoading] = useState<boolean>(true);
   const [releases, setReleases] = useState<Release[]>([]);
 
@@ -119,7 +130,7 @@ const Download: FC = () => {
   const renderTabPanel = useCallback(
     (os: Os) => (
       <div className="Download__tab-panel">
-        <a className="Download__download-link" href={getDownloadLink(os)}>
+        <a className="Download__download-link" href={getDownloadLink(os)} tabIndex={-1}>
           <Button className="Download__download-button" disabled={!latestReleaseNumber}>
             Download for {os} <Icon className="Download__download-icon" icon={IconType.arrowCollapseDown} size={18} />
           </Button>
@@ -159,7 +170,7 @@ const Download: FC = () => {
           <Loader />
         ) : (
           <>
-            <Tabs tabs={tabs} latestReleaseNumber={latestReleaseNumber} />
+            <Tabs defaultTab={userOsTabIndex} tabs={tabs} latestReleaseNumber={latestReleaseNumber} />
           </>
         )}
       </div>
