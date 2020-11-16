@@ -20,6 +20,7 @@ const TEAM_NAME_FILTERS: NavOption[] = [
   {pathname: TeamName.frontEndDevelopers, title: 'Front-End Developers'},
   {pathname: TeamName.kotlinSDK, title: 'Kotlin SDK'},
   {pathname: TeamName.marketing, title: 'Marketing'},
+  {pathname: TeamName.newUserOperations, title: 'New User Operations'},
   {pathname: TeamName.payments, title: 'Payments'},
   {pathname: TeamName.qa, title: 'QA'},
   {pathname: TeamName.redditModerators, title: 'Reddit Moderators'},
