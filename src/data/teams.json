@@ -508,6 +508,24 @@
     ]
   },
   {
+    "title": "New User Operations",
+    "contributors": [
+      {
+        "title": "New User Operations Lead",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "51",
+          "displayName": "Martyn",
+          "githubUsername": "Spotnag",
+          "profileImage": "https://avatars3.githubusercontent.com/u/2324860?s=400&u=ca3e6fcc7e1c03a48720143704adc8ef51d7c64d&v=4",
+          "slackUsername": "Martyn"
+        }
+      }
+    ]
+  },
+  {
     "title": "Payments",
     "contributors": [
       {
