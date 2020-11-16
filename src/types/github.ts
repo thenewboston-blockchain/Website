@@ -70,6 +70,7 @@ export enum Repository {
   accountManager = 'Account-Manager',
   bank = 'Bank',
   thenewbostonPython = 'thenewboston-python',
+  thenewbostonPythonclient = 'thenewboston-python-client',
   validator = 'Validator',
   website = 'Website',
 }
