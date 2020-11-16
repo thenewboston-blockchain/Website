@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {Helmet, HelmetProvider} from 'react-helmet-async';
+import {Helmet} from 'react-helmet-async';
 
 interface ComponentProps {
   title: string;
@@ -7,11 +7,9 @@ interface ComponentProps {
 
 const PageTitle: FC<ComponentProps> = ({title}) => {
   return (
-    <HelmetProvider>
-      <Helmet>
-        <title>{title} | thenewboston</title>
-      </Helmet>
-    </HelmetProvider>
+    <Helmet>
+      <title>{title} | thenewboston</title>
+    </Helmet>
   );
 };
 
