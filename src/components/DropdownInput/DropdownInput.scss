@@ -1,0 +1,33 @@
+.DropdownInput {
+  align-items: center;
+  display: flex;
+  position: relative;
+
+  &__chevron-down {
+    height: 20px;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    width: 20px;
+  }
+
+  &__select-box {
+    appearance: none;
+    border: 1px solid var(--color-sail-gray-300);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: 400;
+    height: 30px;
+    min-width: 100px;
+    padding: 6px 32px 6px 6px;
+    text-align: left;
+    width: fit-content;
+  }
+
+  &__option {
+    font-size: 14px;
+    padding: 6px 6px;
+  }
+}
