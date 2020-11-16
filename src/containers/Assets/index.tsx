@@ -25,27 +25,27 @@ const assets: Asset[] = [
 const Assets: FC = () => {
   const renderCard = (asset: Asset): ReactNode => {
     return (
-      <>
-        <PageTitle title="Assets" />
-        <div key={asset.subtext} className="Assets__card-wrapper">
-          <A className="Assets__download-button" href={asset.downloadLink} target="_self">
-            <Icon icon={IconType.downloadIcon} />
-          </A>
-          <div className="Assets__card">
-            <img alt={`tnb logo`} className={clsx('Assets__logo')} src={asset.imageUrl} />
-          </div>
-          <h2 className="Assets__subtext">{asset.subtext}</h2>
+      <div key={asset.subtext} className="Assets__card-wrapper">
+        <A className="Assets__download-button" href={asset.downloadLink} target="_self">
+          <Icon icon={IconType.downloadIcon} />
+        </A>
+        <div className="Assets__card">
+          <img alt={`tnb logo`} className={clsx('Assets__logo')} src={asset.imageUrl} />
         </div>
-      </>
+        <h2 className="Assets__subtext">{asset.subtext}</h2>
+      </div>
     );
   };
 
   return (
-    <div className="Assets">
-      <h1 className="Assets__heading">Download thenewboston assets</h1>
-      <h2 className="Assets__subtext">All assets of thenewboston at one place for you to download.</h2>
-      <div className="Assets__cards-container">{assets.map((asset: Asset) => renderCard(asset))}</div>
-    </div>
+    <>
+      <PageTitle title="Assets" />
+      <div className="Assets">
+        <h1 className="Assets__heading">Download thenewboston assets</h1>
+        <h2 className="Assets__subtext">All assets of thenewboston at one place for you to download.</h2>
+        <div className="Assets__cards-container">{assets.map((asset: Asset) => renderCard(asset))}</div>
+      </div>
+    </>
   );
 };
 
