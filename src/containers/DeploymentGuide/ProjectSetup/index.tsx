@@ -17,8 +17,7 @@ const ProjectSetup: FC<ComponentProps> = ({name}) => {
       <CodeSnippet
         code={`git clone https://github.com/thenewboston-developers/${name}.git /var/www/${name}
 cd /var/www/${name}/
-sudo pip3 install -r requirements/production.txt
-`}
+sudo pip3 install -r requirements/production.txt`}
         heading="Clone project to server and install dependencies"
       />
     </DocSubSection>
