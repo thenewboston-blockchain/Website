@@ -2,7 +2,7 @@ import React, {FC, memo, ReactNode} from 'react';
 import clsx from 'clsx';
 
 import {Asset} from 'types/assets';
-import {A, Icon, IconType} from 'components';
+import {A, Icon, IconType, PageTitle} from 'components';
 import {socialMediaUrls} from 'utils/social-media';
 import TnbLogo from 'assets/images/TNB-Logo.png';
 import TnbLogoAndWordmark from 'assets/images/TNB-LogoAndWordmark.png';
@@ -25,15 +25,18 @@ const assets: Asset[] = [
 const Assets: FC = () => {
   const renderCard = (asset: Asset): ReactNode => {
     return (
-      <div key={asset.subtext} className="Assets__card-wrapper">
-        <A className="Assets__download-button" href={asset.downloadLink} target="_self">
-          <Icon icon={IconType.downloadIcon} />
-        </A>
-        <div className="Assets__card">
-          <img alt={`tnb logo`} className={clsx('Assets__logo')} src={asset.imageUrl} />
+      <>
+        <PageTitle title="Assets" />
+        <div key={asset.subtext} className="Assets__card-wrapper">
+          <A className="Assets__download-button" href={asset.downloadLink} target="_self">
+            <Icon icon={IconType.downloadIcon} />
+          </A>
+          <div className="Assets__card">
+            <img alt={`tnb logo`} className={clsx('Assets__logo')} src={asset.imageUrl} />
+          </div>
+          <h2 className="Assets__subtext">{asset.subtext}</h2>
         </div>
-        <h2 className="Assets__subtext">{asset.subtext}</h2>
-      </div>
+      </>
     );
   };
 
