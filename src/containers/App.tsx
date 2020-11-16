@@ -59,7 +59,7 @@ const App: FC = () => {
           <Route exact path="/assets" component={Assets} />
           <Route exact path="/leaderboard/:repository" component={Leaderboard} />
           <Redirect exact from="/openings" to="/openings/All" />
-          <Route exact path="/openings/:category/:openingId?" render={() => <Openings openingsFrozen />} />
+          <Route exact path="/openings/:category/:openingId?" render={() => <Openings openingsFrozen={false} />} />
           <Route exact path="/social" component={Social} />
           <Redirect exact from="/tasks" to="/tasks/All" />
           <Route exact path="/tasks/:repository" component={Tasks} />

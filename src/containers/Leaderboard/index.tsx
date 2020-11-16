@@ -2,8 +2,6 @@ import React, {ReactNode, useEffect, useState} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
 import sub from 'date-fns/sub';
 
-import {REPOSITORY_FILTERS} from 'constants/github';
-
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle, TimeFilter} from 'components';
 import {
   Contributor,
@@ -16,6 +14,7 @@ import {
   TimeFilterType,
 } from 'types/github';
 import {getContributors, getTasks} from 'utils/data';
+import {REPOSITORY_FILTERS} from 'constants/github';
 import {sortByDateKey, sortByNumberKey} from 'utils/sort';
 
 import LeaderboardContributor from './LeaderboardContributor';
@@ -113,11 +112,7 @@ const Leaderboard = (): JSX.Element => {
 
   const renderNavLinks = (): ReactNode => {
     return (
-      <FlatNavLinks<Repository>
-        handleOptionClick={handleNavOptionClick}
-        options={REPOSITORY_FILTERS}
-        selectedOption={repository}
-      />
+      <FlatNavLinks handleOptionClick={handleNavOptionClick} options={REPOSITORY_FILTERS} selectedOption={repository} />
     );
   };
 

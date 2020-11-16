@@ -1,31 +1,32 @@
 import React, {FC, ReactNode, useEffect, useState} from 'react';
 
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
-import {TeamMember, TeamName} from 'types/teams';
 import {getTeamMembers} from 'utils/data';
+import {NavOption} from 'types/option';
+import {TeamMember, TeamName} from 'types/teams';
 
 import TeamMemberCard from './TeamMemberCard';
 import './Teams.scss';
 
 const teamMembers = getTeamMembers();
 
-const TEAM_NAME_FILTERS = [
-  TeamName.all,
-  TeamName.backEndDevelopers,
-  TeamName.community,
-  TeamName.design,
-  TeamName.devOps,
-  TeamName.discordManagers,
-  TeamName.frontEndDevelopers,
-  TeamName.kotlinSDK,
-  TeamName.marketing,
-  TeamName.payments,
-  TeamName.qa,
-  TeamName.redditModerators,
-  TeamName.research,
-  TeamName.security,
-  TeamName.slackManagers,
-  TeamName.youtube,
+const TEAM_NAME_FILTERS: NavOption[] = [
+  {pathname: TeamName.all, title: 'All'},
+  {pathname: TeamName.backEndDevelopers, title: 'Back-End Developers'},
+  {pathname: TeamName.community, title: 'Community'},
+  {pathname: TeamName.design, title: 'Design'},
+  {pathname: TeamName.devOps, title: 'DevOps'},
+  {pathname: TeamName.discordManagers, title: 'Discord Managers'},
+  {pathname: TeamName.frontEndDevelopers, title: 'Front-End Developers'},
+  {pathname: TeamName.kotlinSDK, title: 'Kotlin SDK'},
+  {pathname: TeamName.marketing, title: 'Marketing'},
+  {pathname: TeamName.payments, title: 'Payments'},
+  {pathname: TeamName.qa, title: 'QA'},
+  {pathname: TeamName.redditModerators, title: 'Reddit Moderators'},
+  {pathname: TeamName.research, title: 'Research'},
+  {pathname: TeamName.security, title: 'Security'},
+  {pathname: TeamName.slackManagers, title: 'Slack Manager'},
+  {pathname: TeamName.youtube, title: 'YouTube'},
 ];
 
 const Teams: FC = () => {
@@ -59,11 +60,7 @@ const Teams: FC = () => {
 
   const renderTeamFilter = (): ReactNode => {
     return (
-      <FlatNavLinks<TeamName>
-        handleOptionClick={handleNavOptionClick}
-        options={TEAM_NAME_FILTERS}
-        selectedOption={teamFilter}
-      />
+      <FlatNavLinks handleOptionClick={handleNavOptionClick} options={TEAM_NAME_FILTERS} selectedOption={teamFilter} />
     );
   };
 
