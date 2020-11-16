@@ -24,7 +24,7 @@
     "react-cool-onclickoutside": "^1.5.5",
     "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0",
+    "react-helmet-async": "^1.0.7",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "react-syntax-highlighter": "^15.3.0",
