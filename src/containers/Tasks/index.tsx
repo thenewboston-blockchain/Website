@@ -105,11 +105,7 @@ const Tasks: FC = () => {
 
   const renderFilters = () => (
     <>
-      <FlatNavLinks<Repository>
-        handleOptionClick={handleNavOptionClick}
-        options={REPOSITORY_FILTERS}
-        selectedOption={repository}
-      />
+      <FlatNavLinks handleOptionClick={handleNavOptionClick} options={REPOSITORY_FILTERS} selectedOption={repository} />
       <LabelFilter
         className="Tasks__LabelFilter"
         handleLabelClick={handleLabelClick}

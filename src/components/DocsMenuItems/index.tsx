@@ -25,6 +25,14 @@ export const accountManagerNavigationData = [
     name: 'Edit Nicknames',
     url: '/account-manager/edit-nicknames',
   },
+  {
+    name: 'Create a Bank',
+    url: '/account-manager/create-bank',
+  },
+  {
+    name: 'Create a Validator',
+    url: '/account-manager/create-validator',
+  },
 ];
 
 export const bankApiNavigationData = [

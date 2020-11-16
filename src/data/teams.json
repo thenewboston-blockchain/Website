@@ -29,6 +29,19 @@
         }
       },
       {
+        "title": "Python Product Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-11-13T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "45",
+          "displayName": "Andy Bajaras",
+          "githubUsername": "Barajas123",
+          "profileImage": "https://avatars2.githubusercontent.com/u/46165581?s=460&v=4",
+          "slackUsername": "Andy Bajaras"
+        }
+      },
+      {
         "title": "Junior Python (Django) Developer",
         "isLead": false,
         "payPerDay": 2800,
@@ -52,6 +65,32 @@
           "githubUsername": "shahraizali",
           "profileImage": "https://avatars3.githubusercontent.com/u/15216270?s=460&u=d417978e0163fb544caf74293278fac7ebf1dabf&v=4",
           "slackUsername": "Shahraiz Ali"
+        }
+      },
+      {
+        "title": "Python Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-11-12T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "42",
+          "displayName": "Dwayne Sordam",
+          "githubUsername": "CirXe0N",
+          "profileImage": "https://avatars3.githubusercontent.com/u/24738451?s=460&u=c1e3dc0dd9585a4cf877c453ec80f4af830c2fd5&v=4",
+          "slackUsername": "Dwayne"
+        }
+      },
+      {
+        "title": "Python Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-11-13T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "47",
+          "displayName": "Richard Starkey",
+          "githubUsername": "MathClassIsTough",
+          "profileImage": "https://avatars0.githubusercontent.com/u/74336482?s=460&v=4",
+          "slackUsername": "Richard (MathClassIsTough)"
         }
       }
     ]
@@ -242,6 +281,19 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E0FS4762-ge975c8b59da-512",
           "slackUsername": "Rajput Usman"
         }
+      },
+      {
+        "title": "Moderator",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "49",
+          "displayName": "DinShpati",
+          "githubUsername": "DinShpati",
+          "profileImage": "https://avatars2.githubusercontent.com/u/25906602",
+          "slackUsername": "DinShpati"
+        }
       }
     ]
   },
@@ -338,6 +390,32 @@
           "profileImage": "https://avatars2.githubusercontent.com/u/43641633?s=460&u=33f06f961b604732bec844c107c279e080aa038b&v=4",
           "slackUsername": "Carter"
         }
+      },
+      {
+        "title": "Software Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "43",
+          "displayName": "Michael Lee",
+          "githubUsername": "tpikachu",
+          "profileImage": "https://avatars1.githubusercontent.com/u/46133358?s=460&u=d731694bb83f5f51df70fa1841ccedcd70efc7f7&v=4",
+          "slackUsername": "Michael"
+        }
+      },
+      {
+        "title": "Software Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-11-12T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "41",
+          "displayName": "Meharban Singh",
+          "githubUsername": "Meharban-Singh",
+          "profileImage": "https://avatars1.githubusercontent.com/u/33323725?s=460&u=da67fec9d0eacc6f5680c789265fb372a75d71c0&v=4",
+          "slackUsername": "Meharban Singh"
+        }
       }
     ]
   },
@@ -400,6 +478,19 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01C14HRXFT-g90d1fb3c0c1-512",
           "slackUsername": "Sunil Chauhan"
         }
+      },
+      {
+        "title": "Marketing Coordinator",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "46",
+          "displayName": "Amy Burcham",
+          "githubUsername": "Nevah422",
+          "profileImage": "https://avatars0.githubusercontent.com/u/74023881?s=400&v=4",
+          "slackUsername": "Amy Burcham"
+        }
       }
     ]
   },
@@ -417,6 +508,24 @@
           "githubUsername": "odetolataiwo",
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EZHA7NQ0-91f6147e4788-512",
           "slackUsername": "Taiwo Odetola"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Penetration Testing",
+    "contributors": [
+      {
+        "title": "Penetration Testing Team Lead",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "48",
+          "displayName": "Spencer Dollahite",
+          "githubUsername": "spencer-dollahite",
+          "profileImage": "https://avatars0.githubusercontent.com/u/74439721?s=400&v=4",
+          "slackUsername": "Spencer Dollahite"
         }
       }
     ]
@@ -466,6 +575,19 @@
           "githubUsername": null,
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01B1PFRMH7-df88a64aa7ba-512",
           "slackUsername": "Bojan Ilijevski"
+        }
+      },
+      {
+        "title": "Reddit Moderator",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "44",
+          "displayName": "Landon Moon",
+          "githubUsername": "LunarDeveloper",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E879GB1Q-c93201d09399-512",
+          "slackUsername": "Moon"
         }
       }
     ]

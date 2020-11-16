@@ -66,7 +66,7 @@ import {getCustomClassNames} from 'utils/components';`}
         <DocList variant="ol">
           <li>Only Functional Components. No Class-based components.</li>
           <li>
-            Reusable components that doesn't connect to the redux store belong in the{' '}
+            Reusable components that don't connect to the redux store belong in the{' '}
             <DocInlineCode>components</DocInlineCode> directory. Components that connects to the store belong in the{' '}
             <DocInlineCode>containers</DocInlineCode> directory.
           </li>
@@ -95,7 +95,7 @@ import {getCustomClassNames} from 'utils/components';`}
   </div>
 );`}
           heading="Bad"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
       </DocSubSection>
       <DocSubSection id={StyleGuideReactNav.componentTypes} title="Component Types">
@@ -117,7 +117,7 @@ import {getCustomClassNames} from 'utils/components';`}
   <SomeComponent {...props} />
 );`}
           heading="Bad"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <CodeSnippet
           code={`return (
@@ -128,7 +128,7 @@ import {getCustomClassNames} from 'utils/components';`}
   />
 );`}
           heading="Good"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
       </DocSubSection>
       <DocSubSection id={StyleGuideReactNav.libraries} title="Libraries We Use">
