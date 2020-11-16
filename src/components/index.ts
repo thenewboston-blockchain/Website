@@ -6,6 +6,7 @@ import CopyableAccountNumber from './CopyableAccountNumber';
 import DashboardLayout from './DashboardLayout';
 import DocsMenuItems from './DocsMenuItems';
 import {DocContainer, DocEndpoint, DocImage, DocInlineCode, DocList, DocSubSection} from './DocWrapper';
+import DropdownInput from './DropdownInput';
 import EmptyPage from './EmptyPage';
 import FlatNavLinks from './FlatNavLinks';
 import Footer from './Footer';
@@ -48,6 +49,7 @@ export {
   DocList,
   DocSubSection,
   DocsMenuItems,
+  DropdownInput,
   EmptyPage,
   FlatNavLinks,
   Footer,

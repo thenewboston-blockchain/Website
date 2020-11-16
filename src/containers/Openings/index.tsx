@@ -2,8 +2,9 @@ import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'r
 import {useHistory, useParams} from 'react-router-dom';
 
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
-import {OpeningCategory, OpeningsUrlParams} from 'types/openings';
 import {getOpenings} from 'utils/data';
+import {NavOption} from 'types/option';
+import {OpeningCategory, OpeningsUrlParams} from 'types/openings';
 
 import OpeningDetails from './OpeningDetails';
 import OpeningsOpening from './OpeningsOpening';
@@ -11,15 +12,19 @@ import './Openings.scss';
 
 const openings = getOpenings();
 
-const OPENING_CATEGORY_FILTERS = [
-  OpeningCategory.all,
-  OpeningCategory.community,
-  OpeningCategory.design,
-  OpeningCategory.engineering,
-  OpeningCategory.marketing,
+const OPENING_CATEGORY_FILTERS: NavOption[] = [
+  {pathname: OpeningCategory.all, title: 'All'},
+  {pathname: OpeningCategory.community, title: 'Community'},
+  {pathname: OpeningCategory.design, title: 'Design'},
+  {pathname: OpeningCategory.engineering, title: 'Engineering'},
+  {pathname: OpeningCategory.marketing, title: 'Marketing'},
 ];
 
-const Openings: FC = () => {
+interface ComponentProps {
+  openingsFrozen: boolean;
+}
+
+const Openings: FC<ComponentProps> = ({openingsFrozen}) => {
   const history = useHistory();
   const {category: categoryParam, openingId: openingIdParam} = useParams<OpeningsUrlParams>();
   const [categoryFilter, setCategoryFilter] = useState<OpeningCategory>(OpeningCategory.all);
@@ -48,7 +53,7 @@ const Openings: FC = () => {
 
   const renderCategoryFilter = (): ReactNode => {
     return (
-      <FlatNavLinks<OpeningCategory>
+      <FlatNavLinks
         handleOptionClick={handleNavOptionClick}
         options={OPENING_CATEGORY_FILTERS}
         selectedOption={categoryFilter}
@@ -74,7 +79,18 @@ const Openings: FC = () => {
     return <OpeningDetails opening={opening} />;
   };
 
-  return (
+  return openingsFrozen ? (
+    <>
+      <PageTitle title="Openings" />
+      <div className="hiring-freeze">
+        <h1>Openings</h1>
+        <br />
+        <h3>
+          We are on a <span>hiring freeze</span> until further notice
+        </h3>
+      </div>
+    </>
+  ) : (
     <>
       <PageTitle title="Openings" />
       <div className="Openings">

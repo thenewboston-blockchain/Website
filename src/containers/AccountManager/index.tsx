@@ -7,6 +7,8 @@ import {PageData, PageDataObject} from 'types/page-data';
 
 import AccountManagerAddFriends from './AccountManagerAddFriends';
 import AccountManagerCreateAccount from './AccountManagerCreateAccount';
+import AccountManagerCreateBank from './AccountManagerCreateBank';
+import AccountManagerCreateValidator from './AccountManagerCreateValidator';
 import AccountManagerEditNicknames from './AccountManagerEditNicknames';
 import AccountManagerGetStarted from './AccountManagerGetStarted';
 import AccountManagerSendCoins from './AccountManagerSendCoins';
@@ -24,6 +26,14 @@ const pageData: PageDataObject = {
   'create-an-account': {
     content: <AccountManagerCreateAccount />,
     name: 'Create an Account',
+  },
+  'create-bank': {
+    content: <AccountManagerCreateBank />,
+    name: 'Create a Bank',
+  },
+  'create-validator': {
+    content: <AccountManagerCreateValidator />,
+    name: 'Create a Validator',
   },
   'edit-nicknames': {
     content: <AccountManagerEditNicknames />,
