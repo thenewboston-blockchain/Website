@@ -7,7 +7,7 @@ interface ComponentProps {
 
 const PageTitle: FC<ComponentProps> = ({title}) => {
   return (
-    <Helmet defer={false}>
+    <Helmet>
       <title>{title} | thenewboston</title>
     </Helmet>
   );
