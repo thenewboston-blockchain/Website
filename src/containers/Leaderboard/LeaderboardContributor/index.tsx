@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import {A, ContributorTasks, CopyableAccountNumber, Qr, TotalAmount} from 'components';
 import SlideUpAccountDetails from 'containers/SlideUpAccountDetails';
 import {Task} from 'types/github';
+import {getImageSizeBasedOnDeviceRatio} from 'utils/image';
 
 import './LeaderboardContributor.scss';
 
@@ -25,6 +26,10 @@ const LeaderboardContributor: FC<ComponentProps> = ({
   total_earnings,
 }) => {
   const [displaySlideUp, setDisplaySlideUp] = useState(false);
+  const smallImageSize = getImageSizeBasedOnDeviceRatio(54);
+  const smallGithubAvatarUrl = `${github_avatar_url}&s=${smallImageSize}`;
+  const largeImageSize = getImageSizeBasedOnDeviceRatio(178);
+  const largeGithubAvatarUrl = `${github_avatar_url}&s=${largeImageSize}`;
 
   const handleClick = (e: any): void => {
     if (e.target.nodeName === 'A') return;
@@ -41,7 +46,13 @@ const LeaderboardContributor: FC<ComponentProps> = ({
       >
         {rank}
       </div>
-      <img className="LeaderboardContributor__user-avatar" src={github_avatar_url} alt={github_username} />
+      <img
+        className="LeaderboardContributor__user-avatar"
+        src={largeGithubAvatarUrl}
+        srcSet={`${largeGithubAvatarUrl} 178w, ${smallGithubAvatarUrl} 54w`}
+        sizes="(max-width: 768px) 54px, 178px"
+        alt={github_username}
+      />
     </div>
   );
 
