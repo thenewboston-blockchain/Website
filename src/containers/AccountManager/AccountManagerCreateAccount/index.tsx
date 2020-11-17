@@ -2,8 +2,8 @@ import React, {FC} from 'react';
 
 import {DocContainer, DocImage, DocSubSection} from 'components';
 
-import CreateNewAccountModal from './CreateNewAccountModal.png';
 import AccountOverview from './AccountOverview.png';
+import CreateNewAccountModal from './CreateNewAccountModal.png';
 
 enum AccountManagerCreateAccountNav {
   accountOverview = 'account-overview',

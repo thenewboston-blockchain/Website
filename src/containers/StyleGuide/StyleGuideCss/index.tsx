@@ -94,7 +94,6 @@ const StyleGuideCss: FC = () => {
           code={`import React, {FC} from 'react';
         
 import './LeftMenu.scss';
-
 const LeftMenu: FC = () => {
   return (
     <div className="LeftMenu">
@@ -127,7 +126,7 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Bad"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <CodeSnippet
           code={`return (
@@ -138,7 +137,7 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Good"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
       </DocSubSection>
       <DocSubSection id={StyleGuideCssNav.clsx} title="CLSX for conditional classNames">
@@ -146,18 +145,20 @@ const LeftMenu: FC = () => {
           We use the <A href="https://www.npmjs.com/package/clsx">CLSX</A> package to deal with conditional classNames.
         </p>
         <CodeSnippet
-          code={`<div className={\`LeftNav__nav \${selected === 'home' ? 'LeftNav__nav--active' : ''}\`}>Home</div>`}
+          code={`return <div className={\`LeftNav__nav \${selected === 'home' ? 'LeftNav__nav--active' : ''}\`}>Home</div>;`}
           heading="Bad"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <CodeSnippet
-          code={`<div 
-   className={clsx("LeftNav__nav", {
-      "LeftNav__nav--active": selected === "home"
-   })}
->Home</div>`}
+          code={`return (
+  <div 
+     className={clsx("LeftNav__nav", {
+        "LeftNav__nav--active": selected === "home"
+     })}
+  >Home</div>
+);`}
           heading="Good"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
       </DocSubSection>
       <DocSubSection id={StyleGuideCssNav.sassAmpBem} title="SASS Ampersand + BEM">
@@ -181,7 +182,7 @@ const LeftMenu: FC = () => {
    </div>
 );`}
           heading="LeftMenu.tsx"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <p>
           There are three classNames we have to deal with: <DocInlineCode>.LeftNav</DocInlineCode>,{' '}
@@ -258,8 +259,8 @@ const LeftMenu: FC = () => {
       </DocSubSection>
       <DocSubSection id={StyleGuideCssNav.blocksElements} title="Blocks vs. Elements">
         <p>
-          One of the pain-coins of <DocInlineCode>BEM</DocInlineCode> is the ambiguity of the distinction between Blocks
-          and Elements. In order to keep it simple, this is the rule we are going to follow:
+          One of the pain-points of <DocInlineCode>BEM</DocInlineCode> is the ambiguity of the distinction between
+          Blocks and Elements. In order to keep it simple, this is the rule we are going to follow:
         </p>
         <DocList variant="ul">
           <li>
@@ -277,7 +278,7 @@ const LeftMenu: FC = () => {
         <p>
           <strong>
             1. A given DOM element with more elements inside doesn't need to be considered as Blocks if the naming won't
-            won't be too confusing:
+            be too confusing:
           </strong>
         </p>
         <CodeSnippet
@@ -290,7 +291,7 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Bad"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <CodeSnippet
           code={`return (
@@ -303,7 +304,7 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Good"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <p>
           <strong>
@@ -330,7 +331,7 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Bad"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <CodeSnippet
           code={`return (
@@ -351,17 +352,17 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Good"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <p>
           One note about above: you should only introduce one level of new blocks for a given component. If you need to
           use 2-level or more nested blocks within a given component, the component is (probably) better off being
-          separated into multiple components. This coin probably deserves a new section:
+          separated into multiple components. This point probably deserves a new section:
         </p>
       </DocSubSection>
       <DocSubSection id={StyleGuideCssNav.blocksSassNesting} title="Blocks and level of SASS Nesting">
         <p>
-          Continuing on with the previous coin, each component should have at most one level of nested{' '}
+          Continuing on with the previous point, each component should have at most one level of nested{' '}
           <DocInlineCode>blocks</DocInlineCode> within it's root DOM element. Ideally, if the component is small enough,
           it doesn't need any blocks, but this is not always realistic. This is to ensure we don't have selectors within
           our SCSS that have too high of a specificity.
@@ -400,13 +401,13 @@ const LeftMenu: FC = () => {
         </p>
         <CodeSnippet
           code={`return (
-  <div className="PresentationalComponent>
+  <div className="PresentationalComponent">
     <div className="PresentationalComponent__left">{leftComponentProp}</div>
     {children}
   </div>
 );`}
           heading="TSX Component"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <CodeSnippet
           code={`.PresentationalComponent {
@@ -435,7 +436,6 @@ const LeftMenu: FC = () => {
           code={`.red {
   color: red;
 }
-
 .fancy-table {
   // some fancy table styling
 }`}
@@ -463,7 +463,6 @@ const LeftMenu: FC = () => {
           code={`#left-nav { // No id selectors
   // ...  
 }
-
 .LeftNav {
   a { // No HTML Element selectors
     // ...
@@ -501,7 +500,7 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="TSX Component"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <CodeSnippet
           code={`.Component {

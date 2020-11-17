@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom
 import {Layout} from 'components';
 
 import AccountManager from './AccountManager';
+import Assets from './Assets';
 import BankApi from './BankApi';
 import ConfirmationValidatorApi from './ConfirmationValidatorApi';
 import DeploymentGuide from './DeploymentGuide';
@@ -55,21 +56,22 @@ const App: FC = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/donate" component={Donate} />
           <Route exact path="/faq" component={Faq} />
+          <Route exact path="/assets" component={Assets} />
           <Route exact path="/leaderboard/:repository" component={Leaderboard} />
           <Redirect exact from="/openings" to="/openings/All" />
-          <Route exact path="/openings/:category/:openingId?" component={Openings} />
+          <Route exact path="/openings/:category/:openingId?" render={() => <Openings openingsFrozen={false} />} />
           <Route exact path="/social" component={Social} />
           <Redirect exact from="/tasks" to="/tasks/All" />
           <Route exact path="/tasks/:repository" component={Tasks} />
           <Route exact path="/teams" component={Teams} />
-          <Route path="/account-manager/:chapter?" component={AccountManager} />
-          <Route path="/bank-api/:chapter?" component={BankApi} />
-          <Route path="/confirmation-validator-api/:chapter?" component={ConfirmationValidatorApi} />
-          <Route path="/deployment-guide/:chapter?" component={DeploymentGuide} />
+          <Route path="/account-manager/:chapter" component={AccountManager} />
+          <Route path="/bank-api/:chapter" component={BankApi} />
+          <Route path="/confirmation-validator-api/:chapter" component={ConfirmationValidatorApi} />
+          <Route path="/deployment-guide/:chapter" component={DeploymentGuide} />
           <Route path="/download" component={Download} />
-          <Route path="/guide/:chapter?" component={Guide} />
-          <Route path="/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
-          <Route path="/style-guide/:chapter?" component={StyleGuide} />
+          <Route path="/guide/:chapter" component={Guide} />
+          <Route path="/primary-validator-api/:chapter" component={PrimaryValidatorApi} />
+          <Route path="/style-guide/:chapter" component={StyleGuide} />
           <Redirect to="/" />
         </Switch>
       </Layout>
