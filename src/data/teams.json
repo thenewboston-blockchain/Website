@@ -449,18 +449,17 @@
         }
       },
       {
-        "title": "Team Lead",
+        "title": "Software Developer",
         "isLead": true,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": null,
-          "displayName": "Martin Nowosad",
-          "githubUsername": "MrIceman",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U016SCACHM4-1a824cfe8763-512",
-          "slackUsername": "Martin Nowosad"
+          "displayName": "Peter Sommerhoff",
+          "githubUsername": "petersommerhoff",
+          "profileImage": "https://avatars2.githubusercontent.com/u/2805791?s=460&u=5fcb7424015f63ae2194171c5649af332ab59f05&v=4",
+          "slackUsername": "Peter Sommerhoff"
         }
-      }
     ]
   },
   {
