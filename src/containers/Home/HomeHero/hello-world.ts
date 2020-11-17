@@ -53,6 +53,7 @@ const HelloWorld: {[isoLangCode: string]: string} = {
   lo: 'ສະບາຍດີຊາວໂລກ',
   lt: 'Labas Pasauli',
   lv: 'Sveika pasaule',
+  mi: 'Kia Ora Ao',
   mk: 'Здраво Свету',
   ml: 'ഹലോ വേൾഡ്',
   mr: 'नमस्कार जग',
