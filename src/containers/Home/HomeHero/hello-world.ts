@@ -32,6 +32,7 @@ const HelloWorld: {[isoLangCode: string]: string} = {
   he: 'שלום עולם',
   hi: 'नमस्ते दुनिया',
   hr: 'Pozdrav svijetu',
+  ht: 'Bonjou Mondyal',
   hu: 'Helló világ',
   hy: 'Բարեւ աշխարհ',
   id: 'Halo Dunia',
