@@ -38,6 +38,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
         <button className="mobile-menu__button" onClick={toggleMobileMenu}>
           <Icon icon={IconType.menu} size={24} />
         </button>
+        {renderMobileDropdownMenu()}
       </div>
     );
   };
@@ -227,15 +228,12 @@ const TopNav: FC<ComponentProps> = ({className}) => {
   }, [setMoreAnchorEl]);
 
   return (
-    <>
-      <header className={clsx('TopNav', className)}>
-        <div className="TopNav__left">
-          <TopNavLogo />
-        </div>
-        {renderRightItems()}
-      </header>
-      {renderMobileDropdownMenu()}
-    </>
+    <header className={clsx('TopNav', className)}>
+      <div className="TopNav__left">
+        <TopNavLogo />
+      </div>
+      {renderRightItems()}
+    </header>
   );
 };
 
