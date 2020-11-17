@@ -540,6 +540,19 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EZHA7NQ0-91f6147e4788-512",
           "slackUsername": "Taiwo Odetola"
         }
+      },
+      {
+        "title": "Payments Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "54",
+          "displayName": "Nikhil Taneja",
+          "githubUsername": "itsnikhil",
+          "profileImage": "https://avatars1.githubusercontent.com/u/20350674?v=4",
+          "slackUsername": "itsnikhil"
+        }
       }
     ]
   },
