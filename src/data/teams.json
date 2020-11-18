@@ -358,6 +358,19 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
+          "contributorId": "11",
+          "displayName": "Aayushi Maheshwari",
+          "githubUsername": "aayushi14",
+          "profileImage": "https://avatars3.githubusercontent.com/u/33564949?s=460&u=90790eec3a04dfd58d08d0adeb18cba94e39685c&v=4",
+          "slackUsername": "Aayushi Maheshwari"
+        }
+      },
+      {
+        "title": "Front-End Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
           "contributorId": "19",
           "displayName": "Amarjeet Sarma",
           "githubUsername": "amarjeet987",
@@ -746,19 +759,6 @@
           "githubUsername": null,
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01BWTU729Z-b2ae1378a598-512",
           "slackUsername": "Benjamin Thorpe"
-        }
-      },
-      {
-        "title": "Slack Manager",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "11",
-          "displayName": "Aayushi Maheshwari",
-          "githubUsername": "aayushi14",
-          "profileImage": "https://avatars3.githubusercontent.com/u/33564949?s=460&u=90790eec3a04dfd58d08d0adeb18cba94e39685c&v=4",
-          "slackUsername": "Aayushi Maheshwari"
         }
       },
       {
