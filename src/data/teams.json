@@ -92,6 +92,19 @@
           "profileImage": "https://avatars0.githubusercontent.com/u/74336482?s=460&v=4",
           "slackUsername": "Richard (MathClassIsTough)"
         }
+      },
+      {
+        "title": "Python Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-11-18T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "52",
+          "displayName": "Yashovardhan",
+          "githubUsername": "YashovardhanSingh",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EDS61953-f188ea1780e8-512",
+          "slackUsername": "yashovardhansingh"
+        }
       }
     ]
   },
