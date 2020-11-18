@@ -92,6 +92,7 @@ const Openings: FC<ComponentProps> = ({openingsFrozen}) => {
     </>
   ) : (
     <>
+      <PageTitle title="Openings" />
       <div className="Openings">
         <BreadcrumbMenu
           className="Openings__BreadcrumbMenu"

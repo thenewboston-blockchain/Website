@@ -366,6 +366,19 @@
         }
       },
       {
+        "title": "Front-End Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-11-14T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "50",
+          "displayName": "Nine",
+          "githubUsername": "whitelionx",
+          "profileImage": "https://avatars1.githubusercontent.com/u/31674307?s=460&u=89b8153755b6765cbdc0b2579d8f545138b4760c&v=4",
+          "slackUsername": "Nine"
+        }
+      },
+      {
         "title": "Front-end Responsive UI Expert",
         "isLead": false,
         "payPerDay": 2800,
@@ -495,6 +508,24 @@
     ]
   },
   {
+    "title": "New User Operations",
+    "contributors": [
+      {
+        "title": "New User Operations Lead",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "51",
+          "displayName": "Martyn",
+          "githubUsername": "Spotnag",
+          "profileImage": "https://avatars3.githubusercontent.com/u/2324860?s=400&u=ca3e6fcc7e1c03a48720143704adc8ef51d7c64d&v=4",
+          "slackUsername": "Martyn"
+        }
+      }
+    ]
+  },
+  {
     "title": "Payments",
     "contributors": [
       {
@@ -508,24 +539,6 @@
           "githubUsername": "odetolataiwo",
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EZHA7NQ0-91f6147e4788-512",
           "slackUsername": "Taiwo Odetola"
-        }
-      }
-    ]
-  },
-  {
-    "title": "Penetration Testing",
-    "contributors": [
-      {
-        "title": "Penetration Testing Team Lead",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "48",
-          "displayName": "Spencer Dollahite",
-          "githubUsername": "spencer-dollahite",
-          "profileImage": "https://avatars0.githubusercontent.com/u/74439721?s=400&v=4",
-          "slackUsername": "Spencer Dollahite"
         }
       }
     ]
@@ -637,6 +650,19 @@
           "githubUsername": "codedevloper",
           "profileImage": "https://avatars1.githubusercontent.com/u/5453949?s=460&v=4",
           "slackUsername": "Amol Bhure"
+        }
+      },
+      {
+        "title": "Penetration Testing Team Lead",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "48",
+          "displayName": "Spencer Dollahite",
+          "githubUsername": "spencer-dollahite",
+          "profileImage": "https://avatars0.githubusercontent.com/u/74439721?s=400&v=4",
+          "slackUsername": "Spencer Dollahite"
         }
       }
     ]
