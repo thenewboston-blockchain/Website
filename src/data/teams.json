@@ -92,6 +92,19 @@
           "profileImage": "https://avatars0.githubusercontent.com/u/74336482?s=460&v=4",
           "slackUsername": "Richard (MathClassIsTough)"
         }
+      },
+      {
+        "title": "Python Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-11-18T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "52",
+          "displayName": "Yashovardhan",
+          "githubUsername": "YashovardhanSingh",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EDS61953-f188ea1780e8-512",
+          "slackUsername": "yashovardhansingh"
+        }
       }
     ]
   },
@@ -345,6 +358,19 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
+          "contributorId": "11",
+          "displayName": "Aayushi Maheshwari",
+          "githubUsername": "aayushi14",
+          "profileImage": "https://avatars3.githubusercontent.com/u/33564949?s=460&u=90790eec3a04dfd58d08d0adeb18cba94e39685c&v=4",
+          "slackUsername": "Aayushi Maheshwari"
+        }
+      },
+      {
+        "title": "Front-End Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
           "contributorId": "19",
           "displayName": "Amarjeet Sarma",
           "githubUsername": "amarjeet987",
@@ -447,6 +473,32 @@
           "profileImage": "https://avatars2.githubusercontent.com/u/6011914?s=460&u=9328434aef816ce5dfe5fbc12b64f2f498222ebc&v=4",
           "slackUsername": "Ian Arbuckle"
         }
+      },
+      {
+        "title": "Team Lead",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "53",
+          "displayName": "Martin Nowosad",
+          "githubUsername": "MrIceman",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U016SCACHM4-1a824cfe8763-512",
+          "slackUsername": "Martin Nowosad"
+        }
+      },
+      {
+        "title": "Software Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "54",
+          "displayName": "Peter Sommerhoff",
+          "githubUsername": "petersommerhoff",
+          "profileImage": "https://avatars2.githubusercontent.com/u/2805791?s=460&u=5fcb7424015f63ae2194171c5649af332ab59f05&v=4",
+          "slackUsername": "Peter Sommerhoff"
+        }
       }
     ]
   },
@@ -540,6 +592,32 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EZHA7NQ0-91f6147e4788-512",
           "slackUsername": "Taiwo Odetola"
         }
+      },
+      {
+        "title": "Payments Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "55",
+          "displayName": "Nikhil Taneja",
+          "githubUsername": "itsnikhil",
+          "profileImage": "https://avatars1.githubusercontent.com/u/20350674?v=4",
+          "slackUsername": "itsnikhil"
+        }
+      },
+      {
+        "title": "Payments Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "56",
+          "displayName": "Tawanda Makunike",
+          "githubUsername": "Tawanike",
+          "profileImage": "https://avatars1.githubusercontent.com/u/329524?v=4",
+          "slackUsername": "Tawanda Makunike"
+        }
       }
     ]
   },
@@ -572,7 +650,7 @@
         "contributor": {
           "contributorId": "8",
           "displayName": "Shivam Yadav",
-          "githubUsername": null,
+          "githubUsername": "shivamyadav37",
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U017J4SDBM4-49405606e0d2-512",
           "slackUsername": "Shivam Yadav"
         }
@@ -681,19 +759,6 @@
           "githubUsername": null,
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01BWTU729Z-b2ae1378a598-512",
           "slackUsername": "Benjamin Thorpe"
-        }
-      },
-      {
-        "title": "Slack Manager",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "11",
-          "displayName": "Aayushi Maheshwari",
-          "githubUsername": "aayushi14",
-          "profileImage": "https://avatars3.githubusercontent.com/u/33564949?s=460&u=90790eec3a04dfd58d08d0adeb18cba94e39685c&v=4",
-          "slackUsername": "Aayushi Maheshwari"
         }
       },
       {
