@@ -59,6 +59,7 @@
     display: block;
     font-size: 18px;
     font-weight: 700;
+    word-break: break-word;
 
     &:hover {
       color: var(--color-github-blue);
