@@ -3,13 +3,21 @@ export enum TeamName {
   backEndDevelopers = 'Back-End Developers',
   community = 'Community',
   design = 'Design',
+  devOps = 'DevOps',
+  discordManagers = 'Discord Managers',
   frontEndDevelopers = 'Front-End Developers',
+  kotlinSDK = 'Kotlin SDK',
   marketing = 'Marketing',
+  newUserOperations = 'New User Operations',
+  payments = 'Payments',
+  penetrationTesting = 'Penetration Testing',
+  projectProposals = 'Project Proposals',
   qa = 'QA',
   redditModerators = 'Reddit Moderators',
+  research = 'Research',
   security = 'Security',
   slackManagers = 'Slack Managers',
-  youtubers = 'YouTubers',
+  youtube = 'YouTube',
 }
 
 interface Contributor {

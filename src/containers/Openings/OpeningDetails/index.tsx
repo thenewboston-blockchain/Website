@@ -49,9 +49,7 @@ const OpeningDetails: FC<ComponentProps> = ({opening}) => {
     return (
       <>
         <div className="OpeningDetails__list-label">
-          {rows.length > 1
-            ? 'To apply, send us a message through any of the following channels:'
-            : 'To apply, send us a message through the following channel:'}
+          To apply, leave a message in the #intros channel with the position you are interested in!
         </div>
         <div className="OpeningDetails__application-method-container">{rows}</div>
       </>

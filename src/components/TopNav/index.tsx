@@ -1,5 +1,5 @@
 import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
-import {Link, useHistory, useLocation} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 
 import {Button, Icon, IconType} from 'components';
@@ -16,7 +16,6 @@ interface ComponentProps {
 
 const TopNav: FC<ComponentProps> = ({className}) => {
   const [mobileMenuOpen, toggleMobileMenu, , closeMobileMenu] = useBooleanState(false);
-  const history = useHistory();
   const {pathname} = useLocation();
   const [communityAnchorEl, setCommunityAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [getStartedAnchorEl, setGetStartedAnchorEl] = useState<HTMLButtonElement | null>(null);
@@ -32,11 +31,6 @@ const TopNav: FC<ComponentProps> = ({className}) => {
       closeMobileMenu();
     }
   }, [closeMobileMenu, mobileMenuOpen, width]);
-
-  const handleMobileLinkClick = (to: string) => (): void => {
-    history.push(to);
-    closeMobileMenu();
-  };
 
   const renderMobileMenu = (): ReactNode => {
     return (
@@ -111,6 +105,13 @@ const TopNav: FC<ComponentProps> = ({className}) => {
       <>
         <TopNavPopoverItem
           closePopover={unsetMoreAnchorEl}
+          description="Download thenewboston assets"
+          iconType={IconType.fileDownload}
+          title="Assets"
+          to="/assets"
+        />
+        <TopNavPopoverItem
+          closePopover={unsetMoreAnchorEl}
           description="Frequently asked questions"
           iconType={IconType.forum}
           title="FAQ"
@@ -160,7 +161,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
         >
           {renderMorePopover()}
         </TopNavPopoverButton>
-        <Link className={clsx('TopNav__right-item', 'TopNav__download-button')} to="/download">
+        <Link className={clsx('TopNav__right-item', 'TopNav__download-button')} tabIndex={-1} to="/download">
           <Button>Download</Button>
         </Link>
       </>
@@ -187,6 +188,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
           </div>
           <div className="mobile-menu__column">
             <div className="mobile-menu__column-title">More</div>
+            {renderMobileLink('Assets', '/assets')}
             {renderMobileLink('FAQ', '/faq')}
             {renderMobileLink('Donate', '/donate')}
           </div>
@@ -198,9 +200,9 @@ const TopNav: FC<ComponentProps> = ({className}) => {
 
   const renderMobileLink = (label: string, to: string): ReactNode => {
     return (
-      <button className="mobile-menu__link" onClick={handleMobileLinkClick(to)}>
+      <Link className="mobile-menu__link" to={to}>
         {label}
-      </button>
+      </Link>
     );
   };
 

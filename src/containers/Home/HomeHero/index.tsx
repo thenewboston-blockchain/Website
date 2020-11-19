@@ -22,11 +22,10 @@ const HomeHero: FC = () => {
 
   useEffect(() => {
     let i = 0;
-
+    let timerId: ReturnType<typeof setTimeout>;
     const interval = setInterval(() => {
       setHelloFadeClass(HelloFadeClass.fadeOut);
-
-      setTimeout(() => {
+      timerId = setTimeout(() => {
         const key = shuffledHelloKeys[i];
         setHelloText(HelloWorld[key]);
         i += 1;
@@ -38,6 +37,9 @@ const HomeHero: FC = () => {
     }, 5000);
 
     return () => {
+      if (timerId) {
+        clearTimeout(timerId);
+      }
       clearInterval(interval);
     };
   }, [setHelloFadeClass]);

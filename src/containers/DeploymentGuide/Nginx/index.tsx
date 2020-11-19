@@ -15,8 +15,7 @@ const Nginx: FC<ComponentProps> = ({name}) => {
     <DocSubSection className="Nginx" id={NginxNav.nginx} title="NGINX">
       <CodeSnippet
         code={`sudo rm /etc/nginx/sites-available/default
-sudo nano /etc/nginx/sites-available/default
-`}
+sudo nano /etc/nginx/sites-available/default`}
         heading="Create NGINX configuration"
       />
       <CodeSnippet
@@ -53,8 +52,7 @@ server {
         proxy_set_header X-Forwarded-Host $server_name;
     }
 
-}
-`}
+}`}
         heading="Paste in the following and save"
       />
       <CodeSnippet code="sudo nginx -t" heading="Test configuration" />

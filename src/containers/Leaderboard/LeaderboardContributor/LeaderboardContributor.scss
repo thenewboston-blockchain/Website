@@ -53,6 +53,7 @@
     border-radius: 50%;
     height: auto;
     max-width: 178px;
+    min-width: 178px;
   }
 
   &__user-avatar-container {
@@ -137,6 +138,7 @@
 
     &__user-avatar {
       max-width: 54px;
+      min-width: 54px;
     }
 
     &__user-avatar-rank {
