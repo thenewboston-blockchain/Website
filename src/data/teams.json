@@ -707,6 +707,24 @@
     ]
   },
   {
+    "title": "Research",
+    "contributors": [
+      {
+        "title": "Blockchain Researcher",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-11-19T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": null,
+          "displayName": "Kayode Babarinde",
+          "githubUsername": "",
+          "profileImage": "",
+          "slackUsername": "Kayode Babarinde"
+        }
+      }
+    ]
+  },
+  {
     "title": "Security",
     "contributors": [
       {
