@@ -245,19 +245,6 @@
           "profileImage": "https://avatars0.githubusercontent.com/u/18399270?s=400&v=4",
           "slackUsername": "Sush"
         }
-      },
-      {
-        "title": "UX/UI Designer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "35",
-          "displayName": "Manish Ram",
-          "githubUsername": "manishram",
-          "profileImage": "https://avatars0.githubusercontent.com/u/22790904?s=400&u=643810e6c9d5686df409132b01863f9e065df6c1&v=4",
-          "slackUsername": "Manish"
-        }
       }
     ]
   },
@@ -617,6 +604,24 @@
           "githubUsername": "Tawanike",
           "profileImage": "https://avatars1.githubusercontent.com/u/329524?v=4",
           "slackUsername": "Tawanda Makunike"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Project Proposals",
+    "contributors": [
+      {
+        "title": "Project Proposals Manager",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "35",
+          "displayName": "Manish Ram",
+          "githubUsername": "manishram",
+          "profileImage": "https://avatars0.githubusercontent.com/u/22790904?s=400&u=643810e6c9d5686df409132b01863f9e065df6c1&v=4",
+          "slackUsername": "Manish"
         }
       }
     ]
