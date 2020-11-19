@@ -22,6 +22,7 @@ const TEAM_NAME_FILTERS: NavOption[] = [
   {pathname: TeamName.marketing, title: 'Marketing'},
   {pathname: TeamName.newUserOperations, title: 'New User Operations'},
   {pathname: TeamName.payments, title: 'Payments'},
+  {pathname: TeamName.projectProposals, title: 'Project Proposals'},
   {pathname: TeamName.qa, title: 'QA'},
   {pathname: TeamName.redditModerators, title: 'Reddit Moderators'},
   {pathname: TeamName.research, title: 'Research'},
