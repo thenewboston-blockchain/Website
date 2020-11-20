@@ -14,6 +14,7 @@ import ChevronDownIcon from 'mdi-react/ChevronDownIcon';
 import ChevronLeftIcon from 'mdi-react/ChevronLeftIcon';
 import ChevronRightIcon from 'mdi-react/ChevronRightIcon';
 import ChevronUpIcon from 'mdi-react/ChevronUpIcon';
+import CloseIcon from 'mdi-react/CloseIcon';
 import ContentCopyIcon from 'mdi-react/ContentCopyIcon';
 import CurrencyUsdIcon from 'mdi-react/CurrencyUsdIcon';
 import DownloadIcon from 'mdi-react/DownloadIcon';
@@ -54,6 +55,7 @@ export enum IconType {
   chevronLeft,
   chevronRight,
   chevronUp,
+  closeIcon,
   contentCopy,
   currencyUsd,
   downloadIcon,
@@ -116,6 +118,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(({className, disabled = 
         return <ChevronRightIcon {...iconProps} />;
       case IconType.chevronUp:
         return <ChevronUpIcon {...iconProps} />;
+      case IconType.closeIcon:
+        return <CloseIcon {...iconProps} />;
       case IconType.contentCopy:
         return <ContentCopyIcon {...iconProps} />;
       case IconType.currencyUsd:

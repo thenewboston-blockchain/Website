@@ -6,6 +6,7 @@ import Logo from 'assets/svgs/thenewboston-white.svg';
 import SocialMediaIcon from 'components/SocialMediaIcon';
 import {SocialMedia} from 'types/social-media';
 
+import NewsletterForm from 'components/Newsletter/NewsletterForm';
 import FooterNavList from './FooterNavList';
 import './Footer.scss';
 
@@ -94,6 +95,10 @@ const Footer: FC<ComponentProps> = ({className}) => {
         <Link to="/">
           <img src={Logo} alt="thenewboston logo" />
         </Link>
+        <div className="Footer__newsletter-form">
+          <span>Sign up for our newsletter</span>
+          <NewsletterForm buttonType="secondary" />
+        </div>
         <div className="Footer__social-media-links">{renderSocialMediaLinks()}</div>
       </div>
       <div className="Footer__right">{renderNavLists()}</div>

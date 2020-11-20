@@ -1,0 +1,28 @@
+.newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 16px;
+
+  & > * {
+    height: 40px;
+  }
+
+  input {
+    width: 240px;
+    padding: 8px;
+
+    @media (max-width: 425px) {
+      width: 100%;
+    }
+  }
+
+  button {
+    margin-left: 16px;
+
+    @media (max-width: 425px) {
+      margin-left: 0;
+      margin-top: 16px;
+      width: 100%;
+    }
+  }
+}

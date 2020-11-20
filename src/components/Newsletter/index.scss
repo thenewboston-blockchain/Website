@@ -1,0 +1,40 @@
+.newsletter-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba($color: #000000, $alpha: 0.3);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 76px 50px;
+    max-width: 540px;
+    background: var(--color-white);
+    border-radius: 3px;
+    position: relative;
+    margin: 10px;
+
+    @media (max-width: 425px) {
+      padding: 60px 15px;
+    }
+
+    * {
+      align-self: center;
+    }
+
+    .Icon {
+      position: absolute;
+      top: 17px;
+      right: 17px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+}

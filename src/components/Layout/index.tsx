@@ -4,6 +4,7 @@ import clsx from 'clsx';
 
 import {Footer, GoToTop, TopNav} from 'components';
 import './Layout.scss';
+import NewsletterModal from 'components/Newsletter';
 
 interface ComponentProps {
   children: ReactNode;
@@ -19,6 +20,7 @@ const Layout: FC<ComponentProps> = ({children}) => {
 
   return (
     <div className="Layout">
+      <NewsletterModal />
       <div className="Layout__top-nav-wrapper">
         <TopNav className="Layout__TopNav" />
       </div>
