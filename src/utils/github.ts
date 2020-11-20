@@ -17,7 +17,7 @@ export const fetchGithubIssues = async (): Promise<Issue[]> => {
     const amountLabels = issue.labels.filter(({color}: any) => color.toLowerCase() === AMOUNT_COLOR);
     return {
       ...issue,
-      amount: amountLabels.length ? parseInt(amountLabels[0].name, 10) : 0,
+      amount: amountLabels.length ? parseInt(amountLabels[0].name.replace(/[^\d.]/g, ''), 10) : 0,
       repositoryName: getRepositoryName(issue.repository_url),
     };
   });
