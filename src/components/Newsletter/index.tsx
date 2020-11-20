@@ -4,7 +4,7 @@ import NewsletterForm from '../NewsletterForm';
 import './Newsletter.scss';
 
 const NewsletterModal: FC = () => {
-  const [modal, setModal] = useState<boolean>(true);
+  const [modal, setModal] = useState<boolean>(false);
 
   useEffect(() => {
     const newsletterModal = localStorage.getItem('newsletter-modal');
