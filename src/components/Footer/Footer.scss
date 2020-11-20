@@ -24,6 +24,10 @@
   &__newsletter-form {
     color: var(--color-white);
     margin-top: 42px;
+
+    &-span {
+      margin-top: 16px;
+    }
   }
 
   &__social-media-links {

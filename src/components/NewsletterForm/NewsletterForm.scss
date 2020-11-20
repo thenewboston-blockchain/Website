@@ -1,17 +1,23 @@
 .newsletter-form {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 16px;
+  form {
+    display: flex;
+    flex-wrap: wrap;
 
-  & > * {
-    height: 40px;
+    & > * {
+      height: 40px;
+    }
+  }
+
+  &__error {
+    color: var(--color-danger);
+    height: 24px;
   }
 
   input {
     padding: 8px;
     width: 240px;
 
-    @media (max-width: 425px) {
+    @media (max-width: 500px) {
       width: 100%;
     }
   }
@@ -19,7 +25,7 @@
   button {
     margin-left: 16px;
 
-    @media (max-width: 425px) {
+    @media (max-width: 500px) {
       margin-left: 0;
       margin-top: 16px;
       width: 100%;

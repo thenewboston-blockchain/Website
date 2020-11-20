@@ -1,5 +1,7 @@
+import React, {FC} from 'react';
 import axios from 'axios';
-import React, {ChangeEvent, FC, FormEvent, useState} from 'react';
+import {useFormik} from 'formik';
+import * as Yup from 'yup';
 import './NewsletterForm.scss';
 
 interface FormProps {
@@ -7,21 +9,30 @@ interface FormProps {
 }
 
 const NewsletterForm: FC<FormProps> = ({buttonType = 'primary'}) => {
-  const [email, setEmail] = useState<string>('');
+  const formik = useFormik({
+    initialValues: {email: ''},
+    onSubmit: ({email}) => axios.post('NEWSLETTER__ENDPOINT', {email}),
+    validationSchema: Yup.object().shape({email: Yup.string().email('Invalid email').required('Required')}),
+  });
 
-  const handleEmailValue = (e: ChangeEvent<HTMLInputElement>) => setEmail(e.currentTarget.value);
-
-  const handleFormSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (email) axios.post('NEWSLETTER__ENDPOINT', {email}).then(() => setEmail(''));
-  };
   return (
-    <form className="newsletter-form" onSubmit={handleFormSubmit}>
-      <input value={email} onChange={handleEmailValue} type="text" className="Input" placeholder="Email address" />
-      <button className={`Button Button--contained Button--${buttonType}`} type="submit">
-        Submit
-      </button>
-    </form>
+    <div className="newsletter-form">
+      <p className="newsletter-form__error">{formik.errors.email && formik.touched.email && formik.errors.email}</p>
+      <form onSubmit={formik.handleSubmit}>
+        <input
+          name="email"
+          id="email"
+          onChange={formik.handleChange}
+          value={formik.values.email}
+          type="text"
+          className="Input"
+          placeholder="Email address"
+        />
+        <button className={`Button Button--contained Button--${buttonType}`} type="submit">
+          Submit
+        </button>
+      </form>
+    </div>
   );
 };
 

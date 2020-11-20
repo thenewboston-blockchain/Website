@@ -1,10 +1,10 @@
 import React, {FC, Fragment, useState, useEffect} from 'react';
-import {Icon, IconType, Shadow} from 'components';
+import {Icon, IconType} from 'components';
 import NewsletterForm from '../NewsletterForm';
 import './Newsletter.scss';
 
 const NewsletterModal: FC = () => {
-  const [modal, setModal] = useState<boolean>(false);
+  const [modal, setModal] = useState<boolean>(true);
 
   useEffect(() => {
     const newsletterModal = localStorage.getItem('newsletter-modal');

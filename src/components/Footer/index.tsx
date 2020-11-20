@@ -96,7 +96,7 @@ const Footer: FC<ComponentProps> = ({className}) => {
           <img src={Logo} alt="thenewboston logo" />
         </Link>
         <div className="Footer__newsletter-form">
-          <span>Sign up for our newsletter</span>
+          <span className="Footer__newsletter-form-span">Sign up for our newsletter</span>
           <NewsletterForm buttonType="secondary" />
         </div>
         <div className="Footer__social-media-links">{renderSocialMediaLinks()}</div>
