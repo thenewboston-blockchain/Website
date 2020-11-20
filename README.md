@@ -32,7 +32,7 @@ Please avoid working on issues that have the **Not Ready** label on them.
 
 The reward labels will be assigned to issues by the core team members based on certain parameters. If you want to create an issue with a design suggestion, please do it in the [design repository](https://github.com/thenewboston-developers/Design).
 
-Every PR must be connected to an issue, so as stated above, before raising a PR, please create an issue and reference it in the PR.
+Every PR must be connected to an issue, so as stated above, before creating a PR, please raise an issue and reference it in the PR.
 
 Before starting, add a comment to let others know that you'll be working on that issue.
 
