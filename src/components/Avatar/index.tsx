@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import clsx from 'clsx';
 
 import './Avatar.scss';
@@ -16,9 +16,9 @@ const getImageSizeBasedOnDeviceRatio = (size: number): number => {
 };
 
 const Avatar: FC<ComponentProps> = ({alt, className, size, src}) => {
-  const [source, setSource] = React.useState<string>(src);
+  const [source, setSource] = useState<string>(src);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const updatedSize = getImageSizeBasedOnDeviceRatio(size);
     if (src.includes('github')) {
       const [path] = src.split('?');
