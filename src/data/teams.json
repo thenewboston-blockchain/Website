@@ -703,6 +703,19 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01DDHVKK9S-5d84cd83bdb7-512",
           "slackUsername": "Colfax"
         }
+      },
+      {
+        "title": "Blockchain Researcher",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-11-19T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "57",
+          "displayName": "Hargobind Gupta",
+          "githubUsername": "Yara1990",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E9PS8ZEF-0edd4a970eba-512",
+          "slackUsername": "Hargobind -Blockchain Researcher"
+        }
       }
     ]
   },
