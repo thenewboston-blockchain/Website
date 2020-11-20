@@ -6,7 +6,7 @@ import Logo from 'assets/svgs/thenewboston-white.svg';
 import SocialMediaIcon from 'components/SocialMediaIcon';
 import {SocialMedia} from 'types/social-media';
 
-import NewsletterForm from 'components/Newsletter/NewsletterForm';
+import NewsletterForm from 'components/NewsletterForm';
 import FooterNavList from './FooterNavList';
 import './Footer.scss';
 
