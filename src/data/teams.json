@@ -716,6 +716,19 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E9PS8ZEF-0edd4a970eba-512",
           "slackUsername": "Hargobind -Blockchain Researcher"
         }
+      },
+      {
+        "title": "Blockchain Researcher",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-11-19T02:14:59.307535Z",
+        "contributor": {
+            "contributorId": "58",
+            "displayName": "Kayode Babarinde",
+            "githubUsername": "",
+            "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E6KXL06A-0e40b9f51c32-512",
+            "slackUsername": "Kayode Babarinde"
+        }
       }
     ]
   },
