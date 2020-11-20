@@ -25,7 +25,7 @@ contributions you make are **greatly appreciated**.
 
 To start, you can always check the [open issues](https://github.com/thenewboston-developers/Website/issues) in this repository. You can filter issues using the labels and find the ones that suit your domain. All issues that have a green coins label on them are ready to work on and the amount of coins that is on the "PR Reward" label will be transfered to the account of the person who solves that issue. Please avoid working on issues that have the "Not Ready" label on them.
 
-If you discover a new issue that was not yet reported, please open an issue before working on it. People who discover bugs will be rewarded as well with the amount of coinst specified by the red "Bug Bounty Owed" labels. The reward labels will be assigned on issues by the core team only based on the importance and difficulty of the tasks. If you want to create an issue with a design suggestion, please do it in the [design repository](https://github.com/thenewboston-developers/Design).
+If you discover a new issue that was not yet reported, please open an issue before working on it. People who discover bugs will be rewarded as well with the amount of coins specified by the red "Bug Bounty Owed" labels. The reward labels will be assigned on issues by the core team only based on the importance and difficulty of the tasks. If you want to create an issue with a design suggestion, please do it in the [design repository](https://github.com/thenewboston-developers/Design).
 
 Every PR must be connected to an issue, so as stated above, before rasing a PR, please create an issue and reference it in the PR.
 
