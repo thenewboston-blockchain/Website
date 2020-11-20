@@ -1,8 +1,9 @@
 import React, {FC, useState} from 'react';
 import clsx from 'clsx';
 
-import {A, ContributorTasks, CopyableAccountNumber, Qr, TotalAmount} from 'components';
+import {A, Avatar, ContributorTasks, CopyableAccountNumber, Qr, TotalAmount} from 'components';
 import SlideUpAccountDetails from 'containers/SlideUpAccountDetails';
+import {useWindowDimensions} from 'hooks';
 import {Task} from 'types/github';
 
 import './LeaderboardContributor.scss';
@@ -25,10 +26,11 @@ const LeaderboardContributor: FC<ComponentProps> = ({
   total_earnings,
 }) => {
   const [displaySlideUp, setDisplaySlideUp] = useState(false);
+  const {width} = useWindowDimensions();
 
   const handleClick = (e: any): void => {
     if (e.target.nodeName === 'A') return;
-    if (window.innerWidth > 768) return;
+    if (width > 768) return;
     setDisplaySlideUp(true);
   };
 
@@ -41,7 +43,7 @@ const LeaderboardContributor: FC<ComponentProps> = ({
       >
         {rank}
       </div>
-      <img className="LeaderboardContributor__user-avatar" src={github_avatar_url} alt={github_username} />
+      <Avatar alt={github_username} size={width > 768 ? 178 : 54} src={github_avatar_url} />
     </div>
   );
 
