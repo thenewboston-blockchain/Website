@@ -1,4 +1,4 @@
-import React, {FC, useEffect, useState} from 'react';
+import React, {FC, useEffect, useRef, useState} from 'react';
 import clsx from 'clsx';
 
 import './Avatar.scss';
@@ -17,19 +17,23 @@ const getImageSizeBasedOnDeviceRatio = (size: number): number => {
 
 const Avatar: FC<ComponentProps> = ({alt, className, size, src}) => {
   const [source, setSource] = useState<string>(src);
+  const isFetched = useRef<boolean>(false);
 
   useEffect(() => {
-    const updatedSize = getImageSizeBasedOnDeviceRatio(size);
-    if (src.includes('github')) {
-      const [path] = src.split('?');
-      setSource(`${path}?s=${updatedSize}`);
-    } else if (src.includes('slack')) {
-      const srcSplitArr = src.split('-');
-      srcSplitArr.pop();
-      const path = srcSplitArr.join('-');
-      setSource(`${path}-${updatedSize}`);
-    } else {
-      setSource(src);
+    if (!isFetched.current) {
+      const updatedSize = getImageSizeBasedOnDeviceRatio(size);
+      if (src.includes('github')) {
+        const [path] = src.split('?');
+        setSource(`${path}?s=${updatedSize}`);
+      } else if (src.includes('slack')) {
+        const srcSplitArr = src.split('-');
+        srcSplitArr.pop();
+        const path = srcSplitArr.join('-');
+        setSource(`${path}-${updatedSize}`);
+      } else {
+        setSource(src);
+      }
+      isFetched.current = true;
     }
   }, [src, size]);
 
