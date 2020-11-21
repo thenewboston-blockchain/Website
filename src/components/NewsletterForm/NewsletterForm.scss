@@ -1,4 +1,4 @@
-.newsletter-form {
+.NewsletterForm {
   margin-top: 16px;
   position: relative;
 
@@ -11,6 +11,16 @@
     }
   }
 
+  &__button {
+    margin-left: 16px;
+
+    @media (max-width: 500px) {
+      margin-left: 0;
+      margin-top: 16px;
+      width: 100%;
+    }
+  }
+
   &__error {
     color: var(--color-danger);
     height: 24px;
@@ -18,21 +28,13 @@
     position: absolute;
   }
 
-  input {
+  &__input {
+    border: 1px solid #a3acb9;
+    border-radius: 3px;
     padding: 8px;
     width: 240px;
 
     @media (max-width: 500px) {
-      width: 100%;
-    }
-  }
-
-  button {
-    margin-left: 16px;
-
-    @media (max-width: 500px) {
-      margin-left: 0;
-      margin-top: 16px;
       width: 100%;
     }
   }

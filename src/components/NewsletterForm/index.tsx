@@ -2,6 +2,9 @@ import React, {FC} from 'react';
 import axios from 'axios';
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
+
+import {Button} from 'components';
+
 import './NewsletterForm.scss';
 
 interface FormProps {
@@ -16,7 +19,7 @@ const NewsletterForm: FC<FormProps> = ({buttonType = 'primary'}) => {
   });
 
   return (
-    <div className="newsletter-form">
+    <div className="NewsletterForm">
       <form onSubmit={formik.handleSubmit}>
         <input
           name="email"
@@ -24,14 +27,14 @@ const NewsletterForm: FC<FormProps> = ({buttonType = 'primary'}) => {
           onChange={formik.handleChange}
           value={formik.values.email}
           type="text"
-          className="Input"
+          className="NewsletterForm__input"
           placeholder="Email address"
         />
-        <button className={`Button Button--contained Button--${buttonType}`} type="submit">
+        <Button className="NewsletterForm__button" color={buttonType} type="submit">
           Submit
-        </button>
+        </Button>
       </form>
-      <p className="newsletter-form__error">{formik.errors.email && formik.touched.email && formik.errors.email}</p>
+      <p className="NewsletterForm__error">{formik.errors.email && formik.touched.email && formik.errors.email}</p>
     </div>
   );
 };

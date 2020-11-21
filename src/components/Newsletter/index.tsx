@@ -19,7 +19,7 @@ const NewsletterModal: FC = () => {
       <div className="newsletter-modal">
         <div className="newsletter-modal__content">
           <Icon icon={IconType.closeIcon} onClick={() => setModal(false)} />
-          <h1 className="newsletter-modal__title">Join The Community!</h1>
+          <h1 className="newsletter-modal__title">Join the Community!</h1>
           <p>Get the latest updates on new videos, openings, features, and special offers directly in your inbox!</p>
           <NewsletterForm />
         </div>
