@@ -723,11 +723,11 @@
         "payPerDay": 2800,
         "createdDate": "2020-11-19T02:14:59.307535Z",
         "contributor": {
-            "contributorId": "58",
-            "displayName": "Kayode Babarinde",
-            "githubUsername": "",
-            "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E6KXL06A-0e40b9f51c32-512",
-            "slackUsername": "Kayode Babarinde"
+          "contributorId": "58",
+          "displayName": "Kayode Babarinde",
+          "githubUsername": "",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E6KXL06A-0e40b9f51c32-512",
+          "slackUsername": "Kayode Babarinde"
         }
       },
       {
@@ -736,11 +736,11 @@
         "payPerDay": 2800,
         "createdDate": "2020-11-19T02:14:59.307535Z",
         "contributor": {
-           "contributorId": "59",
-           "displayName": "Joe Sykes",
-           "githubUsername": "",
-           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01CTDXMK1Q-4953bceb47d4-512",
-           "slackUsername": "Joe Sykes"
+          "contributorId": "59",
+          "displayName": "Joe Sykes",
+          "githubUsername": "",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01CTDXMK1Q-4953bceb47d4-512",
+          "slackUsername": "Joe Sykes"
         }
       }
     ]
