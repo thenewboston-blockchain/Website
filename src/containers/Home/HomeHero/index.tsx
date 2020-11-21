@@ -21,21 +21,37 @@ const HomeHero: FC = () => {
   const [helloText, setHelloText] = useState<string>(defaultHelloWorld);
 
   useEffect(() => {
+    // Setup the variables
     let i = 0;
+    let fadeCount = 1;
     let timerId: ReturnType<typeof setTimeout>;
-    const interval = setInterval(() => {
-      setHelloFadeClass(HelloFadeClass.fadeOut);
-      timerId = setTimeout(() => {
-        const key = shuffledHelloKeys[i];
-        setHelloText(HelloWorld[key]);
-        i += 1;
-        if (i === shuffledHelloKeys.length) {
-          i = 0;
-        }
+
+    // Text change functions
+    function fadeInOut() {
+      if (fadeCount === 0) {
         setHelloFadeClass(HelloFadeClass.fadeIn);
+        fadeCount = 1;
+      } else {
+        setHelloFadeClass(HelloFadeClass.fadeOut);
+        fadeCount = 0;
+      }
+    }
+    function switchLang() {
+      const newText = HelloWorld[HelloWorldKeys[i]];
+      setHelloText(newText);
+      i += 1;
+    }
+
+    // Code that runs (or something)
+    const interval = setInterval(() => {
+      fadeInOut();
+      timerId = setTimeout(() => {
+        switchLang();
+        fadeInOut();
       }, 1000);
     }, 5000);
 
+    // Return the timeout and interval
     return () => {
       if (timerId) {
         clearTimeout(timerId);
@@ -44,6 +60,7 @@ const HomeHero: FC = () => {
     };
   }, [setHelloFadeClass]);
 
+  // Everything else
   const renderSocialMediaLinks = () =>
     [SocialMedia.slack, SocialMedia.github, SocialMedia.youtube].map((website) => (
       <SocialMediaIcon className="HomeHero__SocialMediaLink" iconSize={30} key={website} website={website} />
