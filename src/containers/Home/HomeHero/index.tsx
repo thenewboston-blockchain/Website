@@ -37,7 +37,7 @@ const HomeHero: FC = () => {
       }
     }
     function switchLang() {
-      const newText = HelloWorld[HelloWorldKeys[i]];
+      const newText = HelloWorld[shuffledHelloKeys[i]];
       setHelloText(newText);
       i += 1;
     }
