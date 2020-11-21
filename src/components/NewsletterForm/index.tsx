@@ -12,12 +12,11 @@ const NewsletterForm: FC<FormProps> = ({buttonType = 'primary'}) => {
   const formik = useFormik({
     initialValues: {email: ''},
     onSubmit: ({email}) => axios.post('NEWSLETTER__ENDPOINT', {email}),
-    validationSchema: Yup.object().shape({email: Yup.string().email('Invalid email').required('Required')}),
+    validationSchema: Yup.object().shape({email: Yup.string().email('Invalid email')}),
   });
 
   return (
     <div className="newsletter-form">
-      <p className="newsletter-form__error">{formik.errors.email && formik.touched.email && formik.errors.email}</p>
       <form onSubmit={formik.handleSubmit}>
         <input
           name="email"
@@ -32,6 +31,7 @@ const NewsletterForm: FC<FormProps> = ({buttonType = 'primary'}) => {
           Submit
         </button>
       </form>
+      <p className="newsletter-form__error">{formik.errors.email && formik.touched.email && formik.errors.email}</p>
     </div>
   );
 };

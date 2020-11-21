@@ -1,4 +1,7 @@
 .newsletter-form {
+  margin-top: 16px;
+  position: relative;
+
   form {
     display: flex;
     flex-wrap: wrap;
@@ -11,6 +14,8 @@
   &__error {
     color: var(--color-danger);
     height: 24px;
+    margin-top: 5px;
+    position: absolute;
   }
 
   input {
