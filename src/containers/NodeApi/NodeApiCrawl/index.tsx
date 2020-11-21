@@ -18,6 +18,18 @@ const NodeApiCrawl: FC = () => {
 
       <p>Node will stop the process if it receive a stop message.</p>
 
+      <DocEndpoint endpoint="/crawl" method="GET" />
+      <RequestResponseSnippet
+        code={`{
+  "crawl_last_completed": None,
+  "crawl_status": "crawling",
+  "ip_address": "20.188.56.203",
+  "port": None,
+  "protocol": "http"
+}`}
+        heading="Response"
+      />
+
       <DocEndpoint endpoint="/crawl" method="POST" />
       <TableParams
         items={[
@@ -31,11 +43,22 @@ const NodeApiCrawl: FC = () => {
       <RequestResponseSnippet
         code={`{
     data={
-        "crawl": "start"
+        "crawl": "start" (or "stop")
     },
-    nid_signing_key="b4d335fa7662216acba06c18d93c6cfb688c8057cbe9193ddc8e6fb3702ba1d979e43b09e06c6c7c38358bbee5243dc37a52c5212298c2259be48285e3da130c"
+    signature="b4d335fa7662216acbcccccccccccccc688c8057cbe9193ddc8e6fb3702ba1d979e43b09e06c6c7c38358bbee5243dc37a52c5212298c2259be48285e3da130c"
 }`}
         heading="Request (Client > Node)"
+      />
+
+      <RequestResponseSnippet
+        code={`{
+  "crawl_last_completed": None,
+  "crawl_status": "crawling",
+  "ip_address": "20.188.56.203",
+  "port": None,
+  "protocol": "http"
+}`}
+        heading="Response"
       />
     </DocContainer>
   );

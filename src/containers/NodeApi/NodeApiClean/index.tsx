@@ -17,6 +17,17 @@ const NodeApiClean: FC = () => {
 
       <p>Node will stop the process if it receive a stop message.</p>
 
+      <DocEndpoint endpoint="/clean" method="GET" />
+      <RequestResponseSnippet
+        code={`{
+  "clean_last_completed": None,
+  "clean_status": "cleaning",
+  "ip_address": "20.188.56.203",
+  "port": None,
+  "protocol": "http"
+}`}
+        heading="Response"
+      />
       <DocEndpoint endpoint="/clean" method="POST" />
       <TableParams
         items={[
@@ -30,11 +41,21 @@ const NodeApiClean: FC = () => {
       <RequestResponseSnippet
         code={`{
     data={
-        "clean": "start"
+        "clean": "start" (or "stop")
     },
-    nid_signing_key="b4d335fa7662216acba06c18d93c6cfb688c8057cbe9193ddc8e6fb3702ba1d979e43b09e06c6c7c38358bbee5243dc37a52c5212298c2259be48285e3da130c"
+    signature="b4d335fa7662216acbcccccccccccccc688c8057cbe9193ddc8e6fb3702ba1d979e43b09e06c6c7c38358bbee5243dc37a52c5212298c2259be48285e3da130c"
 }`}
         heading="Request (Client > Node)"
+      />
+      <RequestResponseSnippet
+        code={`{
+  'clean_last_completed': None,
+  'clean_status': 'cleaning',
+  'ip_address': '20.188.56.203',
+  'port': None,
+  'protocol': 'http'
+}`}
+        heading="Response"
       />
     </DocContainer>
   );
