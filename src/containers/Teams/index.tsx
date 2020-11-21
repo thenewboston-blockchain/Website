@@ -12,6 +12,7 @@ const teamMembers = getTeamMembers();
 
 const TEAM_NAME_FILTERS: NavOption[] = [
   {pathname: TeamName.all, title: 'All'},
+  {pathname: TeamName.dotnetCore, title: '.NET Core'},
   {pathname: TeamName.backEndDevelopers, title: 'Back-End Developers'},
   {pathname: TeamName.community, title: 'Community'},
   {pathname: TeamName.design, title: 'Design'},

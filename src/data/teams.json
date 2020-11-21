@@ -1,5 +1,23 @@
 [
   {
+    "title": ".NET Core",
+    "contributors": [
+      {
+        "title": "Software Developer",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "59",
+          "displayName": "Mircea Teodor Oprea",
+          "githubUsername": "Mirch",
+          "profileImage": "https://avatars1.githubusercontent.com/u/15807790?s=460&u=44cb333c66bf58ee7b5b5d5391c7653d0e705b96&v=4",
+          "slackUsername": "Mircea Teodor Oprea"
+        }
+      }
+    ]
+  },
+  {
     "title": "Back-End Developers",
     "contributors": [
       {
