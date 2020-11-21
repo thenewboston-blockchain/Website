@@ -35,7 +35,9 @@ const Avatar: FC<ComponentProps> = ({alt, className, size, src}) => {
 
   return source?.length ? (
     <img alt={alt} className={clsx('Avatar', className)} height={size} loading="lazy" src={source} width={size} />
-  ) : null;
+  ) : (
+    <div className={clsx('Avatar Placeholder', className)} style={{height: size, width: size}} />
+  );
 };
 
 export default Avatar;
