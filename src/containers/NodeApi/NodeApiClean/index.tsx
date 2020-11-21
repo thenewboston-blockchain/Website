@@ -20,7 +20,7 @@ const NodeApiClean: FC = () => {
       <DocEndpoint endpoint="/clean" method="GET" />
       <RequestResponseSnippet
         code={`{
-  "clean_last_completed": None,
+  "clean_last_completed": "2020-11-21 11:15:07.923380+00:00",
   "clean_status": "cleaning",
   "ip_address": "20.188.56.203",
   "port": None,
@@ -49,7 +49,7 @@ const NodeApiClean: FC = () => {
       />
       <RequestResponseSnippet
         code={`{
-  'clean_last_completed': None,
+  'clean_last_completed': "2020-11-21 11:15:07.923380+00:00",
   'clean_status': 'cleaning',
   'ip_address': '20.188.56.203',
   'port': None,

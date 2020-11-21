@@ -21,7 +21,7 @@ const NodeApiCrawl: FC = () => {
       <DocEndpoint endpoint="/crawl" method="GET" />
       <RequestResponseSnippet
         code={`{
-  "crawl_last_completed": None,
+  "crawl_last_completed": "2020-11-21 11:15:07.923380+00:00",
   "crawl_status": "crawling",
   "ip_address": "20.188.56.203",
   "port": None,
@@ -52,7 +52,7 @@ const NodeApiCrawl: FC = () => {
 
       <RequestResponseSnippet
         code={`{
-  "crawl_last_completed": None,
+  "crawl_last_completed": "2020-11-21 11:15:07.923380+00:00",
   "crawl_status": "crawling",
   "ip_address": "20.188.56.203",
   "port": None,
