@@ -17,8 +17,7 @@ const BankApiBlocks: FC = () => {
 
       <DocEndpoint endpoint="/blocks" method="GET" />
       <RequestResponseSnippet
-        code={`
-{
+        code={`{
   "count": 2,
   "next": "http://143.110.137.54/blocks?limit=50&offset=50",
   "previous": null,
@@ -39,8 +38,7 @@ const BankApiBlocks: FC = () => {
       "sender": "a37e2836805975f334108b55523634c995bd2a4db610062f404510617e83126f",
       "signature": "54875b5fa4db317133b7195d5afa43e5d7c7659970b5c07f7408fb43524573ee0db3078daffa3a5fc341c6851a85c5128d8a79b8f71d5f7d87e275ccca1e8408"
     }
-}
-`}
+}`}
         heading="Response"
       />
 
