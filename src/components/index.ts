@@ -1,4 +1,5 @@
 import A from './A';
+import Avatar from './Avatar';
 import BreadcrumbMenu from './BreadcrumbMenu';
 import {CodeSnippet, RequestResponseSnippet, SnippetLang} from './CodeSnippet';
 import ContributorTasks from './ContributorTasks';
@@ -20,6 +21,7 @@ import MarketingButton from './MarketingButton';
 import MenuGroup from './MenuGroup';
 import LabelFilter from './LabelFilter';
 import Loader from './Loader';
+import OrganizationMenuItems from './OrganizationMenuItems';
 import PageTitle from './PageTitle';
 import Pagination from './Pagination';
 import Popover from './Popover';
@@ -36,6 +38,7 @@ import TotalAmount from './TotalAmount';
 
 export {
   A,
+  Avatar,
   BreadcrumbMenu,
   Button,
   CodeSnippet,
@@ -63,6 +66,7 @@ export {
   Loader,
   MarketingButton,
   MenuGroup,
+  OrganizationMenuItems,
   PageTitle,
   Pagination,
   Popover,

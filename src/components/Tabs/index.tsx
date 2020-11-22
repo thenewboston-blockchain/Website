@@ -1,4 +1,4 @@
-import React, {FC, useState, ReactNode} from 'react';
+import React, {FC, ReactNode, useState} from 'react';
 import clsx from 'clsx';
 
 import './Tabs.scss';

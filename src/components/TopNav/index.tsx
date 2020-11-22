@@ -105,6 +105,13 @@ const TopNav: FC<ComponentProps> = ({className}) => {
       <>
         <TopNavPopoverItem
           closePopover={unsetMoreAnchorEl}
+          description="Propose ideas you want built"
+          iconType={IconType.hammerWrench}
+          title="Project Proposals"
+          to="/project-proposals/overview"
+        />
+        <TopNavPopoverItem
+          closePopover={unsetMoreAnchorEl}
           description="Download thenewboston assets"
           iconType={IconType.fileDownload}
           title="Assets"
@@ -188,6 +195,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
           </div>
           <div className="mobile-menu__column">
             <div className="mobile-menu__column-title">More</div>
+            {renderMobileLink('Project Proposals', '/project-proposals/overview')}
             {renderMobileLink('Assets', '/assets')}
             {renderMobileLink('FAQ', '/faq')}
             {renderMobileLink('Donate', '/donate')}
