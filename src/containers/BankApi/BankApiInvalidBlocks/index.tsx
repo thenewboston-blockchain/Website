@@ -40,7 +40,7 @@ const BankApiInvalidBlocks: FC = () => {
       <RequestResponseSnippet
         code={`{
   "count": 234,
-  "next": "http://143.110.137.54/invalid_blocks?limit=50&offset=2",
+  "next": "http://143.110.137.54/invalid_blocks?limit=2&offset=2",
   "previous": null,
   "results": 
   [
