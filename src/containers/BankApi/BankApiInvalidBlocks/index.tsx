@@ -40,7 +40,7 @@ const BankApiInvalidBlocks: FC = () => {
       <RequestResponseSnippet
         code={`{
   "count": 234,
-  "next": "http://143.110.137.54/invalid_blocks?limit=50&offset=50",
+  "next": "http://143.110.137.54/invalid_blocks?limit=50&offset=2",
   "previous": null,
   "results": 
   [
@@ -53,7 +53,6 @@ const BankApiInvalidBlocks: FC = () => {
       "confirmation_validator": "fcd2dce8-9e4f-4bf1-8dac-cdbaf64e5ce8",
       "primary_validator": "51461a75-dd8d-4133-81f4-543a3b054149"
     },
-    ...
     {
       "id": "c6fc11cf-8948-4d32-96c9-d56caa6d5b24",
       "created_date": "2020-07-11T19:44:16.518695Z",
