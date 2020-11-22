@@ -20,6 +20,7 @@ import MarketingButton from './MarketingButton';
 import MenuGroup from './MenuGroup';
 import LabelFilter from './LabelFilter';
 import Loader from './Loader';
+import OrganizationMenuItems from './OrganizationMenuItems';
 import PageTitle from './PageTitle';
 import Pagination from './Pagination';
 import Popover from './Popover';
@@ -63,6 +64,7 @@ export {
   Loader,
   MarketingButton,
   MenuGroup,
+  OrganizationMenuItems,
   PageTitle,
   Pagination,
   Popover,
