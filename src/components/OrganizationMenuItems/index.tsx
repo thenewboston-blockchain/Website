@@ -4,6 +4,13 @@ import {NavLink} from 'react-router-dom';
 import {MenuGroup} from 'components';
 import {NavigationItem} from 'types/navigation';
 
+export const internalNavigationData = [
+  {
+    name: 'New User Operations',
+    url: '/internal/new-user-operations',
+  },
+];
+
 export const projectProposalsNavigationData = [
   {
     name: 'Overview',
@@ -26,6 +33,10 @@ const OrganizationMenuItems: FC = () => {
 
   return (
     <>
+      <MenuGroup title="Internal" urlBase="internal">
+        {renderNavLinks(internalNavigationData)}
+      </MenuGroup>
+
       <MenuGroup title="Project Proposals" urlBase="project-proposals">
         {renderNavLinks(projectProposalsNavigationData)}
       </MenuGroup>
