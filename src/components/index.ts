@@ -6,10 +6,12 @@ import CopyableAccountNumber from './CopyableAccountNumber';
 import DashboardLayout from './DashboardLayout';
 import DocsMenuItems from './DocsMenuItems';
 import {DocContainer, DocEndpoint, DocImage, DocInlineCode, DocList, DocSubSection} from './DocWrapper';
+import DropdownInput from './DropdownInput';
 import EmptyPage from './EmptyPage';
 import FlatNavLinks from './FlatNavLinks';
 import Footer from './Footer';
 import {Button} from './FormElements';
+import GoToTop from './GoToTop';
 import HashLink from './HashLink';
 import Icon, {IconType} from './Icon';
 import Label from './Label';
@@ -18,6 +20,7 @@ import MarketingButton from './MarketingButton';
 import MenuGroup from './MenuGroup';
 import LabelFilter from './LabelFilter';
 import Loader from './Loader';
+import PageTitle from './PageTitle';
 import Pagination from './Pagination';
 import Popover from './Popover';
 import Qr from './Qr';
@@ -46,9 +49,11 @@ export {
   DocList,
   DocSubSection,
   DocsMenuItems,
+  DropdownInput,
   EmptyPage,
   FlatNavLinks,
   Footer,
+  GoToTop,
   HashLink,
   Icon,
   IconType,
@@ -58,6 +63,7 @@ export {
   Loader,
   MarketingButton,
   MenuGroup,
+  PageTitle,
   Pagination,
   Popover,
   Qr,

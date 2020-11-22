@@ -29,8 +29,7 @@ export NETWORK_SIGNING_KEY="${networkSigningKey}"`}
       <CodeSnippet
         code={`logout
 su - deploy
-printenv
-`}
+printenv`}
         heading="Log out and log back in"
       />
 
@@ -38,8 +37,7 @@ printenv
         code={`cd /var/www/${name}/
 python3 manage.py makemigrations && python3 manage.py migrate
 python3 manage.py createsuperuser
-python3 manage.py collectstatic
-`}
+python3 manage.py collectstatic`}
         heading="Set up database"
       />
       {initializationCommand}

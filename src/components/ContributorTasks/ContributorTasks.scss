@@ -32,6 +32,7 @@
   td:nth-child(1),
   th:nth-child(1) {
     max-width: 140px;
+    min-width: 140px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -39,7 +40,8 @@
   // Repository
   td:nth-child(2),
   th:nth-child(2) {
-    width: 140px;
+    max-width: 140px;
+    min-width: 140px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -47,13 +49,15 @@
   // Completed
   td:nth-child(3),
   th:nth-child(3) {
-    width: 70px;
+    max-width: 70px;
+    min-width: 70px;
   }
 
   // Amount
   td:nth-child(4),
   th:nth-child(4) {
-    width: 60px;
+    max-width: 100px;
+    min-width: 100px;
   }
 
   &__amount {

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Flip, ToastContainer} from 'react-toastify';
+import {HelmetProvider} from 'react-helmet-async';
 
 // Styles
 import 'normalize.css';
@@ -11,7 +12,9 @@ import App from 'containers/App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <HelmetProvider>
+      <App />
+    </HelmetProvider>
     <ToastContainer
       autoClose={3000}
       closeOnClick

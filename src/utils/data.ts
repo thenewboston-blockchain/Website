@@ -40,6 +40,7 @@ export const getTeamMembers = (): TeamMember[] => {
       const {contributorId, ...otherProps} = contributor;
       if (!members[contributorId]) {
         members[contributorId] = {
+          contributorId,
           createdDate,
           isLead,
           payPerDay,
@@ -64,9 +65,6 @@ export const getTeamMembers = (): TeamMember[] => {
   });
 
   return Object.entries(members)
-    .sort(
-      ([, a]: [string, any], [, b]: [string, any]) =>
-        new Date(b.createdDate).valueOf() - new Date(a.createdDate).valueOf(),
-    )
+    .sort(([, a]: [string, any], [, b]: [string, any]) => a.contributorId - b.contributorId)
     .map(([, member]) => member) as TeamMember[];
 };

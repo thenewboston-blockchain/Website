@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {useHistory} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 import {Icon, IconType} from 'components';
 
@@ -15,21 +15,18 @@ interface ComponentProps {
 }
 
 const TopNavPopoverItem: FC<ComponentProps> = ({closePopover, description, iconSize, iconType, title, to}) => {
-  const history = useHistory();
-
   const handleButtonClick = (): void => {
-    history.push(to);
     closePopover();
   };
 
   return (
-    <button className="TopNavPopoverItem" onClick={handleButtonClick}>
+    <Link className="TopNavPopoverItem" to={to} onClick={handleButtonClick}>
       <Icon className="TopNavPopoverItem__icon" icon={iconType} size={iconSize} />
       <div className="TopNavPopoverItem__right">
         <span className="TopNavPopoverItem__title">{title}</span>
         <span className="TopNavPopoverItem__description">{description}</span>
       </div>
-    </button>
+    </Link>
   );
 };
 

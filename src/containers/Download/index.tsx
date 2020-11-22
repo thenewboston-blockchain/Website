@@ -1,6 +1,6 @@
 import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'react';
 
-import {Button, CodeSnippet, Icon, IconType, Loader, Tab, Tabs} from 'components';
+import {Button, CodeSnippet, Icon, IconType, Loader, PageTitle, Tab, Tabs} from 'components';
 import {Release} from 'types/github';
 import {fetchGithubReleases} from 'utils/github';
 import {displayToast} from 'utils/toast';
@@ -14,6 +14,17 @@ enum Os {
 }
 
 const Download: FC = () => {
+  const userOsMatcher = /Windows|Linux|Mac/gi.exec(navigator.userAgent);
+  let userOsTabIndex = 0;
+
+  if (userOsMatcher && userOsMatcher[0] === 'Mac') {
+    userOsTabIndex = 1;
+  }
+
+  if (userOsMatcher && userOsMatcher[0] === 'Linux') {
+    userOsTabIndex = 2;
+  }
+
   const [loading, setLoading] = useState<boolean>(true);
   const [releases, setReleases] = useState<Release[]>([]);
 
@@ -105,11 +116,11 @@ const Download: FC = () => {
           <div className="instruction-container__li">
             <span className="instruction-container__instruction">To run thenewboston, make it executable</span>
           </div>
-          <CodeSnippet code="$ sudo chmod a+x TNB-Account-Manager-1.0.0-alpha.20-linux*.AppImage" />
+          <CodeSnippet code="$ sudo chmod a+x TNB-Account-Manager-*.AppImage" />
           <div className="instruction-container__li">
             <span className="instruction-container__instruction">Run!</span>
           </div>
-          <CodeSnippet code="$ ./TNB-Account-Manager-1.0.0-alpha.20-linux*.AppImage" />
+          <CodeSnippet code="$ ./TNB-Account-Manager-*.AppImage" />
         </>
       );
     }
@@ -119,7 +130,7 @@ const Download: FC = () => {
   const renderTabPanel = useCallback(
     (os: Os) => (
       <div className="Download__tab-panel">
-        <a className="Download__download-link" href={getDownloadLink(os)}>
+        <a className="Download__download-link" href={getDownloadLink(os)} tabIndex={-1}>
           <Button className="Download__download-button" disabled={!latestReleaseNumber}>
             Download for {os} <Icon className="Download__download-icon" icon={IconType.arrowCollapseDown} size={18} />
           </Button>
@@ -152,16 +163,18 @@ const Download: FC = () => {
   );
 
   return (
-    <div className="Download">
-      {loading ? (
-        <Loader />
-      ) : (
-        <>
-          <span className="Download__latest-version">Latest Version: 1.0.0-alpha.{latestReleaseNumber}</span>
-          <Tabs tabs={tabs} />
-        </>
-      )}
-    </div>
+    <>
+      <PageTitle title="Download" />
+      <div className="Download">
+        {loading ? (
+          <Loader />
+        ) : (
+          <>
+            <Tabs defaultTab={userOsTabIndex} tabs={tabs} latestReleaseNumber={latestReleaseNumber} />
+          </>
+        )}
+      </div>
+    </>
   );
 };
 
