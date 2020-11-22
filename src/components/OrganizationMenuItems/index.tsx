@@ -9,6 +9,10 @@ export const internalNavigationData = [
     name: 'New User Operations',
     url: '/internal/new-user-operations',
   },
+  {
+    name: 'Team Lead Onboarding',
+    url: '/internal/team-lead-onboarding',
+  },
 ];
 
 export const projectProposalsNavigationData = [
