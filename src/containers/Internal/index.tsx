@@ -6,6 +6,7 @@ import {internalNavigationData} from 'components/OrganizationMenuItems';
 import {PageData, PageDataObject} from 'types/page-data';
 
 import InternalNewUserOperations from './InternalNewUserOperations';
+import InternalProductDevelopment from './InternalProductDevelopment';
 import InternalTeamLeadOnboarding from './InternalTeamLeadOnboarding';
 
 const defaultPageData: PageData = {
@@ -17,6 +18,10 @@ const pageData: PageDataObject = {
   'new-user-operations': {
     content: <InternalNewUserOperations />,
     name: 'New User Operations',
+  },
+  'product-development': {
+    content: <InternalProductDevelopment />,
+    name: 'Product Development',
   },
   'team-lead-onboarding': {
     content: <InternalTeamLeadOnboarding />,

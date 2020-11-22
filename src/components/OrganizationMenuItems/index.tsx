@@ -13,6 +13,10 @@ export const internalNavigationData = [
     name: 'Team Lead Onboarding',
     url: '/internal/team-lead-onboarding',
   },
+  {
+    name: 'Product Development',
+    url: '/internal/product-development',
+  },
 ];
 
 export const projectProposalsNavigationData = [
