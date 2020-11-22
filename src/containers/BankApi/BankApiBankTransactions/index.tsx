@@ -59,19 +59,6 @@ const BankApiBankTransactions: FC = () => {
         },
         "amount": 1,
         "recipient": "2e86f48216567302527b69eae6c6a188097ed3a9741f43cc3723e570cf47644c"
-    },
-    {
-        "id": "800746a9-1bb9-4b3e-b17a-b9457dd6b385",
-        "block": {
-            "id": "74b9d153-aca8-46b0-9c82-55a1e0dd4958",
-            "created_date": "2020-11-20T07:43:34.261742Z",
-            "modified_date": "2020-11-20T07:43:34.261789Z",
-            "balance_key": "e9321848d3f496bd4a5713b892c0a2c229c64b5a5fa2d2f56f33f3bd6aea5d80",
-            "sender": "addf211d203c077bc5c6b78f41ddc68481804539de4bd3fd736fa853514551c0",
-            "signature": "19726b9acc9b77fd5a8f1828e27f7b81db22d9ed3c8f1f267aaddbe1573bfbcfa80fe95bfb88b7f1d54e5736039760762723a6c017e3af9e92d4ef609b850406"
-        },
-        "amount": 500,
-        "recipient": "b5e439050e077544a563c08fbabc7c2729ad906cb0d7d68b89501c35f4b878aa"
     }
   ]
 }`}
