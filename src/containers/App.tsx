@@ -16,6 +16,7 @@ import Home from './Home';
 import Leaderboard from './Leaderboard';
 import Openings from './Openings';
 import PrimaryValidatorApi from './PrimaryValidatorApi';
+import ProjectProposals from './ProjectProposals';
 import Social from './Social';
 import StyleGuide from './StyleGuide';
 import Tasks from './Tasks';
@@ -71,6 +72,7 @@ const App: FC = () => {
           <Route path="/download" component={Download} />
           <Route path="/guide/:chapter" component={Guide} />
           <Route path="/primary-validator-api/:chapter" component={PrimaryValidatorApi} />
+          <Route path="/project-proposals/:chapter" component={ProjectProposals} />
           <Route path="/style-guide/:chapter" component={StyleGuide} />
           <Redirect to="/" />
         </Switch>

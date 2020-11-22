@@ -6,14 +6,14 @@ import intersection from 'lodash/intersection';
 
 import {
   BreadcrumbMenu,
+  DropdownInput,
   EmptyPage,
   FlatNavLinks,
+  Icon,
+  IconType,
   LabelFilter,
   Loader,
   PageTitle,
-  DropdownInput,
-  Icon,
-  IconType,
 } from 'components';
 import {fetchGithubIssues} from 'utils/github';
 import {GenericVoidFunction} from 'types/generic';
