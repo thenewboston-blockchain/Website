@@ -18,28 +18,33 @@ const BankApiBanks: FC = () => {
 
       <DocEndpoint endpoint="/banks" method="GET" />
       <RequestResponseSnippet
-        code={`[
-  {
-    "account_number": "5e12967707909e62b2bb2036c209085a784fabbc3deccefee70052b6181c8ed8",
-    "ip_address": "83.168.1.232",
-    "node_identifier": "d5356888dc9303e44ce52b1e06c3165a7759b9df1e6a6dfbd33ee1c3df1ab4d1",
-    "port": 80,
-    "protocol": "http",
-    "version": "v1.0",
-    "default_transaction_fee": "1.0000000000000000",
-    "trust": "100.00"
-  },
-  {
-    "account_number": "db1a9ac3c356ab744ab4ad5256bb86c2f6dfaa7c1aece1f026a08dbd8c7178f2",
-    "ip_address": "74.124.1.68",
-    "node_identifier": "3214108063cda7b259782c57ff8cec343ad2f1ad35baf38c3503db5cf6f3b2f7",
-    "port": 80,
-    "protocol": "http",
-    "version": "v1.0",
-    "default_transaction_fee": "2.5000000000000000",
-    "trust": "98.32"
-  }
-]`}
+        code={`{
+  "count": 2,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "account_number": "336dfdf1eacb968511da967b2289e39361a33b823ef2cfabb9cd818b3110e2ee",
+      "ip_address": "3.35.3.48",
+      "node_identifier": "35f4c988f425809ca7f5d0b319cdf8f7d7aba1b064fd0efc85d61fa0f4d05145",
+      "port": 80,
+      "protocol": "http",
+      "version": "v1.0",
+      "default_transaction_fee": 1,
+      "trust": "100.00"
+    },
+    {
+      "account_number": "dfddf07ec15cbf363ecb52eedd7133b70b3ec896b488460bcecaba63e8e36be5",
+      "ip_address": "143.110.137.54",
+      "node_identifier": "6dbaff44058e630cb375955c82b0d3bd7bc7e20cad93e74909a8951f747fb8a4",
+      "port": null,
+      "protocol": "http",
+      "version": "v1.0",
+      "default_transaction_fee": 1,
+      "trust": "12.34"
+    }
+  ]
+}`}
         heading="Response"
       />
 
@@ -56,23 +61,23 @@ const BankApiBanks: FC = () => {
       <RequestResponseSnippet
         code={`{
   "message": {
-    "trust": 76.26
+    "trust": "76.43"
   },
-  "node_identifier": "d5356888dc9303e44ce52b1e06c3165a7759b9df1e6a6dfbd33ee1c3df1ab4d1",
-  "signature": "d11c5f7fcc5f541a94ceee7c73972b21c73912e41f06cc22989863fa22529f55d0b81bc9f95a203191be0259518bdfe073de77d87a7230d37bb14f21666ee40a"
+  "node_identifier": "35f4c988f425809ca7f5d0b319cdf8f7d7aba1b064fd0efc85d61fa0f4d05145",
+  "signature": "93952df29ae3885fd9c9f88721314236bdb53ca5632b2959dcf5cf3c38cb8b96ca57ff84c5337eb164f803237f901abcb0c41a9f71e14aa2fb3159c7ad7a7509"
 }`}
         heading="Request"
       />
       <RequestResponseSnippet
         code={`{
-  "account_number": "5e12967707909e62b2bb2036c209085a784fabbc3deccefee70052b6181c8ed8",
-  "ip_address": "192.168.1.232",
-  "node_identifier": "d5356888dc9303e44ce52b1e06c3165a7759b9df1e6a6dfbd33ee1c3df1ab4d1",
+  "account_number": "dfddf07ec15cbf363ecb52eedd7133b70b3ec896b488460bcecaba63e8e36be5",
+  "ip_address": "143.110.137.54",
+  "node_identifier": "6dbaff44058e630cb375955c82b0d3bd7bc7e20cad93e74909a8951f747fb8a4",
   "port": null,
   "protocol": "http",
   "version": "v1.0",
-  "default_transaction_fee": "1.0000000000000000",
-  "trust": "76.26"
+  "default_transaction_fee": 1,
+  "trust": "76.43"
 }`}
         heading="Response"
       />
