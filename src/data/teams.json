@@ -42,7 +42,7 @@
           "contributorId": "5",
           "displayName": "Mikhail",
           "githubUsername": "fonar",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01CTP5N98D-11bd9bb494f5-512",
+          "profileImage": "https://avatars0.githubusercontent.com/u/5008719?s=460&v=4",
           "slackUsername": "Mikhail"
         }
       },
@@ -68,7 +68,7 @@
           "contributorId": "18",
           "displayName": "Abhi",
           "githubUsername": "Abhishek5101",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01BPK991R7-8dac7d9c0d9c-512",
+          "profileImage": "https://avatars2.githubusercontent.com/u/35332154?s=460&u=177f255ad3f55a5a8b610b9b807f60d2e95d6519&v=4",
           "slackUsername": "Abhi"
         }
       },
@@ -120,7 +120,7 @@
           "contributorId": "52",
           "displayName": "Yashovardhan",
           "githubUsername": "YashovardhanSingh",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EDS61953-f188ea1780e8-512",
+          "profileImage": "https://avatars1.githubusercontent.com/u/63940326?s=460&v=4",
           "slackUsername": "yashovardhansingh"
         }
       }
@@ -151,8 +151,34 @@
           "contributorId": "6",
           "displayName": "Miss ChrishaPh",
           "githubUsername": "MsChrishaph",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01ENH6SBMX-eadd7536195a-512",
+          "profileImage": "https://avatars3.githubusercontent.com/u/74167226?s=460&u=03945a9e2040664fe6f8d05baf22f6b43d3e866c&v=4",
           "slackUsername": "MsChrishaPh"
+        }
+      },
+      {
+        "title": "Slack Manager",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "10",
+          "displayName": "Benjamin Thorpe",
+          "githubUsername": null,
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01BWTU729Z-b2ae1378a598-512",
+          "slackUsername": "Benjamin Thorpe"
+        }
+      },
+      {
+        "title": "Slack Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "12",
+          "displayName": "KryptoZero",
+          "githubUsername": null,
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E2FN4D1S-4688c60ed154-512",
+          "slackUsername": "KryptoZero"
         }
       },
       {
@@ -296,7 +322,7 @@
           "contributorId": "28",
           "displayName": "Rajput Usman",
           "githubUsername": null,
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E0FS4762-ge975c8b59da-512",
+          "profileImage": "https://avatars0.githubusercontent.com/u/65516140?s=460&v=4",
           "slackUsername": "Rajput Usman"
         }
       },
@@ -488,7 +514,7 @@
           "contributorId": "53",
           "displayName": "Martin Nowosad",
           "githubUsername": "MrIceman",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U016SCACHM4-1a824cfe8763-512",
+          "profileImage": "https://avatars1.githubusercontent.com/u/8811474?s=460&u=439dda616284c68e76898195986dc5db2a231c66&v=4",
           "slackUsername": "Martin Nowosad"
         }
       },
@@ -519,7 +545,7 @@
           "contributorId": "20",
           "displayName": "Siddhesh Kulthe",
           "githubUsername": "iamsid47",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E65PEUFL-gecaf59a1c95-512",
+          "profileImage": "https://avatars1.githubusercontent.com/u/55309498?s=460&u=5735170037f5398148b87115ee9c9e7df574b7b1&v=4",
           "slackUsername": "Siddhesh Kulthe"
         }
       },
@@ -594,7 +620,7 @@
           "contributorId": "32",
           "displayName": "Taiwo Odetola",
           "githubUsername": "odetolataiwo",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EZHA7NQ0-91f6147e4788-512",
+          "profileImage": "https://avatars0.githubusercontent.com/u/19375004?s=460&u=43726634fdd5140afbe1b2a60904654261e6a073&v=4",
           "slackUsername": "Taiwo Odetola"
         }
       },
@@ -674,7 +700,7 @@
           "contributorId": "8",
           "displayName": "Shivam Yadav",
           "githubUsername": "shivamyadav37",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U017J4SDBM4-49405606e0d2-512",
+          "profileImage": "https://avatars2.githubusercontent.com/u/44369701?s=460&u=ffafffa6856bb45683168b58fdf35624f0d346f8&v=4",
           "slackUsername": "Shivam Yadav"
         }
       },
@@ -700,7 +726,7 @@
           "contributorId": "44",
           "displayName": "Landon Moon",
           "githubUsername": "LunarDeveloper",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E879GB1Q-c93201d09399-512",
+          "profileImage": "https://avatars3.githubusercontent.com/u/32111172?s=460&u=274388e47550c045abc5496b9f25485123634715&v=4",
           "slackUsername": "Moon"
         }
       }
@@ -718,7 +744,7 @@
           "contributorId": "17",
           "displayName": "Colfax",
           "githubUsername": "colfax23",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01DDHVKK9S-5d84cd83bdb7-512",
+          "profileImage": "https://avatars0.githubusercontent.com/u/914240?s=460&v=4",
           "slackUsername": "Colfax"
         }
       },
@@ -731,7 +757,7 @@
           "contributorId": "57",
           "displayName": "Hargobind Gupta",
           "githubUsername": "Yara1990",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E9PS8ZEF-0edd4a970eba-512",
+          "profileImage": "https://avatars3.githubusercontent.com/u/15350237?s=460&u=46a246a5f8b4fac015551b79ffb95a268e9914e1&v=4",
           "slackUsername": "Hargobind -Blockchain Researcher"
         }
       },
@@ -775,7 +801,7 @@
           "contributorId": "24",
           "displayName": "Sarthak Mathur",
           "githubUsername": "smash8tap",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EM1KM7DF-d0152ca4da07-512",
+          "profileImage": "https://avatars1.githubusercontent.com/u/67650789?s=460&v=4",
           "slackUsername": "Sarthak Mathur"
         }
       },
@@ -803,37 +829,6 @@
           "githubUsername": "spencer-dollahite",
           "profileImage": "https://avatars0.githubusercontent.com/u/74439721?s=400&v=4",
           "slackUsername": "Spencer Dollahite"
-        }
-      }
-    ]
-  },
-  {
-    "title": "Slack Managers",
-    "contributors": [
-      {
-        "title": "Slack Manager",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "10",
-          "displayName": "Benjamin Thorpe",
-          "githubUsername": null,
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01BWTU729Z-b2ae1378a598-512",
-          "slackUsername": "Benjamin Thorpe"
-        }
-      },
-      {
-        "title": "Slack Manager",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "12",
-          "displayName": "KryptoZero",
-          "githubUsername": null,
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E2FN4D1S-4688c60ed154-512",
-          "slackUsername": "KryptoZero"
         }
       }
     ]
