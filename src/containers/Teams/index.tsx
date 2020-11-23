@@ -28,7 +28,6 @@ const TEAM_NAME_FILTERS: NavOption[] = [
   {pathname: TeamName.redditModerators, title: 'Reddit Moderators'},
   {pathname: TeamName.research, title: 'Research'},
   {pathname: TeamName.security, title: 'Security'},
-  {pathname: TeamName.slackManagers, title: 'Slack Manager'},
   {pathname: TeamName.youtube, title: 'YouTube'},
 ];
 
