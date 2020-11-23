@@ -1,22 +1,25 @@
 import React, {FC} from 'react';
 
 import Modal from 'components/Modal';
-import CreateAccountModalFields, {FormValues, initialValues} from './AccoountTestModalFields';
+import EditModalFields, {FormValues, initialValues} from './EditModalFields';
+
+import './EditModal.scss';
 
 interface ComponentProps {
   close(): void;
   isGetStartedModal?: boolean;
 }
 
-const TestModal: FC<ComponentProps> = ({close, isGetStartedModal = false}) => {
+const EditModal: FC<ComponentProps> = ({close, isGetStartedModal = false}) => {
   const handleSubmit = ({accountNumber, displayName, slackName}: FormValues): void => {
-    console.log(accountNumber, displayName, slackName);
+    // eslint-disable-next-line no-console
+    console.log({accountNumber, displayName, slackName});
     close();
   };
 
   return (
     <Modal
-      className="AccountTestModal"
+      className="EditModal"
       close={close}
       disableOverlayClick={isGetStartedModal}
       displayCancelButton={!isGetStartedModal}
@@ -27,9 +30,9 @@ const TestModal: FC<ComponentProps> = ({close, isGetStartedModal = false}) => {
       onSubmit={handleSubmit}
       submitButton={'Save'}
     >
-      <CreateAccountModalFields />
+      <EditModalFields />
     </Modal>
   );
 };
 
-export default TestModal;
+export default EditModal;

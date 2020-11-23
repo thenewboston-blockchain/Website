@@ -1,8 +1,6 @@
 import React, {FC} from 'react';
 import {useBooleanState} from 'hooks';
-import TestModal from './AccountTestModal';
-
-import './AccountTestModal.scss';
+import EditModal from './EditModal';
 
 interface ComponentProps {
   className?: string;
@@ -10,8 +8,8 @@ interface ComponentProps {
 }
 
 const AccountComponent: FC<ComponentProps> = () => {
-  const [getStartedModalIsOpen, toggleGetStartedModal] = useBooleanState(true);
-  return <div>{getStartedModalIsOpen && <TestModal close={toggleGetStartedModal} />}</div>;
+  const [editModalIsOpen, toggleEditModal] = useBooleanState(true);
+  return <div>{editModalIsOpen && <EditModal close={toggleEditModal} />}</div>;
 };
 
 export default AccountComponent;

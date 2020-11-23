@@ -1,6 +1,5 @@
 import React, {FC} from 'react';
 import {FormInput, FormTextArea} from 'components/FormComponents';
-import {useFormContext} from 'hooks';
 
 export const initialValues = {
   accountNumber: '',
@@ -9,11 +8,7 @@ export const initialValues = {
 };
 
 export type FormValues = typeof initialValues;
-const AccountTestModalFields: FC = () => {
-  const {
-    values: {accountNumber, displayName, slackName},
-  } = useFormContext<FormValues>();
-
+const EditModalFields: FC = () => {
   return (
     <>
       <FormInput label="Display Name" name="displayName" />
@@ -23,4 +18,4 @@ const AccountTestModalFields: FC = () => {
   );
 };
 
-export default AccountTestModalFields;
+export default EditModalFields;
