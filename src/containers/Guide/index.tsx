@@ -12,7 +12,6 @@ import GuideBlocks from './GuideBlocks';
 import GuideConfirmationServices from './GuideConfirmationServices';
 import GuideConfirmationValidators from './GuideConfirmationValidators';
 import GuideFutureDevelopment from './GuideFutureDevelopment';
-import GuideInitialFunds from './GuideInitialFunds';
 import GuideIntroduction from './GuideIntroduction';
 import GuideNodeIdentifier from './GuideNodeIdentifier';
 import GuideResyncProcess from './GuideResyncProcess';
@@ -55,10 +54,6 @@ const pageData: PageDataObject = {
   'future-development': {
     content: <GuideFutureDevelopment />,
     name: 'Future Development',
-  },
-  'initial-funds': {
-    content: <GuideInitialFunds />,
-    name: 'Initial Funds',
   },
   introduction: {
     content: <GuideIntroduction />,

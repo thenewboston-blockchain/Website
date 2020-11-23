@@ -73,7 +73,7 @@ $break-mobile: 640px;
     font-weight: 600;
     font-size: 20px;
     line-height: 125%;
-}
+  }
 
   &__header_mobile {
     display: none;
@@ -106,7 +106,7 @@ $break-mobile: 640px;
       left: 23px;
       top: 50%;
       transform: translateY(-50%);
-  
+
       &--submitting {
         cursor: wait;
       }
