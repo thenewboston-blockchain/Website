@@ -1,6 +1,8 @@
 import React, {FC} from 'react';
 
 import Modal from 'components/Modal';
+import yup from 'utils/yup';
+
 import EditModalFields, {FormValues, initialValues} from './EditModalFields';
 
 import './EditModal.scss';
@@ -17,6 +19,15 @@ const EditModal: FC<ComponentProps> = ({close, isGetStartedModal = false}) => {
     close();
   };
 
+  const validationSchema = yup.object().shape({
+    accountNumber: yup
+      .string()
+      .length(64, 'Account Number must be 64 characters long')
+      .required('This field is required'),
+    displayName: yup.string().required('This field is required'),
+    slackName: yup.string(),
+  });
+
   return (
     <Modal
       className="EditModal"
@@ -29,6 +40,7 @@ const EditModal: FC<ComponentProps> = ({close, isGetStartedModal = false}) => {
       initialValues={initialValues}
       onSubmit={handleSubmit}
       submitButton={'Save'}
+      validationSchema={validationSchema}
     >
       <EditModalFields />
     </Modal>
