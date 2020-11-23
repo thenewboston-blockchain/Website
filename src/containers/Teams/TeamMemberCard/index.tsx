@@ -1,12 +1,12 @@
 import React, {FC} from 'react';
 
-import {A} from 'components';
+import {A, Avatar} from 'components';
 
 import './TeamMemberCard.scss';
 
 interface ComponentProps {
   displayName: string;
-  githubUsername: string;
+  githubUsername?: string;
   isLead: boolean;
   payPerDay: number;
   profileImage: string;
@@ -24,8 +24,8 @@ const TeamMemberCard: FC<ComponentProps> = ({
   titles,
 }) => {
   const renderAvatar = () => (
-    <div>
-      <img className="TeamMemberCard__user-avatar" src={profileImage} alt={displayName} />
+    <div className="TeamMemberCard__user-avatar">
+      <Avatar alt={displayName} size={144} src={profileImage} />
     </div>
   );
 
@@ -36,9 +36,7 @@ const TeamMemberCard: FC<ComponentProps> = ({
       <h2 className="TeamMemberCard__details-name">{displayName}</h2>
       <div className="TeamMemberCard__details-title">{titles.join(', ')}</div>
       <div>Slack: {slackUsername}</div>
-      <div>
-        Github: <A href={`https://github.com/${githubUsername}`}>{githubUsername}</A>
-      </div>
+      <div>Github: {githubUsername ? <A href={`https://github.com/${githubUsername}`}>{githubUsername}</A> : '-'}</div>
       <div>
         Pay Per Day: <span className="TeamMemberCard__details-pay">{payPerDay.toLocaleString()}</span>
       </div>

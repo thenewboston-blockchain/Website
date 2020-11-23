@@ -1,5 +1,5 @@
 import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
-import {Link, useHistory, useLocation} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 
 import {Button, Icon, IconType} from 'components';
@@ -16,7 +16,6 @@ interface ComponentProps {
 
 const TopNav: FC<ComponentProps> = ({className}) => {
   const [mobileMenuOpen, toggleMobileMenu, , closeMobileMenu] = useBooleanState(false);
-  const history = useHistory();
   const {pathname} = useLocation();
   const [communityAnchorEl, setCommunityAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [getStartedAnchorEl, setGetStartedAnchorEl] = useState<HTMLButtonElement | null>(null);
@@ -32,11 +31,6 @@ const TopNav: FC<ComponentProps> = ({className}) => {
       closeMobileMenu();
     }
   }, [closeMobileMenu, mobileMenuOpen, width]);
-
-  const handleMobileLinkClick = (to: string) => (): void => {
-    history.push(to);
-    closeMobileMenu();
-  };
 
   const renderMobileMenu = (): ReactNode => {
     return (
@@ -65,6 +59,13 @@ const TopNav: FC<ComponentProps> = ({className}) => {
           iconType={IconType.humanHandsUp}
           title="Openings"
           to="/openings"
+        />
+        <TopNavPopoverItem
+          closePopover={unsetCommunityAnchorEl}
+          description="Meet our growing team"
+          iconType={IconType.accountGroup}
+          title="Team"
+          to="/teams"
         />
         <TopNavPopoverItem
           closePopover={unsetCommunityAnchorEl}
@@ -102,6 +103,20 @@ const TopNav: FC<ComponentProps> = ({className}) => {
   const renderMorePopover = (): ReactNode => {
     return (
       <>
+        <TopNavPopoverItem
+          closePopover={unsetMoreAnchorEl}
+          description="Propose ideas you want built"
+          iconType={IconType.hammerWrench}
+          title="Project Proposals"
+          to="/project-proposals/overview"
+        />
+        <TopNavPopoverItem
+          closePopover={unsetMoreAnchorEl}
+          description="Download thenewboston assets"
+          iconType={IconType.fileDownload}
+          title="Assets"
+          to="/assets"
+        />
         <TopNavPopoverItem
           closePopover={unsetMoreAnchorEl}
           description="Frequently asked questions"
@@ -153,7 +168,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
         >
           {renderMorePopover()}
         </TopNavPopoverButton>
-        <Link className={clsx('TopNav__right-item', 'TopNav__download-button')} to="/download">
+        <Link className={clsx('TopNav__right-item', 'TopNav__download-button')} tabIndex={-1} to="/download">
           <Button>Download</Button>
         </Link>
       </>
@@ -175,10 +190,13 @@ const TopNav: FC<ComponentProps> = ({className}) => {
             <div className="mobile-menu__column-title">Community</div>
             {renderMobileLink('Join the Community!', '/social')}
             {renderMobileLink('Openings', '/openings')}
+            {renderMobileLink('Teams', '/teams')}
             {renderMobileLink('Leaderboard', '/leaderboard/All')}
           </div>
           <div className="mobile-menu__column">
             <div className="mobile-menu__column-title">More</div>
+            {renderMobileLink('Project Proposals', '/project-proposals/overview')}
+            {renderMobileLink('Assets', '/assets')}
             {renderMobileLink('FAQ', '/faq')}
             {renderMobileLink('Donate', '/donate')}
           </div>
@@ -190,9 +208,9 @@ const TopNav: FC<ComponentProps> = ({className}) => {
 
   const renderMobileLink = (label: string, to: string): ReactNode => {
     return (
-      <button className="mobile-menu__link" onClick={handleMobileLinkClick(to)}>
+      <Link className="mobile-menu__link" to={to}>
         {label}
-      </button>
+      </Link>
     );
   };
 

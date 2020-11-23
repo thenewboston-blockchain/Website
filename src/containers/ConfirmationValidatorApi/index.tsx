@@ -1,7 +1,7 @@
 import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
-import {DashboardLayout, Pagination} from 'components';
+import {DashboardLayout, DocsMenuItems, Pagination} from 'components';
 import {confirmationValidatorApiNavigationData} from 'components/DocsMenuItems';
 import NodeApiConnectionRequests from 'containers/NodeApi/NodeApiConnectionRequests';
 import {PageData, PageDataObject} from 'types/page-data';
@@ -68,7 +68,7 @@ const ConfirmationValidatorApi: FC = () => {
   const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
 
   return (
-    <DashboardLayout pageName={name} sectionName="Confirmation Validator API">
+    <DashboardLayout menuItems={<DocsMenuItems />} pageName={name} sectionName="Confirmation Validator API">
       {content}
       <Pagination navigationData={confirmationValidatorApiNavigationData} />
     </DashboardLayout>

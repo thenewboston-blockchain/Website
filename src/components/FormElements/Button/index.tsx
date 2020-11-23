@@ -11,7 +11,7 @@ export interface BaseButtonProps {
   focused?: boolean;
   onClick?(e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void;
   type?: 'button' | 'reset' | 'submit';
-  variant?: 'contained' | 'link';
+  variant?: 'contained' | 'link' | 'outlined';
 }
 
 const Button: FC<BaseButtonProps> = ({

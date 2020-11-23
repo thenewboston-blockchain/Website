@@ -1,5 +1,5 @@
 $dropdown-height: 316px;
-$mobile-dropdown-height: 450px;
+$mobile-dropdown-height: 510px;
 $top-nav-height: 60px;
 
 @keyframes addOverlay {
@@ -34,7 +34,6 @@ $top-nav-height: 60px;
   display: flex;
   height: $top-nav-height;
   justify-content: space-between;
-  position: relative;
 
   &__download-button {
     margin-right: 24px;
@@ -125,6 +124,7 @@ $top-nav-height: 60px;
       margin-bottom: 24px;
       padding: 0;
       text-align: unset;
+      height: 18px;
 
       &:hover {
         text-decoration: underline;

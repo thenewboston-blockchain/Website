@@ -46,13 +46,15 @@
   }
 
   &__lead-flag {
+    align-items: center;
     background: var(--color-secondary);
     border-radius: 100px;
     color: var(--color-bg);
+    display: flex;
     font-size: 14px;
     height: 24px;
+    justify-content: center;
     line-height: 17px;
-    padding: 3px 0px 0px 9px;
     position: absolute;
     right: 18px;
     top: -7px;
@@ -60,8 +62,16 @@
   }
 
   &__user-avatar {
-    border-radius: 50%;
-    height: auto;
-    width: 144px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+
+    &__details {
+      text-align: center;
+    }
   }
 }

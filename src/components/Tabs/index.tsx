@@ -1,4 +1,4 @@
-import React, {FC, useState, ReactNode} from 'react';
+import React, {FC, ReactNode, useState} from 'react';
 import clsx from 'clsx';
 
 import './Tabs.scss';
@@ -11,9 +11,10 @@ export interface Tab {
 interface ComponentProps {
   defaultTab?: number;
   tabs: Tab[];
+  latestReleaseNumber: number | null;
 }
 
-const Tabs: FC<ComponentProps> = ({defaultTab = 0, tabs}) => {
+const Tabs: FC<ComponentProps> = ({defaultTab = 0, tabs, latestReleaseNumber}) => {
   const [activeTab, setActiveTab] = useState<number>(defaultTab);
 
   const renderTabs = (): ReactNode => {
@@ -41,6 +42,7 @@ const Tabs: FC<ComponentProps> = ({defaultTab = 0, tabs}) => {
   return (
     <div className="Tabs">
       {renderTabs()}
+      <p className="Download__latest-version">{`Latest Version: 1.0.0-alpha.${latestReleaseNumber}`}</p>
       {renderTabPanel()}
     </div>
   );

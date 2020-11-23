@@ -19,14 +19,12 @@ const CeleryValidator: FC<ComponentProps> = ({name, networkSigningKey}) => {
 sudo mkdir ${name.toLowerCase()}
 sudo mkdir /var/log/celery
 sudo chown deploy /var/log/celery
-sudo nano /etc/${name.toLowerCase()}/environment
-`}
+sudo nano /etc/${name.toLowerCase()}/environment`}
         heading="Create a file to contain our environment variables"
       />
       <CodeSnippet
         code={`DJANGO_APPLICATION_ENVIRONMENT=production
-NETWORK_SIGNING_KEY=${networkSigningKey}
-`}
+NETWORK_SIGNING_KEY=${networkSigningKey}`}
       />
       <CodeSnippet code={`sudo nano /etc/${name.toLowerCase()}/celery.conf`} heading="Create celery env config" />
       <CodeSnippet
@@ -53,8 +51,7 @@ User = deploy
 ExecStart = /usr/local/bin/start_api.sh
 
 [Install]
-WantedBy = multi-user.target
-`}
+WantedBy = multi-user.target`}
       />
       <CodeSnippet code="sudo chmod a+x /etc/systemd/system/api.service" heading="Update permissions for file" />
       <CodeSnippet code="sudo nano /etc/systemd/system/celery.service" heading="Create service for celery" />
@@ -78,8 +75,7 @@ ExecReload=/bin/sh -c '\${CELERY_BIN} multi restart \${CELERYD_NODES} \\
   --logfile=\${CELERYD_LOG_FILE} --loglevel=\${CELERYD_LOG_LEVEL} \${CELERYD_OPTS}'
 
 [Install]
-WantedBy=multi-user.target
-`}
+WantedBy=multi-user.target`}
       />
       <CodeSnippet
         code="sudo systemctl daemon-reload && sudo systemctl enable api && sudo systemctl enable celery"

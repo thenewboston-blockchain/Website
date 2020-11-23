@@ -43,6 +43,10 @@ const navLists = [
         url: '/openings',
       },
       {
+        title: 'Team',
+        url: '/teams',
+      },
+      {
         title: 'Leaderboard',
         url: '/leaderboard/All',
       },
@@ -51,6 +55,14 @@ const navLists = [
   {
     header: 'More',
     links: [
+      {
+        title: 'Project Proposals',
+        url: '/project-proposals/overview',
+      },
+      {
+        title: 'Assets',
+        url: '/assets',
+      },
       {
         title: 'FAQ',
         url: '/faq',

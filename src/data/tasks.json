@@ -1,12 +1,212 @@
 {
+  "A-A-2": [
+    {
+      "repository": "Website",
+      "title": "Add Hello World in Kurdish",
+      "issue_id": "351",
+      "pr_id": "548",
+      "completed_by": "A-A-2",
+      "completed_date": "11/7/20",
+      "amount_paid": "500"
+    }
+  ],
+  "AkbarKamran": [
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "921",
+      "pr_id": "933",
+      "completed_by": "AkbarKamran",
+      "completed_date": "11/20/20",
+      "amount_paid": "500"
+    }
+  ],
+  "Akshit1311": [
+    {
+      "repository": "Website",
+      "title": "Openings - Hiring Freeze #738 Fixed!",
+      "issue_id": "738",
+      "pr_id": "739",
+      "completed_by": "Akshit1311",
+      "completed_date": "11/12/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributer #782",
+      "issue_id": "782",
+      "pr_id": "784",
+      "completed_by": "Akshit1311",
+      "completed_date": "11/13/20",
+      "amount_paid": "500"
+    }
+  ],
+  "AntonFredrikSvensson": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "478",
+      "completed_by": "AntonFredrikSvensson",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
+  "Benett1": [
+    {
+      "repository": "Website",
+      "title": "Fixed a typo in Albanian language Hello World",
+      "issue_id": "351",
+      "pr_id": "690",
+      "completed_by": "Benett1",
+      "completed_date": "11/12/20",
+      "amount_paid": "500"
+    }
+  ],
+  "BlueBlazin": [
+    {
+      "repository": "Website",
+      "title": "Links in the navbar cannot be opened in a new tab",
+      "issue_id": "752",
+      "pr_id": "753",
+      "completed_by": "BlueBlazin",
+      "completed_date": "11/12/20",
+      "amount_paid": "500"
+    }
+  ],
+  "CirXe0N": [
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Bank - validator confirmation services api calls",
+      "issue_id": "19",
+      "pr_id": "37",
+      "completed_by": "CirXe0N",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000"
+    }
+  ],
+  "DenverCoder1": [
+    {
+      "repository": "Website",
+      "title": "Added Yiddish Hello World",
+      "issue_id": "351",
+      "pr_id": "655",
+      "completed_by": "DenverCoder1",
+      "completed_date": "11/9/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Fixed typos in FAQ page",
+      "issue_id": "705",
+      "pr_id": "653",
+      "completed_by": "DenverCoder1",
+      "completed_date": "11/10/20",
+      "amount_paid": "500"
+    }
+  ],
+  "DinShpati": [
+    {
+      "repository": "Website",
+      "title": "Hello World in Albanian",
+      "issue_id": "351",
+      "pr_id": "539",
+      "completed_by": "DinShpati",
+      "completed_date": "11/7/20",
+      "amount_paid": "500"
+    }
+  ],
   "DucPhamTV": [
     {
       "repository": "Website",
       "title": "Put Hello World\" in your OWN language!\"",
-      "issue_id": "369",
+      "issue_id": "351",
       "pr_id": "382",
       "completed_by": "DucPhamTV",
       "completed_date": "11/2/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Write and read signing key file",
+      "issue_id": "1",
+      "pr_id": "9",
+      "completed_by": "DucPhamTV",
+      "completed_date": "11/8/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Write and read signing key file",
+      "issue_id": "2",
+      "pr_id": "9",
+      "completed_by": "DucPhamTV",
+      "completed_date": "11/8/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Implement bank client",
+      "issue_id": "3",
+      "pr_id": "11",
+      "completed_by": "DucPhamTV",
+      "completed_date": "11/8/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Implement bank client",
+      "issue_id": "4",
+      "pr_id": "11",
+      "completed_by": "DucPhamTV",
+      "completed_date": "11/8/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Implement bank client",
+      "issue_id": "5",
+      "pr_id": "11",
+      "completed_by": "DucPhamTV",
+      "completed_date": "11/8/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Implement bank client",
+      "issue_id": "6",
+      "pr_id": "11",
+      "completed_by": "DucPhamTV",
+      "completed_date": "11/8/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Implement bank client",
+      "issue_id": "7",
+      "pr_id": "11",
+      "completed_by": "DucPhamTV",
+      "completed_date": "11/8/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Implement bank client",
+      "issue_id": "8",
+      "pr_id": "11",
+      "completed_by": "DucPhamTV",
+      "completed_date": "11/8/20",
+      "amount_paid": "5000"
+    }
+  ],
+  "FaiyazMdAbdul": [
+    {
+      "repository": "Website",
+      "title": "Improve Tamil translation of Hello World",
+      "issue_id": "351",
+      "pr_id": "709",
+      "completed_by": "FaiyazMdAbdul",
+      "completed_date": "11/11/20",
       "amount_paid": "500"
     }
   ],
@@ -37,6 +237,121 @@
       "completed_by": "GermaVinsmoke",
       "completed_date": "10/20/20",
       "amount_paid": "2500"
+    }
+  ],
+  "Get-ADUser": [
+    {
+      "repository": "Website",
+      "title": "Update hello-world.ts",
+      "issue_id": "351",
+      "pr_id": "562",
+      "completed_by": "Get-ADUser",
+      "completed_date": "11/7/20",
+      "amount_paid": "500"
+    }
+  ],
+  "Hot-Shot75": [
+    {
+      "repository": "Website",
+      "title": "Added 'Hello world' in Georgian",
+      "issue_id": "351",
+      "pr_id": "867",
+      "completed_by": "Hot-Shot75",
+      "completed_date": "11/16/20",
+      "amount_paid": "500"
+    }
+  ],
+  "Hristijan95": [
+    {
+      "repository": "Account-Manager",
+      "title": "Zoom function in the window tab not doing anything.",
+      "issue_id": "415",
+      "pr_id": "428",
+      "completed_by": "Hristijan95",
+      "completed_date": "11/5/20",
+      "amount_paid": "2500"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Update overall style guide/colors",
+      "issue_id": "55",
+      "pr_id": "59",
+      "completed_by": "Hristijan95",
+      "completed_date": "7/19/20",
+      "amount_paid": "7500"
+    }
+  ],
+  "JayBIOS": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "486",
+      "completed_by": "JayBIOS",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
+  "JonasPik": [
+    {
+      "repository": "Website",
+      "title": "#351 Added Hello World in Lithuanian language",
+      "issue_id": "351",
+      "pr_id": "555",
+      "completed_by": "JonasPik",
+      "completed_date": "11/7/20",
+      "amount_paid": "500"
+    }
+  ],
+  "KingChampion36": [
+    {
+      "repository": "Website",
+      "title": "Hello world in pali",
+      "issue_id": "351",
+      "pr_id": "824",
+      "completed_by": "KingChampion36",
+      "completed_date": "11/15/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Added contributor for issue #821",
+      "issue_id": "821",
+      "pr_id": "823",
+      "completed_by": "KingChampion36",
+      "completed_date": "11/15/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "New contributor added for front end (#866)",
+      "issue_id": "866",
+      "pr_id": "871",
+      "completed_by": "KingChampion36",
+      "completed_date": "11/16/20",
+      "amount_paid": "500"
+    }
+  ],
+  "LunarDeveloper": [
+    {
+      "repository": "Website",
+      "title": "New Member Added Issue 773",
+      "issue_id": "773",
+      "pr_id": "777",
+      "completed_by": "LunarDeveloper",
+      "completed_date": "11/14/20",
+      "amount_paid": "500"
+    }
+  ],
+  "MirkoHotsHot": [
+    {
+      "repository": "Website",
+      "title": "Added Afrikaans language",
+      "issue_id": "351",
+      "pr_id": "713",
+      "completed_by": "MirkoHotsHot",
+      "completed_date": "11/11/20",
+      "amount_paid": "500"
     }
   ],
   "Niekon01": [
@@ -75,6 +390,271 @@
       "completed_by": "Niekon01",
       "completed_date": "11/3/20",
       "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "Update Send Coin\" image\"",
+      "issue_id": "445",
+      "pr_id": "467",
+      "completed_by": "Niekon01",
+      "completed_date": "11/5/20",
+      "amount_paid": "2500"
+    }
+  ],
+  "P-Sklodowska": [
+    {
+      "repository": "Website",
+      "title": "Hello world in Polish",
+      "issue_id": "351",
+      "pr_id": "765",
+      "completed_by": "P-Sklodowska",
+      "completed_date": "11/14/20",
+      "amount_paid": "500"
+    }
+  ],
+  "PatNeedham": [
+    {
+      "repository": "Website",
+      "title": "fix: long-press TopNav links on Android",
+      "issue_id": "812",
+      "pr_id": "813",
+      "completed_by": "PatNeedham",
+      "completed_date": "11/15/20",
+      "amount_paid": "500"
+    }
+  ],
+  "ProdexOne": [
+    {
+      "repository": "Website",
+      "title": "Added Hello World in Assamese",
+      "issue_id": "351",
+      "pr_id": "701",
+      "completed_by": "ProdexOne",
+      "completed_date": "11/11/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Added Hello World in Bihari languages (Bhojpuri)",
+      "issue_id": "351",
+      "pr_id": "725",
+      "completed_by": "ProdexOne",
+      "completed_date": "11/12/20",
+      "amount_paid": "500"
+    }
+  ],
+  "Ramin-RX7": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "477",
+      "completed_by": "Ramin-RX7",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
+  "Reeler": [
+    {
+      "repository": "Website",
+      "title": "Docs update",
+      "issue_id": "643",
+      "pr_id": "650",
+      "completed_by": "Reeler",
+      "completed_date": "11/9/20",
+      "amount_paid": "500"
+    }
+  ],
+  "Rosendo6": [
+    {
+      "repository": "Website",
+      "title": "Added Hello world in Catalan",
+      "issue_id": "351",
+      "pr_id": "766",
+      "completed_by": "Rosendo6",
+      "completed_date": "11/13/20",
+      "amount_paid": "500"
+    }
+  ],
+  "RoyVoetman": [
+    {
+      "repository": "Website",
+      "title": "Hello world in Frisian",
+      "issue_id": "351",
+      "pr_id": "708",
+      "completed_by": "RoyVoetman",
+      "completed_date": "11/11/20",
+      "amount_paid": "500"
+    }
+  ],
+  "SOHDA31": [
+    {
+      "repository": "marketing",
+      "title": "LinkedIn Banner",
+      "issue_id": "6",
+      "pr_id": "",
+      "completed_by": "SOHDA31",
+      "completed_date": "11/15/20",
+      "amount_paid": "7500"
+    }
+  ],
+  "Surac778": [
+    {
+      "repository": "Website",
+      "title": "Added Tajik language",
+      "issue_id": "351",
+      "pr_id": "900",
+      "completed_by": "Surac778",
+      "completed_date": "11/18/20",
+      "amount_paid": "500"
+    }
+  ],
+  "The-Veil": [
+    {
+      "repository": "Website",
+      "title": "Added Czech language",
+      "issue_id": "351",
+      "pr_id": "762",
+      "completed_by": "The-Veil",
+      "completed_date": "11/12/20",
+      "amount_paid": "500"
+    }
+  ],
+  "Tobel158": [
+    {
+      "repository": "Website",
+      "title": "zulu hello world",
+      "issue_id": "351",
+      "pr_id": "735",
+      "completed_by": "Tobel158",
+      "completed_date": "11/12/20",
+      "amount_paid": "500"
+    }
+  ],
+  "Tuhinga": [
+    {
+      "repository": "Website",
+      "title": "Added Maori language",
+      "issue_id": "351",
+      "pr_id": "884",
+      "completed_by": "Tuhinga",
+      "completed_date": "11/18/20",
+      "amount_paid": "500"
+    }
+  ],
+  "VJKLFT": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "490",
+      "completed_by": "VJKLFT",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
+  "Vangaorth": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "466",
+      "completed_by": "Vangaorth",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
+  "VictorABoye": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "483",
+      "completed_by": "VictorABoye",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
+  "VincentHch": [
+    {
+      "repository": "Website",
+      "title": "Added Luxembourgish language",
+      "issue_id": "351",
+      "pr_id": "736",
+      "completed_by": "VincentHch",
+      "completed_date": "11/12/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Add new user",
+      "issue_id": "872",
+      "pr_id": "873",
+      "completed_by": "VincentHch",
+      "completed_date": "11/16/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Bank - get bank config",
+      "issue_id": "16",
+      "pr_id": "34",
+      "completed_by": "VincentHch",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Bank - confirmation blocks api calls",
+      "issue_id": "17",
+      "pr_id": "35",
+      "completed_by": "VincentHch",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000"
+    }
+  ],
+  "Weav3r": [
+    {
+      "repository": "Website",
+      "title": "Add Hello World Twi (Akan)",
+      "issue_id": "351",
+      "pr_id": "820",
+      "completed_by": "Weav3r",
+      "completed_date": "11/15/20",
+      "amount_paid": "500"
+    }
+  ],
+  "YashovardhanSingh": [
+    {
+      "repository": "Website",
+      "title": "fixes #787",
+      "issue_id": "787",
+      "pr_id": "794",
+      "completed_by": "YashovardhanSingh",
+      "completed_date": "11/13/20",
+      "amount_paid": "500"
+    }
+  ],
+  "Zims": [
+    {
+      "repository": "Website",
+      "title": "added Latvian languag",
+      "issue_id": "351",
+      "pr_id": "557",
+      "completed_by": "Zims",
+      "completed_date": "11/8/20",
+      "amount_paid": "500"
+    }
+  ],
+  "ZokaSoce": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "473",
+      "completed_by": "ZokaSoce",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
     }
   ],
   "aayushi14": [
@@ -158,6 +738,77 @@
       "completed_by": "aayushi14",
       "completed_date": "11/4/20",
       "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "763- fixed incorrect text on Add Friends page",
+      "issue_id": "763",
+      "pr_id": "764",
+      "completed_by": "aayushi14",
+      "completed_date": "11/13/20",
+      "amount_paid": "500"
+    }
+  ],
+  "aeronye": [
+    {
+      "repository": "Website",
+      "title": "New member",
+      "issue_id": "351",
+      "pr_id": "939",
+      "completed_by": "aeronye",
+      "completed_date": "11/21/20",
+      "amount_paid": "500"
+    }
+  ],
+  "akamfoad": [
+    {
+      "repository": "Website",
+      "title": "\ud83d\udc4cauto select download tab based on user system",
+      "issue_id": "819",
+      "pr_id": "805",
+      "completed_by": "akamfoad",
+      "completed_date": "11/15/20",
+      "amount_paid": "1000"
+    }
+  ],
+  "alexkimeu0": [
+    {
+      "repository": "Website",
+      "title": "Added Hello World in Swahili",
+      "issue_id": "351",
+      "pr_id": "635",
+      "completed_by": "alexkimeu0",
+      "completed_date": "11/9/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Added Hello World in Kikuyu account number: 3972dfcfb9fd488cf90644b599558d3e265bdb883686933f62e8450aaee974b1",
+      "issue_id": "351",
+      "pr_id": "609",
+      "completed_by": "alexkimeu0",
+      "completed_date": "11/8/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Fixed typo in the documentation account: 3972dfcfb9fd488cf90644b599558d3e265bdb883686933f62e8450aaee974b1",
+      "issue_id": "889",
+      "pr_id": "757",
+      "completed_by": "alexkimeu0",
+      "completed_date": "11/17/20",
+      "amount_paid": "500"
+    }
+  ],
+  "alhuang2": [
+    {
+      "repository": "Website",
+      "title": "hello world in chinese",
+      "issue_id": "351",
+      "pr_id": "480",
+      "completed_by": "alhuang2",
+      "completed_date": "11/6/20",
+      "amount_paid": "500"
     }
   ],
   "amarjeet987": [
@@ -178,6 +829,15 @@
       "completed_by": "amarjeet987",
       "completed_date": "11/4/20",
       "amount_paid": "7500"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "upgrade react-scripts",
+      "issue_id": "423",
+      "pr_id": "427",
+      "completed_by": "amarjeet987",
+      "completed_date": "11/5/20",
+      "amount_paid": "2500"
     }
   ],
   "angle943": [
@@ -296,6 +956,17 @@
       "pr_id": "449",
       "completed_by": "angle943",
       "completed_date": "11/4/20",
+      "amount_paid": "500"
+    }
+  ],
+  "askass": [
+    {
+      "repository": "Website",
+      "title": "Hellow World in Belarusian",
+      "issue_id": "351",
+      "pr_id": "652",
+      "completed_by": "askass",
+      "completed_date": "11/9/20",
       "amount_paid": "500"
     }
   ],
@@ -436,6 +1107,17 @@
       "amount_paid": "5000"
     }
   ],
+  "avinashupadhya99": [
+    {
+      "repository": "Website",
+      "title": "Hello world in Kannada",
+      "issue_id": "351",
+      "pr_id": "554",
+      "completed_by": "avinashupadhya99",
+      "completed_date": "11/7/20",
+      "amount_paid": "500"
+    }
+  ],
   "brian316": [
     {
       "repository": "Account-Manager",
@@ -454,6 +1136,17 @@
       "completed_by": "brian316",
       "completed_date": "10/17/20",
       "amount_paid": "1000"
+    }
+  ],
+  "briankinane": [
+    {
+      "repository": "Website",
+      "title": "Added 'Hello World' in Latin.",
+      "issue_id": "351",
+      "pr_id": "862",
+      "completed_by": "briankinane",
+      "completed_date": "11/16/20",
+      "amount_paid": "500"
     }
   ],
   "brmendez": [
@@ -503,6 +1196,66 @@
       "completed_by": "buckyroberts",
       "completed_date": "10/2/20",
       "amount_paid": "5000"
+    },
+    {
+      "repository": "Website",
+      "title": "Static Teams Page",
+      "issue_id": "503",
+      "pr_id": "508",
+      "completed_by": "buckyroberts",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Project proposals",
+      "issue_id": "934",
+      "pr_id": "978",
+      "completed_by": "buckyroberts",
+      "completed_date": "11/22/20",
+      "amount_paid": "2500"
+    }
+  ],
+  "cebisom": [
+    {
+      "repository": "Website",
+      "title": "Added Hello World in isiNdebele",
+      "issue_id": "351",
+      "pr_id": "691",
+      "completed_by": "cebisom",
+      "completed_date": "11/10/20",
+      "amount_paid": "500"
+    }
+  ],
+  "cfviotti": [
+    {
+      "repository": "Website",
+      "title": "Fix Social page heading and links alignment",
+      "issue_id": "686",
+      "pr_id": "716",
+      "completed_by": "cfviotti",
+      "completed_date": "11/11/20",
+      "amount_paid": "500"
+    }
+  ],
+  "codemedo": [
+    {
+      "repository": "Website",
+      "title": "Added hello world in tatari language",
+      "issue_id": "351",
+      "pr_id": "904",
+      "completed_by": "codemedo",
+      "completed_date": "11/19/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Added new contributor",
+      "issue_id": "899",
+      "pr_id": "901",
+      "completed_by": "codemedo",
+      "completed_date": "11/18/20",
+      "amount_paid": "500"
     }
   ],
   "colfax23": [
@@ -543,6 +1296,17 @@
       "amount_paid": "2500"
     }
   ],
+  "cubedtear": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "476",
+      "completed_by": "cubedtear",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
   "dahelg": [
     {
       "repository": "Website",
@@ -554,6 +1318,79 @@
       "amount_paid": "2500"
     }
   ],
+  "danielivert": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "481",
+      "completed_by": "danielivert",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
+  "danieloravec": [
+    {
+      "repository": "Website",
+      "title": "Add correct hello-world in Slovak",
+      "issue_id": "351",
+      "pr_id": "685",
+      "completed_by": "danieloravec",
+      "completed_date": "11/12/20",
+      "amount_paid": "500"
+    }
+  ],
+  "dark121211": [
+    {
+      "repository": "Website",
+      "title": "Added Burmese language",
+      "issue_id": "351",
+      "pr_id": "860",
+      "completed_by": "dark121211",
+      "completed_date": "11/16/20",
+      "amount_paid": "500"
+    }
+  ],
+  "ddyakov": [
+    {
+      "repository": "Website",
+      "title": "added Hello World in bulgarian",
+      "issue_id": "351",
+      "pr_id": "727",
+      "completed_by": "ddyakov",
+      "completed_date": "11/12/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "fixed typo in react/jsx style guide",
+      "issue_id": "756",
+      "pr_id": "759",
+      "completed_by": "ddyakov",
+      "completed_date": "11/13/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "improved correctness and clarity in itroduction page text",
+      "issue_id": "800",
+      "pr_id": "801",
+      "completed_by": "ddyakov",
+      "completed_date": "11/14/20",
+      "amount_paid": "500"
+    }
+  ],
+  "donmbelembe": [
+    {
+      "repository": "Website",
+      "title": "Hello word in lingala",
+      "issue_id": "351",
+      "pr_id": "516",
+      "completed_by": "donmbelembe",
+      "completed_date": "11/7/20",
+      "amount_paid": "500"
+    }
+  ],
   "dorlivniopen": [
     {
       "repository": "Website",
@@ -562,6 +1399,139 @@
       "pr_id": "354",
       "completed_by": "dorlivniopen",
       "completed_date": "11/1/20",
+      "amount_paid": "500"
+    }
+  ],
+  "fadyadal": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "474",
+      "completed_by": "fadyadal",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
+  "ffpetrovic": [
+    {
+      "repository": "Website",
+      "title": "Remove package-lock.json and update npm commands to yarn",
+      "issue_id": "828",
+      "pr_id": "829",
+      "completed_by": "ffpetrovic",
+      "completed_date": "11/16/20",
+      "amount_paid": "500"
+    }
+  ],
+  "fosteradorkor": [
+    {
+      "repository": "Website",
+      "title": "Hello world in Akan",
+      "issue_id": "351",
+      "pr_id": "692",
+      "completed_by": "fosteradorkor",
+      "completed_date": "11/15/20",
+      "amount_paid": "500"
+    }
+  ],
+  "ganeshvicky": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "479",
+      "completed_by": "ganeshvicky",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
+  "gatvay23924": [
+    {
+      "repository": "Website",
+      "title": "Added Esperanto language",
+      "issue_id": "351",
+      "pr_id": "902",
+      "completed_by": "gatvay23924",
+      "completed_date": "11/18/20",
+      "amount_paid": "500"
+    }
+  ],
+  "h3cksamrat": [
+    {
+      "repository": "Website",
+      "title": "Added Hello World In Nepali",
+      "issue_id": "351",
+      "pr_id": "651",
+      "completed_by": "h3cksamrat",
+      "completed_date": "11/9/20",
+      "amount_paid": "500"
+    }
+  ],
+  "hLudde": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "484",
+      "completed_by": "hLudde",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
+  "hasham56": [
+    {
+      "repository": "Website",
+      "title": "New contributor added",
+      "issue_id": "772",
+      "pr_id": "775",
+      "completed_by": "hasham56",
+      "completed_date": "11/14/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor Added",
+      "issue_id": "793",
+      "pr_id": "797",
+      "completed_by": "hasham56",
+      "completed_date": "11/13/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Kotlin software developer",
+      "issue_id": "877",
+      "pr_id": "897",
+      "completed_by": "hasham56",
+      "completed_date": "11/18/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Kotlin SDK member added",
+      "issue_id": "878",
+      "pr_id": "896",
+      "completed_by": "hasham56",
+      "completed_date": "11/18/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Adding contributor",
+      "issue_id": "915",
+      "pr_id": "930",
+      "completed_by": "hasham56",
+      "completed_date": "11/20/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "914",
+      "pr_id": "929",
+      "completed_by": "hasham56",
+      "completed_date": "11/20/20",
       "amount_paid": "500"
     }
   ],
@@ -583,6 +1553,39 @@
       "completed_by": "hawyar",
       "completed_date": "10/4/20",
       "amount_paid": "2500"
+    }
+  ],
+  "henctv": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "475",
+      "completed_by": "henctv",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
+  "hienqn": [
+    {
+      "repository": "Website",
+      "title": "added hello world for Armenian language",
+      "issue_id": "351",
+      "pr_id": "711",
+      "completed_by": "hienqn",
+      "completed_date": "11/11/20",
+      "amount_paid": "500"
+    }
+  ],
+  "ionutzaharia": [
+    {
+      "repository": "Website",
+      "title": "Add Romanian Fix missing space",
+      "issue_id": "351",
+      "pr_id": "599",
+      "completed_by": "ionutzaharia",
+      "completed_date": "11/8/20",
+      "amount_paid": "500"
     }
   ],
   "itsnikhil": [
@@ -607,7 +1610,7 @@
     {
       "repository": "Website",
       "title": "Put Hello World\" in your OWN language!\"",
-      "issue_id": "369",
+      "issue_id": "351",
       "pr_id": "351",
       "completed_by": "itsnikhil",
       "completed_date": "11/2/20",
@@ -675,6 +1678,227 @@
       "completed_by": "itsnikhil",
       "completed_date": "11/3/20",
       "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Task page margin",
+      "issue_id": "413",
+      "pr_id": "469",
+      "completed_by": "itsnikhil",
+      "completed_date": "11/6/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "673 - Marketing analyst opening",
+      "issue_id": "673",
+      "pr_id": "683",
+      "completed_by": "itsnikhil",
+      "completed_date": "11/10/20",
+      "amount_paid": "1000"
+    }
+  ],
+  "jaelee0409": [
+    {
+      "repository": "Website",
+      "title": "Updated the Team page",
+      "issue_id": "627",
+      "pr_id": "639",
+      "completed_by": "jaelee0409",
+      "completed_date": "11/9/20",
+      "amount_paid": "1000"
+    }
+  ],
+  "jagdisharma": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "470",
+      "completed_by": "jagdisharma",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
+  "jamessspanggg": [
+    {
+      "repository": "Website",
+      "title": "Add hello world in javanese",
+      "issue_id": "351",
+      "pr_id": "642",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/9/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Prevent content jumping in leaderboard page",
+      "issue_id": "703",
+      "pr_id": "704",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/11/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "[#675] Fix hash link in documentations page",
+      "issue_id": "675",
+      "pr_id": "676",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/10/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "[#679] Fix leaderboard drop down",
+      "issue_id": "679",
+      "pr_id": "680",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/10/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "Fix code highlighting in documentation",
+      "issue_id": "733",
+      "pr_id": "734",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/13/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "[#743] Add new front end contributor",
+      "issue_id": "743",
+      "pr_id": "744",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/14/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Change sorting of members to be based on contributorId",
+      "issue_id": "747",
+      "pr_id": "788",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/14/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Enforce width of task sections in leaderboard",
+      "issue_id": "839",
+      "pr_id": "840",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/15/20",
+      "amount_paid": "2000"
+    },
+    {
+      "repository": "Website",
+      "title": "[FAQ] Fix console error in development mode",
+      "issue_id": "845",
+      "pr_id": "846",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/15/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Remove empty new line in scripts within deployment guides",
+      "issue_id": "858",
+      "pr_id": "859",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/16/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Utilise react-helmet-async instead of react-helmet",
+      "issue_id": "856",
+      "pr_id": "857",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/16/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "Fix console warnings",
+      "issue_id": "863",
+      "pr_id": "865",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/16/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "Add new contributor: Payments Manager Tawanda",
+      "issue_id": "892",
+      "pr_id": "895",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/18/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Add new contributor: Payments Manager Nikhil",
+      "issue_id": "893",
+      "pr_id": "894",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/18/20",
+      "amount_paid": "500"
+    }
+  ],
+  "jonathanlee06": [
+    {
+      "repository": "Website",
+      "title": "Added Hello World in Malay Language",
+      "issue_id": "351",
+      "pr_id": "567",
+      "completed_by": "jonathanlee06",
+      "completed_date": "11/11/20",
+      "amount_paid": "500"
+    }
+  ],
+  "jtavak": [
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Implemented some validator features",
+      "issue_id": "13",
+      "pr_id": "12",
+      "completed_by": "jtavak",
+      "completed_date": "11/8/20",
+      "amount_paid": "10000"
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Bank - banks api calls",
+      "issue_id": "15",
+      "pr_id": "24",
+      "completed_by": "jtavak",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000"
+    }
+  ],
+  "kagisojamesthomba": [
+    {
+      "repository": "Website",
+      "title": "Added Hello World in Tswana",
+      "issue_id": "351",
+      "pr_id": "687",
+      "completed_by": "kagisojamesthomba",
+      "completed_date": "11/10/20",
+      "amount_paid": "500"
+    }
+  ],
+  "kenmusima": [
+    {
+      "repository": "Website",
+      "title": "Hello World in Kiswahili",
+      "issue_id": "351",
+      "pr_id": "545",
+      "completed_by": "kenmusima",
+      "completed_date": "11/7/20",
+      "amount_paid": "500"
     }
   ],
   "kristykjlee": [
@@ -778,6 +2002,17 @@
       "amount_paid": "5000"
     }
   ],
+  "kush-daga": [
+    {
+      "repository": "Website",
+      "title": "Fixes #550 - Added Sorting in Tasks",
+      "issue_id": "550",
+      "pr_id": "616",
+      "completed_by": "kush-daga",
+      "completed_date": "11/16/20",
+      "amount_paid": "7500"
+    }
+  ],
   "lapstjup": [
     {
       "repository": "Website",
@@ -832,6 +2067,35 @@
       "completed_by": "lapstjup",
       "completed_date": "11/4/20",
       "amount_paid": "2500"
+    },
+    {
+      "repository": "Website",
+      "title": "Fix safari dropdown positioning",
+      "issue_id": "462",
+      "pr_id": "468",
+      "completed_by": "lapstjup",
+      "completed_date": "11/9/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "Website",
+      "title": "Fix proposal for decoupling animation and shuffling logic",
+      "issue_id": "890",
+      "pr_id": "918",
+      "completed_by": "lapstjup",
+      "completed_date": "11/21/20",
+      "amount_paid": "5000"
+    }
+  ],
+  "laughablehaha": [
+    {
+      "repository": "Website",
+      "title": "Added Maltese language.",
+      "issue_id": "351",
+      "pr_id": "771",
+      "completed_by": "laughablehaha",
+      "completed_date": "11/14/20",
+      "amount_paid": "500"
     }
   ],
   "leelatanniru": [
@@ -863,6 +2127,115 @@
       "amount_paid": "5000"
     }
   ],
+  "lucedawg": [
+    {
+      "repository": "Website",
+      "title": "'Hello World' in Haitian Creole",
+      "issue_id": "351",
+      "pr_id": "891",
+      "completed_by": "lucedawg",
+      "completed_date": "11/18/20",
+      "amount_paid": "500"
+    }
+  ],
+  "lukas-kasticky": [
+    {
+      "repository": "Website",
+      "title": "Hello World in Serbian",
+      "issue_id": "351",
+      "pr_id": "526",
+      "completed_by": "lukas-kasticky",
+      "completed_date": "11/7/20",
+      "amount_paid": "500"
+    }
+  ],
+  "manishram": [
+    {
+      "repository": "Website",
+      "title": "Fixes: #399 Added go to top button",
+      "issue_id": "399",
+      "pr_id": "600",
+      "completed_by": "manishram",
+      "completed_date": "11/9/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "Added Hello World in sanskrit (india)",
+      "issue_id": "351",
+      "pr_id": "571",
+      "completed_by": "manishram",
+      "completed_date": "11/7/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Fixes: #523 Assets page",
+      "issue_id": "523",
+      "pr_id": "641",
+      "completed_by": "manishram",
+      "completed_date": "11/12/20",
+      "amount_paid": "7500"
+    },
+    {
+      "repository": "Website",
+      "title": "Add new contributor to the Back-End Developers",
+      "issue_id": "745",
+      "pr_id": "746",
+      "completed_by": "manishram",
+      "completed_date": "11/14/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Fixes Left Navigation Links",
+      "issue_id": "564",
+      "pr_id": "803",
+      "completed_by": "manishram",
+      "completed_date": "11/15/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "Complete title of recent task on hover",
+      "issue_id": "815",
+      "pr_id": "816",
+      "completed_by": "manishram",
+      "completed_date": "11/15/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Page Title Fix: Assets and Openings page",
+      "issue_id": "854",
+      "pr_id": "855",
+      "completed_by": "manishram",
+      "completed_date": "11/16/20",
+      "amount_paid": "500"
+    }
+  ],
+  "melsh123221": [
+    {
+      "repository": "Website",
+      "title": "Added Hello World in Welsh language",
+      "issue_id": "351",
+      "pr_id": "868",
+      "completed_by": "melsh123221",
+      "completed_date": "11/16/20",
+      "amount_paid": "500"
+    }
+  ],
+  "mersimoski": [
+    {
+      "repository": "Website",
+      "title": "issue#909 - Long title words break the mobile design in the tasks page",
+      "issue_id": "909",
+      "pr_id": "917",
+      "completed_by": "mersimoski",
+      "completed_date": "11/19/20",
+      "amount_paid": "1000"
+    }
+  ],
   "moki298": [
     {
       "repository": "Account-Manager",
@@ -890,13 +2263,176 @@
       "completed_by": "moki298",
       "completed_date": "11/1/20",
       "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Make the command 'npm run lint' run for Windows/Linux users",
+      "issue_id": "455",
+      "pr_id": "458",
+      "completed_by": "moki298",
+      "completed_date": "11/5/20",
+      "amount_paid": "7500"
+    }
+  ],
+  "mprateek14": [
+    {
+      "repository": "Website",
+      "title": "added hello world in odia",
+      "issue_id": "351",
+      "pr_id": "682",
+      "completed_by": "mprateek14",
+      "completed_date": "11/10/20",
+      "amount_paid": "500"
+    }
+  ],
+  "mthomas-io": [
+    {
+      "repository": "Website",
+      "title": "fix: Apply z-translation to make rotated chevron visible in Safari",
+      "issue_id": "446",
+      "pr_id": "504",
+      "completed_by": "mthomas-io",
+      "completed_date": "11/9/20",
+      "amount_paid": "1000"
+    }
+  ],
+  "naveedahmad99": [
+    {
+      "repository": "Website",
+      "title": "Pashto language added",
+      "issue_id": "351",
+      "pr_id": "510",
+      "completed_by": "naveedahmad99",
+      "completed_date": "11/7/20",
+      "amount_paid": "500"
+    }
+  ],
+  "nberic": [
+    {
+      "repository": "Website",
+      "title": "Add Serbian language",
+      "issue_id": "351",
+      "pr_id": "684",
+      "completed_by": "nberic",
+      "completed_date": "11/10/20",
+      "amount_paid": "500"
+    }
+  ],
+  "nparoski": [
+    {
+      "repository": "Website",
+      "title": "Fix/double focus",
+      "issue_id": "830",
+      "pr_id": "831",
+      "completed_by": "nparoski",
+      "completed_date": "11/15/20",
+      "amount_paid": "1000"
+    }
+  ],
+  "nrednav": [
+    {
+      "repository": "Website",
+      "title": "Fixes #389: Download page needs design update for iPhone 5",
+      "issue_id": "389",
+      "pr_id": "560",
+      "completed_by": "nrednav",
+      "completed_date": "11/11/20",
+      "amount_paid": "2000"
+    }
+  ],
+  "officialabdulrehman": [
+    {
+      "repository": "Website",
+      "title": "Added Hello World in Sindhi Language",
+      "issue_id": "351",
+      "pr_id": "575",
+      "completed_by": "officialabdulrehman",
+      "completed_date": "11/7/20",
+      "amount_paid": "500"
+    }
+  ],
+  "pabloqb2000": [
+    {
+      "repository": "Website",
+      "title": "Added Hello World in Aragonese",
+      "issue_id": "351",
+      "pr_id": "861",
+      "completed_by": "pabloqb2000",
+      "completed_date": "11/16/20",
+      "amount_paid": "500"
+    }
+  ],
+  "phase7": [
+    {
+      "repository": "Website",
+      "title": "Put Hello World\" in your OWN language!\"",
+      "issue_id": "351",
+      "pr_id": "485",
+      "completed_by": "phase7",
+      "completed_date": "11/5/20",
+      "amount_paid": "500"
+    }
+  ],
+  "phoenixArtwork": [
+    {
+      "repository": "Website",
+      "title": "Update of hello-world.ts and a suggestion.",
+      "issue_id": "351",
+      "pr_id": "698",
+      "completed_by": "phoenixArtwork",
+      "completed_date": "11/15/20",
+      "amount_paid": "500"
+    }
+  ],
+  "rabeeh-ta": [
+    {
+      "repository": "Website",
+      "title": "Added Hello World in Malayalam",
+      "issue_id": "351",
+      "pr_id": "596",
+      "completed_by": "rabeeh-ta",
+      "completed_date": "11/7/20",
+      "amount_paid": "500"
+    }
+  ],
+  "rahulkiller104": [
+    {
+      "repository": "Website",
+      "title": "donate-card-margin fixes",
+      "issue_id": "776",
+      "pr_id": "817",
+      "completed_by": "rahulkiller104",
+      "completed_date": "11/14/20",
+      "amount_paid": "500"
+    }
+  ],
+  "rasabel": [
+    {
+      "repository": "Website",
+      "title": "Add hello world in Amharic",
+      "issue_id": "351",
+      "pr_id": "649",
+      "completed_by": "rasabel",
+      "completed_date": "11/9/20",
+      "amount_paid": "500"
+    }
+  ],
+  "reeveng": [
+    {
+      "repository": "Website",
+      "title": "Adding Thai version of Hello world",
+      "issue_id": "351",
+      "pr_id": "535",
+      "completed_by": "reeveng",
+      "completed_date": "11/7/20",
+      "amount_paid": "500"
     }
   ],
   "rizqyep": [
     {
       "repository": "Website",
       "title": "Put Hello World\" in your OWN language!\"",
-      "issue_id": "369",
+      "issue_id": "351",
       "pr_id": "381",
       "completed_by": "rizqyep",
       "completed_date": "11/2/20",
@@ -907,18 +2443,71 @@
     {
       "repository": "Website",
       "title": "Put Hello World\" in your OWN language!\"",
-      "issue_id": "369",
+      "issue_id": "351",
       "pr_id": "457",
       "completed_by": "robMakasi",
       "completed_date": "11/4/20",
       "amount_paid": "500"
     }
   ],
+  "sardorml": [
+    {
+      "repository": "Website",
+      "title": ":globe_with_meridians: Added Hello World in Uzbek language",
+      "issue_id": "351",
+      "pr_id": "740",
+      "completed_by": "sardorml",
+      "completed_date": "11/12/20",
+      "amount_paid": "500"
+    }
+  ],
+  "sarveshkolte": [
+    {
+      "repository": "Website",
+      "title": "Hello world in Japanese",
+      "issue_id": "351",
+      "pr_id": "511",
+      "completed_by": "sarveshkolte",
+      "completed_date": "11/7/20",
+      "amount_paid": "500"
+    }
+  ],
+  "sbalasa": [
+    {
+      "repository": "Website",
+      "title": "Adding Hello World in Irish/Gaelic language",
+      "issue_id": "351",
+      "pr_id": "720",
+      "completed_by": "sbalasa",
+      "completed_date": "11/12/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Add Github Actions to automate testing and linting",
+      "issue_id": "38",
+      "pr_id": "40",
+      "completed_by": "sbalasa",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000"
+    }
+  ],
+  "sdhiaeddine": [
+    {
+      "repository": "Website",
+      "title": "Docs need some language/grammatical fixes",
+      "issue_id": "619",
+      "pr_id": "624",
+      "completed_by": "sdhiaeddine",
+      "completed_date": "11/9/20",
+      "amount_paid": "1000"
+    }
+  ],
   "shahraizali": [
     {
       "repository": "Website",
       "title": "Put Hello World\" in your OWN language!\"",
-      "issue_id": "369",
+      "issue_id": "351",
       "pr_id": "379",
       "completed_by": "shahraizali",
       "completed_date": "11/2/20",
@@ -941,6 +2530,81 @@
       "completed_by": "shahraizali",
       "completed_date": "10/16/20",
       "amount_paid": "5000"
+    },
+    {
+      "repository": "Website",
+      "title": "Added Urdu",
+      "issue_id": "351",
+      "pr_id": "379",
+      "completed_by": "shahraizali",
+      "completed_date": "11/2/20",
+      "amount_paid": "500"
+    }
+  ],
+  "shcul333": [
+    {
+      "repository": "Website",
+      "title": "Added marathi translation for Hello World",
+      "issue_id": "351",
+      "pr_id": "546",
+      "completed_by": "shcul333",
+      "completed_date": "11/7/20",
+      "amount_paid": "500"
+    }
+  ],
+  "siemen-subbaiah": [
+    {
+      "repository": "Website",
+      "title": "Update hello-world.ts",
+      "issue_id": "351",
+      "pr_id": "874",
+      "completed_by": "siemen-subbaiah",
+      "completed_date": "11/17/20",
+      "amount_paid": "500"
+    }
+  ],
+  "singh-sarabjeet": [
+    {
+      "repository": "Website",
+      "title": "Added Hello World in Punjabi",
+      "issue_id": "351",
+      "pr_id": "623",
+      "completed_by": "singh-sarabjeet",
+      "completed_date": "11/9/20",
+      "amount_paid": "500"
+    }
+  ],
+  "sotheavuthnguon": [
+    {
+      "repository": "Website",
+      "title": "Added hello world in khmer language",
+      "issue_id": "351",
+      "pr_id": "742",
+      "completed_by": "sotheavuthnguon",
+      "completed_date": "11/12/20",
+      "amount_paid": "500"
+    }
+  ],
+  "subhamg": [
+    {
+      "repository": "Website",
+      "title": "feat: Add contributor to the team of front-end developers",
+      "issue_id": "750",
+      "pr_id": "755",
+      "completed_by": "subhamg",
+      "completed_date": "11/12/20",
+      "amount_paid": "500"
+    }
+  ],
+  "suhailpappu": [
+    {
+      "repository": "Website",
+      "title": "Changed hello in telugu to real form of hello i.e namaste",
+      "issue_id": "351",
+      "pr_id": "677",
+      "completed_by": "suhailpappu",
+      "completed_date": "11/13/20",
+      "amount_paid": "500"
     }
   ],
   "thesanjeevsharma": [
@@ -1015,6 +2679,42 @@
       "completed_by": "thesanjeevsharma",
       "completed_date": "11/4/20",
       "amount_paid": "5000"
+    },
+    {
+      "repository": "Website",
+      "title": "added @mersimoski to front-end team",
+      "issue_id": "699",
+      "pr_id": "700",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "11/10/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "updated engineering openings",
+      "issue_id": "706",
+      "pr_id": "707",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "11/10/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "added Kotlin-SDK to tasks",
+      "issue_id": "876",
+      "pr_id": "882",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "11/17/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Added Avatar component",
+      "issue_id": "869",
+      "pr_id": "942",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "11/22/20",
+      "amount_paid": "2500"
     }
   ],
   "tpikachu": [
@@ -1035,6 +2735,48 @@
       "completed_by": "tpikachu",
       "completed_date": "10/4/20",
       "amount_paid": "5000"
+    }
+  ],
+  "velibor7": [
+    {
+      "repository": "Website",
+      "title": "Download page fix",
+      "issue_id": "517",
+      "pr_id": "489",
+      "completed_by": "velibor7",
+      "completed_date": "11/6/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Bank - patch api call for validators path",
+      "issue_id": "22",
+      "pr_id": "23",
+      "completed_by": "velibor7",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000"
+    }
+  ],
+  "vilihegyi": [
+    {
+      "repository": "Website",
+      "title": "Added Hello World in Hungarian language.",
+      "issue_id": "351",
+      "pr_id": "597",
+      "completed_by": "vilihegyi",
+      "completed_date": "11/9/20",
+      "amount_paid": "500"
+    }
+  ],
+  "virtualdesigner": [
+    {
+      "repository": "Website",
+      "title": "Add correct translation to Hello World in Tamil.",
+      "issue_id": "351",
+      "pr_id": "678",
+      "completed_by": "virtualdesigner",
+      "completed_date": "11/9/20",
+      "amount_paid": "500"
     }
   ],
   "webdeveloperswj": [
@@ -1066,14 +2808,143 @@
       "amount_paid": "5000"
     }
   ],
+  "whitelionx": [
+    {
+      "repository": "Account-Manager",
+      "title": "#435 - Fix Prefix Issue",
+      "issue_id": "435",
+      "pr_id": "445",
+      "completed_by": "whitelionx",
+      "completed_date": "11/9/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "#643 - Fix readme spelling mistakes and grammar",
+      "issue_id": "643",
+      "pr_id": "646",
+      "completed_by": "whitelionx",
+      "completed_date": "11/9/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Bug/#645 team lead text alignment issue",
+      "issue_id": "645",
+      "pr_id": "647",
+      "completed_by": "whitelionx",
+      "completed_date": "11/9/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Bug - #659 hash link snap issue",
+      "issue_id": "659",
+      "pr_id": "661",
+      "completed_by": "whitelionx",
+      "completed_date": "11/9/20",
+      "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "Bosnian hello world",
+      "issue_id": "351",
+      "pr_id": "514",
+      "completed_by": "whitelionx",
+      "completed_date": "11/7/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "#581 - Fix no margin issue",
+      "issue_id": "589",
+      "pr_id": "581",
+      "completed_by": "whitelionx",
+      "completed_date": "11/7/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Feature/Account manager docs",
+      "issue_id": "761",
+      "pr_id": "737",
+      "completed_by": "whitelionx",
+      "completed_date": "11/12/20",
+      "amount_paid": "1000"
+    }
+  ],
+  "wilsongayo": [
+    {
+      "repository": "Website",
+      "title": "Adding Hello World in Tagalog | Filipino",
+      "issue_id": "351",
+      "pr_id": "531",
+      "completed_by": "wilsongayo",
+      "completed_date": "11/7/20",
+      "amount_paid": "500"
+    }
+  ],
+  "xZliman": [
+    {
+      "repository": "Website",
+      "title": "hello world in turkish (#351)",
+      "issue_id": "351",
+      "pr_id": "528",
+      "completed_by": "xZliman",
+      "completed_date": "11/7/20",
+      "amount_paid": "500"
+    }
+  ],
   "xmac11": [
     {
       "repository": "Website",
       "title": "Put Hello World\" in your OWN language!\"",
-      "issue_id": "369",
+      "issue_id": "351",
       "pr_id": "380",
       "completed_by": "xmac11",
       "completed_date": "11/2/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Bank - post invalid block to bank",
+      "issue_id": "18",
+      "pr_id": "26",
+      "completed_by": "xmac11",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000"
+    }
+  ],
+  "ysttt12": [
+    {
+      "repository": "Website",
+      "title": "Added Nyanja language",
+      "issue_id": "351",
+      "pr_id": "913",
+      "completed_by": "ysttt12",
+      "completed_date": "11/19/20",
+      "amount_paid": "500"
+    }
+  ],
+  "zalkar-z": [
+    {
+      "repository": "Website",
+      "title": "added hello world in Kyrgyz language",
+      "issue_id": "351",
+      "pr_id": "721",
+      "completed_by": "zalkar-z",
+      "completed_date": "11/11/20",
+      "amount_paid": "500"
+    }
+  ],
+  "zinoadidi": [
+    {
+      "repository": "Website",
+      "title": "#351 - Hello world in Estonian",
+      "issue_id": "351",
+      "pr_id": "538",
+      "completed_by": "zinoadidi",
+      "completed_date": "11/7/20",
       "amount_paid": "500"
     }
   ]

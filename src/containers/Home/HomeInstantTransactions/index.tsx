@@ -26,7 +26,11 @@ const HomeInstantTransactions: FC = () => {
               <p>
                 <strong>Now in alpha!</strong>
               </p>
-              <NavLink className="HomeInstantTransactions__content-container--display-large" to="/guide/introduction">
+              <NavLink
+                className="HomeInstantTransactions__content-container--display-large"
+                tabIndex={-1}
+                to="/guide/introduction"
+              >
                 <Button>View Docs</Button>
               </NavLink>
             </div>
