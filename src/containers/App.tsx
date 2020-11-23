@@ -22,7 +22,6 @@ import Social from './Social';
 import StyleGuide from './StyleGuide';
 import Tasks from './Tasks';
 import Teams from './Teams';
-import AccountComponent from './Account';
 
 interface GoogleAnalyticsWindow extends Window {
   ga: any;
@@ -72,7 +71,6 @@ const App: FC = () => {
           <Route path="/confirmation-validator-api/:chapter" component={ConfirmationValidatorApi} />
           <Route path="/deployment-guide/:chapter" component={DeploymentGuide} />
           <Route path="/download" component={Download} />
-          <Route path="/account" component={AccountComponent} />
           <Route path="/guide/:chapter" component={Guide} />
           <Route path="/internal/:chapter" component={Internal} />
           <Route path="/primary-validator-api/:chapter" component={PrimaryValidatorApi} />
