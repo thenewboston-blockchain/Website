@@ -83,7 +83,7 @@ const GuideBanks: FC = () => {
         <li>Users choose their banks</li>
         <li>Banks choose their primary validators</li>
         <li>
-          The banks confirmation validators will tell the bank when to switch primary validators (if/when the primary
+          The bank's confirmation validators will tell the bank when to switch primary validators (if/when the primary
           validator becomes untrustworthy)
         </li>
       </DocList>

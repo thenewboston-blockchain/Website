@@ -26,7 +26,7 @@ const ProjectProposalsRules: FC = () => {
       <StepIndicator
         className="ProjectProposalsRules__StepIndicator"
         number={4}
-        text="Projects promoting abusive advertisements are not be allowed."
+        text="Projects promoting abusive advertisements are not allowed."
       />
       <StepIndicator
         className="ProjectProposalsRules__StepIndicator"
