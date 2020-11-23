@@ -6,7 +6,7 @@ const ConfirmationValidatorApiAccounts: FC = () => {
   return (
     <DocContainer className="ConfirmationValidatorApiAccounts" title="Accounts">
       <p>
-        The confirmation validators will maintain the account numbers, balances, and balance locks for all accounts on
+        The confirmation validators will maintain the account numbers, balances and balance locks for all accounts on
         the network.
       </p>
 

@@ -1,12 +1,14 @@
 import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
-import {DashboardLayout, Pagination} from 'components';
+import {DashboardLayout, DocsMenuItems, Pagination} from 'components';
 import {accountManagerNavigationData} from 'components/DocsMenuItems';
 import {PageData, PageDataObject} from 'types/page-data';
 
 import AccountManagerAddFriends from './AccountManagerAddFriends';
 import AccountManagerCreateAccount from './AccountManagerCreateAccount';
+import AccountManagerCreateBank from './AccountManagerCreateBank';
+import AccountManagerCreateValidator from './AccountManagerCreateValidator';
 import AccountManagerEditNicknames from './AccountManagerEditNicknames';
 import AccountManagerGetStarted from './AccountManagerGetStarted';
 import AccountManagerSendCoins from './AccountManagerSendCoins';
@@ -24,6 +26,14 @@ const pageData: PageDataObject = {
   'create-an-account': {
     content: <AccountManagerCreateAccount />,
     name: 'Create an Account',
+  },
+  'create-bank': {
+    content: <AccountManagerCreateBank />,
+    name: 'Create a Bank',
+  },
+  'create-validator': {
+    content: <AccountManagerCreateValidator />,
+    name: 'Create a Validator',
   },
   'edit-nicknames': {
     content: <AccountManagerEditNicknames />,
@@ -48,7 +58,7 @@ const AccountManager: FC = () => {
   const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
 
   return (
-    <DashboardLayout pageName={name} sectionName="Account Manager">
+    <DashboardLayout menuItems={<DocsMenuItems />} pageName={name} sectionName="Account Manager">
       {content}
       <Pagination navigationData={accountManagerNavigationData} />
     </DashboardLayout>

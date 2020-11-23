@@ -2,10 +2,11 @@ import axios from 'axios';
 
 import {AMOUNT_COLOR, REPOSITORIES} from 'constants/github';
 import {BaseRelease, Issue, Release} from 'types/github';
+import {REGEX} from 'constants/regex';
 
 export const fetchGithubIssues = async (): Promise<Issue[]> => {
   const promises = REPOSITORIES.map((repoName) =>
-    axios.get(`https://api.github.com/repos/thenewboston-developers/${repoName}/issues`),
+    axios.get(`https://api.github.com/repos/thenewboston-developers/${repoName.pathname}/issues`),
   );
 
   const results = await Promise.all(promises);
@@ -17,7 +18,7 @@ export const fetchGithubIssues = async (): Promise<Issue[]> => {
     const amountLabels = issue.labels.filter(({color}: any) => color.toLowerCase() === AMOUNT_COLOR);
     return {
       ...issue,
-      amount: amountLabels.length ? parseInt(amountLabels[0].name, 10) : 0,
+      amount: amountLabels.length ? parseInt(amountLabels[0].name.replace(REGEX.excludingNumber, ''), 10) : 0,
       repositoryName: getRepositoryName(issue.repository_url),
     };
   });

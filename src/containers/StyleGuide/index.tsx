@@ -1,7 +1,7 @@
 import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
-import {DashboardLayout} from 'components';
+import {DashboardLayout, DocsMenuItems} from 'components';
 import {PageData, PageDataObject} from 'types/page-data';
 
 import StyleGuideCss from './StyleGuideCss';
@@ -32,7 +32,7 @@ const StyleGuide: FC = () => {
   const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
 
   return (
-    <DashboardLayout pageName={name} sectionName="Style Guide">
+    <DashboardLayout menuItems={<DocsMenuItems />} pageName={name} sectionName="Style Guide">
       {content}
     </DashboardLayout>
   );

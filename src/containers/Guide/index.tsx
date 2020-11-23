@@ -1,7 +1,7 @@
 import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
-import {DashboardLayout, Pagination} from 'components';
+import {DashboardLayout, DocsMenuItems, Pagination} from 'components';
 import {guideNavigationData} from 'components/DocsMenuItems';
 import {PageData, PageDataObject} from 'types/page-data';
 
@@ -12,7 +12,6 @@ import GuideBlocks from './GuideBlocks';
 import GuideConfirmationServices from './GuideConfirmationServices';
 import GuideConfirmationValidators from './GuideConfirmationValidators';
 import GuideFutureDevelopment from './GuideFutureDevelopment';
-import GuideInitialFunds from './GuideInitialFunds';
 import GuideIntroduction from './GuideIntroduction';
 import GuideNodeIdentifier from './GuideNodeIdentifier';
 import GuideResyncProcess from './GuideResyncProcess';
@@ -55,10 +54,6 @@ const pageData: PageDataObject = {
   'future-development': {
     content: <GuideFutureDevelopment />,
     name: 'Future Development',
-  },
-  'initial-funds': {
-    content: <GuideInitialFunds />,
-    name: 'Initial Funds',
   },
   introduction: {
     content: <GuideIntroduction />,
@@ -103,7 +98,7 @@ const Guide: FC = () => {
   const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
 
   return (
-    <DashboardLayout pageName={name} sectionName="Guide">
+    <DashboardLayout menuItems={<DocsMenuItems />} pageName={name} sectionName="Guide">
       {content}
       <Pagination navigationData={guideNavigationData} />
     </DashboardLayout>

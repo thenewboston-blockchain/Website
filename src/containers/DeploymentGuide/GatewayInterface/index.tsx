@@ -22,8 +22,7 @@ const GatewayInterface: FC<ComponentProps> = ({name}) => {
         code={`#!/bin/bash
 
 cd /var/www/${name}
-daphne -p 8001 config.asgi:application
-`}
+daphne -p 8001 config.asgi:application`}
         heading="Paste in the following and save"
       />
       <CodeSnippet

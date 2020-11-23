@@ -38,14 +38,13 @@ const StyleGuideCss: FC = () => {
         <A href="https://css-tricks.com/using-sass-control-scope-bem-naming/">article</A>.
       </p>
       <p>
-        We chose not to use any CSS Frameworks that provides global selectors (such as Bootstrap). Some of the reasons
+        We chose not to use any CSS Frameworks that provide global selectors (such as Bootstrap). Some of the reasons
         for this decision is that:
       </p>
       <DocList variant="ul">
         <li>CSS Frameworks are great for prototyping, but we already have designs built for us (in Figma).</li>
         <li>
-          CSS Frameworks adds extra complexity to our code, and it becomes an additional barrier for developers to
-          learn.
+          CSS Frameworks add extra complexity to our code, and it becomes an additional barrier for developers to learn.
         </li>
         <li>
           Modern CSS (such as <A href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox</A> and{' '}
@@ -74,9 +73,9 @@ const StyleGuideCss: FC = () => {
         title="CapitalCase className for the root DOM element of a component"
       >
         <p>
-          Every React component should have it's root DOM element have it's className be the CapitalCased version of the
+          Every React component should have its root DOM element have its className be the CapitalCased version of the
           component name. Since every React Component should already follow the CapitalCase convention, this implies
-          that the className should be completely identical with the name of the component. If the component need's it
+          that the className should be completely identical with the name of the component. If the component needs its
           own custom styling, there should be an accompanying <DocInlineCode>SCSS</DocInlineCode> file with the same
           name.
         </p>
@@ -94,7 +93,6 @@ const StyleGuideCss: FC = () => {
           code={`import React, {FC} from 'react';
         
 import './LeftMenu.scss';
-
 const LeftMenu: FC = () => {
   return (
     <div className="LeftMenu">
@@ -127,7 +125,7 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Bad"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <CodeSnippet
           code={`return (
@@ -138,7 +136,7 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Good"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
       </DocSubSection>
       <DocSubSection id={StyleGuideCssNav.clsx} title="CLSX for conditional classNames">
@@ -146,18 +144,20 @@ const LeftMenu: FC = () => {
           We use the <A href="https://www.npmjs.com/package/clsx">CLSX</A> package to deal with conditional classNames.
         </p>
         <CodeSnippet
-          code={`<div className={\`LeftNav__nav \${selected === 'home' ? 'LeftNav__nav--active' : ''}\`}>Home</div>`}
+          code={`return <div className={\`LeftNav__nav \${selected === 'home' ? 'LeftNav__nav--active' : ''}\`}>Home</div>;`}
           heading="Bad"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <CodeSnippet
-          code={`<div 
-   className={clsx("LeftNav__nav", {
-      "LeftNav__nav--active": selected === "home"
-   })}
->Home</div>`}
+          code={`return (
+  <div 
+     className={clsx("LeftNav__nav", {
+        "LeftNav__nav--active": selected === "home"
+     })}
+  >Home</div>
+);`}
           heading="Good"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
       </DocSubSection>
       <DocSubSection id={StyleGuideCssNav.sassAmpBem} title="SASS Ampersand + BEM">
@@ -181,7 +181,7 @@ const LeftMenu: FC = () => {
    </div>
 );`}
           heading="LeftMenu.tsx"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <p>
           There are three classNames we have to deal with: <DocInlineCode>.LeftNav</DocInlineCode>,{' '}
@@ -258,8 +258,8 @@ const LeftMenu: FC = () => {
       </DocSubSection>
       <DocSubSection id={StyleGuideCssNav.blocksElements} title="Blocks vs. Elements">
         <p>
-          One of the pain-coins of <DocInlineCode>BEM</DocInlineCode> is the ambiguity of the distinction between Blocks
-          and Elements. In order to keep it simple, this is the rule we are going to follow:
+          One of the pain-points of <DocInlineCode>BEM</DocInlineCode> is the ambiguity of the distinction between
+          Blocks and Elements. In order to keep it simple, this is the rule we are going to follow:
         </p>
         <DocList variant="ul">
           <li>
@@ -269,14 +269,14 @@ const LeftMenu: FC = () => {
           <li>
             Every other (non-modifiers) DOM elements contained within that root DOM element should try to be considered
             as <DocInlineCode>Elements</DocInlineCode>, unless the said <DocInlineCode>Element</DocInlineCode> has so
-            many sub-elements that needs styling, in which case it will be converted to a{' '}
+            many sub-elements that need styling, in which case it will be converted to a{' '}
             <DocInlineCode>Block</DocInlineCode>.
           </li>
         </DocList>
         <p>This is probably best explained with a couple examples:</p>
         <p>
           <strong>
-            1. A given DOM element with more elements inside doesn't need to be considered as Blocks if the naming won't
+            1. A given DOM element with more elements inside doesn't need to be considered as a Block if the naming
             won't be too confusing:
           </strong>
         </p>
@@ -290,7 +290,7 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Bad"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <CodeSnippet
           code={`return (
@@ -303,7 +303,7 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Good"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <p>
           <strong>
@@ -330,7 +330,7 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Bad"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <CodeSnippet
           code={`return (
@@ -351,18 +351,18 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="Good"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <p>
           One note about above: you should only introduce one level of new blocks for a given component. If you need to
           use 2-level or more nested blocks within a given component, the component is (probably) better off being
-          separated into multiple components. This coin probably deserves a new section:
+          separated into multiple components. This point probably deserves a new section:
         </p>
       </DocSubSection>
       <DocSubSection id={StyleGuideCssNav.blocksSassNesting} title="Blocks and level of SASS Nesting">
         <p>
-          Continuing on with the previous coin, each component should have at most one level of nested{' '}
-          <DocInlineCode>blocks</DocInlineCode> within it's root DOM element. Ideally, if the component is small enough,
+          Continuing on with the previous point, each component should have at most one level of nested{' '}
+          <DocInlineCode>blocks</DocInlineCode> within its root DOM element. Ideally, if the component is small enough,
           it doesn't need any blocks, but this is not always realistic. This is to ensure we don't have selectors within
           our SCSS that have too high of a specificity.
         </p>
@@ -400,13 +400,13 @@ const LeftMenu: FC = () => {
         </p>
         <CodeSnippet
           code={`return (
-  <div className="PresentationalComponent>
+  <div className="PresentationalComponent">
     <div className="PresentationalComponent__left">{leftComponentProp}</div>
     {children}
   </div>
 );`}
           heading="TSX Component"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <CodeSnippet
           code={`.PresentationalComponent {
@@ -435,7 +435,6 @@ const LeftMenu: FC = () => {
           code={`.red {
   color: red;
 }
-
 .fancy-table {
   // some fancy table styling
 }`}
@@ -463,7 +462,6 @@ const LeftMenu: FC = () => {
           code={`#left-nav { // No id selectors
   // ...  
 }
-
 .LeftNav {
   a { // No HTML Element selectors
     // ...
@@ -474,11 +472,11 @@ const LeftMenu: FC = () => {
         />
         <p>
           *The only exception to this rule is when dealing with nested HTML Elements that always go hand-in-hand, such
-          as a <DocInlineCode>table</DocInlineCode> that always has accomodating elements such as{' '}
+          as a <DocInlineCode>table</DocInlineCode> that always has accommodating elements such as{' '}
           <DocInlineCode>thead</DocInlineCode>, <DocInlineCode>tbody</DocInlineCode>, <DocInlineCode>tr</DocInlineCode>,{' '}
           <DocInlineCode>th</DocInlineCode>, <DocInlineCode>td</DocInlineCode>. Or a{' '}
-          <DocInlineCode>ol/ul</DocInlineCode>, with it's accompanying <DocInlineCode>li</DocInlineCode> element. In
-          this case, you must give the root HTML element (such as <DocInlineCode>table</DocInlineCode> or{' '}
+          <DocInlineCode>ol/ul</DocInlineCode>, with its accompanying <DocInlineCode>li</DocInlineCode> element. In this
+          case, you must give the root HTML element (such as <DocInlineCode>table</DocInlineCode> or{' '}
           <DocInlineCode>ol</DocInlineCode>) a className, and put all the HTML element selectors inside that class
           selector.
         </p>
@@ -501,7 +499,7 @@ const LeftMenu: FC = () => {
   </div>
 );`}
           heading="TSX Component"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <CodeSnippet
           code={`.Component {
