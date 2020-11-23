@@ -44,8 +44,7 @@ const StyleGuideCss: FC = () => {
       <DocList variant="ul">
         <li>CSS Frameworks are great for prototyping, but we already have designs built for us (in Figma).</li>
         <li>
-          CSS Frameworks add extra complexity to our code, and it becomes an additional barrier for developers to
-          learn.
+          CSS Frameworks add extra complexity to our code, and it becomes an additional barrier for developers to learn.
         </li>
         <li>
           Modern CSS (such as <A href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox</A> and{' '}
@@ -277,8 +276,8 @@ const LeftMenu: FC = () => {
         <p>This is probably best explained with a couple examples:</p>
         <p>
           <strong>
-            1. A given DOM element with more elements inside doesn't need to be considered as a Block if the naming won't
-            be too confusing:
+            1. A given DOM element with more elements inside doesn't need to be considered as a Block if the naming
+            won't be too confusing:
           </strong>
         </p>
         <CodeSnippet
@@ -476,8 +475,8 @@ const LeftMenu: FC = () => {
           as a <DocInlineCode>table</DocInlineCode> that always has accommodating elements such as{' '}
           <DocInlineCode>thead</DocInlineCode>, <DocInlineCode>tbody</DocInlineCode>, <DocInlineCode>tr</DocInlineCode>,{' '}
           <DocInlineCode>th</DocInlineCode>, <DocInlineCode>td</DocInlineCode>. Or a{' '}
-          <DocInlineCode>ol/ul</DocInlineCode>, with its accompanying <DocInlineCode>li</DocInlineCode> element. In
-          this case, you must give the root HTML element (such as <DocInlineCode>table</DocInlineCode> or{' '}
+          <DocInlineCode>ol/ul</DocInlineCode>, with its accompanying <DocInlineCode>li</DocInlineCode> element. In this
+          case, you must give the root HTML element (such as <DocInlineCode>table</DocInlineCode> or{' '}
           <DocInlineCode>ol</DocInlineCode>) a className, and put all the HTML element selectors inside that class
           selector.
         </p>

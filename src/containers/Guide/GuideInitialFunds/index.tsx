@@ -21,7 +21,7 @@ const GuideInitialFunds: FC = () => {
         first. Given that the usefulness of currency is the transfer of value from one individual to another, the
         initial distribution of funds must be to several individuals. This would not only help alleviate the
         concentration of wealth that is apparent in the majority of existing economies, both fiat and digital but also
-        aid early adoption by placing the currency in the hands of many rather than a selected few. With the foundational
+        aid early adoption by placing the currency in the hands of many rather than a select few. With the foundational
         ideas of initial distribution apparent, the solution to that question now became tied to another. Who gets the
         funds?
       </p>
