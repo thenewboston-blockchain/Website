@@ -52,7 +52,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-11-13T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "45",
+          "contributorId": "43",
           "displayName": "Andy Bajaras",
           "githubUsername": "Barajas123",
           "profileImage": "https://avatars2.githubusercontent.com/u/46165581?s=460&v=4",
@@ -91,7 +91,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-11-12T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "42",
+          "contributorId": "40",
           "displayName": "Dwayne Sordam",
           "githubUsername": "CirXe0N",
           "profileImage": "https://avatars3.githubusercontent.com/u/24738451?s=460&u=c1e3dc0dd9585a4cf877c453ec80f4af830c2fd5&v=4",
@@ -104,7 +104,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-11-13T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "47",
+          "contributorId": "44",
           "displayName": "Richard Starkey",
           "githubUsername": "MathClassIsTough",
           "profileImage": "https://avatars0.githubusercontent.com/u/74336482?s=460&v=4",
@@ -117,7 +117,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-11-18T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "52",
+          "contributorId": "49",
           "displayName": "Yashovardhan",
           "githubUsername": "YashovardhanSingh",
           "profileImage": "https://avatars1.githubusercontent.com/u/63940326?s=460&v=4",
@@ -213,7 +213,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "40",
+          "contributorId": "38",
           "displayName": "Francisca Nwafor",
           "githubUsername": null,
           "profileImage": "https://media-exp1.licdn.com/dms/image/C4D03AQFRvpMONLCcdQ/profile-displayphoto-shrink_400_400/0?e=1610582400&v=beta&t=f69ny2IHWl5A2BAq6_UcDBn1lmhyNSsVhdjZn0SimoM",
@@ -263,32 +263,6 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01C3UKRM2M-e036dfe7aec6-512",
           "slackUsername": "David Yap"
         }
-      },
-      {
-        "title": "UX/UI Designer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "33",
-          "displayName": "Khairul Akmal",
-          "githubUsername": "mofodox",
-          "profileImage": "https://avatars0.githubusercontent.com/u/1651333?s=400&u=e72af3c47428f9f173b90d45a990e5631c37ea5d&v=4",
-          "slackUsername": "Khairul Akmal"
-        }
-      },
-      {
-        "title": "UX/UI Designer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "34",
-          "displayName": "Sush",
-          "githubUsername": "nsushman",
-          "profileImage": "https://avatars0.githubusercontent.com/u/18399270?s=400&v=4",
-          "slackUsername": "Sush"
-        }
       }
     ]
   },
@@ -301,7 +275,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "39",
+          "contributorId": "37",
           "displayName": "Mark",
           "githubUsername": null,
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EFN0FG04-291dc1f7a129-512",
@@ -332,7 +306,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "49",
+          "contributorId": "46",
           "displayName": "DinShpati",
           "githubUsername": "DinShpati",
           "profileImage": "https://avatars2.githubusercontent.com/u/25906602",
@@ -428,7 +402,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-11-14T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "50",
+          "contributorId": "47",
           "displayName": "Nine",
           "githubUsername": "whitelionx",
           "profileImage": "https://avatars1.githubusercontent.com/u/31674307?s=460&u=89b8153755b6765cbdc0b2579d8f545138b4760c&v=4",
@@ -467,7 +441,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "43",
+          "contributorId": "41",
           "displayName": "Michael Lee",
           "githubUsername": "tpikachu",
           "profileImage": "https://avatars1.githubusercontent.com/u/46133358?s=460&u=d731694bb83f5f51df70fa1841ccedcd70efc7f7&v=4",
@@ -480,7 +454,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-11-12T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "41",
+          "contributorId": "39",
           "displayName": "Meharban Singh",
           "githubUsername": "Meharban-Singh",
           "profileImage": "https://avatars1.githubusercontent.com/u/33323725?s=460&u=da67fec9d0eacc6f5680c789265fb372a75d71c0&v=4",
@@ -498,7 +472,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "37",
+          "contributorId": "35",
           "displayName": "Ian Arbuckle",
           "githubUsername": "IanArb",
           "profileImage": "https://avatars2.githubusercontent.com/u/6011914?s=460&u=9328434aef816ce5dfe5fbc12b64f2f498222ebc&v=4",
@@ -511,7 +485,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "53",
+          "contributorId": "50",
           "displayName": "Martin Nowosad",
           "githubUsername": "MrIceman",
           "profileImage": "https://avatars1.githubusercontent.com/u/8811474?s=460&u=439dda616284c68e76898195986dc5db2a231c66&v=4",
@@ -524,7 +498,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "54",
+          "contributorId": "51",
           "displayName": "Peter Sommerhoff",
           "githubUsername": "petersommerhoff",
           "profileImage": "https://avatars2.githubusercontent.com/u/2805791?s=460&u=5fcb7424015f63ae2194171c5649af332ab59f05&v=4",
@@ -555,7 +529,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "36",
+          "contributorId": "34",
           "displayName": "Pulkit Bajaj",
           "githubUsername": "-",
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01DYM56TQV-b28ea2d2e34d-72",
@@ -574,19 +548,6 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01C14HRXFT-g90d1fb3c0c1-512",
           "slackUsername": "Sunil Chauhan"
         }
-      },
-      {
-        "title": "Marketing Coordinator",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "46",
-          "displayName": "Amy Burcham",
-          "githubUsername": "Nevah422",
-          "profileImage": "https://avatars0.githubusercontent.com/u/74023881?s=400&v=4",
-          "slackUsername": "Amy Burcham"
-        }
       }
     ]
   },
@@ -599,7 +560,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "51",
+          "contributorId": "48",
           "displayName": "Martyn",
           "githubUsername": "Spotnag",
           "profileImage": "https://avatars3.githubusercontent.com/u/2324860?s=400&u=ca3e6fcc7e1c03a48720143704adc8ef51d7c64d&v=4",
@@ -630,7 +591,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "55",
+          "contributorId": "52",
           "displayName": "Nikhil Taneja",
           "githubUsername": "itsnikhil",
           "profileImage": "https://avatars1.githubusercontent.com/u/20350674?v=4",
@@ -643,7 +604,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "56",
+          "contributorId": "53",
           "displayName": "Tawanda Makunike",
           "githubUsername": "Tawanike",
           "profileImage": "https://avatars1.githubusercontent.com/u/329524?v=4",
@@ -661,7 +622,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "35",
+          "contributorId": "33",
           "displayName": "Manish Ram",
           "githubUsername": "manishram",
           "profileImage": "https://avatars0.githubusercontent.com/u/22790904?s=400&u=643810e6c9d5686df409132b01863f9e065df6c1&v=4",
@@ -723,7 +684,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "44",
+          "contributorId": "42",
           "displayName": "Landon Moon",
           "githubUsername": "LunarDeveloper",
           "profileImage": "https://avatars3.githubusercontent.com/u/32111172?s=460&u=274388e47550c045abc5496b9f25485123634715&v=4",
@@ -754,7 +715,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-11-19T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "57",
+          "contributorId": "54",
           "displayName": "Hargobind Gupta",
           "githubUsername": "Yara1990",
           "profileImage": "https://avatars3.githubusercontent.com/u/15350237?s=460&u=46a246a5f8b4fac015551b79ffb95a268e9914e1&v=4",
@@ -767,7 +728,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-11-19T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "58",
+          "contributorId": "55",
           "displayName": "Kayode Babarinde",
           "githubUsername": "",
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E6KXL06A-0e40b9f51c32-512",
@@ -780,7 +741,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-11-19T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "59",
+          "contributorId": "56",
           "displayName": "Joe Sykes",
           "githubUsername": "",
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01CTDXMK1Q-4953bceb47d4-512",
@@ -824,7 +785,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "48",
+          "contributorId": "45",
           "displayName": "Spencer Dollahite",
           "githubUsername": "spencer-dollahite",
           "profileImage": "https://avatars0.githubusercontent.com/u/74439721?s=400&v=4",
@@ -855,7 +816,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "38",
+          "contributorId": "36",
           "displayName": "Nico y-crozier",
           "githubUsername": "nicocrozier",
           "profileImage": "https://avatars2.githubusercontent.com/u/41084465?s=460&u=e4bbc12b9d60ba1869da25809044eddc97733c1b&v=4",
