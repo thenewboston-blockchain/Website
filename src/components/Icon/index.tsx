@@ -102,7 +102,6 @@ interface ComponentProps {
 const Icon = forwardRef<HTMLDivElement, ComponentProps>(
   ({className, disabled = false, icon, onClick, onKeyDown, size, totalSize = 'unset', unfocusable = false}, ref) => {
     const iconProps = {
-      onClick: disabled ? noop : onClick,
       size,
     };
 
