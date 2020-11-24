@@ -2,7 +2,6 @@
 
 import React, {forwardRef, ReactNode, useMemo} from 'react';
 import clsx from 'clsx';
-import noop from 'lodash/noop';
 
 import AccountGroupIcon from 'mdi-react/AccountGroupIcon';
 import AlertCircleOutlineIcon from 'mdi-react/AlertCircleOutlineIcon';
@@ -102,7 +101,6 @@ interface ComponentProps {
 const Icon = forwardRef<HTMLDivElement, ComponentProps>(
   ({className, disabled = false, icon, onClick, onKeyDown, size, totalSize = 'unset', unfocusable = false}, ref) => {
     const iconProps = {
-      onClick: disabled ? noop : onClick,
       size,
     };
 
