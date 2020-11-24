@@ -219,7 +219,7 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
           ...getCustomClassNames(className, '--disabled', disabled),
         })}
         ref={ref}
-        onClick={handleClick}
+        onClick={disabled ? noop : handleClick}
         onKeyDown={handleKeyDown}
         style={divStyle}
         tabIndex={tabIndex}
