@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
+import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
 
 const ConfirmationValidatorApiValidators: FC = () => {
   return (
@@ -8,10 +8,19 @@ const ConfirmationValidatorApiValidators: FC = () => {
       <p>Confirmation validators will maintain a record of all connected validators.</p>
 
       <DocEndpoint endpoint="/validators" method="GET" />
+      <TableParams
+        items={[
+          {
+            dataType: 'decimal',
+            description: 'Amount of trust',
+            param: 'trust',
+          },
+        ]}
+      />
       <RequestResponseSnippet
         code={`{
     "count": 10,
-    "next": null,
+    "next": "http://54.219.178.46/validators?limit=2&offset=2",
     "previous": null,
     "results": [
         {
@@ -43,6 +52,34 @@ const ConfirmationValidatorApiValidators: FC = () => {
             "trust": "100.00"
         }
     ]
+}`}
+        heading="Response"
+      />
+
+      <DocEndpoint endpoint="/validators/<node_identifier>" method="GET" />
+      <TableParams
+        items={[
+          {
+            dataType: 'decimal',
+            description: 'Amount of trust',
+            param: 'trust',
+          },
+        ]}
+      />
+      <RequestResponseSnippet
+        code={`{
+    "account_number": "4699a423c455a40feb1d6b90b167584a880659e1bf9adf9954a727d534ff0c16",
+    "ip_address": "54.219.178.46",
+    "node_identifier": "b1b232503b3db3975524faf98674f22c83f4357c3d946431b8a8568715d7e1d9",
+    "port": null,
+    "protocol": "http",
+    "version": "v1.0",
+    "default_transaction_fee": 1,
+    "root_account_file": "http://54.219.178.46/media/root_account_file.json",
+    "root_account_file_hash": "cc9390cc579dc8a99a1f34c1bea5d54a0f45b27ecee7e38662f0cd853f76744d",
+    "seed_block_identifier": "",
+    "daily_confirmation_rate": 1,
+    "trust": "100.00"
 }`}
         heading="Response"
       />
