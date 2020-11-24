@@ -54,7 +54,7 @@ const GuideConfirmationValidators: FC = () => {
           they match.
         </li>
         <li>
-          Store the block hash of the primary validators last validated block, also known as the HEAD block hash, for
+          Store the block hash of the primary validator's last validated block, also known as the HEAD block hash, for
           reference (we will see how this is used later).
         </li>
       </DocList>
@@ -70,7 +70,7 @@ const GuideConfirmationValidators: FC = () => {
         <li>Verify the block against their own account data</li>
         <ol type="a">
           <li>
-            If the confirmation validators results match the updated balances given by the primary validator (the block
+            If the confirmation validator's results match the updated balances given by the primary validator (the block
             is verified), the confirmation validator will:
           </li>
           <ol type="i">
