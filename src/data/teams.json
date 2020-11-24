@@ -697,7 +697,7 @@
     "title": "Research",
     "contributors": [
       {
-        "title": "Blockchain Cryptocurrency Researcher",
+        "title": "Blockchain Researcher",
         "isLead": true,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
@@ -705,7 +705,7 @@
           "contributorId": "17",
           "displayName": "Colfax",
           "githubUsername": "colfax23",
-          "profileImage": "https://avatars0.githubusercontent.com/u/914240?s=460&v=4",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01DDHVKK9S-5d84cd83bdb7-512",
           "slackUsername": "Colfax"
         }
       },
