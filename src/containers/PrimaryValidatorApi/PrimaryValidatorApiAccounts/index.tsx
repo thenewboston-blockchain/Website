@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
+import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
 
 const PrimaryValidatorApiAccounts: FC = () => {
   return (
@@ -35,6 +35,15 @@ const PrimaryValidatorApiAccounts: FC = () => {
       />
 
       <DocEndpoint endpoint="/accounts/<account_number>/balance" method="GET" />
+      <TableParams
+        items={[
+          {
+            dataType: 'URL parameter',
+            description: 'The account number that you want to check',
+            param: 'account_number',
+          },
+        ]}
+      />
       <RequestResponseSnippet
         code={`{
   "balance": "4294967051"
@@ -43,6 +52,15 @@ const PrimaryValidatorApiAccounts: FC = () => {
       />
 
       <DocEndpoint endpoint="/accounts/<account_number>/balance_lock" method="GET" />
+      <TableParams
+        items={[
+          {
+            dataType: 'URL parameter',
+            description: 'The account number that you want to check',
+            param: 'account_number',
+          },
+        ]}
+      />
       <RequestResponseSnippet
         code={`{
   "balance_lock": "21cfd80a31930e801e97d34e3f00a7d9b5c01b2fb531a5ac14cd59d10ab446c8"
