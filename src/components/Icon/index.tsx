@@ -2,7 +2,6 @@
 
 import React, {forwardRef, ReactNode, useMemo} from 'react';
 import clsx from 'clsx';
-import noop from 'lodash/noop';
 
 import AccountGroupIcon from 'mdi-react/AccountGroupIcon';
 import AlertCircleOutlineIcon from 'mdi-react/AlertCircleOutlineIcon';
@@ -219,7 +218,7 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
           ...getCustomClassNames(className, '--disabled', disabled),
         })}
         ref={ref}
-        onClick={disabled ? noop : handleClick}
+        onClick={handleClick}
         onKeyDown={handleKeyDown}
         style={divStyle}
         tabIndex={tabIndex}
