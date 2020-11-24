@@ -1,0 +1,142 @@
+$modal-header-height: 48px;
+$modal-header-height-mobile: 75px;
+$modal-footer-height: 60px;
+$break-mobile: 640px;
+
+@keyframes addOverlay {
+  from {
+    background: rgba(0, 0, 0, 0);
+  }
+  to {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.Modal {
+  background: var(--color-white);
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: fixed;
+
+  &__close-icon {
+    position: absolute;
+    right: 9px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--submitting {
+      cursor: wait;
+    }
+  }
+
+  &__content {
+    background: var(--color-gray-050);
+    max-height: calc(85vh - #{$modal-header-height} - #{$modal-footer-height});
+    overflow-y: auto;
+    padding: 12px;
+  }
+
+  &--default-position {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 396px;
+  }
+
+  &__default-submit {
+    margin-left: 12px;
+  }
+
+  &__default-cancel {
+    margin-left: 12px;
+    box-shadow: none;
+    border: none;
+  }
+
+  &__footer {
+    align-items: center;
+    display: flex;
+    height: $modal-footer-height;
+    justify-content: flex-end;
+    padding: 0 12px;
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    height: $modal-header-height;
+    padding: 0 12px;
+    position: relative;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 125%;
+  }
+
+  &__header_mobile {
+    display: none;
+  }
+
+  &__overlay {
+    animation: addOverlay 0.3s forwards;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+
+    &--submitting {
+      cursor: wait;
+    }
+  }
+}
+
+@media screen and (max-width: $break-mobile) {
+  .Modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 20;
+    background-color: var(--color-gray-050);
+
+    &__close-icon {
+      position: absolute;
+      left: 23px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &--submitting {
+        cursor: wait;
+      }
+    }
+
+    &__header_mobile {
+      align-items: center;
+      display: flex;
+      background-color: white;
+      height: $modal-header-height-mobile;
+      padding: 0 12px;
+      position: relative;
+
+      h2 {
+        margin-left: 60px;
+      }
+    }
+
+    &__default-submit {
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &__header {
+      display: none;
+    }
+    &__footer {
+      display: none;
+    }
+  }
+}

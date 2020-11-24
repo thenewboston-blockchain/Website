@@ -2,7 +2,7 @@ import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
 import {Link, useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 
-import {Button, Icon, IconType} from 'components';
+import {A, Button, Icon, IconType} from 'components';
 import {useBooleanState, useWindowDimensions} from 'hooks';
 
 import TopNavLogo from './TopNavLogo';
@@ -105,6 +105,13 @@ const TopNav: FC<ComponentProps> = ({className}) => {
       <>
         <TopNavPopoverItem
           closePopover={unsetMoreAnchorEl}
+          description="Propose ideas you want built"
+          iconType={IconType.hammerWrench}
+          title="Project Proposals"
+          to="/project-proposals/overview"
+        />
+        <TopNavPopoverItem
+          closePopover={unsetMoreAnchorEl}
           description="Download thenewboston assets"
           iconType={IconType.fileDownload}
           title="Assets"
@@ -164,6 +171,12 @@ const TopNav: FC<ComponentProps> = ({className}) => {
         <Link className={clsx('TopNav__right-item', 'TopNav__download-button')} tabIndex={-1} to="/download">
           <Button>Download</Button>
         </Link>
+        {/* <A
+          className={clsx('TopNav__right-item', 'TopNav__download-button')}
+          href={`https://github.com/login/oauth/authorize?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&scope=read%3auser%20user%3aemail%20`}
+        >
+          <Button>Login with GitHub</Button>
+        </A> */}
       </>
     );
   };
@@ -188,6 +201,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
           </div>
           <div className="mobile-menu__column">
             <div className="mobile-menu__column-title">More</div>
+            {renderMobileLink('Project Proposals', '/project-proposals/overview')}
             {renderMobileLink('Assets', '/assets')}
             {renderMobileLink('FAQ', '/faq')}
             {renderMobileLink('Donate', '/donate')}

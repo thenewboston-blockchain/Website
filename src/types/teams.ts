@@ -5,6 +5,7 @@ export enum TeamName {
   design = 'Design',
   devOps = 'DevOps',
   discordManagers = 'Discord Managers',
+  dotnetCore = '.NET Core',
   frontEndDevelopers = 'Front-End Developers',
   kotlinSDK = 'Kotlin SDK',
   marketing = 'Marketing',
@@ -16,7 +17,6 @@ export enum TeamName {
   redditModerators = 'Reddit Moderators',
   research = 'Research',
   security = 'Security',
-  slackManagers = 'Slack Managers',
   youtube = 'YouTube',
 }
 

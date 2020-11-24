@@ -10,6 +10,17 @@
       "amount_paid": "500"
     }
   ],
+  "AkbarKamran": [
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "921",
+      "pr_id": "933",
+      "completed_by": "AkbarKamran",
+      "completed_date": "11/20/20",
+      "amount_paid": "500"
+    }
+  ],
   "Akshit1311": [
     {
       "repository": "Website",
@@ -61,6 +72,17 @@
       "completed_by": "BlueBlazin",
       "completed_date": "11/12/20",
       "amount_paid": "500"
+    }
+  ],
+  "CirXe0N": [
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Bank - validator confirmation services api calls",
+      "issue_id": "19",
+      "pr_id": "37",
+      "completed_by": "CirXe0N",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000"
     }
   ],
   "DenverCoder1": [
@@ -476,6 +498,17 @@
       "amount_paid": "7500"
     }
   ],
+  "Surac778": [
+    {
+      "repository": "Website",
+      "title": "Added Tajik language",
+      "issue_id": "351",
+      "pr_id": "900",
+      "completed_by": "Surac778",
+      "completed_date": "11/18/20",
+      "amount_paid": "500"
+    }
+  ],
   "The-Veil": [
     {
       "repository": "Website",
@@ -560,6 +593,24 @@
       "completed_by": "VincentHch",
       "completed_date": "11/16/20",
       "amount_paid": "500"
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Bank - get bank config",
+      "issue_id": "16",
+      "pr_id": "34",
+      "completed_by": "VincentHch",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000"
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Bank - confirmation blocks api calls",
+      "issue_id": "17",
+      "pr_id": "35",
+      "completed_by": "VincentHch",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000"
     }
   ],
   "Weav3r": [
@@ -695,6 +746,17 @@
       "pr_id": "764",
       "completed_by": "aayushi14",
       "completed_date": "11/13/20",
+      "amount_paid": "500"
+    }
+  ],
+  "aeronye": [
+    {
+      "repository": "Website",
+      "title": "New member",
+      "issue_id": "351",
+      "pr_id": "939",
+      "completed_by": "aeronye",
+      "completed_date": "11/21/20",
       "amount_paid": "500"
     }
   ],
@@ -1143,6 +1205,15 @@
       "completed_by": "buckyroberts",
       "completed_date": "11/5/20",
       "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Project proposals",
+      "issue_id": "934",
+      "pr_id": "978",
+      "completed_by": "buckyroberts",
+      "completed_date": "11/22/20",
+      "amount_paid": "2500"
     }
   ],
   "cebisom": [
@@ -1164,6 +1235,26 @@
       "pr_id": "716",
       "completed_by": "cfviotti",
       "completed_date": "11/11/20",
+      "amount_paid": "500"
+    }
+  ],
+  "codemedo": [
+    {
+      "repository": "Website",
+      "title": "Added hello world in tatari language",
+      "issue_id": "351",
+      "pr_id": "904",
+      "completed_by": "codemedo",
+      "completed_date": "11/19/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Added new contributor",
+      "issue_id": "899",
+      "pr_id": "901",
+      "completed_by": "codemedo",
+      "completed_date": "11/18/20",
       "amount_paid": "500"
     }
   ],
@@ -1355,6 +1446,17 @@
       "amount_paid": "500"
     }
   ],
+  "gatvay23924": [
+    {
+      "repository": "Website",
+      "title": "Added Esperanto language",
+      "issue_id": "351",
+      "pr_id": "902",
+      "completed_by": "gatvay23924",
+      "completed_date": "11/18/20",
+      "amount_paid": "500"
+    }
+  ],
   "h3cksamrat": [
     {
       "repository": "Website",
@@ -1394,6 +1496,42 @@
       "pr_id": "797",
       "completed_by": "hasham56",
       "completed_date": "11/13/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Kotlin software developer",
+      "issue_id": "877",
+      "pr_id": "897",
+      "completed_by": "hasham56",
+      "completed_date": "11/18/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Kotlin SDK member added",
+      "issue_id": "878",
+      "pr_id": "896",
+      "completed_by": "hasham56",
+      "completed_date": "11/18/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Adding contributor",
+      "issue_id": "915",
+      "pr_id": "930",
+      "completed_by": "hasham56",
+      "completed_date": "11/20/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "914",
+      "pr_id": "929",
+      "completed_by": "hasham56",
+      "completed_date": "11/20/20",
       "amount_paid": "500"
     }
   ],
@@ -1690,6 +1828,24 @@
       "completed_by": "jamessspanggg",
       "completed_date": "11/16/20",
       "amount_paid": "1000"
+    },
+    {
+      "repository": "Website",
+      "title": "Add new contributor: Payments Manager Tawanda",
+      "issue_id": "892",
+      "pr_id": "895",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/18/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Add new contributor: Payments Manager Nikhil",
+      "issue_id": "893",
+      "pr_id": "894",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/18/20",
+      "amount_paid": "500"
     }
   ],
   "jonathanlee06": [
@@ -1712,6 +1868,15 @@
       "completed_by": "jtavak",
       "completed_date": "11/8/20",
       "amount_paid": "10000"
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Bank - banks api calls",
+      "issue_id": "15",
+      "pr_id": "24",
+      "completed_by": "jtavak",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000"
     }
   ],
   "kagisojamesthomba": [
@@ -1911,6 +2076,15 @@
       "completed_by": "lapstjup",
       "completed_date": "11/9/20",
       "amount_paid": "5000"
+    },
+    {
+      "repository": "Website",
+      "title": "Fix proposal for decoupling animation and shuffling logic",
+      "issue_id": "890",
+      "pr_id": "918",
+      "completed_by": "lapstjup",
+      "completed_date": "11/21/20",
+      "amount_paid": "5000"
     }
   ],
   "laughablehaha": [
@@ -2049,6 +2223,17 @@
       "completed_by": "melsh123221",
       "completed_date": "11/16/20",
       "amount_paid": "500"
+    }
+  ],
+  "mersimoski": [
+    {
+      "repository": "Website",
+      "title": "issue#909 - Long title words break the mobile design in the tasks page",
+      "issue_id": "909",
+      "pr_id": "917",
+      "completed_by": "mersimoski",
+      "completed_date": "11/19/20",
+      "amount_paid": "1000"
     }
   ],
   "moki298": [
@@ -2296,6 +2481,15 @@
       "completed_by": "sbalasa",
       "completed_date": "11/12/20",
       "amount_paid": "500"
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Add Github Actions to automate testing and linting",
+      "issue_id": "38",
+      "pr_id": "40",
+      "completed_by": "sbalasa",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000"
     }
   ],
   "sdhiaeddine": [
@@ -2512,6 +2706,15 @@
       "completed_by": "thesanjeevsharma",
       "completed_date": "11/17/20",
       "amount_paid": "500"
+    },
+    {
+      "repository": "Website",
+      "title": "Added Avatar component",
+      "issue_id": "869",
+      "pr_id": "942",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "11/22/20",
+      "amount_paid": "2500"
     }
   ],
   "tpikachu": [
@@ -2543,6 +2746,15 @@
       "completed_by": "velibor7",
       "completed_date": "11/6/20",
       "amount_paid": "500"
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Bank - patch api call for validators path",
+      "issue_id": "22",
+      "pr_id": "23",
+      "completed_by": "velibor7",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000"
     }
   ],
   "vilihegyi": [
@@ -2691,6 +2903,26 @@
       "pr_id": "380",
       "completed_by": "xmac11",
       "completed_date": "11/2/20",
+      "amount_paid": "500"
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Bank - post invalid block to bank",
+      "issue_id": "18",
+      "pr_id": "26",
+      "completed_by": "xmac11",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000"
+    }
+  ],
+  "ysttt12": [
+    {
+      "repository": "Website",
+      "title": "Added Nyanja language",
+      "issue_id": "351",
+      "pr_id": "913",
+      "completed_by": "ysttt12",
+      "completed_date": "11/19/20",
       "amount_paid": "500"
     }
   ],

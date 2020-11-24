@@ -1,0 +1,21 @@
+.Input {
+  border-radius: 3px;
+  border: 1px solid var(--color-gray-300);
+  height: 30px;
+  padding: 0 6px;
+  transition: all 0.1s;
+
+  &:active,
+  &:focus {
+    border-color: var(--color-secondary);
+  }
+
+  &:disabled {
+    border-color: var(--color-gray-300);
+    color: var(--color-gray-300);
+  }
+
+  &--error {
+    border-color: var(--color-alert);
+  }
+}
