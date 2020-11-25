@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
+import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
 
 const PrimaryValidatorApiValidators: FC = () => {
   return (
@@ -12,11 +12,25 @@ const PrimaryValidatorApiValidators: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/validators" method="GET" />
+      <TableParams
+        items={[
+          {
+            dataType: 'URL parameter',
+            description: 'If you want to start at a specific point, an offset can be specified.',
+            param: 'offset',
+          },
+          {
+            dataType: 'URL parameter',
+            description: 'Maximum number of block returned by the node. (max: 100)',
+            param: 'limit',
+          },
+        ]}
+      />
       <RequestResponseSnippet
         code={`{
-    "count": 16,
-    "next": null,
-    "previous": null,
+    "count": 10,
+    "next": "http://54.219.178.46/validators?limit=2&offset=6",
+    "previous": "http://54.219.178.46/validators?limit=2&offset=2",
     "results": [
         {
             "account_number": "4699a423c455a40feb1d6b90b167584a880659e1bf9adf9954a727d534ff0c16",
