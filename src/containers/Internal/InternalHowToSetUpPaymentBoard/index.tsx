@@ -132,7 +132,7 @@ const InternalHowToSetUpPaymentBoard: FC = () => {
 
       <DocList variant="ol">
         <li>
-          Go to your repository -{'>'} Issues and there’s a button right of the issues filter that says{' '}
+          Go to your repository -{'>'} Issues and there’s a button to the right of the issues filter that says{' '}
           <strong>Labels</strong>. Click on it and it’ll take you to a page where you can see your labels.
         </li>
         <li>
