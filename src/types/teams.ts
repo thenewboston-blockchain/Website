@@ -17,7 +17,6 @@ export enum TeamName {
   redditModerators = 'Reddit Moderators',
   research = 'Research',
   security = 'Security',
-  slackManagers = 'Slack Managers',
   youtube = 'YouTube',
 }
 

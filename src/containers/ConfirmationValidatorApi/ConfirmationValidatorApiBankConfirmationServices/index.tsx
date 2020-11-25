@@ -8,7 +8,7 @@ const ConfirmationValidatorApiBankConfirmationServices: FC = () => {
     <DocContainer className="ConfirmationValidatorApiBankConfirmationServices" title="Bank Confirmation Services">
       <p>
         Bank confirmation services are created by the confirmation validator when a transaction is received from a
-        connected bank. Upon receiving this payment it is implied that the sending bank is purchasing confirmation
+        connected bank. Upon receiving this payment, it is implied that the sending bank is purchasing confirmation
         services.
       </p>
       <p>

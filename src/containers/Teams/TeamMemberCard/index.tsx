@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {A} from 'components';
+import {A, Avatar} from 'components';
 
 import './TeamMemberCard.scss';
 
@@ -25,7 +25,7 @@ const TeamMemberCard: FC<ComponentProps> = ({
 }) => {
   const renderAvatar = () => (
     <div className="TeamMemberCard__user-avatar">
-      <img src={profileImage} alt={displayName} />
+      <Avatar alt={displayName} size={144} src={profileImage} />
     </div>
   );
 
