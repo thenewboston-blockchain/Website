@@ -1,8 +1,7 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocImage, DocList} from 'components';
+import {DocContainer, DocImage, DocList, Label} from 'components';
 import PaymentBoard from './PaymentBoard.png';
-import PaymentLabels from './PaymentLabels.png';
 
 const InternalHowToSetUpPaymentBoard: FC = () => {
   return (
@@ -82,58 +81,60 @@ const InternalHowToSetUpPaymentBoard: FC = () => {
       <p>We have four types of labels on the repositories that will help the whole payment flow:</p>
 
       <DocList variant="ul">
-        <li>Paid</li>
+        <li>
+          <Label name="Paid" color="FBCA04" />
+        </li>
         <ul>
           <li>
             This label is simple. When the payment team is done with the payments, they put this label on the closed
-            issues to mark it as paid. The color code used for this label is{' '}
-            <span style={{color: '#FBCA04'}}>#FBCA04</span>.
+            issues to mark it as paid.
           </li>
+          <li>Hex code - #FBCA04</li>
         </ul>
-        <li>Not Paid</li>
+        <li>
+          <Label name="Not Paid" color="E99695" />
+        </li>
         <ul>
           <li>
             We use this label rarely. If there’s a case where one issue is producing multiple PRs (like the{' '}
             <strong>Hello World</strong> issue on the website), we don’t close that issue until the last PR connected to
             it has been merge. So we use this label after merging the PRs from that issue (and we put this label on the
             PR itself only) and tag someone from the payment team in a comment on the PR with the number of coins
-            waiting to be sent to the contributor. The color code used for this label is{' '}
-            <span style={{color: '#E99695'}}>#E99695</span>.
+            waiting to be sent to the contributor.
           </li>
           <li>This is very rare, as the rules are 1 issue = 1 PR.</li>
+          <li>Hex code - #E99695</li>
         </ul>
-        <li>Bug Bounty Owed - [NUMBER_OF_COINS]</li>
+        <li>
+          <Label name="Bug Bounty Owed - [COINS]" color="B60205" />
+        </li>
         <ul>
           <li>
             This label is added by the team leads and it’s the number of coins that should be given to the issue creator
             for discovering the bug. If the issue is not a bug, or in any other case where the issue creator should not
-            be rewarded, we just don’t use this label. The color code used for this label is{' '}
-            <span style={{color: '#B60205'}}>#B60205</span>.
+            be rewarded, we just don’t use this label.
           </li>
+          <li>Hex code - #B60205</li>
         </ul>
-        <li>PR Reward - [NUMBER_OF_COINS]</li>
+        <li>
+          <Label name="PR Reward - [COINS]" color="09825d" />
+        </li>
         <ul>
           <li>
             This is the reward in coins that will be given to the contributor that solved the issue (submitted a PR that
-            is accepted and merged). The color code used for this label is{' '}
-            <span style={{color: '#09825d'}}>#09825d</span>.
+            is accepted and merged).
           </li>
+          <li>Hex code - #09825d</li>
         </ul>
       </DocList>
 
       <p>
-        Here you can see the <strong>Paid</strong> and <strong>Not Paid</strong> labels:
-      </p>
-      <DocImage alt="payment labels" maxWidth={720} src={PaymentLabels} />
-      <p>
-        The <strong>Bug Bounty Owed</strong> label should be in red color with values 250, 500, 1000, 2000, 2500, 5000,
-        7500, 10000, 25000. Before every number, we will have the <strong>Bug Bounty Owed</strong> text, so a label
-        would look like: <strong>Bug Bounty Owed - 500</strong>.
+        The <strong>Bug Bounty Owed</strong> label can have <strong>[COINS]</strong> set as 250, 500, 1000, 2000, 2500,
+        5000, 7500, 10000, 25000. So the label's text would look like: <strong>Bug Bounty Owed - 500</strong>.
       </p>
       <p>
-        The <strong>PR Reward</strong> labels should be in green color with values 250, 500, 1000, 2000, 2500, 5000,
-        7500, 10000, 25000. Before every number, we will have the <strong>PR Reward</strong> text, so a label would look
-        like: <strong>PR Reward - 500</strong>.
+        The <strong>PR Reward</strong> labels can have <strong>[COINS]</strong> set as 250, 500, 1000, 2000, 2500, 5000,
+        7500, 10000, 25000. So the label's text would look like: <strong>PR Reward - 500</strong>.
       </p>
       <p>A quick tutorial on how to create labels:</p>
 
