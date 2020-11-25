@@ -50,7 +50,7 @@ const ProjectProposalsRules: FC = () => {
       />
       <StepIndicator
         className="ProjectProposalsRules__StepIndicator"
-        number={8}
+        number={9}
         text="thenewboston is not liable for copyright or other intellectual property rights, property damage, misuse of coins."
       />
     </DocContainer>
