@@ -33,25 +33,25 @@ const BankApiAccounts: FC = () => {
       />
       <RequestResponseSnippet
         code={`{
-    "count": 87,
-    "next": "http://143.110.137.54/accounts?limit=2&offset=2",
-    "previous": null,
-    "results": [
-        {
-            "id": "5a8c7990-393a-4299-ae92-2f096a2c7f43",
-            "created_date": "2020-10-08T02:18:07.346849Z",
-            "modified_date": "2020-10-08T02:18:07.346914Z",
-            "account_number": "a37e2836805975f334108b55523634c995bd2a4db610062f404510617e83126f",
-            "trust": "0.00"
-        },
-        {
-            "id": "2682963f-06b1-47d7-a2e1-1f8ec6ae98dc",
-            "created_date": "2020-10-08T02:39:44.071810Z",
-            "modified_date": "2020-10-08T02:39:44.071853Z",
-            "account_number": "cc8fb4ebbd2b9a98a767e801ac2b0d296ced88b5d3b7d6d6e12e1d2d7635d724",
-            "trust": "0.00"
-        }
-    ]
+  "count": 87,
+  "next": "http://143.110.137.54/accounts?limit=2&offset=2",
+  "previous": null,
+  "results": [
+    {
+      "id": "5a8c7990-393a-4299-ae92-2f096a2c7f43",
+      "created_date": "2020-10-08T02:18:07.346849Z",
+      "modified_date": "2020-10-08T02:18:07.346914Z",
+      "account_number": "a37e2836805975f334108b55523634c995bd2a4db610062f404510617e83126f",
+      "trust": "0.00"
+    },
+    {
+      "id": "2682963f-06b1-47d7-a2e1-1f8ec6ae98dc",
+      "created_date": "2020-10-08T02:39:44.071810Z",
+      "modified_date": "2020-10-08T02:39:44.071853Z",
+      "account_number": "cc8fb4ebbd2b9a98a767e801ac2b0d296ced88b5d3b7d6d6e12e1d2d7635d724",
+      "trust": "0.00"
+    }
+  ]
 }`}
         heading="Response"
       />
