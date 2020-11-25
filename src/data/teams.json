@@ -187,19 +187,6 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "31",
-          "displayName": "Rahul Kothari",
-          "githubUsername": "-",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EUQ8SR2L-e347b1c404fa-512",
-          "slackUsername": "Rahul Kothari"
-        }
-      },
-      {
-        "title": "Product Manager",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
           "contributorId": "26",
           "displayName": "Steve Hedden",
           "githubUsername": "SteveHedden",
@@ -697,7 +684,7 @@
     "title": "Research",
     "contributors": [
       {
-        "title": "Blockchain Cryptocurrency Researcher",
+        "title": "Blockchain Researcher",
         "isLead": true,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
@@ -705,7 +692,7 @@
           "contributorId": "17",
           "displayName": "Colfax",
           "githubUsername": "colfax23",
-          "profileImage": "https://avatars0.githubusercontent.com/u/914240?s=460&v=4",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01DDHVKK9S-5d84cd83bdb7-512",
           "slackUsername": "Colfax"
         }
       },
@@ -746,6 +733,19 @@
           "githubUsername": "",
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01CTDXMK1Q-4953bceb47d4-512",
           "slackUsername": "Joe Sykes"
+        }
+      },
+      {
+        "title": "Blockchain Research PM",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "31",
+          "displayName": "Rahul Kothari",
+          "githubUsername": "-",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EUQ8SR2L-e347b1c404fa-512",
+          "slackUsername": "Rahul Kothari"
         }
       }
     ]
