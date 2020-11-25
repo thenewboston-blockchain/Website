@@ -53,7 +53,7 @@ const BankApiBlocks: FC = () => {
             "signature": "54875b5fa4db317133b7195d5afa43e5d7c7659970b5c07f7408fb43524573ee0db3078daffa3a5fc341c6851a85c5128d8a79b8f71d5f7d87e275ccca1e8408"
         }
     ]
-}}`}
+}`}
         heading="Response"
       />
 
