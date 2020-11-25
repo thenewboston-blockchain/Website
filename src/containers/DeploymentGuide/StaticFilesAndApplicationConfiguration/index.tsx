@@ -34,11 +34,30 @@ printenv`}
       />
 
       <CodeSnippet
+        code={`# Create a new user (or more precisely, a role)
+sudo -u postgres createuser --interactive
+
+Enter name of role to add: thenewboston
+Shall the new role be a superuser? (y/n) y
+
+# Create new database
+sudo -u postgres createdb thenewboston
+
+# Set a password for the user
+sudo -u postgres psql template1
+ALTER USER thenewboston PASSWORD 'thenewboston';
+
+# Exit prompt
+\\q`}
+        heading="Initialize database"
+      />
+
+      <CodeSnippet
         code={`cd /var/www/${name}/
 python3 manage.py makemigrations && python3 manage.py migrate
 python3 manage.py createsuperuser
 python3 manage.py collectstatic`}
-        heading="Set up database"
+        heading="Populate database"
       />
       {initializationCommand}
       <CodeSnippet code="http://[IP_ADDRESS]/config" heading="Verify everything is working correctly by visiting" />
