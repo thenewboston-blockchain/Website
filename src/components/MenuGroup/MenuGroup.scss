@@ -66,11 +66,11 @@
   }
 
   &__title {
-    border: 0;
     background-color: transparent;
-    padding: 0;
+    border: 0;
+    cursor: pointer;
     font-weight: 700;
     line-height: 1.5;
-    cursor: pointer;
+    padding: 0;
   }
 }
