@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
+import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
 
 const ConfirmationValidatorApiBanks: FC = () => {
   return (
@@ -8,10 +8,24 @@ const ConfirmationValidatorApiBanks: FC = () => {
       <p>The confirmation validators will maintain a record of all connected banks.</p>
 
       <DocEndpoint endpoint="/banks" method="GET" />
+      <TableParams
+        items={[
+          {
+            dataType: 'URL parameter',
+            description: 'If you want to start at a specific point, an offset can be specified.',
+            param: 'offset',
+          },
+          {
+            dataType: 'URL parameter',
+            description: 'Maximum number of block returned by the node. (max: 100)',
+            param: 'limit',
+          },
+        ]}
+      />
       <RequestResponseSnippet
         code={`{
     "count": 20,
-    "next": null,
+    "next": "http://54.183.17.224/banks?limit=2&offset=2",
     "previous": null,
     "results": [
         {
