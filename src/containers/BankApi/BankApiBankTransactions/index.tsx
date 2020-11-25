@@ -31,8 +31,8 @@ const BankApiBankTransactions: FC = () => {
       <RequestResponseSnippet
         code={`{
   "count": 2116,
-  "next": "http://143.110.137.54/bank_transactions?limit=3&offset=53",
-  "previous": "http://143.110.137.54/bank_transactions?limit=3&offset=47",
+  "next": "http://143.110.137.54/bank_transactions?limit=2&offset=52",
+  "previous": "http://143.110.137.54/bank_transactions?limit=2&offset=48",
   "results": [
     {
         "id": "a7fb060d-e442-4dd4-8604-3b0e67f691aa",
