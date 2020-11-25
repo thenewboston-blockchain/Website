@@ -67,16 +67,16 @@ const App: FC = () => {
           <Redirect exact from="/tasks" to="/tasks/All" />
           <Route exact path="/tasks/:repository" component={Tasks} />
           <Route exact path="/teams" component={Teams} />
-          <Route path="/account-manager/:chapter" component={AccountManager} />
-          <Route path="/bank-api/:chapter" component={BankApi} />
-          <Route path="/confirmation-validator-api/:chapter" component={ConfirmationValidatorApi} />
-          <Route path="/deployment-guide/:chapter" component={DeploymentGuide} />
+          <Route path="/account-manager/:chapter?" component={AccountManager} />
+          <Route path="/bank-api/:chapter?" component={BankApi} />
+          <Route path="/confirmation-validator-api/:chapter?" component={ConfirmationValidatorApi} />
+          <Route path="/deployment-guide/:chapter?" component={DeploymentGuide} />
           <Route path="/download" component={Download} />
-          <Route path="/guide/:chapter" component={Guide} />
-          <Route path="/internal/:chapter" component={Internal} />
-          <Route path="/primary-validator-api/:chapter" component={PrimaryValidatorApi} />
-          <Route path="/project-proposals/:chapter" component={ProjectProposals} />
-          <Route path="/style-guide/:chapter" component={StyleGuide} />
+          <Route path="/guide/:chapter?" component={Guide} />
+          <Route path="/internal/:chapter?" component={Internal} />
+          <Route path="/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
+          <Route path="/project-proposals/:chapter?" component={ProjectProposals} />
+          <Route path="/style-guide/:chapter?" component={StyleGuide} />
           <Route path="/user/signin/callback" component={Auth} />
           <Redirect to="/" />
         </Switch>
