@@ -100,16 +100,9 @@ const DeploymentGuideValidator: FC = () => {
       <Nginx name="Validator" />
       <Redis />
       <GatewayInterface name="Validator" />
-      <CeleryValidator
-        name="Validator"
-        networkSigningKey="6f812a35643b55a77f71c3b722504fbc5918e83ec72965f7fd33865ed0be8f81"
-      />
+      <CeleryValidator name="Validator" />
       <SystemServices />
-      <StaticFilesAndApplicationConfiguration
-        initializationCommand={renderInitializationCommands()}
-        name="Validator"
-        networkSigningKey="6f812a35643b55a77f71c3b722504fbc5918e83ec72965f7fd33865ed0be8f81"
-      />
+      <StaticFilesAndApplicationConfiguration initializationCommand={renderInitializationCommands()} name="Validator" />
       <Troubleshooting />
     </DocContainer>
   );

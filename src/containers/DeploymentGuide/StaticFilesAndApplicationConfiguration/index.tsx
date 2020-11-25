@@ -5,14 +5,13 @@ import {CodeSnippet, DocSubSection} from 'components';
 interface ComponentProps {
   initializationCommand: ReactNode;
   name: string;
-  networkSigningKey: string;
 }
 
 enum StaticFilesAndApplicationNav {
   staticFilesAndApplication = 'static-files-and-application',
 }
 
-const StaticFilesAndApplication: FC<ComponentProps> = ({initializationCommand, name, networkSigningKey}) => {
+const StaticFilesAndApplication: FC<ComponentProps> = ({initializationCommand, name}) => {
   return (
     <DocSubSection
       className="StaticFilesAndApplication"
@@ -23,7 +22,8 @@ const StaticFilesAndApplication: FC<ComponentProps> = ({initializationCommand, n
 
       <CodeSnippet
         code={`export DJANGO_APPLICATION_ENVIRONMENT="production"
-export NETWORK_SIGNING_KEY="${networkSigningKey}"`}
+export NETWORK_SIGNING_KEY="YOUR_NID_SIGNING_KEY"
+export SECRET_KEY="YOUR_SECRET_KEY"`}
       />
 
       <CodeSnippet

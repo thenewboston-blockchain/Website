@@ -77,13 +77,9 @@ const DeploymentGuideBank: FC = () => {
       <Nginx name="Bank" />
       <Redis />
       <GatewayInterface name="Bank" />
-      <CeleryBank name="Bank" networkSigningKey="e5e5fec0dcbbd8b0a76c67204823678d3f243de7a0a1042bb3ecf66285cd9fd4" />
+      <CeleryBank name="Bank" />
       <SystemServices />
-      <StaticFilesAndApplicationConfiguration
-        initializationCommand={renderInitializationCommands()}
-        name="Bank"
-        networkSigningKey="e5e5fec0dcbbd8b0a76c67204823678d3f243de7a0a1042bb3ecf66285cd9fd4"
-      />
+      <StaticFilesAndApplicationConfiguration initializationCommand={renderInitializationCommands()} name="Bank" />
       <Troubleshooting />
     </DocContainer>
   );
