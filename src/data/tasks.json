@@ -149,6 +149,18 @@
       "bug_bounty": ""
     }
   ],
+  "DrSparky-2007": [
+    {
+      "repository": "Design",
+      "title": "Blockchain topic Infographic",
+      "issue_id": "55",
+      "pr_id": "",
+      "completed_by": "DrSparky-2007",
+      "completed_date": "11/24/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    }
+  ],
   "DucPhamTV": [
     {
       "repository": "Website",
@@ -1571,6 +1583,18 @@
       "bug_bounty": ""
     }
   ],
+  "davidyapdy": [
+    {
+      "repository": "Design",
+      "title": "As a user I would like to be able to sell my goods to accumulate more TNB coins",
+      "issue_id": "24",
+      "pr_id": "",
+      "completed_by": "davidyapdy",
+      "completed_date": "11/24/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    }
+  ],
   "ddyakov": [
     {
       "repository": "Website",
@@ -2127,6 +2151,26 @@
       "completed_date": "11/24/20",
       "amount_paid": "500",
       "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Website",
+      "title": "Fix NaN reward",
+      "issue_id": "936",
+      "pr_id": "938",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/20/20",
+      "amount_paid": "500",
+      "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add how to set up payment board docs",
+      "issue_id": "990",
+      "pr_id": "1020",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/26/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "jonathanlee06": [
@@ -2297,6 +2341,16 @@
       "completed_date": "11/4/20",
       "amount_paid": "5000",
       "bug_bounty": ""
+    },
+    {
+      "repository": "Design",
+      "title": "Teams page update",
+      "issue_id": "23",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "11/20/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
     }
   ],
   "kush-daga": [
@@ -2563,6 +2617,26 @@
       "completed_date": "11/23/20",
       "amount_paid": "250",
       "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Website",
+      "title": "Added point number 6",
+      "issue_id": "996",
+      "pr_id": "997",
+      "completed_by": "manishram",
+      "completed_date": "11/23/20",
+      "amount_paid": "250",
+      "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Website",
+      "title": "Adds new rule",
+      "issue_id": "1024",
+      "pr_id": "1025",
+      "completed_by": "manishram",
+      "completed_date": "11/25/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
     }
   ],
   "melsh123221": [
@@ -2587,6 +2661,18 @@
       "completed_date": "11/19/20",
       "amount_paid": "1000",
       "bug_bounty": ""
+    }
+  ],
+  "mofodox": [
+    {
+      "repository": "Website",
+      "title": "Last updated date for Docs",
+      "issue_id": "549",
+      "pr_id": "",
+      "completed_by": "mofodox",
+      "completed_date": "11/8/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
     }
   ],
   "moki298": [
@@ -2701,6 +2787,16 @@
       "completed_date": "11/15/20",
       "amount_paid": "1000",
       "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Feature/accesibility improvements",
+      "issue_id": "843",
+      "pr_id": "844",
+      "completed_by": "nparoski",
+      "completed_date": "11/25/20",
+      "amount_paid": "2000",
+      "bug_bounty": "TRUE"
     }
   ],
   "nrednav": [
@@ -3181,6 +3277,16 @@
       "completed_date": "11/24/20",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "fix: docs routing",
+      "issue_id": "1023",
+      "pr_id": "1027",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "11/26/20",
+      "amount_paid": "1000",
+      "bug_bounty": "TRUE"
     }
   ],
   "tpikachu": [

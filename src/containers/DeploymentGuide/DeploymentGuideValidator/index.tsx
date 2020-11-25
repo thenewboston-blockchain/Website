@@ -1,6 +1,6 @@
 import React, {FC, ReactNode} from 'react';
 
-import {A, CodeSnippet, DocContainer, TableParams} from 'components';
+import {CodeSnippet, DocContainer, TableParams} from 'components';
 
 import CeleryValidator from '../CeleryValidator';
 import Firewall from '../Firewall';
