@@ -10,7 +10,7 @@ const InternalHowToSetUpPaymentBoard: FC = () => {
       <p>
         In order to make the whole payment process easier, we will be using the Github projects feature. This should be
         unified across all repositories to make payments easier and more reliable. To set up a Github project we have a
-        certain <strong>template</strong> that every repository should follow:
+        certain template that every repository should follow:
       </p>
 
       <DocList variant="ol">
@@ -36,7 +36,7 @@ const InternalHowToSetUpPaymentBoard: FC = () => {
         <li>
           The second column is called <strong>Ready for engineering</strong>, so go ahead and create it. You don’t need
           any automation rules about this one because when a team leads reviews an issue and assign coin labels to it,
-          they will change its status to “Ready for engineering” (explained in the next section of this document).
+          they will change its status to this.
         </li>
         <li>
           The next column is optional and called <strong>PR Review</strong>. On the <strong>Website</strong> repository
@@ -59,15 +59,11 @@ const InternalHowToSetUpPaymentBoard: FC = () => {
         </li>
       </DocList>
 
-      <p>A few notes about the payment boards:</p>
-
-      <DocList variant="ol">
-        <li>
-          When team leads are adding the coin reward labels, they should make sure that the issue is connected to the
-          Github project. This can be done under the <strong>Projects</strong> section on the right sidebar of the issue
-          page on Github.
-        </li>
-      </DocList>
+      <p>
+        <strong>Note</strong> - When team leads are adding the coin reward labels, they should make sure that the issue
+        is connected to the Github project. This can be done under the <strong>Projects</strong> section on the right
+        sidebar of the issue page on Github.
+      </p>
 
       <p>
         Below you can see an example picture of the boards in the <strong>Website</strong> project that can be found{' '}
@@ -82,16 +78,16 @@ const InternalHowToSetUpPaymentBoard: FC = () => {
 
       <p>We have four types of labels on the repositories that will help the whole payment flow:</p>
 
-      <DocList variant="ol">
+      <DocList variant="ul">
         <li>Paid</li>
-        <ol type="a">
+        <ul>
           <li>
             This label is simple. When the payment team is done with the payments, they put this label on the closed
             issues to mark it as paid.
           </li>
-        </ol>
+        </ul>
         <li>Not Paid</li>
-        <ol type="a">
+        <ul>
           <li>
             We use this label rarely. If there’s a case where one issue is producing multiple PRs (like the{' '}
             <strong>Hello World</strong> issue on the website), we don’t close that issue until the last PR connected to
@@ -100,22 +96,22 @@ const InternalHowToSetUpPaymentBoard: FC = () => {
             waiting to be sent to the contributor.
           </li>
           <li>This is very rare, as the rules are 1 issue = 1PR.</li>
-        </ol>
+        </ul>
         <li>Bug Bounty Owed - [NUMBER_OF_COINS]</li>
-        <ol type="a">
+        <ul>
           <li>
             This label is added by the team leads and it’s the number of coins that should be given to the issue creator
             for discovering the bug. If the issue is not a bug, or in any other case where the issue creator should not
             be rewarded, we just don’t use this label.
           </li>
-        </ol>
+        </ul>
         <li>PR Reward - [NUMBER_OF_COINS]</li>
-        <ol type="a">
+        <ul>
           <li>
             This is the reward in coins that will be given to the contributor that solved the issue (submitted a PR that
             is accepted and merged).
           </li>
-        </ol>
+        </ul>
       </DocList>
 
       <p>
@@ -146,7 +142,9 @@ const InternalHowToSetUpPaymentBoard: FC = () => {
           When you click on the button you will be presented with a form where you can enter the label name,
           description, and color.
         </li>
-        <li>Click create label.</li>
+        <li>
+          Click <strong>Create label</strong>.
+        </li>
       </DocList>
     </DocContainer>
   );
