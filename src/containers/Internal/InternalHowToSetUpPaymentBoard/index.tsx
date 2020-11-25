@@ -8,9 +8,12 @@ const InternalHowToSetUpPaymentBoard: FC = () => {
   return (
     <DocContainer className="InternalHowToSetUpPaymentBoard" title="How to Set Up Payment Board">
       <p>
-        In order to make the whole payment process easier, we will be using the Github projects feature. This should be
-        unified across all repositories to make payments easier and more reliable. To set up a Github project we have a
-        certain template that every repository should follow:
+        In order to make the whole payment process easier, we will be using the{' '}
+        <a href="https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/about-project-boards">
+          Github project boards
+        </a>{' '}
+        feature. This should be unified across all repositories to make payments easier and more reliable. To set up a
+        Github project board, we have a certain template that every repository should follow:
       </p>
 
       <DocList variant="ol">
@@ -22,7 +25,7 @@ const InternalHowToSetUpPaymentBoard: FC = () => {
           Enter your project name and description & click <strong>Create project</strong>.
         </li>
         <li>
-          After your project was created, you need to create columns for it, so just click on the{' '}
+          After creating your project, you need to create columns for it, so just click on the{' '}
           <strong>Add column</strong> button.
         </li>
         <li>
@@ -36,11 +39,11 @@ const InternalHowToSetUpPaymentBoard: FC = () => {
         <li>
           The second column is called <strong>Ready for engineering</strong>, so go ahead and create it. You don’t need
           any automation rules about this one because when a team leads reviews an issue and assign coin labels to it,
-          they will change its status to this.
+          their status will be changed accordingly.
         </li>
         <li>
-          The next column is optional and called <strong>PR Review</strong>. On the <strong>Website</strong> repository
-          we use it when the PR is in the review phase.
+          The next optional column is called <strong>PR Review</strong>. On the <strong>Website</strong> repository we
+          use it when the PR is in the review phase.
         </li>
         <li>
           After that, we have the <strong>Done</strong> column and here we need to set the automation rules to move
@@ -53,9 +56,9 @@ const InternalHowToSetUpPaymentBoard: FC = () => {
           from the <strong>Done</strong> column. No automation rules here.
         </li>
         <li>
-          The last column is called <strong>No Account Number</strong> and also has no automation rules. Its purpose is
-          for the payment team to keep issues there temporarily when the contributors forgot to put their accounts on
-          the issue / PR.
+          The last column is called <strong>No Account Number</strong> and it also has no automation rules. Its purpose
+          is for the payment team to keep issues there temporarily when the contributors forgot to put their account
+          numbers on the issue / PR.
         </li>
       </DocList>
 
@@ -83,7 +86,8 @@ const InternalHowToSetUpPaymentBoard: FC = () => {
         <ul>
           <li>
             This label is simple. When the payment team is done with the payments, they put this label on the closed
-            issues to mark it as paid.
+            issues to mark it as paid. The color code used for this label is{' '}
+            <span style={{color: '#FBCA04'}}>#FBCA04</span>.
           </li>
         </ul>
         <li>Not Paid</li>
@@ -93,23 +97,26 @@ const InternalHowToSetUpPaymentBoard: FC = () => {
             <strong>Hello World</strong> issue on the website), we don’t close that issue until the last PR connected to
             it has been merge. So we use this label after merging the PRs from that issue (and we put this label on the
             PR itself only) and tag someone from the payment team in a comment on the PR with the number of coins
-            waiting to be sent to the contributor.
+            waiting to be sent to the contributor. The color code used for this label is{' '}
+            <span style={{color: '#E99695'}}>#E99695</span>.
           </li>
-          <li>This is very rare, as the rules are 1 issue = 1PR.</li>
+          <li>This is very rare, as the rules are 1 issue = 1 PR.</li>
         </ul>
         <li>Bug Bounty Owed - [NUMBER_OF_COINS]</li>
         <ul>
           <li>
             This label is added by the team leads and it’s the number of coins that should be given to the issue creator
             for discovering the bug. If the issue is not a bug, or in any other case where the issue creator should not
-            be rewarded, we just don’t use this label.
+            be rewarded, we just don’t use this label. The color code used for this label is{' '}
+            <span style={{color: '#B60205'}}>#B60205</span>.
           </li>
         </ul>
         <li>PR Reward - [NUMBER_OF_COINS]</li>
         <ul>
           <li>
             This is the reward in coins that will be given to the contributor that solved the issue (submitted a PR that
-            is accepted and merged).
+            is accepted and merged). The color code used for this label is{' '}
+            <span style={{color: '#09825d'}}>#09825d</span>.
           </li>
         </ul>
       </DocList>
