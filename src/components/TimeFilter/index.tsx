@@ -19,17 +19,15 @@ const TimeFilter: FC<ComponentProps> = ({className, selectedFilter, setSelectedF
 
   const renderOptions = () => {
     return [Time.days7, Time.days30, Time.all].map((option) => (
-      <div
+      <button
         className={clsx('TimeFilter__option', {
           'TimeFilter__option--active': option === selectedFilter,
         })}
         key={option}
         onClick={handleOptionClick(option)}
-        role="button"
-        tabIndex={0}
       >
         {option}
-      </div>
+      </button>
     ));
   };
 
