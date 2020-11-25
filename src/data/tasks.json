@@ -7,7 +7,32 @@
       "pr_id": "548",
       "completed_by": "A-A-2",
       "completed_date": "11/7/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "AbhayAysola": [
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Generate documentation for the codebase using sphinx",
+      "issue_id": "49",
+      "pr_id": "56",
+      "completed_by": "AbhayAysola",
+      "completed_date": "11/23/20",
+      "amount_paid": "5000",
+      "bug_bounty": ""
+    }
+  ],
+  "AkbarKamran": [
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "921",
+      "pr_id": "933",
+      "completed_by": "AkbarKamran",
+      "completed_date": "11/20/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "Akshit1311": [
@@ -18,7 +43,18 @@
       "pr_id": "739",
       "completed_by": "Akshit1311",
       "completed_date": "11/12/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributer #782",
+      "issue_id": "782",
+      "pr_id": "784",
+      "completed_by": "Akshit1311",
+      "completed_date": "11/13/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "AntonFredrikSvensson": [
@@ -29,7 +65,8 @@
       "pr_id": "478",
       "completed_by": "AntonFredrikSvensson",
       "completed_date": "11/5/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "Benett1": [
@@ -40,7 +77,8 @@
       "pr_id": "690",
       "completed_by": "Benett1",
       "completed_date": "11/12/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "BlueBlazin": [
@@ -51,7 +89,30 @@
       "pr_id": "753",
       "completed_by": "BlueBlazin",
       "completed_date": "11/12/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "CirXe0N": [
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Bank - validator confirmation services api calls",
+      "issue_id": "19",
+      "pr_id": "37",
+      "completed_by": "CirXe0N",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Change class methods to private",
+      "issue_id": "55",
+      "pr_id": "56",
+      "completed_by": "CirXe0N",
+      "completed_date": "11/23/20",
+      "amount_paid": "10000",
+      "bug_bounty": ""
     }
   ],
   "DenverCoder1": [
@@ -62,7 +123,8 @@
       "pr_id": "655",
       "completed_by": "DenverCoder1",
       "completed_date": "11/9/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -71,7 +133,8 @@
       "pr_id": "653",
       "completed_by": "DenverCoder1",
       "completed_date": "11/10/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "DinShpati": [
@@ -82,7 +145,8 @@
       "pr_id": "539",
       "completed_by": "DinShpati",
       "completed_date": "11/7/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "DucPhamTV": [
@@ -93,7 +157,8 @@
       "pr_id": "382",
       "completed_by": "DucPhamTV",
       "completed_date": "11/2/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "thenewboston-python-client",
@@ -102,7 +167,8 @@
       "pr_id": "9",
       "completed_by": "DucPhamTV",
       "completed_date": "11/8/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "thenewboston-python-client",
@@ -111,7 +177,8 @@
       "pr_id": "9",
       "completed_by": "DucPhamTV",
       "completed_date": "11/8/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "thenewboston-python-client",
@@ -120,7 +187,8 @@
       "pr_id": "11",
       "completed_by": "DucPhamTV",
       "completed_date": "11/8/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "thenewboston-python-client",
@@ -129,7 +197,8 @@
       "pr_id": "11",
       "completed_by": "DucPhamTV",
       "completed_date": "11/8/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "thenewboston-python-client",
@@ -138,7 +207,8 @@
       "pr_id": "11",
       "completed_by": "DucPhamTV",
       "completed_date": "11/8/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "thenewboston-python-client",
@@ -147,7 +217,8 @@
       "pr_id": "11",
       "completed_by": "DucPhamTV",
       "completed_date": "11/8/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "thenewboston-python-client",
@@ -156,7 +227,8 @@
       "pr_id": "11",
       "completed_by": "DucPhamTV",
       "completed_date": "11/8/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "thenewboston-python-client",
@@ -165,7 +237,8 @@
       "pr_id": "11",
       "completed_by": "DucPhamTV",
       "completed_date": "11/8/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     }
   ],
   "FaiyazMdAbdul": [
@@ -176,7 +249,8 @@
       "pr_id": "709",
       "completed_by": "FaiyazMdAbdul",
       "completed_date": "11/11/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "GermaVinsmoke": [
@@ -187,7 +261,8 @@
       "pr_id": "306",
       "completed_by": "GermaVinsmoke",
       "completed_date": "10/19/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -196,7 +271,8 @@
       "pr_id": "307",
       "completed_by": "GermaVinsmoke",
       "completed_date": "10/19/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -205,7 +281,8 @@
       "pr_id": "310",
       "completed_by": "GermaVinsmoke",
       "completed_date": "10/20/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     }
   ],
   "Get-ADUser": [
@@ -216,7 +293,32 @@
       "pr_id": "562",
       "completed_by": "Get-ADUser",
       "completed_date": "11/7/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "Godnoken": [
+    {
+      "repository": "Website",
+      "title": "Hello world Swedish correction",
+      "issue_id": "351",
+      "pr_id": "987",
+      "completed_by": "Godnoken",
+      "completed_date": "11/23/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "Hot-Shot75": [
+    {
+      "repository": "Website",
+      "title": "Added 'Hello world' in Georgian",
+      "issue_id": "351",
+      "pr_id": "867",
+      "completed_by": "Hot-Shot75",
+      "completed_date": "11/16/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "Hristijan95": [
@@ -227,7 +329,8 @@
       "pr_id": "428",
       "completed_by": "Hristijan95",
       "completed_date": "11/5/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -236,7 +339,8 @@
       "pr_id": "59",
       "completed_by": "Hristijan95",
       "completed_date": "7/19/20",
-      "amount_paid": "7500"
+      "amount_paid": "7500",
+      "bug_bounty": ""
     }
   ],
   "JayBIOS": [
@@ -247,7 +351,8 @@
       "pr_id": "486",
       "completed_by": "JayBIOS",
       "completed_date": "11/5/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "JonasPik": [
@@ -258,7 +363,52 @@
       "pr_id": "555",
       "completed_by": "JonasPik",
       "completed_date": "11/7/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "KingChampion36": [
+    {
+      "repository": "Website",
+      "title": "Hello world in pali",
+      "issue_id": "351",
+      "pr_id": "824",
+      "completed_by": "KingChampion36",
+      "completed_date": "11/15/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Added contributor for issue #821",
+      "issue_id": "821",
+      "pr_id": "823",
+      "completed_by": "KingChampion36",
+      "completed_date": "11/15/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "New contributor added for front end (#866)",
+      "issue_id": "866",
+      "pr_id": "871",
+      "completed_by": "KingChampion36",
+      "completed_date": "11/16/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "LunarDeveloper": [
+    {
+      "repository": "Website",
+      "title": "New Member Added Issue 773",
+      "issue_id": "773",
+      "pr_id": "777",
+      "completed_by": "LunarDeveloper",
+      "completed_date": "11/14/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "MirkoHotsHot": [
@@ -269,7 +419,8 @@
       "pr_id": "713",
       "completed_by": "MirkoHotsHot",
       "completed_date": "11/11/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "Niekon01": [
@@ -280,7 +431,8 @@
       "pr_id": "",
       "completed_by": "Niekon01",
       "completed_date": "9/21/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -289,7 +441,8 @@
       "pr_id": "",
       "completed_by": "Niekon01",
       "completed_date": "9/21/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -298,7 +451,8 @@
       "pr_id": "308",
       "completed_by": "Niekon01",
       "completed_date": "9/21/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -307,7 +461,8 @@
       "pr_id": "435",
       "completed_by": "Niekon01",
       "completed_date": "11/3/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -316,7 +471,32 @@
       "pr_id": "467",
       "completed_by": "Niekon01",
       "completed_date": "11/5/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
+    }
+  ],
+  "P-Sklodowska": [
+    {
+      "repository": "Website",
+      "title": "Hello world in Polish",
+      "issue_id": "351",
+      "pr_id": "765",
+      "completed_by": "P-Sklodowska",
+      "completed_date": "11/14/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "PatNeedham": [
+    {
+      "repository": "Website",
+      "title": "fix: long-press TopNav links on Android",
+      "issue_id": "812",
+      "pr_id": "813",
+      "completed_by": "PatNeedham",
+      "completed_date": "11/15/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "ProdexOne": [
@@ -327,7 +507,8 @@
       "pr_id": "701",
       "completed_by": "ProdexOne",
       "completed_date": "11/11/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -336,7 +517,8 @@
       "pr_id": "725",
       "completed_by": "ProdexOne",
       "completed_date": "11/12/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "Ramin-RX7": [
@@ -347,7 +529,8 @@
       "pr_id": "477",
       "completed_by": "Ramin-RX7",
       "completed_date": "11/5/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "Reeler": [
@@ -358,7 +541,8 @@
       "pr_id": "650",
       "completed_by": "Reeler",
       "completed_date": "11/9/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "Rosendo6": [
@@ -369,7 +553,8 @@
       "pr_id": "766",
       "completed_by": "Rosendo6",
       "completed_date": "11/13/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "RoyVoetman": [
@@ -380,7 +565,32 @@
       "pr_id": "708",
       "completed_by": "RoyVoetman",
       "completed_date": "11/11/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "SOHDA31": [
+    {
+      "repository": "marketing",
+      "title": "LinkedIn Banner",
+      "issue_id": "6",
+      "pr_id": "",
+      "completed_by": "SOHDA31",
+      "completed_date": "11/15/20",
+      "amount_paid": "7500",
+      "bug_bounty": ""
+    }
+  ],
+  "Surac778": [
+    {
+      "repository": "Website",
+      "title": "Added Tajik language",
+      "issue_id": "351",
+      "pr_id": "900",
+      "completed_by": "Surac778",
+      "completed_date": "11/18/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "The-Veil": [
@@ -391,7 +601,8 @@
       "pr_id": "762",
       "completed_by": "The-Veil",
       "completed_date": "11/12/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "Tobel158": [
@@ -402,7 +613,20 @@
       "pr_id": "735",
       "completed_by": "Tobel158",
       "completed_date": "11/12/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "Tuhinga": [
+    {
+      "repository": "Website",
+      "title": "Added Maori language",
+      "issue_id": "351",
+      "pr_id": "884",
+      "completed_by": "Tuhinga",
+      "completed_date": "11/18/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "VJKLFT": [
@@ -413,7 +637,8 @@
       "pr_id": "490",
       "completed_by": "VJKLFT",
       "completed_date": "11/5/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "Vangaorth": [
@@ -424,7 +649,8 @@
       "pr_id": "466",
       "completed_by": "Vangaorth",
       "completed_date": "11/5/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "VictorABoye": [
@@ -435,7 +661,8 @@
       "pr_id": "483",
       "completed_by": "VictorABoye",
       "completed_date": "11/5/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "VincentHch": [
@@ -446,7 +673,82 @@
       "pr_id": "736",
       "completed_by": "VincentHch",
       "completed_date": "11/12/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Add new user",
+      "issue_id": "872",
+      "pr_id": "873",
+      "completed_by": "VincentHch",
+      "completed_date": "11/16/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Bank - get bank config",
+      "issue_id": "16",
+      "pr_id": "34",
+      "completed_by": "VincentHch",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Bank - confirmation blocks api calls",
+      "issue_id": "17",
+      "pr_id": "35",
+      "completed_by": "VincentHch",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Bank - post upgrade notice",
+      "issue_id": "20",
+      "pr_id": "42",
+      "completed_by": "VincentHch",
+      "completed_date": "11/23/20",
+      "amount_paid": "200",
+      "bug_bounty": ""
+    }
+  ],
+  "Weav3r": [
+    {
+      "repository": "Website",
+      "title": "Add Hello World Twi (Akan)",
+      "issue_id": "351",
+      "pr_id": "820",
+      "completed_by": "Weav3r",
+      "completed_date": "11/15/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "YashovardhanSingh": [
+    {
+      "repository": "Website",
+      "title": "fixes #787",
+      "issue_id": "787",
+      "pr_id": "794",
+      "completed_by": "YashovardhanSingh",
+      "completed_date": "11/13/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Design",
+      "title": "Coins Memes Infographic",
+      "issue_id": "42",
+      "pr_id": "",
+      "completed_by": "YashovardhanSingh",
+      "completed_date": "11/24/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
     }
   ],
   "Zims": [
@@ -457,7 +759,8 @@
       "pr_id": "557",
       "completed_by": "Zims",
       "completed_date": "11/8/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "ZokaSoce": [
@@ -468,7 +771,8 @@
       "pr_id": "473",
       "completed_by": "ZokaSoce",
       "completed_date": "11/5/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "aayushi14": [
@@ -479,7 +783,8 @@
       "pr_id": "323",
       "completed_by": "aayushi14",
       "completed_date": "10/27/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -488,7 +793,8 @@
       "pr_id": "344",
       "completed_by": "aayushi14",
       "completed_date": "10/31/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -497,7 +803,8 @@
       "pr_id": "346",
       "completed_by": "aayushi14",
       "completed_date": "11/1/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -506,7 +813,8 @@
       "pr_id": "361",
       "completed_by": "aayushi14",
       "completed_date": "11/1/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -515,7 +823,8 @@
       "pr_id": "367",
       "completed_by": "aayushi14",
       "completed_date": "11/1/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -524,7 +833,8 @@
       "pr_id": "365",
       "completed_by": "aayushi14",
       "completed_date": "11/1/20",
-      "amount_paid": "2000"
+      "amount_paid": "2000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -533,7 +843,8 @@
       "pr_id": "425",
       "completed_by": "aayushi14",
       "completed_date": "11/3/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -542,7 +853,8 @@
       "pr_id": "450",
       "completed_by": "aayushi14",
       "completed_date": "11/4/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -551,7 +863,52 @@
       "pr_id": "452",
       "completed_by": "aayushi14",
       "completed_date": "11/4/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "763- fixed incorrect text on Add Friends page",
+      "issue_id": "763",
+      "pr_id": "764",
+      "completed_by": "aayushi14",
+      "completed_date": "11/13/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "994-removed members from team",
+      "issue_id": "994",
+      "pr_id": "1010",
+      "completed_by": "aayushi14",
+      "completed_date": "11/24/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    }
+  ],
+  "aeronye": [
+    {
+      "repository": "Website",
+      "title": "New member",
+      "issue_id": "351",
+      "pr_id": "939",
+      "completed_by": "aeronye",
+      "completed_date": "11/21/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "akamfoad": [
+    {
+      "repository": "Website",
+      "title": "\ud83d\udc4cauto select download tab based on user system",
+      "issue_id": "819",
+      "pr_id": "805",
+      "completed_by": "akamfoad",
+      "completed_date": "11/15/20",
+      "amount_paid": "1000",
+      "bug_bounty": ""
     }
   ],
   "alexkimeu0": [
@@ -562,7 +919,8 @@
       "pr_id": "635",
       "completed_by": "alexkimeu0",
       "completed_date": "11/9/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -571,7 +929,28 @@
       "pr_id": "609",
       "completed_by": "alexkimeu0",
       "completed_date": "11/8/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Fixed typo in the documentation account: 3972dfcfb9fd488cf90644b599558d3e265bdb883686933f62e8450aaee974b1",
+      "issue_id": "889",
+      "pr_id": "757",
+      "completed_by": "alexkimeu0",
+      "completed_date": "11/17/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Fixes #935",
+      "issue_id": "935",
+      "pr_id": "1004",
+      "completed_by": "alexkimeu0",
+      "completed_date": "11/23/20",
+      "amount_paid": "500",
+      "bug_bounty": "TRUE"
     }
   ],
   "alhuang2": [
@@ -582,7 +961,8 @@
       "pr_id": "480",
       "completed_by": "alhuang2",
       "completed_date": "11/6/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "amarjeet987": [
@@ -593,7 +973,8 @@
       "pr_id": "376",
       "completed_by": "amarjeet987",
       "completed_date": "11/3/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -602,7 +983,8 @@
       "pr_id": "442",
       "completed_by": "amarjeet987",
       "completed_date": "11/4/20",
-      "amount_paid": "7500"
+      "amount_paid": "7500",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -611,7 +993,18 @@
       "pr_id": "427",
       "completed_by": "amarjeet987",
       "completed_date": "11/5/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Signup modal",
+      "issue_id": "461",
+      "pr_id": "585",
+      "completed_by": "amarjeet987",
+      "completed_date": "11/24/20",
+      "amount_paid": "25000",
+      "bug_bounty": ""
     }
   ],
   "angle943": [
@@ -622,7 +1015,8 @@
       "pr_id": "302",
       "completed_by": "angle943",
       "completed_date": "9/18/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -631,7 +1025,8 @@
       "pr_id": "314",
       "completed_by": "angle943",
       "completed_date": "9/22/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -640,7 +1035,8 @@
       "pr_id": "308",
       "completed_by": "angle943",
       "completed_date": "10/19/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -649,7 +1045,8 @@
       "pr_id": "308",
       "completed_by": "angle943",
       "completed_date": "10/19/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -658,7 +1055,8 @@
       "pr_id": "312",
       "completed_by": "angle943",
       "completed_date": "10/21/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -667,7 +1065,8 @@
       "pr_id": "343",
       "completed_by": "angle943",
       "completed_date": "10/31/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -676,7 +1075,8 @@
       "pr_id": "350",
       "completed_by": "angle943",
       "completed_date": "11/1/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -685,7 +1085,8 @@
       "pr_id": "358",
       "completed_by": "angle943",
       "completed_date": "11/1/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -694,7 +1095,8 @@
       "pr_id": "359",
       "completed_by": "angle943",
       "completed_date": "11/1/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -703,7 +1105,8 @@
       "pr_id": "436",
       "completed_by": "angle943",
       "completed_date": "11/3/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -712,7 +1115,8 @@
       "pr_id": "439",
       "completed_by": "angle943",
       "completed_date": "11/3/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -721,7 +1125,8 @@
       "pr_id": "453",
       "completed_by": "angle943",
       "completed_date": "11/4/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -730,7 +1135,8 @@
       "pr_id": "449",
       "completed_by": "angle943",
       "completed_date": "11/4/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "askass": [
@@ -741,7 +1147,8 @@
       "pr_id": "652",
       "completed_by": "askass",
       "completed_date": "11/9/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "avgust13": [
@@ -752,7 +1159,8 @@
       "pr_id": "313",
       "completed_by": "avgust13",
       "completed_date": "9/22/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -761,7 +1169,8 @@
       "pr_id": "313",
       "completed_by": "avgust13",
       "completed_date": "9/22/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -770,7 +1179,8 @@
       "pr_id": "313",
       "completed_by": "avgust13",
       "completed_date": "9/22/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -779,7 +1189,8 @@
       "pr_id": "313",
       "completed_by": "avgust13",
       "completed_date": "9/22/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -788,7 +1199,8 @@
       "pr_id": "313",
       "completed_by": "avgust13",
       "completed_date": "9/22/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -797,7 +1209,8 @@
       "pr_id": "313",
       "completed_by": "avgust13",
       "completed_date": "9/22/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -806,7 +1219,8 @@
       "pr_id": "319",
       "completed_by": "avgust13",
       "completed_date": "9/23/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -815,7 +1229,8 @@
       "pr_id": "325",
       "completed_by": "avgust13",
       "completed_date": "9/24/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -824,7 +1239,8 @@
       "pr_id": "334",
       "completed_by": "avgust13",
       "completed_date": "9/26/20",
-      "amount_paid": "10000"
+      "amount_paid": "10000",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -833,7 +1249,8 @@
       "pr_id": "336",
       "completed_by": "avgust13",
       "completed_date": "9/27/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -842,7 +1259,8 @@
       "pr_id": "345",
       "completed_by": "avgust13",
       "completed_date": "9/30/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -851,7 +1269,8 @@
       "pr_id": "350",
       "completed_by": "avgust13",
       "completed_date": "9/30/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -860,7 +1279,8 @@
       "pr_id": "357",
       "completed_by": "avgust13",
       "completed_date": "9/30/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -869,7 +1289,8 @@
       "pr_id": "379",
       "completed_by": "avgust13",
       "completed_date": "10/6/20",
-      "amount_paid": "50000"
+      "amount_paid": "50000",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -878,7 +1299,8 @@
       "pr_id": "379",
       "completed_by": "avgust13",
       "completed_date": "10/6/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     }
   ],
   "avinashupadhya99": [
@@ -889,7 +1311,8 @@
       "pr_id": "554",
       "completed_by": "avinashupadhya99",
       "completed_date": "11/7/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "brian316": [
@@ -900,7 +1323,8 @@
       "pr_id": "403",
       "completed_by": "brian316",
       "completed_date": "10/14/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -909,7 +1333,20 @@
       "pr_id": "405",
       "completed_by": "brian316",
       "completed_date": "10/17/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
+    }
+  ],
+  "briankinane": [
+    {
+      "repository": "Website",
+      "title": "Added 'Hello World' in Latin.",
+      "issue_id": "351",
+      "pr_id": "862",
+      "completed_by": "briankinane",
+      "completed_date": "11/16/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "brmendez": [
@@ -920,7 +1357,8 @@
       "pr_id": "338",
       "completed_by": "brmendez",
       "completed_date": "10/30/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     }
   ],
   "buckyroberts": [
@@ -931,7 +1369,8 @@
       "pr_id": "186",
       "completed_by": "buckyroberts",
       "completed_date": "9/20/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -940,7 +1379,8 @@
       "pr_id": "186",
       "completed_by": "buckyroberts",
       "completed_date": "9/20/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -949,7 +1389,8 @@
       "pr_id": "201",
       "completed_by": "buckyroberts",
       "completed_date": "9/20/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -958,7 +1399,8 @@
       "pr_id": "364",
       "completed_by": "buckyroberts",
       "completed_date": "10/2/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -967,7 +1409,18 @@
       "pr_id": "508",
       "completed_by": "buckyroberts",
       "completed_date": "11/5/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Project proposals",
+      "issue_id": "934",
+      "pr_id": "978",
+      "completed_by": "buckyroberts",
+      "completed_date": "11/22/20",
+      "amount_paid": "2500",
+      "bug_bounty": ""
     }
   ],
   "cebisom": [
@@ -978,7 +1431,8 @@
       "pr_id": "691",
       "completed_by": "cebisom",
       "completed_date": "11/10/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "cfviotti": [
@@ -989,7 +1443,30 @@
       "pr_id": "716",
       "completed_by": "cfviotti",
       "completed_date": "11/11/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "codemedo": [
+    {
+      "repository": "Website",
+      "title": "Added hello world in tatari language",
+      "issue_id": "351",
+      "pr_id": "904",
+      "completed_by": "codemedo",
+      "completed_date": "11/19/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Added new contributor",
+      "issue_id": "899",
+      "pr_id": "901",
+      "completed_by": "codemedo",
+      "completed_date": "11/18/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "colfax23": [
@@ -1000,7 +1477,8 @@
       "pr_id": "313",
       "completed_by": "colfax23",
       "completed_date": "10/26/20",
-      "amount_paid": "10000"
+      "amount_paid": "10000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1009,7 +1487,8 @@
       "pr_id": "328",
       "completed_by": "colfax23",
       "completed_date": "10/27/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -1018,7 +1497,8 @@
       "pr_id": "419",
       "completed_by": "colfax23",
       "completed_date": "10/27/20",
-      "amount_paid": "7500"
+      "amount_paid": "7500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1027,7 +1507,8 @@
       "pr_id": "339",
       "completed_by": "colfax23",
       "completed_date": "10/30/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     }
   ],
   "cubedtear": [
@@ -1038,7 +1519,8 @@
       "pr_id": "476",
       "completed_by": "cubedtear",
       "completed_date": "11/5/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "dahelg": [
@@ -1049,7 +1531,8 @@
       "pr_id": "290",
       "completed_by": "dahelg",
       "completed_date": "10/11/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     }
   ],
   "danielivert": [
@@ -1060,7 +1543,8 @@
       "pr_id": "481",
       "completed_by": "danielivert",
       "completed_date": "11/5/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "danieloravec": [
@@ -1071,7 +1555,20 @@
       "pr_id": "685",
       "completed_by": "danieloravec",
       "completed_date": "11/12/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "dark121211": [
+    {
+      "repository": "Website",
+      "title": "Added Burmese language",
+      "issue_id": "351",
+      "pr_id": "860",
+      "completed_by": "dark121211",
+      "completed_date": "11/16/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "ddyakov": [
@@ -1082,7 +1579,8 @@
       "pr_id": "727",
       "completed_by": "ddyakov",
       "completed_date": "11/12/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1091,7 +1589,18 @@
       "pr_id": "759",
       "completed_by": "ddyakov",
       "completed_date": "11/13/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "improved correctness and clarity in itroduction page text",
+      "issue_id": "800",
+      "pr_id": "801",
+      "completed_by": "ddyakov",
+      "completed_date": "11/14/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "donmbelembe": [
@@ -1102,7 +1611,8 @@
       "pr_id": "516",
       "completed_by": "donmbelembe",
       "completed_date": "11/7/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "dorlivniopen": [
@@ -1113,7 +1623,8 @@
       "pr_id": "354",
       "completed_by": "dorlivniopen",
       "completed_date": "11/1/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "fadyadal": [
@@ -1124,7 +1635,32 @@
       "pr_id": "474",
       "completed_by": "fadyadal",
       "completed_date": "11/5/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "ffpetrovic": [
+    {
+      "repository": "Website",
+      "title": "Remove package-lock.json and update npm commands to yarn",
+      "issue_id": "828",
+      "pr_id": "829",
+      "completed_by": "ffpetrovic",
+      "completed_date": "11/16/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "fosteradorkor": [
+    {
+      "repository": "Website",
+      "title": "Hello world in Akan",
+      "issue_id": "351",
+      "pr_id": "692",
+      "completed_by": "fosteradorkor",
+      "completed_date": "11/15/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "ganeshvicky": [
@@ -1135,7 +1671,20 @@
       "pr_id": "479",
       "completed_by": "ganeshvicky",
       "completed_date": "11/5/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "gatvay23924": [
+    {
+      "repository": "Website",
+      "title": "Added Esperanto language",
+      "issue_id": "351",
+      "pr_id": "902",
+      "completed_by": "gatvay23924",
+      "completed_date": "11/18/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "h3cksamrat": [
@@ -1146,7 +1695,8 @@
       "pr_id": "651",
       "completed_by": "h3cksamrat",
       "completed_date": "11/9/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "hLudde": [
@@ -1157,7 +1707,70 @@
       "pr_id": "484",
       "completed_by": "hLudde",
       "completed_date": "11/5/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "hasham56": [
+    {
+      "repository": "Website",
+      "title": "New contributor added",
+      "issue_id": "772",
+      "pr_id": "775",
+      "completed_by": "hasham56",
+      "completed_date": "11/14/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor Added",
+      "issue_id": "793",
+      "pr_id": "797",
+      "completed_by": "hasham56",
+      "completed_date": "11/13/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Kotlin software developer",
+      "issue_id": "877",
+      "pr_id": "897",
+      "completed_by": "hasham56",
+      "completed_date": "11/18/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Kotlin SDK member added",
+      "issue_id": "878",
+      "pr_id": "896",
+      "completed_by": "hasham56",
+      "completed_date": "11/18/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Adding contributor",
+      "issue_id": "915",
+      "pr_id": "930",
+      "completed_by": "hasham56",
+      "completed_date": "11/20/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "914",
+      "pr_id": "929",
+      "completed_by": "hasham56",
+      "completed_date": "11/20/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "hawyar": [
@@ -1168,7 +1781,8 @@
       "pr_id": "362",
       "completed_by": "hawyar",
       "completed_date": "10/2/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -1177,7 +1791,8 @@
       "pr_id": "373",
       "completed_by": "hawyar",
       "completed_date": "10/4/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     }
   ],
   "henctv": [
@@ -1188,7 +1803,8 @@
       "pr_id": "475",
       "completed_by": "henctv",
       "completed_date": "11/5/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "hienqn": [
@@ -1199,7 +1815,8 @@
       "pr_id": "711",
       "completed_by": "hienqn",
       "completed_date": "11/11/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "ionutzaharia": [
@@ -1210,7 +1827,8 @@
       "pr_id": "599",
       "completed_by": "ionutzaharia",
       "completed_date": "11/8/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "itsnikhil": [
@@ -1221,7 +1839,8 @@
       "pr_id": "289",
       "completed_by": "itsnikhil",
       "completed_date": "10/10/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1230,7 +1849,8 @@
       "pr_id": "370",
       "completed_by": "itsnikhil",
       "completed_date": "11/2/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1239,7 +1859,8 @@
       "pr_id": "351",
       "completed_by": "itsnikhil",
       "completed_date": "11/2/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1248,7 +1869,8 @@
       "pr_id": "404",
       "completed_by": "itsnikhil",
       "completed_date": "11/3/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1257,7 +1879,8 @@
       "pr_id": "405",
       "completed_by": "itsnikhil",
       "completed_date": "11/3/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1266,7 +1889,8 @@
       "pr_id": "409",
       "completed_by": "itsnikhil",
       "completed_date": "11/3/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1275,7 +1899,8 @@
       "pr_id": "414",
       "completed_by": "itsnikhil",
       "completed_date": "11/3/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1284,7 +1909,8 @@
       "pr_id": "418",
       "completed_by": "itsnikhil",
       "completed_date": "11/3/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1293,7 +1919,8 @@
       "pr_id": "419",
       "completed_by": "itsnikhil",
       "completed_date": "11/3/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1302,7 +1929,8 @@
       "pr_id": "421",
       "completed_by": "itsnikhil",
       "completed_date": "11/3/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1311,7 +1939,8 @@
       "pr_id": "469",
       "completed_by": "itsnikhil",
       "completed_date": "11/6/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1320,7 +1949,8 @@
       "pr_id": "683",
       "completed_by": "itsnikhil",
       "completed_date": "11/10/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
     }
   ],
   "jaelee0409": [
@@ -1331,7 +1961,8 @@
       "pr_id": "639",
       "completed_by": "jaelee0409",
       "completed_date": "11/9/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
     }
   ],
   "jagdisharma": [
@@ -1342,7 +1973,8 @@
       "pr_id": "470",
       "completed_by": "jagdisharma",
       "completed_date": "11/5/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "jamessspanggg": [
@@ -1353,7 +1985,8 @@
       "pr_id": "642",
       "completed_by": "jamessspanggg",
       "completed_date": "11/9/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1362,7 +1995,8 @@
       "pr_id": "704",
       "completed_by": "jamessspanggg",
       "completed_date": "11/11/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1371,7 +2005,8 @@
       "pr_id": "676",
       "completed_by": "jamessspanggg",
       "completed_date": "11/10/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1380,7 +2015,8 @@
       "pr_id": "680",
       "completed_by": "jamessspanggg",
       "completed_date": "11/10/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1389,7 +2025,108 @@
       "pr_id": "734",
       "completed_by": "jamessspanggg",
       "completed_date": "11/13/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "[#743] Add new front end contributor",
+      "issue_id": "743",
+      "pr_id": "744",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/14/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Change sorting of members to be based on contributorId",
+      "issue_id": "747",
+      "pr_id": "788",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/14/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Enforce width of task sections in leaderboard",
+      "issue_id": "839",
+      "pr_id": "840",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/15/20",
+      "amount_paid": "2000",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "[FAQ] Fix console error in development mode",
+      "issue_id": "845",
+      "pr_id": "846",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/15/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Remove empty new line in scripts within deployment guides",
+      "issue_id": "858",
+      "pr_id": "859",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/16/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Utilise react-helmet-async instead of react-helmet",
+      "issue_id": "856",
+      "pr_id": "857",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/16/20",
+      "amount_paid": "1000",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Fix console warnings",
+      "issue_id": "863",
+      "pr_id": "865",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/16/20",
+      "amount_paid": "1000",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Add new contributor: Payments Manager Tawanda",
+      "issue_id": "892",
+      "pr_id": "895",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/18/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Add new contributor: Payments Manager Nikhil",
+      "issue_id": "893",
+      "pr_id": "894",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/18/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Fix double calls to onClick when clicked on Icons",
+      "issue_id": "1014",
+      "pr_id": "1015",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/24/20",
+      "amount_paid": "500",
+      "bug_bounty": "TRUE"
     }
   ],
   "jonathanlee06": [
@@ -1400,7 +2137,8 @@
       "pr_id": "567",
       "completed_by": "jonathanlee06",
       "completed_date": "11/11/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "jtavak": [
@@ -1411,7 +2149,18 @@
       "pr_id": "12",
       "completed_by": "jtavak",
       "completed_date": "11/8/20",
-      "amount_paid": "10000"
+      "amount_paid": "10000",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Bank - banks api calls",
+      "issue_id": "15",
+      "pr_id": "24",
+      "completed_by": "jtavak",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000",
+      "bug_bounty": ""
     }
   ],
   "kagisojamesthomba": [
@@ -1422,7 +2171,8 @@
       "pr_id": "687",
       "completed_by": "kagisojamesthomba",
       "completed_date": "11/10/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "kenmusima": [
@@ -1433,7 +2183,8 @@
       "pr_id": "545",
       "completed_by": "kenmusima",
       "completed_date": "11/7/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "kristykjlee": [
@@ -1444,7 +2195,8 @@
       "pr_id": "",
       "completed_by": "kristykjlee",
       "completed_date": "9/16/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1453,7 +2205,8 @@
       "pr_id": "",
       "completed_by": "kristykjlee",
       "completed_date": "10/24/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1462,7 +2215,8 @@
       "pr_id": "",
       "completed_by": "kristykjlee",
       "completed_date": "10/24/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1471,7 +2225,8 @@
       "pr_id": "",
       "completed_by": "kristykjlee",
       "completed_date": "10/24/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1480,7 +2235,8 @@
       "pr_id": "",
       "completed_by": "kristykjlee",
       "completed_date": "10/24/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1489,7 +2245,8 @@
       "pr_id": "",
       "completed_by": "kristykjlee",
       "completed_date": "10/24/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1498,7 +2255,8 @@
       "pr_id": "",
       "completed_by": "kristykjlee",
       "completed_date": "10/31/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1507,7 +2265,8 @@
       "pr_id": "",
       "completed_by": "kristykjlee",
       "completed_date": "11/1/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1516,7 +2275,8 @@
       "pr_id": "",
       "completed_by": "kristykjlee",
       "completed_date": "11/3/20",
-      "amount_paid": "25000"
+      "amount_paid": "25000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1525,7 +2285,8 @@
       "pr_id": "",
       "completed_by": "kristykjlee",
       "completed_date": "11/4/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1534,7 +2295,20 @@
       "pr_id": "",
       "completed_by": "kristykjlee",
       "completed_date": "11/4/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
+    }
+  ],
+  "kush-daga": [
+    {
+      "repository": "Website",
+      "title": "Fixes #550 - Added Sorting in Tasks",
+      "issue_id": "550",
+      "pr_id": "616",
+      "completed_by": "kush-daga",
+      "completed_date": "11/16/20",
+      "amount_paid": "7500",
+      "bug_bounty": ""
     }
   ],
   "lapstjup": [
@@ -1545,7 +2319,8 @@
       "pr_id": "266",
       "completed_by": "lapstjup",
       "completed_date": "10/2/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1554,7 +2329,8 @@
       "pr_id": "384",
       "completed_by": "lapstjup",
       "completed_date": "11/2/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1563,7 +2339,8 @@
       "pr_id": "416",
       "completed_by": "lapstjup",
       "completed_date": "11/3/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1572,7 +2349,8 @@
       "pr_id": "422",
       "completed_by": "lapstjup",
       "completed_date": "11/3/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1581,7 +2359,8 @@
       "pr_id": "443",
       "completed_by": "lapstjup",
       "completed_date": "11/4/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1590,7 +2369,8 @@
       "pr_id": "443",
       "completed_by": "lapstjup",
       "completed_date": "11/4/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1599,7 +2379,30 @@
       "pr_id": "468",
       "completed_by": "lapstjup",
       "completed_date": "11/9/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Fix proposal for decoupling animation and shuffling logic",
+      "issue_id": "890",
+      "pr_id": "918",
+      "completed_by": "lapstjup",
+      "completed_date": "11/21/20",
+      "amount_paid": "5000",
+      "bug_bounty": ""
+    }
+  ],
+  "laughablehaha": [
+    {
+      "repository": "Website",
+      "title": "Added Maltese language.",
+      "issue_id": "351",
+      "pr_id": "771",
+      "completed_by": "laughablehaha",
+      "completed_date": "11/14/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "leelatanniru": [
@@ -1610,7 +2413,8 @@
       "pr_id": "246",
       "completed_by": "leelatanniru",
       "completed_date": "9/3/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -1619,7 +2423,8 @@
       "pr_id": "374",
       "completed_by": "leelatanniru",
       "completed_date": "10/4/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -1628,7 +2433,20 @@
       "pr_id": "401",
       "completed_by": "leelatanniru",
       "completed_date": "10/14/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
+    }
+  ],
+  "lucedawg": [
+    {
+      "repository": "Website",
+      "title": "'Hello World' in Haitian Creole",
+      "issue_id": "351",
+      "pr_id": "891",
+      "completed_by": "lucedawg",
+      "completed_date": "11/18/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "lukas-kasticky": [
@@ -1639,7 +2457,30 @@
       "pr_id": "526",
       "completed_by": "lukas-kasticky",
       "completed_date": "11/7/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "makaramkd": [
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Change class methods to private",
+      "issue_id": "57",
+      "pr_id": "58",
+      "completed_by": "makaramkd",
+      "completed_date": "11/23/20",
+      "amount_paid": "200",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Add typing annotations to the codebase to help developers reduce code mistakes.",
+      "issue_id": "39",
+      "pr_id": "44",
+      "completed_by": "makaramkd",
+      "completed_date": "11/23/20",
+      "amount_paid": "6000",
+      "bug_bounty": ""
     }
   ],
   "manishram": [
@@ -1650,7 +2491,8 @@
       "pr_id": "600",
       "completed_by": "manishram",
       "completed_date": "11/9/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1659,7 +2501,8 @@
       "pr_id": "571",
       "completed_by": "manishram",
       "completed_date": "11/7/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1668,7 +2511,82 @@
       "pr_id": "641",
       "completed_by": "manishram",
       "completed_date": "11/12/20",
-      "amount_paid": "7500"
+      "amount_paid": "7500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Add new contributor to the Back-End Developers",
+      "issue_id": "745",
+      "pr_id": "746",
+      "completed_by": "manishram",
+      "completed_date": "11/14/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Fixes Left Navigation Links",
+      "issue_id": "564",
+      "pr_id": "803",
+      "completed_by": "manishram",
+      "completed_date": "11/15/20",
+      "amount_paid": "1000",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Complete title of recent task on hover",
+      "issue_id": "815",
+      "pr_id": "816",
+      "completed_by": "manishram",
+      "completed_date": "11/15/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Page Title Fix: Assets and Openings page",
+      "issue_id": "854",
+      "pr_id": "855",
+      "completed_by": "manishram",
+      "completed_date": "11/16/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "added project proposals link to footer",
+      "issue_id": "1008",
+      "pr_id": "1009",
+      "completed_by": "manishram",
+      "completed_date": "11/23/20",
+      "amount_paid": "250",
+      "bug_bounty": "TRUE"
+    }
+  ],
+  "melsh123221": [
+    {
+      "repository": "Website",
+      "title": "Added Hello World in Welsh language",
+      "issue_id": "351",
+      "pr_id": "868",
+      "completed_by": "melsh123221",
+      "completed_date": "11/16/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "mersimoski": [
+    {
+      "repository": "Website",
+      "title": "issue#909 - Long title words break the mobile design in the tasks page",
+      "issue_id": "909",
+      "pr_id": "917",
+      "completed_by": "mersimoski",
+      "completed_date": "11/19/20",
+      "amount_paid": "1000",
+      "bug_bounty": ""
     }
   ],
   "moki298": [
@@ -1679,7 +2597,8 @@
       "pr_id": "412",
       "completed_by": "moki298",
       "completed_date": "10/20/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1688,7 +2607,8 @@
       "pr_id": "314",
       "completed_by": "moki298",
       "completed_date": "10/28/20",
-      "amount_paid": "7500"
+      "amount_paid": "7500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1697,7 +2617,8 @@
       "pr_id": "363",
       "completed_by": "moki298",
       "completed_date": "11/1/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1706,7 +2627,8 @@
       "pr_id": "458",
       "completed_by": "moki298",
       "completed_date": "11/5/20",
-      "amount_paid": "7500"
+      "amount_paid": "7500",
+      "bug_bounty": ""
     }
   ],
   "mprateek14": [
@@ -1717,7 +2639,8 @@
       "pr_id": "682",
       "completed_by": "mprateek14",
       "completed_date": "11/10/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "mthomas-io": [
@@ -1728,7 +2651,8 @@
       "pr_id": "504",
       "completed_by": "mthomas-io",
       "completed_date": "11/9/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
     }
   ],
   "naveedahmad99": [
@@ -1739,7 +2663,8 @@
       "pr_id": "510",
       "completed_by": "naveedahmad99",
       "completed_date": "11/7/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "nberic": [
@@ -1750,7 +2675,32 @@
       "pr_id": "684",
       "completed_by": "nberic",
       "completed_date": "11/10/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "nishp77": [
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Bank - blocks api calls",
+      "issue_id": "21",
+      "pr_id": "36",
+      "completed_by": "nishp77",
+      "completed_date": "11/23/20",
+      "amount_paid": "5000",
+      "bug_bounty": ""
+    }
+  ],
+  "nparoski": [
+    {
+      "repository": "Website",
+      "title": "Fix/double focus",
+      "issue_id": "830",
+      "pr_id": "831",
+      "completed_by": "nparoski",
+      "completed_date": "11/15/20",
+      "amount_paid": "1000",
+      "bug_bounty": ""
     }
   ],
   "nrednav": [
@@ -1761,7 +2711,8 @@
       "pr_id": "560",
       "completed_by": "nrednav",
       "completed_date": "11/11/20",
-      "amount_paid": "2000"
+      "amount_paid": "2000",
+      "bug_bounty": ""
     }
   ],
   "officialabdulrehman": [
@@ -1772,7 +2723,20 @@
       "pr_id": "575",
       "completed_by": "officialabdulrehman",
       "completed_date": "11/7/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "pabloqb2000": [
+    {
+      "repository": "Website",
+      "title": "Added Hello World in Aragonese",
+      "issue_id": "351",
+      "pr_id": "861",
+      "completed_by": "pabloqb2000",
+      "completed_date": "11/16/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "phase7": [
@@ -1783,7 +2747,20 @@
       "pr_id": "485",
       "completed_by": "phase7",
       "completed_date": "11/5/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "phoenixArtwork": [
+    {
+      "repository": "Website",
+      "title": "Update of hello-world.ts and a suggestion.",
+      "issue_id": "351",
+      "pr_id": "698",
+      "completed_by": "phoenixArtwork",
+      "completed_date": "11/15/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "rabeeh-ta": [
@@ -1794,7 +2771,20 @@
       "pr_id": "596",
       "completed_by": "rabeeh-ta",
       "completed_date": "11/7/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "rahulkiller104": [
+    {
+      "repository": "Website",
+      "title": "donate-card-margin fixes",
+      "issue_id": "776",
+      "pr_id": "817",
+      "completed_by": "rahulkiller104",
+      "completed_date": "11/14/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "rasabel": [
@@ -1805,7 +2795,8 @@
       "pr_id": "649",
       "completed_by": "rasabel",
       "completed_date": "11/9/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "reeveng": [
@@ -1816,7 +2807,8 @@
       "pr_id": "535",
       "completed_by": "reeveng",
       "completed_date": "11/7/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "rizqyep": [
@@ -1827,7 +2819,8 @@
       "pr_id": "381",
       "completed_by": "rizqyep",
       "completed_date": "11/2/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "robMakasi": [
@@ -1838,7 +2831,8 @@
       "pr_id": "457",
       "completed_by": "robMakasi",
       "completed_date": "11/4/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "sardorml": [
@@ -1849,7 +2843,8 @@
       "pr_id": "740",
       "completed_by": "sardorml",
       "completed_date": "11/12/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "sarveshkolte": [
@@ -1860,7 +2855,8 @@
       "pr_id": "511",
       "completed_by": "sarveshkolte",
       "completed_date": "11/7/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "sbalasa": [
@@ -1871,7 +2867,40 @@
       "pr_id": "720",
       "completed_by": "sbalasa",
       "completed_date": "11/12/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Add Github Actions to automate testing and linting",
+      "issue_id": "38",
+      "pr_id": "40",
+      "completed_by": "sbalasa",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000",
+      "bug_bounty": ""
+    }
+  ],
+  "sbalsa": [
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Add Github Actions to automate testing and linting",
+      "issue_id": "38",
+      "pr_id": "40",
+      "completed_by": "sbalsa",
+      "completed_date": "11/23/20",
+      "amount_paid": "5000",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Fix black formatting errors in Codebase",
+      "issue_id": "31",
+      "pr_id": "32",
+      "completed_by": "sbalsa",
+      "completed_date": "11/23/20",
+      "amount_paid": "1000",
+      "bug_bounty": ""
     }
   ],
   "sdhiaeddine": [
@@ -1882,7 +2911,8 @@
       "pr_id": "624",
       "completed_by": "sdhiaeddine",
       "completed_date": "11/9/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
     }
   ],
   "shahraizali": [
@@ -1893,7 +2923,8 @@
       "pr_id": "379",
       "completed_by": "shahraizali",
       "completed_date": "11/2/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -1902,7 +2933,8 @@
       "pr_id": "397",
       "completed_by": "shahraizali",
       "completed_date": "10/13/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "thenewboston-python",
@@ -1911,7 +2943,8 @@
       "pr_id": "",
       "completed_by": "shahraizali",
       "completed_date": "10/16/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1920,7 +2953,8 @@
       "pr_id": "379",
       "completed_by": "shahraizali",
       "completed_date": "11/2/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "shcul333": [
@@ -1931,7 +2965,32 @@
       "pr_id": "546",
       "completed_by": "shcul333",
       "completed_date": "11/7/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    }
+  ],
+  "shivamyadav37": [
+    {
+      "repository": "Design",
+      "title": "Reddit Banner",
+      "issue_id": "67",
+      "pr_id": "",
+      "completed_by": "shivamyadav37",
+      "completed_date": "11/24/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    }
+  ],
+  "siemen-subbaiah": [
+    {
+      "repository": "Website",
+      "title": "Update hello-world.ts",
+      "issue_id": "351",
+      "pr_id": "874",
+      "completed_by": "siemen-subbaiah",
+      "completed_date": "11/17/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "singh-sarabjeet": [
@@ -1942,7 +3001,8 @@
       "pr_id": "623",
       "completed_by": "singh-sarabjeet",
       "completed_date": "11/9/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "sotheavuthnguon": [
@@ -1953,7 +3013,8 @@
       "pr_id": "742",
       "completed_by": "sotheavuthnguon",
       "completed_date": "11/12/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "subhamg": [
@@ -1964,7 +3025,8 @@
       "pr_id": "755",
       "completed_by": "subhamg",
       "completed_date": "11/12/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "suhailpappu": [
@@ -1975,7 +3037,8 @@
       "pr_id": "677",
       "completed_by": "suhailpappu",
       "completed_date": "11/13/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "thesanjeevsharma": [
@@ -1986,7 +3049,8 @@
       "pr_id": "226",
       "completed_by": "thesanjeevsharma",
       "completed_date": "9/22/20",
-      "amount_paid": "10000"
+      "amount_paid": "10000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -1995,7 +3059,8 @@
       "pr_id": "264",
       "completed_by": "thesanjeevsharma",
       "completed_date": "10/2/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -2004,7 +3069,8 @@
       "pr_id": "278",
       "completed_by": "thesanjeevsharma",
       "completed_date": "10/10/20",
-      "amount_paid": "10000"
+      "amount_paid": "10000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -2013,7 +3079,8 @@
       "pr_id": "325",
       "completed_by": "thesanjeevsharma",
       "completed_date": "10/27/20",
-      "amount_paid": "2500"
+      "amount_paid": "2500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -2022,7 +3089,8 @@
       "pr_id": "340",
       "completed_by": "thesanjeevsharma",
       "completed_date": "10/30/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -2031,7 +3099,8 @@
       "pr_id": "424",
       "completed_by": "thesanjeevsharma",
       "completed_date": "11/4/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -2040,7 +3109,8 @@
       "pr_id": "444",
       "completed_by": "thesanjeevsharma",
       "completed_date": "11/4/20",
-      "amount_paid": "10000"
+      "amount_paid": "10000",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -2049,7 +3119,8 @@
       "pr_id": "424",
       "completed_by": "thesanjeevsharma",
       "completed_date": "11/4/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -2058,7 +3129,8 @@
       "pr_id": "700",
       "completed_by": "thesanjeevsharma",
       "completed_date": "11/10/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -2067,7 +3139,48 @@
       "pr_id": "707",
       "completed_by": "thesanjeevsharma",
       "completed_date": "11/10/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "added Kotlin-SDK to tasks",
+      "issue_id": "876",
+      "pr_id": "882",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "11/17/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Added Avatar component",
+      "issue_id": "869",
+      "pr_id": "942",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "11/22/20",
+      "amount_paid": "2500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "feat: GitHub OAuth POC",
+      "issue_id": "364",
+      "pr_id": "509",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "11/24/20",
+      "amount_paid": "7500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "data(teams): move Rahul to Research",
+      "issue_id": "1016",
+      "pr_id": "1019",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "11/24/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
     }
   ],
   "tpikachu": [
@@ -2078,7 +3191,8 @@
       "pr_id": "352",
       "completed_by": "tpikachu",
       "completed_date": "9/30/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -2087,7 +3201,8 @@
       "pr_id": "376",
       "completed_by": "tpikachu",
       "completed_date": "10/4/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     }
   ],
   "velibor7": [
@@ -2098,7 +3213,18 @@
       "pr_id": "489",
       "completed_by": "velibor7",
       "completed_date": "11/6/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Bank - patch api call for validators path",
+      "issue_id": "22",
+      "pr_id": "23",
+      "completed_by": "velibor7",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000",
+      "bug_bounty": ""
     }
   ],
   "vilihegyi": [
@@ -2109,7 +3235,8 @@
       "pr_id": "597",
       "completed_by": "vilihegyi",
       "completed_date": "11/9/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "virtualdesigner": [
@@ -2120,7 +3247,8 @@
       "pr_id": "678",
       "completed_by": "virtualdesigner",
       "completed_date": "11/9/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "webdeveloperswj": [
@@ -2131,7 +3259,8 @@
       "pr_id": "",
       "completed_by": "webdeveloperswj",
       "completed_date": "9/17/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "Account-Manager",
@@ -2140,7 +3269,8 @@
       "pr_id": "",
       "completed_by": "webdeveloperswj",
       "completed_date": "9/17/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -2149,7 +3279,8 @@
       "pr_id": "",
       "completed_by": "webdeveloperswj",
       "completed_date": "9/22/20",
-      "amount_paid": "5000"
+      "amount_paid": "5000",
+      "bug_bounty": ""
     }
   ],
   "whitelionx": [
@@ -2160,7 +3291,8 @@
       "pr_id": "445",
       "completed_by": "whitelionx",
       "completed_date": "11/9/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -2169,7 +3301,8 @@
       "pr_id": "646",
       "completed_by": "whitelionx",
       "completed_date": "11/9/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -2178,7 +3311,8 @@
       "pr_id": "647",
       "completed_by": "whitelionx",
       "completed_date": "11/9/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -2187,7 +3321,8 @@
       "pr_id": "661",
       "completed_by": "whitelionx",
       "completed_date": "11/9/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -2196,7 +3331,8 @@
       "pr_id": "514",
       "completed_by": "whitelionx",
       "completed_date": "11/7/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -2205,7 +3341,8 @@
       "pr_id": "581",
       "completed_by": "whitelionx",
       "completed_date": "11/7/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     },
     {
       "repository": "Website",
@@ -2214,7 +3351,8 @@
       "pr_id": "737",
       "completed_by": "whitelionx",
       "completed_date": "11/12/20",
-      "amount_paid": "1000"
+      "amount_paid": "1000",
+      "bug_bounty": ""
     }
   ],
   "wilsongayo": [
@@ -2225,7 +3363,8 @@
       "pr_id": "531",
       "completed_by": "wilsongayo",
       "completed_date": "11/7/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "xZliman": [
@@ -2236,7 +3375,8 @@
       "pr_id": "528",
       "completed_by": "xZliman",
       "completed_date": "11/7/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "xmac11": [
@@ -2247,7 +3387,30 @@
       "pr_id": "380",
       "completed_by": "xmac11",
       "completed_date": "11/2/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
+    },
+    {
+      "repository": "thenewboston-python-client",
+      "title": "Bank - post invalid block to bank",
+      "issue_id": "18",
+      "pr_id": "26",
+      "completed_by": "xmac11",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000",
+      "bug_bounty": ""
+    }
+  ],
+  "ysttt12": [
+    {
+      "repository": "Website",
+      "title": "Added Nyanja language",
+      "issue_id": "351",
+      "pr_id": "913",
+      "completed_by": "ysttt12",
+      "completed_date": "11/19/20",
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "zalkar-z": [
@@ -2258,7 +3421,8 @@
       "pr_id": "721",
       "completed_by": "zalkar-z",
       "completed_date": "11/11/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ],
   "zinoadidi": [
@@ -2269,7 +3433,8 @@
       "pr_id": "538",
       "completed_by": "zinoadidi",
       "completed_date": "11/7/20",
-      "amount_paid": "500"
+      "amount_paid": "500",
+      "bug_bounty": ""
     }
   ]
 }

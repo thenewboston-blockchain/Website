@@ -52,8 +52,8 @@ const GuideResyncProcess: FC = () => {
       <p>
         When a bank alters the trust levels of their validators and the results indicate that there are now confirmation
         validators that are more trusted than the bank's primary validator, the bank will send out a request to the
-        confirmation validators requesting one of them upgrade to a primary validator. This is because the banks always
-        prefer the most trusted validator to be the primary validator for the network.
+        confirmation validators requesting one of them to upgrade to a primary validator. This is because the banks
+        always prefer the most trusted validator to be the primary validator for the network.
       </p>
       <p>
         A confirmation validator will accept the request if they themselves have the requesting bank set as their most
