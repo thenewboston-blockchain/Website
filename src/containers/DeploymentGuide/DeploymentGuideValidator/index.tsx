@@ -1,11 +1,12 @@
 import React, {FC, ReactNode} from 'react';
 
-import {CodeSnippet, DocContainer, TableParams} from 'components';
+import {A, CodeSnippet, DocContainer, TableParams} from 'components';
 
 import CeleryValidator from '../CeleryValidator';
 import Firewall from '../Firewall';
 import GatewayInterface from '../GatewayInterface';
 import InstallDependencies from '../InstallDependencies';
+import KeyGeneration from '../KeyGeneration';
 import Nginx from '../Nginx';
 import ProjectSetup from '../ProjectSetup';
 import Redis from '../Redis';
@@ -94,6 +95,7 @@ const DeploymentGuideValidator: FC = () => {
   return (
     <DocContainer className="DeploymentGuideValidator" title="Validator Deployment Guide">
       <p>This guide will detail the deployment instructions for both primary validators and confirmation validators.</p>
+      <KeyGeneration />
       <InstallDependencies />
       <Firewall />
       <ProjectSetup name="Validator" />

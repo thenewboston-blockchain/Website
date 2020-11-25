@@ -23,7 +23,8 @@ sudo nano /etc/${name.toLowerCase()}/environment`}
       />
       <CodeSnippet
         code={`DJANGO_APPLICATION_ENVIRONMENT=production
-NETWORK_SIGNING_KEY=YOUR_NID_SIGNING_KEY`}
+NETWORK_SIGNING_KEY=YOUR_NID_SIGNING_KEY
+SECRET_KEY=YOUR_SECRET_KEY`}
       />
       <CodeSnippet code={`sudo nano /etc/${name.toLowerCase()}/celery.conf`} heading="Create celery env config" />
       <CodeSnippet
@@ -36,7 +37,8 @@ CELERYD_PID_FILE="/var/log/celery/%n.pid"
 CELERYD_LOG_FILE="/var/log/celery/%n%I.log"
 CELERYD_LOG_LEVEL="DEBUG"
 DJANGO_APPLICATION_ENVIRONMENT=production
-NETWORK_SIGNING_KEY=YOUR_NID_SIGNING_KEY`}
+NETWORK_SIGNING_KEY=YOUR_NID_SIGNING_KEY
+SECRET_KEY=YOUR_SECRET_KEY`}
       />
       <CodeSnippet code="sudo nano /etc/systemd/system/api.service" heading="Create service" />
       <CodeSnippet

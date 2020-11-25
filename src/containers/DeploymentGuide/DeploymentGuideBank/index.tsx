@@ -1,11 +1,12 @@
 import React, {FC, ReactNode} from 'react';
 
-import {A, CodeSnippet, DocContainer, TableParams} from 'components';
+import {CodeSnippet, DocContainer, TableParams} from 'components';
 
 import CeleryBank from '../CeleryBank';
 import Firewall from '../Firewall';
 import GatewayInterface from '../GatewayInterface';
 import InstallDependencies from '../InstallDependencies';
+import KeyGeneration from '../KeyGeneration';
 import Nginx from '../Nginx';
 import ProjectSetup from '../ProjectSetup';
 import Redis from '../Redis';
@@ -71,11 +72,7 @@ const DeploymentGuideBank: FC = () => {
   return (
     <DocContainer className="DeploymentGuideBank" title="Bank Deployment Guide">
       <p>This guide will detail the deployment instructions for banks.</p>
-      <p>
-        Before deploying server, run{' '}
-        <A href="https://gist.github.com/buckyroberts/f64a5580d55a26f2e7871f06a14c4c8b">this script</A> to generate all
-        keys that will be needed later for configuration.
-      </p>
+      <KeyGeneration />
       <InstallDependencies />
       <Firewall />
       <ProjectSetup name="Bank" />
