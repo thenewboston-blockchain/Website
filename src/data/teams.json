@@ -174,19 +174,11 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-<<<<<<< HEAD
-          "contributorId": "31",
-          "displayName": "Rahul Kothari",
-          "githubUsername": "",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EUQ8SR2L-e347b1c404fa-512",
-          "slackUsername": "Rahul Kothari"
-=======
           "contributorId": "12",
           "displayName": "KryptoZero",
           "githubUsername": null,
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E2FN4D1S-4688c60ed154-512",
           "slackUsername": "KryptoZero"
->>>>>>> bb749c03ea8c19eac9f0458baee5b8e1ad9386d4
         }
       },
       {
