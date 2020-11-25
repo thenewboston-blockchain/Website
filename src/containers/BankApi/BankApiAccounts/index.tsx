@@ -52,7 +52,7 @@ const BankApiAccounts: FC = () => {
             "trust": "0.00"
         }
     ]
-}}`}
+}`}
         heading="Response"
       />
 
