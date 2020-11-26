@@ -52,7 +52,7 @@ const PrimaryValidatorApiAccounts: FC = () => {
       <TableParams
         items={[
           {
-            dataType: 'URL parameter',
+            dataType: 'PATH parameter',
             description: 'The account number that you want to check',
             param: 'account_number',
           },
@@ -69,7 +69,7 @@ const PrimaryValidatorApiAccounts: FC = () => {
       <TableParams
         items={[
           {
-            dataType: 'URL parameter',
+            dataType: 'PATH parameter',
             description: 'The account number that you want to check',
             param: 'account_number',
           },
