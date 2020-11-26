@@ -68,18 +68,18 @@ const PrimaryValidatorApiValidators: FC = () => {
       <DocEndpoint endpoint="/validators/<node_identifier>" method="GET" />
       <RequestResponseSnippet
         code={`{
-    "account_number": "d5c4db217c032ef21df84be4201766b73e623940ce6d95aedf153da2f8c38626",
-    "ip_address": "54.67.72.197",
-    "node_identifier": "61dbf00c2dd7886f01fda60aca6fffd9799f4612110fe804220570add6b28923",
-    "port": null,
-    "protocol": "http",
-    "version": "v1.0",
-    "default_transaction_fee": 1,
-    "root_account_file": "https://gist.githubusercontent.com/buckyroberts/0688f136b6c1332be472a8baf10f78c5/raw/323fcd29672e392be2b934b82ab9eac8d15e840f/alpha-00.json",
-    "root_account_file_hash": "0f775023bee79884fbd9a90a76c5eacfee38a8ca52735f7ab59dab63a75cbee1",
-    "seed_block_identifier": "",
-    "daily_confirmation_rate": null,
-    "trust": "0.00"
+  "account_number": "d5c4db217c032ef21df84be4201766b73e623940ce6d95aedf153da2f8c38626",
+  "ip_address": "54.67.72.197",
+  "node_identifier": "61dbf00c2dd7886f01fda60aca6fffd9799f4612110fe804220570add6b28923",
+  "port": null,
+  "protocol": "http",
+  "version": "v1.0",
+  "default_transaction_fee": 1,
+  "root_account_file": "https://gist.githubusercontent.com/buckyroberts/0688f136b6c1332be472a8baf10f78c5/raw/323fcd29672e392be2b934b82ab9eac8d15e840f/alpha-00.json",
+  "root_account_file_hash": "0f775023bee79884fbd9a90a76c5eacfee38a8ca52735f7ab59dab63a75cbee1",
+  "seed_block_identifier": "",
+  "daily_confirmation_rate": null,
+  "trust": "0.00"
 }`}
         heading="Response"
       />
