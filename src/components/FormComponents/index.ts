@@ -6,6 +6,7 @@ import FormSelect from './FormSelect';
 import FormSelectDetailed from './FormSelectDetailed';
 import FormTextArea from './FormTextArea';
 
-export {Form, FormButton, FormInput, FormRadioGroup, FormSelect, FormSelectDetailed, FormTextArea};
+export {Form, FormButton, FormInput, FormRadioGroup, FormSelect, FormSelectDetailed, 
+  FormTextArea};
 
 export type {FormButtonProps};
