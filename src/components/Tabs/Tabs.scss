@@ -24,7 +24,9 @@
     position: relative;
 
     @media (max-width: 768px) {
-      justify-content: center;
+      column-gap: 24px;
+      max-width: 540px;
+      padding: 18px;
     }
   }
 }

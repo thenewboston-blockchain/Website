@@ -44,8 +44,11 @@ const MarketingCard: FC<ComponentProps> = ({className, customLink, website}) => 
   return (
     <A className={clsx('MarketingCard', className)} href={customLink || socialMediaUrls[website]}>
       {images[website]}
-      <span className="MarketingCard__Handle">{socialMediaHandles[website]}</span>
-      <span className="MarketingCard__Description">{socialMediaDescriptions[website]}</span>
+      <div className="MarketingCard__handle">{socialMediaHandles[website]}</div>
+      <div className="MarketingCard__description">
+        <div className="MarketingCard__description__handle">{socialMediaHandles[website]}</div>{' '}
+        {socialMediaDescriptions[website]}
+      </div>
     </A>
   );
 };
