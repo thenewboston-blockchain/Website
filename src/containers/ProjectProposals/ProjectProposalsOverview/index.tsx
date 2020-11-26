@@ -29,12 +29,12 @@ const ProjectProposalsOverview: FC = () => {
       <StepIndicator
         className="ProjectProposalsOverview__StepIndicator"
         number={3}
-        text='If your project adheres to the rules and guidelines of thenewboston your proposal will be labeled "Pending Review".'
+        text='If your project adheres to the rules and guidelines of thenewboston, your proposal will be labeled "Pending Review".'
       />
       <StepIndicator
         className="ProjectProposalsOverview__StepIndicator"
         number={4}
-        text='If your proposal is good enough to impress TNB team your proposal will be approved and your proposal will be labeled as "Pending Repository".'
+        text='If your proposal is good enough to impress TNB team, your proposal will be approved and your proposal will be labeled as "Pending Repository".'
       />
       <StepIndicator
         className="ProjectProposalsOverview__StepIndicator"

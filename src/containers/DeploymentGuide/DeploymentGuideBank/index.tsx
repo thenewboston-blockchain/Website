@@ -6,6 +6,7 @@ import CeleryBank from '../CeleryBank';
 import Firewall from '../Firewall';
 import GatewayInterface from '../GatewayInterface';
 import InstallDependencies from '../InstallDependencies';
+import KeyGeneration from '../KeyGeneration';
 import Nginx from '../Nginx';
 import ProjectSetup from '../ProjectSetup';
 import Redis from '../Redis';
@@ -71,19 +72,16 @@ const DeploymentGuideBank: FC = () => {
   return (
     <DocContainer className="DeploymentGuideBank" title="Bank Deployment Guide">
       <p>This guide will detail the deployment instructions for banks.</p>
+      <KeyGeneration />
       <InstallDependencies />
       <Firewall />
       <ProjectSetup name="Bank" />
       <Nginx name="Bank" />
       <Redis />
       <GatewayInterface name="Bank" />
-      <CeleryBank name="Bank" networkSigningKey="e5e5fec0dcbbd8b0a76c67204823678d3f243de7a0a1042bb3ecf66285cd9fd4" />
+      <CeleryBank name="Bank" />
       <SystemServices />
-      <StaticFilesAndApplicationConfiguration
-        initializationCommand={renderInitializationCommands()}
-        name="Bank"
-        networkSigningKey="e5e5fec0dcbbd8b0a76c67204823678d3f243de7a0a1042bb3ecf66285cd9fd4"
-      />
+      <StaticFilesAndApplicationConfiguration initializationCommand={renderInitializationCommands()} name="Bank" />
       <Troubleshooting />
     </DocContainer>
   );
