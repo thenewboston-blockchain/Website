@@ -1,4 +1,4 @@
-name: Linting code styles
+name: Lint Action
 
 on:
   push:
@@ -13,6 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
-        run: npm install
+        run: npm ci
       - name: Run linters
         run: npm run lint
