@@ -175,10 +175,6 @@ export const guideNavigationData = [
     url: '/guide/trust',
   },
   {
-    name: 'Initial Funds',
-    url: '/guide/initial-funds',
-  },
-  {
     name: 'Best Practices',
     url: '/guide/best-practices',
   },
