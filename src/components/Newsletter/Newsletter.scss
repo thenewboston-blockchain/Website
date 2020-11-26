@@ -1,40 +1,54 @@
-.newsletter-modal {
-  align-items: center;
-  background: rgba($color: #000000, $alpha: 0.3);
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  position: fixed;
-  width: 100%;
-  z-index: 2;
-
+.Newsletter {
   &__content {
+    align-items: center;
     background: var(--color-white);
-    border-radius: 3px;
     display: flex;
     flex-direction: column;
-    margin: 10px;
-    max-width: 540px;
-    padding: 76px 50px;
-    position: relative;
+    overflow: visible;
     text-align: center;
+  }
 
-    @media (max-width: 500px) {
-      padding: 60px 15px;
-    }
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
 
-    * {
-      align-self: center;
+    & > * {
+      height: 40px;
     }
+  }
 
-    .Icon {
-      position: absolute;
-      right: 17px;
-      top: 17px;
-    }
+  .FormFieldComponent__error-message {
+    color: var(--color-danger);
+    text-align: start;
   }
 
   &__title {
     margin-bottom: 16px;
+  }
+
+  .FormInput {
+    width: 240px;
+
+    @media (max-width: 500px) {
+      width: 100%;
+    }
+  }
+
+  .FormField {
+    border: 1px solid #a3acb9;
+    border-radius: 3px;
+    height: 100%;
+    padding: 8px;
+    width: 100%;
+  }
+
+  button {
+    margin-left: 16px;
+
+    @media (max-width: 500px) {
+      margin-left: 0;
+      margin-top: 25px;
+      width: 100%;
+    }
   }
 }
