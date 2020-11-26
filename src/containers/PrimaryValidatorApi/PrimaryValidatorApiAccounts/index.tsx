@@ -11,6 +11,20 @@ const PrimaryValidatorApiAccounts: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/accounts" method="GET" />
+      <TableParams
+        items={[
+          {
+            dataType: 'URL parameter',
+            description: 'If you want to start at a specific point, an offset can be specified.',
+            param: 'offset',
+          },
+          {
+            dataType: 'URL parameter',
+            description: 'Number of returned accounts per request starting from the offset',
+            param: 'limit',
+          },
+        ]}
+      />
       <RequestResponseSnippet
         code={`{
   "count": 345,
