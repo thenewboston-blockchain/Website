@@ -28,7 +28,7 @@ export const socialMediaDescriptions = {
   [SocialMedia.reddit]:
     'Our Reddit community is built to help others learn about computer science and other academic subjects.',
   [SocialMedia.slack]:
-    'With 2049 members our Slack team is the central communication channel for app ideas, development & design.',
+    'With over thousands of members our Slack team is the central communication channel for app ideas, development & design.',
   [SocialMedia.twitter]: 'Stay up to date by following Bucky Roberts on his personal Twitter page.',
   [SocialMedia.youtube]:
     'Follow us on YouTube and find tons of sweet computer related tutorials and some other awesome videos too!',
