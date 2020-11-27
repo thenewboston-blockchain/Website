@@ -1,15 +1,18 @@
-import React, {FC, Fragment, useState, useEffect} from 'react';
+import React, {FC, Fragment, useEffect} from 'react';
+import axios from 'axios';
 import yup from 'utils/yup';
 import {useBooleanState} from 'hooks';
 import {Button} from 'components/FormElements';
 import {FormInput} from 'components/FormComponents';
-import {Icon, IconType} from 'components';
 import Modal from 'components/Modal';
-import NewsletterForm from '../NewsletterForm';
 import './Newsletter.scss';
 
+interface Newsletter {
+  email: string;
+}
+
 const NewsletterModal: FC = () => {
-  const [modal, setModal] = useBooleanState(true);
+  const [modal, setModal] = useBooleanState(false);
 
   useEffect(() => {
     const newsletterModal = localStorage.getItem('newsletter-modal');
@@ -19,21 +22,14 @@ const NewsletterModal: FC = () => {
     }
   }, [setModal]);
 
-  const handleSubmit = (email: any): void => {
-    // eslint-disable-next-line no-console
-    console.log(email);
-  };
+  const handleSubmit = ({email}: Newsletter) => axios.post('NEWSLETTER__ENDPOINT', {email});
+
+  const validationSchema = yup
+    .object()
+    .shape({email: yup.string().required('Email is required.').email('Invalid email.')});
 
   if (modal) {
     return (
-      // <div className="newsletter-modal">
-      //   <div className="newsletter-modal__content">
-      //     <Icon icon={IconType.close} onClick={() => setModal(false)} />
-      //     <h1 className="newsletter-modal__title">Join the Community!</h1>
-      //     <p>Get the latest updates on new videos, openings, features, and special offers directly in your inbox!</p>
-      //     <NewsletterForm />
-      //   </div>
-      // </div>
       <Modal
         className="Newsletter"
         initialValues={{email: ''}}
@@ -41,7 +37,7 @@ const NewsletterModal: FC = () => {
         displayCancelButton={false}
         onSubmit={handleSubmit}
         close={setModal}
-        validationSchema={yup.object().shape({email: yup.string().email('Invalid email')})}
+        validationSchema={validationSchema}
       >
         <h1 className="Newsletter__title">Join the Community!</h1>
         <p>Get the latest updates on new videos, openings, features, and special offers directly in your inbox!</p>
