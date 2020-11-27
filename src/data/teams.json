@@ -434,6 +434,19 @@
           "profileImage": "https://avatars1.githubusercontent.com/u/33323725?s=460&u=da67fec9d0eacc6f5680c789265fb372a75d71c0&v=4",
           "slackUsername": "Meharban Singh"
         }
+      },
+      {
+        "title": "Front-End Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-27-11",
+        "contributor": {
+          "contributorId": "58",
+          "displayName": "James Pang",
+          "githubUsername": "jamessspanggg",
+          "profileImage": "https://avatars0.githubusercontent.com/u/32864116?s=460&u=0c2a53c6f1476da904d2b3c820bab43b64b7185b&v=4",
+          "slackUsername": "James Pang"
+        }
       }
     ]
   },
