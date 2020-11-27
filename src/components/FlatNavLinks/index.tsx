@@ -16,7 +16,7 @@ interface ComponentProps {
 function FlatNavLinks({className, handleOptionClick, options, selectedOption}: ComponentProps) {
   const renderOptions = () => {
     return options.map((option: NavOption) => (
-      <div
+      <button
         className={clsx('FlatNavLinks__option', {
           'FlatNavLinks__option--active': option.pathname === selectedOption,
           ...getCustomClassNames(className, '__option', true),
@@ -24,11 +24,9 @@ function FlatNavLinks({className, handleOptionClick, options, selectedOption}: C
         })}
         key={option.pathname}
         onClick={handleOptionClick(option.pathname)}
-        role="button"
-        tabIndex={0}
       >
         {option.title}
-      </div>
+      </button>
     ));
   };
 

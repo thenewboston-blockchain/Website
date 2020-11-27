@@ -12,6 +12,7 @@ const teamMembers = getTeamMembers();
 
 const TEAM_NAME_FILTERS: NavOption[] = [
   {pathname: TeamName.all, title: 'All'},
+  {pathname: TeamName.dotnetCore, title: '.NET Core'},
   {pathname: TeamName.backEndDevelopers, title: 'Back-End Developers'},
   {pathname: TeamName.community, title: 'Community'},
   {pathname: TeamName.design, title: 'Design'},
@@ -20,12 +21,13 @@ const TEAM_NAME_FILTERS: NavOption[] = [
   {pathname: TeamName.frontEndDevelopers, title: 'Front-End Developers'},
   {pathname: TeamName.kotlinSDK, title: 'Kotlin SDK'},
   {pathname: TeamName.marketing, title: 'Marketing'},
+  {pathname: TeamName.newUserOperations, title: 'New User Operations'},
   {pathname: TeamName.payments, title: 'Payments'},
+  {pathname: TeamName.projectProposals, title: 'Project Proposals'},
   {pathname: TeamName.qa, title: 'QA'},
   {pathname: TeamName.redditModerators, title: 'Reddit Moderators'},
   {pathname: TeamName.research, title: 'Research'},
   {pathname: TeamName.security, title: 'Security'},
-  {pathname: TeamName.slackManagers, title: 'Slack Manager'},
   {pathname: TeamName.youtube, title: 'YouTube'},
 ];
 

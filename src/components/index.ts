@@ -1,4 +1,5 @@
 import A from './A';
+import Avatar from './Avatar';
 import BreadcrumbMenu from './BreadcrumbMenu';
 import {CodeSnippet, RequestResponseSnippet, SnippetLang} from './CodeSnippet';
 import ContributorTasks from './ContributorTasks';
@@ -6,6 +7,7 @@ import CopyableAccountNumber from './CopyableAccountNumber';
 import DashboardLayout from './DashboardLayout';
 import DocsMenuItems from './DocsMenuItems';
 import {DocContainer, DocEndpoint, DocImage, DocInlineCode, DocList, DocSubSection} from './DocWrapper';
+import DropdownInput from './DropdownInput';
 import EmptyPage from './EmptyPage';
 import FlatNavLinks from './FlatNavLinks';
 import Footer from './Footer';
@@ -19,6 +21,7 @@ import MarketingButton from './MarketingButton';
 import MenuGroup from './MenuGroup';
 import LabelFilter from './LabelFilter';
 import Loader from './Loader';
+import OrganizationMenuItems from './OrganizationMenuItems';
 import PageTitle from './PageTitle';
 import Pagination from './Pagination';
 import Popover from './Popover';
@@ -35,6 +38,7 @@ import TotalAmount from './TotalAmount';
 
 export {
   A,
+  Avatar,
   BreadcrumbMenu,
   Button,
   CodeSnippet,
@@ -48,6 +52,7 @@ export {
   DocList,
   DocSubSection,
   DocsMenuItems,
+  DropdownInput,
   EmptyPage,
   FlatNavLinks,
   Footer,
@@ -61,6 +66,7 @@ export {
   Loader,
   MarketingButton,
   MenuGroup,
+  OrganizationMenuItems,
   PageTitle,
   Pagination,
   Popover,

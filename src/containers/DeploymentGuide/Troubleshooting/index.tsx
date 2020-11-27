@@ -13,8 +13,7 @@ const Troubleshooting: FC = () => {
       <CodeSnippet
         code={`sudo journalctl -u api.service
 sudo journalctl -u celery.service
-sudo journalctl -u nginx.service
-`}
+sudo journalctl -u nginx.service`}
         heading="View the logs"
       />
     </DocSubSection>
