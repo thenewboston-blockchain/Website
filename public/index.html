@@ -40,6 +40,13 @@
     </script>
   </head>
   <body>
+    <script>
+      if (window.document.documentMode) {
+        var h1 = document.createElement('h1');
+        h1.innerText = 'Internet Explorer is not supported, please try visiting from another browser';
+        document.body.appendChild(h1);
+      }
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <div id="modal-root"></div>
