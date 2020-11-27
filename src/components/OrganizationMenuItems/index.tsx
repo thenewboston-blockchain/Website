@@ -17,6 +17,10 @@ export const internalNavigationData = [
     name: 'Product Development',
     url: '/internal/product-development',
   },
+  {
+    name: 'How to Set Up Payment Board',
+    url: '/internal/how-to-set-up-payment-board',
+  },
 ];
 
 export const projectProposalsNavigationData = [

@@ -374,19 +374,6 @@
         "title": "Front-End Developer",
         "isLead": false,
         "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "21",
-          "displayName": "Izsak",
-          "githubUsername": "accessdeniedIT",
-          "profileImage": "https://avatars1.githubusercontent.com/u/59346347?s=460&u=aefefc6e52e3e0a6e43e19f5d08119aa76dd3c00&v=4",
-          "slackUsername": "accessdeniedIT"
-        }
-      },
-      {
-        "title": "Front-End Developer",
-        "isLead": false,
-        "payPerDay": 2800,
         "createdDate": "2020-11-14T02:14:59.307535Z",
         "contributor": {
           "contributorId": "47",
@@ -518,7 +505,7 @@
         "contributor": {
           "contributorId": "34",
           "displayName": "Pulkit Bajaj",
-          "githubUsername": "-",
+          "githubUsername": "",
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01DYM56TQV-b28ea2d2e34d-72",
           "slackUsername": "Pulkit Bajaj"
         }
