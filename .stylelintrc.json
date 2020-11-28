@@ -21,7 +21,6 @@
     "property-case": "lower",
     "property-no-unknown": true,
     "selector-list-comma-newline-after": "always",
-    "selector-type-case": "lower",
     "string-no-newline": true,
     "string-quotes": "single",
     "unit-no-unknown": true
