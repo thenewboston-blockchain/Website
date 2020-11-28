@@ -4,12 +4,12 @@
   border-radius: 12px;
   box-shadow: 0 0 4px rgba(4, 34, 53, 0.3);
   color: var(--color-primary);
-  column-gap: 8px;
+  column-gap: 18px;
   display: grid;
-  grid-template-columns: 64px auto;
+  grid-template-columns: 30px auto;
   margin: 12px;
   max-width: 392px;
-  padding: 24px;
+  padding: 18px;
   row-gap: 12px;
 
   &:hover {
@@ -17,17 +17,11 @@
   }
 
   &__img {
-    width: 64px;
-    padding: 8px;
-  }
-
-  &__handle,
-  &__description__handle {
-    font-weight: 600;
-    text-align: center;
+    width: 100%;
   }
 
   &__handle {
+    font-weight: 600;
     grid-column: 2;
   }
 
@@ -36,13 +30,14 @@
 
     &__handle {
       display: none;
+      font-weight: 600;
     }
   }
 
   @media (min-width: 768px) {
-    column-gap: 18px;
+    column-gap: 24px;
     max-width: 540px;
-    padding: 18px;
+    padding: 18px 24px;
 
     &__img {
       grid-row: 1;
