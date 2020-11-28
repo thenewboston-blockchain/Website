@@ -4,6 +4,7 @@ import {NavLink} from 'react-router-dom';
 import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
 
 const ConfirmationValidatorApiUpgradeRequest: FC = () => {
+  const guideLink = <NavLink to="/guide/resync-process">Resync Process</NavLink>;
   return (
     <DocContainer className="ConfirmationValidatorApiUpgradeRequest" title="Upgrade Request">
       <p>
@@ -12,10 +13,7 @@ const ConfirmationValidatorApiUpgradeRequest: FC = () => {
         confirmation validators requesting one of them to upgrade to a primary validator. This is because the banks
         always prefer the most trusted validator to be the primary validator for the network.
       </p>
-      <p>
-        More information about upgrade requests can be found in the{' '}
-        <NavLink to="/guide/resync-process">Resync Process</NavLink> section of the guide.
-      </p>
+      <p>{`More information about upgrade requests can be found in the ${guideLink} section of the guide.`}</p>
 
       <DocEndpoint endpoint="/upgrade_request" method="POST" />
       <TableParams
@@ -47,12 +45,42 @@ const ConfirmationValidatorApiUpgradeRequest: FC = () => {
 }`}
         heading="Request"
       />
-      <RequestResponseSnippet code={`{}`} heading="Response" />
+      <RequestResponseSnippet
+        code={`{
+  "primary_validator": {
+    "account_number": "2e86f48216567302527b69eae6c6a188097ed3a9741f43cc3723e570cf47644c",
+    "ip_address": "54.183.17.224",
+    "node_identifier": "2262026a562b0274163158e92e8fbc4d28e519bc5ba8c1cf403703292be84a51",
+    "port": 1337,
+    "protocol": "http",
+    "version": "v1.0",
+    "default_transaction_fee": 1,
+    "root_account_file": "http://54.183.17.224/media/root_account_file.json",
+    "root_account_file_hash": "cc9390cc579dc8a99a1f34c1bea5d54a0f45b27ecee7e38662f0cd853f76744d",
+    "seed_block_identifier": "",
+    "daily_confirmation_rate": null,
+    "trust": 100.0
+  },
+  "account_number": "ad1f8845c6a1abb6011a2a434a079a087c460657aad54329a84b406dce8bf314",
+  "ip_address": "54.219.178.46",
+  "node_identifier": "b82a2fac55dd39f667a53157c68100ba856d07272f21e62b54155a5200415ff6",
+  "port": 1337,
+  "protocol": "http",
+  "version": "v1.0",
+  "default_transaction_fee": 1,
+  "root_account_file": "http://70.79.52.191:1337/media/root_account_file.json",
+  "root_account_file_hash": "cc9390cc579dc8a99a1f34c1bea5d54a0f45b27ecee7e38662f0cd853f76744d",
+  "seed_block_identifier": "",
+  "daily_confirmation_rate": null,
+  "node_type": "PRIMARY_VALIDATOR"
+}`}
+        heading="Response"
+      />
       <TableParams
         items={[
           {
             dataType: 'OK',
-            description: 'Accepted the request and upgraded to a PV',
+            description: 'Accepted the request and upgraded to a Primary Validator',
             param: '200',
           },
           {
