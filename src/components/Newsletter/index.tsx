@@ -39,8 +39,10 @@ const NewsletterModal: FC = () => {
         close={setModal}
         validationSchema={validationSchema}
       >
-        <h1 className="Newsletter__title">Join the Community!</h1>
-        <p>Get the latest updates on new videos, openings, features, and special offers directly in your inbox!</p>
+        <span className="Newsletter__title">Join the Community!</span>
+        <span>
+          Get the latest updates on new videos, openings, features, and special offers directly in your inbox!
+        </span>
         <div className="Newsletter__form">
           <FormInput className="Newsletter__input" name="email" placeholder="Email" />
           <Button className="Newsletter__button" color="primary" type="submit">

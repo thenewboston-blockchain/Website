@@ -1,18 +1,24 @@
 .Newsletter {
   background: var(--color-white);
+  height: 340px;
+  max-width: 540px;
+  width: 90%;
 
   &__content {
     align-items: center;
     background: var(--color-white);
     display: flex;
     flex-direction: column;
+    margin-top: 28px;
     overflow: visible;
+    padding-top: 0;
     text-align: center;
   }
 
   &__form {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 54px;
 
     @media (max-width: 500px) {
       width: 100%;
@@ -29,6 +35,8 @@
   }
 
   &__title {
+    font-size: var(--font-size-large);
+    font-weight: 701;
     margin-bottom: 16px;
   }
 
