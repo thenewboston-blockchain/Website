@@ -48,9 +48,9 @@ $break-mobile: 640px;
   }
 
   &__default-cancel {
-    margin-left: 12px;
-    box-shadow: none;
     border: none;
+    box-shadow: none;
+    margin-left: 12px;
   }
 
   &__footer {
@@ -70,8 +70,8 @@ $break-mobile: 640px;
   }
 
   h2 {
-    font-weight: 600;
     font-size: 20px;
+    font-weight: 600;
     line-height: 125%;
   }
 
@@ -95,15 +95,15 @@ $break-mobile: 640px;
 
 @media screen and (max-width: $break-mobile) {
   .Modal {
-    width: 100vw;
+    background-color: var(--color-gray-050);
     height: 100vh;
     position: fixed;
+    width: 100vw;
     z-index: 20;
-    background-color: var(--color-gray-050);
 
     &__close-icon {
-      position: absolute;
       left: 23px;
+      position: absolute;
       top: 50%;
       transform: translateY(-50%);
 
@@ -114,8 +114,8 @@ $break-mobile: 640px;
 
     &__header_mobile {
       align-items: center;
-      display: flex;
       background-color: white;
+      display: flex;
       height: $modal-header-height-mobile;
       padding: 0 12px;
       position: relative;
