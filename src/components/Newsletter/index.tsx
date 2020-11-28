@@ -12,15 +12,15 @@ interface Newsletter {
 }
 
 const NewsletterModal: FC = () => {
-  const [modal, setModal] = useBooleanState(false);
+  const [showModal, toggleModalState] = useBooleanState(false);
 
   useEffect(() => {
-    const newsletterModal = localStorage.getItem('newsletter-modal');
-    if (!newsletterModal) {
-      setModal();
-      localStorage.setItem('newsletter-modal', 'true');
+    const isNewsLetterModalSeen = localStorage.getItem('isNewsLetterModalSeen');
+    if (!isNewsLetterModalSeen) {
+      toggleModalState();
+      localStorage.setItem('isNewsLetterModalSeen', 'true');
     }
-  }, [setModal]);
+  }, [toggleModalState]);
 
   const handleSubmit = ({email}: Newsletter) => axios.post('NEWSLETTER__ENDPOINT', {email});
 
@@ -28,32 +28,32 @@ const NewsletterModal: FC = () => {
     .object()
     .shape({email: yup.string().required('Email is required.').email('Invalid email.')});
 
-  if (modal) {
-    return (
-      <Modal
-        className="Newsletter"
-        initialValues={{email: ''}}
-        displaySubmitButton={false}
-        displayCancelButton={false}
-        onSubmit={handleSubmit}
-        close={setModal}
-        validationSchema={validationSchema}
-      >
-        <span className="Newsletter__title">Join the Community!</span>
-        <span>
-          Get the latest updates on new videos, openings, features, and special offers directly in your inbox!
-        </span>
-        <div className="Newsletter__form">
-          <FormInput className="Newsletter__input" name="email" placeholder="Email" />
-          <Button className="Newsletter__button" color="primary" type="submit">
-            Submit
-          </Button>
-        </div>
-      </Modal>
-    );
-  }
-
-  return <></>;
+  return (
+    <>
+      {showModal && (
+        <Modal
+          className="Newsletter"
+          initialValues={{email: ''}}
+          displaySubmitButton={false}
+          displayCancelButton={false}
+          onSubmit={handleSubmit}
+          close={toggleModalState}
+          validationSchema={validationSchema}
+        >
+          <span className="Newsletter__title">Join the Community!</span>
+          <span>
+            Get the latest updates on new videos, openings, features, and special offers directly in your inbox!
+          </span>
+          <div className="Newsletter__form">
+            <FormInput className="Newsletter__input" name="email" placeholder="Email" />
+            <Button className="Newsletter__button" color="primary" type="submit">
+              Submit
+            </Button>
+          </div>
+        </Modal>
+      )}
+    </>
+  );
 };
 
 export default NewsletterModal;
