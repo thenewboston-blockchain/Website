@@ -4,6 +4,7 @@ import {useFormik} from 'formik';
 import * as Yup from 'yup';
 
 import {Button} from 'components';
+import {Input} from 'components/FormElements';
 
 import './NewsletterForm.scss';
 
@@ -21,7 +22,7 @@ const NewsletterForm: FC<FormProps> = ({buttonType = 'primary'}) => {
   return (
     <div className="NewsletterForm">
       <form onSubmit={formik.handleSubmit}>
-        <input
+        <Input
           name="email"
           id="email"
           onChange={formik.handleChange}

@@ -6,6 +6,7 @@ import './Input.scss';
 
 export interface BaseInputProps {
   className?: string;
+  id?: string;
   disabled?: boolean;
   error?: boolean;
   focused?: boolean;
