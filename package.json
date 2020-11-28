@@ -41,7 +41,7 @@
     "eject": "react-scripts eject",
     "lint": "tsc --noEmit && eslint \"./src/**/*.{js,ts,tsx}\" && stylelint \"./src/**/*.{css,scss}\"",
     "prettier": "prettier --write \"{,!(node_modules)/**/}*.{ts,tsx,js,json,css,less,scss}\"",
-    "stylelint": "stylelint \"./src/**/*.{css,scss}\" --cache --fix",
+    "stylelint": "stylelint \"./src/**/*.{css,scss}\" --fix",
     "start": "react-scripts start",
     "test": "jest --passWithNoTests"
   },
@@ -95,7 +95,7 @@
     ],
     "{,!(node_modules)/**/}*.{css,scss}": [
       "prettier --write",
-      "stylelint \"./src/**/*.{css,scss}\" --cache --fix"
+      "stylelint --cache --fix"
     ]
   }
 }
