@@ -23,7 +23,7 @@ const AccountManagerAddFriends: FC = () => {
         <p>
           After adding a friend, you will be taken to their account overview page where you can view their balance, look
           through their transaction history, and send them coins. You can also edit or remove friends by using the
-          options menu in the top roght corner.
+          options menu in the top right corner.
         </p>
 
         <DocImage alt="friend overview" bordered maxWidth={1200} src={FriendOverview} />

@@ -5,6 +5,7 @@ import {DashboardLayout, OrganizationMenuItems, Pagination} from 'components';
 import {internalNavigationData} from 'components/OrganizationMenuItems';
 import {PageData, PageDataObject} from 'types/page-data';
 
+import InternalHowToSetUpPaymentBoard from './InternalHowToSetUpPaymentBoard';
 import InternalNewUserOperations from './InternalNewUserOperations';
 import InternalProductDevelopment from './InternalProductDevelopment';
 import InternalTeamLeadOnboarding from './InternalTeamLeadOnboarding';
@@ -15,6 +16,10 @@ const defaultPageData: PageData = {
 };
 
 const pageData: PageDataObject = {
+  'how-to-set-up-payment-board': {
+    content: <InternalHowToSetUpPaymentBoard />,
+    name: 'How to Set Up Payment Board',
+  },
   'new-user-operations': {
     content: <InternalNewUserOperations />,
     name: 'New User Operations',

@@ -20,8 +20,8 @@
   }
 
   &__loader-container {
-    margin-top: 64px;
     height: 80vh;
+    margin-top: 64px;
   }
 
   &__task-list {
@@ -44,10 +44,10 @@
   &__sortby-icon {
     color: #2a2f45;
     cursor: pointer;
+    margin-right: 12px;
     &:hover {
       color: #000;
     }
-    margin-right: 12px;
   }
 
   @media (max-width: 992px) {
