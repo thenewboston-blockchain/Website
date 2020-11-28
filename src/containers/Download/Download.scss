@@ -1,14 +1,14 @@
 .Download {
   display: flex;
   flex-direction: column;
-  width: 75vw;
   margin: 5% auto;
   position: relative;
+  width: 75vw;
 
   @media (max-width: 480px) {
-    width: 100%;
     margin: 5% auto;
     padding: 0px;
+    width: 100%;
   }
 
   &__tab-panel {
@@ -32,18 +32,18 @@
   }
 
   &__latest-version {
-    text-align: end;
-    position: absolute;
     padding: 18px 12px;
-    top: 0;
+    position: absolute;
     right: 0;
+    text-align: end;
+    top: 0;
 
     @media (max-width: 768px) {
-      text-align: center;
-      padding: 2% 0;
       margin-top: 4%;
+      padding: 2% 0;
 
       position: initial;
+      text-align: center;
     }
   }
 
@@ -51,16 +51,16 @@
     counter-reset: instruction;
 
     @media (max-width: 768px) {
-      width: 100%;
-      margin: 0 auto;
-      margin-bottom: 3vh;
       display: flex;
       flex-direction: column;
+      margin: 0 auto;
+      margin-bottom: 3vh;
+      width: 100%;
     }
 
     &__li {
-      display: flex;
       align-items: center;
+      display: flex;
       margin: 1.5vh 0;
       width: 85%;
 
@@ -83,9 +83,9 @@
         flex-shrink: 0;
         font-size: var(--font-size-medium);
         font-weight: 800;
+        height: 36px;
         justify-content: center;
         width: 36px;
-        height: 36px;
 
         @media (max-width: 480px) {
           margin-left: 7.5%;
@@ -96,8 +96,8 @@
     &__title {
       font-size: 20px;
       font-weight: 800;
-      margin-top: 6vh;
       margin-bottom: 3vh;
+      margin-top: 6vh;
       text-align: start;
 
       @media (max-width: 768px) {
@@ -109,9 +109,9 @@
   .CodeSnippet {
     margin: 2vh 0;
     @media (max-width: 480px) {
-      width: 85%;
       margin: 1vh 0;
       margin-left: 7.5%;
+      width: 85%;
     }
   }
 }
