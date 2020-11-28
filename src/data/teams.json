@@ -250,6 +250,19 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01C3UKRM2M-e036dfe7aec6-512",
           "slackUsername": "David Yap"
         }
+      },
+      {
+        "title": "UI/UX Designer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "ec18c4b2832564cc0fc0a6d4c8dfe4f4b692ea742fd366b039b8273341f5380d",
+          "displayName": "Osaro Ochuko Adade",
+          "githubUsername": "osaroadade",
+          "profileImage": "PROFILE IMAGE URL (Slack or GitHub URL)",
+          "slackUsername": "Osaro Ochuko Adade"
+        }
       }
     ]
   },
