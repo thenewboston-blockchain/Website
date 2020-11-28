@@ -61,7 +61,7 @@
    <script>
       if (window.document.documentMode) {
          // documentMode is only available in IE
-         let heading = document.createElement('h2');
+         var heading = document.createElement('h2');
          heading.innerText = 'Internet Explorer is not supported, please try visiting from another browser.';
          heading.style.textAlign = 'center';
          document.body.appendChild(heading);
