@@ -58,5 +58,45 @@
       "Expert knowledge of Linux",
       "Proven understanding of networking (TCP/IP, DNS, etc)"
     ]
+  },
+  {
+    "openingId": "graphic-designer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Kristy KJ Lee & David Yap"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Design",
+    "description": "As a graphic designer, you will create high-fidelity graphics for our social media team and marketing team.",
+    "payNotes": ["2,800 points/day"],
+    "position": "Graphic Designer",
+    "reportsTo": [
+      {
+        "githubUsername": "kristykjlee",
+        "name": "Kristy Lee"
+      },
+      {
+        "githubUsername": "davidyapdy",
+        "name": "David Yap"
+      }
+    ],
+    "responsibilities": [
+      "Create HiFi graphics for social media posts & marketing content",
+      "Give design reviews to community members making infographics",
+      "Review end results with design team",
+      "Send completed graphics to social media & marketing team for them to post",
+      "Be a part of creating our visual language"
+    ],
+    "technologyRequirements": ["Skilled in Figma", "Skilled in Illustrator"]
   }
 ]
