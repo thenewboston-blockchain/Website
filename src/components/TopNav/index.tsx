@@ -2,7 +2,7 @@ import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
 import {Link, useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 
-import {A, Button, Icon, IconType} from 'components';
+import {Button, Icon, IconType} from 'components';
 import {useBooleanState, useWindowDimensions} from 'hooks';
 
 import TopNavLogo from './TopNavLogo';

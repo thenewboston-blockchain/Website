@@ -26,9 +26,10 @@
       pointer-events: unset;
     }
 
+    /* stylelint-disable declaration-no-important */
     #{$self}__control {
-      border-radius: 3px;
       border: 1px solid var(--color-gray-300);
+      border-radius: 3px;
       box-shadow: unset !important;
       height: 100%;
       min-height: unset;
