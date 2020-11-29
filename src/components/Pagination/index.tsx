@@ -26,7 +26,7 @@ const Pagination: FC<ComponentProps> = ({navigationData}) => {
 
   const renderPreviousLink = () => {
     const index = navigationData.findIndex(({url}) => url === location.pathname);
-    if (index === 0) return null;
+    if (index === 0 || index === -1) return null;
     const {name, url} = navigationData[index - 1];
     return (
       <NavLink className="Pagination__a" to={url}>

@@ -21,6 +21,26 @@
       "completed_date": "11/23/20",
       "amount_paid": "5000",
       "bug_bounty": ""
+    },
+    {
+      "repository": "Validator",
+      "title": "Fix Flake8 Issues for Validator",
+      "issue_id": "91",
+      "pr_id": "94",
+      "completed_by": "AbhayAysola",
+      "completed_date": "11/27/20",
+      "amount_paid": "5000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Validator",
+      "title": "Generate documentation for the codebase using sphinx",
+      "issue_id": "93",
+      "pr_id": "95",
+      "completed_by": "AbhayAysola",
+      "completed_date": "11/26/20",
+      "amount_paid": "5000",
+      "bug_bounty": "FALSE"
     }
   ],
   "AkbarKamran": [
@@ -67,6 +87,16 @@
       "completed_date": "11/5/20",
       "amount_paid": "500",
       "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Update Swedish hello world",
+      "issue_id": "351",
+      "pr_id": "478",
+      "completed_by": "AntonFredrikSvensson",
+      "completed_date": "11/6/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
     }
   ],
   "Benett1": [
@@ -147,6 +177,18 @@
       "completed_date": "11/7/20",
       "amount_paid": "500",
       "bug_bounty": ""
+    }
+  ],
+  "DrSparky-2007": [
+    {
+      "repository": "Design",
+      "title": "Blockchain topic Infographic",
+      "issue_id": "55",
+      "pr_id": "",
+      "completed_by": "DrSparky-2007",
+      "completed_date": "11/24/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
     }
   ],
   "DucPhamTV": [
@@ -239,6 +281,16 @@
       "completed_date": "11/8/20",
       "amount_paid": "5000",
       "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Update document for Bank API /Banks",
+      "issue_id": "953",
+      "pr_id": "1006",
+      "completed_by": "DucPhamTV",
+      "completed_date": "11/26/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "FaiyazMdAbdul": [
@@ -617,6 +669,18 @@
       "bug_bounty": ""
     }
   ],
+  "Toledit": [
+    {
+      "repository": "Wensite",
+      "title": "Hello World in Afaan Oromoo",
+      "issue_id": "351",
+      "pr_id": "949",
+      "completed_by": "Toledit",
+      "completed_date": "11/26/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    }
+  ],
   "Tuhinga": [
     {
       "repository": "Website",
@@ -627,6 +691,18 @@
       "completed_date": "11/18/20",
       "amount_paid": "500",
       "bug_bounty": ""
+    }
+  ],
+  "UweVanOpfern": [
+    {
+      "repository": "Website",
+      "title": "[Documentation]: Updated Docs for Bank - Bank Transactions #952",
+      "issue_id": "952",
+      "pr_id": "986",
+      "completed_by": "UweVanOpfern",
+      "completed_date": "11/26/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "VJKLFT": [
@@ -749,6 +825,16 @@
       "completed_date": "11/24/20",
       "amount_paid": "2000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "fixes #1042",
+      "issue_id": "1042",
+      "pr_id": "1043",
+      "completed_by": "YashovardhanSingh",
+      "completed_date": "11/27/20",
+      "amount_paid": "500",
+      "bug_bounty": "TRUE"
     }
   ],
   "Zims": [
@@ -884,6 +970,56 @@
       "completed_by": "aayushi14",
       "completed_date": "11/24/20",
       "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "969-updated docs for Confirmation Validator - Accounts",
+      "issue_id": "969",
+      "pr_id": "998",
+      "completed_by": "aayushi14",
+      "completed_date": "11/26/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "968-updated docs for Primary Validator - Validators",
+      "issue_id": "968",
+      "pr_id": "992",
+      "completed_by": "aayushi14",
+      "completed_date": "11/26/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "965-updated docs for Primary Validator - Config",
+      "issue_id": "965",
+      "pr_id": "991",
+      "completed_by": "aayushi14",
+      "completed_date": "11/26/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "961-updated docs for Bank - Validators",
+      "issue_id": "961",
+      "pr_id": "995",
+      "completed_by": "aayushi14",
+      "completed_date": "11/26/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "972-updated docs cv - config",
+      "issue_id": "972",
+      "pr_id": "1000",
+      "completed_by": "aayushi14",
+      "completed_date": "11/26/20",
+      "amount_paid": "1000",
       "bug_bounty": "FALSE"
     }
   ],
@@ -1571,6 +1707,18 @@
       "bug_bounty": ""
     }
   ],
+  "davidyapdy": [
+    {
+      "repository": "Design",
+      "title": "As a user I would like to be able to sell my goods to accumulate more TNB coins",
+      "issue_id": "24",
+      "pr_id": "",
+      "completed_by": "davidyapdy",
+      "completed_date": "11/24/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    }
+  ],
   "ddyakov": [
     {
       "repository": "Website",
@@ -2127,6 +2275,96 @@
       "completed_date": "11/24/20",
       "amount_paid": "500",
       "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Website",
+      "title": "Fix NaN reward",
+      "issue_id": "936",
+      "pr_id": "938",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/20/20",
+      "amount_paid": "500",
+      "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add how to set up payment board docs",
+      "issue_id": "990",
+      "pr_id": "1020",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/26/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add github action workflow for linting",
+      "issue_id": "1032",
+      "pr_id": "1033",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/26/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Remove contributor",
+      "issue_id": "1030",
+      "pr_id": "1031",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/26/20",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Editing account nickname does not revalidate the nickname",
+      "issue_id": "488",
+      "pr_id": "489",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/20/20",
+      "amount_paid": "1000",
+      "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Editing bank nickname does not revalidate the nickname",
+      "issue_id": "490",
+      "pr_id": "491",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/20/20",
+      "amount_paid": "1000",
+      "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "[Suggestion] Move validation values to a constant file",
+      "issue_id": "496",
+      "pr_id": "497",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/22/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Able to give nickname that is very long",
+      "issue_id": "494",
+      "pr_id": "495",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/22/20",
+      "amount_paid": "500",
+      "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add new contributor",
+      "issue_id": "1039",
+      "pr_id": "1040",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/27/20",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
     }
   ],
   "jonathanlee06": [
@@ -2297,6 +2535,26 @@
       "completed_date": "11/4/20",
       "amount_paid": "5000",
       "bug_bounty": ""
+    },
+    {
+      "repository": "Design",
+      "title": "Teams page update",
+      "issue_id": "23",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "11/20/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Import/Export Signing Keys Hi-Fi",
+      "issue_id": "148",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000",
+      "bug_bounty": "FALSE"
     }
   ],
   "kush-daga": [
@@ -2563,6 +2821,38 @@
       "completed_date": "11/23/20",
       "amount_paid": "250",
       "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Website",
+      "title": "Added point number 6",
+      "issue_id": "996",
+      "pr_id": "997",
+      "completed_by": "manishram",
+      "completed_date": "11/23/20",
+      "amount_paid": "250",
+      "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Website",
+      "title": "Adds new rule",
+      "issue_id": "1024",
+      "pr_id": "1025",
+      "completed_by": "manishram",
+      "completed_date": "11/25/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    }
+  ],
+  "matheusfillipe": [
+    {
+      "repository": "Account-Manager",
+      "title": "White screen of death at launch",
+      "issue_id": "480",
+      "pr_id": "484",
+      "completed_by": "matheusfillipe",
+      "completed_date": "11/20/20",
+      "amount_paid": "500",
+      "bug_bounty": "TRUE"
     }
   ],
   "melsh123221": [
@@ -2587,6 +2877,18 @@
       "completed_date": "11/19/20",
       "amount_paid": "1000",
       "bug_bounty": ""
+    }
+  ],
+  "mofodox": [
+    {
+      "repository": "Website",
+      "title": "Last updated date for Docs",
+      "issue_id": "549",
+      "pr_id": "",
+      "completed_by": "mofodox",
+      "completed_date": "11/8/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
     }
   ],
   "moki298": [
@@ -2701,6 +3003,16 @@
       "completed_date": "11/15/20",
       "amount_paid": "1000",
       "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Feature/accesibility improvements",
+      "issue_id": "843",
+      "pr_id": "844",
+      "completed_by": "nparoski",
+      "completed_date": "11/25/20",
+      "amount_paid": "2000",
+      "bug_bounty": "TRUE"
     }
   ],
   "nrednav": [
@@ -3181,6 +3493,16 @@
       "completed_date": "11/24/20",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "fix: docs routing",
+      "issue_id": "1023",
+      "pr_id": "1027",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "11/26/20",
+      "amount_paid": "1000",
+      "bug_bounty": "TRUE"
     }
   ],
   "tpikachu": [
