@@ -1,7 +1,5 @@
 {
-  "plugins": [
-    "stylelint-order"
-  ],
+  "plugins": ["stylelint-order"],
   "rules": {
     "block-no-empty": true,
     "color-no-invalid-hex": true,
