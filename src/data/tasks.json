@@ -703,6 +703,16 @@
       "completed_date": "11/26/20",
       "amount_paid": "1000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "[Documentation]: Updated Docs for Bank - Bank Transactions #952",
+      "issue_id": "966",
+      "pr_id": "986",
+      "completed_by": "UweVanOpfern",
+      "completed_date": "11/26/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "VJKLFT": [
@@ -1019,6 +1029,16 @@
       "pr_id": "1000",
       "completed_by": "aayushi14",
       "completed_date": "11/26/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "977-updated docs cv - validators",
+      "issue_id": "977",
+      "pr_id": "1001",
+      "completed_by": "aayushi14",
+      "completed_date": "11/28/20",
       "amount_paid": "1000",
       "bug_bounty": "FALSE"
     }
@@ -2365,6 +2385,36 @@
       "completed_date": "11/27/20",
       "amount_paid": "250",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Reuse avatar component in SlideUpAccountDetails",
+      "issue_id": "1051",
+      "pr_id": "1052",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/28/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add new job opening",
+      "issue_id": "1046",
+      "pr_id": "1048",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/28/20",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add Stylelint as CSS/SCSS linter",
+      "issue_id": "1036",
+      "pr_id": "1049",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/28/20",
+      "amount_paid": "2500",
+      "bug_bounty": "FALSE"
     }
   ],
   "jonathanlee06": [
@@ -3013,6 +3063,26 @@
       "completed_date": "11/25/20",
       "amount_paid": "2000",
       "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Website",
+      "title": "Feature/design team",
+      "issue_id": "1050",
+      "pr_id": "1053",
+      "completed_by": "nparoski",
+      "completed_date": "11/29/20",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Fix/ie blank page",
+      "issue_id": "211",
+      "pr_id": "1044",
+      "completed_by": "nparoski",
+      "completed_date": "11/28/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
     }
   ],
   "nrednav": [
