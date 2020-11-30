@@ -18,6 +18,7 @@ import Internal from './Internal';
 import Leaderboard from './Leaderboard';
 import Openings from './Openings';
 import PrimaryValidatorApi from './PrimaryValidatorApi';
+import Profile from './Profile';
 import ProjectProposals from './ProjectProposals';
 import Social from './Social';
 import StyleGuide from './StyleGuide';
@@ -79,6 +80,7 @@ const App: FC = () => {
           <Route path="/project-proposals/:chapter?" component={ProjectProposals} />
           <Route path="/style-guide/:chapter?" component={StyleGuide} />
           <Route path="/user/signin/callback" component={Auth} />
+          <Route path="/user/profile" component={Profile} />
           <Redirect to="/" />
         </Switch>
       </Layout>
