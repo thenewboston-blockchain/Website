@@ -6,13 +6,13 @@ import {SocialMedia} from 'types/social-media';
 import {getCustomClassNames} from 'utils/components';
 import {socialMediaUrls, socialMediaHandles, socialMediaDescriptions} from 'utils/social-media';
 
-import FacebookLogo from './logos/FacebookMark.png';
-import GitHubLogo from './logos/GitHubMark.png';
-import LinkedInLogo from './logos/LinkedInMark.png';
-import RedditLogo from './logos/RedditMark.png';
-import SlackLogo from './logos/SlackMark.png';
-import TwitterLogo from './logos/TwitterMark.png';
-import YouTubeLogo from './logos/YouTubeMark.png';
+import FacebookLogo from 'assets/logos/Facebook.png';
+import GitHubLogo from 'assets/logos/GitHub.png';
+import LinkedInLogo from 'assets/logos/LinkedIn.png';
+import RedditLogo from 'assets/logos/Reddit.png';
+import SlackLogo from 'assets/logos/Slack.png';
+import TwitterLogo from 'assets/logos/Twitter.png';
+import YouTubeLogo from 'assets/logos/YouTube.png';
 
 import './MarketingCard.scss';
 
