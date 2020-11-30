@@ -6,7 +6,7 @@
   margin-bottom: 30px;
   overflow: hidden;
 
-  @media (max-width: 768px) {
+  @media (max-width: 840px) {
     grid-template-columns: auto;
     grid-template-rows: fit-content(0) fit-content(0) auto;
   }
@@ -17,7 +17,7 @@
     margin: 12px 0px 36px 36px;
     padding-bottom: 30px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 840px) {
       margin: 36px 36px 0px 36px;
     }
 
@@ -33,7 +33,7 @@
     margin: 12px 36px 36px 10px;
     padding-bottom: 30px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 840px) {
       margin: 12px 36px 36px 36px;
     }
 
