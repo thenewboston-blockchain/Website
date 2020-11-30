@@ -154,7 +154,7 @@
         "channel": "reddit"
       }
     ],
-    "category": ".NET core",
+    "category": "Engineering",
     "description": "Work on the .NET Core SDK for thenewboston, code review the PRs opened by other contributors and participate in discussions about the architecture/direction of the SDK.",
     "payNotes": ["2,800 coins/day"],
     "position": "Senior .NET Core Developer",
