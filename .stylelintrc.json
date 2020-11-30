@@ -1,0 +1,26 @@
+{
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "block-no-empty": true,
+    "color-no-invalid-hex": true,
+    "comment-no-empty": true,
+    "declaration-block-single-line-max-declarations": 1,
+    "declaration-colon-space-after": "always",
+    "declaration-no-important": true,
+    "function-comma-space-before": "never",
+    "function-comma-space-after": "always",
+    "indentation": 2,
+    "max-empty-lines": 2,
+    "no-eol-whitespace": true,
+    "no-extra-semicolons": true,
+    "no-invalid-double-slash-comments": true,
+    "order/properties-alphabetical-order": true,
+    "number-no-trailing-zeros": true,
+    "property-case": "lower",
+    "property-no-unknown": true,
+    "selector-list-comma-newline-after": "always",
+    "string-no-newline": true,
+    "string-quotes": "single",
+    "unit-no-unknown": true
+  }
+}

@@ -1,19 +1,30 @@
 .Download {
-  padding: 60px 120px;
+  display: flex;
+  flex-direction: column;
+  margin: 5% auto;
   position: relative;
+  width: 75vw;
 
-  @media (max-width: 768px) {
-    padding: 30px 60px;
+  @media (max-width: 480px) {
+    margin: 5% auto;
+    padding: 0px;
+    width: 100%;
   }
 
   &__tab-panel {
-    margin-top: 43px;
+    @media (max-width: 480px) {
+      margin-top: 2vw;
+    }
   }
 
   &__download-button {
     align-items: center;
-    display: inline-flex;
-    margin-bottom: 60px;
+    display: flex;
+    margin-top: 6vh;
+
+    @media (max-width: 768px) {
+      margin: 0 auto;
+    }
   }
 
   &__download-icon {
@@ -21,26 +32,45 @@
   }
 
   &__latest-version {
+    padding: 18px 12px;
     position: absolute;
-    right: 120px;
+    right: 0;
+    text-align: end;
+    top: 0;
 
     @media (max-width: 768px) {
-      right: unset;
-      left: 60px;
-      top: 82px;
+      margin-top: 4%;
+      padding: 2% 0;
+
+      position: initial;
+      text-align: center;
     }
   }
 
   .instruction-container {
     counter-reset: instruction;
 
-    &__instruction {
-      margin-top: 7px;
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      margin-bottom: 3vh;
+      width: 100%;
     }
 
     &__li {
+      align-items: center;
       display: flex;
-      margin-bottom: 18px;
+      margin: 1.5vh 0;
+      width: 85%;
+
+      span {
+        margin-left: 2vw;
+
+        @media (max-width: 480px) {
+          margin-left: 4vw;
+        }
+      }
 
       &::before {
         align-items: center;
@@ -55,15 +85,33 @@
         font-weight: 800;
         height: 36px;
         justify-content: center;
-        margin-right: 18px;
         width: 36px;
+
+        @media (max-width: 480px) {
+          margin-left: 7.5%;
+        }
       }
     }
 
     &__title {
       font-size: 20px;
       font-weight: 800;
-      margin-bottom: 30px;
+      margin-bottom: 3vh;
+      margin-top: 6vh;
+      text-align: start;
+
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+  }
+
+  .CodeSnippet {
+    margin: 2vh 0;
+    @media (max-width: 480px) {
+      margin: 1vh 0;
+      margin-left: 7.5%;
+      width: 85%;
     }
   }
 }

@@ -48,6 +48,9 @@ typings/
 # Optional eslint cache
 .eslintcache
 
+# Optional stylelint cache
+.stylelintcache
+
 # Optional REPL history
 .node_repl_history
 
@@ -56,6 +59,7 @@ typings/
 
 # Yarn Integrity file
 .yarn-integrity
+yarn.lock
 
 # dotenv environment variables file
 .env
@@ -92,4 +96,5 @@ out/
 .idea/
 
 # VS Code
+.vs/
 .vscode/

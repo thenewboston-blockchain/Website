@@ -25,6 +25,14 @@ export const accountManagerNavigationData = [
     name: 'Edit Nicknames',
     url: '/account-manager/edit-nicknames',
   },
+  {
+    name: 'Create a Bank',
+    url: '/account-manager/create-bank',
+  },
+  {
+    name: 'Create a Validator',
+    url: '/account-manager/create-validator',
+  },
 ];
 
 export const bankApiNavigationData = [
@@ -165,10 +173,6 @@ export const guideNavigationData = [
   {
     name: 'Trust',
     url: '/guide/trust',
-  },
-  {
-    name: 'Initial Funds',
-    url: '/guide/initial-funds',
   },
   {
     name: 'Best Practices',

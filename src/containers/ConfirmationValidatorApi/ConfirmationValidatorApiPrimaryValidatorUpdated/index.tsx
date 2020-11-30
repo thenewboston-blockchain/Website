@@ -7,8 +7,8 @@ const ConfirmationValidatorApiPrimaryValidatorUpdated: FC = () => {
   return (
     <DocContainer className="ConfirmationValidatorApiPrimaryValidatorUpdated" title="Primary Validator Updated">
       <p>
-        The last step in the resync process is the notice that is sent from banks to their CV's to indicate that they
-        are leaving the current network and switching to a new PV (a new network).
+        The last step in the resync process is the notice that is sent from banks to their CVs to indicate that they are
+        leaving the current network and switching to a new PV (a new network).
       </p>
       <p>
         More information about the updating of primary validators can be found in the{' '}

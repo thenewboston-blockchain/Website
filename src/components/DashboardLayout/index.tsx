@@ -1,27 +1,29 @@
-import React, {FC} from 'react';
+import React, {FC, ReactNode} from 'react';
 
-import {BreadcrumbMenu, DocsMenuItems} from 'components';
+import {BreadcrumbMenu, PageTitle} from 'components';
 import './DashboardLayout.scss';
 
 interface ComponentProps {
+  menuItems: ReactNode;
   pageName: string;
   sectionName: string;
 }
 
-const DashboardLayout: FC<ComponentProps> = ({children, pageName, sectionName}) => {
+const DashboardLayout: FC<ComponentProps> = ({children, menuItems, pageName, sectionName}) => {
   return (
-    <div className="DashboardLayout">
-      <BreadcrumbMenu
-        className="DashboardLayout__BreadcrumbMenu"
-        menuItems={<DocsMenuItems />}
-        pageName={pageName}
-        sectionName={sectionName}
-      />
-      <div className="DashboardLayout__left-menu">
-        <DocsMenuItems />
+    <>
+      <PageTitle title={`${sectionName}`} />
+      <div className="DashboardLayout">
+        <BreadcrumbMenu
+          className="DashboardLayout__BreadcrumbMenu"
+          menuItems={menuItems}
+          pageName={pageName}
+          sectionName={sectionName}
+        />
+        <div className="DashboardLayout__left-menu">{menuItems}</div>
+        <div className="DashboardLayout__main-content">{children}</div>
       </div>
-      <div className="DashboardLayout__main-content">{children}</div>
-    </div>
+    </>
   );
 };
 
