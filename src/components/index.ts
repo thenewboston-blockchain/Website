@@ -18,6 +18,7 @@ import Icon, {IconType} from './Icon';
 import Label from './Label';
 import Layout from './Layout';
 import MarketingButton from './MarketingButton';
+import MarketingCard from './MarketingCard';
 import MenuGroup from './MenuGroup';
 import LabelFilter from './LabelFilter';
 import Loader from './Loader';
@@ -65,6 +66,7 @@ export {
   Layout,
   Loader,
   MarketingButton,
+  MarketingCard,
   MenuGroup,
   OrganizationMenuItems,
   PageTitle,
