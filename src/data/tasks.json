@@ -21,6 +21,26 @@
       "completed_date": "11/23/20",
       "amount_paid": "5000",
       "bug_bounty": ""
+    },
+    {
+      "repository": "Validator",
+      "title": "Fix Flake8 Issues for Validator",
+      "issue_id": "91",
+      "pr_id": "94",
+      "completed_by": "AbhayAysola",
+      "completed_date": "11/27/20",
+      "amount_paid": "5000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Validator",
+      "title": "Generate documentation for the codebase using sphinx",
+      "issue_id": "93",
+      "pr_id": "95",
+      "completed_by": "AbhayAysola",
+      "completed_date": "11/26/20",
+      "amount_paid": "5000",
+      "bug_bounty": "FALSE"
     }
   ],
   "AkbarKamran": [
@@ -67,6 +87,16 @@
       "completed_date": "11/5/20",
       "amount_paid": "500",
       "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Update Swedish hello world",
+      "issue_id": "351",
+      "pr_id": "478",
+      "completed_by": "AntonFredrikSvensson",
+      "completed_date": "11/6/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
     }
   ],
   "Benett1": [
@@ -251,6 +281,16 @@
       "completed_date": "11/8/20",
       "amount_paid": "5000",
       "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Update document for Bank API /Banks",
+      "issue_id": "953",
+      "pr_id": "1006",
+      "completed_by": "DucPhamTV",
+      "completed_date": "11/26/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "FaiyazMdAbdul": [
@@ -629,6 +669,18 @@
       "bug_bounty": ""
     }
   ],
+  "Toledit": [
+    {
+      "repository": "Wensite",
+      "title": "Hello World in Afaan Oromoo",
+      "issue_id": "351",
+      "pr_id": "949",
+      "completed_by": "Toledit",
+      "completed_date": "11/26/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    }
+  ],
   "Tuhinga": [
     {
       "repository": "Website",
@@ -639,6 +691,28 @@
       "completed_date": "11/18/20",
       "amount_paid": "500",
       "bug_bounty": ""
+    }
+  ],
+  "UweVanOpfern": [
+    {
+      "repository": "Website",
+      "title": "[Documentation]: Updated Docs for Bank - Bank Transactions #952",
+      "issue_id": "952",
+      "pr_id": "986",
+      "completed_by": "UweVanOpfern",
+      "completed_date": "11/26/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "[Documentation]: Updated Docs for Bank - Bank Transactions #952",
+      "issue_id": "966",
+      "pr_id": "986",
+      "completed_by": "UweVanOpfern",
+      "completed_date": "11/26/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "VJKLFT": [
@@ -761,6 +835,16 @@
       "completed_date": "11/24/20",
       "amount_paid": "2000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "fixes #1042",
+      "issue_id": "1042",
+      "pr_id": "1043",
+      "completed_by": "YashovardhanSingh",
+      "completed_date": "11/27/20",
+      "amount_paid": "500",
+      "bug_bounty": "TRUE"
     }
   ],
   "Zims": [
@@ -896,6 +980,66 @@
       "completed_by": "aayushi14",
       "completed_date": "11/24/20",
       "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "969-updated docs for Confirmation Validator - Accounts",
+      "issue_id": "969",
+      "pr_id": "998",
+      "completed_by": "aayushi14",
+      "completed_date": "11/26/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "968-updated docs for Primary Validator - Validators",
+      "issue_id": "968",
+      "pr_id": "992",
+      "completed_by": "aayushi14",
+      "completed_date": "11/26/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "965-updated docs for Primary Validator - Config",
+      "issue_id": "965",
+      "pr_id": "991",
+      "completed_by": "aayushi14",
+      "completed_date": "11/26/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "961-updated docs for Bank - Validators",
+      "issue_id": "961",
+      "pr_id": "995",
+      "completed_by": "aayushi14",
+      "completed_date": "11/26/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "972-updated docs cv - config",
+      "issue_id": "972",
+      "pr_id": "1000",
+      "completed_by": "aayushi14",
+      "completed_date": "11/26/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "977-updated docs cv - validators",
+      "issue_id": "977",
+      "pr_id": "1001",
+      "completed_by": "aayushi14",
+      "completed_date": "11/28/20",
+      "amount_paid": "1000",
       "bug_bounty": "FALSE"
     }
   ],
@@ -2171,6 +2315,106 @@
       "completed_date": "11/26/20",
       "amount_paid": "1000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add github action workflow for linting",
+      "issue_id": "1032",
+      "pr_id": "1033",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/26/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Remove contributor",
+      "issue_id": "1030",
+      "pr_id": "1031",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/26/20",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Editing account nickname does not revalidate the nickname",
+      "issue_id": "488",
+      "pr_id": "489",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/20/20",
+      "amount_paid": "1000",
+      "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Editing bank nickname does not revalidate the nickname",
+      "issue_id": "490",
+      "pr_id": "491",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/20/20",
+      "amount_paid": "1000",
+      "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "[Suggestion] Move validation values to a constant file",
+      "issue_id": "496",
+      "pr_id": "497",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/22/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Able to give nickname that is very long",
+      "issue_id": "494",
+      "pr_id": "495",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/22/20",
+      "amount_paid": "500",
+      "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add new contributor",
+      "issue_id": "1039",
+      "pr_id": "1040",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/27/20",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Reuse avatar component in SlideUpAccountDetails",
+      "issue_id": "1051",
+      "pr_id": "1052",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/28/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add new job opening",
+      "issue_id": "1046",
+      "pr_id": "1048",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/28/20",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add Stylelint as CSS/SCSS linter",
+      "issue_id": "1036",
+      "pr_id": "1049",
+      "completed_by": "jamessspanggg",
+      "completed_date": "11/28/20",
+      "amount_paid": "2500",
+      "bug_bounty": "FALSE"
     }
   ],
   "jonathanlee06": [
@@ -2350,6 +2594,16 @@
       "completed_by": "kristykjlee",
       "completed_date": "11/20/20",
       "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Account-Manager",
+      "title": "Import/Export Signing Keys Hi-Fi",
+      "issue_id": "148",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "11/17/20",
+      "amount_paid": "5000",
       "bug_bounty": "FALSE"
     }
   ],
@@ -2639,6 +2893,18 @@
       "bug_bounty": "FALSE"
     }
   ],
+  "matheusfillipe": [
+    {
+      "repository": "Account-Manager",
+      "title": "White screen of death at launch",
+      "issue_id": "480",
+      "pr_id": "484",
+      "completed_by": "matheusfillipe",
+      "completed_date": "11/20/20",
+      "amount_paid": "500",
+      "bug_bounty": "TRUE"
+    }
+  ],
   "melsh123221": [
     {
       "repository": "Website",
@@ -2797,6 +3063,26 @@
       "completed_date": "11/25/20",
       "amount_paid": "2000",
       "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Website",
+      "title": "Feature/design team",
+      "issue_id": "1050",
+      "pr_id": "1053",
+      "completed_by": "nparoski",
+      "completed_date": "11/29/20",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Fix/ie blank page",
+      "issue_id": "211",
+      "pr_id": "1044",
+      "completed_by": "nparoski",
+      "completed_date": "11/28/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
     }
   ],
   "nrednav": [
