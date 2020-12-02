@@ -8,6 +8,10 @@ import openings from 'data/openings.json';
 import tasks from 'data/tasks.json';
 import teams from 'data/teams.json';
 
+export const getContributorByGithubUsername = (github_username: string): Contributor | undefined => {
+  return contributors.find((contributor) => contributor.github_username === github_username);
+};
+
 export const getContributors = (): Contributor[] => {
   return contributors;
 };
@@ -29,6 +33,19 @@ export const getTasks = (): TaskDict => {
   });
 
   return results;
+};
+
+export const getTeamMemberByGithubUsername = (github_username: string): TeamMember | undefined => {
+  let teamMember;
+  teams.forEach((team) => {
+    const {contributors: teamContributors} = team;
+    teamContributors.forEach((member) => {
+      if (member.contributor.githubUsername === github_username) {
+        teamMember = member;
+      }
+    });
+  });
+  return teamMember;
 };
 
 export const getTeamMembers = (): TeamMember[] => {
