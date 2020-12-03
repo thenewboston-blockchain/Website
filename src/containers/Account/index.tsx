@@ -1,15 +1,24 @@
 import React, {FC} from 'react';
-import {useBooleanState} from 'hooks';
 import EditModal from './EditModal';
 
 interface ComponentProps {
+  accountNumber: string;
   className?: string;
-  href: string;
+  displayName: string;
+  href?: string;
+  isOpen: boolean;
+  slackName: string;
+  toggleModal(): void;
 }
 
-const AccountComponent: FC<ComponentProps> = () => {
-  const [editModalIsOpen, toggleEditModal] = useBooleanState(true);
-  return <div>{editModalIsOpen && <EditModal close={toggleEditModal} />}</div>;
+const AccountComponent: FC<ComponentProps> = ({accountNumber, displayName, isOpen, slackName, toggleModal}) => {
+  return (
+    <div>
+      {isOpen && (
+        <EditModal accountNumber={accountNumber} close={toggleModal} displayName={displayName} slackName={slackName} />
+      )}
+    </div>
+  );
 };
 
 export default AccountComponent;
