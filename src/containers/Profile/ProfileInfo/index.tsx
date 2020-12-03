@@ -20,7 +20,7 @@ const ProfileInfo: FC<ComponentProps> = ({github_username}) => {
 
   const renderCoverImage = (alt: string, imageUrl: string | null, isLead: boolean) => {
     return (
-      <div>
+      <div className="ProfileInfo__cover-image-container">
         {imageUrl ? (
           <img alt={alt} className="ProfileInfo__cover-image" src={imageUrl} />
         ) : (
@@ -50,12 +50,12 @@ const ProfileInfo: FC<ComponentProps> = ({github_username}) => {
           ))}
         <div className="ProfileInfo__member-slack">
           <Icon icon={IconType.slack} onClick={() => null} size={18} />
-          {slackUsername}
+          {slackUsername || 'jamessspanggg'}
         </div>
         <div className="ProfileInfo__member-github">
           <Icon icon={IconType.github} onClick={() => null} size={18} />
           <A className="ProfileInfo__member-github-link" href={`https://github.com/${github_username}`}>
-            {githubUsername}
+            {githubUsername || 'jamessspanggg'}
           </A>
         </div>
       </>
@@ -67,16 +67,24 @@ const ProfileInfo: FC<ComponentProps> = ({github_username}) => {
 
   return (
     <div className="ProfileInfo">
-      {renderCoverImage(`${github_username}'s cover image`, coverImageUrl, memberDetails?.isLead || false)}
-      <Avatar className="ProfileInfo__profile-picture" alt={github_username} size={178} src={githubAvatarUrl} />
-      <div className="ProfileInfo__user-details">
-        <div className="ProfileInfo__name">{memberDetails ? memberDetails.displayName : github_username}</div>
-        {memberDetails && renderMemberDetails(memberDetails)}
+      <div className="ProfileInfo__top-section">
+        {renderCoverImage(`${github_username}'s cover image`, coverImageUrl, memberDetails?.isLead || false)}
+        <Avatar className="ProfileInfo__profile-picture" alt={github_username} size={178} src={githubAvatarUrl} />
       </div>
-      <div className="ProfileInfo__account-details">
-        <CopyableAccountNumber accountNumber={accountNumber} className="ProfileInfo__CopyableAccountNumber" />
-        <div className="ProfileInfo__qr-container">
-          <Qr text={accountNumber} width={100} />
+      <div className="ProfileInfo__details">
+        <div className="ProfileInfo__user-details">
+          <div className="ProfileInfo__name">{memberDetails ? memberDetails.displayName : github_username}</div>
+          {memberDetails && renderMemberDetails(memberDetails)}
+        </div>
+        <div className="ProfileInfo__account-details">
+          <CopyableAccountNumber
+            accountNumber={accountNumber}
+            className="ProfileInfo__CopyableAccountNumber"
+            isCopyButtonAtBottom
+          />
+          <div className="ProfileInfo__qr-container">
+            <Qr text={accountNumber} width={110} />
+          </div>
         </div>
       </div>
     </div>
