@@ -42,7 +42,7 @@
   &__edit-profile {
     background-color: var(--color-white);
     border-radius: 50%;
-    color: var(--color-blue-gray-1000);
+    color: var(--color-secondary);
     position: absolute;
     right: 18px;
     top: 18px;
@@ -77,7 +77,7 @@
 
   &__name {
     font-size: var(--font-size-medium);
-    font-weight: 700;
+    font-weight: 701;
   }
 
   &__profile-picture {

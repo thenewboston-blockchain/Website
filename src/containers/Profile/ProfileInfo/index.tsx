@@ -31,7 +31,7 @@ const ProfileInfo: FC<ComponentProps> = ({github_username}) => {
           className="ProfileInfo__edit-profile"
           icon={IconType.pencil}
           onClick={toggleEditModal}
-          size={18}
+          size={24}
           totalSize={36}
         />
       </div>
