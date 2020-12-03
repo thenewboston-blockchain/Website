@@ -38,7 +38,7 @@ const ConfirmationValidatorApiUpgradeRequest: FC = () => {
       <RequestResponseSnippet
         code={`{
   "message": {
-    "validator_node_identifier": "59479a31c3b91d96bb7a0b3e07f18d4bf301f1bb0bde05f8d36d9611dcbe7cbf"
+    "validator_node_identifier": "2262026a562b0274163158e92e8fbc4d28e519bc5ba8c1cf403703292be84a51"
   },
   "node_identifier": "d5356888dc9303e44ce52b1e06c3165a7759b9df1e6a6dfbd33ee1c3df1ab4d1",
   "signature": "90a365d1950b1765b973d3d21d763f9bea7eb1f9d1f33d6e9c3f8eb4803022f97ad3173474707b4786e556cccf4ca0a0e81d18edb655b090967c96c22c40140a"
