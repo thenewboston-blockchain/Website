@@ -131,10 +131,53 @@
       }
     ],
     "responsibilities": [
+      "Create written material for our email campaigns",
+      "Produce well-researched content for blogs",
+      "Give feedback on writings"
+    ],
+    "technologyRequirements": [
       "An understanding of search engine optimization best practices",
       "Understanding grammar rules and how to construct clear sentences",
       "Being mindful of things like flow, readability, and sentence variety"
+    ]
+  },
+  {
+    "openingId": "senior-dot-net-core-developer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Mircea Teodor Oprea"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
     ],
-    "technologyRequirements": ["Skilled in Figma", "Skilled in Illustrator"]
+    "category": "Engineering",
+    "description": "Work on the .NET Core SDK for thenewboston, code review the PRs opened by other contributors and participate in discussions about the architecture/direction of the SDK.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Senior .NET Core Developer",
+    "reportsTo": [
+      {
+        "githubUsername": "Mirch",
+        "name": "Mircea Teodor Oprea"
+      }
+    ],
+    "responsibilities": [
+      "Contribute to the development of the .NET Core SDK",
+      "Code review the PRs of other contributors",
+      "Contribute to discussions about the structure of the project, code standards and development approaches"
+    ],
+    "technologyRequirements": [
+      ".NET Core",
+      "xUnit & Moq",
+      "ASP.NET Core (for future example projects)",
+      "Github Actions"
+    ]
   }
 ]
