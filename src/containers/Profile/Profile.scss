@@ -1,5 +1,6 @@
 .Profile {
   display: grid;
+  font-size: var(--font-size-small-regular);
   grid-template-columns: 366px auto;
   grid-template-rows: fit-content(0) auto;
   height: 100%;

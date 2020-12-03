@@ -18,17 +18,13 @@ const ProfileInfo: FC<ComponentProps> = ({github_username}) => {
     return <EmptyPage className="ProfileInfo__empty-page" />;
   }
 
-  const renderCoverImage = (alt: string, imageUrl: string | null, isLead: boolean) => {
+  const renderBackdrop = (isLead: boolean) => {
     return (
-      <div className="ProfileInfo__cover-image-container">
-        {imageUrl ? (
-          <img alt={alt} className="ProfileInfo__cover-image" src={imageUrl} />
-        ) : (
-          <div className="ProfileInfo__cover-image--empty" />
-        )}
+      <div className="ProfileInfo__backdrop-container">
+        <div className="ProfileInfo__blue-backdrop" />
         {isLead && <div className="ProfileInfo__lead-flag">Team Lead</div>}
         <Icon
-          className="ProfileInfo__edit-cover-image"
+          className="ProfileInfo__edit-profile"
           icon={IconType.pencil}
           onClick={() => null}
           size={18}
@@ -44,18 +40,18 @@ const ProfileInfo: FC<ComponentProps> = ({github_username}) => {
       <>
         {teams &&
           teams.map((team, index) => (
-            <div className="ProfileInfo__member-title">
+            <div className="ProfileInfo__member-title" key={team.title}>
               {titles[index]} on {team.title}
             </div>
           ))}
         <div className="ProfileInfo__member-slack">
           <Icon icon={IconType.slack} onClick={() => null} size={18} />
-          {slackUsername || 'jamessspanggg'}
+          {slackUsername}
         </div>
         <div className="ProfileInfo__member-github">
           <Icon icon={IconType.github} onClick={() => null} size={18} />
           <A className="ProfileInfo__member-github-link" href={`https://github.com/${github_username}`}>
-            {githubUsername || 'jamessspanggg'}
+            {githubUsername}
           </A>
         </div>
       </>
@@ -68,7 +64,7 @@ const ProfileInfo: FC<ComponentProps> = ({github_username}) => {
   return (
     <div className="ProfileInfo">
       <div className="ProfileInfo__top-section">
-        {renderCoverImage(`${github_username}'s cover image`, coverImageUrl, memberDetails?.isLead || false)}
+        {renderBackdrop(memberDetails?.isLead || false)}
         <Avatar className="ProfileInfo__profile-picture" alt={github_username} size={178} src={githubAvatarUrl} />
       </div>
       <div className="ProfileInfo__details">

@@ -1,27 +1,23 @@
 .ProfileInfo {
   &__account-details {
-    align-items: center;
     display: flex;
     gap: 11px;
     padding-top: 18px;
   }
 
-  &__cover-image-container {
+  &__backdrop-container {
     position: relative;
   }
 
-  &__cover-image {
+  &__blue-backdrop {
+    background-color: var(--color-blue-gray-1000);
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     height: 116px;
     width: 100%;
 
-    &--empty {
-      background-color: var(--color-blue-gray-1000);
-      border-top-left-radius: 12px;
-      border-top-right-radius: 12px;
-      height: 116px;
-      width: 100%;
+    @media (max-width: 480px) {
+      border-radius: 0;
     }
   }
 
@@ -36,10 +32,14 @@
   }
 
   &__details {
-    padding: 18px;
+    padding: 0px 18px;
+
+    @media (max-width: 480px) {
+      padding: 0px 36px;
+    }
   }
 
-  &__edit-cover-image {
+  &__edit-profile {
     background-color: var(--color-white);
     border-radius: 50%;
     color: var(--color-blue-gray-1000);
@@ -49,21 +49,35 @@
   }
 
   &__lead-flag {
+    align-items: center;
+    background: var(--color-secondary);
+    border-radius: 100px;
+    color: var(--color-bg);
+    display: flex;
+    height: 24px;
+    justify-content: center;
     left: 18px;
+    line-height: 17px;
     position: absolute;
     top: 18px;
+    width: 91px;
   }
 
   &__member-github {
     display: flex;
     flex-direction: row;
-    gap: 12px;
+    gap: 10px;
   }
 
   &__member-slack {
     display: flex;
     flex-direction: row;
-    gap: 12px;
+    gap: 10px;
+  }
+
+  &__name {
+    font-size: var(--font-size-medium);
+    font-weight: 700;
   }
 
   &__profile-picture {
@@ -87,6 +101,7 @@
     border-bottom: 1px solid var(--color-sail-gray-100);
     display: flex;
     flex-direction: column;
+    gap: 10px;
     padding-bottom: 18px;
   }
 }
