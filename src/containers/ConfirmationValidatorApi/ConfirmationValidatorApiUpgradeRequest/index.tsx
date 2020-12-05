@@ -13,7 +13,7 @@ const ConfirmationValidatorApiUpgradeRequest: FC = () => {
         confirmation validators requesting one of them to upgrade to a primary validator. This is because the banks
         always prefer the most trusted validator to be the primary validator for the network.
       </p>
-      <p>{`More information about upgrade requests can be found in the ${guideLink} section of the guide.`}</p>
+      <p>More information about upgrade requests can be found in the {guideLink} section of the guide.</p>
 
       <DocEndpoint endpoint="/upgrade_request" method="POST" />
       <TableParams
