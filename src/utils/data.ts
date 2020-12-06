@@ -35,7 +35,7 @@ export const getTeamMembers = (): TeamMember[] => {
   const members: any = {};
   teams.forEach((team) => {
     const {title: teamTitle, contributors: teamContributors} = team;
-    teamContributors.forEach((teamMember) => {
+    teamContributors.forEach((teamMember: any) => {
       const {title: userTitle, isLead, payPerDay, createdDate, contributor} = teamMember;
       const {contributorId, ...otherProps} = contributor;
       if (!members[contributorId]) {
