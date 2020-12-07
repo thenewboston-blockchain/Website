@@ -49,11 +49,11 @@ const ProfileInfo: FC<ComponentProps> = ({github_username}) => {
             </div>
           ))}
         <div className="ProfileInfo__member-slack">
-          <Icon icon={IconType.slack} onClick={() => null} size={18} />
+          <Icon className="ProfileInfo__member-slack-icon" icon={IconType.slack} onClick={() => null} size={18} />
           {slackUsername}
         </div>
         <div className="ProfileInfo__member-github">
-          <Icon icon={IconType.github} onClick={() => null} size={18} />
+          <Icon className="ProfileInfo__member-github-icon" icon={IconType.github} onClick={() => null} size={18} />
           <A className="ProfileInfo__member-github-link" href={`https://github.com/${github_username}`}>
             {githubUsername}
           </A>
