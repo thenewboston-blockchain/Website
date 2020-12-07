@@ -131,11 +131,15 @@
       }
     ],
     "responsibilities": [
+      "Create written material for our email campaigns",
+      "Produce well-researched content for blogs",
+      "Give feedback on writings"
+    ],
+    "technologyRequirements": [
       "An understanding of search engine optimization best practices",
       "Understanding grammar rules and how to construct clear sentences",
       "Being mindful of things like flow, readability, and sentence variety"
-    ],
-    "technologyRequirements": ["Skilled in Figma", "Skilled in Illustrator"]
+    ]
   },
   {
     "openingId": "senior-dot-net-core-developer",
