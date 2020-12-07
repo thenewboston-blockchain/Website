@@ -96,7 +96,7 @@ $break-mobile: 640px;
 @media screen and (max-width: $break-mobile) {
   .Modal {
     background-color: var(--color-gray-050);
-    height: 100vh;
+    height: 100%;
     position: fixed;
     width: 100vw;
     z-index: 20;

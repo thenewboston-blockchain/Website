@@ -80,7 +80,7 @@ const App: FC = () => {
           <Route path="/project-proposals/:chapter?" component={ProjectProposals} />
           <Route path="/style-guide/:chapter?" component={StyleGuide} />
           <Route path="/user/signin/callback" component={Auth} />
-          <Route path="/user/profile" component={Profile} />
+          <Route path="/user/profile" render={() => <Profile github_username="jamessspanggg" />} />
           <Redirect to="/" />
         </Switch>
       </Layout>
