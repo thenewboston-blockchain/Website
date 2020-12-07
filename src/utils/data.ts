@@ -40,7 +40,7 @@ export const getTeamMemberByGithubUsername = (github_username: string): TeamMemb
 
   teams.forEach((team) => {
     const {title: teamTitle, contributors: teamContributors} = team;
-    teamContributors.forEach((teamMember) => {
+    teamContributors.forEach((teamMember: any) => {
       if (teamMember.contributor.githubUsername === github_username) {
         const {title: userTitle, isLead, payPerDay, contributor} = teamMember;
         const {contributorId, ...otherProps} = contributor;
