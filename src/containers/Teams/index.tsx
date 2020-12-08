@@ -1,39 +1,52 @@
-import React, {FC, ReactNode, useEffect, useState} from 'react';
+import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
+import {useHistory, useParams} from 'react-router-dom';
 
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
 import {getTeamMembers} from 'utils/data';
 import {NavOption} from 'types/option';
-import {TeamMember, TeamName} from 'types/teams';
+import {TeamMember, TeamName, TeamsUrlParams} from 'types/teams';
 
 import TeamMemberCard from './TeamMemberCard';
 import './Teams.scss';
 
-const teamMembers = getTeamMembers();
-
-const TEAM_NAME_FILTERS: NavOption[] = [
-  {pathname: TeamName.all, title: 'All'},
-  {pathname: TeamName.dotnetCore, title: '.NET Core'},
-  {pathname: TeamName.backEndDevelopers, title: 'Back-End Developers'},
-  {pathname: TeamName.community, title: 'Community'},
-  {pathname: TeamName.design, title: 'Design'},
-  {pathname: TeamName.devOps, title: 'DevOps'},
-  {pathname: TeamName.discordManagers, title: 'Discord Managers'},
-  {pathname: TeamName.frontEndDevelopers, title: 'Front-End Developers'},
-  {pathname: TeamName.kotlinSDK, title: 'Kotlin SDK'},
-  {pathname: TeamName.marketing, title: 'Marketing'},
-  {pathname: TeamName.newUserOperations, title: 'New User Operations'},
-  {pathname: TeamName.payments, title: 'Payments'},
-  {pathname: TeamName.projectProposals, title: 'Project Proposals'},
-  {pathname: TeamName.qa, title: 'QA'},
-  {pathname: TeamName.redditModerators, title: 'Reddit Moderators'},
-  {pathname: TeamName.research, title: 'Research'},
-  {pathname: TeamName.security, title: 'Security'},
-  {pathname: TeamName.youtube, title: 'YouTube'},
+export const TEAMS: NavOption[] = [
+  {pathname: 'all', title: TeamName.all},
+  {pathname: 'back-end-developers', title: TeamName.backEndDevelopers},
+  {pathname: 'community', title: TeamName.community},
+  {pathname: 'design', title: TeamName.design},
+  {pathname: 'dev-ops', title: TeamName.devOps},
+  {pathname: 'discord-managers', title: TeamName.discordManagers},
+  {pathname: 'dot-net-core', title: TeamName.dotnetCore},
+  {pathname: 'front-end-developers', title: TeamName.frontEndDevelopers},
+  {pathname: 'kotlin-sdk', title: TeamName.kotlinSDK},
+  {pathname: 'marketing', title: TeamName.marketing},
+  {pathname: 'new-user-operations', title: TeamName.newUserOperations},
+  {pathname: 'payments', title: TeamName.payments},
+  //   {pathname: 'penetration-testing', title: TeamName.penetrationTesting},
+  {pathname: 'project-proposals', title: TeamName.projectProposals},
+  {pathname: 'qa', title: TeamName.qa},
+  {pathname: 'reddit-moderators', title: TeamName.redditModerators},
+  {pathname: 'research', title: TeamName.research},
+  {pathname: 'security', title: TeamName.security},
+  {pathname: 'youtube', title: TeamName.youtube},
 ];
 
+const teamMembers = getTeamMembers();
+
 const Teams: FC = () => {
+  const history = useHistory();
+  const {team: teamParam} = useParams<TeamsUrlParams>();
   const [filteredMembers, setFilteredMembers] = useState<TeamMember[]>(teamMembers);
   const [teamFilter, setTeamFilter] = useState<TeamName>(TeamName.all);
+
+  useEffect(() => {
+    const team = TEAMS.find(({pathname}) => pathname === teamParam);
+    if (team) {
+      setTeamFilter(team.title as TeamName);
+    } else {
+      history.push(`/teams`);
+    }
+  }, [history, teamParam]);
 
   useEffect(() => {
     const getFilteredMembers = (): TeamMember[] => {
@@ -56,14 +69,15 @@ const Teams: FC = () => {
     setFilteredMembers(teamFilter === TeamName.all ? teamMembers : getFilteredMembers());
   }, [teamFilter]);
 
-  const handleNavOptionClick = (option: TeamName) => (): void => {
-    setTeamFilter(option);
-  };
+  const handleNavOptionClick = useCallback(
+    (option: string) => (): void => {
+      history.push(`/teams/${option}`);
+    },
+    [history],
+  );
 
   const renderTeamFilter = (): ReactNode => {
-    return (
-      <FlatNavLinks handleOptionClick={handleNavOptionClick} options={TEAM_NAME_FILTERS} selectedOption={teamFilter} />
-    );
+    return <FlatNavLinks handleOptionClick={handleNavOptionClick} options={TEAMS} selectedOption={teamParam} />;
   };
 
   const renderTeamMembers = (): ReactNode => {

@@ -68,7 +68,8 @@ const App: FC = () => {
           <Route exact path="/social" component={Social} />
           <Redirect exact from="/tasks" to="/tasks/All" />
           <Route exact path="/tasks/:repository" component={Tasks} />
-          <Route exact path="/teams" component={Teams} />
+          <Route exact path="/teams/:team" component={Teams} />
+          <Redirect exact path="/teams" to="/teams/all" />
           <Route path="/account-manager/:chapter?" component={AccountManager} />
           <Route path="/bank-api/:chapter?" component={BankApi} />
           <Route path="/confirmation-validator-api/:chapter?" component={ConfirmationValidatorApi} />
