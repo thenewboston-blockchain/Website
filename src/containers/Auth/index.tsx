@@ -27,7 +27,7 @@ const Auth: FC = () => {
     }
   }, [code, history]);
 
-  return <h4>{fetching ? 'Fetching access token...' : 'API request complete!'}</h4>;
+  return <h4>{fetching ? 'Fetching access token...' : code}</h4>;
 };
 
 export default Auth;
