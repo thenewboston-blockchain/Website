@@ -163,8 +163,8 @@
         "contributor": {
           "contributorId": "10",
           "displayName": "Benjamin Thorpe",
-          "githubUsername": null,
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01BWTU729Z-b2ae1378a598-512",
+          "githubUsername": "benjithorpe",
+          "profileImage": "https://avatars3.githubusercontent.com/u/61359802?s=460&u=6a610edb702f7bcb9a81946357705fe3204d9905&v=4",
           "slackUsername": "Benjamin Thorpe"
         }
       },
@@ -176,8 +176,8 @@
         "contributor": {
           "contributorId": "12",
           "displayName": "KryptoZero",
-          "githubUsername": null,
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E2FN4D1S-4688c60ed154-512",
+          "githubUsername": "jefferytnb",
+          "profileImage": "https://avatars3.githubusercontent.com/u/74891032?s=460&v=4",
           "slackUsername": "KryptoZero"
         }
       },
@@ -202,8 +202,8 @@
         "contributor": {
           "contributorId": "38",
           "displayName": "Francisca Nwafor",
-          "githubUsername": null,
-          "profileImage": "https://media-exp1.licdn.com/dms/image/C4D03AQFRvpMONLCcdQ/profile-displayphoto-shrink_400_400/0?e=1610582400&v=beta&t=f69ny2IHWl5A2BAq6_UcDBn1lmhyNSsVhdjZn0SimoM",
+          "githubUsername": "Francaolisa",
+          "profileImage": "https://avatars0.githubusercontent.com/u/72324717?s=460&v=4",
           "slackUsername": "Francisca Nwafor"
         }
       },
@@ -215,8 +215,8 @@
         "contributor": {
           "contributorId": "7",
           "displayName": "Martin",
-          "githubUsername": null,
-          "profileImage": "https://media-exp1.licdn.com/dms/image/C4D03AQEsxV5J1Hi9QQ/profile-displayphoto-shrink_400_400/0?e=1609977600&v=beta&t=4jG6hRfnY9P5t0wrhrbuosLRRTWvxaxStZzdtYr5rdc",
+          "githubUsername": "Mathlucklala",
+          "profileImage": "https://avatars0.githubusercontent.com/u/74901267?s=460&v=4",
           "slackUsername": "Martin"
         }
       }
@@ -246,8 +246,8 @@
         "contributor": {
           "contributorId": "13",
           "displayName": "David Yap",
-          "githubUsername": null,
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01C3UKRM2M-e036dfe7aec6-512",
+          "githubUsername": "davidyapdy",
+          "profileImage": "https://avatars0.githubusercontent.com/u/17293366?s=460&u=549156b32fdbfc62ce02d54bb54e56782c9a7637&v=4",
           "slackUsername": "David Yap"
         }
       },
@@ -262,6 +262,18 @@
           "githubUsername": "osaroadade",
           "profileImage": "https://avatars1.githubusercontent.com/u/47249126?s=400&u=2e9e60984bef80c2908856c3f9966593372a1049&v=4",
           "slackUsername": "Osaro Ochuko Adade"
+        }
+      },
+      {
+        "title": "Graphic Designer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "contributor": {
+          "contributorId": "59",
+          "displayName": "Devansh Gajjar",
+          "githubUsername": "devanshgajjar",
+          "profileImage": "https://avatars2.githubusercontent.com/u/37979044?s=400&u=c451811d1e6c8a9b26bca433aa74d0e789706eba&v=4",
+          "slackUsername": "Devansh Gajjar"
         }
       }
     ]
@@ -295,7 +307,7 @@
         "contributor": {
           "contributorId": "28",
           "displayName": "Rajput Usman",
-          "githubUsername": null,
+          "githubUsername": "Rajputusman",
           "profileImage": "https://avatars0.githubusercontent.com/u/65516140?s=460&v=4",
           "slackUsername": "Rajput Usman"
         }
@@ -531,8 +543,8 @@
         "contributor": {
           "contributorId": "34",
           "displayName": "Pulkit Bajaj",
-          "githubUsername": "",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01DYM56TQV-b28ea2d2e34d-72",
+          "githubUsername": "pulkitbajaj007",
+          "profileImage": "https://avatars3.githubusercontent.com/u/74899933?s=460&u=28b9a72efc37620e5bf8a01eb547dfa780235c59&v=4",
           "slackUsername": "Pulkit Bajaj"
         }
       },
@@ -544,8 +556,8 @@
         "contributor": {
           "contributorId": "25",
           "displayName": "Sunil Chauhan",
-          "githubUsername": null,
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01C14HRXFT-g90d1fb3c0c1-512",
+          "githubUsername": "mrsunilchauhan",
+          "profileImage": "https://avatars3.githubusercontent.com/u/11782262?s=460&u=f75f41668f2f11a0ac9358f3ea482f2b5b85e9d0&v=4",
           "slackUsername": "Sunil Chauhan"
         }
       }
@@ -642,7 +654,7 @@
         "contributor": {
           "contributorId": "22",
           "displayName": "Snehal Ingale",
-          "githubUsername": null,
+          "githubUsername": "webdeveloperswj",
           "profileImage": "https://avatars2.githubusercontent.com/u/59204822?s=460&v=4",
           "slackUsername": "Snehal Ingale"
         }
@@ -673,8 +685,8 @@
         "contributor": {
           "contributorId": "9",
           "displayName": "Bojan Ilijevski",
-          "githubUsername": null,
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01B1PFRMH7-df88a64aa7ba-512",
+          "githubUsername": "bojan-ilijevski",
+          "profileImage": "https://avatars2.githubusercontent.com/u/58598872?s=460&v=4",
           "slackUsername": "Bojan Ilijevski"
         }
       },
@@ -730,8 +742,8 @@
         "contributor": {
           "contributorId": "55",
           "displayName": "Kayode Babarinde",
-          "githubUsername": "",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E6KXL06A-0e40b9f51c32-512",
+          "githubUsername": "KAYBABSGit",
+          "profileImage": "https://avatars1.githubusercontent.com/u/74966842?s=460&v=4",
           "slackUsername": "Kayode Babarinde"
         }
       },
@@ -756,8 +768,8 @@
         "contributor": {
           "contributorId": "31",
           "displayName": "Rahul Kothari",
-          "githubUsername": "-",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EUQ8SR2L-e347b1c404fa-512",
+          "githubUsername": "rahul-kothari",
+          "profileImage": "https://avatars0.githubusercontent.com/u/35169918?s=400&u=fecec8cb667103fd2d8e52422f6f4bd9666b2613&v=4",
           "slackUsername": "Rahul Kothari"
         }
       }

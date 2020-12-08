@@ -33,12 +33,11 @@ export interface Team {
   title: string;
 }
 
-interface TeamContributor {
+export interface TeamContributor {
   contributor: Contributor;
   createdDate: string;
   isLead: boolean;
   payPerDay: number;
-  team: Team;
   title: string;
 }
 

@@ -30,6 +30,7 @@ import LoadingIcon from 'mdi-react/LoadingIcon';
 import MenuIcon from 'mdi-react/MenuIcon';
 import MenuRightIcon from 'mdi-react/MenuRightIcon';
 import MinusIcon from 'mdi-react/MinusIcon';
+import PencilIcon from 'mdi-react/PencilIcon';
 import PlusIcon from 'mdi-react/PlusIcon';
 import RadioboxBlankIcon from 'mdi-react/RadioboxBlankIcon';
 import RadioboxMarkedIcon from 'mdi-react/RadioboxMarkedIcon';
@@ -74,6 +75,7 @@ export enum IconType {
   menu,
   menuRight,
   minus,
+  pencil,
   plus,
   radioboxBlank,
   radioboxMarked,
@@ -160,6 +162,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
           return <MenuRightIcon {...iconProps} />;
         case IconType.minus:
           return <MinusIcon {...iconProps} />;
+        case IconType.pencil:
+          return <PencilIcon {...iconProps} />;
         case IconType.plus:
           return <PlusIcon {...iconProps} />;
         case IconType.radioboxBlank:
