@@ -45,7 +45,7 @@ const NewsletterModal: FC = () => {
             Get the latest updates on new videos, openings, features, and special offers directly in your inbox!
           </span>
           <div className="Newsletter__form">
-            <FormInput className="Newsletter__input" name="email" placeholder="Email" />
+            <FormInput className="Newsletter__input" name="email" placeholder="Email address" />
             <Button className="Newsletter__button" color="primary" type="submit">
               Submit
             </Button>
