@@ -4,7 +4,7 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'co
 
 const PrimaryValidatorApiBanks: FC = () => {
   return (
-    <DocContainer className="PrimaryValidatorApiBanks" title="Banks">
+    <DocContainer className="PrimaryValidatorApiBanks" title="Banks" lastUpdated="Updated on 07 Dec 2020">
       <p>The primary validator will maintain a record of all connected banks on the network.</p>
 
       <DocEndpoint endpoint="/banks" method="GET" />

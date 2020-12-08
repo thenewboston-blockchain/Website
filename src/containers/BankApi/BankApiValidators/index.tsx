@@ -5,7 +5,7 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'co
 
 const BankApiValidators: FC = () => {
   return (
-    <DocContainer className="BankApiValidators" title="Validators">
+    <DocContainer className="BankApiValidators" title="Validators" lastUpdated="Updated on 07 Dec 2020">
       <p>Banks will maintain a record of all validators, both primary and confirmation, that they are connected to.</p>
       <p>
         More information about validators can be found in the <NavLink to="/guide/validators">Validators</NavLink>{' '}

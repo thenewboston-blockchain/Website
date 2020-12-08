@@ -70,7 +70,7 @@ const DeploymentGuideBank: FC = () => {
   );
 
   return (
-    <DocContainer className="DeploymentGuideBank" title="Bank Deployment Guide">
+    <DocContainer className="DeploymentGuideBank" title="Bank Deployment Guide" lastUpdated="Updated on 07 Dec 2020">
       <p>This guide will detail the deployment instructions for banks.</p>
       <KeyGeneration />
       <InstallDependencies />

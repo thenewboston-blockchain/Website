@@ -11,7 +11,7 @@ enum AccountManagerCreateBankNav {
 
 const AccountManagerCreateBank: FC = () => {
   return (
-    <DocContainer className="AccountManagerCreateBank" title="Create a Bank">
+    <DocContainer className="AccountManagerCreateBank" title="Create a Bank" lastUpdated="Updated on 07 Dec 2020">
       <p>
         <strong>Banks</strong> play a critical role regarding several aspects of the network. They act as the bond
         between end users and the network and have several responsibilities to each. To create a Bank, click the plus

@@ -4,7 +4,11 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
 
 const PrimaryValidatorApiConfirmationBlocks: FC = () => {
   return (
-    <DocContainer className="PrimaryValidatorApiConfirmationBlocks" title="Confirmation Blocks">
+    <DocContainer
+      className="PrimaryValidatorApiConfirmationBlocks"
+      title="Confirmation Blocks"
+      lastUpdated="Updated on 07 Dec 2020"
+    >
       <p>
         Primary validators will send confirmation blocks to confirmation validators for re-validation after a block has
         been added to the blockchain. No confirmation blocks will be sent to the primary validator directly.

@@ -7,7 +7,11 @@ import ConfirmationValidatorSyncing from './ConfirmationValidatorSyncing.png';
 
 const GuideConfirmationValidators: FC = () => {
   return (
-    <DocContainer className="GuideConfirmationValidators" title="Confirmation Validators">
+    <DocContainer
+      className="GuideConfirmationValidators"
+      title="Confirmation Validators"
+      lastUpdated="Updated on 07 Dec 2020"
+    >
       <p>
         The final technical details to cover are the specific functionality of the confirmation validators and
         generation of confirmation blocks (which will be outlined in the next section).

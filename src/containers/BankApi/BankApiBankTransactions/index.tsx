@@ -4,7 +4,7 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'co
 
 const BankApiBankTransactions: FC = () => {
   return (
-    <DocContainer className="BankApiBankTransactions" title="Bank Transactions">
+    <DocContainer className="BankApiBankTransactions" title="Bank Transactions" lastUpdated="Updated on 07 Dec 2020">
       <p>
         Bank transactions represent a single transaction within a block. They reference both the recipient account and
         the parent block. Bank transactions are stored separate from the block due to the fact that when viewing an

@@ -14,7 +14,12 @@ enum StyleGuideReactNav {
 
 const StyleGuideReact: FC = () => {
   return (
-    <DocContainer className="StyleGuideReact" id={StyleGuideReactNav.header} title="React / JSX Style Guide">
+    <DocContainer
+      className="StyleGuideReact"
+      id={StyleGuideReactNav.header}
+      title="React / JSX Style Guide"
+      lastUpdated="Updated on 07 Dec 2020"
+    >
       <p>
         Here are the rules that we should follow when working with React. We have{' '}
         <A href="https://eslint.org">ESLint</A> and <A href="https://prettier.io/">Prettier</A> configured, so for the

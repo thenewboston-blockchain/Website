@@ -5,7 +5,7 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'co
 
 const BankApiBlocks: FC = () => {
   return (
-    <DocContainer className="BankApiBlocks" title="Blocks">
+    <DocContainer className="BankApiBlocks" title="Blocks" lastUpdated="Updated on 07 Dec 2020">
       <p>
         A block is a group of one or more transactions. There are often multiple transactions (usually fees) to
         different recipients within a single block.
