@@ -36,10 +36,10 @@ $top-nav-height: 60px;
   justify-content: space-between;
 
   &__separator {
-    height: 25px;
-    width: 0.5px;
-    margin-left: 30px;
     background-color: #C1C9D2;
+    height: 25px;
+    margin-left: 30px;
+    width: 0.5px;
 
     @media (max-width: 992px) {
       display: none;
@@ -91,12 +91,10 @@ $top-nav-height: 60px;
     &__icon-holder {
       display: inline-block;
       position: absolute;
-      
     }
 
     &__chevron-icon {
       transition: transform 0.3s ease-in-out;
-  
       &--open {
         transform: rotateX(180deg) translateZ(-1px);
       }
@@ -116,13 +114,13 @@ $top-nav-height: 60px;
     }
 
     &__column-title {
-      color: var(--color-sail-gray-300);
-      margin-bottom: 20px;
-      border: 0px;
       background-color: transparent;
-      padding: 0px;
+      border: 0px;
+      color: var(--color-sail-gray-300);
       cursor: pointer;
+      margin-bottom: 20px;
       outline: none;
+      padding: 0px;
     }
 
     &__dropdown-container {
@@ -186,8 +184,8 @@ $top-nav-height: 60px;
     &__separator {
       background-color: #C1C9D2;
       height: 0.5px;
-      width: 40px;
       margin-bottom: 20px;
+      width: 40px;
     }
   }
 }

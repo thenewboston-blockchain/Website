@@ -1,8 +1,8 @@
-import React, {FC, ReactNode, useEffect} from 'react';
+import React, {FC} from 'react';
 import clsx from 'clsx';
 import {Link} from 'react-router-dom';
 
-import './TopNav.scss';
+import './TopNavText.scss';
 
 interface ComponentProps {
   buttonText: string;
