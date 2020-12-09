@@ -12,26 +12,15 @@
     height: 12px;
   }
 
-  &__guide-header {
-    display: flex;
-    margin-bottom: 24px;
-    @media only screen and (max-width: 360px) {
-      flex-direction: column;
-    }
-
-    &--lastUpdated {
-      color: lightgray;
-      flex: 1;
-      text-align: right;
-      @media only screen and (max-width: 360px) {
-        text-align: left;
-      }
-    }
-  }
-
   &__HashLink {
     display: none;
     padding-left: 8px;
+  }
+
+  &__last-updated {
+    color: var(--color-sail-gray-500);
+    font-size: 14px;
+    font-weight: 300;
   }
 
   &__page-title {
@@ -45,9 +34,20 @@
         display: inline;
       }
     }
+  }
 
-    @media only screen and (max-width: 600px) {
-      flex: 1;
+  &__wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: 992px) {
+    &__wrapper {
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: start;
     }
   }
 }

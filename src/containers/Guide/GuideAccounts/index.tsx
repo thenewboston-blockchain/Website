@@ -7,7 +7,7 @@ import AccountsSimple from './AccountsSimple.png';
 
 const GuideAccounts: FC = () => {
   return (
-    <DocContainer className="GuideAccounts" title="Accounts" lastUpdated="Updated on 07 Dec 2020">
+    <DocContainer className="GuideAccounts" title="Accounts" lastUpdated="07 Dec 2020">
       <p>
         <strong>Accounts</strong> are anonymous digital identities on the network where coins may be sent to and from.{' '}
         <strong>Account managers</strong> are software applications (such as a mobile application or desktop software)

@@ -4,7 +4,7 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
 
 const BankApiConfig: FC = () => {
   return (
-    <DocContainer className="BankApiConfig" title="Config" lastUpdated="Updated on 07 Dec 2020">
+    <DocContainer className="BankApiConfig" title="Config" lastUpdated="07 Dec 2020">
       <p>
         All nodes will provide config data detailing their current configuration details as well as their primary
         validator selection. This information is used not only by connecting clients but also by all other nodes in

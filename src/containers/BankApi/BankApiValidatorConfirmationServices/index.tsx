@@ -8,7 +8,7 @@ const BankApiValidatorConfirmationServices: FC = () => {
     <DocContainer
       className="BankApiValidatorConfirmationServices"
       title="Validator Confirmation Services"
-      lastUpdated="Updated on 07 Dec 2020"
+      lastUpdated="07 Dec 2020"
     >
       <p>
         Validator confirmation services represent an agreement between a confirmation validator and a bank. They state

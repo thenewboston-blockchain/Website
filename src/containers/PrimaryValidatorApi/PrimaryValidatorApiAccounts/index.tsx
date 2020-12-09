@@ -4,7 +4,7 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'co
 
 const PrimaryValidatorApiAccounts: FC = () => {
   return (
-    <DocContainer className="PrimaryValidatorApiAccounts" title="Accounts" lastUpdated="Updated on 07 Dec 2020">
+    <DocContainer className="PrimaryValidatorApiAccounts" title="Accounts" lastUpdated="07 Dec 2020">
       <p>
         The primary validator will maintain the account numbers, balances, and balance locks for all accounts on the
         network. New accounts are created as needed when funds are first sent.

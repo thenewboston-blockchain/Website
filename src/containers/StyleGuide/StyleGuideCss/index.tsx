@@ -26,7 +26,7 @@ const StyleGuideCss: FC = () => {
       className="StyleGuideCss"
       id={StyleGuideCssNav.header}
       title="CSS / SASS Style Guide"
-      lastUpdated="Updated on 07 Dec 2020"
+      lastUpdated="07 Dec 2020"
     >
       <p>
         One of our primary motivators when choosing a technology is to pick technologies that are widespread in

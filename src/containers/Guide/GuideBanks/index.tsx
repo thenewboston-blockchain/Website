@@ -7,7 +7,7 @@ import ValidatorElection from './ValidatorElection.png';
 
 const GuideBanks: FC = () => {
   return (
-    <DocContainer className="GuideBanks" title="Banks" lastUpdated="Updated on 07 Dec 2020">
+    <DocContainer className="GuideBanks" title="Banks" lastUpdated="07 Dec 2020">
       <p>
         Banks play a critical role regarding several aspects of the network. They act as the bond between end users and
         the network and have several responsibilities to each. Regarding network-related responsibilities, banks are

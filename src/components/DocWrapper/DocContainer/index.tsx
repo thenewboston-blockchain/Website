@@ -19,7 +19,7 @@ const DocContainer: FC<ComponentProps> = ({children, className, id, introSection
   return (
     <section className={clsx('DocContainer', className)}>
       {introTitle ? (
-        <div className="DocContainer__guide-header">
+        <div className="DocContainer__wrapper">
           <h1
             className={clsx('DocContainer__page-title', {
               ...getCustomClassNames(className, '__page-title', true),
@@ -27,7 +27,7 @@ const DocContainer: FC<ComponentProps> = ({children, className, id, introSection
           >
             {introTitle}
           </h1>
-          <p className="DocContainer__guide-header--lastUpdated">{lastUpdated}</p>
+          {Boolean(lastUpdated) && <span className="DocContainer__last-updated">Updated on {lastUpdated}</span>}
         </div>
       ) : null}
       {introSection ? (
@@ -36,7 +36,7 @@ const DocContainer: FC<ComponentProps> = ({children, className, id, introSection
           <div className={clsx('DocContainer__divider')} />
         </>
       ) : null}
-      <div className="DocContainer__guide-header">
+      <div className="DocContainer__wrapper">
         <h1
           className={clsx('DocContainer__page-title', {
             ...getCustomClassNames(className, '__page-title', true),
@@ -46,7 +46,7 @@ const DocContainer: FC<ComponentProps> = ({children, className, id, introSection
           {title}
           {id ? <HashLink className="DocContainer__HashLink" id={id} /> : null}
         </h1>
-        <p className="DocContainer__guide-header--lastUpdated">{lastUpdated}</p>
+        {Boolean(lastUpdated) && <span className="DocContainer__last-updated">Updated on {lastUpdated}</span>}
       </div>
       {children}
     </section>

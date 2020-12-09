@@ -6,11 +6,7 @@ import ConnectionRequestDiagram from './ConnectionRequest.png';
 
 const NodeApiConnectionRequests: FC = () => {
   return (
-    <DocContainer
-      className="NodeApiConnectionRequests"
-      title="Connection Requests"
-      lastUpdated="Updated on 07 Dec 2020"
-    >
+    <DocContainer className="NodeApiConnectionRequests" title="Connection Requests" lastUpdated="07 Dec 2020">
       <p>To connect with another node on the network, a signed connection request can be sent to the target node.</p>
 
       <DocImage alt="connection request" maxWidth={640} src={ConnectionRequestDiagram} />

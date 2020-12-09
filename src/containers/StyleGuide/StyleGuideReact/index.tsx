@@ -18,7 +18,7 @@ const StyleGuideReact: FC = () => {
       className="StyleGuideReact"
       id={StyleGuideReactNav.header}
       title="React / JSX Style Guide"
-      lastUpdated="Updated on 07 Dec 2020"
+      lastUpdated="07 Dec 2020"
     >
       <p>
         Here are the rules that we should follow when working with React. We have{' '}

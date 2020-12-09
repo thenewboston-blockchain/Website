@@ -8,7 +8,7 @@ const ConfirmationValidatorApiPrimaryValidatorUpdated: FC = () => {
     <DocContainer
       className="ConfirmationValidatorApiPrimaryValidatorUpdated"
       title="Primary Validator Updated"
-      lastUpdated="Updated on 07 Dec 2020"
+      lastUpdated="07 Dec 2020"
     >
       <p>
         The last step in the resync process is the notice that is sent from banks to their CVs to indicate that they are

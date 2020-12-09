@@ -4,7 +4,7 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
 
 const ConfirmationValidatorApiConfig: FC = () => {
   return (
-    <DocContainer className="ConfirmationValidatorApiConfig" title="Config" lastUpdated="Updated on 07 Dec 2020">
+    <DocContainer className="ConfirmationValidatorApiConfig" title="Config" lastUpdated="07 Dec 2020">
       <p>
         All nodes will provide config data detailing their current configuration details. This information is used by
         all other nodes in order to ensure proper connection settings.

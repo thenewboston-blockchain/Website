@@ -4,7 +4,7 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'co
 
 const ConfirmationValidatorApiBanks: FC = () => {
   return (
-    <DocContainer className="ConfirmationValidatorApiBanks" title="Banks" lastUpdated="Updated on 07 Dec 2020">
+    <DocContainer className="ConfirmationValidatorApiBanks" title="Banks" lastUpdated="07 Dec 2020">
       <p>The confirmation validators will maintain a record of all connected banks.</p>
 
       <DocEndpoint endpoint="/banks" method="GET" />

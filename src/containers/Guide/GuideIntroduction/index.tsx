@@ -61,7 +61,7 @@ const GuideIntroduction: FC = () => {
       introSection={renderIntro()}
       introTitle="Introduction"
       title="Overview"
-      lastUpdated="Updated on 07 Dec 2020"
+      lastUpdated="07 Dec 2020"
     >
       <p>
         The system has many components, each of which plays a specific role in allowing the transfer of coins (the

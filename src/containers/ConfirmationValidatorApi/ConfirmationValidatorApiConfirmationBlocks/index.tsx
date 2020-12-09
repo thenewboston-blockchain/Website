@@ -7,7 +7,7 @@ const ConfirmationValidatorApiConfirmationBlocks: FC = () => {
     <DocContainer
       className="ConfirmationValidatorApiConfirmationBlocks"
       title="Confirmation Blocks"
-      lastUpdated="Updated on 07 Dec 2020"
+      lastUpdated="07 Dec 2020"
     >
       <p>
         Primary validators will send confirmation blocks to confirmation validators for re-validation after a block has

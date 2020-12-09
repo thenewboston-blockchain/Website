@@ -5,7 +5,7 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'co
 
 const BankApiAccounts: FC = () => {
   return (
-    <DocContainer className="BankApiAccounts" title="Accounts" lastUpdated="Updated on 07 Dec 2020">
+    <DocContainer className="BankApiAccounts" title="Accounts" lastUpdated="07 Dec 2020">
       <p>
         Banks will store information of all accounts that have sent blocks through them. Banks will also assign a trust
         level to each account they are tracking in order to determine future transactions fees. More trusted accounts

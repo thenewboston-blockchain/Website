@@ -11,7 +11,7 @@ enum AccountManagerAddFriendsNav {
 
 const AccountManagerAddFriends: FC = () => {
   return (
-    <DocContainer className="AccountManagerAddFriends" title="Add Friends" lastUpdated="Updated on 07 Dec 2020">
+    <DocContainer className="AccountManagerAddFriends" title="Add Friends" lastUpdated="07 Dec 2020">
       <p>
         To add friends, click the plus button to the right of "Friends" on the left side menu. After entering their
         nickname and account number, click "Add" to add them to your friends list.

@@ -8,7 +8,7 @@ const ConfirmationValidatorApiBankConfirmationServices: FC = () => {
     <DocContainer
       className="ConfirmationValidatorApiBankConfirmationServices"
       title="Bank Confirmation Services"
-      lastUpdated="Updated on 07 Dec 2020"
+      lastUpdated="07 Dec 2020"
     >
       <p>
         Bank confirmation services are created by the confirmation validator when a transaction is received from a

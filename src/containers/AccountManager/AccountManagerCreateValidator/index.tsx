@@ -11,11 +11,7 @@ enum AccountManagerCreateValidatorNav {
 
 const AccountManagerCreateValidator: FC = () => {
   return (
-    <DocContainer
-      className="AccountManagerCreateValidator"
-      title="Create a Validator"
-      lastUpdated="Updated on 07 Dec 2020"
-    >
+    <DocContainer className="AccountManagerCreateValidator" title="Create a Validator" lastUpdated="07 Dec 2020">
       <p>
         <strong>Validator's</strong> purpose is most importantly to validate transactions. To create a Validator, click
         the plus button to the right of "Validators" on the left side menu. After choosing a protocol and filling out a
