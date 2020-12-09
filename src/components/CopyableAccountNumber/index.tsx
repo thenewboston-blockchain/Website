@@ -10,9 +10,10 @@ import './CopyableAccountNumber.scss';
 interface ComponentProps {
   accountNumber: string;
   className?: string;
+  isCopyButtonAtBottom?: boolean;
 }
 
-const CopyableAccountNumber: FC<ComponentProps> = ({accountNumber, className}) => {
+const CopyableAccountNumber: FC<ComponentProps> = ({accountNumber, className, isCopyButtonAtBottom}) => {
   const handleCopy = (): void => {
     displayToast('Account Number copied to the clipboard', 'success');
   };
@@ -21,14 +22,24 @@ const CopyableAccountNumber: FC<ComponentProps> = ({accountNumber, className}) =
     <div className={clsx('CopyableAccountNumber', className)}>
       <div className="CopyableAccountNumber__top">
         <div className="CopyableAccountNumber__label">Account Number</div>
+        {!isCopyButtonAtBottom && (
+          <CopyToClipboard onCopy={handleCopy} text={accountNumber}>
+            <div className="CopyableAccountNumber__copy-container">
+              <Icon className="CopyableAccountNumber__copy-icon" icon={IconType.contentCopy} size={22} />
+              <div className="CopyableAccountNumber__copy-text">Copy</div>
+            </div>
+          </CopyToClipboard>
+        )}
+      </div>
+      <div className="CopyableAccountNumber__account-number">{accountNumber}</div>
+      {isCopyButtonAtBottom && (
         <CopyToClipboard onCopy={handleCopy} text={accountNumber}>
           <div className="CopyableAccountNumber__copy-container">
             <Icon className="CopyableAccountNumber__copy-icon" icon={IconType.contentCopy} size={22} />
             <div className="CopyableAccountNumber__copy-text">Copy</div>
           </div>
         </CopyToClipboard>
-      </div>
-      <div className="CopyableAccountNumber__account-number">{accountNumber}</div>
+      )}
     </div>
   );
 };

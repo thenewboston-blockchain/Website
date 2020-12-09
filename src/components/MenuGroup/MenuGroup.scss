@@ -43,6 +43,8 @@
 
   &__toggle {
     align-items: center;
+    background-color: transparent;
+    border: 0;
     cursor: pointer;
     display: flex;
     padding: 10px 16px 0;
@@ -66,11 +68,6 @@
   }
 
   &__title {
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
     font-weight: 700;
-    line-height: 1.5;
-    padding: 0;
   }
 }
