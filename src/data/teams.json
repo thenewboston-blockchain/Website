@@ -547,19 +547,6 @@
           "profileImage": "https://avatars3.githubusercontent.com/u/74899933?s=460&u=28b9a72efc37620e5bf8a01eb547dfa780235c59&v=4",
           "slackUsername": "Pulkit Bajaj"
         }
-      },
-      {
-        "title": "SEO Manager",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "25",
-          "displayName": "Sunil Chauhan",
-          "githubUsername": "mrsunilchauhan",
-          "profileImage": "https://avatars3.githubusercontent.com/u/11782262?s=460&u=f75f41668f2f11a0ac9358f3ea482f2b5b85e9d0&v=4",
-          "slackUsername": "Sunil Chauhan"
-        }
       }
     ]
   },
