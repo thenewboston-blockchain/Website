@@ -4,7 +4,7 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'co
 
 const PrimaryValidatorApiValidators: FC = () => {
   return (
-    <DocContainer className="PrimaryValidatorApiValidators" title="Validators">
+    <DocContainer className="PrimaryValidatorApiValidators" title="Validators" lastUpdated="07 Dec 2020">
       <p>
         The primary validator will maintain a record of all validators on the network. The primary validator will also
         send confirmation blocks to all connected confirmation validators for re-validation after a block has been

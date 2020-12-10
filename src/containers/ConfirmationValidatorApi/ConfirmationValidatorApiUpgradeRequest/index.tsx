@@ -6,7 +6,7 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'co
 const ConfirmationValidatorApiUpgradeRequest: FC = () => {
   const guideLink = <NavLink to="/guide/resync-process">Resync Process</NavLink>;
   return (
-    <DocContainer className="ConfirmationValidatorApiUpgradeRequest" title="Upgrade Request">
+    <DocContainer className="ConfirmationValidatorApiUpgradeRequest" title="Upgrade Request" lastUpdated="07 Dec 2020">
       <p>
         When a bank alters the trust levels of their validators, if the results indicate that there are now confirmation
         validators that are more trusted than the bank's primary validator, the bank will send out a request to the

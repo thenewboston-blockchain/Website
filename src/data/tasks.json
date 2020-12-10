@@ -51,6 +51,16 @@
       "completed_date": "11/26/20",
       "amount_paid": "5000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "thenewboston-python",
+      "title": "Generate documentation for the codebase using sphinx",
+      "issue_id": "36",
+      "pr_id": "42",
+      "completed_by": "AbhayAysola",
+      "completed_date": "12/06/20",
+      "amount_paid": "5000",
+      "bug_bounty": "FALSE"
     }
   ],
   "AkbarKamran": [
@@ -131,6 +141,18 @@
       "completed_date": "11/12/20",
       "amount_paid": "500",
       "bug_bounty": ""
+    }
+  ],
+  "CNFloss": [
+    {
+      "repository": "Website",
+      "title": "Last updated date for Docs #549",
+      "issue_id": "549",
+      "pr_id": "1091",
+      "completed_by": "CNFloss",
+      "completed_date": "12/09/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
     }
   ],
   "CirXe0N": [
@@ -311,6 +333,46 @@
       "completed_date": "12/01/20",
       "amount_paid": "5000",
       "bug_bounty": ""
+    },
+    {
+      "repository": "Bank",
+      "title": "Write a test for class BankViewSet using get method to verify bank details",
+      "issue_id": "107",
+      "pr_id": "114",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/07/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Bank",
+      "title": "Write a test to validate unique constraint of block and validator together",
+      "issue_id": "108",
+      "pr_id": "115",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/07/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Bank",
+      "title": "Unit test failed when Faker().pytest() = 0",
+      "issue_id": "117",
+      "pr_id": "118",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/06/20",
+      "amount_paid": "2000",
+      "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Bank",
+      "title": "Write a test to validate trust value while creating a new Bank",
+      "issue_id": "112",
+      "pr_id": "119",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/06/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "FaiyazMdAbdul": [
@@ -762,6 +824,36 @@
       "completed_by": "Toledit",
       "completed_date": "11/26/20",
       "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "Cryptocurrency topic Infographic",
+      "issue_id": "56",
+      "pr_id": "",
+      "completed_by": "Toledit",
+      "completed_date": "12/04/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "Yes to Coins Infographic",
+      "issue_id": "46",
+      "pr_id": "",
+      "completed_by": "Toledit",
+      "completed_date": "12/04/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "Coins Mobile app Infographic",
+      "issue_id": "64",
+      "pr_id": "",
+      "completed_by": "Toledit",
+      "completed_date": "12/04/20",
+      "amount_paid": "1000",
       "bug_bounty": "FALSE"
     }
   ],
@@ -3345,6 +3437,28 @@
       "bug_bounty": ""
     }
   ],
+  "mrbusysky": [
+    {
+      "repository": "thenewboston-js",
+      "title": "[Task] Implement Browser Support with Browserify",
+      "issue_id": "9",
+      "pr_id": "13",
+      "completed_by": "mrbusysky",
+      "completed_date": "12/08/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Update to add tnb-js",
+      "issue_id": "1103",
+      "pr_id": "1098",
+      "completed_by": "mrbusysky",
+      "completed_date": "12/10/20",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    }
+  ],
   "mthomas-io": [
     {
       "repository": "Website",
@@ -3833,6 +3947,26 @@
       "completed_date": "11/28/20",
       "amount_paid": "250",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "thenewboston-js",
+      "title": "[Task] Type Bank Get Config Response",
+      "issue_id": "17",
+      "pr_id": "18",
+      "completed_by": "sno2",
+      "completed_date": "12/09/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "thenewboston-js",
+      "title": "[Task] Add Axios Response Generics for `ServerNode` Request Methods",
+      "issue_id": "15",
+      "pr_id": "16",
+      "completed_by": "sno2",
+      "completed_date": "12/08/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
     }
   ],
   "sotheavuthnguon": [
@@ -4161,6 +4295,18 @@
       "completed_date": "9/22/20",
       "amount_paid": "5000",
       "bug_bounty": ""
+    }
+  ],
+  "wendtl": [
+    {
+      "repository": "Website",
+      "title": "Doc Update - Validator Upgrade Request",
+      "issue_id": "976",
+      "pr_id": "1045",
+      "completed_by": "wendtl",
+      "completed_date": "12/05/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "whitelionx": [
