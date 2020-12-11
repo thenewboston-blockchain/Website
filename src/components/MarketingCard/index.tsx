@@ -33,6 +33,7 @@ const MarketingCard: FC<ComponentProps> = ({className, customLink, website}) => 
   );
 
   const images = {
+    discord: renderImage(DiscordLogo),
     facebook: renderImage(FacebookLogo),
     github: renderImage(GitHubLogo),
     linkedin: renderImage(LinkedInLogo),
@@ -40,7 +41,6 @@ const MarketingCard: FC<ComponentProps> = ({className, customLink, website}) => 
     slack: renderImage(SlackLogo),
     twitter: renderImage(TwitterLogo),
     youtube: renderImage(YouTubeLogo),
-    discord: renderImage(DiscordLogo),
   };
 
   return (
