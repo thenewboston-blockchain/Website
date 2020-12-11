@@ -6,4 +6,5 @@ export enum SocialMedia {
   slack = 'slack',
   twitter = 'twitter',
   youtube = 'youtube',
+  discord = 'discord',
 }

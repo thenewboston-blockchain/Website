@@ -8,6 +8,7 @@ export const socialMediaUrls = {
   [SocialMedia.slack]: 'https://join.slack.com/t/thenewboston/shared_invite/zt-j7j4ie92-ADy7GL3KAzCwSlaAVoDKLw',
   [SocialMedia.twitter]: 'https://twitter.com/bucky_roberts',
   [SocialMedia.youtube]: 'https://www.youtube.com/user/thenewboston',
+  [SocialMedia.discord]: 'https://discord.gg/fdj2EMvSYx',
 };
 
 export const socialMediaHandles = {
@@ -18,6 +19,7 @@ export const socialMediaHandles = {
   [SocialMedia.slack]: 't/thenewboston',
   [SocialMedia.twitter]: '@bucky_roberts',
   [SocialMedia.youtube]: 'thenewboston',
+  [SocialMedia.discord]: 'discord',
 };
 
 export const socialMediaDescriptions = {
@@ -32,4 +34,6 @@ export const socialMediaDescriptions = {
   [SocialMedia.twitter]: 'Stay up to date by following Bucky Roberts on his personal Twitter page.',
   [SocialMedia.youtube]:
     'Follow us on YouTube and find tons of sweet computer related tutorials and some other awesome videos too!',
+  [SocialMedia.discord]:
+  'Join our community on discord.',
 };

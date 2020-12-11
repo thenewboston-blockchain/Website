@@ -13,6 +13,7 @@ import RedditLogo from 'assets/logos/Reddit.png';
 import SlackLogo from 'assets/logos/Slack.png';
 import TwitterLogo from 'assets/logos/Twitter.png';
 import YouTubeLogo from 'assets/logos/YouTube.png';
+import DiscordLogo from 'assets/logos/Discord.png';
 
 import './MarketingCard.scss';
 
@@ -39,6 +40,7 @@ const MarketingCard: FC<ComponentProps> = ({className, customLink, website}) => 
     slack: renderImage(SlackLogo),
     twitter: renderImage(TwitterLogo),
     youtube: renderImage(YouTubeLogo),
+    discord: renderImage(DiscordLogo),
   };
 
   return (
