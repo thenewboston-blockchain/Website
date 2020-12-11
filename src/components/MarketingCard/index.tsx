@@ -6,6 +6,7 @@ import {SocialMedia} from 'types/social-media';
 import {getCustomClassNames} from 'utils/components';
 import {socialMediaUrls, socialMediaHandles, socialMediaDescriptions} from 'utils/social-media';
 
+import DiscordLogo from 'assets/logos/Discord.png';
 import FacebookLogo from 'assets/logos/Facebook.png';
 import GitHubLogo from 'assets/logos/GitHub.png';
 import LinkedInLogo from 'assets/logos/LinkedIn.png';
@@ -13,7 +14,6 @@ import RedditLogo from 'assets/logos/Reddit.png';
 import SlackLogo from 'assets/logos/Slack.png';
 import TwitterLogo from 'assets/logos/Twitter.png';
 import YouTubeLogo from 'assets/logos/YouTube.png';
-import DiscordLogo from 'assets/logos/Discord.png';
 
 import './MarketingCard.scss';
 
