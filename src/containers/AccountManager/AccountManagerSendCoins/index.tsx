@@ -6,7 +6,7 @@ import SendCoinsModal from './SendCoinsModal.png';
 
 const AccountManagerSendCoins: FC = () => {
   return (
-    <DocContainer className="AccountManagerSendCoins" title="Send Coins">
+    <DocContainer className="AccountManagerSendCoins" title="Send Coins" lastUpdated="07 Dec 2020">
       <p>
         To send coins, first click on the "Send Coins" button at the top of any account page (yours or your friends). A
         form will appear asking from which one of your accounts you would like to send coins from as well as for the

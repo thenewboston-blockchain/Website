@@ -6,7 +6,7 @@ import ConfirmationValidatorOverview from './ConfirmationValidatorOverview.png';
 
 const GuideValidators: FC = () => {
   return (
-    <DocContainer className="GuideValidators" title="Validators">
+    <DocContainer className="GuideValidators" title="Validators" lastUpdated="07 Dec 2020">
       <p>
         The purpose of the validator is most importantly to validate transactions. As we discussed in a previous
         section, upon validation of a block the validator will append that block onto their blockchain and also update

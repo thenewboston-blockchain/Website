@@ -4,7 +4,7 @@ import {DocContainer, DocList} from 'components';
 
 const GuideBestPractices: FC = () => {
   return (
-    <DocContainer className="GuideBestPractices" title="Best Practices">
+    <DocContainer className="GuideBestPractices" title="Best Practices" lastUpdated="07 Dec 2020">
       <p>In this section we will review some best practices regarding the network as a whole.</p>
 
       <DocList variant="ol">

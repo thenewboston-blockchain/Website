@@ -7,7 +7,7 @@ import GetStarted from './GetStarted.png';
 
 const AccountManagerGetStarted: FC = () => {
   return (
-    <DocContainer className="AccountManagerGetStarted" title="Get Started">
+    <DocContainer className="AccountManagerGetStarted" title="Get Started" lastUpdated="07 Dec 2020">
       <p>
         When the application is first started, it will attempt to automatically connect to the network. If successful
         you will be prompted to either create a new account or add an existing account. To create a new account, simply

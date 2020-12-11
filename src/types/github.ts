@@ -73,6 +73,7 @@ export enum Repository {
   kotlinSdk = 'Kotlin-SDK',
   thenewbostonPython = 'thenewboston-python',
   thenewbostonPythonclient = 'thenewboston-python-client',
+  thenewbostonJs = 'thenewboston-js',
   validator = 'Validator',
   website = 'Website',
 }
