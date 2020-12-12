@@ -93,7 +93,7 @@ const DeploymentGuideValidator: FC = () => {
   );
 
   return (
-    <DocContainer className="DeploymentGuideValidator" title="Validator Deployment Guide">
+    <DocContainer className="DeploymentGuideValidator" title="Validator Deployment Guide" lastUpdated="07 Dec 2020">
       <p>This guide will detail the deployment instructions for both primary validators and confirmation validators.</p>
       <KeyGeneration />
       <InstallDependencies />

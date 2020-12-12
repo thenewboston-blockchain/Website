@@ -5,7 +5,11 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
 
 const ConfirmationValidatorApiBankConfirmationServices: FC = () => {
   return (
-    <DocContainer className="ConfirmationValidatorApiBankConfirmationServices" title="Bank Confirmation Services">
+    <DocContainer
+      className="ConfirmationValidatorApiBankConfirmationServices"
+      title="Bank Confirmation Services"
+      lastUpdated="07 Dec 2020"
+    >
       <p>
         Bank confirmation services are created by the confirmation validator when a transaction is received from a
         connected bank. Upon receiving this payment, it is implied that the sending bank is purchasing confirmation

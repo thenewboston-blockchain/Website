@@ -11,20 +11,24 @@ interface ComponentProps {
   id?: string;
   introSection?: ReactNode;
   introTitle?: ReactNode;
+  lastUpdated?: string;
   title: ReactNode;
 }
 
-const DocContainer: FC<ComponentProps> = ({children, className, id, introSection, introTitle, title}) => {
+const DocContainer: FC<ComponentProps> = ({children, className, id, introSection, introTitle, title, lastUpdated}) => {
   return (
     <section className={clsx('DocContainer', className)}>
       {introTitle ? (
-        <h1
-          className={clsx('DocContainer__page-title', {
-            ...getCustomClassNames(className, '__page-title', true),
-          })}
-        >
-          {introTitle}
-        </h1>
+        <div className="DocContainer__wrapper">
+          <h1
+            className={clsx('DocContainer__page-title', {
+              ...getCustomClassNames(className, '__page-title', true),
+            })}
+          >
+            {introTitle}
+          </h1>
+          {Boolean(lastUpdated) && <span className="DocContainer__last-updated">Updated on {lastUpdated}</span>}
+        </div>
       ) : null}
       {introSection ? (
         <>
@@ -32,15 +36,18 @@ const DocContainer: FC<ComponentProps> = ({children, className, id, introSection
           <div className={clsx('DocContainer__divider')} />
         </>
       ) : null}
-      <h1
-        className={clsx('DocContainer__page-title', {
-          ...getCustomClassNames(className, '__page-title', true),
-        })}
-        id={id}
-      >
-        {title}
-        {id ? <HashLink className="DocContainer__HashLink" id={id} /> : null}
-      </h1>
+      <div className="DocContainer__wrapper">
+        <h1
+          className={clsx('DocContainer__page-title', {
+            ...getCustomClassNames(className, '__page-title', true),
+          })}
+          id={id}
+        >
+          {title}
+          {id ? <HashLink className="DocContainer__HashLink" id={id} /> : null}
+        </h1>
+        {Boolean(lastUpdated) && <span className="DocContainer__last-updated">Updated on {lastUpdated}</span>}
+      </div>
       {children}
     </section>
   );

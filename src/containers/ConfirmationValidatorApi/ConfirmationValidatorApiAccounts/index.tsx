@@ -4,7 +4,7 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'co
 
 const ConfirmationValidatorApiAccounts: FC = () => {
   return (
-    <DocContainer className="ConfirmationValidatorApiAccounts" title="Accounts">
+    <DocContainer className="ConfirmationValidatorApiAccounts" title="Accounts" lastUpdated="07 Dec 2020">
       <p>
         The confirmation validators will maintain the account numbers, balances and balance locks for all accounts on
         the network.

@@ -5,7 +5,7 @@ import {DocContainer, DocEndpoint, DocList, RequestResponseSnippet, TableParams}
 
 const BankApiConfirmationBlocks: FC = () => {
   return (
-    <DocContainer className="BankApiConfirmationBlocks" title="Confirmation Blocks">
+    <DocContainer className="BankApiConfirmationBlocks" title="Confirmation Blocks" lastUpdated="07 Dec 2020">
       <p>
         Confirmation blocks are blocks that have been signed by a validator as confirmation that it has been added to
         their blockchain. The general flow from bank account to confirmation block is as follows:

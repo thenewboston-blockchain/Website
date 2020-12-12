@@ -22,7 +22,12 @@ enum StyleGuideCssNav {
 
 const StyleGuideCss: FC = () => {
   return (
-    <DocContainer className="StyleGuideCss" id={StyleGuideCssNav.header} title="CSS / SASS Style Guide">
+    <DocContainer
+      className="StyleGuideCss"
+      id={StyleGuideCssNav.header}
+      title="CSS / SASS Style Guide"
+      lastUpdated="07 Dec 2020"
+    >
       <p>
         One of our primary motivators when choosing a technology is to pick technologies that are widespread in
         professional use, as well as it being relatively easy to learn. For that reason, we chose to go with{' '}
