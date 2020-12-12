@@ -95,7 +95,7 @@ const GuideResyncProcess: FC = () => {
   );
 
   return (
-    <DocContainer className="GuideResyncProcess" title="Resync Process">
+    <DocContainer className="GuideResyncProcess" title="Resync Process" lastUpdated="07 Dec 2020">
       <p>The resync process is the same no matter which resync trigger initiated the event.</p>
       <DocSubSection id={GuideResyncProcessNav.upgradeRequest} title="Upgrade Request">
         {renderUpgradeRequest()}

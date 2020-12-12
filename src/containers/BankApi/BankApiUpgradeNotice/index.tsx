@@ -5,7 +5,7 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'co
 
 const BankApiUpgradeNotice: FC = () => {
   return (
-    <DocContainer className="BankApiUpgradeNotice" title="Upgrade Notice">
+    <DocContainer className="BankApiUpgradeNotice" title="Upgrade Notice" lastUpdated="07 Dec 2020">
       <p>
         After a confirmation validator has upgraded to a primary validator, it will send out an upgrade notice to all
         connected banks.

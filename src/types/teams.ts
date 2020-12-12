@@ -57,3 +57,7 @@ export interface TeamMember {
   teams: TeamLead[];
   titles: string[];
 }
+
+export interface TeamsUrlParams {
+  team: string;
+}

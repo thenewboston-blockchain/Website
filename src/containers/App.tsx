@@ -68,7 +68,8 @@ const App: FC = () => {
           <Route exact path="/social" component={Social} />
           <Redirect exact from="/tasks" to="/tasks/All" />
           <Route exact path="/tasks/:repository" component={Tasks} />
-          <Route exact path="/teams" component={Teams} />
+          <Redirect exact path="/teams" to="/teams/All" />
+          <Route exact path="/teams/:team" component={Teams} />
           <Route path="/account-manager/:chapter?" component={AccountManager} />
           <Route path="/bank-api/:chapter?" component={BankApi} />
           <Route path="/confirmation-validator-api/:chapter?" component={ConfirmationValidatorApi} />
@@ -80,7 +81,7 @@ const App: FC = () => {
           <Route path="/project-proposals/:chapter?" component={ProjectProposals} />
           <Route path="/style-guide/:chapter?" component={StyleGuide} />
           <Route path="/user/signin/callback" component={Auth} />
-          <Route path="/user/profile" component={Profile} />
+          <Route path="/user/profile" render={() => <Profile github_username="jamessspanggg" />} />
           <Redirect to="/" />
         </Switch>
       </Layout>
