@@ -16,6 +16,7 @@ import ChevronUpIcon from 'mdi-react/ChevronUpIcon';
 import CloseIcon from 'mdi-react/CloseIcon';
 import ContentCopyIcon from 'mdi-react/ContentCopyIcon';
 import CurrencyUsdIcon from 'mdi-react/CurrencyUsdIcon';
+import DiscordIcon from 'mdi-react/DiscordIcon';
 import DownloadIcon from 'mdi-react/DownloadIcon';
 import EarthIcon from 'mdi-react/EarthIcon';
 import FacebookIcon from 'mdi-react/FacebookIcon';
@@ -42,7 +43,6 @@ import ThumbsUpIcon from 'mdi-react/ThumbsUpIcon';
 import TrophyIcon from 'mdi-react/TrophyIcon';
 import TwitterIcon from 'mdi-react/TwitterIcon';
 import YoutubeIcon from 'mdi-react/YoutubeIcon';
-import DiscordIcon from 'mdi-react/DiscordIcon';
 
 import {getCustomClassNames} from 'utils/components';
 import './Icon.scss';
@@ -62,6 +62,7 @@ export enum IconType {
   close,
   contentCopy,
   currencyUsd,
+  discord,
   downloadIcon,
   earth,
   facebook,
@@ -88,7 +89,6 @@ export enum IconType {
   trophy,
   twitter,
   youtube,
-  discord,
 }
 
 interface ComponentProps {
@@ -136,6 +136,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
           return <ContentCopyIcon {...iconProps} />;
         case IconType.currencyUsd:
           return <CurrencyUsdIcon {...iconProps} />;
+        case IconType.discord:
+          return <DiscordIcon {...iconProps} />;
         case IconType.downloadIcon:
           return <DownloadIcon {...iconProps} />;
         case IconType.earth:
@@ -188,8 +190,6 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
           return <TwitterIcon {...iconProps} />;
         case IconType.youtube:
           return <YoutubeIcon {...iconProps} />;
-        case IconType.discord:
-          return <DiscordIcon {...iconProps} />;
         default:
           return null;
       }
