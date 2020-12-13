@@ -5,10 +5,14 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
 
 const ConfirmationValidatorApiBankConfirmationServices: FC = () => {
   return (
-    <DocContainer className="ConfirmationValidatorApiBankConfirmationServices" title="Bank Confirmation Services">
+    <DocContainer
+      className="ConfirmationValidatorApiBankConfirmationServices"
+      title="Bank Confirmation Services"
+      lastUpdated="07 Dec 2020"
+    >
       <p>
         Bank confirmation services are created by the confirmation validator when a transaction is received from a
-        connected bank. Upon receiving this payment it is implied that the sending bank is purchasing confirmation
+        connected bank. Upon receiving this payment, it is implied that the sending bank is purchasing confirmation
         services.
       </p>
       <p>
@@ -24,20 +28,20 @@ const ConfirmationValidatorApiBankConfirmationServices: FC = () => {
   "previous": null,
   "results": [
     {
-      "id": "09e96a28-4d71-4123-85a3-882a9bdad114",
-      "created_date": "2020-09-11T02:15:13.638227Z",
-      "modified_date": "2020-09-11T02:15:13.638326Z",
-      "end": "2020-09-23T00:06:55.320993Z",
-      "start": "2020-09-20T00:06:55.320993Z",
-      "bank": "b58b4b8a-d8f9-4395-a0de-f9df150bb093"
+      "id": "120a1b5d-8978-4fa5-a5dc-66dbe8ddbd75",
+      "created_date": "2020-11-29T19:29:12.656665Z",
+      "modified_date": "2020-11-29T19:29:12.656704Z",
+      "end": "2020-11-30T19:28:36Z",
+      "start": "2020-11-29T19:29:10Z",
+      "bank": "c6ad67ee-d9b8-4c8f-ba62-f46213119689"
     },
     {
-      "id": "6caa533f-34e6-4c65-84a5-5c4516cb71e8",
-      "created_date": "2020-09-11T02:16:08.014656Z",
-      "modified_date": "2020-09-11T02:16:08.014697Z",
-      "end": "2020-09-25T12:06:55.320993Z",
-      "start": "2020-09-23T00:06:55.320993Z",
-      "bank": "b58b4b8a-d8f9-4395-a0de-f9df150bb093"
+      "id": "cc56651f-b4e9-487d-82b9-64774a11a4e5",
+      "created_date": "2020-11-29T19:30:21.485785Z",
+      "modified_date": "2020-11-29T19:30:21.485832Z",
+      "end": "2020-12-02T19:30:16Z",
+      "start": "2020-11-29T19:30:18Z",
+      "bank": "c6ad67ee-d9b8-4c8f-ba62-f46213119689"
     }
   ]
 }`}

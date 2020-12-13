@@ -5,16 +5,18 @@ export enum TeamName {
   design = 'Design',
   devOps = 'DevOps',
   discordManagers = 'Discord Managers',
+  dotnetCore = '.NET Core',
   frontEndDevelopers = 'Front-End Developers',
   kotlinSDK = 'Kotlin SDK',
   marketing = 'Marketing',
+  newUserOperations = 'New User Operations',
   payments = 'Payments',
   penetrationTesting = 'Penetration Testing',
+  projectProposals = 'Project Proposals',
   qa = 'QA',
   redditModerators = 'Reddit Moderators',
   research = 'Research',
   security = 'Security',
-  slackManagers = 'Slack Managers',
   youtube = 'YouTube',
 }
 
@@ -31,12 +33,11 @@ export interface Team {
   title: string;
 }
 
-interface TeamContributor {
+export interface TeamContributor {
   contributor: Contributor;
   createdDate: string;
   isLead: boolean;
   payPerDay: number;
-  team: Team;
   title: string;
 }
 
@@ -55,4 +56,8 @@ export interface TeamMember {
   slackUsername: string;
   teams: TeamLead[];
   titles: string[];
+}
+
+export interface TeamsUrlParams {
+  team: string;
 }

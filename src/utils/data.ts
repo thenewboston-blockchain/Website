@@ -8,6 +8,10 @@ import openings from 'data/openings.json';
 import tasks from 'data/tasks.json';
 import teams from 'data/teams.json';
 
+export const getContributorByGithubUsername = (github_username: string): Contributor | undefined => {
+  return contributors.find((contributor) => contributor.github_username === github_username);
+};
+
 export const getContributors = (): Contributor[] => {
   return contributors;
 };
@@ -31,11 +35,48 @@ export const getTasks = (): TaskDict => {
   return results;
 };
 
+export const getTeamMemberByGithubUsername = (github_username: string): TeamMember | undefined => {
+  let member: TeamMember | undefined;
+
+  teams.forEach((team) => {
+    const {title: teamTitle, contributors: teamContributors} = team;
+    teamContributors.forEach((teamMember: any) => {
+      if (teamMember.contributor.githubUsername === github_username) {
+        const {title: userTitle, isLead, payPerDay, contributor} = teamMember;
+        const {contributorId, ...otherProps} = contributor;
+        if (!member) {
+          member = {
+            contributorId,
+            isLead,
+            payPerDay,
+            teams: [{isLead, title: teamTitle}],
+            titles: [userTitle],
+            ...otherProps,
+          };
+        } else {
+          const {teams: addedTeams, titles, isLead: isLeadForAddedTeams} = member;
+          const teamNameExists =
+            addedTeams.findIndex(({title}: {title: string}) => title.toLowerCase() === teamTitle.toLowerCase()) !== -1;
+          const titleExists =
+            titles.findIndex((title: string) => title.toLowerCase() === userTitle.toLowerCase()) !== -1;
+          member = {
+            ...member,
+            isLead: isLeadForAddedTeams || isLead,
+            teams: teamNameExists ? addedTeams : addedTeams.concat([{isLead, title: teamTitle}]),
+            titles: titleExists ? titles : titles.concat([userTitle]),
+          };
+        }
+      }
+    });
+  });
+
+  return member;
+};
+
 export const getTeamMembers = (): TeamMember[] => {
   const members: any = {};
   teams.forEach((team) => {
-    const {title: teamTitle, contributors: teamContributors} = team;
-    teamContributors.forEach((teamMember) => {
+    team.contributors.forEach((teamMember: any) => {
       const {title: userTitle, isLead, payPerDay, createdDate, contributor} = teamMember;
       const {contributorId, ...otherProps} = contributor;
       if (!members[contributorId]) {
@@ -44,7 +85,7 @@ export const getTeamMembers = (): TeamMember[] => {
           createdDate,
           isLead,
           payPerDay,
-          teams: [{isLead, title: teamTitle}],
+          teams: [{isLead, title: team.title}],
           titles: [userTitle],
           ...otherProps,
         };
@@ -52,12 +93,12 @@ export const getTeamMembers = (): TeamMember[] => {
         const member = members[contributorId];
         const {teams: addedTeams, titles, isLead: isLeadForAddedTeams} = member;
         const teamNameExists =
-          addedTeams.findIndex(({title}: {title: string}) => title.toLowerCase() === teamTitle.toLowerCase()) !== -1;
+          addedTeams.findIndex(({title}: {title: string}) => title.toLowerCase() === team.title.toLowerCase()) !== -1;
         const titleExists = titles.findIndex((title: string) => title.toLowerCase() === userTitle.toLowerCase()) !== -1;
         members[contributorId] = {
           ...member,
           isLead: isLeadForAddedTeams || isLead,
-          teams: teamNameExists ? addedTeams : addedTeams.concat([{isLead, title: teamTitle}]),
+          teams: teamNameExists ? addedTeams : addedTeams.concat([{isLead, title: team.title}]),
           titles: titleExists ? titles : titles.concat([userTitle]),
         };
       }

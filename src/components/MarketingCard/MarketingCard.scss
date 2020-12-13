@@ -1,0 +1,58 @@
+.MarketingCard {
+  align-items: center;
+  background: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 0 4px rgba(4, 34, 53, 0.3);
+  color: var(--color-primary);
+  column-gap: 18px;
+  display: grid;
+  grid-template-columns: 30px auto;
+  margin: 12px;
+  max-width: 392px;
+  padding: 18px;
+  row-gap: 12px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+
+  &__description {
+    grid-column: 1 / 3;
+
+    &__handle {
+      display: none;
+      font-weight: 600;
+    }
+  }
+
+  &__handle {
+    font-weight: 600;
+    grid-column: 2;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    column-gap: 24px;
+    max-width: 540px;
+    padding: 18px 24px;
+
+    &__description {
+      grid-column: 2;
+
+      &__handle {
+        display: inline;
+      }
+    }
+
+    &__handle {
+      display: none;
+    }
+
+    &__img {
+      grid-row: 1;
+    }
+  }
+}

@@ -9,7 +9,7 @@ import FullSystem from './FullSystem.png';
 
 const GuideConfirmationServices: FC = () => {
   return (
-    <DocContainer className="GuideConfirmationServices" title="Confirmation Services">
+    <DocContainer className="GuideConfirmationServices" title="Confirmation Services" lastUpdated="07 Dec 2020">
       <p>
         Confirmation validators are able to provide confirmation services to all banks in the network. These services
         are offered at a time based rate, which is determined by the confirmation validators themselves. Confirmation

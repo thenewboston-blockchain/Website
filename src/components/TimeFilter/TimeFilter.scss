@@ -7,14 +7,15 @@
   }
 
   &__option {
+    background: transparent;
+    border: 0;
     color: var(--color-sail-gray-400);
     cursor: pointer;
     font-weight: 700;
+    line-height: 1.5;
     margin-left: 12px;
-
-    &:focus {
-      outline: none;
-    }
+    outline: none;
+    padding: 0;
 
     &:hover {
       color: var(--color-primary);

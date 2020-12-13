@@ -69,7 +69,11 @@ export enum Repository {
   all = 'All',
   accountManager = 'Account-Manager',
   bank = 'Bank',
+  design = 'Design',
+  kotlinSdk = 'Kotlin-SDK',
   thenewbostonPython = 'thenewboston-python',
+  thenewbostonPythonclient = 'thenewboston-python-client',
+  thenewbostonJs = 'thenewboston-js',
   validator = 'Validator',
   website = 'Website',
 }

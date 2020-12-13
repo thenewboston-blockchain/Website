@@ -5,7 +5,7 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'co
 
 const BankApiBlocks: FC = () => {
   return (
-    <DocContainer className="BankApiBlocks" title="Blocks">
+    <DocContainer className="BankApiBlocks" title="Blocks" lastUpdated="07 Dec 2020">
       <p>
         A block is a group of one or more transactions. There are often multiple transactions (usually fees) to
         different recipients within a single block.
@@ -16,33 +16,44 @@ const BankApiBlocks: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/blocks" method="GET" />
+      <TableParams
+        items={[
+          {
+            dataType: 'URL parameter',
+            description: 'If you want to start at a specific point, an offset can be specified.',
+            param: 'offset',
+          },
+          {
+            dataType: 'URL parameter',
+            description: 'Maximum number of block returned by the node. (max: 100)',
+            param: 'limit',
+          },
+        ]}
+      />
       <RequestResponseSnippet
-        code={`[
-  {
-    "id": "c1ad29ef-7342-4bf2-9e8c-f31379b4dcee",
-    "created_date": "2020-07-09T04:36:44.061174Z",
-    "modified_date": "2020-07-09T04:36:44.061197Z",
-    "balance_key": "218b4d6348a1f17eb4479a3fdcefa1859ea1d27918051412d00d8e275c19d5a8",
-    "sender": "0cdd4ba04456ca169baca3d66eace869520c62fe84421329086e03d91a68acdb",
-    "signature": "a9660b77062877c040fc9fd62d994ee2ae47da0969172e04fe992510f703dfd9055e20ddd957c34cc7683db8fc3bc684ae35074cc25b9982a375a8d618697c0c"
-  },
-  {
-    "id": "feb02965-bce6-4860-ae60-93884bfac245",
-    "created_date": "2020-07-09T04:37:00.118328Z",
-    "modified_date": "2020-07-09T04:37:00.118353Z",
-    "balance_key": "e7174d983d4a85e25f352eb0d083a1d54243ecdc60a7d4ca548742f48a10c342",
-    "sender": "0cdd4ba04456ca169baca3d66eace869520c62fe84421329086e03d91a68acdb",
-    "signature": "5e3697fcb48d9bc4b6418f2839e699fe2189b0642802ab1c52e97dba1bc2693fba86b2c68f4b962b90f2a2a7d646b41da85a467e970bfbcfc2033c0aac357707"
-  },
-  {
-    "id": "d0e8a43e-75d7-4dbf-9ab2-1b3a25feeb29",
-    "created_date": "2020-07-09T04:37:21.589858Z",
-    "modified_date": "2020-07-09T04:37:21.589883Z",
-    "balance_key": "4375649fe1ee0b72df2001044a0a26ddb3feb45542ce47323ba587d371b70cff",
-    "sender": "0cdd4ba04456ca169baca3d66eace869520c62fe84421329086e03d91a68acdb",
-    "signature": "dcde90868e77259a0c22c7e97236c1de6d265c1c0d6a00850bd31d3ae3058d9500467fea6a06f4c365bb212ea9fdecbeb542aa70cd05dabe1e14c7566c2b2c0f"
-  }
-]`}
+        code={`{
+  "count": 805,
+  "next": "http://143.110.137.54/blocks?limit=2&offset=2",
+  "previous": null,
+  "results": [
+    {
+      "id": "c6fc11cf-8948-4d32-96c9-d56caa6d5b24",
+      "created_date": "2020-10-08T02:18:07.324999Z",
+      "modified_date": "2020-10-08T02:18:07.325044Z",
+      "balance_key": "a37e2836805975f334108b55523634c995bd2a4db610062f404510617e83126f",
+      "sender": "a37e2836805975f334108b55523634c995bd2a4db610062f404510617e83126f",
+      "signature": "a2ba346d98cb1f7ce6bf017240d674a9928796ddb564a2c8817e68ead0ea02d960e970fe581c6d3a25b9876e1873d51c882b23d843e32f511d9575ef60d2940d"
+    },
+    {
+      "id": "797b7324-905f-42e1-95a3-df918d01e3b0",
+      "created_date": "2020-10-08T02:18:48.575966Z",
+      "modified_date": "2020-10-08T02:18:48.576030Z",
+      "balance_key": "92b9360e31f5ae4fa074ee5e03322aff6c275872e2afc31fbd523f022f18e421",
+      "sender": "a37e2836805975f334108b55523634c995bd2a4db610062f404510617e83126f",
+      "signature": "54875b5fa4db317133b7195d5afa43e5d7c7659970b5c07f7408fb43524573ee0db3078daffa3a5fc341c6851a85c5128d8a79b8f71d5f7d87e275ccca1e8408"
+    }
+  ]
+}`}
         heading="Response"
       />
 

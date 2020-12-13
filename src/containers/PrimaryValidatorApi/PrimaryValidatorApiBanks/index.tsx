@@ -1,27 +1,73 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
+import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
 
 const PrimaryValidatorApiBanks: FC = () => {
   return (
-    <DocContainer className="PrimaryValidatorApiBanks" title="Banks">
+    <DocContainer className="PrimaryValidatorApiBanks" title="Banks" lastUpdated="07 Dec 2020">
       <p>The primary validator will maintain a record of all connected banks on the network.</p>
 
       <DocEndpoint endpoint="/banks" method="GET" />
+      <TableParams
+        items={[
+          {
+            dataType: 'URL parameter',
+            description: 'If you want to start at a specific point, an offset can be specified.',
+            param: 'offset',
+          },
+          {
+            dataType: 'URL parameter',
+            description: 'Maximum number of block returned by the node. (max: 100)',
+            param: 'limit',
+          },
+        ]}
+      />
       <RequestResponseSnippet
-        code={`[
-  {
-    "account_number": "5e12967707909e62b2bb2036c209085a784fabbc3deccefee70052b6181c8ed8",
-    "ip_address": "192.168.1.232",
-    "node_identifier": "d5356888dc9303e44ce52b1e06c3165a7759b9df1e6a6dfbd33ee1c3df1ab4d1",
-    "port": 8000,
-    "protocol": "http",
-    "version": "v1.0",
-    "default_transaction_fee": "1.0000000000000000",
-    "confirmation_expiration": null,
-    "trust": "0.00"
-  }
-]`}
+        code={`{
+  "count": 20,
+  "next": "http://54.183.17.224/banks?limit=2&offset=2",
+  "previous": null,
+  "results": [
+    {
+      "account_number": "dfddf07ec15cbf363ecb52eedd7133b70b3ec896b488460bcecaba63e8e36be5",
+      "ip_address": "143.110.137.54",
+      "node_identifier": "6dbaff44058e630cb375955c82b0d3bd7bc7e20cad93e74909a8951f747fb8a4",
+      "port": null,
+      "protocol": "http",
+      "version": "v1.0",
+      "default_transaction_fee": 1,
+      "confirmation_expiration": null,
+      "trust": "0.00"
+    },
+    {
+      "account_number": "7977b7f7a6f52bf9ebda93694d9276e9e23049eb40b263799fb2a35fa9316b9b",
+      "ip_address": "143.110.141.4",
+      "node_identifier": "735bfc11f802dbb8365998703539823d751ac5f5f82905143fba8a84d967f29b",
+      "port": null,
+      "protocol": "http",
+      "version": "v1.0",
+      "default_transaction_fee": 2,
+      "confirmation_expiration": null,
+      "trust": "0.00"
+    }
+  ]
+}`}
+        heading="Response"
+      />
+
+      <DocEndpoint endpoint="/banks/<node_identifier>" method="GET" />
+      <RequestResponseSnippet
+        code={`{
+  "account_number": "dfddf07ec15cbf363ecb52eedd7133b70b3ec896b488460bcecaba63e8e36be5",
+  "ip_address": "143.110.137.54",
+  "node_identifier": "6dbaff44058e630cb375955c82b0d3bd7bc7e20cad93e74909a8951f747fb8a4",
+  "port": null,
+  "protocol": "http",
+  "version": "v1.0",
+  "default_transaction_fee": 1,
+  "confirmation_expiration": null,
+  "trust": "0.00"
+}`}
         heading="Response"
       />
     </DocContainer>

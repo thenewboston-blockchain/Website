@@ -11,8 +11,7 @@ const Firewall: FC = () => {
     <DocSubSection className="Firewall" id={FirewallNav.firewall} title="Firewall">
       <CodeSnippet
         code={`sudo ufw app list
-sudo ufw allow 'Nginx Full' && sudo ufw allow OpenSSH && sudo ufw enable
-`}
+sudo ufw allow 'Nginx Full' && sudo ufw allow OpenSSH && sudo ufw enable`}
         heading="Enable firewall"
       />
       <CodeSnippet

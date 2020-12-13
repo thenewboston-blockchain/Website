@@ -1,5 +1,5 @@
 $dropdown-height: 316px;
-$mobile-dropdown-height: 475px;
+$mobile-dropdown-height: 510px;
 $top-nav-height: 60px;
 
 @keyframes addOverlay {
@@ -101,18 +101,18 @@ $top-nav-height: 60px;
       box-shadow: 0 6px 6px rgba(4, 34, 53, 0.3);
       display: flex;
       height: $dropdown-height;
+      left: 0;
       padding: 60px;
       position: fixed;
       top: $top-nav-height;
-      left: 0;
       width: 100vw;
       z-index: 2;
 
       @media (max-width: 576px) {
         animation: mobileSlideDown 0.3s forwards;
-        padding: 18px 36px;
         flex-direction: column;
         height: $mobile-dropdown-height;
+        padding: 18px 36px;
       }
     }
 
@@ -121,6 +121,7 @@ $top-nav-height: 60px;
       border: none;
       color: var(--color-primary);
       display: block;
+      height: 18px;
       margin-bottom: 24px;
       padding: 0;
       text-align: unset;

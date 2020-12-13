@@ -1,44 +1,82 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
+import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
 
 const ConfirmationValidatorApiValidators: FC = () => {
   return (
-    <DocContainer className="ConfirmationValidatorApiValidators" title="Validators">
+    <DocContainer className="ConfirmationValidatorApiValidators" title="Validators" lastUpdated="07 Dec 2020">
       <p>Confirmation validators will maintain a record of all connected validators.</p>
 
       <DocEndpoint endpoint="/validators" method="GET" />
+      <TableParams
+        items={[
+          {
+            dataType: 'URL parameter',
+            description: 'If you want to start at a specific point, an offset can be specified.',
+            param: 'offset',
+          },
+          {
+            dataType: 'URL parameter',
+            description: 'Maximum number of block returned by the node. (max: 100)',
+            param: 'limit',
+          },
+        ]}
+      />
       <RequestResponseSnippet
-        code={`[
-  {
-    "account_number": "4d2ec91f37bc553bc538e91195669b666e26b2ea3e4e31507e38102a758d4f86",
-    "ip_address": "192.168.1.65",
-    "node_identifier": "59479a31c3b91d96bb7a0b3e07f18d4bf301f1bb0bde05f8d36d9611dcbe7cbf",
-    "port": 8000,
-    "protocol": "http",
-    "version": "v1.0",
-    "default_transaction_fee": "4.0000000000000000",
-    "root_account_file": "https://gist.githubusercontent.com/buckyroberts/519b5cb82a0a5b5d4ae8a2175b722520/raw/9237deb449e27cab93cb89ea3346ecdfc61fe9ea/0.json",
-    "root_account_file_hash": "4694e1ee1dcfd8ee5f989e59ae40a9f751812bf5ca52aca2766b322c4060672b",
-    "seed_block_identifier": "",
-    "daily_confirmation_rate": null,
-    "trust": "100.00"
-  },
-  {
-    "account_number": "ad1f8845c6a1abb6011a2a434a079a087c460657aad54329a84b406dce8bf314",
-    "ip_address": "192.168.1.75",
-    "node_identifier": "3afdf37573f1a511def0bd85553404b7091a76bcd79cdcebba1310527b167521",
-    "port": 8000,
-    "protocol": "http",
-    "version": "v1.0",
-    "default_transaction_fee": "4.0000000000000000",
-    "root_account_file": "https://gist.githubusercontent.com/buckyroberts/519b5cb82a0a5b5d4ae8a2175b722520/raw/9237deb449e27cab93cb89ea3346ecdfc61fe9ea/0.json",
-    "root_account_file_hash": "4694e1ee1dcfd8ee5f989e59ae40a9f751812bf5ca52aca2766b322c4060672b",
-    "seed_block_identifier": "",
-    "daily_confirmation_rate": null,
-    "trust": "100.00"
-  }
-]`}
+        code={`{
+  "count": 10,
+  "next": "http://54.219.178.46/validators?limit=2&offset=6",
+  "previous": "http://54.219.178.46/validators?limit=2&offset=2",
+  "results": [
+    {
+      "account_number": "4699a423c455a40feb1d6b90b167584a880659e1bf9adf9954a727d534ff0c16",
+      "ip_address": "54.219.178.46",
+      "node_identifier": "b1b232503b3db3975524faf98674f22c83f4357c3d946431b8a8568715d7e1d9",
+      "port": null,
+      "protocol": "http",
+      "version": "v1.0",
+      "default_transaction_fee": 1,
+      "root_account_file": "http://54.219.178.46/media/root_account_file.json",
+      "root_account_file_hash": "cc9390cc579dc8a99a1f34c1bea5d54a0f45b27ecee7e38662f0cd853f76744d",
+      "seed_block_identifier": "",
+      "daily_confirmation_rate": 1,
+      "trust": "100.00"
+    },
+    {
+      "account_number": "2e86f48216567302527b69eae6c6a188097ed3a9741f43cc3723e570cf47644c",
+      "ip_address": "54.183.17.224",
+      "node_identifier": "2262026a562b0274163158e92e8fbc4d28e519bc5ba8c1cf403703292be84a51",
+      "port": null,
+      "protocol": "http",
+      "version": "v1.0",
+      "default_transaction_fee": 1,
+      "root_account_file": "http://54.183.17.224/media/root_account_file.json",
+      "root_account_file_hash": "cc9390cc579dc8a99a1f34c1bea5d54a0f45b27ecee7e38662f0cd853f76744d",
+      "seed_block_identifier": "",
+      "daily_confirmation_rate": null,
+      "trust": "100.00"
+    }
+  ]
+}`}
+        heading="Response"
+      />
+
+      <DocEndpoint endpoint="/validators/<node_identifier>" method="GET" />
+      <RequestResponseSnippet
+        code={`{
+  "account_number": "4699a423c455a40feb1d6b90b167584a880659e1bf9adf9954a727d534ff0c16",
+  "ip_address": "54.219.178.46",
+  "node_identifier": "b1b232503b3db3975524faf98674f22c83f4357c3d946431b8a8568715d7e1d9",
+  "port": null,
+  "protocol": "http",
+  "version": "v1.0",
+  "default_transaction_fee": 1,
+  "root_account_file": "http://54.219.178.46/media/root_account_file.json",
+  "root_account_file_hash": "cc9390cc579dc8a99a1f34c1bea5d54a0f45b27ecee7e38662f0cd853f76744d",
+  "seed_block_identifier": "",
+  "daily_confirmation_rate": 1,
+  "trust": "100.00"
+}`}
         heading="Response"
       />
     </DocContainer>

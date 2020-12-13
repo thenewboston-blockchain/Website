@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {A, CopyableAccountNumber, Qr, SlideUp} from 'components';
+import {A, Avatar, CopyableAccountNumber, Qr, SlideUp} from 'components';
 
 import './SlideUpAccountDetails.scss';
 
@@ -28,7 +28,7 @@ const SlideUpAccountDetails: FC<ComponentProps> = ({account_number, close, githu
     <SlideUp className="SlideUpAccountDetails__SlideUp" close={close}>
       <div className="SlideUpAccountDetails__inner-wrapper">
         <div>
-          <img className="SlideUpAccountDetails__user-avatar" src={github_avatar_url} alt={github_username} />
+          <Avatar alt={github_username} size={54} src={github_avatar_url} />
         </div>
         {renderRight()}
       </div>
