@@ -5,7 +5,7 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'co
 
 const BankApiAccounts: FC = () => {
   return (
-    <DocContainer className="BankApiAccounts" title="Accounts">
+    <DocContainer className="BankApiAccounts" title="Accounts" lastUpdated="07 Dec 2020">
       <p>
         Banks will store information of all accounts that have sent blocks through them. Banks will also assign a trust
         level to each account they are tracking in order to determine future transactions fees. More trusted accounts
@@ -17,26 +17,44 @@ const BankApiAccounts: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/accounts" method="GET" />
+      <TableParams
+        items={[
+          {
+            dataType: 'URL parameter',
+            description: 'If you want to start at a specific point, an offset can be specified.',
+            param: 'offset',
+          },
+          {
+            dataType: 'URL parameter',
+            description: 'Maximum number of block returned by the node. (max: 100)',
+            param: 'limit',
+          },
+        ]}
+      />
       <RequestResponseSnippet
-        code={`[
-  {
-    "id": "9eca00a5-d925-454c-a8d6-ecbb26ec2f76",
-    "created_date": "2020-07-08T02:14:59.307535Z",
-    "modified_date": "2020-07-08T02:14:59.307553Z",
-    "account_number": "4d2ec91f37bc553bc538e91195669b666e26b2ea3e4e31507e38102a758d4f86",
-    "trust": "75.21"
-  },
-  {
-    "id": "ae4d43b0-5c34-4e56-8266-0e3531268815",
-    "created_date": "2020-07-08T02:15:12.271834Z",
-    "modified_date": "2020-07-08T02:15:12.271852Z",
-    "account_number": "a29baa6ba36f6db707f8f8dacfa82d5e8a28fa616e8cc96cf6d7790f551d79f2",
-    "trust": "94.63"
-  }
-]`}
+        code={`{
+  "count": 87,
+  "next": "http://143.110.137.54/accounts?limit=2&offset=2",
+  "previous": null,
+  "results": [
+    {
+      "id": "5a8c7990-393a-4299-ae92-2f096a2c7f43",
+      "created_date": "2020-10-08T02:18:07.346849Z",
+      "modified_date": "2020-10-08T02:18:07.346914Z",
+      "account_number": "a37e2836805975f334108b55523634c995bd2a4db610062f404510617e83126f",
+      "trust": "0.00"
+    },
+    {
+      "id": "2682963f-06b1-47d7-a2e1-1f8ec6ae98dc",
+      "created_date": "2020-10-08T02:39:44.071810Z",
+      "modified_date": "2020-10-08T02:39:44.071853Z",
+      "account_number": "cc8fb4ebbd2b9a98a767e801ac2b0d296ced88b5d3b7d6d6e12e1d2d7635d724",
+      "trust": "0.00"
+    }
+  ]
+}`}
         heading="Response"
       />
-
       <DocEndpoint endpoint="/accounts/<account_number>" method="PATCH" />
       <TableParams
         items={[

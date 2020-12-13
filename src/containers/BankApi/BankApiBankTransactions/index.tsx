@@ -1,10 +1,10 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
+import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
 
 const BankApiBankTransactions: FC = () => {
   return (
-    <DocContainer className="BankApiBankTransactions" title="Bank Transactions">
+    <DocContainer className="BankApiBankTransactions" title="Bank Transactions" lastUpdated="07 Dec 2020">
       <p>
         Bank transactions represent a single transaction within a block. They reference both the recipient account and
         the parent block. Bank transactions are stored separate from the block due to the fact that when viewing an
@@ -14,48 +14,54 @@ const BankApiBankTransactions: FC = () => {
       <p>Bank transactions are created automatically by the bank during block processing.</p>
 
       <DocEndpoint endpoint="/bank_transactions" method="GET" />
+      <TableParams
+        items={[
+          {
+            dataType: 'URL parameter',
+            description: 'You can specify an offset, If you want to start at a some specific point.',
+            param: 'offset',
+          },
+          {
+            dataType: 'URL parameter',
+            description: 'Maximum number of bank transaction returned by the node, (max: 100).',
+            param: 'limit',
+          },
+        ]}
+      />
       <RequestResponseSnippet
-        code={`[
-  {
-    "id": "a85a4692-e03d-4419-8b25-813598b367bd",
-    "block": {
-      "id": "e00c5522-1b73-4a46-bd03-629d446eec19",
-      "created_date": "2020-07-14T03:14:36.436771Z",
-      "modified_date": "2020-07-14T03:14:36.436796Z",
-      "balance_key": "efa253d24ee516fe5ed45bb4e47a3146026e97f766df1cdb13663ec62174e214",
-      "sender": "0cdd4ba04456ca169baca3d66eace869520c62fe84421329086e03d91a68acdb",
-      "signature": "a1bbd321ad6d3f74f027de5a2c19457779fe1466708c2ea3dc9bf993a4048471025928cabcea934cf681930657ff661f05452f34630e5ea45d962e828899af00"
+        code={`{
+  "count": 2116,
+  "next": "http://143.110.137.54/bank_transactions?limit=2&offset=52",
+  "previous": "http://143.110.137.54/bank_transactions?limit=2&offset=48",
+  "results": [
+    {
+      "id": "a7fb060d-e442-4dd4-8604-3b0e67f691aa",
+      "block": {
+        "id": "167707b6-ad59-4b59-9bae-875b0cd604e0",
+        "created_date": "2020-11-20T08:11:05.091231Z",
+        "modified_date": "2020-11-20T08:11:05.091279Z",
+        "balance_key": "2088e602b6b742ff9d47495730a22e03841f46accd911541c413b7ef421a62f9",
+        "sender": "f0fe0fdff41db888a0938882502ee809f6874c015aa09e11e38c8452d4175535",
+        "signature": "74508c8a2ca9810938b10443862d2f875375f6e67a9472e5ffcb03dd51d35c485dbf91577a0978e05825c7c2a7a4fcc15623d0573fe48f980c7ccf5e7d55b304"
+      },
+      "amount": 1,
+      "recipient": "dfddf07ec15cbf363ecb52eedd7133b70b3ec896b488460bcecaba63e8e36be5"
     },
-    "amount": "12.5000000000000000",
-    "recipient": "484b3176c63d5f37d808404af1a12c4b9649cd6f6769f35bdf5a816133623fbc"
-  },
-  {
-    "id": "9273bcdb-61c9-4bc3-91c8-ebc4c2fe5894",
-    "block": {
-      "id": "e00c5522-1b73-4a46-bd03-629d446eec19",
-      "created_date": "2020-07-14T03:14:36.436771Z",
-      "modified_date": "2020-07-14T03:14:36.436796Z",
-      "balance_key": "efa253d24ee516fe5ed45bb4e47a3146026e97f766df1cdb13663ec62174e214",
-      "sender": "0cdd4ba04456ca169baca3d66eace869520c62fe84421329086e03d91a68acdb",
-      "signature": "a1bbd321ad6d3f74f027de5a2c19457779fe1466708c2ea3dc9bf993a4048471025928cabcea934cf681930657ff661f05452f34630e5ea45d962e828899af00"
-    },
-    "amount": "1.0000000000000000",
-    "recipient": "5e12967707909e62b2bb2036c209085a784fabbc3deccefee70052b6181c8ed8"
-  },
-  {
-    "id": "7f5cf013-f58a-4e80-97aa-f03309b1a4dd",
-    "block": {
-      "id": "e00c5522-1b73-4a46-bd03-629d446eec19",
-      "created_date": "2020-07-14T03:14:36.436771Z",
-      "modified_date": "2020-07-14T03:14:36.436796Z",
-      "balance_key": "efa253d24ee516fe5ed45bb4e47a3146026e97f766df1cdb13663ec62174e214",
-      "sender": "0cdd4ba04456ca169baca3d66eace869520c62fe84421329086e03d91a68acdb",
-      "signature": "a1bbd321ad6d3f74f027de5a2c19457779fe1466708c2ea3dc9bf993a4048471025928cabcea934cf681930657ff661f05452f34630e5ea45d962e828899af00"
-    },
-    "amount": "4.0000000000000000",
-    "recipient": "ad1f8845c6a1abb6011a2a434a079a087c460657aad54329a84b406dce8bf314"
-  }
-]`}
+    {
+      "id": "14330e7d-729a-4f22-b277-28d368ac46cc",
+      "block": {
+        "id": "74b9d153-aca8-46b0-9c82-55a1e0dd4958",
+        "created_date": "2020-11-20T07:43:34.261742Z",
+        "modified_date": "2020-11-20T07:43:34.261789Z",
+        "balance_key": "e9321848d3f496bd4a5713b892c0a2c229c64b5a5fa2d2f56f33f3bd6aea5d80",
+        "sender": "addf211d203c077bc5c6b78f41ddc68481804539de4bd3fd736fa853514551c0",
+        "signature": "19726b9acc9b77fd5a8f1828e27f7b81db22d9ed3c8f1f267aaddbe1573bfbcfa80fe95bfb88b7f1d54e5736039760762723a6c017e3af9e92d4ef609b850406"
+      },
+      "amount": 1,
+      "recipient": "2e86f48216567302527b69eae6c6a188097ed3a9741f43cc3723e570cf47644c"
+    }
+  ]
+}`}
         heading="Response"
       />
     </DocContainer>

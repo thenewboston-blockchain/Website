@@ -7,7 +7,7 @@ import ValidatorElection from './ValidatorElection.png';
 
 const GuideBanks: FC = () => {
   return (
-    <DocContainer className="GuideBanks" title="Banks">
+    <DocContainer className="GuideBanks" title="Banks" lastUpdated="07 Dec 2020">
       <p>
         Banks play a critical role regarding several aspects of the network. They act as the bond between end users and
         the network and have several responsibilities to each. Regarding network-related responsibilities, banks are
@@ -83,7 +83,7 @@ const GuideBanks: FC = () => {
         <li>Users choose their banks</li>
         <li>Banks choose their primary validators</li>
         <li>
-          The banks confirmation validators will tell the bank when to switch primary validators (if/when the primary
+          The bank's confirmation validators will tell the bank when to switch primary validators (if/when the primary
           validator becomes untrustworthy)
         </li>
       </DocList>

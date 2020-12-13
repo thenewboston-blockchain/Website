@@ -43,6 +43,8 @@
 
   &__toggle {
     align-items: center;
+    background-color: transparent;
+    border: 0;
     cursor: pointer;
     display: flex;
     padding: 10px 16px 0;
@@ -63,5 +65,9 @@
     margin-right: 16px;
     transform: rotate(0deg);
     transition-duration: 0.2s;
+  }
+
+  &__title {
+    font-weight: 700;
   }
 }

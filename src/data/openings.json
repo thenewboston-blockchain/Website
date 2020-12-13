@@ -38,7 +38,7 @@
     ],
     "category": "Engineering",
     "description": "As Senior DevOps Engineer you will be a key contributor to designing, building, testing, managing, and maintaining some of the key technology that powers our digital currency network.",
-    "payNotes": ["2,800 points/day"],
+    "payNotes": ["2,800 coins/day"],
     "position": "Senior DevOps Engineer",
     "reportsTo": [
       {
@@ -57,6 +57,171 @@
       "Extensive experience with cloud computing and virtualization",
       "Expert knowledge of Linux",
       "Proven understanding of networking (TCP/IP, DNS, etc)"
+    ]
+  },
+  {
+    "openingId": "graphic-designer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Kristy KJ Lee & David Yap"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Design",
+    "description": "As a graphic designer, you will create high-fidelity graphics for our social media team and marketing team.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Graphic Designer",
+    "reportsTo": [
+      {
+        "githubUsername": "kristykjlee",
+        "name": "Kristy Lee"
+      },
+      {
+        "githubUsername": "davidyapdy",
+        "name": "David Yap"
+      }
+    ],
+    "responsibilities": [
+      "Create HiFi graphics for social media posts & marketing content",
+      "Give design reviews to community members making infographics",
+      "Review end results with design team",
+      "Send completed graphics to social media & marketing team for them to post",
+      "Be a part of creating our visual language"
+    ],
+    "technologyRequirements": ["Skilled in Figma", "Skilled in Illustrator"]
+  },
+  {
+    "openingId": "content-writer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Pulkit Bajaj & Siddhesh Kulthe - Head Of Marketing"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Marketing",
+    "description": "Work with our marketing team to create written content for email campaigns and blogs to make awareness about our product.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Content Writer",
+    "reportsTo": [
+      {
+        "githubUsername": "pulkitbajaj007",
+        "name": "Pulkit"
+      },
+      {
+        "githubUsername": "iamsid47",
+        "name": "Siddhesh"
+      }
+    ],
+    "responsibilities": [
+      "Create written material for our email campaigns",
+      "Produce well-researched content for blogs",
+      "Give feedback on writings"
+    ],
+    "technologyRequirements": [
+      "An understanding of search engine optimization best practices",
+      "Understanding grammar rules and how to construct clear sentences",
+      "Being mindful of things like flow, readability, and sentence variety"
+    ]
+  },
+  {
+    "openingId": "senior-dot-net-core-developer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Mircea Teodor Oprea"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "Work on the .NET Core SDK for thenewboston, code review the PRs opened by other contributors and participate in discussions about the architecture/direction of the SDK.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Senior .NET Core Developer",
+    "reportsTo": [
+      {
+        "githubUsername": "Mirch",
+        "name": "Mircea Teodor Oprea"
+      }
+    ],
+    "responsibilities": [
+      "Contribute to the development of the .NET Core SDK",
+      "Code review the PRs of other contributors",
+      "Contribute to discussions about the structure of the project, code standards and development approaches"
+    ],
+    "technologyRequirements": [
+      ".NET Core",
+      "xUnit & Moq",
+      "ASP.NET Core (for future example projects)",
+      "Github Actions"
+    ]
+  },
+  {
+    "openingId": "wordpress-developer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Bucky or Siddhesh Kulthe - Head Of Marketing"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "Work on developing and designing a WordPress blog for thenewboston.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "WordPress Developer",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      },
+      {
+        "githubUsername": "iamsid47",
+        "name": "Siddhesh"
+      }
+    ],
+    "responsibilities": [
+      "To develop a vibrant and appreciable WordPress blog",
+      "Create eye-catching headlines and sections for an increased user-engagement",
+      "Optimizing images, writing alt-text for all the images used for the blog",
+      "Giving feedbacks and suggestions for a scope of improvement"
+    ],
+    "technologyRequirements": [
+      "Needs to have a good understanding of WordPress and how things work there",
+      "Required to know how to install plugins and themes and customize images and content to their core",
+      "Required to have a good understanding of keywords, SEO (basic knowledge is accepted), image optimization, alt text, etc.",
+      "Required to know HTML and CSS (Intermediate levels are preferred)"
     ]
   }
 ]

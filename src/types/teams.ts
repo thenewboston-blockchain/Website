@@ -33,12 +33,11 @@ export interface Team {
   title: string;
 }
 
-interface TeamContributor {
+export interface TeamContributor {
   contributor: Contributor;
   createdDate: string;
   isLead: boolean;
   payPerDay: number;
-  team: Team;
   title: string;
 }
 
@@ -57,4 +56,8 @@ export interface TeamMember {
   slackUsername: string;
   teams: TeamLead[];
   titles: string[];
+}
+
+export interface TeamsUrlParams {
+  team: string;
 }

@@ -56,7 +56,13 @@ const GuideIntroduction: FC = () => {
   };
 
   return (
-    <DocContainer className="GuideIntroduction" introSection={renderIntro()} introTitle="Introduction" title="Overview">
+    <DocContainer
+      className="GuideIntroduction"
+      introSection={renderIntro()}
+      introTitle="Introduction"
+      title="Overview"
+      lastUpdated="07 Dec 2020"
+    >
       <p>
         The system has many components, each of which plays a specific role in allowing the transfer of coins (the
         currency of the system) securely between accounts. Future sections will discuss each of these elements in more

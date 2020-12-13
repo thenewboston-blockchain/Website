@@ -17,16 +17,36 @@
     padding-left: 8px;
   }
 
+  &__last-updated {
+    color: var(--color-sail-gray-500);
+    font-size: 14px;
+    font-weight: 300;
+  }
+
   &__page-title {
     font-size: 36px;
     font-weight: 300;
     line-height: 1.2;
-    margin-bottom: 24px;
 
     &:hover {
       #{$self}__HashLink {
         display: inline;
       }
+    }
+  }
+
+  &__wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: 992px) {
+    &__wrapper {
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: start;
     }
   }
 }
