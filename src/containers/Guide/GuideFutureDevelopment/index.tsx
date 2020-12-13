@@ -6,7 +6,7 @@ import './GuideFutureDevelopment.scss';
 
 const GuideFutureDevelopment: FC = () => {
   return (
-    <DocContainer className="GuideFutureDevelopment" title="Future Development">
+    <DocContainer className="GuideFutureDevelopment" title="Future Development" lastUpdated="07 Dec 2020">
       <p>
         In addition to the architecture outlined earlier, there are also several additional features being considered
         for inclusion into the network. These features require additional discussion with the development community.

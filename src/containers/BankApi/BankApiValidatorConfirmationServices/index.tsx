@@ -5,7 +5,11 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
 
 const BankApiValidatorConfirmationServices: FC = () => {
   return (
-    <DocContainer className="BankApiValidatorConfirmationServices" title="Validator Confirmation Services">
+    <DocContainer
+      className="BankApiValidatorConfirmationServices"
+      title="Validator Confirmation Services"
+      lastUpdated="07 Dec 2020"
+    >
       <p>
         Validator confirmation services represent an agreement between a confirmation validator and a bank. They state
         that the confirmation validator will sign and send all confirmed blocks to the bank for a specified period of
