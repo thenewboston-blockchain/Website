@@ -102,7 +102,13 @@ const Download: FC = () => {
             <span className="instruction-container__instruction">Drag and drop the app to the Applications folder</span>
           </div>
           <div className="instruction-container__li">
-            <span className="instruction-container__instruction">Open the app</span>
+            <span className="instruction-container__instruction">
+              Open the app. If you see an error because the Account Manager app is not from the App Store check out{' '}
+              <a href="https://support.apple.com/en-us/HT202491" target="_blank" rel="noreferrer">
+                these instructions
+              </a>{' '}
+              to allow the install.
+            </span>
           </div>
         </>
       );
