@@ -45,10 +45,15 @@
         margin-right: 12px;
       }
     }
+    &--white {
+      background: var(--color-primary);
+      color: var(--color-white);
+    }
   }
 
   &__download-button {
     background: var(--color-primary);
+    border: 1px var(--color-white) solid;
     border-radius: 50%;
     box-shadow: 0 4px 4px rgba(4, 34, 53, 0.25);
     color: var(--color-white);

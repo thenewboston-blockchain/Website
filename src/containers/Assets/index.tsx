@@ -6,6 +6,7 @@ import {A, Icon, IconType, PageTitle} from 'components';
 import {socialMediaUrls} from 'utils/social-media';
 import TnbLogo from 'assets/images/TNB-Logo.png';
 import TnbLogoAndWordmark from 'assets/images/TNB-LogoAndWordmark.png';
+import TnbLogoAndWordmarkWhite from 'assets/images/TNB-LogoAndWordmarkWhite.png';
 
 import './Assets.scss';
 
@@ -20,12 +21,22 @@ const assets: Asset[] = [
     imageUrl: TnbLogoAndWordmark,
     subtext: 'TNB-Logo-and-Wordmark.Zip',
   },
+  {
+    downloadLink: `${socialMediaUrls.github}/Marketing/raw/master/Logo-and-Wordmark-white.zip`,
+    imageUrl: TnbLogoAndWordmarkWhite,
+    subtext: 'TNB-Logo-and-Wordmark-white.Zip',
+  },
 ];
 
 const Assets: FC = () => {
   const renderCard = (asset: Asset): ReactNode => {
     return (
-      <div key={asset.subtext} className="Assets__card-wrapper">
+      <div
+        key={asset.subtext}
+        className={clsx('Assets__card-wrapper', {
+          'Assets__card-wrapper--white': asset.subtext === 'TNB-Logo-and-Wordmark-white.Zip',
+        })}
+      >
         <A className="Assets__download-button" href={asset.downloadLink} target="_self">
           <Icon icon={IconType.downloadIcon} />
         </A>
