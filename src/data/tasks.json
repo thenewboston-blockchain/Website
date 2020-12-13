@@ -373,6 +373,26 @@
       "completed_date": "12/06/20",
       "amount_paid": "1000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Bank",
+      "title": "Write a test to validate value of account number and trust in accounts",
+      "issue_id": "121",
+      "pr_id": "123",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/11/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Bank",
+      "title": "Write a test to validate unique constraint of confirmation_validator and primary_validator together for InvalidBlock",
+      "issue_id": "109",
+      "pr_id": "122",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/11/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "FaiyazMdAbdul": [
@@ -1417,6 +1437,16 @@
       "completed_date": "11/24/20",
       "amount_paid": "25000",
       "bug_bounty": ""
+    },
+    {
+      "repository": "Kotlin-SDK",
+      "title": "Android Sample App",
+      "issue_id": "42",
+      "pr_id": "57",
+      "completed_by": "amarjeet987",
+      "completed_date": "12/03/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
     }
   ],
   "angle943": [
@@ -2055,6 +2085,36 @@
       "pr_id": "",
       "completed_by": "devanshgajjar",
       "completed_date": "12/04/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "HIFI - Money to Currency Infographic",
+      "issue_id": "80",
+      "pr_id": "",
+      "completed_by": "devanshgajjar",
+      "completed_date": "12/10/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "HIFI infographic",
+      "issue_id": "89",
+      "pr_id": "",
+      "completed_by": "devanshgajjar",
+      "completed_date": "12/10/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "HIFI infographic",
+      "issue_id": "90",
+      "pr_id": "",
+      "completed_by": "devanshgajjar",
+      "completed_date": "12/10/20",
       "amount_paid": "1000",
       "bug_bounty": "FALSE"
     }
@@ -3110,7 +3170,7 @@
       "issue_id": "232",
       "pr_id": "246",
       "completed_by": "leelatanniru",
-      "completed_date": "9/03/20",
+      "completed_date": "09/03/20",
       "amount_paid": "2500",
       "bug_bounty": ""
     },
@@ -3319,6 +3379,26 @@
       "pr_id": "1025",
       "completed_by": "manishram",
       "completed_date": "11/25/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Remove Sunil Chauhan",
+      "issue_id": "1092",
+      "pr_id": "1093",
+      "completed_by": "manishram",
+      "completed_date": "12/10/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add wordpress developer to openings",
+      "issue_id": "1101",
+      "pr_id": "1102",
+      "completed_by": "manishram",
+      "completed_date": "12/10/20",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
     }
@@ -4155,6 +4235,16 @@
       "completed_date": "11/26/20",
       "amount_paid": "1000",
       "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Website",
+      "title": "refactor: add routing on teams page",
+      "issue_id": "1095",
+      "pr_id": "1096",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "12/11/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "tpikachu": [
