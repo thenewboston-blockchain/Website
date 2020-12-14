@@ -223,5 +223,46 @@
       "Required to have a good understanding of keywords, SEO (basic knowledge is accepted), image optimization, alt text, etc.",
       "Required to know HTML and CSS (Intermediate levels are preferred)"
     ]
+  },
+  {
+    "openingId": "seo-manager",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Siddhesh Kulthe"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Marketing",
+    "description": "We are looking for an SEO Manager to coordinate SEO efforts, including onsite and offsite optimization and keyword expansion research. You’ll also oversee paid search campaigns to ensure their success. We are looking for an analytical and perceptive professional who is a skilled communicator and able to collaborate with various teams. Current knowledge of SEO practices and techniques is essential to this role. Your goal will be to ensure that content is search-engine friendly and optimized to increase our company’s profitability.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "SEO Manager",
+    "reportsTo": [
+      {
+        "githubUsername": "iamsid47",
+        "name": "Siddhesh Kulthe"
+      }
+    ],
+    "responsibilities": [
+      "Develop and execute successful SEO strategies",
+      "Conduct keyword research to guide content teams",
+      "Review technical SEO issues and recommend fixes",
+      "Optimize website content, landing pages and paid search copy",
+      "Collect data and report on traffic, rankings and other SEO aspects",
+      "Work with social media to optimize campaigns"
+    ],
+    "technologyRequirements": [
+      "Knowledge of standard and current SEO practices",
+      "Experience with SEO reporting",
+      "Familiarity with relevant tools (e.g. Conductor, Screaming Frog, MOZ) and web analytics tools (e.g. Google Analytics, WebTrends)"
+    ]
   }
 ]

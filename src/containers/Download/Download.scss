@@ -7,7 +7,7 @@
 
   @media (max-width: 480px) {
     margin: 5% auto;
-    padding: 0px;
+    padding: 0;
     width: 100%;
   }
 
@@ -21,6 +21,7 @@
     align-items: center;
     display: flex;
     margin-top: 6vh;
+    white-space: nowrap;
 
     @media (max-width: 768px) {
       margin: 0 auto;

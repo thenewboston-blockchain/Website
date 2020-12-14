@@ -4,7 +4,7 @@ import {A, Avatar, CopyableAccountNumber, EmptyPage, Icon, IconType, Qr} from 'c
 import Account from 'containers/Account';
 import {useBooleanState} from 'hooks';
 import {TeamMember} from 'types/teams';
-import {getContributorByGithubUsername, getTeamMemberByGithubUsername} from 'utils/data';
+import {getContributorByGithubUsername, getTeamMemberByGithubUsername, getTeamPathname} from 'utils/data';
 
 import './ProfileInfo.scss';
 
@@ -45,7 +45,7 @@ const ProfileInfo: FC<ComponentProps> = ({github_username}) => {
         {teams &&
           teams.map((team, index) => (
             <div className="ProfileInfo__member-title" key={team.title}>
-              {titles[index]} on {team.title}
+              {titles[index]} on <A href={`/teams/${getTeamPathname(team.title)}`}>{team.title}</A>
             </div>
           ))}
         <div className="ProfileInfo__member-slack">
