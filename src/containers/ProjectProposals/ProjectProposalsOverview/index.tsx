@@ -107,6 +107,15 @@ const ProjectProposalsOverview: FC = () => {
           </>
         }
       />
+      <StepIndicator
+        className="ProjectProposalsOverview__StepIndicator"
+        number={10}
+        text={
+          <>
+            A person can be part of only <strong>one project</strong> at a time.
+          </>
+        }
+      />
     </DocContainer>
   );
 };
