@@ -125,7 +125,7 @@ const Download: FC = () => {
           <div className="instruction-container__li">
             <span className="instruction-container__instruction">To run thenewboston, make it executable</span>
           </div>
-          <CodeSnippet code="$ sudo chmod a+x TNB-Account-Manager-*.AppImage" />
+          <CodeSnippet code="$ chmod a+x TNB-Account-Manager-*.AppImage" />
           <div className="instruction-container__li">
             <span className="instruction-container__instruction">Run!</span>
           </div>
@@ -133,6 +133,7 @@ const Download: FC = () => {
         </>
       );
     }
+
     return null;
   }, []);
 
