@@ -15,7 +15,7 @@ const customLinks = {
   [SocialMedia.slack]: '',
   [SocialMedia.twitter]: '',
   [SocialMedia.youtube]: '',
-  [SocialMedia.discord]: 'https://discord.gg/fdj2EMvSY',
+  [SocialMedia.discord]: 'https://discord.gg/fdj2EMvSYx',
 };
 
 interface ComponentProps {
