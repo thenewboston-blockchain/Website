@@ -88,7 +88,7 @@ const ProjectProposalsRules: FC = () => {
         number={9}
         text={
           <>
-            <strong>Thenewboston</strong> is not liable for <strong>copyright</strong> or other{' '}
+            <strong>thenewboston</strong> is not liable for <strong>copyright</strong> or other{' '}
             <strong>intellectual property rights, property damage, misuse of coins</strong>.
           </>
         }
