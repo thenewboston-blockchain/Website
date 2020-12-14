@@ -34,5 +34,5 @@ export const socialMediaDescriptions = {
   [SocialMedia.twitter]: 'Stay up to date by following Bucky Roberts on his personal Twitter page.',
   [SocialMedia.youtube]:
     'Follow us on YouTube and find tons of sweet computer related tutorials and some other awesome videos too!',
-  [SocialMedia.discord]: 'Join our community on discord.',
+  [SocialMedia.discord]: 'Join our discord community to make new friends and interact with one another.',
 };
