@@ -24,13 +24,17 @@ export const fetchGithubIssues = async (): Promise<Issue[]> => {
   });
 };
 
-type FetchGithubReleasesParams = {amount?: number};
+type FetchGithubReleasesParams = {
+  page?: number;
+  per_page?: number;
+};
 
-export const fetchGithubReleases = async ({amount}: FetchGithubReleasesParams): Promise<Release[]> => {
-  const pageQueryParam = amount != null ? `?page=1&per_page=${amount}` : '';
-
+export const fetchGithubReleases = async (queryParams: FetchGithubReleasesParams): Promise<Release[]> => {
   const {data} = await axios.get<BaseRelease[]>(
-    `https://api.github.com/repos/thenewboston-developers/Account-Manager/releases${pageQueryParam}`,
+    'https://api.github.com/repos/thenewboston-developers/Account-Manager/releases',
+    {
+      params: queryParams,
+    },
   );
 
   return data.map((release: BaseRelease) => {

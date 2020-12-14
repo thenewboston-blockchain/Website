@@ -31,7 +31,10 @@ const Download: FC = () => {
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
       try {
-        const response = await fetchGithubReleases({amount: 1});
+        const response = await fetchGithubReleases({
+          page: 1,
+          per_page: 1,
+        });
         setReleases(response);
       } catch (error) {
         displayToast('Network Error');
