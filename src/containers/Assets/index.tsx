@@ -12,16 +12,19 @@ import './Assets.scss';
 
 const assets: Asset[] = [
   {
+    backgroundColor: 'light',
     downloadLink: `${socialMediaUrls.github}/Marketing/raw/master/Logo.zip`,
     imageUrl: TnbLogo,
     subtext: 'TNB-Logo.Zip',
   },
   {
+    backgroundColor: 'light',
     downloadLink: `${socialMediaUrls.github}/Marketing/raw/master/Logo-and-Wordmark.zip`,
     imageUrl: TnbLogoAndWordmark,
     subtext: 'TNB-Logo-and-Wordmark.Zip',
   },
   {
+    backgroundColor: 'dark',
     downloadLink: `${socialMediaUrls.github}/Marketing/raw/master/Logo-and-Wordmark-white.zip`,
     imageUrl: TnbLogoAndWordmarkWhite,
     subtext: 'TNB-Logo-and-Wordmark-white.Zip',
@@ -34,7 +37,7 @@ const Assets: FC = () => {
       <div
         key={asset.subtext}
         className={clsx('Assets__card-wrapper', {
-          'Assets__card-wrapper--white': asset.subtext === 'TNB-Logo-and-Wordmark-white.Zip',
+          'Assets__card-wrapper--dark': asset.backgroundColor === 'dark',
         })}
       >
         <A className="Assets__download-button" href={asset.downloadLink} target="_self">
