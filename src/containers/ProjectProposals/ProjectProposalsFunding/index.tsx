@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {DocContainer, StepIndicator} from 'components';
+import {A, DocContainer, StepIndicator} from 'components';
 
 import './ProjectProposalsFunding.scss';
 
@@ -26,8 +26,8 @@ const ProjectProposalsFunding: FC = () => {
             The project leader (or manager) has to provide a weekly report of the project’s progress by adding the
             report file with the name <strong>week-NUMBER.md</strong> (For example, <strong>week-1.md</strong> for the
             first week, <strong>week-2.md</strong> for the second week report, and so on.) to the{' '}
-            <strong>Weekly Reports</strong> directory of the respective project’s folder in the Project-proposals
-            repository.
+            <strong>Weekly Reports</strong> directory of the respective project’s folder in the{' '}
+            <A href="https://github.com/thenewboston-developers/Project-Proposals">Project-proposals</A> repository.
           </>
         }
       />
