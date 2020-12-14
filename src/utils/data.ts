@@ -1,6 +1,8 @@
 import parse from 'date-fns/parse';
+import {TEAMS} from 'constants/teams';
 import {Contributor, RawTask, Task, TaskDict} from 'types/github';
 import {Opening} from 'types/openings';
+import {NavOption} from 'types/option';
 import {TeamMember} from 'types/teams';
 
 import contributors from 'data/contributors.json';
@@ -108,4 +110,9 @@ export const getTeamMembers = (): TeamMember[] => {
   return Object.entries(members)
     .sort(([, a]: [string, any], [, b]: [string, any]) => a.contributorId - b.contributorId)
     .map(([, member]) => member) as TeamMember[];
+};
+
+export const getTeamPathname = (teamTitle: string): string => {
+  const pathname = TEAMS.find((team: NavOption) => team.title === teamTitle)?.pathname;
+  return pathname || '';
 };
