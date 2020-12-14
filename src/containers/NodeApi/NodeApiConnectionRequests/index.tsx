@@ -18,16 +18,19 @@ const NodeApiConnectionRequests: FC = () => {
             dataType: 'string',
             description: 'IP address of the requesting node',
             param: 'ip_address',
+            sampleValue: '172.19.0.13',
           },
           {
             dataType: 'decimal',
             description: 'port of the requesting node',
             param: 'port',
+            sampleValue: '80',
           },
           {
             dataType: 'string',
             description: 'protocol of the requesting node',
             param: 'protocol',
+            sampleValue: 'http',
           },
         ]}
       />
