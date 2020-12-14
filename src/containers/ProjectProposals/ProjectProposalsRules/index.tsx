@@ -11,17 +11,29 @@ const ProjectProposalsRules: FC = () => {
       <StepIndicator
         className="ProjectProposalsRules__StepIndicator"
         number={1}
-        text="Your project must connect to thenewboston in a way or another."
+        text={
+          <>
+            Your project must <strong>connect to thenewboston</strong> in a way or another.
+          </>
+        }
       />
       <StepIndicator
         className="ProjectProposalsRules__StepIndicator"
         number={2}
-        text="Must be an open-source project."
+        text={
+          <>
+            Must be an <strong>open-source</strong> project.
+          </>
+        }
       />
       <StepIndicator
         className="ProjectProposalsRules__StepIndicator"
         number={3}
-        text="Direct distribution of thenewboston digital currency from the treasury is not allowed."
+        text={
+          <>
+            <strong>Direct distribution</strong> of thenewboston digital currency from the treasury is not allowed.
+          </>
+        }
       />
       <StepIndicator
         className="ProjectProposalsRules__StepIndicator"
@@ -37,11 +49,6 @@ const ProjectProposalsRules: FC = () => {
         className="ProjectProposalsRules__StepIndicator"
         number={6}
         text="Projects dealing with explicit content or pornography are not allowed."
-      />
-      <StepIndicator
-        className="ProjectProposalsRules__StepIndicator"
-        number={6}
-        text="Projects promoting pedophilia or inappropriate interaction targeted at a minor are not allowed."
       />
       <StepIndicator
         className="ProjectProposalsRules__StepIndicator"
