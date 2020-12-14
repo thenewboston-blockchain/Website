@@ -102,7 +102,8 @@ const ProjectProposalsOverview: FC = () => {
         text={
           <>
             After the team formation, the team leader (or manager) has to provide details of each member of the team.
-            Details include <strong>Complete Name, GitHub Username, Slack username, LinkedIn, Role in the team,</strong>{' '}
+            Details include{' '}
+            <strong>full-name, GitHub username, Slack username, LinkedIn profile, role in the team, </strong>
             and the <strong>account number</strong> where they want to receive payments.
           </>
         }
