@@ -112,10 +112,7 @@ export const getTeamMembers = (): TeamMember[] => {
     .map(([, member]) => member) as TeamMember[];
 };
 
-export const getTeamPathname = (teamName: string): string => {
-  const pathname = TEAMS.find((team: NavOption) => team.title === teamName)?.pathname;
-  if (!pathname) {
-    return '';
-  }
-  return pathname;
+export const getTeamPathname = (teamTitle: string): string => {
+  const pathname = TEAMS.find((team: NavOption) => team.title === teamTitle)?.pathname;
+  return pathname || '';
 };

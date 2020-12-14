@@ -3,8 +3,8 @@ import {useHistory, useParams} from 'react-router-dom';
 
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
 import {TEAMS} from 'constants/teams';
-import {getTeamMembers} from 'utils/data';
 import {TeamMember, TeamName, TeamsUrlParams} from 'types/teams';
+import {getTeamMembers} from 'utils/data';
 
 import TeamMemberCard from './TeamMemberCard';
 import './Teams.scss';
