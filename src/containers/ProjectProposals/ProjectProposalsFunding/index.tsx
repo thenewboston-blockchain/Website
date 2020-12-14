@@ -31,7 +31,6 @@ const ProjectProposalsFunding: FC = () => {
           </>
         }
       />
-
       <StepIndicator
         className="ProjectProposalsRules__StepIndicator"
         number={3}
