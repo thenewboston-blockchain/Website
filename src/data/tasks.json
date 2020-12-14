@@ -61,6 +61,46 @@
       "completed_date": "12/06/20",
       "amount_paid": "5000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "thenewboston-js",
+      "title": "[Task] Create `Bank` Documentation",
+      "issue_id": "24",
+      "pr_id": "41",
+      "completed_by": "AbhayAysola",
+      "completed_date": "12/12/20",
+      "amount_paid": "10000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "thenewboston-js",
+      "title": "[Task] Implement POST Primary Validator Updated for `ConfirmationValidator`",
+      "issue_id": "30",
+      "pr_id": "32",
+      "completed_by": "AbhayAysola",
+      "completed_date": "12/10/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "thenewboston-js",
+      "title": "[Task] Implement POST Upgrade Request for `ConfirmationValidator`",
+      "issue_id": "29",
+      "pr_id": "31",
+      "completed_by": "AbhayAysola",
+      "completed_date": "12/09/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "thenewboston-js",
+      "title": "[Task] Implement Update Account Method for `Bank`",
+      "issue_id": "14",
+      "pr_id": "20",
+      "completed_by": "AbhayAysola",
+      "completed_date": "12/09/20",
+      "amount_paid": "3000",
+      "bug_bounty": "FALSE"
     }
   ],
   "AkbarKamran": [
@@ -151,6 +191,26 @@
       "pr_id": "1091",
       "completed_by": "CNFloss",
       "completed_date": "12/09/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "thenewboston-js",
+      "title": "[Task] Type `PrimaryValidator.getConfig` Method Response",
+      "issue_id": "36",
+      "pr_id": "40",
+      "completed_by": "CNFloss",
+      "completed_date": "12/11/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "thenewboston-js",
+      "title": "[Task] Implement POST Update Notice Method for `Bank`",
+      "issue_id": "28",
+      "pr_id": "33",
+      "completed_by": "CNFloss",
+      "completed_date": "12/11/20",
       "amount_paid": "2000",
       "bug_bounty": "FALSE"
     }
@@ -3605,6 +3665,26 @@
       "completed_date": "11/30/20",
       "amount_paid": "2000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "thenewboston-js",
+      "title": "[Task] Implement `Bank` POST Blocks Method",
+      "issue_id": "37",
+      "pr_id": "39",
+      "completed_by": "nishp77",
+      "completed_date": "12/11/20",
+      "amount_paid": "2500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "thenewboston-js",
+      "title": "[Task] Type `ConfirmationValidator.getConfig` Method Response",
+      "issue_id": "35",
+      "pr_id": "38",
+      "completed_by": "nishp77",
+      "completed_date": "12/11/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "nparoski": [
@@ -4046,6 +4126,26 @@
       "completed_by": "sno2",
       "completed_date": "12/08/20",
       "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "thenewboston-js",
+      "title": "[Task] Create `Account` Documentation",
+      "issue_id": "22",
+      "pr_id": "34",
+      "completed_by": "sno2",
+      "completed_date": "12/10/20",
+      "amount_paid": "7500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "thenewboston-js",
+      "title": "[Task] Refactor Account Class Construction",
+      "issue_id": "19",
+      "pr_id": "21",
+      "completed_by": "sno2",
+      "completed_date": "12/09/20",
+      "amount_paid": "2000",
       "bug_bounty": "FALSE"
     }
   ],

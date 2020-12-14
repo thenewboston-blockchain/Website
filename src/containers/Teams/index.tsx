@@ -2,35 +2,12 @@ import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
 
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
-import {TeamPathname} from 'constants/teams';
-import {getTeamMembers} from 'utils/data';
-import {NavOption} from 'types/option';
+import {TEAMS} from 'constants/teams';
 import {TeamMember, TeamName, TeamsUrlParams} from 'types/teams';
+import {getTeamMembers} from 'utils/data';
 
 import TeamMemberCard from './TeamMemberCard';
 import './Teams.scss';
-
-export const TEAMS: NavOption[] = [
-  {pathname: TeamPathname.all, title: TeamName.all},
-  {pathname: TeamPathname.backEndDevelopers, title: TeamName.backEndDevelopers},
-  {pathname: TeamPathname.community, title: TeamName.community},
-  {pathname: TeamPathname.design, title: TeamName.design},
-  {pathname: TeamPathname.devOps, title: TeamName.devOps},
-  {pathname: TeamPathname.discordManagers, title: TeamName.discordManagers},
-  {pathname: TeamPathname.dotnetCore, title: TeamName.dotnetCore},
-  {pathname: TeamPathname.frontEndDevelopers, title: TeamName.frontEndDevelopers},
-  {pathname: TeamPathname.kotlinSDK, title: TeamName.kotlinSDK},
-  {pathname: TeamPathname.marketing, title: TeamName.marketing},
-  {pathname: TeamPathname.newUserOperations, title: TeamName.newUserOperations},
-  {pathname: TeamPathname.payments, title: TeamName.payments},
-  //   {pathname: TeamPathname.penetrationTesting, title: TeamName.penetrationTesting},
-  {pathname: TeamPathname.projectProposals, title: TeamName.projectProposals},
-  {pathname: TeamPathname.qa, title: TeamName.qa},
-  {pathname: TeamPathname.redditModerators, title: TeamName.redditModerators},
-  {pathname: TeamPathname.research, title: TeamName.research},
-  {pathname: TeamPathname.security, title: TeamName.security},
-  {pathname: TeamPathname.youtube, title: TeamName.youtube},
-];
 
 const teamMembers = getTeamMembers();
 
