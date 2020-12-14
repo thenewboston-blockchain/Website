@@ -1,26 +1,48 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, DocImage, RequestResponseSnippet} from 'components';
+import {DocContainer, DocEndpoint, DocImage, RequestResponseSnippet, TableParams} from 'components';
 
 import ConnectionRequestDiagram from './ConnectionRequest.png';
 
 const NodeApiConnectionRequests: FC = () => {
   return (
-    <DocContainer className="NodeApiConnectionRequests" title="Connection Requests">
+    <DocContainer className="NodeApiConnectionRequests" title="Connection Requests" lastUpdated="07 Dec 2020">
       <p>To connect with another node on the network, a signed connection request can be sent to the target node.</p>
 
       <DocImage alt="connection request" maxWidth={640} src={ConnectionRequestDiagram} />
 
       <DocEndpoint endpoint="/connection_requests" method="POST" />
+      <TableParams
+        items={[
+          {
+            dataType: 'string',
+            description: 'IP address of the requesting node',
+            param: 'ip_address',
+            sampleValue: '172.19.0.13',
+          },
+          {
+            dataType: 'decimal',
+            description: 'port of the requesting node',
+            param: 'port',
+            sampleValue: '80',
+          },
+          {
+            dataType: 'string',
+            description: 'protocol of the requesting node',
+            param: 'protocol',
+            sampleValue: 'http',
+          },
+        ]}
+      />
       <RequestResponseSnippet
         code={`{
   "message": {
-    "ip_address": "192.168.1.232",
-    "port": "8000",
+    "ip_address": "172.19.0.13",
+    "port": 8000,
     "protocol": "http"
   },
-  "node_identifier": "d5356888dc9303e44ce52b1e06c3165a7759b9df1e6a6dfbd33ee1c3df1ab4d1",
-  "signature": "3c88665e123e7e25a8b9d9592f3269ab4efc4bcba989a103a898e2625933261b1cccdaf2f52eca9c58d2bf033968ab6b702089bca8fc6e0c80b3b002a5e05b03"
+  "node_identifier": "c292c7c13c46e0abcb6c84b1f35a24efb5dd4605445a2864754e02f174b2a192",
+  "signature": "28c508668e638664bb9d16f96d7dca7647c4311f256d98aeac962618df279475aedee4da7b1580e6156ba7b79a93f685fb325bf29e69b4eeaf4063078b98af06"
 }`}
         heading="Request"
       />

@@ -96,7 +96,7 @@ const GuideResyncTriggers: FC = () => {
   );
 
   return (
-    <DocContainer className="GuideResyncTriggers" title="Resync Triggers">
+    <DocContainer className="GuideResyncTriggers" title="Resync Triggers" lastUpdated="07 Dec 2020">
       <p>
         The process in which banks switch to a new primary validator is referred to as a <strong>resync</strong>. In
         reviewing the resync process, it is important to keep in mind the following notes:

@@ -51,6 +51,16 @@
       "completed_date": "11/26/20",
       "amount_paid": "5000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "thenewboston-python",
+      "title": "Generate documentation for the codebase using sphinx",
+      "issue_id": "36",
+      "pr_id": "42",
+      "completed_by": "AbhayAysola",
+      "completed_date": "12/06/20",
+      "amount_paid": "5000",
+      "bug_bounty": "FALSE"
     }
   ],
   "AkbarKamran": [
@@ -131,6 +141,18 @@
       "completed_date": "11/12/20",
       "amount_paid": "500",
       "bug_bounty": ""
+    }
+  ],
+  "CNFloss": [
+    {
+      "repository": "Website",
+      "title": "Last updated date for Docs #549",
+      "issue_id": "549",
+      "pr_id": "1091",
+      "completed_by": "CNFloss",
+      "completed_date": "12/09/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
     }
   ],
   "CirXe0N": [
@@ -311,6 +333,66 @@
       "completed_date": "12/01/20",
       "amount_paid": "5000",
       "bug_bounty": ""
+    },
+    {
+      "repository": "Bank",
+      "title": "Write a test for class BankViewSet using get method to verify bank details",
+      "issue_id": "107",
+      "pr_id": "114",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/07/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Bank",
+      "title": "Write a test to validate unique constraint of block and validator together",
+      "issue_id": "108",
+      "pr_id": "115",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/07/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Bank",
+      "title": "Unit test failed when Faker().pytest() = 0",
+      "issue_id": "117",
+      "pr_id": "118",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/06/20",
+      "amount_paid": "2000",
+      "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Bank",
+      "title": "Write a test to validate trust value while creating a new Bank",
+      "issue_id": "112",
+      "pr_id": "119",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/06/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Bank",
+      "title": "Write a test to validate value of account number and trust in accounts",
+      "issue_id": "121",
+      "pr_id": "123",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/11/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Bank",
+      "title": "Write a test to validate unique constraint of confirmation_validator and primary_validator together for InvalidBlock",
+      "issue_id": "109",
+      "pr_id": "122",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/11/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "FaiyazMdAbdul": [
@@ -323,6 +405,18 @@
       "completed_date": "11/11/20",
       "amount_paid": "500",
       "bug_bounty": ""
+    }
+  ],
+  "FredrickXavier": [
+    {
+      "repository": "Design",
+      "title": "Coins Memes Infographic",
+      "issue_id": "85",
+      "pr_id": "",
+      "completed_by": "FredrickXavier",
+      "completed_date": "12/04/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "GermaVinsmoke": [
@@ -587,6 +681,16 @@
       "completed_date": "11/05/20",
       "amount_paid": "2500",
       "bug_bounty": ""
+    },
+    {
+      "repository": "Design",
+      "title": "Trust Coins Infographic",
+      "issue_id": "63",
+      "pr_id": "",
+      "completed_by": "Niekon01",
+      "completed_date": "12/04/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "P-Sklodowska": [
@@ -741,6 +845,36 @@
       "completed_date": "11/26/20",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "Cryptocurrency topic Infographic",
+      "issue_id": "56",
+      "pr_id": "",
+      "completed_by": "Toledit",
+      "completed_date": "12/04/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "Yes to Coins Infographic",
+      "issue_id": "46",
+      "pr_id": "",
+      "completed_by": "Toledit",
+      "completed_date": "12/04/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "Coins Mobile app Infographic",
+      "issue_id": "64",
+      "pr_id": "",
+      "completed_by": "Toledit",
+      "completed_date": "12/04/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "Tuhinga": [
@@ -773,6 +907,16 @@
       "pr_id": "986",
       "completed_by": "UweVanOpfern",
       "completed_date": "11/26/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Issue bank confirmation services #970",
+      "issue_id": "970",
+      "pr_id": "1064",
+      "completed_by": "UweVanOpfern",
+      "completed_date": "12/03/20",
       "amount_paid": "1000",
       "bug_bounty": "FALSE"
     }
@@ -936,6 +1080,26 @@
       "completed_by": "YashovardhanSingh",
       "completed_date": "11/29/20",
       "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "Coins Memes Infographic",
+      "issue_id": "86",
+      "pr_id": "",
+      "completed_by": "YashovardhanSingh",
+      "completed_date": "12/04/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "Facts about Coins Infographic",
+      "issue_id": "61",
+      "pr_id": "",
+      "completed_by": "YashovardhanSingh",
+      "completed_date": "12/03/20",
+      "amount_paid": "1000",
       "bug_bounty": "FALSE"
     }
   ],
@@ -1143,6 +1307,16 @@
       "completed_date": "12/02/20",
       "amount_paid": "1000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "964-docs primary validator banks",
+      "issue_id": "964",
+      "pr_id": "1057",
+      "completed_by": "aayushi14",
+      "completed_date": "12/03/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "aeronye": [
@@ -1263,6 +1437,16 @@
       "completed_date": "11/24/20",
       "amount_paid": "25000",
       "bug_bounty": ""
+    },
+    {
+      "repository": "Kotlin-SDK",
+      "title": "Android Sample App",
+      "issue_id": "42",
+      "pr_id": "57",
+      "completed_by": "amarjeet987",
+      "completed_date": "12/03/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
     }
   ],
   "angle943": [
@@ -1883,6 +2067,56 @@
       "completed_date": "12/02/20",
       "amount_paid": "1000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "HIFI - Infographics on Project Proposals",
+      "issue_id": "79",
+      "pr_id": "",
+      "completed_by": "devanshgajjar",
+      "completed_date": "12/04/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "HIFI - Infographics on Project Proposals",
+      "issue_id": "78",
+      "pr_id": "",
+      "completed_by": "devanshgajjar",
+      "completed_date": "12/04/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "HIFI - Money to Currency Infographic",
+      "issue_id": "80",
+      "pr_id": "",
+      "completed_by": "devanshgajjar",
+      "completed_date": "12/10/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "HIFI infographic",
+      "issue_id": "89",
+      "pr_id": "",
+      "completed_by": "devanshgajjar",
+      "completed_date": "12/10/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "HIFI infographic",
+      "issue_id": "90",
+      "pr_id": "",
+      "completed_by": "devanshgajjar",
+      "completed_date": "12/10/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "dhakal0kushal": [
@@ -1894,6 +2128,16 @@
       "completed_by": "dhakal0kushal",
       "completed_date": "11/30/20",
       "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "Coins Memes Infographic (includes 2)",
+      "issue_id": "87",
+      "pr_id": "",
+      "completed_by": "dhakal0kushal",
+      "completed_date": "12/04/20",
+      "amount_paid": "2000",
       "bug_bounty": "FALSE"
     }
   ],
@@ -2581,6 +2825,46 @@
       "completed_date": "12/02/20",
       "amount_paid": "5000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add new contributor",
+      "issue_id": "1069",
+      "pr_id": "1072",
+      "completed_by": "jamessspanggg",
+      "completed_date": "12/03/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "[Dropdowns] Allow outer div to be toggle-able",
+      "issue_id": "1075",
+      "pr_id": "1076",
+      "completed_by": "jamessspanggg",
+      "completed_date": "12/05/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add Profile Info section",
+      "issue_id": "1062",
+      "pr_id": "1070",
+      "completed_by": "jamessspanggg",
+      "completed_date": "12/07/20",
+      "amount_paid": "5000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Modify teams data",
+      "issue_id": "1077",
+      "pr_id": "1081",
+      "completed_by": "jamessspanggg",
+      "completed_date": "12/07/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
     }
   ],
   "jonathanlee06": [
@@ -3097,6 +3381,26 @@
       "completed_date": "11/25/20",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Remove Sunil Chauhan",
+      "issue_id": "1092",
+      "pr_id": "1093",
+      "completed_by": "manishram",
+      "completed_date": "12/10/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add wordpress developer to openings",
+      "issue_id": "1101",
+      "pr_id": "1102",
+      "completed_by": "manishram",
+      "completed_date": "12/10/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
     }
   ],
   "matheusfillipe": [
@@ -3109,6 +3413,18 @@
       "completed_date": "11/20/20",
       "amount_paid": "500",
       "bug_bounty": "TRUE"
+    }
+  ],
+  "matthewrkula": [
+    {
+      "repository": "Kotlin-SDK",
+      "title": "Implement ConfigDataSource class for Bank Config endpoint",
+      "issue_id": "49",
+      "pr_id": "59",
+      "completed_by": "matthewrkula",
+      "completed_date": "11/23/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "melsh123221": [
@@ -3199,6 +3515,28 @@
       "completed_date": "11/10/20",
       "amount_paid": "500",
       "bug_bounty": ""
+    }
+  ],
+  "mrbusysky": [
+    {
+      "repository": "thenewboston-js",
+      "title": "[Task] Implement Browser Support with Browserify",
+      "issue_id": "9",
+      "pr_id": "13",
+      "completed_by": "mrbusysky",
+      "completed_date": "12/08/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Update to add tnb-js",
+      "issue_id": "1103",
+      "pr_id": "1098",
+      "completed_by": "mrbusysky",
+      "completed_date": "12/10/20",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
     }
   ],
   "mthomas-io": [
@@ -3667,6 +4005,18 @@
       "bug_bounty": ""
     }
   ],
+  "smazydev": [
+    {
+      "repository": "Design",
+      "title": "Spending Coins Infographic",
+      "issue_id": "62",
+      "pr_id": "",
+      "completed_by": "smazydev",
+      "completed_date": "12/03/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    }
+  ],
   "sno2": [
     {
       "repository": "thenewboston-js",
@@ -3676,6 +4026,26 @@
       "completed_by": "sno2",
       "completed_date": "11/28/20",
       "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "thenewboston-js",
+      "title": "[Task] Type Bank Get Config Response",
+      "issue_id": "17",
+      "pr_id": "18",
+      "completed_by": "sno2",
+      "completed_date": "12/09/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "thenewboston-js",
+      "title": "[Task] Add Axios Response Generics for `ServerNode` Request Methods",
+      "issue_id": "15",
+      "pr_id": "16",
+      "completed_by": "sno2",
+      "completed_date": "12/08/20",
+      "amount_paid": "500",
       "bug_bounty": "FALSE"
     }
   ],
@@ -3865,6 +4235,16 @@
       "completed_date": "11/26/20",
       "amount_paid": "1000",
       "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Website",
+      "title": "refactor: add routing on teams page",
+      "issue_id": "1095",
+      "pr_id": "1096",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "12/11/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "tpikachu": [
@@ -3919,6 +4299,36 @@
       "completed_date": "12/01/20",
       "amount_paid": "1000",
       "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Documentation fixes",
+      "issue_id": "955",
+      "pr_id": "982",
+      "completed_by": "velibor7",
+      "completed_date": "12/03/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Documentation fixes",
+      "issue_id": "954",
+      "pr_id": "982",
+      "completed_by": "velibor7",
+      "completed_date": "12/03/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Documentation fixes",
+      "issue_id": "951",
+      "pr_id": "982",
+      "completed_by": "velibor7",
+      "completed_date": "12/03/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "vilihegyi": [
@@ -3975,6 +4385,18 @@
       "completed_date": "9/22/20",
       "amount_paid": "5000",
       "bug_bounty": ""
+    }
+  ],
+  "wendtl": [
+    {
+      "repository": "Website",
+      "title": "Doc Update - Validator Upgrade Request",
+      "issue_id": "976",
+      "pr_id": "1045",
+      "completed_by": "wendtl",
+      "completed_date": "12/05/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "whitelionx": [

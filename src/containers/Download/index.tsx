@@ -31,7 +31,10 @@ const Download: FC = () => {
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
       try {
-        const response = await fetchGithubReleases();
+        const response = await fetchGithubReleases({
+          page: 1,
+          per_page: 1,
+        });
         setReleases(response);
       } catch (error) {
         displayToast('Network Error');
@@ -102,7 +105,13 @@ const Download: FC = () => {
             <span className="instruction-container__instruction">Drag and drop the app to the Applications folder</span>
           </div>
           <div className="instruction-container__li">
-            <span className="instruction-container__instruction">Open the app</span>
+            <span className="instruction-container__instruction">
+              Open the app. If you see an error because the Account Manager app is not from the App Store check out{' '}
+              <a href="https://support.apple.com/en-us/HT202491" target="_blank" rel="noreferrer">
+                these instructions
+              </a>{' '}
+              to allow the install.
+            </span>
           </div>
         </>
       );
@@ -116,7 +125,7 @@ const Download: FC = () => {
           <div className="instruction-container__li">
             <span className="instruction-container__instruction">To run thenewboston, make it executable</span>
           </div>
-          <CodeSnippet code="$ sudo chmod a+x TNB-Account-Manager-*.AppImage" />
+          <CodeSnippet code="$ chmod a+x TNB-Account-Manager-*.AppImage" />
           <div className="instruction-container__li">
             <span className="instruction-container__instruction">Run!</span>
           </div>
@@ -124,6 +133,7 @@ const Download: FC = () => {
         </>
       );
     }
+
     return null;
   }, []);
 
