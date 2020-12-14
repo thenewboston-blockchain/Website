@@ -275,6 +275,18 @@
           "profileImage": "https://avatars2.githubusercontent.com/u/37979044?s=400&u=c451811d1e6c8a9b26bca433aa74d0e789706eba&v=4",
           "slackUsername": "Devansh Gajjar"
         }
+      },
+      {
+        "title": "Graphic Designer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "contributor": {
+          "contributorId": "60",
+          "displayName": "Tolawak Gelana",
+          "githubUsername": "toledit",
+          "profileImage": "https://avatars0.githubusercontent.com/u/27518021?s=400&u=5b21160854c436683ecc060aa0c269694f62fe94&v=4",
+          "slackUsername": "toledit"
+        }
       }
     ]
   },
@@ -515,6 +527,19 @@
           "githubUsername": "petersommerhoff",
           "profileImage": "https://avatars2.githubusercontent.com/u/2805791?s=460&u=5fcb7424015f63ae2194171c5649af332ab59f05&v=4",
           "slackUsername": "Peter Sommerhoff"
+        }
+      },
+      {
+        "title": "Software Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "61",
+          "displayName": "Nish",
+          "githubUsername": "nishp77",
+          "profileImage": "https://avatars0.githubusercontent.com/u/35785259?v=4",
+          "slackUsername": "Nish"
         }
       }
     ]

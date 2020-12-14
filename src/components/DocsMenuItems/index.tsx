@@ -53,12 +53,20 @@ export const bankApiNavigationData = [
     url: '/bank-api/blocks',
   },
   {
+    name: 'Clean',
+    url: '/bank-api/clean',
+  },
+  {
     name: 'Config',
     url: '/bank-api/config',
   },
   {
     name: 'Confirmation Blocks',
     url: '/bank-api/confirmation-blocks',
+  },
+  {
+    name: 'Crawl',
+    url: '/bank-api/crawl',
   },
   {
     name: 'Invalid Blocks',
@@ -96,6 +104,10 @@ export const confirmationValidatorApiNavigationData = [
     url: '/confirmation-validator-api/banks',
   },
   {
+    name: 'Clean',
+    url: '/confirmation-validator-api/clean',
+  },
+  {
     name: 'Config',
     url: '/confirmation-validator-api/config',
   },
@@ -106,6 +118,10 @@ export const confirmationValidatorApiNavigationData = [
   {
     name: 'Connection Requests',
     url: '/confirmation-validator-api/connection-requests',
+  },
+  {
+    name: 'Crawl',
+    url: '/confirmation-validator-api/crawl',
   },
   {
     name: 'Primary Validator Updated',
