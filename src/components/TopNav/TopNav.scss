@@ -44,13 +44,13 @@ $top-nav-height: 60px;
   }
 
   &__left {
-    position: relative;
-    flex: 1;
-    background-color: var(--color-bg);
-    z-index: 3;
-    height: 60px;
-    display: flex;
     align-items: center;
+    background-color: var(--color-bg);
+    display: flex;
+    flex: 1;
+    height: 60px;
+    position: relative;
+    z-index: 3;
   }
 
   &__right {
@@ -70,8 +70,8 @@ $top-nav-height: 60px;
     display: none;
 
     @media (max-width: 992px) {
-      display: block;
       background-color: var(--color-bg);
+      display: block;
     }
 
     &__button {
@@ -79,9 +79,9 @@ $top-nav-height: 60px;
       border: none;
       height: $top-nav-height;
       outline: none;
+      position: relative;
       transition: background 0.1s ease-in;
       width: $top-nav-height;
-      position: relative;
       z-index: 3;
 
       &:hover {
