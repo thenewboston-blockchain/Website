@@ -33,7 +33,9 @@ const TasksTask: FC<ComponentProps> = ({
 
   const renderAssignees = () => {
     return assignedUsers.map(({avatar_url, login}) => (
-      <img alt={login} className="TasksTask__assignee" key={login} src={avatar_url} />
+      <A href={`/user/profile/${login}`}>
+        <img alt={login} className="TasksTask__assignee" key={login} src={avatar_url} />
+      </A>
     ));
   };
 

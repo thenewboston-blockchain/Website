@@ -66,7 +66,7 @@ const LeaderboardContributor: FC<ComponentProps> = ({
   const renderRight = () => (
     <div className="LeaderboardContributor__right">
       <div className="LeaderBoardContributor__user-container">
-        <A className="LeaderboardContributor__user-login" href={`https://github.com/${github_username}`}>
+        <A className="LeaderboardContributor__user-login" href={`/user/profile/${github_username}`}>
           {github_username}
         </A>
       </div>

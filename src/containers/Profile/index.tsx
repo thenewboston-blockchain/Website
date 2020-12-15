@@ -1,21 +1,20 @@
 import React, {FC} from 'react';
+import {useParams} from 'react-router-dom';
 
+import {ProfileUrlParams} from 'types/profiles';
 import ProfileInfo from './ProfileInfo';
 import TasksCompleted from './TasksCompleted';
 import './Profile.scss';
 
-interface ComponentProps {
-  github_username: string;
-}
-
-const Profile: FC<ComponentProps> = ({github_username}) => {
+const Profile: FC = () => {
+  const {githubUsername} = useParams<ProfileUrlParams>();
   return (
     <div className="Profile">
       <div className="Profile__left-section">
-        <ProfileInfo github_username={github_username} />
+        <ProfileInfo github_username={githubUsername} />
       </div>
       <div className="Profile__right-section">
-        <TasksCompleted github_username={github_username} />
+        <TasksCompleted github_username={githubUsername} />
       </div>
     </div>
   );
