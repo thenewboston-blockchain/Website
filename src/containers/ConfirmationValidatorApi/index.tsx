@@ -3,7 +3,9 @@ import {Redirect, useParams} from 'react-router-dom';
 
 import {DashboardLayout, DocsMenuItems, Pagination} from 'components';
 import {confirmationValidatorApiNavigationData} from 'components/DocsMenuItems';
+import NodeApiClean from 'containers/NodeApi/NodeApiClean';
 import NodeApiConnectionRequests from 'containers/NodeApi/NodeApiConnectionRequests';
+import NodeApiCrawl from 'containers/NodeApi/NodeApiCrawl';
 import {PageData, PageDataObject} from 'types/page-data';
 
 import ConfirmationValidatorApiAccounts from './ConfirmationValidatorApiAccounts';
@@ -33,6 +35,10 @@ const pageData: PageDataObject = {
     content: <ConfirmationValidatorApiBanks />,
     name: 'Banks',
   },
+  clean: {
+    content: <NodeApiClean />,
+    name: 'Clean',
+  },
   config: {
     content: <ConfirmationValidatorApiConfig />,
     name: 'Config',
@@ -44,6 +50,10 @@ const pageData: PageDataObject = {
   'connection-requests': {
     content: <NodeApiConnectionRequests />,
     name: 'Connection Requests',
+  },
+  crawl: {
+    content: <NodeApiCrawl />,
+    name: 'Crawl',
   },
   'primary-validator-updated': {
     content: <ConfirmationValidatorApiPrimaryValidatorUpdated />,

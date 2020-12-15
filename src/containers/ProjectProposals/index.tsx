@@ -6,6 +6,7 @@ import {projectProposalsNavigationData} from 'components/OrganizationMenuItems';
 import {PageData, PageDataObject} from 'types/page-data';
 
 import ProjectProposalsOverview from './ProjectProposalsOverview';
+import ProjectProposalsFunding from './ProjectProposalsFunding';
 import ProjectProposalsRules from './ProjectProposalsRules';
 
 const defaultPageData: PageData = {
@@ -14,6 +15,10 @@ const defaultPageData: PageData = {
 };
 
 const pageData: PageDataObject = {
+  funding: {
+    content: <ProjectProposalsFunding />,
+    name: 'Funding',
+  },
   overview: {
     content: <ProjectProposalsOverview />,
     name: 'Overview',
