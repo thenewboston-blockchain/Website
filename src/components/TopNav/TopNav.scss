@@ -48,7 +48,7 @@ $top-nav-height: 60px;
     background-color: var(--color-bg);
     display: flex;
     flex: 1;
-    height: 60px;
+    height: $top-nav-height;
     position: relative;
     z-index: 3;
   }
