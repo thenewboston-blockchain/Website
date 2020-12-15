@@ -29,6 +29,10 @@ export const projectProposalsNavigationData = [
     url: '/project-proposals/overview',
   },
   {
+    name: 'Funding',
+    url: '/project-proposals/funding',
+  },
+  {
     name: 'Rules & Guidelines',
     url: '/project-proposals/rules',
   },
