@@ -1,7 +1,7 @@
-import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'react';
+import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
 
-import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
+import {BreadcrumbMenu, FlatNavLinks, PageTitle} from 'components';
 import {TEAMS} from 'constants/teams';
 import {TeamMember, TeamName, TeamsUrlParams} from 'types/teams';
 import {getTeamMembers} from 'utils/data';
@@ -17,6 +17,16 @@ const Teams: FC = () => {
   const {team: teamParam, tab: tabParam} = useParams<TeamsUrlParams>();
   const [filteredMembers, setFilteredMembers] = useState<TeamMember[]>(teamMembers);
   const [teamFilter, setTeamFilter] = useState<TeamName>(TeamName.all);
+
+  const sortTeamMembers = useCallback((members: TeamMember[]): TeamMember[] => {
+    const teamLeads = members
+      .filter(({isLead}) => isLead)
+      .sort((member1, member2) => (member1.displayName > member2.displayName ? 1 : -1));
+    const otherMembers = members
+      .filter(({isLead}) => !isLead)
+      .sort((member1, member2) => (member1.displayName > member2.displayName ? 1 : -1));
+    return teamLeads.concat(otherMembers);
+  }, []);
 
   useEffect(() => {
     const team = TEAMS.find(({pathname}) => pathname === teamParam);
@@ -42,11 +52,12 @@ const Teams: FC = () => {
           }
         }
       });
-      return teamLeads.sort().concat(otherMembers.sort());
+      return teamLeads.concat(otherMembers);
     };
-
-    setFilteredMembers(teamFilter === TeamName.all ? teamMembers : getFilteredMembers());
-  }, [teamFilter]);
+    const members = teamFilter === TeamName.all ? teamMembers : getFilteredMembers();
+    const sortedMembers = sortTeamMembers(members);
+    setFilteredMembers(sortedMembers);
+  }, [sortTeamMembers, teamFilter]);
 
   const handleNavOptionClick = useCallback(
     (option: string) => (): void => {
