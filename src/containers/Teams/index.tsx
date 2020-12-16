@@ -1,4 +1,4 @@
-import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
+import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
 
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
@@ -7,13 +7,14 @@ import {TeamMember, TeamName, TeamsUrlParams} from 'types/teams';
 import {getTeamMembers} from 'utils/data';
 
 import TeamMemberCard from './TeamMemberCard';
+import TeamTabs from './TeamTabs';
 import './Teams.scss';
 
 const teamMembers = getTeamMembers();
 
 const Teams: FC = () => {
   const history = useHistory();
-  const {team: teamParam} = useParams<TeamsUrlParams>();
+  const {team: teamParam, tab: tabParam} = useParams<TeamsUrlParams>();
   const [filteredMembers, setFilteredMembers] = useState<TeamMember[]>(teamMembers);
   const [teamFilter, setTeamFilter] = useState<TeamName>(TeamName.all);
 
@@ -41,7 +42,7 @@ const Teams: FC = () => {
           }
         }
       });
-      return teamLeads.concat(otherMembers);
+      return teamLeads.sort().concat(otherMembers.sort());
     };
 
     setFilteredMembers(teamFilter === TeamName.all ? teamMembers : getFilteredMembers());
@@ -49,7 +50,11 @@ const Teams: FC = () => {
 
   const handleNavOptionClick = useCallback(
     (option: string) => (): void => {
-      history.push(`/teams/${option}`);
+      if (option === TeamName.all) {
+        history.push(`/teams/${option}/Members`);
+      } else {
+        history.push(`/teams/${option}/Overview`);
+      }
     },
     [history],
   );
@@ -58,7 +63,7 @@ const Teams: FC = () => {
     return <FlatNavLinks handleOptionClick={handleNavOptionClick} options={TEAMS} selectedOption={teamParam} />;
   };
 
-  const renderTeamMembers = (): ReactNode => {
+  const renderTeamMembers = useCallback((): ReactNode => {
     return filteredMembers.map(
       ({contributorId, displayName, githubUsername, isLead, payPerDay, profileImage, slackUsername, titles}) => (
         <TeamMemberCard
@@ -73,7 +78,17 @@ const Teams: FC = () => {
         />
       ),
     );
-  };
+  }, [filteredMembers]);
+
+  const renderTabPanel = useCallback(() => {
+    switch (tabParam) {
+      case 'Members': {
+        return <div className="Teams__team-list">{renderTeamMembers()}</div>;
+      }
+      default:
+        return null;
+    }
+  }, [renderTeamMembers, tabParam]);
 
   return (
     <>
@@ -87,9 +102,10 @@ const Teams: FC = () => {
         />
         <div className="Teams__left-menu">{renderTeamFilter()}</div>
         <div className="Teams__right-list">
-          <h1 className="Teams__team-heading">{teamFilter === TeamName.all ? 'All Contributors' : teamFilter}</h1>
-          {!filteredMembers.length && <EmptyPage />}
-          <div className="Teams__team-list">{renderTeamMembers()}</div>
+          <h1 className="Teams__team-heading">{teamFilter === TeamName.all ? 'All' : teamFilter}</h1>
+          {/* {!filteredMembers.length && <EmptyPage />} */}
+          <TeamTabs team={teamParam} tab={tabParam} />
+          <div className="Teams__tab-panel">{renderTabPanel()}</div>
         </div>
       </div>
     </>

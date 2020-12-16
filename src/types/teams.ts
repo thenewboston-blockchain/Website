@@ -59,4 +59,5 @@ export interface TeamMember {
 
 export interface TeamsUrlParams {
   team: string;
+  tab: string;
 }
