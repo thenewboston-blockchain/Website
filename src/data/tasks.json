@@ -453,6 +453,36 @@
       "completed_date": "12/11/20",
       "amount_paid": "1000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Update documentation for Connection Requests",
+      "issue_id": "974",
+      "pr_id": "1026",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/14/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Update documentation for Connection Requests",
+      "issue_id": "958",
+      "pr_id": "1026",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/14/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Update documentation for Connection Requests",
+      "issue_id": "967",
+      "pr_id": "1026",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/14/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "FaiyazMdAbdul": [
@@ -857,6 +887,18 @@
       "completed_date": "11/15/20",
       "amount_paid": "7500",
       "bug_bounty": ""
+    }
+  ],
+  "SirDaev": [
+    {
+      "repository": "Website",
+      "title": "Fix download button concatenation (#1055)",
+      "issue_id": "1055",
+      "pr_id": "1115",
+      "completed_by": "SirDaev",
+      "completed_date": "12/14/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
     }
   ],
   "Surac778": [
@@ -1376,6 +1418,26 @@
       "completed_by": "aayushi14",
       "completed_date": "12/03/20",
       "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "1083- added new contributor",
+      "issue_id": "1083",
+      "pr_id": "1086",
+      "completed_by": "aayushi14",
+      "completed_date": "12/14/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "1084-added job opening",
+      "issue_id": "1084",
+      "pr_id": "1087",
+      "completed_by": "aayushi14",
+      "completed_date": "12/14/20",
+      "amount_paid": "500",
       "bug_bounty": "FALSE"
     }
   ],
@@ -2925,6 +2987,26 @@
       "completed_date": "12/07/20",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Profile: add link to team page",
+      "issue_id": "1109",
+      "pr_id": "1104",
+      "completed_by": "jamessspanggg",
+      "completed_date": "12/14/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add new kotlin contributor",
+      "issue_id": "1085",
+      "pr_id": "1090",
+      "completed_by": "jamessspanggg",
+      "completed_date": "12/14/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
     }
   ],
   "jonathanlee06": [
@@ -3253,6 +3335,16 @@
       "completed_date": "10/14/20",
       "amount_paid": "5000",
       "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "Added white logo",
+      "issue_id": "1073",
+      "pr_id": "1113",
+      "completed_by": "leelatanniru",
+      "completed_date": "12/14/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
     }
   ],
   "lucedawg": [
@@ -3461,6 +3553,16 @@
       "completed_date": "12/10/20",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Update for Project proposals",
+      "issue_id": "1116",
+      "pr_id": "1117",
+      "completed_by": "manishram",
+      "completed_date": "12/15/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
     }
   ],
   "matheusfillipe": [
@@ -3596,6 +3698,16 @@
       "completed_by": "mrbusysky",
       "completed_date": "12/10/20",
       "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Adding discord",
+      "issue_id": "1111",
+      "pr_id": "1110",
+      "completed_by": "mrbusysky",
+      "completed_date": "12/15/20",
+      "amount_paid": "1000",
       "bug_bounty": "FALSE"
     }
   ],
@@ -4344,6 +4456,18 @@
       "completed_by": "thesanjeevsharma",
       "completed_date": "12/11/20",
       "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    }
+  ],
+  "tomijaga": [
+    {
+      "repository": "Website",
+      "title": "Added Hello World in Shona",
+      "issue_id": "351",
+      "pr_id": "1126",
+      "completed_by": "tomijaga",
+      "completed_date": "12/15/20",
+      "amount_paid": "500",
       "bug_bounty": "FALSE"
     }
   ],

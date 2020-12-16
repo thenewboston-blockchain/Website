@@ -16,6 +16,7 @@ import ChevronUpIcon from 'mdi-react/ChevronUpIcon';
 import CloseIcon from 'mdi-react/CloseIcon';
 import ContentCopyIcon from 'mdi-react/ContentCopyIcon';
 import CurrencyUsdIcon from 'mdi-react/CurrencyUsdIcon';
+import DiscordIcon from 'mdi-react/DiscordIcon';
 import DownloadIcon from 'mdi-react/DownloadIcon';
 import EarthIcon from 'mdi-react/EarthIcon';
 import FacebookIcon from 'mdi-react/FacebookIcon';
@@ -61,6 +62,7 @@ export enum IconType {
   close,
   contentCopy,
   currencyUsd,
+  discord,
   downloadIcon,
   earth,
   facebook,
@@ -134,6 +136,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
           return <ContentCopyIcon {...iconProps} />;
         case IconType.currencyUsd:
           return <CurrencyUsdIcon {...iconProps} />;
+        case IconType.discord:
+          return <DiscordIcon {...iconProps} />;
         case IconType.downloadIcon:
           return <DownloadIcon {...iconProps} />;
         case IconType.earth:
