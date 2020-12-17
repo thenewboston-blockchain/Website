@@ -86,6 +86,7 @@ const Footer: FC<ComponentProps> = ({className}) => {
       SocialMedia.facebook,
       SocialMedia.twitter,
       SocialMedia.discord,
+      SocialMedia.twitch,
     ].map((website) => (
       <SocialMediaIcon className="Footer__SocialMediaLink" iconSize={28} key={website} website={website} />
     ));

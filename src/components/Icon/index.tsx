@@ -41,6 +41,7 @@ import SortAscendingIcon from 'mdi-react/SortAscendingIcon';
 import SortDescendingIcon from 'mdi-react/SortDescendingIcon';
 import ThumbsUpIcon from 'mdi-react/ThumbsUpIcon';
 import TrophyIcon from 'mdi-react/TrophyIcon';
+import TwitchIcon from 'mdi-react/TwitchIcon';
 import TwitterIcon from 'mdi-react/TwitterIcon';
 import YoutubeIcon from 'mdi-react/YoutubeIcon';
 
@@ -87,6 +88,7 @@ export enum IconType {
   sortDescending,
   thumbsUp,
   trophy,
+  twitch,
   twitter,
   youtube,
 }
@@ -186,6 +188,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
           return <ThumbsUpIcon {...iconProps} />;
         case IconType.trophy:
           return <TrophyIcon {...iconProps} />;
+        case IconType.twitch:
+          return <TwitchIcon {...iconProps} />;
         case IconType.twitter:
           return <TwitterIcon {...iconProps} />;
         case IconType.youtube:
