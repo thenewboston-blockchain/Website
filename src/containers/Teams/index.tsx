@@ -1,7 +1,7 @@
 import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
 
-import {BreadcrumbMenu, FlatNavLinks, PageTitle} from 'components';
+import {A, BreadcrumbMenu, FlatNavLinks, Icon, IconType, PageTitle} from 'components';
 import {TEAMS} from 'constants/teams';
 import {TeamMember, TeamName, TeamsUrlParams} from 'types/teams';
 import {getTeamMembers} from 'utils/data';
@@ -91,10 +91,58 @@ const Teams: FC = () => {
     );
   }, [filteredMembers]);
 
+  const renderTeamDescription = (): ReactNode => {
+    return (
+      <>
+        <h4 className="Teams__team-overview-sub-heading"> About the team </h4>
+        <p className="Teams__team-description">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam qui sed ratione porro sit soluta quibusdam
+          voluptatum ipsam quidem sunt nostrum tempore voluptatem debitis, consectetur consequuntur? Excepturi
+          perspiciatis corrupti tenetur.
+        </p>
+        {[
+          {name: 'slack', src: '-'},
+          {name: 'github', src: 'https://google.com'},
+        ].map((channel) => (
+          <div className="Teams__team-social">
+            <Icon
+              className="Teams__team-social-icon"
+              icon={channel.name === 'github' ? IconType.github : IconType.slack}
+              size={18}
+            />
+            {channel.name === 'github' ? (
+              <A className="Teams__team-social-title" href={channel.src}>
+                {channel.name}
+              </A>
+            ) : (
+              <p className="Teams__team-social-title Teams__team-social-title--sail-gray"> #{channel.name} </p>
+            )}
+          </div>
+        ))}
+      </>
+    );
+  };
+
+  const renderTeamResponsibilities = (): ReactNode => {
+    return (
+      <>
+        <h4 className="Teams__team-overview-sub-heading"> Role and Responsibilities </h4>
+      </>
+    );
+  };
+
   const renderTabPanel = useCallback(() => {
     switch (tabParam) {
       case 'Members': {
         return <div className="Teams__team-list">{renderTeamMembers()}</div>;
+      }
+      case 'Overview': {
+        return (
+          <div className="Teams__team-overview">
+            <div className="Teams__team-about">{renderTeamDescription()}</div>
+            <div className="Teams__team-responsibilities">{renderTeamResponsibilities()}</div>
+          </div>
+        );
       }
       default:
         return null;
@@ -111,13 +159,13 @@ const Teams: FC = () => {
           pageName={teamFilter}
           sectionName="Team"
         />
-        <div className="Teams__left-menu">{renderTeamFilter()}</div>
-        <div className="Teams__right-list">
+        <aside className="Teams__left-menu">{renderTeamFilter()}</aside>
+        <section className="Teams__right-section">
           <h1 className="Teams__team-heading">{teamFilter === TeamName.all ? 'All' : teamFilter}</h1>
           {/* {!filteredMembers.length && <EmptyPage />} */}
           <TeamTabs team={teamParam} tab={tabParam} />
           <div className="Teams__tab-panel">{renderTabPanel()}</div>
-        </div>
+        </section>
       </div>
     </>
   );

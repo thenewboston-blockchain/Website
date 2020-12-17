@@ -12,10 +12,17 @@
     grid-column: 1 / span 1;
   }
 
-  &__right-list {
+  &__right-section {
     grid-column: 2 / span 1;
     overflow-y: auto;
-    padding: 12px 0 48px;
+    padding: 12px 40px 48px;
+  }
+
+  &__team-description {
+    color: var(--color-sail-gray-900);
+    font-size: 14px;
+    line-height: 125%;
+    margin-bottom: 24px;
   }
 
   &__team-details {
@@ -27,14 +34,54 @@
     font-family: var(--font-family-inter-light);
     font-size: 36px;
     line-height: 1.25;
-    margin: 16px 40px 28px;
+    margin: 16px 0 28px;
   }
 
   &__team-list {
     display: grid;
     grid-gap: 12px;
     grid-template-columns: 50% 50%;
-    padding: 0 36px;
+  }
+
+  &__team-overview {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: 350px auto;
+
+    & > div {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0px 0px 3px rgba(85, 108, 214, 0.3);
+      padding: 18px;
+    }
+
+    &-sub-heading {
+      color: var(--color-sail-gray-900);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 125%;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__team-social {
+    align-items: center;
+    display: flex;
+    margin-bottom: 24px;
+
+    &-icon {
+      margin-right: 12px;
+    }
+
+    &-title {
+      font-size: 14px;
+      line-height: 125%;
+      margin-bottom: 0;
+
+      &--sail-gray {
+        color: var(--color-sail-gray-900);
+      }
+    }
   }
 
   @media (max-width: 992px) {
@@ -52,19 +99,18 @@
       display: none;
     }
 
-    &__right-list {
+    &__right-section {
       grid-column: 1 / span 1;
       grid-row: 2 / span 1;
+      padding: 12px 12px 48px;
+    }
+
+    &__team-heading {
+      margin: 16px 0;
     }
 
     &__team-list {
       grid-template-columns: auto;
-    }
-  }
-
-  @media (max-width: 768px) {
-    &__team-heading {
-      margin: 16px 42px 36px;
     }
   }
 }
