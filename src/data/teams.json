@@ -1,6 +1,11 @@
 [
   {
     "title": ".NET Core",
+    "description": ".NET Core team is rocking it.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
+      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+    ],
     "contributors": [
       {
         "title": "Software Developer",
@@ -19,6 +24,11 @@
   },
   {
     "title": "Back-End Developers",
+    "description": ".NET Core team is rocking it.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
+      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+    ],
     "contributors": [
       {
         "title": "Back-End Lead",
@@ -128,6 +138,11 @@
   },
   {
     "title": "Community",
+    "description": ".NET Core team is rocking it.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
+      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+    ],
     "contributors": [
       {
         "title": "Head of Community",
@@ -224,6 +239,11 @@
   },
   {
     "title": "Design",
+    "description": ".NET Core team is rocking it.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
+      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+    ],
     "contributors": [
       {
         "title": "Design Lead",
@@ -292,6 +312,11 @@
   },
   {
     "title": "DevOps",
+    "description": ".NET Core team is rocking it.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
+      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+    ],
     "contributors": [
       {
         "title": "DevOps",
@@ -310,6 +335,11 @@
   },
   {
     "title": "Discord Managers",
+    "description": ".NET Core team is rocking it.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
+      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+    ],
     "contributors": [
       {
         "title": "Discord Manager",
@@ -341,6 +371,11 @@
   },
   {
     "title": "Front-End Developers",
+    "description": ".NET Core team is rocking it.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
+      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+    ],
     "contributors": [
       {
         "title": "Front-End Lead",
@@ -489,6 +524,11 @@
   },
   {
     "title": "Kotlin SDK",
+    "description": ".NET Core team is rocking it.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
+      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+    ],
     "contributors": [
       {
         "title": "Kotlin SDK Lead",
@@ -546,6 +586,11 @@
   },
   {
     "title": "Marketing",
+    "description": ".NET Core team is rocking it.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
+      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+    ],
     "contributors": [
       {
         "title": "Head of Marketing",
@@ -577,6 +622,11 @@
   },
   {
     "title": "New User Operations",
+    "description": ".NET Core team is rocking it.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
+      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+    ],
     "contributors": [
       {
         "title": "New User Operations Lead",
@@ -595,6 +645,11 @@
   },
   {
     "title": "Payments",
+    "description": ".NET Core team is rocking it.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
+      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+    ],
     "contributors": [
       {
         "title": "Head of Contributor Payments",
@@ -639,6 +694,11 @@
   },
   {
     "title": "Project Proposals",
+    "description": ".NET Core team is rocking it.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
+      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+    ],
     "contributors": [
       {
         "title": "Project Proposals Manager",
@@ -657,6 +717,11 @@
   },
   {
     "title": "QA",
+    "description": ".NET Core team is rocking it.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
+      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+    ],
     "contributors": [
       {
         "title": "QA Lead",
@@ -675,6 +740,11 @@
   },
   {
     "title": "Reddit Moderators",
+    "description": ".NET Core team is rocking it.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
+      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+    ],
     "contributors": [
       {
         "title": "Reddit Moderator",
@@ -719,6 +789,11 @@
   },
   {
     "title": "Research",
+    "description": ".NET Core team is rocking it.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
+      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+    ],
     "contributors": [
       {
         "title": "Blockchain Researcher",
@@ -789,6 +864,11 @@
   },
   {
     "title": "Security",
+    "description": ".NET Core team is rocking it.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
+      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+    ],
     "contributors": [
       {
         "title": "Cryptography Security Engineer",
@@ -833,6 +913,11 @@
   },
   {
     "title": "YouTube",
+    "description": ".NET Core team is rocking it.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
+      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+    ],
     "contributors": [
       {
         "title": "YouTube Educator",

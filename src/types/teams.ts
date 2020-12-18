@@ -27,8 +27,16 @@ interface Contributor {
   slackUsername: string;
 }
 
+export interface TeamPlatform {
+  label: string;
+  link: string;
+  name: string;
+}
+
 export interface Team {
   contributors: TeamContributor[];
+  description: string;
+  platforms: TeamPlatform[];
   title: string;
 }
 

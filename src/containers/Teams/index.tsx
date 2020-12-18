@@ -4,7 +4,7 @@ import {useHistory, useParams} from 'react-router-dom';
 import {A, BreadcrumbMenu, FlatNavLinks, Icon, IconType, PageTitle} from 'components';
 import {TEAMS} from 'constants/teams';
 import {TeamMember, TeamName, TeamsUrlParams} from 'types/teams';
-import {getTeamMembers} from 'utils/data';
+import {getTeamDescription, getTeamMembers} from 'utils/data';
 
 import TeamMemberCard from './TeamMemberCard';
 import TeamTabs from './TeamTabs';
@@ -91,37 +91,32 @@ const Teams: FC = () => {
     );
   }, [filteredMembers]);
 
-  const renderTeamDescription = (): ReactNode => {
+  const renderTeamDescription = useCallback((): ReactNode => {
+    const {description, platforms} = getTeamDescription(teamFilter);
+
     return (
       <>
         <h4 className="Teams__team-overview-sub-heading"> About the team </h4>
-        <p className="Teams__team-description">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam qui sed ratione porro sit soluta quibusdam
-          voluptatum ipsam quidem sunt nostrum tempore voluptatem debitis, consectetur consequuntur? Excepturi
-          perspiciatis corrupti tenetur.
-        </p>
-        {[
-          {name: 'slack', src: '-'},
-          {name: 'github', src: 'https://google.com'},
-        ].map((channel) => (
+        <p className="Teams__team-description">{description}</p>
+        {platforms.map(({name, label, link}) => (
           <div className="Teams__team-social">
             <Icon
               className="Teams__team-social-icon"
-              icon={channel.name === 'github' ? IconType.github : IconType.slack}
+              icon={name === 'github' ? IconType.github : IconType.slack}
               size={18}
             />
-            {channel.name === 'github' ? (
-              <A className="Teams__team-social-title" href={channel.src}>
-                {channel.name}
+            {name === 'github' ? (
+              <A className="Teams__team-social-title" href={link}>
+                {label}
               </A>
             ) : (
-              <p className="Teams__team-social-title Teams__team-social-title--sail-gray"> #{channel.name} </p>
+              <p className="Teams__team-social-title Teams__team-social-title--sail-gray"> #{label} </p>
             )}
           </div>
         ))}
       </>
     );
-  };
+  }, [teamFilter]);
 
   const renderTeamResponsibilities = (): ReactNode => {
     return (
@@ -147,7 +142,7 @@ const Teams: FC = () => {
       default:
         return null;
     }
-  }, [renderTeamMembers, tabParam]);
+  }, [renderTeamDescription, renderTeamMembers, tabParam]);
 
   return (
     <>
