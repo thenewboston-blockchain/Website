@@ -20,15 +20,15 @@ const Webmap: FC = () => {
   const ipInfoEndpoint = 'http://ip-api.com/batch/';
 
   interface APIResponse {
-    query: string;
-    country: string;
-    city: string;
-    org: string;
-    root_account_file: string;
     account_number: number;
+    city: string;
+    country: string;
     default_transaction_fee: number;
     lat: number;
     lon: number;
+    org: string;
+    query: string;
+    root_account_file: string;
   }
 
   const [state, setState] = useState<APIResponse[]>([]);
