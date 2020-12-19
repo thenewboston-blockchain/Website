@@ -160,7 +160,7 @@ const Teams: FC = () => {
         return <div className="Teams__resources">{renderResources()}</div>;
       }
       default:
-        return null;
+        return <EmptyPage />;
     }
   }, [renderResources, renderTeamMembers, tabParam, teamFilter]);
 
