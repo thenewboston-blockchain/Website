@@ -1,10 +1,14 @@
 [
   {
     "title": ".NET Core",
-    "description": ".NET Core team is rocking it.",
+    "description": ".NET Core",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
-      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "developers",
+        "link": ""
+      }
     ],
     "contributors": [
       {
@@ -25,10 +29,14 @@
   },
   {
     "title": "Back-End Developers",
-    "description": ".NET Core team is rocking it.",
+    "description": "Back-End Developers",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
-      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "back-end",
+        "link": ""
+      }
     ],
     "contributors": [
       {
@@ -140,10 +148,14 @@
   },
   {
     "title": "Community",
-    "description": ".NET Core team is rocking it.",
+    "description": "Community",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
-      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "general",
+        "link": ""
+      }
     ],
     "contributors": [
       {
@@ -279,10 +291,14 @@
   },
   {
     "title": "Design",
-    "description": ".NET Core team is rocking it.",
+    "description": "Design",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
-      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "design",
+        "link": ""
+      }
     ],
     "contributors": [
       {
@@ -378,10 +394,14 @@
   },
   {
     "title": "DevOps",
-    "description": ".NET Core team is rocking it.",
+    "description": "DevOps",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
-      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "developers",
+        "link": ""
+      }
     ],
     "contributors": [
       {
@@ -402,10 +422,14 @@
   },
   {
     "title": "Discord Managers",
-    "description": ".NET Core team is rocking it.",
+    "description": "Discord Managers",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
-      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "general",
+        "link": ""
+      }
     ],
     "contributors": [
       {
@@ -444,10 +468,14 @@
   },
   {
     "title": "Front-End Developers",
-    "description": ".NET Core team is rocking it.",
+    "description": "Front-End Developers",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
-      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "front-end",
+        "link": ""
+      }
     ],
     "contributors": [
       {
@@ -598,10 +626,14 @@
   },
   {
     "title": "Kotlin SDK",
-    "description": ".NET Core team is rocking it.",
+    "description": "Kotlin SDK",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
-      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "developers",
+        "link": ""
+      }
     ],
     "contributors": [
       {
@@ -661,10 +693,14 @@
   },
   {
     "title": "Marketing",
-    "description": ".NET Core team is rocking it.",
+    "description": "Marketing",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
-      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "general",
+        "link": ""
+      }
     ],
     "contributors": [
       {
@@ -735,10 +771,14 @@
   },
   {
     "title": "New User Operations",
-    "description": ".NET Core team is rocking it.",
+    "description": "New User Operations",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
-      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "intros",
+        "link": ""
+      }
     ],
     "contributors": [
       {
@@ -776,10 +816,14 @@
   },
   {
     "title": "Payments",
-    "description": ".NET Core team is rocking it.",
+    "description": "Payments",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
-      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "payments",
+        "link": ""
+      }
     ],
     "contributors": [
       {
@@ -843,10 +887,14 @@
   },
   {
     "title": "Project Proposals",
-    "description": ".NET Core team is rocking it.",
+    "description": "Project Proposals",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
-      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "general",
+        "link": ""
+      }
     ],
     "contributors": [
       {
@@ -903,10 +951,14 @@
   },
   {
     "title": "QA",
-    "description": ".NET Core team is rocking it.",
+    "description": "QA",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
-      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "developers",
+        "link": ""
+      }
     ],
     "contributors": [
       {
@@ -927,10 +979,14 @@
   },
   {
     "title": "Reddit Moderators",
-    "description": ".NET Core team is rocking it.",
+    "description": "Reddit Moderators",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
-      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "developers",
+        "link": ""
+      }
     ],
     "contributors": [
       {
@@ -982,10 +1038,14 @@
   },
   {
     "title": "Research",
-    "description": ".NET Core team is rocking it.",
+    "description": "Research",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
-      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "research",
+        "link": ""
+      }
     ],
     "contributors": [
       {
@@ -1075,10 +1135,14 @@
   },
   {
     "title": "Security",
-    "description": ".NET Core team is rocking it.",
+    "description": "Security",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
-      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "developers",
+        "link": ""
+      }
     ],
     "contributors": [
       {
@@ -1125,10 +1189,14 @@
   },
   {
     "title": "YouTube",
-    "description": ".NET Core team is rocking it.",
+    "description": "YouTube",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com"},
-      {"name": "slack", "label": "thenewboston", "link": "https://slack.com"}
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "general",
+        "link": ""
+      }
     ],
     "contributors": [
       {
