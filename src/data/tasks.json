@@ -213,6 +213,16 @@
       "completed_date": "12/11/20",
       "amount_paid": "2000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "thenewboston-js",
+      "title": "[Task] Create `Validator` Documentation",
+      "issue_id": "25",
+      "pr_id": "43",
+      "completed_by": "CNFloss",
+      "completed_date": "12/14/20",
+      "amount_paid": "7500",
+      "bug_bounty": "FALSE"
     }
   ],
   "CirXe0N": [
@@ -639,6 +649,16 @@
       "completed_date": "11/30/20",
       "amount_paid": "1000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Kotlin-SDK",
+      "title": "Implement PATCH request for Banks in Banks API",
+      "issue_id": "66",
+      "pr_id": "78",
+      "completed_by": "IanArb",
+      "completed_date": "12/10/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
     }
   ],
   "JayBIOS": [
@@ -899,6 +919,16 @@
       "completed_date": "12/14/20",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Prevent mobile menu from blocking header elements during animation",
+      "issue_id": "582",
+      "pr_id": "1118",
+      "completed_by": "SirDaev",
+      "completed_date": "12/15/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "Surac778": [
@@ -1109,6 +1139,26 @@
       "completed_date": "11/23/20",
       "amount_paid": "200",
       "bug_bounty": ""
+    },
+    {
+      "repository": "Website",
+      "title": "[Documentaion] Bank confirmation blocks",
+      "issue_id": "956",
+      "pr_id": "980",
+      "completed_by": "VincentHch",
+      "completed_date": "12/05/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "[Documentation] Bank invalid blocks",
+      "issue_id": "957",
+      "pr_id": "981",
+      "completed_by": "VincentHch",
+      "completed_date": "12/02/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "Weav3r": [
@@ -3007,6 +3057,16 @@
       "completed_date": "12/14/20",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Fix width of mobile menu dropdown",
+      "issue_id": "1129",
+      "pr_id": "1130",
+      "completed_by": "jamessspanggg",
+      "completed_date": "12/16/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
     }
   ],
   "jonathanlee06": [
@@ -3797,6 +3857,16 @@
       "completed_date": "12/11/20",
       "amount_paid": "1000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Kotlin-SDK",
+      "title": "Implement GET request for invalid blocks in Banks API",
+      "issue_id": "63",
+      "pr_id": "75",
+      "completed_by": "nishp77",
+      "completed_date": "12/06/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
     }
   ],
   "nparoski": [
@@ -3928,6 +3998,26 @@
       "completed_by": "petersommerhoff",
       "completed_date": "11/17/20",
       "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Kotlin-SDK",
+      "title": "Implement POST request for invalid block in Banks API",
+      "issue_id": "64",
+      "pr_id": "87",
+      "completed_by": "petersommerhoff",
+      "completed_date": "12/12/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Kotlin-SDK",
+      "title": "Implement PATCH request for Account in Banks API",
+      "issue_id": "65",
+      "pr_id": "74",
+      "completed_by": "petersommerhoff",
+      "completed_date": "12/06/20",
+      "amount_paid": "2000",
       "bug_bounty": "FALSE"
     }
   ],

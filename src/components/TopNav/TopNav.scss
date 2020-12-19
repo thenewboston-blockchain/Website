@@ -118,7 +118,7 @@ $top-nav-height: 60px;
       padding: 60px;
       position: fixed;
       top: $top-nav-height;
-      width: 100vw;
+      width: 100%;
       z-index: 2;
 
       @media (max-width: 576px) {
@@ -155,7 +155,7 @@ $top-nav-height: 60px;
       outline: none;
       position: fixed;
       top: $top-nav-height;
-      width: 100vw;
+      width: 100%;
       z-index: 1;
     }
   }
