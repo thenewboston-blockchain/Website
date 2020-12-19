@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocImage, DocList, Label} from 'components';
+import {DocImage, DocList, Label} from 'components';
 import 'containers/Teams/Resources/Resources.scss';
 import PaymentBoard from './PaymentBoard.png';
 

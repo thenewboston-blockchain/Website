@@ -1,21 +1,32 @@
 import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
 import {Link, useHistory, useParams} from 'react-router-dom';
 
-import {A, BreadcrumbMenu, DocList, EmptyPage, FlatNavLinks, Icon, IconType, PageTitle} from 'components';
+import {BreadcrumbMenu, EmptyPage, FlatNavLinks, Icon, IconType, PageTitle} from 'components';
 import {TEAMS} from 'constants/teams';
 import {PageDataObject} from 'types/page-data';
-import {TeamMember, TeamName, TeamPlatform, TeamResponsibility, TeamsUrlParams} from 'types/teams';
-import {getTeamData, getTeamMembers} from 'utils/data';
+import {TeamMember, TeamName, TeamsUrlParams} from 'types/teams';
+import {getTeamMembers} from 'utils/data';
 
 import InternalHowToSetUpPaymentBoard from './Resources/InternalHowToSetUpPaymentBoard';
 import InternalNewUserOperations from './Resources/InternalNewUserOperations';
 import InternalProductDevelopment from './Resources/InternalProductDevelopment';
 import InternalTeamLeadOnboarding from './Resources/InternalTeamLeadOnboarding';
 import TeamMemberCard from './TeamMemberCard';
+import TeamOverview from './TeamOverview';
 import TeamTabs from './TeamTabs';
 import './Teams.scss';
 
 const teamMembers = getTeamMembers();
+
+const sortTeamMembers = (members: TeamMember[]): TeamMember[] => {
+  const teamLeads = members
+    .filter(({isLead}) => isLead)
+    .sort((member1, member2) => (member1.displayName > member2.displayName ? 1 : -1));
+  const otherMembers = members
+    .filter(({isLead}) => !isLead)
+    .sort((member1, member2) => (member1.displayName > member2.displayName ? 1 : -1));
+  return teamLeads.concat(otherMembers);
+};
 
 const pageData: PageDataObject = {
   'how-to-set-up-payment-board': {
@@ -41,16 +52,6 @@ const Teams: FC = () => {
   const {team: teamParam, tab: tabParam, resource: resourceParam} = useParams<TeamsUrlParams>();
   const [filteredMembers, setFilteredMembers] = useState<TeamMember[]>(teamMembers);
   const [teamFilter, setTeamFilter] = useState<TeamName>(TeamName.all);
-
-  const sortTeamMembers = useCallback((members: TeamMember[]): TeamMember[] => {
-    const teamLeads = members
-      .filter(({isLead}) => isLead)
-      .sort((member1, member2) => (member1.displayName > member2.displayName ? 1 : -1));
-    const otherMembers = members
-      .filter(({isLead}) => !isLead)
-      .sort((member1, member2) => (member1.displayName > member2.displayName ? 1 : -1));
-    return teamLeads.concat(otherMembers);
-  }, []);
 
   useEffect(() => {
     const team = TEAMS.find(({pathname}) => pathname === teamParam);
@@ -81,7 +82,7 @@ const Teams: FC = () => {
     const members = teamFilter === TeamName.all ? teamMembers : getFilteredMembers();
     const sortedMembers = sortTeamMembers(members);
     setFilteredMembers(sortedMembers);
-  }, [sortTeamMembers, teamFilter]);
+  }, [teamFilter]);
 
   const handleNavOptionClick = useCallback(
     (option: string) => (): void => {
@@ -115,61 +116,6 @@ const Teams: FC = () => {
       ),
     );
   }, [filteredMembers]);
-
-  const renderTeamDescription = useCallback((description: string, platforms: TeamPlatform[]): ReactNode => {
-    return (
-      <>
-        <h4 className="Teams__team-overview-sub-heading"> About the team </h4>
-        <p className="Teams__team-description">{description}</p>
-        {platforms.map(({name, label, link}) => (
-          <div className="Teams__team-social">
-            <Icon
-              className="Teams__team-social-icon"
-              icon={name === 'github' ? IconType.github : IconType.slack}
-              size={18}
-            />
-            {name === 'github' ? (
-              <A className="Teams__team-social-title" href={link}>
-                {label}
-              </A>
-            ) : (
-              <p className="Teams__team-social-title Teams__team-social-title--sail-gray"> #{label} </p>
-            )}
-          </div>
-        ))}
-      </>
-    );
-  }, []);
-
-  const renderTeamResponsibilities = useCallback((responsibilities: TeamResponsibility[]): ReactNode => {
-    return (
-      <>
-        <h4 className="Teams__team-overview-sub-heading"> Role and Responsibilities </h4>
-        <DocList className="Teams__team-responsibilities-item" variant="ul">
-          {responsibilities.map(({item, subitems}) => (
-            <>
-              <li> {item} </li>
-              <ul>
-                {subitems.map((subitem) => (
-                  <li>{subitem}</li>
-                ))}
-              </ul>
-            </>
-          ))}
-        </DocList>
-      </>
-    );
-  }, []);
-
-  const renderTeamOverview = useCallback((): ReactNode => {
-    const {description, platforms, responsibilities} = getTeamData(teamFilter);
-    return (
-      <>
-        <div className="Teams__team-about">{renderTeamDescription(description, platforms)}</div>
-        <div className="Teams__team-responsibilities">{renderTeamResponsibilities(responsibilities)}</div>
-      </>
-    );
-  }, [teamFilter, renderTeamDescription, renderTeamResponsibilities]);
 
   const renderResources = useCallback((): ReactNode => {
     return (
@@ -208,7 +154,7 @@ const Teams: FC = () => {
         return <div className="Teams__team-list">{renderTeamMembers()}</div>;
       }
       case 'Overview': {
-        return <div className="Teams__team-overview">{renderTeamOverview()}</div>;
+        return <TeamOverview teamFilter={teamFilter} />;
       }
       case 'Resources': {
         return <div className="Teams__resources">{renderResources()}</div>;
@@ -216,7 +162,7 @@ const Teams: FC = () => {
       default:
         return null;
     }
-  }, [renderResources, renderTeamMembers, renderTeamOverview, tabParam]);
+  }, [renderResources, renderTeamMembers, tabParam, teamFilter]);
 
   return (
     <>

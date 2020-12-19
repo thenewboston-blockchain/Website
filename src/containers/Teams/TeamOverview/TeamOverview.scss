@@ -1,0 +1,78 @@
+.TeamOverview {
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 336px auto;
+
+  & > div {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 0px 3px rgba(85, 108, 214, 0.3);
+    padding: 18px;
+  }
+
+  &__about {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  &__responsibilities {
+    grid-area: 1 / 2 / 2 / 2;
+  }
+
+  &__description {
+    color: var(--color-sail-gray-900);
+    font-size: 14px;
+    line-height: 125%;
+    margin-bottom: 24px;
+  }
+
+  &__social {
+    align-items: center;
+    display: flex;
+    margin-bottom: 24px;
+
+    &-icon {
+      margin-right: 12px;
+    }
+
+    &-title {
+      font-size: 14px;
+      line-height: 125%;
+      margin-bottom: 0;
+
+      &--sail-gray {
+        color: var(--color-sail-gray-900);
+      }
+    }
+  }
+
+  &__sub-heading {
+    color: var(--color-sail-gray-900);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 125%;
+    margin-bottom: 30px;
+  }
+
+  &__responsibilities {
+    color: var(--color-sail-gray-900);
+
+    &-item {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    & {
+      grid-template-columns: auto;
+    }
+
+    &__about {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    &__responsibilities {
+      grid-area: 2 / 1 / 2 / 2;
+    }
+  }
+}
