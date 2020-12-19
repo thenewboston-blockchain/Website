@@ -20,7 +20,7 @@
 
   &__description {
     color: var(--color-sail-gray-900);
-    font-size: 14px;
+    font-size: var(--font-size-small-regular);
     line-height: 125%;
     margin-bottom: 24px;
   }
@@ -35,7 +35,7 @@
     }
 
     &-title {
-      font-size: 14px;
+      font-size: var(--font-size-small-regular);
       line-height: 125%;
       margin-bottom: 0;
 
@@ -47,7 +47,7 @@
 
   &__sub-heading {
     color: var(--color-sail-gray-900);
-    font-size: 16px;
+    font-size: var(--font-size-regular);
     font-weight: 500;
     line-height: 125%;
     margin-bottom: 30px;
@@ -57,7 +57,7 @@
     color: var(--color-sail-gray-900);
 
     &-item {
-      font-size: 14px;
+      font-size: var(--font-size-small-regular);
       line-height: 21px;
     }
   }

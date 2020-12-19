@@ -7,10 +7,14 @@
     cursor: pointer;
     font-size: var(--font-size-medium);
     outline: none;
-    padding: 12px;
+    padding-bottom: 9px;
 
     &:hover {
       border-bottom-color: var(--color-sail-gray-500);
+    }
+
+    &:not(:last-child) {
+      margin-right: 36px;
     }
 
     &--active {
@@ -24,9 +28,5 @@
     display: flex;
     justify-content: flex-start;
     position: relative;
-
-    @media (max-width: 768px) {
-      justify-content: center;
-    }
   }
 }
