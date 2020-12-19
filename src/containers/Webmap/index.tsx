@@ -15,9 +15,9 @@ export const validatorIcon = new Icon({
 });
 
 const Webmap: FC = () => {
-  const validatorEndpoint = 'http://157.230.75.212/validators?limit=30&offset=0';
   const bankEndpoint = 'http://157.230.75.212/banks?limit=30&offset=0';
   const ipInfoEndpoint = 'http://ip-api.com/batch/';
+  const validatorEndpoint = 'http://157.230.75.212/validators?limit=30&offset=0';
 
   interface APIResponse {
     account_number: number;
