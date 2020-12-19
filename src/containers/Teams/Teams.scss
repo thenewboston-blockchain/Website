@@ -18,6 +18,14 @@
     padding: 12px 40px 48px;
   }
 
+  &__team-about {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  &__team-responsibilities {
+    grid-area: 1 / 2 / 2 / 2;
+  }
+
   &__team-description {
     color: var(--color-sail-gray-900);
     font-size: 14px;
@@ -46,7 +54,7 @@
   &__team-overview {
     display: grid;
     grid-gap: 12px;
-    grid-template-columns: 350px auto;
+    grid-template-columns: 336px auto;
 
     & > div {
       background: #ffffff;
@@ -61,6 +69,15 @@
       font-weight: 500;
       line-height: 125%;
       margin-bottom: 30px;
+    }
+  }
+
+  &__team-responsibilities {
+    color: var(--color-sail-gray-900);
+
+    &-item {
+      font-size: 14px;
+      line-height: 21px;
     }
   }
 
@@ -111,6 +128,20 @@
 
     &__team-list {
       grid-template-columns: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__team-about {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    &__team-overview {
+      grid-template-columns: auto;
+    }
+
+    &__team-responsibilities {
+      grid-area: 2 / 1 / 2 / 2;
     }
   }
 }

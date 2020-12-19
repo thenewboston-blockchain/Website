@@ -120,7 +120,7 @@ const Teams: FC = () => {
     return (
       <>
         <h4 className="Teams__team-overview-sub-heading"> Role and Responsibilities </h4>
-        <DocList variant="ul">
+        <DocList className="Teams__team-responsibilities-item" variant="ul">
           {responsibilities.map(({item, subitems}) => (
             <>
               <li> {item} </li>
