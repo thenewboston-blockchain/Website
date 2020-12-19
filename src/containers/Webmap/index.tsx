@@ -47,7 +47,6 @@ const Webmap: FC = () => {
         ...result,
         ...resultBatch.data[i],
       }));
-      // console.log(merged);
       setState(merged);
     }
     fetchData();
