@@ -131,6 +131,13 @@ const TopNav: FC<ComponentProps> = ({className}) => {
           title="Donate"
           to="/donate"
         />
+        <TopNavPopoverItem
+          closePopover={unsetMoreAnchorEl}
+          description="Map of all Validator Nodes on network"
+          iconType={IconType.earth}
+          title="Webmap"
+          to="/webmap"
+        />
       </>
     );
   };

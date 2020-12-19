@@ -24,6 +24,7 @@ import Social from './Social';
 import StyleGuide from './StyleGuide';
 import Tasks from './Tasks';
 import Teams from './Teams';
+import WebMap from './Webmap';
 
 interface GoogleAnalyticsWindow extends Window {
   ga: any;
@@ -82,6 +83,7 @@ const App: FC = () => {
           <Route path="/style-guide/:chapter?" component={StyleGuide} />
           <Route path="/user/signin/callback" component={Auth} />
           <Route path="/user/profile" render={() => <Profile github_username="jamessspanggg" />} />
+          <Route path="/webmap" component={WebMap} />
           <Redirect to="/" />
         </Switch>
       </Layout>
