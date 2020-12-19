@@ -1,8 +1,25 @@
 .Teams {
+  $self: &;
   display: grid;
   grid-template-columns: 240px auto;
   height: 100%;
   overflow: hidden;
+
+  &__back-container {
+    align-items: center;
+    color: var(--color-secondary);
+    cursor: pointer;
+    display: inline-flex;
+    margin-bottom: 40px;
+
+    &:hover #{$self}__back-text {
+      text-decoration: underline;
+    }
+  }
+
+  &__back-icon {
+    margin-right: 15px;
+  }
 
   &__BreadcrumbMenu {
     display: none;
@@ -10,6 +27,13 @@
 
   &__left-menu {
     grid-column: 1 / span 1;
+  }
+
+  &__resources {
+    &-item {
+      display: block;
+      margin-bottom: 16px;
+    }
   }
 
   &__right-section {

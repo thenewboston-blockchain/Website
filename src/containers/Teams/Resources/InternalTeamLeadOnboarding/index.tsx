@@ -1,11 +1,13 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocImage, DocList} from 'components';
+import {DocImage, DocList} from 'components';
+import 'containers/Teams/Resources/Resources.scss';
 import TeamLeadOnboarding from './TeamLeadOnboarding.png';
 
 const InternalTeamLeadOnboarding: FC = () => {
   return (
-    <DocContainer className="InternalTeamLeadOnboarding" title="Team Lead Onboarding">
+    <>
+      <h1 className="Resource__heading"> How to Onboard Team Leads </h1>
       <DocImage alt="team lead onboarding" maxWidth={500} src={TeamLeadOnboarding} />
 
       <p>
@@ -43,7 +45,7 @@ const InternalTeamLeadOnboarding: FC = () => {
         <li>Find bottlenecks / areas for improvements in the process and offer solutions to those problems</li>
         <li>Work with Kristy to document this process and format it for the website</li>
       </DocList>
-    </DocContainer>
+    </>
   );
 };
 

@@ -1,20 +1,44 @@
 import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
-import {useHistory, useParams} from 'react-router-dom';
+import {Link, useHistory, useParams} from 'react-router-dom';
 
-import {A, BreadcrumbMenu, DocList, FlatNavLinks, Icon, IconType, PageTitle} from 'components';
+import {A, BreadcrumbMenu, DocList, EmptyPage, FlatNavLinks, Icon, IconType, PageTitle} from 'components';
 import {TEAMS} from 'constants/teams';
+import {PageDataObject} from 'types/page-data';
 import {TeamMember, TeamName, TeamPlatform, TeamResponsibility, TeamsUrlParams} from 'types/teams';
 import {getTeamData, getTeamMembers} from 'utils/data';
 
+import InternalHowToSetUpPaymentBoard from './Resources/InternalHowToSetUpPaymentBoard';
+import InternalNewUserOperations from './Resources/InternalNewUserOperations';
+import InternalProductDevelopment from './Resources/InternalProductDevelopment';
+import InternalTeamLeadOnboarding from './Resources/InternalTeamLeadOnboarding';
 import TeamMemberCard from './TeamMemberCard';
 import TeamTabs from './TeamTabs';
 import './Teams.scss';
 
 const teamMembers = getTeamMembers();
 
+const pageData: PageDataObject = {
+  'how-to-set-up-payment-board': {
+    content: <InternalHowToSetUpPaymentBoard />,
+    name: 'How to set up payment boards',
+  },
+  'new-user-operations': {
+    content: <InternalNewUserOperations />,
+    name: 'How to onboard new users',
+  },
+  'product-development': {
+    content: <InternalProductDevelopment />,
+    name: 'How the product development process works',
+  },
+  'team-lead-onboarding': {
+    content: <InternalTeamLeadOnboarding />,
+    name: 'How to onboard team leads',
+  },
+};
+
 const Teams: FC = () => {
   const history = useHistory();
-  const {team: teamParam, tab: tabParam} = useParams<TeamsUrlParams>();
+  const {team: teamParam, tab: tabParam, resource: resourceParam} = useParams<TeamsUrlParams>();
   const [filteredMembers, setFilteredMembers] = useState<TeamMember[]>(teamMembers);
   const [teamFilter, setTeamFilter] = useState<TeamName>(TeamName.all);
 
@@ -75,6 +99,7 @@ const Teams: FC = () => {
   };
 
   const renderTeamMembers = useCallback((): ReactNode => {
+    if (!filteredMembers.length) return <EmptyPage />;
     return filteredMembers.map(
       ({contributorId, displayName, githubUsername, isLead, payPerDay, profileImage, slackUsername, titles}) => (
         <TeamMemberCard
@@ -146,6 +171,37 @@ const Teams: FC = () => {
     );
   }, [teamFilter, renderTeamDescription, renderTeamResponsibilities]);
 
+  const renderResources = useCallback((): ReactNode => {
+    return (
+      <>
+        {Object.entries(pageData).map(([key, value]) => (
+          <Link className="Teams__resources-item" to={`/teams/${teamParam}/${tabParam}/${key}`}>
+            {value.name}
+          </Link>
+        ))}
+      </>
+    );
+  }, [teamParam, tabParam]);
+
+  const handleBackClick = useCallback((): void => {
+    history.replace(`/teams/${teamParam}/${tabParam}`);
+  }, [history, teamParam, tabParam]);
+
+  const renderResourceDoc = useCallback((): ReactNode => {
+    if (resourceParam) {
+      const resource = pageData[resourceParam]?.content || <EmptyPage />;
+      return (
+        <>
+          <div className="Teams__back-container" onClick={handleBackClick} role="button" tabIndex={0}>
+            <Icon className="Teams__back-icon" icon={IconType.arrowLeft} />
+            <span className="Teams__back-text">Back</span>
+          </div>
+          {resource}
+        </>
+      );
+    }
+  }, [handleBackClick, resourceParam]);
+
   const renderTabPanel = useCallback(() => {
     switch (tabParam) {
       case 'Members': {
@@ -154,10 +210,13 @@ const Teams: FC = () => {
       case 'Overview': {
         return <div className="Teams__team-overview">{renderTeamOverview()}</div>;
       }
+      case 'Resources': {
+        return <div className="Teams__resources">{renderResources()}</div>;
+      }
       default:
         return null;
     }
-  }, [renderTeamMembers, renderTeamOverview, tabParam]);
+  }, [renderResources, renderTeamMembers, renderTeamOverview, tabParam]);
 
   return (
     <>
@@ -171,10 +230,15 @@ const Teams: FC = () => {
         />
         <aside className="Teams__left-menu">{renderTeamFilter()}</aside>
         <section className="Teams__right-section">
-          <h1 className="Teams__team-heading">{teamFilter === TeamName.all ? 'All' : teamFilter}</h1>
-          {/* {!filteredMembers.length && <EmptyPage />} */}
-          <TeamTabs team={teamParam} tab={tabParam} />
-          <div className="Teams__tab-panel">{renderTabPanel()}</div>
+          {resourceParam ? (
+            <>{renderResourceDoc()}</>
+          ) : (
+            <>
+              <h1 className="Teams__team-heading">{teamFilter === TeamName.all ? 'All' : teamFilter}</h1>
+              <TeamTabs team={teamParam} tab={tabParam} />
+              <div className="Teams__tab-panel">{renderTabPanel()}</div>
+            </>
+          )}
         </section>
       </div>
     </>
