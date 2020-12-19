@@ -20,7 +20,8 @@
           "slackUsername": "Mircea Teodor Oprea"
         }
       }
-    ]
+    ],
+    "responsibilities": []
   },
   {
     "title": "Back-End Developers",
@@ -134,7 +135,8 @@
           "slackUsername": "yashovardhansingh"
         }
       }
-    ]
+    ],
+    "responsibilities": []
   },
   {
     "title": "Community",
@@ -235,6 +237,44 @@
           "slackUsername": "Martin"
         }
       }
+    ],
+    "responsibilities": [
+      {
+        "item": "Get people to where they need to be. Greet, welcome, guide",
+        "subitems": []
+      },
+      {
+        "item": "People will come into #intros and must oversee other Slack channels for new users",
+        "subitems": []
+      },
+      {
+        "item": "Guide users to teams they fit into",
+        "subitems": []
+      },
+      {
+        "item": "Send applications to Team Leads",
+        "subitems": []
+      },
+      {
+        "item": "After interview, register peoples accounts",
+        "subitems": []
+      },
+      {
+        "item": "Team Leads are responsible for hiring more community managers",
+        "subitems": []
+      },
+      {
+        "item": "Provide user feedback and analytics to design team",
+        "subitems": []
+      },
+      {
+        "item": "Suggest better methods on how to gather user feedback",
+        "subitems": []
+      },
+      {
+        "item": "Optimize user feedback loop",
+        "subitems": []
+      }
     ]
   },
   {
@@ -308,6 +348,32 @@
           "slackUsername": "toledit"
         }
       }
+    ],
+    "responsibilities": [
+      {
+        "item": "Help identify what needs to be built based off user feedback",
+        "subitems": []
+      },
+      {
+        "item": "Design wireframes",
+        "subitems": []
+      },
+      {
+        "item": "User test designs with the community",
+        "subitems": []
+      },
+      {
+        "item": "Write product requirements for engineering handoff",
+        "subitems": []
+      },
+      {
+        "item": "HiFi designs & update style guide",
+        "subitems": []
+      },
+      {
+        "item": "Give design reviews to members within the community",
+        "subitems": []
+      }
     ]
   },
   {
@@ -331,7 +397,8 @@
           "slackUsername": "shashanksinha89"
         }
       }
-    ]
+    ],
+    "responsibilities": []
   },
   {
     "title": "Discord Managers",
@@ -366,6 +433,12 @@
           "profileImage": "https://avatars2.githubusercontent.com/u/25906602",
           "slackUsername": "DinShpati"
         }
+      }
+    ],
+    "responsibilities": [
+      {
+        "item": "Oversee discord community",
+        "subitems": []
       }
     ]
   },
@@ -520,7 +593,8 @@
           "slackUsername": "James Pang"
         }
       }
-    ]
+    ],
+    "responsibilities": []
   },
   {
     "title": "Kotlin SDK",
@@ -582,7 +656,8 @@
           "slackUsername": "Nish"
         }
       }
-    ]
+    ],
+    "responsibilities": []
   },
   {
     "title": "Marketing",
@@ -618,6 +693,44 @@
           "slackUsername": "Pulkit Bajaj"
         }
       }
+    ],
+    "responsibilities": [
+      {
+        "item": "Drive traffic",
+        "subitems": []
+      },
+      {
+        "item": "Gather & collect user emails",
+        "subitems": ["Email newsletter", "Pull from GitHub", "Additional tools"]
+      },
+      {
+        "item": "Send email campaigns",
+        "subitems": []
+      },
+      {
+        "item": "Help drive traffic through social media",
+        "subitems": []
+      },
+      {
+        "item": "Sending out social media posts on core team applications",
+        "subitems": []
+      },
+      {
+        "item": "Requests graphics & images",
+        "subitems": []
+      },
+      {
+        "item": "LinkedIn, Facebook, Reddit",
+        "subitems": []
+      },
+      {
+        "item": "If posting anything, post it on all social media accounts",
+        "subitems": []
+      },
+      {
+        "item": "If any other social media sites that can be strategical, we can expand",
+        "subitems": []
+      }
     ]
   },
   {
@@ -640,6 +753,24 @@
           "profileImage": "https://avatars3.githubusercontent.com/u/2324860?s=400&u=ca3e6fcc7e1c03a48720143704adc8ef51d7c64d&v=4",
           "slackUsername": "Martyn"
         }
+      }
+    ],
+    "responsibilities": [
+      {
+        "item": "Convert new users to contributors",
+        "subitems": []
+      },
+      {
+        "item": "Identify where new users will get stuck",
+        "subitems": []
+      },
+      {
+        "item": "Find solutions to remove bottlenecks",
+        "subitems": []
+      },
+      {
+        "item": "Increase user retention by keeping users engaged",
+        "subitems": []
       }
     ]
   },
@@ -690,6 +821,24 @@
           "slackUsername": "Tawanda Makunike"
         }
       }
+    ],
+    "responsibilities": [
+      {
+        "item": "Oversee payments",
+        "subitems": []
+      },
+      {
+        "item": "Pay weekly contributors",
+        "subitems": []
+      },
+      {
+        "item": "Pay task payments",
+        "subitems": []
+      },
+      {
+        "item": "Pay projects",
+        "subitems": []
+      }
     ]
   },
   {
@@ -712,6 +861,43 @@
           "profileImage": "https://avatars0.githubusercontent.com/u/22790904?s=400&u=643810e6c9d5686df409132b01863f9e065df6c1&v=4",
           "slackUsername": "Manish"
         }
+      }
+    ],
+    "responsibilities": [
+      {
+        "item": "Oversee project proposals",
+        "subitems": []
+      },
+      {
+        "item": "Helping people fill out proposals",
+        "subitems": [
+          "Seeing if there are any empty fields",
+          "Tell users to fill out project proposals instead of typing it out on Slack"
+        ]
+      },
+      {
+        "item": "Reviewing proposals on GitHub",
+        "subitems": ["Help clarify the details of what the app is", "Talking to them for suggestions as well"]
+      },
+      {
+        "item": "Answering questions",
+        "subitems": []
+      },
+      {
+        "item": "Helping with recruiting",
+        "subitems": []
+      },
+      {
+        "item": "Set a timeline & clear check-ins",
+        "subitems": [
+          "Responsible for setting and agreeing on timeline with other party",
+          "Responsible for being part of check-ins",
+          "Case by case"
+        ]
+      },
+      {
+        "item": "Make payment GitHub issues when projects are due",
+        "subitems": []
       }
     ]
   },
@@ -736,7 +922,8 @@
           "slackUsername": "Snehal Ingale"
         }
       }
-    ]
+    ],
+    "responsibilities": []
   },
   {
     "title": "Reddit Moderators",
@@ -784,6 +971,12 @@
           "profileImage": "https://avatars3.githubusercontent.com/u/32111172?s=460&u=274388e47550c045abc5496b9f25485123634715&v=4",
           "slackUsername": "Moon"
         }
+      }
+    ],
+    "responsibilities": [
+      {
+        "item": "Oversee Reddit community",
+        "subitems": []
       }
     ]
   },
@@ -860,6 +1053,24 @@
           "slackUsername": "Rahul Kothari"
         }
       }
+    ],
+    "responsibilities": [
+      {
+        "item": "Research trends and identify opportunities",
+        "subitems": []
+      },
+      {
+        "item": "Offer suggestions to help guide the future roadmap",
+        "subitems": []
+      },
+      {
+        "item": "Researching technology that exists that could improve ours",
+        "subitems": []
+      },
+      {
+        "item": "Identify areas within blockchain that we can partner with",
+        "subitems": []
+      }
     ]
   },
   {
@@ -909,7 +1120,8 @@
           "slackUsername": "Spencer Dollahite"
         }
       }
-    ]
+    ],
+    "responsibilities": []
   },
   {
     "title": "YouTube",
@@ -944,6 +1156,20 @@
           "profileImage": "https://avatars2.githubusercontent.com/u/41084465?s=460&u=e4bbc12b9d60ba1869da25809044eddc97733c1b&v=4",
           "slackUsername": "Nico y-crozier"
         }
+      }
+    ],
+    "responsibilities": [
+      {
+        "item": "YouTube Outreach and video creation",
+        "subitems": []
+      },
+      {
+        "item": "Reaching out to YouTubers related to blockchain and programming",
+        "subitems": []
+      },
+      {
+        "item": "Deciding on the best strategy for what to film and what channel to put it on",
+        "subitems": []
       }
     ]
   }

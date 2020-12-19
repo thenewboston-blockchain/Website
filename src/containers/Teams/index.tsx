@@ -1,10 +1,10 @@
 import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
 
-import {A, BreadcrumbMenu, FlatNavLinks, Icon, IconType, PageTitle} from 'components';
+import {A, BreadcrumbMenu, DocList, FlatNavLinks, Icon, IconType, PageTitle} from 'components';
 import {TEAMS} from 'constants/teams';
-import {TeamMember, TeamName, TeamsUrlParams} from 'types/teams';
-import {getTeamDescription, getTeamMembers} from 'utils/data';
+import {TeamMember, TeamName, TeamPlatform, TeamResponsibility, TeamsUrlParams} from 'types/teams';
+import {getTeamData, getTeamMembers} from 'utils/data';
 
 import TeamMemberCard from './TeamMemberCard';
 import TeamTabs from './TeamTabs';
@@ -91,9 +91,7 @@ const Teams: FC = () => {
     );
   }, [filteredMembers]);
 
-  const renderTeamDescription = useCallback((): ReactNode => {
-    const {description, platforms} = getTeamDescription(teamFilter);
-
+  const renderTeamDescription = useCallback((description: string, platforms: TeamPlatform[]): ReactNode => {
     return (
       <>
         <h4 className="Teams__team-overview-sub-heading"> About the team </h4>
@@ -116,15 +114,37 @@ const Teams: FC = () => {
         ))}
       </>
     );
-  }, [teamFilter]);
+  }, []);
 
-  const renderTeamResponsibilities = (): ReactNode => {
+  const renderTeamResponsibilities = useCallback((responsibilities: TeamResponsibility[]): ReactNode => {
     return (
       <>
         <h4 className="Teams__team-overview-sub-heading"> Role and Responsibilities </h4>
+        <DocList variant="ul">
+          {responsibilities.map(({item, subitems}) => (
+            <>
+              <li> {item} </li>
+              <ul>
+                {subitems.map((subitem) => (
+                  <li>{subitem}</li>
+                ))}
+              </ul>
+            </>
+          ))}
+        </DocList>
       </>
     );
-  };
+  }, []);
+
+  const renderTeamOverview = useCallback((): ReactNode => {
+    const {description, platforms, responsibilities} = getTeamData(teamFilter);
+    return (
+      <>
+        <div className="Teams__team-about">{renderTeamDescription(description, platforms)}</div>
+        <div className="Teams__team-responsibilities">{renderTeamResponsibilities(responsibilities)}</div>
+      </>
+    );
+  }, [teamFilter, renderTeamDescription, renderTeamResponsibilities]);
 
   const renderTabPanel = useCallback(() => {
     switch (tabParam) {
@@ -132,17 +152,12 @@ const Teams: FC = () => {
         return <div className="Teams__team-list">{renderTeamMembers()}</div>;
       }
       case 'Overview': {
-        return (
-          <div className="Teams__team-overview">
-            <div className="Teams__team-about">{renderTeamDescription()}</div>
-            <div className="Teams__team-responsibilities">{renderTeamResponsibilities()}</div>
-          </div>
-        );
+        return <div className="Teams__team-overview">{renderTeamOverview()}</div>;
       }
       default:
         return null;
     }
-  }, [renderTeamDescription, renderTeamMembers, tabParam]);
+  }, [renderTeamMembers, renderTeamOverview, tabParam]);
 
   return (
     <>

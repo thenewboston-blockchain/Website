@@ -3,7 +3,7 @@ import {TEAMS} from 'constants/teams';
 import {Contributor, RawTask, Task, TaskDict} from 'types/github';
 import {Opening} from 'types/openings';
 import {NavOption} from 'types/option';
-import {TeamMember, TeamName, TeamPlatform} from 'types/teams';
+import {TeamMember, TeamName, TeamPlatform, TeamResponsibility} from 'types/teams';
 
 import contributors from 'data/contributors.json';
 import openings from 'data/openings.json';
@@ -112,12 +112,14 @@ export const getTeamMembers = (): TeamMember[] => {
     .map(([, member]) => member) as TeamMember[];
 };
 
-export const getTeamDescription = (teamTitle: TeamName): {description: string; platforms: TeamPlatform[]} => {
+export const getTeamData = (
+  teamTitle: TeamName,
+): {description: string; platforms: TeamPlatform[]; responsibilities: TeamResponsibility[]} => {
   const team = teams.find(({title}) => title === teamTitle);
   if (team) {
-    return {description: team.description, platforms: team.platforms};
+    return {description: team.description, platforms: team.platforms, responsibilities: team.responsibilities};
   }
-  return {description: '', platforms: []};
+  return {description: '', platforms: [], responsibilities: []};
 };
 
 export const getTeamPathname = (teamTitle: string): string => {

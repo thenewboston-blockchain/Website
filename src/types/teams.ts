@@ -33,11 +33,17 @@ export interface TeamPlatform {
   name: string;
 }
 
+export interface TeamResponsibility {
+  item: string;
+  subitems: string[];
+}
+
 export interface Team {
   contributors: TeamContributor[];
   description: string;
   platforms: TeamPlatform[];
   title: string;
+  responsibilities: TeamResponsibility[];
 }
 
 export interface TeamContributor {
