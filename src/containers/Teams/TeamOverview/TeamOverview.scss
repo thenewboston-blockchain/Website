@@ -14,15 +14,21 @@
     grid-area: 1 / 1 / 2 / 2;
   }
 
-  &__responsibilities {
-    grid-area: 1 / 2 / 2 / 2;
-  }
-
   &__description {
     color: var(--color-sail-gray-900);
     font-size: var(--font-size-small-regular);
     line-height: 125%;
     margin-bottom: 24px;
+  }
+
+  &__responsibilities {
+    color: var(--color-sail-gray-900);
+    grid-area: 1 / 2 / 2 / 2;
+
+    &-item {
+      font-size: var(--font-size-small-regular);
+      line-height: 21px;
+    }
   }
 
   &__social {
@@ -51,15 +57,6 @@
     font-weight: 500;
     line-height: 125%;
     margin-bottom: 30px;
-  }
-
-  &__responsibilities {
-    color: var(--color-sail-gray-900);
-
-    &-item {
-      font-size: var(--font-size-small-regular);
-      line-height: 21px;
-    }
   }
 
   @media (max-width: 768px) {
