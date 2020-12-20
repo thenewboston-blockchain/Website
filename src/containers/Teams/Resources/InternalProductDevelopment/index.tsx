@@ -1,13 +1,12 @@
 import React, {FC} from 'react';
 
-import {DocImage, DocList} from 'components';
+import {DocContainer, DocImage, DocList} from 'components';
 import 'containers/Teams/Resources/Resources.scss';
 import ProductDevelopment from './ProductDevelopment.png';
 
 const InternalProductDevelopment: FC = () => {
   return (
-    <>
-      <h1 className="Resource__heading"> How the Product Development Process Works </h1>
+    <DocContainer className="Resource" title="How the Product Development Process Works">
       <DocImage alt="product development" maxWidth={1200} src={ProductDevelopment} />
 
       <p>
@@ -55,7 +54,7 @@ const InternalProductDevelopment: FC = () => {
         </li>
         <li>Find bottleneck within engineering process and offer solutions</li>
       </DocList>
-    </>
+    </DocContainer>
   );
 };
 

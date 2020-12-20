@@ -1,9 +1,10 @@
 .Resource {
-  &__heading {
+  padding: 0;
+
+  &__page-title {
     color: var(--color-sail-gray-900);
     font-size: 36px;
     font-weight: 700;
     line-height: 45px;
-    margin-bottom: 40px;
   }
 }

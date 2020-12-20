@@ -1,13 +1,12 @@
 import React, {FC} from 'react';
 
-import {A, DocImage, DocList} from 'components';
+import {A, DocContainer, DocImage, DocList} from 'components';
 import 'containers/Teams/Resources/Resources.scss';
 import NewUsers from './NewUsers.png';
 
 const InternalNewUserOperations: FC = () => {
   return (
-    <>
-      <h1 className="Resource__heading"> How to Onboard New Users </h1>
+    <DocContainer className="Resource" title="How to Onboard New Users">
       <DocImage alt="new users" maxWidth={1200} src={NewUsers} />
 
       <p>
@@ -101,7 +100,7 @@ const InternalNewUserOperations: FC = () => {
           <li>Teams may also bypass interviews if they are not needed (Discord Managers for example)</li>
         </ul>
       </DocList>
-    </>
+    </DocContainer>
   );
 };
 

@@ -1,13 +1,12 @@
 import React, {FC} from 'react';
 
-import {DocImage, DocList, Label} from 'components';
+import {DocContainer, DocImage, DocList, Label} from 'components';
 import 'containers/Teams/Resources/Resources.scss';
 import PaymentBoard from './PaymentBoard.png';
 
 const InternalHowToSetUpPaymentBoard: FC = () => {
   return (
-    <>
-      <h1 className="Resource__heading"> How to Set Up Payment Board </h1>
+    <DocContainer className="Resource" title="How to Set Up Payment Board">
       <p>
         In order to make the whole payment process easier, we will be using the{' '}
         <a href="https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/about-project-boards">
@@ -156,7 +155,7 @@ const InternalHowToSetUpPaymentBoard: FC = () => {
           Click <strong>Create label</strong>.
         </li>
       </DocList>
-    </>
+    </DocContainer>
   );
 };
 
