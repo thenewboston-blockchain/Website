@@ -54,18 +54,23 @@ const Teams: FC = () => {
   const [teamFilter, setTeamFilter] = useState<TeamName>(TeamName.all);
 
   useEffect(() => {
+    const isAllTeams = teamParam === TeamName.all;
     if (teamParam && tabParam) {
-      if (teamParam === TeamName.all) {
-        if (!(tabParam === TeamTabOptions.members || tabParam === TeamTabOptions.resources)) {
+      if (isAllTeams) {
+        const isInvalidTabForAll = !(tabParam === TeamTabOptions.members || tabParam === TeamTabOptions.resources);
+        if (isInvalidTabForAll) {
           history.replace(`/teams`);
         }
-      } else if (teamParam !== TeamName.all) {
-        if (!(tabParam === TeamTabOptions.members || tabParam === TeamTabOptions.overview)) {
+      } else {
+        const isInvalidTabForSingleTeam = !(
+          tabParam === TeamTabOptions.members || tabParam === TeamTabOptions.overview
+        );
+        if (isInvalidTabForSingleTeam) {
           history.replace(`/teams/${teamParam}`);
         }
       }
     } else if (teamParam && !tabParam) {
-      if (teamParam === TeamName.all) {
+      if (isAllTeams) {
         history.replace(`/teams/${teamParam}/${TeamTabOptions.members}`);
       } else {
         history.replace(`/teams/${teamParam}/${TeamTabOptions.overview}`);
