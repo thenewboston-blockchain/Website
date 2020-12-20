@@ -74,5 +74,11 @@ export interface TeamMember {
 export interface TeamsUrlParams {
   resource?: string;
   team: string;
-  tab?: string;
+  tab?: TeamTabOptions;
+}
+
+export enum TeamTabOptions {
+  members = 'Members',
+  overview = 'Overview',
+  resources = 'Resources',
 }

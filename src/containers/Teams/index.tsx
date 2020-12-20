@@ -4,7 +4,7 @@ import {Link, useHistory, useParams} from 'react-router-dom';
 import {BreadcrumbMenu, EmptyPage, FlatNavLinks, Icon, IconType, PageTitle} from 'components';
 import {TEAMS} from 'constants/teams';
 import {PageDataObject} from 'types/page-data';
-import {TeamMember, TeamName, TeamsUrlParams} from 'types/teams';
+import {TeamMember, TeamName, TeamsUrlParams, TeamTabOptions} from 'types/teams';
 import {getTeamMembers} from 'utils/data';
 
 import InternalHowToSetUpPaymentBoard from './Resources/InternalHowToSetUpPaymentBoard';
@@ -56,19 +56,19 @@ const Teams: FC = () => {
   useEffect(() => {
     if (teamParam && tabParam) {
       if (teamParam === TeamName.all) {
-        if (!(tabParam === 'Members' || tabParam === 'Resources')) {
+        if (!(tabParam === TeamTabOptions.members || tabParam === TeamTabOptions.resources)) {
           history.replace(`/teams`);
         }
       } else if (teamParam !== TeamName.all) {
-        if (!(tabParam === 'Members' || tabParam === 'Overview')) {
+        if (!(tabParam === TeamTabOptions.members || tabParam === TeamTabOptions.overview)) {
           history.replace(`/teams/${teamParam}`);
         }
       }
     } else if (teamParam && !tabParam) {
       if (teamParam === TeamName.all) {
-        history.replace(`/teams/${teamParam}/Members`);
+        history.replace(`/teams/${teamParam}/${TeamTabOptions.members}`);
       } else {
-        history.replace(`/teams/${teamParam}/Overview`);
+        history.replace(`/teams/${teamParam}/${TeamTabOptions.overview}`);
       }
     }
   }, [history, tabParam, teamParam]);
@@ -107,9 +107,9 @@ const Teams: FC = () => {
   const handleNavOptionClick = useCallback(
     (option: string) => (): void => {
       if (option === TeamName.all) {
-        history.push(`/teams/${option}/Members`);
+        history.push(`/teams/${option}/${TeamTabOptions.members}`);
       } else {
-        history.push(`/teams/${option}/Overview`);
+        history.push(`/teams/${option}/${TeamTabOptions.overview}`);
       }
     },
     [history],
@@ -170,13 +170,13 @@ const Teams: FC = () => {
 
   const renderTabPanel = useCallback(() => {
     switch (tabParam) {
-      case 'Members': {
+      case TeamTabOptions.members: {
         return <div className="Teams__team-list">{renderTeamMembers()}</div>;
       }
-      case 'Overview': {
+      case TeamTabOptions.overview: {
         return <TeamOverview teamFilter={teamFilter} />;
       }
-      case 'Resources': {
+      case TeamTabOptions.resources: {
         return <div className="Teams__resources">{renderResources()}</div>;
       }
       default:

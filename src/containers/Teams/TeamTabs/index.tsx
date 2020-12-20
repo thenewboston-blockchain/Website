@@ -3,7 +3,7 @@ import {useHistory} from 'react-router';
 import clsx from 'clsx';
 
 import './TeamTabs.scss';
-import {TeamName} from 'types/teams';
+import {TeamName, TeamTabOptions} from 'types/teams';
 
 interface ComponentProps {
   team: string;
@@ -14,7 +14,13 @@ const TeamTabs: FC<ComponentProps> = ({team, tab}) => {
   const history = useHistory();
   const [activeTab, setActiveTab] = useState<string>();
 
-  const tabs = useMemo(() => (team === TeamName.all ? ['Members', 'Resources'] : ['Overview', 'Members']), [team]);
+  const tabs = useMemo(
+    () =>
+      team === TeamName.all
+        ? [TeamTabOptions.members, TeamTabOptions.resources]
+        : [TeamTabOptions.overview, TeamTabOptions.members],
+    [team],
+  );
 
   useEffect(() => {
     setActiveTab(tab);
