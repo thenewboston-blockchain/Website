@@ -1,4 +1,4 @@
-import React, {FC, ReactNode, useCallback} from 'react';
+import React, {FC, Fragment, ReactNode, useCallback} from 'react';
 import {A, DocList, Icon, IconType} from 'components';
 import {TeamName} from 'types/teams';
 import {getTeamData} from 'utils/data';
@@ -18,7 +18,7 @@ const TeamOverview: FC<ComponentProps> = ({teamFilter}) => {
         <h4 className="TeamOverview__sub-heading"> About the team </h4>
         <p className="TeamOverview__description">{description}</p>
         {platforms.map(({name, label, link}) => (
-          <div className="TeamOverview__social">
+          <div className="TeamOverview__social" key={label}>
             <Icon
               className="TeamOverview__social-icon"
               icon={name === 'github' ? IconType.github : IconType.slack}
@@ -42,15 +42,15 @@ const TeamOverview: FC<ComponentProps> = ({teamFilter}) => {
       <>
         <h4 className="TeamOverview__sub-heading"> Role and Responsibilities </h4>
         <DocList className="TeamOverview__responsibilities-item" variant="ul">
-          {responsibilities.map(({item, subitems}) => (
-            <>
+          {responsibilities.map(({item, subitems}, i) => (
+            <Fragment key={i}>
               <li> {item} </li>
               <ul>
-                {subitems.map((subitem) => (
-                  <li>{subitem}</li>
+                {subitems.map((subitem, index) => (
+                  <li key={index}>{subitem}</li>
                 ))}
               </ul>
-            </>
+            </Fragment>
           ))}
         </DocList>
       </>

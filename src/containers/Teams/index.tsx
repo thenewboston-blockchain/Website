@@ -141,7 +141,7 @@ const Teams: FC = () => {
     return (
       <>
         {Object.entries(pageData).map(([key, value]) => (
-          <Link className="Teams__resources-item" to={`/teams/${teamParam}/${tabParam}/${key}`}>
+          <Link className="Teams__resources-item" key={key} to={`/teams/${teamParam}/${tabParam}/${key}`}>
             {value.name}
           </Link>
         ))}
