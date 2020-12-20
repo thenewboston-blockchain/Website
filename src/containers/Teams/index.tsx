@@ -54,6 +54,26 @@ const Teams: FC = () => {
   const [teamFilter, setTeamFilter] = useState<TeamName>(TeamName.all);
 
   useEffect(() => {
+    if (teamParam && tabParam) {
+      if (teamParam === TeamName.all) {
+        if (!(tabParam === 'Members' || tabParam === 'Resources')) {
+          history.replace(`/teams`);
+        }
+      } else if (teamParam !== TeamName.all) {
+        if (!(tabParam === 'Members' || tabParam === 'Overview')) {
+          history.replace(`/teams/${teamParam}`);
+        }
+      }
+    } else if (teamParam && !tabParam) {
+      if (teamParam === TeamName.all) {
+        history.replace(`/teams/${teamParam}/Members`);
+      } else {
+        history.replace(`/teams/${teamParam}/Overview`);
+      }
+    }
+  }, [history, tabParam, teamParam]);
+
+  useEffect(() => {
     const team = TEAMS.find(({pathname}) => pathname === teamParam);
     if (team) {
       setTeamFilter(team.title as TeamName);
@@ -181,7 +201,7 @@ const Teams: FC = () => {
           ) : (
             <>
               <h1 className="Teams__team-heading">{teamFilter === TeamName.all ? 'All' : teamFilter}</h1>
-              <TeamTabs team={teamParam} tab={tabParam} />
+              <TeamTabs team={teamParam} tab={tabParam || ''} />
               <div className="Teams__tab-panel">{renderTabPanel()}</div>
             </>
           )}
