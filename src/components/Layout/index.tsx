@@ -10,13 +10,23 @@ interface ComponentProps {
 }
 
 const Layout: FC<ComponentProps> = ({children}) => {
-  const {pathname} = useLocation();
+  const {hash, pathname} = useLocation();
   const isHomepage = pathname === '/';
   const isProfilePage = pathname.includes('/profile');
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (hash === '') {
+      window.scrollTo(0, 0);
+    } else {
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView();
+        }
+      }, 0);
+    }
+  }, [hash, pathname]);
 
   return (
     <div className="Layout">
