@@ -51,7 +51,7 @@ const ConfirmationValidatorApiAccounts: FC = () => {
       <DocEndpoint endpoint="/accounts/<account_number>/balance" method="GET" />
       <RequestResponseSnippet
         code={`{
-  "balance": "6"
+  "balance": 6
 }`}
         heading="Response"
       />
