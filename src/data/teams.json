@@ -336,10 +336,8 @@
           "profileImage": "https://avatars2.githubusercontent.com/u/25906602",
           "slackUsername": "DinShpati"
         }
-      }
-    ]
-  },
-  {
+      },
+      {
         "title": "Moderator",
         "isLead": false,
         "payPerDay": 2800,
@@ -350,6 +348,9 @@
           "githubUsername": "codemedo",
           "profileImage": "https://avatars0.githubusercontent.com/u/48848156?v=4",
           "slackUsername": "Muhammed Medo"
+        }
+      }
+    ]
   },
   {
     "title": "Front-End Developers",
