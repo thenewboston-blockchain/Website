@@ -8,11 +8,13 @@ import {SocialMedia} from 'types/social-media';
 import './OpeningDetails.scss';
 
 const customLinks = {
+  [SocialMedia.discord]: 'https://discord.gg/fdj2EMvSYx',
   [SocialMedia.facebook]: '',
   [SocialMedia.github]: '',
   [SocialMedia.linkedin]: 'https://www.linkedin.com/in/buckyroberts/',
   [SocialMedia.reddit]: 'https://www.reddit.com/message/compose?to=/r/thenewboston',
   [SocialMedia.slack]: '',
+  [SocialMedia.twitch]: '',
   [SocialMedia.twitter]: '',
   [SocialMedia.youtube]: '',
 };

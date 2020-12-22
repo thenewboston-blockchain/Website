@@ -86,6 +86,7 @@ completely unrelated topics.
 - [Facebook](https://www.facebook.com/TheNewBoston-464114846956315/)
 - [Twitter](https://twitter.com/bucky_roberts)
 - [YouTube](https://www.youtube.com/user/thenewboston)
+- [Discord](https://discord.gg/fdj2EMvSYx)
 
 ## Donate
 

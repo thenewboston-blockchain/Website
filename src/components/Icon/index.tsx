@@ -16,6 +16,7 @@ import ChevronUpIcon from 'mdi-react/ChevronUpIcon';
 import CloseIcon from 'mdi-react/CloseIcon';
 import ContentCopyIcon from 'mdi-react/ContentCopyIcon';
 import CurrencyUsdIcon from 'mdi-react/CurrencyUsdIcon';
+import DiscordIcon from 'mdi-react/DiscordIcon';
 import DownloadIcon from 'mdi-react/DownloadIcon';
 import EarthIcon from 'mdi-react/EarthIcon';
 import FacebookIcon from 'mdi-react/FacebookIcon';
@@ -40,6 +41,7 @@ import SortAscendingIcon from 'mdi-react/SortAscendingIcon';
 import SortDescendingIcon from 'mdi-react/SortDescendingIcon';
 import ThumbsUpIcon from 'mdi-react/ThumbsUpIcon';
 import TrophyIcon from 'mdi-react/TrophyIcon';
+import TwitchIcon from 'mdi-react/TwitchIcon';
 import TwitterIcon from 'mdi-react/TwitterIcon';
 import YoutubeIcon from 'mdi-react/YoutubeIcon';
 
@@ -61,6 +63,7 @@ export enum IconType {
   close,
   contentCopy,
   currencyUsd,
+  discord,
   downloadIcon,
   earth,
   facebook,
@@ -85,6 +88,7 @@ export enum IconType {
   sortDescending,
   thumbsUp,
   trophy,
+  twitch,
   twitter,
   youtube,
 }
@@ -134,6 +138,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
           return <ContentCopyIcon {...iconProps} />;
         case IconType.currencyUsd:
           return <CurrencyUsdIcon {...iconProps} />;
+        case IconType.discord:
+          return <DiscordIcon {...iconProps} />;
         case IconType.downloadIcon:
           return <DownloadIcon {...iconProps} />;
         case IconType.earth:
@@ -182,6 +188,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
           return <ThumbsUpIcon {...iconProps} />;
         case IconType.trophy:
           return <TrophyIcon {...iconProps} />;
+        case IconType.twitch:
+          return <TwitchIcon {...iconProps} />;
         case IconType.twitter:
           return <TwitterIcon {...iconProps} />;
         case IconType.youtube:

@@ -6,11 +6,13 @@ import {SocialMedia} from 'types/social-media';
 import {getCustomClassNames} from 'utils/components';
 import {socialMediaUrls, socialMediaHandles, socialMediaDescriptions} from 'utils/social-media';
 
+import DiscordLogo from 'assets/logos/Discord.png';
 import FacebookLogo from 'assets/logos/Facebook.png';
 import GitHubLogo from 'assets/logos/GitHub.png';
 import LinkedInLogo from 'assets/logos/LinkedIn.png';
 import RedditLogo from 'assets/logos/Reddit.png';
 import SlackLogo from 'assets/logos/Slack.png';
+import TwitchLogo from 'assets/logos/Twitch.png';
 import TwitterLogo from 'assets/logos/Twitter.png';
 import YouTubeLogo from 'assets/logos/YouTube.png';
 
@@ -32,11 +34,13 @@ const MarketingCard: FC<ComponentProps> = ({className, customLink, website}) => 
   );
 
   const images = {
+    discord: renderImage(DiscordLogo),
     facebook: renderImage(FacebookLogo),
     github: renderImage(GitHubLogo),
     linkedin: renderImage(LinkedInLogo),
     reddit: renderImage(RedditLogo),
     slack: renderImage(SlackLogo),
+    twitch: renderImage(TwitchLogo),
     twitter: renderImage(TwitterLogo),
     youtube: renderImage(YouTubeLogo),
   };

@@ -6,11 +6,13 @@ import {SocialMedia} from 'types/social-media';
 import {getCustomClassNames} from 'utils/components';
 import {socialMediaUrls} from 'utils/social-media';
 
+import DiscordLogo from './logos/DiscordLogo.png';
 import FacebookLogo from './logos/FacebookLogo.png';
 import GitHubLogo from './logos/GitHubLogo.png';
 import LinkedInLogo from './logos/LinkedInLogo.png';
 import RedditLogo from './logos/RedditLogo.png';
 import SlackLogo from './logos/SlackLogo.png';
+import TwitchLogo from './logos/TwitchLogo.png';
 import TwitterLogo from './logos/TwitterLogo.png';
 import YouTubeLogo from './logos/YouTubeLogo.png';
 
@@ -32,11 +34,13 @@ const MarketingButton: FC<ComponentProps> = ({className, customLink, website}) =
   );
 
   const images = {
+    discord: renderImage(DiscordLogo),
     facebook: renderImage(FacebookLogo),
     github: renderImage(GitHubLogo),
     linkedin: renderImage(LinkedInLogo),
     reddit: renderImage(RedditLogo),
     slack: renderImage(SlackLogo),
+    twitch: renderImage(TwitchLogo),
     twitter: renderImage(TwitterLogo),
     youtube: renderImage(YouTubeLogo),
   };
