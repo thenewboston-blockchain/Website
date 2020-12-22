@@ -2,13 +2,13 @@
   "A-A-2": [
     {
       "repository": "Website",
-      "title": "Add Hello World in Kurdish",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "548",
       "completed_by": "A-A-2",
       "completed_date": "11/07/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "AbhayAysola": [
@@ -112,45 +112,45 @@
       "completed_by": "AkbarKamran",
       "completed_date": "11/20/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "Akshit1311": [
     {
       "repository": "Website",
-      "title": "Openings - Hiring Freeze #738 Fixed!",
+      "title": "Openings - HIRING FREEZE",
       "issue_id": "738",
       "pr_id": "739",
       "completed_by": "Akshit1311",
       "completed_date": "11/12/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "New Contributer #782",
+      "title": "New Contributor",
       "issue_id": "782",
       "pr_id": "784",
       "completed_by": "Akshit1311",
       "completed_date": "11/13/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "AntonFredrikSvensson": [
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "478",
       "completed_by": "AntonFredrikSvensson",
       "completed_date": "11/05/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Update Swedish hello world",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "478",
       "completed_by": "AntonFredrikSvensson",
@@ -162,31 +162,31 @@
   "Benett1": [
     {
       "repository": "Website",
-      "title": "Fixed a typo in Albanian language Hello World",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "690",
       "completed_by": "Benett1",
       "completed_date": "11/12/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "BlueBlazin": [
     {
       "repository": "Website",
       "title": "Links in the navbar cannot be opened in a new tab",
-      "issue_id": "752",
-      "pr_id": "753",
+      "issue_id": "753",
+      "pr_id": "752",
       "completed_by": "BlueBlazin",
       "completed_date": "11/12/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "CNFloss": [
     {
       "repository": "Website",
-      "title": "Last updated date for Docs #549",
+      "title": "Last updated date for Docs",
       "issue_id": "549",
       "pr_id": "1091",
       "completed_by": "CNFloss",
@@ -250,35 +250,35 @@
   "DenverCoder1": [
     {
       "repository": "Website",
-      "title": "Added Yiddish Hello World",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "655",
       "completed_by": "DenverCoder1",
       "completed_date": "11/09/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Fixed typos in FAQ page",
+      "title": "Proofreading FAQ page",
       "issue_id": "705",
       "pr_id": "653",
       "completed_by": "DenverCoder1",
       "completed_date": "11/10/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "DinShpati": [
     {
       "repository": "Website",
-      "title": "Hello World in Albanian",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "539",
       "completed_by": "DinShpati",
       "completed_date": "11/07/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "DrSparky-2007": [
@@ -296,13 +296,13 @@
   "DucPhamTV": [
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "382",
       "completed_by": "DucPhamTV",
       "completed_date": "11/02/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "thenewboston-python-client",
@@ -386,7 +386,7 @@
     },
     {
       "repository": "Website",
-      "title": "Update document for Bank API /Banks",
+      "title": "Update Docs for Bank - Banks",
       "issue_id": "953",
       "pr_id": "1006",
       "completed_by": "DucPhamTV",
@@ -466,7 +466,7 @@
     },
     {
       "repository": "Website",
-      "title": "Update documentation for Connection Requests",
+      "title": "Update Docs for Confirmation Validator - Connection Requests",
       "issue_id": "974",
       "pr_id": "1026",
       "completed_by": "DucPhamTV",
@@ -476,7 +476,7 @@
     },
     {
       "repository": "Website",
-      "title": "Update documentation for Connection Requests",
+      "title": "Update Docs for Bank - Connection Requests",
       "issue_id": "958",
       "pr_id": "1026",
       "completed_by": "DucPhamTV",
@@ -486,7 +486,7 @@
     },
     {
       "repository": "Website",
-      "title": "Update documentation for Connection Requests",
+      "title": "Update Docs for Primary Validator - Connection Requests",
       "issue_id": "967",
       "pr_id": "1026",
       "completed_by": "DucPhamTV",
@@ -498,13 +498,13 @@
   "FaiyazMdAbdul": [
     {
       "repository": "Website",
-      "title": "Improve Tamil translation of Hello World",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "709",
       "completed_by": "FaiyazMdAbdul",
       "completed_date": "11/11/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "FredrickXavier": [
@@ -528,7 +528,7 @@
       "completed_by": "GermaVinsmoke",
       "completed_date": "10/19/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -538,7 +538,7 @@
       "completed_by": "GermaVinsmoke",
       "completed_date": "10/19/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -548,43 +548,43 @@
       "completed_by": "GermaVinsmoke",
       "completed_date": "10/20/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "Get-ADUser": [
     {
       "repository": "Website",
-      "title": "Update hello-world.ts",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "562",
       "completed_by": "Get-ADUser",
       "completed_date": "11/07/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "Godnoken": [
     {
       "repository": "Website",
-      "title": "Hello world Swedish correction",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "987",
       "completed_by": "Godnoken",
       "completed_date": "11/23/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "Hot-Shot75": [
     {
       "repository": "Website",
-      "title": "Added 'Hello world' in Georgian",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "867",
       "completed_by": "Hot-Shot75",
       "completed_date": "11/16/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "Hristijan95": [
@@ -610,7 +610,7 @@
     },
     {
       "repository": "Website",
-      "title": "New content writer job opening",
+      "title": "New Job Opening",
       "issue_id": "1047",
       "pr_id": "1058",
       "completed_by": "Hristijan95",
@@ -620,7 +620,7 @@
     },
     {
       "repository": "Website",
-      "title": "Updated Docs for Primary Validator - Accounts #962 Fix",
+      "title": "Update Docs for Primary Validator - Accounts",
       "issue_id": "962",
       "pr_id": "983",
       "completed_by": "Hristijan95",
@@ -664,81 +664,81 @@
   "JayBIOS": [
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "486",
       "completed_by": "JayBIOS",
       "completed_date": "11/05/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "JonasPik": [
     {
       "repository": "Website",
-      "title": "#351 Added Hello World in Lithuanian language",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "555",
       "completed_by": "JonasPik",
       "completed_date": "11/07/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "KingChampion36": [
     {
       "repository": "Website",
-      "title": "Hello world in pali",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "824",
       "completed_by": "KingChampion36",
       "completed_date": "11/15/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Added contributor for issue #821",
+      "title": "New Contributor",
       "issue_id": "821",
       "pr_id": "823",
       "completed_by": "KingChampion36",
       "completed_date": "11/15/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "New contributor added for front end (#866)",
+      "title": "New Contributor",
       "issue_id": "866",
       "pr_id": "871",
       "completed_by": "KingChampion36",
       "completed_date": "11/16/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "LunarDeveloper": [
     {
       "repository": "Website",
-      "title": "New Member Added Issue 773",
+      "title": "New Contributor",
       "issue_id": "773",
       "pr_id": "777",
       "completed_by": "LunarDeveloper",
       "completed_date": "11/14/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "MirkoHotsHot": [
     {
       "repository": "Website",
-      "title": "Added Afrikaans language",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "713",
       "completed_by": "MirkoHotsHot",
       "completed_date": "11/11/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "Niekon01": [
@@ -780,17 +780,17 @@
       "completed_by": "Niekon01",
       "completed_date": "11/03/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Update Send Coin\" image\"",
+      "title": "Update \"Send Coin\" image",
       "issue_id": "445",
       "pr_id": "467",
       "completed_by": "Niekon01",
       "completed_date": "11/05/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Design",
@@ -806,95 +806,95 @@
   "P-Sklodowska": [
     {
       "repository": "Website",
-      "title": "Hello world in Polish",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "765",
       "completed_by": "P-Sklodowska",
       "completed_date": "11/14/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "PatNeedham": [
     {
       "repository": "Website",
-      "title": "fix: long-press TopNav links on Android",
+      "title": "[Android] Long-press on top nav links doesn't give option to open in new tab",
       "issue_id": "812",
       "pr_id": "813",
       "completed_by": "PatNeedham",
       "completed_date": "11/15/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "ProdexOne": [
     {
       "repository": "Website",
-      "title": "Added Hello World in Assamese",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "701",
       "completed_by": "ProdexOne",
       "completed_date": "11/11/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Added Hello World in Bihari languages (Bhojpuri)",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "725",
       "completed_by": "ProdexOne",
       "completed_date": "11/12/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "Ramin-RX7": [
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "477",
       "completed_by": "Ramin-RX7",
       "completed_date": "11/05/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "Reeler": [
     {
       "repository": "Website",
-      "title": "Docs update",
+      "title": "Proofread the README file",
       "issue_id": "643",
       "pr_id": "650",
       "completed_by": "Reeler",
       "completed_date": "11/09/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "Rosendo6": [
     {
       "repository": "Website",
-      "title": "Added Hello world in Catalan",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "766",
       "completed_by": "Rosendo6",
       "completed_date": "11/13/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "RoyVoetman": [
     {
       "repository": "Website",
-      "title": "Hello world in Frisian",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "708",
       "completed_by": "RoyVoetman",
       "completed_date": "11/11/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "SOHDA31": [
@@ -912,7 +912,7 @@
   "SirDaev": [
     {
       "repository": "Website",
-      "title": "Fix download button concatenation (#1055)",
+      "title": "Download button weird behaviour",
       "issue_id": "1055",
       "pr_id": "1115",
       "completed_by": "SirDaev",
@@ -922,7 +922,7 @@
     },
     {
       "repository": "Website",
-      "title": "Prevent mobile menu from blocking header elements during animation",
+      "title": "Mobile drop-down menu blocking logo & icon during animation",
       "issue_id": "582",
       "pr_id": "1118",
       "completed_by": "SirDaev",
@@ -934,43 +934,43 @@
   "Surac778": [
     {
       "repository": "Website",
-      "title": "Added Tajik language",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "900",
       "completed_by": "Surac778",
       "completed_date": "11/18/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "The-Veil": [
     {
       "repository": "Website",
-      "title": "Added Czech language",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "762",
       "completed_by": "The-Veil",
       "completed_date": "11/12/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "Tobel158": [
     {
       "repository": "Website",
-      "title": "zulu hello world",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "735",
       "completed_by": "Tobel158",
       "completed_date": "11/12/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "Toledit": [
     {
-      "repository": "Wensite",
-      "title": "Hello World in Afaan Oromoo",
+      "repository": "Website",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "949",
       "completed_by": "Toledit",
@@ -1012,19 +1012,19 @@
   "Tuhinga": [
     {
       "repository": "Website",
-      "title": "Added Maori language",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "884",
       "completed_by": "Tuhinga",
       "completed_date": "11/18/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "UweVanOpfern": [
     {
       "repository": "Website",
-      "title": "[Documentation]: Updated Docs for Bank - Bank Transactions #952",
+      "title": "Update Docs for Bank - Bank Transactions",
       "issue_id": "952",
       "pr_id": "986",
       "completed_by": "UweVanOpfern",
@@ -1034,7 +1034,7 @@
     },
     {
       "repository": "Website",
-      "title": "[Documentation]: Updated Docs for Bank - Bank Transactions #952",
+      "title": "Update Docs for Primary Validator - Confirmation Blocks",
       "issue_id": "966",
       "pr_id": "986",
       "completed_by": "UweVanOpfern",
@@ -1044,7 +1044,7 @@
     },
     {
       "repository": "Website",
-      "title": "Issue bank confirmation services #970",
+      "title": "Update Docs for Confirmation Validator - Bank Confirmation Services",
       "issue_id": "970",
       "pr_id": "1064",
       "completed_by": "UweVanOpfern",
@@ -1056,59 +1056,59 @@
   "VJKLFT": [
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "490",
       "completed_by": "VJKLFT",
       "completed_date": "11/05/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "Vangaorth": [
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "466",
       "completed_by": "Vangaorth",
       "completed_date": "11/05/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "VictorABoye": [
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "483",
       "completed_by": "VictorABoye",
       "completed_date": "11/05/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "VincentHch": [
     {
       "repository": "Website",
-      "title": "Added Luxembourgish language",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "736",
       "completed_by": "VincentHch",
       "completed_date": "11/12/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Add new user",
+      "title": "New Contributor",
       "issue_id": "872",
       "pr_id": "873",
       "completed_by": "VincentHch",
       "completed_date": "11/16/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "thenewboston-python-client",
@@ -1142,7 +1142,7 @@
     },
     {
       "repository": "Website",
-      "title": "[Documentaion] Bank confirmation blocks",
+      "title": "Update Docs for Bank - Confirmation Blocks",
       "issue_id": "956",
       "pr_id": "980",
       "completed_by": "VincentHch",
@@ -1152,7 +1152,7 @@
     },
     {
       "repository": "Website",
-      "title": "[Documentation] Bank invalid blocks",
+      "title": "Update Docs for Bank - Invalid Blocks",
       "issue_id": "957",
       "pr_id": "981",
       "completed_by": "VincentHch",
@@ -1164,25 +1164,25 @@
   "Weav3r": [
     {
       "repository": "Website",
-      "title": "Add Hello World Twi (Akan)",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "820",
       "completed_by": "Weav3r",
       "completed_date": "11/15/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "YashovardhanSingh": [
     {
       "repository": "Website",
-      "title": "fixes #787",
+      "title": "A little typo in the 'Openings' page",
       "issue_id": "787",
       "pr_id": "794",
       "completed_by": "YashovardhanSingh",
       "completed_date": "11/13/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Design",
@@ -1196,7 +1196,7 @@
     },
     {
       "repository": "Website",
-      "title": "fixes #1042",
+      "title": "The leaderboard page redirects to the home page",
       "issue_id": "1042",
       "pr_id": "1043",
       "completed_by": "YashovardhanSingh",
@@ -1258,25 +1258,25 @@
   "Zims": [
     {
       "repository": "Website",
-      "title": "added Latvian languag",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "557",
       "completed_by": "Zims",
       "completed_date": "11/08/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "ZokaSoce": [
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "473",
       "completed_by": "ZokaSoce",
       "completed_date": "11/05/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "aayushi14": [
@@ -1288,7 +1288,7 @@
       "completed_by": "aayushi14",
       "completed_date": "10/27/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -1298,7 +1298,7 @@
       "completed_by": "aayushi14",
       "completed_date": "10/31/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -1308,17 +1308,17 @@
       "completed_by": "aayushi14",
       "completed_date": "11/01/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "361",
       "completed_by": "aayushi14",
       "completed_date": "11/01/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -1328,7 +1328,7 @@
       "completed_by": "aayushi14",
       "completed_date": "11/01/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -1338,7 +1338,7 @@
       "completed_by": "aayushi14",
       "completed_date": "11/01/20",
       "amount_paid": "2000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -1348,7 +1348,7 @@
       "completed_by": "aayushi14",
       "completed_date": "11/03/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -1358,7 +1358,7 @@
       "completed_by": "aayushi14",
       "completed_date": "11/04/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -1368,21 +1368,21 @@
       "completed_by": "aayushi14",
       "completed_date": "11/04/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "763- fixed incorrect text on Add Friends page",
+      "title": "Incorrect Text on the Add Friends Page",
       "issue_id": "763",
       "pr_id": "764",
       "completed_by": "aayushi14",
       "completed_date": "11/13/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "994-removed members from team",
+      "title": "Remove Members listed from Team",
       "issue_id": "994",
       "pr_id": "1010",
       "completed_by": "aayushi14",
@@ -1392,7 +1392,7 @@
     },
     {
       "repository": "Website",
-      "title": "969-updated docs for Confirmation Validator - Accounts",
+      "title": "Update Docs for Confirmation Validator - Accounts",
       "issue_id": "969",
       "pr_id": "998",
       "completed_by": "aayushi14",
@@ -1402,7 +1402,7 @@
     },
     {
       "repository": "Website",
-      "title": "968-updated docs for Primary Validator - Validators",
+      "title": "Update Docs for Primary Validator - Validators",
       "issue_id": "968",
       "pr_id": "992",
       "completed_by": "aayushi14",
@@ -1412,7 +1412,7 @@
     },
     {
       "repository": "Website",
-      "title": "965-updated docs for Primary Validator - Config",
+      "title": "Update Docs for Primary Validator - Config",
       "issue_id": "965",
       "pr_id": "991",
       "completed_by": "aayushi14",
@@ -1422,7 +1422,7 @@
     },
     {
       "repository": "Website",
-      "title": "961-updated docs for Bank - Validators",
+      "title": "Update Docs for Bank - Validators",
       "issue_id": "961",
       "pr_id": "995",
       "completed_by": "aayushi14",
@@ -1432,7 +1432,7 @@
     },
     {
       "repository": "Website",
-      "title": "972-updated docs cv - config",
+      "title": "Update Docs for Confirmation Validator - Config",
       "issue_id": "972",
       "pr_id": "1000",
       "completed_by": "aayushi14",
@@ -1442,7 +1442,7 @@
     },
     {
       "repository": "Website",
-      "title": "977-updated docs cv - validators",
+      "title": "Update Docs for Confirmation Validator - Validators",
       "issue_id": "977",
       "pr_id": "1001",
       "completed_by": "aayushi14",
@@ -1452,7 +1452,7 @@
     },
     {
       "repository": "Website",
-      "title": "971-updated docs cv - banks",
+      "title": "Update Docs for Confirmation Validator - Banks",
       "issue_id": "971",
       "pr_id": "999",
       "completed_by": "aayushi14",
@@ -1462,7 +1462,7 @@
     },
     {
       "repository": "Website",
-      "title": "964-docs primary validator banks",
+      "title": "Update Docs for Primary Validator - Banks",
       "issue_id": "964",
       "pr_id": "1057",
       "completed_by": "aayushi14",
@@ -1472,7 +1472,7 @@
     },
     {
       "repository": "Website",
-      "title": "1083- added new contributor",
+      "title": "New Contributor",
       "issue_id": "1083",
       "pr_id": "1086",
       "completed_by": "aayushi14",
@@ -1482,7 +1482,7 @@
     },
     {
       "repository": "Website",
-      "title": "1084-added job opening",
+      "title": "Job Description",
       "issue_id": "1084",
       "pr_id": "1087",
       "completed_by": "aayushi14",
@@ -1494,61 +1494,61 @@
   "aeronye": [
     {
       "repository": "Website",
-      "title": "New member",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "939",
       "completed_by": "aeronye",
       "completed_date": "11/21/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "akamfoad": [
     {
       "repository": "Website",
-      "title": "\ud83d\udc4cauto select download tab based on user system",
+      "title": "website doesn't auto select download tab based on user system",
       "issue_id": "819",
       "pr_id": "805",
       "completed_by": "akamfoad",
       "completed_date": "11/15/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "alexkimeu0": [
     {
       "repository": "Website",
-      "title": "Added Hello World in Swahili",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "635",
       "completed_by": "alexkimeu0",
       "completed_date": "11/09/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Added Hello World in Kikuyu account number: 3972dfcfb9fd488cf90644b599558d3e265bdb883686933f62e8450aaee974b1",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "609",
       "completed_by": "alexkimeu0",
       "completed_date": "11/08/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Fixed typo in the documentation account: 3972dfcfb9fd488cf90644b599558d3e265bdb883686933f62e8450aaee974b1",
+      "title": "Documentation typo",
       "issue_id": "889",
       "pr_id": "757",
       "completed_by": "alexkimeu0",
       "completed_date": "11/17/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Fixes #935",
+      "title": "Typos in the docs",
       "issue_id": "935",
       "pr_id": "1004",
       "completed_by": "alexkimeu0",
@@ -1560,13 +1560,13 @@
   "alhuang2": [
     {
       "repository": "Website",
-      "title": "hello world in chinese",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "480",
       "completed_by": "alhuang2",
       "completed_date": "11/06/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "amarjeet987": [
@@ -1578,17 +1578,17 @@
       "completed_by": "amarjeet987",
       "completed_date": "11/03/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Rename 'Points' to 'Coins'",
+      "title": "Rename \"Points\" to \"Coins\"",
       "issue_id": "438",
       "pr_id": "442",
       "completed_by": "amarjeet987",
       "completed_date": "11/04/20",
       "amount_paid": "7500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Account-Manager",
@@ -1602,13 +1602,13 @@
     },
     {
       "repository": "Website",
-      "title": "Signup modal",
+      "title": "User Account Prereq - Integrate our AccountManager's Modal into the website",
       "issue_id": "461",
       "pr_id": "585",
       "completed_by": "amarjeet987",
       "completed_date": "11/24/20",
       "amount_paid": "25000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Kotlin-SDK",
@@ -1650,7 +1650,7 @@
       "completed_by": "angle943",
       "completed_date": "10/19/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -1660,7 +1660,7 @@
       "completed_by": "angle943",
       "completed_date": "10/19/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -1670,7 +1670,7 @@
       "completed_by": "angle943",
       "completed_date": "10/21/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -1680,7 +1680,7 @@
       "completed_by": "angle943",
       "completed_date": "10/31/20",
       "amount_paid": "5000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -1690,7 +1690,7 @@
       "completed_by": "angle943",
       "completed_date": "11/01/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -1700,7 +1700,7 @@
       "completed_by": "angle943",
       "completed_date": "11/01/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -1710,7 +1710,7 @@
       "completed_by": "angle943",
       "completed_date": "11/01/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -1720,7 +1720,7 @@
       "completed_by": "angle943",
       "completed_date": "11/03/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -1730,7 +1730,7 @@
       "completed_by": "angle943",
       "completed_date": "11/03/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -1740,7 +1740,7 @@
       "completed_by": "angle943",
       "completed_date": "11/04/20",
       "amount_paid": "5000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -1750,19 +1750,19 @@
       "completed_by": "angle943",
       "completed_date": "11/04/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "askass": [
     {
       "repository": "Website",
-      "title": "Hellow World in Belarusian",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "652",
       "completed_by": "askass",
       "completed_date": "11/09/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "avgust13": [
@@ -1920,13 +1920,13 @@
   "avinashupadhya99": [
     {
       "repository": "Website",
-      "title": "Hello world in Kannada",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "554",
       "completed_by": "avinashupadhya99",
       "completed_date": "11/07/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "brian316": [
@@ -1954,13 +1954,13 @@
   "briankinane": [
     {
       "repository": "Website",
-      "title": "Added 'Hello World' in Latin.",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "862",
       "completed_by": "briankinane",
       "completed_date": "11/16/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "brmendez": [
@@ -1972,7 +1972,7 @@
       "completed_by": "brmendez",
       "completed_date": "10/30/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "buckyroberts": [
@@ -1984,7 +1984,7 @@
       "completed_by": "buckyroberts",
       "completed_date": "9/20/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -1994,7 +1994,7 @@
       "completed_by": "buckyroberts",
       "completed_date": "9/20/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -2004,7 +2004,7 @@
       "completed_by": "buckyroberts",
       "completed_date": "9/20/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Account-Manager",
@@ -2024,63 +2024,63 @@
       "completed_by": "buckyroberts",
       "completed_date": "11/05/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Project proposals",
+      "title": "Projects Proposal page",
       "issue_id": "934",
       "pr_id": "978",
       "completed_by": "buckyroberts",
       "completed_date": "11/22/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "cebisom": [
     {
       "repository": "Website",
-      "title": "Added Hello World in isiNdebele",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "691",
       "completed_by": "cebisom",
       "completed_date": "11/10/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "cfviotti": [
     {
       "repository": "Website",
-      "title": "Fix Social page heading and links alignment",
+      "title": "\"Join the Community\" heading in /social",
       "issue_id": "686",
       "pr_id": "716",
       "completed_by": "cfviotti",
       "completed_date": "11/11/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "codemedo": [
     {
       "repository": "Website",
-      "title": "Added hello world in tatari language",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "904",
       "completed_by": "codemedo",
       "completed_date": "11/19/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Added new contributor",
+      "title": "New Contributor",
       "issue_id": "899",
       "pr_id": "901",
       "completed_by": "codemedo",
       "completed_date": "11/18/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "colfax23": [
@@ -2092,7 +2092,7 @@
       "completed_by": "colfax23",
       "completed_date": "10/26/20",
       "amount_paid": "10000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -2102,7 +2102,7 @@
       "completed_by": "colfax23",
       "completed_date": "10/27/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Account-Manager",
@@ -2116,25 +2116,25 @@
     },
     {
       "repository": "Website",
-      "title": "Help to Social page",
+      "title": "Social Media page",
       "issue_id": "319",
       "pr_id": "339",
       "completed_by": "colfax23",
       "completed_date": "10/30/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "cubedtear": [
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "476",
       "completed_by": "cubedtear",
       "completed_date": "11/05/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "dahelg": [
@@ -2146,43 +2146,43 @@
       "completed_by": "dahelg",
       "completed_date": "10/11/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "danielivert": [
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "481",
       "completed_by": "danielivert",
       "completed_date": "11/05/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "danieloravec": [
     {
       "repository": "Website",
-      "title": "Add correct hello-world in Slovak",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "685",
       "completed_by": "danieloravec",
       "completed_date": "11/12/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "dark121211": [
     {
       "repository": "Website",
-      "title": "Added Burmese language",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "860",
       "completed_by": "dark121211",
       "completed_date": "11/16/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "davidyapdy": [
@@ -2200,33 +2200,33 @@
   "ddyakov": [
     {
       "repository": "Website",
-      "title": "added Hello World in bulgarian",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "727",
       "completed_by": "ddyakov",
       "completed_date": "11/12/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "fixed typo in react/jsx style guide",
+      "title": "Typo in the documentation.",
       "issue_id": "756",
       "pr_id": "759",
       "completed_by": "ddyakov",
       "completed_date": "11/13/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "improved correctness and clarity in itroduction page text",
+      "title": "Small correctness and clarity mistakes in introduction page",
       "issue_id": "800",
       "pr_id": "801",
       "completed_by": "ddyakov",
       "completed_date": "11/14/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "devanshgajjar": [
@@ -2294,7 +2294,7 @@
   "dhakal0kushal": [
     {
       "repository": "Website",
-      "title": "Added Hello World in Wolfo Language",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "979",
       "completed_by": "dhakal0kushal",
@@ -2316,161 +2316,161 @@
   "donmbelembe": [
     {
       "repository": "Website",
-      "title": "Hello word in lingala",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "516",
       "completed_by": "donmbelembe",
       "completed_date": "11/07/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "dorlivniopen": [
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "354",
       "completed_by": "dorlivniopen",
       "completed_date": "11/01/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "fadyadal": [
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "474",
       "completed_by": "fadyadal",
       "completed_date": "11/05/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "ffpetrovic": [
     {
       "repository": "Website",
-      "title": "Remove package-lock.json and update npm commands to yarn",
+      "title": "Remove package-lock.json and use yarn",
       "issue_id": "828",
       "pr_id": "829",
       "completed_by": "ffpetrovic",
       "completed_date": "11/16/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "fosteradorkor": [
     {
       "repository": "Website",
-      "title": "Hello world in Akan",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "692",
       "completed_by": "fosteradorkor",
       "completed_date": "11/15/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "ganeshvicky": [
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "479",
       "completed_by": "ganeshvicky",
       "completed_date": "11/05/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "gatvay23924": [
     {
       "repository": "Website",
-      "title": "Added Esperanto language",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "902",
       "completed_by": "gatvay23924",
       "completed_date": "11/18/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "h3cksamrat": [
     {
       "repository": "Website",
-      "title": "Added Hello World In Nepali",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "651",
       "completed_by": "h3cksamrat",
       "completed_date": "11/09/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "hLudde": [
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "484",
       "completed_by": "hLudde",
       "completed_date": "11/05/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "hasham56": [
     {
       "repository": "Website",
-      "title": "New contributor added",
+      "title": "New Contributor",
       "issue_id": "772",
       "pr_id": "775",
       "completed_by": "hasham56",
       "completed_date": "11/14/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "New Contributor Added",
+      "title": "New Contributor",
       "issue_id": "793",
       "pr_id": "797",
       "completed_by": "hasham56",
       "completed_date": "11/13/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Kotlin software developer",
+      "title": "Kotlin SDK new member (Peter Sommerhoff)",
       "issue_id": "877",
       "pr_id": "897",
       "completed_by": "hasham56",
       "completed_date": "11/18/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Kotlin SDK member added",
+      "title": "Kotlin SDK New Contributor Martin Nowosad",
       "issue_id": "878",
       "pr_id": "896",
       "completed_by": "hasham56",
       "completed_date": "11/18/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Adding contributor",
+      "title": "New Contributor",
       "issue_id": "915",
       "pr_id": "930",
       "completed_by": "hasham56",
       "completed_date": "11/20/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -2480,7 +2480,7 @@
       "completed_by": "hasham56",
       "completed_date": "11/20/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "hawyar": [
@@ -2508,37 +2508,37 @@
   "henctv": [
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "475",
       "completed_by": "henctv",
       "completed_date": "11/05/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "hienqn": [
     {
       "repository": "Website",
-      "title": "added hello world for Armenian language",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "711",
       "completed_by": "hienqn",
       "completed_date": "11/11/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "ionutzaharia": [
     {
       "repository": "Website",
-      "title": "Add Romanian Fix missing space",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "599",
       "completed_by": "ionutzaharia",
       "completed_date": "11/08/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "itsnikhil": [
@@ -2550,7 +2550,7 @@
       "completed_by": "itsnikhil",
       "completed_date": "10/10/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -2560,17 +2560,17 @@
       "completed_by": "itsnikhil",
       "completed_date": "11/02/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "351",
       "completed_by": "itsnikhil",
       "completed_date": "11/02/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -2580,7 +2580,7 @@
       "completed_by": "itsnikhil",
       "completed_date": "11/03/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -2590,7 +2590,7 @@
       "completed_by": "itsnikhil",
       "completed_date": "11/03/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -2600,7 +2600,7 @@
       "completed_by": "itsnikhil",
       "completed_date": "11/03/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -2610,7 +2610,7 @@
       "completed_by": "itsnikhil",
       "completed_date": "11/03/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -2620,7 +2620,7 @@
       "completed_by": "itsnikhil",
       "completed_date": "11/03/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -2630,7 +2630,7 @@
       "completed_by": "itsnikhil",
       "completed_date": "11/03/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -2640,7 +2640,7 @@
       "completed_by": "itsnikhil",
       "completed_date": "11/03/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -2650,17 +2650,17 @@
       "completed_by": "itsnikhil",
       "completed_date": "11/06/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "673 - Marketing analyst opening",
+      "title": "[Job Opening] Marketing Analyst",
       "issue_id": "673",
       "pr_id": "683",
       "completed_by": "itsnikhil",
       "completed_date": "11/10/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Kotlin-SDK",
@@ -2686,171 +2686,171 @@
   "jaelee0409": [
     {
       "repository": "Website",
-      "title": "Updated the Team page",
+      "title": "Team Page - Member Updates",
       "issue_id": "627",
       "pr_id": "639",
       "completed_by": "jaelee0409",
       "completed_date": "11/09/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "jagdisharma": [
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "470",
       "completed_by": "jagdisharma",
       "completed_date": "11/05/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "jamessspanggg": [
     {
       "repository": "Website",
-      "title": "Add hello world in javanese",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "642",
       "completed_by": "jamessspanggg",
       "completed_date": "11/09/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Prevent content jumping in leaderboard page",
+      "title": "[Leaderboard] Image content jumping when loading page",
       "issue_id": "703",
       "pr_id": "704",
       "completed_by": "jamessspanggg",
       "completed_date": "11/11/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "[#675] Fix hash link in documentations page",
+      "title": "[Documentation] Hash link snap issue",
       "issue_id": "675",
       "pr_id": "676",
       "completed_by": "jamessspanggg",
       "completed_date": "11/10/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "[#679] Fix leaderboard drop down",
+      "title": "[Leaderboard] Dropdown does not work",
       "issue_id": "679",
       "pr_id": "680",
       "completed_by": "jamessspanggg",
       "completed_date": "11/10/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Fix code highlighting in documentation",
+      "title": "[Documentation] Code segments under CSS / SASS not highlighted properly",
       "issue_id": "733",
       "pr_id": "734",
       "completed_by": "jamessspanggg",
       "completed_date": "11/13/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "[#743] Add new front end contributor",
+      "title": "New Contributor",
       "issue_id": "743",
       "pr_id": "744",
       "completed_by": "jamessspanggg",
       "completed_date": "11/14/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Change sorting of members to be based on contributorId",
+      "title": "Sorting of team members not working as expected",
       "issue_id": "747",
       "pr_id": "788",
       "completed_by": "jamessspanggg",
       "completed_date": "11/14/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Enforce width of task sections in leaderboard",
+      "title": "[Leaderboard] Inconsistencies in width of tasks",
       "issue_id": "839",
       "pr_id": "840",
       "completed_by": "jamessspanggg",
       "completed_date": "11/15/20",
       "amount_paid": "2000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "[FAQ] Fix console error in development mode",
+      "title": "[FAQ] Console error when in dev mode",
       "issue_id": "845",
       "pr_id": "846",
       "completed_by": "jamessspanggg",
       "completed_date": "11/15/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Remove empty new line in scripts within deployment guides",
+      "title": "[Documentation] Empty new lines in deployment guide",
       "issue_id": "858",
       "pr_id": "859",
       "completed_by": "jamessspanggg",
       "completed_date": "11/16/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Utilise react-helmet-async instead of react-helmet",
+      "title": "UNSAFE_componentWillMount console error",
       "issue_id": "856",
       "pr_id": "857",
       "completed_by": "jamessspanggg",
       "completed_date": "11/16/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Fix console warnings",
+      "title": "Fix console warnings during development",
       "issue_id": "863",
       "pr_id": "865",
       "completed_by": "jamessspanggg",
       "completed_date": "11/16/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Add new contributor: Payments Manager Tawanda",
+      "title": "New Contributor",
       "issue_id": "892",
       "pr_id": "895",
       "completed_by": "jamessspanggg",
       "completed_date": "11/18/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Add new contributor: Payments Manager Nikhil",
+      "title": "New Contributor",
       "issue_id": "893",
       "pr_id": "894",
       "completed_by": "jamessspanggg",
       "completed_date": "11/18/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Fix double calls to onClick when clicked on Icons",
+      "title": "[Tasks] Ascending and descending sort not working",
       "issue_id": "1014",
       "pr_id": "1015",
       "completed_by": "jamessspanggg",
@@ -2860,7 +2860,7 @@
     },
     {
       "repository": "Website",
-      "title": "Fix NaN reward",
+      "title": "NaN reward",
       "issue_id": "936",
       "pr_id": "938",
       "completed_by": "jamessspanggg",
@@ -2870,7 +2870,7 @@
     },
     {
       "repository": "Website",
-      "title": "Add how to set up payment board docs",
+      "title": "Add How to Set Up Payment Board Docs",
       "issue_id": "990",
       "pr_id": "1020",
       "completed_by": "jamessspanggg",
@@ -2880,7 +2880,7 @@
     },
     {
       "repository": "Website",
-      "title": "Add github action workflow for linting",
+      "title": "[Suggestion] Automate testing/linting using github actions",
       "issue_id": "1032",
       "pr_id": "1033",
       "completed_by": "jamessspanggg",
@@ -2890,7 +2890,7 @@
     },
     {
       "repository": "Website",
-      "title": "Remove contributor",
+      "title": "Remove team member",
       "issue_id": "1030",
       "pr_id": "1031",
       "completed_by": "jamessspanggg",
@@ -2940,7 +2940,7 @@
     },
     {
       "repository": "Website",
-      "title": "Add new contributor",
+      "title": "New Contributor",
       "issue_id": "1039",
       "pr_id": "1040",
       "completed_by": "jamessspanggg",
@@ -2950,7 +2950,7 @@
     },
     {
       "repository": "Website",
-      "title": "Reuse avatar component in SlideUpAccountDetails",
+      "title": "[Leaderboard] Slide up account details shifts around when initially loaded",
       "issue_id": "1051",
       "pr_id": "1052",
       "completed_by": "jamessspanggg",
@@ -2960,7 +2960,7 @@
     },
     {
       "repository": "Website",
-      "title": "Add new job opening",
+      "title": "New Job Opening",
       "issue_id": "1046",
       "pr_id": "1048",
       "completed_by": "jamessspanggg",
@@ -2970,7 +2970,7 @@
     },
     {
       "repository": "Website",
-      "title": "Add Stylelint as CSS/SCSS linter",
+      "title": "[Suggestion] Linter for css/scss files",
       "issue_id": "1036",
       "pr_id": "1049",
       "completed_by": "jamessspanggg",
@@ -2980,7 +2980,7 @@
     },
     {
       "repository": "Website",
-      "title": "Add new dot net core opening",
+      "title": "New Job Opening: Senior .NET Core developer",
       "issue_id": "1056",
       "pr_id": "1060",
       "completed_by": "jamessspanggg",
@@ -2990,7 +2990,7 @@
     },
     {
       "repository": "Website",
-      "title": "Add tasks completed in Profile",
+      "title": "Create the \"Tasks Completed\" section of the profile page",
       "issue_id": "1063",
       "pr_id": "1065",
       "completed_by": "jamessspanggg",
@@ -3000,7 +3000,7 @@
     },
     {
       "repository": "Website",
-      "title": "Add new contributor",
+      "title": "New Contributor",
       "issue_id": "1069",
       "pr_id": "1072",
       "completed_by": "jamessspanggg",
@@ -3010,7 +3010,7 @@
     },
     {
       "repository": "Website",
-      "title": "[Dropdowns] Allow outer div to be toggle-able",
+      "title": "[Documentation] Breadcrumb menu does not toggle when clicked on icon",
       "issue_id": "1075",
       "pr_id": "1076",
       "completed_by": "jamessspanggg",
@@ -3020,7 +3020,7 @@
     },
     {
       "repository": "Website",
-      "title": "Add Profile Info section",
+      "title": "Create the \"Profile Info\" section of the profile page",
       "issue_id": "1062",
       "pr_id": "1070",
       "completed_by": "jamessspanggg",
@@ -3030,7 +3030,7 @@
     },
     {
       "repository": "Website",
-      "title": "Modify teams data",
+      "title": "New Contributor",
       "issue_id": "1077",
       "pr_id": "1081",
       "completed_by": "jamessspanggg",
@@ -3040,7 +3040,7 @@
     },
     {
       "repository": "Website",
-      "title": "Profile: add link to team page",
+      "title": "[Profile] Add team link",
       "issue_id": "1109",
       "pr_id": "1104",
       "completed_by": "jamessspanggg",
@@ -3050,7 +3050,7 @@
     },
     {
       "repository": "Website",
-      "title": "Add new kotlin contributor",
+      "title": "New Contributor",
       "issue_id": "1085",
       "pr_id": "1090",
       "completed_by": "jamessspanggg",
@@ -3060,11 +3060,21 @@
     },
     {
       "repository": "Website",
-      "title": "Fix width of mobile menu dropdown",
+      "title": "Mobile menu dropdown shifts things around",
       "issue_id": "1129",
       "pr_id": "1130",
       "completed_by": "jamessspanggg",
       "completed_date": "12/16/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add Twitch link to Social Media page",
+      "issue_id": "1131",
+      "pr_id": "1132",
+      "completed_by": "jamessspanggg",
+      "completed_date": "12/18/20",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
     }
@@ -3072,13 +3082,13 @@
   "jonathanlee06": [
     {
       "repository": "Website",
-      "title": "Added Hello World in Malay Language",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "567",
       "completed_by": "jonathanlee06",
       "completed_date": "11/11/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "jtavak": [
@@ -3106,25 +3116,25 @@
   "kagisojamesthomba": [
     {
       "repository": "Website",
-      "title": "Added Hello World in Tswana",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "687",
       "completed_by": "kagisojamesthomba",
       "completed_date": "11/10/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "kenmusima": [
     {
       "repository": "Website",
-      "title": "Hello World in Kiswahili",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "545",
       "completed_by": "kenmusima",
       "completed_date": "11/07/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "kristykjlee": [
@@ -3136,7 +3146,7 @@
       "completed_by": "kristykjlee",
       "completed_date": "9/16/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -3146,7 +3156,7 @@
       "completed_by": "kristykjlee",
       "completed_date": "10/24/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -3156,7 +3166,7 @@
       "completed_by": "kristykjlee",
       "completed_date": "10/24/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -3166,7 +3176,7 @@
       "completed_by": "kristykjlee",
       "completed_date": "10/24/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -3176,7 +3186,7 @@
       "completed_by": "kristykjlee",
       "completed_date": "10/24/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -3186,7 +3196,7 @@
       "completed_by": "kristykjlee",
       "completed_date": "10/24/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -3196,7 +3206,7 @@
       "completed_by": "kristykjlee",
       "completed_date": "10/31/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -3206,7 +3216,7 @@
       "completed_by": "kristykjlee",
       "completed_date": "11/01/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -3216,7 +3226,7 @@
       "completed_by": "kristykjlee",
       "completed_date": "11/03/20",
       "amount_paid": "25000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -3226,7 +3236,7 @@
       "completed_by": "kristykjlee",
       "completed_date": "11/04/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -3236,7 +3246,7 @@
       "completed_by": "kristykjlee",
       "completed_date": "11/04/20",
       "amount_paid": "5000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Design",
@@ -3262,13 +3272,13 @@
   "kush-daga": [
     {
       "repository": "Website",
-      "title": "Fixes #550 - Added Sorting in Tasks",
+      "title": "[Feature Request] Tasks should be sortable by time and coins",
       "issue_id": "550",
       "pr_id": "616",
       "completed_by": "kush-daga",
       "completed_date": "11/16/20",
       "amount_paid": "7500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "lapstjup": [
@@ -3280,7 +3290,7 @@
       "completed_by": "lapstjup",
       "completed_date": "10/02/20",
       "amount_paid": "5000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -3290,7 +3300,7 @@
       "completed_by": "lapstjup",
       "completed_date": "11/02/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -3300,7 +3310,7 @@
       "completed_by": "lapstjup",
       "completed_date": "11/03/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -3310,7 +3320,7 @@
       "completed_by": "lapstjup",
       "completed_date": "11/03/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -3320,7 +3330,7 @@
       "completed_by": "lapstjup",
       "completed_date": "11/04/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -3330,39 +3340,39 @@
       "completed_by": "lapstjup",
       "completed_date": "11/04/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Fix safari dropdown positioning",
+      "title": "Get Started/Community dropdown positioning not coherent in Safari",
       "issue_id": "462",
       "pr_id": "468",
       "completed_by": "lapstjup",
       "completed_date": "11/09/20",
       "amount_paid": "5000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Fix proposal for decoupling animation and shuffling logic",
+      "title": "Decouple Hello World animation and word shuffle logic using custom hooks",
       "issue_id": "890",
       "pr_id": "918",
       "completed_by": "lapstjup",
       "completed_date": "11/21/20",
       "amount_paid": "5000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "laughablehaha": [
     {
       "repository": "Website",
-      "title": "Added Maltese language.",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "771",
       "completed_by": "laughablehaha",
       "completed_date": "11/14/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "leelatanniru": [
@@ -3398,7 +3408,7 @@
     },
     {
       "repository": "Website",
-      "title": "Added white logo",
+      "title": "Add additional logos to Assets page",
       "issue_id": "1073",
       "pr_id": "1113",
       "completed_by": "leelatanniru",
@@ -3410,25 +3420,25 @@
   "lucedawg": [
     {
       "repository": "Website",
-      "title": "'Hello World' in Haitian Creole",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "891",
       "completed_by": "lucedawg",
       "completed_date": "11/18/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "lukas-kasticky": [
     {
       "repository": "Website",
-      "title": "Hello World in Serbian",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "526",
       "completed_by": "lukas-kasticky",
       "completed_date": "11/07/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Design",
@@ -3496,77 +3506,77 @@
   "manishram": [
     {
       "repository": "Website",
-      "title": "Fixes: #399 Added go to top button",
+      "title": "add the floating button that takes us to the top of the page",
       "issue_id": "399",
       "pr_id": "600",
       "completed_by": "manishram",
       "completed_date": "11/09/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Added Hello World in sanskrit (india)",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "571",
       "completed_by": "manishram",
       "completed_date": "11/07/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Fixes: #523 Assets page",
+      "title": "Design Assets page",
       "issue_id": "523",
       "pr_id": "641",
       "completed_by": "manishram",
       "completed_date": "11/12/20",
       "amount_paid": "7500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Add new contributor to the Back-End Developers",
+      "title": "New Contributor",
       "issue_id": "745",
       "pr_id": "746",
       "completed_by": "manishram",
       "completed_date": "11/14/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Fixes Left Navigation Links",
+      "title": "Task Left Menu Issue",
       "issue_id": "564",
       "pr_id": "803",
       "completed_by": "manishram",
       "completed_date": "11/15/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Complete title of recent task on hover",
+      "title": "Issue with recent task title",
       "issue_id": "815",
       "pr_id": "816",
       "completed_by": "manishram",
       "completed_date": "11/15/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Page Title Fix: Assets and Openings page",
+      "title": "Title Missing: Assets and Openings page",
       "issue_id": "854",
       "pr_id": "855",
       "completed_by": "manishram",
       "completed_date": "11/16/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "added project proposals link to footer",
+      "title": "Project proposals link missing in the footer",
       "issue_id": "1008",
       "pr_id": "1009",
       "completed_by": "manishram",
@@ -3576,7 +3586,7 @@
     },
     {
       "repository": "Website",
-      "title": "Added point number 6",
+      "title": "Point number 6 is missing",
       "issue_id": "996",
       "pr_id": "997",
       "completed_by": "manishram",
@@ -3586,7 +3596,7 @@
     },
     {
       "repository": "Website",
-      "title": "Adds new rule",
+      "title": "Add new rule",
       "issue_id": "1024",
       "pr_id": "1025",
       "completed_by": "manishram",
@@ -3596,7 +3606,7 @@
     },
     {
       "repository": "Website",
-      "title": "Remove Sunil Chauhan",
+      "title": "Remove contributor",
       "issue_id": "1092",
       "pr_id": "1093",
       "completed_by": "manishram",
@@ -3606,7 +3616,7 @@
     },
     {
       "repository": "Website",
-      "title": "Add wordpress developer to openings",
+      "title": "WordPress Developer",
       "issue_id": "1101",
       "pr_id": "1102",
       "completed_by": "manishram",
@@ -3616,7 +3626,7 @@
     },
     {
       "repository": "Website",
-      "title": "Update for Project proposals",
+      "title": "Update the Project Proposals section",
       "issue_id": "1116",
       "pr_id": "1117",
       "completed_by": "manishram",
@@ -3652,25 +3662,25 @@
   "melsh123221": [
     {
       "repository": "Website",
-      "title": "Added Hello World in Welsh language",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "868",
       "completed_by": "melsh123221",
       "completed_date": "11/16/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "mersimoski": [
     {
       "repository": "Website",
-      "title": "issue#909 - Long title words break the mobile design in the tasks page",
+      "title": "Long title words break the mobile design in the tasks page",
       "issue_id": "909",
       "pr_id": "917",
       "completed_by": "mersimoski",
       "completed_date": "11/19/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "mofodox": [
@@ -3704,17 +3714,17 @@
       "completed_by": "moki298",
       "completed_date": "10/28/20",
       "amount_paid": "7500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "363",
       "completed_by": "moki298",
       "completed_date": "11/01/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -3724,19 +3734,19 @@
       "completed_by": "moki298",
       "completed_date": "11/05/20",
       "amount_paid": "7500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "mprateek14": [
     {
       "repository": "Website",
-      "title": "added hello world in odia",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "682",
       "completed_by": "mprateek14",
       "completed_date": "11/10/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "mrbusysky": [
@@ -3752,7 +3762,7 @@
     },
     {
       "repository": "Website",
-      "title": "Update to add tnb-js",
+      "title": "Add thenewboston-js to tasks page",
       "issue_id": "1103",
       "pr_id": "1098",
       "completed_by": "mrbusysky",
@@ -3762,7 +3772,7 @@
     },
     {
       "repository": "Website",
-      "title": "Adding discord",
+      "title": "Need to add discord to website",
       "issue_id": "1111",
       "pr_id": "1110",
       "completed_by": "mrbusysky",
@@ -3774,37 +3784,37 @@
   "mthomas-io": [
     {
       "repository": "Website",
-      "title": "fix: Apply z-translation to make rotated chevron visible in Safari",
+      "title": "Get Started / Community chevron icon disappears on toggle in Safari",
       "issue_id": "446",
       "pr_id": "504",
       "completed_by": "mthomas-io",
       "completed_date": "11/09/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "naveedahmad99": [
     {
       "repository": "Website",
-      "title": "Pashto language added",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "510",
       "completed_by": "naveedahmad99",
       "completed_date": "11/07/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "nberic": [
     {
       "repository": "Website",
-      "title": "Add Serbian language",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "684",
       "completed_by": "nberic",
       "completed_date": "11/10/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "nishp77": [
@@ -3872,17 +3882,17 @@
   "nparoski": [
     {
       "repository": "Website",
-      "title": "Fix/double focus",
+      "title": "[Bug]Website buttons in navigation have double focus.",
       "issue_id": "830",
       "pr_id": "831",
       "completed_by": "nparoski",
       "completed_date": "11/15/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Feature/accesibility improvements",
+      "title": "[Bug] Interactive elements don't have outlines on focus and are not clickable via keyboard.",
       "issue_id": "843",
       "pr_id": "844",
       "completed_by": "nparoski",
@@ -3892,7 +3902,7 @@
     },
     {
       "repository": "Website",
-      "title": "Feature/design team",
+      "title": "New Contributor",
       "issue_id": "1050",
       "pr_id": "1053",
       "completed_by": "nparoski",
@@ -3902,7 +3912,7 @@
     },
     {
       "repository": "Website",
-      "title": "Fix/ie blank page",
+      "title": "[Internet Explorer] Site not working",
       "issue_id": "211",
       "pr_id": "1044",
       "completed_by": "nparoski",
@@ -3912,7 +3922,7 @@
     },
     {
       "repository": "Website",
-      "title": "Fix/mobile contributors num overflow",
+      "title": "[Leaderboard] High ranking number exceeds container in mobile view",
       "issue_id": "1041",
       "pr_id": "1054",
       "completed_by": "nparoski",
@@ -3924,25 +3934,25 @@
   "nrednav": [
     {
       "repository": "Website",
-      "title": "Fixes #389: Download page needs design update for iPhone 5",
+      "title": "Download page needs design update for iPhone 5",
       "issue_id": "389",
       "pr_id": "560",
       "completed_by": "nrednav",
       "completed_date": "11/11/20",
       "amount_paid": "2000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "officialabdulrehman": [
     {
       "repository": "Website",
-      "title": "Added Hello World in Sindhi Language",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "575",
       "completed_by": "officialabdulrehman",
       "completed_date": "11/07/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "osaroadade": [
@@ -3970,13 +3980,13 @@
   "pabloqb2000": [
     {
       "repository": "Website",
-      "title": "Added Hello World in Aragonese",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "861",
       "completed_by": "pabloqb2000",
       "completed_date": "11/16/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Design",
@@ -4024,133 +4034,133 @@
   "phase7": [
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "485",
       "completed_by": "phase7",
       "completed_date": "11/05/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "phoenixArtwork": [
     {
       "repository": "Website",
-      "title": "Update of hello-world.ts and a suggestion.",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "698",
       "completed_by": "phoenixArtwork",
       "completed_date": "11/15/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "rabeeh-ta": [
     {
       "repository": "Website",
-      "title": "Added Hello World in Malayalam",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "596",
       "completed_by": "rabeeh-ta",
       "completed_date": "11/07/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "rahulkiller104": [
     {
       "repository": "Website",
-      "title": "donate-card-margin fixes",
+      "title": "extra right margin in donate-card on mobile",
       "issue_id": "776",
       "pr_id": "817",
       "completed_by": "rahulkiller104",
       "completed_date": "11/14/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "rasabel": [
     {
       "repository": "Website",
-      "title": "Add hello world in Amharic",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "649",
       "completed_by": "rasabel",
       "completed_date": "11/09/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "reeveng": [
     {
       "repository": "Website",
-      "title": "Adding Thai version of Hello world",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "535",
       "completed_by": "reeveng",
       "completed_date": "11/07/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "rizqyep": [
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "381",
       "completed_by": "rizqyep",
       "completed_date": "11/02/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "robMakasi": [
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "457",
       "completed_by": "robMakasi",
       "completed_date": "11/04/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "sardorml": [
     {
       "repository": "Website",
-      "title": ":globe_with_meridians: Added Hello World in Uzbek language",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "740",
       "completed_by": "sardorml",
       "completed_date": "11/12/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "sarveshkolte": [
     {
       "repository": "Website",
-      "title": "Hello world in Japanese",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "511",
       "completed_by": "sarveshkolte",
       "completed_date": "11/07/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "sbalasa": [
     {
       "repository": "Website",
-      "title": "Adding Hello World in Irish/Gaelic language",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "720",
       "completed_by": "sbalasa",
       "completed_date": "11/12/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "thenewboston-python-client",
@@ -4194,19 +4204,19 @@
       "completed_by": "sdhiaeddine",
       "completed_date": "11/09/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "shahraizali": [
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "379",
       "completed_by": "shahraizali",
       "completed_date": "11/02/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Account-Manager",
@@ -4230,25 +4240,25 @@
     },
     {
       "repository": "Website",
-      "title": "Added Urdu",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "379",
       "completed_by": "shahraizali",
       "completed_date": "11/02/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "shcul333": [
     {
       "repository": "Website",
-      "title": "Added marathi translation for Hello World",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "546",
       "completed_by": "shcul333",
       "completed_date": "11/07/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "shivamyadav37": [
@@ -4266,25 +4276,25 @@
   "siemen-subbaiah": [
     {
       "repository": "Website",
-      "title": "Update hello-world.ts",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "874",
       "completed_by": "siemen-subbaiah",
       "completed_date": "11/17/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "singh-sarabjeet": [
     {
       "repository": "Website",
-      "title": "Added Hello World in Punjabi",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "623",
       "completed_by": "singh-sarabjeet",
       "completed_date": "11/09/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "smazydev": [
@@ -4354,37 +4364,37 @@
   "sotheavuthnguon": [
     {
       "repository": "Website",
-      "title": "Added hello world in khmer language",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "742",
       "completed_by": "sotheavuthnguon",
       "completed_date": "11/12/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "subhamg": [
     {
       "repository": "Website",
-      "title": "feat: Add contributor to the team of front-end developers",
+      "title": "New Contributor",
       "issue_id": "750",
       "pr_id": "755",
       "completed_by": "subhamg",
       "completed_date": "11/12/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "suhailpappu": [
     {
       "repository": "Website",
-      "title": "Changed hello in telugu to real form of hello i.e namaste",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "677",
       "completed_by": "suhailpappu",
       "completed_date": "11/13/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "thesanjeevsharma": [
@@ -4396,7 +4406,7 @@
       "completed_by": "thesanjeevsharma",
       "completed_date": "9/22/20",
       "amount_paid": "10000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -4406,7 +4416,7 @@
       "completed_by": "thesanjeevsharma",
       "completed_date": "10/02/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -4416,7 +4426,7 @@
       "completed_by": "thesanjeevsharma",
       "completed_date": "10/10/20",
       "amount_paid": "10000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -4426,7 +4436,7 @@
       "completed_by": "thesanjeevsharma",
       "completed_date": "10/27/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -4436,7 +4446,7 @@
       "completed_by": "thesanjeevsharma",
       "completed_date": "10/30/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -4446,7 +4456,7 @@
       "completed_by": "thesanjeevsharma",
       "completed_date": "11/04/20",
       "amount_paid": "5000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
@@ -4456,7 +4466,7 @@
       "completed_by": "thesanjeevsharma",
       "completed_date": "11/04/20",
       "amount_paid": "10000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Account-Manager",
@@ -4470,57 +4480,57 @@
     },
     {
       "repository": "Website",
-      "title": "added @mersimoski to front-end team",
+      "title": "Update teams page",
       "issue_id": "699",
       "pr_id": "700",
       "completed_by": "thesanjeevsharma",
       "completed_date": "11/10/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "updated engineering openings",
+      "title": "Update engineering openings",
       "issue_id": "706",
       "pr_id": "707",
       "completed_by": "thesanjeevsharma",
       "completed_date": "11/10/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "added Kotlin-SDK to tasks",
+      "title": "Add Kotlin SDK to tasks",
       "issue_id": "876",
       "pr_id": "882",
       "completed_by": "thesanjeevsharma",
       "completed_date": "11/17/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Added Avatar component",
+      "title": "Make an Image component with optimizations for image loading",
       "issue_id": "869",
       "pr_id": "942",
       "completed_by": "thesanjeevsharma",
       "completed_date": "11/22/20",
       "amount_paid": "2500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "feat: GitHub OAuth POC",
+      "title": "Integrate GitHub OAuth into Front-end",
       "issue_id": "364",
       "pr_id": "509",
       "completed_by": "thesanjeevsharma",
       "completed_date": "11/24/20",
       "amount_paid": "7500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "data(teams): move Rahul to Research",
+      "title": "New Contributor - moving roles from another role",
       "issue_id": "1016",
       "pr_id": "1019",
       "completed_by": "thesanjeevsharma",
@@ -4530,7 +4540,7 @@
     },
     {
       "repository": "Website",
-      "title": "fix: docs routing",
+      "title": "The guide page redirects to the home page",
       "issue_id": "1023",
       "pr_id": "1027",
       "completed_by": "thesanjeevsharma",
@@ -4540,7 +4550,7 @@
     },
     {
       "repository": "Website",
-      "title": "refactor: add routing on teams page",
+      "title": "Add routing to teams page",
       "issue_id": "1095",
       "pr_id": "1096",
       "completed_by": "thesanjeevsharma",
@@ -4552,7 +4562,7 @@
   "tomijaga": [
     {
       "repository": "Website",
-      "title": "Added Hello World in Shona",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "1126",
       "completed_by": "tomijaga",
@@ -4586,13 +4596,13 @@
   "velibor7": [
     {
       "repository": "Website",
-      "title": "Download page fix",
+      "title": "Linux download instructions update",
       "issue_id": "517",
       "pr_id": "489",
       "completed_by": "velibor7",
       "completed_date": "11/06/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "thenewboston-python-client",
@@ -4616,7 +4626,7 @@
     },
     {
       "repository": "Website",
-      "title": "Documentation fixes",
+      "title": "Update Docs for Bank - Config",
       "issue_id": "955",
       "pr_id": "982",
       "completed_by": "velibor7",
@@ -4626,7 +4636,7 @@
     },
     {
       "repository": "Website",
-      "title": "Documentation fixes",
+      "title": "Update Docs for Bank - Blocks",
       "issue_id": "954",
       "pr_id": "982",
       "completed_by": "velibor7",
@@ -4636,7 +4646,7 @@
     },
     {
       "repository": "Website",
-      "title": "Documentation fixes",
+      "title": "Update Docs for Bank - Accounts",
       "issue_id": "951",
       "pr_id": "982",
       "completed_by": "velibor7",
@@ -4648,25 +4658,25 @@
   "vilihegyi": [
     {
       "repository": "Website",
-      "title": "Added Hello World in Hungarian language.",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "597",
       "completed_by": "vilihegyi",
       "completed_date": "11/09/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "virtualdesigner": [
     {
       "repository": "Website",
-      "title": "Add correct translation to Hello World in Tamil.",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "678",
       "completed_by": "virtualdesigner",
       "completed_date": "11/09/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "webdeveloperswj": [
@@ -4698,13 +4708,13 @@
       "completed_by": "webdeveloperswj",
       "completed_date": "9/22/20",
       "amount_paid": "5000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "wendtl": [
     {
       "repository": "Website",
-      "title": "Doc Update - Validator Upgrade Request",
+      "title": "Update Docs for Confirmation Validator - Upgrade Request",
       "issue_id": "976",
       "pr_id": "1045",
       "completed_by": "wendtl",
@@ -4726,99 +4736,99 @@
     },
     {
       "repository": "Website",
-      "title": "#643 - Fix readme spelling mistakes and grammar",
+      "title": "Proofread the README file",
       "issue_id": "643",
       "pr_id": "646",
       "completed_by": "whitelionx",
       "completed_date": "11/09/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Bug/#645 team lead text alignment issue",
+      "title": "Team Lead tag's text is misaligned",
       "issue_id": "645",
       "pr_id": "647",
       "completed_by": "whitelionx",
       "completed_date": "11/09/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Bug - #659 hash link snap issue",
+      "title": "[FAQ] Hash Links does not snap correctly to the question title",
       "issue_id": "659",
       "pr_id": "661",
       "completed_by": "whitelionx",
       "completed_date": "11/09/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Bosnian hello world",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "514",
       "completed_by": "whitelionx",
       "completed_date": "11/07/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "#581 - Fix no margin issue",
-      "issue_id": "589",
-      "pr_id": "581",
+      "title": "[Design] No Margin between Task Left Menu",
+      "issue_id": "581",
+      "pr_id": "589",
       "completed_by": "whitelionx",
       "completed_date": "11/07/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "Website",
-      "title": "Feature/Account manager docs",
+      "title": "More Account Manager Docs",
       "issue_id": "761",
       "pr_id": "737",
       "completed_by": "whitelionx",
       "completed_date": "11/12/20",
       "amount_paid": "1000",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "wilsongayo": [
     {
       "repository": "Website",
-      "title": "Adding Hello World in Tagalog | Filipino",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "531",
       "completed_by": "wilsongayo",
       "completed_date": "11/07/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "xZliman": [
     {
       "repository": "Website",
-      "title": "hello world in turkish (#351)",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "528",
       "completed_by": "xZliman",
       "completed_date": "11/07/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "xmac11": [
     {
       "repository": "Website",
-      "title": "Put Hello World\" in your OWN language!\"",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "380",
       "completed_by": "xmac11",
       "completed_date": "11/02/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     },
     {
       "repository": "thenewboston-python-client",
@@ -4834,37 +4844,37 @@
   "ysttt12": [
     {
       "repository": "Website",
-      "title": "Added Nyanja language",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "913",
       "completed_by": "ysttt12",
       "completed_date": "11/19/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "zalkar-z": [
     {
       "repository": "Website",
-      "title": "added hello world in Kyrgyz language",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "721",
       "completed_by": "zalkar-z",
       "completed_date": "11/11/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ],
   "zinoadidi": [
     {
       "repository": "Website",
-      "title": "#351 - Hello world in Estonian",
+      "title": "Put \"Hello World\" in your OWN language!",
       "issue_id": "351",
       "pr_id": "538",
       "completed_by": "zinoadidi",
       "completed_date": "11/07/20",
       "amount_paid": "500",
-      "bug_bounty": ""
+      "bug_bounty": "FALSE"
     }
   ]
 }
