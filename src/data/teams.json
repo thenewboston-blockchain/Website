@@ -336,6 +336,19 @@
           "profileImage": "https://avatars2.githubusercontent.com/u/25906602",
           "slackUsername": "DinShpati"
         }
+      },
+      {
+        "title": "Moderator",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "62",
+          "displayName": "Muhammed Medo",
+          "githubUsername": "codemedo",
+          "profileImage": "https://avatars0.githubusercontent.com/u/48848156?v=4",
+          "slackUsername": "Muhammed Medo"
+        }
       }
     ]
   },
