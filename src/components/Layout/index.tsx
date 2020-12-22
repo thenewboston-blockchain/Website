@@ -15,7 +15,7 @@ const Layout: FC<ComponentProps> = ({children}) => {
   const isProfilePage = pathname.includes('/profile');
 
   useEffect(() => {
-    if (hash === '') {
+    if (!hash) {
       window.scrollTo(0, 0);
     } else {
       setTimeout(() => {
