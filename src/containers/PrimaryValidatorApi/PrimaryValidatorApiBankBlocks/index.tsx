@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
+import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
 
 const PrimaryValidatorApiBankBlocks: FC = () => {
   return (
@@ -12,35 +12,77 @@ const PrimaryValidatorApiBankBlocks: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/bank_blocks" method="POST" />
+      <TableParams
+        items={[
+          {
+            dataType: 'object',
+            description: 'A block contains a list of updated account balances of all accounts involved.',
+            param: 'block',
+          },
+          {
+            dataType: 'string',
+            description: "Bank's node_identifier",
+            param: 'node_identifier',
+          },
+          {
+            dataType: 'string',
+            description: 'Signature is signed by the bank.',
+            param: 'signature',
+          },
+        ]}
+      />
       <RequestResponseSnippet
         code={`{
   "block": {
-    "account_number": "0cdd4ba04456ca169baca3d66eace869520c62fe84421329086e03d91a68acdb",
+    "account_number": "755ba2840909ae88987ef9de08dc5882ffa1e3df774e95a9500f5a9cfb4fe0be",
     "message": {
-      "balance_key": "ee7a6d21feb2905605f9af446566e003decec3de2f55a6eff9815d41fcde59e0",
+      "balance_key": "755ba2840909ae88987ef9de08dc5882ffa1e3df774e95a9500f5a9cfb4fe0be",
       "txs": [
         {
-          "amount": 4.125,
-          "recipient": "484b3176c63d5f37d808404af1a12c4b9649cd6f6769f35bdf5a816133623fbc"
+          "amount": 1,
+          "recipient": "5e76c46de6256db3987de8d78ef4af8d792979a95fdd1094bcad3e00c82d0e08"
         },
         {
           "amount": 1,
-          "recipient": "5e12967707909e62b2bb2036c209085a784fabbc3deccefee70052b6181c8ed8"
+          "recipient": "6e3232cb30bdcb79494ca9c1993dfbe6845a2f079438a7d56502f94fbd64bb2b"
         },
         {
-          "amount": 4,
-          "recipient": "ad1f8845c6a1abb6011a2a434a079a087c460657aad54329a84b406dce8bf314"
+          "amount": 1,
+          "recipient": "7bb9787dec7ee1978b43c182e554e5e5e62627e80f3fa6681e7f983930dbb1be"
         }
       ]
     },
-    "signature": "e8b5215193cd5f91029b2a7a9ff2426b0a9fc0032f5a0f74ec0e6cc2f3ac9f20acd170f90e1557e561c85d34daa37d0cec90901f3d4c9579700847f67de22a05"
+    "signature": "78e6288a1a3a38af78f824c8cbe9f6152eafe692828df93c759e41f0088839388a45cf22739fb62de7aa3a9caee51222293bbe8a6f5ac64ded03356301870a0a"
   },
-  "node_identifier": "d5356888dc9303e44ce52b1e06c3165a7759b9df1e6a6dfbd33ee1c3df1ab4d1",
-  "signature": "4f019d36d362f09960399fe51dd67d7ddbee27d73994558cf4015bb13260957f861afaa1694d40fd0397ed2a889834d8a20bff4c3417bbde383e2cd4e219cb0f"
+  "node_identifier": "c292c7c13c46e0abcb6c84b1f35a24efb5dd4605445a2864754e02f174b2a192",
+  "signature": "a0d0421c4ea59283be8296fb8dc953ac453b09dcd747a240e3de7cff15eb5db11d557bffcc1729a00ce67dc50f3352808111e133580b8621f970ea02e72bec07"
 }`}
         heading="Request"
       />
-      <RequestResponseSnippet code={`{}`} heading="Response" />
+      <RequestResponseSnippet
+        code={`{
+  "account_number": "755ba2840909ae88987ef9de08dc5882ffa1e3df774e95a9500f5a9cfb4fe0be",
+  "message": {
+    "balance_key": "755ba2840909ae88987ef9de08dc5882ffa1e3df774e95a9500f5a9cfb4fe0be",
+    "txs": [
+      {
+        "amount": 1,
+        "recipient": "5e76c46de6256db3987de8d78ef4af8d792979a95fdd1094bcad3e00c82d0e08"
+      },
+      {
+        "amount": 1,
+        "recipient": "6e3232cb30bdcb79494ca9c1993dfbe6845a2f079438a7d56502f94fbd64bb2b"
+      },
+      {
+        "amount": 1,
+        "recipient": "7bb9787dec7ee1978b43c182e554e5e5e62627e80f3fa6681e7f983930dbb1be"
+      }
+    ]
+  },
+  "signature": "78e6288a1a3a38af78f824c8cbe9f6152eafe692828df93c759e41f0088839388a45cf22739fb62de7aa3a9caee51222293bbe8a6f5ac64ded03356301870a0a"
+}`}
+        heading="Response"
+      />
     </DocContainer>
   );
 };
