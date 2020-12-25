@@ -101,6 +101,16 @@
       "completed_date": "12/09/20",
       "amount_paid": "3000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "thenewboston-js",
+      "title": "Fix the minified Browserify file",
+      "issue_id": "48",
+      "pr_id": "45",
+      "completed_by": "AbhayAysola",
+      "completed_date": "12/19/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "AkbarKamran": [
@@ -725,6 +735,18 @@
       "pr_id": "777",
       "completed_by": "LunarDeveloper",
       "completed_date": "11/14/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    }
+  ],
+  "Meharban-Singh": [
+    {
+      "repository": "thenewboston-js",
+      "title": "Updated some documentation",
+      "issue_id": "49",
+      "pr_id": "46",
+      "completed_by": "Meharban-Singh",
+      "completed_date": "12/22/20",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
     }
@@ -3382,7 +3404,7 @@
       "issue_id": "232",
       "pr_id": "246",
       "completed_by": "leelatanniru",
-      "completed_date": "09/03/20",
+      "completed_date": "9/03/20",
       "amount_paid": "2500",
       "bug_bounty": ""
     },
