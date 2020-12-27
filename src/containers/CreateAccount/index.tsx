@@ -1,7 +1,14 @@
 import React, {FC} from 'react';
 
+import {AuthContainer} from 'components';
+
 const CreateAccount: FC = () => {
-  return <h4>Create an Account</h4>;
+  return (
+    <AuthContainer heading="Create an Account">
+      <div>hey</div>
+      <div>now</div>
+    </AuthContainer>
+  );
 };
 
 export default CreateAccount;

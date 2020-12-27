@@ -1,4 +1,5 @@
 import A from './A';
+import AuthContainer from './AuthContainer';
 import Avatar from './Avatar';
 import BreadcrumbMenu from './BreadcrumbMenu';
 import {CodeSnippet, RequestResponseSnippet, SnippetLang} from './CodeSnippet';
@@ -39,6 +40,7 @@ import TotalAmount from './TotalAmount';
 
 export {
   A,
+  AuthContainer,
   Avatar,
   BreadcrumbMenu,
   Button,
