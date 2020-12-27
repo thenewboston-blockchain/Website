@@ -197,8 +197,8 @@ const TopNav: FC<ComponentProps> = ({className}) => {
           {renderMorePopover()}
         </TopNavPopoverButton>
         <div className="TopNav__separator" />
-        <TopNavText buttonText="Sign In" className="TopNav__right-item" toUrl="/sign-in" />
         <TopNavText buttonText="Create Account" className="TopNav__right-item" toUrl="/create-account" />
+        <TopNavText buttonText="Sign In" className="TopNav__right-item" toUrl="/sign-in" />
         <Link className={clsx('TopNav__right-item', 'TopNav__download-button')} tabIndex={-1} to="/download">
           <Button>Download</Button>
         </Link>
@@ -294,13 +294,13 @@ const TopNav: FC<ComponentProps> = ({className}) => {
           </div>
           <div className="mobile-menu__separator mobile-menu__not-visible-tab" />
           <div className="mobile-menu__column mobile-menu__not-visible-tab">
-            <Link to="/sign-in">
-              <button className="mobile-menu__column-title">Sign In</button>
+            <Link to="/create-account">
+              <button className="mobile-menu__column-title">Create Account</button>
             </Link>
           </div>
           <div className="mobile-menu__column mobile-menu__not-visible-tab">
-            <Link to="/create-account">
-              <button className="mobile-menu__column-title">Create Account</button>
+            <Link to="/sign-in">
+              <button className="mobile-menu__column-title">Sign In</button>
             </Link>
           </div>
           <div className="mobile-menu__column mobile-menu__not-visible-tab">
