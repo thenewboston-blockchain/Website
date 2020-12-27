@@ -36,7 +36,7 @@ $top-nav-height: 60px;
   justify-content: space-between;
 
   &__separator {
-    background-color: #C1C9D2;
+    background-color: #c1c9d2;
     height: 25px;
     margin-left: 30px;
     width: 0.5px;
@@ -44,7 +44,6 @@ $top-nav-height: 60px;
     @media (max-width: 992px) {
       display: none;
     }
-
   }
 
   &__download-button {
@@ -101,13 +100,9 @@ $top-nav-height: 60px;
       }
     }
 
-    &__icon-holder {
-      display: inline-block;
-      position: absolute;
-    }
-
     &__chevron-icon {
       transition: transform 0.3s ease-in-out;
+
       &--open {
         transform: rotateX(180deg) translateZ(-1px);
       }
@@ -128,12 +123,12 @@ $top-nav-height: 60px;
 
     &__column-title {
       background-color: transparent;
-      border: 0px;
+      border: 0;
       color: var(--color-sail-gray-300);
       cursor: pointer;
       margin-bottom: 20px;
       outline: none;
-      padding: 0px;
+      padding: 0;
     }
 
     &__dropdown-container {
@@ -153,9 +148,13 @@ $top-nav-height: 60px;
         animation: mobileSlideDown 0.3s forwards;
         flex-direction: column;
         height: $mobile-dropdown-height;
-        padding: 18px 36px;
-        padding-top: 50px;
+        padding: 50px 36px 18px;
       }
+    }
+
+    &__icon-holder {
+      display: inline-block;
+      position: absolute;
     }
 
     &__link {
@@ -195,7 +194,7 @@ $top-nav-height: 60px;
     }
 
     &__separator {
-      background-color: #C1C9D2;
+      background-color: #c1c9d2;
       height: 0.5px;
       margin-bottom: 20px;
       width: 40px;
