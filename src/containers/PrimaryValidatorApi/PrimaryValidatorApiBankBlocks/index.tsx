@@ -4,7 +4,7 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
 
 const PrimaryValidatorApiBankBlocks: FC = () => {
   return (
-    <DocContainer className="PrimaryValidatorApiBankBlocks" title="Bank Blocks">
+    <DocContainer className="PrimaryValidatorApiBankBlocks" title="Bank Blocks" lastUpdated="07 Dec 2020">
       <p>
         Bank blocks are blocks that have been signed by banks as a way of indicating that the block has passed initial
         validation. Blocks will be sent from end users to banks, and upon initial validation of those blocks the bank
