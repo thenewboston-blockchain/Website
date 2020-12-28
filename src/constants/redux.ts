@@ -1,10 +1,6 @@
-export const USER = 'user';
+export const APP = 'APP';
 
-export const AUTHENTICATION = 'authentication';
-export const PROFILE = 'profile';
+export const ACTIVE_USER = 'ACTIVE_USER';
 
 // App
-export const APP_AUTHENTICATION = `${USER}/${AUTHENTICATION}`;
-
-// User
-export const USER_PROFILE = `${USER}/${PROFILE}`;
+export const APP_ACTIVE_USER = `${APP}/${ACTIVE_USER}`;
