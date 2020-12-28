@@ -61,15 +61,16 @@ $top-nav-height: 60px;
   }
 
   &__column {
+    @media (max-width: 576px) {
+      margin-bottom: 18px;
+    }
+
     &:not(:last-child) {
       margin-right: 60px;
+
       @media (max-width: 576px) {
         margin-right: 0;
       }
-    }
-
-    @media (max-width: 576px) {
-      margin-bottom: 18px;
     }
   }
 
