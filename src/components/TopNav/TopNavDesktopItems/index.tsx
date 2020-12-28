@@ -1,11 +1,12 @@
 import React, {ReactNode, useCallback, useState} from 'react';
 import {Link} from 'react-router-dom';
-import clsx from 'clsx';
 
 import {Button, IconType} from 'components';
 import TopNavPopoverButton from 'components/TopNav/TopNavPopoverButton';
 import TopNavText from 'components/TopNav/TopNavText';
 import TopNavPopoverItem from 'components/TopNav/TopNavPopoverItem';
+
+import './TopNavDesktopItems.scss';
 
 const TopNavDesktopItems = () => {
   const [communityAnchorEl, setCommunityAnchorEl] = useState<HTMLButtonElement | null>(null);
@@ -121,7 +122,7 @@ const TopNavDesktopItems = () => {
       <TopNavPopoverButton
         anchorEl={getStartedAnchorEl}
         buttonText="Get Started"
-        className="TopNav__right-item"
+        className="TopNavDesktopItems__right-item"
         popoverId="get-started-popover"
         setAnchorEl={setGetStartedAnchorEl}
         unsetAnchorEl={unsetGetStartedAnchorEl}
@@ -131,7 +132,7 @@ const TopNavDesktopItems = () => {
       <TopNavPopoverButton
         anchorEl={communityAnchorEl}
         buttonText="Community"
-        className="TopNav__right-item"
+        className="TopNavDesktopItems__right-item"
         popoverId="community-popover"
         setAnchorEl={setCommunityAnchorEl}
         unsetAnchorEl={unsetCommunityAnchorEl}
@@ -141,17 +142,17 @@ const TopNavDesktopItems = () => {
       <TopNavPopoverButton
         anchorEl={moreAnchorEl}
         buttonText="More"
-        className="TopNav__right-item"
+        className="TopNavDesktopItems__right-item"
         popoverId="more-popover"
         setAnchorEl={setMoreAnchorEl}
         unsetAnchorEl={unsetMoreAnchorEl}
       >
         {renderMorePopover()}
       </TopNavPopoverButton>
-      <div className="TopNav__separator" />
-      <TopNavText buttonText="Create Account" className="TopNav__right-item" toUrl="/create-account" />
-      <TopNavText buttonText="Sign In" className="TopNav__right-item" toUrl="/sign-in" />
-      <Link className={clsx('TopNav__right-item', 'TopNav__download-button')} tabIndex={-1} to="/download">
+      <div className="TopNavDesktopItems__separator" />
+      <TopNavText buttonText="Create Account" className="TopNavDesktopItems__right-item" toUrl="/create-account" />
+      <TopNavText buttonText="Sign In" className="TopNavDesktopItems__right-item" toUrl="/sign-in" />
+      <Link className="TopNavDesktopItems__right-item TopNavDesktopItems__download-button" tabIndex={-1} to="/download">
         <Button>Download</Button>
       </Link>
     </>
