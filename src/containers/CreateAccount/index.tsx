@@ -44,7 +44,10 @@ const CreateAccount: FC = () => {
         </FormButton>
       </Form>
     ) : (
-      <p>Click the link that has been sent to your email to complete registration!</p>
+      <p>
+        Our email verification system is still in development. Please contact Bucky on Slack to manually verify your
+        email.
+      </p>
     );
   };
 
