@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import {AuthContainer} from 'components';
 import {Form, FormButton, FormInput} from 'components/FormComponents';
+import {formatAPIError} from 'utils/errors';
 import {standardHeaders} from 'utils/requests';
 import yup from 'utils/yup';
 
@@ -21,19 +22,11 @@ const CreateAccount: FC = () => {
   const handleSubmit = async ({email, password}: FormValues): Promise<void> => {
     try {
       setSubmitting(true);
-      const response = await axios.post(
-        `${process.env.REACT_APP_BACKEND_API}/users`,
-        {email, password},
-        standardHeaders(),
-      );
-
-      // eslint-disable-next-line no-console
-      console.log(response.data);
-
+      await axios.post(`${process.env.REACT_APP_BACKEND_API}/users`, {email, password}, standardHeaders());
       setCreatingAccount(false);
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.error(error);
+      console.warn(formatAPIError(error));
     } finally {
       setSubmitting(false);
     }
