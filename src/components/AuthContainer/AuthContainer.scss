@@ -9,4 +9,9 @@
     margin-bottom: 24px;
     text-align: center;
   }
+
+  &__error-message {
+    color: var(--color-alert);
+    margin-bottom: 18px;
+  }
 }

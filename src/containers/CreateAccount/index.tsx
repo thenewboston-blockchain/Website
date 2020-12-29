@@ -17,16 +17,17 @@ export type FormValues = typeof initialValues;
 
 const CreateAccount: FC = () => {
   const [creatingAccount, setCreatingAccount] = useState(true);
+  const [errorMessage, setErrorMessage] = useState<string>('');
   const [submitting, setSubmitting] = useState<boolean>(false);
 
   const handleSubmit = async ({email, password}: FormValues): Promise<void> => {
     try {
+      setErrorMessage('');
       setSubmitting(true);
       await axios.post(`${process.env.REACT_APP_BACKEND_API}/users`, {email, password}, standardHeaders());
       setCreatingAccount(false);
     } catch (error) {
-      // eslint-disable-next-line no-console
-      console.warn(formatAPIError(error));
+      setErrorMessage(formatAPIError(error));
     } finally {
       setSubmitting(false);
     }
@@ -54,7 +55,7 @@ const CreateAccount: FC = () => {
   });
 
   return (
-    <AuthContainer heading={creatingAccount ? 'Create an Account' : 'Verify Email'}>
+    <AuthContainer errorMessage={errorMessage} heading={creatingAccount ? 'Create an Account' : 'Verify Email'}>
       {renderAuthContainerContent()}
     </AuthContainer>
   );
