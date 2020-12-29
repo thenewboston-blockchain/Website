@@ -32,7 +32,7 @@ $top-nav-height: 60px;
 .TopNavMobileMenu {
   display: none;
 
-  @media (max-width: 992px) {
+  @media (max-width: 1200px) {
     background-color: var(--color-bg);
     display: block;
   }
@@ -53,6 +53,7 @@ $top-nav-height: 60px;
   }
 
   &__chevron-icon {
+    color: var(--color-sail-gray-300);
     transition: transform 0.3s ease-in-out;
 
     &--open {
@@ -61,14 +62,10 @@ $top-nav-height: 60px;
   }
 
   &__column {
-    @media (max-width: 576px) {
-      margin-bottom: 18px;
-    }
-
     &:not(:last-child) {
       margin-right: 60px;
 
-      @media (max-width: 576px) {
+      @media (max-width: 992px) {
         margin-right: 0;
       }
     }
@@ -79,7 +76,7 @@ $top-nav-height: 60px;
     border: 0;
     color: var(--color-sail-gray-300);
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     outline: none;
     padding: 0;
   }
@@ -97,7 +94,7 @@ $top-nav-height: 60px;
     width: 100%;
     z-index: 2;
 
-    @media (max-width: 576px) {
+    @media (max-width: 992px) {
       animation: mobileSlideDown 0.3s forwards;
       flex-direction: column;
       height: $mobile-dropdown-height;
@@ -115,7 +112,7 @@ $top-nav-height: 60px;
     border: none;
     color: var(--color-primary);
     display: block;
-    height: 18px;
+    line-height: 1;
     margin-bottom: 24px;
     padding: 0;
     text-align: unset;
@@ -124,13 +121,13 @@ $top-nav-height: 60px;
       text-decoration: underline;
     }
 
-    @media (max-width: 576px) {
-      margin-bottom: 12px;
+    @media (max-width: 992px) {
+      margin-bottom: 24px;
     }
   }
 
   &__not-visible-tab {
-    @media (min-width: 576px) {
+    @media (min-width: 992px) {
       display: none;
     }
   }

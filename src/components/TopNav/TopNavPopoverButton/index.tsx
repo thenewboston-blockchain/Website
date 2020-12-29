@@ -38,7 +38,7 @@ const TopNavPopoverButton: FC<ComponentProps> = ({
   };
 
   useEffect(() => {
-    if (clientWidth < 992 && popoverIsOpen) {
+    if (clientWidth < 1200 && popoverIsOpen) {
       unsetAnchorEl();
     }
   }, [popoverIsOpen, unsetAnchorEl, clientWidth]);
