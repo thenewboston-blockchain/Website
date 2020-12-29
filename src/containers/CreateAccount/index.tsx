@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import {AuthContainer} from 'components';
 import {Form, FormButton, FormInput} from 'components/FormComponents';
+import {standardHeaders} from 'utils/requests';
 import yup from 'utils/yup';
 
 const initialValues = {
@@ -23,11 +24,7 @@ const CreateAccount: FC = () => {
       const response = await axios.post(
         `${process.env.REACT_APP_BACKEND_API}/users`,
         {email, password},
-        {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        },
+        standardHeaders(),
       );
 
       // eslint-disable-next-line no-console
