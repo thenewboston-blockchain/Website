@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, ReactNode, useState} from 'react';
 
 import {AuthContainer} from 'components';
 import {Form, FormButton, FormInput} from 'components/FormComponents';
@@ -13,9 +13,27 @@ const initialValues = {
 export type FormValues = typeof initialValues;
 
 const CreateAccount: FC = () => {
+  const [creatingAccount, setCreatingAccount] = useState(true);
+
   const handleSubmit = ({confirmPassword, email, password}: FormValues): void => {
     // eslint-disable-next-line no-console
     console.log({confirmPassword, email, password});
+    setCreatingAccount(false);
+  };
+
+  const renderAuthContainerContent = (): ReactNode => {
+    return creatingAccount ? (
+      <Form initialValues={initialValues} onSubmit={handleSubmit} validationSchema={validationSchema}>
+        <FormInput label="Email" name="email" placeholder="" />
+        <FormInput label="Password" name="password" placeholder="" type="password" />
+        <FormInput label="Confirm Password" name="confirmPassword" placeholder="" type="password" />
+        <FormButton submitting={false} type="submit">
+          Create Account
+        </FormButton>
+      </Form>
+    ) : (
+      <p>Verify your email</p>
+    );
   };
 
   const validationSchema = yup.object().shape({
@@ -25,15 +43,8 @@ const CreateAccount: FC = () => {
   });
 
   return (
-    <AuthContainer heading="Create an Account">
-      <Form initialValues={initialValues} onSubmit={handleSubmit} validationSchema={validationSchema}>
-        <FormInput label="Email" name="email" placeholder="" />
-        <FormInput label="Password" name="password" placeholder="" type="password" />
-        <FormInput label="Confirm Password" name="confirmPassword" placeholder="" type="password" />
-        <FormButton submitting={false} type="submit">
-          Create Account
-        </FormButton>
-      </Form>
+    <AuthContainer heading={creatingAccount ? 'Create an Account' : 'Verify Email'}>
+      {renderAuthContainerContent()}
     </AuthContainer>
   );
 };
