@@ -2,14 +2,14 @@ import {createSlice} from '@reduxjs/toolkit';
 
 import {APP_ACTIVE_USER} from 'constants/redux';
 import {ActiveUser} from 'types/app/ActiveUser';
-import {Dict} from 'types/store';
-import {setStateReducer} from 'utils/store';
+import {localStorageDefaultState} from 'utils/browser';
+import {setLocalAndStateReducer} from 'utils/store';
 
 const activeUser = createSlice({
-  initialState: {} as Dict<any>,
+  initialState: localStorageDefaultState(APP_ACTIVE_USER, null) as ActiveUser,
   name: APP_ACTIVE_USER,
   reducers: {
-    setActiveUser: setStateReducer<ActiveUser>(),
+    setActiveUser: setLocalAndStateReducer<ActiveUser>(APP_ACTIVE_USER),
   },
 });
 
