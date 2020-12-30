@@ -1,17 +1,22 @@
 import React, {ReactNode, useCallback, useState} from 'react';
+import {useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
 
 import {Button, IconType} from 'components';
 import TopNavPopoverButton from 'containers/TopNav/TopNavPopoverButton';
 import TopNavText from 'containers/TopNav/TopNavText';
 import TopNavPopoverItem from 'containers/TopNav/TopNavPopoverItem';
+import {selectActiveUser} from 'selectors/state';
 
 import './TopNavDesktopItems.scss';
 
 const TopNavDesktopItems = () => {
+  const activeUser = useSelector(selectActiveUser);
   const [communityAnchorEl, setCommunityAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [getStartedAnchorEl, setGetStartedAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [moreAnchorEl, setMoreAnchorEl] = useState<HTMLButtonElement | null>(null);
+
+  console.log(activeUser);
 
   const renderCommunityPopover = (): ReactNode => {
     return (
