@@ -1,5 +1,4 @@
 .Profile {
-  background: var(--color-gray-050);
   display: grid;
   font-size: var(--font-size-small-regular);
   grid-template-columns: 366px auto;
@@ -15,24 +14,24 @@
   &__left-section {
     background: var(--color-bg);
     border-radius: 12px;
-    box-shadow: 0px 0px 3px rgba(85, 108, 214, 0.3);
-    margin: 12px 0px 36px 36px;
+    box-shadow: 0 0 3px rgba(85, 108, 214, 0.3);
+    margin: 12px 0 36px 36px;
     padding-bottom: 30px;
 
     @media (max-width: 840px) {
-      margin: 36px 36px 0px 36px;
+      margin: 36px 36px 0 36px;
     }
 
     @media (max-width: 480px) {
-      border-radius: 0px;
-      margin: 0px;
+      border-radius: 0;
+      margin: 0;
     }
   }
 
   &__right-section {
     background: var(--color-bg);
     border-radius: 12px;
-    box-shadow: 0px 0px 3px rgba(85, 108, 214, 0.3);
+    box-shadow: 0 0 3px rgba(85, 108, 214, 0.3);
     margin: 12px 36px 36px 10px;
     padding-bottom: 30px;
 
@@ -41,8 +40,8 @@
     }
 
     @media (max-width: 480px) {
-      border-radius: 0px;
-      margin: 12px 0px 36px 0px;
+      border-radius: 0;
+      margin: 12px 0 36px 0;
     }
   }
 }
