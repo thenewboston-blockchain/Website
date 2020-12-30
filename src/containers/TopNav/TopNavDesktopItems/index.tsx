@@ -6,12 +6,14 @@ import {Button, IconType} from 'components';
 import TopNavPopoverButton from 'containers/TopNav/TopNavPopoverButton';
 import TopNavText from 'containers/TopNav/TopNavText';
 import TopNavPopoverItem from 'containers/TopNav/TopNavPopoverItem';
+import TopNavPopoverItemSimple from 'containers/TopNav/TopNavPopoverItemSimple';
 import {selectActiveUser} from 'selectors/state';
 
 import './TopNavDesktopItems.scss';
 
 const TopNavDesktopItems = () => {
   const activeUser = useSelector(selectActiveUser);
+  const [activeUserAnchorEl, setActiveUserAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [communityAnchorEl, setCommunityAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [getStartedAnchorEl, setGetStartedAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [moreAnchorEl, setMoreAnchorEl] = useState<HTMLButtonElement | null>(null);
@@ -19,7 +21,30 @@ const TopNavDesktopItems = () => {
   const renderActiveUser = () => {
     if (!activeUser) return null;
     const {profile_image: profileImage} = activeUser;
-    return <img alt="profile" className="TopNavDesktopItems__profile-image" src={profileImage} />;
+    return (
+      <TopNavPopoverButton
+        anchorEl={activeUserAnchorEl}
+        customButtonContent={<img alt="profile" className="TopNavDesktopItems__profile-image" src={profileImage} />}
+        popoverId="active-user-popover"
+        setAnchorEl={setActiveUserAnchorEl}
+        unsetAnchorEl={unsetActiveUserAnchorEl}
+      >
+        {renderActiveUserPopover()}
+      </TopNavPopoverButton>
+    );
+  };
+
+  const renderActiveUserPopover = (): ReactNode => {
+    return (
+      <>
+        <TopNavPopoverItemSimple
+          closePopover={unsetActiveUserAnchorEl}
+          title="Your Profile"
+          to={`/users/${activeUser.pk}`}
+        />
+        <TopNavPopoverItemSimple closePopover={unsetActiveUserAnchorEl} title="Sign Out" to="/" />
+      </>
+    );
   };
 
   const renderAuthButtons = () => {
@@ -123,6 +148,10 @@ const TopNavDesktopItems = () => {
       </>
     );
   };
+
+  const unsetActiveUserAnchorEl = useCallback((): void => {
+    setActiveUserAnchorEl(null);
+  }, [setActiveUserAnchorEl]);
 
   const unsetCommunityAnchorEl = useCallback((): void => {
     setCommunityAnchorEl(null);
