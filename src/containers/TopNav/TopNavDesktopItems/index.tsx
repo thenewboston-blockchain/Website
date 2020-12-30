@@ -16,7 +16,21 @@ const TopNavDesktopItems = () => {
   const [getStartedAnchorEl, setGetStartedAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [moreAnchorEl, setMoreAnchorEl] = useState<HTMLButtonElement | null>(null);
 
-  console.log(activeUser);
+  const renderActiveUser = () => {
+    if (!activeUser) return null;
+    const {profile_image: profileImage} = activeUser;
+    return <img alt="profile" className="TopNavDesktopItems__profile-image" src={profileImage} />;
+  };
+
+  const renderAuthButtons = () => {
+    if (activeUser) return null;
+    return (
+      <>
+        <TopNavText buttonText="Create Account" className="TopNavDesktopItems__right-item" toUrl="/create-account" />
+        <TopNavText buttonText="Sign In" className="TopNavDesktopItems__right-item" toUrl="/sign-in" />
+      </>
+    );
+  };
 
   const renderCommunityPopover = (): ReactNode => {
     return (
@@ -155,11 +169,11 @@ const TopNavDesktopItems = () => {
         {renderMorePopover()}
       </TopNavPopoverButton>
       <div className="TopNavDesktopItems__separator" />
-      <TopNavText buttonText="Create Account" className="TopNavDesktopItems__right-item" toUrl="/create-account" />
-      <TopNavText buttonText="Sign In" className="TopNavDesktopItems__right-item" toUrl="/sign-in" />
+      {renderAuthButtons()}
       <Link className="TopNavDesktopItems__right-item TopNavDesktopItems__download-button" tabIndex={-1} to="/download">
         <Button>Download</Button>
       </Link>
+      {renderActiveUser()}
     </>
   );
 };
