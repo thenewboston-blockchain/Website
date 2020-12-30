@@ -3,9 +3,9 @@ import React, {FC} from 'react';
 import Modal from 'components/Modal';
 import yup from 'utils/yup';
 
-import EditModalFields, {FormValues} from './EditModalFields';
+import EditUserModalFields, {FormValues} from './EditUserModalFields';
 
-import './EditModal.scss';
+import './EditUserModal.scss';
 
 interface ComponentProps {
   accountNumber: string;
@@ -14,7 +14,7 @@ interface ComponentProps {
   slackName: string;
 }
 
-const EditModal: FC<ComponentProps> = ({
+const EditUserModal: FC<ComponentProps> = ({
   accountNumber: initialAccountNumber,
   close,
   displayName: initialDisplayName,
@@ -43,18 +43,18 @@ const EditModal: FC<ComponentProps> = ({
 
   return (
     <Modal
-      className="EditModal"
+      className="EditUserModal"
       close={close}
-      header={'Edit Profile'}
+      header="Edit Profile"
       ignoreDirty
       initialValues={initialValues}
       onSubmit={handleSubmit}
-      submitButton={'Save'}
+      submitButton="Save"
       validationSchema={validationSchema}
     >
-      <EditModalFields />
+      <EditUserModalFields />
     </Modal>
   );
 };
 
-export default EditModal;
+export default EditUserModal;

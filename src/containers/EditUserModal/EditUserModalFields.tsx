@@ -9,7 +9,7 @@ export const initialValues = {
 
 export type FormValues = typeof initialValues;
 
-const EditModalFields: FC = () => {
+const EditUserModalFields: FC = () => {
   return (
     <>
       <FormInput label="Display Name" name="displayName" />
@@ -19,4 +19,4 @@ const EditModalFields: FC = () => {
   );
 };
 
-export default EditModalFields;
+export default EditUserModalFields;

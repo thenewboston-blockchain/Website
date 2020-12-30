@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux';
 import {useParams} from 'react-router-dom';
 
 import {A, Avatar, CopyableAccountNumber, EmptyPage, Icon, IconType, Qr} from 'components';
-import EditModal from 'containers/EditModal';
+import EditUserModal from 'containers/EditUserModal';
 import {useBooleanState} from 'hooks';
 import {selectActiveUser} from 'selectors/state';
 import {User} from 'types/app/User';
@@ -25,7 +25,7 @@ const ProfileInfo: FC<ComponentProps> = ({user}) => {
   const {userId} = useParams<ProfileUrlParams>();
   const contributorDetails = getContributorByGithubUsername(user.github_username);
   const memberDetails = getTeamMemberByGithubUsername(user.github_username);
-  const [editModalIsOpen, toggleEditModal] = useBooleanState(false);
+  const [editUserModalIsOpen, toggleEditUserModal] = useBooleanState(false);
 
   if (!contributorDetails) {
     return <EmptyPage className="ProfileInfo__empty-page" />;
@@ -40,7 +40,7 @@ const ProfileInfo: FC<ComponentProps> = ({user}) => {
           <Icon
             className="ProfileInfo__edit-profile"
             icon={IconType.pencil}
-            onClick={toggleEditModal}
+            onClick={toggleEditUserModal}
             size={24}
             totalSize={36}
           />
@@ -104,10 +104,10 @@ const ProfileInfo: FC<ComponentProps> = ({user}) => {
           </div>
         </div>
       </div>
-      {editModalIsOpen && (
-        <EditModal
+      {editUserModalIsOpen && (
+        <EditUserModal
           accountNumber={accountNumber}
-          close={toggleEditModal}
+          close={toggleEditUserModal}
           displayName={memberDetails ? memberDetails.displayName : user.github_username}
           slackName={memberDetails ? memberDetails.slackUsername : ''}
         />
