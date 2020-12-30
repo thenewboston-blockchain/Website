@@ -42,7 +42,7 @@ const TopNavDesktopItems = () => {
           title="Your Profile"
           to={`/users/${activeUser.pk}`}
         />
-        <TopNavPopoverItemSimple closePopover={unsetActiveUserAnchorEl} title="Sign Out" to="/" />
+        <TopNavPopoverItemSimple closePopover={unsetActiveUserAnchorEl} title="Sign Out" to="/sign-out" />
       </>
     );
   };

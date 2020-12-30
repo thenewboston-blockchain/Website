@@ -3,16 +3,17 @@ import {createSlice} from '@reduxjs/toolkit';
 import {APP_ACTIVE_USER} from 'constants/redux';
 import {ActiveUser} from 'types/app/ActiveUser';
 import {localStorageDefaultState} from 'utils/browser';
-import {setLocalAndStateReducer} from 'utils/store';
+import {setLocalAndStateReducer, unsetLocalAndStateReducer} from 'utils/store';
 
 const activeUser = createSlice({
   initialState: localStorageDefaultState(APP_ACTIVE_USER, null) as ActiveUser,
   name: APP_ACTIVE_USER,
   reducers: {
     setActiveUser: setLocalAndStateReducer<ActiveUser>(APP_ACTIVE_USER),
+    unsetActiveUser: unsetLocalAndStateReducer(APP_ACTIVE_USER, null),
   },
 });
 
-export const {setActiveUser} = activeUser.actions;
+export const {setActiveUser, unsetActiveUser} = activeUser.actions;
 
 export default activeUser;

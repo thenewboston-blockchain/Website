@@ -1,9 +1,9 @@
 import {combineReducers} from '@reduxjs/toolkit';
 
 import {ACTIVE_USER} from 'constants/redux';
-import activeUser, {setActiveUser} from './active-user';
+import activeUser, {setActiveUser, unsetActiveUser} from './active-user';
 
-export {setActiveUser};
+export {setActiveUser, unsetActiveUser};
 
 const appReducers = combineReducers({
   [ACTIVE_USER]: activeUser.reducer,

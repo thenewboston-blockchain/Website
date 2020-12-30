@@ -6,3 +6,10 @@ export function setLocalAndStateReducer<T>(localStorageKey: string) {
     return action.payload;
   };
 }
+
+export function unsetLocalAndStateReducer(localStorageKey: string, defaultValue: any) {
+  return () => {
+    localStorage.setItem(localStorageKey, defaultValue ? JSON.stringify(defaultValue) : defaultValue);
+    return defaultValue;
+  };
+}
