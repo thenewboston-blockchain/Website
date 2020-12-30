@@ -2,7 +2,8 @@ import React, {FC, ReactNode, useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 
-import {Footer, GoToTop, TopNav} from 'components';
+import {Footer, GoToTop} from 'components';
+import TopNav from 'containers/TopNav';
 import './Layout.scss';
 
 interface ComponentProps {

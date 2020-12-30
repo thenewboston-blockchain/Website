@@ -2,9 +2,9 @@ import React, {ReactNode, useCallback, useState} from 'react';
 import {Link} from 'react-router-dom';
 
 import {Button, IconType} from 'components';
-import TopNavPopoverButton from 'components/TopNav/TopNavPopoverButton';
-import TopNavText from 'components/TopNav/TopNavText';
-import TopNavPopoverItem from 'components/TopNav/TopNavPopoverItem';
+import TopNavPopoverButton from 'containers/TopNav/TopNavPopoverButton';
+import TopNavText from 'containers/TopNav/TopNavText';
+import TopNavPopoverItem from 'containers/TopNav/TopNavPopoverItem';
 
 import './TopNavDesktopItems.scss';
 

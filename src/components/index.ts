@@ -35,7 +35,6 @@ import StepIndicator from './StepIndicator';
 import {TableBorderGrid, TableParams, TableVertical} from './Table';
 import Tabs, {Tab} from './Tabs';
 import TimeFilter from './TimeFilter';
-import TopNav from './TopNav';
 import TotalAmount from './TotalAmount';
 
 export {
@@ -86,7 +85,6 @@ export {
   TableVertical,
   Tabs,
   TimeFilter,
-  TopNav,
   TotalAmount,
 };
 
