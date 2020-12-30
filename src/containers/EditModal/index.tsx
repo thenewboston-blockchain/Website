@@ -11,7 +11,6 @@ interface ComponentProps {
   accountNumber: string;
   close(): void;
   displayName: string;
-  isGetStartedModal?: boolean;
   slackName: string;
 }
 
@@ -19,7 +18,6 @@ const EditModal: FC<ComponentProps> = ({
   accountNumber: initialAccountNumber,
   close,
   displayName: initialDisplayName,
-  isGetStartedModal = false,
   slackName: initialSlackName,
 }) => {
   const handleSubmit = ({accountNumber, displayName, slackName}: FormValues): void => {
@@ -47,9 +45,6 @@ const EditModal: FC<ComponentProps> = ({
     <Modal
       className="EditModal"
       close={close}
-      disableOverlayClick={isGetStartedModal}
-      displayCancelButton={!isGetStartedModal}
-      displayCloseButton={!isGetStartedModal}
       header={'Edit Profile'}
       ignoreDirty
       initialValues={initialValues}

@@ -8,6 +8,7 @@ export const initialValues = {
 };
 
 export type FormValues = typeof initialValues;
+
 const EditModalFields: FC = () => {
   return (
     <>
