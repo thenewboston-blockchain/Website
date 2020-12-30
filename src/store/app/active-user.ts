@@ -1,7 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit';
 
 import {APP_ACTIVE_USER} from 'constants/redux';
-import {ActiveUser} from 'types/app/ActiveUser';
+import {ActiveUser} from 'types/app/User';
 import {localStorageDefaultState} from 'utils/browser';
 import {setLocalAndStateReducer, unsetLocalAndStateReducer} from 'utils/store';
 

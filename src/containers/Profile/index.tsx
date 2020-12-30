@@ -3,7 +3,7 @@ import {useParams} from 'react-router-dom';
 import axios from 'axios';
 
 import {Loader} from 'components';
-import {ActiveUser} from 'types/app/ActiveUser';
+import {ActiveUser} from 'types/app/User';
 import ProfileInfo from './ProfileInfo';
 import TasksCompleted from './TasksCompleted';
 
@@ -37,7 +37,7 @@ const Profile: FC = () => {
     if (!user) return null;
     return (
       <div className="Profile__left-section">
-        <ProfileInfo github_username={user.github_username} />
+        <ProfileInfo user={user} />
       </div>
     );
   };
