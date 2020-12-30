@@ -1,4 +1,4 @@
-export interface ActiveUser {
+export interface User {
   account_number: string;
   created_date: string;
   display_name: string;
@@ -8,6 +8,9 @@ export interface ActiveUser {
   pk: string;
   profile_image: string;
   slack_username: string;
+}
+
+export interface ActiveUser extends User {
   access_token: string;
   refresh_token: string;
 }

@@ -1,10 +1,12 @@
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
 import {useDispatch} from 'react-redux';
+import {useHistory} from 'react-router-dom';
 
 import {AuthContainer} from 'components';
 import {Form, FormButton, FormInput} from 'components/FormComponents';
 import {login} from 'dispatchers/app';
 import {AppDispatch} from 'types/store';
+import {formatAPIError} from 'utils/errors';
 import yup from 'utils/yup';
 
 const initialValues = {
@@ -16,11 +18,16 @@ export type FormValues = typeof initialValues;
 
 const SignIn: FC = () => {
   const dispatch = useDispatch<AppDispatch>();
+  const history = useHistory();
+  const [errorMessage, setErrorMessage] = useState<string>('');
 
   const handleSubmit = async ({email, password}: FormValues): Promise<void> => {
-    // eslint-disable-next-line no-console
-    console.log({email, password});
-    await dispatch(login({email, password}));
+    try {
+      const {data} = await dispatch(login({email, password}));
+      history.push(`/users/${data.pk}`);
+    } catch (error) {
+      setErrorMessage(formatAPIError(error));
+    }
   };
 
   const validationSchema = yup.object().shape({
@@ -29,7 +36,7 @@ const SignIn: FC = () => {
   });
 
   return (
-    <AuthContainer heading="Sign In">
+    <AuthContainer errorMessage={errorMessage} heading="Sign In">
       <Form initialValues={initialValues} onSubmit={handleSubmit} validationSchema={validationSchema}>
         <FormInput label="Email" name="email" placeholder="" />
         <FormInput label="Password" name="password" placeholder="" type="password" />

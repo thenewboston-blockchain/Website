@@ -10,7 +10,6 @@ interface LoginParameters {
 
 export const login = (data: LoginParameters) => async (dispatch: AppDispatch) => {
   const response = await axios.post(`${process.env.REACT_APP_BACKEND_API}/login`, data);
-  // eslint-disable-next-line no-console
-  console.log(response.data);
   dispatch(setActiveUser(response.data));
+  return response;
 };
