@@ -23,14 +23,9 @@
   }
 
   @media (max-width: 1200px) {
-    &__download-button {
-      display: none;
-    }
-
-    &__right-item {
-      display: none;
-    }
-
+    &__download-button,
+    &__profile-image,
+    &__right-item,
     &__separator {
       display: none;
     }

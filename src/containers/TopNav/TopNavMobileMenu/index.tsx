@@ -1,12 +1,15 @@
 import React, {ReactNode, useEffect, useState} from 'react';
+import {useSelector} from 'react-redux';
 import {Link, useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 
 import {Icon, IconType} from 'components';
 import {useBooleanState, useWindowDimensions} from 'hooks';
+import {selectActiveUser} from 'selectors/state';
 import './TopNavMobileMenu.scss';
 
 const TopNavMobileMenu = () => {
+  const activeUser = useSelector(selectActiveUser);
   const [menuOpen, toggleMenu, , closeMenu] = useBooleanState(false);
   const [openSection, setOpenSection] = useState<'community' | 'getStarted' | 'more' | 'other' | null>(null);
   const [smallDevice, setSmallDevice] = useState(false);
@@ -52,24 +55,29 @@ const TopNavMobileMenu = () => {
     );
   };
 
+  const renderOtherSmallDeviceLink = (title: string, to: string): ReactNode => (
+    <div className="TopNavMobileMenu__column TopNavMobileMenu__not-visible-tab">
+      <Link to={to}>
+        <button className="TopNavMobileMenu__column-title">{title}</button>
+      </Link>
+    </div>
+  );
+
   const renderOtherSmallDeviceLinks = (): ReactNode => (
     <>
       <div className="TopNavMobileMenu__separator TopNavMobileMenu__not-visible-tab" />
-      <div className="TopNavMobileMenu__column TopNavMobileMenu__not-visible-tab">
-        <Link to="/create-account">
-          <button className="TopNavMobileMenu__column-title">Create Account</button>
-        </Link>
-      </div>
-      <div className="TopNavMobileMenu__column TopNavMobileMenu__not-visible-tab">
-        <Link to="/sign-in">
-          <button className="TopNavMobileMenu__column-title">Sign In</button>
-        </Link>
-      </div>
-      <div className="TopNavMobileMenu__column TopNavMobileMenu__not-visible-tab">
-        <Link to="/download">
-          <button className="TopNavMobileMenu__column-title">Download</button>
-        </Link>
-      </div>
+      {activeUser ? (
+        <>
+          {renderOtherSmallDeviceLink('Your Profile', `/users/${activeUser.pk}`)}
+          {renderOtherSmallDeviceLink('Sign Out', '/sign-out')}
+        </>
+      ) : (
+        <>
+          {renderOtherSmallDeviceLink('Create Account', '/create-account')}
+          {renderOtherSmallDeviceLink('Sign In', '/sign-in')}
+        </>
+      )}
+      {renderOtherSmallDeviceLink('Download', '/download')}
     </>
   );
 
@@ -111,8 +119,17 @@ const TopNavMobileMenu = () => {
                 'other',
                 'Other',
                 <>
-                  {renderMobileLink('Create Account', '/create-account')}
-                  {renderMobileLink('Sign In', '/sign-in')}
+                  {activeUser ? (
+                    <>
+                      {renderMobileLink('Your Profile', `/users/${activeUser.pk}`)}
+                      {renderMobileLink('Sign Out', '/sign-out')}
+                    </>
+                  ) : (
+                    <>
+                      {renderMobileLink('Create Account', '/create-account')}
+                      {renderMobileLink('Sign In', '/sign-in')}
+                    </>
+                  )}
                   {renderMobileLink('Download', '/download')}
                 </>,
               )}
