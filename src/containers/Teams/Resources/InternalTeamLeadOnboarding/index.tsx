@@ -1,11 +1,12 @@
 import React, {FC} from 'react';
 
 import {DocContainer, DocImage, DocList} from 'components';
+import 'containers/Teams/Resources/Resources.scss';
 import TeamLeadOnboarding from './TeamLeadOnboarding.png';
 
 const InternalTeamLeadOnboarding: FC = () => {
   return (
-    <DocContainer className="InternalTeamLeadOnboarding" title="Team Lead Onboarding">
+    <DocContainer className="Resource" title="How to Onboard Team Leads">
       <DocImage alt="team lead onboarding" maxWidth={500} src={TeamLeadOnboarding} />
 
       <p>

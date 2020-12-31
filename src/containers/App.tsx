@@ -14,7 +14,6 @@ import Download from './Download';
 import Faq from './Faq';
 import Guide from './Guide';
 import Home from './Home';
-import Internal from './Internal';
 import Leaderboard from './Leaderboard';
 import Openings from './Openings';
 import PrimaryValidatorApi from './PrimaryValidatorApi';
@@ -71,15 +70,14 @@ const App: FC = () => {
           <Route exact path="/social" component={Social} />
           <Redirect exact from="/tasks" to="/tasks/All" />
           <Route exact path="/tasks/:repository" component={Tasks} />
-          <Redirect exact path="/teams" to="/teams/All" />
-          <Route exact path="/teams/:team" component={Teams} />
+          <Redirect exact path="/teams" to="/teams/All/Members" />
+          <Route exact path="/teams/:team/:tab?/:resource?" component={Teams} />
           <Route path="/account-manager/:chapter?" component={AccountManager} />
           <Route path="/bank-api/:chapter?" component={BankApi} />
           <Route path="/confirmation-validator-api/:chapter?" component={ConfirmationValidatorApi} />
           <Route path="/deployment-guide/:chapter?" component={DeploymentGuide} />
           <Route path="/download" component={Download} />
           <Route path="/guide/:chapter?" component={Guide} />
-          <Route path="/internal/:chapter?" component={Internal} />
           <Route path="/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
           <Route path="/project-proposals/:chapter?" component={ProjectProposals} />
           <Route exact path="/sign-in" component={SignIn} />

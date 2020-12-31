@@ -1,11 +1,12 @@
 import React, {FC} from 'react';
 
 import {DocContainer, DocImage, DocList} from 'components';
+import 'containers/Teams/Resources/Resources.scss';
 import ProductDevelopment from './ProductDevelopment.png';
 
 const InternalProductDevelopment: FC = () => {
   return (
-    <DocContainer className="InternalProductDevelopment" title="Product Development">
+    <DocContainer className="Resource" title="How the Product Development Process Works">
       <DocImage alt="product development" maxWidth={1200} src={ProductDevelopment} />
 
       <p>

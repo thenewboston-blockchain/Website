@@ -1,6 +1,19 @@
 [
   {
     "title": ".NET Core",
+    "description": "Build and maintain a a .NET Core SDK for thenewboston.",
+    "platforms": [
+      {
+        "name": "github",
+        "label": "dotnetcore-sdk",
+        "link": "https://github.com/thenewboston-developers/dotnetcore-sdk"
+      },
+      {
+        "name": "slack",
+        "label": "dotnetcore-sdk",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Software Developer",
@@ -15,10 +28,24 @@
           "slackUsername": "Mircea Teodor Oprea"
         }
       }
-    ]
+    ],
+    "responsibilities": []
   },
   {
     "title": "Back-End Developers",
+    "description": "Build and maintain the APIs related to the website and the digital currency network.",
+    "platforms": [
+      {
+        "name": "github",
+        "label": "thenewboston-python",
+        "link": "https://github.com/thenewboston-developers/thenewboston-python"
+      },
+      {
+        "name": "slack",
+        "label": "back-end",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Back-End Lead",
@@ -124,10 +151,20 @@
           "slackUsername": "yashovardhansingh"
         }
       }
-    ]
+    ],
+    "responsibilities": []
   },
   {
     "title": "Community",
+    "description": "Liaising with job applicants and team leads. Choosing the right job applicants and sending it to team leaders base on departments for further scrutiny. We create the strategy, oversee the overall TNB product, create standards, and improve cross-collab between teams.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "general",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Head of Community",
@@ -220,10 +257,57 @@
           "slackUsername": "Martin"
         }
       }
+    ],
+    "responsibilities": [
+      {
+        "item": "Get people to where they need to be. Greet, welcome, guide",
+        "subitems": []
+      },
+      {
+        "item": "People will come into #intros and must oversee other Slack channels for new users",
+        "subitems": []
+      },
+      {
+        "item": "Guide users to teams they fit into",
+        "subitems": []
+      },
+      {
+        "item": "Send applications to Team Leads",
+        "subitems": []
+      },
+      {
+        "item": "After interview, register peoples accounts",
+        "subitems": []
+      },
+      {
+        "item": "Team Leads are responsible for hiring more community managers",
+        "subitems": []
+      },
+      {
+        "item": "Provide user feedback and analytics to design team",
+        "subitems": []
+      },
+      {
+        "item": "Suggest better methods on how to gather user feedback",
+        "subitems": []
+      },
+      {
+        "item": "Optimize user feedback loop",
+        "subitems": []
+      }
     ]
   },
   {
     "title": "Design",
+    "description": "We create and manage all designs within thenewboston website & app. ",
+    "platforms": [
+      {"name": "github", "label": "Design", "link": "https://github.com/thenewboston-developers/Design"},
+      {
+        "name": "slack",
+        "label": "design",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Design Lead",
@@ -288,10 +372,45 @@
           "slackUsername": "toledit"
         }
       }
+    ],
+    "responsibilities": [
+      {
+        "item": "Help identify what needs to be built based off user feedback",
+        "subitems": []
+      },
+      {
+        "item": "Design wireframes",
+        "subitems": []
+      },
+      {
+        "item": "User test designs with the community",
+        "subitems": []
+      },
+      {
+        "item": "Write product requirements for engineering handoff",
+        "subitems": []
+      },
+      {
+        "item": "HiFi designs & update style guide",
+        "subitems": []
+      },
+      {
+        "item": "Give design reviews to members within the community",
+        "subitems": []
+      }
     ]
   },
   {
     "title": "DevOps",
+    "description": "Provides \"systems for the systems\". Focused on underlying infrastructure (servers, OS, networking, access security), services (web servers, databases), as well as monitoring and automating the configuration of those items.",
+    "platforms": [
+      {"name": "github", "label": "DevOps", "link": "https://github.com/thenewboston-developers/DevOps"},
+      {
+        "name": "slack",
+        "label": "devops",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "DevOps",
@@ -306,10 +425,20 @@
           "slackUsername": "shashanksinha89"
         }
       }
-    ]
+    ],
+    "responsibilities": []
   },
   {
     "title": "Discord Managers",
+    "description": "Managing Discord server for thenewboston Community.",
+    "platforms": [
+      {"name": "github", "label": "Discord-Bot", "link": "https://github.com/thenewboston-developers/Discord-Bot"},
+      {
+        "name": "slack",
+        "label": "discord",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Discord Manager",
@@ -350,10 +479,25 @@
           "slackUsername": "Muhammed Medo"
         }
       }
+    ],
+    "responsibilities": [
+      {
+        "item": "Oversee discord community",
+        "subitems": []
+      }
     ]
   },
   {
     "title": "Front-End Developers",
+    "description": "Basically, everything that the user can interact with, comes under this team's scope. We'll be mostly working on the Website and Account Manager repo. ",
+    "platforms": [
+      {"name": "github", "label": "Website", "link": "https://github.com/thenewboston-developers/Website"},
+      {
+        "name": "slack",
+        "label": "front-end",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Front-End Lead",
@@ -498,10 +642,20 @@
           "slackUsername": "James Pang"
         }
       }
-    ]
+    ],
+    "responsibilities": []
   },
   {
     "title": "Kotlin SDK",
+    "description": "Provide a Kotlin client library.",
+    "platforms": [
+      {"name": "github", "label": "Kotlin-SDK", "link": "https://github.com/thenewboston-developers/Kotlin-SDK"},
+      {
+        "name": "slack",
+        "label": "kotlin-sdk",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Kotlin SDK Lead",
@@ -555,10 +709,20 @@
           "slackUsername": "Nish"
         }
       }
-    ]
+    ],
+    "responsibilities": []
   },
   {
     "title": "Marketing",
+    "description": "My team handles all the marketing part including email, SEO, and media buys. Developing and Executing marketing strategies as well as focusing on user behaviour and contacts/partnership collection.",
+    "platforms": [
+      {"name": "github", "label": "Marketing", "link": "https://github.com/thenewboston-developers/Marketing"},
+      {
+        "name": "slack",
+        "label": "marketing",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Head of Marketing",
@@ -586,10 +750,57 @@
           "slackUsername": "Pulkit Bajaj"
         }
       }
+    ],
+    "responsibilities": [
+      {
+        "item": "Drive traffic",
+        "subitems": []
+      },
+      {
+        "item": "Gather & collect user emails",
+        "subitems": ["Email newsletter", "Pull from GitHub", "Additional tools"]
+      },
+      {
+        "item": "Send email campaigns",
+        "subitems": []
+      },
+      {
+        "item": "Help drive traffic through social media",
+        "subitems": []
+      },
+      {
+        "item": "Sending out social media posts on core team applications",
+        "subitems": []
+      },
+      {
+        "item": "Requests graphics & images",
+        "subitems": []
+      },
+      {
+        "item": "LinkedIn, Facebook, Reddit",
+        "subitems": []
+      },
+      {
+        "item": "If posting anything, post it on all social media accounts",
+        "subitems": []
+      },
+      {
+        "item": "If any other social media sites that can be strategical, we can expand",
+        "subitems": []
+      }
     ]
   },
   {
     "title": "New User Operations",
+    "description": "Convert new users to task contributors or team members.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "intros",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "New User Operations Lead",
@@ -604,10 +815,41 @@
           "slackUsername": "Martyn"
         }
       }
+    ],
+    "responsibilities": [
+      {
+        "item": "Convert new users to contributors",
+        "subitems": []
+      },
+      {
+        "item": "Identify where new users will get stuck",
+        "subitems": []
+      },
+      {
+        "item": "Find solutions to remove bottlenecks",
+        "subitems": []
+      },
+      {
+        "item": "Increase user retention by keeping users engaged",
+        "subitems": []
+      }
     ]
   },
   {
     "title": "Payments",
+    "description": "The team handles the payments of all thenewboston contributors in different capacities.",
+    "platforms": [
+      {
+        "name": "github",
+        "label": "Payment-Processor",
+        "link": "https://github.com/thenewboston-developers/Payment-Processor"
+      },
+      {
+        "name": "slack",
+        "label": "payments",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Head of Contributor Payments",
@@ -648,10 +890,41 @@
           "slackUsername": "Tawanda Makunike"
         }
       }
+    ],
+    "responsibilities": [
+      {
+        "item": "Oversee payments",
+        "subitems": []
+      },
+      {
+        "item": "Pay weekly contributors",
+        "subitems": []
+      },
+      {
+        "item": "Pay task payments",
+        "subitems": []
+      },
+      {
+        "item": "Pay projects",
+        "subitems": []
+      }
     ]
   },
   {
     "title": "Project Proposals",
+    "description": "This team is responsible for managing all the App Ideas from developers all around the globe.",
+    "platforms": [
+      {
+        "name": "github",
+        "label": "Project-Proposals",
+        "link": "https://github.com/thenewboston-developers/Project-Proposals"
+      },
+      {
+        "name": "slack",
+        "label": "projects",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Project Proposals Manager",
@@ -666,10 +939,56 @@
           "slackUsername": "Manish"
         }
       }
+    ],
+    "responsibilities": [
+      {
+        "item": "Oversee project proposals",
+        "subitems": []
+      },
+      {
+        "item": "Helping people fill out proposals",
+        "subitems": [
+          "Seeing if there are any empty fields",
+          "Tell users to fill out project proposals instead of typing it out on Slack"
+        ]
+      },
+      {
+        "item": "Reviewing proposals on GitHub",
+        "subitems": ["Help clarify the details of what the app is", "Talking to them for suggestions as well"]
+      },
+      {
+        "item": "Answering questions",
+        "subitems": []
+      },
+      {
+        "item": "Helping with recruiting",
+        "subitems": []
+      },
+      {
+        "item": "Set a timeline & clear check-ins",
+        "subitems": [
+          "Responsible for setting and agreeing on timeline with other party",
+          "Responsible for being part of check-ins",
+          "Case by case"
+        ]
+      },
+      {
+        "item": "Make payment GitHub issues when projects are due",
+        "subitems": []
+      }
     ]
   },
   {
     "title": "QA",
+    "description": "Identify and detect bugs in our apps to increase the quality of our products for improved customer satisfaction.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "quality-analyst",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "QA Lead",
@@ -684,10 +1003,20 @@
           "slackUsername": "Snehal Ingale"
         }
       }
-    ]
+    ],
+    "responsibilities": []
   },
   {
     "title": "Reddit Moderators",
+    "description": "We moderate posts on reddit and post job openings on it. Also other additional tasks given by bucky is also done by us. Thanks",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "reddit-moderation",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Reddit Moderator",
@@ -728,10 +1057,25 @@
           "slackUsername": "Moon"
         }
       }
+    ],
+    "responsibilities": [
+      {
+        "item": "Oversee Reddit community",
+        "subitems": []
+      }
     ]
   },
   {
     "title": "Research",
+    "description": "We research the latest developments in blockchain technology and identify strategic opportunities.  We work closely with the development teams on their crypto-economic model, protocol, architecture, and strategy.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "blockchain-research-team-channel",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Blockchain Researcher",
@@ -798,10 +1142,37 @@
           "slackUsername": "Rahul Kothari"
         }
       }
+    ],
+    "responsibilities": [
+      {
+        "item": "Research trends and identify opportunities",
+        "subitems": []
+      },
+      {
+        "item": "Offer suggestions to help guide the future roadmap",
+        "subitems": []
+      },
+      {
+        "item": "Researching technology that exists that could improve ours",
+        "subitems": []
+      },
+      {
+        "item": "Identify areas within blockchain that we can partner with",
+        "subitems": []
+      }
     ]
   },
   {
     "title": "Security",
+    "description": "Currently we are two members only. Working on security roadmap. Trying to keep the blockchain network safe from adversaries and ensuring the services are always available to the end user",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "security",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Cryptography Security Engineer",
@@ -842,10 +1213,20 @@
           "slackUsername": "Spencer Dollahite"
         }
       }
-    ]
+    ],
+    "responsibilities": []
   },
   {
     "title": "YouTube",
+    "description": "Dedicated to developer evangelism as well as general adoption of the coin through YouTube videos.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "youtube",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "YouTube Educator",
@@ -872,6 +1253,20 @@
           "profileImage": "https://avatars2.githubusercontent.com/u/41084465?s=460&u=e4bbc12b9d60ba1869da25809044eddc97733c1b&v=4",
           "slackUsername": "Nico y-crozier"
         }
+      }
+    ],
+    "responsibilities": [
+      {
+        "item": "YouTube Outreach and video creation",
+        "subitems": []
+      },
+      {
+        "item": "Reaching out to YouTubers related to blockchain and programming",
+        "subitems": []
+      },
+      {
+        "item": "Deciding on the best strategy for what to film and what channel to put it on",
+        "subitems": []
       }
     ]
   }
