@@ -1,9 +1,10 @@
 import React, {FC, useEffect, useState} from 'react';
+import {useSelector} from 'react-redux';
 import {useParams} from 'react-router-dom';
 import axios from 'axios';
 
 import {Loader} from 'components';
-import {ActiveUser} from 'types/app/User';
+import {selectUsers} from 'selectors/state';
 import ProfileInfo from './ProfileInfo';
 import TasksCompleted from './TasksCompleted';
 
@@ -17,13 +18,13 @@ const Profile: FC = () => {
   const {userId} = useParams<ProfileUrlParams>();
   const [errorMessage, setErrorMessage] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(true);
-  const [user, setUser] = useState<ActiveUser | null>(null);
+  const users = useSelector(selectUsers);
+  const user = users[userId];
 
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
       try {
-        const {data} = await axios.get(`${process.env.REACT_APP_BACKEND_API}/users/${userId}`);
-        setUser(data);
+        await axios.get(`${process.env.REACT_APP_BACKEND_API}/users/${userId}`);
       } catch (error) {
         setErrorMessage('Error retrieving user');
       } finally {
