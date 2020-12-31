@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
 import Modal from 'components/Modal';
@@ -19,6 +19,8 @@ interface ComponentProps {
 const EditUserModal: FC<ComponentProps> = ({close}) => {
   const activeUser = useSelector(selectActiveUser);
   const dispatch = useDispatch<AppDispatch>();
+  const [submitting, setSubmitting] = useState<boolean>(false);
+
   const initialValues = {
     accountNumber: activeUser.account_number || '',
     displayName: activeUser.display_name || '',
@@ -27,6 +29,7 @@ const EditUserModal: FC<ComponentProps> = ({close}) => {
 
   const handleSubmit = async ({accountNumber, displayName, slackName}: FormValues): Promise<void> => {
     try {
+      setSubmitting(true);
       await dispatch(
         editUser({
           account_number: accountNumber,
@@ -38,6 +41,7 @@ const EditUserModal: FC<ComponentProps> = ({close}) => {
       close();
     } catch (error) {
       displayToast('There was an error with the request', 'warning');
+      setSubmitting(false);
     }
   };
 
@@ -59,6 +63,7 @@ const EditUserModal: FC<ComponentProps> = ({close}) => {
       initialValues={initialValues}
       onSubmit={handleSubmit}
       submitButton="Save"
+      submitting={submitting}
       validationSchema={validationSchema}
     >
       <EditUserModalFields />
