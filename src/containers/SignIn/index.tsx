@@ -24,7 +24,7 @@ const SignIn: FC = () => {
   const handleSubmit = async ({email, password}: FormValues): Promise<void> => {
     try {
       const {data} = await dispatch(login({email, password}));
-      history.push(`/users/${data.pk}`);
+      history.push(`/users/${data.user.pk}`);
     } catch (error) {
       setErrorMessage(formatAPIError(error));
     }

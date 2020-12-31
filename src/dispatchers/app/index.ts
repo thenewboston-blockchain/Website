@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 import {setActiveUser} from 'store/app';
+import {setUser} from 'store/models';
 import {AppDispatch} from 'types/store';
 
 interface LoginParameters {
@@ -10,6 +11,8 @@ interface LoginParameters {
 
 export const login = (data: LoginParameters) => async (dispatch: AppDispatch) => {
   const response = await axios.post(`${process.env.REACT_APP_BACKEND_API}/login`, data);
-  dispatch(setActiveUser(response.data));
+  const {authentication, user} = response.data;
+  dispatch(setActiveUser({...authentication, ...user}));
+  dispatch(setUser(user));
   return response;
 };

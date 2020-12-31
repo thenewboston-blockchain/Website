@@ -1,11 +1,13 @@
 import {configureStore} from '@reduxjs/toolkit';
 
-import {APP} from 'constants/redux';
+import {APP, MODELS} from 'constants/redux';
 import appReducers from './app';
+import modelReducers from './models';
 
 const store = configureStore({
   reducer: {
     [APP]: appReducers,
+    [MODELS]: modelReducers,
   },
 });
 
