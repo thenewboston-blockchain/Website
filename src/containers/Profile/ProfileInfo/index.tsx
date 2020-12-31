@@ -3,13 +3,13 @@ import {useSelector} from 'react-redux';
 import {useParams} from 'react-router-dom';
 
 import DefaultUserAvatar from 'assets/images/default-avatar.png';
-import {A, Avatar, CopyableAccountNumber, EmptyPage, Icon, IconType, Qr} from 'components';
+import {A, Avatar, CopyableAccountNumber, Icon, IconType, Qr} from 'components';
 import EditUserModal from 'containers/EditUserModal';
 import {useBooleanState} from 'hooks';
 import {selectActiveUser} from 'selectors/state';
 import {User} from 'types/app/User';
 import {TeamMember} from 'types/teams';
-import {getContributorByGithubUsername, getTeamMemberByGithubUsername, getTeamPathname} from 'utils/data';
+import {getTeamMemberByGithubUsername, getTeamPathname} from 'utils/data';
 
 import './ProfileInfo.scss';
 
@@ -23,14 +23,9 @@ interface ProfileUrlParams {
 
 const ProfileInfo: FC<ComponentProps> = ({user}) => {
   const activeUser = useSelector(selectActiveUser);
-  const contributorDetails = getContributorByGithubUsername(user.github_username);
   const memberDetails = getTeamMemberByGithubUsername(user.github_username);
   const {userId} = useParams<ProfileUrlParams>();
   const [editUserModalIsOpen, toggleEditUserModal] = useBooleanState(false);
-
-  if (!contributorDetails) {
-    return <EmptyPage className="ProfileInfo__empty-page" />;
-  }
 
   const renderBackdrop = (isLead: boolean) => {
     return (
@@ -91,16 +86,18 @@ const ProfileInfo: FC<ComponentProps> = ({user}) => {
             <div className="ProfileInfo__name">{user.display_name}</div>
             {memberDetails && renderMemberDetails(memberDetails)}
           </div>
-          <div className="ProfileInfo__account-details">
-            <CopyableAccountNumber
-              accountNumber={user.account_number}
-              className="ProfileInfo__CopyableAccountNumber"
-              isCopyButtonAtBottom
-            />
-            <div className="ProfileInfo__qr-container">
-              <Qr text={user.account_number} width={110} />
+          {user.account_number && (
+            <div className="ProfileInfo__account-details">
+              <CopyableAccountNumber
+                accountNumber={user.account_number}
+                className="ProfileInfo__CopyableAccountNumber"
+                isCopyButtonAtBottom
+              />
+              <div className="ProfileInfo__qr-container">
+                <Qr text={user.account_number} width={110} />
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
       {editUserModalIsOpen && <EditUserModal close={toggleEditUserModal} />}
