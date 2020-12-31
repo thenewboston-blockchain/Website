@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
+import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
 
 const BankApiValidatorConfirmationServices: FC = () => {
   return (
@@ -21,25 +21,44 @@ const BankApiValidatorConfirmationServices: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/validator_confirmation_services" method="GET" />
+      <TableParams
+        items={[
+          {
+            dataType: 'URL parameter',
+            description: 'If you want to start at a specific point, an offset can be specified.',
+            param: 'offset',
+          },
+          {
+            dataType: 'URL parameter',
+            description: 'Maximum number of validator returned by the node. (max: 100)',
+            param: 'limit',
+          },
+        ]}
+      />
       <RequestResponseSnippet
-        code={`[
-  {
-    "id": "be9fbc3b-d4df-43d5-9bea-9882a6dd27f6",
-    "created_date": "2020-07-09T22:10:35.312956Z",
-    "modified_date": "2020-07-09T22:10:37.393578Z",
-    "end": "2020-08-09T22:10:24Z",
-    "start": "2020-07-09T22:10:25Z",
-    "validator": "51461a75-dd8d-4133-81f4-543a3b054149"
-  },
-  {
-    "id": "e2055637-67ff-4479-aec6-a8095d513862",
-    "created_date": "2020-07-09T22:10:35.312956Z",
-    "modified_date": "2020-07-09T22:10:37.393578Z",
-    "end": "2020-08-09T22:10:24Z",
-    "start": "2020-07-09T22:10:25Z",
-    "validator": "10308b02-d577-484e-953c-0a2bdb5e3d83"
-  }
-]`}
+        code={`{
+  "count": 4,
+  "next": "http://54.193.31.159/validator_confirmation_services?limit=2&offset=2",
+  "previous": null,
+  "results": [
+    {
+      "id": "b585ee1e-97fa-4014-b215-a16592e3ffeb",
+      "created_date": "2020-11-29T07:52:42.860433Z",
+      "modified_date": "2020-11-29T07:52:42.860459Z",
+      "end": "2021-01-28T07:52:42.831382Z",
+      "start": "2020-11-29T07:52:42.831382Z",
+      "validator": "699ea481-8235-4669-b612-b9e1f825e3f2"
+    },
+    {
+      "id": "4e23e065-8c7f-4da4-9b2e-b7a759f191f2",
+      "created_date": "2020-11-29T07:54:16.302531Z",
+      "modified_date": "2020-11-29T07:54:16.302556Z",
+      "end": "2020-12-15T07:54:16.233806Z",
+      "start": "2020-11-29T07:54:16.233806Z",
+      "validator": "0e87bf5a-1b2c-46fc-8d50-89cb383db0f3"
+    }
+  ]
+}`}
         heading="Response"
       />
 
@@ -53,25 +72,39 @@ const BankApiValidatorConfirmationServices: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/validator_confirmation_services" method="POST" />
+      <TableParams
+        items={[
+          {
+            dataType: 'string',
+            description: 'The start date for validator confirmation services',
+            param: 'start',
+          },
+          {
+            dataType: 'string',
+            description: 'The end date for validator confirmation services',
+            param: 'end',
+          },
+        ]}
+      />
       <RequestResponseSnippet
         code={`{
   "message": {
-    "end": "2020-07-09T22:10:25Z",
-    "start": "2020-08-09T22:10:25Z"
+    "start": "2020-12-17T16:01:05.474601",
+    "end": "2020-12-19T16:01:05.474612"
   },
-  "node_identifier": "59479a31c3b91d96bb7a0b3e07f18d4bf301f1bb0bde05f8d36d9611dcbe7cbf",
-  "signature": "2a4b90e97566d4c46cb302e8297841ebe0b9f5ce6f30217721dedb4bfdc48944d14f46032e33246b6a60a942bc48fd9541057b7b1c635d4346436deab9f4bf01"
+  "node_identifier": "eda664301159dac609f047d28b371bfe11837b3a6f86ca5a760cc7b789887c55",
+  "signature": "6298bfd14244be036d25767c3bd12be8e4ad593273fe73284ad8438117f2ec3302a94cb5699860840fa7b86614ffcdcba567e4326ae93efe7f94f5a0574d7a0b"
 }`}
         heading="Request"
       />
       <RequestResponseSnippet
         code={`{
-  "id": "2558fd55-e132-4667-8d39-d3b5e8eb9c4d",
-  "created_date": "2020-07-10T02:38:44.917554Z",
-  "modified_date": "2020-07-10T02:38:44.917601Z",
-  "end": "2020-07-09T22:10:25Z",
-  "start": "2020-08-09T22:10:25Z",
-  "validator": "fcd2dce8-9e4f-4bf1-8dac-cdbaf64e5ce8"
+  "id": "a6e4f1b5-21ea-464d-ba24-027e48b1c1aa",
+  "created_date": "2020-12-17T16:01:05.627955Z",
+  "modified_date": "2020-12-17T16:01:05.627982Z",
+  "end": "2020-12-19T16:01:05.474612Z",
+  "start": "2020-12-17T16:01:05.474601Z",
+  "validator": "d79345f0-ea3a-4bcd-9a42-d4cb23133ecc"
 }`}
         heading="Response"
       />
