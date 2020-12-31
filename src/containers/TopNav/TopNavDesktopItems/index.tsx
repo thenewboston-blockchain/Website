@@ -79,9 +79,9 @@ const TopNavDesktopItems = () => {
         />
         <TopNavPopoverItem
           closePopover={unsetCommunityAnchorEl}
-          description="Meet our growing team"
+          description="Meet our awesome teams"
           iconType={IconType.accountGroup}
-          title="Team"
+          title="Teams"
           to="/teams"
         />
         <TopNavPopoverItem
