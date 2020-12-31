@@ -1,0 +1,33 @@
+.TopNavDesktopItems {
+  &__download-button {
+    margin-right: 24px;
+  }
+
+  &__profile-image {
+    border-radius: 50%;
+    height: auto;
+    margin-left: 12px;
+    margin-right: 24px;
+    width: 36px;
+  }
+
+  &__right-item {
+    margin-left: 42px;
+  }
+
+  &__separator {
+    background-color: #c1c9d2;
+    height: 25px;
+    margin-left: 30px;
+    width: 0.5px;
+  }
+
+  @media (max-width: 1200px) {
+    &__download-button,
+    &__profile-image,
+    &__right-item,
+    &__separator {
+      display: none;
+    }
+  }
+}
