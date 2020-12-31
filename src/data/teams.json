@@ -1,12 +1,16 @@
 [
   {
     "title": ".NET Core",
-    "description": ".NET Core",
+    "description": "Build and maintain a a .NET Core SDK for thenewboston.",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "github",
+        "label": "dotnetcore-sdk",
+        "link": "https://github.com/thenewboston-developers/dotnetcore-sdk"
+      },
       {
         "name": "slack",
-        "label": "developers",
+        "label": "dotnetcore-sdk",
         "link": ""
       }
     ],
@@ -29,9 +33,13 @@
   },
   {
     "title": "Back-End Developers",
-    "description": "Back-End Developers",
+    "description": "Build and maintain the APIs related to the website and the digital currency network.",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "github",
+        "label": "thenewboston-python",
+        "link": "https://github.com/thenewboston-developers/thenewboston-python"
+      },
       {
         "name": "slack",
         "label": "back-end",
@@ -148,7 +156,7 @@
   },
   {
     "title": "Community",
-    "description": "Community",
+    "description": "Liaising with job applicants and team leads. Choosing the right job applicants and sending it to team leaders base on departments for further scrutiny. We create the strategy, oversee the overall TNB product, create standards, and improve cross-collab between teams.",
     "platforms": [
       {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
       {
@@ -291,9 +299,9 @@
   },
   {
     "title": "Design",
-    "description": "Design",
+    "description": "We create and manage all designs within thenewboston website & app. ",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {"name": "github", "label": "Design", "link": "https://github.com/thenewboston-developers/Design"},
       {
         "name": "slack",
         "label": "design",
@@ -394,12 +402,12 @@
   },
   {
     "title": "DevOps",
-    "description": "DevOps",
+    "description": "Provides \"systems for the systems\". Focused on underlying infrastructure (servers, OS, networking, access security), services (web servers, databases), as well as monitoring and automating the configuration of those items.",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {"name": "github", "label": "DevOps", "link": "https://github.com/thenewboston-developers/DevOps"},
       {
         "name": "slack",
-        "label": "developers",
+        "label": "devops",
         "link": ""
       }
     ],
@@ -422,12 +430,12 @@
   },
   {
     "title": "Discord Managers",
-    "description": "Discord Managers",
+    "description": "Managing Discord server for thenewboston Community.",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {"name": "github", "label": "Discord-Bot", "link": "https://github.com/thenewboston-developers/Discord-Bot"},
       {
         "name": "slack",
-        "label": "general",
+        "label": "discord",
         "link": ""
       }
     ],
@@ -481,9 +489,9 @@
   },
   {
     "title": "Front-End Developers",
-    "description": "Front-End Developers",
+    "description": "Basically, everything that the user can interact with, comes under this team's scope. We'll be mostly working on the Website and Account Manager repo. ",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {"name": "github", "label": "Website", "link": "https://github.com/thenewboston-developers/Website"},
       {
         "name": "slack",
         "label": "front-end",
@@ -639,12 +647,12 @@
   },
   {
     "title": "Kotlin SDK",
-    "description": "Kotlin SDK",
+    "description": "Provide a Kotlin client library.",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {"name": "github", "label": "Kotlin-SDK", "link": "https://github.com/thenewboston-developers/Kotlin-SDK"},
       {
         "name": "slack",
-        "label": "developers",
+        "label": "kotlin-sdk",
         "link": ""
       }
     ],
@@ -706,12 +714,12 @@
   },
   {
     "title": "Marketing",
-    "description": "Marketing",
+    "description": "My team handles all the marketing part including email, SEO, and media buys. Developing and Executing marketing strategies as well as focusing on user behaviour and contacts/partnership collection.",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {"name": "github", "label": "Marketing", "link": "https://github.com/thenewboston-developers/Marketing"},
       {
         "name": "slack",
-        "label": "general",
+        "label": "marketing",
         "link": ""
       }
     ],
@@ -784,7 +792,7 @@
   },
   {
     "title": "New User Operations",
-    "description": "New User Operations",
+    "description": "Convert new users to task contributors or team members.",
     "platforms": [
       {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
       {
@@ -829,9 +837,13 @@
   },
   {
     "title": "Payments",
-    "description": "Payments",
+    "description": "The team handles the payments of all thenewboston contributors in different capacities.",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "github",
+        "label": "Payment-Processor",
+        "link": "https://github.com/thenewboston-developers/Payment-Processor"
+      },
       {
         "name": "slack",
         "label": "payments",
@@ -900,12 +912,16 @@
   },
   {
     "title": "Project Proposals",
-    "description": "Project Proposals",
+    "description": "This team is responsible for managing all the App Ideas from developers all around the globe.",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "github",
+        "label": "Project-Proposals",
+        "link": "https://github.com/thenewboston-developers/Project-Proposals"
+      },
       {
         "name": "slack",
-        "label": "general",
+        "label": "projects",
         "link": ""
       }
     ],
@@ -964,12 +980,12 @@
   },
   {
     "title": "QA",
-    "description": "QA",
+    "description": "Identify and detect bugs in our apps to increase the quality of our products for improved customer satisfaction.",
     "platforms": [
       {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
       {
         "name": "slack",
-        "label": "developers",
+        "label": "quality-analyst",
         "link": ""
       }
     ],
@@ -992,12 +1008,12 @@
   },
   {
     "title": "Reddit Moderators",
-    "description": "Reddit Moderators",
+    "description": "We moderate posts on reddit and post job openings on it. Also other additional tasks given by bucky is also done by us. Thanks",
     "platforms": [
       {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
       {
         "name": "slack",
-        "label": "developers",
+        "label": "reddit-moderation",
         "link": ""
       }
     ],
@@ -1051,12 +1067,12 @@
   },
   {
     "title": "Research",
-    "description": "Research",
+    "description": "We research the latest developments in blockchain technology and identify strategic opportunities.  We work closely with the development teams on their crypto-economic model, protocol, architecture, and strategy.",
     "platforms": [
       {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
       {
         "name": "slack",
-        "label": "research",
+        "label": "blockchain-research-team-channel",
         "link": ""
       }
     ],
@@ -1148,12 +1164,12 @@
   },
   {
     "title": "Security",
-    "description": "Security",
+    "description": "Currently we are two members only. Working on security roadmap. Trying to keep the blockchain network safe from adversaries and ensuring the services are always available to the end user",
     "platforms": [
       {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
       {
         "name": "slack",
-        "label": "developers",
+        "label": "security",
         "link": ""
       }
     ],
@@ -1202,12 +1218,12 @@
   },
   {
     "title": "YouTube",
-    "description": "YouTube",
+    "description": "Dedicated to developer evangelism as well as general adoption of the coin through YouTube videos.",
     "platforms": [
       {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
       {
         "name": "slack",
-        "label": "general",
+        "label": "youtube",
         "link": ""
       }
     ],
