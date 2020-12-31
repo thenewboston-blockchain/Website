@@ -4,9 +4,9 @@
   grid-template-columns: 336px auto;
 
   & > div {
-    background: #ffffff;
+    background: #fff;
     border-radius: 12px;
-    box-shadow: 0px 0px 3px rgba(85, 108, 214, 0.3);
+    box-shadow: 0 0 3px rgba(85, 108, 214, 0.3);
     padding: 18px;
   }
 
@@ -17,7 +17,7 @@
   &__description {
     color: var(--color-sail-gray-900);
     font-size: var(--font-size-small-regular);
-    line-height: 1.6;
+    line-height: 1.5;
     margin-bottom: 24px;
   }
 
