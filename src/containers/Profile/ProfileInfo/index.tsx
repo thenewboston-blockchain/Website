@@ -89,7 +89,7 @@ const ProfileInfo: FC<ComponentProps> = ({user}) => {
         </div>
         <div className="ProfileInfo__details">
           <div className="ProfileInfo__user-details">
-            <div className="ProfileInfo__name">{memberDetails ? memberDetails.displayName : user.github_username}</div>
+            <div className="ProfileInfo__name">{user.display_name}</div>
             {memberDetails && renderMemberDetails(memberDetails)}
           </div>
           <div className="ProfileInfo__account-details">
