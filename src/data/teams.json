@@ -736,7 +736,20 @@
           "profileImage": "https://avatars1.githubusercontent.com/u/55309498?s=460&u=5735170037f5398148b87115ee9c9e7df574b7b1&v=4",
           "slackUsername": "Siddhesh Kulthe"
         }
-      }
+      },
+      {
+          "title": "Blog Project Manager",
+          "isLead": true,
+          "payPerDay": 2800,
+          "createdDate": "2020-07-08T02:14:59.307535Z",
+          "contributor": {
+            "contributorId": "63",
+            "displayName": "Ijeoma Okoh",
+            "githubUsername": "Aiijay",
+            "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EBD81EHG-43d3e010ec4a-512",
+            "slackUsername": "Ijeoma"
+          }
+        } 
     ],
     "responsibilities": [
       {
