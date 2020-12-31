@@ -2,6 +2,7 @@ import React, {FC} from 'react';
 import {useSelector} from 'react-redux';
 import {useParams} from 'react-router-dom';
 
+import DefaultUserAvatar from 'assets/images/default-avatar.png';
 import {A, Avatar, CopyableAccountNumber, EmptyPage, Icon, IconType, Qr} from 'components';
 import EditUserModal from 'containers/EditUserModal';
 import {useBooleanState} from 'hooks';
@@ -73,7 +74,7 @@ const ProfileInfo: FC<ComponentProps> = ({user}) => {
     );
   };
 
-  const {account_number: accountNumber, github_avatar_url: githubAvatarUrl} = contributorDetails;
+  const {account_number: accountNumber} = contributorDetails;
 
   return (
     <>
@@ -84,7 +85,7 @@ const ProfileInfo: FC<ComponentProps> = ({user}) => {
             className="ProfileInfo__profile-picture"
             alt={user.github_username}
             size={178}
-            src={githubAvatarUrl}
+            src={user.profile_image || DefaultUserAvatar}
           />
         </div>
         <div className="ProfileInfo__details">

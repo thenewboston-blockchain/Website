@@ -2,6 +2,7 @@ import React, {ReactNode, useCallback, useState} from 'react';
 import {useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
 
+import DefaultUserAvatar from 'assets/images/default-avatar.png';
 import {Button, IconType} from 'components';
 import TopNavPopoverButton from 'containers/TopNav/TopNavPopoverButton';
 import TopNavText from 'containers/TopNav/TopNavText';
@@ -24,7 +25,9 @@ const TopNavDesktopItems = () => {
     return (
       <TopNavPopoverButton
         anchorEl={activeUserAnchorEl}
-        customButtonContent={<img alt="profile" className="TopNavDesktopItems__profile-image" src={profileImage} />}
+        customButtonContent={
+          <img alt="profile" className="TopNavDesktopItems__profile-image" src={profileImage || DefaultUserAvatar} />
+        }
         popoverId="active-user-popover"
         setAnchorEl={setActiveUserAnchorEl}
         unsetAnchorEl={unsetActiveUserAnchorEl}

@@ -31,7 +31,7 @@ const SignIn: FC = () => {
   };
 
   const validationSchema = yup.object().shape({
-    email: yup.string().required('This field is required'),
+    email: yup.string().email().required('Email is required'),
     password: yup.string().required('This field is required'),
   });
 
