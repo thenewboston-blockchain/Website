@@ -12,3 +12,9 @@ export const editUser = (data: Partial<User>) => async (dispatch: AppDispatch) =
   dispatch(setUser(response.data));
   return response;
 };
+
+export const getUser = (pk: string) => async (dispatch: AppDispatch) => {
+  const response = await axios.get(`${process.env.REACT_APP_BACKEND_API}/users/${pk}`);
+  dispatch(setUser(response.data));
+  return response;
+};

@@ -51,7 +51,7 @@ const ProfileInfo: FC<ComponentProps> = ({user}) => {
   };
 
   const renderMemberDetails = (member: TeamMember) => {
-    const {githubUsername, slackUsername, teams, titles} = member;
+    const {teams, titles} = member;
     return (
       <>
         {teams &&
@@ -62,19 +62,17 @@ const ProfileInfo: FC<ComponentProps> = ({user}) => {
           ))}
         <div className="ProfileInfo__member-slack">
           <Icon className="ProfileInfo__member-slack-icon" icon={IconType.slack} size={18} />
-          {slackUsername}
+          {user.slack_username}
         </div>
         <div className="ProfileInfo__member-github">
           <Icon className="ProfileInfo__member-github-icon" icon={IconType.github} size={18} />
           <A className="ProfileInfo__member-github-link" href={`https://github.com/${user.github_username}`}>
-            {githubUsername}
+            {user.github_username}
           </A>
         </div>
       </>
     );
   };
-
-  const {account_number: accountNumber} = contributorDetails;
 
   return (
     <>
@@ -82,8 +80,8 @@ const ProfileInfo: FC<ComponentProps> = ({user}) => {
         <div className="ProfileInfo__top-section">
           {renderBackdrop(memberDetails?.isLead || false)}
           <Avatar
-            className="ProfileInfo__profile-picture"
             alt={user.github_username}
+            className="ProfileInfo__profile-picture"
             size={178}
             src={user.profile_image || DefaultUserAvatar}
           />
@@ -95,12 +93,12 @@ const ProfileInfo: FC<ComponentProps> = ({user}) => {
           </div>
           <div className="ProfileInfo__account-details">
             <CopyableAccountNumber
-              accountNumber={accountNumber}
+              accountNumber={user.account_number}
               className="ProfileInfo__CopyableAccountNumber"
               isCopyButtonAtBottom
             />
             <div className="ProfileInfo__qr-container">
-              <Qr text={accountNumber} width={110} />
+              <Qr text={user.account_number} width={110} />
             </div>
           </div>
         </div>

@@ -1,10 +1,11 @@
 import React, {FC, useEffect, useState} from 'react';
-import {useSelector} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {useParams} from 'react-router-dom';
-import axios from 'axios';
 
 import {Loader} from 'components';
+import {getUser} from 'dispatchers/users/user';
 import {selectUsers} from 'selectors/state';
+import {AppDispatch} from 'types/store';
 import ProfileInfo from './ProfileInfo';
 import TasksCompleted from './TasksCompleted';
 
@@ -18,13 +19,14 @@ const Profile: FC = () => {
   const {userId} = useParams<ProfileUrlParams>();
   const [errorMessage, setErrorMessage] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(true);
+  const dispatch = useDispatch<AppDispatch>();
   const users = useSelector(selectUsers);
   const user = users[userId];
 
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
       try {
-        await axios.get(`${process.env.REACT_APP_BACKEND_API}/users/${userId}`);
+        await dispatch(getUser(userId));
       } catch (error) {
         setErrorMessage('Error retrieving user');
       } finally {
@@ -32,7 +34,7 @@ const Profile: FC = () => {
       }
     };
     fetchData();
-  }, [userId]);
+  }, [dispatch, userId]);
 
   const renderLeftSection = () => {
     if (!user) return null;
