@@ -1,6 +1,10 @@
 import React, {FC} from 'react';
+import {useSelector} from 'react-redux';
+import axios from 'axios';
 
 import Modal from 'components/Modal';
+import {selectActiveUser} from 'selectors/state';
+import {authHeaders} from 'utils/requests';
 import yup from 'utils/yup';
 
 import EditUserModalFields, {FormValues} from './EditUserModalFields';
@@ -20,9 +24,20 @@ const EditUserModal: FC<ComponentProps> = ({
   displayName: initialDisplayName,
   slackName: initialSlackName,
 }) => {
-  const handleSubmit = ({accountNumber, displayName, slackName}: FormValues): void => {
+  const activeUser = useSelector(selectActiveUser);
+
+  const handleSubmit = async ({accountNumber, displayName, slackName}: FormValues): Promise<void> => {
     // eslint-disable-next-line no-console
     console.log({accountNumber, displayName, slackName});
+    const response = await axios.patch(
+      `${process.env.REACT_APP_BACKEND_API}/users/${activeUser.pk}`,
+      {
+        account_number: accountNumber,
+        display_name: displayName,
+        slack_username: slackName,
+      },
+      authHeaders(),
+    );
     close();
   };
 

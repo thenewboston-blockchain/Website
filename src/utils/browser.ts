@@ -1,4 +1,4 @@
-export const localStorageDefaultState = (key: string, defaultValue: any) => {
-  const localStorageState = localStorage.getItem(key);
-  return localStorageState ? JSON.parse(localStorageState) : defaultValue;
+export const getLocalStorageItem = (key: string, defaultValue: any) => {
+  const item = localStorage.getItem(key);
+  return item ? JSON.parse(item) : defaultValue;
 };
