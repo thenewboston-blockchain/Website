@@ -10,10 +10,6 @@ import openings from 'data/openings.json';
 import tasks from 'data/tasks.json';
 import teams from 'data/teams.json';
 
-export const getContributorByGithubUsername = (github_username: string): Contributor | undefined => {
-  return contributors.find((contributor) => contributor.github_username === github_username);
-};
-
 export const getContributors = (): Contributor[] => {
   return contributors;
 };

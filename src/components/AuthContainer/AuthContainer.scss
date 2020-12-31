@@ -1,0 +1,17 @@
+.AuthContainer {
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(85, 108, 214, 0.18);
+  margin: 48px auto 64px;
+  max-width: 480px;
+  padding: 32px;
+
+  h2 {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  &__error-message {
+    color: var(--color-alert);
+    margin-bottom: 18px;
+  }
+}

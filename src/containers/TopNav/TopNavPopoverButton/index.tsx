@@ -8,9 +8,10 @@ import './TopNavPopoverButton.scss';
 
 interface ComponentProps {
   anchorEl: HTMLButtonElement | null;
-  buttonText: string;
+  buttonText?: string;
   children: ReactNode;
   className?: string;
+  customButtonContent?: ReactNode;
   popoverId: string;
   setAnchorEl(newEl: HTMLButtonElement | null): void;
   unsetAnchorEl(): void;
@@ -21,6 +22,7 @@ const TopNavPopoverButton: FC<ComponentProps> = ({
   buttonText,
   children,
   className,
+  customButtonContent,
   popoverId,
   setAnchorEl,
   unsetAnchorEl,
@@ -38,7 +40,7 @@ const TopNavPopoverButton: FC<ComponentProps> = ({
   };
 
   useEffect(() => {
-    if (clientWidth < 992 && popoverIsOpen) {
+    if (clientWidth < 1200 && popoverIsOpen) {
       unsetAnchorEl();
     }
   }, [popoverIsOpen, unsetAnchorEl, clientWidth]);
@@ -46,13 +48,17 @@ const TopNavPopoverButton: FC<ComponentProps> = ({
   return (
     <>
       <button className={clsx('TopNavPopoverButton', className)} onClick={handleButtonClick}>
-        {buttonText}
-        <Icon
-          className={clsx('TopNavPopoverButton__chevron-icon', {
-            'TopNavPopoverButton__chevron-icon--open': popoverIsOpen,
-          })}
-          icon={IconType.chevronDown}
-        />
+        {customButtonContent || (
+          <>
+            {buttonText}
+            <Icon
+              className={clsx('TopNavPopoverButton__chevron-icon', {
+                'TopNavPopoverButton__chevron-icon--open': popoverIsOpen,
+              })}
+              icon={IconType.chevronDown}
+            />
+          </>
+        )}
       </button>
       <Popover
         anchorEl={anchorEl}

@@ -1,4 +1,5 @@
 import A from './A';
+import AuthContainer from './AuthContainer';
 import Avatar from './Avatar';
 import BreadcrumbMenu from './BreadcrumbMenu';
 import {CodeSnippet, RequestResponseSnippet, SnippetLang} from './CodeSnippet';
@@ -34,11 +35,11 @@ import StepIndicator from './StepIndicator';
 import {TableBorderGrid, TableParams, TableVertical} from './Table';
 import Tabs, {Tab} from './Tabs';
 import TimeFilter from './TimeFilter';
-import TopNav from './TopNav';
 import TotalAmount from './TotalAmount';
 
 export {
   A,
+  AuthContainer,
   Avatar,
   BreadcrumbMenu,
   Button,
@@ -84,7 +85,6 @@ export {
   TableVertical,
   Tabs,
   TimeFilter,
-  TopNav,
   TotalAmount,
 };
 
