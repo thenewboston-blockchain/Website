@@ -27,9 +27,23 @@ interface Contributor {
   slackUsername: string;
 }
 
+export interface TeamPlatform {
+  label: string;
+  link: string;
+  name: string;
+}
+
+export interface TeamResponsibility {
+  item: string;
+  subitems: string[];
+}
+
 export interface Team {
   contributors: TeamContributor[];
+  description: string;
+  platforms: TeamPlatform[];
   title: string;
+  responsibilities: TeamResponsibility[];
 }
 
 export interface TeamContributor {
@@ -58,5 +72,13 @@ export interface TeamMember {
 }
 
 export interface TeamsUrlParams {
+  resource?: string;
   team: string;
+  tab?: TeamTabOptions;
+}
+
+export enum TeamTabOptions {
+  members = 'Members',
+  overview = 'Overview',
+  resources = 'Resources',
 }

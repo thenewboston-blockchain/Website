@@ -4,22 +4,23 @@ import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom
 import {Layout} from 'components';
 
 import AccountManager from './AccountManager';
-import Auth from './Auth';
 import Assets from './Assets';
 import BankApi from './BankApi';
 import ConfirmationValidatorApi from './ConfirmationValidatorApi';
+import CreateAccount from './CreateAccount';
 import DeploymentGuide from './DeploymentGuide';
 import Donate from './Donate';
 import Download from './Download';
 import Faq from './Faq';
 import Guide from './Guide';
 import Home from './Home';
-import Internal from './Internal';
 import Leaderboard from './Leaderboard';
 import Openings from './Openings';
 import PrimaryValidatorApi from './PrimaryValidatorApi';
 import Profile from './Profile';
 import ProjectProposals from './ProjectProposals';
+import SignIn from './SignIn';
+import SignOut from './SignOut';
 import Social from './Social';
 import StyleGuide from './StyleGuide';
 import Tasks from './Tasks';
@@ -58,6 +59,7 @@ const App: FC = () => {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/create-account" component={CreateAccount} />
           <Route exact path="/donate" component={Donate} />
           <Route exact path="/faq" component={Faq} />
           <Route exact path="/assets" component={Assets} />
@@ -68,20 +70,20 @@ const App: FC = () => {
           <Route exact path="/social" component={Social} />
           <Redirect exact from="/tasks" to="/tasks/All" />
           <Route exact path="/tasks/:repository" component={Tasks} />
-          <Redirect exact path="/teams" to="/teams/All" />
-          <Route exact path="/teams/:team" component={Teams} />
+          <Redirect exact path="/teams" to="/teams/All/Members" />
+          <Route exact path="/teams/:team/:tab?/:resource?" component={Teams} />
           <Route path="/account-manager/:chapter?" component={AccountManager} />
           <Route path="/bank-api/:chapter?" component={BankApi} />
           <Route path="/confirmation-validator-api/:chapter?" component={ConfirmationValidatorApi} />
           <Route path="/deployment-guide/:chapter?" component={DeploymentGuide} />
           <Route path="/download" component={Download} />
           <Route path="/guide/:chapter?" component={Guide} />
-          <Route path="/internal/:chapter?" component={Internal} />
           <Route path="/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
           <Route path="/project-proposals/:chapter?" component={ProjectProposals} />
+          <Route exact path="/sign-in" component={SignIn} />
+          <Route exact path="/sign-out" component={SignOut} />
           <Route path="/style-guide/:chapter?" component={StyleGuide} />
-          <Route path="/user/signin/callback" component={Auth} />
-          <Route path="/user/profile" render={() => <Profile github_username="jamessspanggg" />} />
+          <Route path="/users/:userId" component={Profile} />
           <Redirect to="/" />
         </Switch>
       </Layout>
