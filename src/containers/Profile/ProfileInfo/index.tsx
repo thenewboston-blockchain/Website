@@ -22,9 +22,9 @@ interface ProfileUrlParams {
 
 const ProfileInfo: FC<ComponentProps> = ({user}) => {
   const activeUser = useSelector(selectActiveUser);
-  const {userId} = useParams<ProfileUrlParams>();
   const contributorDetails = getContributorByGithubUsername(user.github_username);
   const memberDetails = getTeamMemberByGithubUsername(user.github_username);
+  const {userId} = useParams<ProfileUrlParams>();
   const [editUserModalIsOpen, toggleEditUserModal] = useBooleanState(false);
 
   if (!contributorDetails) {
@@ -104,14 +104,7 @@ const ProfileInfo: FC<ComponentProps> = ({user}) => {
           </div>
         </div>
       </div>
-      {editUserModalIsOpen && (
-        <EditUserModal
-          accountNumber={accountNumber}
-          close={toggleEditUserModal}
-          displayName={memberDetails ? memberDetails.displayName : user.github_username}
-          slackName={memberDetails ? memberDetails.slackUsername : ''}
-        />
-      )}
+      {editUserModalIsOpen && <EditUserModal close={toggleEditUserModal} />}
     </>
   );
 };

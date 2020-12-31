@@ -13,20 +13,17 @@ import EditUserModalFields, {FormValues} from './EditUserModalFields';
 import './EditUserModal.scss';
 
 interface ComponentProps {
-  accountNumber: string;
   close(): void;
-  displayName: string;
-  slackName: string;
 }
 
-const EditUserModal: FC<ComponentProps> = ({
-  accountNumber: initialAccountNumber,
-  close,
-  displayName: initialDisplayName,
-  slackName: initialSlackName,
-}) => {
+const EditUserModal: FC<ComponentProps> = ({close}) => {
   const activeUser = useSelector(selectActiveUser);
   const dispatch = useDispatch<AppDispatch>();
+  const initialValues = {
+    accountNumber: activeUser.account_number || '',
+    displayName: activeUser.display_name || '',
+    slackName: activeUser.slack_username || '',
+  };
 
   const handleSubmit = async ({accountNumber, displayName, slackName}: FormValues): Promise<void> => {
     try {
@@ -52,12 +49,6 @@ const EditUserModal: FC<ComponentProps> = ({
     displayName: yup.string().required('This field is required'),
     slackName: yup.string(),
   });
-
-  const initialValues = {
-    accountNumber: initialAccountNumber,
-    displayName: initialDisplayName,
-    slackName: initialSlackName,
-  };
 
   return (
     <Modal
