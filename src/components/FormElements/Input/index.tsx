@@ -5,6 +5,7 @@ import {getCustomClassNames} from 'utils/components';
 import './Input.scss';
 
 export interface BaseInputProps {
+  autoComplete?: 'username' | 'current-password' | 'new-password';
   className?: string;
   disabled?: boolean;
   error?: boolean;
@@ -18,6 +19,7 @@ export interface BaseInputProps {
 }
 
 const Input: FC<BaseInputProps> = ({
+  autoComplete,
   className,
   disabled = false,
   error = false,
@@ -39,6 +41,7 @@ const Input: FC<BaseInputProps> = ({
 
   return (
     <input
+      autoComplete={autoComplete}
       className={clsx('Input', className, {
         'Input--error': error,
         ...getCustomClassNames(className, '--error', error),
