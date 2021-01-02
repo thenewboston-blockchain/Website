@@ -1253,7 +1253,20 @@
           "profileImage": "https://avatars2.githubusercontent.com/u/41084465?s=460&u=e4bbc12b9d60ba1869da25809044eddc97733c1b&v=4",
           "slackUsername": "Nico y-crozier"
         }
-      }
+      },
+      {
+        "title": "YouTube Educator",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2021-01-01T02:14:59.307535Z",
+        "contributor": {
+        "contributorId": [65],
+        "displayName": "Francis Polignano",
+        "githubUsername": "franchyze923",
+        "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01DQAFHKE3-aad7fcf8fa5b-512",
+        "slackUsername": "Francis Polignano"
+        }
+        }
     ],
     "responsibilities": [
       {
