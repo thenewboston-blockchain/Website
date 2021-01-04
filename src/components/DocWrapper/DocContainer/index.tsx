@@ -19,7 +19,11 @@ const DocContainer: FC<ComponentProps> = ({children, className, id, introSection
   return (
     <section className={clsx('DocContainer', className)}>
       {introTitle ? (
-        <div className="DocContainer__wrapper">
+        <div
+          className={clsx('DocContainer__wrapper', {
+            ...getCustomClassNames(className, '__wrapper', true),
+          })}
+        >
           <h1
             className={clsx('DocContainer__page-title', {
               ...getCustomClassNames(className, '__page-title', true),
@@ -36,7 +40,11 @@ const DocContainer: FC<ComponentProps> = ({children, className, id, introSection
           <div className={clsx('DocContainer__divider')} />
         </>
       ) : null}
-      <div className="DocContainer__wrapper">
+      <div
+        className={clsx('DocContainer__wrapper', {
+          ...getCustomClassNames(className, '__wrapper', true),
+        })}
+      >
         <h1
           className={clsx('DocContainer__page-title', {
             ...getCustomClassNames(className, '__page-title', true),

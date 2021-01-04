@@ -13,7 +13,7 @@ export interface BaseInputProps {
   onBlur?(e: FocusEvent<HTMLInputElement>): void;
   onChange?(e: ChangeEvent<HTMLInputElement>): void;
   placeholder?: string;
-  type?: 'text' | 'number';
+  type?: 'number' | 'password' | 'text';
   value: string;
 }
 
