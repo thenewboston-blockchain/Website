@@ -18,7 +18,7 @@ const TeamOverview: FC<ComponentProps> = ({teamFilter}) => {
         <h4 className="TeamOverview__sub-heading"> About the team </h4>
         <p className="TeamOverview__description">{description}</p>
         {platforms.map(({name, label, link}) => (
-          <div className="TeamOverview__social" key={label}>
+          <div className="TeamOverview__social" key={`${name}-${label}`}>
             <Icon
               className="TeamOverview__social-icon"
               icon={name === 'github' ? IconType.github : IconType.slack}
