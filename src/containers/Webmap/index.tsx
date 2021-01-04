@@ -3,14 +3,14 @@ import axios from 'axios';
 import {Icon} from 'leaflet';
 import {Map, Marker, Popup, TileLayer} from 'react-leaflet';
 import './Webmap.scss';
-import * as apiEndpoints from '../../constants/api-endpoints';
+import * as apiEndpoints from 'constants/api-endpoints';
 
-export const bankIcon = new Icon({
+const bankIcon = new Icon({
   iconSize: [20, 20],
   iconUrl: '/bank1.svg',
 });
 
-export const validatorIcon = new Icon({
+const validatorIcon = new Icon({
   iconSize: [20, 20],
   iconUrl: '/validator.svg',
 });
@@ -53,10 +53,10 @@ const Webmap: FC = () => {
   }, []);
 
   return (
-    <Map center={[37, -30]} zoom={3}>
+    <Map center={[37, -30]} zoom={2}>
       <TileLayer
         attribution="Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ"
-        url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}'"
+        url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
       />
       {state.map((node) => (
         <Marker
