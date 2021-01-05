@@ -1,8 +1,14 @@
 @import '~leaflet/dist/leaflet.css';
+$map-bottom-offset: 200px;
 
-.leaflet-container {
-  height: 50vh;
+.Map {
+  height: calc(100vh - #{$map-bottom-offset});
   margin-top: 10px;
   width: 100%;
   z-index: 0;
+  &__popup-content {
+    > h4 {
+      word-break: break-all;
+    }
+  }
 }
