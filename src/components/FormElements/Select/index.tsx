@@ -20,7 +20,7 @@ export interface BaseSelectProps {
   focused?: boolean;
   name?: string;
   onBlur?: FocusEventHandler;
-  onChange?(value: ValueType<InputOption, any>, actionMeta?: ActionMeta<InputOption>): void;
+  onChange?(value: ValueType<InputOption>, actionMeta?: ActionMeta<InputOption>): void;
   options: InputOption[];
   placeholder?: string;
   searchable?: boolean;
@@ -29,7 +29,7 @@ export interface BaseSelectProps {
 
 interface ComponentProps extends BaseSelectProps {
   filterOption?(option: InputOption, rawInput: string): boolean;
-  formatOptionLabel?(option: InputOption, labelMeta: FormatOptionLabelMeta<InputOption, any>): ReactNode;
+  formatOptionLabel?(option: InputOption, labelMeta: FormatOptionLabelMeta<InputOption>): ReactNode;
 }
 
 const Select: FC<ComponentProps> = ({

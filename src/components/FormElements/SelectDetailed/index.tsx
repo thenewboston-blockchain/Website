@@ -17,10 +17,7 @@ const filterOption = ({label, value}: InputOption, rawInput: string): boolean =>
   );
 };
 
-const formatOptionLabel = (
-  {value, label}: InputOption,
-  {context}: FormatOptionLabelMeta<InputOption, any>,
-): ReactNode => {
+const formatOptionLabel = ({value, label}: InputOption, {context}: FormatOptionLabelMeta<InputOption>): ReactNode => {
   if (context === 'value') {
     return value;
   }
