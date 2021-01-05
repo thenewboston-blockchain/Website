@@ -4,6 +4,7 @@ import {Icon} from 'leaflet';
 import {Map, Marker, Popup, TileLayer} from 'react-leaflet';
 import './Webmap.scss';
 import * as apiEndpoints from 'constants/api-endpoints';
+import {useWindowDimensions} from 'hooks';
 
 const bankIcon = new Icon({
   iconSize: [20, 20],
@@ -16,6 +17,9 @@ const validatorIcon = new Icon({
 });
 
 const Webmap: FC = () => {
+  const windowDimensions = useWindowDimensions();
+  console.log(windowDimensions.clientWidth);
+
   interface APIResponse {
     account_number: number;
     city: string;
@@ -53,7 +57,10 @@ const Webmap: FC = () => {
   }, []);
 
   return (
-    <Map center={[37, -30]} zoom={2}>
+    <Map
+      center={windowDimensions.clientWidth > 450 ? [37, -30] : [45, -30]}
+      zoom={windowDimensions.clientWidth > 450 ? 2.5 : 2}
+    >
       <TileLayer
         attribution="Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ"
         url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
