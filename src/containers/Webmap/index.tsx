@@ -18,7 +18,6 @@ const validatorIcon = new Icon({
 
 const Webmap: FC = () => {
   const windowDimensions = useWindowDimensions();
-  console.log(windowDimensions.clientWidth);
 
   interface APIResponse {
     account_number: number;
@@ -59,7 +58,7 @@ const Webmap: FC = () => {
   return (
     <Map
       center={windowDimensions.clientWidth > 450 ? [37, -30] : [45, -30]}
-      zoom={windowDimensions.clientWidth > 450 ? 2.5 : 2}
+      zoom={windowDimensions.clientWidth > 450 ? 2.5 : 1}
     >
       <TileLayer
         attribution="Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ"
