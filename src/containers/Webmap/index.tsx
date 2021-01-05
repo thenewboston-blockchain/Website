@@ -57,7 +57,7 @@ const Webmap: FC = () => {
 
   return (
     <Map
-      center={windowDimensions.clientWidth > 450 ? [37, -30] : [45, -30]}
+      center={windowDimensions.clientWidth > 450 ? [37, -30] : [45, -20]}
       zoom={windowDimensions.clientWidth > 450 ? 2.5 : 1}
     >
       <TileLayer
