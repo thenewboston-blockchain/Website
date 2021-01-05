@@ -62,13 +62,13 @@ const Webmap: FC = () => {
         <Marker
           key={node.query}
           position={[node.lat + Math.random() * (0.2 - 0.1) + 0.1, node.lon]}
-          icon={node.root_account_file != null ? validatorIcon : bankIcon}
+          icon={node.root_account_file ? validatorIcon : bankIcon}
         >
           <Popup maxWidth={700} position={[node.lat + Math.random() * (0.2 - 0.1) + 0.1, node.lon]}>
             <div>
               <h2>Node Info</h2>
               <br />
-              <h4>Node Type: {node.root_account_file != null ? 'Validator' : 'Bank'}</h4>
+              <h4>Node Type: {node.root_account_file ? 'Validator' : 'Bank'}</h4>
               <h4>Country: {node.country}</h4>
               <h4>City: {node.city}</h4>
               <h4>IP Address: {node.query}</h4>
