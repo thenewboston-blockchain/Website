@@ -16,7 +16,7 @@
     "@types/react-select": "^3.0.23",
     "@types/react-syntax-highlighter": "^11.0.4",
     "@types/yup": "^0.29.9",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "clsx": "^1.1.1",
     "date-fns": "^2.16.1",
     "formik": "^2.2.2",
