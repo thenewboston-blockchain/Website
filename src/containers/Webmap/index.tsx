@@ -21,9 +21,9 @@ const validatorIcon = new Icon({
 });
 
 const Webmap: FC = () => {
-  const windowDimensions = useWindowDimensions();
+  const {clientWidth} = useWindowDimensions();
 
-  interface APIResponse {
+  interface Node {
     account_number: number;
     city: string;
     country: string;
@@ -35,7 +35,7 @@ const Webmap: FC = () => {
     root_account_file: string;
   }
 
-  const [state, setState] = useState<APIResponse[]>([]);
+  const [nodes, setNodes] = useState<Node[]>([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -54,12 +54,12 @@ const Webmap: FC = () => {
         ...result,
         ...resultBatch.data[i],
       }));
-      setState(merged);
+      setNodes(merged);
     }
     fetchData();
   }, []);
 
-  const renderPopupContent = (node: APIResponse) => (
+  const renderPopupContent = (node: Node) => (
     <div className="Map__popup-content">
       <h2>Node Info</h2>
       <br />
@@ -75,9 +75,9 @@ const Webmap: FC = () => {
   return (
     <Map
       className="Map"
-      center={windowDimensions.clientWidth > 450 ? [37, -30] : [45, -20]}
-      zoom={windowDimensions.clientWidth > 450 ? 2.5 : 1}
-      minZoom={windowDimensions.clientWidth > 450 ? 2.5 : 1}
+      center={clientWidth > 450 ? [37, -30] : [45, -20]}
+      zoom={clientWidth > 450 ? 2.5 : 1}
+      minZoom={clientWidth > 450 ? 2.5 : 1}
       maxBounds={[
         [90, -180],
         [-90, 180],
@@ -87,19 +87,19 @@ const Webmap: FC = () => {
         attribution="Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ"
         url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
       />
-      {state.map((node) => (
+      {nodes.map((node) => (
         <Marker
           key={node.query}
           position={[node.lat + Math.random() * (0.2 - 0.1) + 0.1, node.lon]}
           icon={node.root_account_file ? validatorIcon : bankIcon}
         >
-          {windowDimensions.clientWidth > 450 && (
+          {clientWidth > 450 && (
             <Popup maxWidth={700} position={[node.lat + Math.random() * (0.2 - 0.1) + 0.1, node.lon]}>
               {renderPopupContent(node)}
             </Popup>
           )}
 
-          {windowDimensions.clientWidth < 450 && (
+          {clientWidth < 450 && (
             <Popup maxWidth={250} position={[node.lat + Math.random() * (0.2 - 0.1) + 0.1, node.lon]}>
               {renderPopupContent(node)}
             </Popup>
