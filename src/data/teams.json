@@ -738,18 +738,18 @@
         }
       },
       {
-        "title": "Marketing Director",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "34",
-          "displayName": "Pulkit Bajaj",
-          "githubUsername": "pulkitbajaj007",
-          "profileImage": "https://avatars3.githubusercontent.com/u/74899933?s=460&u=28b9a72efc37620e5bf8a01eb547dfa780235c59&v=4",
-          "slackUsername": "Pulkit Bajaj"
-        }
-      }
+          "title": "Blog Project Manager",
+          "isLead": true,
+          "payPerDay": 2800,
+          "createdDate": "2020-07-08T02:14:59.307535Z",
+          "contributor": {
+            "contributorId": "63",
+            "displayName": "Ijeoma Okoh",
+            "githubUsername": "Aiijay",
+            "profileImage": "https://avatars3.githubusercontent.com/u/55064951?s=400&u=ac5fc97138da6bd28ae66399241daeff7605d969&v=4",
+            "slackUsername": "Ijeoma"
+          }
+       }
     ],
     "responsibilities": [
       {
