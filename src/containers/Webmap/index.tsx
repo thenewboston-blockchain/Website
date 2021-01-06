@@ -60,16 +60,32 @@ const Webmap: FC = () => {
   }, []);
 
   const renderPopupContent = (node: Node) => (
-    <div className="Map__popup-content">
-      <h2>Node Info</h2>
-      <br />
-      <h4>Node Type: {node.root_account_file ? 'Validator' : 'Bank'}</h4>
-      <h4>Country: {node.country}</h4>
-      <h4>City: {node.city}</h4>
-      <h4>IP Address: {node.query}</h4>
-      <h4>Account Number: {node.account_number}</h4>
-      <h4>Default TX Fee: {node.default_transaction_fee}</h4>
-      <h4>Provider: {node.org}</h4>
+    <div className="Map__Popup">
+      <h2 className="Map__Popup-heading">{node.root_account_file ? 'Validator' : 'Bank'}</h2>
+      <div className="Map__Popup-info">
+        <div className="Map__Popup-info-label">IP Address</div>
+        <div className="Map__Popup-info-value">{node.query}</div>
+      </div>
+      <div className="Map__Popup-info">
+        <div className="Map__Popup-info-label">Account Number</div>
+        <div className="Map__Popup-info-value">{node.account_number}</div>
+      </div>
+      <div className="Map__Popup-info">
+        <div className="Map__Popup-info-label">Default Tx Fee</div>
+        <div className="Map__Popup-info-value">{node.default_transaction_fee}</div>
+      </div>
+      <div className="Map__Popup-info">
+        <div className="Map__Popup-info-label">City</div>
+        <div className="Map__Popup-info-value">{node.city}</div>
+      </div>
+      <div className="Map__Popup-info">
+        <div className="Map__Popup-info-label">Country</div>
+        <div className="Map__Popup-info-value">{node.country}</div>
+      </div>
+      <div className="Map__Popup-info">
+        <div className="Map__Popup-info-label">Provider</div>
+        <div className="Map__Popup-info-value">{node.org}</div>
+      </div>
     </div>
   );
   return (
