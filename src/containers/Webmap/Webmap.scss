@@ -1,0 +1,31 @@
+@import '~leaflet/dist/leaflet.css';
+$map-bottom-offset: 200px;
+
+.Map {
+  height: calc(100vh - #{$map-bottom-offset});
+  margin-top: 10px;
+  width: 100%;
+  z-index: 0;
+
+  &__Popup {
+    &-heading {
+      color: var(--color-primary);
+      margin-bottom: 12px;
+    }
+
+    &-info {
+      display: grid;
+      grid-column-gap: 4px;
+      grid-row-gap: 8px;
+      grid-template-columns: 100px auto;
+
+      &-label {
+        color: var(--color-gray-500);
+      }
+
+      &-value {
+        word-wrap: anywhere;
+      }
+    }
+  }
+}
