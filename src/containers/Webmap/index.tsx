@@ -1,19 +1,23 @@
 import React, {FC, useEffect, useState} from 'react';
+import {Map, Marker, Popup, TileLayer} from 'react-leaflet';
 import axios from 'axios';
 import {Icon} from 'leaflet';
-import {Map, Marker, Popup, TileLayer} from 'react-leaflet';
+
+import bankSvg from 'assets/svgs/bank1.svg';
+import validatorSvg from 'assets/svgs/validator.svg';
 import * as apiEndpoints from 'constants/api-endpoints';
 import {useWindowDimensions} from 'hooks';
+
 import './Webmap.scss';
 
 const bankIcon = new Icon({
   iconSize: [20, 20],
-  iconUrl: '/bank1.svg',
+  iconUrl: bankSvg,
 });
 
 const validatorIcon = new Icon({
   iconSize: [20, 20],
-  iconUrl: '/validator.svg',
+  iconUrl: validatorSvg,
 });
 
 const Webmap: FC = () => {
