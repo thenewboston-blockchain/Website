@@ -1273,13 +1273,13 @@
         "payPerDay": 2800,
         "createdDate": "2021-01-01T02:14:59.307535Z",
         "contributor": {
-          "contributorId": [65],
+          "contributorId": "65",
           "displayName": "Francis Polignano",
           "githubUsername": "franchyze923",
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01DQAFHKE3-aad7fcf8fa5b-512",
           "slackUsername": "Francis Polignano"
-          }
         }
+      }
     ],
     "responsibilities": [
       {
