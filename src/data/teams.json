@@ -816,6 +816,19 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01JJ677TL0-88e284149aec-512",
           "slackUsername": "Tristan Spearing"
         }
+      },
+      {
+        "title": "Marketing Analyst",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "U01JHJS30SC",
+          "displayName": "Tomiwa",
+          "githubUsername": "",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01JHJS30SC-62f5af21aed7-512",
+          "slackUsername": "Tomiwa"
+        }
       }
     ],
     "responsibilities": [
