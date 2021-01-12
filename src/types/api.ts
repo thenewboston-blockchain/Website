@@ -1,3 +1,7 @@
+export interface APIModel {
+  pk: string;
+}
+
 export interface AuthResponse {
   data?: Token;
   message: string;

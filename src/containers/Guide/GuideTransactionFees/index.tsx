@@ -7,7 +7,7 @@ import './GuideTransactionFees.scss';
 
 const GuideTransactionFees: FC = () => {
   return (
-    <DocContainer className="GuideTransactionFees" title="Transaction Fees">
+    <DocContainer className="GuideTransactionFees" title="Transaction Fees" lastUpdated="07 Dec 2020">
       <p>
         Users are incentivized to maintain bank and validator nodes through the collection of transaction fees. The
         owners of the nodes set the fee amounts and fee structures entirely.

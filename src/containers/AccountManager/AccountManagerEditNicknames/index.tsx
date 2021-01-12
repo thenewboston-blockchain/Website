@@ -13,7 +13,7 @@ enum AccountManagerEditNicknamesNav {
 
 const AccountManagerEditNicknames: FC = () => {
   return (
-    <DocContainer className="AccountManagerEditNicknames" title="Edit Nicknames">
+    <DocContainer className="AccountManagerEditNicknames" title="Edit Nicknames" lastUpdated="07 Dec 2020">
       <p>
         You can edit the nickname for any item that appears on your left menu (Validators, Banks, Accounts, and Friends)
         by clicking on the 3 dot menu on the top right of that page and selecting the "Edit Nickname" option.

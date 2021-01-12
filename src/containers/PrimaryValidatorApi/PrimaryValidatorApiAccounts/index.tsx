@@ -1,55 +1,80 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
+import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
 
 const PrimaryValidatorApiAccounts: FC = () => {
   return (
-    <DocContainer className="PrimaryValidatorApiAccounts" title="Accounts">
+    <DocContainer className="PrimaryValidatorApiAccounts" title="Accounts" lastUpdated="07 Dec 2020">
       <p>
         The primary validator will maintain the account numbers, balances, and balance locks for all accounts on the
         network. New accounts are created as needed when funds are first sent.
       </p>
 
       <DocEndpoint endpoint="/accounts" method="GET" />
+      <TableParams
+        items={[
+          {
+            dataType: 'URL parameter',
+            description: 'If you want to start at a specific point, an offset can be specified.',
+            param: 'offset',
+          },
+          {
+            dataType: 'URL parameter',
+            description: 'Number of returned accounts per request starting from the offset',
+            param: 'limit',
+          },
+        ]}
+      />
       <RequestResponseSnippet
-        code={`[
-  {
-    "id": "82bb14ab-00eb-41ba-8120-99ba80a74f5a",
-    "account_number": "0cdd4ba04456ca169baca3d66eace869520c62fe84421329086e03d91a68acdb",
-    "balance": "4294967051.0000000000000000",
-    "balance_lock": "21cfd80a31930e801e97d34e3f00a7d9b5c01b2fb531a5ac14cd59d10ab446c8"
-  },
-  {
-    "id": "77cf2b96-180e-4315-82a5-483a5e256923",
-    "account_number": "484b3176c63d5f37d808404af1a12c4b9649cd6f6769f35bdf5a816133623fbc",
-    "balance": "175.0000000000000000",
-    "balance_lock": "484b3176c63d5f37d808404af1a12c4b9649cd6f6769f35bdf5a816133623fbc"
-  },
-  {
-    "id": "d7df9c73-d381-4764-b4c8-90ca5e021d85",
-    "account_number": "5e12967707909e62b2bb2036c209085a784fabbc3deccefee70052b6181c8ed8",
-    "balance": "14.0000000000000000",
-    "balance_lock": "5e12967707909e62b2bb2036c209085a784fabbc3deccefee70052b6181c8ed8"
-  },
-  {
-    "id": "e8b24ad7-f81e-4731-818e-9bbbc3336428",
-    "account_number": "ad1f8845c6a1abb6011a2a434a079a087c460657aad54329a84b406dce8bf314",
-    "balance": "56.0000000000000000",
-    "balance_lock": "ad1f8845c6a1abb6011a2a434a079a087c460657aad54329a84b406dce8bf314"
-  }
-]`}
+        code={`{
+  "count": 345,
+  "next": "http://54.183.17.224/accounts?limit=50&offset=50",
+  "previous": null,
+  "results": [
+    {
+      "id": "4cb1cdbe-ebbf-43c8-9f86-826aaa2af250",
+      "account_number": "9bfa37627e2dba0ae48165b219e76ceaba036b3db8e84108af73a1cce01fad35",
+      "balance": 6,
+      "balance_lock": "749f6faa4eeeda50f51334e903a1eaae084435d53d2a85fb0993a518fef27273"
+    },
+    {
+      "id": "9c6dd61a-438c-4a95-b1d2-33f90bd7f6ad",
+      "account_number": "2e86f48216567302527b69eae6c6a188097ed3a9741f43cc3723e570cf47644c",
+      "balance": 403,
+      "balance_lock": "aca94f4d2f472c6b9b662f60aab247b9c6aef2079d63b870e2cc02308a7c822b"
+    }
+  ]
+}`}
         heading="Response"
       />
 
       <DocEndpoint endpoint="/accounts/<account_number>/balance" method="GET" />
+      <TableParams
+        items={[
+          {
+            dataType: 'PATH parameter',
+            description: 'The account number that you want to check',
+            param: 'account_number',
+          },
+        ]}
+      />
       <RequestResponseSnippet
         code={`{
-  "balance": "4294967051.0000000000000000"
+  "balance": "4294967051"
 }`}
         heading="Response"
       />
 
       <DocEndpoint endpoint="/accounts/<account_number>/balance_lock" method="GET" />
+      <TableParams
+        items={[
+          {
+            dataType: 'PATH parameter',
+            description: 'The account number that you want to check',
+            param: 'account_number',
+          },
+        ]}
+      />
       <RequestResponseSnippet
         code={`{
   "balance_lock": "21cfd80a31930e801e97d34e3f00a7d9b5c01b2fb531a5ac14cd59d10ab446c8"

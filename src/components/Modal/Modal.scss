@@ -16,6 +16,7 @@ $break-mobile: 640px;
   background: var(--color-white);
   border-radius: 3px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
   position: fixed;
 
   &__close-icon {
@@ -96,7 +97,7 @@ $break-mobile: 640px;
 @media screen and (max-width: $break-mobile) {
   .Modal {
     background-color: var(--color-gray-050);
-    height: 100vh;
+    height: 100%;
     position: fixed;
     width: 100vw;
     z-index: 20;

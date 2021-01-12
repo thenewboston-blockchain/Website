@@ -4,7 +4,7 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'co
 
 const ConfirmationValidatorApiAccounts: FC = () => {
   return (
-    <DocContainer className="ConfirmationValidatorApiAccounts" title="Accounts">
+    <DocContainer className="ConfirmationValidatorApiAccounts" title="Accounts" lastUpdated="07 Dec 2020">
       <p>
         The confirmation validators will maintain the account numbers, balances and balance locks for all accounts on
         the network.
@@ -51,7 +51,7 @@ const ConfirmationValidatorApiAccounts: FC = () => {
       <DocEndpoint endpoint="/accounts/<account_number>/balance" method="GET" />
       <RequestResponseSnippet
         code={`{
-  "balance": "6"
+  "balance": 6
 }`}
         heading="Response"
       />

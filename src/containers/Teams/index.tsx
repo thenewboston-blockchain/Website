@@ -1,39 +1,91 @@
-import React, {FC, ReactNode, useEffect, useState} from 'react';
+import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
+import {Link, useHistory, useParams} from 'react-router-dom';
 
-import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
+import {BreadcrumbMenu, EmptyPage, FlatNavLinks, Icon, IconType, PageTitle} from 'components';
+import {TEAMS} from 'constants/teams';
+import {PageDataObject} from 'types/page-data';
+import {TeamMember, TeamName, TeamsUrlParams, TeamTabOptions} from 'types/teams';
 import {getTeamMembers} from 'utils/data';
-import {NavOption} from 'types/option';
-import {TeamMember, TeamName} from 'types/teams';
 
+import InternalHowToSetUpPaymentBoard from './Resources/InternalHowToSetUpPaymentBoard';
+import InternalNewUserOperations from './Resources/InternalNewUserOperations';
+import InternalProductDevelopment from './Resources/InternalProductDevelopment';
+import InternalTeamLeadOnboarding from './Resources/InternalTeamLeadOnboarding';
 import TeamMemberCard from './TeamMemberCard';
+import TeamOverview from './TeamOverview';
+import TeamTabs from './TeamTabs';
 import './Teams.scss';
 
 const teamMembers = getTeamMembers();
 
-const TEAM_NAME_FILTERS: NavOption[] = [
-  {pathname: TeamName.all, title: 'All'},
-  {pathname: TeamName.dotnetCore, title: '.NET Core'},
-  {pathname: TeamName.backEndDevelopers, title: 'Back-End Developers'},
-  {pathname: TeamName.community, title: 'Community'},
-  {pathname: TeamName.design, title: 'Design'},
-  {pathname: TeamName.devOps, title: 'DevOps'},
-  {pathname: TeamName.discordManagers, title: 'Discord Managers'},
-  {pathname: TeamName.frontEndDevelopers, title: 'Front-End Developers'},
-  {pathname: TeamName.kotlinSDK, title: 'Kotlin SDK'},
-  {pathname: TeamName.marketing, title: 'Marketing'},
-  {pathname: TeamName.newUserOperations, title: 'New User Operations'},
-  {pathname: TeamName.payments, title: 'Payments'},
-  {pathname: TeamName.projectProposals, title: 'Project Proposals'},
-  {pathname: TeamName.qa, title: 'QA'},
-  {pathname: TeamName.redditModerators, title: 'Reddit Moderators'},
-  {pathname: TeamName.research, title: 'Research'},
-  {pathname: TeamName.security, title: 'Security'},
-  {pathname: TeamName.youtube, title: 'YouTube'},
-];
+const sortTeamMembers = (members: TeamMember[]): TeamMember[] => {
+  const teamLeads = members
+    .filter(({isLead}) => isLead)
+    .sort((member1, member2) => (member1.displayName > member2.displayName ? 1 : -1));
+  const otherMembers = members
+    .filter(({isLead}) => !isLead)
+    .sort((member1, member2) => (member1.displayName > member2.displayName ? 1 : -1));
+  return teamLeads.concat(otherMembers);
+};
+
+const pageData: PageDataObject = {
+  'how-to-set-up-payment-board': {
+    content: <InternalHowToSetUpPaymentBoard />,
+    name: 'How to set up payment boards',
+  },
+  'new-user-operations': {
+    content: <InternalNewUserOperations />,
+    name: 'How to onboard new users',
+  },
+  'product-development': {
+    content: <InternalProductDevelopment />,
+    name: 'How the product development process works',
+  },
+  'team-lead-onboarding': {
+    content: <InternalTeamLeadOnboarding />,
+    name: 'How to onboard team leads',
+  },
+};
 
 const Teams: FC = () => {
+  const history = useHistory();
+  const {team: teamParam, tab: tabParam, resource: resourceParam} = useParams<TeamsUrlParams>();
   const [filteredMembers, setFilteredMembers] = useState<TeamMember[]>(teamMembers);
   const [teamFilter, setTeamFilter] = useState<TeamName>(TeamName.all);
+
+  useEffect(() => {
+    const isAllTeams = teamParam === TeamName.all;
+    if (teamParam && tabParam) {
+      if (isAllTeams) {
+        const isInvalidTabForAll = !(tabParam === TeamTabOptions.members || tabParam === TeamTabOptions.resources);
+        if (isInvalidTabForAll) {
+          history.replace(`/teams`);
+        }
+      } else {
+        const isInvalidTabForSingleTeam = !(
+          tabParam === TeamTabOptions.members || tabParam === TeamTabOptions.overview
+        );
+        if (isInvalidTabForSingleTeam) {
+          history.replace(`/teams/${teamParam}`);
+        }
+      }
+    } else if (teamParam && !tabParam) {
+      if (isAllTeams) {
+        history.replace(`/teams/${teamParam}/${TeamTabOptions.members}`);
+      } else {
+        history.replace(`/teams/${teamParam}/${TeamTabOptions.overview}`);
+      }
+    }
+  }, [history, tabParam, teamParam]);
+
+  useEffect(() => {
+    const team = TEAMS.find(({pathname}) => pathname === teamParam);
+    if (team) {
+      setTeamFilter(team.title as TeamName);
+    } else {
+      history.push(`/teams`);
+    }
+  }, [history, teamParam]);
 
   useEffect(() => {
     const getFilteredMembers = (): TeamMember[] => {
@@ -52,21 +104,28 @@ const Teams: FC = () => {
       });
       return teamLeads.concat(otherMembers);
     };
-
-    setFilteredMembers(teamFilter === TeamName.all ? teamMembers : getFilteredMembers());
+    const members = teamFilter === TeamName.all ? teamMembers : getFilteredMembers();
+    const sortedMembers = sortTeamMembers(members);
+    setFilteredMembers(sortedMembers);
   }, [teamFilter]);
 
-  const handleNavOptionClick = (option: TeamName) => (): void => {
-    setTeamFilter(option);
-  };
+  const handleNavOptionClick = useCallback(
+    (option: string) => (): void => {
+      if (option === TeamName.all) {
+        history.push(`/teams/${option}/${TeamTabOptions.members}`);
+      } else {
+        history.push(`/teams/${option}/${TeamTabOptions.overview}`);
+      }
+    },
+    [history],
+  );
 
   const renderTeamFilter = (): ReactNode => {
-    return (
-      <FlatNavLinks handleOptionClick={handleNavOptionClick} options={TEAM_NAME_FILTERS} selectedOption={teamFilter} />
-    );
+    return <FlatNavLinks handleOptionClick={handleNavOptionClick} options={TEAMS} selectedOption={teamParam} />;
   };
 
-  const renderTeamMembers = (): ReactNode => {
+  const renderTeamMembers = useCallback((): ReactNode => {
+    if (!filteredMembers.length) return <EmptyPage />;
     return filteredMembers.map(
       ({contributorId, displayName, githubUsername, isLead, payPerDay, profileImage, slackUsername, titles}) => (
         <TeamMemberCard
@@ -81,7 +140,54 @@ const Teams: FC = () => {
         />
       ),
     );
-  };
+  }, [filteredMembers]);
+
+  const renderResources = useCallback((): ReactNode => {
+    return (
+      <>
+        {Object.entries(pageData).map(([key, value]) => (
+          <Link className="Teams__resources-item" key={key} to={`/teams/${teamParam}/${tabParam}/${key}`}>
+            {value.name}
+          </Link>
+        ))}
+      </>
+    );
+  }, [teamParam, tabParam]);
+
+  const handleBackClick = useCallback((): void => {
+    history.replace(`/teams/${teamParam}/${tabParam}`);
+  }, [history, teamParam, tabParam]);
+
+  const renderResourceDoc = useCallback((): ReactNode => {
+    if (resourceParam) {
+      const resource = pageData[resourceParam]?.content || <EmptyPage />;
+      return (
+        <>
+          <div className="Teams__back-container" onClick={handleBackClick} role="button" tabIndex={0}>
+            <Icon className="Teams__back-icon" icon={IconType.arrowLeft} />
+            <span className="Teams__back-text">Back</span>
+          </div>
+          {resource}
+        </>
+      );
+    }
+  }, [handleBackClick, resourceParam]);
+
+  const renderTabPanel = useCallback(() => {
+    switch (tabParam) {
+      case TeamTabOptions.members: {
+        return <div className="Teams__team-list">{renderTeamMembers()}</div>;
+      }
+      case TeamTabOptions.overview: {
+        return <TeamOverview teamFilter={teamFilter} />;
+      }
+      case TeamTabOptions.resources: {
+        return <div className="Teams__resources">{renderResources()}</div>;
+      }
+      default:
+        return <EmptyPage />;
+    }
+  }, [renderResources, renderTeamMembers, tabParam, teamFilter]);
 
   return (
     <>
@@ -93,12 +199,18 @@ const Teams: FC = () => {
           pageName={teamFilter}
           sectionName="Team"
         />
-        <div className="Teams__left-menu">{renderTeamFilter()}</div>
-        <div className="Teams__right-list">
-          <h1 className="Teams__team-heading">{teamFilter === TeamName.all ? 'All Contributors' : teamFilter}</h1>
-          {!filteredMembers.length && <EmptyPage />}
-          <div className="Teams__team-list">{renderTeamMembers()}</div>
-        </div>
+        <aside className="Teams__left-menu">{renderTeamFilter()}</aside>
+        <section className="Teams__right-section">
+          {resourceParam ? (
+            <>{renderResourceDoc()}</>
+          ) : (
+            <>
+              <h1 className="Teams__team-heading">{teamFilter === TeamName.all ? 'All' : teamFilter}</h1>
+              <TeamTabs team={teamParam} tab={tabParam || ''} />
+              <div className="Teams__tab-panel">{renderTabPanel()}</div>
+            </>
+          )}
+        </section>
       </div>
     </>
   );

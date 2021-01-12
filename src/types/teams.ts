@@ -11,7 +11,6 @@ export enum TeamName {
   marketing = 'Marketing',
   newUserOperations = 'New User Operations',
   payments = 'Payments',
-  penetrationTesting = 'Penetration Testing',
   projectProposals = 'Project Proposals',
   qa = 'QA',
   redditModerators = 'Reddit Moderators',
@@ -28,17 +27,30 @@ interface Contributor {
   slackUsername: string;
 }
 
-export interface Team {
-  contributors: TeamContributor[];
-  title: string;
+export interface TeamPlatform {
+  label: string;
+  link: string;
+  name: string;
 }
 
-interface TeamContributor {
+export interface TeamResponsibility {
+  item: string;
+  subitems: string[];
+}
+
+export interface Team {
+  contributors: TeamContributor[];
+  description: string;
+  platforms: TeamPlatform[];
+  title: string;
+  responsibilities: TeamResponsibility[];
+}
+
+export interface TeamContributor {
   contributor: Contributor;
   createdDate: string;
   isLead: boolean;
   payPerDay: number;
-  team: Team;
   title: string;
 }
 
@@ -57,4 +69,16 @@ export interface TeamMember {
   slackUsername: string;
   teams: TeamLead[];
   titles: string[];
+}
+
+export interface TeamsUrlParams {
+  resource?: string;
+  team: string;
+  tab?: TeamTabOptions;
+}
+
+export enum TeamTabOptions {
+  members = 'Members',
+  overview = 'Overview',
+  resources = 'Resources',
 }

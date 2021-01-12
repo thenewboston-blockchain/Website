@@ -1,4 +1,5 @@
 import A from './A';
+import AuthContainer from './AuthContainer';
 import Avatar from './Avatar';
 import BreadcrumbMenu from './BreadcrumbMenu';
 import {CodeSnippet, RequestResponseSnippet, SnippetLang} from './CodeSnippet';
@@ -18,6 +19,7 @@ import Icon, {IconType} from './Icon';
 import Label from './Label';
 import Layout from './Layout';
 import MarketingButton from './MarketingButton';
+import MarketingCard from './MarketingCard';
 import MenuGroup from './MenuGroup';
 import LabelFilter from './LabelFilter';
 import Loader from './Loader';
@@ -33,11 +35,11 @@ import StepIndicator from './StepIndicator';
 import {TableBorderGrid, TableParams, TableVertical} from './Table';
 import Tabs, {Tab} from './Tabs';
 import TimeFilter from './TimeFilter';
-import TopNav from './TopNav';
 import TotalAmount from './TotalAmount';
 
 export {
   A,
+  AuthContainer,
   Avatar,
   BreadcrumbMenu,
   Button,
@@ -65,6 +67,7 @@ export {
   Layout,
   Loader,
   MarketingButton,
+  MarketingCard,
   MenuGroup,
   OrganizationMenuItems,
   PageTitle,
@@ -82,7 +85,6 @@ export {
   TableVertical,
   Tabs,
   TimeFilter,
-  TopNav,
   TotalAmount,
 };
 

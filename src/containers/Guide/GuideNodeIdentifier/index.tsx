@@ -8,7 +8,7 @@ import NID from './NID.png';
 
 const GuideNodeIdentifier: FC = () => {
   return (
-    <DocContainer className="GuideNodeIdentifier" title="Node Identifier">
+    <DocContainer className="GuideNodeIdentifier" title="Node Identifier" lastUpdated="07 Dec 2020">
       <p>The node identifier (or NID) system is a separate key-pair used by nodes to sign requests to other nodes.</p>
 
       <DocImage alt="node identifier" maxWidth={1000} src={NID} />

@@ -5,7 +5,7 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'co
 
 const BankApiInvalidBlocks: FC = () => {
   return (
-    <DocContainer className="BankApiInvalidBlocks" title="Invalid Blocks">
+    <DocContainer className="BankApiInvalidBlocks" title="Invalid Blocks" lastUpdated="07 Dec 2020">
       <p>
         Invalid blocks are blocks sent from confirmation validators to their banks as an indication that a block that
         had been received from the primary validator was unable to be validated. This may be due to improper formatting,
@@ -23,18 +23,47 @@ const BankApiInvalidBlocks: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/invalid_blocks" method="GET" />
+      <TableParams
+        items={[
+          {
+            dataType: 'URL parameter',
+            description: 'If you want to start at a specific point, an offset can be specified.',
+            param: 'offset',
+          },
+          {
+            dataType: 'URL parameter',
+            description: 'Maximum number of block returned by the node. (max: 100)',
+            param: 'limit',
+          },
+        ]}
+      />
       <RequestResponseSnippet
-        code={`[
-  {
-    "id": "2bcd53c5-19f9-4226-ab04-3dfb17c3a1fe",
-    "created_date": "2020-07-11T18:44:16.518695Z",
-    "modified_date": "2020-07-11T18:44:16.518719Z",
-    "block_identifier": "65ae26192dfb9ec41f88c6d582b374a9b42ab58833e1612452d7a8f685dcd4d5",
-    "block": "3ff4ebb0-2b3d-429b-ba90-08133fcdee4e",
-    "confirmation_validator": "fcd2dce8-9e4f-4bf1-8dac-cdbaf64e5ce8",
-    "primary_validator": "51461a75-dd8d-4133-81f4-543a3b054149"
-  }
-]`}
+        code={`{
+  "count": 234,
+  "next": "http://143.110.137.54/invalid_blocks?limit=2&offset=2",
+  "previous": null,
+  "results": 
+  [
+    {
+      "id": "2bcd53c5-19f9-4226-ab04-3dfb17c3a1fe",
+      "created_date": "2020-07-11T18:44:16.518695Z",
+      "modified_date": "2020-07-11T18:44:16.518719Z",
+      "block_identifier": "65ae26192dfb9ec41f88c6d582b374a9b42ab58833e1612452d7a8f685dcd4d5",
+      "block": "3ff4ebb0-2b3d-429b-ba90-08133fcdee4e",
+      "confirmation_validator": "fcd2dce8-9e4f-4bf1-8dac-cdbaf64e5ce8",
+      "primary_validator": "51461a75-dd8d-4133-81f4-543a3b054149"
+    },
+    {
+      "id": "c6fc11cf-8948-4d32-96c9-d56caa6d5b24",
+      "created_date": "2020-07-11T19:44:16.518695Z",
+      "modified_date": "2020-07-11T19:44:16.518719Z",
+      "block_identifier": "5da3758cdd6b2c9d5ed60471f15654622bc5eae047d71d995c0df3180e6097c0",
+      "block": "402d5976-cbaa-4d89-b5d7-bddfe0aa5a3d",
+      "confirmation_validator": "fcd2dce8-9e4f-4bf1-8dac-cdbaf64e5ce8",
+      "primary_validator": "51461a75-dd8d-4133-81f4-543a3b054149"
+    },
+  ]
+}`}
         heading="Response (Bank > client)"
       />
 
