@@ -37,6 +37,13 @@ $top-nav-height: 60px;
     display: block;
   }
 
+  &__title-wrapper {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: unset;
+  }
+
   &__button {
     background: transparent;
     border: none;
@@ -76,6 +83,7 @@ $top-nav-height: 60px;
     border: 0;
     color: var(--color-sail-gray-300);
     cursor: pointer;
+    display: inline-block;
     margin-bottom: 24px;
     outline: none;
     padding: 0;
@@ -105,6 +113,7 @@ $top-nav-height: 60px;
   &__icon-holder {
     display: inline-block;
     position: absolute;
+    transform: translateY(-3.2px);
   }
 
   &__link {

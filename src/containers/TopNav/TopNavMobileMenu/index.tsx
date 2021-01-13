@@ -37,19 +37,20 @@ const TopNavMobileMenu = () => {
   ): ReactNode => {
     return (
       <div className="TopNavMobileMenu__column">
-        <button className="TopNavMobileMenu__column-title" onClick={handleColumnTitleClick(section)}>
-          {title}
+        <button className="TopNavMobileMenu__title-wrapper" onClick={handleColumnTitleClick(section)}>
+          <div className="TopNavMobileMenu__column-title">{title}</div>
+          {smallDevice && (
+            <div className="TopNavMobileMenu__icon-holder">
+              <Icon
+                className={clsx('TopNavMobileMenu__chevron-icon', {
+                  'TopNavMobileMenu__chevron-icon--open': openSection === section,
+                })}
+                icon={IconType.chevronDown}
+              />
+            </div>
+          )}
         </button>
-        {smallDevice && (
-          <div className="TopNavMobileMenu__icon-holder">
-            <Icon
-              className={clsx('TopNavMobileMenu__chevron-icon', {
-                'TopNavMobileMenu__chevron-icon--open': openSection === section,
-              })}
-              icon={IconType.chevronDown}
-            />
-          </div>
-        )}
+
         {(!smallDevice || openSection === section) && <div className="TopNavMobileMenu__links">{links}</div>}
       </div>
     );
