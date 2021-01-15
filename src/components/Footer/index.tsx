@@ -71,10 +71,6 @@ const navLists = [
         title: 'Donate',
         url: '/donate',
       },
-      {
-        title: 'Webmap',
-        url: '/webmap',
-      },
     ],
   },
 ];
