@@ -38,7 +38,7 @@ const SignIn: FC = () => {
   return (
     <AuthContainer errorMessage={errorMessage} heading="Sign In">
       <Form initialValues={initialValues} onSubmit={handleSubmit} validationSchema={validationSchema}>
-        <FormInput autoComplete="username" label="Email" name="email" placeholder="" />
+        <FormInput autoComplete="email" label="Email" name="email" placeholder="" />
         <FormInput autoComplete="current-password" label="Password" name="password" placeholder="" type="password" />
         <FormButton submitting={false} type="submit">
           Sign In

@@ -36,7 +36,7 @@ const CreateAccount: FC = () => {
   const renderAuthContainerContent = (): ReactNode => {
     return creatingAccount ? (
       <Form initialValues={initialValues} onSubmit={handleSubmit} validationSchema={validationSchema}>
-        <FormInput autoComplete="username" label="Email" name="email" placeholder="" />
+        <FormInput autoComplete="email" label="Email" name="email" placeholder="" />
         <FormInput autoComplete="new-password" label="Password" name="password" placeholder="" type="password" />
         <FormInput
           autoComplete="new-password"

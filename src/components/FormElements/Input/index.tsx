@@ -5,7 +5,7 @@ import {getCustomClassNames} from 'utils/components';
 import './Input.scss';
 
 export interface BaseInputProps {
-  autoComplete?: 'username' | 'current-password' | 'new-password';
+  autoComplete?: 'email' | 'current-password' | 'new-password';
   className?: string;
   disabled?: boolean;
   error?: boolean;
