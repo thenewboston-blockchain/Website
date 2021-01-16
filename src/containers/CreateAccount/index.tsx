@@ -36,9 +36,15 @@ const CreateAccount: FC = () => {
   const renderAuthContainerContent = (): ReactNode => {
     return creatingAccount ? (
       <Form initialValues={initialValues} onSubmit={handleSubmit} validationSchema={validationSchema}>
-        <FormInput label="Email" name="email" placeholder="" />
-        <FormInput label="Password" name="password" placeholder="" type="password" />
-        <FormInput label="Confirm Password" name="confirmPassword" placeholder="" type="password" />
+        <FormInput autoComplete="email" label="Email" name="email" placeholder="" />
+        <FormInput autoComplete="new-password" label="Password" name="password" placeholder="" type="password" />
+        <FormInput
+          autoComplete="new-password"
+          label="Confirm Password"
+          name="confirmPassword"
+          placeholder=""
+          type="password"
+        />
         <FormButton submitting={submitting} type="submit">
           Create Account
         </FormButton>
@@ -52,7 +58,10 @@ const CreateAccount: FC = () => {
   };
 
   const validationSchema = yup.object().shape({
-    confirmPassword: yup.string().oneOf([yup.ref('password'), ''], 'Passwords must match'),
+    confirmPassword: yup
+      .string()
+      .oneOf([yup.ref('password'), ''], 'Passwords must match')
+      .required(),
     email: yup.string().email().required('Email is required'),
     password: yup.string().required('Password is required'),
   });

@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
-import React, {FC} from 'react';
+import React, {ChangeEvent, FC} from 'react';
 import {Field} from 'formik';
 import clsx from 'clsx';
 
@@ -19,13 +19,20 @@ const FormInput: FC<ComponentProps> = ({
   ...baseInputProps
 }) => {
   const {className, name} = baseInputProps;
-  const {errors, touched} = useFormContext();
+  const {errors, handleChange, touched, validateField} = useFormContext();
   const error = !!errors[name] && !!touched[name];
+
+  const handleChangeAndValidate = (e: ChangeEvent) => {
+    handleChange(e);
+    setTimeout(() => {
+      validateField(name);
+    });
+  };
 
   return (
     <div className={clsx('FormInput FormFieldComponent', className)}>
       {renderFormLabel(name, className, label, required)}
-      <Field {...baseInputProps} as={Input} className="FormField" error={error} required={required} />
+      <Field {...baseInputProps} as={Input} className="FormField" error={error} onChange={handleChangeAndValidate} />
       {hideErrorBlock ? null : renderFormError(name, className, hideErrorText)}
     </div>
   );
