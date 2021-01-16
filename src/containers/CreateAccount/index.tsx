@@ -58,7 +58,10 @@ const CreateAccount: FC = () => {
   };
 
   const validationSchema = yup.object().shape({
-    confirmPassword: yup.string().oneOf([yup.ref('password'), ''], 'Passwords must match'),
+    confirmPassword: yup
+      .string()
+      .oneOf([yup.ref('password'), ''], 'Passwords must match')
+      .required(),
     email: yup.string().email().required('Email is required'),
     password: yup.string().required('Password is required'),
   });
