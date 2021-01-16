@@ -148,13 +148,6 @@ const TopNavDesktopItems = () => {
           title="Donate"
           to="/donate"
         />
-        <TopNavPopoverItem
-          closePopover={unsetMoreAnchorEl}
-          description="Map of all nodes on thenewboston"
-          iconType={IconType.earth}
-          title="Webmap"
-          to="/webmap"
-        />
       </>
     );
   };
