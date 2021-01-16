@@ -655,7 +655,6 @@
           "slackUsername": "ATLIT"
         }
       }
-
     ],
     "responsibilities": []
   },
@@ -752,31 +751,31 @@
         }
       },
       {
-        "title": "Blog Project Manager",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "63",
-          "displayName": "Ijeoma Okoh",
-          "githubUsername": "Aiijay",
-          "profileImage": "https://avatars3.githubusercontent.com/u/55064951?s=400&u=ac5fc97138da6bd28ae66399241daeff7605d969&v=4",
-          "slackUsername": "Ijeoma"
+          "title": "Blog Project Manager",
+          "isLead": true,
+          "payPerDay": 2800,
+          "createdDate": "2020-07-08T02:14:59.307535Z",
+          "contributor": {
+            "contributorId": "63",
+            "displayName": "Ijeoma Okoh",
+            "githubUsername": "Aiijay",
+            "profileImage": "https://avatars3.githubusercontent.com/u/55064951?s=400&u=ac5fc97138da6bd28ae66399241daeff7605d969&v=4",
+            "slackUsername": "Ijeoma"
+          }
+        },
+        {
+          "title": "Marketing Manager",
+          "isLead": true,
+          "payPerDay": 2800,
+          "createdDate": "2021-01-01T02:14:59.307535Z",
+          "contributor": {
+            "contributorId": "64",
+            "displayName": "Chatrasal Singh",
+            "githubUsername": "chatrasal",
+            "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01HR3S3WCS-810bc78e23bd-512",
+            "slackUsername": "Chatrasal Singh"
+          }
         }
-      },
-      {
-        "title": "Marketing Manager",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2021-01-01T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "64",
-          "displayName": "Chatrasal Singh",
-          "githubUsername": "chatrasal",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01HR3S3WCS-810bc78e23bd-512",
-          "slackUsername": "Chatrasal Singh"
-        }
-      }
     ],
     "responsibilities": [
       {
