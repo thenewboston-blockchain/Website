@@ -763,7 +763,20 @@
           "slackUsername": "Chatrasal Singh"
         }
       },
-       {
+      {
+        "title": "Marketing Analyst",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "66",
+          "displayName": "Tristan Spearing",
+          "githubUsername": "tspearing",
+          "profileImage": "https://avatars1.githubusercontent.com/u/77364430?s=460&v=4",
+          "slackUsername": "Tristan Spearing"
+        }
+      },
+      {
         "title": "Marketing Analyst",
         "isLead": false,
         "payPerDay": 2800,
