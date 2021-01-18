@@ -1,4 +1,5 @@
 import React, {FC} from 'react';
+import clsx from 'clsx';
 
 import {ContributorTasks, EmptyPage, TotalAmount} from 'components';
 import {useWindowDimensions} from 'hooks';
@@ -52,7 +53,7 @@ const TasksCompleted: FC<ComponentProps> = ({github_username}) => {
   return (
     <div className="TasksCompleted">
       <h2 className="TasksCompleted__title">Tasks Completed</h2>
-      <div className={`TasksCompleted__tasks${totalTasks <= 0 ? '--empty' : ''}`}>
+      <div className={clsx('TasksCompleted__tasks', {'TasksCompleted__tasks--empty': totalTasks <= 0})}>
         {totalTasks > 0 && (width > 480 ? renderTasks() : renderMobileTasks())}
         {totalTasks <= 0 && <EmptyPage className="TasksCompleted__empty-page" />}
       </div>
