@@ -1,14 +1,14 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
+import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSnippet, TableParams} from 'components';
 
 const BankApiValidatorConfirmationServices: FC = () => {
   return (
     <DocContainer
       className="BankApiValidatorConfirmationServices"
       title="Validator Confirmation Services"
-      lastUpdated="07 Dec 2020"
+      lastUpdated="15 Jan 2021"
     >
       <p>
         Validator confirmation services represent an agreement between a confirmation validator and a bank. They state
@@ -21,20 +21,7 @@ const BankApiValidatorConfirmationServices: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/validator_confirmation_services" method="GET" />
-      <TableParams
-        items={[
-          {
-            dataType: 'URL parameter',
-            description: 'If you want to start at a specific point, an offset can be specified.',
-            param: 'offset',
-          },
-          {
-            dataType: 'URL parameter',
-            description: 'Maximum number of validator returned by the node. (max: 100)',
-            param: 'limit',
-          },
-        ]}
-      />
+      <QueryParamsOffsetAndLimit returnedEntityName="validator confirmation services" />
       <RequestResponseSnippet
         code={`{
   "count": 4,

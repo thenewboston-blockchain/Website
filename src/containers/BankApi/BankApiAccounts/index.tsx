@@ -1,11 +1,11 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
+import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSnippet, TableParams} from 'components';
 
 const BankApiAccounts: FC = () => {
   return (
-    <DocContainer className="BankApiAccounts" title="Accounts" lastUpdated="07 Dec 2020">
+    <DocContainer className="BankApiAccounts" title="Accounts" lastUpdated="15 Jan 2021">
       <p>
         Banks will store information of all accounts that have sent blocks through them. Banks will also assign a trust
         level to each account they are tracking in order to determine future transactions fees. More trusted accounts
@@ -17,20 +17,7 @@ const BankApiAccounts: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/accounts" method="GET" />
-      <TableParams
-        items={[
-          {
-            dataType: 'URL parameter',
-            description: 'If you want to start at a specific point, an offset can be specified.',
-            param: 'offset',
-          },
-          {
-            dataType: 'URL parameter',
-            description: 'Maximum number of block returned by the node. (max: 100)',
-            param: 'limit',
-          },
-        ]}
-      />
+      <QueryParamsOffsetAndLimit returnedEntityName="accounts" />
       <RequestResponseSnippet
         code={`{
   "count": 87,

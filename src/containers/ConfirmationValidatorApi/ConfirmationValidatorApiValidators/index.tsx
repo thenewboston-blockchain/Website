@@ -1,27 +1,14 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
+import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSnippet} from 'components';
 
 const ConfirmationValidatorApiValidators: FC = () => {
   return (
-    <DocContainer className="ConfirmationValidatorApiValidators" title="Validators" lastUpdated="07 Dec 2020">
+    <DocContainer className="ConfirmationValidatorApiValidators" title="Validators" lastUpdated="15 Jan 2021">
       <p>Confirmation validators will maintain a record of all connected validators.</p>
 
       <DocEndpoint endpoint="/validators" method="GET" />
-      <TableParams
-        items={[
-          {
-            dataType: 'URL parameter',
-            description: 'If you want to start at a specific point, an offset can be specified.',
-            param: 'offset',
-          },
-          {
-            dataType: 'URL parameter',
-            description: 'Maximum number of block returned by the node. (max: 100)',
-            param: 'limit',
-          },
-        ]}
-      />
+      <QueryParamsOffsetAndLimit returnedEntityName="validators" />
       <RequestResponseSnippet
         code={`{
   "count": 10,
