@@ -1,8 +1,14 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {DocContainer, DocEndpoint, DocList, RequestResponseSnippet, TableParams} from 'components';
-import {QueryParamsOffsetAndLimit} from 'components/QueryParams';
+import {
+  DocContainer,
+  DocEndpoint,
+  DocList,
+  QueryParamsOffsetAndLimit,
+  RequestResponseSnippet,
+  TableParams,
+} from 'components';
 
 const BankApiConfirmationBlocks: FC = () => {
   return (

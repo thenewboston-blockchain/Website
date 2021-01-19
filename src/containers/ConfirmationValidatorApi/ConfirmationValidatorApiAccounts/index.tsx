@@ -1,7 +1,6 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
-import {QueryParamsOffsetAndLimit} from 'components/QueryParams';
+import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSnippet} from 'components';
 
 const ConfirmationValidatorApiAccounts: FC = () => {
   return (

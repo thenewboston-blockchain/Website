@@ -28,6 +28,7 @@ import PageTitle from './PageTitle';
 import Pagination from './Pagination';
 import Popover from './Popover';
 import Qr from './Qr';
+import {QueryParamsOffsetAndLimit} from './QueryParams';
 import Shadow from './Shadow';
 import SlideUp from './SlideUp';
 import SocialMediaIcon from './SocialMediaIcon';
@@ -74,6 +75,7 @@ export {
   Pagination,
   Popover,
   Qr,
+  QueryParamsOffsetAndLimit,
   RequestResponseSnippet,
   Shadow,
   SlideUp,

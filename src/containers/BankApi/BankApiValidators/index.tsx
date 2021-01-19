@@ -1,8 +1,7 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
-import {QueryParamsOffsetAndLimit} from 'components/QueryParams';
+import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSnippet} from 'components';
 
 const BankApiValidators: FC = () => {
   return (
