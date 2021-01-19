@@ -641,6 +641,19 @@
           "profileImage": "https://avatars0.githubusercontent.com/u/32864116?s=460&u=0c2a53c6f1476da904d2b3c820bab43b64b7185b&v=4",
           "slackUsername": "James Pang"
         }
+      },
+      {
+        "title": "WordPress Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "67",
+          "displayName": "Aathil Ahamed",
+          "githubUsername": "aathil-Mr-ITGuy",
+          "profileImage": "https://avatars0.githubusercontent.com/u/36620321?s=400&u=af0419d3610824677b5f529008f9f87b23623091&v=4",
+          "slackUsername": "ATLIT"
+        }
       }
     ],
     "responsibilities": []
@@ -751,16 +764,29 @@
         }
       },
       {
-        "title": "Marketing Manager",
-        "isLead": true,
+        "title": "Marketing Analyst",
+        "isLead": false,
         "payPerDay": 2800,
-        "createdDate": "2021-01-01T02:14:59.307535Z",
+        "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "64",
-          "displayName": "Chatrasal Singh",
-          "githubUsername": "chatrasal",
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01HR3S3WCS-810bc78e23bd-512",
-          "slackUsername": "Chatrasal Singh"
+          "contributorId": "65",
+          "displayName": "Tristan Spearing",
+          "githubUsername": "tspearing",
+          "profileImage": "https://avatars1.githubusercontent.com/u/77364430?s=460&v=4",
+          "slackUsername": "Tristan Spearing"
+        }
+      },
+      {
+        "title": "Marketing Analyst",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "66",
+          "displayName": "Tomiwa",
+          "githubUsername": "oluwatomiwatemidayo",
+          "profileImage": "https://avatars1.githubusercontent.com/u/72953345?s=400&u=8a7d5931cd7e0041fc6e68683ad25aeb4e7016ce&v=4",
+          "slackUsername": "Tomiwa"
         }
       }
     ],
@@ -1273,7 +1299,7 @@
         "payPerDay": 2800,
         "createdDate": "2021-01-01T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "65",
+          "contributorId": "64",
           "displayName": "Francis Polignano",
           "githubUsername": "franchyze923",
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01DQAFHKE3-aad7fcf8fa5b-512",
