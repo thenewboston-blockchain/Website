@@ -776,6 +776,19 @@
           "profileImage": "https://avatars1.githubusercontent.com/u/72953345?s=400&u=8a7d5931cd7e0041fc6e68683ad25aeb4e7016ce&v=4",
           "slackUsername": "Tomiwa"
         }
+      },
+      {
+        "title": "Blog Writer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "69",
+          "displayName": "Chibuzor Eze-nwosu",
+          "githubUsername": null,
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01G1B4V42D-94d5b325b7d5-512",
+          "slackUsername": "Chibuzor"
+        }
       }
     ],
     "responsibilities": [
