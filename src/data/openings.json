@@ -139,50 +139,6 @@
     ]
   },
   {
-    "openingId": "wordpress-developer",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Bucky or Siddhesh Kulthe - Head Of Marketing"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
-      }
-    ],
-    "category": "Engineering",
-    "description": "Work on developing and designing a WordPress blog for thenewboston.",
-    "payNotes": ["2,800 coins/day"],
-    "position": "WordPress Developer",
-    "reportsTo": [
-      {
-        "githubUsername": "buckyroberts",
-        "name": "Bucky"
-      },
-      {
-        "githubUsername": "iamsid47",
-        "name": "Siddhesh"
-      }
-    ],
-    "responsibilities": [
-      "To develop a vibrant and appreciable WordPress blog",
-      "Create eye-catching headlines and sections for an increased user-engagement",
-      "Optimizing images, writing alt-text for all the images used for the blog",
-      "Giving feedbacks and suggestions for a scope of improvement"
-    ],
-    "technologyRequirements": [
-      "Needs to have a good understanding of WordPress and how things work there",
-      "Required to know how to install plugins and themes and customize images and content to their core",
-      "Required to have a good understanding of keywords, SEO (basic knowledge is accepted), image optimization, alt text, etc.",
-      "Required to know HTML and CSS (Intermediate levels are preferred)"
-    ]
-  },
-  {
     "openingId": "seo-manager",
     "applicationMethods": [
       {
