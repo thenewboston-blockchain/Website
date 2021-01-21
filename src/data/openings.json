@@ -100,48 +100,6 @@
     "technologyRequirements": ["Skilled in Figma", "Skilled in Illustrator"]
   },
   {
-    "openingId": "content-writer",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Pulkit Bajaj & Siddhesh Kulthe - Head Of Marketing"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
-      }
-    ],
-    "category": "Marketing",
-    "description": "Work with our marketing team to create written content for email campaigns and blogs to make awareness about our product.",
-    "payNotes": ["2,800 coins/day"],
-    "position": "Content Writer",
-    "reportsTo": [
-      {
-        "githubUsername": "pulkitbajaj007",
-        "name": "Pulkit"
-      },
-      {
-        "githubUsername": "iamsid47",
-        "name": "Siddhesh"
-      }
-    ],
-    "responsibilities": [
-      "Create written material for our email campaigns",
-      "Produce well-researched content for blogs",
-      "Give feedback on writings"
-    ],
-    "technologyRequirements": [
-      "An understanding of search engine optimization best practices",
-      "Understanding grammar rules and how to construct clear sentences",
-      "Being mindful of things like flow, readability, and sentence variety"
-    ]
-  },
-  {
     "openingId": "senior-dot-net-core-developer",
     "applicationMethods": [
       {
