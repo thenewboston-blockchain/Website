@@ -353,18 +353,6 @@
         "isLead": false,
         "payPerDay": 2800,
         "contributor": {
-          "contributorId": "59",
-          "displayName": "Devansh Gajjar",
-          "githubUsername": "devanshgajjar",
-          "profileImage": "https://avatars2.githubusercontent.com/u/37979044?s=400&u=c451811d1e6c8a9b26bca433aa74d0e789706eba&v=4",
-          "slackUsername": "Devansh Gajjar"
-        }
-      },
-      {
-        "title": "Graphic Designer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "contributor": {
           "contributorId": "60",
           "displayName": "Tolawak Gelana",
           "githubUsername": "toledit",
