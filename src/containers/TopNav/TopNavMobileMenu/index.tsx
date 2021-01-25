@@ -38,16 +38,16 @@ const TopNavMobileMenu = () => {
     return (
       <div className="TopNavMobileMenu__column">
         <button className="TopNavMobileMenu__title-wrapper" onClick={handleColumnTitleClick(section)}>
-          <div className="TopNavMobileMenu__column-title">{title}</div>
+          <span className="TopNavMobileMenu__column-title">{title}</span>
           {smallDevice && (
-            <div className="TopNavMobileMenu__icon-holder">
+            <span className="TopNavMobileMenu__icon-holder">
               <Icon
                 className={clsx('TopNavMobileMenu__chevron-icon', {
                   'TopNavMobileMenu__chevron-icon--open': openSection === section,
                 })}
                 icon={IconType.chevronDown}
               />
-            </div>
+            </span>
           )}
         </button>
 
