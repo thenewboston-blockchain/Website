@@ -1089,6 +1089,58 @@
       "bug_bounty": "FALSE"
     }
   ],
+  "Paul-Taiwo": [
+    {
+      "repository": "Website",
+      "title": "New Contributor - Aathil Ahamed",
+      "issue_id": "1188",
+      "pr_id": "1206",
+      "completed_by": "Paul-Taiwo",
+      "completed_date": "1/17/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor - Tristan Spearing",
+      "issue_id": "1186",
+      "pr_id": "1203",
+      "completed_by": "Paul-Taiwo",
+      "completed_date": "1/17/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor - Tomiwa",
+      "issue_id": "1187",
+      "pr_id": "1202",
+      "completed_by": "Paul-Taiwo",
+      "completed_date": "1/17/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add title on some pages",
+      "issue_id": "626",
+      "pr_id": "654",
+      "completed_by": "Paul-Taiwo",
+      "completed_date": "11/9/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1197",
+      "pr_id": "1211",
+      "completed_by": "Paul-Taiwo",
+      "completed_date": "1/21/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    }
+  ],
   "ProdexOne": [
     {
       "repository": "Website",
@@ -1119,6 +1171,16 @@
       "pr_id": "1140",
       "completed_by": "Rajputusman",
       "completed_date": "12/22/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Job Listing Removal",
+      "issue_id": "1215",
+      "pr_id": "1218",
+      "completed_by": "Rajputusman",
+      "completed_date": "1/21/21",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
     }
@@ -1285,7 +1347,7 @@
     {
       "repository": "Design",
       "title": "Logo designs for apparel/stickers",
-      "issue_id": "94",
+      "issue_id": "92",
       "pr_id": "",
       "completed_by": "Toledit",
       "completed_date": "12/21/20",
@@ -3431,6 +3493,16 @@
       "completed_date": "1/16/21",
       "amount_paid": "500",
       "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Website",
+      "title": "Standardize query param component",
+      "issue_id": "1195",
+      "pr_id": "1196",
+      "completed_by": "jamessspanggg",
+      "completed_date": "1/19/21",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
     }
   ],
   "jonathanlee06": [
@@ -3442,6 +3514,38 @@
       "completed_by": "jonathanlee06",
       "completed_date": "11/11/20",
       "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    }
+  ],
+  "jroberts91": [
+    {
+      "repository": "Website",
+      "title": "[Leaderboard] Mismatch of issue for tasks completed",
+      "issue_id": "1200",
+      "pr_id": "1205",
+      "completed_by": "jroberts91",
+      "completed_date": "1/18/21",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Remove Contributor from Teams page",
+      "issue_id": "1207",
+      "pr_id": "1209",
+      "completed_by": "jroberts91",
+      "completed_date": "1/18/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Left part of TopNav has a undesired white bg color",
+      "issue_id": "1217",
+      "pr_id": "1220",
+      "completed_by": "jroberts91",
+      "completed_date": "1/21/21",
+      "amount_paid": "250",
       "bug_bounty": "FALSE"
     }
   ],
