@@ -1,11 +1,18 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {DocContainer, DocEndpoint, DocList, RequestResponseSnippet, TableParams} from 'components';
+import {
+  DocContainer,
+  DocEndpoint,
+  DocList,
+  QueryParamsOffsetAndLimit,
+  RequestResponseSnippet,
+  TableParams,
+} from 'components';
 
 const BankApiConfirmationBlocks: FC = () => {
   return (
-    <DocContainer className="BankApiConfirmationBlocks" title="Confirmation Blocks" lastUpdated="07 Dec 2020">
+    <DocContainer className="BankApiConfirmationBlocks" title="Confirmation Blocks" lastUpdated="15 Jan 2021">
       <p>
         Confirmation blocks are blocks that have been signed by a validator as confirmation that it has been added to
         their blockchain. The general flow from bank account to confirmation block is as follows:
@@ -25,20 +32,7 @@ const BankApiConfirmationBlocks: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/confirmation_blocks" method="GET" />
-      <TableParams
-        items={[
-          {
-            dataType: 'URL parameter',
-            description: 'If you want to start at a specific point, an offset can be specified.',
-            param: 'offset',
-          },
-          {
-            dataType: 'URL parameter',
-            description: 'Maximum number of block returned by the node. (max: 100)',
-            param: 'limit',
-          },
-        ]}
-      />
+      <QueryParamsOffsetAndLimit returnedEntityName="confirmation blocks" />
       <RequestResponseSnippet
         code={`{
   "count": 1654,

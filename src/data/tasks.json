@@ -111,6 +111,16 @@
       "completed_date": "12/19/20",
       "amount_paid": "1000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "thenewboston-js",
+      "title": "[Task] Create `PrimaryValidator` Documentation",
+      "issue_id": "27",
+      "pr_id": "55",
+      "completed_by": "AbhayAysola",
+      "completed_date": "12/27/20",
+      "amount_paid": "5000",
+      "bug_bounty": "FALSE"
     }
   ],
   "AkbarKamran": [
@@ -503,6 +513,186 @@
       "completed_date": "12/14/20",
       "amount_paid": "1000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Validator",
+      "title": "Write test for class ConfirmationBlockHistory to cover creation of block history",
+      "issue_id": "108",
+      "pr_id": "130",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/18/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Validator",
+      "title": "Write a test for function add_block_to_queue to add block to the queue",
+      "issue_id": "114",
+      "pr_id": "127",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/13/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Validator",
+      "title": "Write a test for function head_block_hash_view() queued_confirmation_blocks_view() and valid_confirmation_blocks_view()",
+      "issue_id": "105",
+      "pr_id": "126",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/13/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Validator",
+      "title": "Write a test for function block_chain_view() and block_queue_view()",
+      "issue_id": "104",
+      "pr_id": "126",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/13/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Validator",
+      "title": "Create a test to create a bank using post method",
+      "issue_id": "102",
+      "pr_id": "126",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/13/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Validator",
+      "title": "Write test for class ConnectionRequestView to cover creation of connection request",
+      "issue_id": "107",
+      "pr_id": "129",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/16/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Validator",
+      "title": "Write a test for class ValidatorViewSet using post method and get method",
+      "issue_id": "106",
+      "pr_id": "127",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/12/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Validator",
+      "title": "Write test to validate primary validator and node type",
+      "issue_id": "109",
+      "pr_id": "129",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/16/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Validator",
+      "title": "Write a test to verify bank creation and confirmation validator creation using connection_requests url",
+      "issue_id": "115",
+      "pr_id": "129",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/16/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Validator",
+      "title": "Write a test to verify the validator's connection to itself should fail with 400 status",
+      "issue_id": "116",
+      "pr_id": "129",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/16/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Validator",
+      "title": "Write a test to verify the validator's connection to the existing bank and validator which should return 400 status",
+      "issue_id": "117",
+      "pr_id": "129",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/16/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Validator",
+      "title": "Write a test to validate existing bank and validator using connection request",
+      "issue_id": "118",
+      "pr_id": "129",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/16/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Validator",
+      "title": "Write a test to validate existing bank and validator using node identifier",
+      "issue_id": "119",
+      "pr_id": "129",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/16/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Validator",
+      "title": "Write a test to cover invalid request from primary identifier from connection request",
+      "issue_id": "120",
+      "pr_id": "129",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/16/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Validator",
+      "title": "Write a test to cover invalid node type from connection requests",
+      "issue_id": "121",
+      "pr_id": "129",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/16/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Validator",
+      "title": "Write a test to verify that primary validator field is required in connect request",
+      "issue_id": "122",
+      "pr_id": "129",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/16/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Update Docs for Bank - Validator Confirmation Services",
+      "issue_id": "959",
+      "pr_id": "1134",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/31/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Update Docs for Primary Validator - Bank Blocks",
+      "issue_id": "963",
+      "pr_id": "1146",
+      "completed_by": "DucPhamTV",
+      "completed_date": "12/31/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
     }
   ],
   "FaiyazMdAbdul": [
@@ -637,6 +827,16 @@
       "completed_date": "12/02/20",
       "amount_paid": "1000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Redux implementation",
+      "issue_id": "1080",
+      "pr_id": "1122",
+      "completed_by": "Hristijan95",
+      "completed_date": "12/28/20",
+      "amount_paid": "10000",
+      "bug_bounty": "FALSE"
     }
   ],
   "IanArb": [
@@ -667,6 +867,46 @@
       "pr_id": "78",
       "completed_by": "IanArb",
       "completed_date": "12/10/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Kotlin-SDK",
+      "title": "Implement GET confirmation services Bank API",
+      "issue_id": "81",
+      "pr_id": "91",
+      "completed_by": "IanArb",
+      "completed_date": "12/19/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Kotlin-SDK",
+      "title": "Implement POST confirmation services Bank API",
+      "issue_id": "82",
+      "pr_id": "99",
+      "completed_by": "IanArb",
+      "completed_date": "12/22/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Kotlin-SDK",
+      "title": "Implement POST upgrade notice Bank API",
+      "issue_id": "83",
+      "pr_id": "100",
+      "completed_by": "IanArb",
+      "completed_date": "12/27/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Kotlin-SDK",
+      "title": "Implement POST connection request Bank API",
+      "issue_id": "80",
+      "pr_id": "106",
+      "completed_by": "IanArb",
+      "completed_date": "12/30/20",
       "amount_paid": "2000",
       "bug_bounty": "FALSE"
     }
@@ -849,6 +1089,58 @@
       "bug_bounty": "FALSE"
     }
   ],
+  "Paul-Taiwo": [
+    {
+      "repository": "Website",
+      "title": "New Contributor - Aathil Ahamed",
+      "issue_id": "1188",
+      "pr_id": "1206",
+      "completed_by": "Paul-Taiwo",
+      "completed_date": "1/17/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor - Tristan Spearing",
+      "issue_id": "1186",
+      "pr_id": "1203",
+      "completed_by": "Paul-Taiwo",
+      "completed_date": "1/17/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor - Tomiwa",
+      "issue_id": "1187",
+      "pr_id": "1202",
+      "completed_by": "Paul-Taiwo",
+      "completed_date": "1/17/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add title on some pages",
+      "issue_id": "626",
+      "pr_id": "654",
+      "completed_by": "Paul-Taiwo",
+      "completed_date": "11/9/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1197",
+      "pr_id": "1211",
+      "completed_by": "Paul-Taiwo",
+      "completed_date": "1/21/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    }
+  ],
   "ProdexOne": [
     {
       "repository": "Website",
@@ -867,6 +1159,28 @@
       "pr_id": "725",
       "completed_by": "ProdexOne",
       "completed_date": "11/12/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    }
+  ],
+  "Rajputusman": [
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1139",
+      "pr_id": "1140",
+      "completed_by": "Rajputusman",
+      "completed_date": "12/22/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Job Listing Removal",
+      "issue_id": "1215",
+      "pr_id": "1218",
+      "completed_by": "Rajputusman",
+      "completed_date": "1/21/21",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
     }
@@ -1028,6 +1342,16 @@
       "completed_by": "Toledit",
       "completed_date": "12/04/20",
       "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "Logo designs for apparel/stickers",
+      "issue_id": "92",
+      "pr_id": "",
+      "completed_by": "Toledit",
+      "completed_date": "12/21/20",
+      "amount_paid": "10000",
       "bug_bounty": "FALSE"
     }
   ],
@@ -1639,6 +1963,16 @@
       "pr_id": "57",
       "completed_by": "amarjeet987",
       "completed_date": "12/03/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Prepare the top navigation for user profile",
+      "issue_id": "1061",
+      "pr_id": "1100",
+      "completed_by": "amarjeet987",
+      "completed_date": "12/31/20",
       "amount_paid": "2000",
       "bug_bounty": "FALSE"
     }
@@ -2332,6 +2666,16 @@
       "completed_by": "dhakal0kushal",
       "completed_date": "12/04/20",
       "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "Coins inspiring meme infographic",
+      "issue_id": "93",
+      "pr_id": "",
+      "completed_by": "dhakal0kushal",
+      "completed_date": "12/20/20",
+      "amount_paid": "1000",
       "bug_bounty": "FALSE"
     }
   ],
@@ -3099,6 +3443,66 @@
       "completed_date": "12/18/20",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Top contributors not showing in README",
+      "issue_id": "1147",
+      "pr_id": "1148",
+      "completed_by": "jamessspanggg",
+      "completed_date": "12/25/20",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Sharing website link with hash param does not snap to correct position",
+      "issue_id": "1127",
+      "pr_id": "1141",
+      "completed_by": "jamessspanggg",
+      "completed_date": "12/22/20",
+      "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Teams Section repository name duplicated",
+      "issue_id": "1174",
+      "pr_id": "1175",
+      "completed_by": "jamessspanggg",
+      "completed_date": "1/4/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Auth forms: unable to click on submit button after filling all inputs correctly",
+      "issue_id": "1168",
+      "pr_id": "1169",
+      "completed_by": "jamessspanggg",
+      "completed_date": "1/16/21",
+      "amount_paid": "1000",
+      "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Website",
+      "title": "[Accessibility] Add `autocomplete` attributes for `type=\"password\"` input fields",
+      "issue_id": "1165",
+      "pr_id": "1167",
+      "completed_by": "jamessspanggg",
+      "completed_date": "1/16/21",
+      "amount_paid": "500",
+      "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Website",
+      "title": "Standardize query param component",
+      "issue_id": "1195",
+      "pr_id": "1196",
+      "completed_by": "jamessspanggg",
+      "completed_date": "1/19/21",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
     }
   ],
   "jonathanlee06": [
@@ -3110,6 +3514,38 @@
       "completed_by": "jonathanlee06",
       "completed_date": "11/11/20",
       "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    }
+  ],
+  "jroberts91": [
+    {
+      "repository": "Website",
+      "title": "[Leaderboard] Mismatch of issue for tasks completed",
+      "issue_id": "1200",
+      "pr_id": "1205",
+      "completed_by": "jroberts91",
+      "completed_date": "1/18/21",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Remove Contributor from Teams page",
+      "issue_id": "1207",
+      "pr_id": "1209",
+      "completed_by": "jroberts91",
+      "completed_date": "1/18/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Left part of TopNav has a undesired white bg color",
+      "issue_id": "1217",
+      "pr_id": "1220",
+      "completed_by": "jroberts91",
+      "completed_date": "1/21/21",
+      "amount_paid": "250",
       "bug_bounty": "FALSE"
     }
   ],
@@ -3404,7 +3840,7 @@
       "issue_id": "232",
       "pr_id": "246",
       "completed_by": "leelatanniru",
-      "completed_date": "9/03/20",
+      "completed_date": "09/03/20",
       "amount_paid": "2500",
       "bug_bounty": ""
     },
@@ -3801,6 +4237,16 @@
       "completed_date": "12/15/20",
       "amount_paid": "1000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "Promoting our Project proposal task",
+      "issue_id": "104",
+      "pr_id": "",
+      "completed_by": "mrbusysky",
+      "completed_date": "12/29/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
     }
   ],
   "mthomas-io": [
@@ -3897,6 +4343,56 @@
       "pr_id": "75",
       "completed_by": "nishp77",
       "completed_date": "12/06/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "thenewboston-js",
+      "title": "Implemented post request for bank blocks under primary-validator \ud83d\ude01\ud83d\ude01",
+      "issue_id": "47",
+      "pr_id": "54",
+      "completed_by": "nishp77",
+      "completed_date": "12/23/20",
+      "amount_paid": "2500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Kotlin-SDK",
+      "title": "Implement POST request for Blocks in Banks API",
+      "issue_id": "62",
+      "pr_id": "90",
+      "completed_by": "nishp77",
+      "completed_date": "12/17/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Kotlin-SDK",
+      "title": "Implement GET request for Clean in Bank API",
+      "issue_id": "94",
+      "pr_id": "103",
+      "completed_by": "nishp77",
+      "completed_date": "12/28/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Kotlin-SDK",
+      "title": "Implement GET request for Crawl in Bank API",
+      "issue_id": "96",
+      "pr_id": "105",
+      "completed_by": "nishp77",
+      "completed_date": "12/29/20",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Kotlin-SDK",
+      "title": "Implement POST request for Clean in Bank API",
+      "issue_id": "95",
+      "pr_id": "104",
+      "completed_by": "nishp77",
+      "completed_date": "12/29/20",
       "amount_paid": "2000",
       "bug_bounty": "FALSE"
     }
@@ -4317,6 +4813,56 @@
       "completed_date": "11/09/20",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Slack link on homepage no longer active",
+      "issue_id": "1152",
+      "pr_id": "1155",
+      "completed_by": "singh-sarabjeet",
+      "completed_date": "12/30/20",
+      "amount_paid": "500",
+      "bug_bounty": "TRUE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1166",
+      "pr_id": "1173",
+      "completed_by": "singh-sarabjeet",
+      "completed_date": "1/6/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1162",
+      "pr_id": "1172",
+      "completed_by": "singh-sarabjeet",
+      "completed_date": "1/5/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Remove Contributor",
+      "issue_id": "1163",
+      "pr_id": "1164",
+      "completed_by": "singh-sarabjeet",
+      "completed_date": "1/4/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add Francis Polignano as a contributer",
+      "issue_id": "1156",
+      "pr_id": "1171",
+      "completed_by": "singh-sarabjeet",
+      "completed_date": "1/11/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
     }
   ],
   "smazydev": [
@@ -4380,6 +4926,16 @@
       "completed_by": "sno2",
       "completed_date": "12/09/20",
       "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "thenewboston-js",
+      "title": "Implement Payment Handler",
+      "issue_id": "51",
+      "pr_id": "50",
+      "completed_by": "sno2",
+      "completed_date": "12/23/20",
+      "amount_paid": "3000",
       "bug_bounty": "FALSE"
     }
   ],
@@ -4579,6 +5135,16 @@
       "completed_date": "12/11/20",
       "amount_paid": "1000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Update the team pages",
+      "issue_id": "1013",
+      "pr_id": "1138",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "12/31/20",
+      "amount_paid": "10000",
+      "bug_bounty": "FALSE"
     }
   ],
   "tomijaga": [
@@ -4590,6 +5156,16 @@
       "completed_by": "tomijaga",
       "completed_date": "12/15/20",
       "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Kotlin-SDK",
+      "title": "Replace all uses of BankTrustResponse with Bank",
+      "issue_id": "79",
+      "pr_id": "89",
+      "completed_by": "tomijaga",
+      "completed_date": "12/17/20",
+      "amount_paid": "1000",
       "bug_bounty": "FALSE"
     }
   ],
@@ -4698,6 +5274,18 @@
       "completed_by": "virtualdesigner",
       "completed_date": "11/09/20",
       "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    }
+  ],
+  "wajeehmisbahkhan": [
+    {
+      "repository": "Website",
+      "title": "Update Docs for Confirmation Validator - Primary Validator Updated",
+      "issue_id": "975",
+      "pr_id": "1150",
+      "completed_by": "wajeehmisbahkhan",
+      "completed_date": "12/31/20",
+      "amount_paid": "1000",
       "bug_bounty": "FALSE"
     }
   ],

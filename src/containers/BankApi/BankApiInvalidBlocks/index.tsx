@@ -1,11 +1,11 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
+import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSnippet, TableParams} from 'components';
 
 const BankApiInvalidBlocks: FC = () => {
   return (
-    <DocContainer className="BankApiInvalidBlocks" title="Invalid Blocks" lastUpdated="07 Dec 2020">
+    <DocContainer className="BankApiInvalidBlocks" title="Invalid Blocks" lastUpdated="15 Jan 2021">
       <p>
         Invalid blocks are blocks sent from confirmation validators to their banks as an indication that a block that
         had been received from the primary validator was unable to be validated. This may be due to improper formatting,
@@ -23,20 +23,7 @@ const BankApiInvalidBlocks: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/invalid_blocks" method="GET" />
-      <TableParams
-        items={[
-          {
-            dataType: 'URL parameter',
-            description: 'If you want to start at a specific point, an offset can be specified.',
-            param: 'offset',
-          },
-          {
-            dataType: 'URL parameter',
-            description: 'Maximum number of block returned by the node. (max: 100)',
-            param: 'limit',
-          },
-        ]}
-      />
+      <QueryParamsOffsetAndLimit returnedEntityName="invalid blocks" />
       <RequestResponseSnippet
         code={`{
   "count": 234,

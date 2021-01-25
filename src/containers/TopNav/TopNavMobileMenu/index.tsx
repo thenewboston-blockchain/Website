@@ -111,7 +111,6 @@ const TopNavMobileMenu = () => {
               {renderMobileLink('Project Proposals', '/project-proposals/overview')}
               {renderMobileLink('Assets', '/assets')}
               {renderMobileLink('FAQ', '/faq')}
-              {renderMobileLink('WebMap', '/webmap')}
               {renderMobileLink('Donate', '/donate')}
             </>,
           )}
