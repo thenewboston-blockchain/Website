@@ -1,30 +1,17 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
+import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSnippet, TableParams} from 'components';
 
 const PrimaryValidatorApiAccounts: FC = () => {
   return (
-    <DocContainer className="PrimaryValidatorApiAccounts" title="Accounts" lastUpdated="07 Dec 2020">
+    <DocContainer className="PrimaryValidatorApiAccounts" title="Accounts" lastUpdated="15 Jan 2021">
       <p>
         The primary validator will maintain the account numbers, balances, and balance locks for all accounts on the
         network. New accounts are created as needed when funds are first sent.
       </p>
 
       <DocEndpoint endpoint="/accounts" method="GET" />
-      <TableParams
-        items={[
-          {
-            dataType: 'URL parameter',
-            description: 'If you want to start at a specific point, an offset can be specified.',
-            param: 'offset',
-          },
-          {
-            dataType: 'URL parameter',
-            description: 'Number of returned accounts per request starting from the offset',
-            param: 'limit',
-          },
-        ]}
-      />
+      <QueryParamsOffsetAndLimit returnedEntityName="accounts" />
       <RequestResponseSnippet
         code={`{
   "count": 345,

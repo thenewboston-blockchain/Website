@@ -1,10 +1,10 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
+import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSnippet} from 'components';
 
 const BankApiBankTransactions: FC = () => {
   return (
-    <DocContainer className="BankApiBankTransactions" title="Bank Transactions" lastUpdated="07 Dec 2020">
+    <DocContainer className="BankApiBankTransactions" title="Bank Transactions" lastUpdated="15 Jan 2021">
       <p>
         Bank transactions represent a single transaction within a block. They reference both the recipient account and
         the parent block. Bank transactions are stored separate from the block due to the fact that when viewing an
@@ -14,20 +14,7 @@ const BankApiBankTransactions: FC = () => {
       <p>Bank transactions are created automatically by the bank during block processing.</p>
 
       <DocEndpoint endpoint="/bank_transactions" method="GET" />
-      <TableParams
-        items={[
-          {
-            dataType: 'URL parameter',
-            description: 'You can specify an offset, If you want to start at a some specific point.',
-            param: 'offset',
-          },
-          {
-            dataType: 'URL parameter',
-            description: 'Maximum number of bank transaction returned by the node, (max: 100).',
-            param: 'limit',
-          },
-        ]}
-      />
+      <QueryParamsOffsetAndLimit returnedEntityName="bank transactions" />
       <RequestResponseSnippet
         code={`{
   "count": 2116,

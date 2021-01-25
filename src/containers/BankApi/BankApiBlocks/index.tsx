@@ -1,11 +1,11 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
+import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSnippet, TableParams} from 'components';
 
 const BankApiBlocks: FC = () => {
   return (
-    <DocContainer className="BankApiBlocks" title="Blocks" lastUpdated="07 Dec 2020">
+    <DocContainer className="BankApiBlocks" title="Blocks" lastUpdated="15 Jan 2021">
       <p>
         A block is a group of one or more transactions. There are often multiple transactions (usually fees) to
         different recipients within a single block.
@@ -16,20 +16,7 @@ const BankApiBlocks: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/blocks" method="GET" />
-      <TableParams
-        items={[
-          {
-            dataType: 'URL parameter',
-            description: 'If you want to start at a specific point, an offset can be specified.',
-            param: 'offset',
-          },
-          {
-            dataType: 'URL parameter',
-            description: 'Maximum number of block returned by the node. (max: 100)',
-            param: 'limit',
-          },
-        ]}
-      />
+      <QueryParamsOffsetAndLimit returnedEntityName="blocks" />
       <RequestResponseSnippet
         code={`{
   "count": 805,
