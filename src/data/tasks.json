@@ -135,6 +135,18 @@
       "bug_bounty": "FALSE"
     }
   ],
+  "AkinAguda": [
+    {
+      "repository": "Website",
+      "title": "Mobile drop down icon not clickable",
+      "issue_id": "1179",
+      "pr_id": "1190",
+      "completed_by": "AkinAguda",
+      "completed_date": "1/26/21",
+      "amount_paid": "1000",
+      "bug_bounty": "TRUE"
+    }
+  ],
   "Akshit1311": [
     {
       "repository": "Website",
@@ -1181,6 +1193,16 @@
       "pr_id": "1218",
       "completed_by": "Rajputusman",
       "completed_date": "1/21/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Remove Contributor",
+      "issue_id": "1221",
+      "pr_id": "1222",
+      "completed_by": "Rajputusman",
+      "completed_date": "1/25/21",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
     }
@@ -4395,6 +4417,16 @@
       "completed_date": "12/29/20",
       "amount_paid": "2000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Kotlin-SDK",
+      "title": "Implement POST request for Crawl in Bank API",
+      "issue_id": "97",
+      "pr_id": "109",
+      "completed_by": "nishp77",
+      "completed_date": "1/3/21",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
     }
   ],
   "nparoski": [
@@ -5166,6 +5198,26 @@
       "completed_by": "tomijaga",
       "completed_date": "12/17/20",
       "amount_paid": "1000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Kotlin-SDK",
+      "title": "Implement Pagination for GET endpoints in Bank API",
+      "issue_id": "98",
+      "pr_id": "111",
+      "completed_by": "tomijaga",
+      "completed_date": "1/9/21",
+      "amount_paid": "5000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Kotlin-SDK",
+      "title": "Implement GET request for Config in Primary Validator API",
+      "issue_id": "117",
+      "pr_id": "121",
+      "completed_by": "tomijaga",
+      "completed_date": "1/25/21",
+      "amount_paid": "2000",
       "bug_bounty": "FALSE"
     }
   ],

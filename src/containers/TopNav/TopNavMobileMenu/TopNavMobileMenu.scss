@@ -37,6 +37,16 @@ $top-nav-height: 60px;
     display: block;
   }
 
+  &__title-wrapper {
+    align-items: center;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    outline: none;
+    padding: unset;
+  }
+
   &__button {
     background: transparent;
     border: none;
@@ -69,6 +79,7 @@ $top-nav-height: 60px;
         margin-right: 0;
       }
     }
+    margin-bottom: 24px;
   }
 
   &__column-title {
@@ -76,7 +87,6 @@ $top-nav-height: 60px;
     border: 0;
     color: var(--color-sail-gray-300);
     cursor: pointer;
-    margin-bottom: 24px;
     outline: none;
     padding: 0;
   }
@@ -104,7 +114,6 @@ $top-nav-height: 60px;
 
   &__icon-holder {
     display: inline-block;
-    position: absolute;
   }
 
   &__link {
@@ -113,16 +122,12 @@ $top-nav-height: 60px;
     color: var(--color-primary);
     display: block;
     line-height: 1;
-    margin-bottom: 24px;
+    margin-top: 24px;
     padding: 0;
     text-align: unset;
 
     &:hover {
       text-decoration: underline;
-    }
-
-    @media (max-width: 992px) {
-      margin-bottom: 24px;
     }
   }
 
