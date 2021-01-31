@@ -844,6 +844,19 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EDKBT8LA-a17fa362a21e-512",
           "slackUsername": "Ananda"
         }  
+      },
+      {
+        "title": "Graphic Designer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "71",
+          "displayName": "Ramadhani Khamisi",
+          "githubUsername": "swaiba43",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01HRTHAG3X-236b30d5fb15-512",
+          "slackUsername": "swaiba43"
+        }
       }
     ],
     "responsibilities": [
