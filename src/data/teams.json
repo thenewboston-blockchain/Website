@@ -234,19 +234,6 @@
         }
       },
       {
-        "title": "Community Manager",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "6",
-          "displayName": "Miss ChrishaPh",
-          "githubUsername": "MsChrishaph",
-          "profileImage": "https://avatars3.githubusercontent.com/u/74167226?s=460&u=03945a9e2040664fe6f8d05baf22f6b43d3e866c&v=4",
-          "slackUsername": "MsChrishaPh"
-        }
-      },
-      {
         "title": "Slack Manager",
         "isLead": true,
         "payPerDay": 2800,
@@ -778,6 +765,19 @@
           "githubUsername": "iamsid47",
           "profileImage": "https://avatars1.githubusercontent.com/u/55309498?s=460&u=5735170037f5398148b87115ee9c9e7df574b7b1&v=4",
           "slackUsername": "Siddhesh Kulthe"
+        }
+      },     
+      {
+        "title": "Head of Marketing",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "6",
+          "displayName": "MsChrishaph",
+          "githubUsername": "Chrisha1212",
+          "profileImage": "https://avatars.githubusercontent.com/u/72809444?s=460&u=e2138725222fb09a546d7d1e164cf64f5583648b&v=4",
+          "slackUsername": "MsChrishaph"
         }
       },
       {
