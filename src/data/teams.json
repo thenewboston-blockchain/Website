@@ -1084,6 +1084,19 @@
           "profileImage": "https://avatars2.githubusercontent.com/u/59204822?s=460&v=4",
           "slackUsername": "Snehal Ingale"
         }
+      },
+      {
+        "title": "QA",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2021-26-01T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "70",
+          "displayName": "Aadhar",
+          "githubUsername": "aadhar54",
+          "profileImage": "https://avatars.githubusercontent.com/u/36945867?s=400&u=310f332de0d260790224937869d0922513b0c319&v=4",
+          "slackUsername": "Aadhar"
+        }
       }
     ],
     "responsibilities": []
