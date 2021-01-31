@@ -155,6 +155,60 @@
     "responsibilities": []
   },
   {
+    "title": "Communications",
+    "description": "Communicating with each team to receive weekly updates identifying progress, opportunities, hardships, etc.",
+    "platforms": [
+      {
+        "name": "github",
+        "label": "Communications",
+        "link": "https://github.com/thenewboston-developers/Communications"
+      },
+      {
+        "name": "slack",
+        "label": "communications",
+        "link": ""
+      }
+    ],
+    "contributors": [
+      {
+        "title": "Chief Communications Officer",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "900",
+          "displayName": "Jesus Avina",
+          "githubUsername": "javina89",
+          "profileImage": "https://avatars.githubusercontent.com/u/13725042?s=460&u=ea84af4231fdf89f8454b485de5ee3df49321621&v=4",
+          "slackUsername": "Chuy"
+        }
+      },
+      {
+        "title": "Director of Communications",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "901",
+          "displayName": "Taylor M",
+          "githubUsername": "tmcninch",
+          "profileImage": "https://avatars.githubusercontent.com/u/78127708?s=460&v=4",
+          "slackUsername": "Taylor M"
+        }
+      }
+    ],
+    "responsibilities": [
+      {
+        "item": "Receive weekly status updates from each team",
+        "subitems": []
+      },
+      {
+        "item": "Create reports",
+        "subitems": []
+      }
+    ]
+  },
+  {
     "title": "Community",
     "description": "Liaising with job applicants and team leads. Choosing the right job applicants and sending it to team leaders base on departments for further scrutiny. We create the strategy, oversee the overall TNB product, create standards, and improve cross-collab between teams.",
     "platforms": [
