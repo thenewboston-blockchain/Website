@@ -831,6 +831,19 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01G1B4V42D-94d5b325b7d5-512",
           "slackUsername": "Chibuzor"
         }
+      },
+      {
+        "title": "Marketing Analysis",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "74",
+          "displayName": "GYulian",
+          "githubUsername": "Grapelounge",
+          "profileImage": "https://avatars.githubusercontent.com/u/38263524?s=460&u=b49e5b4f427d570e965069af7a3c04f57fd75179&v=4",
+          "slackUsername": "GYulian"
+        }    
       }
     ],
     "responsibilities": [
