@@ -831,6 +831,19 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01G1B4V42D-94d5b325b7d5-512",
           "slackUsername": "Chibuzor"
         }
+      },
+      {
+        "title": "Graphic Designer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "72",
+          "displayName": "Ramadhani Khamisi",
+          "githubUsername": "swaiba43",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01HRTHAG3X-236b30d5fb15-512",
+          "slackUsername": "swaiba43"
+        }
       }
     ],
     "responsibilities": [
