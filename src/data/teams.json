@@ -831,6 +831,19 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01G1B4V42D-94d5b325b7d5-512",
           "slackUsername": "Chibuzor"
         }
+      },
+      {
+        "title": "Marketing Analysis",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "73",
+          "displayName": "John Midas",
+          "githubUsername": "Jonmidas",
+          "profileImage": "https://avatars.githubusercontent.com/u/77834804?s=460&u=87070024df150d1bb1697438e6546911808ecf8f&v=4",
+          "slackUsername": "John Midas"
+        }  
       }
     ],
     "responsibilities": [
