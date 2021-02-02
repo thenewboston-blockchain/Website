@@ -51,8 +51,8 @@ const CreateAccount: FC = () => {
       </Form>
     ) : (
       <p>
-        Our email verification system is still in development. Please contact Bucky on Slack to manually verify your
-        email.
+        Our email verification system is still in development. When this feature is implemented you will receive an
+        email confirming your registration.
       </p>
     );
   };
