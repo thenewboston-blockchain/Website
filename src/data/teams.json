@@ -234,19 +234,6 @@
         }
       },
       {
-        "title": "Community Manager",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "6",
-          "displayName": "Miss ChrishaPh",
-          "githubUsername": "MsChrishaph",
-          "profileImage": "https://avatars3.githubusercontent.com/u/74167226?s=460&u=03945a9e2040664fe6f8d05baf22f6b43d3e866c&v=4",
-          "slackUsername": "MsChrishaPh"
-        }
-      },
-      {
         "title": "Slack Manager",
         "isLead": true,
         "payPerDay": 2800,
@@ -781,6 +768,19 @@
         }
       },
       {
+        "title": "Head of Marketing",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "6",
+          "displayName": "MsChrishaph",
+          "githubUsername": "Chrisha1212",
+          "profileImage": "https://avatars.githubusercontent.com/u/72809444?s=460&u=e2138725222fb09a546d7d1e164cf64f5583648b&v=4",
+          "slackUsername": "MsChrishaph"
+        }
+      },
+      {
         "title": "Blog Project Manager",
         "isLead": true,
         "payPerDay": 2800,
@@ -830,6 +830,19 @@
           "githubUsername": null,
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01G1B4V42D-94d5b325b7d5-512",
           "slackUsername": "Chibuzor"
+        }
+      },
+      {
+        "title": "Meme Designer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "71",
+          "displayName": "Ananda",
+          "githubUsername": "dhakalananda",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EDKBT8LA-a17fa362a21e-512",
+          "slackUsername": "Ananda"
         }
       }
     ],
@@ -1083,6 +1096,19 @@
           "githubUsername": "webdeveloperswj",
           "profileImage": "https://avatars2.githubusercontent.com/u/59204822?s=460&v=4",
           "slackUsername": "Snehal Ingale"
+        }
+      },
+      {
+        "title": "QA",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2021-26-01T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "70",
+          "displayName": "Aadhar",
+          "githubUsername": "aadhar54",
+          "profileImage": "https://avatars.githubusercontent.com/u/36945867?s=400&u=310f332de0d260790224937869d0922513b0c319&v=4",
+          "slackUsername": "Aadhar"
         }
       }
     ],
