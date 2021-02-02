@@ -99,6 +99,7 @@ const HelloWorld: {[isoLangCode: string]: string} = {
   uk: 'Привіт Світе',
   ur: 'ہیلو ورلڈ',
   uz: 'Salom Dunyo',
+  ve: 'Ria Vusa Lifhasi',
   vi: 'Xin chào thế giới',
   wo: 'Salaam aleekum Àdduna',
   xh: 'Molo Lizwe',
