@@ -1,0 +1,28 @@
+.TopNavPopoverButton {
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: var(--color-sail-gray-500);
+  cursor: pointer;
+  display: flex;
+  font-weight: 700;
+  justify-content: center;
+  outline: none;
+  transition: color 0.1s ease;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+
+  &--active {
+    color: var(--color-primary);
+  }
+
+  &__Popover {
+    padding: 18px;
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+}

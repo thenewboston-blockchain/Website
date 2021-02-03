@@ -1,0 +1,32 @@
+.TeamsTabs {
+  margin-bottom: 30px;
+
+  &__tab {
+    border: 3px solid transparent;
+    color: var(--color-sail-gray-500);
+    cursor: pointer;
+    font-size: var(--font-size-medium);
+    outline: none;
+    padding-bottom: 9px;
+
+    &:hover {
+      border-bottom-color: var(--color-sail-gray-500);
+    }
+
+    &:not(:last-child) {
+      margin-right: 36px;
+    }
+
+    &--active {
+      border-bottom-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+  }
+
+  &__tabs-container {
+    border-bottom: 1px solid var(--color-sail-gray-100);
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+  }
+}
