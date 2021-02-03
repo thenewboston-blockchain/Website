@@ -1,11 +1,11 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
+import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSnippet, TableParams} from 'components';
 
 const BankApiBanks: FC = () => {
   return (
-    <DocContainer className="BankApiBanks" title="Banks" lastUpdated="07 Dec 2020">
+    <DocContainer className="BankApiBanks" title="Banks" lastUpdated="15 Jan 2021">
       <p>
         All banks have the option of connecting to other banks. Although it is not a requirement, it is often useful for
         a bank to inspect the trust levels assigned by other banks. This data is used primarily in determining which
@@ -17,20 +17,7 @@ const BankApiBanks: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/banks?limit=2&offset=4" method="GET" />
-      <TableParams
-        items={[
-          {
-            dataType: 'URL parameter',
-            description: 'specific point in banks list will be returned.',
-            param: 'offset',
-          },
-          {
-            dataType: 'URL parameter',
-            description: 'Maximum number of banks returned by the node.',
-            param: 'limit',
-          },
-        ]}
-      />
+      <QueryParamsOffsetAndLimit returnedEntityName="banks" />
       <RequestResponseSnippet
         code={`{
   "count": 17,

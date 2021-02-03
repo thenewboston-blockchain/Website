@@ -5,6 +5,7 @@ import {getCustomClassNames} from 'utils/components';
 import './Input.scss';
 
 export interface BaseInputProps {
+  autoComplete?: 'email' | 'current-password' | 'new-password';
   className?: string;
   disabled?: boolean;
   error?: boolean;
@@ -13,11 +14,12 @@ export interface BaseInputProps {
   onBlur?(e: FocusEvent<HTMLInputElement>): void;
   onChange?(e: ChangeEvent<HTMLInputElement>): void;
   placeholder?: string;
-  type?: 'text' | 'number';
+  type?: 'number' | 'password' | 'text';
   value: string;
 }
 
 const Input: FC<BaseInputProps> = ({
+  autoComplete,
   className,
   disabled = false,
   error = false,
@@ -39,6 +41,7 @@ const Input: FC<BaseInputProps> = ({
 
   return (
     <input
+      autoComplete={autoComplete}
       className={clsx('Input', className, {
         'Input--error': error,
         ...getCustomClassNames(className, '--error', error),

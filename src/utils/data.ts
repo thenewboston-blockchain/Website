@@ -3,16 +3,12 @@ import {TEAMS} from 'constants/teams';
 import {Contributor, RawTask, Task, TaskDict} from 'types/github';
 import {Opening} from 'types/openings';
 import {NavOption} from 'types/option';
-import {TeamMember} from 'types/teams';
+import {TeamMember, TeamName, TeamPlatform, TeamResponsibility} from 'types/teams';
 
 import contributors from 'data/contributors.json';
 import openings from 'data/openings.json';
 import tasks from 'data/tasks.json';
 import teams from 'data/teams.json';
-
-export const getContributorByGithubUsername = (github_username: string): Contributor | undefined => {
-  return contributors.find((contributor) => contributor.github_username === github_username);
-};
 
 export const getContributors = (): Contributor[] => {
   return contributors;
@@ -110,6 +106,16 @@ export const getTeamMembers = (): TeamMember[] => {
   return Object.entries(members)
     .sort(([, a]: [string, any], [, b]: [string, any]) => a.contributorId - b.contributorId)
     .map(([, member]) => member) as TeamMember[];
+};
+
+export const getTeamData = (
+  teamTitle: TeamName,
+): {description: string; platforms: TeamPlatform[]; responsibilities: TeamResponsibility[]} => {
+  const team = teams.find(({title}) => title === teamTitle);
+  if (team) {
+    return {description: team.description, platforms: team.platforms, responsibilities: team.responsibilities};
+  }
+  return {description: '', platforms: [], responsibilities: []};
 };
 
 export const getTeamPathname = (teamTitle: string): string => {

@@ -1,0 +1,17 @@
+.TopNavLogo {
+  align-items: center;
+  background-color: transparent;
+  border-right: none;
+  display: flex;
+  margin-left: 24px;
+  padding: 8px 0;
+
+  &__img {
+    height: 30px;
+    margin-right: 6px;
+  }
+
+  @media (max-width: 1200px) {
+    margin-left: 12px;
+  }
+}

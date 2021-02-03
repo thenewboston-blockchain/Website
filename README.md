@@ -76,13 +76,13 @@ Join the community to stay updated on the most recent developments, project road
 completely unrelated topics.
 
 - [thenewboston.com](https://thenewboston.com/)
-- [Slack](https://join.slack.com/t/thenewboston/shared_invite/zt-j7j4ie92-ADy7GL3KAzCwSlaAVoDKLw)
+- [Slack](https://join.slack.com/t/thenewboston/shared_invite/zt-lldpqdle-l9lvBI7PbZD_uDJegmk3xA)
 - [Reddit](https://www.reddit.com/r/thenewboston/)
 - [LinkedIn](https://www.linkedin.com/company/thenewboston-developers/)
 - [Facebook](https://www.facebook.com/TheNewBoston-464114846956315/)
 - [Twitter](https://twitter.com/bucky_roberts)
 - [YouTube](https://www.youtube.com/user/thenewboston)
-- [Discord](https://discord.gg/fdj2EMvSYx)
+- [Discord](https://discord.gg/thenewboston)
 
 ## Donate
 

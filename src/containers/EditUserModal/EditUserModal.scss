@@ -1,0 +1,20 @@
+.EditUserModal {
+  &__content {
+    background-color: #f7fafc;
+    padding: 18px;
+  }
+
+  &__footer {
+    background-color: white;
+    padding: 18px;
+  }
+
+  &__header {
+    background-color: white;
+    padding: 18px;
+  }
+
+  &__radio-container {
+    margin-bottom: 24px;
+  }
+}

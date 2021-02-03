@@ -6,10 +6,9 @@ import noop from 'lodash/noop';
 import {Form, FormButton, FormButtonProps} from 'components/FormComponents';
 import Icon, {IconType} from 'components/Icon';
 import Loader from 'components/FormElements/Loader';
+import {GenericFormValues} from 'types/forms';
+import {GenericFunction} from 'types/generic';
 import {getCustomClassNames} from 'utils/components';
-
-import {GenericFormValues} from '../../types/forms';
-import {GenericFunction} from '../../types/generic';
 
 import './Modal.scss';
 
@@ -21,10 +20,6 @@ interface ComponentProps {
   cancelButton?: ModalButtonProps | string;
   className?: string;
   close(): void;
-  disableOverlayClick?: boolean;
-  displayCancelButton?: boolean;
-  displayCloseButton?: boolean;
-  displaySubmitButton?: boolean;
   footer?: ReactNode;
   header?: ReactNode;
   ignoreDirty?: boolean;
@@ -41,12 +36,8 @@ const Modal: FC<ComponentProps> = ({
   children,
   className,
   close,
-  disableOverlayClick = false,
-  displayCancelButton = true,
-  displaySubmitButton = true,
   footer,
   header,
-  displayCloseButton = true,
   ignoreDirty: ignoreDirtyProps = false,
   initialValues = {},
   onSubmit,
@@ -108,38 +99,34 @@ const Modal: FC<ComponentProps> = ({
   const renderDefaultFooter = (): ReactNode => {
     return (
       <>
-        {displayCancelButton && (
-          <FormButton
-            className={clsx('Modal__default-cancel', cancelProps.className, {
-              ...getCustomClassNames(className, '__default-cancel', true),
-            })}
-            color={cancelProps.color}
-            disabled={cancelProps.disabled}
-            ignoreDirty={cancelProps.ignoreDirty}
-            onClick={cancelProps.onClick}
-            submitting={cancelProps.submitting}
-            type={cancelProps.type}
-            variant={cancelProps.variant}
-          >
-            {cancelProps.content}
-          </FormButton>
-        )}
-        {displaySubmitButton && (
-          <FormButton
-            className={clsx('Modal__default-submit', submitProps.className, {
-              ...getCustomClassNames(className, '__default-submit', true),
-            })}
-            color={submitProps.color}
-            disabled={submitProps.disabled}
-            ignoreDirty={submitProps.ignoreDirty}
-            onClick={submitProps.onClick}
-            submitting={submitProps.submitting}
-            type={submitProps.type}
-            variant={submitProps.variant}
-          >
-            {submitting ? <Loader /> : submitProps.content}
-          </FormButton>
-        )}
+        <FormButton
+          className={clsx('Modal__default-cancel', cancelProps.className, {
+            ...getCustomClassNames(className, '__default-cancel', true),
+          })}
+          color={cancelProps.color}
+          disabled={cancelProps.disabled}
+          ignoreDirty={cancelProps.ignoreDirty}
+          onClick={cancelProps.onClick}
+          submitting={cancelProps.submitting}
+          type={cancelProps.type}
+          variant={cancelProps.variant}
+        >
+          {cancelProps.content}
+        </FormButton>
+        <FormButton
+          className={clsx('Modal__default-submit', submitProps.className, {
+            ...getCustomClassNames(className, '__default-submit', true),
+          })}
+          color={submitProps.color}
+          disabled={submitProps.disabled}
+          ignoreDirty={submitProps.ignoreDirty}
+          onClick={submitProps.onClick}
+          submitting={submitProps.submitting}
+          type={submitProps.type}
+          variant={submitProps.variant}
+        >
+          {submitting ? <Loader /> : submitProps.content}
+        </FormButton>
       </>
     );
   };
@@ -147,35 +134,31 @@ const Modal: FC<ComponentProps> = ({
   const renderResponsiveHeader = (): ReactNode => {
     return (
       <>
-        {displayCloseButton && (
-          <Icon
-            className={clsx('Modal__close-icon', {
-              'Modal__close-icon--submitting': submitting,
-              ...getCustomClassNames(className, '__close-icon', true),
-              ...getCustomClassNames(className, '__close-icon--submitting', submitting),
-            })}
-            disabled={submitting}
-            icon={IconType.close}
-            onClick={close}
-          />
-        )}
+        <Icon
+          className={clsx('Modal__close-icon', {
+            'Modal__close-icon--submitting': submitting,
+            ...getCustomClassNames(className, '__close-icon', true),
+            ...getCustomClassNames(className, '__close-icon--submitting', submitting),
+          })}
+          disabled={submitting}
+          icon={IconType.close}
+          onClick={close}
+        />
         {typeof header === 'string' ? <h2>{header}</h2> : header}
-        {displaySubmitButton && (
-          <FormButton
-            className={clsx('Modal__default-submit', submitProps.className, {
-              ...getCustomClassNames(className, '__default-submit', true),
-            })}
-            color={submitProps.color}
-            disabled={submitProps.disabled}
-            ignoreDirty={submitProps.ignoreDirty}
-            onClick={submitProps.onClick}
-            submitting={submitProps.submitting}
-            type={submitProps.type}
-            variant={submitProps.variant}
-          >
-            {submitting ? <Loader /> : submitProps.content}
-          </FormButton>
-        )}
+        <FormButton
+          className={clsx('Modal__default-submit', submitProps.className, {
+            ...getCustomClassNames(className, '__default-submit', true),
+          })}
+          color={submitProps.color}
+          disabled={submitProps.disabled}
+          ignoreDirty={submitProps.ignoreDirty}
+          onClick={submitProps.onClick}
+          submitting={submitProps.submitting}
+          type={submitProps.type}
+          variant={submitProps.variant}
+        >
+          {submitting ? <Loader /> : submitProps.content}
+        </FormButton>
       </>
     );
   };
@@ -189,7 +172,7 @@ const Modal: FC<ComponentProps> = ({
           ...getCustomClassNames(className, '__overlay', true),
           ...getCustomClassNames(className, '__overlay--submitting', submitting),
         })}
-        onClick={submitting || disableOverlayClick ? noop : close}
+        onClick={submitting ? noop : close}
       />
       <div
         className={clsx(
@@ -201,18 +184,16 @@ const Modal: FC<ComponentProps> = ({
       >
         <div className={clsx('Modal__header', {...getCustomClassNames(className, '__header', true)})}>
           {typeof header === 'string' ? <h2>{header}</h2> : header}
-          {displayCloseButton && (
-            <Icon
-              className={clsx('Modal__close-icon', {
-                'Modal__close-icon--submitting': submitting,
-                ...getCustomClassNames(className, '__close-icon', true),
-                ...getCustomClassNames(className, '__close-icon--submitting', submitting),
-              })}
-              disabled={submitting}
-              icon={IconType.close}
-              onClick={close}
-            />
-          )}
+          <Icon
+            className={clsx('Modal__close-icon', {
+              'Modal__close-icon--submitting': submitting,
+              ...getCustomClassNames(className, '__close-icon', true),
+              ...getCustomClassNames(className, '__close-icon--submitting', submitting),
+            })}
+            disabled={submitting}
+            icon={IconType.close}
+            onClick={close}
+          />
         </div>
         <Form initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
           <div className={clsx('Modal__header_mobile', {...getCustomClassNames(className, '__header_mobile', true)})}>

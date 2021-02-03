@@ -1,0 +1,24 @@
+$dropdown-height: 316px;
+$mobile-dropdown-height: 1000px;
+$top-nav-height: 60px;
+
+.TopNav {
+  align-items: center;
+  display: flex;
+  height: $top-nav-height;
+  justify-content: space-between;
+
+  &__left {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    height: $top-nav-height;
+    position: relative;
+    z-index: 3;
+  }
+
+  &__right {
+    align-items: center;
+    display: flex;
+  }
+}

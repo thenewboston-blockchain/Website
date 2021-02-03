@@ -1,6 +1,19 @@
 [
   {
     "title": ".NET Core",
+    "description": "Build and maintain a a .NET Core SDK for thenewboston.",
+    "platforms": [
+      {
+        "name": "github",
+        "label": "dotnetcore-sdk",
+        "link": "https://github.com/thenewboston-developers/dotnetcore-sdk"
+      },
+      {
+        "name": "slack",
+        "label": "dotnetcore-sdk",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Software Developer",
@@ -15,10 +28,24 @@
           "slackUsername": "Mircea Teodor Oprea"
         }
       }
-    ]
+    ],
+    "responsibilities": []
   },
   {
     "title": "Back-End Developers",
+    "description": "Build and maintain the APIs related to the website and the digital currency network.",
+    "platforms": [
+      {
+        "name": "github",
+        "label": "thenewboston-python",
+        "link": "https://github.com/thenewboston-developers/thenewboston-python"
+      },
+      {
+        "name": "slack",
+        "label": "back-end",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Back-End Lead",
@@ -124,10 +151,74 @@
           "slackUsername": "yashovardhansingh"
         }
       }
+    ],
+    "responsibilities": []
+  },
+  {
+    "title": "Communications",
+    "description": "Communicating with each team to receive weekly updates identifying progress, opportunities, hardships, etc.",
+    "platforms": [
+      {
+        "name": "github",
+        "label": "Communications",
+        "link": "https://github.com/thenewboston-developers/Communications"
+      },
+      {
+        "name": "slack",
+        "label": "communications",
+        "link": ""
+      }
+    ],
+    "contributors": [
+      {
+        "title": "Chief Communications Officer",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "900",
+          "displayName": "Jesus Avina",
+          "githubUsername": "javina89",
+          "profileImage": "https://avatars.githubusercontent.com/u/13725042?s=460&u=ea84af4231fdf89f8454b485de5ee3df49321621&v=4",
+          "slackUsername": "Chuy"
+        }
+      },
+      {
+        "title": "Director of Communications",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "901",
+          "displayName": "Taylor M",
+          "githubUsername": "tmcninch",
+          "profileImage": "https://avatars.githubusercontent.com/u/78127708?s=460&v=4",
+          "slackUsername": "Taylor M"
+        }
+      }
+    ],
+    "responsibilities": [
+      {
+        "item": "Receive weekly status updates from each team",
+        "subitems": []
+      },
+      {
+        "item": "Create reports",
+        "subitems": []
+      }
     ]
   },
   {
     "title": "Community",
+    "description": "Liaising with job applicants and team leads. Choosing the right job applicants and sending it to team leaders base on departments for further scrutiny. We create the strategy, oversee the overall TNB product, create standards, and improve cross-collab between teams.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "general",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Head of Community",
@@ -140,19 +231,6 @@
           "githubUsername": "buckyroberts",
           "profileImage": "https://avatars2.githubusercontent.com/u/8547538?s=460&u=8a4be84ff4870a332fe94c11fca02b432fb9f83e&v=4",
           "slackUsername": "Bucky"
-        }
-      },
-      {
-        "title": "Community Manager",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "6",
-          "displayName": "Miss ChrishaPh",
-          "githubUsername": "MsChrishaph",
-          "profileImage": "https://avatars3.githubusercontent.com/u/74167226?s=460&u=03945a9e2040664fe6f8d05baf22f6b43d3e866c&v=4",
-          "slackUsername": "MsChrishaPh"
         }
       },
       {
@@ -219,11 +297,71 @@
           "profileImage": "https://avatars0.githubusercontent.com/u/74901267?s=460&v=4",
           "slackUsername": "Martin"
         }
+      },
+      {
+        "title": "Slack Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "68",
+          "displayName": "Chris Meninwa",
+          "githubUsername": "",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EHEJQUMS-g820abfd57a6-512",
+          "slackUsername": "Chris Meninwa"
+        }
+      }
+    ],
+    "responsibilities": [
+      {
+        "item": "Get people to where they need to be. Greet, welcome, guide",
+        "subitems": []
+      },
+      {
+        "item": "People will come into #intros and must oversee other Slack channels for new users",
+        "subitems": []
+      },
+      {
+        "item": "Guide users to teams they fit into",
+        "subitems": []
+      },
+      {
+        "item": "Send applications to Team Leads",
+        "subitems": []
+      },
+      {
+        "item": "After interview, register peoples accounts",
+        "subitems": []
+      },
+      {
+        "item": "Team Leads are responsible for hiring more community managers",
+        "subitems": []
+      },
+      {
+        "item": "Provide user feedback and analytics to design team",
+        "subitems": []
+      },
+      {
+        "item": "Suggest better methods on how to gather user feedback",
+        "subitems": []
+      },
+      {
+        "item": "Optimize user feedback loop",
+        "subitems": []
       }
     ]
   },
   {
     "title": "Design",
+    "description": "We create and manage all designs within thenewboston website & app. ",
+    "platforms": [
+      {"name": "github", "label": "Design", "link": "https://github.com/thenewboston-developers/Design"},
+      {
+        "name": "slack",
+        "label": "design",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Design Lead",
@@ -263,35 +401,46 @@
           "profileImage": "https://avatars1.githubusercontent.com/u/47249126?s=400&u=2e9e60984bef80c2908856c3f9966593372a1049&v=4",
           "slackUsername": "Osaro Ochuko Adade"
         }
+      }
+    ],
+    "responsibilities": [
+      {
+        "item": "Help identify what needs to be built based off user feedback",
+        "subitems": []
       },
       {
-        "title": "Graphic Designer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "contributor": {
-          "contributorId": "59",
-          "displayName": "Devansh Gajjar",
-          "githubUsername": "devanshgajjar",
-          "profileImage": "https://avatars2.githubusercontent.com/u/37979044?s=400&u=c451811d1e6c8a9b26bca433aa74d0e789706eba&v=4",
-          "slackUsername": "Devansh Gajjar"
-        }
+        "item": "Design wireframes",
+        "subitems": []
       },
       {
-        "title": "Graphic Designer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "contributor": {
-          "contributorId": "60",
-          "displayName": "Tolawak Gelana",
-          "githubUsername": "toledit",
-          "profileImage": "https://avatars0.githubusercontent.com/u/27518021?s=400&u=5b21160854c436683ecc060aa0c269694f62fe94&v=4",
-          "slackUsername": "toledit"
-        }
+        "item": "User test designs with the community",
+        "subitems": []
+      },
+      {
+        "item": "Write product requirements for engineering handoff",
+        "subitems": []
+      },
+      {
+        "item": "HiFi designs & update style guide",
+        "subitems": []
+      },
+      {
+        "item": "Give design reviews to members within the community",
+        "subitems": []
       }
     ]
   },
   {
     "title": "DevOps",
+    "description": "Provides \"systems for the systems\". Focused on underlying infrastructure (servers, OS, networking, access security), services (web servers, databases), as well as monitoring and automating the configuration of those items.",
+    "platforms": [
+      {"name": "github", "label": "DevOps", "link": "https://github.com/thenewboston-developers/DevOps"},
+      {
+        "name": "slack",
+        "label": "devops",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "DevOps",
@@ -306,10 +455,20 @@
           "slackUsername": "shashanksinha89"
         }
       }
-    ]
+    ],
+    "responsibilities": []
   },
   {
     "title": "Discord Managers",
+    "description": "Managing Discord server for thenewboston Community.",
+    "platforms": [
+      {"name": "github", "label": "Discord-Bot", "link": "https://github.com/thenewboston-developers/Discord-Bot"},
+      {
+        "name": "slack",
+        "label": "discord",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Discord Manager",
@@ -350,10 +509,25 @@
           "slackUsername": "Muhammed Medo"
         }
       }
+    ],
+    "responsibilities": [
+      {
+        "item": "Oversee discord community",
+        "subitems": []
+      }
     ]
   },
   {
     "title": "Front-End Developers",
+    "description": "Basically, everything that the user can interact with, comes under this team's scope. We'll be mostly working on the Website and Account Manager repo. ",
+    "platforms": [
+      {"name": "github", "label": "Website", "link": "https://github.com/thenewboston-developers/Website"},
+      {
+        "name": "slack",
+        "label": "front-end",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Front-End Lead",
@@ -497,11 +671,34 @@
           "profileImage": "https://avatars0.githubusercontent.com/u/32864116?s=460&u=0c2a53c6f1476da904d2b3c820bab43b64b7185b&v=4",
           "slackUsername": "James Pang"
         }
+      },
+      {
+        "title": "WordPress Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "67",
+          "displayName": "Aathil Ahamed",
+          "githubUsername": "aathil-Mr-ITGuy",
+          "profileImage": "https://avatars0.githubusercontent.com/u/36620321?s=400&u=af0419d3610824677b5f529008f9f87b23623091&v=4",
+          "slackUsername": "ATLIT"
+        }
       }
-    ]
+    ],
+    "responsibilities": []
   },
   {
     "title": "Kotlin SDK",
+    "description": "Provide a Kotlin client library.",
+    "platforms": [
+      {"name": "github", "label": "Kotlin-SDK", "link": "https://github.com/thenewboston-developers/Kotlin-SDK"},
+      {
+        "name": "slack",
+        "label": "kotlin-sdk",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Kotlin SDK Lead",
@@ -555,10 +752,20 @@
           "slackUsername": "Nish"
         }
       }
-    ]
+    ],
+    "responsibilities": []
   },
   {
     "title": "Marketing",
+    "description": "My team handles all the marketing part including email, SEO, and media buys. Developing and Executing marketing strategies as well as focusing on user behaviour and contacts/partnership collection.",
+    "platforms": [
+      {"name": "github", "label": "Marketing", "link": "https://github.com/thenewboston-developers/Marketing"},
+      {
+        "name": "slack",
+        "label": "marketing",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Head of Marketing",
@@ -574,22 +781,134 @@
         }
       },
       {
-        "title": "Marketing Director",
+        "title": "Head of Marketing",
         "isLead": true,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "34",
-          "displayName": "Pulkit Bajaj",
-          "githubUsername": "pulkitbajaj007",
-          "profileImage": "https://avatars3.githubusercontent.com/u/74899933?s=460&u=28b9a72efc37620e5bf8a01eb547dfa780235c59&v=4",
-          "slackUsername": "Pulkit Bajaj"
+          "contributorId": "6",
+          "displayName": "MsChrishaph",
+          "githubUsername": "Chrisha1212",
+          "profileImage": "https://avatars.githubusercontent.com/u/72809444?s=460&u=e2138725222fb09a546d7d1e164cf64f5583648b&v=4",
+          "slackUsername": "MsChrishaph"
         }
+      },
+      {
+        "title": "Blog Project Manager",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "63",
+          "displayName": "Ijeoma Okoh",
+          "githubUsername": "Aiijay",
+          "profileImage": "https://avatars3.githubusercontent.com/u/55064951?s=400&u=ac5fc97138da6bd28ae66399241daeff7605d969&v=4",
+          "slackUsername": "Ijeoma"
+        }
+      },
+      {
+        "title": "Marketing Analyst",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "65",
+          "displayName": "Tristan Spearing",
+          "githubUsername": "tspearing",
+          "profileImage": "https://avatars1.githubusercontent.com/u/77364430?s=460&v=4",
+          "slackUsername": "Tristan Spearing"
+        }
+      },
+      {
+        "title": "Marketing Analyst",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "66",
+          "displayName": "Tomiwa",
+          "githubUsername": "oluwatomiwatemidayo",
+          "profileImage": "https://avatars1.githubusercontent.com/u/72953345?s=400&u=8a7d5931cd7e0041fc6e68683ad25aeb4e7016ce&v=4",
+          "slackUsername": "Tomiwa"
+        }
+      },
+      {
+        "title": "Blog Writer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "69",
+          "displayName": "Chibuzor Eze-nwosu",
+          "githubUsername": null,
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01G1B4V42D-94d5b325b7d5-512",
+          "slackUsername": "Chibuzor"
+        }
+      },
+      {
+        "title": "Meme Designer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "71",
+          "displayName": "Ananda",
+          "githubUsername": "dhakalananda",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EDKBT8LA-a17fa362a21e-512",
+          "slackUsername": "Ananda"
+        }
+      }
+    ],
+    "responsibilities": [
+      {
+        "item": "Drive traffic",
+        "subitems": []
+      },
+      {
+        "item": "Gather & collect user emails",
+        "subitems": ["Email newsletter", "Pull from GitHub", "Additional tools"]
+      },
+      {
+        "item": "Send email campaigns",
+        "subitems": []
+      },
+      {
+        "item": "Help drive traffic through social media",
+        "subitems": []
+      },
+      {
+        "item": "Sending out social media posts on core team applications",
+        "subitems": []
+      },
+      {
+        "item": "Requests graphics & images",
+        "subitems": []
+      },
+      {
+        "item": "LinkedIn, Facebook, Reddit",
+        "subitems": []
+      },
+      {
+        "item": "If posting anything, post it on all social media accounts",
+        "subitems": []
+      },
+      {
+        "item": "If any other social media sites that can be strategical, we can expand",
+        "subitems": []
       }
     ]
   },
   {
     "title": "New User Operations",
+    "description": "Convert new users to task contributors or team members.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "intros",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "New User Operations Lead",
@@ -604,10 +923,41 @@
           "slackUsername": "Martyn"
         }
       }
+    ],
+    "responsibilities": [
+      {
+        "item": "Convert new users to contributors",
+        "subitems": []
+      },
+      {
+        "item": "Identify where new users will get stuck",
+        "subitems": []
+      },
+      {
+        "item": "Find solutions to remove bottlenecks",
+        "subitems": []
+      },
+      {
+        "item": "Increase user retention by keeping users engaged",
+        "subitems": []
+      }
     ]
   },
   {
     "title": "Payments",
+    "description": "The team handles the payments of all thenewboston contributors in different capacities.",
+    "platforms": [
+      {
+        "name": "github",
+        "label": "Payment-Processor",
+        "link": "https://github.com/thenewboston-developers/Payment-Processor"
+      },
+      {
+        "name": "slack",
+        "label": "payments",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Head of Contributor Payments",
@@ -648,10 +998,41 @@
           "slackUsername": "Tawanda Makunike"
         }
       }
+    ],
+    "responsibilities": [
+      {
+        "item": "Oversee payments",
+        "subitems": []
+      },
+      {
+        "item": "Pay weekly contributors",
+        "subitems": []
+      },
+      {
+        "item": "Pay task payments",
+        "subitems": []
+      },
+      {
+        "item": "Pay projects",
+        "subitems": []
+      }
     ]
   },
   {
     "title": "Project Proposals",
+    "description": "This team is responsible for managing all the App Ideas from developers all around the globe.",
+    "platforms": [
+      {
+        "name": "github",
+        "label": "Project-Proposals",
+        "link": "https://github.com/thenewboston-developers/Project-Proposals"
+      },
+      {
+        "name": "slack",
+        "label": "projects",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Project Proposals Manager",
@@ -666,10 +1047,56 @@
           "slackUsername": "Manish"
         }
       }
+    ],
+    "responsibilities": [
+      {
+        "item": "Oversee project proposals",
+        "subitems": []
+      },
+      {
+        "item": "Helping people fill out proposals",
+        "subitems": [
+          "Seeing if there are any empty fields",
+          "Tell users to fill out project proposals instead of typing it out on Slack"
+        ]
+      },
+      {
+        "item": "Reviewing proposals on GitHub",
+        "subitems": ["Help clarify the details of what the app is", "Talking to them for suggestions as well"]
+      },
+      {
+        "item": "Answering questions",
+        "subitems": []
+      },
+      {
+        "item": "Helping with recruiting",
+        "subitems": []
+      },
+      {
+        "item": "Set a timeline & clear check-ins",
+        "subitems": [
+          "Responsible for setting and agreeing on timeline with other party",
+          "Responsible for being part of check-ins",
+          "Case by case"
+        ]
+      },
+      {
+        "item": "Make payment GitHub issues when projects are due",
+        "subitems": []
+      }
     ]
   },
   {
     "title": "QA",
+    "description": "Identify and detect bugs in our apps to increase the quality of our products for improved customer satisfaction.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "quality-analyst",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "QA Lead",
@@ -683,11 +1110,34 @@
           "profileImage": "https://avatars2.githubusercontent.com/u/59204822?s=460&v=4",
           "slackUsername": "Snehal Ingale"
         }
+      },
+      {
+        "title": "QA",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2021-26-01T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "70",
+          "displayName": "Aadhar",
+          "githubUsername": "aadhar54",
+          "profileImage": "https://avatars.githubusercontent.com/u/36945867?s=400&u=310f332de0d260790224937869d0922513b0c319&v=4",
+          "slackUsername": "Aadhar"
+        }
       }
-    ]
+    ],
+    "responsibilities": []
   },
   {
     "title": "Reddit Moderators",
+    "description": "We moderate posts on reddit and post job openings on it. Also other additional tasks given by bucky is also done by us. Thanks",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "reddit-moderation",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Reddit Moderator",
@@ -728,10 +1178,25 @@
           "slackUsername": "Moon"
         }
       }
+    ],
+    "responsibilities": [
+      {
+        "item": "Oversee Reddit community",
+        "subitems": []
+      }
     ]
   },
   {
     "title": "Research",
+    "description": "We research the latest developments in blockchain technology and identify strategic opportunities.  We work closely with the development teams on their crypto-economic model, protocol, architecture, and strategy.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "blockchain-research-team-channel",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Blockchain Researcher",
@@ -798,10 +1263,37 @@
           "slackUsername": "Rahul Kothari"
         }
       }
+    ],
+    "responsibilities": [
+      {
+        "item": "Research trends and identify opportunities",
+        "subitems": []
+      },
+      {
+        "item": "Offer suggestions to help guide the future roadmap",
+        "subitems": []
+      },
+      {
+        "item": "Researching technology that exists that could improve ours",
+        "subitems": []
+      },
+      {
+        "item": "Identify areas within blockchain that we can partner with",
+        "subitems": []
+      }
     ]
   },
   {
     "title": "Security",
+    "description": "Currently we are two members only. Working on security roadmap. Trying to keep the blockchain network safe from adversaries and ensuring the services are always available to the end user",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "security",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "Cryptography Security Engineer",
@@ -842,10 +1334,20 @@
           "slackUsername": "Spencer Dollahite"
         }
       }
-    ]
+    ],
+    "responsibilities": []
   },
   {
     "title": "YouTube",
+    "description": "Dedicated to developer evangelism as well as general adoption of the coin through YouTube videos.",
+    "platforms": [
+      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "slack",
+        "label": "youtube",
+        "link": ""
+      }
+    ],
     "contributors": [
       {
         "title": "YouTube Educator",
@@ -872,6 +1374,33 @@
           "profileImage": "https://avatars2.githubusercontent.com/u/41084465?s=460&u=e4bbc12b9d60ba1869da25809044eddc97733c1b&v=4",
           "slackUsername": "Nico y-crozier"
         }
+      },
+      {
+        "title": "YouTube Educator",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2021-01-01T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "64",
+          "displayName": "Francis Polignano",
+          "githubUsername": "franchyze923",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01DQAFHKE3-aad7fcf8fa5b-512",
+          "slackUsername": "Francis Polignano"
+        }
+      }
+    ],
+    "responsibilities": [
+      {
+        "item": "YouTube Outreach and video creation",
+        "subitems": []
+      },
+      {
+        "item": "Reaching out to YouTubers related to blockchain and programming",
+        "subitems": []
+      },
+      {
+        "item": "Deciding on the best strategy for what to film and what channel to put it on",
+        "subitems": []
       }
     ]
   }

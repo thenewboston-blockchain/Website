@@ -1,11 +1,11 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
+import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSnippet} from 'components';
 
 const BankApiValidators: FC = () => {
   return (
-    <DocContainer className="BankApiValidators" title="Validators" lastUpdated="07 Dec 2020">
+    <DocContainer className="BankApiValidators" title="Validators" lastUpdated="15 Jan 2021">
       <p>Banks will maintain a record of all validators, both primary and confirmation, that they are connected to.</p>
       <p>
         More information about validators can be found in the <NavLink to="/guide/validators">Validators</NavLink>{' '}
@@ -13,20 +13,7 @@ const BankApiValidators: FC = () => {
       </p>
 
       <DocEndpoint endpoint="/validators" method="GET" />
-      <TableParams
-        items={[
-          {
-            dataType: 'URL parameter',
-            description: 'If you want to start at a specific point, an offset can be specified.',
-            param: 'offset',
-          },
-          {
-            dataType: 'URL parameter',
-            description: 'Maximum number of block returned by the node. (max: 100)',
-            param: 'limit',
-          },
-        ]}
-      />
+      <QueryParamsOffsetAndLimit returnedEntityName="validators" />
       <RequestResponseSnippet
         code={`{
   "count": 10,

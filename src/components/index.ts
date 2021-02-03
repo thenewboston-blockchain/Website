@@ -1,4 +1,5 @@
 import A from './A';
+import AuthContainer from './AuthContainer';
 import Avatar from './Avatar';
 import BreadcrumbMenu from './BreadcrumbMenu';
 import {CodeSnippet, RequestResponseSnippet, SnippetLang} from './CodeSnippet';
@@ -27,6 +28,7 @@ import PageTitle from './PageTitle';
 import Pagination from './Pagination';
 import Popover from './Popover';
 import Qr from './Qr';
+import {QueryParamsOffsetAndLimit} from './QueryParams';
 import Shadow from './Shadow';
 import SlideUp from './SlideUp';
 import SocialMediaIcon from './SocialMediaIcon';
@@ -34,11 +36,11 @@ import StepIndicator from './StepIndicator';
 import {TableBorderGrid, TableParams, TableVertical} from './Table';
 import Tabs, {Tab} from './Tabs';
 import TimeFilter from './TimeFilter';
-import TopNav from './TopNav';
 import TotalAmount from './TotalAmount';
 
 export {
   A,
+  AuthContainer,
   Avatar,
   BreadcrumbMenu,
   Button,
@@ -73,6 +75,7 @@ export {
   Pagination,
   Popover,
   Qr,
+  QueryParamsOffsetAndLimit,
   RequestResponseSnippet,
   Shadow,
   SlideUp,
@@ -84,7 +87,6 @@ export {
   TableVertical,
   Tabs,
   TimeFilter,
-  TopNav,
   TotalAmount,
 };
 
