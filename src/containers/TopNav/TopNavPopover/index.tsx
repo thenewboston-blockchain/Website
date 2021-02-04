@@ -4,8 +4,8 @@ import clsx from 'clsx';
 import {Icon, IconType, Popover} from 'components';
 import {useWindowDimensions} from 'hooks';
 
-import TopNavPopoverItem from '../TopNavPopoverItem';
-import TopNavPopoverItemSimple from '../TopNavPopoverItemSimple';
+import TopNavPopoverItem from './TopNavPopoverItem';
+import TopNavPopoverItemSimple from './TopNavPopoverItemSimple';
 import './TopNavPopover.scss';
 
 export interface TopNavPopoverItemType {

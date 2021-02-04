@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 import DefaultUserAvatar from 'assets/images/default-avatar.png';
 import {Button, IconType} from 'components';
 import TopNavPopover, {TopNavPopoverItemType} from 'containers/TopNav/TopNavPopover';
-import TopNavText from 'containers/TopNav/TopNavText';
+import TopNavButton from 'containers/TopNav/TopNavButton';
 import {selectActiveUser} from 'selectors/state';
 
 import './TopNavDesktopItems.scss';
@@ -117,8 +117,8 @@ const TopNavDesktopItems = () => {
     if (activeUser) return null;
     return (
       <>
-        <TopNavText buttonText="Create Account" className="TopNavDesktopItems__right-item" toUrl="/create-account" />
-        <TopNavText buttonText="Sign In" className="TopNavDesktopItems__right-item" toUrl="/sign-in" />
+        <TopNavButton buttonText="Create Account" className="TopNavDesktopItems__right-item" toUrl="/create-account" />
+        <TopNavButton buttonText="Sign In" className="TopNavDesktopItems__right-item" toUrl="/sign-in" />
       </>
     );
   };
