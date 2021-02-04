@@ -1,42 +1,54 @@
-import React, {FC, ReactNode, useEffect} from 'react';
+import React, {FC, ReactNode, useCallback, useEffect} from 'react';
 import clsx from 'clsx';
 
 import {Icon, IconType, Popover} from 'components';
 import {useWindowDimensions} from 'hooks';
 
-import './TopNavPopoverButton.scss';
+import TopNavPopoverItem from '../TopNavPopoverItem';
+import TopNavPopoverItemSimple from '../TopNavPopoverItemSimple';
+import './TopNavPopover.scss';
+
+export interface TopNavPopoverItemType {
+  description?: string;
+  iconSize?: number;
+  iconType?: IconType;
+  title: string;
+  to: string;
+}
 
 interface ComponentProps {
   anchorEl: HTMLButtonElement | null;
   buttonText?: string;
-  children: ReactNode;
   className?: string;
   customButtonContent?: ReactNode;
+  items: TopNavPopoverItemType[];
   popoverId: string;
   setAnchorEl(newEl: HTMLButtonElement | null): void;
-  unsetAnchorEl(): void;
 }
 
-const TopNavPopoverButton: FC<ComponentProps> = ({
+const TopNavPopover: FC<ComponentProps> = ({
   anchorEl,
   buttonText,
-  children,
   className,
   customButtonContent,
+  items,
   popoverId,
   setAnchorEl,
-  unsetAnchorEl,
 }) => {
   const {clientWidth} = useWindowDimensions();
 
   const popoverIsOpen = !!anchorEl;
+
+  const unsetAnchorEl = useCallback((): void => {
+    setAnchorEl(null);
+  }, [setAnchorEl]);
 
   const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
     if (!anchorEl) {
       setAnchorEl(e.currentTarget);
       return;
     }
-    setAnchorEl(null);
+    unsetAnchorEl();
   };
 
   useEffect(() => {
@@ -47,13 +59,13 @@ const TopNavPopoverButton: FC<ComponentProps> = ({
 
   return (
     <>
-      <button className={clsx('TopNavPopoverButton', className)} onClick={handleButtonClick}>
+      <button className={clsx('TopNavPopover', className)} onClick={handleButtonClick}>
         {customButtonContent || (
           <>
             {buttonText}
             <Icon
-              className={clsx('TopNavPopoverButton__chevron-icon', {
-                'TopNavPopoverButton__chevron-icon--open': popoverIsOpen,
+              className={clsx('TopNavPopover__chevron-icon', {
+                'TopNavPopover__chevron-icon--open': popoverIsOpen,
               })}
               icon={IconType.chevronDown}
             />
@@ -63,17 +75,31 @@ const TopNavPopoverButton: FC<ComponentProps> = ({
       <Popover
         anchorEl={anchorEl}
         anchorOrigin={{horizontal: 'center', vertical: 'bottom'}}
-        className="TopNavPopoverButton__Popover"
+        className="TopNavPopover__Popover"
         closePopover={unsetAnchorEl}
         id={popoverId}
         open={popoverIsOpen}
         transformOrigin={{horizontal: 'center', vertical: 'top'}}
         transformOffset={{horizontal: 0, vertical: 12}}
       >
-        {children}
+        {items.map(({description, iconSize, iconType, title, to}) => {
+          if (iconType !== undefined) {
+            return (
+              <TopNavPopoverItem
+                closePopover={unsetAnchorEl}
+                description={description || ''}
+                iconSize={iconSize}
+                iconType={iconType}
+                title={title}
+                to={to}
+              />
+            );
+          }
+          return <TopNavPopoverItemSimple closePopover={unsetAnchorEl} title={title} to={to} />;
+        })}
       </Popover>
     </>
   );
 };
 
-export default TopNavPopoverButton;
+export default TopNavPopover;

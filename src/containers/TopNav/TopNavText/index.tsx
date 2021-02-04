@@ -9,11 +9,11 @@ interface ComponentProps {
   className?: string;
   toUrl: string;
 }
-
+// TODO: WTF is this component??
 const TopNavText: FC<ComponentProps> = ({buttonText, className, toUrl}) => {
   return (
     <Link to={toUrl}>
-      <button className={clsx('TopNavPopoverButton', className)}>{buttonText}</button>
+      <button className={clsx('TopNavPopover', className)}>{buttonText}</button>
     </Link>
   );
 };
