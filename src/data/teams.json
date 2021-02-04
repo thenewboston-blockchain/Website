@@ -895,7 +895,20 @@
           "githubUsername": "Grapelounge",
           "profileImage": "https://avatars.githubusercontent.com/u/38263524?s=460&u=b49e5b4f427d570e965069af7a3c04f57fd75179&v=4",
           "slackUsername": "GYulian"
-        }   
+        }
+      },
+      {
+        "title": "Graphic Designer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "75",
+          "displayName": "SohDa",
+          "githubUsername": "SOHDA31",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E4P5AU5Q-8722ab1e52a7-512",
+          "slackUsername": "SohDa"
+        }
       }
     ],
     "responsibilities": [
