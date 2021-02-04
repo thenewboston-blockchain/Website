@@ -137,5 +137,47 @@
       "ASP.NET Core (for future example projects)",
       "Github Actions"
     ]
+  },
+  {
+    "openingId": "social-media-manager",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message MsChrishaph"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "Social Media Managers are responsible for planning, implementing, managing and monitoring company's Social Media strategy in order to increase brand awareness, improve Marketing effort.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Social Media Manager",
+    "reportsTo": [
+      {
+        "githubUsername": "Chrisha1212",
+        "name": "Chrisha"
+      }
+    ],
+    "responsibilities": [
+      "Develop, implement and manage our social media strategy",
+      "Define most important social media KPIs",
+      "Manage and oversee social media content",
+      "Measure the success of every social media campaign",
+      "Stay up to date with latest social media best practices and technologies",
+      "Work with copywriters and designers to ensure content is informative and appealing",
+      "Collaborate with Marketing Teams"
+    ],
+    "technologyRequirements": [
+      "Proven work experience as a Social media manager",
+      "G-suite expert",
+      "Solid knowledge of SEO, keyword research and Google Analytics"
+    ]
   }
 ]
