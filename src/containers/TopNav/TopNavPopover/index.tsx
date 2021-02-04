@@ -1,4 +1,5 @@
-import React, {FC, ReactNode, useCallback, useEffect} from 'react';
+import React, {FC, KeyboardEvent, ReactNode, useCallback, useEffect, useRef} from 'react';
+import {useHistory} from 'react-router';
 import clsx from 'clsx';
 
 import {Icon, IconType, Popover} from 'components';
@@ -35,13 +36,51 @@ const TopNavPopover: FC<ComponentProps> = ({
   popoverId,
   setAnchorEl,
 }) => {
+  const history = useHistory();
+  const itemsRef = useRef<HTMLAnchorElement[]>([]);
   const {clientWidth} = useWindowDimensions();
 
   const popoverIsOpen = !!anchorEl;
 
+  useEffect(() => {
+    if (popoverIsOpen) {
+      itemsRef.current[0]?.focus();
+    }
+  }, [itemsRef, popoverIsOpen]);
+
   const unsetAnchorEl = useCallback((): void => {
     setAnchorEl(null);
   }, [setAnchorEl]);
+
+  const handleOptionKeyDown = (to: string, index: number, disabled?: boolean) => (
+    e: KeyboardEvent<HTMLAnchorElement>,
+  ): void => {
+    if (e.key === 'Tab') {
+      return;
+    }
+
+    e.preventDefault();
+
+    if (e.key === 'Escape') {
+      unsetAnchorEl();
+      return;
+    }
+
+    if (e.key === 'ArrowDown' && index !== items.length - 1) {
+      itemsRef.current[index + 1]?.focus();
+      return;
+    }
+
+    if (e.key === 'ArrowUp' && index !== 0) {
+      itemsRef.current[index - 1]?.focus();
+      return;
+    }
+
+    if (e.key === 'Enter' && !disabled) {
+      unsetAnchorEl();
+      history.push(to);
+    }
+  };
 
   const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
     if (!anchorEl) {
@@ -82,20 +121,34 @@ const TopNavPopover: FC<ComponentProps> = ({
         transformOrigin={{horizontal: 'center', vertical: 'top'}}
         transformOffset={{horizontal: 0, vertical: 12}}
       >
-        {items.map(({description, iconSize, iconType, title, to}) => {
+        {items.map(({description, iconSize, iconType, title, to}, index) => {
           if (iconType !== undefined) {
             return (
               <TopNavPopoverItem
                 closePopover={unsetAnchorEl}
                 description={description || ''}
+                handleKeyDown={handleOptionKeyDown(to, index)}
                 iconSize={iconSize}
                 iconType={iconType}
+                key={title}
+                ref={(el) => {
+                  if (el) {
+                    itemsRef.current[index] = el;
+                  }
+                }}
                 title={title}
                 to={to}
               />
             );
           }
-          return <TopNavPopoverItemSimple closePopover={unsetAnchorEl} title={title} to={to} />;
+          return (
+            <TopNavPopoverItemSimple
+              closePopover={unsetAnchorEl}
+              handleKeyDown={handleOptionKeyDown(to, index)}
+              title={title}
+              to={to}
+            />
+          );
         })}
       </Popover>
     </>
