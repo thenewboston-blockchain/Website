@@ -1205,6 +1205,66 @@
       "completed_date": "1/25/21",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Remove Contributor from Teams Page",
+      "issue_id": "1210",
+      "pr_id": "1213",
+      "completed_by": "Rajputusman",
+      "completed_date": "1/21/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Move me as Marketing Lead",
+      "issue_id": "1233",
+      "pr_id": "1236",
+      "completed_by": "Rajputusman",
+      "completed_date": "1/31/21",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1231",
+      "pr_id": "1232",
+      "completed_by": "Rajputusman",
+      "completed_date": "2/02/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1144",
+      "pr_id": "1145",
+      "completed_by": "Rajputusman",
+      "completed_date": "2/03/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1237",
+      "pr_id": "1242",
+      "completed_by": "Rajputusman",
+      "completed_date": "2/03/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1238",
+      "pr_id": "1243",
+      "completed_by": "Rajputusman",
+      "completed_date": "2/03/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
     }
   ],
   "Ramin-RX7": [
@@ -2699,6 +2759,26 @@
       "completed_date": "12/20/20",
       "amount_paid": "1000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "update discord social link with new custom link",
+      "issue_id": "1247",
+      "pr_id": "1246",
+      "completed_by": "dhakal0kushal",
+      "completed_date": "2/02/21",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "Coins Memes Infographic (includes 3)",
+      "issue_id": "92",
+      "pr_id": "",
+      "completed_by": "dhakal0kushal",
+      "completed_date": "1/28/21",
+      "amount_paid": "3000",
+      "bug_bounty": "FALSE"
     }
   ],
   "donmbelembe": [
@@ -3745,6 +3825,16 @@
       "pr_id": "",
       "completed_by": "kristykjlee",
       "completed_date": "11/17/20",
+      "amount_paid": "5000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Design",
+      "title": "Update Bank OVERVIEW & Purchase Confirmation Service ModaL",
+      "issue_id": "120",
+      "pr_id": "",
+      "completed_by": "kristykjlee",
+      "completed_date": "1/28/21",
       "amount_paid": "5000",
       "bug_bounty": "FALSE"
     }
