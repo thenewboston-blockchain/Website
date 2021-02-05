@@ -8,10 +8,15 @@
   cursor: pointer;
   display: flex;
   height: 81px;
+  outline: none;
   padding: 18px;
   text-align: unset;
   transition: background 0.1s ease-in;
   width: 427px;
+
+  &:focus {
+    background: var(--color-sail-gray-50);
+  }
 
   &:hover {
     background: #d6ecff;
