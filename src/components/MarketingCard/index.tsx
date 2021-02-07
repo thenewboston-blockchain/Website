@@ -9,6 +9,7 @@ import {socialMediaUrls, socialMediaHandles, socialMediaDescriptions} from 'util
 import DiscordLogo from 'assets/logos/Discord.png';
 import FacebookLogo from 'assets/logos/Facebook.png';
 import GitHubLogo from 'assets/logos/GitHub.png';
+import InstagramLogo from 'assets/logos/Instagram.png';
 import LinkedInLogo from 'assets/logos/LinkedIn.png';
 import RedditLogo from 'assets/logos/Reddit.png';
 import SlackLogo from 'assets/logos/Slack.png';
@@ -37,6 +38,7 @@ const MarketingCard: FC<ComponentProps> = ({className, customLink, website}) => 
     discord: renderImage(DiscordLogo),
     facebook: renderImage(FacebookLogo),
     github: renderImage(GitHubLogo),
+    instagram: renderImage(InstagramLogo),
     linkedin: renderImage(LinkedInLogo),
     reddit: renderImage(RedditLogo),
     slack: renderImage(SlackLogo),

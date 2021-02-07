@@ -24,6 +24,7 @@ import FileDocumentIcon from 'mdi-react/FileDocumentIcon';
 import FileDownloadIcon from 'mdi-react/FileDownloadIcon';
 import ForumIcon from 'mdi-react/ForumIcon';
 import GithubIcon from 'mdi-react/GithubIcon';
+import InstagramIcon from 'mdi-react/InstagramIcon';
 import HammerWrenchIcon from 'mdi-react/HammerWrenchIcon';
 import HumanHandsupIcon from 'mdi-react/HumanHandsupIcon';
 import LinkedinIcon from 'mdi-react/LinkedinIcon';
@@ -71,6 +72,7 @@ export enum IconType {
   fileDownload,
   forum,
   github,
+  instagram,
   hammerWrench,
   humanHandsUp,
   linkedin,
@@ -154,6 +156,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
           return <ForumIcon {...iconProps} />;
         case IconType.github:
           return <GithubIcon {...iconProps} />;
+        case IconType.instagram:
+          return <InstagramIcon {...iconProps} />;
         case IconType.hammerWrench:
           return <HammerWrenchIcon {...iconProps} />;
         case IconType.humanHandsUp:

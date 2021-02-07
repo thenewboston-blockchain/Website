@@ -9,6 +9,7 @@ import {socialMediaUrls} from 'utils/social-media';
 import DiscordLogo from './logos/DiscordLogo.png';
 import FacebookLogo from './logos/FacebookLogo.png';
 import GitHubLogo from './logos/GitHubLogo.png';
+import InstagramLogo from './logos/InstagramLogo.png';
 import LinkedInLogo from './logos/LinkedInLogo.png';
 import RedditLogo from './logos/RedditLogo.png';
 import SlackLogo from './logos/SlackLogo.png';
@@ -37,6 +38,7 @@ const MarketingButton: FC<ComponentProps> = ({className, customLink, website}) =
     discord: renderImage(DiscordLogo),
     facebook: renderImage(FacebookLogo),
     github: renderImage(GitHubLogo),
+    instagram: renderImage(InstagramLogo),
     linkedin: renderImage(LinkedInLogo),
     reddit: renderImage(RedditLogo),
     slack: renderImage(SlackLogo),
