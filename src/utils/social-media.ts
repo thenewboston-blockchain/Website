@@ -8,7 +8,7 @@ export const socialMediaUrls = {
   [SocialMedia.reddit]: 'https://www.reddit.com/r/thenewboston/',
   [SocialMedia.slack]: 'https://join.slack.com/t/thenewboston/shared_invite/zt-lldpqdle-l9lvBI7PbZD_uDJegmk3xA',
   [SocialMedia.twitch]: 'https://twitch.tv/thenewboston/profile',
-  [SocialMedia.twitter]: 'https://twitter.com/bucky_roberts',
+  [SocialMedia.twitter]: 'https://twitter.com/thenewboston_og',
   [SocialMedia.youtube]: 'https://www.youtube.com/user/thenewboston',
 };
 
@@ -20,7 +20,7 @@ export const socialMediaHandles = {
   [SocialMedia.reddit]: 'r/thenewboston',
   [SocialMedia.slack]: 't/thenewboston',
   [SocialMedia.twitch]: 'thenewboston',
-  [SocialMedia.twitter]: '@bucky_roberts',
+  [SocialMedia.twitter]: '@thenewboston_og',
   [SocialMedia.youtube]: 'thenewboston',
 };
 
