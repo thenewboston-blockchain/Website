@@ -1,7 +1,6 @@
 import React, {FC} from 'react';
 import clsx from 'clsx';
-
-import {getCustomClassNames} from 'utils/components';
+import {bemify} from '@thenewboston/utils';
 
 import BaseCodeSnippet, {SnippetLang} from '../BaseCodeSnippet';
 import './CodeSnippet.scss';
@@ -19,7 +18,7 @@ const CodeSnippet: FC<ComponentProps> = ({className, code, heading, language = S
       {heading ? (
         <div
           className={clsx('CodeSnippet__heading', {
-            ...getCustomClassNames(className, '__heading', true),
+            ...bemify(className, '__heading'),
           })}
         >
           {heading}:

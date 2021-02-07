@@ -2,13 +2,13 @@ import React, {CSSProperties, FC, ReactNode, useMemo} from 'react';
 import {createPortal} from 'react-dom';
 import clsx from 'clsx';
 import noop from 'lodash/noop';
+import {bemify} from '@thenewboston/utils';
 
 import {Form, FormButton, FormButtonProps} from 'components/FormComponents';
 import Icon, {IconType} from 'components/Icon';
 import Loader from 'components/FormElements/Loader';
 import {GenericFormValues} from 'types/forms';
 import {GenericFunction} from 'types/generic';
-import {getCustomClassNames} from 'utils/components';
 
 import './Modal.scss';
 
@@ -101,7 +101,7 @@ const Modal: FC<ComponentProps> = ({
       <>
         <FormButton
           className={clsx('Modal__default-cancel', cancelProps.className, {
-            ...getCustomClassNames(className, '__default-cancel', true),
+            ...bemify(className, '__default-cancel'),
           })}
           color={cancelProps.color}
           disabled={cancelProps.disabled}
@@ -115,7 +115,7 @@ const Modal: FC<ComponentProps> = ({
         </FormButton>
         <FormButton
           className={clsx('Modal__default-submit', submitProps.className, {
-            ...getCustomClassNames(className, '__default-submit', true),
+            ...bemify(className, '__default-submit'),
           })}
           color={submitProps.color}
           disabled={submitProps.disabled}
@@ -137,8 +137,8 @@ const Modal: FC<ComponentProps> = ({
         <Icon
           className={clsx('Modal__close-icon', {
             'Modal__close-icon--submitting': submitting,
-            ...getCustomClassNames(className, '__close-icon', true),
-            ...getCustomClassNames(className, '__close-icon--submitting', submitting),
+            ...bemify(className, '__close-icon'),
+            ...bemify(className, '__close-icon--submitting', submitting),
           })}
           disabled={submitting}
           icon={IconType.close}
@@ -147,7 +147,7 @@ const Modal: FC<ComponentProps> = ({
         {typeof header === 'string' ? <h2>{header}</h2> : header}
         <FormButton
           className={clsx('Modal__default-submit', submitProps.className, {
-            ...getCustomClassNames(className, '__default-submit', true),
+            ...bemify(className, '__default-submit'),
           })}
           color={submitProps.color}
           disabled={submitProps.disabled}
@@ -169,26 +169,26 @@ const Modal: FC<ComponentProps> = ({
         role="contentinfo"
         className={clsx('Modal__overlay', {
           'Modal__overlay--submitting': submitting,
-          ...getCustomClassNames(className, '__overlay', true),
-          ...getCustomClassNames(className, '__overlay--submitting', submitting),
+          ...bemify(className, '__overlay'),
+          ...bemify(className, '__overlay--submitting', submitting),
         })}
         onClick={submitting ? noop : close}
       />
       <div
         className={clsx(
           'Modal',
-          {'Modal--default-position': !style, ...getCustomClassNames(className, '--default-position', !style)},
+          {'Modal--default-position': !style, ...bemify(className, '--default-position', !style)},
           className,
         )}
         style={style}
       >
-        <div className={clsx('Modal__header', {...getCustomClassNames(className, '__header', true)})}>
+        <div className={clsx('Modal__header', {...bemify(className, '__header')})}>
           {typeof header === 'string' ? <h2>{header}</h2> : header}
           <Icon
             className={clsx('Modal__close-icon', {
               'Modal__close-icon--submitting': submitting,
-              ...getCustomClassNames(className, '__close-icon', true),
-              ...getCustomClassNames(className, '__close-icon--submitting', submitting),
+              ...bemify(className, '__close-icon'),
+              ...bemify(className, '__close-icon--submitting', submitting),
             })}
             disabled={submitting}
             icon={IconType.close}
@@ -196,13 +196,11 @@ const Modal: FC<ComponentProps> = ({
           />
         </div>
         <Form initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
-          <div className={clsx('Modal__header_mobile', {...getCustomClassNames(className, '__header_mobile', true)})}>
+          <div className={clsx('Modal__header_mobile', {...bemify(className, '__header_mobile')})}>
             {footer || renderResponsiveHeader()}
           </div>
-          <div className={clsx('Modal__content', {...getCustomClassNames(className, '__content', true)})}>
-            {children}
-          </div>
-          <div className={clsx('Modal__footer', {...getCustomClassNames(className, '__footer', true)})}>
+          <div className={clsx('Modal__content', {...bemify(className, '__content')})}>{children}</div>
+          <div className={clsx('Modal__footer', {...bemify(className, '__footer')})}>
             {footer || renderDefaultFooter()}
           </div>
         </Form>

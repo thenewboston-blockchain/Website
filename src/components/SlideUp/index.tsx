@@ -1,8 +1,7 @@
 import React, {FC} from 'react';
 import {createPortal} from 'react-dom';
 import clsx from 'clsx';
-
-import {getCustomClassNames} from 'utils/components';
+import {bemify} from '@thenewboston/utils';
 
 import './SlideUp.scss';
 
@@ -16,9 +15,7 @@ const SlideUp: FC<ComponentProps> = ({children, className, close}) => {
     <>
       <div className="SlideUp__overlay" onClick={close} role="button" tabIndex={0} />
       <div className={clsx('SlideUp', className)}>
-        <div className={clsx('SlideUp__content', {...getCustomClassNames(className, '__content', true)})}>
-          {children}
-        </div>
+        <div className={clsx('SlideUp__content', {...bemify(className, '__content')})}>{children}</div>
       </div>
     </>,
     document.getElementById('slide-up-root')!,

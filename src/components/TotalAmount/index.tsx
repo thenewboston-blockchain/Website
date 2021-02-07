@@ -1,7 +1,6 @@
 import React, {FC} from 'react';
 import clsx from 'clsx';
-
-import {getCustomClassNames} from 'utils/components';
+import {bemify} from '@thenewboston/utils';
 
 import './TotalAmount.scss';
 
@@ -14,10 +13,8 @@ interface ComponentProps {
 const TotalAmount: FC<ComponentProps> = ({amount, className, title}) => {
   return (
     <div className={clsx('TotalAmount', className)}>
-      <div className={clsx('TotalAmount__title', {...getCustomClassNames(className, '__title', true)})}>{title}</div>
-      <div className={clsx('TotalAmount__amount', {...getCustomClassNames(className, '__amount', true)})}>
-        {amount.toLocaleString()}
-      </div>
+      <div className={clsx('TotalAmount__title', {...bemify(className, '__title')})}>{title}</div>
+      <div className={clsx('TotalAmount__amount', {...bemify(className, '__amount')})}>{amount.toLocaleString()}</div>
     </div>
   );
 };

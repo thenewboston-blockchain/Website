@@ -2,6 +2,7 @@
 
 import React, {forwardRef, ReactNode, useMemo} from 'react';
 import clsx from 'clsx';
+import {bemify} from '@thenewboston/utils';
 
 import AccountGroupIcon from 'mdi-react/AccountGroupIcon';
 import AlertCircleOutlineIcon from 'mdi-react/AlertCircleOutlineIcon';
@@ -45,7 +46,6 @@ import TwitchIcon from 'mdi-react/TwitchIcon';
 import TwitterIcon from 'mdi-react/TwitterIcon';
 import YoutubeIcon from 'mdi-react/YoutubeIcon';
 
-import {getCustomClassNames} from 'utils/components';
 import './Icon.scss';
 
 // These names are camelCased versions of the names found in https://materialdesignicons.com/
@@ -227,7 +227,7 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
         role="button"
         className={clsx('Icon', className, {
           'Icon--disabled': disabled,
-          ...getCustomClassNames(className, '--disabled', disabled),
+          ...bemify(className, '--disabled', disabled),
         })}
         ref={ref}
         onClick={handleClick}

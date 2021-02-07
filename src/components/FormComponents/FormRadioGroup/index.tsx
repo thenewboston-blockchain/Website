@@ -3,12 +3,12 @@
 import React, {FC, useMemo, useState} from 'react';
 import clsx from 'clsx';
 import noop from 'lodash/noop';
+import {bemify} from '@thenewboston/utils';
 
 import {BaseRadioProps, Radio} from 'components/FormElements';
 import {useFormContext} from 'hooks';
 import {BaseFormComponentProps, InputOption} from 'types/forms';
 import {renderFormError, renderFormLabel} from 'utils/forms';
-import {getCustomClassNames} from 'utils/components';
 
 interface BaseRadioGroupProps extends Omit<BaseRadioProps, 'checked'> {
   options: InputOption[];
@@ -68,8 +68,8 @@ const FormRadioGroup: FC<ComponentProps> = ({
             <Radio
               checked={selected}
               className={clsx('FormField__option-input', `FormRadioGroup__option-${index}`, {
-                ...getCustomClassNames(className, '__option-input', true),
-                ...getCustomClassNames(className, `__option-${index}`, true),
+                ...bemify(className, '__option-input'),
+                ...bemify(className, `__option-${index}`),
               })}
               disabled={option.disabled}
               error={error && selected}
@@ -83,8 +83,8 @@ const FormRadioGroup: FC<ComponentProps> = ({
               role="contentinfo"
               className={clsx('FormField__option-label', {
                 'FormField__option-label--disabled': option.disabled,
-                ...getCustomClassNames(className, '__option-label', true),
-                ...getCustomClassNames(className, '__option-label--disabled', option.disabled || false),
+                ...bemify(className, '__option-label'),
+                ...bemify(className, '__option-label--disabled', option.disabled || false),
               })}
               onClick={option.disabled ? noop : handleClick(option.value)}
             >
