@@ -1,9 +1,9 @@
 import React, {FC} from 'react';
 import clsx from 'clsx';
+import {bemify} from '@thenewboston/utils';
 
 import {A} from 'components';
 import {SocialMedia} from 'types/social-media';
-import {getCustomClassNames} from 'utils/components';
 import {socialMediaUrls, socialMediaHandles, socialMediaDescriptions} from 'utils/social-media';
 
 import DiscordLogo from 'assets/logos/Discord.png';
@@ -26,11 +26,7 @@ interface ComponentProps {
 
 const MarketingCard: FC<ComponentProps> = ({className, customLink, website}) => {
   const renderImage = (src: any) => (
-    <img
-      alt={website}
-      className={clsx('MarketingCard__img', {...getCustomClassNames(className, '__img', true)})}
-      src={src}
-    />
+    <img alt={website} className={clsx('MarketingCard__img', {...bemify(className, '__img')})} src={src} />
   );
 
   const images = {

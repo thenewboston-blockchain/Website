@@ -1,7 +1,7 @@
 import React, {ChangeEvent, FC, FocusEvent, useEffect, useRef} from 'react';
 import clsx from 'clsx';
+import {bemify} from '@thenewboston/utils';
 
-import {getCustomClassNames} from 'utils/components';
 import './Input.scss';
 
 export interface BaseInputProps {
@@ -44,7 +44,7 @@ const Input: FC<BaseInputProps> = ({
       autoComplete={autoComplete}
       className={clsx('Input', className, {
         'Input--error': error,
-        ...getCustomClassNames(className, '--error', error),
+        ...bemify(className, '--error', error),
       })}
       disabled={disabled}
       name={name}

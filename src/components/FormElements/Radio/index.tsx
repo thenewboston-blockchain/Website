@@ -1,8 +1,8 @@
 import React, {FC, useEffect, useRef} from 'react';
 import clsx from 'clsx';
+import {bemify} from '@thenewboston/utils';
 
 import Icon, {IconType} from 'components/Icon';
-import {getCustomClassNames} from 'utils/components';
 
 import './Radio.scss';
 
@@ -47,8 +47,8 @@ const Radio: FC<BaseRadioProps> = ({
         className={clsx('Radio', className, {
           'Radio--checked': checked,
           'Radio--error': error,
-          ...getCustomClassNames(className, '--checked', checked),
-          ...getCustomClassNames(className, '--error', error),
+          ...bemify(className, '--checked', checked),
+          ...bemify(className, '--error', error),
         })}
         disabled={disabled}
         icon={checked ? IconType.radioboxMarked : IconType.radioboxBlank}

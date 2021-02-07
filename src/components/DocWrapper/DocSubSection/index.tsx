@@ -1,8 +1,8 @@
 import React, {FC, ReactNode} from 'react';
 import clsx from 'clsx';
+import {bemify} from '@thenewboston/utils';
 
 import {HashLink} from 'components';
-import {getCustomClassNames} from 'utils/components';
 
 import './DocSubSection.scss';
 
@@ -15,7 +15,7 @@ interface ComponentProps {
 const DocSubSection: FC<ComponentProps> = ({children, className, id, title}) => {
   return (
     <>
-      <h2 className={clsx('DocSubSection__h2', {...getCustomClassNames(className, '__h2', true)})} id={id}>
+      <h2 className={clsx('DocSubSection__h2', {...bemify(className, '__h2')})} id={id}>
         {title}
         {id ? <HashLink className="DocSubSection__HashLink" id={id} /> : null}
       </h2>

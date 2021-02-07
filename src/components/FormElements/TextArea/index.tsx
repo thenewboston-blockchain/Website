@@ -1,7 +1,7 @@
 import React, {ChangeEvent, FC, FocusEvent, useEffect, useRef} from 'react';
 import clsx from 'clsx';
+import {bemify} from '@thenewboston/utils';
 
-import {getCustomClassNames} from 'utils/components';
 import './TextArea.scss';
 
 export interface BaseInputProps {
@@ -39,7 +39,7 @@ const InputTextArea: FC<BaseInputProps> = ({
     <textarea
       className={clsx('TextArea', className, {
         'TextArea--error': error,
-        ...getCustomClassNames(className, '--error', error),
+        ...bemify(className, '--error', error),
       })}
       disabled={disabled}
       name={name}

@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
+import {bemify} from '@thenewboston/utils';
 
-import {getCustomClassNames} from 'utils/components';
 import {NavOption} from 'types/option';
 
 import './FlatNavLinks.scss';
@@ -19,8 +19,8 @@ function FlatNavLinks({className, handleOptionClick, options, selectedOption}: C
       <button
         className={clsx('FlatNavLinks__option', {
           'FlatNavLinks__option--active': option.pathname === selectedOption,
-          ...getCustomClassNames(className, '__option', true),
-          ...getCustomClassNames(className, '__option--active', option.pathname === selectedOption),
+          ...bemify(className, '__option'),
+          ...bemify(className, '__option--active', option.pathname === selectedOption),
         })}
         key={option.pathname}
         onClick={handleOptionClick(option.pathname)}

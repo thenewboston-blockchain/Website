@@ -1,7 +1,7 @@
 import React, {FC, useEffect, useRef} from 'react';
 import clsx from 'clsx';
+import {bemify} from '@thenewboston/utils';
 
-import {getCustomClassNames} from 'utils/components';
 import './Button.scss';
 
 export interface BaseButtonProps {
@@ -36,9 +36,9 @@ const Button: FC<BaseButtonProps> = ({
     <button
       className={clsx('Button', `Button--${variant}`, `Button--${color}`, className, {
         'Button--disabled': disabled,
-        ...getCustomClassNames(className, `--${variant}`, true),
-        ...getCustomClassNames(className, `--${color}`, true),
-        ...getCustomClassNames(className, '--disabled', disabled),
+        ...bemify(className, `--${variant}`),
+        ...bemify(className, `--${color}`),
+        ...bemify(className, '--disabled', disabled),
       })}
       disabled={disabled}
       onClick={onClick}
