@@ -27,6 +27,7 @@ import ForumIcon from 'mdi-react/ForumIcon';
 import GithubIcon from 'mdi-react/GithubIcon';
 import HammerWrenchIcon from 'mdi-react/HammerWrenchIcon';
 import HumanHandsupIcon from 'mdi-react/HumanHandsupIcon';
+import InstagramIcon from 'mdi-react/InstagramIcon';
 import LinkedinIcon from 'mdi-react/LinkedinIcon';
 import LoadingIcon from 'mdi-react/LoadingIcon';
 import MenuIcon from 'mdi-react/MenuIcon';
@@ -73,6 +74,7 @@ export enum IconType {
   github,
   hammerWrench,
   humanHandsUp,
+  instagram,
   linkedin,
   loading,
   menu,
@@ -158,6 +160,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
           return <HammerWrenchIcon {...iconProps} />;
         case IconType.humanHandsUp:
           return <HumanHandsupIcon {...iconProps} />;
+        case IconType.instagram:
+          return <InstagramIcon {...iconProps} />;
         case IconType.linkedin:
           return <LinkedinIcon {...iconProps} />;
         case IconType.loading:

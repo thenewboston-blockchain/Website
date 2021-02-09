@@ -11,6 +11,7 @@ const customLinks = {
   [SocialMedia.discord]: 'https://discord.gg/thenewboston',
   [SocialMedia.facebook]: '',
   [SocialMedia.github]: '',
+  [SocialMedia.instagram]: '',
   [SocialMedia.linkedin]: 'https://www.linkedin.com/in/buckyroberts/',
   [SocialMedia.reddit]: 'https://www.reddit.com/message/compose?to=/r/thenewboston',
   [SocialMedia.slack]: '',
