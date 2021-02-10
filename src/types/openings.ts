@@ -23,6 +23,8 @@ export enum OpeningCategory {
   design = 'Design',
   engineering = 'Engineering',
   marketing = 'Marketing',
+  restaurants_self_order_app = 'Restaurants Self Order App',
+  tnb_forum = 'TNB Forum',
 }
 
 export interface OpeningsUrlParams {
