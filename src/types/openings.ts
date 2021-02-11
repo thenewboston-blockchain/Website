@@ -12,6 +12,7 @@ export interface Opening {
   openingId: string;
   payNotes: string[];
   position: string;
+  proposal?: string;
   reportsTo: Reportee[];
   responsibilities: string[];
   technologyRequirements: string[];
@@ -23,8 +24,7 @@ export enum OpeningCategory {
   design = 'Design',
   engineering = 'Engineering',
   marketing = 'Marketing',
-  restaurants_self_order_app = 'Restaurants Self Order App',
-  tnb_forum = 'TNB Forum',
+  project_proposals = 'Project Proposals',
 }
 
 export interface OpeningsUrlParams {

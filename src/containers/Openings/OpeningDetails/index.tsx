@@ -63,6 +63,9 @@ const OpeningDetails: FC<ComponentProps> = ({opening}) => {
     <>
       <div className="OpeningDetails__position">{opening.position}</div>
       <div className="OpeningDetails__description">{opening.description}</div>
+      {opening.proposal && (
+        <div className="OpeningDetails__proposal">Part of the {opening.proposal} Project Proposal</div>
+      )}
       {renderStringList(opening.responsibilities, 'Responsibilities')}
       {renderStringList(opening.technologyRequirements, 'Technology Requirements')}
       {renderReportsToList()}
