@@ -84,6 +84,7 @@ const Footer: FC<ComponentProps> = ({className}) => {
       SocialMedia.reddit,
       SocialMedia.linkedin,
       SocialMedia.facebook,
+      SocialMedia.instagram,
       SocialMedia.twitter,
       SocialMedia.discord,
       SocialMedia.twitch,

@@ -1,14 +1,15 @@
 import React, {FC} from 'react';
 import clsx from 'clsx';
+import {bemify} from '@thenewboston/utils';
 
 import {A} from 'components';
 import {SocialMedia} from 'types/social-media';
-import {getCustomClassNames} from 'utils/components';
 import {socialMediaUrls} from 'utils/social-media';
 
 import DiscordLogo from './logos/DiscordLogo.png';
 import FacebookLogo from './logos/FacebookLogo.png';
 import GitHubLogo from './logos/GitHubLogo.png';
+import InstagramLogo from './logos/InstagramLogo.png';
 import LinkedInLogo from './logos/LinkedInLogo.png';
 import RedditLogo from './logos/RedditLogo.png';
 import SlackLogo from './logos/SlackLogo.png';
@@ -26,17 +27,14 @@ interface ComponentProps {
 
 const MarketingButton: FC<ComponentProps> = ({className, customLink, website}) => {
   const renderImage = (src: any) => (
-    <img
-      alt={website}
-      className={clsx('MarketingButton__img', {...getCustomClassNames(className, '__img', true)})}
-      src={src}
-    />
+    <img alt={website} className={clsx('MarketingButton__img', {...bemify(className, '__img')})} src={src} />
   );
 
   const images = {
     discord: renderImage(DiscordLogo),
     facebook: renderImage(FacebookLogo),
     github: renderImage(GitHubLogo),
+    instagram: renderImage(InstagramLogo),
     linkedin: renderImage(LinkedInLogo),
     reddit: renderImage(RedditLogo),
     slack: renderImage(SlackLogo),

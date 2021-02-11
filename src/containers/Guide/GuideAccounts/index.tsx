@@ -21,7 +21,7 @@ const GuideAccounts: FC = () => {
 
       <p>
         When users first download an account manager, it will take the user through the process of creating a{' '}
-        <strong>key pair</strong>. A key pair consists of two keys, a <strong>signing key</strong> and an{' '}
+        <strong>key pair</strong>. A key pair consists of two keys, a <strong>signing key</strong> an d an{' '}
         <strong>account number</strong>.
       </p>
 

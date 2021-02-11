@@ -2,9 +2,9 @@ import React, {FC, ReactNode, useEffect, useMemo, useRef, useState} from 'react'
 import {createPortal} from 'react-dom';
 import {useLocation} from 'react-router-dom';
 import clsx from 'clsx';
+import {bemify} from '@thenewboston/utils';
 
 import {useEventListener, useWindowDimensions} from 'hooks';
-import {getCustomClassNames} from 'utils/components';
 import './Popover.scss';
 
 interface DomRect {
@@ -173,7 +173,7 @@ const Popover: FC<ComponentProps> = ({
           aria-hidden={!open}
           className={clsx('Popover', className, {
             'Popover--open': open,
-            ...getCustomClassNames(className, '--open', open),
+            ...bemify(className, '--open', open),
           })}
           id={id}
           onClick={handleStopFromClosing}

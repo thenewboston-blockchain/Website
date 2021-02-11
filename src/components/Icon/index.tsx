@@ -2,6 +2,7 @@
 
 import React, {forwardRef, ReactNode, useMemo} from 'react';
 import clsx from 'clsx';
+import {bemify} from '@thenewboston/utils';
 
 import AccountGroupIcon from 'mdi-react/AccountGroupIcon';
 import AlertCircleOutlineIcon from 'mdi-react/AlertCircleOutlineIcon';
@@ -26,6 +27,7 @@ import ForumIcon from 'mdi-react/ForumIcon';
 import GithubIcon from 'mdi-react/GithubIcon';
 import HammerWrenchIcon from 'mdi-react/HammerWrenchIcon';
 import HumanHandsupIcon from 'mdi-react/HumanHandsupIcon';
+import InstagramIcon from 'mdi-react/InstagramIcon';
 import LinkedinIcon from 'mdi-react/LinkedinIcon';
 import LoadingIcon from 'mdi-react/LoadingIcon';
 import MenuIcon from 'mdi-react/MenuIcon';
@@ -45,7 +47,6 @@ import TwitchIcon from 'mdi-react/TwitchIcon';
 import TwitterIcon from 'mdi-react/TwitterIcon';
 import YoutubeIcon from 'mdi-react/YoutubeIcon';
 
-import {getCustomClassNames} from 'utils/components';
 import './Icon.scss';
 
 // These names are camelCased versions of the names found in https://materialdesignicons.com/
@@ -73,6 +74,7 @@ export enum IconType {
   github,
   hammerWrench,
   humanHandsUp,
+  instagram,
   linkedin,
   loading,
   menu,
@@ -158,6 +160,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
           return <HammerWrenchIcon {...iconProps} />;
         case IconType.humanHandsUp:
           return <HumanHandsupIcon {...iconProps} />;
+        case IconType.instagram:
+          return <InstagramIcon {...iconProps} />;
         case IconType.linkedin:
           return <LinkedinIcon {...iconProps} />;
         case IconType.loading:
@@ -227,7 +231,7 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
         role="button"
         className={clsx('Icon', className, {
           'Icon--disabled': disabled,
-          ...getCustomClassNames(className, '--disabled', disabled),
+          ...bemify(className, '--disabled', disabled),
         })}
         ref={ref}
         onClick={handleClick}

@@ -1,8 +1,8 @@
 import React, {FC, ReactNode} from 'react';
 import clsx from 'clsx';
+import {bemify} from '@thenewboston/utils';
 
 import {HashLink} from 'components';
-import {getCustomClassNames} from 'utils/components';
 
 import './DocContainer.scss';
 
@@ -21,12 +21,12 @@ const DocContainer: FC<ComponentProps> = ({children, className, id, introSection
       {introTitle ? (
         <div
           className={clsx('DocContainer__wrapper', {
-            ...getCustomClassNames(className, '__wrapper', true),
+            ...bemify(className, '__wrapper'),
           })}
         >
           <h1
             className={clsx('DocContainer__page-title', {
-              ...getCustomClassNames(className, '__page-title', true),
+              ...bemify(className, '__page-title'),
             })}
           >
             {introTitle}
@@ -42,12 +42,12 @@ const DocContainer: FC<ComponentProps> = ({children, className, id, introSection
       ) : null}
       <div
         className={clsx('DocContainer__wrapper', {
-          ...getCustomClassNames(className, '__wrapper', true),
+          ...bemify(className, '__wrapper'),
         })}
       >
         <h1
           className={clsx('DocContainer__page-title', {
-            ...getCustomClassNames(className, '__page-title', true),
+            ...bemify(className, '__page-title'),
           })}
           id={id}
         >
