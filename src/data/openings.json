@@ -181,11 +181,11 @@
     ]
   },
   {
-    "openingId": "senior-backend-django-developer",
+    "openingId": "self-order-senior-backend-django-developer",
     "applicationMethods": [
       {
         "channel": "slack",
-        "note": "Slack Name: @Yahya"
+        "note": "Message Yahya"
       }
     ],
     "reportsTo": [
@@ -194,15 +194,12 @@
         "name": ""
       }
     ],
-    "category": "Project Proposals",
-    "projectName": "Restaraunt Self Order App",
+    "category": "Engineering",
+    "projectName": "Restaurant Self Order App",
     "description": "Have a solid backend experience",
     "payNotes": ["2,800 coins/day"],
     "position": "Senior Backend Django Developer",
-    "responsibilities": [
-      "To be able to interpret requirements into code",
-      "Write some documentations like API specs ..."
-    ],
+    "responsibilities": ["To be able to interpret requirements into code", "Write some documentations like API specs"],
     "technologyRequirements": [
       "Design knowledge of the backend (Architecture)",
       "Solve the problems to fit with the best performance and keep a solid backend",
@@ -215,7 +212,7 @@
     "applicationMethods": [
       {
         "channel": "slack",
-        "note": "Slack Name: @Yahya"
+        "note": "Message Yahya"
       }
     ],
     "reportsTo": [
@@ -224,11 +221,11 @@
         "name": ""
       }
     ],
-    "category": "Project Proposals",
-    "projectName": "Restaraunt Self Order App",
+    "category": "Design",
+    "projectName": "Restaurant Self Order App",
     "description": "Have a good experience in UI/UX standards",
     "payNotes": ["2,800 coins/day"],
-    "position": "UI/UX designer",
+    "position": "UI/UX Designer",
     "responsibilities": [
       "Design the mobile app interfaces using Figma",
       "Coordinate and take notes from other teammates"
@@ -240,7 +237,7 @@
     "applicationMethods": [
       {
         "channel": "slack",
-        "note": "Slack Name: @Avinash Upadhyaya"
+        "note": "Message Avinash Upadhyaya"
       }
     ],
     "reportsTo": [
@@ -249,11 +246,11 @@
         "name": ""
       }
     ],
-    "category": "Project Proposals",
+    "category": "Design",
     "projectName": "TNB Forum",
     "description": "Have a good experience in UI/UX standards",
     "payNotes": ["2,800 coins/day"],
-    "position": "UI/UX designer",
+    "position": "UI/UX Designer",
     "responsibilities": [
       "Design the web interfaces using Figma",
       "Design pages from scratch based on requirements",
