@@ -50,11 +50,6 @@
     margin-top: 4px;
   }
 
-  &__proposal {
-    font-size: small;
-    font-style: italic;
-  }
-
   &__list-label {
     font-weight: 800;
     margin-top: 24px;
@@ -71,6 +66,15 @@
     font-weight: 300;
     line-height: 1.25;
     margin-top: 36px;
+  }
+
+  &__proposal {
+    color: var(--color-blue-gray-800);
+    margin-bottom: 16px;
+
+    span {
+      font-weight: 500;
+    }
   }
 
   &__ul {
