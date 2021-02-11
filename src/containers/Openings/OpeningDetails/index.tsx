@@ -62,10 +62,10 @@ const OpeningDetails: FC<ComponentProps> = ({opening}) => {
   const renderContent = (): ReactNode => (
     <>
       <div className="OpeningDetails__position">{opening.position}</div>
-      <div className="OpeningDetails__description">{opening.description}</div>
-      {opening.proposal && (
-        <div className="OpeningDetails__proposal">Part of the {opening.proposal} Project Proposal</div>
+      {opening.projectName && (
+        <div className="OpeningDetails__proposal">Part of the {opening.projectName} Project Proposal</div>
       )}
+      <div className="OpeningDetails__description">{opening.description}</div>
       {renderStringList(opening.responsibilities, 'Responsibilities')}
       {renderStringList(opening.technologyRequirements, 'Technology Requirements')}
       {renderReportsToList()}

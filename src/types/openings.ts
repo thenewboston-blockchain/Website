@@ -12,7 +12,7 @@ export interface Opening {
   openingId: string;
   payNotes: string[];
   position: string;
-  proposal?: string;
+  projectName?: string;
   reportsTo: Reportee[];
   responsibilities: string[];
   technologyRequirements: string[];

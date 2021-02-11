@@ -47,7 +47,12 @@
   }
 
   &__description {
-    margin-top: 24px;
+    margin-top: 4px;
+  }
+
+  &__proposal {
+    font-size: small;
+    font-style: italic;
   }
 
   &__list-label {
