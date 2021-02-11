@@ -24,7 +24,6 @@ export enum OpeningCategory {
   design = 'Design',
   engineering = 'Engineering',
   marketing = 'Marketing',
-  project_proposals = 'Project Proposals',
 }
 
 export interface OpeningsUrlParams {

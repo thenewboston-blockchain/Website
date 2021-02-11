@@ -18,7 +18,6 @@ const OPENING_CATEGORY_FILTERS: NavOption[] = [
   {pathname: OpeningCategory.design, title: 'Design'},
   {pathname: OpeningCategory.engineering, title: 'Engineering'},
   {pathname: OpeningCategory.marketing, title: 'Marketing'},
-  {pathname: OpeningCategory.project_proposals, title: 'Project Proposals'},
 ];
 
 interface ComponentProps {
