@@ -221,37 +221,5 @@
       "Excellent knowledge of correct spelling, grammar and punctuation",
       "Can work with Marketing Team"
     ]
-  },
-  {
-    "openingId": "senior-django-developer",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message @yahya"
-      }
-    ],
-    "category": "Engineering",
-    "description": "Someone with a good experience in translating business and technical requirements into comprehensive software design and architecture",
-    "payNotes": ["2,800 coins/day"],
-    "position": "Software architect/ Senior Django developer",
-    "reportsTo": [
-      {
-        "githubUsername": "yahya",
-        "name": "Yahya"
-      }
-    ],
-    "responsibilities": [
-      "Designing and creating RESTful APIs",
-      "Designing and optimization of the database",
-      "Responsible for architectural, design of the product",
-      "Familiar with diagrams and documentations is a plus",
-      "Code review"
-    ],
-    "technologyRequirements": [
-      "Mainly a person who has a good skills in product designing to meet the best performance, scalability, and maintainability",
-      "Even if you are not experienced with Django, but you meet the main responsibilities, still DM me",
-      "Clean code standards",
-      "5+ years of experience"
-    ]
   }
 ]
