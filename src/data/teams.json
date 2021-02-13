@@ -764,7 +764,20 @@
           "profileImage": "https://avatars0.githubusercontent.com/u/35785259?v=4",
           "slackUsername": "Nish"
         }
-      }
+      },
+      {
+        "title": "Software Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+            "contributorId": "79",
+            "displayName": "tomijaga",
+            "githubUsername": "tomijaga",
+            "profileImage": "https://avatars.githubusercontent.com/u/50385769?s=400&u=53be327b7eaabd41f4e3c1e57d958508dec12357&v=4",
+            "slackUsername": "tomijaga"
+        }
+      }  
     ],
     "responsibilities": []
   },
