@@ -935,7 +935,20 @@
             "profileImage": "https://avatars.githubusercontent.com/u/78949557?s=400&u=b0707a51ab840b3960b240899a5235b140cb721e&v=4",
             "slackUsername": "KZZz"
         }
-    }
+      },
+      {
+        "title": "Social Media Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+            "contributorId": "78",
+            "displayName": "Mr9tynine",
+            "githubUsername": "Mr9tynine",
+            "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01MFD5GT5J-eae2ef782ec8-512",
+            "slackUsername": "Mr9tynine"
+        }
+      }
     ],
     "responsibilities": [
       {
