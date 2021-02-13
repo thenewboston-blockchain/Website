@@ -922,7 +922,20 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01E4P5AU5Q-8722ab1e52a7-512",
           "slackUsername": "SohDa"
         }
-      }
+      },
+      {
+        "title": "Memes Designer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+            "contributorId": "77",
+            "displayName": "kizzi",
+            "githubUsername": "kizzi789",
+            "profileImage": "https://avatars.githubusercontent.com/u/78949557?s=400&u=b0707a51ab840b3960b240899a5235b140cb721e&v=4",
+            "slackUsername": "KZZz"
+        }
+    }
     ],
     "responsibilities": [
       {
