@@ -310,7 +310,20 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01EHEJQUMS-g820abfd57a6-512",
           "slackUsername": "Chris Meninwa"
         }
-      }
+      },
+      {
+        "title": "Technical Writer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+            "contributorId": "76",
+            "displayName": "Vyz",
+            "githubUsername": "led76marx",
+            "profileImage": "https://avatars.githubusercontent.com/u/20023713?v=4",
+            "slackUsername": "Vyz"
+        }
+    }
     ],
     "responsibilities": [
       {
