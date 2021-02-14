@@ -179,5 +179,47 @@
       "G-suite expert",
       "Solid knowledge of SEO, keyword research and Google Analytics"
     ]
+  },
+  {
+    "openingId": "data-entry-operator",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message MsChrishaph"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Marketing",
+    "description": "We are looking for a Data Entry Operator to update and maintain information on our Marketing Team database .",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Data Entry Operator",
+    "reportsTo": [
+      {
+        "githubUsername": "Chrisha1212",
+        "name": "Chrisha"
+      }
+    ],
+    "responsibilities": [
+      "Maintaining accurate, up-to-date and useable information in our systems",
+      "Comply with data integrity and security policies",
+      "Keep information confidential",
+      "Research and obtain further information for incomplete documents",
+      "Compile, verify accuracy and sort information according to priorities to prepare source data for computer entry",
+      "Review data for deficiencies or errors, correct any incompatibilities if possible and check output"
+    ],
+    "technologyRequirements": [
+      "Proven data entry work experience, as a Data Entry Operator or Office Clerk",
+      "Experience with MS Office and data programs",
+      "Excellent knowledge of correct spelling, grammar and punctuation",
+      "Can work with Marketing Team"
+    ]
   }
 ]
