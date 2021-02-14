@@ -42,6 +42,7 @@ import RedditIcon from 'mdi-react/RedditIcon';
 import SlackIcon from 'mdi-react/SlackIcon';
 import SortAscendingIcon from 'mdi-react/SortAscendingIcon';
 import SortDescendingIcon from 'mdi-react/SortDescendingIcon';
+import TextBoxIcon from 'mdi-react/TextBoxIcon';
 import ThumbsUpIcon from 'mdi-react/ThumbsUpIcon';
 import TrophyIcon from 'mdi-react/TrophyIcon';
 import TwitchIcon from 'mdi-react/TwitchIcon';
@@ -90,6 +91,7 @@ export enum IconType {
   slack,
   sortAscending,
   sortDescending,
+  textBox,
   thumbsUp,
   trophy,
   twitch,
@@ -192,6 +194,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
           return <SortAscendingIcon {...iconProps} />;
         case IconType.sortDescending:
           return <SortDescendingIcon {...iconProps} />;
+        case IconType.textBox:
+          return <TextBoxIcon {...iconProps} />;
         case IconType.thumbsUp:
           return <ThumbsUpIcon {...iconProps} />;
         case IconType.trophy:

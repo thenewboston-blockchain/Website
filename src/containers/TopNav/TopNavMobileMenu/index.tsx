@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux';
 import {Link, useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 
-import {Icon, IconType} from 'components';
+import {A, Icon, IconType} from 'components';
 import {useBooleanState, useWindowDimensions} from 'hooks';
 import {selectActiveUser} from 'selectors/state';
 import './TopNavMobileMenu.scss';
@@ -109,6 +109,7 @@ const TopNavMobileMenu = () => {
             'More',
             <>
               {renderMobileLink('Project Proposals', '/project-proposals/overview')}
+              {renderMobileLink('Blog', 'https://thenewboston.blog/', true)}
               {renderMobileLink('Assets', '/assets')}
               {renderMobileLink('FAQ', '/faq')}
               {renderMobileLink('Donate', '/donate')}
@@ -140,7 +141,14 @@ const TopNavMobileMenu = () => {
     );
   };
 
-  const renderMobileLink = (label: string, to: string): ReactNode => {
+  const renderMobileLink = (label: string, to: string, isExternal?: boolean): ReactNode => {
+    if (isExternal) {
+      return (
+        <A className="TopNavMobileMenu__link" href={to} newWindow={false}>
+          {label}
+        </A>
+      );
+    }
     return (
       <Link className="TopNavMobileMenu__link" to={to}>
         {label}

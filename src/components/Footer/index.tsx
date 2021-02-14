@@ -60,6 +60,11 @@ const navLists = [
         url: '/project-proposals/overview',
       },
       {
+        isExternal: true,
+        title: 'Blog',
+        url: 'https://thenewboston.blog/',
+      },
+      {
         title: 'Assets',
         url: '/assets',
       },
