@@ -63,13 +63,14 @@ const Openings: FC<ComponentProps> = ({openingsFrozen}) => {
 
   const renderOpenings = (): ReactNode => {
     if (!filteredOpenings.length) return <EmptyPage />;
-    return filteredOpenings.map(({category, description, openingId, position}) => (
+    return filteredOpenings.map(({category, description, openingId, position, project}) => (
       <OpeningsOpening
         category={category}
         description={description}
-        key={position}
+        key={openingId}
         openingId={openingId}
         position={position}
+        project={project}
       />
     ));
   };

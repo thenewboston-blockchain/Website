@@ -23,6 +23,12 @@ $opening-card-box-shadow: 0 15px 30px 15px rgba(85, 108, 214, 0.18);
     font-weight: 700;
   }
 
+  &__project {
+    color: var(--color-blue-gray-800);
+    font-size: var(--font-size-small-regular);
+    font-weight: 400;
+  }
+
   @media (max-width: 768px) {
     margin: 0 24px 12px;
   }

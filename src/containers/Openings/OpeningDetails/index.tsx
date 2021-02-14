@@ -62,6 +62,13 @@ const OpeningDetails: FC<ComponentProps> = ({opening}) => {
   const renderContent = (): ReactNode => (
     <>
       <div className="OpeningDetails__position">{opening.position}</div>
+      {opening.project && (
+        <div className="OpeningDetails__proposal">
+          Hiring for{' '}
+          {opening.project.url ? <A href={opening.project.url}>{opening.project.name}</A> : <>{opening.project.name}</>}{' '}
+          under Project Proposals.
+        </div>
+      )}
       <div className="OpeningDetails__description">{opening.description}</div>
       {renderStringList(opening.responsibilities, 'Responsibilities')}
       {renderStringList(opening.technologyRequirements, 'Technology Requirements')}
@@ -85,6 +92,7 @@ const OpeningDetails: FC<ComponentProps> = ({opening}) => {
         )}
       </li>
     ));
+
     return (
       <>
         <div className="OpeningDetails__list-label">Reports To</div>
