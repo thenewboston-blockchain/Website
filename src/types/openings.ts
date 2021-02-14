@@ -12,7 +12,7 @@ export interface Opening {
   openingId: string;
   payNotes: string[];
   position: string;
-  projectName?: string;
+  project?: {title: string; url?: string};
   reportsTo: Reportee[];
   responsibilities: string[];
   technologyRequirements: string[];

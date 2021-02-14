@@ -195,7 +195,10 @@
       }
     ],
     "category": "Engineering",
-    "projectName": "Restaurant Self Order App",
+    "project": {
+      "title": "Restaurant Self Order App",
+      "url": "https://github.com/Restaurants-Self-Order"
+    },
     "description": "Have a solid backend experience",
     "payNotes": ["2,800 coins/day"],
     "position": "Senior Backend Django Developer",
@@ -222,7 +225,10 @@
       }
     ],
     "category": "Design",
-    "projectName": "Restaurant Self Order App",
+    "project": {
+      "title": "Restaurant Self Order App",
+      "url": "https://github.com/Restaurants-Self-Order"
+    },
     "description": "Have a good experience in UI/UX standards",
     "payNotes": ["2,800 coins/day"],
     "position": "UI/UX Designer",
@@ -247,7 +253,10 @@
       }
     ],
     "category": "Design",
-    "projectName": "TNB Forum",
+    "project": {
+      "title": "TNB Forum",
+      "url": "https://github.com/arunnalla/tnbforum"
+    },
     "description": "Have a good experience in UI/UX standards",
     "payNotes": ["2,800 coins/day"],
     "position": "UI/UX Designer",
