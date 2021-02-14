@@ -20,7 +20,7 @@ const OpeningsOpening: FC<ComponentProps> = ({category, description, openingId, 
     if (project) {
       return (
         <>
-          {position} <span>({project.name})</span>
+          {position} <span className="OpeningsOpening__project">({project.name})</span>
         </>
       );
     }

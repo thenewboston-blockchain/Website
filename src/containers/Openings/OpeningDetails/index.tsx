@@ -64,12 +64,8 @@ const OpeningDetails: FC<ComponentProps> = ({opening}) => {
       <div className="OpeningDetails__position">{opening.position}</div>
       {opening.project && (
         <div className="OpeningDetails__proposal">
-          Hiring for
-          {opening.project.url ? (
-            <A href={opening.project.url}> {opening.project.name} </A>
-          ) : (
-            <span> {opening.project.name} </span>
-          )}
+          Hiring for{' '}
+          {opening.project.url ? <A href={opening.project.url}>{opening.project.name}</A> : <>{opening.project.name}</>}{' '}
           under Project Proposals.
         </div>
       )}
@@ -96,6 +92,7 @@ const OpeningDetails: FC<ComponentProps> = ({opening}) => {
         )}
       </li>
     ));
+
     return (
       <>
         <div className="OpeningDetails__list-label">Reports To</div>
