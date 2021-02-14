@@ -70,7 +70,7 @@ const Openings: FC<ComponentProps> = ({openingsFrozen}) => {
         key={openingId}
         openingId={openingId}
         position={position}
-        projectName={project?.title}
+        project={project}
       />
     ));
   };

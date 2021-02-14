@@ -196,7 +196,7 @@
     ],
     "category": "Engineering",
     "project": {
-      "title": "Restaurant Self Order App",
+      "name": "Restaurant Self Order App",
       "url": "https://github.com/Restaurants-Self-Order"
     },
     "description": "Have a solid backend experience",
@@ -226,7 +226,7 @@
     ],
     "category": "Design",
     "project": {
-      "title": "Restaurant Self Order App",
+      "name": "Restaurant Self Order App",
       "url": "https://github.com/Restaurants-Self-Order"
     },
     "description": "Have a good experience in UI/UX standards",
@@ -254,7 +254,7 @@
     ],
     "category": "Design",
     "project": {
-      "title": "TNB Forum",
+      "name": "TNB Forum",
       "url": "https://github.com/arunnalla/tnbforum"
     },
     "description": "Have a good experience in UI/UX standards",
@@ -268,7 +268,8 @@
     "technologyRequirements": [
       "Using Figma is a must",
       "Knowledge of design systems is good to know",
-      "Knowledge of React is preferred"]
+      "Knowledge of React is preferred"
+    ]
   },
   {
     "openingId": "data-entry-operator",

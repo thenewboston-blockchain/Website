@@ -1,7 +1,7 @@
 import React, {FC, memo, useCallback} from 'react';
 import {Link, useLocation} from 'react-router-dom';
 
-import {OpeningCategory} from 'types/openings';
+import {OpeningCategory, ProjectProposal} from 'types/openings';
 
 import './OpeningsOpening.scss';
 
@@ -10,22 +10,22 @@ interface ComponentProps {
   description: string;
   openingId: string;
   position: string;
-  projectName?: string;
+  project?: ProjectProposal;
 }
 
-const OpeningsOpening: FC<ComponentProps> = ({category, description, openingId, position, projectName}) => {
+const OpeningsOpening: FC<ComponentProps> = ({category, description, openingId, position, project}) => {
   const location = useLocation();
 
   const renderOpeningTitle = useCallback(() => {
-    if (projectName) {
+    if (project) {
       return (
         <>
-          {position} <span>({projectName})</span>
+          {position} <span>({project.name})</span>
         </>
       );
     }
     return position;
-  }, [position, projectName]);
+  }, [position, project]);
 
   return (
     <Link

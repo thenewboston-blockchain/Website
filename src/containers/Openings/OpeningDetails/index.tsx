@@ -64,8 +64,13 @@ const OpeningDetails: FC<ComponentProps> = ({opening}) => {
       <div className="OpeningDetails__position">{opening.position}</div>
       {opening.project && (
         <div className="OpeningDetails__proposal">
-          Hiring for <A href={opening.project.url ? opening.project.url : ''}>{opening.project.title}</A> under Project
-          Proposals.
+          Hiring for
+          {opening.project.url ? (
+            <A href={opening.project.url}> {opening.project.name} </A>
+          ) : (
+            <span> {opening.project.name} </span>
+          )}
+          under Project Proposals.
         </div>
       )}
       <div className="OpeningDetails__description">{opening.description}</div>
