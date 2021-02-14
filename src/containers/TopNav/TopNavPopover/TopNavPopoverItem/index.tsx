@@ -35,7 +35,7 @@ const TopNavPopoverItem = forwardRef<HTMLAnchorElement, ComponentProps>(
     };
 
     return isExternal ? (
-      <A className="TopNavPopoverItem" href={to} onClick={handleButtonClick}>
+      <A className="TopNavPopoverItem" href={to} newWindow={false}>
         {renderChildren()}
       </A>
     ) : (

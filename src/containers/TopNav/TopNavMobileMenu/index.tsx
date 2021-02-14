@@ -144,7 +144,7 @@ const TopNavMobileMenu = () => {
   const renderMobileLink = (label: string, to: string, isExternal?: boolean): ReactNode => {
     if (isExternal) {
       return (
-        <A className="TopNavMobileMenu__link" href={to}>
+        <A className="TopNavMobileMenu__link" href={to} newWindow={false}>
           {label}
         </A>
       );

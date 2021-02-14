@@ -23,7 +23,7 @@ const FooterNavList: FC<ComponentProps> = ({header, links}) => {
       {links.map((link) => (
         <li className="FooterNavList__item" key={link.title}>
           {link.isExternal ? (
-            <A className="FooterNavList__item-link" href={link.url}>
+            <A className="FooterNavList__item-link" href={link.url} newWindow={false}>
               {link.title}
             </A>
           ) : (
