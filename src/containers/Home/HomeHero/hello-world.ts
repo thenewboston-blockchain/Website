@@ -26,6 +26,7 @@ const HelloWorld: {[isoLangCode: string]: string} = {
   fa: 'سلام دنیا',
   fi: 'Hei maailma',
   fj: 'Bula Vuravura',
+  fo: 'Halló Verøld',
   fr: 'Bonjour monde',
   fy: 'Hallo wrâld',
   ga: 'Dia duit an Domhan',

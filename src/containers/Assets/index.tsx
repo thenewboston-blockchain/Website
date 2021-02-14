@@ -40,7 +40,7 @@ const Assets: FC = () => {
           'Assets__card-wrapper--dark': asset.backgroundColor === 'dark',
         })}
       >
-        <A className="Assets__download-button" href={asset.downloadLink} target="_self">
+        <A className="Assets__download-button" href={asset.downloadLink} newWindow={false}>
           <Icon icon={IconType.downloadIcon} />
         </A>
         <div className="Assets__card">

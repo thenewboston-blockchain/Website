@@ -30,6 +30,7 @@ import HumanHandsupIcon from 'mdi-react/HumanHandsupIcon';
 import InstagramIcon from 'mdi-react/InstagramIcon';
 import LinkedinIcon from 'mdi-react/LinkedinIcon';
 import LoadingIcon from 'mdi-react/LoadingIcon';
+import OpenInNewIcon from 'mdi-react/OpenInNewIcon';
 import MenuIcon from 'mdi-react/MenuIcon';
 import MenuRightIcon from 'mdi-react/MenuRightIcon';
 import MinusIcon from 'mdi-react/MinusIcon';
@@ -80,6 +81,7 @@ export enum IconType {
   menu,
   menuRight,
   minus,
+  openInNew,
   pencil,
   plus,
   radioboxBlank,
@@ -172,6 +174,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
           return <MenuRightIcon {...iconProps} />;
         case IconType.minus:
           return <MinusIcon {...iconProps} />;
+        case IconType.openInNew:
+          return <OpenInNewIcon {...iconProps} />;
         case IconType.pencil:
           return <PencilIcon {...iconProps} />;
         case IconType.plus:
