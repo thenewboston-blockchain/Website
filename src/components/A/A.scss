@@ -1,9 +1,7 @@
 .A {
-  .Icon {
+  // Needed to add extra specificity to override `Icon`'s styling
+  .A__Icon--new-window {
     display: inline-flex;
-  }
-
-  &__Icon--new-window {
     margin-left: 1px;
     margin-right: 3px;
   }
