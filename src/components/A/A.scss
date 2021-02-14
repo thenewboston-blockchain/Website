@@ -2,4 +2,9 @@
   .Icon {
     display: inline-flex;
   }
+
+  &__Icon--new-window {
+    margin-left: 1px;
+    margin-right: 3px;
+  }
 }

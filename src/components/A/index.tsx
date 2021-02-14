@@ -22,7 +22,7 @@ const A: FC<ComponentProps> = ({children, className, href, newWindow = true}) =>
       {children}
       {renderIcon && (
         <Icon
-          className={clsx('A__Icon', {...bemify(className, '__Icon')})}
+          className={clsx('A__Icon--new-window', {...bemify(className, '__Icon')})}
           icon={IconType.openInNew}
           size={16}
           totalSize={20}
