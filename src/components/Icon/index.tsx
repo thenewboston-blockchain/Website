@@ -30,6 +30,7 @@ import HumanHandsupIcon from 'mdi-react/HumanHandsupIcon';
 import InstagramIcon from 'mdi-react/InstagramIcon';
 import LinkedinIcon from 'mdi-react/LinkedinIcon';
 import LoadingIcon from 'mdi-react/LoadingIcon';
+import OpenInNewIcon from 'mdi-react/OpenInNewIcon';
 import MenuIcon from 'mdi-react/MenuIcon';
 import MenuRightIcon from 'mdi-react/MenuRightIcon';
 import MinusIcon from 'mdi-react/MinusIcon';
@@ -41,6 +42,7 @@ import RedditIcon from 'mdi-react/RedditIcon';
 import SlackIcon from 'mdi-react/SlackIcon';
 import SortAscendingIcon from 'mdi-react/SortAscendingIcon';
 import SortDescendingIcon from 'mdi-react/SortDescendingIcon';
+import TextBoxIcon from 'mdi-react/TextBoxIcon';
 import ThumbsUpIcon from 'mdi-react/ThumbsUpIcon';
 import TrophyIcon from 'mdi-react/TrophyIcon';
 import TwitchIcon from 'mdi-react/TwitchIcon';
@@ -80,6 +82,7 @@ export enum IconType {
   menu,
   menuRight,
   minus,
+  openInNew,
   pencil,
   plus,
   radioboxBlank,
@@ -88,6 +91,7 @@ export enum IconType {
   slack,
   sortAscending,
   sortDescending,
+  textBox,
   thumbsUp,
   trophy,
   twitch,
@@ -172,6 +176,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
           return <MenuRightIcon {...iconProps} />;
         case IconType.minus:
           return <MinusIcon {...iconProps} />;
+        case IconType.openInNew:
+          return <OpenInNewIcon {...iconProps} />;
         case IconType.pencil:
           return <PencilIcon {...iconProps} />;
         case IconType.plus:
@@ -188,6 +194,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
           return <SortAscendingIcon {...iconProps} />;
         case IconType.sortDescending:
           return <SortDescendingIcon {...iconProps} />;
+        case IconType.textBox:
+          return <TextBoxIcon {...iconProps} />;
         case IconType.thumbsUp:
           return <ThumbsUpIcon {...iconProps} />;
         case IconType.trophy:

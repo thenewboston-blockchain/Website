@@ -72,18 +72,17 @@ npm start
 
 ## Community
 
-Join the community to stay updated on the most recent developments, project roadmaps, and random discussions about
-completely unrelated topics.
+Join the community to stay updated on the most recent developments, project roadmaps, and random discussions about completely unrelated topics.
 
 - [thenewboston.com](https://thenewboston.com/)
-- [Slack](https://join.slack.com/t/thenewboston/shared_invite/zt-lldpqdle-l9lvBI7PbZD_uDJegmk3xA)
-- [Reddit](https://www.reddit.com/r/thenewboston/)
-- [LinkedIn](https://www.linkedin.com/company/thenewboston-developers/)
+- [Discord](https://discord.gg/thenewboston)
 - [Facebook](https://www.facebook.com/TheNewBoston-464114846956315/)
 - [Instagram](https://www.instagram.com/thenewboston_official/)
+- [LinkedIn](https://www.linkedin.com/company/thenewboston-developers/)
+- [Reddit](https://www.reddit.com/r/thenewboston/)
+- [Twitch](https://www.twitch.tv/thenewboston/videos)
 - [Twitter](https://twitter.com/thenewboston_og)
 - [YouTube](https://www.youtube.com/user/thenewboston)
-- [Discord](https://discord.gg/thenewboston)
 
 ## Donate
 

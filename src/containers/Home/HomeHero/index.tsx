@@ -36,7 +36,11 @@ const HomeHero: FC = () => {
         <div className="HomeHero__left">
           <div className="HomeHero__left-content-container">
             <span className={clsx('HomeHero__hello-world', HelloFadeClass[animationState])}>{helloText}</span>
-            <h1 className="HomeHero__title">Turn your coding skills into rewards</h1>
+            <h1 className="HomeHero__title">
+              Build a community
+              <br />
+              Earn digital currency
+            </h1>
             <h2 className="HomeHero__subtitle">
               Learn to code, collaborate on projects, gain experience, build a community, and earn coins by
               contributing.
