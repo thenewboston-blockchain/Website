@@ -1,0 +1,26 @@
+name: Test
+on:
+  pull_request:
+    branches:
+      - development
+jobs:
+  build:
+    name: Running test on Node ${{ matrix.node }} and ${{ matrix.os }}
+
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node: ['10.x', '12.x', '14.x']
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Use Node ${{ matrix.node }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Test
+        run: yarn test --ci --coverage --maxWorkers=2
