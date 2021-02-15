@@ -414,7 +414,20 @@
           "profileImage": "https://avatars1.githubusercontent.com/u/47249126?s=400&u=2e9e60984bef80c2908856c3f9966593372a1049&v=4",
           "slackUsername": "Osaro Ochuko Adade"
         }
-      }
+      },
+      {
+        "title": "UI/UX Designer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+            "contributorId": "80",
+            "displayName": "Adarsh Kumar",
+            "githubUsername": "Niekon01",
+            "profileImage": "https://avatars.githubusercontent.com/u/55133485?s=400&u=30095929a9d5bf6199f89c43d8df26bb9bb484a1&v=4",
+            "slackUsername": "Niekon"
+        }
+        }        
     ],
     "responsibilities": [
       {
