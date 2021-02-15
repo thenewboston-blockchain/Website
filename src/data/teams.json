@@ -317,13 +317,13 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-            "contributorId": "76",
-            "displayName": "Vyz",
-            "githubUsername": "led76marx",
-            "profileImage": "https://avatars.githubusercontent.com/u/20023713?v=4",
-            "slackUsername": "Vyz"
+          "contributorId": "76",
+          "displayName": "Vyz",
+          "githubUsername": "led76marx",
+          "profileImage": "https://avatars.githubusercontent.com/u/20023713?v=4",
+          "slackUsername": "Vyz"
         }
-    }
+      }
     ],
     "responsibilities": [
       {
@@ -771,13 +771,13 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-            "contributorId": "79",
-            "displayName": "tomijaga",
-            "githubUsername": "tomijaga",
-            "profileImage": "https://avatars.githubusercontent.com/u/50385769?s=400&u=53be327b7eaabd41f4e3c1e57d958508dec12357&v=4",
-            "slackUsername": "tomijaga"
+          "contributorId": "79",
+          "displayName": "tomijaga",
+          "githubUsername": "tomijaga",
+          "profileImage": "https://avatars.githubusercontent.com/u/50385769?s=400&u=53be327b7eaabd41f4e3c1e57d958508dec12357&v=4",
+          "slackUsername": "tomijaga"
         }
-      }  
+      }
     ],
     "responsibilities": []
   },
@@ -942,11 +942,11 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-            "contributorId": "77",
-            "displayName": "kizzi",
-            "githubUsername": "kizzi789",
-            "profileImage": "https://avatars.githubusercontent.com/u/78949557?s=400&u=b0707a51ab840b3960b240899a5235b140cb721e&v=4",
-            "slackUsername": "KZZz"
+          "contributorId": "77",
+          "displayName": "kizzi",
+          "githubUsername": "kizzi789",
+          "profileImage": "https://avatars.githubusercontent.com/u/78949557?s=400&u=b0707a51ab840b3960b240899a5235b140cb721e&v=4",
+          "slackUsername": "KZZz"
         }
       },
       {
@@ -955,11 +955,11 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-            "contributorId": "78",
-            "displayName": "Mr9tynine",
-            "githubUsername": "Mr9tynine",
-            "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01MFD5GT5J-eae2ef782ec8-512",
-            "slackUsername": "Mr9tynine"
+          "contributorId": "78",
+          "displayName": "Mr9tynine",
+          "githubUsername": "Mr9tynine",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01MFD5GT5J-eae2ef782ec8-512",
+          "slackUsername": "Mr9tynine"
         }
       }
     ],
