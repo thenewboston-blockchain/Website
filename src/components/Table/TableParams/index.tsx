@@ -1,7 +1,6 @@
 import React, {FC, ReactNode} from 'react';
 import clsx from 'clsx';
-
-import {getCustomClassNames} from 'utils/components';
+import {bemify} from '@thenewboston/utils';
 
 import './TableParams.scss';
 
@@ -21,33 +20,29 @@ interface ComponentProps {
 const TableParams: FC<ComponentProps> = ({className, headers, items}) => {
   const renderBody = (): ReactNode => {
     return (
-      <tbody className={clsx('TableParams__tbody', {...getCustomClassNames(className, '__tbody', true)})}>
+      <tbody className={clsx('TableParams__tbody', {...bemify(className, '__tbody')})}>
         {items.map(({dataType, description, param, sampleValue}, index) => (
           <tr
             key={index}
             className={clsx('TableParams__tr', {
               'TableParams__tr--even': index % 2 === 0,
-              ...getCustomClassNames(className, '__tr', true),
-              ...getCustomClassNames(className, '__tr--odd', index % 2 !== 0),
+              ...bemify(className, '__tr'),
+              ...bemify(className, '__tr--odd', index % 2 !== 0),
             })}
           >
             <td
               className={clsx('TableParams__td TableParams__td--param', {
-                ...getCustomClassNames(className, '__td', true),
-                ...getCustomClassNames(className, '__td--param', true),
+                ...bemify(className, '__td'),
+                ...bemify(className, '__td--param'),
               })}
             >
               {param}
-              <span
-                className={clsx('TableParams__data-type', {...getCustomClassNames(className, '__data-type', true)})}
-              >
-                {dataType}
-              </span>
+              <span className={clsx('TableParams__data-type', {...bemify(className, '__data-type')})}>{dataType}</span>
             </td>
             <td
               className={clsx('TableParams__td TableParams__td--description', {
-                ...getCustomClassNames(className, '__td', true),
-                ...getCustomClassNames(className, '__td--description', true),
+                ...bemify(className, '__td'),
+                ...bemify(className, '__td--description'),
               })}
             >
               {description}
@@ -55,8 +50,8 @@ const TableParams: FC<ComponentProps> = ({className, headers, items}) => {
             {sampleValue ? (
               <td
                 className={clsx('TableParams__td TableParams__td--sample-value', {
-                  ...getCustomClassNames(className, '__td', true),
-                  ...getCustomClassNames(className, '__td--sample-value', true),
+                  ...bemify(className, '__td'),
+                  ...bemify(className, '__td--sample-value'),
                 })}
               >
                 {sampleValue}
@@ -72,10 +67,10 @@ const TableParams: FC<ComponentProps> = ({className, headers, items}) => {
     if (!headers) return;
 
     return (
-      <thead className={clsx('TableParams__thead', {...getCustomClassNames(className, '__thead', true)})}>
-        <tr className={clsx('TableParams__tr', {...getCustomClassNames(className, '__tr', true)})}>
+      <thead className={clsx('TableParams__thead', {...bemify(className, '__thead')})}>
+        <tr className={clsx('TableParams__tr', {...bemify(className, '__tr')})}>
           {headers.map((header, i) => (
-            <th key={i} className={clsx('TableParams__th', {...getCustomClassNames(className, '__th', true)})}>
+            <th key={i} className={clsx('TableParams__th', {...bemify(className, '__th')})}>
               {header}
             </th>
           ))}
@@ -86,7 +81,7 @@ const TableParams: FC<ComponentProps> = ({className, headers, items}) => {
 
   return (
     <div className={clsx('TableParams', className)}>
-      <table className={clsx('TableParams__table', {...getCustomClassNames(className, '__table', true)})}>
+      <table className={clsx('TableParams__table', {...bemify(className, '__table')})}>
         {renderHeaders()}
         {renderBody()}
       </table>

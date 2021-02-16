@@ -1,7 +1,6 @@
 import React, {FC, useMemo} from 'react';
 import clsx from 'clsx';
-
-import {getCustomClassNames} from 'utils/components';
+import {bemify} from '@thenewboston/utils';
 
 import './DocList.scss';
 
@@ -15,7 +14,7 @@ const DocList: FC<ComponentProps> = ({children, className, variant}) => {
     () =>
       clsx('DocList', className, {
         [`DocList--${variant}`]: true,
-        ...getCustomClassNames(className, `--${variant}`, true),
+        ...bemify(className, `--${variant}`),
       }),
     [className, variant],
   );

@@ -7,7 +7,7 @@ import AccountsSimple from './AccountsSimple.png';
 
 const GuideAccounts: FC = () => {
   return (
-    <DocContainer className="GuideAccounts" title="Accounts">
+    <DocContainer className="GuideAccounts" title="Accounts" lastUpdated="07 Dec 2020">
       <p>
         <strong>Accounts</strong> are anonymous digital identities on the network where coins may be sent to and from.{' '}
         <strong>Account managers</strong> are software applications (such as a mobile application or desktop software)
@@ -21,7 +21,7 @@ const GuideAccounts: FC = () => {
 
       <p>
         When users first download an account manager, it will take the user through the process of creating a{' '}
-        <strong>key pair</strong>. A key pair consists of two keys, a <strong>signing key</strong> and an{' '}
+        <strong>key pair</strong>. A key pair consists of two keys, a <strong>signing key</strong> an d an{' '}
         <strong>account number</strong>.
       </p>
 

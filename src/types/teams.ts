@@ -1,13 +1,23 @@
 export enum TeamName {
   all = 'All',
-  analytics = 'Analytics',
   backEndDevelopers = 'Back-End Developers',
-  frontEndDevelopers = 'Front-End Developers',
+  communications = 'Communications',
+  community = 'Community',
   design = 'Design',
+  devOps = 'DevOps',
+  discordManagers = 'Discord Managers',
+  dotnetCore = '.NET Core',
+  frontEndDevelopers = 'Front-End Developers',
+  kotlinSDK = 'Kotlin SDK',
   marketing = 'Marketing',
-  linkedinManager = 'LinkedIn Manager',
-  seo = 'SEO',
-  slackManager = 'Slack Manager',
+  newUserOperations = 'New User Operations',
+  payments = 'Payments',
+  projectProposals = 'Project Proposals',
+  qa = 'QA',
+  redditModerators = 'Reddit Moderators',
+  research = 'Research',
+  security = 'Security',
+  youtube = 'YouTube',
 }
 
 interface Contributor {
@@ -18,17 +28,30 @@ interface Contributor {
   slackUsername: string;
 }
 
-export interface Team {
-  contributors: TeamContributor[];
-  title: string;
+export interface TeamPlatform {
+  label: string;
+  link: string;
+  name: string;
 }
 
-interface TeamContributor {
+export interface TeamResponsibility {
+  item: string;
+  subitems: string[];
+}
+
+export interface Team {
+  contributors: TeamContributor[];
+  description: string;
+  platforms: TeamPlatform[];
+  title: string;
+  responsibilities: TeamResponsibility[];
+}
+
+export interface TeamContributor {
   contributor: Contributor;
   createdDate: string;
   isLead: boolean;
   payPerDay: number;
-  team: Team;
   title: string;
 }
 
@@ -38,6 +61,7 @@ interface TeamLead {
 }
 
 export interface TeamMember {
+  contributorId: string;
   displayName: string;
   githubUsername: string;
   isLead: boolean;
@@ -46,4 +70,16 @@ export interface TeamMember {
   slackUsername: string;
   teams: TeamLead[];
   titles: string[];
+}
+
+export interface TeamsUrlParams {
+  resource?: string;
+  team: string;
+  tab?: TeamTabOptions;
+}
+
+export enum TeamTabOptions {
+  members = 'Members',
+  overview = 'Overview',
+  resources = 'Resources',
 }

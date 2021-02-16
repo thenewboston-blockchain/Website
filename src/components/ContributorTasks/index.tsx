@@ -15,7 +15,7 @@ const ContributorTasks: FC<ComponentProps> = ({className, tasks}) => {
   const renderRows = () => {
     return tasks.map(({amount_paid, completed_date, issue_id, repository, title}: Task, index) => (
       <tr key={index}>
-        <td className="ContributorTasks__task-title">
+        <td className="ContributorTasks__task-title" title={title}>
           <A
             className="ContributorTasks__issue-link"
             href={`https://github.com/thenewboston-developers/${repository}/issues/${issue_id}`}
@@ -23,7 +23,9 @@ const ContributorTasks: FC<ComponentProps> = ({className, tasks}) => {
             {title}
           </A>
         </td>
-        <td className="ContributorTasks__repository">{repository}</td>
+        <td className="ContributorTasks__repository" title={repository}>
+          {repository}
+        </td>
         <td className="ContributorTasks__date-completed">{format(completed_date, 'L/d/yy')}</td>
         <td className="ContributorTasks__amount">+ {parseInt(amount_paid, 10).toLocaleString()}</td>
       </tr>

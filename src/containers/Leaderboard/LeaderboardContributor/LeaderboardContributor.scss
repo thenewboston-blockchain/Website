@@ -49,12 +49,6 @@
     overflow: hidden;
   }
 
-  &__user-avatar {
-    border-radius: 50%;
-    height: auto;
-    max-width: 178px;
-  }
-
   &__user-avatar-container {
     position: relative;
   }
@@ -135,14 +129,12 @@
       display: none;
     }
 
-    &__user-avatar {
-      max-width: 54px;
-    }
-
     &__user-avatar-rank {
-      font-size: var(--font-size-regular);
-      height: 24px;
-      width: 24px;
+      font-size: var(--font-size-small);
+      height: 28px;
+      left: -8px;
+      top: -8px;
+      width: 28px;
     }
 
     &__user-login {

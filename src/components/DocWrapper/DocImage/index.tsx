@@ -1,7 +1,6 @@
 import React, {FC} from 'react';
 import clsx from 'clsx';
-
-import {getCustomClassNames} from 'utils/components';
+import {bemify} from '@thenewboston/utils';
 
 import './DocImage.scss';
 
@@ -20,7 +19,7 @@ const DocImage: FC<ComponentProps> = ({alt, bordered, className, maxWidth, src})
         alt={alt}
         className={clsx('DocImage__img', {
           DocImage__bordered: bordered,
-          ...getCustomClassNames(className, '__img', true),
+          ...bemify(className, '__img'),
         })}
         src={src}
         style={{maxWidth}}

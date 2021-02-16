@@ -1,0 +1,22 @@
+.TopNavPopoverItemSimple {
+  align-items: center;
+  background: var(--color-white);
+  border-radius: 6px;
+  color: var(--color-sail-gray-800);
+  cursor: pointer;
+  display: block;
+  font-weight: 500;
+  line-height: 1.2;
+  outline: none;
+  padding: 12px 18px;
+  transition: background 0.1s ease-in;
+  white-space: nowrap;
+
+  &:focus {
+    background: var(--color-sail-gray-50);
+  }
+
+  &:hover {
+    background: #d6ecff;
+  }
+}

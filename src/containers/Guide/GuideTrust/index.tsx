@@ -6,7 +6,7 @@ import DoubleSpend from './DoubleSpend.png';
 
 const GuideTrust: FC = () => {
   return (
-    <DocContainer className="GuideTrust" title="Trust">
+    <DocContainer className="GuideTrust" title="Trust" lastUpdated="07 Dec 2020">
       <p>
         The single most important concept in this network architecture is the concept of trust. It is also where this
         network deviates most from traditional Blockchain based digital currencies that abide by common consensus

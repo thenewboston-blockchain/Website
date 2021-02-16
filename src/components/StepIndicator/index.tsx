@@ -1,13 +1,13 @@
-import React, {FC, memo} from 'react';
+import React, {FC, memo, ReactNode} from 'react';
 import clsx from 'clsx';
+import {bemify} from '@thenewboston/utils';
 
-import {getCustomClassNames} from 'utils/components';
 import './StepIndicator.scss';
 
 interface ComponentProps {
   className?: string;
   number: number;
-  text: string;
+  text: ReactNode;
 }
 
 const StepIndicator: FC<ComponentProps> = ({className, number, text}) => {
@@ -15,14 +15,14 @@ const StepIndicator: FC<ComponentProps> = ({className, number, text}) => {
     <div className={clsx('StepIndicator', className)}>
       <div
         className={clsx('StepIndicator__bubble', {
-          ...getCustomClassNames(className, '__bubble', true),
+          ...bemify(className, '__bubble'),
         })}
       >
         {number}
       </div>
       <div
         className={clsx('StepIndicator__text', {
-          ...getCustomClassNames(className, '__text', true),
+          ...bemify(className, '__text'),
         })}
       >
         {text}

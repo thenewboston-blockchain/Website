@@ -7,7 +7,7 @@ import ConfirmationValidatorSyncing from './ConfirmationValidatorSyncing.png';
 
 const GuideConfirmationValidators: FC = () => {
   return (
-    <DocContainer className="GuideConfirmationValidators" title="Confirmation Validators">
+    <DocContainer className="GuideConfirmationValidators" title="Confirmation Validators" lastUpdated="07 Dec 2020">
       <p>
         The final technical details to cover are the specific functionality of the confirmation validators and
         generation of confirmation blocks (which will be outlined in the next section).
@@ -20,7 +20,7 @@ const GuideConfirmationValidators: FC = () => {
       <DocList variant="ul">
         <li>Root account file</li>
         <ul>
-          <li>This is the flattened representation of all account balances at a given coin in time</li>
+          <li>This is the flattened representation of all account balances at a given point in time</li>
         </ul>
         <li>Root account file hash</li>
         <ul>
@@ -38,7 +38,7 @@ const GuideConfirmationValidators: FC = () => {
         </ul>
         <li>Head block hash</li>
         <ul>
-          <li>Value representing the message hash of the primary validators most recently verified block</li>
+          <li>Value representing the message hash of the primary validator's most recently verified block</li>
           <li>Used by the confirmation validators to know when syncing is complete</li>
         </ul>
       </DocList>
@@ -54,7 +54,7 @@ const GuideConfirmationValidators: FC = () => {
           they match.
         </li>
         <li>
-          Store the block hash of the primary validators last validated block, also known as the HEAD block hash, for
+          Store the block hash of the primary validator's last validated block, also known as the HEAD block hash, for
           reference (we will see how this is used later).
         </li>
       </DocList>
@@ -70,7 +70,7 @@ const GuideConfirmationValidators: FC = () => {
         <li>Verify the block against their own account data</li>
         <ol type="a">
           <li>
-            If the confirmation validators results match the updated balances given by the primary validator (the block
+            If the confirmation validator's results match the updated balances given by the primary validator (the block
             is verified), the confirmation validator will:
           </li>
           <ol type="i">
@@ -99,8 +99,8 @@ const GuideConfirmationValidators: FC = () => {
           </li>
         </ol>
         <li>
-          Beginning with the previous primary validators root account file, apply the confirmed blocks (already verified
-          by the confirmation validator) until reaching the seed block from the new primary validator.
+          Beginning with the previous primary validator's root account file, apply the confirmed blocks (already
+          verified by the confirmation validator) until reaching the seed block from the new primary validator.
         </li>
         <li>Compare the updated account file to the root account file of the new primary validator</li>
         <ol type="a">

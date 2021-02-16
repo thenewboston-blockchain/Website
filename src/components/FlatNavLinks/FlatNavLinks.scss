@@ -3,15 +3,19 @@
 
   &__option {
     align-items: center;
+    background: transparent;
+    border: 0;
     border-radius: 6px;
     color: var(--color-sail-gray-400);
     cursor: pointer;
     display: flex;
     font-weight: 700;
     height: 36px;
-    outline: none;
+    line-height: 1.5;
+    margin-bottom: 4px;
     padding: 4px 0 4px 36px;
     transition: background-color 0.1s;
+    width: 100%;
 
     &:hover {
       background: var(--color-sail-gray-100);

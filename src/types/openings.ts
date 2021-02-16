@@ -12,6 +12,7 @@ export interface Opening {
   openingId: string;
   payNotes: string[];
   position: string;
+  project?: ProjectProposal;
   reportsTo: Reportee[];
   responsibilities: string[];
   technologyRequirements: string[];
@@ -28,6 +29,11 @@ export enum OpeningCategory {
 export interface OpeningsUrlParams {
   category: OpeningCategory;
   openingId: string;
+}
+
+export interface ProjectProposal {
+  name: string;
+  url?: string;
 }
 
 export interface Reportee {

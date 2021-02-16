@@ -17,15 +17,13 @@ const MenuGroup: FC<ComponentProps> = ({children, location, title, urlBase}) => 
 
   return (
     <div className="MenuGroup">
-      <div
+      <button
         className={clsx('MenuGroup__toggle', {'MenuGroup__toggle--expanded': expanded})}
         onClick={() => toggleExpanded(!expanded)}
-        role="button"
-        tabIndex={0}
       >
         <Icon className="MenuGroup__toggle-arrow" icon={IconType.menuRight} size={24} />
-        <span className="MenuGroup__title">{title}</span>
-      </div>
+        <div className="MenuGroup__title">{title}</div>
+      </button>
       <div className={clsx('MenuGroup__submenu', {'MenuGroup__submenu--expanded': expanded})}>{children}</div>
     </div>
   );

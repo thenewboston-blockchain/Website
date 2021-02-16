@@ -8,7 +8,7 @@ import './Blocks.scss';
 
 const GuideBlocks: FC = () => {
   return (
-    <DocContainer className="GuideBlocks" title="Blocks">
+    <DocContainer className="GuideBlocks" title="Blocks" lastUpdated="07 Dec 2020">
       <p>
         A block is a group of one or more transactions. There are often multiple transactions (usually fees) to
         different recipients within a single block. We can inspect the structure of a block by first examining a
@@ -94,7 +94,7 @@ const GuideBlocks: FC = () => {
 
       <DocList variant="ol">
         <li>If an owner has never sent coins before, the balance lock is equal to their account number.</li>
-        <li>Otherwise, the balance lock is equal to the hash value of their most recently sent blocks message.</li>
+        <li>Otherwise, the balance lock is equal to the hash value of their most recently sent block's message.</li>
       </DocList>
 
       <p>

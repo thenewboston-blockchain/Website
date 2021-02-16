@@ -1,0 +1,5 @@
+@import 'src/styles/mixins';
+
+.TopNavLink {
+  @include top-nav-button;
+}

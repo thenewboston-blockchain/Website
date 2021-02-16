@@ -43,6 +43,10 @@ const navLists = [
         url: '/openings',
       },
       {
+        title: 'Team',
+        url: '/teams',
+      },
+      {
         title: 'Leaderboard',
         url: '/leaderboard/All',
       },
@@ -51,6 +55,19 @@ const navLists = [
   {
     header: 'More',
     links: [
+      {
+        title: 'Project Proposals',
+        url: '/project-proposals/overview',
+      },
+      {
+        isExternal: true,
+        title: 'Blog',
+        url: 'https://thenewboston.blog/',
+      },
+      {
+        title: 'Assets',
+        url: '/assets',
+      },
       {
         title: 'FAQ',
         url: '/faq',
@@ -72,7 +89,10 @@ const Footer: FC<ComponentProps> = ({className}) => {
       SocialMedia.reddit,
       SocialMedia.linkedin,
       SocialMedia.facebook,
+      SocialMedia.instagram,
       SocialMedia.twitter,
+      SocialMedia.discord,
+      SocialMedia.twitch,
     ].map((website) => (
       <SocialMediaIcon className="Footer__SocialMediaLink" iconSize={28} key={website} website={website} />
     ));

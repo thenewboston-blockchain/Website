@@ -1,8 +1,8 @@
 import React, {FC, ReactNode} from 'react';
 import clsx from 'clsx';
+import {bemify} from '@thenewboston/utils';
 
 import {HashLink} from 'components';
-import {getCustomClassNames} from 'utils/components';
 
 import './DocContainer.scss';
 
@@ -11,20 +11,28 @@ interface ComponentProps {
   id?: string;
   introSection?: ReactNode;
   introTitle?: ReactNode;
+  lastUpdated?: string;
   title: ReactNode;
 }
 
-const DocContainer: FC<ComponentProps> = ({children, className, id, introSection, introTitle, title}) => {
+const DocContainer: FC<ComponentProps> = ({children, className, id, introSection, introTitle, title, lastUpdated}) => {
   return (
     <section className={clsx('DocContainer', className)}>
       {introTitle ? (
-        <h1
-          className={clsx('DocContainer__page-title', {
-            ...getCustomClassNames(className, '__page-title', true),
+        <div
+          className={clsx('DocContainer__wrapper', {
+            ...bemify(className, '__wrapper'),
           })}
         >
-          {introTitle}
-        </h1>
+          <h1
+            className={clsx('DocContainer__page-title', {
+              ...bemify(className, '__page-title'),
+            })}
+          >
+            {introTitle}
+          </h1>
+          {Boolean(lastUpdated) && <span className="DocContainer__last-updated">Updated on {lastUpdated}</span>}
+        </div>
       ) : null}
       {introSection ? (
         <>
@@ -32,15 +40,22 @@ const DocContainer: FC<ComponentProps> = ({children, className, id, introSection
           <div className={clsx('DocContainer__divider')} />
         </>
       ) : null}
-      <h1
-        className={clsx('DocContainer__page-title', {
-          ...getCustomClassNames(className, '__page-title', true),
+      <div
+        className={clsx('DocContainer__wrapper', {
+          ...bemify(className, '__wrapper'),
         })}
-        id={id}
       >
-        {title}
-        {id ? <HashLink className="DocContainer__HashLink" id={id} /> : null}
-      </h1>
+        <h1
+          className={clsx('DocContainer__page-title', {
+            ...bemify(className, '__page-title'),
+          })}
+          id={id}
+        >
+          {title}
+          {id ? <HashLink className="DocContainer__HashLink" id={id} /> : null}
+        </h1>
+        {Boolean(lastUpdated) && <span className="DocContainer__last-updated">Updated on {lastUpdated}</span>}
+      </div>
       {children}
     </section>
   );

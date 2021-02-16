@@ -1,0 +1,22 @@
+@import 'src/styles/mixins';
+
+.TopNavPopover {
+  @include top-nav-button;
+
+  &__chevron-icon {
+    margin-left: 3px;
+    transition: transform 0.3s ease-in-out;
+
+    &--open {
+      transform: rotateX(180deg) translateZ(-1px);
+    }
+  }
+
+  &__Popover {
+    padding: 18px;
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+}

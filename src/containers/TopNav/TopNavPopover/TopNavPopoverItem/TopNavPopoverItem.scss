@@ -1,0 +1,53 @@
+.TopNavPopoverItem {
+  $self: &;
+  align-items: center;
+  background: var(--color-white);
+  border: none;
+  border-radius: 6px;
+  color: var(--color-primary);
+  cursor: pointer;
+  display: flex;
+  height: 81px;
+  outline: none;
+  padding: 18px;
+  text-align: unset;
+  transition: background 0.1s ease-in;
+  width: 427px;
+
+  &:focus {
+    background: var(--color-sail-gray-50);
+  }
+
+  &:hover {
+    background: #d6ecff;
+
+    #{$self}__icon {
+      background: var(--color-secondary);
+    }
+  }
+
+  &__description {
+    color: var(--color-sail-gray-400);
+    display: block;
+  }
+
+  &__icon {
+    align-items: center;
+    background: var(--color-sail-gray-900);
+    border-radius: 50%;
+    color: var(--color-white);
+    display: flex;
+    height: 42px;
+    justify-content: center;
+    margin-right: 18px;
+    transition: background-color 0.1s ease-in;
+    width: 42px;
+  }
+
+  &__title {
+    color: var(--color-sail-gray-800);
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+}

@@ -4,7 +4,11 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
 
 const PrimaryValidatorApiConfirmationBlocks: FC = () => {
   return (
-    <DocContainer className="PrimaryValidatorApiConfirmationBlocks" title="Confirmation Blocks">
+    <DocContainer
+      className="PrimaryValidatorApiConfirmationBlocks"
+      title="Confirmation Blocks"
+      lastUpdated="07 Dec 2020"
+    >
       <p>
         Primary validators will send confirmation blocks to confirmation validators for re-validation after a block has
         been added to the blockchain. No confirmation blocks will be sent to the primary validator directly.
@@ -16,49 +20,49 @@ const PrimaryValidatorApiConfirmationBlocks: FC = () => {
         code={`{
   "message": {
     "block": {
-      "account_number": "0cdd4ba04456ca169baca3d66eace869520c62fe84421329086e03d91a68acdb",
+      "account_number": "a37e2836805975f334108b55523634c995bd2a4db610062f404510617e83126f",
       "message": {
-        "balance_key": "e6a41b658e17ab2db4355176c8160de6a66b07e5cbdd85244b55b38b4fd26e92",
+        "balance_key": "a37e2836805975f334108b55523634c995bd2a4db610062f404510617e83126f",
         "txs": [
           {
-            "amount": 60,
-            "recipient": "484b3176c63d5f37d808404af1a12c4b9649cd6f6769f35bdf5a816133623fbc"
+            "amount": 1,
+            "recipient": "2e86f48216567302527b69eae6c6a188097ed3a9741f43cc3723e570cf47644c"
           },
           {
             "amount": 1,
-            "recipient": "5e12967707909e62b2bb2036c209085a784fabbc3deccefee70052b6181c8ed8"
+            "recipient": "dfddf07ec15cbf363ecb52eedd7133b70b3ec896b488460bcecaba63e8e36be5"
           },
           {
-            "amount": 4,
-            "recipient": "ad1f8845c6a1abb6011a2a434a079a087c460657aad54329a84b406dce8bf314"
+            "amount": 19590,
+            "recipient": "fdae688d9e879ce89f164c6eb793d5a3c9e714bc6962a671275c0e2e1e6ea599"
           }
         ]
       },
-      "signature": "d857184b7d3121a8f9dccab09062fafc82dd0fb30a5d53e19ab25a587171bb9c6b33858353cd3ff7ddc1ad2bfc59a885e85827799bcfc082fd048f9bf34bd404"
+      "signature": "a2ba346d98cb1f7ce6bf017240d674a9928796ddb564a2c8817e68ead0ea02d960e970fe581c6d3a25b9876e1873d51c882b23d843e32f511d9575ef60d2940d"
     },
-    "block_identifier": "4c9595b2b661a23e665256d6826ae940bd4ea82bef0c1ba7b3104e40a4c42b91",
+    "block_identifier": "824614aa97edb391784b17ce6956b70aed31edf741c1858d43ae4d566b2a13ed",
     "updated_balances": [
       {
-        "account_number": "0cdd4ba04456ca169baca3d66eace869520c62fe84421329086e03d91a68acdb",
-        "balance": 4294967014,
-        "balance_lock": "729ce6ce619aeedf260221c7687c51d8a6845fbb5407b11c8cd26eaa7c8a6125"
+        "account_number": "2e86f48216567302527b69eae6c6a188097ed3a9741f43cc3723e570cf47644c",
+        "balance": 37
       },
       {
-        "account_number": "484b3176c63d5f37d808404af1a12c4b9649cd6f6769f35bdf5a816133623fbc",
-        "balance": 191
+        "account_number": "a37e2836805975f334108b55523634c995bd2a4db610062f404510617e83126f",
+        "balance": 543360,
+        "balance_lock": "92b9360e31f5ae4fa074ee5e03322aff6c275872e2afc31fbd523f022f18e421"
       },
       {
-        "account_number": "5e12967707909e62b2bb2036c209085a784fabbc3deccefee70052b6181c8ed8",
-        "balance": 18
+        "account_number": "dfddf07ec15cbf363ecb52eedd7133b70b3ec896b488460bcecaba63e8e36be5",
+        "balance": 1068
       },
       {
-        "account_number": "ad1f8845c6a1abb6011a2a434a079a087c460657aad54329a84b406dce8bf314",
-        "balance": 72
+        "account_number": "fdae688d9e879ce89f164c6eb793d5a3c9e714bc6962a671275c0e2e1e6ea599",
+        "balance": 19590
       }
     ]
   },
-  "node_identifier": "3afdf37573f1a511def0bd85553404b7091a76bcd79cdcebba1310527b167521",
-  "signature": "b4d335fa7662216acba06c18d93c6cfb688c8057cbe9193ddc8e6fb3702ba1d979e43b09e06c6c7c38358bbee5243dc37a52c5212298c2259be48285e3da130c"
+  "node_identifier": "2262026a562b0274163158e92e8fbc4d28e519bc5ba8c1cf403703292be84a51",
+  "signature": "a0f0412d638453a75da39e4911873a1e2a40fe22e9ec078eaeef62f34ba375470b8819135d95ccd5040abeefef75e7919689a6e97be3e6822edb7f9aff01e101"
 }`}
         heading="Response"
       />

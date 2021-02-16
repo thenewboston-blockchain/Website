@@ -14,7 +14,12 @@ enum StyleGuideReactNav {
 
 const StyleGuideReact: FC = () => {
   return (
-    <DocContainer className="StyleGuideReact" id={StyleGuideReactNav.header} title="React / JSX Style Guide">
+    <DocContainer
+      className="StyleGuideReact"
+      id={StyleGuideReactNav.header}
+      title="React / JSX Style Guide"
+      lastUpdated="07 Dec 2020"
+    >
       <p>
         Here are the rules that we should follow when working with React. We have{' '}
         <A href="https://eslint.org">ESLint</A> and <A href="https://prettier.io/">Prettier</A> configured, so for the
@@ -33,7 +38,7 @@ const StyleGuideReact: FC = () => {
           <DocInlineCode>components/containers/utils/types</DocInlineCode>), and each will be alphabetized.
         </p>
         <p>
-          We will always use absolute imports, except when importing files that is contained within the same directory.
+          We will always use absolute imports, except when importing files that are contained within the same directory.
         </p>
         <CodeSnippet
           code={`import React, {FC, ReactNode, useRef, useState} from 'react'; // 'react' imports come first
@@ -66,8 +71,8 @@ import {getCustomClassNames} from 'utils/components';`}
         <DocList variant="ol">
           <li>Only Functional Components. No Class-based components.</li>
           <li>
-            Reusable components that doesn't connect to the redux store belong in the{' '}
-            <DocInlineCode>components</DocInlineCode> directory. Components that connects to the store belong in the{' '}
+            Reusable components that don't connect to the redux store belong in the{' '}
+            <DocInlineCode>components</DocInlineCode> directory. Components that connect to the store belong in the{' '}
             <DocInlineCode>containers</DocInlineCode> directory.
           </li>
           <li>Every React Component should have an unique name, even if it means being a little wordy.</li>
@@ -95,7 +100,7 @@ import {getCustomClassNames} from 'utils/components';`}
   </div>
 );`}
           heading="Bad"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
       </DocSubSection>
       <DocSubSection id={StyleGuideReactNav.componentTypes} title="Component Types">
@@ -117,7 +122,7 @@ import {getCustomClassNames} from 'utils/components';`}
   <SomeComponent {...props} />
 );`}
           heading="Bad"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
         <CodeSnippet
           code={`return (
@@ -128,7 +133,7 @@ import {getCustomClassNames} from 'utils/components';`}
   />
 );`}
           heading="Good"
-          language={SnippetLang.jsx}
+          language={SnippetLang.typescript}
         />
       </DocSubSection>
       <DocSubSection id={StyleGuideReactNav.libraries} title="Libraries We Use">
@@ -140,7 +145,7 @@ import {getCustomClassNames} from 'utils/components';`}
           <li>
             We use <A href="https://redux-toolkit.js.org/">Redux Toolkit</A> to manage our application state. This is
             the official, recommended way to incorporate redux to a React application, and we favor it over traditional
-            Redux architecture for it's compactness and ease-of-use.
+            Redux architecture for its compactness and ease-of-use.
           </li>
         </DocList>
       </DocSubSection>

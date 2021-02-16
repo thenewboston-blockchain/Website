@@ -8,11 +8,14 @@ import {SocialMedia} from 'types/social-media';
 import './OpeningDetails.scss';
 
 const customLinks = {
+  [SocialMedia.discord]: 'https://discord.gg/thenewboston',
   [SocialMedia.facebook]: '',
   [SocialMedia.github]: '',
+  [SocialMedia.instagram]: '',
   [SocialMedia.linkedin]: 'https://www.linkedin.com/in/buckyroberts/',
   [SocialMedia.reddit]: 'https://www.reddit.com/message/compose?to=/r/thenewboston',
   [SocialMedia.slack]: '',
+  [SocialMedia.twitch]: '',
   [SocialMedia.twitter]: '',
   [SocialMedia.youtube]: '',
 };
@@ -49,9 +52,7 @@ const OpeningDetails: FC<ComponentProps> = ({opening}) => {
     return (
       <>
         <div className="OpeningDetails__list-label">
-          {rows.length > 1
-            ? 'To apply, send us a message through any of the following channels:'
-            : 'To apply, send us a message through the following channel:'}
+          To apply, leave a message in the #intros channel with the position you are interested in!
         </div>
         <div className="OpeningDetails__application-method-container">{rows}</div>
       </>
@@ -61,6 +62,13 @@ const OpeningDetails: FC<ComponentProps> = ({opening}) => {
   const renderContent = (): ReactNode => (
     <>
       <div className="OpeningDetails__position">{opening.position}</div>
+      {opening.project && (
+        <div className="OpeningDetails__proposal">
+          Hiring for{' '}
+          {opening.project.url ? <A href={opening.project.url}>{opening.project.name}</A> : <>{opening.project.name}</>}{' '}
+          under Project Proposals.
+        </div>
+      )}
       <div className="OpeningDetails__description">{opening.description}</div>
       {renderStringList(opening.responsibilities, 'Responsibilities')}
       {renderStringList(opening.technologyRequirements, 'Technology Requirements')}
@@ -84,6 +92,7 @@ const OpeningDetails: FC<ComponentProps> = ({opening}) => {
         )}
       </li>
     ));
+
     return (
       <>
         <div className="OpeningDetails__list-label">Reports To</div>

@@ -7,7 +7,7 @@ import './GuideTransactionFees.scss';
 
 const GuideTransactionFees: FC = () => {
   return (
-    <DocContainer className="GuideTransactionFees" title="Transaction Fees">
+    <DocContainer className="GuideTransactionFees" title="Transaction Fees" lastUpdated="07 Dec 2020">
       <p>
         Users are incentivized to maintain bank and validator nodes through the collection of transaction fees. The
         owners of the nodes set the fee amounts and fee structures entirely.
@@ -27,7 +27,7 @@ const GuideTransactionFees: FC = () => {
         In the following example, Amy is sending 100 coins to Brian. Before the block is even created, Amy's bank is
         aware of the validators transaction fee. The transaction fees of both the bank and the validator will be
         displayed on her user interface. When creating a transaction, Amy will first choose the desired recipient and
-        then the amount of coins she wishes to send. A very simple UI that Amy may see at that coin might look like
+        then the amount of coins she wishes to send. A very simple UI that Amy may see at that point might look like
         this:
       </p>
 

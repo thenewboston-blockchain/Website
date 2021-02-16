@@ -1,6 +1,6 @@
 import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'react';
 
-import {Button, CodeSnippet, Icon, IconType, Loader, Tab, Tabs} from 'components';
+import {Button, CodeSnippet, Icon, IconType, Loader, PageTitle, Tab, Tabs} from 'components';
 import {Release} from 'types/github';
 import {fetchGithubReleases} from 'utils/github';
 import {displayToast} from 'utils/toast';
@@ -14,13 +14,27 @@ enum Os {
 }
 
 const Download: FC = () => {
+  const userOsMatcher = /Windows|Linux|Mac/gi.exec(navigator.userAgent);
+  let userOsTabIndex = 0;
+
+  if (userOsMatcher && userOsMatcher[0] === 'Mac') {
+    userOsTabIndex = 1;
+  }
+
+  if (userOsMatcher && userOsMatcher[0] === 'Linux') {
+    userOsTabIndex = 2;
+  }
+
   const [loading, setLoading] = useState<boolean>(true);
   const [releases, setReleases] = useState<Release[]>([]);
 
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
       try {
-        const response = await fetchGithubReleases();
+        const response = await fetchGithubReleases({
+          page: 1,
+          per_page: 1,
+        });
         setReleases(response);
       } catch (error) {
         displayToast('Network Error');
@@ -91,7 +105,13 @@ const Download: FC = () => {
             <span className="instruction-container__instruction">Drag and drop the app to the Applications folder</span>
           </div>
           <div className="instruction-container__li">
-            <span className="instruction-container__instruction">Open the app</span>
+            <span className="instruction-container__instruction">
+              Open the app. If you see an error because the Account Manager app is not from the App Store check out{' '}
+              <a href="https://support.apple.com/en-us/HT202491" target="_blank" rel="noreferrer">
+                these instructions
+              </a>{' '}
+              to allow the install.
+            </span>
           </div>
         </>
       );
@@ -105,23 +125,25 @@ const Download: FC = () => {
           <div className="instruction-container__li">
             <span className="instruction-container__instruction">To run thenewboston, make it executable</span>
           </div>
-          <CodeSnippet code="$ sudo chmod a+x TNB-Account-Manager-1.0.0-alpha.20-linux*.AppImage" />
+          <CodeSnippet code="$ chmod a+x TNB-Account-Manager-*.AppImage" />
           <div className="instruction-container__li">
             <span className="instruction-container__instruction">Run!</span>
           </div>
-          <CodeSnippet code="$ ./TNB-Account-Manager-1.0.0-alpha.20-linux*.AppImage" />
+          <CodeSnippet code="$ ./TNB-Account-Manager-*.AppImage" />
         </>
       );
     }
+
     return null;
   }, []);
 
   const renderTabPanel = useCallback(
     (os: Os) => (
       <div className="Download__tab-panel">
-        <a className="Download__download-link" href={getDownloadLink(os)}>
+        <a className="Download__download-link" href={getDownloadLink(os)} tabIndex={-1}>
           <Button className="Download__download-button" disabled={!latestReleaseNumber}>
-            Download for {os} <Icon className="Download__download-icon" icon={IconType.arrowCollapseDown} size={18} />
+            <span>Download for {os}</span>
+            <Icon className="Download__download-icon" icon={IconType.arrowCollapseDown} size={18} />
           </Button>
         </a>
         <div className="instruction-container">
@@ -152,16 +174,18 @@ const Download: FC = () => {
   );
 
   return (
-    <div className="Download">
-      {loading ? (
-        <Loader />
-      ) : (
-        <>
-          <span className="Download__latest-version">Latest Version: 1.0.0-alpha.{latestReleaseNumber}</span>
-          <Tabs tabs={tabs} />
-        </>
-      )}
-    </div>
+    <>
+      <PageTitle title="Download" />
+      <div className="Download">
+        {loading ? (
+          <Loader />
+        ) : (
+          <>
+            <Tabs defaultTab={userOsTabIndex} tabs={tabs} latestReleaseNumber={latestReleaseNumber} />
+          </>
+        )}
+      </div>
+    </>
   );
 };
 

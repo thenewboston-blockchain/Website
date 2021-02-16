@@ -4,9 +4,8 @@
     color: var(--color-sail-gray-500);
     cursor: pointer;
     font-size: var(--font-size-medium);
-    margin-right: 42px;
     outline: none;
-    padding-bottom: 6px;
+    padding: 12px;
 
     &:hover {
       border-bottom-color: var(--color-sail-gray-500);
@@ -21,5 +20,11 @@
   &__tabs-container {
     border-bottom: 1px solid var(--color-sail-gray-100);
     display: flex;
+    justify-content: flex-start;
+    position: relative;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
   }
 }

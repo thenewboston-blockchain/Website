@@ -2,8 +2,8 @@ import React, {FC} from 'react';
 
 import {DocContainer, DocImage, DocSubSection} from 'components';
 
-import CreateNewAccountModal from './CreateNewAccountModal.png';
 import AccountOverview from './AccountOverview.png';
+import CreateNewAccountModal from './CreateNewAccountModal.png';
 
 enum AccountManagerCreateAccountNav {
   accountOverview = 'account-overview',
@@ -11,7 +11,7 @@ enum AccountManagerCreateAccountNav {
 
 const AccountManagerCreateAccount: FC = () => {
   return (
-    <DocContainer className="AccountManagerCreateAccount" title="Create an Account">
+    <DocContainer className="AccountManagerCreateAccount" title="Create an Account" lastUpdated="07 Dec 2020">
       <p>
         <strong>Accounts</strong> are anonymous digital identities on the network where coins may be sent to and from.
         To create an account, click the plus button to the right of "Accounts" on the left side menu. After filling out
