@@ -421,13 +421,13 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-            "contributorId": "80",
-            "displayName": "Adarsh Kumar",
-            "githubUsername": "Niekon01",
-            "profileImage": "https://avatars.githubusercontent.com/u/55133485?s=400&u=30095929a9d5bf6199f89c43d8df26bb9bb484a1&v=4",
-            "slackUsername": "Niekon"
+          "contributorId": "80",
+          "displayName": "Adarsh Kumar",
+          "githubUsername": "Niekon01",
+          "profileImage": "https://avatars.githubusercontent.com/u/55133485?s=400&u=30095929a9d5bf6199f89c43d8df26bb9bb484a1&v=4",
+          "slackUsername": "Niekon"
         }
-        }        
+      }
     ],
     "responsibilities": [
       {
@@ -1449,19 +1449,6 @@
           "githubUsername": "codedevloper",
           "profileImage": "https://avatars1.githubusercontent.com/u/5453949?s=460&v=4",
           "slackUsername": "Amol Bhure"
-        }
-      },
-      {
-        "title": "Penetration Testing Team Lead",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "45",
-          "displayName": "Spencer Dollahite",
-          "githubUsername": "spencer-dollahite",
-          "profileImage": "https://avatars0.githubusercontent.com/u/74439721?s=400&v=4",
-          "slackUsername": "Spencer Dollahite"
         }
       }
     ],
