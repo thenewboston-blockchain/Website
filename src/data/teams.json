@@ -1451,19 +1451,6 @@
           "slackUsername": "Amol Bhure"
         }
       },
-      {
-        "title": "Penetration Testing Team Lead",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "45",
-          "displayName": "Spencer Dollahite",
-          "githubUsername": "spencer-dollahite",
-          "profileImage": "https://avatars0.githubusercontent.com/u/74439721?s=400&v=4",
-          "slackUsername": "Spencer Dollahite"
-        }
-      }
     ],
     "responsibilities": []
   },
