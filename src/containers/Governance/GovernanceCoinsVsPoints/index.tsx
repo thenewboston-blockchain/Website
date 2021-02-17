@@ -27,11 +27,11 @@ const GovernanceCoinsVsPoints: FC = () => {
       </p>
 
       <p>
-        <strong>app development</strong> - interactions like leaving comments and sending messages no longer have a
+        <strong>App Development</strong> - Interactions like leaving comments and sending messages no longer have a
         monetary cost (coins) but rather refillable points <br />
-        <strong>prevent spam</strong> - users have a limited number of interactions they can perform based on how many
+        <strong>Prevent Spam</strong> - Users have a limited number of interactions they can perform based on how many
         points they have <br />
-        <strong>incentivize server owners</strong> - although server owners have no direct financial incentive, since
+        <strong>Incentivize Server Owners</strong> - Although server owners have no direct financial incentive, since
         users can only acquire points by locking up coins, this increases the value of all coins by reducing the overall
         available supply (less supply on exchanges = more demand = price increases)
       </p>

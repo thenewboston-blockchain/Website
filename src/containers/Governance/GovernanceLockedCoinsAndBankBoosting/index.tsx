@@ -20,8 +20,8 @@ const GovernanceLockedCoinsAndBankBoosting: FC = () => {
       <p>In return for locked coins registered users will receive:</p>
 
       <DocList variant="ul">
-        <li>points</li>
-        <li>the ability to boost a Bank of their choosing</li>
+        <li>Points</li>
+        <li>The ability to boost a Bank of their choosing</li>
       </DocList>
 
       <p>

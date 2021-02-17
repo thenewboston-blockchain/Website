@@ -16,8 +16,8 @@ const GovernanceUsernamesAndVotes: FC = () => {
 
       <p>
         All usernames come with 1 vote by default which can be used to elect members of government (see{' '}
-        <NavLink to="/governance/coins-vs-points">Government Election Process</NavLink>). Once a username has been
-        registered, additional votes may be purchased for that username.
+        <NavLink to="/governance/application-and-election-process">Government Election Process</NavLink>). Once a
+        username has been registered, additional votes may be purchased for that username.
       </p>
     </DocContainer>
   );
