@@ -47,6 +47,7 @@ import ThumbsUpIcon from 'mdi-react/ThumbsUpIcon';
 import TrophyIcon from 'mdi-react/TrophyIcon';
 import TwitchIcon from 'mdi-react/TwitchIcon';
 import TwitterIcon from 'mdi-react/TwitterIcon';
+import VideoIcon from 'mdi-react/VideoIcon';
 import YoutubeIcon from 'mdi-react/YoutubeIcon';
 
 import './Icon.scss';
@@ -96,6 +97,7 @@ export enum IconType {
   trophy,
   twitch,
   twitter,
+  video,
   youtube,
 }
 
@@ -204,6 +206,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
           return <TwitchIcon {...iconProps} />;
         case IconType.twitter:
           return <TwitterIcon {...iconProps} />;
+        case IconType.video:
+          return <VideoIcon {...iconProps} />;
         case IconType.youtube:
           return <YoutubeIcon {...iconProps} />;
         default:

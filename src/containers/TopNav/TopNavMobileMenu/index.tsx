@@ -91,6 +91,7 @@ const TopNavMobileMenu = () => {
             'Get Started',
             <>
               {renderMobileLink('Documentation', '/guide/introduction')}
+              {renderMobileLink('Tutorials', '/tutorials')}
               {renderMobileLink('Tasks', '/tasks')}
             </>,
           )}
