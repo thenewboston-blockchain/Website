@@ -388,20 +388,7 @@
           "profileImage": "https://avatars1.githubusercontent.com/u/68207101?s=460&u=f001c3eb8dfc9444d1abff7ec2ef5e4f0f1ccd5e&v=4",
           "slackUsername": "Kristy KJ"
         }
-      },
-      {
-        "title": "Design Lead",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "13",
-          "displayName": "David Yap",
-          "githubUsername": "davidyapdy",
-          "profileImage": "https://avatars0.githubusercontent.com/u/17293366?s=460&u=549156b32fdbfc62ce02d54bb54e56782c9a7637&v=4",
-          "slackUsername": "David Yap"
-        }
-      },
+      },      
       {
         "title": "UI/UX Designer",
         "isLead": false,
@@ -872,19 +859,6 @@
         }
       },
       {
-        "title": "Blog Writer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "69",
-          "displayName": "Chibuzor Eze-nwosu",
-          "githubUsername": null,
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01G1B4V42D-94d5b325b7d5-512",
-          "slackUsername": "Chibuzor"
-        }
-      },
-      {
         "title": "Meme Designer",
         "isLead": false,
         "payPerDay": 2800,
@@ -1026,21 +1000,7 @@
         "link": ""
       }
     ],
-    "contributors": [
-      {
-        "title": "New User Operations Lead",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "48",
-          "displayName": "Martyn",
-          "githubUsername": "Spotnag",
-          "profileImage": "https://avatars3.githubusercontent.com/u/2324860?s=400&u=ca3e6fcc7e1c03a48720143704adc8ef51d7c64d&v=4",
-          "slackUsername": "Martyn"
-        }
-      }
-    ],
+    "contributors": [],
     "responsibilities": [
       {
         "item": "Convert new users to contributors",
