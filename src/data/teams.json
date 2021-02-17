@@ -974,7 +974,21 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01MFD5GT5J-eae2ef782ec8-512",
           "slackUsername": "Mr9tynine"
         }
-      }
+      },
+      {
+        "title": "Project Manager",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+            "contributorId": "82",
+            "displayName": "Edward",
+            "githubUsername": "SwedishFisherman",
+            "profileImage": "https://avatars.githubusercontent.com/u/78985665?s=400&v=4",
+            "slackUsername": "SwedishFisherman"
+        }
+        }
+
     ],
     "responsibilities": [
       {
