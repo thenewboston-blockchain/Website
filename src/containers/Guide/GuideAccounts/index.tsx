@@ -69,11 +69,9 @@ const GuideAccounts: FC = () => {
       </DocList>
       <p>
         <div className="callout">
-          <p>
-            <strong>Note:</strong> Users can have more than one account, and they can create and manage several accounts
-            (key pairs) through the same account manager application. This can be thought of as an individual having
-            multiple email addresses, but managing all of their email accounts from a single app.
-          </p>
+          <strong>Note:</strong> Users can have more than one account, and they can create and manage several accounts
+          (key pairs) through the same account manager application. This can be thought of as an individual having
+          multiple email addresses, but managing all of their email accounts from a single app.
         </div>
       </p>
       <p>The terms "account" and "user account" are used interchangeably throughout this documentation.</p>
