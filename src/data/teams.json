@@ -495,7 +495,7 @@
     {
       "title": "DevOps",
       "description":
-        'Provides "systems for the systems". Focused on underlying infrastructure (servers, OS, networking, access security), services (web servers, databases), as well as monitoring and automating the configuration of those items.',
+        "Provides systems for the systems. Focused on underlying infrastructure (servers, OS, networking, access security), services (web servers, databases), as well as monitoring and automating the configuration of those items.",
       "platforms": [
         {
           "name": "github",
@@ -1683,5 +1683,5 @@
         }
       ]
     }
-  ];
+  ]
   
