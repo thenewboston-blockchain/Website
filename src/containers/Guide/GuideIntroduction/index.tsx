@@ -1,11 +1,9 @@
 import React, {FC, ReactNode} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {DocContainer, DocImage, DocList, TableVertical} from 'components';
+import {DocContainer, DocImage, DocList, DocSubHeader, TableVertical} from 'components';
 
 import OverviewDiagram from './Overview.png';
-
-import './GuideIntroduction.scss';
 
 const GuideIntroduction: FC = () => {
   const renderGlossary = (): ReactNode => (
@@ -45,13 +43,13 @@ const GuideIntroduction: FC = () => {
           a distributed network of trusted nodes. The amount of trust in the network is quantified solely by human
           judgment. Here is why.
         </p>
-        <h3>Enabling humans to do what they do best</h3>
+        <DocSubHeader>Enabling humans to do what they do best</DocSubHeader>
         <p>
           There is no formula or function that judges human value in the way which we truly need to. Computers are great
           at solving questions where there is only one definitive answer, but to determine and accurately judge
           something as intangible as the work produced by a human being, they are still a long way off.
         </p>
-        <h3>Incentives</h3>
+        <DocSubHeader>Incentives</DocSubHeader>
         <p>
           This leaves us with the challenge of humans themselves. Humans, unlike computer algorithms, can be corrupted.
           However, because of how we want to reward our community members, we believe that there is no better system
@@ -61,7 +59,7 @@ const GuideIntroduction: FC = () => {
           how many checks and balances we put in place, no matter how many restrictions or regulations we write, we will
           be always getting back to the variable of human judgement.
         </p>
-        <h3>Value and work put into the community</h3>
+        <DocSubHeader>Value and work put into the community</DocSubHeader>
         <p>
           We want to ensure that everyone (not just developers and DevOps) can receive the value of their work put into
           making our network and community better. In the long run, this is the only way to guarantee success for our
@@ -71,7 +69,7 @@ const GuideIntroduction: FC = () => {
           this human effort will add to the cryptocurrency's value. This also demystifies how every single coin becomes
           valuable at the moment we generate it.
         </p>
-        <h3>Distribution model deriving from the real world</h3>
+        <DocSubHeader>Distribution model deriving from the real world</DocSubHeader>
         <p>
           We do not base our distribution model on Proof of Work (PoW) or Proof of Stake (PoS) like most other
           cryptocurrencies. With Bitcoin's PoW, for example, the monetary incentive ties to mining blocks, which results
@@ -79,7 +77,7 @@ const GuideIntroduction: FC = () => {
           problems that must be solved. This includes building mobile apps, developing payment libraries, design,
           marketing, research, and so on.
         </p>
-        <h3>Efficiency</h3>
+        <DocSubHeader>Efficiency</DocSubHeader>
         <p>
           When building a distributed payment ledger, it is not the transaction processing itself that requires
           distribution across multiple servers. This often results in duplicate work being done by several network
@@ -122,7 +120,7 @@ const GuideIntroduction: FC = () => {
         There are several key differences between this network structure and the traditional Blockchain architecture
         regarding the creation of a distributed public ledger.
       </p>
-      <h3>Composition of blocks</h3>
+      <DocSubHeader>Composition of blocks</DocSubHeader>
       <p>
         An inherent defect in modern Blockchain architecture is the inefficient composition of blocks. Blocks in the
         Bitcoin Blockchain, for example, comprise multiple unrelated transactions. So, within any block, the earliest
@@ -136,7 +134,7 @@ const GuideIntroduction: FC = () => {
         so, we construct blocks that group related transactions only. (Transactions here refer to sets of transactions
         that must be processed together.) For details, see <NavLink to="/guide/blocks">Blocks</NavLink>.
       </p>
-      <h3>Why it matters</h3>
+      <DocSubHeader>Why it matters</DocSubHeader>
       <p>
         When implemented correctly, these improvements, along with others discussed throughout this documentation,
         reduce the overall energy consumption and processing power required by the network. This increased efficiency

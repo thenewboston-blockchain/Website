@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {A, DocContainer, DocImage, DocList, TableBorderGrid, TableVertical} from 'components';
+import {A, DocContainer, DocImage, DocList, DocSubHeader, TableBorderGrid, TableVertical} from 'components';
 
 import BalanceLockAndKey from './BalanceLockAndKey.png';
 import BlockDetails from './BlockDetails.png';
@@ -15,7 +15,7 @@ const GuideBlocks: FC = () => {
         different recipients within a single block. Let's inspect the structure of a block by first examining the
         simplified scenario below.
       </p>
-      <h3>Example</h3>
+      <DocSubHeader>Example</DocSubHeader>
       <p>In this example, Amy sends 100 coins to Brian:</p>
 
       <TableBorderGrid
@@ -48,7 +48,7 @@ const GuideBlocks: FC = () => {
         See <NavLink to="/guide/transaction-fees">Transaction Fees</NavLink> for details on the fees that relate to this
         transaction.
       </p>
-      <h3>Dissecting a block</h3>
+      <DocSubHeader>Dissecting a block</DocSubHeader>
       <p>
         The signing process produces digital signatures using the{' '}
         <A href="https://ed25519.cr.yp.to/">Ed25519 Digital Signature Algorithm</A>. This ensures that the account owner
