@@ -1,3 +1,4 @@
+import DocCallout from './DocCallout';
 import DocContainer from './DocContainer';
 import DocEndpoint from './DocEndpoint';
 import DocImage from './DocImage';
@@ -6,4 +7,4 @@ import DocList from './DocList';
 import DocSubHeader from './DocSubHeader';
 import DocSubSection from './DocSubSection';
 
-export {DocContainer, DocEndpoint, DocImage, DocInlineCode, DocList, DocSubHeader, DocSubSection};
+export {DocCallout, DocContainer, DocEndpoint, DocImage, DocInlineCode, DocList, DocSubHeader, DocSubSection};

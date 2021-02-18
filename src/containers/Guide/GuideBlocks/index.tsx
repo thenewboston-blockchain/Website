@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {A, DocContainer, DocImage, DocList, DocSubHeader, TableBorderGrid, TableVertical} from 'components';
+import {A, DocCallout, DocContainer, DocImage, DocList, DocSubHeader, TableBorderGrid, TableVertical} from 'components';
 
 import BalanceLockAndKey from './BalanceLockAndKey.png';
 import BlockDetails from './BlockDetails.png';
@@ -53,14 +53,12 @@ const GuideBlocks: FC = () => {
         The signing process produces digital signatures using the{' '}
         <A href="https://ed25519.cr.yp.to/">Ed25519 Digital Signature Algorithm</A>. This ensures that the account owner
         has indeed signed all the transactions within a block.
-        <p>
-          <div className="callout">
-            <strong>Note: </strong>Although in many explanations of the network the account "owner" is often referred to
-            by name, the actual network architecture never stores the name of individuals. Instead, each account refers
-            to the owner by their account number.
-          </div>
-        </p>
       </p>
+      <DocCallout>
+        Although in many explanations of the network the account "owner" is often referred to by name, the actual
+        network architecture never stores the name of individuals. Instead, each account refers to the owner by their
+        account number.
+      </DocCallout>
       <p>
         The account number (in public-key cryptography often referred to as the "public-key") is not only important for
         identifying a user's account when others wish to send coins to this user. It is also important during the
@@ -100,15 +98,11 @@ const GuideBlocks: FC = () => {
         <li>If an owner has never sent coins before, the balance lock is equal to their account number.</li>
         <li>Otherwise, the balance lock is equal to the hash value of their most recently sent block's message.</li>
       </DocList>
-
-      <p>
-        <div className="callout">
-          <strong>Important Note:</strong> The balance lock for an account is only updated when that account owner sends
-          blocks. The balance "lock and key" system is similar to the lock and key for a mailbox. No mailbox key is
-          required when inserting mail into a mailbox. A key is only necessary for opening the mailbox to access the
-          contents inside.
-        </div>
-      </p>
+      <DocCallout>
+        The balance lock for an account is only updated when that account owner sends blocks. The balance "lock and key"
+        system is similar to the lock and key for a mailbox. No mailbox key is required when inserting mail into a
+        mailbox. A key is only necessary for opening the mailbox to access the contents inside.
+      </DocCallout>
     </DocContainer>
   );
 };
