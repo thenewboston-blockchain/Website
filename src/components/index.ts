@@ -8,6 +8,7 @@ import CopyableAccountNumber from './CopyableAccountNumber';
 import DashboardLayout from './DashboardLayout';
 import DocsMenuItems from './DocsMenuItems';
 import {
+  CalloutType,
   DocCallout,
   DocContainer,
   DocEndpoint,
@@ -53,6 +54,7 @@ export {
   Avatar,
   BreadcrumbMenu,
   Button,
+  CalloutType,
   CodeSnippet,
   ContributorTasks,
   CopyableAccountNumber,

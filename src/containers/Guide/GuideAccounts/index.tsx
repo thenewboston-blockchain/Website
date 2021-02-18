@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 import KeyPair from 'assets/images/KeyPair.png';
-import {DocCallout, DocContainer, DocImage, DocList} from 'components';
+import {CalloutType, DocCallout, DocContainer, DocImage, DocList} from 'components';
 
 import AccountsSimple from './AccountsSimple.png';
 
@@ -67,7 +67,7 @@ const GuideAccounts: FC = () => {
           </li>
         </ul>
       </DocList>
-      <DocCallout>
+      <DocCallout type={CalloutType.note}>
         Users can have more than one account, and they can create and manage several accounts (key pairs) through the
         same account manager application. This can be thought of as an individual having multiple email addresses, but
         managing all of their email accounts from a single app.
