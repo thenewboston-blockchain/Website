@@ -181,64 +181,6 @@
     ]
   },
   {
-    "openingId": "self-order-senior-backend-django-developer",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Yahya"
-      }
-    ],
-    "reportsTo": [
-      {
-        "githubUsername": "",
-        "name": ""
-      }
-    ],
-    "category": "Engineering",
-    "project": {
-      "name": "Restaurant Self Order App",
-      "url": "https://github.com/Restaurants-Self-Order"
-    },
-    "description": "Have a solid backend experience",
-    "payNotes": ["2,800 coins/day"],
-    "position": "Senior Backend Django Developer",
-    "responsibilities": ["To be able to interpret requirements into code", "Write some documentations like API specs"],
-    "technologyRequirements": [
-      "Design knowledge of the backend (Architecture)",
-      "Solve the problems to fit with the best performance and keep a solid backend",
-      "A good implementation of design patterns, and reuse of code",
-      "Clean code standards"
-    ]
-  },
-  {
-    "openingId": "self-order-ui-ux-designer",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Yahya"
-      }
-    ],
-    "reportsTo": [
-      {
-        "githubUsername": "",
-        "name": ""
-      }
-    ],
-    "category": "Design",
-    "project": {
-      "name": "Restaurant Self Order App",
-      "url": "https://github.com/Restaurants-Self-Order"
-    },
-    "description": "Have a good experience in UI/UX standards",
-    "payNotes": ["2,800 coins/day"],
-    "position": "UI/UX Designer",
-    "responsibilities": [
-      "Design the mobile app interfaces using Figma",
-      "Coordinate and take notes from other teammates"
-    ],
-    "technologyRequirements": ["Using Figma is a must"]
-  },
-  {
     "openingId": "tnb-forum-ui-ux-designer",
     "applicationMethods": [
       {
