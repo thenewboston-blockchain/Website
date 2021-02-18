@@ -390,19 +390,6 @@
         }
       },
       {
-        "title": "Design Lead",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "13",
-          "displayName": "David Yap",
-          "githubUsername": "davidyapdy",
-          "profileImage": "https://avatars0.githubusercontent.com/u/17293366?s=460&u=549156b32fdbfc62ce02d54bb54e56782c9a7637&v=4",
-          "slackUsername": "David Yap"
-        }
-      },
-      {
         "title": "UI/UX Designer",
         "isLead": false,
         "payPerDay": 2800,
@@ -820,19 +807,6 @@
         }
       },
       {
-        "title": "Blog Project Manager",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "63",
-          "displayName": "Ijeoma Okoh",
-          "githubUsername": "Aiijay",
-          "profileImage": "https://avatars3.githubusercontent.com/u/55064951?s=400&u=ac5fc97138da6bd28ae66399241daeff7605d969&v=4",
-          "slackUsername": "Ijeoma"
-        }
-      },
-      {
         "title": "Marketing Analyst",
         "isLead": false,
         "payPerDay": 2800,
@@ -856,19 +830,6 @@
           "githubUsername": "oluwatomiwatemidayo",
           "profileImage": "https://avatars1.githubusercontent.com/u/72953345?s=400&u=8a7d5931cd7e0041fc6e68683ad25aeb4e7016ce&v=4",
           "slackUsername": "Tomiwa"
-        }
-      },
-      {
-        "title": "Blog Writer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "69",
-          "displayName": "Chibuzor Eze-nwosu",
-          "githubUsername": null,
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01G1B4V42D-94d5b325b7d5-512",
-          "slackUsername": "Chibuzor"
         }
       },
       {
@@ -1013,21 +974,7 @@
         "link": ""
       }
     ],
-    "contributors": [
-      {
-        "title": "New User Operations Lead",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "48",
-          "displayName": "Martyn",
-          "githubUsername": "Spotnag",
-          "profileImage": "https://avatars3.githubusercontent.com/u/2324860?s=400&u=ca3e6fcc7e1c03a48720143704adc8ef51d7c64d&v=4",
-          "slackUsername": "Martyn"
-        }
-      }
-    ],
+    "contributors": [],
     "responsibilities": [
       {
         "item": "Convert new users to contributors",
