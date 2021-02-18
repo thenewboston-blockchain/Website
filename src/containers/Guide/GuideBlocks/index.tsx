@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {A, DocContainer, DocImage, DocList, TableBorderGrid } from 'components';
+import {A, DocContainer, DocImage, DocList, TableBorderGrid} from 'components';
 
 import BalanceLockAndKey from './BalanceLockAndKey.png';
 import BlockDetails from './BlockDetails.png';
