@@ -32,8 +32,8 @@ const GuideBlocks: FC = () => {
         rows={[
           [<strong>Description</strong>, <strong>Coins</strong>],
           ['Coins sent to Brian', '100'],
-          ['Bank fees', <span className="GuideBlocks__text-light">2</span>],
-          ['Validator fees', <span className="GuideBlocks__text-light">1</span>],
+          ['Bank fees', '2'],
+          ['Validator fees', '1'],
           ['Total cost of transaction for Amy', '103'],
         ]}
       />
