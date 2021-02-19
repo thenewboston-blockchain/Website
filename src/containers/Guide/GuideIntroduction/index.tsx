@@ -64,7 +64,7 @@ const GuideIntroduction: FC = () => {
           We want to ensure that everyone (not just developers and DevOps) can receive the value of their work put into
           making our network and community better. In the long run, this is the only way to guarantee success for our
           community as a group of people working toward common goals. In fact, we see thenewboston as an everlasting
-          project because only work put into it generates value spread across every unit of our cryptocurrency. Every
+          project because only work put into it generates value.  Every
           unit of thenewboston will forever represent real human effort put into it, and in every trade of thenewboston
           this human effort will add to the cryptocurrency's value. This also demystifies how every single coin becomes
           valuable at the moment we generate it.
