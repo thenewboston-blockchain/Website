@@ -28,7 +28,7 @@ const GuideAccounts: FC = () => {
 
       <p>
         The account number of an account is like a username, but is unique across the entire network (rather than a
-        single website). Using signing keys secures all accounts and prove ownership of coins. Signing keys are also
+        single website). Using signing keys secures all accounts and proves ownership of coins. Signing keys are also
         used in the process of "signing" a block. This allows users to create secure transactions that the network can
         further validate without revealing the signing key itself. The signing key must always remain private to the
         account owner.
