@@ -176,7 +176,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "900",
+          "contributorId": "83",
           "displayName": "Jesus Avina",
           "githubUsername": "javina89",
           "profileImage": "https://avatars.githubusercontent.com/u/13725042?s=460&u=ea84af4231fdf89f8454b485de5ee3df49321621&v=4",
@@ -189,7 +189,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "901",
+          "contributorId": "84",
           "displayName": "Taylor M",
           "githubUsername": "tmcninch",
           "profileImage": "https://avatars.githubusercontent.com/u/78127708?s=460&v=4",
@@ -716,6 +716,19 @@
           "githubUsername": "aathil-Mr-ITGuy",
           "profileImage": "https://avatars0.githubusercontent.com/u/36620321?s=400&u=af0419d3610824677b5f529008f9f87b23623091&v=4",
           "slackUsername": "ATLIT"
+        }
+      },
+      {
+        "title": "Front-End Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "85",
+          "displayName": "Ivan Danilov",
+          "githubUsername": "IvanDanilov66",
+          "profileImage": "https://avatars.githubusercontent.com/u/78055249?s=400&v=4",
+          "slackUsername": "Ivan Danilov"
         }
       }
     ],
