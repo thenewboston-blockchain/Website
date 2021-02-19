@@ -17,10 +17,10 @@ const GuideBlocks: FC = () => {
 
       <TableBorderGrid
         rows={[
-          ['Coins being sent to Brian', '100.00'],
-          ['Bank fees', <span className="GuideBlocks__text-light">2 coins</span>],
-          ['Validator fees', <span className="GuideBlocks__text-light">1 coin</span>],
-          ['Total', '103.00'],
+          ['Coins being sent to Brian', '100'],
+          ['Bank fees', <span className="GuideBlocks__text-light">2</span>],
+          ['Validator fees', <span className="GuideBlocks__text-light">1</span>],
+          ['Total', '103'],
         ]}
       />
 

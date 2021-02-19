@@ -4,6 +4,37 @@ import {NavLink} from 'react-router-dom';
 import {MenuGroup} from 'components';
 import {NavigationItem} from 'types/navigation';
 
+export const governanceNavigationData = [
+  {
+    name: 'Overview',
+    url: '/governance/overview',
+  },
+  {
+    name: 'Usernames & Votes',
+    url: '/governance/usernames-and-votes',
+  },
+  {
+    name: 'Locked Coins & Bank Boosting',
+    url: '/governance/locked-coins-and-banking-boosting',
+  },
+  {
+    name: 'Points & Refill Logic',
+    url: '/governance/points-and-refill-logic',
+  },
+  {
+    name: 'Coins vs. Points',
+    url: '/governance/coins-vs-points',
+  },
+  {
+    name: 'Application & Election Process',
+    url: '/governance/application-and-election-process',
+  },
+  {
+    name: 'Budgets',
+    url: '/governance/budgets',
+  },
+];
+
 export const accountManagerNavigationData = [
   {
     name: 'Get Started',
@@ -258,6 +289,10 @@ const DocsMenuItems: FC = () => {
       <MenuGroup title="Style Guides" urlBase="style-guide">
         <NavLink to="/style-guide/react">React / JSX</NavLink>
         <NavLink to="/style-guide/css">CSS / SASS</NavLink>
+      </MenuGroup>
+
+      <MenuGroup title="Governance" urlBase="governance">
+        {renderNavLinks(governanceNavigationData)}
       </MenuGroup>
 
       <MenuGroup title="Bank API" urlBase="bank-api">
