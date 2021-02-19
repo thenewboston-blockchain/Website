@@ -70,10 +70,10 @@ const GuideBlocks: FC = () => {
         account number.
       </DocCallout>
       <p>
-        The account number (often referred to as the "public-key" in cryptography) is not only important for
-        identifying a user's account when others wish to send coins to this user. It is also important during the
-        verification process in which blocks must be correctly verified to ensure that the sender (account owner) has
-        authorized the related transactions. So a more realistic representation of a block is the following.
+        The account number (often referred to as the "public-key" in cryptography) is not only important for identifying
+        a user's account when others wish to send coins to this user. It is also important during the verification process
+        in which blocks must be correctly verified to ensure that the sender (account owner) has authorized the related
+        transactions. So, a more realistic representation of a block is the following:
       </p>
       <DocImage alt="block details" maxWidth={530} src={BlockDetails} />
 
