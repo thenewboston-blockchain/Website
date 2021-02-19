@@ -49,7 +49,7 @@
     "contributors": [
       {
         "title": "Back-End Lead",
-        "isLead": true,
+        "isLead": false,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
@@ -58,19 +58,6 @@
           "githubUsername": "vosi",
           "profileImage": "https://avatars0.githubusercontent.com/u/758024?s=460&v=4",
           "slackUsername": "Volodymyr"
-        }
-      },
-      {
-        "title": "Back-End Lead",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-05-09T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "5",
-          "displayName": "Mikhail",
-          "githubUsername": "fonar",
-          "profileImage": "https://avatars0.githubusercontent.com/u/5008719?s=460&v=4",
-          "slackUsername": "Mikhail"
         }
       },
       {
@@ -274,32 +261,6 @@
           "githubUsername": "SteveHedden",
           "profileImage": "https://avatars3.githubusercontent.com/u/5224821?s=460&v=4",
           "slackUsername": "Steve Hedden"
-        }
-      },
-      {
-        "title": "Hiring Manager",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "38",
-          "displayName": "Francisca Nwafor",
-          "githubUsername": "Francaolisa",
-          "profileImage": "https://avatars0.githubusercontent.com/u/72324717?s=460&v=4",
-          "slackUsername": "Francisca Nwafor"
-        }
-      },
-      {
-        "title": "LinkedIn Manager",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "7",
-          "displayName": "Martin",
-          "githubUsername": "Mathlucklala",
-          "profileImage": "https://avatars0.githubusercontent.com/u/74901267?s=460&v=4",
-          "slackUsername": "Martin"
         }
       },
       {
@@ -574,6 +535,19 @@
       }
     ],
     "contributors": [
+      {
+        "title": "Front-End Lead",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "5",
+          "displayName": "Justin",
+          "githubUsername": "angle943",
+          "profileImage": "https://avatars2.githubusercontent.com/u/5943963?v=4",
+          "slackUsername": "Justin"
+        }
+      },
       {
         "title": "Front-End Lead",
         "isLead": true,
@@ -1001,6 +975,32 @@
           "profileImage": "https://avatars.githubusercontent.com/u/78985665?s=400&v=4",
           "slackUsername": "SwedishFisherman"
         }
+      },
+      {
+        "title": "Social Media Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "38",
+          "displayName": "Francisca Nwafor",
+          "githubUsername": "Francaolisa",
+          "profileImage": "https://avatars0.githubusercontent.com/u/72324717?s=460&v=4",
+          "slackUsername": "Francisca Nwafor"
+        }
+      },
+      {
+        "title": "LinkedIn Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "7",
+          "displayName": "Martin",
+          "githubUsername": "Mathlucklala",
+          "profileImage": "https://avatars0.githubusercontent.com/u/74901267?s=460&v=4",
+          "slackUsername": "Martin"
+        }
       }
     ],
     "responsibilities": [
@@ -1249,19 +1249,6 @@
       }
     ],
     "contributors": [
-      {
-        "title": "QA Lead",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "22",
-          "displayName": "Snehal Ingale",
-          "githubUsername": "webdeveloperswj",
-          "profileImage": "https://avatars2.githubusercontent.com/u/59204822?s=460&v=4",
-          "slackUsername": "Snehal Ingale"
-        }
-      },
       {
         "title": "QA",
         "isLead": false,
