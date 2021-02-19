@@ -12,6 +12,7 @@ import DeploymentGuide from './DeploymentGuide';
 import Donate from './Donate';
 import Download from './Download';
 import Faq from './Faq';
+import Governance from './Governance';
 import Guide from './Guide';
 import Home from './Home';
 import Leaderboard from './Leaderboard';
@@ -78,6 +79,7 @@ const App: FC = () => {
           <Route path="/confirmation-validator-api/:chapter?" component={ConfirmationValidatorApi} />
           <Route path="/deployment-guide/:chapter?" component={DeploymentGuide} />
           <Route path="/download" component={Download} />
+          <Route path="/governance/:chapter?" component={Governance} />
           <Route path="/guide/:chapter?" component={Guide} />
           <Route path="/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
           <Route path="/project-proposals/:chapter?" component={ProjectProposals} />

@@ -212,7 +212,11 @@
     "title": "Community",
     "description": "Liaising with job applicants and team leads. Choosing the right job applicants and sending it to team leaders base on departments for further scrutiny. We create the strategy, oversee the overall TNB product, create standards, and improve cross-collab between teams.",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "github",
+        "label": "thenewboston",
+        "link": "https://github.com/thenewboston-developers"
+      },
       {
         "name": "slack",
         "label": "general",
@@ -368,7 +372,11 @@
     "title": "Design",
     "description": "We create and manage all designs within thenewboston website & app. ",
     "platforms": [
-      {"name": "github", "label": "Design", "link": "https://github.com/thenewboston-developers/Design"},
+      {
+        "name": "github",
+        "label": "Design",
+        "link": "https://github.com/thenewboston-developers/Design"
+      },
       {
         "name": "slack",
         "label": "design",
@@ -421,13 +429,13 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-            "contributorId": "80",
-            "displayName": "Adarsh Kumar",
-            "githubUsername": "Niekon01",
-            "profileImage": "https://avatars.githubusercontent.com/u/55133485?s=400&u=30095929a9d5bf6199f89c43d8df26bb9bb484a1&v=4",
-            "slackUsername": "Niekon"
+          "contributorId": "80",
+          "displayName": "Adarsh Kumar",
+          "githubUsername": "Niekon01",
+          "profileImage": "https://avatars.githubusercontent.com/u/55133485?s=400&u=30095929a9d5bf6199f89c43d8df26bb9bb484a1&v=4",
+          "slackUsername": "Niekon"
         }
-        }        
+      }
     ],
     "responsibilities": [
       {
@@ -458,9 +466,13 @@
   },
   {
     "title": "DevOps",
-    "description": "Provides \"systems for the systems\". Focused on underlying infrastructure (servers, OS, networking, access security), services (web servers, databases), as well as monitoring and automating the configuration of those items.",
+    "description": "Provides systems for the systems. Focused on underlying infrastructure (servers, OS, networking, access security), services (web servers, databases), as well as monitoring and automating the configuration of those items.",
     "platforms": [
-      {"name": "github", "label": "DevOps", "link": "https://github.com/thenewboston-developers/DevOps"},
+      {
+        "name": "github",
+        "label": "DevOps",
+        "link": "https://github.com/thenewboston-developers/DevOps"
+      },
       {
         "name": "slack",
         "label": "devops",
@@ -488,7 +500,11 @@
     "title": "Discord Managers",
     "description": "Managing Discord server for thenewboston Community.",
     "platforms": [
-      {"name": "github", "label": "Discord-Bot", "link": "https://github.com/thenewboston-developers/Discord-Bot"},
+      {
+        "name": "github",
+        "label": "Discord-Bot",
+        "link": "https://github.com/thenewboston-developers/Discord-Bot"
+      },
       {
         "name": "slack",
         "label": "discord",
@@ -547,7 +563,11 @@
     "title": "Front-End Developers",
     "description": "Basically, everything that the user can interact with, comes under this team's scope. We'll be mostly working on the Website and Account Manager repo. ",
     "platforms": [
-      {"name": "github", "label": "Website", "link": "https://github.com/thenewboston-developers/Website"},
+      {
+        "name": "github",
+        "label": "Website",
+        "link": "https://github.com/thenewboston-developers/Website"
+      },
       {
         "name": "slack",
         "label": "front-end",
@@ -718,7 +738,11 @@
     "title": "Kotlin SDK",
     "description": "Provide a Kotlin client library.",
     "platforms": [
-      {"name": "github", "label": "Kotlin-SDK", "link": "https://github.com/thenewboston-developers/Kotlin-SDK"},
+      {
+        "name": "github",
+        "label": "Kotlin-SDK",
+        "link": "https://github.com/thenewboston-developers/Kotlin-SDK"
+      },
       {
         "name": "slack",
         "label": "kotlin-sdk",
@@ -798,7 +822,11 @@
     "title": "Marketing",
     "description": "My team handles all the marketing part including email, SEO, and media buys. Developing and Executing marketing strategies as well as focusing on user behaviour and contacts/partnership collection.",
     "platforms": [
-      {"name": "github", "label": "Marketing", "link": "https://github.com/thenewboston-developers/Marketing"},
+      {
+        "name": "github",
+        "label": "Marketing",
+        "link": "https://github.com/thenewboston-developers/Marketing"
+      },
       {
         "name": "slack",
         "label": "marketing",
@@ -974,6 +1002,19 @@
           "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01MFD5GT5J-eae2ef782ec8-512",
           "slackUsername": "Mr9tynine"
         }
+      },
+      {
+        "title": "Project Manager",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "82",
+          "displayName": "Edward",
+          "githubUsername": "SwedishFisherman",
+          "profileImage": "https://avatars.githubusercontent.com/u/78985665?s=400&v=4",
+          "slackUsername": "SwedishFisherman"
+        }
       }
     ],
     "responsibilities": [
@@ -1019,7 +1060,11 @@
     "title": "New User Operations",
     "description": "Convert new users to task contributors or team members.",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "github",
+        "label": "thenewboston",
+        "link": "https://github.com/thenewboston-developers"
+      },
       {
         "name": "slack",
         "label": "intros",
@@ -1163,6 +1208,19 @@
           "profileImage": "https://avatars0.githubusercontent.com/u/22790904?s=400&u=643810e6c9d5686df409132b01863f9e065df6c1&v=4",
           "slackUsername": "Manish"
         }
+      },
+      {
+        "title": "Recruiting Specialist",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2021-02-15T11:46:08.190Z",
+        "contributor": {
+          "contributorId": "81",
+          "displayName": "Demetrio Ornelas",
+          "githubUsername": "DemetrioOrnelas",
+          "profileImage": "https://avatars.githubusercontent.com/u/47065529?s=400&v=4",
+          "slackUsername": "Demetrio Ornelas"
+        }
       }
     ],
     "responsibilities": [
@@ -1207,7 +1265,11 @@
     "title": "QA",
     "description": "Identify and detect bugs in our apps to increase the quality of our products for improved customer satisfaction.",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "github",
+        "label": "thenewboston",
+        "link": "https://github.com/thenewboston-developers"
+      },
       {
         "name": "slack",
         "label": "quality-analyst",
@@ -1248,7 +1310,11 @@
     "title": "Reddit Moderators",
     "description": "We moderate posts on reddit and post job openings on it. Also other additional tasks given by bucky is also done by us. Thanks",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "github",
+        "label": "thenewboston",
+        "link": "https://github.com/thenewboston-developers"
+      },
       {
         "name": "slack",
         "label": "reddit-moderation",
@@ -1307,7 +1373,11 @@
     "title": "Research",
     "description": "We research the latest developments in blockchain technology and identify strategic opportunities.  We work closely with the development teams on their crypto-economic model, protocol, architecture, and strategy.",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "github",
+        "label": "thenewboston",
+        "link": "https://github.com/thenewboston-developers"
+      },
       {
         "name": "slack",
         "label": "blockchain-research-team-channel",
@@ -1404,7 +1474,11 @@
     "title": "Security",
     "description": "Currently we are two members only. Working on security roadmap. Trying to keep the blockchain network safe from adversaries and ensuring the services are always available to the end user",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "github",
+        "label": "thenewboston",
+        "link": "https://github.com/thenewboston-developers"
+      },
       {
         "name": "slack",
         "label": "security",
@@ -1437,19 +1511,6 @@
           "profileImage": "https://avatars1.githubusercontent.com/u/5453949?s=460&v=4",
           "slackUsername": "Amol Bhure"
         }
-      },
-      {
-        "title": "Penetration Testing Team Lead",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "45",
-          "displayName": "Spencer Dollahite",
-          "githubUsername": "spencer-dollahite",
-          "profileImage": "https://avatars0.githubusercontent.com/u/74439721?s=400&v=4",
-          "slackUsername": "Spencer Dollahite"
-        }
       }
     ],
     "responsibilities": []
@@ -1458,7 +1519,11 @@
     "title": "YouTube",
     "description": "Dedicated to developer evangelism as well as general adoption of the coin through YouTube videos.",
     "platforms": [
-      {"name": "github", "label": "thenewboston", "link": "https://github.com/thenewboston-developers"},
+      {
+        "name": "github",
+        "label": "thenewboston",
+        "link": "https://github.com/thenewboston-developers"
+      },
       {
         "name": "slack",
         "label": "youtube",
