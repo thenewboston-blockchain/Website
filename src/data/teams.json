@@ -820,19 +820,6 @@
         }
       },
       {
-        "title": "Blog Project Manager",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "63",
-          "displayName": "Ijeoma Okoh",
-          "githubUsername": "Aiijay",
-          "profileImage": "https://avatars3.githubusercontent.com/u/55064951?s=400&u=ac5fc97138da6bd28ae66399241daeff7605d969&v=4",
-          "slackUsername": "Ijeoma"
-        }
-      },
-      {
         "title": "Marketing Analyst",
         "isLead": false,
         "payPerDay": 2800,
