@@ -53,7 +53,7 @@ const GuideAccounts: FC = () => {
         <li>Made public to the network</li>
         <li>Acts as a receiving address</li>
         <ul>
-          <li>Any user can send coins to the owner of the account using this account number</li>
+          <li>Any user can send coins to the owner of the account using the account number</li>
         </ul>
         <li>Verifies the sender when validating transactions</li>
         <ul>
