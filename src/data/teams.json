@@ -847,8 +847,8 @@
         }
       },
       {
-        "title": "Marketing Analyst",
-        "isLead": false,
+        "title": "Head of Marketing Team",
+        "isLead": true,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
@@ -990,7 +990,7 @@
         }
       },
       {
-        "title": "LinkedIn Manager",
+        "title": "Social Media Manager",
         "isLead": false,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
