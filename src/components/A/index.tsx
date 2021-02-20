@@ -18,11 +18,12 @@ const A: FC<ComponentProps> = ({children, className, href, newWindow = true}) =>
   const target = newWindow ? '_blank' : '_self';
 
   return (
-    <a className={clsx('A', className)} href={href} rel={rel} target={target}>
+    <a className={clsx('A', className)} data-testid="A" href={href} rel={rel} target={target}>
       {children}
       {renderIcon && (
         <Icon
           className={clsx('A__Icon--new-window', {...bemify(className, '__Icon--new-window')})}
+          dataTestId="A__Icon--new-window"
           icon={IconType.openInNew}
           size={16}
           totalSize={20}
