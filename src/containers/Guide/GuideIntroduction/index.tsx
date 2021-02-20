@@ -26,7 +26,7 @@ const GuideIntroduction: FC = () => {
         ['Node', 'Any network server (Bank or Validator)'],
         [
           'Confirmation Block',
-          'Often referred to as a "confirmation," a block that a validator signs as confirmation that it has been added to their blockchain; shows that the transactions have been validated and that the coins have been successfully transferred',
+          'Often referred to as "confirmation," a block that a validator signs as a confirmation that it has been added to their blockchain; shows that the transactions have been validated and that the coins have been successfully transferred',
         ],
         ['Blockchain', 'An ordered list of confirmation blocks'],
         ['Root Account File', 'A historical record (snapshot) of all account balances at a given point in time'],
@@ -80,7 +80,7 @@ const GuideIntroduction: FC = () => {
         <p>
           When building a distributed payment ledger, it is not the transaction processing itself that requires
           distribution across multiple servers. This often results in duplicate work being done by several network
-          nodes, causing an inherent inefficiency in the system. It is rather the ability to elect fairly a single
+          nodes, causing an inherent inefficiency in the system. It is rather the ability to fairly elect a single
           validation server and consensual acceptance of the produced results that require distribution among peers.
           This allows for highly performant transaction validation within a decentralized network.
         </p>
