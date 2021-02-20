@@ -45,7 +45,7 @@ const GuideBlocks: FC = () => {
           [<strong>Validation</strong>, <strong>Notes</strong>],
           [
             'Amy has signed the block',
-            'The term "sign" is preferred over "create" as Amy might sign (authorize) blocks that she did not originate; for example, when Amy adds items to a shopping cart on a retail website, she does not create the block, just need to sign it',
+            'The term "sign" is preferred over "create" as Amy might sign (authorize) blocks that she did not originate; for example, when Amy adds items to a shopping cart on a retail website, she does not create the block, she just signs it',
           ],
           [
             'The block is not being validated more than once',
