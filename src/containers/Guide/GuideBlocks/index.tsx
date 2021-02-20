@@ -45,7 +45,7 @@ const GuideBlocks: FC = () => {
           [<strong>Validation</strong>, <strong>Notes</strong>],
           [
             'Amy has signed the block',
-            'The term "sign" is preferred over "create" because Amy might sign (authorize) blocks that she did not originate, for example, as Amy adds items to her cart on a shopping website, this builds the block',
+            'The term "sign" is preferred over "create" as Amy might sign (authorize) blocks that she did not originate; for example, when Amy adds items to a shopping cart on a retail website, she does not create the block, just need to sign it',
           ],
           [
             'The block is not being validated more than once',
@@ -65,9 +65,9 @@ const GuideBlocks: FC = () => {
         has indeed signed all the transactions within a block.
       </p>
       <DocCallout type={CalloutType.note}>
-        Although in many explanations of the network the account "owner" is often referred to by name, the actual
-        network architecture never stores the name of individuals. Instead, each account refers to the owner by their
-        account number.
+        Although in many explanations of the network the account owner is often referred to by name, the actual network
+        architecture never stores the name of individuals. Instead, each account refers to the owner by their account
+        number.
       </DocCallout>
       <p>
         The account number (often referred to as the "public-key" in cryptography) is not only important for identifying
