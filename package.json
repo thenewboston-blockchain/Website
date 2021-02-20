@@ -4,11 +4,11 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.0",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.6.3",
     "@thenewboston/utils": "^1.0.0",
-    "@types/jest": "^24.0.0",
+    "@types/jest": "^26.0.20",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
@@ -49,7 +49,7 @@
     "prettier": "prettier --write \"{,!(node_modules)/**/}*.{ts,tsx,js,json,css,less,scss}\"",
     "start": "react-scripts start",
     "stylelint": "stylelint \"./src/**/*.{css,scss}\" --fix",
-    "test": "jest --passWithNoTests"
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -104,6 +104,11 @@
     "{,!(node_modules)/**/}*.{css,scss}": [
       "prettier --write",
       "stylelint --cache --fix"
+    ]
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-syntax-highlighter)/"
     ]
   }
 }
