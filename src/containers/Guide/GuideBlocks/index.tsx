@@ -45,7 +45,7 @@ const GuideBlocks: FC = () => {
           [<strong>Validation</strong>, <strong>Notes</strong>],
           [
             'Amy has signed the block',
-            'The term "signing" is preferred over "created" because Amy might sign (authorize) blocks that she did not originate, for example, as Amy adds items to her cart on a shopping website, this builds the block',
+            'The term "sign" is preferred over "create" because Amy might sign (authorize) blocks that she did not originate, for example, as Amy adds items to her cart on a shopping website, this builds the block',
           ],
           [
             'The block is not being validated more than once',
@@ -100,7 +100,7 @@ const GuideBlocks: FC = () => {
         account owner's last sent block message determines the account's balance lock. This, however, leaves out the
         scenario in which the account owner must access their coin balance for the very first time before a block has
         ever been sent. This occurs when a separate user has sent funds to an account for the very first time, but
-        before that recipient sends any coins (create any blocks) themselves. Here, the balance lock for the account
+        before that recipient sends any coins (signs any blocks) themselves. Here, the balance lock for the account
         will be the recipient's account number.
       </p>
       <p>So, the following two rules outline how balance locks are determined:</p>
