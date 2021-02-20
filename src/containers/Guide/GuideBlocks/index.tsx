@@ -83,7 +83,7 @@ const GuideBlocks: FC = () => {
       </p>
       <p>
         Every account on the balance sheet includes a related balance lock. This is a value that the account owner must
-        provide in order to "unlock" or spend their coin balance. The method to unlock a balance lock uses balance keys,
+        provide in order to unlock or spend their coin balance. The method to unlock a balance lock uses balance keys,
         which are provided within the message of every block.
       </p>
       <p>
