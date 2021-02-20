@@ -7,7 +7,7 @@ import AccountsSimple from './AccountsSimple.png';
 
 const GuideAccounts: FC = () => {
   return (
-    <DocContainer className="GuideAccounts" title="Accounts" lastUpdated="16 Feb 2021">
+    <DocContainer className="GuideAccounts" title="Accounts" lastUpdated="21 Feb 2021">
       <p>
         <strong>Accounts</strong> are anonymous digital identities on the network where coins may be sent to and from.{' '}
         <strong>Account managers</strong> are software applications (such as a mobile application or desktop software)
@@ -27,7 +27,7 @@ const GuideAccounts: FC = () => {
       <DocImage alt="key pair" maxWidth={380} src={KeyPair} />
 
       <p>
-        The account number of an account is like a username, but is unique across the entire network (rather than a
+        The account number of an account operates like a username, but is unique across the entire network (rather than a
         single website). Using signing keys secures all accounts and proves ownership of coins. Signing keys are also
         used in the process of "signing" a block. This allows users to create secure transactions that the network can
         further validate without revealing the signing key itself. The signing key must always remain private to the
