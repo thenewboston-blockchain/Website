@@ -181,6 +181,42 @@
     ]
   },
   {
+    "openingId": "self-order-app-sr-django-developer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Yahya"
+      }
+    ],
+    "category": "Engineering",
+    "project": {
+      "name": "Restaurants Self Order App",
+      "url": "https://github.com/Restaurants-Self-Order"
+    },
+    "description": "Someone with a good experience in translating business and technical requirements into comprehensive software design and architecture.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Software Architect/Senior Django Developer",
+    "reportsTo": [
+      {
+        "githubUsername": "yahya",
+        "name": "Yahya"
+      }
+    ],
+    "responsibilities": [
+      "Designing and creating RESTful APIs",
+      "Designing and optimization of the database",
+      "Responsible for architectural, design of the product",
+      "Familiar with diagrams and documentations is a plus",
+      "Code review"
+    ],
+    "technologyRequirements": [
+      "Mainly a person who has a good skills in product designing to meet the best performance, scalability, and maintainability",
+      "Even if you are not experienced with Django, but you meet the main responsibilities, still DM me",
+      "Clean code standards",
+      "5+ years of experience "
+    ]
+  },
+  {
     "openingId": "tnb-forum-ui-ux-designer",
     "applicationMethods": [
       {

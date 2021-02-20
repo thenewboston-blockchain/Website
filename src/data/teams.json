@@ -49,7 +49,7 @@
     "contributors": [
       {
         "title": "Back-End Lead",
-        "isLead": true,
+        "isLead": false,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
@@ -58,19 +58,6 @@
           "githubUsername": "vosi",
           "profileImage": "https://avatars0.githubusercontent.com/u/758024?s=460&v=4",
           "slackUsername": "Volodymyr"
-        }
-      },
-      {
-        "title": "Back-End Lead",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-05-09T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "5",
-          "displayName": "Mikhail",
-          "githubUsername": "fonar",
-          "profileImage": "https://avatars0.githubusercontent.com/u/5008719?s=460&v=4",
-          "slackUsername": "Mikhail"
         }
       },
       {
@@ -176,7 +163,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "900",
+          "contributorId": "83",
           "displayName": "Jesus Avina",
           "githubUsername": "javina89",
           "profileImage": "https://avatars.githubusercontent.com/u/13725042?s=460&u=ea84af4231fdf89f8454b485de5ee3df49321621&v=4",
@@ -189,7 +176,7 @@
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "901",
+          "contributorId": "84",
           "displayName": "Taylor M",
           "githubUsername": "tmcninch",
           "profileImage": "https://avatars.githubusercontent.com/u/78127708?s=460&v=4",
@@ -274,32 +261,6 @@
           "githubUsername": "SteveHedden",
           "profileImage": "https://avatars3.githubusercontent.com/u/5224821?s=460&v=4",
           "slackUsername": "Steve Hedden"
-        }
-      },
-      {
-        "title": "Hiring Manager",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "38",
-          "displayName": "Francisca Nwafor",
-          "githubUsername": "Francaolisa",
-          "profileImage": "https://avatars0.githubusercontent.com/u/72324717?s=460&v=4",
-          "slackUsername": "Francisca Nwafor"
-        }
-      },
-      {
-        "title": "LinkedIn Manager",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "7",
-          "displayName": "Martin",
-          "githubUsername": "Mathlucklala",
-          "profileImage": "https://avatars0.githubusercontent.com/u/74901267?s=460&v=4",
-          "slackUsername": "Martin"
         }
       },
       {
@@ -398,19 +359,6 @@
         }
       },
       {
-        "title": "Design Lead",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "13",
-          "displayName": "David Yap",
-          "githubUsername": "davidyapdy",
-          "profileImage": "https://avatars0.githubusercontent.com/u/17293366?s=460&u=549156b32fdbfc62ce02d54bb54e56782c9a7637&v=4",
-          "slackUsername": "David Yap"
-        }
-      },
-      {
         "title": "UI/UX Designer",
         "isLead": false,
         "payPerDay": 2800,
@@ -434,6 +382,18 @@
           "githubUsername": "Niekon01",
           "profileImage": "https://avatars.githubusercontent.com/u/55133485?s=400&u=30095929a9d5bf6199f89c43d8df26bb9bb484a1&v=4",
           "slackUsername": "Niekon"
+        }
+      },
+      {
+        "title": "Graphic Designer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "contributor": {
+          "contributorId": "86",
+          "displayName": "Tolawak Gelana",
+          "githubUsername": "toledit",
+          "profileImage": "https://avatars0.githubusercontent.com/u/27518021?s=400&u=5b21160854c436683ecc060aa0c269694f62fe94&v=4",
+          "slackUsername": "toledit"
         }
       }
     ],
@@ -575,6 +535,19 @@
       }
     ],
     "contributors": [
+      {
+        "title": "Front-End Lead",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "5",
+          "displayName": "Justin",
+          "githubUsername": "angle943",
+          "profileImage": "https://avatars2.githubusercontent.com/u/5943963?v=4",
+          "slackUsername": "Justin"
+        }
+      },
       {
         "title": "Front-End Lead",
         "isLead": true,
@@ -730,6 +703,19 @@
           "profileImage": "https://avatars0.githubusercontent.com/u/36620321?s=400&u=af0419d3610824677b5f529008f9f87b23623091&v=4",
           "slackUsername": "ATLIT"
         }
+      },
+      {
+        "title": "Front-End Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "85",
+          "displayName": "Ivan Danilov",
+          "githubUsername": "IvanDanilov66",
+          "profileImage": "https://avatars.githubusercontent.com/u/78055249?s=400&v=4",
+          "slackUsername": "Ivan Danilov"
+        }
       }
     ],
     "responsibilities": []
@@ -861,19 +847,6 @@
         }
       },
       {
-        "title": "Blog Project Manager",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "63",
-          "displayName": "Ijeoma Okoh",
-          "githubUsername": "Aiijay",
-          "profileImage": "https://avatars3.githubusercontent.com/u/55064951?s=400&u=ac5fc97138da6bd28ae66399241daeff7605d969&v=4",
-          "slackUsername": "Ijeoma"
-        }
-      },
-      {
         "title": "Marketing Analyst",
         "isLead": false,
         "payPerDay": 2800,
@@ -897,19 +870,6 @@
           "githubUsername": "oluwatomiwatemidayo",
           "profileImage": "https://avatars1.githubusercontent.com/u/72953345?s=400&u=8a7d5931cd7e0041fc6e68683ad25aeb4e7016ce&v=4",
           "slackUsername": "Tomiwa"
-        }
-      },
-      {
-        "title": "Blog Writer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "69",
-          "displayName": "Chibuzor Eze-nwosu",
-          "githubUsername": null,
-          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01G1B4V42D-94d5b325b7d5-512",
-          "slackUsername": "Chibuzor"
         }
       },
       {
@@ -1015,6 +975,32 @@
           "profileImage": "https://avatars.githubusercontent.com/u/78985665?s=400&v=4",
           "slackUsername": "SwedishFisherman"
         }
+      },
+      {
+        "title": "Social Media Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "38",
+          "displayName": "Francisca Nwafor",
+          "githubUsername": "Francaolisa",
+          "profileImage": "https://avatars0.githubusercontent.com/u/72324717?s=460&v=4",
+          "slackUsername": "Francisca Nwafor"
+        }
+      },
+      {
+        "title": "LinkedIn Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "7",
+          "displayName": "Martin",
+          "githubUsername": "Mathlucklala",
+          "profileImage": "https://avatars0.githubusercontent.com/u/74901267?s=460&v=4",
+          "slackUsername": "Martin"
+        }
       }
     ],
     "responsibilities": [
@@ -1071,21 +1057,7 @@
         "link": ""
       }
     ],
-    "contributors": [
-      {
-        "title": "New User Operations Lead",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "48",
-          "displayName": "Martyn",
-          "githubUsername": "Spotnag",
-          "profileImage": "https://avatars3.githubusercontent.com/u/2324860?s=400&u=ca3e6fcc7e1c03a48720143704adc8ef51d7c64d&v=4",
-          "slackUsername": "Martyn"
-        }
-      }
-    ],
+    "contributors": [],
     "responsibilities": [
       {
         "item": "Convert new users to contributors",
@@ -1277,19 +1249,6 @@
       }
     ],
     "contributors": [
-      {
-        "title": "QA Lead",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "22",
-          "displayName": "Snehal Ingale",
-          "githubUsername": "webdeveloperswj",
-          "profileImage": "https://avatars2.githubusercontent.com/u/59204822?s=460&v=4",
-          "slackUsername": "Snehal Ingale"
-        }
-      },
       {
         "title": "QA",
         "isLead": false,

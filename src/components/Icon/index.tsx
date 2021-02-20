@@ -107,6 +107,7 @@ export enum IconType {
 
 interface ComponentProps {
   className?: string;
+  dataTestId?: string;
   disabled?: boolean;
   icon: IconType;
   onClick?(e?: React.MouseEvent<HTMLDivElement, MouseEvent>): void;
@@ -117,7 +118,10 @@ interface ComponentProps {
 }
 
 const Icon = forwardRef<HTMLDivElement, ComponentProps>(
-  ({className, disabled = false, icon, onClick, onKeyDown, size, totalSize = 'unset', unfocusable = false}, ref) => {
+  (
+    {className, dataTestId, disabled = false, icon, onClick, onKeyDown, size, totalSize = 'unset', unfocusable = false},
+    ref,
+  ) => {
     const iconProps = {
       size,
     };
@@ -253,6 +257,7 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
           'Icon--disabled': disabled,
           ...bemify(className, '--disabled', disabled),
         })}
+        data-testid={dataTestId}
         ref={ref}
         onClick={handleClick}
         onKeyDown={handleKeyDown}
