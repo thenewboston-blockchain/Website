@@ -1,9 +1,9 @@
 name: Test
 on:
   push:
+    branches: [master, development]
   pull_request:
-    branches:
-      - development
+    branches: [development]
 jobs:
   build:
     name: Running test on Node ${{ matrix.node }} and ${{ matrix.os }}
