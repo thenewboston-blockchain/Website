@@ -24,4 +24,15 @@ describe('TotalAmount component', () => {
 
     expect(el.className).toContain('test');
   });
+
+  test('renders with updated locale, using de-DE', () => {
+    render(<TotalAmount amount={1000} title="total" locale="de-DE" />);
+    expect(screen.getByText('1.000')).toBeTruthy();
+  });
+
+  test('renders with updated locale, using th-TH-u-nu-thai', () => {
+    const locale = 'th-TH-u-nu-thai';
+    render(<TotalAmount amount={1000} title="total" locale={locale} />);
+    expect(screen.getByText('๑,๐๐๐')).toBeTruthy();
+  });
 });
