@@ -3,40 +3,56 @@ import clsx from 'clsx';
 
 import './Avatar.scss';
 
-interface ComponentProps {
+export interface AvatarProps {
   alt: string;
   className?: string;
   size: number;
   src: string;
 }
 
-const getImageSizeBasedOnDeviceRatio = (size: number): number => {
+export const getImageSizeBasedOnDeviceRatio = (size: number): number => {
   const {devicePixelRatio} = window;
   return size * devicePixelRatio;
 };
 
-const Avatar: FC<ComponentProps> = ({alt, className, size, src}) => {
+const Avatar: FC<AvatarProps> = ({alt, className, size, src}) => {
   const [source, setSource] = useState<string>('');
 
   useEffect(() => {
-    const updatedSize = getImageSizeBasedOnDeviceRatio(size);
-    if (src.includes('github')) {
-      const [path] = src.split('?');
-      setSource(`${path}?s=${updatedSize}`);
-    } else if (src.includes('slack')) {
-      const srcSplitArr = src.split('-');
-      srcSplitArr.pop();
-      const path = srcSplitArr.join('-');
-      setSource(`${path}-${updatedSize}`);
-    } else {
-      setSource(src);
+    try {
+      const updatedSize = getImageSizeBasedOnDeviceRatio(size);
+      if (src.includes('github')) {
+        const [path] = src.split('?');
+        setSource(`${path}?s=${updatedSize}`);
+      } else if (src.includes('slack')) {
+        const srcSplitArr = src.split('-');
+        srcSplitArr.pop();
+        const path = srcSplitArr.join('-');
+        setSource(`${path}-${updatedSize}`);
+      } else {
+        setSource(src);
+      }
+    } catch (error) {
+      setSource('');
     }
   }, [src, size]);
 
   return source?.length ? (
-    <img alt={alt} className={clsx('Avatar', className)} height={size} loading="lazy" src={source} width={size} />
+    <img
+      alt={alt}
+      className={clsx('Avatar', className)}
+      data-testid="Avatar"
+      height={size}
+      loading="lazy"
+      src={source}
+      width={size}
+    />
   ) : (
-    <div className={clsx('Avatar Placeholder', className)} style={{height: size, width: size}} />
+    <div
+      className={clsx('Avatar', 'Avater--placeholder', className)}
+      data-testid="Avatar--placeholder"
+      style={{height: size, width: size}}
+    />
   );
 };
 
