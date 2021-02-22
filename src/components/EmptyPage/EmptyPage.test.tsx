@@ -24,8 +24,8 @@ describe('EmptyPage', () => {
   
   it('renders with passed in className', () => {
     render(<EmptyPage className="test" />);
-    const docEndpoint = screen.getByTestId('EmptyPage');
+    const emptyPage = screen.getByTestId('EmptyPage');
 
-    expect(docEndpoint).toHaveClass('test');
+    expect(emptyPage).toHaveClass('test');
   });
 });
