@@ -11,7 +11,7 @@ interface ComponentProps {
   dataTestId?: string;
 }
 
-const TotalAmount: FC<ComponentProps> = ({amount, className, title, dataTestId = 'totalAmount'}) => {
+const TotalAmount: FC<ComponentProps> = ({amount, className, title, dataTestId = 'TotalAmount'}) => {
   return (
     <div data-testid={dataTestId} className={clsx('TotalAmount', className)}>
       <div className={clsx('TotalAmount__title', {...bemify(className, '__title')})}>{title}</div>

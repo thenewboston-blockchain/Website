@@ -19,13 +19,13 @@ describe('TotalAmount component', () => {
 
   test('renders proper default className', () => {
     render(<TotalAmount amount={100} title="total" />);
-    const el = screen.getByTestId('totalAmount');
+    const el = screen.getByTestId('TotalAmount');
     expect(el.className).toBe('TotalAmount');
   });
 
   test('renders with classNames passed in', () => {
     render(<TotalAmount amount={100} title="total" className="test" />);
-    const el = screen.getByTestId('totalAmount');
+    const el = screen.getByTestId('TotalAmount');
 
     expect(el.className).toContain('test');
   });
