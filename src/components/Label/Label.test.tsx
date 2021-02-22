@@ -1,19 +1,18 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 import Label, {LabelProps} from '.';
 
-describe('Label', () => {
-  const rgbWhite = 'rgb(255, 255, 255)';
-  const rgbBlack = 'rgb(0, 0, 0)';
-  const rgbDark = 'rgb(34, 34, 34)';
-  const rgbLight = 'rgb(221, 221, 221)';
-  const hexDark = '222';
-  const hexLight = 'ddd';
-  const testName = 'Hello world';
+const rgbWhite = 'rgb(255, 255, 255)';
+const rgbBlack = 'rgb(0, 0, 0)';
+const rgbDark = 'rgb(34, 34, 34)';
+const rgbLight = 'rgb(221, 221, 221)';
+const hexDark = '222';
+const hexLight = 'ddd';
+const testName = 'Hello world';
 
+describe('Label', () => {
   const baseProps: LabelProps = {
     color: rgbWhite,
     name: testName,
