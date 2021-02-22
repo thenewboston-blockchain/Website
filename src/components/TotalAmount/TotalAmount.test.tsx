@@ -4,11 +4,6 @@ import '@testing-library/jest-dom/extend-expect';
 
 import TotalAmount from './index';
 
-const DefaultTestProps = {
-  amount: 100,
-  title: 'total',
-};
-
 describe('TotalAmount component', () => {
   test('renders with title and amount', () => {
     render(<TotalAmount amount={100} title="total" />);

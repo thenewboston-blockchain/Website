@@ -6,12 +6,12 @@ import './TotalAmount.scss';
 
 interface ComponentProps {
   amount: number;
-  title: string;
   className?: string;
   dataTestId?: string;
+  title: string;
 }
 
-const TotalAmount: FC<ComponentProps> = ({amount, className, title, dataTestId = 'TotalAmount'}) => {
+const TotalAmount: FC<ComponentProps> = ({amount, className, dataTestId = 'TotalAmount', title}) => {
   return (
     <div data-testid={dataTestId} className={clsx('TotalAmount', className)}>
       <div className={clsx('TotalAmount__title', {...bemify(className, '__title')})}>{title}</div>
