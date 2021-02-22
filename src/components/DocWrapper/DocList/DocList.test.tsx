@@ -5,9 +5,9 @@ import '@testing-library/jest-dom/extend-expect';
 import DocList, {DocListProps} from './index';
 
 describe('DocList', () => {
-  let props: DocListProps = {
-      className: 'test-class',
-      variant: 'ul',
+    const props: DocListProps = {
+    className: 'test-class',
+    variant: 'ul',
     };
 
   it('renders without crashing', () => {
