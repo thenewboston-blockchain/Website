@@ -6,13 +6,14 @@ import './TotalAmount.scss';
 
 interface ComponentProps {
   amount: number;
-  className?: string;
   title: string;
+  className?: string;
+  dataTestId?: string;
 }
 
-const TotalAmount: FC<ComponentProps> = ({amount, className, title}) => {
+const TotalAmount: FC<ComponentProps> = ({amount, className, title, dataTestId = 'totalAmount'}) => {
   return (
-    <div className={clsx('TotalAmount', className)}>
+    <div data-testid={dataTestId} className={clsx('TotalAmount', className)}>
       <div className={clsx('TotalAmount__title', {...bemify(className, '__title')})}>{title}</div>
       <div className={clsx('TotalAmount__amount', {...bemify(className, '__amount')})}>{amount.toLocaleString()}</div>
     </div>
