@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
@@ -6,14 +5,10 @@ import '@testing-library/jest-dom/extend-expect';
 import DocList, {DocListProps} from './index';
 
 describe('DocList', () => {
-  let props: DocListProps;
-
-  beforeEach(() => {
-    props = {
+  let props: DocListProps = {
       className: 'test-class',
       variant: 'ul',
     };
-  });
 
   it('renders without crashing', () => {
     render(<DocList {...props}>Hello World</DocList>);
