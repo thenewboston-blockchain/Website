@@ -49,8 +49,8 @@ const Avatar: FC<AvatarProps> = ({alt, className, size, src}) => {
     />
   ) : (
     <div
-      className={clsx('Avatar Placeholder', className)}
-      data-testid="Avatar-fallback"
+      className={clsx('Avatar', 'Avater--placeholder', className)}
+      data-testid="Avatar--placeholder"
       style={{height: size, width: size}}
     />
   );

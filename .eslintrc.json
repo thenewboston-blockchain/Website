@@ -18,6 +18,14 @@
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
+  "overrides": [
+    {
+      "files": ["*.test.tsx"],
+      "rules": {
+        "react/jsx-props-no-spreading": 0
+      }
+    }
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {

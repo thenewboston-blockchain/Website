@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
@@ -86,7 +85,7 @@ describe('Avatar component', () => {
       const props = {...baseProps, src: ''};
       render(<Avatar {...props} />);
 
-      const el = screen.getByTestId('Avatar-fallback');
+      const el = screen.getByTestId('Avatar--placeholder');
 
       expect(el).toBeTruthy();
     });
@@ -95,7 +94,7 @@ describe('Avatar component', () => {
       const props = {...baseProps, src: ''};
       render(<Avatar {...props} />);
 
-      const el = screen.getByTestId('Avatar-fallback');
+      const el = screen.getByTestId('Avatar--placeholder');
 
       expect(el.style).toHaveProperty('height', `${props.size}px`);
       expect(el.style).toHaveProperty('width', `${props.size}px`);
