@@ -29,6 +29,7 @@ const Toast: FC<ComponentProps> = ({children, className, type = 'warning'}) => {
         [`Toast--${type}`]: true,
         ...bemify(className, `--${type}`),
       })}
+      data-testid="Toast"
     >
       <Icon
         className={clsx('Toast__icon', {

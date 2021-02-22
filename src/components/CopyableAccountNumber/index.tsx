@@ -15,7 +15,7 @@ interface ComponentProps {
 
 const CopyableAccountNumber: FC<ComponentProps> = ({accountNumber, className, isCopyButtonAtBottom}) => {
   const handleCopy = (): void => {
-    displayToast('Account Number copied to the clipboard', 'success');
+    displayToast('Account Number copied to the clipboard', 'success', 'copyable');
   };
 
   return (
