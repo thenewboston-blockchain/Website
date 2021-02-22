@@ -32,7 +32,6 @@ describe('DocEndpoint', () => {
     render(<DocEndpoint {...props} className="test" />);
     const docEndpoint = screen.getByTestId('DocEndpoint');
 
-    expect(docEndpoint).toHaveClass('DocEndpoint');
     expect(docEndpoint).toHaveClass('test');
   });
 
