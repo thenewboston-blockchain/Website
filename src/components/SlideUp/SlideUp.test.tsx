@@ -16,8 +16,13 @@ describe('SlideUp component', () => {
 
   test('calls close prop when component is clicked', () => {
     const close = jest.fn();
-    const {getByRole} = render(<SlideUp close={close}>Hello World</SlideUp>);
-    fireEvent.click(getByRole(/button/));
+    render(<SlideUp close={close}>Hello World</SlideUp>);
+    fireEvent.click(screen.getByTestId('SlideUp'));
     expect(close).toHaveBeenCalledTimes(1);
+  });
+
+  test('renders with className passed in', () => {
+    render(<SlideUp close={() => {}} className="test" />);
+    expect(screen.getByTestId('SlideUpContent')).toHaveClass('test__content');
   });
 });
