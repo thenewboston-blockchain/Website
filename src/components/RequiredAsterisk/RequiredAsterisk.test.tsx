@@ -21,4 +21,11 @@ describe('RequiredAsterisk', () => {
 
     expect(asterisk.className).toBe('RequiredAsterisk');
   });
+  
+  it('renders with passed in className', () => {
+    render(<RequiredAsterisk className="test" />);
+    const asterisk = screen.getByTestId('RequiredAsterisk');
+
+    expect(asterisk).toHaveClass('test');
+  });
 });
