@@ -21,7 +21,7 @@ describe('EmptyPage', () => {
 
     expect(emptyPage.className).toBe('EmptyPage');
   });
-  
+
   it('renders with passed in className', () => {
     render(<EmptyPage className="test" />);
     const emptyPage = screen.getByTestId('EmptyPage');
