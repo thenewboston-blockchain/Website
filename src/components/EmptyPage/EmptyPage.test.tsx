@@ -21,4 +21,11 @@ describe('EmptyPage', () => {
 
     expect(emptyPage.className).toBe('EmptyPage');
   });
+
+  it('renders with passed in className', () => {
+    render(<EmptyPage className="test" />);
+    const docEndpoint = screen.getByTestId('EmptyPage');
+
+    expect(docEndpoint).toHaveClass('test');
+  });
 });
