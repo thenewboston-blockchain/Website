@@ -22,4 +22,13 @@ describe('SocialMediaIcon component', () => {
     expect(svgIcon?.getAttribute('width')).toEqual(SIZE.toString());
     expect(svgIcon?.getAttribute('height')).toEqual(SIZE.toString());
   });
+
+  test('renders socialMediaIcon and get by className', () => {
+    render(<SocialMediaIcon iconSize={SIZE} website={SocialMedia.facebook} />);
+
+    const el = screen.getByTestId('A');
+    expect(el.className).toContain('SocialMediaIcon');
+    expect(el.hasAttribute('href')).toBeTruthy();
+    expect(el.getAttribute('href')).toEqual(socialMediaUrls[SocialMedia.facebook]);
+  });
 });
