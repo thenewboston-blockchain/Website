@@ -8,7 +8,11 @@ interface ComponentProps {
 }
 
 const RequiredAsterisk: FC<ComponentProps> = ({className}) => {
-  return <span className={clsx('RequiredAsterisk', className)}>*</span>;
+  return (
+    <span data-testid="RequiredAsterisk" className={clsx('RequiredAsterisk', className)}>
+      *
+    </span>
+  );
 };
 
 export default memo(RequiredAsterisk);
