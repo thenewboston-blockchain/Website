@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
@@ -6,14 +5,13 @@ import '@testing-library/jest-dom/extend-expect';
 import DocList, {DocListProps} from './index';
 
 describe('DocList', () => {
-  let props: DocListProps;
+  const props: DocListProps = {
+    className: 'test-class',
+    variant: 'ul',
+  };
 
-  beforeEach(() => {
-    props = {
-      className: 'test-class',
-      variant: 'ul',
-    };
-  });
+  const testIdUl = 'DocList--ul';
+  const testIdOl = 'DocList--ol';
 
   it('renders without crashing', () => {
     render(<DocList {...props}>Hello World</DocList>);
@@ -21,41 +19,43 @@ describe('DocList', () => {
 
   it('renders with proper default className', () => {
     render(<DocList {...props}>Hello World</DocList>);
-    const list = screen.getByTestId(`DocList--${props.variant}`);
+    const listUl = screen.getByTestId(testIdUl);
+    const listOl = screen.getByTestId(testIdUl);
 
-    expect(list).toHaveClass('DocList');
+    expect(listUl).toHaveClass('DocList');
+    expect(listOl).toHaveClass('DocList');
   });
 
-  it('renders unorderd list when specified in variant prop', () => {
+  it('renders unordered list when specified in variant prop', () => {
     render(<DocList {...props}>Hello World</DocList>);
-    const list = screen.getByTestId(`DocList--ul`);
+    const list = screen.getByTestId(testIdUl);
 
     expect(list).toBeTruthy();
-    expect(list).toHaveClass(`DocList--ul`);
+    expect(list).toHaveClass(testIdUl);
   });
 
-  it('renders unorderd list with passed in className', () => {
+  it('renders unordered list with passed in className', () => {
     render(<DocList {...props}>Hello World</DocList>);
-    const list = screen.getByTestId(`DocList--ul`);
+    const list = screen.getByTestId(testIdUl);
 
     expect(list).toHaveClass('test-class');
   });
 
-  it('renders orderd list when specified in variant prop', () => {
+  it('renders ordered list when specified in variant prop', () => {
     render(<DocList variant="ol">Hello World</DocList>);
-    const list = screen.getByTestId(`DocList--ol`);
+    const list = screen.getByTestId(testIdOl);
 
     expect(list).toBeTruthy();
-    expect(list).toHaveClass(`DocList--ol`);
+    expect(list).toHaveClass(testIdOl);
   });
 
-  it('renders orderd list with passed in className', () => {
+  it('renders ordered list with passed in className', () => {
     render(
       <DocList className={props.className} variant="ol">
         Hello World
       </DocList>,
     );
-    const list = screen.getByTestId(`DocList--ol`);
+    const list = screen.getByTestId(testIdOl);
 
     expect(list).toHaveClass('test-class');
   });
