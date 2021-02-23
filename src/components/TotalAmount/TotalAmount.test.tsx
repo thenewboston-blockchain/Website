@@ -20,19 +20,17 @@ describe('TotalAmount component', () => {
 
   test('renders with classNames passed in', () => {
     render(<TotalAmount amount={100} title="total" className="test" />);
-    const el = screen.getByTestId('TotalAmount');
+    const totalAmount = screen.getByTestId('TotalAmount');
+    const title = screen.getByTestId('TotalAmount__title');
+    const amount = screen.getByTestId('TotalAmount__amount');
 
-    expect(el.className).toContain('test');
+    expect(totalAmount.className).toContain('test');
+    expect(title.className).toContain('test__title');
+    expect(amount.className).toContain('test__amount');
   });
 
-  test('renders with updated locale, using de-DE', () => {
-    render(<TotalAmount amount={1000} title="total" locale="de-DE" />);
-    expect(screen.getByText('1.000')).toBeTruthy();
-  });
-
-  test('renders with updated locale, using th-TH-u-nu-thai', () => {
-    const locale = 'th-TH-u-nu-thai';
-    render(<TotalAmount amount={1000} title="total" locale={locale} />);
-    expect(screen.getByText('๑,๐๐๐')).toBeTruthy();
+  test('renders with correctly formatted amount', () => {
+    render(<TotalAmount amount={1000} title="total" />);
+    expect(screen.getByText('1,000')).toBeTruthy();
   });
 });
