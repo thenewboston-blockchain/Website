@@ -7,34 +7,29 @@ import format from 'date-fns/format';
 import ContributorTasks, {ContributorTasksProps} from './index';
 
 describe('ContributorTasks', () => {
-  let props: ContributorTasksProps;
-
-  beforeEach(() => {
-    props = {
-      className: 'test',
-      tasks: [
-        {
-          amount_paid: '2800',
-          completed_by: 'contributor 1',
-          completed_date: new Date(Date.now()),
-          issue_id: '111',
-          pr_id: '222',
-          repository: 'Kotlin-SDK',
-          title: 'Sofware engineer',
-        },
-        {
-          amount_paid: '2800',
-
-          completed_by: 'contributor 2',
-          completed_date: new Date(Date.now()),
-          issue_id: '333',
-          pr_id: '444',
-          repository: 'Website',
-          title: 'Front End Developer',
-        },
-      ],
-    };
-  });
+  const props: ContributorTasksProps = {
+    className: 'test',
+    tasks: [
+      {
+        amount_paid: '2800',
+        completed_by: 'contributor 1',
+        completed_date: new Date(Date.now()),
+        issue_id: '111',
+        pr_id: '222',
+        repository: 'Kotlin-SDK',
+        title: 'Sofware engineer',
+      },
+      {
+        amount_paid: '2800',
+        completed_by: 'contributor 2',
+        completed_date: new Date(Date.now()),
+        issue_id: '333',
+        pr_id: '444',
+        repository: 'Website',
+        title: 'Front End Developer',
+      },
+    ],
+  };
 
   it('renders without crashing', () => {
     render(<ContributorTasks {...props} />);
