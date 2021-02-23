@@ -13,9 +13,9 @@ interface ComponentProps {
 const SlideUp: FC<ComponentProps> = ({children, className, close}) => {
   return createPortal(
     <>
-      <div className="SlideUp__overlay" onClick={close} role="button" tabIndex={0} data-testid="SlideUp" />
-      <div className={clsx('SlideUp', className)}>
-        <div className={clsx('SlideUp__content', {...bemify(className, '__content')})} data-testid="SlideUpContent">
+      <div className="SlideUp__overlay" onClick={close} role="button" tabIndex={0} data-testid="SlideUp__overlay" />
+      <div className={clsx('SlideUp', className)} data-testid="SlideUp">
+        <div className={clsx('SlideUp__content', {...bemify(className, '__content')})} data-testid="SlideUp__content">
           {children}
         </div>
       </div>

@@ -17,12 +17,13 @@ describe('SlideUp component', () => {
   test('calls close prop when component is clicked', () => {
     const close = jest.fn();
     render(<SlideUp close={close}>Hello World</SlideUp>);
-    fireEvent.click(screen.getByTestId('SlideUp'));
-    expect(close).toHaveBeenCalledTimes(1);
+    fireEvent.click(screen.getByTestId('SlideUp__overlay'));
+    expect(close).toHaveBeenCalled();
   });
 
   test('renders with className passed in', () => {
     render(<SlideUp close={() => {}} className="test" />);
-    expect(screen.getByTestId('SlideUpContent')).toHaveClass('test__content');
+    expect(screen.getByTestId('SlideUp')).toHaveClass('test');
+    expect(screen.getByTestId('SlideUp__content')).toHaveClass('test__content');
   });
 });
