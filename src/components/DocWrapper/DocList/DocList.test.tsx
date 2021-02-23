@@ -26,7 +26,7 @@ describe('DocList', () => {
     expect(listOl).toHaveClass('DocList');
   });
 
-  it('renders unorderd list when specified in variant prop', () => {
+  it('renders unordered list when specified in variant prop', () => {
     render(<DocList {...props}>Hello World</DocList>);
     const list = screen.getByTestId(testIdUl);
 
@@ -34,14 +34,14 @@ describe('DocList', () => {
     expect(list).toHaveClass(testIdUl);
   });
 
-  it('renders unorderd list with passed in className', () => {
+  it('renders unordered list with passed in className', () => {
     render(<DocList {...props}>Hello World</DocList>);
     const list = screen.getByTestId(testIdUl);
 
     expect(list).toHaveClass('test-class');
   });
 
-  it('renders orderd list when specified in variant prop', () => {
+  it('renders ordered list when specified in variant prop', () => {
     render(<DocList variant="ol">Hello World</DocList>);
     const list = screen.getByTestId(testIdOl);
 
@@ -49,7 +49,7 @@ describe('DocList', () => {
     expect(list).toHaveClass(testIdOl);
   });
 
-  it('renders orderd list with passed in className', () => {
+  it('renders ordered list with passed in className', () => {
     render(
       <DocList className={props.className} variant="ol">
         Hello World
