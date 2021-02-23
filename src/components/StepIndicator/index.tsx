@@ -12,7 +12,7 @@ interface ComponentProps {
 
 const StepIndicator: FC<ComponentProps> = ({className, number, text}) => {
   return (
-    <div className={clsx('StepIndicator', className)}>
+    <div className={clsx('StepIndicator', className)} data-testid="StepIndicator">
       <div
         className={clsx('StepIndicator__bubble', {
           ...bemify(className, '__bubble'),
