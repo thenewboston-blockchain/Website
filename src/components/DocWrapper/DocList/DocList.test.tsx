@@ -5,10 +5,13 @@ import '@testing-library/jest-dom/extend-expect';
 import DocList, {DocListProps} from './index';
 
 describe('DocList', () => {
-    const props: DocListProps = {
+  const props: DocListProps = {
     className: 'test-class',
     variant: 'ul',
-    };
+  };
+
+  const testIdUl = 'DocList--ul';
+  const testIdOl = 'DocList--ol';
 
   it('renders without crashing', () => {
     render(<DocList {...props}>Hello World</DocList>);
@@ -16,32 +19,34 @@ describe('DocList', () => {
 
   it('renders with proper default className', () => {
     render(<DocList {...props}>Hello World</DocList>);
-    const list = screen.getByTestId(`DocList--${props.variant}`);
+    const listUl = screen.getByTestId(testIdUl);
+    const listOl = screen.getByTestId(testIdUl);
 
-    expect(list).toHaveClass('DocList');
+    expect(listUl).toHaveClass('DocList');
+    expect(listOl).toHaveClass('DocList');
   });
 
   it('renders unorderd list when specified in variant prop', () => {
     render(<DocList {...props}>Hello World</DocList>);
-    const list = screen.getByTestId(`DocList--ul`);
+    const list = screen.getByTestId(testIdUl);
 
     expect(list).toBeTruthy();
-    expect(list).toHaveClass(`DocList--ul`);
+    expect(list).toHaveClass(testIdUl);
   });
 
   it('renders unorderd list with passed in className', () => {
     render(<DocList {...props}>Hello World</DocList>);
-    const list = screen.getByTestId(`DocList--ul`);
+    const list = screen.getByTestId(testIdUl);
 
     expect(list).toHaveClass('test-class');
   });
 
   it('renders orderd list when specified in variant prop', () => {
     render(<DocList variant="ol">Hello World</DocList>);
-    const list = screen.getByTestId(`DocList--ol`);
+    const list = screen.getByTestId(testIdOl);
 
     expect(list).toBeTruthy();
-    expect(list).toHaveClass(`DocList--ol`);
+    expect(list).toHaveClass(testIdOl);
   });
 
   it('renders orderd list with passed in className', () => {
@@ -50,7 +55,7 @@ describe('DocList', () => {
         Hello World
       </DocList>,
     );
-    const list = screen.getByTestId(`DocList--ol`);
+    const list = screen.getByTestId(testIdOl);
 
     expect(list).toHaveClass('test-class');
   });
