@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
@@ -35,7 +34,7 @@ describe('DocEndpoint', () => {
     expect(docEndpoint).toHaveClass('test');
   });
 
-  it('renders with valid Props', () => {
+  it('renders with correct text', () => {
     render(<DocEndpoint {...props} />);
     const {method, endpoint} = props;
     const docEndpoint = screen.getByText(`${method} ${endpoint}`);
