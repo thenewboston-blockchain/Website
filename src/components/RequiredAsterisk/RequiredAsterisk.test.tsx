@@ -9,7 +9,7 @@ describe('RequiredAsterisk', () => {
     render(<RequiredAsterisk />);
   });
 
-  it('renders an Asterix', () => {
+  it('renders an asterisk', () => {
     render(<RequiredAsterisk />);
 
     expect(screen.getByText('*')).toBeTruthy();
