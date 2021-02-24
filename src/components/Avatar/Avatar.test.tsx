@@ -35,16 +35,17 @@ describe('Avatar component', () => {
 
   describe('getImageSizeBasedOnDeviceRatio', () => {
     it('calculates correct image size based on device pixel ratio', () => {
-      const size = 10;
+      const dpr = 3;
 
-      const devicePixelRatioGetter = jest.fn().mockReturnValue(3);
+      const devicePixelRatioGetter = jest.fn().mockReturnValue(dpr);
+
       jest.spyOn(global, 'window', 'get').mockImplementation(() =>
         Object.defineProperty({}, 'devicePixelRatio', {
           get: devicePixelRatioGetter,
         }),
       );
 
-      expect(getImageSizeBasedOnDeviceRatio(size)).toBe(30);
+      expect(getImageSizeBasedOnDeviceRatio(baseProps.size)).toBe(baseProps.size * dpr);
     });
   });
 
