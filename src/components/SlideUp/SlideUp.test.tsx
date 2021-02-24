@@ -2,7 +2,7 @@ import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import SlideUp from './index';
+import SlideUp from '.';
 
 const slideUpRoot = document.createElement('div');
 slideUpRoot.setAttribute('id', 'slide-up-root');

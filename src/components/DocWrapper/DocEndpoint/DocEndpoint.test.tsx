@@ -2,7 +2,7 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import DocEndpoint, {DocEndpointProps} from './index';
+import DocEndpoint, {DocEndpointProps} from '.';
 
 describe('DocEndpoint', () => {
   let props: DocEndpointProps;
