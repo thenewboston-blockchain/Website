@@ -333,5 +333,50 @@
       "Knowledge regarding Backend development is preferred",
       "Optional: Experience in Server-side Rendering"
     ]
+  },
+  {
+    "openingId": "python-django-developer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message itsnikhil"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "Blockchain Explorer team is looking for a backend developer to lead parts of the blockchain explorer from inception to launch, and own large parts of the product’s execution. They are one of thenewboston approved project with a mission to create Open Blockchain Explorer.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Python / Django Developer",
+    "reportsTo": [
+      {
+        "githubUsername": "itsnikhil",
+        "name": "Nikhil Taneja"
+      }
+    ],
+    "responsibilities": [
+      "Lead parts of the blockchain explorer from inception to launch, and own large parts of the product’s execution",
+      "Planning out project and involved in database creation, integration, and management",
+      "Writing APIs and Data models for various features of the explorer",
+      "Collaborate with Front-end developers to integrate user-facing elements with server side logic",
+      "Ensuring that systems are safe and secure against cybersecurity threats",
+      "Generating analytics and statistics for the explorer",
+      "Maintain comprehensive workflow documentation and knowledge sharing",
+      "Perform peer code reviews, create issues for other people outside the team could contribute to opensource project"
+    ],
+    "technologyRequirements": [
+      "Proficient in python programming language",
+      "Experienced in Django web framework",
+      "Knowledge of SQL Databases",
+      "Git and GitHub",
+      "Understanding of Blockchain Technology (optional)"
+    ]
   }
 ]
