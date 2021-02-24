@@ -2,7 +2,7 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import FlatNavLinks, {FlatNavLinksProps} from './index';
+import FlatNavLinks, {FlatNavLinksProps} from '.';
 
 describe('FlatNavLinks component', () => {
   let handleOptionClick: jest.Mock;

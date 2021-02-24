@@ -2,7 +2,7 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import TotalAmount from './index';
+import TotalAmount from '.';
 
 describe('TotalAmount component', () => {
   test('renders with title and amount', () => {
