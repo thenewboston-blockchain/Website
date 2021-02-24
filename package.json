@@ -91,6 +91,9 @@
     "stylelint": "^13.8.0",
     "stylelint-order": "^4.1.0"
   },
+  "engines": {
+    "node": ">=12"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
