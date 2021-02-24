@@ -11,6 +11,10 @@ describe('Avatar component', () => {
     src: 'https://avatars.githubusercontent.com/u/29539278?s=460&u=c949af33256607d5e1d93958398a139ff1d67227&v=4',
   };
 
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
   it('renders image', () => {
     render(<Avatar {...baseProps} />);
 
@@ -27,6 +31,21 @@ describe('Avatar component', () => {
     render(<Avatar className="test" {...baseProps} />);
 
     expect(screen.getByTestId('Avatar')).toHaveClass('test');
+  });
+
+  describe('getImageSizeBasedOnDeviceRatio', () => {
+    it('calculates correct image size based on device pixel ratio', () => {
+      const size = 10;
+
+      const devicePixelRatioGetter = jest.fn().mockReturnValue(3);
+      jest.spyOn(global, 'window', 'get').mockImplementation(() =>
+        Object.defineProperty({}, 'devicePixelRatio', {
+          get: devicePixelRatioGetter,
+        }),
+      );
+
+      expect(getImageSizeBasedOnDeviceRatio(size)).toBe(30);
+    });
   });
 
   describe('renders image with updated url', () => {
@@ -72,12 +91,6 @@ describe('Avatar component', () => {
 
     expect(el).toHaveAttribute('height', baseProps.size.toString());
     expect(el).toHaveAttribute('width', baseProps.size.toString());
-  });
-
-  it('calculates correct image size based on device pixel ratio', () => {
-    const result = baseProps.size * window.devicePixelRatio;
-
-    expect(getImageSizeBasedOnDeviceRatio(baseProps.size)).toBe(result);
   });
 
   describe('renders fallback component', () => {
