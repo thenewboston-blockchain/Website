@@ -92,7 +92,7 @@
     "stylelint-order": "^4.1.0"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=12"
   },
   "husky": {
     "hooks": {
