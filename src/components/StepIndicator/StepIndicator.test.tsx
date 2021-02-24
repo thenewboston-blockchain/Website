@@ -28,8 +28,8 @@ describe('StepIndicator', () => {
     const elText = screen.getByTestId('StepIndicator__text');
 
     expect(el.className).toContain('test');
-    expect(elBubble.className).toContain('test');
-    expect(elText.className).toContain('test');
+    expect(elBubble.className).toContain('test__bubble');
+    expect(elText.className).toContain('test__text');
   });
 
   it('renders with number and text passed in', () => {
