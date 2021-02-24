@@ -74,13 +74,13 @@ describe('FlatNavLinks component', () => {
     expect(child).toHaveClass('test__option--active');
   });
 
-  it('renders with title passed in', () => {
+  it('renders options with title passed in', () => {
     render(<FlatNavLinks {...props} />);
 
     const elements = screen.getAllByRole('button');
-    const isWorking = elements.every((el, i) => el.textContent === props.options[i].title);
 
-    expect(isWorking).toBeTruthy();
+    expect(elements[0].textContent).toBe(props.options[0].title);
+    expect(elements[1].textContent).toBe(props.options[1].title);
   });
 
   it('triggers handleOptionClick when an option is clicked', () => {
