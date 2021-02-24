@@ -16,6 +16,8 @@ describe('MarketingButton component', () => {
     expect(el).toBeTruthy();
     expect(el.hasAttribute('href')).toBeTruthy();
     expect(el.getAttribute('href')).toEqual(socialMediaUrls[SocialMedia.discord]);
+
+    expect(el.className).toContain('MarketingButton');
   });
 
   test('renders MarketingButton with customLink with Youtube icon', () => {
