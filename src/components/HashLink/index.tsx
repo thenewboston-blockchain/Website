@@ -3,7 +3,7 @@ import clsx from 'clsx';
 
 import './HashLink.scss';
 
-interface HashLinkProps {
+export interface HashLinkProps {
   className?: string;
   id: string;
 }

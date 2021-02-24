@@ -6,7 +6,7 @@ import {HashLink} from 'components';
 
 import './DocSubSection.scss';
 
-interface DocSubSectionProps {
+export interface DocSubSectionProps {
   className?: string;
   id?: string;
   title: ReactNode;
