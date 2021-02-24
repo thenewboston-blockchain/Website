@@ -14,7 +14,7 @@ export interface ContributorTasksProps {
 const ContributorTasks: FC<ContributorTasksProps> = ({className, tasks}) => {
   const renderRows = () => {
     return tasks.map(({amount_paid, completed_date, issue_id, repository, title}: Task, index) => (
-      <tr key={index} data-testid="ContributorTasks--row">
+      <tr key={index} data-testid="ContributorTasks__row">
         <td className="ContributorTasks__task-title" data-testid="ContributorTasks__task-title" title={title}>
           <A
             className="ContributorTasks__issue-link"

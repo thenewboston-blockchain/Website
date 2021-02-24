@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
@@ -6,74 +5,97 @@ import format from 'date-fns/format';
 
 import ContributorTasks, {ContributorTasksProps} from './index';
 
-describe('ContributorTasks', () => {
-  const props: ContributorTasksProps = {
-    className: 'test',
-    tasks: [
-      {
-        amount_paid: '2800',
-        completed_by: 'contributor 1',
-        completed_date: new Date(Date.now()),
-        issue_id: '111',
-        pr_id: '222',
-        repository: 'Kotlin-SDK',
-        title: 'Sofware engineer',
-      },
-      {
-        amount_paid: '2800',
-        completed_by: 'contributor 2',
-        completed_date: new Date(Date.now()),
-        issue_id: '333',
-        pr_id: '444',
-        repository: 'Website',
-        title: 'Front End Developer',
-      },
-    ],
-  };
+const props: ContributorTasksProps = {
+  className: 'test',
+  tasks: [
+    {
+      amount_paid: '2800',
+      completed_by: 'contributor 1',
+      completed_date: new Date('2021/02/20'),
+      issue_id: '111',
+      pr_id: '222',
+      repository: 'Kotlin-SDK',
+      title: 'Sofware engineer',
+    },
+    {
+      amount_paid: '2800',
+      completed_by: 'contributor 2',
+      completed_date: new Date('2021/02/24'),
+      issue_id: '333',
+      pr_id: '444',
+      repository: 'Website',
+      title: 'Front End Developer',
+    },
+  ],
+};
 
+const testIdTask = 'ContributorTasks';
+const testIdRow = 'ContributorTasks__row';
+const testIdTitle = 'ContributorTasks__task-title';
+const testIdLink = 'A';
+const testIdRepo = 'ContributorTasks__repository';
+const testIdDate = 'ContributorTasks__date-completed';
+const testIdAmount = 'ContributorTasks__amount';
+
+describe('ContributorTasks', () => {
   it('renders without crashing', () => {
     render(<ContributorTasks {...props} />);
 
-    expect(screen.getByTestId('ContributorTasks')).toBeTruthy();
-  });
-
-  it('renders with default className', () => {
-    render(<ContributorTasks {...props} />);
-    const taskComp = screen.getByTestId('ContributorTasks');
-
-    expect(taskComp).toHaveClass('ContributorTasks');
-  });
-
-  it('renders with passed in className', () => {
-    render(<ContributorTasks {...props} />);
-    const taskComp = screen.getByTestId('ContributorTasks');
-
-    expect(taskComp).toHaveClass('test');
+    expect(screen.getByTestId(testIdTask)).toBeTruthy();
   });
 
   it('renders all tasks', () => {
     render(<ContributorTasks {...props} />);
-    const tasks = screen.getAllByTestId('ContributorTasks--row');
+    const tasks = screen.getAllByTestId(testIdRow);
 
-    expect(tasks.length).toBe(props.tasks.length);
+    expect(tasks.length).toBe(2);
+  });
+
+  it('renders with default className', () => {
+    render(<ContributorTasks {...props} />);
+    const taskComp = screen.getByTestId(testIdTask);
+    const taskTitle = screen.getAllByTestId(testIdTitle);
+    const issueLink = screen.getAllByTestId(testIdLink);
+    const repo = screen.getAllByTestId(testIdRepo);
+    const dateCompleted = screen.getAllByTestId(testIdDate);
+    const amount = screen.getAllByTestId(testIdAmount);
+
+    expect(taskComp).toHaveClass(testIdTask);
+
+    expect(taskTitle[0]).toHaveClass(testIdTitle);
+    expect(taskTitle[1]).toHaveClass(testIdTitle);
+
+    expect(issueLink[0]).toHaveClass('ContributorTasks__issue-link');
+    expect(issueLink[1]).toHaveClass('ContributorTasks__issue-link');
+
+    expect(repo[0]).toHaveClass(testIdRepo);
+    expect(repo[1]).toHaveClass(testIdRepo);
+
+    expect(dateCompleted[0]).toHaveClass(testIdDate);
+    expect(dateCompleted[1]).toHaveClass(testIdDate);
+
+    expect(amount[0]).toHaveClass(testIdAmount);
+    expect(amount[1]).toHaveClass(testIdAmount);
+  });
+
+  it('renders with passed in className', () => {
+    render(<ContributorTasks {...props} />);
+    const taskComp = screen.getByTestId(testIdTask);
+
+    expect(taskComp).toHaveClass('test');
   });
 
   it('renders rows with title', () => {
     render(<ContributorTasks {...props} />);
-    const tasks = screen.getAllByTestId('ContributorTasks__task-title');
+    const tasks = screen.getAllByTestId(testIdTitle);
 
-    const validTitle = tasks.every((task, i) => task.textContent === props.tasks[i].title);
-
-    expect(validTitle).toBeTruthy();
+    expect(tasks[0]).toHaveTextContent('Sofware engineer');
+    expect(tasks[1]).toHaveTextContent('Front End Developer');
   });
 
   it('renders rows with valid github issue link', () => {
     render(<ContributorTasks {...props} />);
-    const tasks = screen.getAllByTestId('A');
-
-    const validClass = tasks.every((task) => {
-      return task.className.includes('ContributorTasks__issue-link');
-    });
+    const tasks = screen.getAllByTestId(testIdLink);
 
     const validHref = tasks.every((task, i) => {
       const propTask = props.tasks[i];
@@ -82,43 +104,30 @@ describe('ContributorTasks', () => {
       return task.getAttribute('href') === href;
     });
 
-    expect(validClass).toBeTruthy();
     expect(validHref).toBeTruthy();
   });
 
   it('renders rows with valid github repository repository', () => {
     render(<ContributorTasks {...props} />);
-    const tasks = screen.getAllByTestId('ContributorTasks__repository');
+    const tasks = screen.getAllByTestId(testIdRepo);
 
-    const validRepo = tasks.every((task, i) => {
-      return task.textContent === props.tasks[i].repository;
-    });
-
-    expect(validRepo).toBeTruthy();
+    expect(tasks[0]).toHaveTextContent('Kotlin-SDK');
+    expect(tasks[1]).toHaveTextContent('Website');
   });
 
   it('renders rows with date compeleted', () => {
     render(<ContributorTasks {...props} />);
-    const tasks = screen.getAllByTestId('ContributorTasks__date-completed');
+    const tasks = screen.getAllByTestId(testIdDate);
 
-    const validDate = tasks.every((task, i) => {
-      const date = format(props.tasks[i].completed_date, 'L/d/yy');
-      return task.textContent === date;
-    });
-
-    expect(validDate).toBeTruthy();
+    expect(tasks[0]).toHaveTextContent('2/20/21');
+    expect(tasks[1]).toHaveTextContent('2/24/21');
   });
 
   it('renders rows with valid amount', () => {
     render(<ContributorTasks {...props} />);
-    const tasks = screen.getAllByTestId('ContributorTasks__amount');
+    const tasks = screen.getAllByTestId(testIdAmount);
 
-    const validAmount = tasks.every((task, i) => {
-      const amount = props.tasks[i].amount_paid;
-      const formattedAmount = parseInt(amount, 10).toLocaleString();
-      return task.textContent === `+ ${formattedAmount}`;
-    });
-
-    expect(validAmount).toBeTruthy();
+    expect(tasks[0]).toHaveTextContent('+ 2,800');
+    expect(tasks[1]).toHaveTextContent('+ 2,800');
   });
 });
