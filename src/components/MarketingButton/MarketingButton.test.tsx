@@ -12,7 +12,7 @@ describe('MarketingButton component', () => {
   test('renders with expected props of discord as website', () => {
     render(<MarketingButton website={SocialMedia.discord} />);
 
-    const el = screen.getByTestId('A');
+    const el = screen.getByTestId('MarketingButton');
     expect(el).toBeTruthy();
     expect(el.hasAttribute('href')).toBeTruthy();
     expect(el.getAttribute('href')).toEqual(socialMediaUrls[SocialMedia.discord]);
@@ -20,23 +20,27 @@ describe('MarketingButton component', () => {
 
   test('renders correctly with default className', () => {
     render(<MarketingButton website={SocialMedia.discord} />);
-    const el = screen.getByTestId('A');
-    expect(el).toBeTruthy();
-    expect(el.className).toContain('MarketingButton');
+    const marketingButton = screen.getByTestId('MarketingButton');
+    const image = screen.getByTestId('MarketingButton__img');
+
+    expect(marketingButton.className).toContain('MarketingButton');
+    expect(image.className).toContain('MarketingButton__img');
   });
 
   test('renders correctly with className passed in', () => {
     render(<MarketingButton website={SocialMedia.discord} className="test-class" />);
-    const el = screen.getByTestId('A');
-    expect(el).toBeTruthy();
-    expect(el.className).toContain('test-class');
+    const marketingButton = screen.getByTestId('MarketingButton');
+    const image = screen.getByTestId('MarketingButton__img');
+
+    expect(marketingButton.className).toContain('test-class');
+    expect(image.className).toContain('test-class__img');
   });
 
   test('renders MarketingButton with customLink with Youtube icon', () => {
     const CustomLink = 'https://youtube.com';
     render(<MarketingButton customLink={CustomLink} website={SocialMedia.youtube} />);
 
-    const el = screen.getByTestId('A');
+    const el = screen.getByTestId('MarketingButton');
     expect(el).toBeTruthy();
     expect(el.hasAttribute('href')).toBeTruthy();
     expect(el.getAttribute('href')).toEqual(CustomLink);
