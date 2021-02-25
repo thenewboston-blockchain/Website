@@ -60,8 +60,10 @@ $top-nav-height: 60px;
     width: $top-nav-height;
     z-index: 3;
 
-    &:hover {
-      background: rgba(0, 0, 0, 0.1);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background: rgba(0, 0, 0, 0.1);
+      }
     }
   }
 
