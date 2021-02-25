@@ -11,14 +11,14 @@ interface NavLink {
   url: string;
 }
 
-interface ComponentProps {
+export interface ComponentProps {
   header: string;
   links: NavLink[];
 }
 
 const FooterNavList: FC<ComponentProps> = ({header, links}) => {
   return (
-    <ul className="FooterNavList">
+    <ul className="FooterNavList" data-testid="FooterNavList">
       <li className="FooterNavList__header">{header}</li>
       {links.map((link) => (
         <li className="FooterNavList__item" key={link.title}>
