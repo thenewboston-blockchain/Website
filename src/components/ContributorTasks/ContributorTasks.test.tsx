@@ -1,9 +1,8 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import format from 'date-fns/format';
 
-import ContributorTasks, {ContributorTasksProps} from './index';
+import ContributorTasks, {ContributorTasksProps} from '.';
 
 const props: ContributorTasksProps = {
   className: 'test',
@@ -15,7 +14,7 @@ const props: ContributorTasksProps = {
       issue_id: '111',
       pr_id: '222',
       repository: 'Kotlin-SDK',
-      title: 'Sofware engineer',
+      title: 'Software engineer',
     },
     {
       amount_paid: '2800',
@@ -89,7 +88,7 @@ describe('ContributorTasks', () => {
     render(<ContributorTasks {...props} />);
     const tasks = screen.getAllByTestId(testIdTitle);
 
-    expect(tasks[0]).toHaveTextContent('Sofware engineer');
+    expect(tasks[0]).toHaveTextContent('Software engineer');
     expect(tasks[1]).toHaveTextContent('Front End Developer');
   });
 
@@ -115,7 +114,7 @@ describe('ContributorTasks', () => {
     expect(tasks[1]).toHaveTextContent('Website');
   });
 
-  it('renders rows with date compeleted', () => {
+  it('renders rows with date completed', () => {
     render(<ContributorTasks {...props} />);
     const tasks = screen.getAllByTestId(testIdDate);
 
