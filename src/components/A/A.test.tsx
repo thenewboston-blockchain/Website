@@ -2,7 +2,7 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import A from './index';
+import A from '.';
 
 describe('A component', () => {
   test('renders with text passed in', () => {

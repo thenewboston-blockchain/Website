@@ -19,15 +19,20 @@ import YouTubeLogo from 'assets/logos/YouTube.png';
 
 import './MarketingCard.scss';
 
-interface ComponentProps {
+export interface MarketingCardProps {
   className?: string;
   customLink?: string;
   website: SocialMedia;
 }
 
-const MarketingCard: FC<ComponentProps> = ({className, customLink, website}) => {
+const MarketingCard: FC<MarketingCardProps> = ({className, customLink, website}) => {
   const renderImage = (src: any) => (
-    <img alt={website} className={clsx('MarketingCard__img', {...bemify(className, '__img')})} src={src} />
+    <img
+      alt={website}
+      className={clsx('MarketingCard__img', {...bemify(className, '__img')})}
+      data-testid="MarketingCard__img"
+      src={src}
+    />
   );
 
   const images = {
@@ -46,9 +51,22 @@ const MarketingCard: FC<ComponentProps> = ({className, customLink, website}) => 
   return (
     <A className={clsx('MarketingCard', className)} href={customLink || socialMediaUrls[website]}>
       {images[website]}
-      <div className="MarketingCard__handle">{socialMediaHandles[website]}</div>
-      <div className="MarketingCard__description">
-        <div className="MarketingCard__description__handle">{socialMediaHandles[website]}</div>{' '}
+      <div
+        className={clsx('MarketingCard__handle', {...bemify(className, '__handle')})}
+        data-testid="MarketingCard__handle"
+      >
+        {socialMediaHandles[website]}
+      </div>
+      <div
+        className={clsx('MarketingCard__description', {...bemify(className, '__description')})}
+        data-testid="MarketingCard__description"
+      >
+        <div
+          className={clsx('MarketingCard__description__handle', {...bemify(className, '__description__handle')})}
+          data-testid="MarketingCard__description__handle"
+        >
+          {socialMediaHandles[website]}
+        </div>{' '}
         {socialMediaDescriptions[website]}
       </div>
     </A>
