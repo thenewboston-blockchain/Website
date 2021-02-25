@@ -1,29 +1,23 @@
-import React, {ReactNode, useEffect, useState} from 'react';
+import React, {FC, ReactNode, useState} from 'react';
 import {useSelector} from 'react-redux';
-import {Link, useLocation} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import clsx from 'clsx';
 
 import {A, Icon, IconType} from 'components';
-import {useBooleanState, useWindowDimensions} from 'hooks';
 import {selectActiveUser} from 'selectors/state';
 import './TopNavMobileMenu.scss';
+import {createPortal} from 'react-dom';
 
-const TopNavMobileMenu = () => {
+interface ComponentProps {
+  closeMenu(): void;
+  menuOpen: boolean;
+  smallDevice: boolean;
+  toggleMenu(): void;
+}
+
+const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice, toggleMenu}) => {
   const activeUser = useSelector(selectActiveUser);
-  const [menuOpen, toggleMenu, , closeMenu] = useBooleanState(false);
   const [openSection, setOpenSection] = useState<'community' | 'getStarted' | 'more' | 'other' | null>(null);
-  const [smallDevice, setSmallDevice] = useState(false);
-  const {pathname} = useLocation();
-  const {width} = useWindowDimensions();
-
-  useEffect(() => {
-    closeMenu();
-  }, [closeMenu, pathname]);
-
-  useEffect(() => {
-    if (width > 1200) closeMenu();
-    setSmallDevice(width < 992);
-  }, [closeMenu, menuOpen, width]);
 
   const handleColumnTitleClick = (section: 'community' | 'getStarted' | 'more' | 'other') => (): void => {
     if (!smallDevice) return;
@@ -38,7 +32,7 @@ const TopNavMobileMenu = () => {
     return (
       <div className="TopNavMobileMenu__column">
         <button className="TopNavMobileMenu__title-wrapper" onClick={handleColumnTitleClick(section)}>
-          <span className="TopNavMobileMenu__column-title">{title}</span>
+          <span className="TopNavMobileMenu__column-title TopNavMobileMenu__column-title--accordion">{title}</span>
           {smallDevice && (
             <span className="TopNavMobileMenu__icon-holder">
               <Icon
@@ -161,7 +155,7 @@ const TopNavMobileMenu = () => {
       <button className="TopNavMobileMenu__button" onClick={toggleMenu}>
         <Icon icon={IconType.menu} size={24} />
       </button>
-      {menuOpen && renderMenu()}
+      {menuOpen && createPortal(renderMenu(), document.getElementById('popover-root')!)}
     </div>
   );
 };

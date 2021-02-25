@@ -13,18 +13,22 @@ $top-nav-height: 60px;
 
 @keyframes mobileSlideDown {
   from {
+    opacity: 0;
     top: $top-nav-height - $mobile-dropdown-height;
   }
   to {
+    opacity: 1;
     top: $top-nav-height;
   }
 }
 
 @keyframes slideDown {
   from {
+    opacity: 0;
     top: $top-nav-height - $dropdown-height;
   }
   to {
+    opacity: 1;
     top: $top-nav-height;
   }
 }
@@ -33,7 +37,6 @@ $top-nav-height: 60px;
   display: none;
 
   @media (max-width: 1200px) {
-    background-color: var(--color-bg);
     display: block;
   }
 
@@ -85,10 +88,13 @@ $top-nav-height: 60px;
   &__column-title {
     background-color: transparent;
     border: 0;
-    color: var(--color-sail-gray-300);
     cursor: pointer;
     outline: none;
     padding: 0;
+
+    &--accordion {
+      color: var(--color-sail-gray-400);
+    }
   }
 
   &__dropdown-container {
