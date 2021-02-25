@@ -16,8 +16,20 @@ describe('MarketingButton component', () => {
     expect(el).toBeTruthy();
     expect(el.hasAttribute('href')).toBeTruthy();
     expect(el.getAttribute('href')).toEqual(socialMediaUrls[SocialMedia.discord]);
+  });
 
+  test('renders correctly with default className', () => {
+    render(<MarketingButton website={SocialMedia.discord} />);
+    const el = screen.getByTestId('A');
+    expect(el).toBeTruthy();
     expect(el.className).toContain('MarketingButton');
+  });
+
+  test('renders correctly with className passed in', () => {
+    render(<MarketingButton website={SocialMedia.discord} className="test-class" />);
+    const el = screen.getByTestId('A');
+    expect(el).toBeTruthy();
+    expect(el.className).toContain('test-class');
   });
 
   test('renders MarketingButton with customLink with Youtube icon', () => {
