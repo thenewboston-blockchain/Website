@@ -39,6 +39,7 @@ describe('DocList', () => {
     const list = screen.getByTestId(testIdUl);
 
     expect(list).toHaveClass('test-class');
+    expect(list).toHaveClass('test-class--ul');
   });
 
   it('renders ordered list when specified in variant prop', () => {
@@ -58,5 +59,6 @@ describe('DocList', () => {
     const list = screen.getByTestId(testIdOl);
 
     expect(list).toHaveClass('test-class');
+    expect(list).toHaveClass('test-class--ol');
   });
 });
