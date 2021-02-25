@@ -241,10 +241,15 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
     return (
       <div
         role="button"
-        className={clsx('Icon', className, {
-          'Icon--disabled': disabled,
-          ...bemify(className, '--disabled', disabled),
-        })}
+        className={clsx(
+          'Icon',
+          className,
+          {
+            'Icon--disabled': disabled,
+            ...bemify(className, '--disabled', disabled),
+          },
+          icon,
+        )}
         data-testid={dataTestId}
         ref={ref}
         onClick={handleClick}

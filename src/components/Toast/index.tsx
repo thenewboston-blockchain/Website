@@ -39,8 +39,11 @@ const Toast: FC<ComponentProps> = ({children, className, type = 'warning'}) => {
         })}
         icon={iconType}
         size={20}
+        dataTestId="Toast__icon"
       />
-      <div className={clsx('Toast__text', {...bemify(className, '__text')})}>{children}</div>
+      <div className={clsx('Toast__text', {...bemify(className, '__text')})} data-testid="Toast__text">
+        {children}
+      </div>
     </div>
   );
 };
