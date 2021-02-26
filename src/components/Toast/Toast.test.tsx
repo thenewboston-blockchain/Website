@@ -2,8 +2,6 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import {IconType} from 'components/Icon';
-
 import Toast from './index';
 
 describe('Toast component', () => {
@@ -68,7 +66,6 @@ describe('Toast component', () => {
 
     expect(el.className).toContain('Toast--success');
     expect(icon.className).toContain('Toast__icon--success');
-    expect(icon.className).toContain(IconType.thumbsUp);
   });
 
   test('renders with passed--warning classname', () => {
@@ -82,6 +79,5 @@ describe('Toast component', () => {
 
     expect(el.className).toContain('Toast--warning');
     expect(icon.className).toContain('Toast__icon--warning');
-    expect(icon.className).toContain(IconType.alertCircleOutline);
   });
 });
