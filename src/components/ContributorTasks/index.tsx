@@ -19,6 +19,8 @@ const ContributorTasks: FC<ContributorTasksProps> = ({className, tasks}) => {
           <A
             className="ContributorTasks__issue-link"
             href={`https://github.com/thenewboston-developers/${repository}/issues/${issue_id}`}
+            iconSize={12}
+            iconTotalSize={12}
           >
             {title}
           </A>
