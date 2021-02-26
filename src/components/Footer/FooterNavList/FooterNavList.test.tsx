@@ -3,7 +3,7 @@ import {render, screen} from '@testing-library/react';
 import {BrowserRouter as Router} from 'react-router-dom';
 import '@testing-library/jest-dom/extend-expect';
 
-import FooterNavList, {ComponentProps} from './index';
+import FooterNavList, {FooterNavListProps} from './index';
 
 const TestLinks = [
   {
@@ -17,7 +17,7 @@ const TestLinks = [
   },
 ];
 
-const WrappedComponent = ({header, links}: ComponentProps) => {
+const WrappedComponent = ({header, links}: FooterNavListProps) => {
   return (
     <Router>
       <FooterNavList header={header} links={links} />
