@@ -31,7 +31,7 @@ describe('Footer component', () => {
     expect(el.className).toContain('CustomFooter');
   });
 
-  test('renders newboston logo as link', () => {
+  test('renders the tnb logo as link', () => {
     render(<WrappedComponent />);
     const logo = screen.getByAltText('thenewboston logo');
     expect(logo).toBeTruthy();
@@ -45,5 +45,13 @@ describe('Footer component', () => {
     const SocialMediaLinks = footer.querySelectorAll('.Footer__social-media-links > .Footer__SocialMediaLink');
     const SocialMediaValues = Object.keys(SocialMedia);
     expect(SocialMediaLinks.length).toEqual(SocialMediaValues.length);
+  });
+
+  test('renders FooterNavLists', () => {
+    render(<WrappedComponent />);
+
+    expect(screen.getByText('Get Started')).toBeTruthy();
+    expect(screen.getByText('Community')).toBeTruthy();
+    expect(screen.getByText('More')).toBeTruthy();
   });
 });
