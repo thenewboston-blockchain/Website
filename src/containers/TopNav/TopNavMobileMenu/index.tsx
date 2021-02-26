@@ -6,7 +6,6 @@ import clsx from 'clsx';
 import {A, Icon, IconType} from 'components';
 import {selectActiveUser} from 'selectors/state';
 import './TopNavMobileMenu.scss';
-import {createPortal} from 'react-dom';
 
 interface ComponentProps {
   closeMenu(): void;
@@ -155,7 +154,7 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice,
       <button className="TopNavMobileMenu__button" onClick={toggleMenu}>
         <Icon icon={IconType.menu} size={24} />
       </button>
-      {menuOpen && createPortal(renderMenu(), document.getElementById('popover-root')!)}
+      {menuOpen && renderMenu()}
     </div>
   );
 };
