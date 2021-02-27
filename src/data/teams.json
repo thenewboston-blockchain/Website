@@ -1296,7 +1296,7 @@
       },
       {
         "title": "Reddit Moderator",
-        "isLead": false,
+        "isLead": true,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
