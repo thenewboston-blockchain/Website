@@ -131,4 +131,28 @@ describe('A component', () => {
 
     expect(icon.className).toContain('test__Icon--new-window');
   });
+
+  test('new window icon has correct default iconTotalSize when not passed in', () => {
+    render(
+      <A className="test" href="/">
+        hello
+      </A>,
+    );
+    const icon = screen.getByTestId('A__Icon--new-window');
+
+    expect(icon.style).toHaveProperty('width', '20px');
+    expect(icon.style).toHaveProperty('height', '20px');
+  });
+
+  test('new window icon has correct iconTotalSize when passed in', () => {
+    render(
+      <A className="test" href="/" iconSize={12} iconTotalSize={12}>
+        hello
+      </A>,
+    );
+    const icon = screen.getByTestId('A__Icon--new-window');
+
+    expect(icon.style).toHaveProperty('width', '12px');
+    expect(icon.style).toHaveProperty('height', '12px');
+  });
 });
