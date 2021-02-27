@@ -362,19 +362,6 @@
         "title": "UI/UX Designer",
         "isLead": false,
         "payPerDay": 2800,
-        "createdDate": "2020-11-28T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "58",
-          "displayName": "Osaro Ochuko Adade",
-          "githubUsername": "osaroadade",
-          "profileImage": "https://avatars1.githubusercontent.com/u/47249126?s=400&u=2e9e60984bef80c2908856c3f9966593372a1049&v=4",
-          "slackUsername": "Osaro Ochuko Adade"
-        }
-      },
-      {
-        "title": "UI/UX Designer",
-        "isLead": false,
-        "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "80",
