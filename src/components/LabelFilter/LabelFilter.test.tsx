@@ -58,6 +58,6 @@ describe('LabelFilter', () => {
 
     const selectedLabel = elLabels.find((elLabel) => elLabel.textContent === 'suggestion') as HTMLElement;
     selectedLabel.click();
-    expect(baseProps.handleLabelClick).toHaveBeenCalled();
+    expect(baseProps.handleLabelClick).toHaveBeenCalledWith('suggestion');
   });
 });
