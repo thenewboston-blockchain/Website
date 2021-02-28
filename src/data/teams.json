@@ -703,10 +703,24 @@
           "profileImage": "https://avatars0.githubusercontent.com/u/36620321?s=400&u=af0419d3610824677b5f529008f9f87b23623091&v=4",
           "slackUsername": "ATLIT"
         }
-      },
+      }
+    ],
+    "responsibilities": []
+  },
+  {
+    "title": "Blog",
+    "description": "In charge of all things related to the thenewboston blog",
+    "platforms": [
       {
-        "title": "Front-End Developer",
-        "isLead": false,
+        "name": "slack",
+        "label": "front-end",
+        "link": ""
+      }
+    ],
+    "contributors": [
+      {
+        "title": "Front-End Developer for Blog",
+        "isLead": true,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {

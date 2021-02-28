@@ -1,6 +1,7 @@
 export enum TeamName {
   all = 'All',
   backEndDevelopers = 'Back-End Developers',
+  blog = 'Blog',
   communications = 'Communications',
   community = 'Community',
   design = 'Design',
