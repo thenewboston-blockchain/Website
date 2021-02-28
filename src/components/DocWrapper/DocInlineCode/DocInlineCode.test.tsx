@@ -20,17 +20,9 @@ describe('DocInlineCode', () => {
   });
 
   it('renders with inner child component', () => {
-    render(
-      <DocInlineCode>
-        <div data-testid="innerTest">
-          <span>Test</span>
-        </div>
-      </DocInlineCode>,
-    );
-    const docInlineCode = screen.getByTestId('innerTest');
-    expect(docInlineCode).toBeTruthy();
+    render(<DocInlineCode>1+1=2</DocInlineCode>);
 
-    const text = screen.getByText('Test');
+    const text = screen.getByText('1+1=2');
     expect(text).toBeTruthy();
   });
 });
