@@ -30,6 +30,7 @@ describe('RequestResponseSnippet', () => {
   it('renders with passed in className', () => {
     render(<RequestResponseSnippet {...baseProps} className="Test" heading="Test Heading" />);
 
+    expect(screen.getByTestId(baseTestId).className).toContain('Test');
     expect(screen.getByTestId(headingTestId).className).toContain('Test__heading');
   });
 

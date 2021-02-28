@@ -13,7 +13,7 @@ export interface RequestResponseSnippetProps {
 
 const RequestResponse: FC<RequestResponseSnippetProps> = ({className, code, heading}) => {
   return (
-    <div className="RequestResponseSnippet" data-testid="RequestResponseSnippet">
+    <div className={clsx('RequestResponseSnippet', className)} data-testid="RequestResponseSnippet">
       {heading ? (
         <div
           className={clsx('RequestResponseSnippet__heading', {...bemify(className, '__heading')})}
