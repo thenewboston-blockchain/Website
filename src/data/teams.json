@@ -709,7 +709,7 @@
   },
   {
     "title": "Blog",
-    "description": "In charge of all things related to the TheNewBoston blog",
+    "description": "In charge of all things related to the thenewboston blog",
     "platforms": [
       {
         "name": "slack",
