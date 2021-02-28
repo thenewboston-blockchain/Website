@@ -4,13 +4,13 @@ import '@testing-library/jest-dom/extend-expect';
 
 import DocImage, {DocImageProps} from '.';
 
-describe('Avatar component', () => {
-  const baseProps: DocImageProps = {
-    alt: 'Test Text',
-    maxWidth: 60,
-    src: 'https://avatars.githubusercontent.com/u/29539278?s=460&u=c949af33256607d5e1d93958398a139ff1d67227&v=4',
-  };
+const baseProps: DocImageProps = {
+  alt: 'Test Text',
+  maxWidth: 60,
+  src: 'https://avatars.githubusercontent.com/u/29539278?s=460&u=c949af33256607d5e1d93958398a139ff1d67227&v=4',
+};
 
+describe('Avatar component', () => {
   it('renders image', () => {
     render(<DocImage {...baseProps} />);
 
