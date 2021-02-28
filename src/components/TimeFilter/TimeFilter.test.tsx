@@ -46,6 +46,6 @@ describe('TimeFilter', () => {
 
     const selectedElOption = elOptions.find((elOption) => elOption.textContent === Time.days30) as HTMLElement;
     selectedElOption.click();
-    expect(baseProps.setSelectedFilter).toHaveBeenCalled();
+    expect(baseProps.setSelectedFilter).toHaveBeenCalledWith(Time.days30);
   });
 });
