@@ -59,19 +59,13 @@ const TestHeaders = [
 
 describe('TableParams component', () => {
   describe('render component without headers', () => {
-    test('renders component with testId Table Params', () => {
+    test('renders component with testid', () => {
       render(<TableParams items={TestItems} />);
 
       const tableParams = screen.getByTestId('TableParams');
-
-      expect(tableParams).toBeTruthy();
-    });
-
-    test('renders table with testId TableParams__tbody', () => {
-      render(<TableParams items={TestItems} />);
-
       const tableBody = screen.getByTestId('TableParams__tbody');
 
+      expect(tableParams).toBeTruthy();
       expect(tableBody).toBeTruthy();
     });
 
@@ -95,32 +89,6 @@ describe('TableParams component', () => {
 
         expect(firstItem).toHaveClass('TableParams__tr');
         expect(firstItem.classList.contains('TableParams__tr--even')).toBeTruthy();
-      });
-    });
-
-    describe('Check second item in table body', () => {
-      test('has className TableParams__tr', () => {
-        render(<TableParams items={TestItems} />);
-
-        const tableBody = screen.getByTestId('TableParams__tbody');
-        const items = tableBody.querySelectorAll('tr');
-        const secondItem = items[1];
-
-        expect(secondItem).toHaveClass('TableParams__tr');
-        expect(secondItem.classList.contains('TableParams__tr--even')).toBeFalsy();
-      });
-    });
-
-    describe('Check third item in table body', () => {
-      test('has className TableParams__tr', () => {
-        render(<TableParams items={TestItems} />);
-
-        const tableBody = screen.getByTestId('TableParams__tbody');
-        const items = tableBody.querySelectorAll('tr');
-        const thirdItem = items[2];
-
-        expect(thirdItem).toHaveClass('TableParams__tr');
-        expect(thirdItem.classList.contains('TableParams__tr--even')).toBeTruthy();
       });
     });
 
@@ -186,107 +154,48 @@ describe('TableParams component', () => {
       expect(thead.querySelectorAll('.TableParams__th').length).toEqual(TestHeaders.length);
     });
 
-    test('Check if FirstHeader Text exists', () => {
+    test('Check if all headers exists', () => {
       render(<TableParams headers={TestHeaders} items={TestItems} />);
 
       expect(screen.getByText('FirstHeader')).toBeTruthy();
-    });
-
-    test('Check if SecondHeader Text exists', () => {
-      render(<TableParams headers={TestHeaders} items={TestItems} />);
-
       expect(screen.getByText('SecondHeader')).toBeTruthy();
-    });
-
-    test('Check if ThirdHeader Text exists', () => {
-      render(<TableParams headers={TestHeaders} items={TestItems} />);
-
       expect(screen.getByText('ThirdHeader')).toBeTruthy();
     });
   });
 
-  describe('render TableParams', () => {
-    describe('with default classNames', () => {
-      test('TableParams has default className', () => {
-        render(<TableParams headers={TestHeaders} items={TestItems} />);
-        expect(screen.getByTestId('TableParams')).toHaveClass('TableParams');
-      });
+  test('TableParams has default classNames', () => {
+    render(<TableParams headers={TestHeaders} items={TestItems} />);
+    expect(screen.getByTestId('TableParams')).toHaveClass('TableParams');
+    expect(screen.getByTestId('TableParams__table')).toHaveClass('TableParams__table');
+    expect(screen.getByTestId('TableParams__thead')).toHaveClass('TableParams__thead');
+    expect(screen.getByTestId('TableParams__tbody')).toHaveClass('TableParams__tbody');
+  });
 
-      test('TableParams__table has default className', () => {
-        render(<TableParams headers={TestHeaders} items={TestItems} />);
-        expect(screen.getByTestId('TableParams__table')).toHaveClass('TableParams__table');
-      });
+  test('TableParams renders with correct custom classNames', () => {
+    render(<TableParams className="CustomClassName" headers={TestHeaders} items={TestItems} />);
+    expect(screen.getByTestId('TableParams')).toHaveClass('CustomClassName');
+    expect(screen.getByTestId('TableParams__table')).toHaveClass('CustomClassName__table');
+    expect(screen.getByTestId('TableParams__thead')).toHaveClass('CustomClassName__thead');
+    expect(screen.getByTestId('TableParams__tbody')).toHaveClass('CustomClassName__tbody');
 
-      test('TableParams__thead has default className', () => {
-        render(<TableParams headers={TestHeaders} items={TestItems} />);
-        expect(screen.getByTestId('TableParams__thead')).toHaveClass('TableParams__thead');
-      });
-
-      test('TableParams__tbody has default className', () => {
-        render(<TableParams headers={TestHeaders} items={TestItems} />);
-        expect(screen.getByTestId('TableParams__tbody')).toHaveClass('TableParams__tbody');
-      });
+    const paramEls = screen.getAllByTestId('TableParams__td--param');
+    paramEls.forEach((item) => {
+      expect(item).toHaveClass('CustomClassName__td--param');
     });
 
-    describe('with custom classNames', () => {
-      test('TableParams has custom className CustomClassName', () => {
-        render(<TableParams className="CustomClassName" headers={TestHeaders} items={TestItems} />);
-        expect(screen.getByTestId('TableParams')).toHaveClass('CustomClassName');
-      });
+    const dataTypeEls = screen.getAllByTestId('TableParams__data-type');
+    dataTypeEls.forEach((item) => {
+      expect(item).toHaveClass('CustomClassName__data-type');
+    });
 
-      test('TableParams__table has className CustomClassName__table', () => {
-        render(<TableParams className="CustomClassName" headers={TestHeaders} items={TestItems} />);
-        expect(screen.getByTestId('TableParams__table')).toHaveClass('CustomClassName__table');
-      });
+    const descriptionEls = screen.getAllByTestId('TableParams__td--description');
+    descriptionEls.forEach((item) => {
+      expect(item).toHaveClass('CustomClassName__td--description');
+    });
 
-      test('TableParams__thead has className CustomClassName__thead', () => {
-        render(<TableParams className="CustomClassName" headers={TestHeaders} items={TestItems} />);
-        expect(screen.getByTestId('TableParams__thead')).toHaveClass('CustomClassName__thead');
-      });
-
-      test('TableParams__tbody has className CustomClassName__tbody', () => {
-        render(<TableParams className="CustomClassName" headers={TestHeaders} items={TestItems} />);
-        expect(screen.getByTestId('TableParams__tbody')).toHaveClass('CustomClassName__tbody');
-      });
-
-      describe('items in table has custom classNames', () => {
-        test('params have CustomClassName', () => {
-          render(<TableParams className="CustomClassName" headers={TestHeaders} items={TestItems} />);
-
-          const items = screen.getAllByTestId('TableParams__td--param');
-
-          items.forEach((item) => {
-            expect(item).toHaveClass('CustomClassName__td--param');
-          });
-        });
-
-        test('datatypes have CustomClassName', () => {
-          render(<TableParams className="CustomClassName" headers={TestHeaders} items={TestItems} />);
-
-          const items = screen.getAllByTestId('TableParams__data-type');
-          items.forEach((item) => {
-            expect(item).toHaveClass('CustomClassName__data-type');
-          });
-        });
-
-        test('descriptions have CustomClassName', () => {
-          render(<TableParams className="CustomClassName" headers={TestHeaders} items={TestItems} />);
-
-          const items = screen.getAllByTestId('TableParams__td--description');
-          items.forEach((item) => {
-            expect(item).toHaveClass('CustomClassName__td--description');
-          });
-        });
-
-        test('sampleValues have CustomClassName', () => {
-          render(<TableParams className="CustomClassName" headers={TestHeaders} items={TestItems} />);
-
-          const items = screen.getAllByTestId('TableParams__td--sample-value');
-          items.forEach((item) => {
-            expect(item).toHaveClass('CustomClassName__td--sample-value');
-          });
-        });
-      });
+    const sampleValueEls = screen.getAllByTestId('TableParams__td--sample-value');
+    sampleValueEls.forEach((item) => {
+      expect(item).toHaveClass('CustomClassName__td--sample-value');
     });
   });
 });
