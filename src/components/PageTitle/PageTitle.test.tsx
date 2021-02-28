@@ -1,6 +1,6 @@
 import React from 'react';
 import {HelmetProvider} from 'react-helmet-async';
-import {render, waitFor, screen} from '@testing-library/react';
+import {render, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 import PageTitle from './index';
