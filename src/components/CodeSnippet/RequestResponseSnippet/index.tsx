@@ -5,17 +5,22 @@ import {bemify} from '@thenewboston/utils';
 import BaseCodeSnippet, {SnippetLang} from '../BaseCodeSnippet';
 import './RequestResponseSnippet.scss';
 
-interface ComponentProps {
+export interface RequestResponseSnippetProps {
   className?: string;
   code: string;
   heading?: string;
 }
 
-const RequestResponse: FC<ComponentProps> = ({className, code, heading}) => {
+const RequestResponse: FC<RequestResponseSnippetProps> = ({className, code, heading}) => {
   return (
-    <div className="RequestResponseSnippet">
+    <div className={clsx('RequestResponseSnippet', className)} data-testid="RequestResponseSnippet">
       {heading ? (
-        <div className={clsx('RequestResponseSnippet__heading', {...bemify(className, '__heading')})}>{heading}:</div>
+        <div
+          className={clsx('RequestResponseSnippet__heading', {...bemify(className, '__heading')})}
+          data-testid="RequestResponseSnippet__heading"
+        >
+          {heading}:
+        </div>
       ) : null}
       <BaseCodeSnippet code={code} language={SnippetLang.json} showLineNumbers={false} />
     </div>
