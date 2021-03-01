@@ -19,13 +19,11 @@ const Layout: FC<LayoutProps> = ({children}) => {
     if (!hash) {
       window.scrollTo(0, 0);
     } else {
-      setTimeout(() => {
-        const id = hash.replace('#', '');
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView();
-        }
-      }, 0);
+      const id = hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView();
+      }
     }
   }, [hash, pathname]);
 
