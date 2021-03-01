@@ -1320,6 +1320,19 @@
           "profileImage": "https://avatars.githubusercontent.com/u/37742873?v=4",
           "slackUsername": "Dushko Manev"
       }
+    },
+    {
+      "title": "Reddit Moderator",
+      "isLead": false,
+      "payPerDay": 2800,
+      "createdDate": "2020-07-08T02:14:59.307535Z",
+      "contributor": {
+        "contributorId": "48",
+        "displayName": "Milena Gligorova",
+        "githubUsername": "MilenaGligorova",
+        "profileImage": "https://avatars.githubusercontent.com/u/79817275?v=4",
+        "slackUsername": "Milena Gligorova"
+      }
     }
     ],
     "responsibilities": [
