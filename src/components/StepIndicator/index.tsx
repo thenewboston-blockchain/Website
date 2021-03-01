@@ -4,19 +4,20 @@ import {bemify} from '@thenewboston/utils';
 
 import './StepIndicator.scss';
 
-interface ComponentProps {
+export interface StepIndicatorProps {
   className?: string;
   number: number;
   text: ReactNode;
 }
 
-const StepIndicator: FC<ComponentProps> = ({className, number, text}) => {
+const StepIndicator: FC<StepIndicatorProps> = ({className, number, text}) => {
   return (
-    <div className={clsx('StepIndicator', className)}>
+    <div className={clsx('StepIndicator', className)} data-testid="StepIndicator">
       <div
         className={clsx('StepIndicator__bubble', {
           ...bemify(className, '__bubble'),
         })}
+        data-testid="StepIndicator__bubble"
       >
         {number}
       </div>
@@ -24,6 +25,7 @@ const StepIndicator: FC<ComponentProps> = ({className, number, text}) => {
         className={clsx('StepIndicator__text', {
           ...bemify(className, '__text'),
         })}
+        data-testid="StepIndicator__text"
       >
         {text}
       </div>

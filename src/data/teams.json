@@ -362,19 +362,6 @@
         "title": "UI/UX Designer",
         "isLead": false,
         "payPerDay": 2800,
-        "createdDate": "2020-11-28T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "58",
-          "displayName": "Osaro Ochuko Adade",
-          "githubUsername": "osaroadade",
-          "profileImage": "https://avatars1.githubusercontent.com/u/47249126?s=400&u=2e9e60984bef80c2908856c3f9966593372a1049&v=4",
-          "slackUsername": "Osaro Ochuko Adade"
-        }
-      },
-      {
-        "title": "UI/UX Designer",
-        "isLead": false,
-        "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "80",
@@ -473,7 +460,7 @@
     ],
     "contributors": [
       {
-        "title": "Discord Manager",
+        "title": "Discord",
         "isLead": true,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
@@ -542,7 +529,7 @@
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "5",
-          "displayName": "Justin",
+          "displayName": "Angle943",
           "githubUsername": "angle943",
           "profileImage": "https://avatars2.githubusercontent.com/u/5943963?v=4",
           "slackUsername": "Justin"
@@ -640,19 +627,6 @@
         }
       },
       {
-        "title": "Head of JavaScript Library Development",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "27",
-          "displayName": "Carter",
-          "githubUsername": "sno2",
-          "profileImage": "https://avatars2.githubusercontent.com/u/43641633?s=460&u=33f06f961b604732bec844c107c279e080aa038b&v=4",
-          "slackUsername": "Carter"
-        }
-      },
-      {
         "title": "Software Developer",
         "isLead": false,
         "payPerDay": 2800,
@@ -703,10 +677,24 @@
           "profileImage": "https://avatars0.githubusercontent.com/u/36620321?s=400&u=af0419d3610824677b5f529008f9f87b23623091&v=4",
           "slackUsername": "ATLIT"
         }
-      },
+      }
+    ],
+    "responsibilities": []
+  },
+  {
+    "title": "Blog",
+    "description": "In charge of all things related to the thenewboston blog",
+    "platforms": [
       {
-        "title": "Front-End Developer",
-        "isLead": false,
+        "name": "slack",
+        "label": "front-end",
+        "link": ""
+      }
+    ],
+    "contributors": [
+      {
+        "title": "Front-End Developer for Blog",
+        "isLead": true,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
@@ -847,8 +835,8 @@
         }
       },
       {
-        "title": "Marketing Analyst",
-        "isLead": false,
+        "title": "Head of Marketing Team",
+        "isLead": true,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
@@ -990,7 +978,7 @@
         }
       },
       {
-        "title": "LinkedIn Manager",
+        "title": "Social Media Manager",
         "isLead": false,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
@@ -1296,7 +1284,7 @@
       },
       {
         "title": "Reddit Moderator",
-        "isLead": false,
+        "isLead": true,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
@@ -1319,7 +1307,33 @@
           "profileImage": "https://avatars3.githubusercontent.com/u/32111172?s=460&u=274388e47550c045abc5496b9f25485123634715&v=4",
           "slackUsername": "Moon"
         }
+    },
+    {
+      "title": "Reddit Moderator",
+      "isLead": false,
+      "payPerDay": 2800,
+      "createdDate": "2021-02-28T02:14:59.307535Z",
+      "contributor": {
+          "contributorId": "45",
+          "displayName": "Dushko Manev",
+          "githubUsername": "manevdusko",
+          "profileImage": "https://avatars.githubusercontent.com/u/37742873?v=4",
+          "slackUsername": "Dushko Manev"
       }
+    },
+    {
+      "title": "Reddit Moderator",
+      "isLead": false,
+      "payPerDay": 2800,
+      "createdDate": "2020-07-08T02:14:59.307535Z",
+      "contributor": {
+        "contributorId": "48",
+        "displayName": "Milena Gligorova",
+        "githubUsername": "MilenaGligorova",
+        "profileImage": "https://avatars.githubusercontent.com/u/79817275?v=4",
+        "slackUsername": "Milena Gligorova"
+      }
+    }
     ],
     "responsibilities": [
       {

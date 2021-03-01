@@ -4,6 +4,7 @@ import {TeamName} from 'types/teams';
 export const TeamPathname = {
   all: 'All',
   backEndDevelopers: 'Back-End-Developers',
+  blog: 'Blog',
   communications: 'Communications',
   community: 'Community',
   design: 'Design',
@@ -26,6 +27,7 @@ export const TeamPathname = {
 export const TEAMS: NavOption[] = [
   {pathname: TeamPathname.all, title: TeamName.all},
   {pathname: TeamPathname.backEndDevelopers, title: TeamName.backEndDevelopers},
+  {pathname: TeamPathname.blog, title: TeamName.blog},
   {pathname: TeamPathname.communications, title: TeamName.communications},
   {pathname: TeamPathname.community, title: TeamName.community},
   {pathname: TeamPathname.design, title: TeamName.design},
