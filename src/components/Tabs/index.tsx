@@ -19,10 +19,11 @@ const Tabs: FC<ComponentProps> = ({defaultTab = 0, tabs, latestReleaseNumber}) =
 
   const renderTabs = (): ReactNode => {
     return (
-      <div className="Tabs__tabs-container">
+      <div className="Tabs__tabs-container" data-testid="Tabs__tabs-container">
         {tabs.map(({label}, index) => (
           <div
             className={clsx('Tabs__tab', {'Tabs__tab--active': activeTab === index})}
+            data-testid="Tabs__tab"
             key={label}
             onClick={() => setActiveTab(index)}
             role="button"
@@ -40,9 +41,12 @@ const Tabs: FC<ComponentProps> = ({defaultTab = 0, tabs, latestReleaseNumber}) =
   };
 
   return (
-    <div className="Tabs">
+    <div className="Tabs" data-testid="Tabs">
       {renderTabs()}
-      <p className="Download__latest-version">{`Latest Version: 1.0.0-alpha.${latestReleaseNumber}`}</p>
+      <p
+        className="Download__latest-version"
+        data-testid="Download__latest-version"
+      >{`Latest Version: 1.0.0-alpha.${latestReleaseNumber}`}</p>
       {renderTabPanel()}
     </div>
   );
