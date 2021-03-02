@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {Provider} from 'react-redux';
 import {Router} from 'react-router-dom';
-import {cleanup, render, screen} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import {createMemoryHistory} from 'history';
 
@@ -23,20 +23,15 @@ const baseProps: LayoutProps = {
 };
 
 describe('Layout component', () => {
-  const scrollToFn = jest.fn();
-  const scrollIntoViewFn = jest.fn();
-
   beforeAll(() => {
     const portal = document.createElement('div');
     portal.setAttribute('id', 'popover-root');
 
     document.body.appendChild(portal);
 
-    window.scrollTo = scrollToFn;
-    window.HTMLElement.prototype.scrollIntoView = scrollIntoViewFn;
+    window.scrollTo = jest.fn();
+    window.HTMLElement.prototype.scrollIntoView = jest.fn();
   });
-
-  afterAll(cleanup);
 
   it('renders without crashing', () => {
     const history = createMemoryHistory();
@@ -72,7 +67,7 @@ describe('Layout component', () => {
       {wrapper: Wrapper},
     );
 
-    expect(scrollToFn).toBeCalledWith(0, 0);
+    expect(window.scrollTo).toBeCalledWith(0, 0);
   });
 
   it('scrolls to hash link from pathname', () => {
