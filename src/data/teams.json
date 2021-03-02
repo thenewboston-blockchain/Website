@@ -704,6 +704,19 @@
           "profileImage": "https://avatars.githubusercontent.com/u/78055249?s=400&v=4",
           "slackUsername": "Ivan Danilov"
         }
+      },
+      {
+        "title": "Front-End Developer for Blog",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "87",
+          "displayName": "Nosazeme Obabueki",
+          "githubUsername": "knowsarzehmeh",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01LUSU2JEB-47e0846283d1-512",
+          "slackUsername": "Osaz"
+        }
       }
     ],
     "responsibilities": []
