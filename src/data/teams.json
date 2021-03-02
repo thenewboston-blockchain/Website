@@ -473,6 +473,19 @@
         }
       },
       {
+        "title": "Discord",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-11-14T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "47",
+          "displayName": "Nine",
+          "githubUsername": "whitelionx",
+          "profileImage": "https://avatars1.githubusercontent.com/u/31674307?s=460&u=89b8153755b6765cbdc0b2579d8f545138b4760c&v=4",
+          "slackUsername": "Nine"
+        }
+      },
+      {
         "title": "Moderator",
         "isLead": false,
         "payPerDay": 2800,
@@ -598,19 +611,6 @@
           "githubUsername": "amarjeet987",
           "profileImage": "https://avatars1.githubusercontent.com/u/38986305?v=4",
           "slackUsername": "Amarjeet"
-        }
-      },
-      {
-        "title": "Front-End Developer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-11-14T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "47",
-          "displayName": "Nine",
-          "githubUsername": "whitelionx",
-          "profileImage": "https://avatars1.githubusercontent.com/u/31674307?s=460&u=89b8153755b6765cbdc0b2579d8f545138b4760c&v=4",
-          "slackUsername": "Nine"
         }
       },
       {
