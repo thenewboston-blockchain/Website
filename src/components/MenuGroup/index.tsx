@@ -10,13 +10,14 @@ import './MenuGroup.scss';
 interface ComponentProps extends RouteComponentProps {
   title: string;
   urlBase: string;
+  dataTestId?: string;
 }
 
-const MenuGroup: FC<ComponentProps> = ({children, location, title, urlBase}) => {
+const MenuGroup: FC<ComponentProps> = ({children, dataTestId = 'MenuGroup', location, title, urlBase}) => {
   const [expanded, toggleExpanded] = useState(getFirstPathParam(location.pathname) === urlBase);
 
   return (
-    <div className="MenuGroup" data-testid="MenuGroup">
+    <div className="MenuGroup" data-testid={dataTestId}>
       <button
         className={clsx('MenuGroup__toggle', {'MenuGroup__toggle--expanded': expanded})}
         onClick={() => toggleExpanded(!expanded)}

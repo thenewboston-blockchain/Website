@@ -16,6 +16,16 @@ describe('MenuGroup component', () => {
     expect(screen.getByTestId('MenuGroup')).toBeTruthy();
   });
 
+  test('renders with customTestId "Custom" without crashing', async () => {
+    render(
+      <Router>
+        <MenuGroup dataTestId="Custom" title="Test" urlBase="Test" />
+      </Router>,
+    );
+
+    expect(screen.getByTestId('Custom')).toBeTruthy();
+  });
+
   test('renders with title', async () => {
     render(
       <Router>
