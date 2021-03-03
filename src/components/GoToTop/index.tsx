@@ -4,7 +4,7 @@ import {Icon, IconType} from 'components';
 
 import './GoToTop.scss';
 
-const GoToTopButton: FC = () => {
+const GoToTop: FC = () => {
   const [show, setShow] = useState<boolean>(false);
 
   const handleScroll = useCallback(() => {
@@ -25,7 +25,11 @@ const GoToTopButton: FC = () => {
   }, [handleScroll]);
 
   return (
-    <>{Boolean(show) && <Icon className="GoToTop__button" icon={IconType.chevronUp} size={50} onClick={scrollTop} />}</>
+    <>
+      {show && (
+        <Icon className="GoToTop" dataTestId="GoToTop" icon={IconType.chevronUp} size={50} onClick={scrollTop} />
+      )}
+    </>
   );
 };
-export default GoToTopButton;
+export default GoToTop;
