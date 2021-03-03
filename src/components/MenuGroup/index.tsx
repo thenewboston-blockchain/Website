@@ -16,15 +16,21 @@ const MenuGroup: FC<ComponentProps> = ({children, location, title, urlBase}) => 
   const [expanded, toggleExpanded] = useState(getFirstPathParam(location.pathname) === urlBase);
 
   return (
-    <div className="MenuGroup">
+    <div className="MenuGroup" data-testid="MenuGroup">
       <button
         className={clsx('MenuGroup__toggle', {'MenuGroup__toggle--expanded': expanded})}
         onClick={() => toggleExpanded(!expanded)}
+        data-testid="MenuGroup__toggle"
       >
         <Icon className="MenuGroup__toggle-arrow" icon={IconType.menuRight} size={24} />
         <div className="MenuGroup__title">{title}</div>
       </button>
-      <div className={clsx('MenuGroup__submenu', {'MenuGroup__submenu--expanded': expanded})}>{children}</div>
+      <div
+        className={clsx('MenuGroup__submenu', {'MenuGroup__submenu--expanded': expanded})}
+        data-testid="MenuGroup__submenu"
+      >
+        {children}
+      </div>
     </div>
   );
 };
