@@ -2,7 +2,7 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import A from './index';
+import A from '.';
 
 describe('A component', () => {
   test('renders with text passed in', () => {
@@ -130,5 +130,29 @@ describe('A component', () => {
     const icon = screen.getByTestId('A__Icon--new-window');
 
     expect(icon.className).toContain('test__Icon--new-window');
+  });
+
+  test('new window icon has correct default iconTotalSize when not passed in', () => {
+    render(
+      <A className="test" href="/">
+        hello
+      </A>,
+    );
+    const icon = screen.getByTestId('A__Icon--new-window');
+
+    expect(icon.style).toHaveProperty('width', '20px');
+    expect(icon.style).toHaveProperty('height', '20px');
+  });
+
+  test('new window icon has correct iconTotalSize when passed in', () => {
+    render(
+      <A className="test" href="/" iconSize={12} iconTotalSize={12}>
+        hello
+      </A>,
+    );
+    const icon = screen.getByTestId('A__Icon--new-window');
+
+    expect(icon.style).toHaveProperty('width', '12px');
+    expect(icon.style).toHaveProperty('height', '12px');
   });
 });

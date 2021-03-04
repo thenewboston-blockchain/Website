@@ -6,14 +6,14 @@ import {NavOption} from 'types/option';
 
 import './FlatNavLinks.scss';
 
-interface ComponentProps {
+export interface FlatNavLinksProps {
   className?: string;
   handleOptionClick(option: string): () => void;
   options: NavOption[];
   selectedOption: string;
 }
 
-function FlatNavLinks({className, handleOptionClick, options, selectedOption}: ComponentProps) {
+function FlatNavLinks({className, handleOptionClick, options, selectedOption}: FlatNavLinksProps) {
   const renderOptions = () => {
     return options.map((option: NavOption) => (
       <button
@@ -30,7 +30,11 @@ function FlatNavLinks({className, handleOptionClick, options, selectedOption}: C
     ));
   };
 
-  return <div className={clsx('FlatNavLinks', className)}>{renderOptions()}</div>;
+  return (
+    <div className={clsx('FlatNavLinks', className)} data-testid="FlatNavLinks">
+      {renderOptions()}
+    </div>
+  );
 }
 
 export default FlatNavLinks;

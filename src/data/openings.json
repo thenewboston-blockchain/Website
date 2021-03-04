@@ -290,5 +290,93 @@
       "Excellent knowledge of correct spelling, grammar and punctuation",
       "Can work with Marketing Team"
     ]
+  },
+  {
+    "openingId": "front-end-developer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Siddhesh Kulthe"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "As a front-end developer, your key contributions will be setting up the layout for the blog, removing bugs, integrating services like Google Analytics, Facebook Pixel, managing the metadata of the website, etc.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Front End Developer",
+    "reportsTo": [
+      {
+        "githubUsername": "Siddhesh",
+        "name": "Siddhesh Kulthe"
+      }
+    ],
+    "responsibilities": [
+      "Developing the front-end of the website",
+      "Managing the blog and clearing bugs",
+      "Posting blogs on a timely basis (Weekly)",
+      "Changing the blog layout if needed",
+      "The code should not be copy-pasted",
+      "Quality of code shall be high so that reduction in size is possible which will perhaps lead to faster load times"
+    ],
+    "technologyRequirements": [
+      "Experience in ReactJs",
+      "Proven Expertise in SASS",
+      "Shall be well acquainted with jQuery",
+      "Knowledge regarding Backend development is preferred",
+      "Optional: Experience in Server-side Rendering"
+    ]
+  },
+  {
+    "openingId": "python-django-developer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message itsnikhil"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "Blockchain Explorer team is looking for a backend developer to lead parts of the blockchain explorer from inception to launch, and own large parts of the product’s execution. They are one of thenewboston approved project with a mission to create Open Blockchain Explorer.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Python / Django Developer",
+    "reportsTo": [
+      {
+        "githubUsername": "itsnikhil",
+        "name": "Nikhil Taneja"
+      }
+    ],
+    "responsibilities": [
+      "Lead parts of the blockchain explorer from inception to launch, and own large parts of the product’s execution",
+      "Planning out project and involved in database creation, integration, and management",
+      "Writing APIs and Data models for various features of the explorer",
+      "Collaborate with Front-end developers to integrate user-facing elements with server side logic",
+      "Ensuring that systems are safe and secure against cybersecurity threats",
+      "Generating analytics and statistics for the explorer",
+      "Maintain comprehensive workflow documentation and knowledge sharing",
+      "Perform peer code reviews, create issues for other people outside the team could contribute to opensource project"
+    ],
+    "technologyRequirements": [
+      "Proficient in python programming language",
+      "Experienced in Django web framework",
+      "Knowledge of SQL Databases",
+      "Git and GitHub",
+      "Understanding of Blockchain Technology (optional)"
+    ]
   }
 ]

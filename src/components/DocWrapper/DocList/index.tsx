@@ -4,12 +4,12 @@ import {bemify} from '@thenewboston/utils';
 
 import './DocList.scss';
 
-interface ComponentProps {
+export interface DocListProps {
   className?: string;
   variant: 'ul' | 'ol';
 }
 
-const DocList: FC<ComponentProps> = ({children, className, variant}) => {
+const DocList: FC<DocListProps> = ({children, className, variant}) => {
   const mainClassName = useMemo(
     () =>
       clsx('DocList', className, {
@@ -20,10 +20,18 @@ const DocList: FC<ComponentProps> = ({children, className, variant}) => {
   );
 
   if (variant === 'ul') {
-    return <ul className={mainClassName}>{children}</ul>;
+    return (
+      <ul className={mainClassName} data-testid="DocList--ul">
+        {children}
+      </ul>
+    );
   }
 
-  return <ol className={mainClassName}>{children}</ol>;
+  return (
+    <ol className={mainClassName} data-testid="DocList--ol">
+      {children}
+    </ol>
+  );
 };
 
 export default DocList;

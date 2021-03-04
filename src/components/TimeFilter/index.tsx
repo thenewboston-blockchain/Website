@@ -6,13 +6,13 @@ import {Time, TimeFilterType} from 'types/github';
 
 import './TimeFilter.scss';
 
-interface ComponentProps {
+export interface TimeFilterProps {
   className?: string;
   selectedFilter: TimeFilterType;
   setSelectedFilter: GenericVoidFunction;
 }
 
-const TimeFilter: FC<ComponentProps> = ({className, selectedFilter, setSelectedFilter}) => {
+const TimeFilter: FC<TimeFilterProps> = ({className, selectedFilter, setSelectedFilter}) => {
   const handleOptionClick = (i: TimeFilterType): GenericVoidFunction => (): void => {
     setSelectedFilter(i);
   };
@@ -23,6 +23,7 @@ const TimeFilter: FC<ComponentProps> = ({className, selectedFilter, setSelectedF
         className={clsx('TimeFilter__option', {
           'TimeFilter__option--active': option === selectedFilter,
         })}
+        data-testid="TimeFilter__option"
         key={option}
         onClick={handleOptionClick(option)}
       >
@@ -32,9 +33,11 @@ const TimeFilter: FC<ComponentProps> = ({className, selectedFilter, setSelectedF
   };
 
   return (
-    <div className={clsx('TimeFilter', className)}>
+    <div className={clsx('TimeFilter', className)} data-testid="TimeFilter">
       <h2>Top Contributors</h2>
-      <div className="TimeFilter__option-container">{renderOptions()}</div>
+      <div className="TimeFilter__option-container" data-testid="TimeFilter__option-container">
+        {renderOptions()}
+      </div>
     </div>
   );
 };
