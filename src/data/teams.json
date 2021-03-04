@@ -1424,6 +1424,19 @@
         }
       },
       {
+        "title": "Blockchain Researcher",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2021-03-02T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "88",
+          "displayName": "Muhammad Anas Azam Bhatti",
+          "githubUsername": "ma2b0043",
+          "profileImage": "https://ca.slack-edge.com/T07PJD1FZ-U01M4RMJLQ0-9faa743e4f84-512",
+          "slackUsername": "Muhammad Anas Azam Bhatti"
+        }
+      },
+      {
         "title": "Blockchain Research PM",
         "isLead": false,
         "payPerDay": 2800,
