@@ -1,7 +1,39 @@
 [
   {
+    "title": "Javascript SDK",
+    "description": "Build and maintain a JavaScript library for thenewboston.",
+    "platforms": [
+      {
+        "name": "github",
+        "label": "thenewboston-js",
+        "link": "https://github.com/thenewboston-developers/thenewboston-js"
+      },
+      {
+        "name": "slack",
+        "label": "back-end",
+        "link": ""
+      }
+    ],
+    "contributors": [
+      {
+        "title": "Head of Javascript SDK",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2021-03-03T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "89",
+          "displayName": "Zino Adidi",
+          "githubUsername": "zinoadidi",
+          "profileImage": "https://avatars.githubusercontent.com/u/30411401?v=4",
+          "slackUsername": "Zino Adidi"
+        }
+      }
+    ],
+    "responsibilities": []
+  },
+  {
     "title": ".NET Core",
-    "description": "Build and maintain a a .NET Core SDK for thenewboston.",
+    "description": "Build and maintain a .NET Core SDK for thenewboston.",
     "platforms": [
       {
         "name": "github",
