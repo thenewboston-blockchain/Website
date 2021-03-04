@@ -5,11 +5,11 @@ import {Icon, IconType} from 'components';
 import {NavigationItem} from 'types/navigation';
 import './Pagination.scss';
 
-interface ComponentProps {
+export interface PaginationProps {
   navigationData: NavigationItem[];
 }
 
-const Pagination: FC<ComponentProps> = ({navigationData}) => {
+const Pagination: FC<PaginationProps> = ({navigationData}) => {
   const location = useLocation();
 
   const renderNextLink = () => {
@@ -37,7 +37,7 @@ const Pagination: FC<ComponentProps> = ({navigationData}) => {
   };
 
   return (
-    <div className="Pagination">
+    <div className="Pagination" data-testid="Pagination">
       {renderPreviousLink()}
       {renderNextLink()}
     </div>
