@@ -2,9 +2,9 @@ import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import Tabs from '.';
+import Tabs, {Tab, TabsProps} from '.';
 
-const TestTabs = [
+const TestTabs: Tab[] = [
   {
     component: <span>Tab 1</span>,
     label: 'FirstTab',
@@ -15,7 +15,7 @@ const TestTabs = [
   },
 ];
 
-const baseProps = {
+const baseProps: TabsProps = {
   latestReleaseNumber: 1,
   tabs: TestTabs,
 };
@@ -23,50 +23,50 @@ const baseProps = {
 describe('Tabs component', () => {
   test('renders without crashing', () => {
     render(<Tabs {...baseProps} />);
+
     const tabs = screen.getByTestId('Tabs');
     expect(tabs).toBeTruthy();
   });
 
-  test('renders with className Tabs', () => {
+  test('renders with default className', () => {
     render(<Tabs {...baseProps} />);
+
     const tabs = screen.getByTestId('Tabs');
     expect(tabs).toHaveClass('Tabs');
   });
 
-  test('renders with testId Download__latest-version', () => {
+  test('renders latest version text correctly', () => {
     render(<Tabs {...baseProps} />);
+
     const version = screen.getByTestId('Download__latest-version');
     expect(version).toHaveClass('Download__latest-version');
     expect(version).toHaveTextContent('Latest Version: 1.0.0-alpha.1');
   });
 
-  test('renders first tab as active', () => {
+  test('renders first tab as active by default', () => {
     render(<Tabs {...baseProps} />);
+
     const tabs = screen.getAllByTestId('Tabs__tab');
     expect(tabs[0]).toHaveClass('Tabs__tab');
     expect(tabs[0]).toHaveClass('Tabs__tab--active');
     expect(tabs[0]).toHaveTextContent('FirstTab');
   });
 
-  test('renders inactive Tab', () => {
+  test('renders other tabs as inactive', () => {
     render(<Tabs {...baseProps} />);
+
     const tabs = screen.getAllByTestId('Tabs__tab');
     expect(tabs[1]).toHaveClass('Tabs__tab');
     expect(tabs[1]).toHaveTextContent('SecondTab');
   });
 
   test('renders a defaultTab as active', () => {
-    render(<Tabs {...baseProps} defaultTab={1} />);
+    const props = {...baseProps, defaultTab: 1};
+    render(<Tabs {...props} />);
 
     const tabs = screen.getAllByTestId('Tabs__tab');
     expect(tabs[1]).toHaveClass('Tabs__tab');
     expect(tabs[1]).toHaveClass('Tabs__tab--active');
-  });
-
-  test('renders inactive tab as inactive when changing defaultTab', () => {
-    render(<Tabs {...baseProps} defaultTab={1} />);
-
-    const tabs = screen.getAllByTestId('Tabs__tab');
     expect(tabs[0]).toHaveClass('Tabs__tab');
     expect(tabs[0]).not.toHaveClass('Tabs__tab--active');
   });

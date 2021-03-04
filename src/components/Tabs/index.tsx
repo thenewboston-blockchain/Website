@@ -8,13 +8,13 @@ export interface Tab {
   label: string;
 }
 
-interface ComponentProps {
+export interface TabsProps {
   defaultTab?: number;
   tabs: Tab[];
   latestReleaseNumber: number | null;
 }
 
-const Tabs: FC<ComponentProps> = ({defaultTab = 0, tabs, latestReleaseNumber}) => {
+const Tabs: FC<TabsProps> = ({defaultTab = 0, tabs, latestReleaseNumber}) => {
   const [activeTab, setActiveTab] = useState<number>(defaultTab);
 
   const renderTabs = (): ReactNode => {
