@@ -4,14 +4,14 @@ import {bemify} from '@thenewboston/utils';
 
 import './TableBorderGrid.scss';
 
-interface ComponentProps {
+export interface TableBorderGridProps {
   className?: string;
   headers?: ReactNode[];
   rows: ReactNode[][];
   title?: ReactNode;
 }
 
-const TableBorderGrid: FC<ComponentProps> = ({className, headers, rows, title}) => {
+const TableBorderGrid: FC<TableBorderGridProps> = ({className, headers, rows, title}) => {
   const renderBody = (): ReactNode => {
     return (
       <tbody className={clsx('TableBorderGrid__tbody', {...bemify(className, '__tbody')})}>
@@ -50,9 +50,19 @@ const TableBorderGrid: FC<ComponentProps> = ({className, headers, rows, title}) 
 
   return (
     <div>
-      {title ? <div className={clsx('TableBorderGrid__title', {...bemify(className, '__title')})}>{title}</div> : null}
-      <div className={clsx('TableBorderGrid', className)}>
-        <table className={clsx('TableBorderGrid__table', {...bemify(className, '__table')})}>
+      {title ? (
+        <div
+          className={clsx('TableBorderGrid__title', {...bemify(className, '__title')})}
+          data-testid="TableBorderGrid__title"
+        >
+          {title}
+        </div>
+      ) : null}
+      <div className={clsx('TableBorderGrid', className)} data-testid="TableBorderGrid">
+        <table
+          className={clsx('TableBorderGrid__table', {...bemify(className, '__table')})}
+          data-testid="TableBorderGrid__table"
+        >
           {renderHeaders()}
           {renderBody()}
         </table>
