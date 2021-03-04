@@ -1,12 +1,12 @@
 import React from 'react';
-import {render, screen} from '@testing-library/react';
 import {BrowserRouter as Router} from 'react-router-dom';
+import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import OrganizationMenuItems, {projectProposalsNavigationData} from './index';
+import OrganizationMenuItems, {projectProposalsNavigationData} from '.';
 
 describe('OrganizationMenuItems component', () => {
-  test('renders default component', async () => {
+  it('renders without crashing', () => {
     render(
       <Router>
         <OrganizationMenuItems />
@@ -16,7 +16,7 @@ describe('OrganizationMenuItems component', () => {
     expect(screen.queryByText('Project Proposals')).toBeTruthy();
   });
 
-  test('renders NavLinks', () => {
+  it('renders all the NavLinks', () => {
     render(
       <Router>
         <OrganizationMenuItems />
@@ -25,8 +25,7 @@ describe('OrganizationMenuItems component', () => {
 
     projectProposalsNavigationData.forEach((navData) => {
       expect(screen.queryByText(navData.name)).toBeTruthy();
-      expect(screen.queryByText(navData.name)).toHaveAttribute('href');
-      expect(screen.queryByText(navData.name)?.getAttribute('href')).toEqual(navData.url);
+      expect(screen.queryByText(navData.name)).toHaveAttribute('href', navData.url);
     });
   });
 });
