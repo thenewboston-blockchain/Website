@@ -17,7 +17,7 @@ interface NavigationData {
   url: string;
 }
 
-const testHelper = (data: NavigationData[]) => {
+const testHelper = (data: NavigationData[], type: string) => {
   data.forEach((item: NavigationData) => {
     describe(`NavigationData name: '${item.name}' url: '${item.url}'`, () => {
       test(`should render link with text ${item.name}`, () => {
@@ -26,9 +26,9 @@ const testHelper = (data: NavigationData[]) => {
             <DocsMenuItems />
           </Router>,
         );
-        const el = screen.getByRole(`group-${item.name}`);
-        expect(el).toBeTruthy();
-        expect(el).toHaveTextContent(item.name);
+        const link = screen.getByTestId(`${type}-${item.name}`);
+        expect(link).toBeTruthy();
+        expect(link).toHaveTextContent(item.name);
       });
 
       test(`should render link with url ${item.url}`, () => {
@@ -37,9 +37,9 @@ const testHelper = (data: NavigationData[]) => {
             <DocsMenuItems />
           </Router>,
         );
-        const el = screen.getByTestId(`group-${item.name}`);
-        expect(el).toBeTruthy();
-        expect(el?.getAttribute('href')).toEqual(item.url);
+        const link = screen.getByTestId(`${type}-${item.name}`);
+        expect(link).toBeTruthy();
+        expect(link?.getAttribute('href')).toEqual(item.url);
       });
     });
   });
@@ -56,27 +56,27 @@ describe('DocsMenuItems component', () => {
   });
 
   describe('renders Guide links', () => {
-    testHelper(guideNavigationData);
+    testHelper(guideNavigationData, 'Guide');
   });
 
   describe('renders AccountManager links', () => {
-    testHelper(accountManagerNavigationData);
+    testHelper(accountManagerNavigationData, 'AccountManager');
   });
 
   describe('renders Governance links', () => {
-    testHelper(governanceNavigationData);
+    testHelper(governanceNavigationData, 'Governance');
   });
 
   describe('renders BankAPI links', () => {
-    testHelper(bankApiNavigationData);
+    testHelper(bankApiNavigationData, 'BankAPI');
   });
 
   describe('renders ConfirmationValidatorAPI links', () => {
-    testHelper(confirmationValidatorApiNavigationData);
+    testHelper(confirmationValidatorApiNavigationData, 'ConfirmationValidatorAPI');
   });
 
   describe('renders PrimaryValidatorAPI links', () => {
-    testHelper(primaryValidatorApiNavigationData);
+    testHelper(primaryValidatorApiNavigationData, 'PrimaryValidatorAPI');
   });
 
   describe('renders DeploymentGuide links', () => {
@@ -90,20 +90,20 @@ describe('DocsMenuItems component', () => {
         url: '/deployment-guide/validator',
       },
     ];
-    testHelper(deploymentGuideNavigationData);
+    testHelper(deploymentGuideNavigationData, 'DeploymentGuide');
   });
 
   describe('renders StyleGuide links', () => {
     const styleGuideNavigationData = [
       {
-        name: 'React',
+        name: 'React / JSX',
         url: '/style-guide/react',
       },
       {
-        name: 'CSS',
+        name: 'CSS / SASS',
         url: '/style-guide/css',
       },
     ];
-    testHelper(styleGuideNavigationData);
+    testHelper(styleGuideNavigationData, 'StyleGuide');
   });
 });

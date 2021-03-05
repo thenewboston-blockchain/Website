@@ -291,10 +291,10 @@ const DocsMenuItems: FC = () => {
       </MenuGroup>
 
       <MenuGroup title="Style Guides" urlBase="style-guide">
-        <NavLink data-testid="StyleGuide-React" to="/style-guide/react">
+        <NavLink data-testid="StyleGuide-React / JSX" to="/style-guide/react">
           React / JSX
         </NavLink>
-        <NavLink data-testid="StyleGuide-CSS" to="/style-guide/css">
+        <NavLink data-testid="StyleGuide-CSS / SASS" to="/style-guide/css">
           CSS / SASS
         </NavLink>
       </MenuGroup>
