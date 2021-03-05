@@ -26,8 +26,9 @@
 
       &#{$self}--disabled,
       &#{$self}--disabled:hover {
-        background: var(--color-primary);
-        border-color: var(--color-primary);
+        background: var(--color-neutral-300);
+        border-color: var(--color-neutral-300);
+        color: var(--color-neutral-400);
       }
     }
 
