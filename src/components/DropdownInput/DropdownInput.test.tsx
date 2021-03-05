@@ -6,7 +6,7 @@ import DropdownInput from '.';
 
 const BaseProps = {
   callbackOnChange: () => {},
-  defaultOption: 'second',
+  defaultOption: 'first',
   options: ['first', 'second'],
 };
 
@@ -52,20 +52,16 @@ describe('DropdownInput component', () => {
     expect(screen.getByTestId('DropdownInput__select-box')).toHaveClass('DropdownInput__select-box');
   });
 
-  // test('change select value that is different to defaultOption', () => {
-  //   render(<DropdownInput {...BaseProps} />);
-  //   fireEvent.click(screen.getByTestId('DropdownInput__select-box'), {
-  //     target: {
-  //       value: 'second',
-  //     },
-  //   });
+  test('change select value to be second', () => {
+    render(<DropdownInput {...BaseProps} />);
 
-  //   const options = screen.getAllByTestId('DropdownInput__option');
-  //   expect(options).toHaveFormValues({ food: '' })
-  //   const firstOption = options[0] as HTMLInputElement;
-  //   const secondOption = options[1] as HTMLInputElement;
-  //   expect(firstOption.value).toEqual('first');
-  //   expect(secondOption.value).toEqual('second');
-  //   screen.debug();
-  // });
+    fireEvent.change(screen.getByTestId('DropdownInput__select-box'), {
+      target: {
+        value: 'second',
+      },
+    });
+
+    expect(screen.queryByDisplayValue('first')).toBeFalsy();
+    expect(screen.queryByDisplayValue('second')).toBeTruthy();
+  });
 });
