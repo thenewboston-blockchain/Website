@@ -3,14 +3,14 @@ import React, {FC, ReactNode} from 'react';
 import {BreadcrumbMenu, PageTitle} from 'components';
 import './DashboardLayout.scss';
 
-interface ComponentProps {
+export interface DashboardLayoutProps {
   children?: ReactNode;
   menuItems: ReactNode;
   pageName: string;
   sectionName: string;
 }
 
-const DashboardLayout: FC<ComponentProps> = ({children, menuItems, pageName, sectionName}) => {
+const DashboardLayout: FC<DashboardLayoutProps> = ({children, menuItems, pageName, sectionName}) => {
   return (
     <>
       <PageTitle title={`${sectionName}`} />

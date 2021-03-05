@@ -1,60 +1,58 @@
-import React, {ReactNode} from 'react';
-import {render, screen, waitFor} from '@testing-library/react';
-import {BrowserRouter as Router} from 'react-router-dom';
-import '@testing-library/jest-dom/extend-expect';
+import React, {FC} from 'react';
 import {HelmetProvider} from 'react-helmet-async';
-import DashboardLayout from '.';
+import {BrowserRouter as Router} from 'react-router-dom';
+import {render, screen, waitFor} from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 
-interface Props {
-  children?: ReactNode;
-  menuItems?: ReactNode;
-  pageName?: string;
-  sectionName?: string;
-}
+import DashboardLayout, {DashboardLayoutProps} from '.';
 
-const TestComponent = ({
-  children,
-  menuItems = <p>MenuItem</p>,
-  pageName = 'PageName',
-  sectionName = 'SectionName',
-}: Props) => {
+const baseProps: DashboardLayoutProps = {
+  children: <p>Children</p>,
+  menuItems: <p>Test</p>,
+  pageName: 'TestPage',
+  sectionName: 'TestSection',
+};
+
+const Wrapper: FC = ({children}) => {
   return (
     <Router>
-      <HelmetProvider>
-        <DashboardLayout menuItems={menuItems} pageName={pageName} sectionName={sectionName}>
-          {children || <div>Some content here</div>}
-        </DashboardLayout>
-      </HelmetProvider>
+      <HelmetProvider>{children}</HelmetProvider>
     </Router>
   );
 };
 
 describe('Dashboard Component', () => {
+  it('renders without crashing', () => {
+    render(<DashboardLayout {...baseProps} />, {wrapper: Wrapper});
+  });
+
   test('expect to have proper page title passed in', async () => {
-    const sectionName = 'TestName';
-    render(<TestComponent sectionName={sectionName} />);
-    await waitFor(() => expect(document.title).toEqual(`${sectionName} | thenewboston`));
+    render(<DashboardLayout {...baseProps} />, {wrapper: Wrapper});
+
+    await waitFor(() => expect(document.title).toEqual(`${baseProps.sectionName} | thenewboston`));
   });
+
   test('expect to have breadcrumb menu rendered from dashboard', () => {
-    const breadCrumbClassFromDashboard = 'DashboardLayout__BreadcrumbMenu';
-    render(<TestComponent />);
-    expect(screen.getByTestId('BreadcrumbMenu')).toHaveClass(breadCrumbClassFromDashboard);
+    render(<DashboardLayout {...baseProps} />, {wrapper: Wrapper});
+
+    expect(screen.getByTestId('BreadcrumbMenu')).toHaveClass('DashboardLayout__BreadcrumbMenu');
   });
+
   test('expect to have proper pageName passed in', () => {
-    const testPageName = 'DashboardTestPageName';
-    render(<TestComponent pageName={testPageName} />);
-    expect(screen.getByTestId('BreadcrumbMenu__navigation')).toHaveTextContent(testPageName);
+    render(<DashboardLayout {...baseProps} />, {wrapper: Wrapper});
+
+    expect(screen.getByTestId('BreadcrumbMenu__navigation')).toHaveTextContent(baseProps.pageName);
   });
+
   test('expect to have proper menuItems passed in', () => {
-    const testText = 'Dummy Text';
-    const testMenuItem = <p>{testText}</p>;
-    render(<TestComponent menuItems={testMenuItem} />);
-    expect(screen.getByTestId('DashboardLayout__left-menu_test').firstChild?.textContent).toEqual(testText);
+    render(<DashboardLayout {...baseProps} />, {wrapper: Wrapper});
+
+    expect(screen.getByTestId('DashboardLayout__left-menu_test').firstChild).toHaveTextContent('Test');
   });
+
   test('expect to have proper children passed in', () => {
-    const testText = 'Dummy Text';
-    const children = <p>{testText}</p>;
-    render(<TestComponent>{children}</TestComponent>);
-    expect(screen.getByTestId('DashboardLayout__main-content_test').firstChild?.textContent).toEqual(testText);
+    render(<DashboardLayout {...baseProps} />, {wrapper: Wrapper});
+
+    expect(screen.getByTestId('DashboardLayout__main-content_test').firstChild).toHaveTextContent('Children');
   });
 });
