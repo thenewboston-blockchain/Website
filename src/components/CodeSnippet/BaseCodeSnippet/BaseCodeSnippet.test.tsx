@@ -25,6 +25,10 @@ describe('RequestResponseSnippet', () => {
     expect(screen.getByText('// Testing')).toBeTruthy();
     expect(screen.getByText('// TNB To the moon')).toBeTruthy();
     expect(screen.getByText("console.log('TNB is heading to the moon');")).toBeTruthy();
+  });
+
+  it('renders with the default obsidian style', () => {
+    render(<BaseCodeSnippet {...baseProps} />);
 
     // distinct style for obsidian in hljs
     expect(screen.getByTestId(baseTestId).style).toHaveProperty('background-color', 'rgb(40, 43, 46)');
@@ -33,6 +37,7 @@ describe('RequestResponseSnippet', () => {
 
   it('renders without crashing when light passed in', () => {
     render(<BaseCodeSnippet {...baseProps} light />);
+
     // distinct style for routeros in hljs
     expect(screen.getByTestId(baseTestId).style).toHaveProperty('background-color', 'rgb(240, 240, 240)');
     expect(screen.getByTestId(baseTestId).style).toHaveProperty('color', 'rgb(68, 68, 68)');

@@ -1,11 +1,12 @@
 import React from 'react';
-import {BrowserRouter as Router} from 'react-router-dom';
+import {Router} from 'react-router-dom';
 import {render, screen, fireEvent} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
+import {createMemoryHistory} from 'history';
 
 import MenuGroup from '.';
 
-const BaseProps = {
+const baseProps = {
   children: (
     <>
       <div>Child 1</div>
@@ -13,24 +14,27 @@ const BaseProps = {
     </>
   ),
   title: 'Test',
-  urlBase: 'Test',
+  urlBase: 'test',
 };
 
 describe('MenuGroup component', () => {
   it('renders without crashing', () => {
+    const history = createMemoryHistory();
     render(
-      <Router>
-        <MenuGroup {...BaseProps} />
+      <Router history={history}>
+        <MenuGroup {...baseProps} />
       </Router>,
     );
 
     expect(screen.getByTestId('MenuGroup')).toBeTruthy();
   });
 
-  it('renders with customTestId "group" without crashing', () => {
+  it('renders with role when passed in', () => {
+    const history = createMemoryHistory();
+    const props = {...baseProps, role: 'group'};
     render(
-      <Router>
-        <MenuGroup role="group" {...BaseProps} />
+      <Router history={history}>
+        <MenuGroup {...props} />
       </Router>,
     );
 
@@ -38,18 +42,20 @@ describe('MenuGroup component', () => {
   });
 
   it('renders with title', () => {
+    const history = createMemoryHistory();
     render(
-      <Router>
-        <MenuGroup {...BaseProps} />
+      <Router history={history}>
+        <MenuGroup {...baseProps} />
       </Router>,
     );
     expect(screen.getByText('Test')).toBeTruthy();
   });
 
-  it('renders with child components', () => {
+  it('renders all the children', () => {
+    const history = createMemoryHistory();
     render(
-      <Router>
-        <MenuGroup {...BaseProps} />
+      <Router history={history}>
+        <MenuGroup {...baseProps} />
       </Router>,
     );
 
@@ -57,10 +63,23 @@ describe('MenuGroup component', () => {
     expect(screen.getByText('Child 2')).toBeTruthy();
   });
 
-  it('renders MenuGroup__toggle', () => {
+  it('renders submenu as expanded when urlBase matches pathname', () => {
+    const history = createMemoryHistory();
+    history.replace('/test');
     render(
-      <Router>
-        <MenuGroup {...BaseProps} />
+      <Router history={history}>
+        <MenuGroup {...baseProps} />
+      </Router>,
+    );
+
+    expect(screen.getByTestId('MenuGroup__submenu')).toHaveClass('MenuGroup__submenu--expanded');
+  });
+
+  it('renders MenuGroup__toggle', () => {
+    const history = createMemoryHistory();
+    render(
+      <Router history={history}>
+        <MenuGroup {...baseProps} />
       </Router>,
     );
 
@@ -69,9 +88,10 @@ describe('MenuGroup component', () => {
   });
 
   it('renders MenuGroup__toggle--expanded when clicked', () => {
+    const history = createMemoryHistory();
     render(
-      <Router>
-        <MenuGroup {...BaseProps} />
+      <Router history={history}>
+        <MenuGroup {...baseProps} />
       </Router>,
     );
 
@@ -81,9 +101,10 @@ describe('MenuGroup component', () => {
   });
 
   it('renders MenuGroup__submenu', () => {
+    const history = createMemoryHistory();
     render(
-      <Router>
-        <MenuGroup {...BaseProps} />
+      <Router history={history}>
+        <MenuGroup {...baseProps} />
       </Router>,
     );
 
@@ -91,9 +112,10 @@ describe('MenuGroup component', () => {
   });
 
   it('renders MenuGroup__submenu--expanded when toggle is clicked', () => {
+    const history = createMemoryHistory();
     render(
-      <Router>
-        <MenuGroup {...BaseProps} />
+      <Router history={history}>
+        <MenuGroup {...baseProps} />
       </Router>,
     );
 
