@@ -38,11 +38,21 @@ const SignIn: FC = () => {
   return (
     <AuthContainer errorMessage={errorMessage} heading="Sign In">
       <Form initialValues={initialValues} onSubmit={handleSubmit} validationSchema={validationSchema}>
-        <FormInput autoComplete="email" label="Email" name="email" placeholder="" />
-        <FormInput autoComplete="current-password" label="Password" name="password" placeholder="" type="password" />
-        <FormButton submitting={false} type="submit">
-          Sign In
-        </FormButton>
+        {({isSubmitting, isValid}) => (
+          <>
+            <FormInput autoComplete="email" label="Email" name="email" placeholder="" />
+            <FormInput
+              autoComplete="current-password"
+              label="Password"
+              name="password"
+              placeholder=""
+              type="password"
+            />
+            <FormButton className="SignIn__submit" submitting={isSubmitting} type="submit" disabled={!isValid}>
+              Sign In
+            </FormButton>
+          </>
+        )}
       </Form>
     </AuthContainer>
   );
