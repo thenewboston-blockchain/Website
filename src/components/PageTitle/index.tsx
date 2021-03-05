@@ -10,19 +10,21 @@ export interface PageTitleProps {
   ogUrl?: string;
 }
 
-export const defaultOgDescription =
-  'Learn to code, collaborate on projects, gain experience, build a community, and earn coins by contributing.';
-export const defaultOgImageUrl = 'https://www.thenewboston.com/logo192.png';
-export const defaultOgType = 'website';
-export const defaultOgUrl = 'https://www.thenewboston.com/';
+export const defaultOg = {
+  description:
+    'Learn to code, collaborate on projects, gain experience, build a community, and earn coins by contributing.',
+  imageUrl: 'https://www.thenewboston.com/logo192.png',
+  type: 'website',
+  url: 'https://www.thenewboston.com/',
+};
 
 const PageTitle: FC<PageTitleProps> = ({
   title,
-  ogDescription = defaultOgDescription,
-  ogImageUrl = defaultOgImageUrl,
+  ogDescription = defaultOg.description,
+  ogImageUrl = defaultOg.imageUrl,
   ogTitle = `${title} | thenewboston`,
-  ogType = defaultOgType,
-  ogUrl = defaultOgUrl,
+  ogType = defaultOg.type,
+  ogUrl = defaultOg.url,
 }) => {
   return (
     <Helmet>
