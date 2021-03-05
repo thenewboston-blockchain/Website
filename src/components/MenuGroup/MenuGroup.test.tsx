@@ -3,45 +3,53 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import {render, screen, fireEvent} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import MenuGroup from './index';
+import MenuGroup from '.';
+
+const BaseProps = {
+  children: (
+    <>
+      <div>Child 1</div>
+      <div>Child 2</div>
+    </>
+  ),
+  title: 'Test',
+  urlBase: 'Test',
+};
 
 describe('MenuGroup component', () => {
-  test('renders without crashing', async () => {
+  it('renders without crashing', () => {
     render(
       <Router>
-        <MenuGroup title="Test" urlBase="Test" />
+        <MenuGroup {...BaseProps} />
       </Router>,
     );
 
     expect(screen.getByTestId('MenuGroup')).toBeTruthy();
   });
 
-  test('renders with customTestId "Custom" without crashing', async () => {
+  it('renders with customTestId "group" without crashing', () => {
     render(
       <Router>
-        <MenuGroup dataTestId="Custom" title="Test" urlBase="Test" />
+        <MenuGroup role="group" {...BaseProps} />
       </Router>,
     );
 
-    expect(screen.getByTestId('Custom')).toBeTruthy();
+    expect(screen.getByRole('group')).toBeTruthy();
   });
 
-  test('renders with title', async () => {
+  it('renders with title', () => {
     render(
       <Router>
-        <MenuGroup title="Test" urlBase="Test" />
+        <MenuGroup {...BaseProps} />
       </Router>,
     );
     expect(screen.getByText('Test')).toBeTruthy();
   });
 
-  test('renders with child components', async () => {
+  it('renders with child components', () => {
     render(
       <Router>
-        <MenuGroup title="Test" urlBase="Test">
-          <div>Child 1</div>
-          <div>Child 2</div>
-        </MenuGroup>
+        <MenuGroup {...BaseProps} />
       </Router>,
     );
 
@@ -49,10 +57,10 @@ describe('MenuGroup component', () => {
     expect(screen.getByText('Child 2')).toBeTruthy();
   });
 
-  test('renders MenuGroup__toggle', async () => {
+  it('renders MenuGroup__toggle', () => {
     render(
       <Router>
-        <MenuGroup title="Test" urlBase="Test" />
+        <MenuGroup {...BaseProps} />
       </Router>,
     );
 
@@ -60,10 +68,10 @@ describe('MenuGroup component', () => {
     expect(screen.getByTestId('MenuGroup__toggle')).toHaveClass('MenuGroup__toggle');
   });
 
-  test('renders MenuGroup__toggle--expanded when clicked', async () => {
+  it('renders MenuGroup__toggle--expanded when clicked', () => {
     render(
       <Router>
-        <MenuGroup title="Test" urlBase="Test" />
+        <MenuGroup {...BaseProps} />
       </Router>,
     );
 
@@ -72,20 +80,20 @@ describe('MenuGroup component', () => {
     expect(toggle).toHaveClass('MenuGroup__toggle--expanded');
   });
 
-  test('renders MenuGroup__submenu', async () => {
+  it('renders MenuGroup__submenu', () => {
     render(
       <Router>
-        <MenuGroup title="Test" urlBase="Test" />
+        <MenuGroup {...BaseProps} />
       </Router>,
     );
 
     expect(screen.getByTestId('MenuGroup__submenu')).toBeTruthy();
   });
 
-  test('renders MenuGroup__submenu--expanded when toggle is clicked', async () => {
+  it('renders MenuGroup__submenu--expanded when toggle is clicked', () => {
     render(
       <Router>
-        <MenuGroup title="Test" urlBase="Test" />
+        <MenuGroup {...BaseProps} />
       </Router>,
     );
 
