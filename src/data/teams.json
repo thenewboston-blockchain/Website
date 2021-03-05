@@ -1,6 +1,6 @@
 [
   {
-    "title": "Javascript SDK",
+    "title": "JavaScript SDK",
     "description": "Build and maintain a JavaScript library for thenewboston.",
     "platforms": [
       {
@@ -10,7 +10,7 @@
       },
       {
         "name": "slack",
-        "label": "back-end",
+        "label": "thenewboston-js",
         "link": ""
       }
     ],
@@ -1352,33 +1352,33 @@
           "profileImage": "https://avatars3.githubusercontent.com/u/32111172?s=460&u=274388e47550c045abc5496b9f25485123634715&v=4",
           "slackUsername": "Moon"
         }
-    },
-    {
-      "title": "Reddit Moderator",
-      "isLead": false,
-      "payPerDay": 2800,
-      "createdDate": "2021-02-28T02:14:59.307535Z",
-      "contributor": {
+      },
+      {
+        "title": "Reddit Moderator",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2021-02-28T02:14:59.307535Z",
+        "contributor": {
           "contributorId": "45",
           "displayName": "Dushko Manev",
           "githubUsername": "manevdusko",
           "profileImage": "https://avatars.githubusercontent.com/u/37742873?v=4",
           "slackUsername": "Dushko Manev"
+        }
+      },
+      {
+        "title": "Reddit Moderator",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "48",
+          "displayName": "Milena Gligorova",
+          "githubUsername": "MilenaGligorova",
+          "profileImage": "https://avatars.githubusercontent.com/u/79817275?v=4",
+          "slackUsername": "Milena Gligorova"
+        }
       }
-    },
-    {
-      "title": "Reddit Moderator",
-      "isLead": false,
-      "payPerDay": 2800,
-      "createdDate": "2020-07-08T02:14:59.307535Z",
-      "contributor": {
-        "contributorId": "48",
-        "displayName": "Milena Gligorova",
-        "githubUsername": "MilenaGligorova",
-        "profileImage": "https://avatars.githubusercontent.com/u/79817275?v=4",
-        "slackUsername": "Milena Gligorova"
-      }
-    }
     ],
     "responsibilities": [
       {
