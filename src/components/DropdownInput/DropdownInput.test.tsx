@@ -5,7 +5,7 @@ import '@testing-library/jest-dom/extend-expect';
 import DropdownInput from '.';
 
 const BaseProps = {
-  callbackOnChange: () => {},
+  callbackOnChange: jest.fn(),
   defaultOption: 'first',
   options: ['first', 'second'],
 };
@@ -63,5 +63,17 @@ describe('DropdownInput component', () => {
 
     expect(screen.queryByDisplayValue('first')).toBeFalsy();
     expect(screen.queryByDisplayValue('second')).toBeTruthy();
+  });
+
+  test('ensure callbackOnChange is called once', () => {
+    render(<DropdownInput {...BaseProps} />);
+
+    fireEvent.change(screen.getByTestId('DropdownInput__select-box'), {
+      target: {
+        value: 'second',
+      },
+    });
+
+    expect(BaseProps.callbackOnChange).toBeCalledTimes(1);
   });
 });
