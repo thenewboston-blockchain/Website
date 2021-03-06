@@ -9,6 +9,7 @@ export enum TeamName {
   discordManagers = 'Discord Managers',
   dotnetCore = '.NET Core',
   frontEndDevelopers = 'Front-End Developers',
+  javaScriptSDK = 'JavaScript SDK',
   kotlinSDK = 'Kotlin SDK',
   marketing = 'Marketing',
   newUserOperations = 'New User Operations',
