@@ -190,8 +190,8 @@ export const guideNavigationData = [
     url: '/guide/root-account-file',
   },
   {
-    name: 'Banks',
-    url: '/guide/banks',
+    name: 'Nodes',
+    url: '/guide/nodes',
   },
   {
     name: 'Validators',

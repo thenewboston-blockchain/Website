@@ -6,7 +6,6 @@ import {guideNavigationData} from 'components/DocsMenuItems';
 import {PageData, PageDataObject} from 'types/page-data';
 
 import GuideAccounts from './GuideAccounts';
-import GuideBanks from './GuideBanks';
 import GuideBestPractices from './GuideBestPractices';
 import GuideBlocks from './GuideBlocks';
 import GuideConfirmationServices from './GuideConfirmationServices';
@@ -14,6 +13,7 @@ import GuideConfirmationValidators from './GuideConfirmationValidators';
 import GuideFutureDevelopment from './GuideFutureDevelopment';
 import GuideIntroduction from './GuideIntroduction';
 import GuideNodeIdentifier from './GuideNodeIdentifier';
+import GuideNodes from './GuideNodes';
 import GuideResyncProcess from './GuideResyncProcess';
 import GuideResyncTriggers from './GuideResyncTriggers';
 import GuideRootAccountFile from './GuideRootAccountFile';
@@ -30,10 +30,6 @@ const pageData: PageDataObject = {
   accounts: {
     content: <GuideAccounts />,
     name: 'Accounts',
-  },
-  banks: {
-    content: <GuideBanks />,
-    name: 'Banks',
   },
   'best-practices': {
     content: <GuideBestPractices />,
@@ -62,6 +58,10 @@ const pageData: PageDataObject = {
   'node-identifiers': {
     content: <GuideNodeIdentifier />,
     name: 'Node Identifiers',
+  },
+  nodes: {
+    content: <GuideNodes />,
+    name: 'Nodes',
   },
   'resync-process': {
     content: <GuideResyncProcess />,
