@@ -63,8 +63,10 @@ describe('DocContainer Component', () => {
     render(<DocContainer {...baseProps} />);
     const {lastUpdated} = baseProps;
 
-    expect(lastUpdated).toMatch(/^(([0-9]|[0-2][0-9]|[3][0-1]) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (20[0-9][0-9]))$/);
-    expect(screen.getAllByText(`Updated on ${lastUpdated}`))
+    expect(lastUpdated).toMatch(
+      /^(([0-9]|[0-2][0-9]|[3][0-1]) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (20[0-9][0-9]))$/,
+    );
+    expect(screen.getAllByText(`Updated on ${lastUpdated}`));
   });
 
   it('renders with title passed in', () => {
