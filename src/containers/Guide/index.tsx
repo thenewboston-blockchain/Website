@@ -7,9 +7,9 @@ import {PageData, PageDataObject} from 'types/page-data';
 
 import GuideAccounts from './GuideAccounts';
 import GuideBestPractices from './GuideBestPractices';
+import GuideBlockchainArchitecture from './GuideBlockchainArchitecture';
 import GuideBlocks from './GuideBlocks';
 import GuideConfirmationServices from './GuideConfirmationServices';
-import GuideConfirmationValidators from './GuideConfirmationValidators';
 import GuideFutureDevelopment from './GuideFutureDevelopment';
 import GuideIntroduction from './GuideIntroduction';
 import GuideNodeIdentifier from './GuideNodeIdentifier';
@@ -19,7 +19,6 @@ import GuideResyncTriggers from './GuideResyncTriggers';
 import GuideRootAccountFile from './GuideRootAccountFile';
 import GuideTransactionFees from './GuideTransactionFees';
 import GuideTrust from './GuideTrust';
-import GuideValidators from './GuideValidators';
 
 const defaultPageData: PageData = {
   content: <Redirect to="/guide/introduction" />,
@@ -35,6 +34,10 @@ const pageData: PageDataObject = {
     content: <GuideBestPractices />,
     name: 'Best Practices',
   },
+  'blockchain-architecture': {
+    content: <GuideBlockchainArchitecture />,
+    name: 'Blockchain Architecture',
+  },
   blocks: {
     content: <GuideBlocks />,
     name: 'Blocks',
@@ -42,10 +45,6 @@ const pageData: PageDataObject = {
   'confirmation-services': {
     content: <GuideConfirmationServices />,
     name: 'Confirmation Services',
-  },
-  'confirmation-validators': {
-    content: <GuideConfirmationValidators />,
-    name: 'Confirmation Validators',
   },
   'future-development': {
     content: <GuideFutureDevelopment />,
@@ -82,10 +81,6 @@ const pageData: PageDataObject = {
   trust: {
     content: <GuideTrust />,
     name: 'Trust',
-  },
-  validators: {
-    content: <GuideValidators />,
-    name: 'Validators',
   },
 };
 
