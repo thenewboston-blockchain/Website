@@ -1,6 +1,6 @@
 import React, {FC, ReactNode} from 'react';
 
-import {DocContainer, DocList, TableVertical} from 'components';
+import {DocContainer, DocList, DocSubHeader, TableVertical} from 'components';
 
 import './GovernanceRatesAndAmounts.scss';
 
@@ -8,7 +8,7 @@ const GovernanceRatesAndAmounts: FC = () => {
   const renderConversionRates = (): ReactNode => {
     return (
       <>
-        <h3 className="GovernanceRatesAndAmounts__sub-heading">Conversion Rates</h3>
+        <DocSubHeader>Conversion Rates</DocSubHeader>
         <TableVertical
           altColors
           className="GovernanceRatesAndAmounts__TableVertical"
@@ -24,7 +24,7 @@ const GovernanceRatesAndAmounts: FC = () => {
   const renderLockedCoinsAndBoost = (): ReactNode => {
     return (
       <>
-        <h3 className="GovernanceRatesAndAmounts__sub-heading">Locked Coins &amp; Boosts</h3>
+        <DocSubHeader>Locked Coins &amp; Boosts</DocSubHeader>
         <TableVertical
           altColors
           className="GovernanceRatesAndAmounts__TableVertical"
@@ -43,7 +43,7 @@ const GovernanceRatesAndAmounts: FC = () => {
   const renderPoints = (): ReactNode => {
     return (
       <>
-        <h3 className="GovernanceRatesAndAmounts__sub-heading">Points</h3>
+        <DocSubHeader>Points</DocSubHeader>
         <TableVertical
           altColors
           className="GovernanceRatesAndAmounts__TableVertical"
@@ -61,7 +61,7 @@ const GovernanceRatesAndAmounts: FC = () => {
   const renderUsernamesAndVotes = (): ReactNode => {
     return (
       <>
-        <h3 className="GovernanceRatesAndAmounts__sub-heading">Usernames &amp; Votes</h3>
+        <DocSubHeader>Usernames &amp; Votes</DocSubHeader>
         <TableVertical
           altColors
           className="GovernanceRatesAndAmounts__TableVertical"
@@ -82,14 +82,14 @@ const GovernanceRatesAndAmounts: FC = () => {
       {renderLockedCoinsAndBoost()}
       {renderPoints()}
 
-      <h3 className="GovernanceRatesAndAmounts__sub-heading">Treasury Board</h3>
+      <DocSubHeader>Treasury Board</DocSubHeader>
       <DocList className="GovernanceRatesAndAmounts__DocList" variant="ul">
         <li>Beta - 3 members</li>
         <li>By launch - 5 members</li>
         <li>Minting coins - 50% or more signatures required</li>
       </DocList>
 
-      <h3 className="GovernanceRatesAndAmounts__sub-heading">Government</h3>
+      <DocSubHeader>Government</DocSubHeader>
       <DocList className="GovernanceRatesAndAmounts__DocList" variant="ul">
         <li>Beta - 8 members</li>
         <li>By launch - 20 members</li>
@@ -100,7 +100,7 @@ const GovernanceRatesAndAmounts: FC = () => {
         </li>
       </DocList>
 
-      <h3 className="GovernanceRatesAndAmounts__sub-heading">Nodes</h3>
+      <DocSubHeader>Nodes</DocSubHeader>
       <DocList className="GovernanceRatesAndAmounts__DocList" variant="ul">
         <li>Beta - 8 nodes</li>
         <li>By launch - 20 nodes</li>
