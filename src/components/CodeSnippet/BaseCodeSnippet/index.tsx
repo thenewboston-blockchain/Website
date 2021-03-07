@@ -11,16 +11,21 @@ export enum SnippetLang {
   typescript = 'typescript',
 }
 
-interface ComponentProps {
+export interface BaseCodeSnippetProps {
   code: string;
   language: SnippetLang;
   light?: boolean;
   showLineNumbers?: boolean;
 }
 
-const BaseCodeSnippet: FC<ComponentProps> = ({code, language, light = false, showLineNumbers = true}) => {
+const BaseCodeSnippet: FC<BaseCodeSnippetProps> = ({code, language, light = false, showLineNumbers = true}) => {
   return (
-    <SyntaxHighlighter language={language} showLineNumbers={showLineNumbers} style={light ? routeros : obsidian}>
+    <SyntaxHighlighter
+      language={language}
+      showLineNumbers={showLineNumbers}
+      style={light ? routeros : obsidian}
+      data-testid="BaseCodeSnippet"
+    >
       {code}
     </SyntaxHighlighter>
   );

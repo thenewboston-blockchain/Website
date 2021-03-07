@@ -4,6 +4,7 @@ import {TeamName} from 'types/teams';
 export const TeamPathname = {
   all: 'All',
   backEndDevelopers: 'Back-End-Developers',
+  blog: 'Blog',
   communications: 'Communications',
   community: 'Community',
   design: 'Design',
@@ -11,6 +12,7 @@ export const TeamPathname = {
   discordManagers: 'Discord-Managers',
   dotnetCore: 'NET-Core',
   frontEndDevelopers: 'Front-End-Developers',
+  javaScriptSDK: 'JavaScript-SDK',
   kotlinSDK: 'Kotlin-SDK',
   marketing: 'Marketing',
   newUserOperations: 'New-User-Operations',
@@ -26,6 +28,7 @@ export const TeamPathname = {
 export const TEAMS: NavOption[] = [
   {pathname: TeamPathname.all, title: TeamName.all},
   {pathname: TeamPathname.backEndDevelopers, title: TeamName.backEndDevelopers},
+  {pathname: TeamPathname.blog, title: TeamName.blog},
   {pathname: TeamPathname.communications, title: TeamName.communications},
   {pathname: TeamPathname.community, title: TeamName.community},
   {pathname: TeamPathname.design, title: TeamName.design},
@@ -33,6 +36,7 @@ export const TEAMS: NavOption[] = [
   {pathname: TeamPathname.discordManagers, title: TeamName.discordManagers},
   {pathname: TeamPathname.dotnetCore, title: TeamName.dotnetCore},
   {pathname: TeamPathname.frontEndDevelopers, title: TeamName.frontEndDevelopers},
+  {pathname: TeamPathname.javaScriptSDK, title: TeamName.javaScriptSDK},
   {pathname: TeamPathname.kotlinSDK, title: TeamName.kotlinSDK},
   {pathname: TeamPathname.marketing, title: TeamName.marketing},
   {pathname: TeamPathname.newUserOperations, title: TeamName.newUserOperations},

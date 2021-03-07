@@ -1,3 +1,8 @@
+// https://reactjs.org/docs/javascript-environment-requirements.html
+import 'core-js/es/map';
+import 'core-js/es/set';
+import 'raf/polyfill';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Flip, ToastContainer} from 'react-toastify';

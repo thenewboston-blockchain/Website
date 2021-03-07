@@ -2,11 +2,28 @@ $dropdown-height: 316px;
 $mobile-dropdown-height: 1000px;
 $top-nav-height: 60px;
 
+@keyframes transitionBackground {
+  from {
+    backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(255, 255, 255, 0.8);
+  }
+  to {
+    backdrop-filter: unset;
+    background: var(--color-white);
+  }
+}
+
 .TopNav {
   align-items: center;
   display: flex;
   height: $top-nav-height;
   justify-content: space-between;
+
+  @media (min-width: 1366px) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1366px;
+  }
 
   &__left {
     align-items: center;
@@ -20,5 +37,14 @@ $top-nav-height: 60px;
   &__right {
     align-items: center;
     display: flex;
+  }
+
+  &__wrapper {
+    backdrop-filter: saturate(180%) blur(20px);
+    background: rgba(255, 255, 255, 0.8);
+
+    &--mobile-menu-open {
+      animation: transitionBackground 0.3s forwards;
+    }
   }
 }

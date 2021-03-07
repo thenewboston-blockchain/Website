@@ -10,7 +10,7 @@ interface ComponentProps {
 }
 
 const Loader: FC<ComponentProps> = ({className}) => {
-  return <Icon className={clsx('Loader', className)} icon={IconType.loading} size={15.35} />;
+  return <Icon className={clsx('Loader', className)} icon={IconType.loading} size={15.35} dataTestId="Loader" />;
 };
 
 export default memo(Loader);

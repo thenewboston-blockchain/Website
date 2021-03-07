@@ -27,7 +27,12 @@ interface ComponentProps {
 
 const MarketingButton: FC<ComponentProps> = ({className, customLink, website}) => {
   const renderImage = (src: any) => (
-    <img alt={website} className={clsx('MarketingButton__img', {...bemify(className, '__img')})} src={src} />
+    <img
+      alt={website}
+      className={clsx('MarketingButton__img', {...bemify(className, '__img')})}
+      data-testid="MarketingButton__img"
+      src={src}
+    />
   );
 
   const images = {
@@ -44,7 +49,11 @@ const MarketingButton: FC<ComponentProps> = ({className, customLink, website}) =
   };
 
   return (
-    <A className={clsx('MarketingButton', className)} href={customLink || socialMediaUrls[website]}>
+    <A
+      className={clsx('MarketingButton', className)}
+      dataTestId="MarketingButton"
+      href={customLink || socialMediaUrls[website]}
+    >
       {images[website]}
     </A>
   );
