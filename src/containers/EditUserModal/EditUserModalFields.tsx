@@ -14,7 +14,7 @@ export type FormValues = typeof initialValues;
 const EditUserModalFields: FC = () => {
   return (
     <>
-      <FormInput label="Display Name" name="displayName" required />
+      <FormInput label="Display Name" name="displayName" focused required />
       <FormInput label="Github Username" name="githubUsername" />
       <FormInput label="Slack Name" name="slackName" />
       <FormTextArea label="Account Number" name="accountNumber" />
