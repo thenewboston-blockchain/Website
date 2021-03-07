@@ -198,20 +198,8 @@ export const guideNavigationData = [
     url: '/guide/blockchain-architecture',
   },
   {
-    name: 'Confirmation Services',
-    url: '/guide/confirmation-services',
-  },
-  {
     name: 'Node Identifiers',
     url: '/guide/node-identifiers',
-  },
-  {
-    name: 'Resync Triggers',
-    url: '/guide/resync-triggers',
-  },
-  {
-    name: 'Resync Process',
-    url: '/guide/resync-process',
   },
   {
     name: 'Trust',
@@ -220,10 +208,6 @@ export const guideNavigationData = [
   {
     name: 'Best Practices',
     url: '/guide/best-practices',
-  },
-  {
-    name: 'Future Development',
-    url: '/guide/future-development',
   },
 ];
 

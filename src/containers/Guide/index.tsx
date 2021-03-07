@@ -9,13 +9,9 @@ import GuideAccounts from './GuideAccounts';
 import GuideBestPractices from './GuideBestPractices';
 import GuideBlockchainArchitecture from './GuideBlockchainArchitecture';
 import GuideBlocks from './GuideBlocks';
-import GuideConfirmationServices from './GuideConfirmationServices';
-import GuideFutureDevelopment from './GuideFutureDevelopment';
 import GuideIntroduction from './GuideIntroduction';
 import GuideNodeIdentifier from './GuideNodeIdentifier';
 import GuideNodes from './GuideNodes';
-import GuideResyncProcess from './GuideResyncProcess';
-import GuideResyncTriggers from './GuideResyncTriggers';
 import GuideRootAccountFile from './GuideRootAccountFile';
 import GuideTransactionFees from './GuideTransactionFees';
 import GuideTrust from './GuideTrust';
@@ -42,14 +38,6 @@ const pageData: PageDataObject = {
     content: <GuideBlocks />,
     name: 'Blocks',
   },
-  'confirmation-services': {
-    content: <GuideConfirmationServices />,
-    name: 'Confirmation Services',
-  },
-  'future-development': {
-    content: <GuideFutureDevelopment />,
-    name: 'Future Development',
-  },
   introduction: {
     content: <GuideIntroduction />,
     name: 'Introduction',
@@ -61,14 +49,6 @@ const pageData: PageDataObject = {
   nodes: {
     content: <GuideNodes />,
     name: 'Nodes',
-  },
-  'resync-process': {
-    content: <GuideResyncProcess />,
-    name: 'Resync Process',
-  },
-  'resync-triggers': {
-    content: <GuideResyncTriggers />,
-    name: 'Resync Triggers',
   },
   'root-account-file': {
     content: <GuideRootAccountFile />,
