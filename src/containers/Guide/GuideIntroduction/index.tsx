@@ -17,19 +17,20 @@ const GuideIntroduction: FC = () => {
           'Signature',
           'Unique value used to verify the authenticity of a digital document (included with every block to prove that the account owner has authorized the related transactions)',
         ],
-        ['Bank', 'A network server that has several responsibilities such as electing a validator and routing blocks'],
-        ['Bank Block', 'A block that the bank has signed'],
         [
-          'Validator',
-          'A central server that accepts blocks from multiple banks and after successful validation/confirmation of each block, creates a new confirmation block which is added to the blockchain',
+          'Node',
+          'A network server that has several responsibilities such as routing blocks and transaction validation',
         ],
-        ['Node', 'Any network server (Bank or Validator)'],
+        ['Node Block', 'A block that a node has signed to indicate that it conforms to network protocol'],
         [
-          'Confirmation Block',
-          'Often referred to as a "confirmation," a block that a validator signs as confirmation that it has been added to their blockchain; indicates that the transactions have been validated and that the coins have been successfully transferred',
+          'Primary Validator (PV)',
+          'A designated node that accepts blocks from other nodes and after successful validation/confirmation of each block, creates a new confirmation block which is added to the blockchain',
         ],
-        ['Blockchain', 'An ordered list of confirmation blocks'],
-        ['Root Account File', 'A historic record (snapshot) of all account balances at a given point in time'],
+        [
+          'Confirmation',
+          'A block that a node signs as confirmation that it has been added to their blockchain; indicates that the transactions have been validated and that the coins have been successfully transferred',
+        ],
+        ['Blockchain', 'An ordered list of confirmations'],
       ]}
     />
   );
@@ -38,18 +39,15 @@ const GuideIntroduction: FC = () => {
     return (
       <>
         <p>
-          This documentation will outline the foundation of a trust-based distributed architecture on which our network
-          is built upon. This architecture offers an efficient yet scalable peer-to-peer consensus mechanism through the
-          election of a primary validation node by a distributed network of trusted nodes, where the amount of trust is
-          quantified solely by human judgment.
+          This documentation will outline an efficient yet scalable peer-to-peer consensus mechanism that allows for
+          highly performant transaction validation within a decentralized network.
         </p>
         <p>
           The architecture is based on the idea that when building a distributed payment ledger, it is not the
           transaction processing itself that requires distribution across multiple servers. This often results in
           duplicate work being done by several network nodes, causing an inherent inefficiency in the system. It is
           rather the ability to elect fairly a single validation server and consensual acceptance of the produced
-          results that require distribution among peers. This allows for highly performant transaction validation within
-          a decentralized network.
+          results that require distribution among peers.
         </p>
       </>
     );
@@ -61,7 +59,7 @@ const GuideIntroduction: FC = () => {
       introSection={renderIntro()}
       introTitle="Introduction"
       title="Overview"
-      lastUpdated="07 Dec 2020"
+      lastUpdated="06 Mar 2021"
     >
       <p>
         The system has many components, each of which plays a specific role in allowing the transfer of coins (the
@@ -71,15 +69,15 @@ const GuideIntroduction: FC = () => {
 
       {renderGlossary()}
 
-      <DocImage alt="Overview Diagram" maxWidth={720} src={OverviewDiagram} />
+      <DocImage alt="Overview Diagram" maxWidth={900} src={OverviewDiagram} />
 
       <p>
         All transactions on the network will begin with a user account. The owner of the account will create a block (a
         group of transactions), indicating the number of coins they would like to send to each recipient, and then send
-        that block to their bank. The bank will then forward the block (now a bank block) along to the validator which,
-        upon successful validation of the transaction, appends it onto the blockchain while updating account balances.
-        There are several key differences between the network structure outlined above and the traditional Blockchain
-        architecture regarding the creation of a distributed public ledger.
+        that block to their node. The node will then forward the block (now a node block) to the primary validator
+        which, upon successful validation of the transaction, appends it onto the blockchain while updating account
+        balances. There are several key differences between the network structure outlined above and the traditional
+        Blockchain architecture regarding the creation of a distributed public ledger.
       </p>
       <p>
         An inherent defect in modern Blockchain architecture is the inefficient composition of blocks. Blocks in the
