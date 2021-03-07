@@ -7,7 +7,17 @@ import ContributorTasks from './ContributorTasks';
 import CopyableAccountNumber from './CopyableAccountNumber';
 import DashboardLayout from './DashboardLayout';
 import DocsMenuItems from './DocsMenuItems';
-import {DocContainer, DocEndpoint, DocImage, DocInlineCode, DocList, DocSubSection} from './DocWrapper';
+import {
+  CalloutType,
+  DocCallout,
+  DocContainer,
+  DocEndpoint,
+  DocImage,
+  DocInlineCode,
+  DocList,
+  DocSubHeader,
+  DocSubSection,
+} from './DocWrapper';
 import DropdownInput from './DropdownInput';
 import EmptyPage from './EmptyPage';
 import FlatNavLinks from './FlatNavLinks';
@@ -44,15 +54,18 @@ export {
   Avatar,
   BreadcrumbMenu,
   Button,
+  CalloutType,
   CodeSnippet,
   ContributorTasks,
   CopyableAccountNumber,
   DashboardLayout,
+  DocCallout,
   DocContainer,
   DocEndpoint,
   DocImage,
   DocInlineCode,
   DocList,
+  DocSubHeader,
   DocSubSection,
   DocsMenuItems,
   DropdownInput,
