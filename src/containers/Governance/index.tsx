@@ -11,6 +11,7 @@ import GovernanceElectionProcess from './GovernanceElectionProcess';
 import GovernanceLockedCoinsAndBoosting from './GovernanceLockedCoinsAndBoosting';
 import GovernanceOverview from './GovernanceOverview';
 import GovernancePointsAndRefillLogic from './GovernancePointsAndRefillLogic';
+import GovernanceRatesAndAmounts from './GovernanceRatesAndAmounts';
 import GovernanceUsernamesAndVotes from './GovernanceUsernamesAndVotes';
 
 const defaultPageData: PageData = {
@@ -42,6 +43,10 @@ const pageData: PageDataObject = {
   'points-and-refill-logic': {
     content: <GovernancePointsAndRefillLogic />,
     name: 'Points & Refill Logic',
+  },
+  'rates-and-amounts': {
+    content: <GovernanceRatesAndAmounts />,
+    name: 'Rates & Amounts',
   },
   'usernames-and-votes': {
     content: <GovernanceUsernamesAndVotes />,

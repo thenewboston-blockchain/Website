@@ -23,6 +23,7 @@ const GovernanceOverview: FC = () => {
       />
     );
   };
+
   return (
     <DocContainer className="GovernanceOverview" title="Overview" lastUpdated="07 Mar 2021">
       <p>

@@ -166,6 +166,10 @@ export const governanceNavigationData = [
     name: 'Budgets',
     url: '/governance/budgets',
   },
+  {
+    name: 'Rates & Amounts',
+    url: '/governance/rates-and-amounts',
+  },
 ];
 
 export const guideNavigationData = [

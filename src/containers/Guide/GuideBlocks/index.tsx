@@ -4,7 +4,8 @@ import {A, DocContainer, DocImage, DocList, TableBorderGrid} from 'components';
 
 import BalanceLockAndKey from './BalanceLockAndKey.png';
 import BlockDetails from './BlockDetails.png';
-import './Blocks.scss';
+
+import './GuideBlocks.scss';
 
 const GuideBlocks: FC = () => {
   return (
