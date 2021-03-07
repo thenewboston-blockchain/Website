@@ -4,13 +4,9 @@ import {DocContainer, DocImage, DocList} from 'components';
 
 import ApplicationAndElectionProcess from './ApplicationAndElectionProcess.png';
 
-const GovernanceApplicationAndElectionProcess: FC = () => {
+const GovernanceElectionProcess: FC = () => {
   return (
-    <DocContainer
-      className="GovernanceApplicationAndElectionProcess"
-      title="Application & Election Process"
-      lastUpdated="15 Feb 2021"
-    >
+    <DocContainer className="GovernanceElectionProcess" title="Election Process" lastUpdated="07 Mar 2021">
       <p>
         Registered users can use points to apply for government positions. Once an application is submitted all
         registered users (excluding the candidate) can begin voting for that candidate. The top X candidates will be
@@ -18,20 +14,18 @@ const GovernanceApplicationAndElectionProcess: FC = () => {
         responsible for minting new coins.
       </p>
 
-      <DocImage alt="app;icationandelectionprocess" maxWidth={720} src={ApplicationAndElectionProcess} />
+      <DocImage alt="application and election process" maxWidth={560} src={ApplicationAndElectionProcess} />
 
       <p>
         The voting process is an ongoing process. Throughout the voting process, users can change or remove their vote
         at any time. Once a member of government has been elected, they will remain seated until bumped out by a higher
         voted applicant.
       </p>
-
       <p>
         All network actions including applying for government positions, updating applications, voting for applicants,
         etc… require the use of points. All actions and voting records will be publicly visible and stored on the
         blockchain.
       </p>
-
       <p>No government actions can be taken until the following requirements are met:</p>
 
       <DocList variant="ol">
@@ -42,4 +36,4 @@ const GovernanceApplicationAndElectionProcess: FC = () => {
   );
 };
 
-export default GovernanceApplicationAndElectionProcess;
+export default GovernanceElectionProcess;

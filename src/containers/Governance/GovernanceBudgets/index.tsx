@@ -6,7 +6,7 @@ import Budgets from './Budgets.png';
 
 const GovernanceBudgets: FC = () => {
   return (
-    <DocContainer className="GovernanceBudgets" title="Budgets" lastUpdated="15 Feb 2021">
+    <DocContainer className="GovernanceBudgets" title="Budgets" lastUpdated="07 Mar 2021">
       <p>
         The existing Treasury will be burnt in favor of an updated minting process by the Treasury Board. Minted coins
         will be deposited into a budget (account) collectively managed by all members of government.
@@ -16,7 +16,7 @@ const GovernanceBudgets: FC = () => {
         similar to a multisig transaction.
       </p>
 
-      <DocImage alt="budgets" maxWidth={720} src={Budgets} />
+      <DocImage alt="budgets" maxWidth={760} src={Budgets} />
     </DocContainer>
   );
 };

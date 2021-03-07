@@ -5,9 +5,9 @@ import {DocContainer, DocImage, DocList} from 'components';
 import BlockchainArchitecture from './BlockchainArchitecture.png';
 import BlockchainSync from './BlockchainSync.png';
 
-const GuideConfirmationValidators: FC = () => {
+const GuideBlockchainArchitecture: FC = () => {
   return (
-    <DocContainer className="GuideConfirmationValidators" title="Blockchain Architecture" lastUpdated="06 Mar 2021">
+    <DocContainer className="GuideBlockchainArchitecture" title="Blockchain Architecture" lastUpdated="06 Mar 2021">
       <p>
         Every PV will provide three important pieces of data that all nodes will use to validate all network
         transactions:
@@ -21,9 +21,8 @@ const GuideConfirmationValidators: FC = () => {
         <li>Root account file hash</li>
         <ul>
           <li>
-            After downloading the root account file from the primary validator, confirmation validators will hash their
-            downloaded copy and compare it to the root account file hash provided by the primary validator to ensure the
-            values match
+            After downloading the root account file from the PV, nodes will hash their downloaded copy and compare it to
+            the root account file hash provided by the primary validator to ensure the values match
           </li>
           <li>This process is used to ensure that data integrity is maintained during the download process</li>
         </ul>
@@ -35,7 +34,7 @@ const GuideConfirmationValidators: FC = () => {
         <li>Head block hash</li>
         <ul>
           <li>Value representing the message hash of the primary validator's most recently verified block</li>
-          <li>Used by the confirmation validators to know when syncing is complete</li>
+          <li>Used by the nodes to indicate when syncing is complete</li>
         </ul>
       </DocList>
 
@@ -82,4 +81,4 @@ const GuideConfirmationValidators: FC = () => {
   );
 };
 
-export default GuideConfirmationValidators;
+export default GuideBlockchainArchitecture;

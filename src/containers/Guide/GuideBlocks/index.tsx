@@ -4,7 +4,8 @@ import {A, DocContainer, DocImage, DocList, TableBorderGrid} from 'components';
 
 import BalanceLockAndKey from './BalanceLockAndKey.png';
 import BlockDetails from './BlockDetails.png';
-import './Blocks.scss';
+
+import './GuideBlocks.scss';
 
 const GuideBlocks: FC = () => {
   return (
@@ -18,8 +19,8 @@ const GuideBlocks: FC = () => {
       <TableBorderGrid
         rows={[
           ['Coins being sent to Brian', '100'],
-          ['Bank fees', <span className="GuideBlocks__text-light">2</span>],
-          ['Validator fees', <span className="GuideBlocks__text-light">1</span>],
+          ['Node fee', <span className="GuideBlocks__text-light">2</span>],
+          ['PV fee', <span className="GuideBlocks__text-light">1</span>],
           ['Total', '103'],
         ]}
       />
@@ -44,8 +45,8 @@ const GuideBlocks: FC = () => {
         <li>The block is not being validated more than once.</li>
         <ol type="a">
           <li>
-            This is critical for preventing banks and validators from sending or validating the same block multiple
-            times in the attempt to collect additional transaction fees
+            This is critical for preventing nodes from validating the same block multiple times in the attempt to
+            collect additional transaction fees
           </li>
         </ol>
       </DocList>
