@@ -29,6 +29,7 @@ const SignIn: FC = () => {
       setSubmitting(false);
       history.push(`/users/${data.user.pk}`);
     } catch (error) {
+      setSubmitting(false);
       setErrorMessage(formatAPIError(error));
     }
   };
