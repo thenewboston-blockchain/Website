@@ -133,7 +133,7 @@ const GuideIntroduction: FC = () => {
         so, we construct blocks that group related transactions only. (Transactions here refer to sets of transactions
         that must be processed together.) For details, see <NavLink to="/guide/blocks">Blocks</NavLink>.
       </p>
-      <DocSubHeader>Why it matters</DocSubHeader>
+      <DocSubHeader>Summary</DocSubHeader>
       <p>
         When implemented correctly, these improvements, along with others discussed throughout this documentation,
         reduce the overall energy consumption and processing power required by the network. This increased efficiency

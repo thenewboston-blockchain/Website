@@ -94,15 +94,14 @@ const GuideBlocks: FC = () => {
       </p>
 
       <DocImage alt="balance lock and key" maxWidth={1400} src={BalanceLockAndKey} />
-
-      <p>
+      <DocCallout type={CalloutType.note}>
         There is one exception to the method in which balance locks are determined. Usually, the hash value of the
         account owner's last sent block message determines the account's balance lock. This, however, leaves out the
         scenario in which the account owner must access their coin balance for the very first time before a block has
         ever been sent. This occurs when a separate user has sent funds to an account for the very first time, but
         before that recipient sends any coins (signs any blocks) themselves. Here, the balance lock for the account will
         be the recipient's account number.
-      </p>
+      </DocCallout>
       <p>So, the following two rules outline how balance locks are determined:</p>
       <DocList variant="ul">
         <li>If an owner has never sent coins before, the balance lock is equal to their account number.</li>

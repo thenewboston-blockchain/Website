@@ -9,12 +9,16 @@ const GuideAccounts: FC = () => {
   return (
     <DocContainer className="GuideAccounts" title="Accounts" lastUpdated="21 Feb 2021">
       <p>
-        <strong>Accounts</strong> are anonymous digital identities on the network where coins may be sent to and from.{' '}
+        <strong>Accounts</strong> are anonymous digital identities on the network where coins may be sent to and from.
+      </p>
+      <p>
         <strong>Account managers</strong> are software applications (such as a mobile application or desktop software)
-        that individuals use to create new accounts, manage existing accounts, and to send coins. When sending coins,
-        users enter the amount they wish to send along with the account number of the recipient and submit it to the
-        network for processing. To receive coins, users share their own account number with other users on the network
-        who will then be able to form blocks themselves.
+        that individuals use to create new accounts, manage existing accounts, and to send coins.
+      </p>
+      <p>
+        When sending coins, users enter the amount they wish to send along with the account number of the recipient and
+        submit it to the network for processing. To receive coins, users share their own account number with other users
+        on the network who will then be able to form blocks themselves.
       </p>
 
       <DocImage alt="accounts simple" maxWidth={600} src={AccountsSimple} />
