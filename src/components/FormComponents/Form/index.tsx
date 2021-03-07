@@ -4,10 +4,10 @@ import {GenericFormValues} from 'types/forms';
 
 interface ComponentProps {
   className?: string;
-  children: ({isSubmitting, isValid}: {isSubmitting: boolean; isValid: boolean}) => JSX.Element;
-  isInitialValid?: boolean;
+  children: ({isValid}: {isValid: boolean}) => JSX.Element;
   initialValues?: GenericFormValues;
   onSubmit(values: GenericFormValues): void | Promise<any>;
+  validateOnMount?: boolean;
   validationSchema?: any;
 }
 
@@ -15,21 +15,21 @@ const Form: FC<ComponentProps> = ({
   children,
   className,
   onSubmit,
-  isInitialValid = false,
   initialValues = {},
+  validateOnMount = true,
   validationSchema,
 }) => {
   return (
     <Formik
       initialValues={initialValues}
-      isInitialValid={isInitialValid}
       onSubmit={onSubmit}
       validationSchema={validationSchema}
+      validateOnMount={validateOnMount}
     >
-      {({isSubmitting, isValid}) => {
+      {({isValid}) => {
         return (
           <FormikForm className={className} spellCheck="false">
-            {children({isSubmitting, isValid})}
+            {children({isValid})}
           </FormikForm>
         );
       }}

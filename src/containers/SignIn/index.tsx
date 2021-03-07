@@ -20,10 +20,13 @@ const SignIn: FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const history = useHistory();
   const [errorMessage, setErrorMessage] = useState<string>('');
+  const [submitting, setSubmitting] = useState<boolean>(false);
 
   const handleSubmit = async ({email, password}: FormValues): Promise<void> => {
     try {
+      setSubmitting(true);
       const {data} = await dispatch(login({email, password}));
+      setSubmitting(false);
       history.push(`/users/${data.user.pk}`);
     } catch (error) {
       setErrorMessage(formatAPIError(error));
@@ -38,7 +41,7 @@ const SignIn: FC = () => {
   return (
     <AuthContainer errorMessage={errorMessage} heading="Sign In">
       <Form initialValues={initialValues} onSubmit={handleSubmit} validationSchema={validationSchema}>
-        {({isSubmitting, isValid}) => (
+        {({isValid}) => (
           <>
             <FormInput autoComplete="email" label="Email" name="email" placeholder="" />
             <FormInput
@@ -48,7 +51,7 @@ const SignIn: FC = () => {
               placeholder=""
               type="password"
             />
-            <FormButton className="SignIn__submit" submitting={isSubmitting} type="submit" disabled={!isValid}>
+            <FormButton className="SignIn__submit" submitting={submitting} type="submit" disabled={!isValid}>
               Sign In
             </FormButton>
           </>
