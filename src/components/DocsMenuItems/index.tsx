@@ -202,8 +202,8 @@ export const guideNavigationData = [
     url: '/guide/node-identifiers',
   },
   {
-    name: 'Trust',
-    url: '/guide/trust',
+    name: 'Schedule',
+    url: '/guide/schedule',
   },
   {
     name: 'Best Practices',

@@ -13,8 +13,8 @@ import GuideIntroduction from './GuideIntroduction';
 import GuideNodeIdentifier from './GuideNodeIdentifier';
 import GuideNodes from './GuideNodes';
 import GuideRootAccountFile from './GuideRootAccountFile';
+import GuideSchedule from './GuideSchedule';
 import GuideTransactionFees from './GuideTransactionFees';
-import GuideTrust from './GuideTrust';
 
 const defaultPageData: PageData = {
   content: <Redirect to="/guide/introduction" />,
@@ -54,13 +54,13 @@ const pageData: PageDataObject = {
     content: <GuideRootAccountFile />,
     name: 'Root Account File',
   },
+  schedule: {
+    content: <GuideSchedule />,
+    name: 'Schedule',
+  },
   'transaction-fees': {
     content: <GuideTransactionFees />,
     name: 'Transaction Fees',
-  },
-  trust: {
-    content: <GuideTrust />,
-    name: 'Trust',
   },
 };
 

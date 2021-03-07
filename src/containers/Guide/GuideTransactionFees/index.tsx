@@ -16,8 +16,9 @@ const GuideTransactionFees: FC = () => {
       </p>
       <p>
         In addition to the node transaction fee, there will also be an additional fee paid to the PV as well. This fee
-        will be set by the government by majority vote rather than having each node set it's own fee. This will result
-        in one unified PV fee across the entire network.
+        will be set by the government by majority vote rather than having each validator set it's own fee. This prevents
+        nodes from needing to figure out a new PV fee after every validator change. This fee will be set directly on the
+        blockchain resulting in one unified PV fee across the entire network.
       </p>
       <p>
         In the following example, Amy is sending 100 coins to Brian. Before the block is ever created, Amy's node is
