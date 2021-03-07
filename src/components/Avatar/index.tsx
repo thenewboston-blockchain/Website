@@ -1,6 +1,8 @@
 import React, {FC, useEffect, useState} from 'react';
 import clsx from 'clsx';
 
+import DefaultUserAvatar from 'assets/images/default-avatar.png';
+
 import './Avatar.scss';
 
 export interface AvatarProps {
@@ -48,10 +50,14 @@ const Avatar: FC<AvatarProps> = ({alt, className, size, src}) => {
       width={size}
     />
   ) : (
-    <div
+    <img
+      alt={alt}
       className={clsx('Avatar', 'Avater--placeholder', className)}
       data-testid="Avatar--placeholder"
-      style={{height: size, width: size}}
+      height={size}
+      loading="lazy"
+      src={DefaultUserAvatar}
+      width={size}
     />
   );
 };
