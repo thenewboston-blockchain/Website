@@ -38,14 +38,22 @@ const CreateAccount: FC = () => {
       <Form initialValues={initialValues} onSubmit={handleSubmit} validationSchema={validationSchema}>
         {({isValid}) => (
           <>
-            <FormInput autoComplete="email" label="Email" name="email" placeholder="" />
-            <FormInput autoComplete="new-password" label="Password" name="password" placeholder="" type="password" />
+            <FormInput autoComplete="email" label="Email" name="email" placeholder="" required />
+            <FormInput
+              autoComplete="new-password"
+              label="Password"
+              name="password"
+              placeholder=""
+              type="password"
+              required
+            />
             <FormInput
               autoComplete="new-password"
               label="Confirm Password"
               name="confirmPassword"
               placeholder=""
               type="password"
+              required
             />
             <FormButton submitting={submitting} type="submit" disabled={!isValid}>
               Create Account

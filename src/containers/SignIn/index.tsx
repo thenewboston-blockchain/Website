@@ -44,13 +44,14 @@ const SignIn: FC = () => {
       <Form initialValues={initialValues} onSubmit={handleSubmit} validationSchema={validationSchema}>
         {({isValid}) => (
           <>
-            <FormInput autoComplete="email" label="Email" name="email" placeholder="" />
+            <FormInput autoComplete="email" label="Email" name="email" placeholder="" required />
             <FormInput
               autoComplete="current-password"
               label="Password"
               name="password"
               placeholder=""
               type="password"
+              required
             />
             <FormButton className="SignIn__submit" submitting={submitting} type="submit" disabled={!isValid}>
               Sign In
