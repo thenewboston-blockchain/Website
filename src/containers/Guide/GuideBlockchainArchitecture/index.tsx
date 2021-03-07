@@ -7,7 +7,7 @@ import BlockchainSync from './BlockchainSync.png';
 
 const GuideConfirmationValidators: FC = () => {
   return (
-    <DocContainer className="GuideConfirmationValidators" title="Blockchain Architecture" lastUpdated="07 Dec 2020">
+    <DocContainer className="GuideConfirmationValidators" title="Blockchain Architecture" lastUpdated="06 Mar 2021">
       <p>
         Every PV will provide three important pieces of data that all nodes will use to validate all network
         transactions:

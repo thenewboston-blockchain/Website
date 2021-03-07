@@ -1,14 +1,14 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {DocContainer, DocImage, DocList, TableVertical} from 'components';
+import {DocContainer, DocImage, TableVertical} from 'components';
 
 import NodeFlow from './NodeFlow.png';
 import Nodes from './Nodes.png';
 
 const GuideNodes: FC = () => {
   return (
-    <DocContainer className="GuideNodes" title="Nodes" lastUpdated="07 Dec 2020">
+    <DocContainer className="GuideNodes" title="Nodes" lastUpdated="06 Mar 2021">
       <p>
         Nodes play a critical role regarding several aspects of the network. They act as the bond between end users and
         the network and have several responsibilities to each. When users first download account manager applications

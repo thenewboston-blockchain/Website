@@ -6,7 +6,7 @@ import './GuideTransactionFees.scss';
 
 const GuideTransactionFees: FC = () => {
   return (
-    <DocContainer className="GuideTransactionFees" title="Transaction Fees" lastUpdated="07 Dec 2020">
+    <DocContainer className="GuideTransactionFees" title="Transaction Fees" lastUpdated="06 Mar 2021">
       <p>
         Individuals are incentivized to maintain nodes through the collection of transaction fees. Node maintainers set
         their own transaction fee amounts. End users will likely use the nodes that offer the lowest transaction fees.

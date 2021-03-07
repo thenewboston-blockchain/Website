@@ -6,7 +6,7 @@ import RootAccountFileDiagram from './RootAccountFile.png';
 
 const GuideRootAccountFile: FC = () => {
   return (
-    <DocContainer className="GuideRootAccountFile" title="Root Account File" lastUpdated="07 Dec 2020">
+    <DocContainer className="GuideRootAccountFile" title="Root Account File" lastUpdated="06 Mar 2021">
       <p>
         The root account file is a historic snapshot of all account balances at a given point in time. Every node in the
         network generate and maintain their own root account file. Different nodes may have different account files

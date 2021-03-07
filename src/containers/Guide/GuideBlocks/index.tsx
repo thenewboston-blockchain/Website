@@ -8,7 +8,7 @@ import './Blocks.scss';
 
 const GuideBlocks: FC = () => {
   return (
-    <DocContainer className="GuideBlocks" title="Blocks" lastUpdated="07 Dec 2020">
+    <DocContainer className="GuideBlocks" title="Blocks" lastUpdated="06 Mar 2021">
       <p>
         A block is a group of one or more transactions. There are often multiple transactions (usually fees) to
         different recipients within a single block. We can inspect the structure of a block by first examining a

@@ -7,7 +7,7 @@ import Round from './Round.png';
 
 const GuideSchedule: FC = () => {
   return (
-    <DocContainer className="GuideSchedule" title="Schedule" lastUpdated="07 Dec 2020">
+    <DocContainer className="GuideSchedule" title="Schedule" lastUpdated="06 Mar 2021">
       <p>
         A schedule will be created at the beginning of each block day to indicate which nodes will be assigned a turn as
         PV for that block day. All nodes on the network will have a record of the PV schedule. The process of how the

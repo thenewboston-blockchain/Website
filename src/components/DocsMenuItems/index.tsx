@@ -198,8 +198,8 @@ export const guideNavigationData = [
     url: '/guide/blockchain-architecture',
   },
   {
-    name: 'Node Identifiers',
-    url: '/guide/node-identifiers',
+    name: 'Node Identifier',
+    url: '/guide/node-identifier',
   },
   {
     name: 'Schedule',
@@ -208,6 +208,10 @@ export const guideNavigationData = [
   {
     name: 'Schedule Adjustments',
     url: '/guide/schedule-adjustments',
+  },
+  {
+    name: 'Fork Prevention',
+    url: '/guide/fork-prevention',
   },
   {
     name: 'Best Practices',
