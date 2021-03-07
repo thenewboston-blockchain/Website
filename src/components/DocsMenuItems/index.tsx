@@ -147,8 +147,8 @@ export const governanceNavigationData = [
     url: '/governance/usernames-and-votes',
   },
   {
-    name: 'Locked Coins & Bank Boosting',
-    url: '/governance/locked-coins-and-banking-boosting',
+    name: 'Locked Coins & Boosting',
+    url: '/governance/locked-coins-and-boosting',
   },
   {
     name: 'Points & Refill Logic',
@@ -159,8 +159,8 @@ export const governanceNavigationData = [
     url: '/governance/coins-vs-points',
   },
   {
-    name: 'Application & Election Process',
-    url: '/governance/application-and-election-process',
+    name: 'Election Process',
+    url: '/governance/election-process',
   },
   {
     name: 'Budgets',
