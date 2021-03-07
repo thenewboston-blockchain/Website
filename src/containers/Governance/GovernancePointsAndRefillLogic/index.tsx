@@ -6,7 +6,7 @@ import DailyRefillRate from './DailyRefillRate.png';
 
 const GovernancePointsAndRefillLogic: FC = () => {
   return (
-    <DocContainer className="GovernancePointsAndRefillLogic" title="Points And Refill Logic" lastUpdated="15 Feb 2021">
+    <DocContainer className="GovernancePointsAndRefillLogic" title="Points And Refill Logic" lastUpdated="07 Mar 2021">
       <p>
         The network is unable to use human time as a reliable form of measurement due to challenges of syncing all
         global nodes which is needed for validation. In our network, time is measured in confirmation blocks. This

@@ -2,14 +2,14 @@ import React, {FC} from 'react';
 
 import {DocContainer, DocImage, DocList} from 'components';
 
-import BankBoosting from './BankBoosting.png';
+import NodeBoosting from './NodeBoosting.png';
 
-const GovernanceLockedCoinsAndBankBoosting: FC = () => {
+const GovernanceLockedCoinsAndBoosting: FC = () => {
   return (
     <DocContainer
-      className="GovernanceLockedCoinsAndBankBoosting"
-      title="Locked Coins & Bank Boosting"
-      lastUpdated="15 Feb 2021"
+      className="GovernanceLockedCoinsAndBoosting"
+      title="Locked Coins & Boosting"
+      lastUpdated="07 Mar 2021"
     >
       <p>
         Registered users have the ability to lock any amount of coins that they own. By locking coins, the network will
@@ -21,7 +21,7 @@ const GovernanceLockedCoinsAndBankBoosting: FC = () => {
 
       <DocList variant="ul">
         <li>Points</li>
-        <li>The ability to boost a Bank of their choosing</li>
+        <li>The ability to boost a node of their choosing</li>
       </DocList>
 
       <p>
@@ -32,14 +32,14 @@ const GovernanceLockedCoinsAndBankBoosting: FC = () => {
       </p>
 
       <p>
-        The top X boosted Banks in the network will act as delegates to elect a PV. The weight of a Bank's vote is equal
-        to the total amount of boosts they recieve. In the event of a tie, the X + 1 boosted Bank will break the tie.
-        The amount of locked coins along with the Bank the user chooses to boost will be stored on the blockchain.
+        The top X boosted nodes in the network will act as delegates to elect a PV. The weight of a nodes vote is equal
+        to the total amount of boosts they receive. In the event of a tie, the X + 1 boosted node will break the tie.
+        The amount of locked coins along with the node the user chooses to boost will be stored on the blockchain.
       </p>
 
-      <DocImage alt="bank-boosting" maxWidth={720} src={BankBoosting} />
+      <DocImage alt="node boosting" maxWidth={640} src={NodeBoosting} />
     </DocContainer>
   );
 };
 
-export default GovernanceLockedCoinsAndBankBoosting;
+export default GovernanceLockedCoinsAndBoosting;

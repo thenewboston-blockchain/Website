@@ -7,11 +7,11 @@ import {PageData, PageDataObject} from 'types/page-data';
 
 import GovernanceBudgets from './GovernanceBudgets';
 import GovernanceCoinsVsPoints from './GovernanceCoinsVsPoints';
-import GovernanceApplicationAndElectionProcess from './GovernanceApplicationAndElectionProcess';
-import GovernanceLockedCoinsAndBankBoosting from './GovernanceLockedCoinsAndBankBoosting';
+import GovernanceElectionProcess from './GovernanceElectionProcess';
+import GovernanceLockedCoinsAndBoosting from './GovernanceLockedCoinsAndBoosting';
+import GovernanceOverview from './GovernanceOverview';
 import GovernancePointsAndRefillLogic from './GovernancePointsAndRefillLogic';
 import GovernanceUsernamesAndVotes from './GovernanceUsernamesAndVotes';
-import GovernanceOverview from './GovernanceOverview';
 
 const defaultPageData: PageData = {
   content: <Redirect to="/governance/overview" />,
@@ -19,10 +19,6 @@ const defaultPageData: PageData = {
 };
 
 const pageData: PageDataObject = {
-  'application-and-election-process': {
-    content: <GovernanceApplicationAndElectionProcess />,
-    name: 'Application & Election Process',
-  },
   budgets: {
     content: <GovernanceBudgets />,
     name: 'Budgets',
@@ -31,9 +27,13 @@ const pageData: PageDataObject = {
     content: <GovernanceCoinsVsPoints />,
     name: 'Coins vs Points',
   },
-  'locked-coins-and-banking-boosting': {
-    content: <GovernanceLockedCoinsAndBankBoosting />,
-    name: 'Locked Coins & Bank Boosting',
+  'election-process': {
+    content: <GovernanceElectionProcess />,
+    name: 'Election Process',
+  },
+  'locked-coins-and-boosting': {
+    content: <GovernanceLockedCoinsAndBoosting />,
+    name: 'Locked Coins & Boosting',
   },
   overview: {
     content: <GovernanceOverview />,
