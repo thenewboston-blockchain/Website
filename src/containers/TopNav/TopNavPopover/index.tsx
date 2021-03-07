@@ -147,6 +147,7 @@ const TopNavPopover: FC<ComponentProps> = ({
             <TopNavPopoverItemSimple
               closePopover={unsetAnchorEl}
               handleKeyDown={handleOptionKeyDown(to, index)}
+              key={title}
               title={title}
               to={to}
             />
