@@ -14,6 +14,7 @@ import GuideNodeIdentifier from './GuideNodeIdentifier';
 import GuideNodes from './GuideNodes';
 import GuideRootAccountFile from './GuideRootAccountFile';
 import GuideSchedule from './GuideSchedule';
+import GuideScheduleAdjustments from './GuideScheduleAdjustments';
 import GuideTransactionFees from './GuideTransactionFees';
 
 const defaultPageData: PageData = {
@@ -57,6 +58,10 @@ const pageData: PageDataObject = {
   schedule: {
     content: <GuideSchedule />,
     name: 'Schedule',
+  },
+  'schedule-adjustments': {
+    content: <GuideScheduleAdjustments />,
+    name: 'Schedule Adjustments',
   },
   'transaction-fees': {
     content: <GuideTransactionFees />,

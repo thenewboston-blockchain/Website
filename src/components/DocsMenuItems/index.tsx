@@ -206,6 +206,10 @@ export const guideNavigationData = [
     url: '/guide/schedule',
   },
   {
+    name: 'Schedule Adjustments',
+    url: '/guide/schedule-adjustments',
+  },
+  {
     name: 'Best Practices',
     url: '/guide/best-practices',
   },
