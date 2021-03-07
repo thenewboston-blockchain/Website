@@ -42,7 +42,7 @@ const GuideSchedule: FC = () => {
       <DocImage alt="round" maxWidth={500} src={Schedule} />
 
       <p>
-        Each of the top 20 nodes will take turns acting as PV while the other 19 nodes act as confirmation validators to
+        Each of the top 20 nodes will take turns acting as PV while the other 19 nodes act as auditing validators to
         validate the results.
       </p>
 
