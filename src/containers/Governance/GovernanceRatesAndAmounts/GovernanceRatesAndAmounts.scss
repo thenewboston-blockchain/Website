@@ -1,9 +1,10 @@
 .GovernanceRatesAndAmounts {
-  &__table-heading {
-    margin-bottom: 12px;
+  &__DocList,
+  &__TableVertical {
+    margin-bottom: 40px;
   }
 
-  &__TableVertical {
-    margin-bottom: 30px;
+  &__sub-heading {
+    margin-bottom: 12px;
   }
 }

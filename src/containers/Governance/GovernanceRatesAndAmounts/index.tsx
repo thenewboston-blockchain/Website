@@ -1,6 +1,6 @@
 import React, {FC, ReactNode} from 'react';
 
-import {DocContainer, TableVertical} from 'components';
+import {DocContainer, DocList, TableVertical} from 'components';
 
 import './GovernanceRatesAndAmounts.scss';
 
@@ -8,7 +8,7 @@ const GovernanceRatesAndAmounts: FC = () => {
   const renderConversionRates = (): ReactNode => {
     return (
       <>
-        <h3 className="GovernanceRatesAndAmounts__table-heading">Conversion Rates</h3>
+        <h3 className="GovernanceRatesAndAmounts__sub-heading">Conversion Rates</h3>
         <TableVertical
           altColors
           className="GovernanceRatesAndAmounts__TableVertical"
@@ -24,7 +24,7 @@ const GovernanceRatesAndAmounts: FC = () => {
   const renderLockedCoinsAndBoost = (): ReactNode => {
     return (
       <>
-        <h3 className="GovernanceRatesAndAmounts__table-heading">Locked Coins &amp; Boosts</h3>
+        <h3 className="GovernanceRatesAndAmounts__sub-heading">Locked Coins &amp; Boosts</h3>
         <TableVertical
           altColors
           className="GovernanceRatesAndAmounts__TableVertical"
@@ -43,7 +43,7 @@ const GovernanceRatesAndAmounts: FC = () => {
   const renderPoints = (): ReactNode => {
     return (
       <>
-        <h3 className="GovernanceRatesAndAmounts__table-heading">Points</h3>
+        <h3 className="GovernanceRatesAndAmounts__sub-heading">Points</h3>
         <TableVertical
           altColors
           className="GovernanceRatesAndAmounts__TableVertical"
@@ -61,7 +61,7 @@ const GovernanceRatesAndAmounts: FC = () => {
   const renderUsernamesAndVotes = (): ReactNode => {
     return (
       <>
-        <h3 className="GovernanceRatesAndAmounts__table-heading">Usernames &amp; Votes</h3>
+        <h3 className="GovernanceRatesAndAmounts__sub-heading">Usernames &amp; Votes</h3>
         <TableVertical
           altColors
           className="GovernanceRatesAndAmounts__TableVertical"
@@ -81,6 +81,30 @@ const GovernanceRatesAndAmounts: FC = () => {
       {renderUsernamesAndVotes()}
       {renderLockedCoinsAndBoost()}
       {renderPoints()}
+
+      <h3 className="GovernanceRatesAndAmounts__sub-heading">Treasury Board</h3>
+      <DocList className="GovernanceRatesAndAmounts__DocList" variant="ul">
+        <li>Beta - 3 members</li>
+        <li>By launch - 5 members</li>
+        <li>Minting coins - 50% or more signatures required</li>
+      </DocList>
+
+      <h3 className="GovernanceRatesAndAmounts__sub-heading">Government</h3>
+      <DocList className="GovernanceRatesAndAmounts__DocList" variant="ul">
+        <li>Beta - 8 members</li>
+        <li>By launch - 20 members</li>
+        <li>Release funds from the budget - 50% or more signatures required</li>
+        <li>
+          No minimum number of total votes required before the government can take action but we will allow project
+          proposals after 1 week
+        </li>
+      </DocList>
+
+      <h3 className="GovernanceRatesAndAmounts__sub-heading">Nodes</h3>
+      <DocList className="GovernanceRatesAndAmounts__DocList" variant="ul">
+        <li>Beta - 8 nodes</li>
+        <li>By launch - 20 nodes</li>
+      </DocList>
     </DocContainer>
   );
 };
