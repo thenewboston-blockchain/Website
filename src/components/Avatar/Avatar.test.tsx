@@ -2,6 +2,7 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
+import DefaultUserAvatar from 'assets/images/default-avatar.png';
 import Avatar, {AvatarProps, getImageSizeBasedOnDeviceRatio} from '.';
 
 describe('Avatar component', () => {
@@ -95,23 +96,26 @@ describe('Avatar component', () => {
   });
 
   describe('renders fallback component', () => {
-    it('renders fallback component if empty stings passed as src', () => {
+    it('renders fallback component if empty strings passed as src', () => {
       const props = {...baseProps, src: ''};
       render(<Avatar {...props} />);
 
       const el = screen.getByTestId('Avatar--placeholder');
 
       expect(el).toBeTruthy();
+      expect(el).toHaveAttribute('alt', baseProps.alt);
+      expect(el).toHaveAttribute('src', DefaultUserAvatar);
+      expect(el).toHaveAttribute('height', props.size.toString());
+      expect(el).toHaveAttribute('width', props.size.toString());
     });
 
-    it('renders fallback component with size passed in', () => {
-      const props = {...baseProps, src: ''};
+    it('renders fallback component with className passed in', () => {
+      const props = {...baseProps, className: 'Test', src: ''};
       render(<Avatar {...props} />);
 
       const el = screen.getByTestId('Avatar--placeholder');
 
-      expect(el.style).toHaveProperty('height', `${props.size}px`);
-      expect(el.style).toHaveProperty('width', `${props.size}px`);
+      expect(el.className).toContain('Test');
     });
   });
 });
