@@ -8,14 +8,7 @@ import Popover, {PopoverProps} from '.';
 
 const history = createMemoryHistory();
 
-const Wrapper: FC = ({children}) => {
-  return (
-    <Router history={history}>
-      <button id="anchor">Anchor</button>
-      {children}
-    </Router>
-  );
-};
+const Wrapper: FC = ({children}) => <Router history={history}>{children}</Router>;
 
 const baseProps: PopoverProps = {
   anchorEl: null,
@@ -24,7 +17,7 @@ const baseProps: PopoverProps = {
   className: 'Test',
   closePopover: jest.fn(),
   id: 'test-id',
-  open: true,
+  open: false,
   transformOffset: {horizontal: 0, vertical: 12},
   transformOrigin: {horizontal: 'center', vertical: 'top'},
 };
@@ -49,10 +42,12 @@ describe('Popover component', () => {
     render(<Popover {...baseProps} />, {wrapper: Wrapper});
 
     expect(screen.getByTestId('Popover')).toHaveClass('Popover');
+    expect(screen.getByTestId('Popover')).not.toHaveClass('Popover--open');
   });
 
   it('renders with default className--open when open is passed in as true', () => {
-    render(<Popover {...baseProps} />, {wrapper: Wrapper});
+    const props = {...baseProps, open: true};
+    render(<Popover {...props} />, {wrapper: Wrapper});
 
     expect(screen.getByTestId('Popover')).toHaveClass('Popover--open');
   });
@@ -61,10 +56,12 @@ describe('Popover component', () => {
     render(<Popover {...baseProps} />, {wrapper: Wrapper});
 
     expect(screen.getByTestId('Popover')).toHaveClass('Test');
+    expect(screen.getByTestId('Popover')).not.toHaveClass('Test--open');
   });
 
   it('renders with className--open when open is passed in as true', () => {
-    render(<Popover {...baseProps} />, {wrapper: Wrapper});
+    const props = {...baseProps, open: true};
+    render(<Popover {...props} />, {wrapper: Wrapper});
 
     expect(screen.getByTestId('Popover')).toHaveClass('Test--open');
   });
@@ -95,15 +92,5 @@ describe('Popover component', () => {
     expect(baseProps.closePopover).toHaveBeenCalledTimes(1);
     fireEvent(document, new MouseEvent('scroll'));
     await waitFor(() => expect(baseProps.closePopover).toHaveBeenCalledTimes(10));
-  });
-
-  it('opens popover when clicked on anchor element', async () => {
-    const anchorEl = document.getElementById('anchor')!;
-    const props = {...baseProps, anchorEl, open: false};
-    render(<Popover {...props} />, {wrapper: Wrapper});
-
-    expect(screen.getByTestId('Popover')).not.toHaveClass('Popover--open');
-    //  fireEvent(anchorEl, new MouseEvent('click'));
-    //  await waitFor(() => expect(screen.getByTestId('Popover')).toHaveClass('Popover--open'));
   });
 });
