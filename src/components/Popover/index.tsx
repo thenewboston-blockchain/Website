@@ -19,7 +19,7 @@ export type VerticalPosition = 'bottom' | 'center' | 'top';
 
 const initialDomRect = {height: 0, left: 0, top: 0, width: 0};
 
-interface ComponentProps {
+export interface PopoverProps {
   anchorOrigin?: {horizontal: HorizontalPosition | number; vertical: VerticalPosition | number};
   anchorEl: HTMLElement | null;
   children: ReactNode;
@@ -31,7 +31,7 @@ interface ComponentProps {
   transformOffset?: {horizontal: number; vertical: number};
 }
 
-const Popover: FC<ComponentProps> = ({
+const Popover: FC<PopoverProps> = ({
   anchorEl,
   anchorOrigin = {horizontal: 'left', vertical: 'top'},
   children,
@@ -175,6 +175,7 @@ const Popover: FC<ComponentProps> = ({
             'Popover--open': open,
             ...bemify(className, '--open', open),
           })}
+          data-testid="Popover"
           id={id}
           onClick={handleStopFromClosing}
           ref={portalRef}
