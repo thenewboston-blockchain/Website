@@ -22,9 +22,9 @@ const GovernanceElectionProcess: FC = () => {
         voted applicant.
       </p>
       <p>
-        All network actions including applying for government positions, updating applications, voting for applicants,
-        etc… require the use of points. All actions and voting records will be publicly visible and stored on the
-        blockchain.
+        There is a 10,000 coin fee to apply for governor. Other government related actions such as updating
+        applications, voting for applicants, etc... require the use of points. All actions and voting records will be
+        publicly visible and stored on the blockchain.
       </p>
       <p>No government actions can be taken until the following requirements are met:</p>
 
