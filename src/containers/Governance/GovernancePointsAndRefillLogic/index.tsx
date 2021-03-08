@@ -20,12 +20,12 @@ const GovernancePointsAndRefillLogic: FC = () => {
 
       <p>
         <strong>Exchange Rate</strong> <br />
-        10,000 points per locked coin
+        100,000 points per locked coin
       </p>
 
       <p>
         <strong>Daily Refill Rate</strong> <br />
-        +2,500 points per locked coin
+        +25,000 points per locked coin
       </p>
 
       <p>This results in a 100% point refill every ~4 days.</p>
@@ -35,10 +35,10 @@ const GovernancePointsAndRefillLogic: FC = () => {
       <TableBorderGrid
         headers={['Events', 'Point Balance']}
         rows={[
-          ['User locks 24 coins', '240,000 (refill rate of 60,000 points/day)'],
-          ['User spends 200,000 points submitting a project proposal', '40,000'],
-          ['1 network day passes', '100,000'],
-          ['1 network day passes', '160,000'],
+          ['User locks 24 coins', '2,400,000 (refill rate of 600,000 points/day)'],
+          ['User spends 2,400,000 points submitting a project proposal', '400,000'],
+          ['1 network day passes', '1,000,000'],
+          ['1 network day passes', '1,600,000'],
         ]}
         title="Example:"
       />
