@@ -21,11 +21,15 @@ const CreateAccount: FC = () => {
   const [errorMessage, setErrorMessage] = useState<string>('');
   const [submitting, setSubmitting] = useState<boolean>(false);
 
-  const handleSubmit = async ({email, password}: FormValues): Promise<void> => {
+  const handleSubmit = async ({display_name, email, password}: FormValues): Promise<void> => {
     try {
       setErrorMessage('');
       setSubmitting(true);
-      await axios.post(`${process.env.REACT_APP_BACKEND_API}/users`, {email, password}, standardHeaders());
+      await axios.post(
+        `${process.env.REACT_APP_BACKEND_API}/users`,
+        {display_name, email, password},
+        standardHeaders(),
+      );
       setCreatingAccount(false);
     } catch (error) {
       setErrorMessage(formatAPIError(error));
