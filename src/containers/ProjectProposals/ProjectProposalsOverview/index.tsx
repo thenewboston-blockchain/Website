@@ -104,7 +104,11 @@ const ProjectProposalsOverview: FC = () => {
             After the team formation, the team leader (or manager) has to provide details of each member of the team.
             Details include{' '}
             <strong>full-name, GitHub username, Slack username, LinkedIn profile, role in the team, </strong>
-            and the <strong>account number</strong> where they want to receive payments.
+            and the <strong>account number</strong> where they want to receive payments. Team details of the projects
+            get added{' '}
+            <A href="https://github.com/thenewboston-developers/Project-Proposals/blob/master/CSVs/project-teams.csv">
+              here
+            </A>
           </>
         }
       />
@@ -113,7 +117,8 @@ const ProjectProposalsOverview: FC = () => {
         number={10}
         text={
           <>
-            A person can be part of only <strong>one project</strong> at a time.
+            We highly recommend one person to be a part of only <strong>one project</strong> at a time so that more and
+            more people can have the opportunity to work on these wonderful projects.
           </>
         }
       />
