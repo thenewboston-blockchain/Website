@@ -9,6 +9,7 @@ import yup from 'utils/yup';
 
 const initialValues = {
   confirmPassword: '',
+  display_name: '',
   email: '',
   password: '',
 };
@@ -55,6 +56,7 @@ const CreateAccount: FC = () => {
               type="password"
               required
             />
+            <FormInput label="Display Name" name="display_name" placeholder="" required />
             <FormButton submitting={submitting} type="submit" disabled={!isValid}>
               Create Account
             </FormButton>
@@ -74,6 +76,7 @@ const CreateAccount: FC = () => {
       .string()
       .oneOf([yup.ref('password'), ''], 'Passwords must match')
       .required(),
+    display_name: yup.string().required('Display Name is required'),
     email: yup.string().email().required('Email is required'),
     password: yup.string().required('Password is required'),
   });
