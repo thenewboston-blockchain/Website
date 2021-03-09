@@ -21,8 +21,8 @@ const DocContainer: FC<DocContainerProps> = ({
   id,
   introSection,
   introTitle,
-  title,
   lastUpdated,
+  title,
 }) => {
   return (
     <section className={clsx('DocContainer', className)} data-testid="DocContainer">
