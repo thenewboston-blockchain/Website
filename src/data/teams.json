@@ -27,6 +27,19 @@
           "profileImage": "https://avatars.githubusercontent.com/u/30411401?v=4",
           "slackUsername": "Zino Adidi"
         }
+      },
+      {
+        "title": "Javascript Developer",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2021-03-05T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "90",
+          "displayName": "Mieszko",
+          "githubUsername": "kycermann",
+          "profileImage": "https://avatars.githubusercontent.com/u/59399685?v=4",
+          "slackUsername": "Mieszko"
+        }
       }
     ],
     "responsibilities": []
