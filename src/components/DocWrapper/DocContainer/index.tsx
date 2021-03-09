@@ -6,7 +6,7 @@ import {HashLink} from 'components';
 
 import './DocContainer.scss';
 
-interface ComponentProps {
+export interface DocContainerProps {
   className?: string;
   id?: string;
   introSection?: ReactNode;
@@ -15,19 +15,29 @@ interface ComponentProps {
   title: ReactNode;
 }
 
-const DocContainer: FC<ComponentProps> = ({children, className, id, introSection, introTitle, title, lastUpdated}) => {
+const DocContainer: FC<DocContainerProps> = ({
+  children,
+  className,
+  id,
+  introSection,
+  introTitle,
+  lastUpdated,
+  title,
+}) => {
   return (
-    <section className={clsx('DocContainer', className)}>
+    <section className={clsx('DocContainer', className)} data-testid="DocContainer">
       {introTitle ? (
         <div
           className={clsx('DocContainer__wrapper', {
             ...bemify(className, '__wrapper'),
           })}
+          data-testid="DocContainer__wrapper"
         >
           <h1
             className={clsx('DocContainer__page-title', {
               ...bemify(className, '__page-title'),
             })}
+            data-testid="DocContainer__page-title"
           >
             {introTitle}
           </h1>
