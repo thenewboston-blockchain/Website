@@ -263,9 +263,9 @@ export const primaryValidatorApiNavigationData = [
 ];
 
 const DocsMenuItems: FC = () => {
-  const renderNavLinks = (dataTestId: string, navigationData: NavigationItem[]) => {
+  const renderNavLinks = (navigationData: NavigationItem[]) => {
     return navigationData.map(({name, url}) => (
-      <NavLink data-testid={`${dataTestId}-${name}`} key={url} to={url}>
+      <NavLink key={url} to={url}>
         {name}
       </NavLink>
     ));
@@ -274,45 +274,37 @@ const DocsMenuItems: FC = () => {
   return (
     <div data-testid="DocsMenuItems">
       <MenuGroup title="Guide" urlBase="guide">
-        {renderNavLinks('Guide', guideNavigationData)}
+        {renderNavLinks(guideNavigationData)}
       </MenuGroup>
 
       <MenuGroup title="Account Manager" urlBase="account-manager">
-        {renderNavLinks('AccountManager', accountManagerNavigationData)}
+        {renderNavLinks(accountManagerNavigationData)}
       </MenuGroup>
 
       <MenuGroup title="Deployment Guides" urlBase="deployment-guide">
-        <NavLink data-testid="DeploymentGuide-Bank" to="/deployment-guide/bank">
-          Bank
-        </NavLink>
-        <NavLink data-testid="DeploymentGuide-Validator" to="/deployment-guide/validator">
-          Validator
-        </NavLink>
+        <NavLink to="/deployment-guide/bank">Bank</NavLink>
+        <NavLink to="/deployment-guide/validator">Validator</NavLink>
       </MenuGroup>
 
       <MenuGroup title="Style Guides" urlBase="style-guide">
-        <NavLink data-testid="StyleGuide-React / JSX" to="/style-guide/react">
-          React / JSX
-        </NavLink>
-        <NavLink data-testid="StyleGuide-CSS / SASS" to="/style-guide/css">
-          CSS / SASS
-        </NavLink>
+        <NavLink to="/style-guide/react">React / JSX</NavLink>
+        <NavLink to="/style-guide/css">CSS / SASS</NavLink>
       </MenuGroup>
 
       <MenuGroup title="Governance" urlBase="governance">
-        {renderNavLinks('Governance', governanceNavigationData)}
+        {renderNavLinks(governanceNavigationData)}
       </MenuGroup>
 
       <MenuGroup title="Bank API" urlBase="bank-api">
-        {renderNavLinks('BankAPI', bankApiNavigationData)}
+        {renderNavLinks(bankApiNavigationData)}
       </MenuGroup>
 
       <MenuGroup title="Primary Validator API" urlBase="primary-validator-api">
-        {renderNavLinks('PrimaryValidatorAPI', primaryValidatorApiNavigationData)}
+        {renderNavLinks(primaryValidatorApiNavigationData)}
       </MenuGroup>
 
       <MenuGroup title="Confirmation Validator API" urlBase="confirmation-validator-api">
-        {renderNavLinks('ConfirmationValidatorAPI', confirmationValidatorApiNavigationData)}
+        {renderNavLinks(confirmationValidatorApiNavigationData)}
       </MenuGroup>
     </div>
   );
