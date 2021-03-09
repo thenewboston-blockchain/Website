@@ -12,7 +12,6 @@ describe('DocsMenuItems component', () => {
         <DocsMenuItems />
       </Router>,
     );
-    expect(screen.getByTestId('DocsMenuItems')).toBeTruthy();
   });
 
   test('renders links correctly', () => {

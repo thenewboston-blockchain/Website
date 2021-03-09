@@ -272,7 +272,7 @@ const DocsMenuItems: FC = () => {
   };
 
   return (
-    <div data-testid="DocsMenuItems">
+    <>
       <MenuGroup title="Guide" urlBase="guide">
         {renderNavLinks(guideNavigationData)}
       </MenuGroup>
@@ -306,7 +306,7 @@ const DocsMenuItems: FC = () => {
       <MenuGroup title="Confirmation Validator API" urlBase="confirmation-validator-api">
         {renderNavLinks(confirmationValidatorApiNavigationData)}
       </MenuGroup>
-    </div>
+    </>
   );
 };
 
