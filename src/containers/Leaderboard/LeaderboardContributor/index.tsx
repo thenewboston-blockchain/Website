@@ -43,7 +43,7 @@ const LeaderboardContributor: FC<ComponentProps> = ({
       >
         {rank}
       </div>
-      <Avatar alt={github_username} size={width > 768 ? 178 : 54} src={github_avatar_url} />
+      <Avatar size={width > 768 ? 178 : 54} src={github_avatar_url} />
     </div>
   );
 

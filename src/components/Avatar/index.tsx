@@ -6,7 +6,6 @@ import DefaultUserAvatar from 'assets/images/default-avatar.png';
 import './Avatar.scss';
 
 export interface AvatarProps {
-  alt: string;
   className?: string;
   size: number;
   src: string;
@@ -17,7 +16,7 @@ export const getImageSizeBasedOnDeviceRatio = (size: number): number => {
   return size * devicePixelRatio;
 };
 
-const Avatar: FC<AvatarProps> = ({alt, className, size, src}) => {
+const Avatar: FC<AvatarProps> = ({className, size, src}) => {
   const [source, setSource] = useState<string>('');
 
   useEffect(() => {
@@ -41,7 +40,7 @@ const Avatar: FC<AvatarProps> = ({alt, className, size, src}) => {
 
   return source?.length ? (
     <img
-      alt={alt}
+      alt="Avatar"
       className={clsx('Avatar', className)}
       data-testid="Avatar"
       height={size}
@@ -51,7 +50,7 @@ const Avatar: FC<AvatarProps> = ({alt, className, size, src}) => {
     />
   ) : (
     <img
-      alt={alt}
+      alt="Avatar"
       className={clsx('Avatar', 'Avater--placeholder', className)}
       data-testid="Avatar--placeholder"
       height={size}

@@ -73,12 +73,7 @@ const ProfileInfo: FC<ComponentProps> = ({user}) => {
       <div className="ProfileInfo">
         <div className="ProfileInfo__top-section">
           {renderBackdrop(memberDetails?.isLead || false)}
-          <Avatar
-            alt={user.github_username}
-            className="ProfileInfo__profile-picture"
-            size={178}
-            src={user.profile_image}
-          />
+          <Avatar className="ProfileInfo__profile-picture" size={178} src={user.profile_image} />
         </div>
         <div className="ProfileInfo__details">
           <div className="ProfileInfo__user-details">

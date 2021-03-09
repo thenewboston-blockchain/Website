@@ -108,10 +108,9 @@ const TopNavDesktopItems = () => {
     const {profile_image: profileImage} = activeUser;
     return (
       <TopNavPopover
+        className="TopNavDesktopItems__profile-image"
         anchorEl={activeUserAnchorEl}
-        customButtonContent={
-          <Avatar alt="profile" className="TopNavDesktopItems__profile-image" src={profileImage} size={36} />
-        }
+        customButtonContent={<Avatar src={profileImage} size={36} />}
         items={activeUserPopoverItems}
         popoverId="active-user-popover"
         setAnchorEl={setActiveUserAnchorEl}

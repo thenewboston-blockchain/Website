@@ -11,7 +11,7 @@ import {renderFormError, renderFormLabel} from 'utils/forms';
 
 type ComponentProps = BaseFormComponentProps<BaseInputProps>;
 
-const FormTextArea: FC<ComponentProps> = ({hideErrorText = false, label, required, ...baseInputProps}) => {
+const FormTextArea: FC<ComponentProps> = ({hideErrorText = false, label, required = false, ...baseInputProps}) => {
   const {className, name} = baseInputProps;
   const {errors, touched} = useFormContext();
   const error = !!errors[name] && !!touched[name];

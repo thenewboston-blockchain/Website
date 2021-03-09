@@ -56,13 +56,10 @@ const EditUserModal: FC<ComponentProps> = ({close}) => {
   };
 
   const validationSchema = yup.object().shape({
-    accountNumber: yup
-      .string()
-      .length(64, 'Account Number must be 64 characters long')
-      .required('This field is required'),
+    accountNumber: yup.string().length(64, 'Account Number must be 64 characters long'),
     displayName: yup.string().required('This field is required'),
     githubUsername: yup.string(),
-    profileImageUrl: yup.string(),
+    profileImageUrl: yup.string().url('Must be a valid URL'),
     slackName: yup.string(),
   });
 
