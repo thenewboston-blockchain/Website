@@ -19,6 +19,13 @@ describe('Qr component', () => {
     expect(el).toBeTruthy();
   });
 
+  it('renders with default className', async () => {
+    render(<Qr {...baseProps} className="Test" />);
+
+    const el = await screen.findByAltText('QR Code');
+    expect(el).toHaveClass('Qr');
+  });
+
   it('renders with className passed in', async () => {
     render(<Qr {...baseProps} className="Test" />);
 
@@ -33,7 +40,7 @@ describe('Qr component', () => {
     expect(QrCode.toDataURL).toHaveBeenCalledTimes(1);
   });
 
-  it('calls QrCode.toDataUrl with base properties', async () => {
+  it('calls QrCode.toDataUrl with default properties', async () => {
     render(<Qr {...baseProps} />);
 
     await screen.findByAltText('QR Code');
@@ -47,7 +54,7 @@ describe('Qr component', () => {
     });
   });
 
-  it('calls QrCode.toDataUrl with 10 margin', async () => {
+  it('calls QrCode.toDataUrl with margin passed in', async () => {
     render(<Qr {...baseProps} margin={10} />);
 
     await screen.findByAltText('QR Code');
@@ -61,7 +68,7 @@ describe('Qr component', () => {
     });
   });
 
-  it('calls QrCode.toDataUrl with 160 width', async () => {
+  it('calls QrCode.toDataUrl with width passed in', async () => {
     render(<Qr {...baseProps} width={160} />);
 
     await screen.findByAltText('QR Code');
