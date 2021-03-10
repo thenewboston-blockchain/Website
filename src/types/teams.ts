@@ -6,7 +6,7 @@ export enum TeamName {
   community = 'Community',
   design = 'Design',
   devOps = 'DevOps',
-  discordManagers = 'Discord',
+  discord = 'Discord',
   dotnetCore = '.NET Core',
   frontEndDevelopers = 'Front-End Developers',
   javaScriptSDK = 'JavaScript SDK',
