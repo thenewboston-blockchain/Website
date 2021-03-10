@@ -9,7 +9,7 @@ export const TeamPathname = {
   community: 'Community',
   design: 'Design',
   devOps: 'DevOps',
-  discordManagers: 'Discord-Managers',
+  discordManagers: 'Discord',
   dotnetCore: 'NET-Core',
   frontEndDevelopers: 'Front-End-Developers',
   javaScriptSDK: 'JavaScript-SDK',
