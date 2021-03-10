@@ -5,7 +5,7 @@ import QrCode from 'qrcode';
 
 import Qr from '.';
 
-jest.mock('QrCode');
+jest.mock('qrcode');
 
 const baseProps = {
   text: 'Test',
