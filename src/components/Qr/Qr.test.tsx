@@ -33,7 +33,7 @@ describe('Qr component', () => {
     expect(QrCode.toDataURL).toHaveBeenCalledTimes(1);
   });
 
-  it('calls QrCode.toDataUrl with default properties', async () => {
+  it('calls QrCode.toDataUrl with base properties', async () => {
     render(<Qr {...baseProps} />);
 
     await screen.findByAltText('QR Code');
@@ -47,7 +47,7 @@ describe('Qr component', () => {
     });
   });
 
-  it('calls QrCode.toDataUrl with custom margin', async () => {
+  it('calls QrCode.toDataUrl with 10 margin', async () => {
     render(<Qr {...baseProps} margin={10} />);
 
     await screen.findByAltText('QR Code');
@@ -61,7 +61,7 @@ describe('Qr component', () => {
     });
   });
 
-  it('calls QrCode.toDataUrl with custom width', async () => {
+  it('calls QrCode.toDataUrl with 160 width', async () => {
     render(<Qr {...baseProps} width={160} />);
 
     await screen.findByAltText('QR Code');
