@@ -1239,19 +1239,6 @@
           "profileImage": "https://avatars0.githubusercontent.com/u/22790904?s=400&u=643810e6c9d5686df409132b01863f9e065df6c1&v=4",
           "slackUsername": "Manish"
         }
-      },
-      {
-        "title": "Recruiting Specialist",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2021-02-15T11:46:08.190Z",
-        "contributor": {
-          "contributorId": "81",
-          "displayName": "Demetrio Ornelas",
-          "githubUsername": "DemetrioOrnelas",
-          "profileImage": "https://avatars.githubusercontent.com/u/47065529?s=400&v=4",
-          "slackUsername": "Demetrio Ornelas"
-        }
       }
     ],
     "responsibilities": [
@@ -1288,6 +1275,47 @@
       },
       {
         "item": "Make payment GitHub issues when projects are due",
+        "subitems": []
+      }
+    ]
+  },
+  {
+    "title": "Recruiting",
+    "description": "This team is responsible for hiring for thenewboston.",
+    "platforms": [
+      {
+        "name": "github",
+        "label": "thenewboston",
+        "link": "https://github.com/thenewboston-developers"
+      },
+      {
+        "name": "slack",
+        "label": "hiring",
+        "link": ""
+      }
+    ],
+    "contributors": [
+      {
+        "title": "Recruiting Specialist",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2021-02-15T11:46:08.190Z",
+        "contributor": {
+          "contributorId": "81",
+          "displayName": "Demetrio Ornelas",
+          "githubUsername": "DemetrioOrnelas",
+          "profileImage": "https://avatars.githubusercontent.com/u/47065529?s=400&v=4",
+          "slackUsername": "Demetrio Ornelas"
+        }
+      }
+    ],
+    "responsibilities": [
+      {
+        "item": "Answering questions",
+        "subitems": []
+      },
+      {
+        "item": "Helping with recruiting",
         "subitems": []
       }
     ]
