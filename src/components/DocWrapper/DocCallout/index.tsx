@@ -12,12 +12,12 @@ export enum CalloutType {
   warning = 'warning',
 }
 
-interface ComponentProps {
+export interface DocCalloutProps {
   className?: string;
   type: CalloutType;
 }
 
-const DocCallout: FC<ComponentProps> = ({children, className, type}) => {
+const DocCallout: FC<DocCalloutProps> = ({children, className, type}) => {
   const modifier = useMemo<string>(() => `--${type}`, [type]);
 
   const icon = useMemo(() => {
@@ -41,12 +41,14 @@ const DocCallout: FC<ComponentProps> = ({children, className, type}) => {
       className={clsx('DocCallout', `DocCallout${modifier}`, className, {
         ...bemify(className, modifier),
       })}
+      data-testid="DocCallout"
     >
       <div
         className={clsx('DocCallout__header', `DocCallout__header${modifier}`, {
           ...bemify(className, '__header'),
           ...bemify(className, `__header${modifier}`),
         })}
+        data-testid="DocCallout__header"
       >
         {icon} {capitalize(type)}
       </div>
