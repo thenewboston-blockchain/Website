@@ -16,6 +16,7 @@ export enum TeamName {
   payments = 'Payments',
   projectProposals = 'Project Proposals',
   qa = 'QA',
+  recruiting = 'Recruiting',
   redditModerators = 'Reddit Moderators',
   research = 'Research',
   security = 'Security',
