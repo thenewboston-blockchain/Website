@@ -489,7 +489,7 @@
     "responsibilities": []
   },
   {
-    "title": "Discord Managers",
+    "title": "Discord",
     "description": "Managing Discord server for thenewboston Community.",
     "platforms": [
       {
@@ -505,7 +505,7 @@
     ],
     "contributors": [
       {
-        "title": "Discord",
+        "title": "Discord Manager",
         "isLead": true,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
@@ -518,7 +518,7 @@
         }
       },
       {
-        "title": "Discord",
+        "title": "Moderator",
         "isLead": false,
         "payPerDay": 2800,
         "createdDate": "2020-11-14T02:14:59.307535Z",
