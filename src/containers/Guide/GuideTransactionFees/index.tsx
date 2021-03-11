@@ -42,8 +42,8 @@ const GuideTransactionFees: FC = () => {
       />
 
       <p>
-        After typing in the amount of coins, Amy is can see the total cost of her transaction and verify that the amount
-        is acceptable before signing and sending the block to her node.
+        After typing in the amount of coins, Amy can see the total cost of her transaction and verify that the amount is
+        acceptable before signing and sending the block to her node.
       </p>
 
       <TableVertical
