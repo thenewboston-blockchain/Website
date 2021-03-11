@@ -37,10 +37,10 @@ describe('TableVertical Component', () => {
     render(<TableVertical {...baseProps} altColors />);
 
     const trElements = screen.getAllByTestId('TableVertical__tr');
-    trElements.forEach((item, index) => {
-      if (index % 2 === 0) {
-        expect(item).toHaveClass('TableVertical__tr--even');
-      }
+
+    const evenRows = trElements.filter((i, index) => index % 2 === 0);
+    evenRows.forEach((item) => {
+      expect(item).toHaveClass('TableVertical__tr--even');
     });
   });
 
