@@ -1060,6 +1060,19 @@
           "profileImage": "https://avatars0.githubusercontent.com/u/74901267?s=460&v=4",
           "slackUsername": "Martin"
         }
+      },
+      {
+        "title": "Social Media Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "90",
+          "displayName": "Princeuchee",
+          "githubUsername": "Princeuchee",
+          "profileImage": "https://avatars.githubusercontent.com/u/80203139?v=4",
+          "slackUsername": "prince Uchee"
+        }
       }
     ],
     "responsibilities": [
