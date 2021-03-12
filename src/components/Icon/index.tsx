@@ -251,8 +251,9 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
     };
 
     return (
+      // eslint-disable-next-line jsx-a11y/no-static-element-interactions
       <div
-        role="button"
+        role={onClick ? 'button' : 'img'}
         className={clsx('Icon', className, {
           'Icon--disabled': disabled,
           ...bemify(className, '--disabled', disabled),

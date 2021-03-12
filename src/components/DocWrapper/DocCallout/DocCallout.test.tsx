@@ -36,9 +36,30 @@ describe('DocCallout Component', () => {
     expect(screen.getByTestId('DocCallout__header')).toHaveClass(`Test__header--${type}`);
   });
 
-  it('renders with type passed in', () => {
-    render(<DocCallout {...baseProps} />);
+  it('renders the children content', () => {
+    render(<DocCallout {...baseProps}>Hello World</DocCallout>);
 
-    expect(screen.getByText(type, {exact: false})).toBeTruthy();
+    expect(screen.getByText('Hello World')).toBeTruthy();
+  });
+
+  it('renders properly for CalloutType note', () => {
+    render(<DocCallout {...baseProps} type={CalloutType.note} />);
+
+    expect(screen.getByText('Note')).toBeTruthy();
+    expect(screen.getByTestId('DocCallout__icon--note')).toBeTruthy();
+  });
+
+  it('renders properly for CalloutType important', () => {
+    render(<DocCallout {...baseProps} type={CalloutType.important} />);
+
+    expect(screen.getByText('Important')).toBeTruthy();
+    expect(screen.getByTestId('DocCallout__icon--important')).toBeTruthy();
+  });
+
+  it('renders properly for CalloutType warning', () => {
+    render(<DocCallout {...baseProps} type={CalloutType.warning} />);
+
+    expect(screen.getByText('Warning')).toBeTruthy();
+    expect(screen.getByTestId('DocCallout__icon--warning')).toBeTruthy();
   });
 });

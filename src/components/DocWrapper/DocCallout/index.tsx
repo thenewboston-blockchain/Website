@@ -26,13 +26,15 @@ const DocCallout: FC<DocCalloutProps> = ({children, className, type}) => {
       ...bemify(className, `__icon${modifier}`),
     });
 
+    const dataTestId = `DocCallout__icon${modifier}`;
+
     switch (type) {
       case CalloutType.important:
-        return <Icon className={classNames} icon={IconType.alertCircle} />;
+        return <Icon className={classNames} dataTestId={dataTestId} icon={IconType.alertCircle} />;
       case CalloutType.warning:
-        return <Icon className={classNames} icon={IconType.alert} />;
+        return <Icon className={classNames} dataTestId={dataTestId} icon={IconType.alert} />;
       default:
-        return <Icon className={classNames} icon={IconType.information} />;
+        return <Icon className={classNames} dataTestId={dataTestId} icon={IconType.information} />;
     }
   }, [className, modifier, type]);
 
