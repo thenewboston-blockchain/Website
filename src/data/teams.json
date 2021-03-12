@@ -145,7 +145,28 @@
         }
       }
     ],
-    "responsibilities": []
+    "responsibilities": [
+      {
+        "item": "Integration of user-facing elements developed by front-end developers with server-side logic",
+        "subitems": []
+      },
+      {
+        "item": "Building reusable code and libraries for future use",
+        "subitems": []
+      },
+      {
+        "item": "Optimization of the application for maximum speed and scalability",
+        "subitems": []
+      },
+      {
+        "item": "Implementation of security and data protection",
+        "subitems": []
+      },
+      {
+        "item": "Design and implementation of data storage solutions",
+        "subitems": []
+      }
+    ]
   },
   {
     "title": "Communications",
