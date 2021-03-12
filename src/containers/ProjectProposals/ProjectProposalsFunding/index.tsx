@@ -23,11 +23,11 @@ const ProjectProposalsFunding: FC = () => {
         number={2}
         text={
           <>
-            The project leader (or manager) has to provide a weekly report of the project’s progress by adding the
-            report file with the name <strong>week-NUMBER.md</strong> (For example, <strong>week-1.md</strong> for the
-            first week, <strong>week-2.md</strong> for the second week report, and so on.) to the{' '}
-            <strong>Weekly Reports</strong> directory of the respective project’s folder in the{' '}
-            <A href="https://github.com/thenewboston-developers/Project-Proposals">Project-proposals</A> repository.
+            The project leader (or manager) has to provide a <strong>weekly report</strong> of the project’s progress
+            and each team member's weekly contribution by raising an issue to{' '}
+            <A href="https://github.com/thenewboston-developers/Activity-Reports/issues/new/choose">Activity-Reports</A>
+            repository. To know more about activity reports please go through{' '}
+            <A href="https://github.com/thenewboston-developers/Activity-Reports/blob/master/README.md">README.md</A>
           </>
         }
       />
@@ -36,15 +36,15 @@ const ProjectProposalsFunding: FC = () => {
         number={3}
         text={
           <>
-            <strong>Weekly Report</strong> can be in any form as long as it clearly describes the progress of the
-            project and work done by members of the project for that week.
+            A good <strong>Weekly Report</strong> consists of each member's tasks for that week and proof of the
+            completion of each given task. The report should also have the contribution details of the project leader.
           </>
         }
       />
       <StepIndicator
         className="ProjectProposalsRules__StepIndicator"
         number={4}
-        text="Once we verify the report and progress of the project, we’ll send weekly payments."
+        text="Once we verify the report and progress of the project, we’ll send weekly payments to those members of the project who contributed."
       />
       <StepIndicator
         className="ProjectProposalsRules__StepIndicator"
@@ -60,8 +60,8 @@ const ProjectProposalsFunding: FC = () => {
         number={6}
         text={
           <>
-            Currently, we are <strong>not rewarding for proposing only Idea</strong>. Instead, we are funding for
-            working on ideas.
+            We are rewarding <strong>3000</strong> coins for <strong>Idea Only</strong> proposals after receiving 1st
+            approved weekly report from the team that is executing that project idea.
           </>
         }
       />

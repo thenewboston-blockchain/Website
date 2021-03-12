@@ -80,6 +80,7 @@ const HelloWorld: {[isoLangCode: string]: string} = {
   pt: 'Olá mundo',
   ro: 'Salut Lume',
   ru: 'Привет Мир',
+  rw: 'Muraho Isi',
   sa: 'नमस्कारः जीवलोक',
   sd: 'هيلو دنيا',
   si: 'ආයුබෝවන් ලෝකය',

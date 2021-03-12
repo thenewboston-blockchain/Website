@@ -2,35 +2,43 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import Avatar, {AvatarProps, getImageSizeBasedOnDeviceRatio} from '.';
+import Avatar, {AvatarProps, getFormattedSrc, getImageSizeBasedOnDeviceRatio} from '.';
 
 describe('Avatar component', () => {
   const baseProps: AvatarProps = {
-    alt: 'Test Text',
     size: 60,
-    src: 'https://avatars.githubusercontent.com/u/29539278?s=460&u=c949af33256607d5e1d93958398a139ff1d67227&v=4',
+    src: 'https://thenewboston.com',
   };
 
   afterEach(() => {
     jest.restoreAllMocks();
   });
 
-  it('renders image', () => {
+  it('renders fallback image', () => {
     render(<Avatar {...baseProps} />);
-
-    expect(screen.getByTestId('Avatar')).toBeTruthy();
+    expect(screen.getByTestId('Avatar--placeholder')).toBeTruthy();
   });
 
-  it('renders image with default className', () => {
+  it('renders fallback image with default className', () => {
     render(<Avatar {...baseProps} />);
 
-    expect(screen.getByTestId('Avatar')).toHaveClass('Avatar');
+    expect(screen.getByTestId('Avatar--placeholder')).toHaveClass('Avatar');
+    expect(screen.getByTestId('Avatar--placeholder')).toHaveClass('Avatar--placeholder');
   });
 
-  it('renders image with className passed in', () => {
+  it('renders fallback image with className passed in', () => {
     render(<Avatar className="test" {...baseProps} />);
 
-    expect(screen.getByTestId('Avatar')).toHaveClass('test');
+    expect(screen.getByTestId('Avatar--placeholder')).toHaveClass('test');
+  });
+
+  it('renders fallback image with size passed in', () => {
+    render(<Avatar className="test" {...baseProps} />);
+
+    const placeholder = screen.getByTestId('Avatar--placeholder');
+
+    expect(placeholder).toHaveStyle({'min-height': `${baseProps.size.toString()}px`});
+    expect(placeholder).toHaveStyle({'min-width': `${baseProps.size.toString()}px`});
   });
 
   describe('getImageSizeBasedOnDeviceRatio', () => {
@@ -49,69 +57,29 @@ describe('Avatar component', () => {
     });
   });
 
-  describe('renders image with updated url', () => {
-    it('renders image with github url', () => {
+  describe('getFormattedSrc', () => {
+    it('gets correct url for github', () => {
+      const url =
+        'https://avatars.githubusercontent.com/u/29539278?s=460&u=c949af33256607d5e1d93958398a139ff1d67227&v=4';
       const updatedUrl = 'https://avatars.githubusercontent.com/u/29539278?s=60';
-      render(<Avatar {...baseProps} />);
+      const result = getFormattedSrc(url, baseProps.size);
 
-      const el = screen.getByTestId('Avatar');
-
-      expect(el).toHaveAttribute('src', updatedUrl);
+      expect(result).toEqual(updatedUrl);
     });
 
-    it('renders image with slack url', () => {
-      const props = {...baseProps, src: 'https://ca.slack-edge.com/T07PJD1FZ-U01EDKBT8LA-a17fa362a21e-512'};
+    it('gets correct url for slack', () => {
+      const url = 'https://ca.slack-edge.com/T07PJD1FZ-U01EDKBT8LA-a17fa362a21e-512';
       const updatedUrl = 'https://ca.slack-edge.com/T07PJD1FZ-U01EDKBT8LA-a17fa362a21e-60';
-      render(<Avatar {...props} />);
+      const result = getFormattedSrc(url, baseProps.size);
 
-      const el = screen.getByTestId('Avatar');
-
-      expect(el).toHaveAttribute('src', updatedUrl);
+      expect(result).toEqual(updatedUrl);
     });
 
-    it('renders image with any other url', () => {
-      const props = {...baseProps, src: 'https://via.placeholder.com/150'};
-      render(<Avatar {...props} />);
+    it('gets correct url for any other url', () => {
+      const url = 'https://via.placeholder.com/150';
+      const result = getFormattedSrc(url, baseProps.size);
 
-      const el = screen.getByTestId('Avatar');
-
-      expect(el).toHaveAttribute('src', props.src);
-    });
-  });
-
-  it('renders image with alt text passed in', () => {
-    render(<Avatar {...baseProps} />);
-
-    expect(screen.getByTestId('Avatar')).toHaveAttribute('alt', baseProps.alt);
-  });
-
-  it('renders image with size passed in', () => {
-    render(<Avatar {...baseProps} />);
-
-    const el = screen.getByTestId('Avatar');
-
-    expect(el).toHaveAttribute('height', baseProps.size.toString());
-    expect(el).toHaveAttribute('width', baseProps.size.toString());
-  });
-
-  describe('renders fallback component', () => {
-    it('renders fallback component if empty stings passed as src', () => {
-      const props = {...baseProps, src: ''};
-      render(<Avatar {...props} />);
-
-      const el = screen.getByTestId('Avatar--placeholder');
-
-      expect(el).toBeTruthy();
-    });
-
-    it('renders fallback component with size passed in', () => {
-      const props = {...baseProps, src: ''};
-      render(<Avatar {...props} />);
-
-      const el = screen.getByTestId('Avatar--placeholder');
-
-      expect(el.style).toHaveProperty('height', `${props.size}px`);
-      expect(el.style).toHaveProperty('width', `${props.size}px`);
+      expect(result).toEqual(url);
     });
   });
 });
