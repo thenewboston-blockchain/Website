@@ -94,19 +94,19 @@
     "contributors": [
       {
         "title": "Back-End Lead",
-        "isLead": false,
+        "isLead": true,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "4",
-          "displayName": "Volodymyr",
-          "githubUsername": "vosi",
-          "profileImage": "https://avatars0.githubusercontent.com/u/758024?s=460&v=4",
-          "slackUsername": "Volodymyr"
+          "displayName": "Dmitry Mugtasimov",
+          "githubUsername": "dmugtasimov",
+          "profileImage": "https://avatars.githubusercontent.com/u/749833?v=4",
+          "slackUsername": "Dmitry Mugtasimov"
         }
       },
       {
-        "title": "Python Product Manager",
+        "title": "Python Developer",
         "isLead": false,
         "payPerDay": 2800,
         "createdDate": "2020-11-13T02:14:59.307535Z",
@@ -116,19 +116,6 @@
           "githubUsername": "Barajas123",
           "profileImage": "https://avatars2.githubusercontent.com/u/46165581?s=460&v=4",
           "slackUsername": "Andy Bajaras"
-        }
-      },
-      {
-        "title": "Junior Python (Django) Developer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-05-09T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "18",
-          "displayName": "Abhi",
-          "githubUsername": "Abhishek5101",
-          "profileImage": "https://avatars2.githubusercontent.com/u/35332154?s=460&u=177f255ad3f55a5a8b610b9b807f60d2e95d6519&v=4",
-          "slackUsername": "Abhi"
         }
       },
       {
@@ -142,45 +129,6 @@
           "githubUsername": "shahraizali",
           "profileImage": "https://avatars3.githubusercontent.com/u/15216270?s=460&u=d417978e0163fb544caf74293278fac7ebf1dabf&v=4",
           "slackUsername": "Shahraiz Ali"
-        }
-      },
-      {
-        "title": "Python Developer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-11-12T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "40",
-          "displayName": "Dwayne Sordam",
-          "githubUsername": "CirXe0N",
-          "profileImage": "https://avatars3.githubusercontent.com/u/24738451?s=460&u=c1e3dc0dd9585a4cf877c453ec80f4af830c2fd5&v=4",
-          "slackUsername": "Dwayne"
-        }
-      },
-      {
-        "title": "Python Developer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-11-13T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "44",
-          "displayName": "Richard Starkey",
-          "githubUsername": "MathClassIsTough",
-          "profileImage": "https://avatars0.githubusercontent.com/u/74336482?s=460&v=4",
-          "slackUsername": "Richard (MathClassIsTough)"
-        }
-      },
-      {
-        "title": "Python Developer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-11-18T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "49",
-          "displayName": "Yashovardhan",
-          "githubUsername": "YashovardhanSingh",
-          "profileImage": "https://avatars1.githubusercontent.com/u/63940326?s=460&v=4",
-          "slackUsername": "yashovardhansingh"
         }
       }
     ],
