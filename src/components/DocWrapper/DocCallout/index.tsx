@@ -12,12 +12,12 @@ export enum CalloutType {
   warning = 'warning',
 }
 
-interface ComponentProps {
+export interface DocCalloutProps {
   className?: string;
   type: CalloutType;
 }
 
-const DocCallout: FC<ComponentProps> = ({children, className, type}) => {
+const DocCallout: FC<DocCalloutProps> = ({children, className, type}) => {
   const modifier = useMemo<string>(() => `--${type}`, [type]);
 
   const icon = useMemo(() => {
@@ -26,13 +26,15 @@ const DocCallout: FC<ComponentProps> = ({children, className, type}) => {
       ...bemify(className, `__icon${modifier}`),
     });
 
+    const dataTestId = `DocCallout__icon${modifier}`;
+
     switch (type) {
       case CalloutType.important:
-        return <Icon className={classNames} icon={IconType.alertCircle} />;
+        return <Icon className={classNames} dataTestId={dataTestId} icon={IconType.alertCircle} />;
       case CalloutType.warning:
-        return <Icon className={classNames} icon={IconType.alert} />;
+        return <Icon className={classNames} dataTestId={dataTestId} icon={IconType.alert} />;
       default:
-        return <Icon className={classNames} icon={IconType.information} />;
+        return <Icon className={classNames} dataTestId={dataTestId} icon={IconType.information} />;
     }
   }, [className, modifier, type]);
 
@@ -41,12 +43,14 @@ const DocCallout: FC<ComponentProps> = ({children, className, type}) => {
       className={clsx('DocCallout', `DocCallout${modifier}`, className, {
         ...bemify(className, modifier),
       })}
+      data-testid="DocCallout"
     >
       <div
         className={clsx('DocCallout__header', `DocCallout__header${modifier}`, {
           ...bemify(className, '__header'),
           ...bemify(className, `__header${modifier}`),
         })}
+        data-testid="DocCallout__header"
       >
         {icon} {capitalize(type)}
       </div>
