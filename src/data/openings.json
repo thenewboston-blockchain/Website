@@ -378,5 +378,44 @@
       "Git and GitHub",
       "Understanding of Blockchain Technology (optional)"
     ]
+  },
+  {
+    "openingId": "blockchain-payment-auditor",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Justin"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "Responsible for ensuring people are sending out payments as promised and other financial operations.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Blockchain Payment Auditor",
+    "reportsTo": [
+      {
+        "githubUsername": "Justin",
+        "name": "Justin"
+      }
+    ],
+    "responsibilities": [
+      "Conduct audit",
+      "Monitor completion of payments and resolve payment discrepancies",
+      "Communicate well with others"
+    ],
+    "technologyRequirements": [
+      "Good communication and problem-solving skills",
+      "Attention to detail and accuracy",
+      "Excellent organizational and follow-up skills",
+      "Strong math skills"
+    ]
   }
 ]
