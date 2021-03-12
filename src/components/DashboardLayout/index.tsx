@@ -3,13 +3,14 @@ import React, {FC, ReactNode} from 'react';
 import {BreadcrumbMenu, PageTitle} from 'components';
 import './DashboardLayout.scss';
 
-interface ComponentProps {
+export interface DashboardLayoutProps {
+  children?: ReactNode;
   menuItems: ReactNode;
   pageName: string;
   sectionName: string;
 }
 
-const DashboardLayout: FC<ComponentProps> = ({children, menuItems, pageName, sectionName}) => {
+const DashboardLayout: FC<DashboardLayoutProps> = ({children, menuItems, pageName, sectionName}) => {
   return (
     <>
       <PageTitle title={`${sectionName}`} />
@@ -20,8 +21,12 @@ const DashboardLayout: FC<ComponentProps> = ({children, menuItems, pageName, sec
           pageName={pageName}
           sectionName={sectionName}
         />
-        <div className="DashboardLayout__left-menu">{menuItems}</div>
-        <div className="DashboardLayout__main-content">{children}</div>
+        <div className="DashboardLayout__left-menu" data-testid="DashboardLayout__left-menu_test">
+          {menuItems}
+        </div>
+        <div className="DashboardLayout__main-content" data-testid="DashboardLayout__main-content_test">
+          {children}
+        </div>
       </div>
     </>
   );

@@ -110,14 +110,14 @@ interface ComponentProps {
   dataTestId?: string;
   disabled?: boolean;
   icon: IconType;
-  onClick?(e?: React.MouseEvent<HTMLDivElement, MouseEvent>): void;
-  onKeyDown?(e?: React.KeyboardEvent<HTMLDivElement>): void;
+  onClick?(e?: React.MouseEvent<HTMLSpanElement, MouseEvent>): void;
+  onKeyDown?(e?: React.KeyboardEvent<HTMLSpanElement>): void;
   size?: number;
   totalSize?: number | 'unset';
   unfocusable?: boolean;
 }
 
-const Icon = forwardRef<HTMLDivElement, ComponentProps>(
+const Icon = forwardRef<HTMLSpanElement, ComponentProps>(
   (
     {className, dataTestId, disabled = false, icon, onClick, onKeyDown, size, totalSize = 'unset', unfocusable = false},
     ref,
@@ -235,12 +235,12 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
 
     const tabIndex = useMemo(() => (unfocusable || !onClick ? undefined : 0), [onClick, unfocusable]);
 
-    const handleClick = (e?: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
+    const handleClick = (e?: React.MouseEvent<HTMLSpanElement, MouseEvent>): void => {
       if (disabled || !onClick) return;
       onClick(e);
     };
 
-    const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>): void => {
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLSpanElement>): void => {
       if (!onClick) return;
 
       if (e.key === 'Enter' && !disabled) {
@@ -251,8 +251,9 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
     };
 
     return (
-      <div
-        role="button"
+      // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+      <span
+        role={onClick ? 'button' : 'img'}
         className={clsx('Icon', className, {
           'Icon--disabled': disabled,
           ...bemify(className, '--disabled', disabled),
@@ -265,7 +266,7 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
         tabIndex={tabIndex}
       >
         {renderIcon()}
-      </div>
+      </span>
     );
   },
 );

@@ -18,10 +18,15 @@ const DropdownInput: FC<ComponentProps<string>> = ({callbackOnChange, defaultOpt
     callbackOnChange(value);
   };
   return (
-    <div className="DropdownInput">
-      <select className="DropdownInput__select-box" value={selectedOption} onChange={handleChange}>
+    <div className="DropdownInput" data-testid="DropdownInput">
+      <select
+        className="DropdownInput__select-box"
+        data-testid="DropdownInput__select-box"
+        value={selectedOption}
+        onChange={handleChange}
+      >
         {options.map((option) => (
-          <option key={option} className="DropdownInput__option" value={option}>
+          <option key={option} className="DropdownInput__option" value={option} data-testid="DropdownInput__option">
             {option}
           </option>
         ))}

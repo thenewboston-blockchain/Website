@@ -1,10 +1,14 @@
-import React, {FC, useEffect, useState} from 'react';
+/* eslint-disable react/jsx-props-no-spreading */
+
+import React, {FC, Suspense, useEffect, useState} from 'react';
+import {useImage} from 'react-image';
 import clsx from 'clsx';
+
+import DefaultUserAvatar from 'assets/images/default-avatar.png';
 
 import './Avatar.scss';
 
 export interface AvatarProps {
-  alt: string;
   className?: string;
   size: number;
   src: string;
@@ -15,44 +19,61 @@ export const getImageSizeBasedOnDeviceRatio = (size: number): number => {
   return size * devicePixelRatio;
 };
 
-const Avatar: FC<AvatarProps> = ({alt, className, size, src}) => {
-  const [source, setSource] = useState<string>('');
+export const getFormattedSrc = (src: string, size: number): string => {
+  try {
+    const updatedSize = getImageSizeBasedOnDeviceRatio(size);
+    if (src.includes('github')) {
+      const [path] = src.split('?');
+      return `${path}?s=${updatedSize}`;
+    }
+    if (src.includes('slack')) {
+      const srcSplitArr = src.split('-');
+      srcSplitArr.pop();
+      const path = srcSplitArr.join('-');
+      return `${path}-${updatedSize}`;
+    }
+
+    return src;
+  } catch (error) {
+    return '';
+  }
+};
+
+const AvatarImgWithFallback: FC<AvatarProps> = ({className, size, src}) => {
+  const [srcPrimary, setSrcPrimary] = useState<string>('');
+  const {src: srcWithFallback} = useImage({srcList: [srcPrimary, DefaultUserAvatar]});
 
   useEffect(() => {
-    try {
-      const updatedSize = getImageSizeBasedOnDeviceRatio(size);
-      if (src.includes('github')) {
-        const [path] = src.split('?');
-        setSource(`${path}?s=${updatedSize}`);
-      } else if (src.includes('slack')) {
-        const srcSplitArr = src.split('-');
-        srcSplitArr.pop();
-        const path = srcSplitArr.join('-');
-        setSource(`${path}-${updatedSize}`);
-      } else {
-        setSource(src);
-      }
-    } catch (error) {
-      setSource('');
-    }
+    setSrcPrimary(getFormattedSrc(src, size));
   }, [src, size]);
 
-  return source?.length ? (
+  return (
     <img
-      alt={alt}
+      alt="Avatar"
       className={clsx('Avatar', className)}
+      crossOrigin="anonymous"
       data-testid="Avatar"
       height={size}
-      loading="lazy"
-      src={source}
+      key={srcWithFallback}
+      src={srcWithFallback}
       width={size}
     />
-  ) : (
-    <div
-      className={clsx('Avatar', 'Avater--placeholder', className)}
-      data-testid="Avatar--placeholder"
-      style={{height: size, width: size}}
-    />
+  );
+};
+
+const Avatar: FC<AvatarProps> = ({className, size, ...props}) => {
+  return (
+    <Suspense
+      fallback={
+        <div
+          className={clsx('Avatar', 'Avatar--placeholder', className)}
+          data-testid="Avatar--placeholder"
+          style={{minHeight: size, minWidth: size}}
+        />
+      }
+    >
+      <AvatarImgWithFallback className={className} size={size} {...props} />
+    </Suspense>
   );
 };
 
