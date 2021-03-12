@@ -20,7 +20,7 @@ describe('Loader component', () => {
 
   test('renders with role Button', () => {
     render(<Loader />);
-    const loader = screen.getByRole('button');
+    const loader = screen.getByRole('img');
     expect(loader).toBeTruthy();
   });
 
