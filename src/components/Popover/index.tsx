@@ -2,6 +2,7 @@ import React, {FC, ReactNode, useEffect, useMemo, useRef, useState} from 'react'
 import {createPortal} from 'react-dom';
 import {useLocation} from 'react-router-dom';
 import clsx from 'clsx';
+import throttle from 'lodash/throttle';
 import {bemify} from '@thenewboston/utils';
 
 import {useEventListener, useWindowDimensions} from 'hooks';
@@ -19,7 +20,7 @@ export type VerticalPosition = 'bottom' | 'center' | 'top';
 
 const initialDomRect = {height: 0, left: 0, top: 0, width: 0};
 
-interface ComponentProps {
+export interface PopoverProps {
   anchorOrigin?: {horizontal: HorizontalPosition | number; vertical: VerticalPosition | number};
   anchorEl: HTMLElement | null;
   children: ReactNode;
@@ -31,7 +32,7 @@ interface ComponentProps {
   transformOffset?: {horizontal: number; vertical: number};
 }
 
-const Popover: FC<ComponentProps> = ({
+const Popover: FC<PopoverProps> = ({
   anchorEl,
   anchorOrigin = {horizontal: 'left', vertical: 'top'},
   children,
@@ -50,7 +51,9 @@ const Popover: FC<ComponentProps> = ({
 
   useEventListener(
     'mousedown',
-    (e: any): void => {
+    throttle((e: any): void => {
+      if (!open) return;
+
       let targetElement = e.target;
 
       do {
@@ -61,13 +64,15 @@ const Popover: FC<ComponentProps> = ({
       } while (targetElement);
 
       closePopover();
-    },
+    }, 150),
     document,
   );
 
   useEventListener(
     'scroll',
-    (e: any): void => {
+    throttle((e: any): void => {
+      if (!open) return;
+
       let targetElement = e.target;
 
       do {
@@ -78,14 +83,17 @@ const Popover: FC<ComponentProps> = ({
       } while (targetElement);
 
       closePopover();
-    },
+    }, 150),
     document,
     true,
   );
 
   useEffect(() => {
-    closePopover();
-  }, [closePopover, pathname]);
+    if (open) {
+      closePopover();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
 
   useEffect(() => {
     if (anchorEl) {
@@ -175,6 +183,7 @@ const Popover: FC<ComponentProps> = ({
             'Popover--open': open,
             ...bemify(className, '--open', open),
           })}
+          data-testid="Popover"
           id={id}
           onClick={handleStopFromClosing}
           ref={portalRef}
