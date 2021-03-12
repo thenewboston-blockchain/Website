@@ -106,6 +106,19 @@
         }
       },
       {
+        "title": "Back-End Lead",
+        "isLead": true,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "18",
+          "displayName": "Justin Ndwiga",
+          "githubUsername": "ThaDeveloper",
+          "profileImage": "https://avatars.githubusercontent.com/u/12385482?v=4",
+          "slackUsername": "Justin Ndwiga"
+        }
+      },
+      {
         "title": "Python Developer",
         "isLead": false,
         "payPerDay": 2800,
