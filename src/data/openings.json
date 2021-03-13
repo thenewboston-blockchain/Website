@@ -384,7 +384,7 @@
     "applicationMethods": [
       {
         "channel": "slack",
-        "note": "Message Justin"
+        "note": "Message Justin (Angle 943)"
       },
       {
         "channel": "linkedin"
@@ -402,7 +402,7 @@
     "position": "Blockchain Payment Auditor",
     "reportsTo": [
       {
-        "githubUsername": "Justin",
+        "githubUsername": "Angle943",
         "name": "Justin"
       }
     ],
