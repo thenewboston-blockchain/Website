@@ -23,11 +23,12 @@ const CreateAccount: FC = () => {
 
   const handleSubmit = async ({display_name, email, password}: FormValues): Promise<void> => {
     try {
+      const trimmedDisplayName = display_name.trim(); // remove trailing spaces in display name before sending BE
       setErrorMessage('');
       setSubmitting(true);
       await axios.post(
         `${process.env.REACT_APP_BACKEND_API}/users`,
-        {display_name, email, password},
+        {display_name: trimmedDisplayName, email, password},
         standardHeaders(),
       );
       setCreatingAccount(false);
@@ -80,7 +81,10 @@ const CreateAccount: FC = () => {
       .string()
       .oneOf([yup.ref('password'), ''], 'Passwords must match')
       .required(),
-    display_name: yup.string().required('Display Name is required'),
+    display_name: yup
+      .string()
+      .required('Display Name is required')
+      .max(30, 'Display Name must be less than 30 characters'),
     email: yup.string().email().required('Email is required'),
     password: yup.string().required('Password is required'),
   });
