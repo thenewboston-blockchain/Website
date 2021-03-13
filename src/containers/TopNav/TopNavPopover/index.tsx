@@ -164,6 +164,11 @@ const TopNavPopover: FC<ComponentProps> = ({
               closePopover={unsetAnchorEl}
               handleKeyDown={handleOptionKeyDown(to, index)}
               key={title}
+              ref={(el) => {
+                if (el) {
+                  itemsRef.current[index] = el;
+                }
+              }}
               title={title}
               to={to}
             />
