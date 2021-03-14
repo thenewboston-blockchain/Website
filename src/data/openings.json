@@ -492,5 +492,42 @@
         "technologyRequirements": [
             "Knowledge in Foreign Languages for future purposes (Spanish, Chinese, Russian, and Japanese)"
         ]
+    },
+    {
+        "openingId": "content-editors",
+        "applicationMethods": [{
+                "channel": "slack",
+                "note": "Message Kristy"
+            },
+            {
+                "channel": "linkedin"
+            },
+            {
+                "channel": "twitter"
+            },
+            {
+                "channel": "reddit"
+            }
+        ],
+        "category": "Community",
+        "description": "A detail-oriented content editor who can deliver quality content and help devise traffic and profit generating content strategies for the community",
+        "payNotes": ["2,800 coins/day"],
+        "position": "Content Editors",
+        "reportsTo": [{
+            "githubUsername": "kristykjlee",
+            "name": "Kristy Lee"
+        }],
+        "responsibilities": [
+            "Responsible for all aspects of content, which includes development, design, production, presentation, evaluation, analysis, etc.",
+            "Use data and feedback from users to help evaluate and enhance the value of a set of written materials and websites"
+        ],
+        "technologyRequirements": [
+            "Excellent command of the English language",
+            "Writing, copy editing, and proofreading experience",
+            "Good communication and interpersonal skills",
+            "Highly organized and detail-oriented",
+            "Proficient in desktop publishing software",
+            "Proficient in Microsoft Office and Social Media platforms"
+        ]
     }
 ]
