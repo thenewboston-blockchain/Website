@@ -1,421 +1,427 @@
-[
-  {
-    "openingId": "senior-python-django-developer",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Post a message in #intros"
-      }
-    ],
-    "category": "Engineering",
-    "description": "We are looking for a Senior Python / Django Developer to help us build out both our digital currency network and Website API.",
-    "payNotes": ["2,800 coins/day"],
-    "position": "Senior Python / Django Developer",
-    "reportsTo": [
-      {
-        "githubUsername": "buckyroberts",
-        "name": "Bucky"
-      }
-    ],
-    "responsibilities": [
-      "Designing and creating RESTful APIs",
-      "Participating in architectural, design and product discussions",
-      "Working in an environment with an excellent team of engineers"
-    ],
-    "technologyRequirements": [
-      "Experience with Celery, DRF, and pytest",
-      "2+ years of experience in Django",
-      "4+ years of experience in Python"
-    ]
-  },
-  {
-    "openingId": "senior-devops-engineer",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Post a message in #intros"
-      }
-    ],
-    "category": "Engineering",
-    "description": "As Senior DevOps Engineer you will be a key contributor to designing, building, testing, managing, and maintaining some of the key technology that powers our digital currency network.",
-    "payNotes": ["2,800 coins/day"],
-    "position": "Senior DevOps Engineer",
-    "reportsTo": [
-      {
-        "githubUsername": "buckyroberts",
-        "name": "Bucky"
-      }
-    ],
-    "responsibilities": [
-      "Analyze, troubleshoot and resolve system, software, network, and storage failures",
-      "Configure, test, deploy, and upgrade software for production services in AWS",
-      "Author and recommend settings for applications, operating systems, networks, and cloud services to improve performance, security, and reliability",
-      "Design and develop monitoring and 100% uptime solutions for our digital currency network"
-    ],
-    "technologyRequirements": [
-      "3+ years experience with both software engineering and sysops or 6+ years experience as a DevOps engineer or similar",
-      "Extensive experience with cloud computing and virtualization",
-      "Expert knowledge of Linux",
-      "Proven understanding of networking (TCP/IP, DNS, etc)"
-    ]
-  },
-  {
-    "openingId": "graphic-designer",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Kristy KJ Lee & David Yap"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
-      }
-    ],
-    "category": "Design",
-    "description": "As a graphic designer, you will create high-fidelity graphics for our social media team and marketing team.",
-    "payNotes": ["2,800 coins/day"],
-    "position": "Graphic Designer",
-    "reportsTo": [
-      {
-        "githubUsername": "kristykjlee",
-        "name": "Kristy Lee"
-      },
-      {
-        "githubUsername": "davidyapdy",
-        "name": "David Yap"
-      }
-    ],
-    "responsibilities": [
-      "Create HiFi graphics for social media posts & marketing content",
-      "Give design reviews to community members making infographics",
-      "Review end results with design team",
-      "Send completed graphics to social media & marketing team for them to post",
-      "Be a part of creating our visual language"
-    ],
-    "technologyRequirements": ["Skilled in Figma", "Skilled in Illustrator"]
-  },
-  {
-    "openingId": "senior-dot-net-core-developer",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Mircea Teodor Oprea"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
-      }
-    ],
-    "category": "Engineering",
-    "description": "Work on the .NET Core SDK for thenewboston, code review the PRs opened by other contributors and participate in discussions about the architecture/direction of the SDK.",
-    "payNotes": ["2,800 coins/day"],
-    "position": "Senior .NET Core Developer",
-    "reportsTo": [
-      {
-        "githubUsername": "Mirch",
-        "name": "Mircea Teodor Oprea"
-      }
-    ],
-    "responsibilities": [
-      "Contribute to the development of the .NET Core SDK",
-      "Code review the PRs of other contributors",
-      "Contribute to discussions about the structure of the project, code standards and development approaches"
-    ],
-    "technologyRequirements": [
-      ".NET Core",
-      "xUnit & Moq",
-      "ASP.NET Core (for future example projects)",
-      "Github Actions"
-    ]
-  },
-  {
-    "openingId": "social-media-manager",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message MsChrishaph"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
-      }
-    ],
-    "category": "Engineering",
-    "description": "Social Media Managers are responsible for planning, implementing, managing and monitoring company's Social Media strategy in order to increase brand awareness, improve Marketing effort.",
-    "payNotes": ["2,800 coins/day"],
-    "position": "Social Media Manager",
-    "reportsTo": [
-      {
-        "githubUsername": "Chrisha1212",
-        "name": "Chrisha"
-      }
-    ],
-    "responsibilities": [
-      "Develop, implement and manage our social media strategy",
-      "Define most important social media KPIs",
-      "Manage and oversee social media content",
-      "Measure the success of every social media campaign",
-      "Stay up to date with latest social media best practices and technologies",
-      "Work with copywriters and designers to ensure content is informative and appealing",
-      "Collaborate with Marketing Teams"
-    ],
-    "technologyRequirements": [
-      "Proven work experience as a Social media manager",
-      "G-suite expert",
-      "Solid knowledge of SEO, keyword research and Google Analytics"
-    ]
-  },
-  {
-    "openingId": "self-order-app-sr-django-developer",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Yahya"
-      }
-    ],
-    "category": "Engineering",
-    "project": {
-      "name": "Restaurants Self Order App",
-      "url": "https://github.com/Restaurants-Self-Order"
+[{
+        "openingId": "senior-python-django-developer",
+        "applicationMethods": [{
+            "channel": "slack",
+            "note": "Post a message in #intros"
+        }],
+        "category": "Engineering",
+        "description": "We are looking for a Senior Python / Django Developer to help us build out both our digital currency network and Website API.",
+        "payNotes": ["2,800 coins/day"],
+        "position": "Senior Python / Django Developer",
+        "reportsTo": [{
+            "githubUsername": "buckyroberts",
+            "name": "Bucky"
+        }],
+        "responsibilities": [
+            "Designing and creating RESTful APIs",
+            "Participating in architectural, design and product discussions",
+            "Working in an environment with an excellent team of engineers"
+        ],
+        "technologyRequirements": [
+            "Experience with Celery, DRF, and pytest",
+            "2+ years of experience in Django",
+            "4+ years of experience in Python"
+        ]
     },
-    "description": "Someone with a good experience in translating business and technical requirements into comprehensive software design and architecture.",
-    "payNotes": ["2,800 coins/day"],
-    "position": "Software Architect/Senior Django Developer",
-    "reportsTo": [
-      {
-        "githubUsername": "yahya",
-        "name": "Yahya"
-      }
-    ],
-    "responsibilities": [
-      "Designing and creating RESTful APIs",
-      "Designing and optimization of the database",
-      "Responsible for architectural, design of the product",
-      "Familiar with diagrams and documentations is a plus",
-      "Code review"
-    ],
-    "technologyRequirements": [
-      "Mainly a person who has a good skills in product designing to meet the best performance, scalability, and maintainability",
-      "Even if you are not experienced with Django, but you meet the main responsibilities, still DM me",
-      "Clean code standards",
-      "5+ years of experience "
-    ]
-  },
-  {
-    "openingId": "tnb-forum-ui-ux-designer",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Avinash Upadhyaya"
-      }
-    ],
-    "reportsTo": [
-      {
-        "githubUsername": "",
-        "name": ""
-      }
-    ],
-    "category": "Design",
-    "project": {
-      "name": "TNB Forum",
-      "url": "https://github.com/arunnalla/tnbforum"
+    {
+        "openingId": "senior-devops-engineer",
+        "applicationMethods": [{
+            "channel": "slack",
+            "note": "Post a message in #intros"
+        }],
+        "category": "Engineering",
+        "description": "As Senior DevOps Engineer you will be a key contributor to designing, building, testing, managing, and maintaining some of the key technology that powers our digital currency network.",
+        "payNotes": ["2,800 coins/day"],
+        "position": "Senior DevOps Engineer",
+        "reportsTo": [{
+            "githubUsername": "buckyroberts",
+            "name": "Bucky"
+        }],
+        "responsibilities": [
+            "Analyze, troubleshoot and resolve system, software, network, and storage failures",
+            "Configure, test, deploy, and upgrade software for production services in AWS",
+            "Author and recommend settings for applications, operating systems, networks, and cloud services to improve performance, security, and reliability",
+            "Design and develop monitoring and 100% uptime solutions for our digital currency network"
+        ],
+        "technologyRequirements": [
+            "3+ years experience with both software engineering and sysops or 6+ years experience as a DevOps engineer or similar",
+            "Extensive experience with cloud computing and virtualization",
+            "Expert knowledge of Linux",
+            "Proven understanding of networking (TCP/IP, DNS, etc)"
+        ]
     },
-    "description": "Have a good experience in UI/UX standards",
-    "payNotes": ["2,800 coins/day"],
-    "position": "UI/UX Designer",
-    "responsibilities": [
-      "Design the web interfaces using Figma",
-      "Design pages from scratch based on requirements",
-      "Coordinate and take notes from other teammates"
-    ],
-    "technologyRequirements": [
-      "Using Figma is a must",
-      "Knowledge of design systems is good to know",
-      "Knowledge of React is preferred"
-    ]
-  },
-  {
-    "openingId": "data-entry-operator",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message MsChrishaph"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
-      }
-    ],
-    "category": "Marketing",
-    "description": "We are looking for a Data Entry Operator to update and maintain information on our Marketing Team database .",
-    "payNotes": ["2,800 coins/day"],
-    "position": "Data Entry Operator",
-    "reportsTo": [
-      {
-        "githubUsername": "Chrisha1212",
-        "name": "Chrisha"
-      }
-    ],
-    "responsibilities": [
-      "Maintaining accurate, up-to-date and useable information in our systems",
-      "Comply with data integrity and security policies",
-      "Keep information confidential",
-      "Research and obtain further information for incomplete documents",
-      "Compile, verify accuracy and sort information according to priorities to prepare source data for computer entry",
-      "Review data for deficiencies or errors, correct any incompatibilities if possible and check output"
-    ],
-    "technologyRequirements": [
-      "Proven data entry work experience, as a Data Entry Operator or Office Clerk",
-      "Experience with MS Office and data programs",
-      "Excellent knowledge of correct spelling, grammar and punctuation",
-      "Can work with Marketing Team"
-    ]
-  },
-  {
-    "openingId": "front-end-developer",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Siddhesh Kulthe"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
-      }
-    ],
-    "category": "Engineering",
-    "description": "As a front-end developer, your key contributions will be setting up the layout for the blog, removing bugs, integrating services like Google Analytics, Facebook Pixel, managing the metadata of the website, etc.",
-    "payNotes": ["2,800 coins/day"],
-    "position": "Front End Developer",
-    "reportsTo": [
-      {
-        "githubUsername": "Siddhesh",
-        "name": "Siddhesh Kulthe"
-      }
-    ],
-    "responsibilities": [
-      "Developing the front-end of the website",
-      "Managing the blog and clearing bugs",
-      "Posting blogs on a timely basis (Weekly)",
-      "Changing the blog layout if needed",
-      "The code should not be copy-pasted",
-      "Quality of code shall be high so that reduction in size is possible which will perhaps lead to faster load times"
-    ],
-    "technologyRequirements": [
-      "Experience in ReactJs",
-      "Proven Expertise in SASS",
-      "Shall be well acquainted with jQuery",
-      "Knowledge regarding Backend development is preferred",
-      "Optional: Experience in Server-side Rendering"
-    ]
-  },
-  {
-    "openingId": "python-django-developer",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message itsnikhil"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
-      }
-    ],
-    "category": "Engineering",
-    "description": "Blockchain Explorer team is looking for a backend developer to lead parts of the blockchain explorer from inception to launch, and own large parts of the product’s execution. They are one of thenewboston approved project with a mission to create Open Blockchain Explorer.",
-    "payNotes": ["2,800 coins/day"],
-    "position": "Python / Django Developer",
-    "reportsTo": [
-      {
-        "githubUsername": "itsnikhil",
-        "name": "Nikhil Taneja"
-      }
-    ],
-    "responsibilities": [
-      "Lead parts of the blockchain explorer from inception to launch, and own large parts of the product’s execution",
-      "Planning out project and involved in database creation, integration, and management",
-      "Writing APIs and Data models for various features of the explorer",
-      "Collaborate with Front-end developers to integrate user-facing elements with server side logic",
-      "Ensuring that systems are safe and secure against cybersecurity threats",
-      "Generating analytics and statistics for the explorer",
-      "Maintain comprehensive workflow documentation and knowledge sharing",
-      "Perform peer code reviews, create issues for other people outside the team could contribute to opensource project"
-    ],
-    "technologyRequirements": [
-      "Proficient in python programming language",
-      "Experienced in Django web framework",
-      "Knowledge of SQL Databases",
-      "Git and GitHub",
-      "Understanding of Blockchain Technology (optional)"
-    ]
-  },
-  {
-    "openingId": "blockchain-payment-auditor",
-    "applicationMethods": [
-      {
-        "channel": "slack",
-        "note": "Message Justin (Angle 943)"
-      },
-      {
-        "channel": "linkedin"
-      },
-      {
-        "channel": "twitter"
-      },
-      {
-        "channel": "reddit"
-      }
-    ],
-    "category": "Engineering",
-    "description": "Responsible for ensuring people are sending out payments as promised and other financial operations.",
-    "payNotes": ["2,800 coins/day"],
-    "position": "Blockchain Payment Auditor",
-    "reportsTo": [
-      {
-        "githubUsername": "Angle943",
-        "name": "Justin"
-      }
-    ],
-    "responsibilities": [
-      "Conduct audit",
-      "Monitor completion of payments and resolve payment discrepancies",
-      "Communicate well with others"
-    ],
-    "technologyRequirements": [
-      "Good communication and problem-solving skills",
-      "Attention to detail and accuracy",
-      "Excellent organizational and follow-up skills",
-      "Strong math skills"
-    ]
-  }
+    {
+        "openingId": "graphic-designer",
+        "applicationMethods": [{
+                "channel": "slack",
+                "note": "Message Kristy KJ Lee & David Yap"
+            },
+            {
+                "channel": "linkedin"
+            },
+            {
+                "channel": "twitter"
+            },
+            {
+                "channel": "reddit"
+            }
+        ],
+        "category": "Design",
+        "description": "As a graphic designer, you will create high-fidelity graphics for our social media team and marketing team.",
+        "payNotes": ["2,800 coins/day"],
+        "position": "Graphic Designer",
+        "reportsTo": [{
+                "githubUsername": "kristykjlee",
+                "name": "Kristy Lee"
+            },
+            {
+                "githubUsername": "davidyapdy",
+                "name": "David Yap"
+            }
+        ],
+        "responsibilities": [
+            "Create HiFi graphics for social media posts & marketing content",
+            "Give design reviews to community members making infographics",
+            "Review end results with design team",
+            "Send completed graphics to social media & marketing team for them to post",
+            "Be a part of creating our visual language"
+        ],
+        "technologyRequirements": ["Skilled in Figma", "Skilled in Illustrator"]
+    },
+    {
+        "openingId": "senior-dot-net-core-developer",
+        "applicationMethods": [{
+                "channel": "slack",
+                "note": "Message Mircea Teodor Oprea"
+            },
+            {
+                "channel": "linkedin"
+            },
+            {
+                "channel": "twitter"
+            },
+            {
+                "channel": "reddit"
+            }
+        ],
+        "category": "Engineering",
+        "description": "Work on the .NET Core SDK for thenewboston, code review the PRs opened by other contributors and participate in discussions about the architecture/direction of the SDK.",
+        "payNotes": ["2,800 coins/day"],
+        "position": "Senior .NET Core Developer",
+        "reportsTo": [{
+            "githubUsername": "Mirch",
+            "name": "Mircea Teodor Oprea"
+        }],
+        "responsibilities": [
+            "Contribute to the development of the .NET Core SDK",
+            "Code review the PRs of other contributors",
+            "Contribute to discussions about the structure of the project, code standards and development approaches"
+        ],
+        "technologyRequirements": [
+            ".NET Core",
+            "xUnit & Moq",
+            "ASP.NET Core (for future example projects)",
+            "Github Actions"
+        ]
+    },
+    {
+        "openingId": "social-media-manager",
+        "applicationMethods": [{
+                "channel": "slack",
+                "note": "Message MsChrishaph"
+            },
+            {
+                "channel": "linkedin"
+            },
+            {
+                "channel": "twitter"
+            },
+            {
+                "channel": "reddit"
+            }
+        ],
+        "category": "Engineering",
+        "description": "Social Media Managers are responsible for planning, implementing, managing and monitoring company's Social Media strategy in order to increase brand awareness, improve Marketing effort.",
+        "payNotes": ["2,800 coins/day"],
+        "position": "Social Media Manager",
+        "reportsTo": [{
+            "githubUsername": "Chrisha1212",
+            "name": "Chrisha"
+        }],
+        "responsibilities": [
+            "Develop, implement and manage our social media strategy",
+            "Define most important social media KPIs",
+            "Manage and oversee social media content",
+            "Measure the success of every social media campaign",
+            "Stay up to date with latest social media best practices and technologies",
+            "Work with copywriters and designers to ensure content is informative and appealing",
+            "Collaborate with Marketing Teams"
+        ],
+        "technologyRequirements": [
+            "Proven work experience as a Social media manager",
+            "G-suite expert",
+            "Solid knowledge of SEO, keyword research and Google Analytics"
+        ]
+    },
+    {
+        "openingId": "self-order-app-sr-django-developer",
+        "applicationMethods": [{
+            "channel": "slack",
+            "note": "Message Yahya"
+        }],
+        "category": "Engineering",
+        "project": {
+            "name": "Restaurants Self Order App",
+            "url": "https://github.com/Restaurants-Self-Order"
+        },
+        "description": "Someone with a good experience in translating business and technical requirements into comprehensive software design and architecture.",
+        "payNotes": ["2,800 coins/day"],
+        "position": "Software Architect/Senior Django Developer",
+        "reportsTo": [{
+            "githubUsername": "yahya",
+            "name": "Yahya"
+        }],
+        "responsibilities": [
+            "Designing and creating RESTful APIs",
+            "Designing and optimization of the database",
+            "Responsible for architectural, design of the product",
+            "Familiar with diagrams and documentations is a plus",
+            "Code review"
+        ],
+        "technologyRequirements": [
+            "Mainly a person who has a good skills in product designing to meet the best performance, scalability, and maintainability",
+            "Even if you are not experienced with Django, but you meet the main responsibilities, still DM me",
+            "Clean code standards",
+            "5+ years of experience "
+        ]
+    },
+    {
+        "openingId": "tnb-forum-ui-ux-designer",
+        "applicationMethods": [{
+            "channel": "slack",
+            "note": "Message Avinash Upadhyaya"
+        }],
+        "reportsTo": [{
+            "githubUsername": "",
+            "name": ""
+        }],
+        "category": "Design",
+        "project": {
+            "name": "TNB Forum",
+            "url": "https://github.com/arunnalla/tnbforum"
+        },
+        "description": "Have a good experience in UI/UX standards",
+        "payNotes": ["2,800 coins/day"],
+        "position": "UI/UX Designer",
+        "responsibilities": [
+            "Design the web interfaces using Figma",
+            "Design pages from scratch based on requirements",
+            "Coordinate and take notes from other teammates"
+        ],
+        "technologyRequirements": [
+            "Using Figma is a must",
+            "Knowledge of design systems is good to know",
+            "Knowledge of React is preferred"
+        ]
+    },
+    {
+        "openingId": "data-entry-operator",
+        "applicationMethods": [{
+                "channel": "slack",
+                "note": "Message MsChrishaph"
+            },
+            {
+                "channel": "linkedin"
+            },
+            {
+                "channel": "twitter"
+            },
+            {
+                "channel": "reddit"
+            }
+        ],
+        "category": "Marketing",
+        "description": "We are looking for a Data Entry Operator to update and maintain information on our Marketing Team database .",
+        "payNotes": ["2,800 coins/day"],
+        "position": "Data Entry Operator",
+        "reportsTo": [{
+            "githubUsername": "Chrisha1212",
+            "name": "Chrisha"
+        }],
+        "responsibilities": [
+            "Maintaining accurate, up-to-date and useable information in our systems",
+            "Comply with data integrity and security policies",
+            "Keep information confidential",
+            "Research and obtain further information for incomplete documents",
+            "Compile, verify accuracy and sort information according to priorities to prepare source data for computer entry",
+            "Review data for deficiencies or errors, correct any incompatibilities if possible and check output"
+        ],
+        "technologyRequirements": [
+            "Proven data entry work experience, as a Data Entry Operator or Office Clerk",
+            "Experience with MS Office and data programs",
+            "Excellent knowledge of correct spelling, grammar and punctuation",
+            "Can work with Marketing Team"
+        ]
+    },
+    {
+        "openingId": "front-end-developer",
+        "applicationMethods": [{
+                "channel": "slack",
+                "note": "Message Siddhesh Kulthe"
+            },
+            {
+                "channel": "linkedin"
+            },
+            {
+                "channel": "twitter"
+            },
+            {
+                "channel": "reddit"
+            }
+        ],
+        "category": "Engineering",
+        "description": "As a front-end developer, your key contributions will be setting up the layout for the blog, removing bugs, integrating services like Google Analytics, Facebook Pixel, managing the metadata of the website, etc.",
+        "payNotes": ["2,800 coins/day"],
+        "position": "Front End Developer",
+        "reportsTo": [{
+            "githubUsername": "Siddhesh",
+            "name": "Siddhesh Kulthe"
+        }],
+        "responsibilities": [
+            "Developing the front-end of the website",
+            "Managing the blog and clearing bugs",
+            "Posting blogs on a timely basis (Weekly)",
+            "Changing the blog layout if needed",
+            "The code should not be copy-pasted",
+            "Quality of code shall be high so that reduction in size is possible which will perhaps lead to faster load times"
+        ],
+        "technologyRequirements": [
+            "Experience in ReactJs",
+            "Proven Expertise in SASS",
+            "Shall be well acquainted with jQuery",
+            "Knowledge regarding Backend development is preferred",
+            "Optional: Experience in Server-side Rendering"
+        ]
+    },
+    {
+        "openingId": "python-django-developer",
+        "applicationMethods": [{
+                "channel": "slack",
+                "note": "Message itsnikhil"
+            },
+            {
+                "channel": "linkedin"
+            },
+            {
+                "channel": "twitter"
+            },
+            {
+                "channel": "reddit"
+            }
+        ],
+        "category": "Engineering",
+        "description": "Blockchain Explorer team is looking for a backend developer to lead parts of the blockchain explorer from inception to launch, and own large parts of the product’s execution. They are one of thenewboston approved project with a mission to create Open Blockchain Explorer.",
+        "payNotes": ["2,800 coins/day"],
+        "position": "Python / Django Developer",
+        "reportsTo": [{
+            "githubUsername": "itsnikhil",
+            "name": "Nikhil Taneja"
+        }],
+        "responsibilities": [
+            "Lead parts of the blockchain explorer from inception to launch, and own large parts of the product’s execution",
+            "Planning out project and involved in database creation, integration, and management",
+            "Writing APIs and Data models for various features of the explorer",
+            "Collaborate with Front-end developers to integrate user-facing elements with server side logic",
+            "Ensuring that systems are safe and secure against cybersecurity threats",
+            "Generating analytics and statistics for the explorer",
+            "Maintain comprehensive workflow documentation and knowledge sharing",
+            "Perform peer code reviews, create issues for other people outside the team could contribute to opensource project"
+        ],
+        "technologyRequirements": [
+            "Proficient in python programming language",
+            "Experienced in Django web framework",
+            "Knowledge of SQL Databases",
+            "Git and GitHub",
+            "Understanding of Blockchain Technology (optional)"
+        ]
+    },
+    {
+        "openingId": "blockchain-payment-auditor",
+        "applicationMethods": [{
+                "channel": "slack",
+                "note": "Message Justin (Angle 943)"
+            },
+            {
+                "channel": "linkedin"
+            },
+            {
+                "channel": "twitter"
+            },
+            {
+                "channel": "reddit"
+            }
+        ],
+        "category": "Engineering",
+        "description": "Responsible for ensuring people are sending out payments as promised and other financial operations.",
+        "payNotes": ["2,800 coins/day"],
+        "position": "Blockchain Payment Auditor",
+        "reportsTo": [{
+            "githubUsername": "Angle943",
+            "name": "Justin"
+        }],
+        "responsibilities": [
+            "Conduct audit",
+            "Monitor completion of payments and resolve payment discrepancies",
+            "Communicate well with others"
+        ],
+        "technologyRequirements": [
+            "Good communication and problem-solving skills",
+            "Attention to detail and accuracy",
+            "Excellent organizational and follow-up skills",
+            "Strong math skills"
+        ]
+    },
+    {
+        "openingId": "ux-designer-and-researcher",
+        "applicationMethods": [{
+                "channel": "slack",
+                "note": "Message Kristy"
+            },
+            {
+                "channel": "linkedin"
+            },
+            {
+                "channel": "twitter"
+            },
+            {
+                "channel": "reddit"
+            }
+        ],
+        "category": "Design",
+        "description": "Responsible for researching, categorizing, and documenting user behavior by employing design methodologies, facilitating internal & external discussions, and visualizing concepts. Ensure design concepts are fully realized by working closely with software developer teams and collaborating with other designers to arrive at the best design solution.",
+        "payNotes": ["2,800 coins/day"],
+        "position": "UX Designer and Researcher",
+        "reportsTo": [{
+            "githubUsername": "kristykjlee",
+            "name": "Kristy Lee"
+        }],
+        "responsibilities": [
+            "Conduct competitor analysis, customer analysis and user research",
+            "Attend to product structure and strategy, as well as content development",
+            "Develop user flows, prototypes and wireframes",
+            "Coordination with other designers and developers",
+            "Conduct user testing and analysis",
+            "Continuously iterate on solutions to make the product increasingly effective and delightful for users"
+        ],
+        "technologyRequirements": [
+            "Collaboration and communication",
+            "Critical thinking and problem-solving skills",
+            "Familiarity with user research and analysis technique",
+            "Wireframing and prototyping",
+            "Understanding of information architecture",
+            "User and usability testing",
+            "Successful completion of UX/UI course work or training portfolio",
+            "Proven experience at a professional level"
+        ]
+    }
 ]
