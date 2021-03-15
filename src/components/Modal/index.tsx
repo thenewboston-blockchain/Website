@@ -196,13 +196,17 @@ const Modal: FC<ComponentProps> = ({
           />
         </div>
         <Form initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
-          <div className={clsx('Modal__header_mobile', {...bemify(className, '__header_mobile')})}>
-            {footer || renderResponsiveHeader()}
-          </div>
-          <div className={clsx('Modal__content', {...bemify(className, '__content')})}>{children}</div>
-          <div className={clsx('Modal__footer', {...bemify(className, '__footer')})}>
-            {footer || renderDefaultFooter()}
-          </div>
+          {() => (
+            <>
+              <div className={clsx('Modal__header_mobile', {...bemify(className, '__header_mobile')})}>
+                {footer || renderResponsiveHeader()}
+              </div>
+              <div className={clsx('Modal__content', {...bemify(className, '__content')})}>{children}</div>
+              <div className={clsx('Modal__footer', {...bemify(className, '__footer')})}>
+                {footer || renderDefaultFooter()}
+              </div>
+            </>
+          )}
         </Form>
       </div>
     </>,

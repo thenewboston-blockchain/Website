@@ -6,16 +6,16 @@ import RootAccountFileDiagram from './RootAccountFile.png';
 
 const GuideRootAccountFile: FC = () => {
   return (
-    <DocContainer className="GuideRootAccountFile" title="Root Account File" lastUpdated="07 Dec 2020">
+    <DocContainer className="GuideRootAccountFile" title="Root Account File" lastUpdated="06 Mar 2021">
       <p>
-        The root account file is a historic snapshot of all account balances at a given point in time. Every validator
-        in the network, both primary and confirmation validators, generate and maintain their own root account file.
-        Different validators may have different account files depending on when the snapshot was taken (which is usually
-        when the node first comes online). However, given the architecture of the blockchain, all other nodes in the
-        network can download and verify all validator account files regardless of when the snapshot was taken.
+        The root account file is a historic snapshot of all account balances at a given point in time. Every node in the
+        network generate and maintain their own root account file. Different nodes may have different account files
+        depending on when the snapshot was taken (which is usually when the node first comes online). However, given the
+        architecture of the blockchain, all other nodes in the network can download and verify all node account files
+        regardless of when the snapshot was taken.
       </p>
 
-      <DocImage alt="root account file" maxWidth={440} src={RootAccountFileDiagram} />
+      <DocImage alt="root account file" maxWidth={500} src={RootAccountFileDiagram} />
 
       <p>
         A key distinction between the architecture outlined above and the Bitcoin Blockchain (as well as many others) is
@@ -67,7 +67,7 @@ const GuideRootAccountFile: FC = () => {
       />
       <p>
         Bucky is skeptical about the balances. He believes that the balances are not legitimate and suspects that Amy
-        may have hacked the bank and changed her account balance. So Bucky views the transaction log and notices some
+        may have hacked the node and changed her account balance. So Bucky views the transaction log and notices some
         changes there as well.
       </p>
       <TableBorderGrid
@@ -79,7 +79,7 @@ const GuideRootAccountFile: FC = () => {
         title="Transaction Log"
       />
       <p>
-        Unfortunately, the bank has not updated its database in years and is only able to store up to two rows in the
+        Unfortunately, the node has not updated its database in years and is only able to store up to two rows in the
         transaction table; it's a very primitive economy after all. The historical log of the first transaction is lost,
         and Bucky never wrote it down. However, since Bucky had already verified the first transaction and also made a
         copy of the account file at that point in time, he does not need to view the first transaction again to ensure
@@ -151,28 +151,10 @@ const GuideRootAccountFile: FC = () => {
         (via the blockchain) for as far back as they can. In practice, nodes will never need to maintain a record of
         transactions more than a few hours old. This is because every node in the system is always in constant
         communication with each other, and every node is always verifying the transactions of others. Overall, the
-        architecture is structured around a central primary validator. Despite this, if the account file or blockchain
-        produced by that validator is ever deemed "invalid" by the confirmation validators who are continuously
-        verifying the data, all nodes will reject the updated balances, decrease trust in that validator, and switch
-        over to a new primary validator as a replacement.
+        architecture is structured around a primary validator. Despite this, if the account file or blockchain produced
+        by that PV is ever deemed "invalid" by the nodes who are continuously verifying the data, all nodes will reject
+        the updated balances, decrease trust in that PV, and switch over to a new PV as a replacement.
       </p>
-      <p>
-        We will cover the concept of "trust" in much more detail later on, but for now we can simplify the concept down
-        to some key ideas.
-      </p>
-
-      <DocList variant="ul">
-        <li>Nodes always want to connect to other nodes that they trust.</li>
-        <li>Trust is increased when you can prove that a given node is telling the truth.</li>
-        <ul>
-          <li>Meaning that the data received from that node can be validated</li>
-        </ul>
-        <li>
-          The further back in time a node is able to provide a transaction history via the blockchain, the more
-          transactions are able to be verified (by comparing them against your own) and the more trust can be
-          established between nodes.
-        </li>
-      </DocList>
     </DocContainer>
   );
 };

@@ -5,6 +5,8 @@ import clsx from 'clsx';
 import {bemify} from '@thenewboston/utils';
 
 import AccountGroupIcon from 'mdi-react/AccountGroupIcon';
+import AlertIcon from 'mdi-react/AlertIcon';
+import AlertCircleIcon from 'mdi-react/AlertCircleIcon';
 import AlertCircleOutlineIcon from 'mdi-react/AlertCircleOutlineIcon';
 import ArrowCollapseDownIcon from 'mdi-react/ArrowCollapseDownIcon';
 import ArrowDownIcon from 'mdi-react/ArrowDownIcon';
@@ -27,6 +29,7 @@ import ForumIcon from 'mdi-react/ForumIcon';
 import GithubIcon from 'mdi-react/GithubIcon';
 import HammerWrenchIcon from 'mdi-react/HammerWrenchIcon';
 import HumanHandsupIcon from 'mdi-react/HumanHandsupIcon';
+import InformationIcon from 'mdi-react/InformationIcon';
 import InstagramIcon from 'mdi-react/InstagramIcon';
 import LinkedinIcon from 'mdi-react/LinkedinIcon';
 import LoadingIcon from 'mdi-react/LoadingIcon';
@@ -54,6 +57,8 @@ import './Icon.scss';
 // These names are camelCased versions of the names found in https://materialdesignicons.com/
 export enum IconType {
   accountGroup,
+  alert,
+  alertCircle,
   alertCircleOutline,
   arrowCollapseDown,
   arrowDown,
@@ -76,6 +81,7 @@ export enum IconType {
   github,
   hammerWrench,
   humanHandsUp,
+  information,
   instagram,
   linkedin,
   loading,
@@ -104,14 +110,14 @@ interface ComponentProps {
   dataTestId?: string;
   disabled?: boolean;
   icon: IconType;
-  onClick?(e?: React.MouseEvent<HTMLDivElement, MouseEvent>): void;
-  onKeyDown?(e?: React.KeyboardEvent<HTMLDivElement>): void;
+  onClick?(e?: React.MouseEvent<HTMLSpanElement, MouseEvent>): void;
+  onKeyDown?(e?: React.KeyboardEvent<HTMLSpanElement>): void;
   size?: number;
   totalSize?: number | 'unset';
   unfocusable?: boolean;
 }
 
-const Icon = forwardRef<HTMLDivElement, ComponentProps>(
+const Icon = forwardRef<HTMLSpanElement, ComponentProps>(
   (
     {className, dataTestId, disabled = false, icon, onClick, onKeyDown, size, totalSize = 'unset', unfocusable = false},
     ref,
@@ -124,6 +130,10 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
       switch (icon) {
         case IconType.accountGroup:
           return <AccountGroupIcon {...iconProps} />;
+        case IconType.alert:
+          return <AlertIcon {...iconProps} />;
+        case IconType.alertCircle:
+          return <AlertCircleIcon {...iconProps} />;
         case IconType.alertCircleOutline:
           return <AlertCircleOutlineIcon {...iconProps} />;
         case IconType.arrowCollapseDown:
@@ -168,6 +178,8 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
           return <HammerWrenchIcon {...iconProps} />;
         case IconType.humanHandsUp:
           return <HumanHandsupIcon {...iconProps} />;
+        case IconType.information:
+          return <InformationIcon {...iconProps} />;
         case IconType.instagram:
           return <InstagramIcon {...iconProps} />;
         case IconType.linkedin:
@@ -223,12 +235,12 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
 
     const tabIndex = useMemo(() => (unfocusable || !onClick ? undefined : 0), [onClick, unfocusable]);
 
-    const handleClick = (e?: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
+    const handleClick = (e?: React.MouseEvent<HTMLSpanElement, MouseEvent>): void => {
       if (disabled || !onClick) return;
       onClick(e);
     };
 
-    const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>): void => {
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLSpanElement>): void => {
       if (!onClick) return;
 
       if (e.key === 'Enter' && !disabled) {
@@ -239,8 +251,9 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
     };
 
     return (
-      <div
-        role="button"
+      // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+      <span
+        role={onClick ? 'button' : 'img'}
         className={clsx('Icon', className, {
           'Icon--disabled': disabled,
           ...bemify(className, '--disabled', disabled),
@@ -253,7 +266,7 @@ const Icon = forwardRef<HTMLDivElement, ComponentProps>(
         tabIndex={tabIndex}
       >
         {renderIcon()}
-      </div>
+      </span>
     );
   },
 );

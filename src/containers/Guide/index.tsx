@@ -6,20 +6,17 @@ import {guideNavigationData} from 'components/DocsMenuItems';
 import {PageData, PageDataObject} from 'types/page-data';
 
 import GuideAccounts from './GuideAccounts';
-import GuideBanks from './GuideBanks';
 import GuideBestPractices from './GuideBestPractices';
+import GuideBlockchainArchitecture from './GuideBlockchainArchitecture';
 import GuideBlocks from './GuideBlocks';
-import GuideConfirmationServices from './GuideConfirmationServices';
-import GuideConfirmationValidators from './GuideConfirmationValidators';
-import GuideFutureDevelopment from './GuideFutureDevelopment';
+import GuideForkPrevention from './GuideForkPrevention';
 import GuideIntroduction from './GuideIntroduction';
 import GuideNodeIdentifier from './GuideNodeIdentifier';
-import GuideResyncProcess from './GuideResyncProcess';
-import GuideResyncTriggers from './GuideResyncTriggers';
+import GuideNodes from './GuideNodes';
 import GuideRootAccountFile from './GuideRootAccountFile';
+import GuideSchedule from './GuideSchedule';
+import GuideScheduleAdjustments from './GuideScheduleAdjustments';
 import GuideTransactionFees from './GuideTransactionFees';
-import GuideTrust from './GuideTrust';
-import GuideValidators from './GuideValidators';
 
 const defaultPageData: PageData = {
   content: <Redirect to="/guide/introduction" />,
@@ -31,61 +28,49 @@ const pageData: PageDataObject = {
     content: <GuideAccounts />,
     name: 'Accounts',
   },
-  banks: {
-    content: <GuideBanks />,
-    name: 'Banks',
-  },
   'best-practices': {
     content: <GuideBestPractices />,
     name: 'Best Practices',
+  },
+  'blockchain-architecture': {
+    content: <GuideBlockchainArchitecture />,
+    name: 'Blockchain Architecture',
   },
   blocks: {
     content: <GuideBlocks />,
     name: 'Blocks',
   },
-  'confirmation-services': {
-    content: <GuideConfirmationServices />,
-    name: 'Confirmation Services',
-  },
-  'confirmation-validators': {
-    content: <GuideConfirmationValidators />,
-    name: 'Confirmation Validators',
-  },
-  'future-development': {
-    content: <GuideFutureDevelopment />,
-    name: 'Future Development',
+  'fork-prevention': {
+    content: <GuideForkPrevention />,
+    name: 'Fork Prevention',
   },
   introduction: {
     content: <GuideIntroduction />,
     name: 'Introduction',
   },
-  'node-identifiers': {
+  'node-identifier': {
     content: <GuideNodeIdentifier />,
-    name: 'Node Identifiers',
+    name: 'Node Identifier',
   },
-  'resync-process': {
-    content: <GuideResyncProcess />,
-    name: 'Resync Process',
-  },
-  'resync-triggers': {
-    content: <GuideResyncTriggers />,
-    name: 'Resync Triggers',
+  nodes: {
+    content: <GuideNodes />,
+    name: 'Nodes',
   },
   'root-account-file': {
     content: <GuideRootAccountFile />,
     name: 'Root Account File',
   },
+  schedule: {
+    content: <GuideSchedule />,
+    name: 'Schedule',
+  },
+  'schedule-adjustments': {
+    content: <GuideScheduleAdjustments />,
+    name: 'Schedule Adjustments',
+  },
   'transaction-fees': {
     content: <GuideTransactionFees />,
     name: 'Transaction Fees',
-  },
-  trust: {
-    content: <GuideTrust />,
-    name: 'Trust',
-  },
-  validators: {
-    content: <GuideValidators />,
-    name: 'Validators',
   },
 };
 

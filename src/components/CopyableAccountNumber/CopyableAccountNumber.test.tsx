@@ -42,8 +42,8 @@ describe('CopyableAccountNumber', () => {
 
   it('renders icon', () => {
     render(<CopyableAccountNumber accountNumber={BaseAccountNumber} />);
-    expect(screen.getByRole('button')).toBeTruthy();
-    expect(screen.getByRole('button')).toHaveClass('CopyableAccountNumber__copy-icon');
-    expect(screen.getByRole('button')).toHaveClass('Icon');
+    expect(screen.getByRole('img')).toBeTruthy();
+    expect(screen.getByRole('img')).toHaveClass('CopyableAccountNumber__copy-icon');
+    expect(screen.getByRole('img')).toHaveClass('Icon');
   });
 });

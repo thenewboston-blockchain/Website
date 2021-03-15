@@ -2,7 +2,6 @@ import React, {FC} from 'react';
 import {useSelector} from 'react-redux';
 import {useParams} from 'react-router-dom';
 
-import DefaultUserAvatar from 'assets/images/default-avatar.png';
 import {A, Avatar, CopyableAccountNumber, Icon, IconType, Qr} from 'components';
 import EditUserModal from 'containers/EditUserModal';
 import {useBooleanState} from 'hooks';
@@ -74,12 +73,7 @@ const ProfileInfo: FC<ComponentProps> = ({user}) => {
       <div className="ProfileInfo">
         <div className="ProfileInfo__top-section">
           {renderBackdrop(memberDetails?.isLead || false)}
-          <Avatar
-            alt={user.github_username}
-            className="ProfileInfo__profile-picture"
-            size={178}
-            src={user.profile_image || DefaultUserAvatar}
-          />
+          <Avatar className="ProfileInfo__profile-picture" size={178} src={user.profile_image} />
         </div>
         <div className="ProfileInfo__details">
           <div className="ProfileInfo__user-details">

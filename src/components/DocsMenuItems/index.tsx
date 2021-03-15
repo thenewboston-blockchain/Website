@@ -4,37 +4,6 @@ import {NavLink} from 'react-router-dom';
 import {MenuGroup} from 'components';
 import {NavigationItem} from 'types/navigation';
 
-export const governanceNavigationData = [
-  {
-    name: 'Overview',
-    url: '/governance/overview',
-  },
-  {
-    name: 'Usernames & Votes',
-    url: '/governance/usernames-and-votes',
-  },
-  {
-    name: 'Locked Coins & Bank Boosting',
-    url: '/governance/locked-coins-and-banking-boosting',
-  },
-  {
-    name: 'Points & Refill Logic',
-    url: '/governance/points-and-refill-logic',
-  },
-  {
-    name: 'Coins vs. Points',
-    url: '/governance/coins-vs-points',
-  },
-  {
-    name: 'Application & Election Process',
-    url: '/governance/application-and-election-process',
-  },
-  {
-    name: 'Budgets',
-    url: '/governance/budgets',
-  },
-];
-
 export const accountManagerNavigationData = [
   {
     name: 'Get Started',
@@ -168,6 +137,41 @@ export const confirmationValidatorApiNavigationData = [
   },
 ];
 
+export const governanceNavigationData = [
+  {
+    name: 'Overview',
+    url: '/governance/overview',
+  },
+  {
+    name: 'Usernames & Votes',
+    url: '/governance/usernames-and-votes',
+  },
+  {
+    name: 'Locked Coins & Boosting',
+    url: '/governance/locked-coins-and-boosting',
+  },
+  {
+    name: 'Points & Refill Logic',
+    url: '/governance/points-and-refill-logic',
+  },
+  {
+    name: 'Coins vs. Points',
+    url: '/governance/coins-vs-points',
+  },
+  {
+    name: 'Election Process',
+    url: '/governance/election-process',
+  },
+  {
+    name: 'Budgets',
+    url: '/governance/budgets',
+  },
+  {
+    name: 'Rates & Amounts',
+    url: '/governance/rates-and-amounts',
+  },
+];
+
 export const guideNavigationData = [
   {
     name: 'Introduction',
@@ -190,44 +194,32 @@ export const guideNavigationData = [
     url: '/guide/root-account-file',
   },
   {
-    name: 'Banks',
-    url: '/guide/banks',
+    name: 'Nodes',
+    url: '/guide/nodes',
   },
   {
-    name: 'Validators',
-    url: '/guide/validators',
+    name: 'Blockchain Architecture',
+    url: '/guide/blockchain-architecture',
   },
   {
-    name: 'Confirmation Validators',
-    url: '/guide/confirmation-validators',
+    name: 'Node Identifier',
+    url: '/guide/node-identifier',
   },
   {
-    name: 'Confirmation Services',
-    url: '/guide/confirmation-services',
+    name: 'Schedule',
+    url: '/guide/schedule',
   },
   {
-    name: 'Node Identifiers',
-    url: '/guide/node-identifiers',
+    name: 'Schedule Adjustments',
+    url: '/guide/schedule-adjustments',
   },
   {
-    name: 'Resync Triggers',
-    url: '/guide/resync-triggers',
-  },
-  {
-    name: 'Resync Process',
-    url: '/guide/resync-process',
-  },
-  {
-    name: 'Trust',
-    url: '/guide/trust',
+    name: 'Fork Prevention',
+    url: '/guide/fork-prevention',
   },
   {
     name: 'Best Practices',
     url: '/guide/best-practices',
-  },
-  {
-    name: 'Future Development',
-    url: '/guide/future-development',
   },
 ];
 

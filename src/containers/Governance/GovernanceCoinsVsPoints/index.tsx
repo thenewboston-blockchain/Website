@@ -4,7 +4,7 @@ import {DocContainer} from 'components';
 
 const GovernanceCoinsVsPoints: FC = () => {
   return (
-    <DocContainer className="GovernanceCoinsVsPoints" title="Coins Vs Points" lastUpdated="15 Feb 2021">
+    <DocContainer className="GovernanceCoinsVsPoints" title="Coins vs. Points" lastUpdated="07 Mar 2021">
       <p>
         The value of our coins will increase as more apps are developed that can be integrated into our network. All
         apps however require some form of user interaction. Some common app interactions include leaving comments,
