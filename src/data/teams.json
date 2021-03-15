@@ -874,6 +874,19 @@
         }
       },
       {
+        "title": "Project Manager",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "91",
+          "displayName": "Bagy",
+          "githubUsername": "BagyPo",
+          "profileImage": "https://i.ibb.co/YZcFxQZ/446694-B6-BE36-4-EA5-B441-B28-EFFABC0-F1.jpg",
+          "slackUsername": "Bagy"
+        }
+      },
+      {
         "title": "Social Media Manager",
         "isLead": false,
         "payPerDay": 2800,
