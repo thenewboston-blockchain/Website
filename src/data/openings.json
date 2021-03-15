@@ -423,7 +423,7 @@
     "applicationMethods": [
       {
         "channel": "slack",
-        "note": "Message [Justin]"
+        "note": "Message Justin (Angle943)"
       },
       {
         "channel": "linkedin"
@@ -441,7 +441,7 @@
     "position": "Technical Project Manager",
     "reportsTo": [
       {
-        "githubUsername": "Angle943",
+        "githubUsername": "angle943",
         "name": "Justin"
       }
     ],
