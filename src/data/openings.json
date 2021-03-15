@@ -417,5 +417,37 @@
       "Excellent organizational and follow-up skills",
       "Strong math skills"
     ]
+  },
+  {
+    "openingId": "business-development-manager",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Post a message in #intros"
+      }
+    ],
+    "category": "Marketing",
+    "description": "Responsible for helping grow our network by researching leads and establishing relationships with potential partners. With strong interpersonal and communication skills, and experience in researching market trends, targeting relationships, and using proven methods to make business decisions.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Business Development Manager",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Develop a growth strategy focused both on financial gain and customer satisfaction.",
+      "Promote the company’s products/services addressing or predicting clients’ objectives.",
+      "Developing a business development strategy focused on financial gain.",
+      "Research, locate, define and target key business prospects.",
+      "Create business development strategies; identify roadblocks and drive new business from conception through closure."
+    ],
+    "technologyRequirements": [
+      "Proven working experience",
+      "Market knowledge",
+      "Ability to build rapport",
+      "Planning skills"
+    ]
   }
 ]
