@@ -417,5 +417,35 @@
       "Excellent organizational and follow-up skills",
       "Strong math skills"
     ]
+  },
+  {
+    "openingId": "administrative-assistant",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Post a message in #intros"
+      }
+    ],
+    "category": "Community",
+    "description": "Provides administrative or community support through a variety of tasks related to organization and communication.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Administrative Assistant",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Provides administrative support to ensure efficient operation.",
+      "Ensure things are accomplished.",
+      "Carries out administrative duties such as organizing documents, answering questions and requests.",
+      "Organize meetings in Google Calendar."
+    ],
+    "technologyRequirements": [
+      "Knowable with G Suite",
+      "Analyzing Information",
+      "Organization Skills"
+    ]
   }
 ]
