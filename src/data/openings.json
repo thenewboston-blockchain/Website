@@ -417,5 +417,94 @@
       "Excellent organizational and follow-up skills",
       "Strong math skills"
     ]
-  }
+  },
+{
+ "openingId": "blockchain-legal-consultant",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message [Bucky]"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "Provide legal counsel to individuals who are deploying Blockchain-based solutions, creating or utilizing digital currencies, and helping individuals understand how existing laws and regulations apply to these new technological innovations. Assist those involved in cryptocurrency ventures to navigate the complex legal issues presented by Blockchain technology.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Blockchain Legal Consultant",
+    "reportsTo": [
+      {
+        "githubUsername": "Bucky",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Finalize terms and agreements and policies to protect community members.",
+      "Advise the community against undesirable factors, including intellectual property.",
+      "Inform the community on taxation, regulations, and so on, at least for major markets.",
+      "Keeping track of agreements of digital currency exchange services.",
+      "Help the community understand use cases as smart contracts, implications in sensitive sectors (health etc.)",
+      "Advise community on how large traders will act/think - e.g., see all aspects of this https://redroadlegal.com/blockchain-crypto-asset-legal-consulting/ "	
+    ],
+    "technologyRequirements": [
+      "Fundamental Skills and Knowledge in Technical Field",
+      "Smart Contracts",
+      "Decentralized Applications",
+      "Know how to Simplify",
+      "Understand Blockchain Security",
+      "Know all the Platforms",
+      "Distribute ledger expertise",
+      "Master of Interoperability",
+      "Embracing Blockchain Expertise as a Service",
+      "Learning to Drive Business Outcomes"
+    ]
+ },
+{
+ "openingId": "business-development-manager",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message [Bucky]"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "Responsible for helping grow our network by researching leads and establishing relationships with potential partners. With strong interpersonal and communication skills, and experience in researching market trends, targeting relationships, and using proven methods to make business decisions.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Business Development Manager",
+    "reportsTo": [
+      {
+        "githubUsername": "Bucky",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Develop a growth strategy focused both on financial gain and customer satisfaction.",
+      "Promote the company’s products/services addressing or predicting clients’ objectives.",
+      "Developing a business development strategy focused on financial gain.",
+      "Research, locate, define and target key business prospects.",
+      "Create business development strategies; identify roadblocks and drive new business from conception through closure."	
+    ],
+    "technologyRequirements": [
+      "Proven working experience",
+      "Market knowledge",
+      "Ability to build rapport",
+      "Planning skills"
+    ]
+ }
 ]
