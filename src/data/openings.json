@@ -155,7 +155,7 @@
         "channel": "reddit"
       }
     ],
-    "category": "Engineering",
+    "category": "Marketing",
     "description": "Social Media Managers are responsible for planning, implementing, managing and monitoring company's Social Media strategy in order to increase brand awareness, improve Marketing effort.",
     "payNotes": ["2,800 coins/day"],
     "position": "Social Media Manager",
@@ -416,6 +416,45 @@
       "Attention to detail and accuracy",
       "Excellent organizational and follow-up skills",
       "Strong math skills"
+    ]
+  },
+  {
+    "openingId": "blockchain-legal-consultant",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Post a message in #intros"
+      }
+    ],
+    "category": "Engineering",
+    "description": "Provide legal counsel to individuals who are deploying Blockchain-based solutions, creating or utilizing digital currencies, and helping individuals understand how existing laws and regulations apply to these new technological innovations. Assist those involved in cryptocurrency ventures to navigate the complex legal issues presented by Blockchain technology.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Blockchain Legal Consultant",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Finalize terms and agreements and policies to protect community members.",
+      "Advise the community against undesirable factors, including intellectual property.",
+      "Inform the community on taxation, regulations, and so on, at least for major markets.",
+      "Keeping track of agreements of digital currency exchange services.",
+      "Help the community understand use cases as smart contracts, implications in sensitive sectors (health etc.)",
+      "Advise community on how large traders will act/think - e.g., see all aspects of this https://redroadlegal.com/blockchain-crypto-asset-legal-consulting/"
+    ],
+    "technologyRequirements": [
+      "Fundamental Skills and Knowledge in Technical Field",
+      "Smart Contracts",
+      "Decentralized Applications",
+      "Know how to Simplify",
+      "Understand Blockchain Security",
+      "Know all the Platforms",
+      "Distribute ledger expertise",
+      "Master of Interoperability",
+      "Embracing Blockchain Expertise as a Service",
+      "Learning to Drive Business Outcomes"
     ]
   }
 ]
