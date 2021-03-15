@@ -770,19 +770,6 @@
         }
       },
       {
-        "title": "Meme Designer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "71",
-          "displayName": "Ananda",
-          "githubUsername": "dhakalananda",
-          "profileImage": "https://avatars.githubusercontent.com/u/43310655?v=4",
-          "slackUsername": "Ananda"
-        }
-      },
-      {
         "title": "Graphic Designer",
         "isLead": false,
         "payPerDay": 2800,
