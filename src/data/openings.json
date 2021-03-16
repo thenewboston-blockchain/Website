@@ -417,5 +417,51 @@
       "Excellent organizational and follow-up skills",
       "Strong math skills"
     ]
+  },
+  {
+    "openingId": "ux-designer-researcher",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Kristy KJ Lee"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Design",
+    "description": "Responsible for researching, categorizing, and documenting user behavior by employing design methodologies, facilitating internal & external discussions, and visualizing concepts. Ensure design concepts are fully realized by working closely with software developer teams and collaborating with other designers to arrive at the best design solution.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "UX Designer & Researcher",
+    "reportsTo": [
+      {
+        "githubUsername": "kristykjlee",
+        "name": "Kristy Lee"
+      }
+    ],
+    "responsibilities": [
+      "Conduct competitor analysis, customer analysis and user research.",
+      "Attend to product structure and strategy, as well as content development.",
+      "Develop user flows, prototypes and wireframes.",
+      "Coordination with other designers and developers.",
+      "Conduct user testing and analysis.",
+      "Continuously iterate on solutions to make the product increasingly effective and delightful for users."
+    ],
+    "technologyRequirements": [
+      "Collaboration and communication",
+      "Critical thinking and problem-solving skills",
+      "Familiarity with user research and analysis technique",
+      "Wireframing and prototyping",
+      "Understanding of information architecture",
+      "User and usability testing",
+      "Successful completion of UX/UI course work or training portfolio",
+      "Proven experience at a professional level"
+    ]
   }
 ]
