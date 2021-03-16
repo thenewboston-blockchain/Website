@@ -417,5 +417,44 @@
       "Excellent organizational and follow-up skills",
       "Strong math skills"
     ]
+  },
+  {
+    "openingId": "community-engagement-specialist",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message MsChrishaph"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Community",
+    "description": "Responsible for building awareness about the project such as coordinating and supporting targeted engagements and outreach that supports public participation and partnership-building efforts for the community. Facilitate projects to promote cohesion and participation at the grassroots level.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Community Engagement Specialist",
+    "reportsTo": [
+      {
+        "githubUsername": "Chrisha1212",
+        "name": "Chrisha"
+      }
+    ],
+    "responsibilities": [
+      "Provide leadership and strategic vision to activities promoting community engagement in municipal governance.",
+      "Strengthen capacity of team members to engage with community, include them in participatory planning processes, and incorporate their priorities into planning documents.",
+      "Facilitate citizen participation in collaborative decision making, management, and monitoring.",
+      "Promote productive interactions between communities that facilitate upward flow of information on community needs and priorities.",
+      "Contribute to work plans, donor reports, success stories, and other deliverables."
+    ],
+    "technologyRequirements": [
+      "Strong interpersonal and written communication skills.",
+      "Proven ability to engage women, youth, and other marginalized populations in community development activities."
+    ]
   }
 ]
