@@ -423,7 +423,7 @@
     "applicationMethods": [
       {
         "channel": "slack",
-        "note": "Message Justin (Angle 943)"
+        "note": "Message Justin (Angle943)"
       },
       {
         "channel": "linkedin"
@@ -441,7 +441,7 @@
     "position": "Quality Assurance Engineer",
     "reportsTo": [
       {
-        "githubUsername": "Angle943",
+        "githubUsername": "angle943",
         "name": "Justin"
       }
     ],
