@@ -97,3 +97,5 @@ All donations will go to thenewboston to help fund the team to continue to devel
 ## License
 
 thenewboston is [MIT licensed](http://opensource.org/licenses/MIT).
+
+DONT SUBMIT NEW PRS FOR PAYMENTS!
