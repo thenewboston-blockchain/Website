@@ -9,6 +9,7 @@ $opening-card-box-shadow: 0 15px 30px 15px rgba(85, 108, 214, 0.18);
   display: block;
   margin: 0 36px 12px;
   padding: 18px;
+  transition: box-shadow 200ms;
 
   &:hover {
     box-shadow: $opening-card-box-shadow;
