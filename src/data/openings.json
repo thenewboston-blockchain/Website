@@ -384,7 +384,7 @@
     "applicationMethods": [
       {
         "channel": "slack",
-        "note": "Message Justin (Angle 943)"
+        "note": "Message Justin (Angle943)"
       },
       {
         "channel": "linkedin"
@@ -402,7 +402,7 @@
     "position": "Blockchain Payment Auditor",
     "reportsTo": [
       {
-        "githubUsername": "Angle943",
+        "githubUsername": "angle943",
         "name": "Justin"
       }
     ],
@@ -417,5 +417,49 @@
       "Excellent organizational and follow-up skills",
       "Strong math skills"
     ]
-  }
+  },
+{
+ "openingId": "technical-project-manager",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Justin (Angle943)"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "Responsible for providing project planning and resource management and ensuring that projects are completed to specification. Provide expertise and strategic advice on best practices and leverage change management principles to ensure project success.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Technical Project Manager",
+    "reportsTo": [
+      {
+        "githubUsername": "angle943",
+        "name": "Justin"
+      }
+    ],
+    "responsibilities": [
+      "Analyze, plan and develop requirements and standards in reference to scheduled projects.",
+      "Oversee subordinates are actively working toward established milestones.",
+      "Hold regular technical team meetings to determine progress and address any questions or challenges regarding projects.",
+      "Determine and define clear deliverables, roles, and responsibilities required for specific projects or initiatives.",
+      "Research and evaluate hardware and software technology options."	
+    ],
+    "technologyRequirements": [
+      "Master's degree in Project Management or related technical field required",
+      "Professional Project Management Certification from accredited institution preferred",
+      "Demonstrated understanding of Project Management processes, strategies, and methods",
+      "Experience in establishing guidelines in these areas for others",
+      "Strong sense of personal accountability regarding decision-making",
+      "Applying analytical thinking and problem-solving skills",
+      "Ability to predict challenges and seek to proactively head-off obstacles"
+    ]
+ }
 ]
