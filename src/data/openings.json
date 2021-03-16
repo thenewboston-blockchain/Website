@@ -417,5 +417,41 @@
       "Excellent organizational and follow-up skills",
       "Strong math skills"
     ]
+  },
+  {
+    "openingId": "localization-manager",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Justin (Angle 943)"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Community",
+    "description": "Ensure translation and localization project tasks are managed to high standards and guarantee that a product is ready for a near simultaneous global launch.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Localization Manager",
+    "reportsTo": [
+      {
+        "githubUsername": "Angle943",
+        "name": "Justin"
+      }
+    ],
+    "responsibilities": [
+      "Keep an eye for organization and precision.",
+      "Communicate the promotional message to a series of external teams.",
+      "Excellent communication skills needed. Comprehension of one or more languages is preferrable."
+    ],
+    "technologyRequirements": [
+      "Knowledge in Foreign Languages for future purposes (Spanish, Chinese, Russian, and Japanese)"
+    ]
   }
 ]
