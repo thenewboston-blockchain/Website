@@ -6,6 +6,7 @@ import {NavOption} from 'types/option';
 import {TeamMember, TeamName, TeamPlatform, TeamResponsibility} from 'types/teams';
 
 import contributors from 'data/contributors.json';
+import openings from 'data/openings.json';
 import tasks from 'data/tasks.json';
 import teams from 'data/teams.json';
 
@@ -14,8 +15,7 @@ export const getContributors = (): Contributor[] => {
 };
 
 export const getOpenings = (): Opening[] => {
-  // temporarily hiding all openings
-  return [] as Opening[];
+  return openings as Opening[];
 };
 
 export const getTasks = (): TaskDict => {
@@ -33,8 +33,8 @@ export const getTasks = (): TaskDict => {
   return results;
 };
 
-export const getTeamMemberByGithubUsername = (github_username: string): TeamMember | undefined => {
-  let member: TeamMember | undefined;
+export const getTeamMemberByGithubUsername = (github_username: string): TeamMember | null => {
+  let member: TeamMember | null = null;
 
   teams.forEach((team) => {
     const {title: teamTitle, contributors: teamContributors} = team;
