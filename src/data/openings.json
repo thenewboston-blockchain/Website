@@ -418,8 +418,8 @@
       "Strong math skills"
     ]
   },
-{
- "openingId": "technical-project-manager",
+  {
+    "openingId": "technical-project-manager",
     "applicationMethods": [
       {
         "channel": "slack",
@@ -461,10 +461,9 @@
       "Applying analytical thinking and problem-solving skills",
       "Ability to predict challenges and seek to proactively head-off obstacles"
     ]
- }
   },
-{
- "openingId": "blockchain-legal-consultant",
+  {
+    "openingId": "blockchain-legal-consultant",
     "applicationMethods": [
       {
         "channel": "slack",
@@ -510,9 +509,9 @@
       "Embracing Blockchain Expertise as a Service",
       "Learning to Drive Business Outcomes"
     ]
- },
-{
- "openingId": "business-development-manager",
+  },
+  {
+    "openingId": "business-development-manager",
     "applicationMethods": [
       {
         "channel": "slack",
@@ -551,5 +550,5 @@
       "Ability to build rapport",
       "Planning skills"
     ]
- }
+  }
 ]
