@@ -550,5 +550,55 @@
       "Ability to build rapport",
       "Planning skills"
     ]
+  },
+  {
+    "openingId": "quality-assurance-engineer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Justin (Angle943)"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "Responsible for developing and executing exploratory and automated tests to ensure product quality as well as suggesting solutions to identified quality problems. Involved in planning and implementing strategies for quality management and testing.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Quality Assurance Engineer",
+    "reportsTo": [
+      {
+        "githubUsername": "angle943",
+        "name": "Justin"
+      }
+    ],
+    "responsibilities": [
+      "Test and identify current product deficiencies",
+      "Suggest solutions to identified product problems",
+      "Investigate product quality to make improvements to achieve better customer satisfaction",
+      "Plan, create and manage the overall Quality Planning strategy",
+      "Collaborate with the Product Development team to ensure consistent project execution",
+      "Identify quality assurance process bottleneck and suggest actions for improvement",
+      "Oversee continuous improvement projects",
+      "Collect quality data",
+      "Identify key KPIs for product quality",
+      "Prepare and present reports and metrics to Senior Management"
+    ],
+    "technologyRequirements": [
+      "2 years of experience as a Quality Assurance Engineer",
+      "2 years of experience with a variety of different testing techniques such as UI Testing, Automated Testing, Test Driven Development Strategies, and others",
+      "2 years of experience with coding using JAVA, HTML5, DB2, XML",
+      "2 years of experience with web security technology",
+      "2 years of experience with software QA tools and processes",
+      "A sense of ownership and pride in your performance",
+      "Critical thinker and problem-solving skills",
+      "Team player"
+    ]
   }
 ]
