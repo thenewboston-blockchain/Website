@@ -625,11 +625,7 @@
       "Carries out administrative duties such as organizing documents, answering questions and requests.",
       "Organize meetings in Google Calendar."
     ],
-    "technologyRequirements": [
-      "Knowable with G Suite",
-      "Analyzing Information",
-      "Organization Skills"
-    ]
+    "technologyRequirements": ["Knowable with G Suite", "Analyzing Information", "Organization Skills"]
   },
   {
     "openingId": "content-editors",
@@ -648,7 +644,7 @@
         "channel": "reddit"
       }
     ],
-    "category": "Design",
+    "category": "Marketing",
     "description": "A detail-oriented content editor who can deliver quality content and help devise traffic and profit generating content strategies for the community.",
     "payNotes": ["2,800 coins/day"],
     "position": "Content Editors",
