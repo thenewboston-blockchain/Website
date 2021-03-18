@@ -6,7 +6,6 @@ import {NavOption} from 'types/option';
 import {TeamMember, TeamName, TeamPlatform, TeamResponsibility} from 'types/teams';
 
 import contributors from 'data/contributors.json';
-import openings from 'data/openings.json';
 import tasks from 'data/tasks.json';
 import teams from 'data/teams.json';
 
@@ -15,7 +14,8 @@ export const getContributors = (): Contributor[] => {
 };
 
 export const getOpenings = (): Opening[] => {
-  return openings as Opening[];
+  // temporarily hiding all openings
+  return [] as Opening[];
 };
 
 export const getTasks = (): TaskDict => {
