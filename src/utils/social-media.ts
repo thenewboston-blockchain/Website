@@ -7,7 +7,6 @@ export const socialMediaUrls = {
   [SocialMedia.instagram]: 'https://www.instagram.com/thenewboston_official/',
   [SocialMedia.linkedin]: 'https://www.linkedin.com/company/thenewboston-developers/',
   [SocialMedia.reddit]: 'https://www.reddit.com/r/thenewboston/',
-  [SocialMedia.slack]: 'https://join.slack.com/t/thenewboston/shared_invite/zt-lldpqdle-l9lvBI7PbZD_uDJegmk3xA',
   [SocialMedia.twitch]: 'https://twitch.tv/thenewboston/profile',
   [SocialMedia.twitter]: 'https://twitter.com/thenewboston_og',
   [SocialMedia.youtube]: 'https://www.youtube.com/user/thenewboston',
@@ -20,7 +19,6 @@ export const socialMediaHandles = {
   [SocialMedia.instagram]: '@thenewboston_official',
   [SocialMedia.linkedin]: 'thenewboston',
   [SocialMedia.reddit]: 'r/thenewboston',
-  [SocialMedia.slack]: 't/thenewboston',
   [SocialMedia.twitch]: 'thenewboston',
   [SocialMedia.twitter]: '@thenewboston_og',
   [SocialMedia.youtube]: 'thenewboston',
@@ -35,10 +33,8 @@ export const socialMediaDescriptions = {
   [SocialMedia.linkedin]: 'Follow us on LinkedIn and expand your network.',
   [SocialMedia.reddit]:
     'Our Reddit community is built to help others learn about computer science and other academic subjects.',
-  [SocialMedia.slack]:
-    'With over thousands of members our Slack team is the central communication channel for app ideas, development & design.',
   [SocialMedia.twitch]: 'Follow us on twitch for regular livestreams.',
-  [SocialMedia.twitter]: 'Stay up to date by following Bucky Roberts on his personal Twitter page.',
+  [SocialMedia.twitter]: 'Stay up to date by following us on Twitter.',
   [SocialMedia.youtube]:
     'Follow us on YouTube and find tons of sweet computer related tutorials and some other awesome videos too!',
 };

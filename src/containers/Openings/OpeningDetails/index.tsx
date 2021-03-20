@@ -14,7 +14,6 @@ const customLinks = {
   [SocialMedia.instagram]: '',
   [SocialMedia.linkedin]: 'https://www.linkedin.com/in/buckyroberts/',
   [SocialMedia.reddit]: 'https://www.reddit.com/message/compose?to=/r/thenewboston',
-  [SocialMedia.slack]: '',
   [SocialMedia.twitch]: '',
   [SocialMedia.twitter]: '',
   [SocialMedia.youtube]: '',

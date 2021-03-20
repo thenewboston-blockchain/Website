@@ -8,7 +8,7 @@ import './Social.scss';
 const Social: FC = () => {
   const renderSocialCards = (): ReactNode => (
     <div className="Social__button-container">
-      <MarketingCard website={SocialMedia.slack} />
+      <MarketingCard website={SocialMedia.discord} />
       <MarketingCard website={SocialMedia.github} />
       <MarketingCard website={SocialMedia.youtube} />
       <MarketingCard website={SocialMedia.reddit} />
@@ -16,7 +16,6 @@ const Social: FC = () => {
       <MarketingCard website={SocialMedia.facebook} />
       <MarketingCard website={SocialMedia.twitter} />
       <MarketingCard website={SocialMedia.instagram} />
-      <MarketingCard website={SocialMedia.discord} />
       <MarketingCard website={SocialMedia.twitch} />
     </div>
   );
