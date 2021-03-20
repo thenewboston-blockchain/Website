@@ -33,8 +33,8 @@ export const getTasks = (): TaskDict => {
   return results;
 };
 
-export const getTeamMemberByGithubUsername = (github_username: string): TeamMember | undefined => {
-  let member: TeamMember | undefined;
+export const getTeamMemberByGithubUsername = (github_username: string): TeamMember | null => {
+  let member: TeamMember | null = null;
 
   teams.forEach((team) => {
     const {title: teamTitle, contributors: teamContributors} = team;

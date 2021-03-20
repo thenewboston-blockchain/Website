@@ -384,7 +384,7 @@
     "applicationMethods": [
       {
         "channel": "slack",
-        "note": "Message Justin (Angle 943)"
+        "note": "Message Justin (Angle943)"
       },
       {
         "channel": "linkedin"
@@ -416,6 +416,376 @@
       "Attention to detail and accuracy",
       "Excellent organizational and follow-up skills",
       "Strong math skills"
+    ]
+  },
+  {
+    "openingId": "technical-project-manager",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Justin (Angle943)"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "Responsible for providing project planning and resource management and ensuring that projects are completed to specification. Provide expertise and strategic advice on best practices and leverage change management principles to ensure project success.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Technical Project Manager",
+    "reportsTo": [
+      {
+        "githubUsername": "angle943",
+        "name": "Justin"
+      }
+    ],
+    "responsibilities": [
+      "Analyze, plan and develop requirements and standards in reference to scheduled projects.",
+      "Oversee subordinates are actively working toward established milestones.",
+      "Hold regular technical team meetings to determine progress and address any questions or challenges regarding projects.",
+      "Determine and define clear deliverables, roles, and responsibilities required for specific projects or initiatives.",
+      "Research and evaluate hardware and software technology options."
+    ],
+    "technologyRequirements": [
+      "Master's degree in Project Management or related technical field required",
+      "Professional Project Management Certification from accredited institution preferred",
+      "Demonstrated understanding of Project Management processes, strategies, and methods",
+      "Experience in establishing guidelines in these areas for others",
+      "Strong sense of personal accountability regarding decision-making",
+      "Applying analytical thinking and problem-solving skills",
+      "Ability to predict challenges and seek to proactively head-off obstacles"
+    ]
+  },
+  {
+    "openingId": "blockchain-legal-consultant",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message [Bucky]"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "Provide legal counsel to individuals who are deploying Blockchain-based solutions, creating or utilizing digital currencies, and helping individuals understand how existing laws and regulations apply to these new technological innovations. Assist those involved in cryptocurrency ventures to navigate the complex legal issues presented by Blockchain technology.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Blockchain Legal Consultant",
+    "reportsTo": [
+      {
+        "githubUsername": "Bucky",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Finalize terms and agreements and policies to protect community members.",
+      "Advise the community against undesirable factors, including intellectual property.",
+      "Inform the community on taxation, regulations, and so on, at least for major markets.",
+      "Keeping track of agreements of digital currency exchange services.",
+      "Help the community understand use cases as smart contracts, implications in sensitive sectors (health etc.)",
+      "Advise community on how large traders will act/think - e.g., see all aspects of this https://redroadlegal.com/blockchain-crypto-asset-legal-consulting/ "
+    ],
+    "technologyRequirements": [
+      "Fundamental Skills and Knowledge in Technical Field",
+      "Smart Contracts",
+      "Decentralized Applications",
+      "Know how to Simplify",
+      "Understand Blockchain Security",
+      "Know all the Platforms",
+      "Distribute ledger expertise",
+      "Master of Interoperability",
+      "Embracing Blockchain Expertise as a Service",
+      "Learning to Drive Business Outcomes"
+    ]
+  },
+  {
+    "openingId": "business-development-manager",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message [Bucky]"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "Responsible for helping grow our network by researching leads and establishing relationships with potential partners. With strong interpersonal and communication skills, and experience in researching market trends, targeting relationships, and using proven methods to make business decisions.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Business Development Manager",
+    "reportsTo": [
+      {
+        "githubUsername": "Bucky",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Develop a growth strategy focused both on financial gain and customer satisfaction.",
+      "Promote the company’s products/services addressing or predicting clients’ objectives.",
+      "Developing a business development strategy focused on financial gain.",
+      "Research, locate, define and target key business prospects.",
+      "Create business development strategies; identify roadblocks and drive new business from conception through closure."
+    ],
+    "technologyRequirements": [
+      "Proven working experience",
+      "Market knowledge",
+      "Ability to build rapport",
+      "Planning skills"
+    ]
+  },
+  {
+    "openingId": "quality-assurance-engineer",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Justin (Angle943)"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Engineering",
+    "description": "Responsible for developing and executing exploratory and automated tests to ensure product quality as well as suggesting solutions to identified quality problems. Involved in planning and implementing strategies for quality management and testing.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Quality Assurance Engineer",
+    "reportsTo": [
+      {
+        "githubUsername": "angle943",
+        "name": "Justin"
+      }
+    ],
+    "responsibilities": [
+      "Test and identify current product deficiencies",
+      "Suggest solutions to identified product problems",
+      "Investigate product quality to make improvements to achieve better customer satisfaction",
+      "Plan, create and manage the overall Quality Planning strategy",
+      "Collaborate with the Product Development team to ensure consistent project execution",
+      "Identify quality assurance process bottleneck and suggest actions for improvement",
+      "Oversee continuous improvement projects",
+      "Collect quality data",
+      "Identify key KPIs for product quality",
+      "Prepare and present reports and metrics to Senior Management"
+    ],
+    "technologyRequirements": [
+      "2 years of experience as a Quality Assurance Engineer",
+      "2 years of experience with a variety of different testing techniques such as UI Testing, Automated Testing, Test Driven Development Strategies, and others",
+      "2 years of experience with coding using JAVA, HTML5, DB2, XML",
+      "2 years of experience with web security technology",
+      "2 years of experience with software QA tools and processes",
+      "A sense of ownership and pride in your performance",
+      "Critical thinker and problem-solving skills",
+      "Team player"
+    ]
+  },
+  {
+    "openingId": "administrative-assistant",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Post a message in #intros"
+      }
+    ],
+    "category": "Community",
+    "description": "Provides administrative or community support through a variety of tasks related to organization and communication.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Administrative Assistant",
+    "reportsTo": [
+      {
+        "githubUsername": "buckyroberts",
+        "name": "Bucky"
+      }
+    ],
+    "responsibilities": [
+      "Provides administrative support to ensure efficient operation.",
+      "Ensure things are accomplished.",
+      "Carries out administrative duties such as organizing documents, answering questions and requests.",
+      "Organize meetings in Google Calendar."
+    ],
+    "technologyRequirements": ["Knowable with G Suite", "Analyzing Information", "Organization Skills"]
+  },
+  {
+    "openingId": "content-editors",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Kristy KJ Lee"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Marketing",
+    "description": "A detail-oriented content editor who can deliver quality content and help devise traffic and profit generating content strategies for the community.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Content Editors",
+    "reportsTo": [
+      {
+        "githubUsername": "kristykjlee",
+        "name": "Kristy Lee"
+      }
+    ],
+    "responsibilities": [
+      "Responsible for all aspects of content, which includes development, design, production, presentation, evaluation, analysis, etc.",
+      "Use data and feedback from users to help evaluate and enhance the value of a set of written materials and websites."
+    ],
+    "technologyRequirements": [
+      "Excellent command of the English language",
+      "Writing, copy editing, and proofreading experience",
+      "Good communication and interpersonal skills",
+      "Highly organized and detail-oriented",
+      "Proficient in desktop publishing software",
+      "Proficient in Microsoft Office and Social Media platforms"
+    ]
+  },
+  {
+    "openingId": "localization-manager",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Justin (Angle943)"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Community",
+    "description": "Ensure translation and localization project tasks are managed to high standards and guarantee that a product is ready for a near simultaneous global launch.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Localization Manager",
+    "reportsTo": [
+      {
+        "githubUsername": "angle943",
+        "name": "Justin"
+      }
+    ],
+    "responsibilities": [
+      "Keep an eye for organization and precision.",
+      "Communicate the promotional message to a series of external teams.",
+      "Excellent communication skills needed. Comprehension of one or more languages is preferrable."
+    ],
+    "technologyRequirements": [
+      "Knowledge in Foreign Languages for future purposes (Spanish, Chinese, Russian, and Japanese)"
+    ]
+  },
+  {
+    "openingId": "community-engagement-specialist",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message MsChrishaph"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Community",
+    "description": "Responsible for building awareness about the project such as coordinating and supporting targeted engagements and outreach that supports public participation and partnership-building efforts for the community. Facilitate projects to promote cohesion and participation at the grassroots level.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "Community Engagement Specialist",
+    "reportsTo": [
+      {
+        "githubUsername": "Chrisha1212",
+        "name": "Chrisha"
+      }
+    ],
+    "responsibilities": [
+      "Provide leadership and strategic vision to activities promoting community engagement in municipal governance.",
+      "Strengthen capacity of team members to engage with community, include them in participatory planning processes, and incorporate their priorities into planning documents.",
+      "Facilitate citizen participation in collaborative decision making, management, and monitoring.",
+      "Promote productive interactions between communities that facilitate upward flow of information on community needs and priorities.",
+      "Contribute to work plans, donor reports, success stories, and other deliverables."
+    ],
+    "technologyRequirements": [
+      "Strong interpersonal and written communication skills.",
+      "Proven ability to engage women, youth, and other marginalized populations in community development activities."
+    ]
+  },
+  {
+    "openingId": "ux-designer-researcher",
+    "applicationMethods": [
+      {
+        "channel": "slack",
+        "note": "Message Kristy KJ Lee"
+      },
+      {
+        "channel": "linkedin"
+      },
+      {
+        "channel": "twitter"
+      },
+      {
+        "channel": "reddit"
+      }
+    ],
+    "category": "Design",
+    "description": "Responsible for researching, categorizing, and documenting user behavior by employing design methodologies, facilitating internal & external discussions, and visualizing concepts. Ensure design concepts are fully realized by working closely with software developer teams and collaborating with other designers to arrive at the best design solution.",
+    "payNotes": ["2,800 coins/day"],
+    "position": "UX Designer & Researcher",
+    "reportsTo": [
+      {
+        "githubUsername": "kristykjlee",
+        "name": "Kristy Lee"
+      }
+    ],
+    "responsibilities": [
+      "Conduct competitor analysis, customer analysis and user research.",
+      "Attend to product structure and strategy, as well as content development.",
+      "Develop user flows, prototypes and wireframes.",
+      "Coordination with other designers and developers.",
+      "Conduct user testing and analysis.",
+      "Continuously iterate on solutions to make the product increasingly effective and delightful for users."
+    ],
+    "technologyRequirements": [
+      "Collaboration and communication",
+      "Critical thinking and problem-solving skills",
+      "Familiarity with user research and analysis technique",
+      "Wireframing and prototyping",
+      "Understanding of information architecture",
+      "User and usability testing",
+      "Successful completion of UX/UI course work or training portfolio",
+      "Proven experience at a professional level"
     ]
   }
 ]
