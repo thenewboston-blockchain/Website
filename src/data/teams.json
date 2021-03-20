@@ -18,7 +18,6 @@
       {
         "title": "Lead Auditor",
         "isLead": true,
-        "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "83",
@@ -31,7 +30,6 @@
       {
         "title": "Auditor",
         "isLead": false,
-        "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "33",
@@ -44,7 +42,6 @@
       {
         "title": "Auditor",
         "isLead": false,
-        "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "52",
@@ -88,7 +85,6 @@
       {
         "title": "Lead Blockchain Developer",
         "isLead": true,
-        "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "4",
@@ -132,7 +128,6 @@
       {
         "title": "Head of Community",
         "isLead": true,
-        "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "1",
@@ -145,7 +140,6 @@
       {
         "title": "Product Manager",
         "isLead": false,
-        "payPerDay": 2800,
         "createdDate": "2021-03-02T02:14:59.307535Z",
         "contributor": {
           "contributorId": "88",
@@ -158,7 +152,6 @@
       {
         "title": "Technical Writer",
         "isLead": false,
-        "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "76",
@@ -198,7 +191,6 @@
       {
         "title": "Design Lead",
         "isLead": true,
-        "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "2",
@@ -206,6 +198,18 @@
           "githubUsername": "kristykjlee",
           "profileImage": "https://avatars1.githubusercontent.com/u/68207101?s=460&u=f001c3eb8dfc9444d1abff7ec2ef5e4f0f1ccd5e&v=4",
           "slackUsername": "Kristy KJ"
+        }
+      },
+      {
+        "title": "UI/UX Designer",
+        "isLead": false,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "7",
+          "displayName": "Pitchapa Nickonpol",
+          "githubUsername": "pitchapa-n",
+          "profileImage": "https://avatars.githubusercontent.com/u/79086524?v=4",
+          "slackUsername": "Pitchapa Nickonpol"
         }
       }
     ],
@@ -255,7 +259,6 @@
       {
         "title": "Front-End Lead",
         "isLead": true,
-        "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "5",
@@ -268,7 +271,6 @@
       {
         "title": "Front-End Developer",
         "isLead": false,
-        "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "3",
@@ -281,7 +283,6 @@
       {
         "title": "Front-End Developer",
         "isLead": false,
-        "payPerDay": 2800,
         "createdDate": "2020-27-11",
         "contributor": {
           "contributorId": "21",
@@ -319,7 +320,6 @@
       {
         "title": "Head of Human Resources",
         "isLead": true,
-        "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "6",
@@ -336,11 +336,23 @@
         "subitems": []
       },
       {
+        "item": "Manage faucet payments",
+        "subitems": []
+      },
+      {
         "item": "Update policies",
         "subitems": []
       },
       {
         "item": "Conduct benefit analysis",
+        "subitems": []
+      },
+      {
+        "item": "Respond to comments and questions from the community",
+        "subitems": []
+      },
+      {
+        "item": "Welcome new members and encourage collaboration and community engagement",
         "subitems": []
       }
     ]
@@ -359,7 +371,6 @@
       {
         "title": "Head of Marketing Team",
         "isLead": true,
-        "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "65",
@@ -372,7 +383,6 @@
       {
         "title": "Reddit Moderator",
         "isLead": false,
-        "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "9",
@@ -416,7 +426,6 @@
       {
         "title": "Lead Website API Developer",
         "isLead": true,
-        "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "18",

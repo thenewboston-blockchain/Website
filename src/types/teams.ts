@@ -41,7 +41,6 @@ export interface TeamContributor {
   contributor: Contributor;
   createdDate: string;
   isLead: boolean;
-  payPerDay: number;
   title: string;
 }
 
@@ -55,7 +54,6 @@ export interface TeamMember {
   displayName: string;
   githubUsername: string;
   isLead: boolean;
-  payPerDay: number;
   profileImage: string;
   slackUsername: string;
   teams: TeamLead[];
