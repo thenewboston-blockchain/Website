@@ -143,7 +143,7 @@
         }
       },
       {
-        "title": "Blockchain Researcher",
+        "title": "Product Manager",
         "isLead": false,
         "payPerDay": 2800,
         "createdDate": "2021-03-02T02:14:59.307535Z",
@@ -266,7 +266,7 @@
         }
       },
       {
-        "title": "Front-End Lead",
+        "title": "Front-End Developer",
         "isLead": false,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
@@ -313,22 +313,11 @@
   },
   {
     "title": "Human Resources",
-    "description": "The team handles the payments of all thenewboston contributors in different capacities.",
-    "platforms": [
-      {
-        "name": "github",
-        "label": "Payment-Processor",
-        "link": "https://github.com/thenewboston-developers/Payment-Processor"
-      },
-      {
-        "name": "slack",
-        "label": "payments",
-        "link": ""
-      }
-    ],
+    "description": "Understand the organization's needs and make sure those needs are met when recruiting for new positions.",
+    "platforms": [],
     "contributors": [
       {
-        "title": "Head of Marketing",
+        "title": "Head of Human Resources",
         "isLead": true,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
@@ -343,36 +332,27 @@
     ],
     "responsibilities": [
       {
-        "item": "Oversee payments",
+        "item": "Recruit candidates",
         "subitems": []
       },
       {
-        "item": "Pay weekly contributors",
+        "item": "Update policies",
         "subitems": []
       },
       {
-        "item": "Pay task payments",
-        "subitems": []
-      },
-      {
-        "item": "Pay projects",
+        "item": "Conduct benefit analysis",
         "subitems": []
       }
     ]
   },
   {
     "title": "Marketing",
-    "description": "My team handles all the marketing part including email, SEO, and media buys. Developing and Executing marketing strategies as well as focusing on user behaviour and contacts/partnership collection.",
+    "description": "Manage all marketing content including email, SEO, and media buys. Develop and execute marketing strategies as well as focus on user behaviour and contact collection.",
     "platforms": [
       {
         "name": "github",
         "label": "Marketing",
         "link": "https://github.com/thenewboston-developers/Marketing"
-      },
-      {
-        "name": "slack",
-        "label": "marketing",
-        "link": ""
       }
     ],
     "contributors": [
@@ -409,10 +389,6 @@
         "subitems": []
       },
       {
-        "item": "Gather & collect user emails",
-        "subitems": ["Email newsletter", "Pull from GitHub", "Additional tools"]
-      },
-      {
         "item": "Send email campaigns",
         "subitems": []
       },
@@ -421,45 +397,24 @@
         "subitems": []
       },
       {
-        "item": "Sending out social media posts on core team applications",
-        "subitems": []
-      },
-      {
-        "item": "Requests graphics & images",
-        "subitems": []
-      },
-      {
-        "item": "LinkedIn, Facebook, Reddit",
-        "subitems": []
-      },
-      {
-        "item": "If posting anything, post it on all social media accounts",
-        "subitems": []
-      },
-      {
-        "item": "If any other social media sites that can be strategical, we can expand",
+        "item": "Requests graphics and images from the design team",
         "subitems": []
       }
     ]
   },
   {
     "title": "Website API",
-    "description": "The team handles the payments of all thenewboston contributors in different capacities.",
+    "description": "Architect, build, and maintain thenewboston website API.",
     "platforms": [
       {
         "name": "github",
-        "label": "Payment-Processor",
-        "link": "https://github.com/thenewboston-developers/Payment-Processor"
-      },
-      {
-        "name": "slack",
-        "label": "payments",
-        "link": ""
+        "label": "Website-API",
+        "link": "https://github.com/thenewboston-developers/Website-API"
       }
     ],
     "contributors": [
       {
-        "title": "Back-End Lead",
+        "title": "Lead Website API Developer",
         "isLead": true,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
@@ -474,19 +429,15 @@
     ],
     "responsibilities": [
       {
-        "item": "Oversee payments",
+        "item": "Create and implement the source code for all API endpoints",
         "subitems": []
       },
       {
-        "item": "Pay weekly contributors",
+        "item": "Test source code and debug code",
         "subitems": []
       },
       {
-        "item": "Pay task payments",
-        "subitems": []
-      },
-      {
-        "item": "Pay projects",
+        "item": "Evaluate existing applications for performance updates and modifications",
         "subitems": []
       }
     ]
