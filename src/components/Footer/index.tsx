@@ -83,7 +83,6 @@ const navLists = [
 const Footer: FC<ComponentProps> = ({className}) => {
   const renderSocialMediaLinks = () =>
     [
-      SocialMedia.slack,
       SocialMedia.github,
       SocialMedia.youtube,
       SocialMedia.reddit,
