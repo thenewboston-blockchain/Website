@@ -35,8 +35,8 @@ describe('CodeSnippet component', () => {
     expect(code).toBeTruthy();
     expect(code).toHaveClass('language-bash');
 
-    expect(screen.getByTestId('BaseCodeSnippet').style).toHaveProperty('background-color', 'rgb(240, 240, 240)');
-    expect(screen.getByTestId('BaseCodeSnippet').style).toHaveProperty('color', 'rgb(68, 68, 68)');
+    expect(screen.getByTestId('BaseCodeSnippet').style).toHaveProperty('background-color', 'rgb(253, 246, 227)');
+    expect(screen.getByTestId('BaseCodeSnippet').style).toHaveProperty('color', 'rgb(101, 123, 131)');
   });
 
   test('renders dark code for language-json', () => {
@@ -45,8 +45,8 @@ describe('CodeSnippet component', () => {
     expect(code).toBeTruthy();
     expect(code).toHaveClass('language-json');
 
-    expect(screen.getByTestId('BaseCodeSnippet').style).toHaveProperty('background-color', 'rgb(40, 43, 46)');
-    expect(screen.getByTestId('BaseCodeSnippet').style).toHaveProperty('color', 'rgb(224, 226, 228)');
+    expect(screen.getByTestId('BaseCodeSnippet').style).toHaveProperty('background-color', 'rgb(42, 39, 52)');
+    expect(screen.getByTestId('BaseCodeSnippet').style).toHaveProperty('color', 'rgb(154, 134, 253)');
   });
 
   test('renders component with custom className CustomCodeSnippet', () => {
