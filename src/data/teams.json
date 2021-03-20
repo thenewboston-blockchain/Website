@@ -1,69 +1,81 @@
 [
   {
-    "title": "JavaScript SDK",
-    "description": "Build and maintain a JavaScript library for thenewboston.",
+    "title": "Audit",
+    "description": "Ensure the accuracy and integrity of all government and team payments.",
     "platforms": [
       {
         "name": "github",
-        "label": "thenewboston-js",
-        "link": "https://github.com/thenewboston-developers/thenewboston-js"
+        "label": "Activity-Reports",
+        "link": "https://github.com/thenewboston-developers/Activity-Reports"
       },
       {
-        "name": "slack",
-        "label": "thenewboston-js",
-        "link": ""
+        "name": "github",
+        "label": "Project-Proposals",
+        "link": "https://github.com/thenewboston-developers/Project-Proposals"
       }
     ],
     "contributors": [
       {
-        "title": "Head of Javascript SDK",
+        "title": "Lead Auditor",
         "isLead": true,
         "payPerDay": 2800,
-        "createdDate": "2021-03-03T02:14:59.307535Z",
+        "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "89",
-          "displayName": "Zino Adidi",
-          "githubUsername": "zinoadidi",
-          "profileImage": "https://avatars.githubusercontent.com/u/30411401?v=4",
-          "slackUsername": "Zino Adidi"
+          "contributorId": "83",
+          "displayName": "Jesus Avina",
+          "githubUsername": "javina89",
+          "profileImage": "https://avatars.githubusercontent.com/u/13725042?s=460&u=ea84af4231fdf89f8454b485de5ee3df49321621&v=4",
+          "slackUsername": "Chuy"
         }
       },
       {
-        "title": "Javascript Developer",
+        "title": "Auditor",
         "isLead": false,
         "payPerDay": 2800,
-        "createdDate": "2021-03-05T02:14:59.307535Z",
+        "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "90",
-          "displayName": "Mieszko",
-          "githubUsername": "kycermann",
-          "profileImage": "https://avatars.githubusercontent.com/u/59399685?v=4",
-          "slackUsername": "Mieszko"
+          "contributorId": "33",
+          "displayName": "Manish Ram",
+          "githubUsername": "manishram",
+          "profileImage": "https://avatars0.githubusercontent.com/u/22790904?s=400&u=643810e6c9d5686df409132b01863f9e065df6c1&v=4",
+          "slackUsername": "Manish"
+        }
+      },
+      {
+        "title": "Auditor",
+        "isLead": false,
+        "payPerDay": 2800,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "52",
+          "displayName": "Nikhil Taneja",
+          "githubUsername": "itsnikhil",
+          "profileImage": "https://avatars1.githubusercontent.com/u/20350674?v=4",
+          "slackUsername": "itsnikhil"
         }
       }
     ],
-    "responsibilities": []
-  },
-  {
-    "title": ".NET Core",
-    "description": "Build and maintain a .NET Core SDK for thenewboston.",
-    "platforms": [
+    "responsibilities": [
       {
-        "name": "github",
-        "label": "dotnetcore-sdk",
-        "link": "https://github.com/thenewboston-developers/dotnetcore-sdk"
+        "item": "Audit government payouts to teams",
+        "subitems": []
       },
       {
-        "name": "slack",
-        "label": "dotnetcore-sdk",
-        "link": ""
+        "item": "Audit government payouts to projects",
+        "subitems": []
+      },
+      {
+        "item": "Audit team lead payments to team members and bug bounties/tasks",
+        "subitems": []
+      },
+      {
+        "item": "Review activity reports and on approval, submit to the government for final review and payout",
+        "subitems": []
       }
-    ],
-    "contributors": [],
-    "responsibilities": []
+    ]
   },
   {
-    "title": "Back-End Developers",
+    "title": "Blockchain",
     "description": "Build and maintain the APIs related to the website and the digital currency network.",
     "platforms": [
       {
@@ -89,19 +101,6 @@
           "githubUsername": "dmugtasimov",
           "profileImage": "https://avatars.githubusercontent.com/u/749833?v=4",
           "slackUsername": "Dmitry Mugtasimov"
-        }
-      },
-      {
-        "title": "Back-End Lead",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "18",
-          "displayName": "Justin Ndwiga",
-          "githubUsername": "ThaDeveloper",
-          "profileImage": "https://avatars.githubusercontent.com/u/12385482?v=4",
-          "slackUsername": "Justin Ndwiga"
         }
       }
     ],
@@ -129,71 +128,17 @@
     ]
   },
   {
-    "title": "Communications",
-    "description": "Communicating with each team to receive weekly updates identifying progress, opportunities, hardships, etc.",
-    "platforms": [
-      {
-        "name": "github",
-        "label": "Communications",
-        "link": "https://github.com/thenewboston-developers/Communications"
-      },
-      {
-        "name": "slack",
-        "label": "communications",
-        "link": ""
-      }
-    ],
-    "contributors": [
-      {
-        "title": "Chief Communications Officer",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "83",
-          "displayName": "Jesus Avina",
-          "githubUsername": "javina89",
-          "profileImage": "https://avatars.githubusercontent.com/u/13725042?s=460&u=ea84af4231fdf89f8454b485de5ee3df49321621&v=4",
-          "slackUsername": "Chuy"
-        }
-      },
-      {
-        "title": "Director of Communications",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "84",
-          "displayName": "Taylor M",
-          "githubUsername": "tmcninch",
-          "profileImage": "https://avatars.githubusercontent.com/u/78127708?s=460&v=4",
-          "slackUsername": "Taylor M"
-        }
-      }
-    ],
-    "responsibilities": [
-      {
-        "item": "Receive weekly status updates from each team",
-        "subitems": []
-      },
-      {
-        "item": "Create reports",
-        "subitems": []
-      }
-    ]
-  },
-  {
     "title": "Community",
-    "description": "Liaising with job applicants and team leads. Choosing the right job applicants and sending it to team leaders base on departments for further scrutiny. We create the strategy, oversee the overall TNB product, create standards, and improve cross-collab between teams.",
+    "description": "Build and maintain the APIs related to the website and the digital currency network.",
     "platforms": [
       {
         "name": "github",
-        "label": "thenewboston",
-        "link": "https://github.com/thenewboston-developers"
+        "label": "thenewboston-python",
+        "link": "https://github.com/thenewboston-developers/thenewboston-python"
       },
       {
         "name": "slack",
-        "label": "general",
+        "label": "back-end",
         "link": ""
       }
     ],
@@ -212,42 +157,16 @@
         }
       },
       {
-        "title": "Slack Manager",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "10",
-          "displayName": "Benjamin Thorpe",
-          "githubUsername": "benjithorpe",
-          "profileImage": "https://avatars3.githubusercontent.com/u/61359802?s=460&u=6a610edb702f7bcb9a81946357705fe3204d9905&v=4",
-          "slackUsername": "Benjamin Thorpe"
-        }
-      },
-      {
-        "title": "Slack Manager",
+        "title": "Blockchain Researcher",
         "isLead": false,
         "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "createdDate": "2021-03-02T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "12",
-          "displayName": "KryptoZero",
-          "githubUsername": "jefferytnb",
-          "profileImage": "https://avatars3.githubusercontent.com/u/74891032?s=460&v=4",
-          "slackUsername": "KryptoZero"
-        }
-      },
-      {
-        "title": "Product Manager",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "26",
-          "displayName": "Steve Hedden",
-          "githubUsername": "SteveHedden",
-          "profileImage": "https://avatars3.githubusercontent.com/u/5224821?s=460&v=4",
-          "slackUsername": "Steve Hedden"
+          "contributorId": "88",
+          "displayName": "Muhammad Anas Azam Bhatti",
+          "githubUsername": "ma2b0043",
+          "profileImage": "https://avatars.githubusercontent.com/u/60430226?v=4",
+          "slackUsername": "Muhammad Anas Azam Bhatti"
         }
       },
       {
@@ -266,55 +185,39 @@
     ],
     "responsibilities": [
       {
-        "item": "Get people to where they need to be. Greet, welcome, guide",
+        "item": "Integration of user-facing elements developed by front-end developers with server-side logic",
         "subitems": []
       },
       {
-        "item": "People will come into #intros and must oversee other Slack channels for new users",
+        "item": "Building reusable code and libraries for future use",
         "subitems": []
       },
       {
-        "item": "Guide users to teams they fit into",
+        "item": "Optimization of the application for maximum speed and scalability",
         "subitems": []
       },
       {
-        "item": "Send applications to Team Leads",
+        "item": "Implementation of security and data protection",
         "subitems": []
       },
       {
-        "item": "After interview, register peoples accounts",
-        "subitems": []
-      },
-      {
-        "item": "Team Leads are responsible for hiring more community managers",
-        "subitems": []
-      },
-      {
-        "item": "Provide user feedback and analytics to design team",
-        "subitems": []
-      },
-      {
-        "item": "Suggest better methods on how to gather user feedback",
-        "subitems": []
-      },
-      {
-        "item": "Optimize user feedback loop",
+        "item": "Design and implementation of data storage solutions",
         "subitems": []
       }
     ]
   },
   {
     "title": "Design",
-    "description": "We create and manage all designs within thenewboston website & app. ",
+    "description": "Build and maintain the APIs related to the website and the digital currency network.",
     "platforms": [
       {
         "name": "github",
-        "label": "Design",
-        "link": "https://github.com/thenewboston-developers/Design"
+        "label": "thenewboston-python",
+        "link": "https://github.com/thenewboston-developers/thenewboston-python"
       },
       {
         "name": "slack",
-        "label": "design",
+        "label": "back-end",
         "link": ""
       }
     ],
@@ -331,170 +234,33 @@
           "profileImage": "https://avatars1.githubusercontent.com/u/68207101?s=460&u=f001c3eb8dfc9444d1abff7ec2ef5e4f0f1ccd5e&v=4",
           "slackUsername": "Kristy KJ"
         }
-      },
-      {
-        "title": "UI/UX Designer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "80",
-          "displayName": "Adarsh Kumar",
-          "githubUsername": "Niekon01",
-          "profileImage": "https://avatars.githubusercontent.com/u/55133485?s=400&u=30095929a9d5bf6199f89c43d8df26bb9bb484a1&v=4",
-          "slackUsername": "Niekon"
-        }
-      },
-      {
-        "title": "Graphic Designer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "contributor": {
-          "contributorId": "86",
-          "displayName": "Tolawak Gelana",
-          "githubUsername": "toledit",
-          "profileImage": "https://avatars0.githubusercontent.com/u/27518021?s=400&u=5b21160854c436683ecc060aa0c269694f62fe94&v=4",
-          "slackUsername": "toledit"
-        }
       }
     ],
     "responsibilities": [
       {
-        "item": "Help identify what needs to be built based off user feedback",
+        "item": "Integration of user-facing elements developed by front-end developers with server-side logic",
         "subitems": []
       },
       {
-        "item": "Design wireframes",
+        "item": "Building reusable code and libraries for future use",
         "subitems": []
       },
       {
-        "item": "User test designs with the community",
+        "item": "Optimization of the application for maximum speed and scalability",
         "subitems": []
       },
       {
-        "item": "Write product requirements for engineering handoff",
+        "item": "Implementation of security and data protection",
         "subitems": []
       },
       {
-        "item": "HiFi designs & update style guide",
-        "subitems": []
-      },
-      {
-        "item": "Give design reviews to members within the community",
+        "item": "Design and implementation of data storage solutions",
         "subitems": []
       }
     ]
   },
   {
-    "title": "DevOps",
-    "description": "Provides systems for the systems. Focused on underlying infrastructure (servers, OS, networking, access security), services (web servers, databases), as well as monitoring and automating the configuration of those items.",
-    "platforms": [
-      {
-        "name": "github",
-        "label": "DevOps",
-        "link": "https://github.com/thenewboston-developers/DevOps"
-      },
-      {
-        "name": "slack",
-        "label": "devops",
-        "link": ""
-      }
-    ],
-    "contributors": [
-      {
-        "title": "DevOps",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "37",
-          "displayName": "Shashank Sinha",
-          "githubUsername": "shashanksinha89",
-          "profileImage": "https://avatars1.githubusercontent.com/u/13620565?v=4",
-          "slackUsername": "shashanksinha89"
-        }
-      }
-    ],
-    "responsibilities": []
-  },
-  {
-    "title": "Discord",
-    "description": "Managing Discord server for thenewboston Community.",
-    "platforms": [
-      {
-        "name": "github",
-        "label": "Discord-Bot",
-        "link": "https://github.com/thenewboston-developers/Discord-Bot"
-      },
-      {
-        "name": "slack",
-        "label": "discord",
-        "link": ""
-      }
-    ],
-    "contributors": [
-      {
-        "title": "Discord Manager",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "28",
-          "displayName": "Rajput Usman",
-          "githubUsername": "Rajputusman",
-          "profileImage": "https://avatars0.githubusercontent.com/u/65516140?s=460&v=4",
-          "slackUsername": "Rajput Usman"
-        }
-      },
-      {
-        "title": "Moderator",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-11-14T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "47",
-          "displayName": "Nine",
-          "githubUsername": "whitelionx",
-          "profileImage": "https://avatars1.githubusercontent.com/u/31674307?s=460&u=89b8153755b6765cbdc0b2579d8f545138b4760c&v=4",
-          "slackUsername": "Nine"
-        }
-      },
-      {
-        "title": "Moderator",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "46",
-          "displayName": "DinShpati",
-          "githubUsername": "DinShpati",
-          "profileImage": "https://avatars2.githubusercontent.com/u/25906602",
-          "slackUsername": "DinShpati"
-        }
-      },
-      {
-        "title": "Moderator",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "62",
-          "displayName": "Muhammed Medo",
-          "githubUsername": "codemedo",
-          "profileImage": "https://avatars0.githubusercontent.com/u/48848156?v=4",
-          "slackUsername": "Muhammed Medo"
-        }
-      }
-    ],
-    "responsibilities": [
-      {
-        "item": "Oversee discord community",
-        "subitems": []
-      }
-    ]
-  },
-  {
-    "title": "Front-End Developers",
+    "title": "Front-End",
     "description": "Basically, everything that the user can interact with, comes under this team's scope. We'll be mostly working on the Website and Account Manager repo. ",
     "platforms": [
       {
@@ -524,7 +290,7 @@
       },
       {
         "title": "Front-End Lead",
-        "isLead": true,
+        "isLead": false,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
@@ -539,32 +305,6 @@
         "title": "Front-End Developer",
         "isLead": false,
         "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "11",
-          "displayName": "Aayushi Maheshwari",
-          "githubUsername": "aayushi14",
-          "profileImage": "https://avatars3.githubusercontent.com/u/33564949?s=460&u=90790eec3a04dfd58d08d0adeb18cba94e39685c&v=4",
-          "slackUsername": "Aayushi Maheshwari"
-        }
-      },
-      {
-        "title": "Front-End Developer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "19",
-          "displayName": "Amarjeet Sarma",
-          "githubUsername": "amarjeet987",
-          "profileImage": "https://avatars1.githubusercontent.com/u/38986305?v=4",
-          "slackUsername": "Amarjeet"
-        }
-      },
-      {
-        "title": "Front-End Developer",
-        "isLead": false,
-        "payPerDay": 2800,
         "createdDate": "2020-27-11",
         "contributor": {
           "contributorId": "21",
@@ -573,133 +313,58 @@
           "profileImage": "https://avatars0.githubusercontent.com/u/32864116?s=460&u=0c2a53c6f1476da904d2b3c820bab43b64b7185b&v=4",
           "slackUsername": "James Pang"
         }
-      },
-      {
-        "title": "WordPress Developer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "67",
-          "displayName": "Aathil Ahamed",
-          "githubUsername": "aathil-Mr-ITGuy",
-          "profileImage": "https://avatars0.githubusercontent.com/u/36620321?s=400&u=af0419d3610824677b5f529008f9f87b23623091&v=4",
-          "slackUsername": "ATLIT"
-        }
       }
     ],
     "responsibilities": []
   },
   {
-    "title": "Blog",
-    "description": "In charge of all things related to the thenewboston blog",
-    "platforms": [
-      {
-        "name": "slack",
-        "label": "front-end",
-        "link": ""
-      }
-    ],
-    "contributors": [
-      {
-        "title": "Front-End Developer for Blog",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "85",
-          "displayName": "Ivan Danilov",
-          "githubUsername": "IvanDanilov66",
-          "profileImage": "https://avatars.githubusercontent.com/u/78055249?s=400&v=4",
-          "slackUsername": "Ivan Danilov"
-        }
-      },
-      {
-        "title": "Front-End Developer for Blog",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "87",
-          "displayName": "Nosazeme Obabueki",
-          "githubUsername": "knowsarzehmeh",
-          "profileImage": "https://avatars.githubusercontent.com/u/28178015?v=4",
-          "slackUsername": "Osaz"
-        }
-      },
-      {
-        "title": "Front-End Developer for Blog",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "89",
-          "displayName": "Gorjan Angelov",
-          "githubUsername": "gorjanangelov",
-          "profileImage": "https://avatars.githubusercontent.com/u/74369235?v=4",
-          "slackUsername": "Gorjan Angelov"
-        }
-      }
-    ],
-    "responsibilities": []
-  },
-  {
-    "title": "Kotlin SDK",
-    "description": "Provide a Kotlin client library.",
+    "title": "Human Resources",
+    "description": "The team handles the payments of all thenewboston contributors in different capacities.",
     "platforms": [
       {
         "name": "github",
-        "label": "Kotlin-SDK",
-        "link": "https://github.com/thenewboston-developers/Kotlin-SDK"
+        "label": "Payment-Processor",
+        "link": "https://github.com/thenewboston-developers/Payment-Processor"
       },
       {
         "name": "slack",
-        "label": "kotlin-sdk",
+        "label": "payments",
         "link": ""
       }
     ],
     "contributors": [
       {
-        "title": "Kotlin SDK Lead",
+        "title": "Head of Marketing",
         "isLead": true,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "35",
-          "displayName": "Ian Arbuckle",
-          "githubUsername": "IanArb",
-          "profileImage": "https://avatars2.githubusercontent.com/u/6011914?s=460&u=9328434aef816ce5dfe5fbc12b64f2f498222ebc&v=4",
-          "slackUsername": "Ian Arbuckle"
-        }
-      },
-      {
-        "title": "Software Developer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "61",
-          "displayName": "Nish",
-          "githubUsername": "nishp77",
-          "profileImage": "https://avatars0.githubusercontent.com/u/35785259?v=4",
-          "slackUsername": "Nish"
-        }
-      },
-      {
-        "title": "Software Developer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "79",
-          "displayName": "tomijaga",
-          "githubUsername": "tomijaga",
-          "profileImage": "https://avatars.githubusercontent.com/u/50385769?s=400&u=53be327b7eaabd41f4e3c1e57d958508dec12357&v=4",
-          "slackUsername": "tomijaga"
+          "contributorId": "6",
+          "displayName": "MsChrishaph",
+          "githubUsername": "Chrisha1212",
+          "profileImage": "https://avatars.githubusercontent.com/u/72809444?s=460&u=e2138725222fb09a546d7d1e164cf64f5583648b&v=4",
+          "slackUsername": "MsChrishaph"
         }
       }
     ],
-    "responsibilities": []
+    "responsibilities": [
+      {
+        "item": "Oversee payments",
+        "subitems": []
+      },
+      {
+        "item": "Pay weekly contributors",
+        "subitems": []
+      },
+      {
+        "item": "Pay task payments",
+        "subitems": []
+      },
+      {
+        "item": "Pay projects",
+        "subitems": []
+      }
+    ]
   },
   {
     "title": "Marketing",
@@ -718,32 +383,6 @@
     ],
     "contributors": [
       {
-        "title": "Head of Marketing",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "20",
-          "displayName": "Siddhesh Kulthe",
-          "githubUsername": "iamsid47",
-          "profileImage": "https://avatars1.githubusercontent.com/u/55309498?s=460&u=5735170037f5398148b87115ee9c9e7df574b7b1&v=4",
-          "slackUsername": "Siddhesh Kulthe"
-        }
-      },
-      {
-        "title": "Head of Marketing",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "6",
-          "displayName": "MsChrishaph",
-          "githubUsername": "Chrisha1212",
-          "profileImage": "https://avatars.githubusercontent.com/u/72809444?s=460&u=e2138725222fb09a546d7d1e164cf64f5583648b&v=4",
-          "slackUsername": "MsChrishaph"
-        }
-      },
-      {
         "title": "Head of Marketing Team",
         "isLead": true,
         "payPerDay": 2800,
@@ -757,146 +396,16 @@
         }
       },
       {
-        "title": "Marketing Analyst",
+        "title": "Reddit Moderator",
         "isLead": false,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "66",
-          "displayName": "Tomiwa",
-          "githubUsername": "oluwatomiwatemidayo",
-          "profileImage": "https://avatars1.githubusercontent.com/u/72953345?s=400&u=8a7d5931cd7e0041fc6e68683ad25aeb4e7016ce&v=4",
-          "slackUsername": "Tomiwa"
-        }
-      },
-      {
-        "title": "Graphic Designer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "72",
-          "displayName": "Ramadhani Khamisi",
-          "githubUsername": "swaiba43",
-          "profileImage": "https://avatars.githubusercontent.com/u/17829082?v=4",
-          "slackUsername": "swaiba43"
-        }
-      },
-      {
-        "title": "Marketing Analysis",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "73",
-          "displayName": "John Midas",
-          "githubUsername": "Jonmidas",
-          "profileImage": "https://avatars.githubusercontent.com/u/77834804?s=460&u=87070024df150d1bb1697438e6546911808ecf8f&v=4",
-          "slackUsername": "John Midas"
-        }
-      },
-      {
-        "title": "Marketing Analysis",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "74",
-          "displayName": "GYulian",
-          "githubUsername": "Grapelounge",
-          "profileImage": "https://avatars.githubusercontent.com/u/38263524?s=460&u=b49e5b4f427d570e965069af7a3c04f57fd75179&v=4",
-          "slackUsername": "GYulian"
-        }
-      },
-      {
-        "title": "Graphic Designer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "75",
-          "displayName": "SohDa",
-          "githubUsername": "SOHDA31",
-          "profileImage": "https://avatars.githubusercontent.com/u/74038568?v=4",
-          "slackUsername": "SohDa"
-        }
-      },
-      {
-        "title": "Memes Designer",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "77",
-          "displayName": "kizzi",
-          "githubUsername": "kizzi789",
-          "profileImage": "https://avatars.githubusercontent.com/u/78949557?s=400&u=b0707a51ab840b3960b240899a5235b140cb721e&v=4",
-          "slackUsername": "KZZz"
-        }
-      },
-      {
-        "title": "Social Media Manager",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "78",
-          "displayName": "Mr9tynine",
-          "githubUsername": "Mr9tynine",
-          "profileImage": "https://avatars.githubusercontent.com/u/49120625?v=4",
-          "slackUsername": "Mr9tynine"
-        }
-      },
-      {
-        "title": "Project Manager",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "82",
-          "displayName": "Edward",
-          "githubUsername": "SwedishFisherman",
-          "profileImage": "https://avatars.githubusercontent.com/u/78985665?s=400&v=4",
-          "slackUsername": "SwedishFisherman"
-        }
-      },
-      {
-        "title": "Social Media Manager",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "38",
-          "displayName": "Francisca Nwafor",
-          "githubUsername": "Francaolisa",
-          "profileImage": "https://avatars0.githubusercontent.com/u/72324717?s=460&v=4",
-          "slackUsername": "Francisca Nwafor"
-        }
-      },
-      {
-        "title": "Social Media Manager",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "7",
-          "displayName": "Martin",
-          "githubUsername": "Mathlucklala",
-          "profileImage": "https://avatars0.githubusercontent.com/u/74901267?s=460&v=4",
-          "slackUsername": "Martin"
-        }
-      },
-      {
-        "title": "Social Media Manager",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "90",
-          "displayName": "Princeuchee",
-          "githubUsername": "Princeuchee",
-          "profileImage": "https://avatars.githubusercontent.com/u/80203139?v=4",
-          "slackUsername": "prince Uchee"
+          "contributorId": "9",
+          "displayName": "Bojan Ilijevski",
+          "githubUsername": "bojan-ilijevski",
+          "profileImage": "https://avatars2.githubusercontent.com/u/58598872?s=460&v=4",
+          "slackUsername": "Bojan Ilijevski"
         }
       }
     ],
@@ -940,42 +449,7 @@
     ]
   },
   {
-    "title": "New User Operations",
-    "description": "Convert new users to task contributors or team members.",
-    "platforms": [
-      {
-        "name": "github",
-        "label": "thenewboston",
-        "link": "https://github.com/thenewboston-developers"
-      },
-      {
-        "name": "slack",
-        "label": "intros",
-        "link": ""
-      }
-    ],
-    "contributors": [],
-    "responsibilities": [
-      {
-        "item": "Convert new users to contributors",
-        "subitems": []
-      },
-      {
-        "item": "Identify where new users will get stuck",
-        "subitems": []
-      },
-      {
-        "item": "Find solutions to remove bottlenecks",
-        "subitems": []
-      },
-      {
-        "item": "Increase user retention by keeping users engaged",
-        "subitems": []
-      }
-    ]
-  },
-  {
-    "title": "Payments",
+    "title": "Website API",
     "description": "The team handles the payments of all thenewboston contributors in different capacities.",
     "platforms": [
       {
@@ -991,42 +465,16 @@
     ],
     "contributors": [
       {
-        "title": "Head of Contributor Payments",
+        "title": "Back-End Lead",
         "isLead": true,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "32",
-          "displayName": "Taiwo Odetola",
-          "githubUsername": "odetolataiwo",
-          "profileImage": "https://avatars0.githubusercontent.com/u/19375004?s=460&u=43726634fdd5140afbe1b2a60904654261e6a073&v=4",
-          "slackUsername": "Taiwo Odetola"
-        }
-      },
-      {
-        "title": "Payments Manager",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "52",
-          "displayName": "Nikhil Taneja",
-          "githubUsername": "itsnikhil",
-          "profileImage": "https://avatars1.githubusercontent.com/u/20350674?v=4",
-          "slackUsername": "itsnikhil"
-        }
-      },
-      {
-        "title": "Payments Manager",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "53",
-          "displayName": "Tawanda Makunike",
-          "githubUsername": "Tawanike",
-          "profileImage": "https://avatars1.githubusercontent.com/u/329524?v=4",
-          "slackUsername": "Tawanda Makunike"
+          "contributorId": "18",
+          "displayName": "Justin Ndwiga",
+          "githubUsername": "ThaDeveloper",
+          "profileImage": "https://avatars.githubusercontent.com/u/12385482?v=4",
+          "slackUsername": "Justin Ndwiga"
         }
       }
     ],
@@ -1045,387 +493,6 @@
       },
       {
         "item": "Pay projects",
-        "subitems": []
-      }
-    ]
-  },
-  {
-    "title": "Project Proposals",
-    "description": "This team is responsible for managing all the App Ideas from developers all around the globe.",
-    "platforms": [
-      {
-        "name": "github",
-        "label": "Project-Proposals",
-        "link": "https://github.com/thenewboston-developers/Project-Proposals"
-      },
-      {
-        "name": "slack",
-        "label": "projects",
-        "link": ""
-      }
-    ],
-    "contributors": [
-      {
-        "title": "Project Proposals Manager",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "33",
-          "displayName": "Manish Ram",
-          "githubUsername": "manishram",
-          "profileImage": "https://avatars0.githubusercontent.com/u/22790904?s=400&u=643810e6c9d5686df409132b01863f9e065df6c1&v=4",
-          "slackUsername": "Manish"
-        }
-      }
-    ],
-    "responsibilities": [
-      {
-        "item": "Oversee project proposals",
-        "subitems": []
-      },
-      {
-        "item": "Helping people fill out proposals",
-        "subitems": [
-          "Seeing if there are any empty fields",
-          "Tell users to fill out project proposals instead of typing it out on Slack"
-        ]
-      },
-      {
-        "item": "Reviewing proposals on GitHub",
-        "subitems": ["Help clarify the details of what the app is", "Talking to them for suggestions as well"]
-      },
-      {
-        "item": "Answering questions",
-        "subitems": []
-      },
-      {
-        "item": "Helping with recruiting",
-        "subitems": []
-      },
-      {
-        "item": "Set a timeline & clear check-ins",
-        "subitems": [
-          "Responsible for setting and agreeing on timeline with other party",
-          "Responsible for being part of check-ins",
-          "Case by case"
-        ]
-      },
-      {
-        "item": "Make payment GitHub issues when projects are due",
-        "subitems": []
-      }
-    ]
-  },
-  {
-    "title": "Recruiting",
-    "description": "This team is responsible for hiring for thenewboston.",
-    "platforms": [
-      {
-        "name": "github",
-        "label": "thenewboston",
-        "link": "https://github.com/thenewboston-developers"
-      },
-      {
-        "name": "slack",
-        "label": "hiring",
-        "link": ""
-      }
-    ],
-    "contributors": [
-      {
-        "title": "Recruiting Specialist",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2021-02-15T11:46:08.190Z",
-        "contributor": {
-          "contributorId": "81",
-          "displayName": "Demetrio Ornelas",
-          "githubUsername": "DemetrioOrnelas",
-          "profileImage": "https://avatars.githubusercontent.com/u/47065529?s=400&v=4",
-          "slackUsername": "Demetrio Ornelas"
-        }
-      }
-    ],
-    "responsibilities": [
-      {
-        "item": "Answering questions",
-        "subitems": []
-      },
-      {
-        "item": "Helping with recruiting",
-        "subitems": []
-      }
-    ]
-  },
-  {
-    "title": "QA",
-    "description": "Identify and detect bugs in our apps to increase the quality of our products for improved customer satisfaction.",
-    "platforms": [
-      {
-        "name": "github",
-        "label": "thenewboston",
-        "link": "https://github.com/thenewboston-developers"
-      },
-      {
-        "name": "slack",
-        "label": "quality-analyst",
-        "link": ""
-      }
-    ],
-    "contributors": [],
-    "responsibilities": []
-  },
-  {
-    "title": "Reddit Moderators",
-    "description": "We moderate posts on reddit and post job openings on it. Also other additional tasks given by bucky is also done by us. Thanks",
-    "platforms": [
-      {
-        "name": "github",
-        "label": "thenewboston",
-        "link": "https://github.com/thenewboston-developers"
-      },
-      {
-        "name": "slack",
-        "label": "reddit-moderation",
-        "link": ""
-      }
-    ],
-    "contributors": [
-      {
-        "title": "Reddit Moderator",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "9",
-          "displayName": "Bojan Ilijevski",
-          "githubUsername": "bojan-ilijevski",
-          "profileImage": "https://avatars2.githubusercontent.com/u/58598872?s=460&v=4",
-          "slackUsername": "Bojan Ilijevski"
-        }
-      },
-      {
-        "title": "Reddit Moderator",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2021-02-28T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "45",
-          "displayName": "Dushko Manev",
-          "githubUsername": "manevdusko",
-          "profileImage": "https://avatars.githubusercontent.com/u/37742873?v=4",
-          "slackUsername": "Dushko Manev"
-        }
-      },
-      {
-        "title": "Reddit Moderator",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "48",
-          "displayName": "Milena Gligorova",
-          "githubUsername": "MilenaGligorova",
-          "profileImage": "https://avatars.githubusercontent.com/u/79817275?v=4",
-          "slackUsername": "Milena Gligorova"
-        }
-      }
-    ],
-    "responsibilities": [
-      {
-        "item": "Oversee Reddit community",
-        "subitems": []
-      }
-    ]
-  },
-  {
-    "title": "Research",
-    "description": "We research the latest developments in blockchain technology and identify strategic opportunities.  We work closely with the development teams on their crypto-economic model, protocol, architecture, and strategy.",
-    "platforms": [
-      {
-        "name": "github",
-        "label": "thenewboston",
-        "link": "https://github.com/thenewboston-developers"
-      },
-      {
-        "name": "slack",
-        "label": "blockchain-research-team-channel",
-        "link": ""
-      }
-    ],
-    "contributors": [
-      {
-        "title": "Blockchain Researcher",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "17",
-          "displayName": "Colfax",
-          "githubUsername": "colfax23",
-          "profileImage": "https://avatars3.githubusercontent.com/u/914240?v=4",
-          "slackUsername": "Colfax"
-        }
-      },
-      {
-        "title": "Blockchain Researcher",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-11-19T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "54",
-          "displayName": "Hargobind Gupta",
-          "githubUsername": "Yara1990",
-          "profileImage": "https://avatars3.githubusercontent.com/u/15350237?s=460&u=46a246a5f8b4fac015551b79ffb95a268e9914e1&v=4",
-          "slackUsername": "Hargobind -Blockchain Researcher"
-        }
-      },
-      {
-        "title": "Blockchain Researcher",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-11-19T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "56",
-          "displayName": "Joe Sykes",
-          "githubUsername": "joe-sykes",
-          "profileImage": "https://avatars2.githubusercontent.com/u/5780413?s=460&u=8e5b89c0666c1a9a12921d99f1ac52028e03a6bb&v=4",
-          "slackUsername": "Joe Sykes"
-        }
-      },
-      {
-        "title": "Blockchain Researcher",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2021-03-02T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "88",
-          "displayName": "Muhammad Anas Azam Bhatti",
-          "githubUsername": "ma2b0043",
-          "profileImage": "https://avatars.githubusercontent.com/u/60430226?v=4",
-          "slackUsername": "Muhammad Anas Azam Bhatti"
-        }
-      },
-      {
-        "title": "Blockchain Research PM",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "31",
-          "displayName": "Rahul Kothari",
-          "githubUsername": "rahul-kothari",
-          "profileImage": "https://avatars0.githubusercontent.com/u/35169918?s=400&u=fecec8cb667103fd2d8e52422f6f4bd9666b2613&v=4",
-          "slackUsername": "Rahul Kothari"
-        }
-      }
-    ],
-    "responsibilities": [
-      {
-        "item": "Research trends and identify opportunities",
-        "subitems": []
-      },
-      {
-        "item": "Offer suggestions to help guide the future roadmap",
-        "subitems": []
-      },
-      {
-        "item": "Researching technology that exists that could improve ours",
-        "subitems": []
-      },
-      {
-        "item": "Identify areas within blockchain that we can partner with",
-        "subitems": []
-      }
-    ]
-  },
-  {
-    "title": "Security",
-    "description": "Currently we are two members only. Working on security roadmap. Trying to keep the blockchain network safe from adversaries and ensuring the services are always available to the end user",
-    "platforms": [
-      {
-        "name": "github",
-        "label": "thenewboston",
-        "link": "https://github.com/thenewboston-developers"
-      },
-      {
-        "name": "slack",
-        "label": "security",
-        "link": ""
-      }
-    ],
-    "contributors": [
-      {
-        "title": "Cryptography Security Engineer",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "14",
-          "displayName": "Amol Bhure",
-          "githubUsername": "codedevloper",
-          "profileImage": "https://avatars1.githubusercontent.com/u/5453949?s=460&v=4",
-          "slackUsername": "Amol Bhure"
-        }
-      }
-    ],
-    "responsibilities": []
-  },
-  {
-    "title": "YouTube",
-    "description": "Dedicated to developer evangelism as well as general adoption of the coin through YouTube videos.",
-    "platforms": [
-      {
-        "name": "github",
-        "label": "thenewboston",
-        "link": "https://github.com/thenewboston-developers"
-      },
-      {
-        "name": "slack",
-        "label": "youtube",
-        "link": ""
-      }
-    ],
-    "contributors": [
-      {
-        "title": "Head of YouTube Outreach",
-        "isLead": true,
-        "payPerDay": 2800,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "36",
-          "displayName": "Nico y-crozier",
-          "githubUsername": "nicocrozier",
-          "profileImage": "https://avatars2.githubusercontent.com/u/41084465?s=460&u=e4bbc12b9d60ba1869da25809044eddc97733c1b&v=4",
-          "slackUsername": "Nico y-crozier"
-        }
-      },
-      {
-        "title": "YouTube Educator",
-        "isLead": false,
-        "payPerDay": 2800,
-        "createdDate": "2021-01-01T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "64",
-          "displayName": "Francis Polignano",
-          "githubUsername": "franchyze923",
-          "profileImage": "https://avatars.githubusercontent.com/u/9319623?v=4",
-          "slackUsername": "Francis Polignano"
-        }
-      }
-    ],
-    "responsibilities": [
-      {
-        "item": "YouTube Outreach and video creation",
-        "subitems": []
-      },
-      {
-        "item": "Reaching out to YouTubers related to blockchain and programming",
-        "subitems": []
-      },
-      {
-        "item": "Deciding on the best strategy for what to film and what channel to put it on",
         "subitems": []
       }
     ]
