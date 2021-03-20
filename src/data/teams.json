@@ -76,22 +76,17 @@
   },
   {
     "title": "Blockchain",
-    "description": "Build and maintain the APIs related to the website and the digital currency network.",
+    "description": "Build and maintain the blockchain for thenewboston digital currency network.",
     "platforms": [
       {
         "name": "github",
-        "label": "thenewboston-python",
-        "link": "https://github.com/thenewboston-developers/thenewboston-python"
-      },
-      {
-        "name": "slack",
-        "label": "back-end",
-        "link": ""
+        "label": "thenewboston-node",
+        "link": "https://github.com/thenewboston-developers/thenewboston-node"
       }
     ],
     "contributors": [
       {
-        "title": "Back-End Lead",
+        "title": "Lead Blockchain Developer",
         "isLead": true,
         "payPerDay": 2800,
         "createdDate": "2020-07-08T02:14:59.307535Z",
@@ -105,10 +100,6 @@
       }
     ],
     "responsibilities": [
-      {
-        "item": "Integration of user-facing elements developed by front-end developers with server-side logic",
-        "subitems": []
-      },
       {
         "item": "Building reusable code and libraries for future use",
         "subitems": []
@@ -129,17 +120,12 @@
   },
   {
     "title": "Community",
-    "description": "Build and maintain the APIs related to the website and the digital currency network.",
+    "description": "Create the strategy, oversee the overall TNB product, create standards, and improve cross collaboration between teams.",
     "platforms": [
       {
         "name": "github",
         "label": "thenewboston-python",
         "link": "https://github.com/thenewboston-developers/thenewboston-python"
-      },
-      {
-        "name": "slack",
-        "label": "back-end",
-        "link": ""
       }
     ],
     "contributors": [
@@ -185,40 +171,27 @@
     ],
     "responsibilities": [
       {
-        "item": "Integration of user-facing elements developed by front-end developers with server-side logic",
+        "item": "Get people to where they need to be",
         "subitems": []
       },
       {
-        "item": "Building reusable code and libraries for future use",
+        "item": "Provide user feedback and analytics",
         "subitems": []
       },
       {
-        "item": "Optimization of the application for maximum speed and scalability",
-        "subitems": []
-      },
-      {
-        "item": "Implementation of security and data protection",
-        "subitems": []
-      },
-      {
-        "item": "Design and implementation of data storage solutions",
+        "item": "Optimize user feedback loop",
         "subitems": []
       }
     ]
   },
   {
     "title": "Design",
-    "description": "Build and maintain the APIs related to the website and the digital currency network.",
+    "description": "Create and manage all designs within thenewboston website and applications.",
     "platforms": [
       {
         "name": "github",
-        "label": "thenewboston-python",
-        "link": "https://github.com/thenewboston-developers/thenewboston-python"
-      },
-      {
-        "name": "slack",
-        "label": "back-end",
-        "link": ""
+        "label": "Design",
+        "link": "https://github.com/thenewboston-developers/Design"
       }
     ],
     "contributors": [
@@ -238,40 +211,44 @@
     ],
     "responsibilities": [
       {
-        "item": "Integration of user-facing elements developed by front-end developers with server-side logic",
+        "item": "Help identify what needs to be built based off user feedback",
         "subitems": []
       },
       {
-        "item": "Building reusable code and libraries for future use",
+        "item": "Design wireframes",
         "subitems": []
       },
       {
-        "item": "Optimization of the application for maximum speed and scalability",
+        "item": "User test designs with the community",
         "subitems": []
       },
       {
-        "item": "Implementation of security and data protection",
+        "item": "Write product requirements for engineering handoff",
         "subitems": []
       },
       {
-        "item": "Design and implementation of data storage solutions",
+        "item": "Create hi-fi designs while maintaining an updated style guide",
+        "subitems": []
+      },
+      {
+        "item": "Give design reviews to members within the community",
         "subitems": []
       }
     ]
   },
   {
     "title": "Front-End",
-    "description": "Basically, everything that the user can interact with, comes under this team's scope. We'll be mostly working on the Website and Account Manager repo. ",
+    "description": "Implement visual elements that users see and interact with in a web application.",
     "platforms": [
+      {
+        "name": "github",
+        "label": "Account-Manager",
+        "link": "https://github.com/thenewboston-developers/Account-Manager"
+      },
       {
         "name": "github",
         "label": "Website",
         "link": "https://github.com/thenewboston-developers/Website"
-      },
-      {
-        "name": "slack",
-        "label": "front-end",
-        "link": ""
       }
     ],
     "contributors": [
@@ -315,7 +292,24 @@
         }
       }
     ],
-    "responsibilities": []
+    "responsibilities": [
+      {
+        "item": "Determine the structure and architecture of web pages",
+        "subitems": []
+      },
+      {
+        "item": "Develop features to enhance the user experience",
+        "subitems": []
+      },
+      {
+        "item": "Troubleshoot website problems",
+        "subitems": []
+      },
+      {
+        "item": "Work with graphics and other designers to strike a balance between functional and aesthetic design",
+        "subitems": []
+      }
+    ]
   },
   {
     "title": "Human Resources",
