@@ -127,13 +127,12 @@ const Teams: FC = () => {
   const renderTeamMembers = useCallback((): ReactNode => {
     if (!filteredMembers.length) return <EmptyPage />;
     return filteredMembers.map(
-      ({contributorId, displayName, githubUsername, isLead, payPerDay, profileImage, slackUsername, titles}) => (
+      ({contributorId, displayName, githubUsername, isLead, profileImage, slackUsername, titles}) => (
         <TeamMemberCard
           displayName={displayName}
           githubUsername={githubUsername}
           isLead={isLead}
           key={contributorId}
-          payPerDay={payPerDay}
           profileImage={profileImage}
           slackUsername={slackUsername}
           titles={titles}
