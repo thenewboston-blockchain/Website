@@ -1,14 +1,44 @@
 import parse from 'date-fns/parse';
 import {TEAMS} from 'constants/teams';
+import {Article} from 'types/blogs';
 import {Contributor, RawTask, Task, TaskDict} from 'types/github';
 import {Opening} from 'types/openings';
 import {NavOption} from 'types/option';
 import {TeamMember, TeamName, TeamPlatform, TeamResponsibility} from 'types/teams';
 
+import articles from 'data/blogs.json';
 import contributors from 'data/contributors.json';
 import openings from 'data/openings.json';
 import tasks from 'data/tasks.json';
 import teams from 'data/teams.json';
+import {shuffle} from './shuffle';
+
+export const getArticles = (): Article[] => {
+  return articles;
+};
+
+export const getArticleByTitle = (title: string): Article | undefined => {
+  const singleArticle: Article | undefined = getArticles().find(
+    (article) => article.title.toLowerCase() === title.toLowerCase(),
+  );
+  return singleArticle;
+};
+
+export const sortByLatest = (array: Article[]): Article => {
+  return array.reduce((b, a) => {
+    return b.datePosted > a.datePosted ? b : a;
+  });
+};
+
+export const getPopularArticles = (): Article[] => {
+  const allArticles = getArticles();
+  const latestArticle = sortByLatest(allArticles);
+  const popularArticles: Article[] = allArticles
+    .filter((a) => a.title.toLowerCase() !== latestArticle.title.toLowerCase())
+    .slice(0, 4);
+
+  return shuffle(popularArticles);
+};
 
 export const getContributors = (): Contributor[] => {
   return contributors;

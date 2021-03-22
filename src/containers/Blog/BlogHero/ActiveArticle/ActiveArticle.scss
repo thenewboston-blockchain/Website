@@ -1,0 +1,59 @@
+$gray-400: #8792a2;
+
+.ActiveArticle {
+  background-color: transparent;
+  //   height: 100%;
+  height: 468px;
+  max-width: 700px;
+  // padding: 1rem;
+  position: relative;
+  width: 100%;
+
+  &__banner-overlay {
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    opacity: 0.4;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__container {
+    bottom: 0;
+    color: #fff;
+    padding: 1rem;
+    position: absolute;
+  }
+
+  &__title {
+    color: white;
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    max-width: 480px;
+  }
+
+  &__user,
+  &__date,
+  &__time {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  &__date {
+    margin: 0;
+  }
+
+  &__time {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ActiveArticle {
+    height: 65vh;
+    margin: 0 auto;
+    width: 90%;
+  }
+}

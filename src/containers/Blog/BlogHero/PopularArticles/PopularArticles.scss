@@ -1,0 +1,130 @@
+$comparison-cards-container: 690px;
+$content-container-padding-lr: 64px;
+$summary-mr: 70px;
+$summary-width: 420px;
+$gray-500: #697386;
+$gray-100: #e3e8ee;
+
+.PopularArticles {
+  // align-items: center;
+  // align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // position: relative;
+  color: $gray-500;
+  padding: 0 1.5rem;
+
+  @media (min-width: 480px) and (max-width: 768px) {
+    padding: 0 2rem;
+  }
+
+  &__header {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    margin-top: 0.3rem;
+    text-transform: uppercase;
+
+    @media (max-width: 768px) {
+      margin-top: 30px;
+    }
+  }
+
+  &__comparison-cards-container {
+    width: $comparison-cards-container;
+
+    @media (max-width: 1200px) {
+      width: unset;
+    }
+  }
+
+  &__content-container {
+    max-width: $summary-width + $summary-mr + $comparison-cards-container + $content-container-padding-lr * 2;
+    padding: 64px;
+    width: 100%;
+
+    @media (max-width: 768px) {
+      max-width: 480px;
+      padding: 32px;
+    }
+  }
+
+  &__article-container {
+    display: flex;
+
+    @media (max-width: 1200px) {
+      display: block;
+    }
+  }
+
+  &__article-wrapper {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+
+  &__article-banner {
+    background-color: $gray-100;
+    height: 96px;
+    margin-right: 1rem;
+    max-width: 96px;
+
+    img {
+      background-size: contain;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__article-title {
+    color: #697386;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  &__article-user,
+  &__article-date,
+  &__article-time {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  &__article-date {
+    margin: 0;
+  }
+
+  &__article-time {
+    margin-left: 1rem;
+  }
+
+  &__summary-snippet-container {
+    margin-right: $summary-mr;
+    width: $summary-width;
+
+    @media (max-width: 1200px) {
+      margin-right: 0;
+      width: unset;
+    }
+  }
+
+  &__text-snippets {
+    margin-top: 30px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    font-family: var(--font-family-inter-bold);
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-top: 30px;
+    max-width: 290px;
+
+    @media (max-width: 1200px) {
+      max-width: unset;
+    }
+  }
+}
