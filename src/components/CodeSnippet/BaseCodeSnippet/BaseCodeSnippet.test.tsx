@@ -27,20 +27,20 @@ describe('RequestResponseSnippet', () => {
     expect(screen.getByText("console.log('TNB is heading to the moon');")).toBeTruthy();
   });
 
-  it('renders with the default duotone dark style', () => {
+  it('renders with the default obsidian style', () => {
     render(<BaseCodeSnippet {...baseProps} />);
 
-    // distinct style for duotone dark in prism
-    expect(screen.getByTestId(baseTestId).style).toHaveProperty('background-color', 'rgb(42, 39, 52)');
-    expect(screen.getByTestId(baseTestId).style).toHaveProperty('color', 'rgb(154, 134, 253)');
+    // distinct style for obsidian in hljs
+    expect(screen.getByTestId(baseTestId).style).toHaveProperty('background-color', 'rgb(40, 43, 46)');
+    expect(screen.getByTestId(baseTestId).style).toHaveProperty('color', 'rgb(224, 226, 228)');
   });
 
   it('renders without crashing when light passed in', () => {
     render(<BaseCodeSnippet {...baseProps} light />);
 
-    // distinct style for solarized light in prism
-    expect(screen.getByTestId(baseTestId).style).toHaveProperty('background-color', 'rgb(253, 246, 227)');
-    expect(screen.getByTestId(baseTestId).style).toHaveProperty('color', 'rgb(101, 123, 131)');
+    // distinct style for routeros in hljs
+    expect(screen.getByTestId(baseTestId).style).toHaveProperty('background-color', 'rgb(240, 240, 240)');
+    expect(screen.getByTestId(baseTestId).style).toHaveProperty('color', 'rgb(68, 68, 68)');
   });
 
   it('renders with showLineNumbers passed in', () => {

@@ -1,12 +1,12 @@
 import React, {FC} from 'react';
-import {PrismLight as SyntaxHighlighter} from 'react-syntax-highlighter';
-import {duotoneDark, solarizedlight} from 'react-syntax-highlighter/dist/esm/styles/prism';
-import bashLang from 'react-syntax-highlighter/dist/esm/languages/prism/bash';
-import jsonLang from 'react-syntax-highlighter/dist/esm/languages/prism/json';
+import {Light as SyntaxHighlighter} from 'react-syntax-highlighter';
+import {obsidian, routeros} from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import bashLang from 'react-syntax-highlighter/dist/esm/languages/hljs/bash';
+import jsonLang from 'react-syntax-highlighter/dist/esm/languages/hljs/json';
 import jsxLang from 'react-syntax-highlighter/dist/esm/languages/prism/jsx';
-import pythonLang from 'react-syntax-highlighter/dist/esm/languages/prism/python';
-import scssLang from 'react-syntax-highlighter/dist/esm/languages/prism/scss';
-import typescriptLang from 'react-syntax-highlighter/dist/esm/languages/prism/typescript';
+import pythonLang from 'react-syntax-highlighter/dist/esm/languages/hljs/python';
+import scssLang from 'react-syntax-highlighter/dist/esm/languages/hljs/scss';
+import typescriptLang from 'react-syntax-highlighter/dist/esm/languages/hljs/typescript';
 
 export enum SnippetLang {
   bash = 'bash',
@@ -36,7 +36,7 @@ const BaseCodeSnippet: FC<BaseCodeSnippetProps> = ({code, language, light = fals
     <SyntaxHighlighter
       language={language}
       showLineNumbers={showLineNumbers}
-      style={light ? solarizedlight : duotoneDark}
+      style={light ? routeros : obsidian}
       data-testid="BaseCodeSnippet"
     >
       {code}
