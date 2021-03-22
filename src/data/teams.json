@@ -148,18 +148,6 @@
           "profileImage": "https://avatars.githubusercontent.com/u/60430226?v=4",
           "slackUsername": "Muhammad Anas Azam Bhatti"
         }
-      },
-      {
-        "title": "Technical Writer",
-        "isLead": false,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "76",
-          "displayName": "Vyz",
-          "githubUsername": "led76marx",
-          "profileImage": "https://avatars.githubusercontent.com/u/20023713?v=4",
-          "slackUsername": "Vyz"
-        }
       }
     ],
     "responsibilities": [
@@ -291,6 +279,18 @@
           "profileImage": "https://avatars0.githubusercontent.com/u/32864116?s=460&u=0c2a53c6f1476da904d2b3c820bab43b64b7185b&v=4",
           "slackUsername": "James Pang"
         }
+      },
+      {
+        "title": "Technical Writer",
+        "isLead": false,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "76",
+          "displayName": "Vyz",
+          "githubUsername": "led76marx",
+          "profileImage": "https://avatars.githubusercontent.com/u/20023713?v=4",
+          "slackUsername": "Vyz"
+        }
       }
     ],
     "responsibilities": [
@@ -390,6 +390,18 @@
           "githubUsername": "bojan-ilijevski",
           "profileImage": "https://avatars2.githubusercontent.com/u/58598872?s=460&v=4",
           "slackUsername": "Bojan Ilijevski"
+        }
+      },
+      {
+        "title": "Discord Moderator",
+        "isLead": false,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "28",
+          "displayName": "Rajput Usman",
+          "githubUsername": "Rajputusman",
+          "profileImage": "https://avatars0.githubusercontent.com/u/65516140?s=460&v=4",
+          "slackUsername": "Rajput Usman"
         }
       }
     ],
