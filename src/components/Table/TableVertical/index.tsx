@@ -4,17 +4,20 @@ import {bemify} from '@thenewboston/utils';
 
 import './TableVertical.scss';
 
-interface ComponentProps {
+export interface TableVerticalProps {
   altColors?: boolean;
   className?: string;
   innerBorders?: boolean;
   rows: ReactNode[][];
 }
 
-const TableVertical: FC<ComponentProps> = ({altColors = false, className, innerBorders = false, rows}) => {
+const TableVertical: FC<TableVerticalProps> = ({altColors = false, className, innerBorders = false, rows}) => {
   const renderBody = (): ReactNode => {
     return (
-      <tbody className={clsx('TableVertical__tbody', {...bemify(className, '__tbody')})}>
+      <tbody
+        className={clsx('TableVertical__tbody', {...bemify(className, '__tbody')})}
+        data-testid="TableVertical__tbody"
+      >
         {rows.map((row, rowIndex) => (
           <tr
             key={rowIndex}
@@ -23,6 +26,7 @@ const TableVertical: FC<ComponentProps> = ({altColors = false, className, innerB
               ...bemify(className, '__tr'),
               ...bemify(className, '__tr--even', altColors && rowIndex % 2 === 0),
             })}
+            data-testid="TableVertical__tr"
           >
             {row.map((item, itemIndex) => (
               <td
@@ -32,6 +36,7 @@ const TableVertical: FC<ComponentProps> = ({altColors = false, className, innerB
                   ...bemify(className, '__td'),
                   ...bemify(className, '__td--border', innerBorders),
                 })}
+                data-testid="TableVertical__td"
               >
                 {item}
               </td>
@@ -44,7 +49,9 @@ const TableVertical: FC<ComponentProps> = ({altColors = false, className, innerB
 
   return (
     <div>
-      <table className={clsx('TableVertical', className)}>{renderBody()}</table>
+      <table className={clsx('TableVertical', className)} data-testid="TableVertical">
+        {renderBody()}
+      </table>
     </div>
   );
 };

@@ -9,7 +9,7 @@ interface ComponentProps {
 
 const EmptyPage: FC<ComponentProps> = ({className}) => {
   return (
-    <div className={clsx('EmptyPage', className)}>
+    <div className={clsx('EmptyPage', className)} data-testid="EmptyPage">
       <h1>No items to display</h1>
     </div>
   );

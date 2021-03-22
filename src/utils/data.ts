@@ -33,20 +33,19 @@ export const getTasks = (): TaskDict => {
   return results;
 };
 
-export const getTeamMemberByGithubUsername = (github_username: string): TeamMember | undefined => {
-  let member: TeamMember | undefined;
+export const getTeamMemberByGithubUsername = (github_username: string): TeamMember | null => {
+  let member: TeamMember | null = null;
 
   teams.forEach((team) => {
     const {title: teamTitle, contributors: teamContributors} = team;
     teamContributors.forEach((teamMember: any) => {
       if (teamMember.contributor.githubUsername === github_username) {
-        const {title: userTitle, isLead, payPerDay, contributor} = teamMember;
+        const {title: userTitle, isLead, contributor} = teamMember;
         const {contributorId, ...otherProps} = contributor;
         if (!member) {
           member = {
             contributorId,
             isLead,
-            payPerDay,
             teams: [{isLead, title: teamTitle}],
             titles: [userTitle],
             ...otherProps,
@@ -75,14 +74,13 @@ export const getTeamMembers = (): TeamMember[] => {
   const members: any = {};
   teams.forEach((team) => {
     team.contributors.forEach((teamMember: any) => {
-      const {title: userTitle, isLead, payPerDay, createdDate, contributor} = teamMember;
+      const {title: userTitle, isLead, createdDate, contributor} = teamMember;
       const {contributorId, ...otherProps} = contributor;
       if (!members[contributorId]) {
         members[contributorId] = {
           contributorId,
           createdDate,
           isLead,
-          payPerDay,
           teams: [{isLead, title: team.title}],
           titles: [userTitle],
           ...otherProps,

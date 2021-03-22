@@ -121,6 +121,16 @@
       "completed_date": "12/27/20",
       "amount_paid": "5000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add Project's openings to the website",
+      "issue_id": "1270",
+      "pr_id": "1275",
+      "completed_by": "AbhayAysola",
+      "completed_date": "2/15/21",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
     }
   ],
   "AkbarKamran": [
@@ -166,6 +176,18 @@
       "completed_by": "Akshit1311",
       "completed_date": "11/13/20",
       "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    }
+  ],
+  "AmrOuf": [
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1276",
+      "pr_id": "1295",
+      "completed_by": "AmrOuf",
+      "completed_date": "2/16/21",
+      "amount_paid": "250",
       "bug_bounty": "FALSE"
     }
   ],
@@ -1917,6 +1939,16 @@
       "completed_date": "12/14/20",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Hiring",
+      "issue_id": "1257",
+      "pr_id": "1258",
+      "completed_by": "aayushi14",
+      "completed_date": "2/04/21",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
     }
   ],
   "aeronye": [
@@ -2367,6 +2399,18 @@
       "bug_bounty": "FALSE"
     }
   ],
+  "bossajie": [
+    {
+      "repository": "Website",
+      "title": "Update twitter social link and added instagram social link",
+      "issue_id": "1263",
+      "pr_id": "1262",
+      "completed_by": "bossajie",
+      "completed_date": "2/09/21",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    }
+  ],
   "brian316": [
     {
       "repository": "Account-Manager",
@@ -2779,6 +2823,56 @@
       "completed_date": "1/28/21",
       "amount_paid": "3000",
       "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1288",
+      "pr_id": "1291",
+      "completed_by": "dhakal0kushal",
+      "completed_date": "2/15/21",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1261",
+      "pr_id": "1285",
+      "completed_by": "dhakal0kushal",
+      "completed_date": "2/14/21",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1273",
+      "pr_id": "1285",
+      "completed_by": "dhakal0kushal",
+      "completed_date": "2/14/21",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1280",
+      "pr_id": "1285",
+      "completed_by": "dhakal0kushal",
+      "completed_date": "2/14/21",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "New Contributor",
+      "issue_id": "1281",
+      "pr_id": "1285",
+      "completed_by": "dhakal0kushal",
+      "completed_date": "2/14/21",
+      "amount_paid": "250",
+      "bug_bounty": "FALSE"
     }
   ],
   "donmbelembe": [
@@ -2861,6 +2955,18 @@
       "pr_id": "902",
       "completed_by": "gatvay23924",
       "completed_date": "11/18/20",
+      "amount_paid": "500",
+      "bug_bounty": "FALSE"
+    }
+  ],
+  "gsonly": [
+    {
+      "repository": "Website",
+      "title": "Put \"Hello World\" in your OWN language!",
+      "issue_id": "351",
+      "pr_id": "1158",
+      "completed_by": "gsonly",
+      "completed_date": "2/03/21",
       "amount_paid": "500",
       "bug_bounty": "FALSE"
     }
@@ -3603,6 +3709,16 @@
       "pr_id": "1196",
       "completed_by": "jamessspanggg",
       "completed_date": "1/19/21",
+      "amount_paid": "2000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Add link to blog on website",
+      "issue_id": "1283",
+      "pr_id": "1284",
+      "completed_by": "jamessspanggg",
+      "completed_date": "2/15/21",
       "amount_paid": "2000",
       "bug_bounty": "FALSE"
     }
@@ -5266,6 +5382,16 @@
       "completed_by": "thesanjeevsharma",
       "completed_date": "12/31/20",
       "amount_paid": "10000",
+      "bug_bounty": "FALSE"
+    },
+    {
+      "repository": "Website",
+      "title": "Remove Contributor",
+      "issue_id": "1300",
+      "pr_id": "1303",
+      "completed_by": "thesanjeevsharma",
+      "completed_date": "2/16/21",
+      "amount_paid": "250",
       "bug_bounty": "FALSE"
     }
   ],

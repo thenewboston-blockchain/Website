@@ -1,23 +1,13 @@
 export enum TeamName {
   all = 'All',
-  backEndDevelopers = 'Back-End Developers',
-  communications = 'Communications',
+  audit = 'Audit',
+  blockchain = 'Blockchain',
   community = 'Community',
   design = 'Design',
-  devOps = 'DevOps',
-  discordManagers = 'Discord Managers',
-  dotnetCore = '.NET Core',
-  frontEndDevelopers = 'Front-End Developers',
-  kotlinSDK = 'Kotlin SDK',
+  frontEnd = 'Front-End',
+  humanResources = 'Human Resources',
   marketing = 'Marketing',
-  newUserOperations = 'New User Operations',
-  payments = 'Payments',
-  projectProposals = 'Project Proposals',
-  qa = 'QA',
-  redditModerators = 'Reddit Moderators',
-  research = 'Research',
-  security = 'Security',
-  youtube = 'YouTube',
+  websiteApi = 'Website API',
 }
 
 interface Contributor {
@@ -51,7 +41,6 @@ export interface TeamContributor {
   contributor: Contributor;
   createdDate: string;
   isLead: boolean;
-  payPerDay: number;
   title: string;
 }
 
@@ -65,7 +54,6 @@ export interface TeamMember {
   displayName: string;
   githubUsername: string;
   isLead: boolean;
-  payPerDay: number;
   profileImage: string;
   slackUsername: string;
   teams: TeamLead[];

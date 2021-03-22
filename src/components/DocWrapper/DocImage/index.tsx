@@ -4,7 +4,7 @@ import {bemify} from '@thenewboston/utils';
 
 import './DocImage.scss';
 
-interface ComponentProps {
+export interface DocImageProps {
   alt: string;
   bordered?: boolean;
   className?: string;
@@ -12,15 +12,16 @@ interface ComponentProps {
   src: string;
 }
 
-const DocImage: FC<ComponentProps> = ({alt, bordered, className, maxWidth, src}) => {
+const DocImage: FC<DocImageProps> = ({alt, bordered, className, maxWidth, src}) => {
   return (
-    <div className={clsx('DocImage', {className})}>
+    <div className={clsx('DocImage', className)} data-testid="DocImage">
       <img
         alt={alt}
         className={clsx('DocImage__img', {
           DocImage__bordered: bordered,
           ...bemify(className, '__img'),
         })}
+        data-testid="DocImage__img"
         src={src}
         style={{maxWidth}}
       />

@@ -2,8 +2,7 @@ import React, {useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
 
-import DefaultUserAvatar from 'assets/images/default-avatar.png';
-import {Button, IconType} from 'components';
+import {Avatar, Button, IconType} from 'components';
 import TopNavLink from 'containers/TopNav/TopNavLink';
 import TopNavPopover, {TopNavPopoverItemType} from 'containers/TopNav/TopNavPopover';
 import {selectActiveUser} from 'selectors/state';
@@ -67,13 +66,6 @@ const morePopoverItems: TopNavPopoverItemType[] = [
     to: '/project-proposals/overview',
   },
   {
-    description: 'Stay updated on crypto and thenewboston',
-    iconType: IconType.textBox,
-    isExternal: true,
-    title: 'Blog',
-    to: 'https://thenewboston.blog/',
-  },
-  {
     description: 'Download thenewboston assets',
     iconType: IconType.fileDownload,
     title: 'Assets',
@@ -115,10 +107,9 @@ const TopNavDesktopItems = () => {
     const {profile_image: profileImage} = activeUser;
     return (
       <TopNavPopover
+        className="TopNavDesktopItems__profile-image"
         anchorEl={activeUserAnchorEl}
-        customButtonContent={
-          <img alt="profile" className="TopNavDesktopItems__profile-image" src={profileImage || DefaultUserAvatar} />
-        }
+        customButtonContent={<Avatar src={profileImage} size={36} />}
         items={activeUserPopoverItems}
         popoverId="active-user-popover"
         setAnchorEl={setActiveUserAnchorEl}

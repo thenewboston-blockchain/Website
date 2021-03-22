@@ -8,7 +8,6 @@ interface ComponentProps {
   displayName: string;
   githubUsername?: string;
   isLead: boolean;
-  payPerDay: number;
   profileImage: string;
   slackUsername: string;
   titles: string[];
@@ -18,14 +17,13 @@ const TeamMemberCard: FC<ComponentProps> = ({
   displayName,
   githubUsername,
   isLead,
-  payPerDay,
   profileImage,
   slackUsername,
   titles,
 }) => {
   const renderAvatar = () => (
     <div className="TeamMemberCard__user-avatar">
-      <Avatar alt={displayName} size={144} src={profileImage} />
+      <Avatar size={144} src={profileImage} />
     </div>
   );
 
@@ -37,9 +35,6 @@ const TeamMemberCard: FC<ComponentProps> = ({
       <div className="TeamMemberCard__details-title">{titles.join(', ')}</div>
       <div>Slack: {slackUsername}</div>
       <div>Github: {githubUsername ? <A href={`https://github.com/${githubUsername}`}>{githubUsername}</A> : '-'}</div>
-      <div>
-        Pay Per Day: <span className="TeamMemberCard__details-pay">{payPerDay.toLocaleString()}</span>
-      </div>
     </div>
   );
 
