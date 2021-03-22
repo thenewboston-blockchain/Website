@@ -1,0 +1,60 @@
+.PopularArticles {
+  align-items: center;
+  background-color: var(--color-sail-blue-900);
+  display: flex;
+  justify-content: center;
+
+  &__content-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1308px;
+    padding: 64px 64px 72px;
+  }
+
+  &__instructional-link {
+    color: var(--color-sail-blue-300);
+  }
+
+  &__instructional-text {
+    color: var(--color-white);
+    margin-top: 8px;
+    padding-left: 48px;
+  }
+
+  &__Step {
+    margin: 0 48px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 1080px) {
+    &__content-container {
+      align-items: center;
+      flex-direction: row;
+    }
+
+    &__Step {
+      //margin: 0 0 48px 0;
+      margin: 0;
+      max-width: 430px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__Step {
+      //margin: 0 32px 32px;
+      margin: 10px;
+
+      &:first-of-type,
+      &:last-of-type {
+        margin: 0 32px 32px;
+      }
+    }
+  }
+}
