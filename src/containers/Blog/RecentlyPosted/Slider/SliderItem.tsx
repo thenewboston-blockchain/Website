@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 // Styles
 import {StyledSliderItem} from './SliderItemStyles';
 
@@ -10,6 +10,7 @@ type SliderItemProps = {
   callbackOut: () => void;
   slideMargin: number;
   visibleSlides: number;
+  children: ReactNode;
 };
 
 const SliderItem: React.FC<SliderItemProps> = ({

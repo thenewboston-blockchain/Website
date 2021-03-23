@@ -1,3 +1,4 @@
+import {ReactNode} from 'react';
 import styled from 'styled-components';
 
 type Props = {
@@ -5,13 +6,16 @@ type Props = {
   slideMargin: number;
   visibleSlides: number;
   className: string;
+  onMouseOver: () => void;
+  onMouseOut: () => void;
+  children?: ReactNode;
 };
 
 export const StyledSliderItem = styled.div<Props>`
   @media (min-width: 480px) and (max-width: 768px) {
     margin: 0 5px;
   }
-  margin: 0 ${(props) => props.slideMargin}px;
+  margin: 0 ${(props: any) => props.slideMargin}px;
   transition: transform 500ms ease;
   border-radius: 20px;
   cursor: pointer;
@@ -22,7 +26,7 @@ export const StyledSliderItem = styled.div<Props>`
   transform: scale(1);
   user-select: none;
   position: relative;
-  flex: 0 0 calc(100% / ${(props) => props.visibleSlides} - ${(props) => props.slideMargin * 2}px);
+  flex: 0 0 calc(100% / ${(props: any) => props.visibleSlides} - ${(props: any) => props.slideMargin * 2}px);
   img {
     height: 100%;
     width: 100%;
@@ -30,15 +34,15 @@ export const StyledSliderItem = styled.div<Props>`
     box-sizing: border-box;
   }
   :hover {
-    transform: scale(${(props) => props.zoomFactor / 100 + 1}) !important;
+    transform: scale(${(props: any) => props.zoomFactor / 100 + 1}) !important;
   }
   :hover ~ * {
-    transform: translateX(${(props) => `${props.zoomFactor / 2}%`}) !important;
+    transform: translateX(${(props: any) => `${props.zoomFactor / 2}%`}) !important;
   }
   &.left {
     transform-origin: left;
     :hover ~ * {
-      transform: translateX(${(props) => `${props.zoomFactor}%`}) !important;
+      transform: translateX(${(props: any) => `${props.zoomFactor}%`}) !important;
     }
   }
   &.right {
