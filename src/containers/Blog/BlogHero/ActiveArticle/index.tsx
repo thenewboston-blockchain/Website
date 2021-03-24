@@ -31,9 +31,7 @@ const ActiveArticle: FC<ArticleProps> = ({articles}) => {
       >
         <div className="ActiveArticle__banner-overlay" />
         <div className="ActiveArticle__container">
-          <Link to={`/blog/${encodeURIComponent(slugify(currentArticle.title, ' ', '-'))}`}>
-            <h3 className="ActiveArticle__title">{currentArticle.title}</h3>
-          </Link>
+          <h3 className="ActiveArticle__title">{currentArticle.title}</h3>
           <p className="ActiveArticle__user">{currentArticle.author.name}</p>
           <p className="ActiveArticle__date">
             {format.toDateString()}

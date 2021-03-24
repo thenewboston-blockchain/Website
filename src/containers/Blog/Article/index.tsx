@@ -38,14 +38,14 @@ const Article: FC = () => {
 
   const renderSocialMediaLinks = () =>
     socials.map((media) => (
-      <A href={media.url + window.location.href}>
+      <A key={media.icon} href={media.url + window.location.href}>
         <Icon icon={IconType[media.icon]} className="Article__SocialMediaLink" />
       </A>
     ));
 
   const renderSocialMediaLinksMobile = () =>
     socials.map((media) => (
-      <div className="Article__SocialMediaLinkWrapper">
+      <div key={media.icon} className="Article__SocialMediaLinkWrapper">
         <A href={media.url + window.location.href}>
           <Icon icon={IconType[media.icon]} className="Article__SocialMediaLinkMobile" />
         </A>
