@@ -1,13 +1,10 @@
-import axios from 'axios';
-
 import {AMOUNT_COLOR, REPOSITORIES} from 'constants/github';
-import {BaseRelease, Issue, Release} from 'types/github';
+import {BaseRelease, Issue, Release, FetchGithubReleasesParams} from 'types/github';
 import {REGEX} from 'constants/regex';
+import * as api from 'apis/github';
 
 export const fetchGithubIssues = async (): Promise<Issue[]> => {
-  const promises = REPOSITORIES.map((repoName) =>
-    axios.get(`https://api.github.com/repos/thenewboston-developers/${repoName.pathname}/issues`),
-  );
+  const promises = REPOSITORIES.map((repoName) => api.getIssuesForRepo(repoName.pathname));
 
   const results = await Promise.all(promises);
   const issues = results
@@ -24,18 +21,8 @@ export const fetchGithubIssues = async (): Promise<Issue[]> => {
   });
 };
 
-type FetchGithubReleasesParams = {
-  page?: number;
-  per_page?: number;
-};
-
 export const fetchGithubReleases = async (queryParams: FetchGithubReleasesParams): Promise<Release[]> => {
-  const {data} = await axios.get<BaseRelease[]>(
-    'https://api.github.com/repos/thenewboston-developers/Account-Manager/releases',
-    {
-      params: queryParams,
-    },
-  );
+  const {data} = await api.getAccountManagerReleases(queryParams);
 
   return data.map((release: BaseRelease) => {
     const {tag_name: tagName} = release;
