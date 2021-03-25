@@ -37,9 +37,6 @@ $gray-50: #f7fafc;
     width: 100%;
 
     @media (max-width: 768px) {
-      //    margin-bottom: 3rem;
-      //    max-width: 480px;
-      //      padding: 32px;
       margin-bottom: 120px;
       padding: 0;
     }
@@ -101,8 +98,6 @@ $gray-50: #f7fafc;
   &__SocialMediaLink {
     color: $gray-900;
   }
-
-  //   Forms
   &__form-wrapper {
     flex: 1;
 

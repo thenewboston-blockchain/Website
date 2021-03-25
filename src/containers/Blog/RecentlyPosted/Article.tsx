@@ -5,17 +5,6 @@ import {slugify} from 'utils/urls';
 
 import './RecentlyPosted.scss';
 
-// {
-//   id?: number;
-//   title: string;
-//   banner: string;
-//   author: {
-//     name: string;
-//     avatar: string;
-//   };
-//   datePosted: string;
-//   readTime: string;
-// };
 interface ArticleProps {
   article: ArticleType;
 }

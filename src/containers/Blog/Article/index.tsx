@@ -8,14 +8,6 @@ import './Article.scss';
 import {slugify} from 'utils/urls';
 import {getArticleByTitle} from 'utils/data';
 
-// {
-//   id: number;
-//   banner: string;
-//   user: string;
-//   datePosted: string;
-//   readTime: string;
-//   body: string;
-// };
 interface RouteParams {
   slug: string;
 }
@@ -72,10 +64,6 @@ const Article: FC = () => {
                     className="Article__SocialMediaShareBtn"
                     onClick={() => toggleSocialVisible()}
                   />
-                  {/* <div className="Article__likes-mobile">
-                    <Icon size={25} icon={IconType.thumbsUp} className="Article__likes__thumbsUp" />
-                    <span>1232</span>
-                  </div> */}
                   <div className={`Article__social-mobile ${socailVisible && 'visible'}`}>
                     {renderSocialMediaLinksMobile()}
                   </div>

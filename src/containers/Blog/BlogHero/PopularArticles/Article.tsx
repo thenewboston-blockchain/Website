@@ -23,7 +23,6 @@ const Article: FC<ComponentProps> = ({article}) => {
           <img src={article.banner} alt="img" />
         </Link>
       </div>
-      {/* <div className="PopularArticles__article-banner" /> */}
       <div className="PopularArticles__article-content">
         <Link to={`/blog/${encodeURIComponent(slugify(article.title, ' ', '-'))}`}>
           <h3 className="PopularArticles__article-title">{article.title}</h3>
