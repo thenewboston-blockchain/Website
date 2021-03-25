@@ -1,11 +1,10 @@
 import React, {FC, useEffect, useState} from 'react';
 import {Map, Marker, Popup, TileLayer} from 'react-leaflet';
-import axios from 'axios';
 import {Icon} from 'leaflet';
 
 import bankSvg from 'assets/svgs/bank1.svg';
 import validatorSvg from 'assets/svgs/validator.svg';
-import * as apiEndpoints from 'constants/api-endpoints';
+import * as api from 'apis/webmap';
 import {useWindowDimensions} from 'hooks';
 
 import './Webmap.scss';
@@ -39,17 +38,14 @@ const Webmap: FC = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const nodeResponse = await axios.all([
-        axios.get(apiEndpoints.VALIDATOR_ENDPOINT),
-        axios.get(apiEndpoints.BANK_ENDPOINT),
-      ]);
+      const nodeResponse = await api.getAllNodes();
       const nodeResponses = nodeResponse[0].data.results.concat(nodeResponse[1].data.results);
       const validatorIps = [];
       for (let i = 0; i < nodeResponses.length; i += 1) {
         const ipAddress = nodeResponses[i].ip_address;
         validatorIps.push({query: ipAddress});
       }
-      const resultBatch = await axios.post(apiEndpoints.IPAPI_ENDPOINT, validatorIps);
+      const resultBatch = await api.getAllValidatorIps(validatorIps);
       const merged = nodeResponses.map((result: any, i: string | number) => ({
         ...result,
         ...resultBatch.data[i],

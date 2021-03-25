@@ -1,10 +1,9 @@
 import React, {FC, ReactNode, useState} from 'react';
-import axios from 'axios';
 
+import * as api from 'apis/users';
 import {AuthContainer} from 'components';
 import {Form, FormButton, FormInput} from 'components/FormComponents';
 import {formatAPIError} from 'utils/errors';
-import {standardHeaders} from 'utils/requests';
 import yup from 'utils/yup';
 
 const initialValues = {
@@ -26,11 +25,7 @@ const CreateAccount: FC = () => {
       const trimmedDisplayName = display_name.trim(); // remove trailing spaces in display name before sending BE
       setErrorMessage('');
       setSubmitting(true);
-      await axios.post(
-        `${process.env.REACT_APP_BACKEND_API}/users`,
-        {display_name: trimmedDisplayName, email, password},
-        standardHeaders(),
-      );
+      await api.createUser({display_name: trimmedDisplayName, email, password});
       setCreatingAccount(false);
     } catch (error) {
       setErrorMessage(formatAPIError(error));
