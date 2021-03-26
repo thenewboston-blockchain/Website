@@ -15,7 +15,6 @@ import Faq from './Faq';
 import Governance from './Governance';
 import Guide from './Guide';
 import Home from './Home';
-import Leaderboard from './Leaderboard';
 import Openings from './Openings';
 import PrimaryValidatorApi from './PrimaryValidatorApi';
 import Profile from './Profile';
@@ -61,14 +60,12 @@ const App: FC = () => {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/create-account" component={CreateAccount} />
+          <Route exact path="/create-account" render={() => <CreateAccount disabled />} />
           <Route exact path="/donate" component={Donate} />
           <Route exact path="/faq" component={Faq} />
           <Route exact path="/assets" component={Assets} />
-          <Redirect exact from="/leaderboard" to="/leaderboard/All" />
-          <Route exact path="/leaderboard/:repository" component={Leaderboard} />
           <Redirect exact from="/openings" to="/openings/All" />
-          <Route exact path="/openings/:category/:openingId?" render={() => <Openings openingsFrozen />} />
+          <Route exact path="/openings/:category/:openingId?" render={() => <Openings />} />
           <Route exact path="/social" component={Social} />
           <Redirect exact from="/tasks" to="/tasks/All" />
           <Route exact path="/tasks/:repository" component={Tasks} />

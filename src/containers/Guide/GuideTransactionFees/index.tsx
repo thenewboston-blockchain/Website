@@ -6,7 +6,7 @@ import './GuideTransactionFees.scss';
 
 const GuideTransactionFees: FC = () => {
   return (
-    <DocContainer className="GuideTransactionFees" title="Transaction Fees" lastUpdated="10 Mar 2021">
+    <DocContainer className="GuideTransactionFees" title="Transaction Fees" lastUpdated="24 Mar 2021">
       <p>
         Through the collection of transaction fees, individuals are motivated to maintain nodes. Node maintainers set
         their own transaction fee amounts. End users will probably use the nodes that offer the lowest transaction fees.
@@ -60,24 +60,24 @@ const GuideTransactionFees: FC = () => {
 
       <DocList variant="ol">
         <li>Amy's node validates the following:</li>
-        <ol type="a">
+        <ul>
           <li>The transaction (Tx) is formatted properly (according to network protocol).</li>
           <li>The fees included in Amy's signed block are in agreement with the expected fees of the network.</li>
           <li>
             All aspects of the block can be validated, otherwise an error will be returned to Amy and the process will
             stop.
           </li>
-        </ol>
+        </ul>
         <li>The block is forwarded to the PV.</li>
         <li>The PV validates that:</li>
-        <ol type="a">
+        <ul>
           <li>
             The block and all transactions are formatted properly (a necessary step before storing the data on the
             blockchain and updating account balances).
           </li>
           <li>The correct fees to the PV are included.</li>
           <li>Amy has enough funds to cover the total cost of all Txs.</li>
-        </ol>
+        </ul>
         <li>If the block is confirmed, the PV adds a confirmation block to the blockchain.</li>
         <li>The PV adds update the coin balances for Amy, Brian, the node, and the PV (itself).</li>
       </DocList>

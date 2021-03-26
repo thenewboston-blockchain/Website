@@ -202,6 +202,11 @@ export interface Release extends BaseRelease {
   alphaVersion: number;
 }
 
+export type FetchGithubReleasesParams = {
+  page?: number;
+  per_page?: number;
+};
+
 interface BaseTask {
   amount_paid: string;
   completed_by: string;

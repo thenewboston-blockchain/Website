@@ -1,11 +1,12 @@
 import React, {FC, ReactNode, useState} from 'react';
-import axios from 'axios';
 
+import * as api from 'apis/users';
 import {AuthContainer} from 'components';
 import {Form, FormButton, FormInput} from 'components/FormComponents';
 import {formatAPIError} from 'utils/errors';
-import {standardHeaders} from 'utils/requests';
 import yup from 'utils/yup';
+
+import './CreateAccount.scss';
 
 const initialValues = {
   confirmPassword: '',
@@ -16,7 +17,11 @@ const initialValues = {
 
 export type FormValues = typeof initialValues;
 
-const CreateAccount: FC = () => {
+interface ComponentProps {
+  disabled?: boolean;
+}
+
+const CreateAccount: FC<ComponentProps> = ({disabled = false}) => {
   const [creatingAccount, setCreatingAccount] = useState(true);
   const [errorMessage, setErrorMessage] = useState<string>('');
   const [submitting, setSubmitting] = useState<boolean>(false);
@@ -26,11 +31,7 @@ const CreateAccount: FC = () => {
       const trimmedDisplayName = display_name.trim(); // remove trailing spaces in display name before sending BE
       setErrorMessage('');
       setSubmitting(true);
-      await axios.post(
-        `${process.env.REACT_APP_BACKEND_API}/users`,
-        {display_name: trimmedDisplayName, email, password},
-        standardHeaders(),
-      );
+      await api.createUser({display_name: trimmedDisplayName, email, password});
       setCreatingAccount(false);
     } catch (error) {
       setErrorMessage(formatAPIError(error));
@@ -76,6 +77,17 @@ const CreateAccount: FC = () => {
     );
   };
 
+  const renderDisabledMessage = (): ReactNode => {
+    return (
+      <div className="CreateAccount__disabled">
+        <h1>Create Account</h1>
+        <h3>
+          Account Creation is currently <span>disabled until beta</span>. Please check back later!
+        </h3>
+      </div>
+    );
+  };
+
   const validationSchema = yup.object().shape({
     confirmPassword: yup
       .string()
@@ -90,9 +102,15 @@ const CreateAccount: FC = () => {
   });
 
   return (
-    <AuthContainer errorMessage={errorMessage} heading={creatingAccount ? 'Create an Account' : 'Verify Email'}>
-      {renderAuthContainerContent()}
-    </AuthContainer>
+    <div className="CreateAccount">
+      {disabled ? (
+        renderDisabledMessage()
+      ) : (
+        <AuthContainer errorMessage={errorMessage} heading={creatingAccount ? 'Create an Account' : 'Verify Email'}>
+          {renderAuthContainerContent()}
+        </AuthContainer>
+      )}
+    </div>
   );
 };
 
