@@ -28,12 +28,6 @@ const communityPopoverItems: TopNavPopoverItemType[] = [
     title: 'Teams',
     to: '/teams',
   },
-  {
-    description: 'View the highest ranked contributors',
-    iconType: IconType.trophy,
-    title: 'Leaderboard',
-    to: '/leaderboard/All',
-  },
 ];
 
 const getStartedPopoverItems: TopNavPopoverItemType[] = [

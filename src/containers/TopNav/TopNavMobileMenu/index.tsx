@@ -94,7 +94,6 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice,
               {renderMobileLink('Join the Community!', '/social')}
               {renderMobileLink('Openings', '/openings')}
               {renderMobileLink('Teams', '/teams')}
-              {renderMobileLink('Leaderboard', '/leaderboard/All')}
             </>,
           )}
           {renderColumn(

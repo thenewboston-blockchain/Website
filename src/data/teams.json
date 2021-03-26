@@ -391,18 +391,6 @@
           "profileImage": "https://avatars2.githubusercontent.com/u/58598872?s=460&v=4",
           "slackUsername": "Bojan Ilijevski"
         }
-      },
-      {
-        "title": "Discord Moderator",
-        "isLead": false,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "28",
-          "displayName": "Rajput Usman",
-          "githubUsername": "Rajputusman",
-          "profileImage": "https://avatars0.githubusercontent.com/u/65516140?s=460&v=4",
-          "slackUsername": "Rajput Usman"
-        }
       }
     ],
     "responsibilities": [
