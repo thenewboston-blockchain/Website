@@ -85,7 +85,6 @@ const Openings: FC<ComponentProps> = ({openingsFrozen}) => {
       <PageTitle title="Openings" />
       <div className="hiring-freeze">
         <h1>Openings</h1>
-        <br />
         <h3>
           We are on a <span>hiring freeze</span> until further notice
         </h3>
