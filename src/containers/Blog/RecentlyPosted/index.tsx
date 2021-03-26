@@ -21,7 +21,6 @@ const RecentlyPosted: FC<ArticlesProps> = ({articles}) => {
       <div className="RecentlyPosted__content-container">
         <h3 className="RecentlyPosted__header">Recently Posted</h3>
         <div className="RecentlyPosted__article">
-          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
           <div className="RecentlyPosted__slider-container">
             <Slider {...sliderProps}>
               {articles.map((article) => (
