@@ -1,19 +1,9 @@
-import {SocialMedia} from 'types/social-media';
-
-export interface ApplicationMethod {
-  channel: SocialMedia;
-  note?: string;
-}
-
 export interface Opening {
-  applicationMethods: ApplicationMethod[];
   category: OpeningCategory;
   description: string;
   openingId: string;
-  payNotes: string[];
   position: string;
   project?: ProjectProposal;
-  reportsTo: Reportee[];
   responsibilities: string[];
   technologyRequirements: string[];
 }
@@ -34,9 +24,4 @@ export interface OpeningsUrlParams {
 export interface ProjectProposal {
   name: string;
   url?: string;
-}
-
-export interface Reportee {
-  githubUsername?: string;
-  name: string;
 }
