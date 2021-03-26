@@ -1,18 +1,13 @@
 import parse from 'date-fns/parse';
 import {TEAMS} from 'constants/teams';
-import {Contributor, RawTask, Task, TaskDict} from 'types/github';
+import {RawTask, Task, TaskDict} from 'types/github';
 import {Opening} from 'types/openings';
 import {NavOption} from 'types/option';
 import {TeamMember, TeamName, TeamPlatform, TeamResponsibility} from 'types/teams';
 
-import contributors from 'data/contributors.json';
 import openings from 'data/openings.json';
 import tasks from 'data/tasks.json';
 import teams from 'data/teams.json';
-
-export const getContributors = (): Contributor[] => {
-  return contributors;
-};
 
 export const getOpenings = (): Opening[] => {
   return openings as Opening[];
