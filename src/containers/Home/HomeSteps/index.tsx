@@ -2,7 +2,6 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 
 import {A, StepIndicator} from 'components';
-import {Repository} from 'types/github';
 
 import './HomeSteps.scss';
 
@@ -31,13 +30,7 @@ const HomeSteps = (): JSX.Element => {
         </div>
         <div className="HomeSteps__Step">
           <StepIndicator number={3} text="Earn coins" />
-          <div className="HomeSteps__instructional-text">
-            Climb the{' '}
-            <NavLink to={`/leaderboard/${Repository.all}`} className="HomeSteps__instructional-link">
-              leaderboard
-            </NavLink>{' '}
-            to become a top developer.
-          </div>
+          <div className="HomeSteps__instructional-text">Earn coins and be a part of our community.</div>
         </div>
       </div>
     </div>
