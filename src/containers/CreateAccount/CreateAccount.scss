@@ -1,6 +1,24 @@
 .CreateAccount {
   &__disabled {
-    margin-top: 50px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: center;
+    padding-bottom: 5rem;
     text-align: center;
+    width: 100%;
+
+    h1 {
+      font-weight: 400;
+    }
+
+    h3 {
+      font-weight: 900;
+    }
+
+    h3 span {
+      color: #ed5f74;
+    }
   }
 }

@@ -79,9 +79,13 @@ const CreateAccount: FC<ComponentProps> = ({disabled = false}) => {
 
   const renderDisabledMessage = (): ReactNode => {
     return (
-      <h2 className="CreateAccount__disabled">
-        Account Creation is currently disabled until beta. Please check back later!
-      </h2>
+      <div className="CreateAccount__disabled">
+        <h1>Create Account</h1>
+        <br />
+        <h3>
+          Account Creation is currently <span>disabled until beta</span>. Please check back later!
+        </h3>
+      </div>
     );
   };
 
