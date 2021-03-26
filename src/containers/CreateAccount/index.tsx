@@ -6,6 +6,8 @@ import {Form, FormButton, FormInput} from 'components/FormComponents';
 import {formatAPIError} from 'utils/errors';
 import yup from 'utils/yup';
 
+import './CreateAccount.scss';
+
 const initialValues = {
   confirmPassword: '',
   display_name: '',
@@ -15,7 +17,11 @@ const initialValues = {
 
 export type FormValues = typeof initialValues;
 
-const CreateAccount: FC = () => {
+interface ComponentProps {
+  disabled?: boolean;
+}
+
+const CreateAccount: FC<ComponentProps> = ({disabled = false}) => {
   const [creatingAccount, setCreatingAccount] = useState(true);
   const [errorMessage, setErrorMessage] = useState<string>('');
   const [submitting, setSubmitting] = useState<boolean>(false);
@@ -71,6 +77,14 @@ const CreateAccount: FC = () => {
     );
   };
 
+  const renderDisabledMessage = (): ReactNode => {
+    return (
+      <h2 className="CreateAccount__disabled">
+        Account Creation is currently disabled until beta. Please check back later!
+      </h2>
+    );
+  };
+
   const validationSchema = yup.object().shape({
     confirmPassword: yup
       .string()
@@ -85,9 +99,15 @@ const CreateAccount: FC = () => {
   });
 
   return (
-    <AuthContainer errorMessage={errorMessage} heading={creatingAccount ? 'Create an Account' : 'Verify Email'}>
-      {renderAuthContainerContent()}
-    </AuthContainer>
+    <div className="CreateAccount">
+      {disabled ? (
+        renderDisabledMessage()
+      ) : (
+        <AuthContainer errorMessage={errorMessage} heading={creatingAccount ? 'Create an Account' : 'Verify Email'}>
+          {renderAuthContainerContent()}
+        </AuthContainer>
+      )}
+    </div>
   );
 };
 
