@@ -81,7 +81,6 @@ const CreateAccount: FC<ComponentProps> = ({disabled = false}) => {
     return (
       <div className="CreateAccount__disabled">
         <h1>Create Account</h1>
-        <br />
         <h3>
           Account Creation is currently <span>disabled until beta</span>. Please check back later!
         </h3>
