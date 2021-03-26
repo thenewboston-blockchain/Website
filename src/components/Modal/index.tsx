@@ -1,4 +1,4 @@
-import React, {CSSProperties, FC, ReactNode, useMemo} from 'react';
+import React, {CSSProperties, FC, ReactNode, useCallback, useEffect, useMemo} from 'react';
 import {createPortal} from 'react-dom';
 import clsx from 'clsx';
 import noop from 'lodash/noop';
@@ -46,6 +46,20 @@ const Modal: FC<ComponentProps> = ({
   submitting = false,
   validationSchema,
 }) => {
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        close();
+      }
+    },
+    [close],
+  );
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [handleKeyDown]);
+
   const ignoreDirty = useMemo<boolean>(() => ignoreDirtyProps || Object.keys(initialValues).length === 0, [
     ignoreDirtyProps,
     initialValues,

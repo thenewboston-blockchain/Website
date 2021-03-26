@@ -20,11 +20,7 @@ const OPENING_CATEGORY_FILTERS: NavOption[] = [
   {pathname: OpeningCategory.marketing, title: 'Marketing'},
 ];
 
-interface ComponentProps {
-  openingsFrozen: boolean;
-}
-
-const Openings: FC<ComponentProps> = ({openingsFrozen}) => {
+const Openings: FC = () => {
   const history = useHistory();
   const {category: categoryParam, openingId: openingIdParam} = useParams<OpeningsUrlParams>();
   const [categoryFilter, setCategoryFilter] = useState<OpeningCategory>(OpeningCategory.all);
@@ -80,18 +76,7 @@ const Openings: FC<ComponentProps> = ({openingsFrozen}) => {
     return <OpeningDetails opening={opening} />;
   };
 
-  return openingsFrozen ? (
-    <>
-      <PageTitle title="Openings" />
-      <div className="hiring-freeze">
-        <h1>Openings</h1>
-        <br />
-        <h3>
-          We are on a <span>hiring freeze</span> until further notice
-        </h3>
-      </div>
-    </>
-  ) : (
+  return (
     <>
       <PageTitle title="Openings" />
       <div className="Openings">

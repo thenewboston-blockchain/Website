@@ -46,10 +46,6 @@ const navLists = [
         title: 'Team',
         url: '/teams',
       },
-      {
-        title: 'Leaderboard',
-        url: '/leaderboard/All',
-      },
     ],
   },
   {
