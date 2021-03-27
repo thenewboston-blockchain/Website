@@ -26,8 +26,12 @@ const Openings: FC = () => {
   const [categoryFilter, setCategoryFilter] = useState<OpeningCategory>(OpeningCategory.all);
 
   useEffect(() => {
-    setCategoryFilter(categoryParam);
-  }, [categoryParam]);
+    if (OPENING_CATEGORY_FILTERS.some((filter) => filter.pathname === categoryParam)) {
+      setCategoryFilter(categoryParam);
+    } else {
+      history.replace('/openings/All');
+    }
+  }, [categoryParam, history]);
 
   const filteredOpenings = useMemo(
     () =>
