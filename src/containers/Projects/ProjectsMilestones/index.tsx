@@ -12,27 +12,32 @@ const ProjectsMilestones: FC = () => {
     </div>
   );
 
+  const renderProofOfWork = (number: number, title: string) => (
+    <div className="ProjectsMilestones__proof-of-work">
+      <div className="ProjectsMilestones__proof-of-work-heading">
+        <strong>
+          {number} - {title}
+        </strong>
+      </div>
+      <ul>
+        <li>
+          <A href="#">Sample proof of work link 1</A>
+        </li>
+        <li>
+          <A href="#">Sample proof of work link 2</A>
+        </li>
+      </ul>
+    </div>
+  );
+
   return (
     <DocContainer className="ProjectsMilestones" title="Milestones & Payouts">
       <p>
         All projects will be funded based on the completion of milestones. All milestones will include a list of all
         quantifiable objectives and estimated coin value of each. Upon completion of the milestone, each objective will
         be reviewed by thenewboston team and once all objectives have been verified as completed, coins will then be
-        rewarded. A sample milestone including a list of quantifiable objectives can be seen below.
+        rewarded.
       </p>
-
-      {renderMilestoneCaption('Milestone 1', 'Completion of navigation, landing page, and initial deployment')}
-      {renderMilestoneCaption('Requested Payment Upon Completion', '36,000 coins')}
-      <TableBorderGrid
-        className="ProjectsMilestones__TableBorderGrid"
-        rows={[
-          [<strong>#</strong>, <strong>Objective</strong>, <strong>Estimated Value (coins)</strong>],
-          [1, 'Functional top navigation menu linking to empty placeholder pages', '10,000'],
-          [2, 'Fully responsive, hifi landing page', '16,000'],
-          [3, 'Website deployed to live environment hosted on AWS', '10,000'],
-        ]}
-      />
-
       <h2>Milestone Payout Request Process</h2>
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
@@ -66,6 +71,22 @@ const ProjectsMilestones: FC = () => {
           </>
         }
       />
+      <h2>Sample Payout Request (with Proof of Work)</h2>
+      {renderMilestoneCaption('Milestone 1', 'Completion of navigation, landing page, and initial deployment')}
+      {renderMilestoneCaption('Requested Payment Upon Completion', '36,000 coins')}
+      <TableBorderGrid
+        className="ProjectsMilestones__TableBorderGrid"
+        rows={[
+          [<strong>#</strong>, <strong>Objective</strong>, <strong>Estimated Value (coins)</strong>],
+          [1, 'Functional top navigation menu linking to empty placeholder pages', '10,000'],
+          [2, 'Fully responsive, hifi landing page', '16,000'],
+          [3, 'Website deployed to live environment hosted on AWS', '10,000'],
+        ]}
+      />
+
+      {renderProofOfWork(1, 'Functional top navigation menu linking to empty placeholder pages')}
+      {renderProofOfWork(2, 'Fully responsive, hifi landing page')}
+      {renderProofOfWork(3, 'Website deployed to live environment hosted on AWS')}
     </DocContainer>
   );
 };
