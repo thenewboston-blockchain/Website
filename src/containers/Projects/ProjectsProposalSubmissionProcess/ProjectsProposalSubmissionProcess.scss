@@ -1,15 +1,11 @@
 .ProjectsProposalSubmissionProcess {
-  &__StepIndicator {
-    margin-bottom: 16px;
+  h2 {
+    font-size: var(--font-size-medium);
+    font-weight: 800;
+    margin: 60px 0 32px;
+  }
 
-    &__bubble {
-      margin-right: 30px;
-    }
-
-    &__text {
-      color: var(--color-primary);
-      font-size: var(--font-size-regular);
-      font-weight: normal;
-    }
+  li {
+    margin: 8px 0;
   }
 }
