@@ -13,7 +13,6 @@ const ProjectsRules: FC = () => {
     'Projects involving gambling or illegal activities of any kind are not allowed.',
     'Projects promoting abusive advertisements are not allowed.',
     'Projects dealing with explicit content or pornography are not allowed.',
-    'Projects promoting pedophilia or inappropriate interaction targeted at a minor are not allowed.',
     "Projects which use the user's personal information for any purpose must take prior permission from the user or inform them clearly.",
     'thenewboston is not liable for copyright or other intellectual property rights, property damage, misuse of coins.',
   ];
