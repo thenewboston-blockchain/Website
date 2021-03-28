@@ -1,13 +1,39 @@
 import React, {FC} from 'react';
 
-import {A, DocContainer, StepIndicator} from 'components';
+import {A, DocContainer, StepIndicator, TableBorderGrid} from 'components';
 
 import './ProjectsMilestones.scss';
 
 const ProjectsMilestones: FC = () => {
+  const renderMilestoneCaption = (heading: string, text: string) => (
+    <div className="ProjectsMilestones__caption">
+      <div className="ProjectsMilestones__caption-heading">{heading}</div>
+      <div className="ProjectsMilestones__caption-text">{text}</div>
+    </div>
+  );
+
   return (
     <DocContainer className="ProjectsMilestones" title="Milestones & Payouts">
-      <h2>How we fund projects?</h2>
+      <p>
+        All projects will be funded based on the completion of milestones. All milestones will include a list of all
+        quantifiable objectives and estimated coin value of each. Upon completion of the milestone, each objective will
+        be reviewed by thenewboston team and once all objectives have been verified as completed, coins will then be
+        rewarded. A sample milestone including a list of quantifiable objectives can be seen below.
+      </p>
+
+      {renderMilestoneCaption('Milestone 1', 'Completion of navigation, landing page, and initial deployment')}
+      {renderMilestoneCaption('Requested Payment Upon Completion', '36,000 coins')}
+      <TableBorderGrid
+        className="ProjectsMilestones__TableBorderGrid"
+        rows={[
+          [<strong>Objective</strong>, <strong>Estimated Value (coins)</strong>],
+          ['Functional top navigation menu linking to empty placeholder pages', '10,000'],
+          ['Fully responsive, hifi landing page', '16,000'],
+          ['Website deployed to live environment hosted on AWS', '10,000'],
+        ]}
+      />
+
+      <h2>Milestone Payout Request Process</h2>
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={1}

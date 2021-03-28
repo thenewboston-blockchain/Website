@@ -5,6 +5,19 @@
     margin: 60px 0 40px;
   }
 
+  &__caption {
+    margin: 12px 0;
+
+    &-heading {
+      font-weight: 800;
+      text-decoration: underline;
+    }
+
+    &-text {
+      margin-top: 2px;
+    }
+  }
+
   &__StepIndicator {
     margin-bottom: 16px;
 
@@ -16,6 +29,16 @@
       color: var(--color-primary);
       font-size: var(--font-size-regular);
       font-weight: normal;
+    }
+  }
+
+  &__TableBorderGrid {
+    margin-top: 24px;
+
+    &__td {
+      strong {
+        white-space: nowrap;
+      }
     }
   }
 }

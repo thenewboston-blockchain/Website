@@ -29,11 +29,11 @@ const ProjectsProposalSubmissionProcess: FC = () => {
             <A href="https://github.com/thenewboston-developers/Project-Proposals/issues/new?assignees=&labels=Project&template=add-project-proposal.md&title=NAME_OF_YOUR_PROJECT">
               Project Proposal
             </A>{' '}
-            in the same repository and fill all the required details in the given format. You can also raise the{' '}
+            and fill all the required details in the given format. You can also raise an{' '}
             <A href="https://github.com/thenewboston-developers/Project-Proposals/issues/new?assignees=&labels=Idea+Only&template=idea-only-proposal.md&title=NAME_OF_YOUR_IDEA">
-              Idea Only proposal
+              Idea Only Proposal
             </A>{' '}
-            if you have an idea but not ready to work on the idea.
+            if you have an idea but not able to or interested in working on the project itself.
           </>
         }
       />
@@ -43,8 +43,8 @@ const ProjectsProposalSubmissionProcess: FC = () => {
         text={
           <>
             Project proposals are labeled as <Label name="Project" color="97DEFC" /> and Idea proposals are labeled as{' '}
-            <Label name="Idea Only" color="F9EDA9" />. Idea Only proposals can be taken by anyone who is willing to work
-            on it. Anyone ready to work on Idea Only proposal requires to comment down the{' '}
+            <Label name="Idea Only" color="F9EDA9" />. Idea only proposals can be taken by anyone who is willing to work
+            on it. Anyone ready to work on idea only proposal requires to comment down the{' '}
             <strong>project milestones</strong> and the <strong>team details</strong>.
           </>
         }
@@ -54,7 +54,7 @@ const ProjectsProposalSubmissionProcess: FC = () => {
         number={4}
         text={
           <>
-            If your project adheres to the Rules and Guidelines of thenewboston, your proposal will be labeled{' '}
+            If your project adheres to all Rules &amp; Guidelines of thenewboston, your proposal will be labeled{' '}
             <Label name="Pending Review" color="FBCA04" />.
           </>
         }
@@ -64,8 +64,8 @@ const ProjectsProposalSubmissionProcess: FC = () => {
         number={5}
         text={
           <>
-            If your proposal is good enough to impress TNB team, your proposal will be approved and your proposal will
-            be labeled as <Label name="Pending Repository" color="006B75" />
+            If your proposal is good enough to impress thenewboston team, your proposal will be approved and your
+            proposal will be labeled as <Label name="Pending Repository" color="006B75" />
           </>
         }
       />
@@ -94,32 +94,6 @@ const ProjectsProposalSubmissionProcess: FC = () => {
         className="ProjectsProposalSubmissionProcess__StepIndicator"
         number={8}
         text="All your project details will be added to that folder."
-      />
-      <StepIndicator
-        className="ProjectsProposalSubmissionProcess__StepIndicator"
-        number={9}
-        text={
-          <>
-            After the team formation, the team leader (or manager) has to provide details of each member of the team.
-            Details include{' '}
-            <strong>full-name, GitHub username, Slack username, LinkedIn profile, role in the team, </strong>
-            and the <strong>account number</strong> where they want to receive payments. Team details of the projects
-            get added{' '}
-            <A href="https://github.com/thenewboston-developers/Project-Proposals/blob/master/CSVs/project-teams.csv">
-              here
-            </A>
-          </>
-        }
-      />
-      <StepIndicator
-        className="ProjectsProposalSubmissionProcess__StepIndicator"
-        number={10}
-        text={
-          <>
-            We highly recommend one person to be a part of only <strong>one project</strong> at a time so that more and
-            more people can have the opportunity to work on these wonderful projects.
-          </>
-        }
       />
     </DocContainer>
   );
