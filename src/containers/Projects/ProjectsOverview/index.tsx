@@ -1,7 +1,8 @@
 import React, {FC} from 'react';
 
-import {DocContainer} from 'components';
+import {DocContainer, DocImage} from 'components';
 
+import RoadmapMilestoneOverview from './RoadmapMilestoneOverview.png';
 import './ProjectsOverview.scss';
 
 const ProjectsOverview: FC = () => {
@@ -27,6 +28,9 @@ const ProjectsOverview: FC = () => {
         <li>Meet objectives according to your submitted roadmap milestones</li>
         <li>Maintain an active and happy team</li>
       </ul>
+
+      <h2>Roadmap, Milestones, and Objectives</h2>
+      <DocImage alt="roadmap diagram" maxWidth={680} src={RoadmapMilestoneOverview} />
     </DocContainer>
   );
 };
