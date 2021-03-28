@@ -9,7 +9,6 @@ $gray-100: #e3e8ee;
 $gray-50: #f7fafc;
 
 .Article {
-  //   min-height: 698px;
   padding: 3rem 0;
 
   &__wrapper {
@@ -18,8 +17,6 @@ $gray-50: #f7fafc;
     flex-direction: column;
     justify-content: center;
   }
-
-  // paragraph content
   .entry-content p {
     line-height: 28px;
   }
@@ -64,10 +61,7 @@ $gray-50: #f7fafc;
   &__time {
     margin-left: 1rem;
   }
-
-  //   Banner
   &__banner {
-    // background-color: $gray-500;
     height: 100%;
     margin: 1.5rem 0;
     max-height: 468px;
@@ -79,8 +73,6 @@ $gray-50: #f7fafc;
       width: 100%;
     }
   }
-
-  // Author
   &__author-wrapper {
     display: flex;
     justify-content: space-between;
@@ -92,15 +84,12 @@ $gray-50: #f7fafc;
     height: 30px;
     width: 30px;
   }
-
-  // Social Icon
   &__Socials__wrapper {
     display: none;
 
     @media (min-width: 1200px) {
       display: block;
       position: fixed;
-      // left: 20px;
       top: 13%;
       width: 178px;
       z-index: 100;
@@ -136,7 +125,6 @@ $gray-50: #f7fafc;
   }
 
   &__social-mobile {
-    // padding-top: 0;
     background: #fff;
     border: 0.5px solid $gray-100;
     border-radius: 5px;
@@ -144,20 +132,12 @@ $gray-50: #f7fafc;
     margin-top: 0.5rem;
     max-width: 137px;
     opacity: 0;
-    /* width: 100%; */
     padding: 0.5rem 0;
     position: absolute;
     right: 0;
     transform: translateY(10px);
     transition: 0.5s;
     z-index: 100;
-
-    // ::before {
-    //   content: '';
-    //   display: block;
-    //   position: absolute;
-    //   b;
-    // }
   }
 
   &__social-mobile.visible {
