@@ -11,7 +11,7 @@ const ProjectsMilestones: FC = () => {
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={1}
-        text="For all design-related works like UI/UX design, publicly viewable Figma, or Adobe XD URL should be provided as proof of work."
+        text="For all design-only related work including UI/UX a publicly viewable Figma, Adobe XD, or other URL must be provided."
       />
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
@@ -21,27 +21,27 @@ const ProjectsMilestones: FC = () => {
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={3}
-        text="Complete URL of the page where a new feature has been added, in case the website is live."
+        text="Complete URL of the page where a new feature has been added if the website is live."
       />
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={4}
-        text="For all documentation-related work, a publically viewable google Docs URL needs to be provided. Research-related Google Docs should have a clear description of the research and its findings."
+        text="For all documentation-related work, a publicly viewable Google Doc URL must be provided. Research-related Google Docs should have a clear description of the research and its findings."
       />
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={5}
-        text="Link to the Google Play Store, App Store, Chrome Web Store, etc in case of published applications."
+        text="Link to the Google Play Store, App Store, Chrome Web Store, etc... in case of published applications."
       />
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={6}
-        text="For Marketing and Social Media related works, links to all the posts and user engagement data(if available)."
+        text="For marketing and social media related work, links to all the posts and user engagement data (if available)."
       />
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={7}
-        text="Diagrams, docs, screenshots, config files, etc for DevOps-related work."
+        text="Diagrams, documentation, screenshots, config files, etc... for DevOps-related work."
       />
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
@@ -50,7 +50,7 @@ const ProjectsMilestones: FC = () => {
           <>
             For backend API Postman collection/ swagger doc should be submitted as proof of work. Learn more about{' '}
             <A href="https://learning.postman.com/docs/publishing-your-api/documenting-your-api/">
-              Documenting your API
+              documenting your API
             </A>
             .
           </>
