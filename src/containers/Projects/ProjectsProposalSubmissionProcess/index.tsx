@@ -2,14 +2,13 @@ import React, {FC} from 'react';
 
 import {A, DocContainer, Label, StepIndicator} from 'components';
 
-import './ProjectProposalsOverview.scss';
+import './ProjectsProposalSubmissionProcess.scss';
 
-const ProjectProposalsOverview: FC = () => {
+const ProjectsProposalSubmissionProcess: FC = () => {
   return (
-    <DocContainer className="ProjectProposalsOverview" title="Overview">
-      <h2>How do the project proposals work?</h2>
+    <DocContainer className="ProjectsProposalSubmissionProcess" title="Proposal Submission Process">
       <StepIndicator
-        className="ProjectProposalsOverview__StepIndicator"
+        className="ProjectsProposalSubmissionProcess__StepIndicator"
         number={1}
         text={
           <>
@@ -22,7 +21,7 @@ const ProjectProposalsOverview: FC = () => {
         }
       />
       <StepIndicator
-        className="ProjectProposalsOverview__StepIndicator"
+        className="ProjectsProposalSubmissionProcess__StepIndicator"
         number={2}
         text={
           <>
@@ -39,7 +38,7 @@ const ProjectProposalsOverview: FC = () => {
         }
       />
       <StepIndicator
-        className="ProjectProposalsOverview__StepIndicator"
+        className="ProjectsProposalSubmissionProcess__StepIndicator"
         number={3}
         text={
           <>
@@ -51,7 +50,7 @@ const ProjectProposalsOverview: FC = () => {
         }
       />
       <StepIndicator
-        className="ProjectProposalsOverview__StepIndicator"
+        className="ProjectsProposalSubmissionProcess__StepIndicator"
         number={4}
         text={
           <>
@@ -61,7 +60,7 @@ const ProjectProposalsOverview: FC = () => {
         }
       />
       <StepIndicator
-        className="ProjectProposalsOverview__StepIndicator"
+        className="ProjectsProposalSubmissionProcess__StepIndicator"
         number={5}
         text={
           <>
@@ -71,7 +70,7 @@ const ProjectProposalsOverview: FC = () => {
         }
       />
       <StepIndicator
-        className="ProjectProposalsOverview__StepIndicator"
+        className="ProjectsProposalSubmissionProcess__StepIndicator"
         number={6}
         text={
           <>
@@ -80,7 +79,7 @@ const ProjectProposalsOverview: FC = () => {
         }
       />
       <StepIndicator
-        className="ProjectProposalsOverview__StepIndicator"
+        className="ProjectsProposalSubmissionProcess__StepIndicator"
         number={7}
         text={
           <>
@@ -92,12 +91,12 @@ const ProjectProposalsOverview: FC = () => {
         }
       />
       <StepIndicator
-        className="ProjectProposalsOverview__StepIndicator"
+        className="ProjectsProposalSubmissionProcess__StepIndicator"
         number={8}
         text="All your project details will be added to that folder."
       />
       <StepIndicator
-        className="ProjectProposalsOverview__StepIndicator"
+        className="ProjectsProposalSubmissionProcess__StepIndicator"
         number={9}
         text={
           <>
@@ -113,7 +112,7 @@ const ProjectProposalsOverview: FC = () => {
         }
       />
       <StepIndicator
-        className="ProjectProposalsOverview__StepIndicator"
+        className="ProjectsProposalSubmissionProcess__StepIndicator"
         number={10}
         text={
           <>
@@ -126,4 +125,4 @@ const ProjectProposalsOverview: FC = () => {
   );
 };
 
-export default ProjectProposalsOverview;
+export default ProjectsProposalSubmissionProcess;

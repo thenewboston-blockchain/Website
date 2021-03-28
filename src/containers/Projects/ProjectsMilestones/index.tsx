@@ -2,14 +2,14 @@ import React, {FC} from 'react';
 
 import {A, DocContainer, StepIndicator} from 'components';
 
-import './ProjectProposalsFunding.scss';
+import './ProjectsMilestones.scss';
 
-const ProjectProposalsFunding: FC = () => {
+const ProjectsMilestones: FC = () => {
   return (
-    <DocContainer className="ProjectProposalsFunding" title="Funding">
+    <DocContainer className="ProjectsMilestones" title="Milestones & Payouts">
       <h2>How we fund projects?</h2>
       <StepIndicator
-        className="ProjectProposalsRules__StepIndicator"
+        className="ProjectsMilestones__StepIndicator"
         number={1}
         text={
           <>
@@ -19,7 +19,7 @@ const ProjectProposalsFunding: FC = () => {
         }
       />
       <StepIndicator
-        className="ProjectProposalsRules__StepIndicator"
+        className="ProjectsMilestones__StepIndicator"
         number={2}
         text={
           <>
@@ -32,7 +32,7 @@ const ProjectProposalsFunding: FC = () => {
         }
       />
       <StepIndicator
-        className="ProjectProposalsRules__StepIndicator"
+        className="ProjectsMilestones__StepIndicator"
         number={3}
         text={
           <>
@@ -42,12 +42,12 @@ const ProjectProposalsFunding: FC = () => {
         }
       />
       <StepIndicator
-        className="ProjectProposalsRules__StepIndicator"
+        className="ProjectsMilestones__StepIndicator"
         number={4}
         text="Once we verify the report and progress of the project, we’ll send weekly payments to those members of the project who contributed."
       />
       <StepIndicator
-        className="ProjectProposalsRules__StepIndicator"
+        className="ProjectsMilestones__StepIndicator"
         number={5}
         text={
           <>
@@ -56,7 +56,7 @@ const ProjectProposalsFunding: FC = () => {
         }
       />
       <StepIndicator
-        className="ProjectProposalsRules__StepIndicator"
+        className="ProjectsMilestones__StepIndicator"
         number={6}
         text={
           <>
@@ -69,4 +69,4 @@ const ProjectProposalsFunding: FC = () => {
   );
 };
 
-export default ProjectProposalsFunding;
+export default ProjectsMilestones;

@@ -2,14 +2,14 @@ import React, {FC} from 'react';
 
 import {DocContainer, StepIndicator} from 'components';
 
-import './ProjectProposalsRules.scss';
+import './ProjectsRules.scss';
 
-const ProjectProposalsRules: FC = () => {
+const ProjectsRules: FC = () => {
   return (
-    <DocContainer className="ProjectProposalsRules" title="Rules & Guidelines">
-      <h2>Rules and Guidelines for Project Proposals</h2>
+    <DocContainer className="ProjectsRules" title="Rules & Guidelines">
+      <p>Projects must adhere to all following rules and guidelines to be eligible for funding.</p>
       <StepIndicator
-        className="ProjectProposalsRules__StepIndicator"
+        className="ProjectsRules__StepIndicator"
         number={1}
         text={
           <>
@@ -18,7 +18,7 @@ const ProjectProposalsRules: FC = () => {
         }
       />
       <StepIndicator
-        className="ProjectProposalsRules__StepIndicator"
+        className="ProjectsRules__StepIndicator"
         number={2}
         text={
           <>
@@ -27,7 +27,7 @@ const ProjectProposalsRules: FC = () => {
         }
       />
       <StepIndicator
-        className="ProjectProposalsRules__StepIndicator"
+        className="ProjectsRules__StepIndicator"
         number={3}
         text={
           <>
@@ -36,7 +36,7 @@ const ProjectProposalsRules: FC = () => {
         }
       />
       <StepIndicator
-        className="ProjectProposalsRules__StepIndicator"
+        className="ProjectsRules__StepIndicator"
         number={4}
         text={
           <>
@@ -46,7 +46,7 @@ const ProjectProposalsRules: FC = () => {
         }
       />
       <StepIndicator
-        className="ProjectProposalsRules__StepIndicator"
+        className="ProjectsRules__StepIndicator"
         number={5}
         text={
           <>
@@ -55,7 +55,7 @@ const ProjectProposalsRules: FC = () => {
         }
       />
       <StepIndicator
-        className="ProjectProposalsRules__StepIndicator"
+        className="ProjectsRules__StepIndicator"
         number={6}
         text={
           <>
@@ -64,7 +64,7 @@ const ProjectProposalsRules: FC = () => {
         }
       />
       <StepIndicator
-        className="ProjectProposalsRules__StepIndicator"
+        className="ProjectsRules__StepIndicator"
         number={7}
         text={
           <>
@@ -74,7 +74,7 @@ const ProjectProposalsRules: FC = () => {
         }
       />
       <StepIndicator
-        className="ProjectProposalsRules__StepIndicator"
+        className="ProjectsRules__StepIndicator"
         number={8}
         text={
           <>
@@ -84,7 +84,7 @@ const ProjectProposalsRules: FC = () => {
         }
       />
       <StepIndicator
-        className="ProjectProposalsRules__StepIndicator"
+        className="ProjectsRules__StepIndicator"
         number={9}
         text={
           <>
@@ -97,4 +97,4 @@ const ProjectProposalsRules: FC = () => {
   );
 };
 
-export default ProjectProposalsRules;
+export default ProjectsRules;
