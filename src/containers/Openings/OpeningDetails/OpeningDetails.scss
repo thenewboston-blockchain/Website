@@ -16,6 +16,12 @@
     }
   }
 
+  &__actions-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__application-method-container {
     margin-bottom: 16px;
   }
