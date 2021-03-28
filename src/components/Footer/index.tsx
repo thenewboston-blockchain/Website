@@ -52,8 +52,8 @@ const navLists = [
     header: 'More',
     links: [
       {
-        title: 'Project Proposals',
-        url: '/project-proposals/overview',
+        title: 'Projects',
+        url: '/projects/overview',
       },
       {
         isExternal: true,

@@ -50,8 +50,8 @@ const morePopoverItems: TopNavPopoverItemType[] = [
   {
     description: 'Propose ideas you want built',
     iconType: IconType.hammerWrench,
-    title: 'Project Proposals',
-    to: '/project-proposals/overview',
+    title: 'Projects',
+    to: '/projects/overview',
   },
   {
     description: 'Download thenewboston assets',
