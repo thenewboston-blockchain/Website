@@ -13,7 +13,7 @@ describe('ProjectsMenuItems component', () => {
       </Router>,
     );
 
-    expect(screen.queryByText('Project Proposals')).toBeTruthy();
+    expect(screen.queryByText('Projects')).toBeTruthy();
   });
 
   it('renders all the NavLinks', () => {
