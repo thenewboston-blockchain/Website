@@ -21,10 +21,10 @@ const ProjectsMilestones: FC = () => {
       </div>
       <ul>
         <li>
-          <A href="#">Sample proof of work link 1</A>
+          <A href="#">Sample proof of work link</A>
         </li>
         <li>
-          <A href="#">Sample proof of work link 2</A>
+          <A href="#">Sample proof of work link</A>
         </li>
       </ul>
     </div>
