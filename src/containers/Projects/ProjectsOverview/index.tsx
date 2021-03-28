@@ -2,6 +2,8 @@ import React, {FC} from 'react';
 
 import {DocContainer} from 'components';
 
+import './ProjectsOverview.scss';
+
 const ProjectsOverview: FC = () => {
   return (
     <DocContainer className="ProjectsOverview" title="Overview">
@@ -15,6 +17,16 @@ const ProjectsOverview: FC = () => {
         These projects will improve our network through the continuous creation of new apps, games, and tools while also
         allowing for a more widespread distribution of coins to many contributors.
       </p>
+
+      <h2>What You Will Be Responsible For</h2>
+      <p>As project manager, you will be responsible for the following.</p>
+      <ul>
+        <li>Guiding the success of the project</li>
+        <li>Building your team (we can help with recruiting)</li>
+        <li>Managing all aspects of the project including planning, design, development, etc...</li>
+        <li>Meet objectives according to your submitted roadmap milestones</li>
+        <li>Maintain an active and happy team</li>
+      </ul>
     </DocContainer>
   );
 };

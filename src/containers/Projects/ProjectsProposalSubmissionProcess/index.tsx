@@ -7,6 +7,7 @@ import './ProjectsProposalSubmissionProcess.scss';
 const ProjectsProposalSubmissionProcess: FC = () => {
   return (
     <DocContainer className="ProjectsProposalSubmissionProcess" title="Proposal Submission Process">
+      <p>To submit a project, please follow the following steps below.</p>
       <StepIndicator
         className="ProjectsProposalSubmissionProcess__StepIndicator"
         number={1}
