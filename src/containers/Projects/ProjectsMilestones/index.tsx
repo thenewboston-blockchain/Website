@@ -5,6 +5,60 @@ import {A, DocContainer, StepIndicator, TableBorderGrid} from 'components';
 import './ProjectsMilestones.scss';
 
 const ProjectsMilestones: FC = () => {
+  const renderAcceptableProofOfWork = () => (
+    <>
+      <h2>Acceptable Proof of Work</h2>
+      <StepIndicator
+        className="ProjectsMilestones__StepIndicator"
+        number={1}
+        text="For all design-related works like UI/UX design, publicly viewable Figma, or Adobe XD URL should be provided as proof of work."
+      />
+      <StepIndicator
+        className="ProjectsMilestones__StepIndicator"
+        number={2}
+        text="Link to a Pull Request or Issue with Pull Request linked for the addition of a new feature and the screenshot/recording showing the new feature in action."
+      />
+      <StepIndicator
+        className="ProjectsMilestones__StepIndicator"
+        number={3}
+        text="Complete URL of the page where a new feature has been added, in case the website is live."
+      />
+      <StepIndicator
+        className="ProjectsMilestones__StepIndicator"
+        number={4}
+        text="For all documentation-related work, a publically viewable google Docs URL needs to be provided. Research-related Google Docs should have a clear description of the research and its findings."
+      />
+      <StepIndicator
+        className="ProjectsMilestones__StepIndicator"
+        number={5}
+        text="Link to the Google Play Store, App Store, Chrome Web Store, etc in case of published applications."
+      />
+      <StepIndicator
+        className="ProjectsMilestones__StepIndicator"
+        number={6}
+        text="For Marketing and Social Media related works, links to all the posts and user engagement data(if available)."
+      />
+      <StepIndicator
+        className="ProjectsMilestones__StepIndicator"
+        number={7}
+        text="Diagrams, docs, screenshots, config files, etc for DevOps-related work."
+      />
+      <StepIndicator
+        className="ProjectsMilestones__StepIndicator"
+        number={8}
+        text={
+          <>
+            For backend API Postman collection/ swagger doc should be submitted as proof of work. Learn more about{' '}
+            <A href="https://learning.postman.com/docs/publishing-your-api/documenting-your-api/">
+              Documenting your API
+            </A>
+            .
+          </>
+        }
+      />
+    </>
+  );
+
   const renderMilestoneCaption = (heading: string, text: string) => (
     <div className="ProjectsMilestones__caption">
       <div className="ProjectsMilestones__caption-heading">{heading}</div>
@@ -12,32 +66,8 @@ const ProjectsMilestones: FC = () => {
     </div>
   );
 
-  const renderProofOfWork = (number: number, title: string) => (
-    <div className="ProjectsMilestones__proof-of-work">
-      <div className="ProjectsMilestones__proof-of-work-heading">
-        <strong>
-          {number} - {title}
-        </strong>
-      </div>
-      <ul>
-        <li>
-          <A href="#">Sample proof of work link</A>
-        </li>
-        <li>
-          <A href="#">Sample proof of work link</A>
-        </li>
-      </ul>
-    </div>
-  );
-
-  return (
-    <DocContainer className="ProjectsMilestones" title="Milestones & Payouts">
-      <p>
-        All projects will be funded based on the completion of milestones. All milestones will include a list of all
-        quantifiable objectives and estimated coin value of each. Upon completion of the milestone, each objective will
-        be reviewed by thenewboston team and once all objectives have been verified as completed, coins will then be
-        rewarded.
-      </p>
+  const renderMilestonePayoutRequestProcess = () => (
+    <>
       <h2>Milestone Payout Request Process</h2>
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
@@ -71,6 +101,29 @@ const ProjectsMilestones: FC = () => {
           </>
         }
       />
+    </>
+  );
+
+  const renderProofOfWork = (number: number, title: string) => (
+    <div className="ProjectsMilestones__proof-of-work">
+      <div className="ProjectsMilestones__proof-of-work-heading">
+        <strong>
+          {number} - {title}
+        </strong>
+      </div>
+      <ul>
+        <li>
+          <A href="#">Sample proof of work link</A>
+        </li>
+        <li>
+          <A href="#">Sample proof of work link</A>
+        </li>
+      </ul>
+    </div>
+  );
+
+  const renderSamplePayoutRequest = () => (
+    <>
       <h2>Sample Payout Request (with Proof of Work)</h2>
       {renderMilestoneCaption('Milestone 1', 'Completion of navigation, landing page, and initial deployment')}
       {renderMilestoneCaption('Requested Payment Upon Completion', '36,000 coins')}
@@ -83,10 +136,23 @@ const ProjectsMilestones: FC = () => {
           [3, 'Website deployed to live environment hosted on AWS', '10,000'],
         ]}
       />
-
       {renderProofOfWork(1, 'Functional top navigation menu linking to empty placeholder pages')}
       {renderProofOfWork(2, 'Fully responsive, hifi landing page')}
       {renderProofOfWork(3, 'Website deployed to live environment hosted on AWS')}
+    </>
+  );
+
+  return (
+    <DocContainer className="ProjectsMilestones" title="Milestones & Payouts">
+      <p>
+        All projects will be funded based on the completion of milestones. All milestones will include a list of all
+        quantifiable objectives and estimated coin value of each. Upon completion of the milestone, each objective will
+        be reviewed by thenewboston team and once all objectives have been verified as completed, coins will then be
+        rewarded.
+      </p>
+      {renderMilestonePayoutRequestProcess()}
+      {renderSamplePayoutRequest()}
+      {renderAcceptableProofOfWork()}
     </DocContainer>
   );
 };
