@@ -26,10 +26,10 @@ const ProjectsMilestones: FC = () => {
       <TableBorderGrid
         className="ProjectsMilestones__TableBorderGrid"
         rows={[
-          [<strong>Objective</strong>, <strong>Estimated Value (coins)</strong>],
-          ['Functional top navigation menu linking to empty placeholder pages', '10,000'],
-          ['Fully responsive, hifi landing page', '16,000'],
-          ['Website deployed to live environment hosted on AWS', '10,000'],
+          [<strong>#</strong>, <strong>Objective</strong>, <strong>Estimated Value (coins)</strong>],
+          [1, 'Functional top navigation menu linking to empty placeholder pages', '10,000'],
+          [2, 'Fully responsive, hifi landing page', '16,000'],
+          [3, 'Website deployed to live environment hosted on AWS', '10,000'],
         ]}
       />
 
@@ -40,8 +40,8 @@ const ProjectsMilestones: FC = () => {
         text={
           <>
             Upon completion of a milestone, the project manager will submit a{' '}
-            <A href="https://github.com/thenewboston-developers/Project-Proposals/issues/new?assignees=&labels=&template=milestone-payout-request.md&title=NAME_OF_PROJECT+-+NAME_OF_MILESTONE+-+MILESTONE_NUMBER">
-              Milestone Payout Request
+            <A href="https://github.com/thenewboston-developers/Project-Proposals/issues/new?assignees=&labels=&template=payout-request.md&title=NAME_OF_PROJECT+-+NAME_OF_MILESTONE+-+MILESTONE_NUMBER">
+              Payout Request
             </A>{' '}
             including valid proof of work for all objectives.
           </>

@@ -36,6 +36,10 @@
     margin-top: 24px;
 
     &__td {
+      &:nth-child(1) {
+        min-width: 32px;
+      }
+
       strong {
         white-space: nowrap;
       }
