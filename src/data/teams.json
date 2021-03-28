@@ -291,6 +291,16 @@
           "profileImage": "https://avatars.githubusercontent.com/u/20023713?v=4",
           "slackUsername": "Vyz"
         }
+      },{
+        "title": "QA Engineer",
+        "isLead": false,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "28",
+          "displayName": "Rajput Usman",
+          "githubUsername": "Rajputusman",
+          "profileImage": "https://avatars.githubusercontent.com/u/65516140?v=4",
+          "slackUsername": "Rajput Usman"
       }
     ],
     "responsibilities": [
