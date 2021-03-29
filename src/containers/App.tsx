@@ -4,10 +4,10 @@ import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom
 import {Layout} from 'components';
 
 import AccountManager from './AccountManager';
-import Article from './Blog/Article';
 import Assets from './Assets';
 import BankApi from './BankApi';
 import Blog from './Blog';
+import BlogArticle from './Blog/BlogArticle';
 import ConfirmationValidatorApi from './ConfirmationValidatorApi';
 import CreateAccount from './CreateAccount';
 import DeploymentGuide from './DeploymentGuide';
@@ -67,7 +67,7 @@ const App: FC = () => {
           <Route exact path="/faq" component={Faq} />
           <Route exact path="/assets" component={Assets} />
           <Route exact path="/blog" component={Blog} />
-          {<Route exact path="/blog/:slug" component={Article} />}
+          <Route exact path="/blog/:slug" component={BlogArticle} />
           <Redirect exact from="/openings" to="/openings/All" />
           <Route exact path="/openings/:category/:openingId?" render={() => <Openings />} />
           <Route exact path="/social" component={Social} />

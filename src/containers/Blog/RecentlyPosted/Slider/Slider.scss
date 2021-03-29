@@ -27,6 +27,7 @@ $transformValue: -0.5%;
     transition: transform 500ms ease;
     user-select: none;
     width: 100%;
+
     @media (min-width: 480px) and (max-width: 768px) {
       margin: 0 5px;
     }
