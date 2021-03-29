@@ -23,11 +23,17 @@
     padding: 12px 0 48px;
   }
 
+  &__opening-list-heading-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 54px 36px;
+  }
+
   &__opening-list-heading {
     font-size: 36px;
     font-weight: 300;
     line-height: 1.25;
-    margin: 16px 54px 36px;
   }
 
   @media (max-width: 992px) {
@@ -52,7 +58,7 @@
   }
 
   @media (max-width: 768px) {
-    &__opening-list-heading {
+    &__opening-list-heading-container {
       margin: 16px 42px 36px;
     }
   }

@@ -1,7 +1,8 @@
 import React, {FC, ReactNode} from 'react';
 import {useHistory, useLocation} from 'react-router-dom';
 
-import {A, Icon, IconType} from 'components';
+import {A, Button, Icon, IconType} from 'components';
+import {OPENINGS_GOOGLE_FORM_LINK} from 'constants/urls';
 import {Opening} from 'types/openings';
 
 import './OpeningDetails.scss';
@@ -54,9 +55,12 @@ const OpeningDetails: FC<ComponentProps> = ({opening}) => {
 
   return (
     <div className="OpeningDetails">
-      <div className="OpeningDetails__back-container" onClick={handleBackClick} role="button" tabIndex={0}>
-        <Icon className="OpeningDetails__back-icon" icon={IconType.arrowLeft} />
-        <span className="OpeningDetails__back-text">Back</span>
+      <div className="OpeningDetails__actions-container">
+        <div className="OpeningDetails__back-container" onClick={handleBackClick} role="button" tabIndex={0}>
+          <Icon className="OpeningDetails__back-icon" icon={IconType.arrowLeft} />
+          <span className="OpeningDetails__back-text">Back</span>
+        </div>
+        <Button onClick={() => window.open(OPENINGS_GOOGLE_FORM_LINK)}>Apply</Button>
       </div>
       {renderContent()}
     </div>

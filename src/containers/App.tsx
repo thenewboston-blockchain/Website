@@ -20,7 +20,7 @@ import Home from './Home';
 import Openings from './Openings';
 import PrimaryValidatorApi from './PrimaryValidatorApi';
 import Profile from './Profile';
-import ProjectProposals from './ProjectProposals';
+import Projects from './Projects';
 import SignIn from './SignIn';
 import SignOut from './SignOut';
 import Social from './Social';
@@ -83,7 +83,7 @@ const App: FC = () => {
           <Route path="/governance/:chapter?" component={Governance} />
           <Route path="/guide/:chapter?" component={Guide} />
           <Route path="/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
-          <Route path="/project-proposals/:chapter?" component={ProjectProposals} />
+          <Route path="/projects/:chapter?" component={Projects} />
           <Route exact path="/sign-in" component={SignIn} />
           <Route exact path="/sign-out" component={SignOut} />
           <Route path="/style-guide/:chapter?" component={StyleGuide} />
