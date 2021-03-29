@@ -25,9 +25,9 @@ const GuideNodes: FC = () => {
 
       <p>
         Users can indicate the nodes they believe that must be designated as PV by boosting them, as described in the{' '}
-        <NavLink to="/governance/locked-coins-and-banking-boosting">locked coins and node boosting</NavLink>{' '}
-        documentation. A schedule will be created at the beginning of each network day to indicate which nodes will be
-        assigned a turn as PV on that network day. All nodes on the network will have a record of the PV schedule.
+        <NavLink to="/governance/locked-coins-and-boosting">locked coins and node boosting</NavLink> documentation. A
+        schedule will be created at the beginning of each network day to indicate which nodes will be assigned a turn as
+        PV on that network day. All nodes on the network will have a record of the PV schedule.
       </p>
 
       <DocCallout type={CalloutType.note}>
