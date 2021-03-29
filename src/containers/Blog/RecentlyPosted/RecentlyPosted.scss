@@ -9,7 +9,6 @@ $gray-100: #e3e8ee;
   align-items: center;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
   position: relative;
 
   &__header {
@@ -30,15 +29,12 @@ $gray-100: #e3e8ee;
   }
 
   &__content-container {
-    margin-bottom: 5rem;
-    max-width: $summary-width + $summary-mr + $comparison-cards-container + $content-container-padding-lr * 2;
-    padding: 35px;
+    overflow-x: hidden;
+    padding: 32px 64px;
     width: 100%;
 
     @media (max-width: 768px) {
-      margin-bottom: 3rem;
-      max-width: 800px;
-      padding: 40px;
+      padding: 16px;
     }
 
     @media (max-width: 480px) {
@@ -48,7 +44,6 @@ $gray-100: #e3e8ee;
 
   &__article {
     display: flex;
-    margin-bottom: 3rem;
 
     @media (max-width: 768px) {
       display: block;
@@ -56,15 +51,11 @@ $gray-100: #e3e8ee;
   }
 
   &__slider-container {
-    max-width: 1200px;
+    max-width: 100%;
   }
 
   &__article-wrapper {
     margin: 0;
-
-    @media (min-width: 325px) and (max-width: 480px) {
-      margin-left: 55px;
-    }
   }
 
   &__article-banner {

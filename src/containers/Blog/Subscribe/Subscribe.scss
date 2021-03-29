@@ -32,12 +32,12 @@ $gray-50: #f7fafc;
 
   &__content-container {
     margin-bottom: 5rem;
-    max-width: $summary-width + $summary-mr + $comparison-cards-container + $content-container-padding-lr * 2;
-    padding: 64px;
+    max-width: $summary-width + $summary-mr + $comparison-cards-container + $content-container-padding-lr * 4;
+    padding: 32px 64px;
     width: 100%;
 
     @media (max-width: 768px) {
-      margin-bottom: 120px;
+      margin-bottom: 64px;
       padding: 0;
     }
     @media (max-width: 450px) {

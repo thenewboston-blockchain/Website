@@ -28,9 +28,6 @@ $transformValue: -0.5%;
     user-select: none;
     width: 100%;
 
-    @media (min-width: 480px) and (max-width: 768px) {
-      margin: 0 5px;
-    }
     img {
       border-radius: 1.5vw;
       box-sizing: border-box;

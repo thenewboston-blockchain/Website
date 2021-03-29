@@ -20,21 +20,21 @@ $summary-width: 420px;
 
   &__content-container {
     max-width: $summary-width + $summary-mr + $comparison-cards-container + $content-container-padding-lr * 4;
-    padding: 64px;
+    padding: 32px 64px;
     width: 100%;
 
     @media (max-width: 768px) {
       max-width: 480px;
-      padding: 32px;
+      padding: 16px;
     }
   }
 
   &__article-container {
+    align-items: center;
     display: flex;
     flex-direction: column;
 
     @media (min-width: 992px) {
-      // display: block;
       flex-direction: row;
     }
   }

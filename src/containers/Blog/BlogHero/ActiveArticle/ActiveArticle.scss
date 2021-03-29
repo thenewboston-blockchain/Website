@@ -2,10 +2,19 @@ $gray-400: #8792a2;
 
 .ActiveArticle {
   background-color: transparent;
+  flex: 3;
   height: 468px;
-  max-width: 700px;
   position: relative;
   width: 100%;
+
+  @media (max-width: 992px) {
+    margin-bottom: 64px;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 0;
+    padding: 0 16px;
+  }
 
   &__banner-overlay {
     background-color: #000;
@@ -15,6 +24,11 @@ $gray-400: #8792a2;
     position: absolute;
     right: 0;
     top: 0;
+
+    @media (max-width: 768px) {
+      left: 16px;
+      right: 16px;
+    }
   }
 
   &__container {
@@ -45,13 +59,5 @@ $gray-400: #8792a2;
 
   &__time {
     margin-left: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .ActiveArticle {
-    height: 65vh;
-    margin: 0 auto;
-    width: 90%;
   }
 }

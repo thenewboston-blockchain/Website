@@ -7,10 +7,15 @@ $gray-100: #e3e8ee;
 
 .PopularArticles {
   color: $gray-500;
-  padding: 0 1.5rem;
+  flex: 2;
+  width: 100%;
 
-  @media (min-width: 480px) and (max-width: 768px) {
-    padding: 0 2rem;
+  @media (min-width: 992px) {
+    padding-left: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
   }
 
   &__header {
@@ -22,33 +27,6 @@ $gray-100: #e3e8ee;
 
     @media (max-width: 768px) {
       margin-top: 30px;
-    }
-  }
-
-  &__comparison-cards-container {
-    width: $comparison-cards-container;
-
-    @media (max-width: 1200px) {
-      width: unset;
-    }
-  }
-
-  &__content-container {
-    max-width: $summary-width + $summary-mr + $comparison-cards-container + $content-container-padding-lr * 2;
-    padding: 64px;
-    width: 100%;
-
-    @media (max-width: 768px) {
-      max-width: 480px;
-      padding: 32px;
-    }
-  }
-
-  &__article-container {
-    display: flex;
-
-    @media (max-width: 1200px) {
-      display: block;
     }
   }
 
@@ -90,36 +68,5 @@ $gray-100: #e3e8ee;
 
   &__article-time {
     margin-left: 1rem;
-  }
-
-  &__summary-snippet-container {
-    margin-right: $summary-mr;
-    width: $summary-width;
-
-    @media (max-width: 1200px) {
-      margin-right: 0;
-      width: unset;
-    }
-  }
-
-  &__text-snippets {
-    margin-top: 30px;
-
-    @media (max-width: 768px) {
-      flex-direction: column;
-    }
-  }
-
-  &__title {
-    font-family: var(--font-family-inter-bold);
-    font-size: 36px;
-    font-weight: 800;
-    line-height: 1.2;
-    margin-top: 30px;
-    max-width: 290px;
-
-    @media (max-width: 1200px) {
-      max-width: unset;
-    }
   }
 }
