@@ -3,8 +3,9 @@ import yup from 'utils/yup';
 
 import {SocialMedia} from 'types/social-media';
 import {SocialMediaIcon} from 'components';
+import {FormButton, FormInput} from 'components/FormComponents';
+import {Form} from 'components/FormComponentsBlog';
 import './Subscribe.scss';
-import {Form, FormButton, FormInput} from 'components/FormComponentsBlog';
 
 const Subscribe: FC = () => {
   const initialValues = {email: ''};
