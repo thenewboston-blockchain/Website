@@ -3,8 +3,7 @@ import yup from 'utils/yup';
 
 import {SocialMedia} from 'types/social-media';
 import {SocialMediaIcon} from 'components';
-import {FormButton, FormInput} from 'components/FormComponents';
-import {Form} from 'components/FormComponentsBlog';
+import {Form, FormButton, FormInput} from 'components/FormComponents';
 import './Subscribe.scss';
 
 const Subscribe: FC = () => {
@@ -32,13 +31,17 @@ const Subscribe: FC = () => {
               onSubmit={() => {}}
               className="Subscribe__form-wrapper"
             >
-              <h3>Get the latest updates</h3>
-              <div className="Subscribe__form">
-                <FormInput name="email" className="Subscribe__form-input" placeholder="Enter your email" />
-                <FormButton type="submit" className="Subscribe__form-button">
-                  Subscribe
-                </FormButton>
-              </div>
+              {() => (
+                <>
+                  <h3>Get the latest updates</h3>
+                  <div className="Subscribe__form">
+                    <FormInput name="email" className="Subscribe__form-input" placeholder="Enter your email" />
+                    <FormButton type="submit" className="Subscribe__form-button">
+                      Subscribe
+                    </FormButton>
+                  </div>
+                </>
+              )}
             </Form>
           </div>
         </div>
