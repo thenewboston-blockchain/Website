@@ -25,8 +25,8 @@ const ProjectsOverview: FC = () => {
         <li>Guiding the success of the project</li>
         <li>Building your team (we can help with recruiting)</li>
         <li>Managing all aspects of the project including planning, design, development, etc...</li>
-        <li>Meet objectives according to your submitted roadmap milestones</li>
-        <li>Maintain an active and happy team</li>
+        <li>Meeting objectives according to your submitted roadmap milestones</li>
+        <li>Maintaining an active and happy team</li>
       </ul>
 
       <h2>Roadmap, Milestones, and Objectives</h2>
