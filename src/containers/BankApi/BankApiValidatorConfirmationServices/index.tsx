@@ -15,10 +15,6 @@ const BankApiValidatorConfirmationServices: FC = () => {
         that the confirmation validator will sign and send all confirmed blocks to the bank for a specified period of
         time.
       </p>
-      <p>
-        More information about the confirmation process can be found in the{' '}
-        <NavLink to="/guide/confirmation-services">Confirmation Services</NavLink> section of the guide.
-      </p>
 
       <DocEndpoint endpoint="/validator_confirmation_services" method="GET" />
       <QueryParamsOffsetAndLimit returnedEntityName="validator confirmation services" />
