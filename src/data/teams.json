@@ -346,7 +346,7 @@
   },
   {
     "title": "Education",
-    "description": "Description of team here.",
+    "description": "Create educational content for the community, primarily focused around video tutorials.",
     "platforms": [],
     "contributors": [
       {
@@ -364,7 +364,23 @@
     ],
     "responsibilities": [
       {
-        "item": "Recruit candidates",
+        "item": "Gather feedback from the community to determine the most requested videos",
+        "subitems": []
+      },
+      {
+        "item": "Design course outlines",
+        "subitems": []
+      },
+      {
+        "item": "Record, edit, and upload high quality video tutorials",
+        "subitems": []
+      },
+      {
+        "item": "Grow the community and collaborate with marketing",
+        "subitems": []
+      },
+      {
+        "item": "Share all course content on GitHub",
         "subitems": []
       }
     ]
