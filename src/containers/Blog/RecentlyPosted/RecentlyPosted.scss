@@ -67,6 +67,10 @@ $gray-100: #e3e8ee;
     }
   }
 
+  &__article-banner-image {
+    object-fit: cover;
+  }
+
   &__article-title {
     color: #000;
     font-size: 16px;

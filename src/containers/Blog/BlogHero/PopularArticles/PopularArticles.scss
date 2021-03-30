@@ -44,6 +44,7 @@ $gray-100: #e3e8ee;
     img {
       background-size: contain;
       height: 100%;
+      object-fit: cover;
       width: 100%;
     }
   }

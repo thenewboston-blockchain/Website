@@ -13,7 +13,7 @@ const Article: FC<ArticleProps> = ({article}) => {
     <div className="RecentlyPosted__article-wrapper">
       <div className="RecentlyPosted__article-banner">
         <Link to={`/blog/${encodeURIComponent(slugify(article.title, ' ', '-'))}`}>
-          <img src={article.banner} alt="img" />
+          <img className="RecentlyPosted__article-banner-image" src={article.banner} alt="img" />
         </Link>
       </div>
       <div className="RecentlyPosted__article-content">
