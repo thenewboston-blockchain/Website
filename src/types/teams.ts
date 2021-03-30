@@ -4,8 +4,8 @@ export enum TeamName {
   blockchain = 'Blockchain',
   community = 'Community',
   design = 'Design',
+  education = 'Education',
   frontEnd = 'Front-End',
-  humanResources = 'Human Resources',
   marketing = 'Marketing',
   websiteApi = 'Website API',
 }
