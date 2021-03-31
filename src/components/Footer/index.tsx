@@ -46,6 +46,10 @@ const navLists = [
         title: 'Team',
         url: '/teams',
       },
+      {
+        title: 'Community Guidelines',
+        url: '/guidelines',
+      },
     ],
   },
   {

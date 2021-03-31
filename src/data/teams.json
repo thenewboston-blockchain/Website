@@ -126,20 +126,8 @@
     ],
     "contributors": [
       {
-        "title": "Head of Community",
-        "isLead": true,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "1",
-          "displayName": "Bucky Roberts",
-          "githubUsername": "buckyroberts",
-          "profileImage": "https://avatars2.githubusercontent.com/u/8547538?s=460&u=8a4be84ff4870a332fe94c11fca02b432fb9f83e&v=4",
-          "slackUsername": "Bucky"
-        }
-      },
-      {
         "title": "Product Manager",
-        "isLead": false,
+        "isLead": true,
         "createdDate": "2021-03-02T02:14:59.307535Z",
         "contributor": {
           "contributorId": "88",
@@ -147,6 +135,18 @@
           "githubUsername": "ma2b0043",
           "profileImage": "https://avatars.githubusercontent.com/u/60430226?v=4",
           "slackUsername": "Muhammad Anas Azam Bhatti"
+        }
+      },
+      {
+        "title": "Head of Human Resources",
+        "isLead": false,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "6",
+          "displayName": "Chrisha",
+          "githubUsername": "Chrisha1212",
+          "profileImage": "https://avatars.githubusercontent.com/u/72809444?s=460&u=e2138725222fb09a546d7d1e164cf64f5583648b&v=4",
+          "slackUsername": "MsChrishaph"
         }
       }
     ],
@@ -161,6 +161,26 @@
       },
       {
         "item": "Optimize user feedback loop",
+        "subitems": []
+      },
+      {
+        "item": "Recruit candidates",
+        "subitems": []
+      },
+      {
+        "item": "Manage faucet payments",
+        "subitems": []
+      },
+      {
+        "item": "Update policies",
+        "subitems": []
+      },
+      {
+        "item": "Respond to comments and questions from the community",
+        "subitems": []
+      },
+      {
+        "item": "Welcome new members and encourage collaboration and community engagement",
         "subitems": []
       }
     ]
@@ -194,10 +214,10 @@
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "7",
-          "displayName": "Pitchapa Nickonpol",
-          "githubUsername": "pitchapa-n",
-          "profileImage": "https://avatars.githubusercontent.com/u/79086524?v=4",
-          "slackUsername": "Pitchapa Nickonpol"
+          "displayName": "Kashif Ahmad",
+          "githubUsername": "https://github.com/kashikushi",
+          "profileImage": "https://avatars.githubusercontent.com/u/35629401?v=4",
+          "slackUsername": "Mr. K"
         }
       }
     ],
@@ -291,7 +311,8 @@
           "profileImage": "https://avatars.githubusercontent.com/u/20023713?v=4",
           "slackUsername": "Vyz"
         }
-      },{
+      },
+      {
         "title": "QA Engineer",
         "isLead": false,
         "createdDate": "2020-07-08T02:14:59.307535Z",
@@ -324,46 +345,42 @@
     ]
   },
   {
-    "title": "Human Resources",
-    "description": "Understand the organization's needs and make sure those needs are met when recruiting for new positions.",
+    "title": "Education",
+    "description": "Create educational content for the community, primarily focused around video tutorials.",
     "platforms": [],
     "contributors": [
       {
-        "title": "Head of Human Resources",
+        "title": "Head of Education",
         "isLead": true,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "6",
-          "displayName": "Chrisha",
-          "githubUsername": "Chrisha1212",
-          "profileImage": "https://avatars.githubusercontent.com/u/72809444?s=460&u=e2138725222fb09a546d7d1e164cf64f5583648b&v=4",
-          "slackUsername": "MsChrishaph"
+          "contributorId": "1",
+          "displayName": "Bucky Roberts",
+          "githubUsername": "buckyroberts",
+          "profileImage": "https://avatars2.githubusercontent.com/u/8547538?s=460&u=8a4be84ff4870a332fe94c11fca02b432fb9f83e&v=4",
+          "slackUsername": "Bucky"
         }
       }
     ],
     "responsibilities": [
       {
-        "item": "Recruit candidates",
+        "item": "Gather feedback from the community to determine the most requested videos",
         "subitems": []
       },
       {
-        "item": "Manage faucet payments",
+        "item": "Design course outlines",
         "subitems": []
       },
       {
-        "item": "Update policies",
+        "item": "Record, edit, and upload high quality video tutorials",
         "subitems": []
       },
       {
-        "item": "Conduct benefit analysis",
+        "item": "Grow the community and collaborate with marketing",
         "subitems": []
       },
       {
-        "item": "Respond to comments and questions from the community",
-        "subitems": []
-      },
-      {
-        "item": "Welcome new members and encourage collaboration and community engagement",
+        "item": "Share all course content on GitHub",
         "subitems": []
       }
     ]

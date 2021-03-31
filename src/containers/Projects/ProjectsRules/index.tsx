@@ -9,7 +9,7 @@ const ProjectsRules: FC = () => {
     'Must be centered around thenewboston network and/or community.',
     'Must clearly add value to thenewboston network and/or community.',
     'For applications involving a user interface (UI), simple mock-ups must be provided in the project proposal. These do not have to be high fidelity designs, basic wireframes are acceptable.',
-    'Must be an open-source project.',
+    'Software projects must be open source.',
     'Projects involving gambling or illegal activities of any kind are not allowed.',
     'Projects promoting abusive advertisements are not allowed.',
     'Projects dealing with explicit content or pornography are not allowed.',

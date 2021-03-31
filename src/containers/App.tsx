@@ -16,6 +16,7 @@ import Download from './Download';
 import Faq from './Faq';
 import Governance from './Governance';
 import Guide from './Guide';
+import Guidelines from './Guidelines';
 import Home from './Home';
 import Openings from './Openings';
 import PrimaryValidatorApi from './PrimaryValidatorApi';
@@ -62,6 +63,7 @@ const App: FC = () => {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/guidelines" component={Guidelines} />
           <Route exact path="/create-account" render={() => <CreateAccount disabled />} />
           <Route exact path="/donate" component={Donate} />
           <Route exact path="/faq" component={Faq} />
