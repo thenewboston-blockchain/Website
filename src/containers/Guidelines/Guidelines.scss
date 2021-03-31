@@ -1,0 +1,25 @@
+.Guidelines {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  max-width: 720px;
+  min-height: 700px;
+  padding-bottom: 120px;
+
+  &__list {
+    li {
+      margin-bottom: 12px;
+      margin-top: 12px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+}
