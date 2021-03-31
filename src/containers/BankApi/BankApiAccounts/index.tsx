@@ -12,8 +12,7 @@ const BankApiAccounts: FC = () => {
         generally pay lower transaction fees.
       </p>
       <p>
-        More information about account can be found in the <NavLink to="/guide/accounts">Accounts</NavLink> section of
-        the guide.
+        For more information, see <NavLink to="/guide/accounts">Accounts</NavLink>.
       </p>
 
       <DocEndpoint endpoint="/accounts" method="GET" />

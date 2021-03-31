@@ -1,5 +1,4 @@
 import React, {FC} from 'react';
-import {NavLink} from 'react-router-dom';
 
 import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
 
@@ -9,10 +8,6 @@ const BankApiUpgradeNotice: FC = () => {
       <p>
         After a confirmation validator has upgraded to a primary validator, it will send out an upgrade notice to all
         connected banks.
-      </p>
-      <p>
-        More information about upgrade notices can be found in the{' '}
-        <NavLink to="/guide/resync-process">Resync Process</NavLink> section of the guide.
       </p>
 
       <DocEndpoint endpoint="/upgrade_notice" method="POST" />

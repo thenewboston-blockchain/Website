@@ -1,5 +1,4 @@
 import React, {FC} from 'react';
-import {NavLink} from 'react-router-dom';
 
 import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSnippet, TableParams} from 'components';
 
@@ -16,10 +15,6 @@ const BankApiInvalidBlocks: FC = () => {
         As banks receive these invalid block notices from their confirmation validators, they will automatically
         decrease the trust of their primary validator. The amount by which the primary validators trust is decreased is
         calculated based on the weighted trust of the sending confirmation validator.
-      </p>
-      <p>
-        Additional information about invalid blocks can be found in the{' '}
-        <NavLink to="/guide/resync-triggers">Resync Triggers</NavLink> section of the guide.
       </p>
 
       <DocEndpoint endpoint="/invalid_blocks" method="GET" />
