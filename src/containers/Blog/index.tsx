@@ -10,7 +10,7 @@ const articles = getArticles();
 const Blog: FC = () => {
   return (
     <>
-      <PageTitle title="blog" />
+      <PageTitle title="Blog" />
       <BlogHero />
       <RecentlyPosted articles={articles} />
       <Subscribe />

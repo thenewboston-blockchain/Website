@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 import {Link} from 'react-router-dom';
+import {Avatar} from 'components';
 import {Article as ArticleType} from 'types/blogs';
 import {slugify} from 'utils/urls';
 
@@ -20,8 +21,8 @@ const Article: FC<ArticleProps> = ({article}) => {
       <div className="RecentlyPosted__article-content">
         <h3 className="RecentlyPosted__article-title">{article.title}</h3>
         <div className="RecentlyPosted__author-wrapper">
-          <img className="RecentlyPosted__author-avatar" src={article.author.avatar} alt={article.author.name} />
-          <p className="RecentlyPosted__article-user">by {article.author.name}</p>
+          <Avatar className="RecentlyPosted__author-avatar" size={30} src={article.author.avatar} />
+          <span className="RecentlyPosted__author-name">by {article.author.name}</span>
         </div>
         <p className="RecentlyPosted__article-date">
           {article.datePosted}

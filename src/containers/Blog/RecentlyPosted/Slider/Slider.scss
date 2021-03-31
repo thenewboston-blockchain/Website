@@ -28,12 +28,6 @@ $transformValue: -0.5%;
     user-select: none;
     width: 100%;
 
-    img {
-      border-radius: 1.5vw;
-      box-sizing: border-box;
-      height: 100%;
-      width: 100%;
-    }
     :hover {
       transform: scale(calc(1 / 100 + 1));
       transition: 0.5s;

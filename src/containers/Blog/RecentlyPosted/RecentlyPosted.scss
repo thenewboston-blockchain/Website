@@ -21,12 +21,6 @@
   }
 
   &__article {
-    &-user {
-      display: inline-block;
-      margin-left: 0.5rem;
-    }
-
-    &-user,
     &-date,
     &-time {
       font-size: 12px;
@@ -50,7 +44,10 @@
       width: 280px;
 
       &-image {
+        border-radius: 8px;
+        height: 100%;
         object-fit: cover;
+        width: 100%;
       }
 
       @media (max-width: 768px) {
@@ -79,16 +76,16 @@
     }
   }
 
-  &__author-wrapper {
-    align-items: center;
-    display: flex;
-    margin-bottom: 0.5rem;
-  }
+  &__author {
+    &-name {
+      font-size: 12px;
+    }
 
-  &__author-avatar {
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
+    &-wrapper {
+      align-items: center;
+      display: flex;
+      margin-bottom: 0.5rem;
+    }
   }
 
   &__summary-snippet-container {
@@ -120,10 +117,6 @@
     @media (max-width: 1200px) {
       max-width: unset;
     }
-  }
-
-  &__author-avatar {
-    max-width: 10%;
   }
 
   @media (max-width: 768px) {
