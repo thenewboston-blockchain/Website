@@ -18,17 +18,13 @@ const sliderProps = {
 const RecentlyPosted: FC<ArticlesProps> = ({articles}) => {
   return (
     <div className="RecentlyPosted">
-      <div className="RecentlyPosted__content-container">
-        <h3 className="RecentlyPosted__header">Recently Posted</h3>
-        <div className="RecentlyPosted__article">
-          <div className="RecentlyPosted__slider-container">
-            <Slider {...sliderProps}>
-              {articles.map((article) => (
-                <Article key={article.title} article={article} />
-              ))}
-            </Slider>
-          </div>
-        </div>
+      <h3 className="RecentlyPosted__header">Recently Posted</h3>
+      <div className="RecentlyPosted__slider-container">
+        <Slider {...sliderProps}>
+          {articles.map((article) => (
+            <Article key={article.title} article={article} />
+          ))}
+        </Slider>
       </div>
     </div>
   );
