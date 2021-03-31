@@ -1,10 +1,8 @@
 import React, {FC} from 'react';
-import {NavLink} from 'react-router-dom';
 
 import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
 
 const ConfirmationValidatorApiUpgradeRequest: FC = () => {
-  const guideLink = <NavLink to="/guide/resync-process">Resync Process</NavLink>;
   return (
     <DocContainer className="ConfirmationValidatorApiUpgradeRequest" title="Upgrade Request" lastUpdated="07 Dec 2020">
       <p>
@@ -13,7 +11,6 @@ const ConfirmationValidatorApiUpgradeRequest: FC = () => {
         confirmation validators requesting one of them to upgrade to a primary validator. This is because the banks
         always prefer the most trusted validator to be the primary validator for the network.
       </p>
-      <p>More information about upgrade requests can be found in the {guideLink} section of the guide.</p>
 
       <DocEndpoint endpoint="/upgrade_request" method="POST" />
       <TableParams
