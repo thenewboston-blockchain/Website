@@ -37,6 +37,7 @@ import OpenInNewIcon from 'mdi-react/OpenInNewIcon';
 import MenuIcon from 'mdi-react/MenuIcon';
 import MenuRightIcon from 'mdi-react/MenuRightIcon';
 import MinusIcon from 'mdi-react/MinusIcon';
+import NotebookCheckOutlineIcon from 'mdi-react/NotebookCheckOutlineIcon';
 import PencilIcon from 'mdi-react/PencilIcon';
 import PlusIcon from 'mdi-react/PlusIcon';
 import RadioboxBlankIcon from 'mdi-react/RadioboxBlankIcon';
@@ -88,6 +89,7 @@ export enum IconType {
   menu,
   menuRight,
   minus,
+  notebookCheckOutline,
   openInNew,
   pencil,
   plus,
@@ -192,6 +194,8 @@ const Icon = forwardRef<HTMLSpanElement, ComponentProps>(
           return <MenuRightIcon {...iconProps} />;
         case IconType.minus:
           return <MinusIcon {...iconProps} />;
+        case IconType.notebookCheckOutline:
+          return <NotebookCheckOutlineIcon {...iconProps} />;
         case IconType.openInNew:
           return <OpenInNewIcon {...iconProps} />;
         case IconType.pencil:

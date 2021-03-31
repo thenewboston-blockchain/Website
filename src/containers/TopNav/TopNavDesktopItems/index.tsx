@@ -28,6 +28,12 @@ const communityPopoverItems: TopNavPopoverItemType[] = [
     title: 'Teams',
     to: '/teams',
   },
+  {
+    description: 'Read up on our community culture',
+    iconType: IconType.notebookCheckOutline,
+    title: 'Community Guidelines',
+    to: '/guidelines',
+  },
 ];
 
 const getStartedPopoverItems: TopNavPopoverItemType[] = [
