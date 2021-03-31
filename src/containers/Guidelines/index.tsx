@@ -58,9 +58,9 @@ const Guidelines: FC = () => {
           <li>Fighting or threatening violence in the workplace.</li>
           <li>Using intimidation tactics or making threats.</li>
           <li>Sabotaging another individual's work.</li>
-          <li>Unauthorized disclosure of business “secrets” or confidential information.</li>
+          <li>Unauthorized disclosure of business "secrets" or confidential information.</li>
           <li>
-            Falsifying organization records or reports, including one’s time records or the time records of another
+            Falsifying organization records or reports, including one's time records or the time records of another
             member.
           </li>
         </ol>
