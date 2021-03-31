@@ -10,16 +10,15 @@ interface ArticleProps {
 }
 const Article: FC<ArticleProps> = ({article}) => {
   return (
-    <div className="RecentlyPosted__article-wrapper">
+    <Link
+      className="RecentlyPosted__article-wrapper"
+      to={`/blog/${encodeURIComponent(slugify(article.title, ' ', '-'))}`}
+    >
       <div className="RecentlyPosted__article-banner">
-        <Link to={`/blog/${encodeURIComponent(slugify(article.title, ' ', '-'))}`}>
-          <img className="RecentlyPosted__article-banner-image" src={article.banner} alt="img" />
-        </Link>
+        <img className="RecentlyPosted__article-banner-image" src={article.banner} alt="img" />
       </div>
       <div className="RecentlyPosted__article-content">
-        <Link to={`/blog/${encodeURIComponent(slugify(article.title, ' ', '-'))}`}>
-          <h3 className="RecentlyPosted__article-title">{article.title}</h3>
-        </Link>
+        <h3 className="RecentlyPosted__article-title">{article.title}</h3>
         <div className="RecentlyPosted__author-wrapper">
           <img className="RecentlyPosted__author-avatar" src={article.author.avatar} alt={article.author.name} />
           <p className="RecentlyPosted__article-user">by {article.author.name}</p>
@@ -29,7 +28,7 @@ const Article: FC<ArticleProps> = ({article}) => {
           <span className="RecentlyPosted__article-time">{article.readTime}</span>
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 

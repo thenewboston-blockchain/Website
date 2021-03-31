@@ -1,17 +1,10 @@
-$comparison-cards-container: 690px;
-$content-container-padding-lr: 64px;
-$summary-mr: 70px;
-$summary-width: 420px;
-$gray-500: #697386;
-$gray-100: #e3e8ee;
-
 .RecentlyPosted {
   overflow-x: hidden;
   padding: 32px 64px;
   position: relative;
 
   &__header {
-    color: $gray-500;
+    color: var(--color-gray-500);
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 1rem;
@@ -20,7 +13,7 @@ $gray-100: #e3e8ee;
   }
 
   &__comparison-cards-container {
-    width: $comparison-cards-container;
+    width: 690px;
 
     @media (max-width: 1200px) {
       width: unset;
@@ -40,17 +33,6 @@ $gray-100: #e3e8ee;
       margin-bottom: 8px;
     }
 
-    &-date {
-      margin: 0;
-    }
-    &-content a {
-      transition: 0.5s;
-
-      &:hover {
-        color: red;
-      }
-    }
-
     &-time {
       margin-left: 1rem;
     }
@@ -67,24 +49,24 @@ $gray-100: #e3e8ee;
       height: 180px;
       width: 280px;
 
+      &-image {
+        object-fit: cover;
+      }
+
       @media (max-width: 768px) {
         max-width: 220px;
       }
     }
 
-    &-banner-image {
-      object-fit: cover;
-    }
-
     &-title {
-      color: #000;
+      color: var(--color-black);
       font-size: 16px;
       line-height: 1.3;
       margin: 1rem 0;
     }
 
     &-wrapper {
-      margin: 0;
+      color: var(--color-gray-500);
     }
   }
 
@@ -110,8 +92,8 @@ $gray-100: #e3e8ee;
   }
 
   &__summary-snippet-container {
-    margin-right: $summary-mr;
-    width: $summary-width;
+    margin-right: 70px;
+    width: 420px;
 
     @media (max-width: 1200px) {
       margin-right: 0;
