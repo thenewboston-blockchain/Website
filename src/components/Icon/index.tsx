@@ -43,7 +43,6 @@ import PlusIcon from 'mdi-react/PlusIcon';
 import RadioboxBlankIcon from 'mdi-react/RadioboxBlankIcon';
 import RadioboxMarkedIcon from 'mdi-react/RadioboxMarkedIcon';
 import RedditIcon from 'mdi-react/RedditIcon';
-import SlackIcon from 'mdi-react/SlackIcon';
 import SortAscendingIcon from 'mdi-react/SortAscendingIcon';
 import SortDescendingIcon from 'mdi-react/SortDescendingIcon';
 import TextBoxIcon from 'mdi-react/TextBoxIcon';
@@ -96,7 +95,6 @@ export enum IconType {
   radioboxBlank,
   radioboxMarked,
   reddit,
-  slack,
   sortAscending,
   sortDescending,
   textBox,
@@ -208,8 +206,6 @@ const Icon = forwardRef<HTMLSpanElement, ComponentProps>(
           return <RadioboxMarkedIcon {...iconProps} />;
         case IconType.reddit:
           return <RedditIcon {...iconProps} />;
-        case IconType.slack:
-          return <SlackIcon {...iconProps} />;
         case IconType.sortAscending:
           return <SortAscendingIcon {...iconProps} />;
         case IconType.sortDescending:
