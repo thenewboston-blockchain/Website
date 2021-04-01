@@ -4,7 +4,7 @@ import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'co
 
 const ConfirmationValidatorApiUpgradeRequest: FC = () => {
   return (
-    <DocContainer className="ConfirmationValidatorApiUpgradeRequest" title="Upgrade Request" lastUpdated="07 Dec 2020">
+    <DocContainer className="ConfirmationValidatorApiUpgradeRequest" title="Upgrade Request" lastUpdated="31 Mar 2021">
       <p>
         When a bank alters the trust levels of their validators, if the results indicate that there are now confirmation
         validators that are more trusted than the bank's primary validator, the bank will send out a request to the

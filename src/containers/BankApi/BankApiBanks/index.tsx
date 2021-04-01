@@ -4,7 +4,7 @@ import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSni
 
 const BankApiBanks: FC = () => {
   return (
-    <DocContainer className="BankApiBanks" title="Banks" lastUpdated="30 Mar 2021">
+    <DocContainer className="BankApiBanks" title="Banks" lastUpdated="31 Mar 2021">
       <p>
         All banks have the option of connecting to other banks. Although it is not a requirement, it is often useful for
         a bank to inspect the trust levels assigned by other banks. This data is used primarily in determining which

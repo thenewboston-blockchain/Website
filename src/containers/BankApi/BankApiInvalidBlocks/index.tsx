@@ -4,7 +4,7 @@ import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSni
 
 const BankApiInvalidBlocks: FC = () => {
   return (
-    <DocContainer className="BankApiInvalidBlocks" title="Invalid Blocks" lastUpdated="15 Jan 2021">
+    <DocContainer className="BankApiInvalidBlocks" title="Invalid Blocks" lastUpdated="31 Mar 2021">
       <p>
         Invalid blocks are blocks sent from confirmation validators to their banks as an indication that a block that
         had been received from the primary validator was unable to be validated. This may be due to improper formatting,
