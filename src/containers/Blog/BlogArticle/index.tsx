@@ -1,5 +1,7 @@
 import React, {FC, useMemo} from 'react';
 import {useParams} from 'react-router-dom';
+import DOMPurify from 'dompurify';
+
 import {A, Icon, IconType} from 'components';
 import {useBooleanState} from 'hooks';
 import {SocialMedia} from 'types/social-media';
@@ -25,13 +27,6 @@ const BlogArticle: FC = () => {
     {icon: SocialMedia.twitter, url: 'https://twitter.com/intent/tweet?url='},
     {icon: SocialMedia.instagram, url: ''},
   ];
-
-  const renderSocialMediaLinks = () =>
-    socials.map((media) => (
-      <A key={media.icon} href={media.url + window.location.href}>
-        <Icon icon={IconType[media.icon]} className="BlogArticle__SocialMediaLink" />
-      </A>
-    ));
 
   const renderSocialMediaLinksMobile = () =>
     socials.map((media) => (
@@ -79,19 +74,12 @@ const BlogArticle: FC = () => {
                 <img src={article?.banner} alt={article.title} />
               </div>
             )}
-            {/* eslint-disable-next-line react/no-danger */}
-            <div className="BlogArticle__body" dangerouslySetInnerHTML={{__html: article?.content as string}} />
+            <div
+              className="BlogArticle__body"
+              // eslint-disable-next-line react/no-danger
+              dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(article?.content || '')}}
+            />
           </div>
-        </div>
-      </div>
-      <div className="BlogArticle__Socials__wrapper">
-        <div className="BlogArticle__Socials">
-          <h3>Share to support thenewboston community</h3>
-          <div className="BlogArticle__social-icons">{renderSocialMediaLinks()}</div>
-        </div>
-        <div className="BlogArticle__likes">
-          <Icon size={25} icon={IconType.thumbsUp} className="BlogArticle__likes__thumbsUp" />
-          <p>1232</p>
         </div>
       </div>
     </>
