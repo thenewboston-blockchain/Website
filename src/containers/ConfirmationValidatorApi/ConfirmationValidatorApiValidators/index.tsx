@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSnippet} from 'components';
+import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSnippet, TableParams} from 'components';
 
 const ConfirmationValidatorApiValidators: FC = () => {
   return (
@@ -63,6 +63,44 @@ const ConfirmationValidatorApiValidators: FC = () => {
   "seed_block_identifier": "",
   "daily_confirmation_rate": 1,
   "trust": "100.00"
+}`}
+        heading="Response"
+      />
+
+      <DocEndpoint endpoint="/validators/<node_identifier>" method="PATCH" />
+      <TableParams
+        items={[
+          {
+            dataType: 'decimal',
+            description: 'Amount of trust',
+            param: 'trust',
+          },
+        ]}
+      />
+      <RequestResponseSnippet
+        code={`{
+  "message": {
+    "trust": 12.00
+  },
+  "node_identifier": "35f4c988f425809ca7f5d0b319cdf8f7d7aba1b064fd0efc85d61fa0f4d05145",
+  "signature": "93952df29ae3885fd9c9f88721314236bdb53ca5632b2959dcf5cf3c38cb8b96ca57ff84c5337eb164f803237f901abcb0c41a9f71e14aa2fb3159c7ad7a7509"
+}`}
+        heading="Request"
+      />
+      <RequestResponseSnippet
+        code={`{
+  account_number: 'd62165ea6102a74fd484176226cd6ed8f7fc779117138e3ee2d9881ff4fc5a04',
+  ip_address: '144.126.219.17',
+  node_identifier: '38ce9d9a245b2c5c923b1a6e8bbf5324a8cd57d71c977aef6a457740d7fd6451',
+  port: 80,
+  protocol: 'http',
+  version: 'v1.4',
+  default_transaction_fee: 1,
+  root_account_file: 'http://144.126.219.17:80/media/root_account_file.json',
+  root_account_file_hash: 'ab9b95e5bb1dc66dd57ebf2cb8a8dece41748389d68077f74c916659f4bd2f1b',
+  seed_block_identifier: '',
+  daily_confirmation_rate: 1,
+  trust: '12.00'
 }`}
         heading="Response"
       />

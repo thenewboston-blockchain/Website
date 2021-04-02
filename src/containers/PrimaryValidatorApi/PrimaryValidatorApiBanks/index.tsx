@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSnippet} from 'components';
+import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSnippet, TableParams} from 'components';
 
 const PrimaryValidatorApiBanks: FC = () => {
   return (
@@ -54,6 +54,40 @@ const PrimaryValidatorApiBanks: FC = () => {
   "default_transaction_fee": 1,
   "confirmation_expiration": null,
   "trust": "0.00"
+}`}
+        heading="Response"
+      />
+
+      <DocEndpoint endpoint="/banks/<node_identifier>" method="PATCH" />
+      <TableParams
+        items={[
+          {
+            dataType: 'decimal',
+            description: 'Amount of trust',
+            param: 'trust',
+          },
+        ]}
+      />
+      <RequestResponseSnippet
+        code={`{
+  "message": {
+    "trust": 65.55
+  },
+  "node_identifier": "35f4c988f425809ca7f5d0b319cdf8f7d7aba1b064fd0efc85d61fa0f4d05145",
+  "signature": "93952df29ae3885fd9c9f88721314236bdb53ca5632b2959dcf5cf3c38cb8b96ca57ff84c5337eb164f803237f901abcb0c41a9f71e14aa2fb3159c7ad7a7509"
+}`}
+        heading="Request"
+      />
+      <RequestResponseSnippet
+        code={`{
+  account_number: '9a275161478536d0a5b88ff05d429b9a9e63d0032a46e7a6a8f088da89c69da5',
+  ip_address: '13.57.215.62',
+  node_identifier: '59af0721c572e6032b835722b5fec22110daad069dc135f1e81794747dbe626f',
+  port: 80,
+  protocol: 'http',
+  version: 'v1.0',
+  default_transaction_fee: 1,
+  trust: '65.55'
 }`}
         heading="Response"
       />
