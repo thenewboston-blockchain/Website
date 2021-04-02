@@ -2,7 +2,7 @@ import React, {FC, useMemo} from 'react';
 import clsx from 'clsx';
 import {bemify} from '@thenewboston/utils';
 
-import Icon, {IconType} from 'components/Icon';
+import {Icon, IconType} from '@thenewboston/ui';
 
 import './Toast.scss';
 

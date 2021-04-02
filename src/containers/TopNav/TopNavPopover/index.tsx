@@ -2,7 +2,8 @@ import React, {FC, KeyboardEvent, ReactNode, useCallback, useEffect, useRef} fro
 import {useHistory} from 'react-router';
 import clsx from 'clsx';
 
-import {Icon, IconType, Popover} from 'components';
+import {Icon, IconType} from '@thenewboston/ui';
+import {Popover} from 'components';
 import {useWindowDimensions} from 'hooks';
 
 import TopNavPopoverItem from './TopNavPopoverItem';

@@ -4,17 +4,8 @@ import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import parseISO from 'date-fns/parseISO';
 import intersection from 'lodash/intersection';
 
-import {
-  BreadcrumbMenu,
-  DropdownInput,
-  EmptyPage,
-  FlatNavLinks,
-  Icon,
-  IconType,
-  LabelFilter,
-  Loader,
-  PageTitle,
-} from 'components';
+import {Icon, IconType} from '@thenewboston/ui';
+import {BreadcrumbMenu, DropdownInput, EmptyPage, FlatNavLinks, LabelFilter, Loader, PageTitle} from 'components';
 import {fetchGithubIssues} from 'utils/github';
 import {GenericVoidFunction} from 'types/generic';
 import {Issue, Repository, RepositoryUrlParams} from 'types/github';

@@ -2,7 +2,7 @@ import React, {FC, ReactNode} from 'react';
 import clsx from 'clsx';
 import {bemify} from '@thenewboston/utils';
 
-import {Icon, IconType} from 'components';
+import {Icon, IconType} from '@thenewboston/ui';
 import './A.scss';
 
 interface ComponentProps {

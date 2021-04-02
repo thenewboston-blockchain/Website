@@ -3,7 +3,8 @@ import useOnclickOutside from 'react-cool-onclickoutside';
 import {useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 
-import {Icon, IconType, Shadow} from 'components';
+import {Icon, IconType} from '@thenewboston/ui';
+import {Shadow} from 'components';
 import './BreadcrumbMenu.scss';
 
 interface ComponentProps {

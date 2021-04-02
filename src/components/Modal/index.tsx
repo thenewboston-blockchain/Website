@@ -5,7 +5,7 @@ import noop from 'lodash/noop';
 import {bemify} from '@thenewboston/utils';
 
 import {Form, FormButton, FormButtonProps} from 'components/FormComponents';
-import Icon, {IconType} from 'components/Icon';
+import {Icon, IconType} from '@thenewboston/ui';
 import Loader from 'components/FormElements/Loader';
 import {GenericFormValues} from 'types/forms';
 import {GenericFunction} from 'types/generic';
