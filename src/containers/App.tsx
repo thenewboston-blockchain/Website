@@ -14,12 +14,12 @@ import Download from './Download';
 import Faq from './Faq';
 import Governance from './Governance';
 import Guide from './Guide';
+import Guidelines from './Guidelines';
 import Home from './Home';
-import Leaderboard from './Leaderboard';
 import Openings from './Openings';
 import PrimaryValidatorApi from './PrimaryValidatorApi';
 import Profile from './Profile';
-import ProjectProposals from './ProjectProposals';
+import Projects from './Projects';
 import SignIn from './SignIn';
 import SignOut from './SignOut';
 import Social from './Social';
@@ -62,14 +62,13 @@ const App: FC = () => {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/create-account" component={CreateAccount} />
+          <Route exact path="/guidelines" component={Guidelines} />
+          <Route exact path="/create-account" render={() => <CreateAccount disabled />} />
           <Route exact path="/donate" component={Donate} />
           <Route exact path="/faq" component={Faq} />
           <Route exact path="/assets" component={Assets} />
-          <Redirect exact from="/leaderboard" to="/leaderboard/All" />
-          <Route exact path="/leaderboard/:repository" component={Leaderboard} />
           <Redirect exact from="/openings" to="/openings/All" />
-          <Route exact path="/openings/:category/:openingId?" render={() => <Openings openingsFrozen />} />
+          <Route exact path="/openings/:category/:openingId?" render={() => <Openings />} />
           <Route exact path="/social" component={Social} />
           <Redirect exact from="/tasks" to="/tasks/All" />
           <Route exact path="/tasks/:repository" component={Tasks} />
@@ -83,7 +82,7 @@ const App: FC = () => {
           <Route path="/governance/:chapter?" component={Governance} />
           <Route path="/guide/:chapter?" component={Guide} />
           <Route path="/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
-          <Route path="/project-proposals/:chapter?" component={ProjectProposals} />
+          <Route path="/projects/:chapter?" component={Projects} />
           <Route exact path="/sign-in" component={SignIn} />
           <Route exact path="/sign-out" component={SignOut} />
           <Route path="/style-guide/:chapter?" component={StyleGuide} />

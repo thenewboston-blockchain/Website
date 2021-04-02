@@ -1,7 +1,8 @@
 import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
 
-import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
+import {Button, BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
+import {OPENINGS_GOOGLE_FORM_LINK} from 'constants/urls';
 import {getOpenings} from 'utils/data';
 import {NavOption} from 'types/option';
 import {OpeningCategory, OpeningsUrlParams} from 'types/openings';
@@ -20,18 +21,18 @@ const OPENING_CATEGORY_FILTERS: NavOption[] = [
   {pathname: OpeningCategory.marketing, title: 'Marketing'},
 ];
 
-interface ComponentProps {
-  openingsFrozen: boolean;
-}
-
-const Openings: FC<ComponentProps> = ({openingsFrozen}) => {
+const Openings: FC = () => {
   const history = useHistory();
   const {category: categoryParam, openingId: openingIdParam} = useParams<OpeningsUrlParams>();
   const [categoryFilter, setCategoryFilter] = useState<OpeningCategory>(OpeningCategory.all);
 
   useEffect(() => {
-    setCategoryFilter(categoryParam);
-  }, [categoryParam]);
+    if (OPENING_CATEGORY_FILTERS.some((filter) => filter.pathname === categoryParam)) {
+      setCategoryFilter(categoryParam);
+    } else {
+      history.replace('/openings/All');
+    }
+  }, [categoryParam, history]);
 
   const filteredOpenings = useMemo(
     () =>
@@ -80,18 +81,7 @@ const Openings: FC<ComponentProps> = ({openingsFrozen}) => {
     return <OpeningDetails opening={opening} />;
   };
 
-  return openingsFrozen ? (
-    <>
-      <PageTitle title="Openings" />
-      <div className="hiring-freeze">
-        <h1>Openings</h1>
-        <br />
-        <h3>
-          We are on a <span>hiring freeze</span> until further notice
-        </h3>
-      </div>
-    </>
-  ) : (
+  return (
     <>
       <PageTitle title="Openings" />
       <div className="Openings">
@@ -106,7 +96,10 @@ const Openings: FC<ComponentProps> = ({openingsFrozen}) => {
           <div className="Openings__opening-details">{renderOpeningDetails()}</div>
         ) : (
           <div className="Openings__opening-list">
-            <h1 className="Openings__opening-list-heading">Openings</h1>
+            <div className="Openings__opening-list-heading-container">
+              <h1 className="Openings__opening-list-heading">Openings</h1>
+              <Button onClick={() => window.open(OPENINGS_GOOGLE_FORM_LINK)}>Apply</Button>
+            </div>
             {renderOpenings()}
           </div>
         )}

@@ -11,7 +11,7 @@ import './TopNavDesktopItems.scss';
 
 const communityPopoverItems: TopNavPopoverItemType[] = [
   {
-    description: 'Slack, GitHub, YouTube, LinkedIn, etc',
+    description: 'Discord, GitHub, YouTube, LinkedIn, etc',
     iconType: IconType.earth,
     title: 'Join the Community!',
     to: '/social',
@@ -29,10 +29,10 @@ const communityPopoverItems: TopNavPopoverItemType[] = [
     to: '/teams',
   },
   {
-    description: 'View the highest ranked contributors',
-    iconType: IconType.trophy,
-    title: 'Leaderboard',
-    to: '/leaderboard/All',
+    description: 'Read up on our community culture',
+    iconType: IconType.notebookCheckOutline,
+    title: 'Community Guidelines',
+    to: '/guidelines',
   },
 ];
 
@@ -62,8 +62,8 @@ const morePopoverItems: TopNavPopoverItemType[] = [
   {
     description: 'Propose ideas you want built',
     iconType: IconType.hammerWrench,
-    title: 'Project Proposals',
-    to: '/project-proposals/overview',
+    title: 'Projects',
+    to: '/projects/overview',
   },
   {
     description: 'Download thenewboston assets',

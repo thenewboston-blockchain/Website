@@ -21,7 +21,7 @@ const TeamOverview: FC<ComponentProps> = ({teamFilter}) => {
           <div className="TeamOverview__social" key={`${name}-${label}`}>
             <Icon
               className="TeamOverview__social-icon"
-              icon={name === 'github' ? IconType.github : IconType.slack}
+              icon={name === 'github' ? IconType.github : IconType.discord}
               size={18}
             />
             {name === 'github' ? (

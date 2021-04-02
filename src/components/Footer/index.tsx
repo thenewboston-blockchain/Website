@@ -47,8 +47,8 @@ const navLists = [
         url: '/teams',
       },
       {
-        title: 'Leaderboard',
-        url: '/leaderboard/All',
+        title: 'Community Guidelines',
+        url: '/guidelines',
       },
     ],
   },
@@ -56,8 +56,8 @@ const navLists = [
     header: 'More',
     links: [
       {
-        title: 'Project Proposals',
-        url: '/project-proposals/overview',
+        title: 'Projects',
+        url: '/projects/overview',
       },
       {
         isExternal: true,

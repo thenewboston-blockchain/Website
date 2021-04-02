@@ -4,6 +4,10 @@
   $self: &;
   margin: 36px 54px;
 
+  @media (max-width: 768px) {
+    margin: 16px 24px;
+  }
+
   &__A {
     color: var(--color-secondary);
 
@@ -12,23 +16,14 @@
     }
   }
 
-  &__application-method-container {
-    margin-bottom: 16px;
-  }
-
-  &__application-method-note {
-    color: var(--color-sail-gray-500);
-    max-width: 400px;
-  }
-
-  &__application-method-row {
+  &__actions-container {
     align-items: center;
     display: flex;
-    margin-top: 12px;
+    justify-content: space-between;
+  }
 
-    &:first-of-type {
-      margin-top: 16px;
-    }
+  &__application-method-container {
+    margin-bottom: 16px;
   }
 
   &__back-container {
@@ -55,11 +50,6 @@
     margin-top: 24px;
   }
 
-  &__MarketingButton {
-    margin-right: 12px;
-    width: 140px;
-  }
-
   &__position {
     color: var(--color-primary);
     font-size: 36px;
@@ -76,16 +66,5 @@
   &__ul {
     margin-top: 4px;
     padding-inline-start: 18px;
-  }
-
-  @media (max-width: 768px) {
-    margin: 16px 24px;
-  }
-
-  @media (max-width: 600px) {
-    &__application-method-note {
-      max-width: 150px;
-      @include word-wrap;
-    }
   }
 }

@@ -13,7 +13,7 @@ const InternalNewUserOperations: FC = () => {
         <strong>Overview</strong>
       </p>
 
-      <p>Various teams will work to draw new users into Slack #intros. From there, Community Managers will:</p>
+      <p>Various teams will work to draw new users into Discord #intros. From there, Community Managers will:</p>
 
       <DocList variant="ul">
         <li>greet them</li>

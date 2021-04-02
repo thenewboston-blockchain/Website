@@ -4,18 +4,18 @@ export enum TeamName {
   blockchain = 'Blockchain',
   community = 'Community',
   design = 'Design',
+  education = 'Education',
   frontEnd = 'Front-End',
-  humanResources = 'Human Resources',
   marketing = 'Marketing',
   websiteApi = 'Website API',
 }
 
 interface Contributor {
   contributorId: string;
+  discordUsername: string;
   displayName: string;
   githubUsername: string;
   profileImage: string;
-  slackUsername: string;
 }
 
 export interface TeamPlatform {
@@ -51,11 +51,11 @@ interface TeamLead {
 
 export interface TeamMember {
   contributorId: string;
+  discordUsername: string;
   displayName: string;
   githubUsername: string;
   isLead: boolean;
   profileImage: string;
-  slackUsername: string;
   teams: TeamLead[];
   titles: string[];
 }

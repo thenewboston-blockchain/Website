@@ -21,10 +21,10 @@
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "83",
+          "discordUsername": "Chuy#5318",
           "displayName": "Jesus Avina",
           "githubUsername": "javina89",
-          "profileImage": "https://avatars.githubusercontent.com/u/13725042?s=460&u=ea84af4231fdf89f8454b485de5ee3df49321621&v=4",
-          "slackUsername": "Chuy"
+          "profileImage": "https://avatars.githubusercontent.com/u/13725042?s=460&u=ea84af4231fdf89f8454b485de5ee3df49321621&v=4"
         }
       },
       {
@@ -33,10 +33,10 @@
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "33",
+          "discordUsername": "Manish#4379",
           "displayName": "Manish Ram",
           "githubUsername": "manishram",
-          "profileImage": "https://avatars0.githubusercontent.com/u/22790904?s=400&u=643810e6c9d5686df409132b01863f9e065df6c1&v=4",
-          "slackUsername": "Manish"
+          "profileImage": "https://avatars0.githubusercontent.com/u/22790904?s=400&u=643810e6c9d5686df409132b01863f9e065df6c1&v=4"
         }
       },
       {
@@ -45,10 +45,10 @@
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "52",
+          "discordUsername": "itsNikhil#0844",
           "displayName": "Nikhil Taneja",
           "githubUsername": "itsnikhil",
-          "profileImage": "https://avatars1.githubusercontent.com/u/20350674?v=4",
-          "slackUsername": "itsnikhil"
+          "profileImage": "https://avatars1.githubusercontent.com/u/20350674?v=4"
         }
       }
     ],
@@ -88,10 +88,10 @@
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "4",
+          "discordUsername": "",
           "displayName": "Dmitry Mugtasimov",
           "githubUsername": "dmugtasimov",
-          "profileImage": "https://avatars.githubusercontent.com/u/749833?v=4",
-          "slackUsername": "Dmitry Mugtasimov"
+          "profileImage": "https://avatars.githubusercontent.com/u/749833?v=4"
         }
       }
     ],
@@ -126,27 +126,27 @@
     ],
     "contributors": [
       {
-        "title": "Head of Community",
-        "isLead": true,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "1",
-          "displayName": "Bucky Roberts",
-          "githubUsername": "buckyroberts",
-          "profileImage": "https://avatars2.githubusercontent.com/u/8547538?s=460&u=8a4be84ff4870a332fe94c11fca02b432fb9f83e&v=4",
-          "slackUsername": "Bucky"
-        }
-      },
-      {
         "title": "Product Manager",
-        "isLead": false,
+        "isLead": true,
         "createdDate": "2021-03-02T02:14:59.307535Z",
         "contributor": {
           "contributorId": "88",
+          "discordUsername": "Muhammad Anas Azam Bhatti#3383",
           "displayName": "Muhammad Anas Azam Bhatti",
           "githubUsername": "ma2b0043",
-          "profileImage": "https://avatars.githubusercontent.com/u/60430226?v=4",
-          "slackUsername": "Muhammad Anas Azam Bhatti"
+          "profileImage": "https://avatars.githubusercontent.com/u/60430226?v=4"
+        }
+      },
+      {
+        "title": "Head of Human Resources",
+        "isLead": false,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "6",
+          "discordUsername": "MsChrishaph#0709",
+          "displayName": "Chrisha",
+          "githubUsername": "Chrisha1212",
+          "profileImage": "https://avatars.githubusercontent.com/u/72809444?s=460&u=e2138725222fb09a546d7d1e164cf64f5583648b&v=4"
         }
       }
     ],
@@ -161,6 +161,26 @@
       },
       {
         "item": "Optimize user feedback loop",
+        "subitems": []
+      },
+      {
+        "item": "Recruit candidates",
+        "subitems": []
+      },
+      {
+        "item": "Manage faucet payments",
+        "subitems": []
+      },
+      {
+        "item": "Update policies",
+        "subitems": []
+      },
+      {
+        "item": "Respond to comments and questions from the community",
+        "subitems": []
+      },
+      {
+        "item": "Welcome new members and encourage collaboration and community engagement",
         "subitems": []
       }
     ]
@@ -182,10 +202,10 @@
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "2",
+          "discordUsername": "Kristy#9261",
           "displayName": "Kristy Lee",
           "githubUsername": "kristykjlee",
-          "profileImage": "https://avatars1.githubusercontent.com/u/68207101?s=460&u=f001c3eb8dfc9444d1abff7ec2ef5e4f0f1ccd5e&v=4",
-          "slackUsername": "Kristy KJ"
+          "profileImage": "https://avatars1.githubusercontent.com/u/68207101?s=460&u=f001c3eb8dfc9444d1abff7ec2ef5e4f0f1ccd5e&v=4"
         }
       },
       {
@@ -194,10 +214,10 @@
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "7",
-          "displayName": "Pitchapa Nickonpol",
-          "githubUsername": "pitchapa-n",
-          "profileImage": "https://avatars.githubusercontent.com/u/79086524?v=4",
-          "slackUsername": "Pitchapa Nickonpol"
+          "discordUsername": "",
+          "displayName": "Kashif Ahmad",
+          "githubUsername": "https://github.com/kashikushi",
+          "profileImage": "https://avatars.githubusercontent.com/u/35629401?v=4"
         }
       }
     ],
@@ -250,10 +270,10 @@
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "5",
+          "discordUsername": "JustinKim#2939",
           "displayName": "Justin",
           "githubUsername": "angle943",
-          "profileImage": "https://avatars2.githubusercontent.com/u/5943963?v=4",
-          "slackUsername": "Justin"
+          "profileImage": "https://avatars2.githubusercontent.com/u/5943963?v=4"
         }
       },
       {
@@ -262,10 +282,10 @@
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "3",
+          "discordUsername": "Sanjeev#4930",
           "displayName": "Sanjeev Sharma",
           "githubUsername": "thesanjeevsharma",
-          "profileImage": "https://avatars3.githubusercontent.com/u/29539278?s=460&u=c949af33256607d5e1d93958398a139ff1d67227&v=4",
-          "slackUsername": "Sanjeev Sharma"
+          "profileImage": "https://avatars3.githubusercontent.com/u/29539278?v=4"
         }
       },
       {
@@ -274,10 +294,10 @@
         "createdDate": "2020-27-11",
         "contributor": {
           "contributorId": "21",
+          "discordUsername": "jamessspanggg#1464",
           "displayName": "James Pang",
           "githubUsername": "jamessspanggg",
-          "profileImage": "https://avatars0.githubusercontent.com/u/32864116?s=460&u=0c2a53c6f1476da904d2b3c820bab43b64b7185b&v=4",
-          "slackUsername": "James Pang"
+          "profileImage": "https://avatars0.githubusercontent.com/u/32864116?v=4"
         }
       },
       {
@@ -286,10 +306,22 @@
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "76",
+          "discordUsername": "Vyz(led76marx)#7396",
           "displayName": "Vyz",
           "githubUsername": "led76marx",
-          "profileImage": "https://avatars.githubusercontent.com/u/20023713?v=4",
-          "slackUsername": "Vyz"
+          "profileImage": "https://avatars.githubusercontent.com/u/20023713?v=4"
+        }
+      },
+      {
+        "title": "QA Engineer",
+        "isLead": false,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "28",
+          "discordUsername": "!𝕽𝖆𝖏𝖆𝕲#1111",
+          "displayName": "Rajput Usman",
+          "githubUsername": "Rajputusman",
+          "profileImage": "https://avatars.githubusercontent.com/u/65516140?v=4"
         }
       }
     ],
@@ -313,46 +345,42 @@
     ]
   },
   {
-    "title": "Human Resources",
-    "description": "Understand the organization's needs and make sure those needs are met when recruiting for new positions.",
+    "title": "Education",
+    "description": "Create educational content for the community, primarily focused around video tutorials.",
     "platforms": [],
     "contributors": [
       {
-        "title": "Head of Human Resources",
+        "title": "Head of Education",
         "isLead": true,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "6",
-          "displayName": "Chrisha",
-          "githubUsername": "Chrisha1212",
-          "profileImage": "https://avatars.githubusercontent.com/u/72809444?s=460&u=e2138725222fb09a546d7d1e164cf64f5583648b&v=4",
-          "slackUsername": "MsChrishaph"
+          "contributorId": "1",
+          "discordUsername": "thenewboston#2734",
+          "displayName": "Bucky Roberts",
+          "githubUsername": "buckyroberts",
+          "profileImage": "https://avatars2.githubusercontent.com/u/8547538?v=4"
         }
       }
     ],
     "responsibilities": [
       {
-        "item": "Recruit candidates",
+        "item": "Gather feedback from the community to determine the most requested videos",
         "subitems": []
       },
       {
-        "item": "Manage faucet payments",
+        "item": "Design course outlines",
         "subitems": []
       },
       {
-        "item": "Update policies",
+        "item": "Record, edit, and upload high quality video tutorials",
         "subitems": []
       },
       {
-        "item": "Conduct benefit analysis",
+        "item": "Grow the community and collaborate with marketing",
         "subitems": []
       },
       {
-        "item": "Respond to comments and questions from the community",
-        "subitems": []
-      },
-      {
-        "item": "Welcome new members and encourage collaboration and community engagement",
+        "item": "Share all course content on GitHub",
         "subitems": []
       }
     ]
@@ -374,10 +402,10 @@
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "65",
+          "discordUsername": "TristanS#6395",
           "displayName": "Tristan Spearing",
           "githubUsername": "tspearing",
-          "profileImage": "https://avatars1.githubusercontent.com/u/77364430?s=460&v=4",
-          "slackUsername": "Tristan Spearing"
+          "profileImage": "https://avatars1.githubusercontent.com/u/77364430?&v=4"
         }
       },
       {
@@ -386,22 +414,10 @@
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "9",
+          "discordUsername": "Bojan#6836",
           "displayName": "Bojan Ilijevski",
           "githubUsername": "bojan-ilijevski",
-          "profileImage": "https://avatars2.githubusercontent.com/u/58598872?s=460&v=4",
-          "slackUsername": "Bojan Ilijevski"
-        }
-      },
-      {
-        "title": "Discord Moderator",
-        "isLead": false,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "28",
-          "displayName": "Rajput Usman",
-          "githubUsername": "Rajputusman",
-          "profileImage": "https://avatars0.githubusercontent.com/u/65516140?s=460&v=4",
-          "slackUsername": "Rajput Usman"
+          "profileImage": "https://avatars2.githubusercontent.com/u/58598872?&v=4"
         }
       }
     ],
@@ -441,10 +457,10 @@
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
           "contributorId": "18",
+          "discordUsername": "Justin N.#6061",
           "displayName": "Justin Ndwiga",
           "githubUsername": "ThaDeveloper",
-          "profileImage": "https://avatars.githubusercontent.com/u/12385482?v=4",
-          "slackUsername": "Justin Ndwiga"
+          "profileImage": "https://avatars.githubusercontent.com/u/12385482?v=4"
         }
       }
     ],

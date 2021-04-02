@@ -95,14 +95,14 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice,
               {renderMobileLink('Join the Community!', '/social')}
               {renderMobileLink('Openings', '/openings')}
               {renderMobileLink('Teams', '/teams')}
-              {renderMobileLink('Leaderboard', '/leaderboard/All')}
+              {renderMobileLink('Community Guidelines', '/guidelines')}
             </>,
           )}
           {renderColumn(
             'more',
             'More',
             <>
-              {renderMobileLink('Project Proposals', '/project-proposals/overview')}
+              {renderMobileLink('Projects', '/projects/overview')}
               {renderMobileLink('Blog', 'https://thenewboston.blog/', true)}
               {renderMobileLink('Assets', '/assets')}
               {renderMobileLink('FAQ', '/faq')}
