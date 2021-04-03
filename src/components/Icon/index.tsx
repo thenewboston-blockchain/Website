@@ -37,12 +37,12 @@ import OpenInNewIcon from 'mdi-react/OpenInNewIcon';
 import MenuIcon from 'mdi-react/MenuIcon';
 import MenuRightIcon from 'mdi-react/MenuRightIcon';
 import MinusIcon from 'mdi-react/MinusIcon';
+import NotebookCheckOutlineIcon from 'mdi-react/NotebookCheckOutlineIcon';
 import PencilIcon from 'mdi-react/PencilIcon';
 import PlusIcon from 'mdi-react/PlusIcon';
 import RadioboxBlankIcon from 'mdi-react/RadioboxBlankIcon';
 import RadioboxMarkedIcon from 'mdi-react/RadioboxMarkedIcon';
 import RedditIcon from 'mdi-react/RedditIcon';
-import SlackIcon from 'mdi-react/SlackIcon';
 import SortAscendingIcon from 'mdi-react/SortAscendingIcon';
 import SortDescendingIcon from 'mdi-react/SortDescendingIcon';
 import TextBoxIcon from 'mdi-react/TextBoxIcon';
@@ -88,13 +88,13 @@ export enum IconType {
   menu,
   menuRight,
   minus,
+  notebookCheckOutline,
   openInNew,
   pencil,
   plus,
   radioboxBlank,
   radioboxMarked,
   reddit,
-  slack,
   sortAscending,
   sortDescending,
   textBox,
@@ -192,6 +192,8 @@ const Icon = forwardRef<HTMLSpanElement, ComponentProps>(
           return <MenuRightIcon {...iconProps} />;
         case IconType.minus:
           return <MinusIcon {...iconProps} />;
+        case IconType.notebookCheckOutline:
+          return <NotebookCheckOutlineIcon {...iconProps} />;
         case IconType.openInNew:
           return <OpenInNewIcon {...iconProps} />;
         case IconType.pencil:
@@ -204,8 +206,6 @@ const Icon = forwardRef<HTMLSpanElement, ComponentProps>(
           return <RadioboxMarkedIcon {...iconProps} />;
         case IconType.reddit:
           return <RedditIcon {...iconProps} />;
-        case IconType.slack:
-          return <SlackIcon {...iconProps} />;
         case IconType.sortAscending:
           return <SortAscendingIcon {...iconProps} />;
         case IconType.sortDescending:

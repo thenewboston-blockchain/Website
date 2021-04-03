@@ -11,7 +11,7 @@ import './TopNavDesktopItems.scss';
 
 const communityPopoverItems: TopNavPopoverItemType[] = [
   {
-    description: 'Slack, GitHub, YouTube, LinkedIn, etc',
+    description: 'Discord, GitHub, YouTube, LinkedIn, etc',
     iconType: IconType.earth,
     title: 'Join the Community!',
     to: '/social',
@@ -27,6 +27,12 @@ const communityPopoverItems: TopNavPopoverItemType[] = [
     iconType: IconType.accountGroup,
     title: 'Teams',
     to: '/teams',
+  },
+  {
+    description: 'Read up on our community culture',
+    iconType: IconType.notebookCheckOutline,
+    title: 'Community Guidelines',
+    to: '/guidelines',
   },
 ];
 

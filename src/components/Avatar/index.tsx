@@ -26,12 +26,6 @@ export const getFormattedSrc = (src: string, size: number): string => {
       const [path] = src.split('?');
       return `${path}?s=${updatedSize}`;
     }
-    if (src.includes('slack')) {
-      const srcSplitArr = src.split('-');
-      srcSplitArr.pop();
-      const path = srcSplitArr.join('-');
-      return `${path}-${updatedSize}`;
-    }
 
     return src;
   } catch (error) {

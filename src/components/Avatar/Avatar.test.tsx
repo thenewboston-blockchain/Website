@@ -67,14 +67,6 @@ describe('Avatar component', () => {
       expect(result).toEqual(updatedUrl);
     });
 
-    it('gets correct url for slack', () => {
-      const url = 'https://ca.slack-edge.com/T07PJD1FZ-U01EDKBT8LA-a17fa362a21e-512';
-      const updatedUrl = 'https://ca.slack-edge.com/T07PJD1FZ-U01EDKBT8LA-a17fa362a21e-60';
-      const result = getFormattedSrc(url, baseProps.size);
-
-      expect(result).toEqual(updatedUrl);
-    });
-
     it('gets correct url for any other url', () => {
       const url = 'https://via.placeholder.com/150';
       const result = getFormattedSrc(url, baseProps.size);

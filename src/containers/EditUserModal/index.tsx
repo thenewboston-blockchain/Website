@@ -23,10 +23,10 @@ const EditUserModal: FC<ComponentProps> = ({close}) => {
 
   const initialValues = {
     accountNumber: activeUser.account_number || '',
+    discordUsername: activeUser.discord_username || '',
     displayName: activeUser.display_name || '',
     githubUsername: activeUser.github_username || '',
     profileImageUrl: activeUser.profile_image || '',
-    slackName: activeUser.slack_username || '',
   };
 
   const handleSubmit = async ({
@@ -34,18 +34,18 @@ const EditUserModal: FC<ComponentProps> = ({close}) => {
     displayName,
     githubUsername,
     profileImageUrl,
-    slackName,
+    discordUsername,
   }: FormValues): Promise<void> => {
     try {
       setSubmitting(true);
       await dispatch(
         editUser({
           account_number: accountNumber,
+          discord_username: discordUsername,
           display_name: displayName,
           github_username: githubUsername,
           pk: activeUser.pk,
           profile_image: profileImageUrl,
-          slack_username: slackName,
         }),
       );
       close();
@@ -57,10 +57,10 @@ const EditUserModal: FC<ComponentProps> = ({close}) => {
 
   const validationSchema = yup.object().shape({
     accountNumber: yup.string().length(64, 'Account Number must be 64 characters long'),
+    discordUserName: yup.string(),
     displayName: yup.string().required('This field is required'),
     githubUsername: yup.string(),
     profileImageUrl: yup.string().url('Must be a valid URL'),
-    slackName: yup.string(),
   });
 
   return (
