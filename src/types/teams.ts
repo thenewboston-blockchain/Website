@@ -1,3 +1,5 @@
+import {User} from 'types/app/User';
+
 export enum TeamName {
   all = 'All',
   audit = 'Audit',
@@ -30,14 +32,6 @@ export interface TeamResponsibility {
   subitems: string[];
 }
 
-export interface Team {
-  contributors: TeamContributor[];
-  description: string;
-  platforms: TeamPlatform[];
-  title: string;
-  responsibilities: TeamResponsibility[];
-}
-
 export interface TeamContributor {
   contributor: Contributor;
   createdDate: string;
@@ -45,9 +39,16 @@ export interface TeamContributor {
   title: string;
 }
 
-interface TeamLead {
+export interface Team {
+  team_members_meta: TeamMember[];
+  created_date: string;
+  modified_date: string;
+  pk: string;
   title: string;
-  isLead: boolean;
+  about: string;
+  responsibilities: string;
+  github: string;
+  slack: string;
 }
 
 export interface TeamMember {
@@ -56,10 +57,44 @@ export interface TeamMember {
   displayName: string;
   githubUsername: string;
   hourlyRate: number;
-  isLead: boolean;
   profileImage: string;
-  teams: TeamLead[];
+  teams: string;
   titles: string[];
+  is_lead: boolean;
+  job_title: string;
+  user: User;
+}
+
+export interface CoreTeamMember extends TeamMember {
+  hourlyRate: number;
+  coreTeam: string;
+}
+
+export interface ProjectTeamMember extends TeamMember {
+  project: string;
+}
+
+export interface GetTeamResponse {
+  team_members_meta: GetTeamMemberResponse[];
+  created_date: string;
+  modified_date: string;
+  pk: string;
+  title: string;
+  about: string;
+  responsibilities: string;
+  github: string;
+  slack: string;
+  discord: string;
+}
+
+export interface GetTeamMemberResponse {
+  user: string; // foreign key to user
+  is_lead: boolean;
+  team: string; // foreign key to team
+  pk: string;
+  job_title: string;
+  modified_date: string;
+  created_date: string;
 }
 
 export interface TeamsUrlParams {
