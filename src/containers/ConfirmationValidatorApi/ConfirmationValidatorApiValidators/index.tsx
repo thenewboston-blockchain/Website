@@ -4,7 +4,7 @@ import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSni
 
 const ConfirmationValidatorApiValidators: FC = () => {
   return (
-    <DocContainer className="ConfirmationValidatorApiValidators" title="Validators" lastUpdated="15 Jan 2021">
+    <DocContainer className="ConfirmationValidatorApiValidators" title="Validators" lastUpdated="3 Apr 2021">
       <p>Confirmation validators will maintain a record of all connected validators.</p>
 
       <DocEndpoint endpoint="/validators" method="GET" />
@@ -89,18 +89,18 @@ const ConfirmationValidatorApiValidators: FC = () => {
       />
       <RequestResponseSnippet
         code={`{
-  account_number: 'd62165ea6102a74fd484176226cd6ed8f7fc779117138e3ee2d9881ff4fc5a04',
-  ip_address: '144.126.219.17',
-  node_identifier: '38ce9d9a245b2c5c923b1a6e8bbf5324a8cd57d71c977aef6a457740d7fd6451',
-  port: 80,
-  protocol: 'http',
-  version: 'v1.4',
-  default_transaction_fee: 1,
-  root_account_file: 'http://144.126.219.17:80/media/root_account_file.json',
-  root_account_file_hash: 'ab9b95e5bb1dc66dd57ebf2cb8a8dece41748389d68077f74c916659f4bd2f1b',
-  seed_block_identifier: '',
-  daily_confirmation_rate: 1,
-  trust: '12.00'
+  "account_number": "d62165ea6102a74fd484176226cd6ed8f7fc779117138e3ee2d9881ff4fc5a04",
+  "ip_address": "144.126.219.17",
+  "node_identifier": "38ce9d9a245b2c5c923b1a6e8bbf5324a8cd57d71c977aef6a457740d7fd6451",
+  "port": 80,
+  "protocol": "http",
+  "version": "v1.4",
+  "default_transaction_fee": 1,
+  "root_account_file": "http://144.126.219.17:80/media/root_account_file.json",
+  "root_account_file_hash": "ab9b95e5bb1dc66dd57ebf2cb8a8dece41748389d68077f74c916659f4bd2f1b",
+  "seed_block_identifier": "",
+  "daily_confirmation_rate": 1,
+  "trust": "12.00"
 }`}
         heading="Response"
       />

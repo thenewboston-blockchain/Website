@@ -4,7 +4,7 @@ import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSni
 
 const PrimaryValidatorApiBanks: FC = () => {
   return (
-    <DocContainer className="PrimaryValidatorApiBanks" title="Banks" lastUpdated="15 Jan 2021">
+    <DocContainer className="PrimaryValidatorApiBanks" title="Banks" lastUpdated="3 Apr 2021">
       <p>The primary validator will maintain a record of all connected banks on the network.</p>
 
       <DocEndpoint endpoint="/banks" method="GET" />
@@ -80,14 +80,14 @@ const PrimaryValidatorApiBanks: FC = () => {
       />
       <RequestResponseSnippet
         code={`{
-  account_number: '9a275161478536d0a5b88ff05d429b9a9e63d0032a46e7a6a8f088da89c69da5',
-  ip_address: '13.57.215.62',
-  node_identifier: '59af0721c572e6032b835722b5fec22110daad069dc135f1e81794747dbe626f',
-  port: 80,
-  protocol: 'http',
-  version: 'v1.0',
-  default_transaction_fee: 1,
-  trust: '65.55'
+  "account_number": "9a275161478536d0a5b88ff05d429b9a9e63d0032a46e7a6a8f088da89c69da5",
+  "ip_address": "13.57.215.62",
+  "node_identifier": "59af0721c572e6032b835722b5fec22110daad069dc135f1e81794747dbe626f",
+  "port": 80,
+  "protocol": "http",
+  "version": "v1.0",
+  "default_transaction_fee": 1,
+  "trust": "65.55"
 }`}
         heading="Response"
       />
