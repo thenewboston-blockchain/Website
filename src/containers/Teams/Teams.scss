@@ -29,6 +29,13 @@
     grid-column: 1 / span 1;
   }
 
+  &__loader-container {
+    left: 50%;
+    position: absolute;
+    top: 30%;
+    transform: translate(-50%, -30%);
+  }
+
   &__resources {
     &-item {
       display: block;

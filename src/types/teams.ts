@@ -13,33 +13,7 @@ export enum TeamName {
   marketing = 'Marketing',
 }
 
-interface Contributor {
-  contributorId: string;
-  discordUsername: string;
-  displayName: string;
-  githubUsername: string;
-  profileImage: string;
-}
-
-export interface TeamPlatform {
-  label: string;
-  link: string;
-  name: string;
-}
-
-export interface TeamResponsibility {
-  item: string;
-  subitems: string[];
-}
-
-export interface TeamContributor {
-  contributor: Contributor;
-  createdDate: string;
-  isLead: boolean;
-  title: string;
-}
-
-export interface Team {
+export type Team = {
   team_members_meta: TeamMember[];
   created_date: string;
   modified_date: string;
@@ -49,53 +23,27 @@ export interface Team {
   responsibilities: string;
   github: string;
   slack: string;
-}
+};
 
-export interface TeamMember {
-  contributorId: string;
-  discordUsername: string;
-  displayName: string;
-  githubUsername: string;
-  hourlyRate: number;
-  profileImage: string;
-  teams: string;
-  titles: string[];
+export type CoreTeam = Omit<Team, 'team_members_meta'> & {
+  core_members_meta: CoreTeamMember[];
+};
+
+export type TeamMember = {
   is_lead: boolean;
   job_title: string;
   user: User;
-}
+};
 
-export interface CoreTeamMember extends TeamMember {
-  hourlyRate: number;
-  coreTeam: string;
-}
+export type CoreTeamMember = TeamMember & {
+  weekly_commitment_hours: number;
+  hourly_rate: number;
+  core_team: string; // foreign key to core team
+};
 
-export interface ProjectTeamMember extends TeamMember {
+export type ProjectTeamMember = TeamMember & {
   project: string;
-}
-
-export interface GetTeamResponse {
-  team_members_meta: GetTeamMemberResponse[];
-  created_date: string;
-  modified_date: string;
-  pk: string;
-  title: string;
-  about: string;
-  responsibilities: string;
-  github: string;
-  slack: string;
-  discord: string;
-}
-
-export interface GetTeamMemberResponse {
-  user: string; // foreign key to user
-  is_lead: boolean;
-  team: string; // foreign key to team
-  pk: string;
-  job_title: string;
-  modified_date: string;
-  created_date: string;
-}
+};
 
 export interface TeamsUrlParams {
   resource?: string;

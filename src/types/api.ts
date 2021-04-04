@@ -13,9 +13,7 @@ export interface Token {
 }
 
 export interface APIArrayResponse<T> {
-  data?: {
-    results: T;
-  };
+  results: T[];
 }
 
 export interface APIResponse<T> {
