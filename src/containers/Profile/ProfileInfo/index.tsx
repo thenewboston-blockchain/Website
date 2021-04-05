@@ -54,9 +54,9 @@ const ProfileInfo: FC<ComponentProps> = ({user}) => {
               {titles[index]} on <A href={`/teams/${getTeamPathname(team.title)}`}>{team.title}</A>
             </div>
           ))}
-        <div className="ProfileInfo__member-slack">
-          <Icon className="ProfileInfo__member-slack-icon" icon={IconType.slack} size={18} />
-          {user.slack_username}
+        <div className="ProfileInfo__member-discord">
+          <Icon className="ProfileInfo__member-discord-icon" icon={IconType.discord} size={18} />
+          {user.discord_username}
         </div>
         <div className="ProfileInfo__member-github">
           <Icon className="ProfileInfo__member-github-icon" icon={IconType.github} size={18} />
