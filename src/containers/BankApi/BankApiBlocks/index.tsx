@@ -5,14 +5,13 @@ import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSni
 
 const BankApiBlocks: FC = () => {
   return (
-    <DocContainer className="BankApiBlocks" title="Blocks" lastUpdated="15 Jan 2021">
+    <DocContainer className="BankApiBlocks" title="Blocks" lastUpdated="31 Mar 2021">
       <p>
         A block is a group of one or more transactions. There are often multiple transactions (usually fees) to
         different recipients within a single block.
       </p>
       <p>
-        More information about blocks can be found in the <NavLink to="/guide/blocks">Blocks</NavLink> section of the
-        guide.
+        For more information, see <NavLink to="/guide/blocks">Blocks</NavLink>.
       </p>
 
       <DocEndpoint endpoint="/blocks" method="GET" />
