@@ -1,5 +1,4 @@
 import React, {FC} from 'react';
-import {NavLink} from 'react-router-dom';
 
 import {
   DocContainer,
@@ -12,7 +11,7 @@ import {
 
 const BankApiConfirmationBlocks: FC = () => {
   return (
-    <DocContainer className="BankApiConfirmationBlocks" title="Confirmation Blocks" lastUpdated="15 Jan 2021">
+    <DocContainer className="BankApiConfirmationBlocks" title="Confirmation Blocks" lastUpdated="30 Mar 2021">
       <p>
         Confirmation blocks are blocks that have been signed by a validator as confirmation that it has been added to
         their blockchain. The general flow from bank account to confirmation block is as follows:
@@ -25,11 +24,6 @@ const BankApiConfirmationBlocks: FC = () => {
         </li>
         <li>After successful validation, the validator will send a confirmation block back to the bank</li>
       </DocList>
-
-      <p>
-        More information about the confirmation process can be found in the{' '}
-        <NavLink to="/guide/confirmation-services">Confirmation Services</NavLink> section of the guide.
-      </p>
 
       <DocEndpoint endpoint="/confirmation_blocks" method="GET" />
       <QueryParamsOffsetAndLimit returnedEntityName="confirmation blocks" />

@@ -1,16 +1,11 @@
 import React, {FC} from 'react';
-import {NavLink} from 'react-router-dom';
 
 import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSnippet, TableParams} from 'components';
 
 const BankApiValidators: FC = () => {
   return (
     <DocContainer className="BankApiValidators" title="Validators" lastUpdated="3 Apr 2021">
-      <p>Banks will maintain a record of all validators, both primary and confirmation, that they are connected to.</p>
-      <p>
-        More information about validators can be found in the <NavLink to="/guide/validators">Validators</NavLink>{' '}
-        section of the guide.
-      </p>
+      <p>Banks will maintain a record of all validators that they are connected to, both primary and confirmation.</p>
 
       <DocEndpoint endpoint="/validators" method="GET" />
       <QueryParamsOffsetAndLimit returnedEntityName="validators" />
