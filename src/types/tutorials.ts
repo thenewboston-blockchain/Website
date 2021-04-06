@@ -1,13 +1,21 @@
 export type VideoType = 'youtube' | 'vimeo';
 
-export interface Video {
-  author: string;
-  category: string[];
+export interface CreatedModified {
   created_date: string;
+  modified_date: string;
+}
+
+export interface Category extends CreatedModified {
+  pk: string;
+  name: string;
+}
+
+export interface Video extends CreatedModified {
+  author: string;
+  categories: string[];
   description: string;
   duration: number;
   language: string;
-  modified_date: string;
   playlist: string | null;
   published_at: string;
   tags: string[];
@@ -18,13 +26,11 @@ export interface Video {
   video_type: VideoType;
 }
 
-export interface Playlist {
+export interface Playlist extends CreatedModified {
   author: string;
-  category: string[];
-  created_date: string;
+  categories: string[];
   description: string;
   language: string;
-  modified_date: string;
   playlist_id: string;
   playlist_type: string;
   published_at: string;
