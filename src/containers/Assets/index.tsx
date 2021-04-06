@@ -42,7 +42,7 @@ const Assets: FC = () => {
         })}
       >
         <A className="Assets__download-button" href={asset.downloadLink} newWindow={false}>
-          <Icon icon={IconType.download} />
+          <Icon icon={IconType.download} totalSize={42} />
         </A>
         <div className="Assets__card">
           <img alt={`tnb logo`} className={clsx('Assets__logo')} src={asset.imageUrl} />

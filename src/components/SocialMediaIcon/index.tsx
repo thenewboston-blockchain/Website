@@ -15,7 +15,7 @@ interface ComponentProps {
 const SocialMediaIcon: FC<ComponentProps> = ({className, iconSize, website}) => {
   return (
     <A className={clsx('SocialMediaIcon', className)} href={socialMediaUrls[website]}>
-      <Icon icon={IconType[website]} size={iconSize} />
+      <Icon icon={IconType[website]} size={iconSize} totalSize={42} />
     </A>
   );
 };
