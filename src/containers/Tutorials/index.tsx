@@ -6,13 +6,14 @@ import {FlatNavLinks, Loader, PageTitle} from 'components';
 import {NavOption} from 'types/option';
 import {Category, TutorialsUrlParams} from 'types/tutorials';
 
+import Playlists from './Playlists';
 import './Tutorials.scss';
 
 const Tutorials: FC = () => {
   const history = useHistory();
   const {category: categoryParam} = useParams<TutorialsUrlParams>();
 
-  const [categoriesLoading, setCategoriesLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(true);
   const [errorMessage, setErrorMessage] = useState<string>('');
   const [categories, setCategories] = useState<NavOption[]>([]);
   const [categoryFilter, setCategoryFilter] = useState<string>('All');
@@ -31,20 +32,20 @@ const Tutorials: FC = () => {
       } catch (error) {
         setErrorMessage(error.message);
       } finally {
-        setCategoriesLoading(false);
+        setLoading(false);
       }
     })();
   }, []);
 
   useEffect(() => {
-    if (!categoriesLoading) {
+    if (!loading) {
       if (categories.some((category: NavOption) => category.pathname === categoryParam)) {
         setCategoryFilter(categoryParam);
       } else {
         history.replace('/tutorials/All');
       }
     }
-  }, [categories, categoriesLoading, categoryParam, history]);
+  }, [categories, loading, categoryParam, history]);
 
   const handleNavOptionClick = useCallback(
     (option: string) => (): void => {
@@ -59,17 +60,15 @@ const Tutorials: FC = () => {
     );
   };
 
-  const renderPlaylists = () => {
-    return 'Playlists';
-  };
-
-  if (categoriesLoading) return <Loader />;
+  if (loading) return <Loader />;
   return (
     <>
       <PageTitle title="Tutorials" />
       <div className="Tutorials">
-        <div className="Tutorials__left-menu">{renderCategoryFilter()}</div>
-        <div className="Tutorials__playlists-list">{renderPlaylists()}</div>
+        <aside className="Tutorials__left-menu">{renderCategoryFilter()}</aside>
+        <div className="Tutorials__playlists-list">
+          <Playlists category={categoryFilter} />
+        </div>
       </div>
     </>
   );
