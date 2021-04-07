@@ -8,6 +8,7 @@ interface ComponentProps {
   displayName: string;
   discordUsername: string;
   githubUsername?: string;
+  hourlyRate: number;
   isLead: boolean;
   profileImage: string;
   titles: string[];
@@ -17,6 +18,7 @@ const TeamMemberCard: FC<ComponentProps> = ({
   displayName,
   discordUsername,
   githubUsername,
+  hourlyRate,
   isLead,
   profileImage,
   titles,
@@ -35,6 +37,7 @@ const TeamMemberCard: FC<ComponentProps> = ({
       <div className="TeamMemberCard__details-title">{titles.join(', ')}</div>
       <div>Discord: {discordUsername || '-'}</div>
       <div>Github: {githubUsername ? <A href={`https://github.com/${githubUsername}`}>{githubUsername}</A> : '-'}</div>
+      <div>Hourly Rate: {hourlyRate}</div>
     </div>
   );
 

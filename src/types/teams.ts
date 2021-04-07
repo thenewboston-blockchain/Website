@@ -54,6 +54,7 @@ export interface TeamMember {
   discordUsername: string;
   displayName: string;
   githubUsername: string;
+  hourlyRate: number;
   isLead: boolean;
   profileImage: string;
   teams: TeamLead[];
