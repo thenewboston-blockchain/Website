@@ -8,8 +8,6 @@ import {TeamMember, TeamName, TeamsUrlParams, TeamTabOptions} from 'types/teams'
 import {getTeamMembers} from 'utils/data';
 
 import InternalHowToSetUpPaymentBoard from './Resources/InternalHowToSetUpPaymentBoard';
-import InternalNewUserOperations from './Resources/InternalNewUserOperations';
-import InternalProductDevelopment from './Resources/InternalProductDevelopment';
 import InternalTeamLeadOnboarding from './Resources/InternalTeamLeadOnboarding';
 import InternalTeamMemberPayments from './Resources/InternalTeamMemberPayments';
 import InternalBountyAccountRefills from './Resources/InternalBountyAccountRefills';
@@ -38,14 +36,6 @@ const pageData: PageDataObject = {
   'how-to-set-up-payment-board': {
     content: <InternalHowToSetUpPaymentBoard />,
     name: 'How to set up payment boards',
-  },
-  'new-user-operations': {
-    content: <InternalNewUserOperations />,
-    name: 'How to onboard new users',
-  },
-  'product-development': {
-    content: <InternalProductDevelopment />,
-    name: 'How the product development process works',
   },
   'team-lead-onboarding': {
     content: <InternalTeamLeadOnboarding />,

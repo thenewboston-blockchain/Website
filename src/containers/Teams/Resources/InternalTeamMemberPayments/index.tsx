@@ -11,7 +11,7 @@ const InternalTeamMemberPayments: FC = () => {
         All team members are eligible to submit a timesheet each day via a GitHub issue in the{' '}
         <a href="https://github.com/thenewboston-developers/Activity-Reports" target="_blank" rel="noreferrer">
           Activity-Reports
-        </a>
+        </a>{' '}
         repository. This will be a record of all tasks that the team member worked on that day including:
       </p>
       <DocList variant="ul">
