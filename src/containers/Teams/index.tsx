@@ -11,6 +11,8 @@ import InternalHowToSetUpPaymentBoard from './Resources/InternalHowToSetUpPaymen
 import InternalNewUserOperations from './Resources/InternalNewUserOperations';
 import InternalProductDevelopment from './Resources/InternalProductDevelopment';
 import InternalTeamLeadOnboarding from './Resources/InternalTeamLeadOnboarding';
+import InternalTeamMemberPayments from './Resources/InternalTeamMemberPayments';
+import InternalBountyAccountRefills from './Resources/InternalBountyAccountRefills';
 import TeamMemberCard from './TeamMemberCard';
 import TeamOverview from './TeamOverview';
 import TeamTabs from './TeamTabs';
@@ -29,6 +31,10 @@ const sortTeamMembers = (members: TeamMember[]): TeamMember[] => {
 };
 
 const pageData: PageDataObject = {
+  'bounty-account-refills': {
+    content: <InternalBountyAccountRefills />,
+    name: 'Bounty Account Refills',
+  },
   'how-to-set-up-payment-board': {
     content: <InternalHowToSetUpPaymentBoard />,
     name: 'How to set up payment boards',
@@ -44,6 +50,10 @@ const pageData: PageDataObject = {
   'team-lead-onboarding': {
     content: <InternalTeamLeadOnboarding />,
     name: 'How to onboard team leads',
+  },
+  'team-member-payments': {
+    content: <InternalTeamMemberPayments />,
+    name: 'Team Member Payments',
   },
 };
 
