@@ -86,7 +86,8 @@ const App: FC = () => {
           <Route exact path="/sign-in" component={SignIn} />
           <Route exact path="/sign-out" component={SignOut} />
           <Route path="/style-guide/:chapter?" component={StyleGuide} />
-          <Route exact path="/tutorials" component={Tutorials} />
+          <Redirect exact path="/tutorials" to="/tutorials/All" />
+          <Route exact path="/tutorials/:category" component={Tutorials} />
           <Route path="/users/:userId" component={Profile} />
           <Route path="/webmap" component={WebMap} />
           <Redirect to="/" />

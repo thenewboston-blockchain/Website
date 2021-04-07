@@ -39,3 +39,8 @@ export interface Playlist extends CreatedModified {
   uuid: string;
   video_list: Video[];
 }
+
+export interface TutorialsUrlParams {
+  category: string;
+  playlistId: string;
+}
