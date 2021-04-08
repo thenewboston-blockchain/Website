@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocImage, DocList} from 'components';
+import {A, DocContainer, DocImage, DocList} from 'components';
 import 'containers/Teams/Resources/Resources.scss';
 import TeamPaymentProcess from './TeamPaymentProcess.png';
 
@@ -9,10 +9,8 @@ const InternalTeamMemberPayments: FC = () => {
     <DocContainer className="Resource" title="Team Member Payments">
       <p>
         All team members are eligible to submit a timesheet each day via a GitHub issue in the{' '}
-        <a href="https://github.com/thenewboston-developers/Activity-Reports" target="_blank" rel="noreferrer">
-          Activity-Reports
-        </a>{' '}
-        repository. This will be a record of all tasks that the team member worked on that day including:
+        <A href="https://github.com/thenewboston-developers/Activity-Reports">Activity-Reports</A> repository. This will
+        be a record of all tasks that the team member worked on that day including:
       </p>
       <DocList variant="ul">
         <li>a short description of the task</li>
@@ -49,14 +47,7 @@ const InternalTeamMemberPayments: FC = () => {
       <p>
         When sending payments, the coin value will be calculated using both the time worked and the hourly rate
         specified{' '}
-        <a
-          href="https://docs.google.com/spreadsheets/u/0/d/109TS__HEndsbOU40EEDSXtB-J6vuysz4EavLjIkcc7A/edit"
-          target="_blank"
-          rel="noreferrer"
-        >
-          here
-        </a>
-        .
+        <A href="https://docs.google.com/spreadsheets/u/0/d/109TS__HEndsbOU40EEDSXtB-J6vuysz4EavLjIkcc7A/edit">here</A>.
       </p>
       <DocImage alt="team payment process" maxWidth={720} src={TeamPaymentProcess} />
     </DocContainer>
