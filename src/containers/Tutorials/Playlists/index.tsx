@@ -38,8 +38,8 @@ const Playlists: FC<PlaylistsParams> = ({category}) => {
         <Loader />
       ) : (
         <div className="Playlists__grid">
-          {playlists.map(({title, uuid}) => (
-            <PlaylistCard key={uuid} title={title} />
+          {playlists.map(({author, title, thumbnail, video_list, uuid}) => (
+            <PlaylistCard author={author} key={uuid} title={title} thumbnail={thumbnail} video_list={video_list} />
           ))}
         </div>
       )}

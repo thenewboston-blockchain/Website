@@ -1,0 +1,42 @@
+.PlaylistCard {
+  max-width: 320px;
+  min-width: 320px;
+
+  &__author {
+    margin-bottom: 4px;
+
+    &-name {
+      color: var(--color-secondary);
+    }
+  }
+
+  &__bottom {
+    color: var(--color-sail-gray-900);
+    line-height: 125%;
+    padding: 16px;
+    padding-top: 12px;
+  }
+
+  &__details {
+    color: var(--color-sail-gray-500);
+    font-size: 14px;
+
+    &-duration {
+      margin-left: 8px;
+    }
+
+    &-videos {
+      margin-right: 8px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  &__thumbnail {
+    height: auto;
+    width: 100%;
+  }
+}

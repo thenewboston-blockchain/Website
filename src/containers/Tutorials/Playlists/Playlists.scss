@@ -1,8 +1,14 @@
 .Playlists {
+  &__grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, 320px);
+  }
+
   &__header {
     font-family: var(--font-family-inter-light);
     font-size: 36px;
     line-height: 1.25;
-    margin: 16px 0 28px;
+    margin: 16px 0 32px;
   }
 }
