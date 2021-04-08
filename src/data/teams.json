@@ -25,7 +25,8 @@
           "displayName": "Jesus Avina",
           "githubUsername": "javina89",
           "profileImage": "https://avatars.githubusercontent.com/u/13725042?s=460&u=ea84af4231fdf89f8454b485de5ee3df49321621&v=4"
-        }
+        },
+        "hourlyRate": 700
       },
       {
         "title": "Auditor",
@@ -37,7 +38,8 @@
           "displayName": "Manish Ram",
           "githubUsername": "manishram",
           "profileImage": "https://avatars0.githubusercontent.com/u/22790904?s=400&u=643810e6c9d5686df409132b01863f9e065df6c1&v=4"
-        }
+        },
+        "hourlyRate": 600
       },
       {
         "title": "Auditor",
@@ -49,7 +51,8 @@
           "displayName": "Nikhil Taneja",
           "githubUsername": "itsnikhil",
           "profileImage": "https://avatars1.githubusercontent.com/u/20350674?v=4"
-        }
+        },
+        "hourlyRate": 600
       }
     ],
     "responsibilities": [
@@ -92,7 +95,8 @@
           "displayName": "Dmitry Mugtasimov",
           "githubUsername": "dmugtasimov",
           "profileImage": "https://avatars.githubusercontent.com/u/749833?v=4"
-        }
+        },
+        "hourlyRate": 1200
       }
     ],
     "responsibilities": [
@@ -135,7 +139,8 @@
           "displayName": "Muhammad Anas Azam Bhatti",
           "githubUsername": "ma2b0043",
           "profileImage": "https://avatars.githubusercontent.com/u/60430226?v=4"
-        }
+        },
+        "hourlyRate": 800
       },
       {
         "title": "Head of Human Resources",
@@ -147,7 +152,8 @@
           "displayName": "Chrisha",
           "githubUsername": "Chrisha1212",
           "profileImage": "https://avatars.githubusercontent.com/u/72809444?s=460&u=e2138725222fb09a546d7d1e164cf64f5583648b&v=4"
-        }
+        },
+        "hourlyRate": 800
       }
     ],
     "responsibilities": [
@@ -206,7 +212,8 @@
           "displayName": "Kristy Lee",
           "githubUsername": "kristykjlee",
           "profileImage": "https://avatars1.githubusercontent.com/u/68207101?s=460&u=f001c3eb8dfc9444d1abff7ec2ef5e4f0f1ccd5e&v=4"
-        }
+        },
+        "hourlyRate": 1200
       },
       {
         "title": "UI/UX Designer",
@@ -216,9 +223,10 @@
           "contributorId": "7",
           "discordUsername": "Mr. K#3316",
           "displayName": "Kashif Ahmad",
-          "githubUsername": "https://github.com/kashikushi",
+          "githubUsername": "kashikushi",
           "profileImage": "https://avatars.githubusercontent.com/u/35629401?v=4"
-        }
+        },
+        "hourlyRate": 1200
       }
     ],
     "responsibilities": [
@@ -274,7 +282,8 @@
           "displayName": "Justin",
           "githubUsername": "angle943",
           "profileImage": "https://avatars2.githubusercontent.com/u/5943963?v=4"
-        }
+        },
+        "hourlyRate": 1000
       },
       {
         "title": "Front-End Developer",
@@ -286,7 +295,8 @@
           "displayName": "Sanjeev Sharma",
           "githubUsername": "thesanjeevsharma",
           "profileImage": "https://avatars3.githubusercontent.com/u/29539278?v=4"
-        }
+        },
+        "hourlyRate": 900
       },
       {
         "title": "Front-End Developer",
@@ -298,7 +308,8 @@
           "displayName": "James Pang",
           "githubUsername": "jamessspanggg",
           "profileImage": "https://avatars0.githubusercontent.com/u/32864116?v=4"
-        }
+        },
+        "hourlyRate": 900
       },
       {
         "title": "Technical Writer",
@@ -310,7 +321,8 @@
           "displayName": "Vyz",
           "githubUsername": "led76marx",
           "profileImage": "https://avatars.githubusercontent.com/u/20023713?v=4"
-        }
+        },
+        "hourlyRate": 800
       },
       {
         "title": "QA Engineer",
@@ -322,7 +334,8 @@
           "displayName": "Rajput Usman",
           "githubUsername": "Rajputusman",
           "profileImage": "https://avatars.githubusercontent.com/u/65516140?v=4"
-        }
+        },
+        "hourlyRate": 600
       }
     ],
     "responsibilities": [
@@ -359,7 +372,8 @@
           "displayName": "Bucky Roberts",
           "githubUsername": "buckyroberts",
           "profileImage": "https://avatars2.githubusercontent.com/u/8547538?v=4"
-        }
+        },
+        "hourlyRate": 1000
       }
     ],
     "responsibilities": [
@@ -406,7 +420,8 @@
           "displayName": "Tristan Spearing",
           "githubUsername": "tspearing",
           "profileImage": "https://avatars1.githubusercontent.com/u/77364430?&v=4"
-        }
+        },
+        "hourlyRate": 800
       },
       {
         "title": "Social Media Moderator",
@@ -418,7 +433,8 @@
           "displayName": "Bojan Ilijevski",
           "githubUsername": "bojan-ilijevski",
           "profileImage": "https://avatars2.githubusercontent.com/u/58598872?&v=4"
-        }
+        },
+        "hourlyRate": 600
       }
     ],
     "responsibilities": [
@@ -461,7 +477,8 @@
           "displayName": "Justin Ndwiga",
           "githubUsername": "ThaDeveloper",
           "profileImage": "https://avatars.githubusercontent.com/u/12385482?v=4"
-        }
+        },
+        "hourlyRate": 900
       }
     ],
     "responsibilities": [

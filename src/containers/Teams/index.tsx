@@ -7,10 +7,8 @@ import {PageDataObject} from 'types/page-data';
 import {TeamMember, TeamName, TeamsUrlParams, TeamTabOptions} from 'types/teams';
 import {getTeamMembers} from 'utils/data';
 
-import InternalHowToSetUpPaymentBoard from './Resources/InternalHowToSetUpPaymentBoard';
-import InternalNewUserOperations from './Resources/InternalNewUserOperations';
-import InternalProductDevelopment from './Resources/InternalProductDevelopment';
-import InternalTeamLeadOnboarding from './Resources/InternalTeamLeadOnboarding';
+import InternalTeamMemberPayments from './Resources/InternalTeamMemberPayments';
+import InternalBountyAccountRefills from './Resources/InternalBountyAccountRefills';
 import TeamMemberCard from './TeamMemberCard';
 import TeamOverview from './TeamOverview';
 import TeamTabs from './TeamTabs';
@@ -29,21 +27,13 @@ const sortTeamMembers = (members: TeamMember[]): TeamMember[] => {
 };
 
 const pageData: PageDataObject = {
-  'how-to-set-up-payment-board': {
-    content: <InternalHowToSetUpPaymentBoard />,
-    name: 'How to set up payment boards',
+  'bounty-account-refills': {
+    content: <InternalBountyAccountRefills />,
+    name: 'Bounty Account Refills',
   },
-  'new-user-operations': {
-    content: <InternalNewUserOperations />,
-    name: 'How to onboard new users',
-  },
-  'product-development': {
-    content: <InternalProductDevelopment />,
-    name: 'How the product development process works',
-  },
-  'team-lead-onboarding': {
-    content: <InternalTeamLeadOnboarding />,
-    name: 'How to onboard team leads',
+  'team-member-payments': {
+    content: <InternalTeamMemberPayments />,
+    name: 'Team Member Payments',
   },
 };
 
@@ -127,11 +117,12 @@ const Teams: FC = () => {
   const renderTeamMembers = useCallback((): ReactNode => {
     if (!filteredMembers.length) return <EmptyPage />;
     return filteredMembers.map(
-      ({contributorId, discordUsername, displayName, githubUsername, isLead, profileImage, titles}) => (
+      ({contributorId, discordUsername, displayName, githubUsername, hourlyRate, isLead, profileImage, titles}) => (
         <TeamMemberCard
           displayName={displayName}
           discordUsername={discordUsername}
           githubUsername={githubUsername}
+          hourlyRate={hourlyRate}
           isLead={isLead}
           key={contributorId}
           profileImage={profileImage}
