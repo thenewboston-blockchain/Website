@@ -1,7 +1,7 @@
 import React, {FC, ReactNode} from 'react';
 import {useHistory, useLocation} from 'react-router-dom';
-
 import {Icon, IconType} from '@thenewboston/ui';
+
 import {A, Button} from 'components';
 import {OPENINGS_GOOGLE_FORM_LINK} from 'constants/urls';
 import {Opening} from 'types/openings';

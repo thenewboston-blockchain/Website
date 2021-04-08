@@ -1,7 +1,7 @@
 import React, {forwardRef, KeyboardEvent} from 'react';
 import {Link} from 'react-router-dom';
-
 import {Icon, IconType} from '@thenewboston/ui';
+
 import {A} from 'components';
 
 import './TopNavPopoverItem.scss';

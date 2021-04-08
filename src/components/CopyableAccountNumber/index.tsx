@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import clsx from 'clsx';
-
 import {Icon, IconType} from '@thenewboston/ui';
+
 import {displayToast} from 'utils/toast';
 
 import './CopyableAccountNumber.scss';

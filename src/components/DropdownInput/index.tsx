@@ -1,5 +1,4 @@
 import React, {FC, useState} from 'react';
-
 import {Icon, IconType} from '@thenewboston/ui';
 
 import './DropdownInput.scss';

@@ -1,8 +1,7 @@
 import React, {FC, useEffect, useRef} from 'react';
 import clsx from 'clsx';
-import {bemify} from '@thenewboston/utils';
-
 import {Icon, IconType} from '@thenewboston/ui';
+import {bemify} from '@thenewboston/utils';
 
 import './Radio.scss';
 

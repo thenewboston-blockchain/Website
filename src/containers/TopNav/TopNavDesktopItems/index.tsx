@@ -1,8 +1,8 @@
 import React, {useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
-
 import {IconType} from '@thenewboston/ui';
+
 import {Avatar, Button} from 'components';
 import TopNavLink from 'containers/TopNav/TopNavLink';
 import TopNavPopover, {TopNavPopoverItemType} from 'containers/TopNav/TopNavPopover';

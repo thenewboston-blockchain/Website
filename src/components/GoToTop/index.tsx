@@ -1,5 +1,4 @@
 import React, {FC, useCallback, useEffect, useState} from 'react';
-
 import {Icon, IconType} from '@thenewboston/ui';
 
 import './GoToTop.scss';

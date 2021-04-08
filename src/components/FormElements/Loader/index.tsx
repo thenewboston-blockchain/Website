@@ -1,6 +1,5 @@
 import React, {FC, memo} from 'react';
 import clsx from 'clsx';
-
 import {Icon, IconType} from '@thenewboston/ui';
 
 import './Loader.scss';

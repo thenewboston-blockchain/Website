@@ -1,8 +1,8 @@
 import React, {FC, useState} from 'react';
 import {RouteComponentProps, withRouter} from 'react-router-dom';
 import clsx from 'clsx';
-
 import {Icon, IconType} from '@thenewboston/ui';
+
 import {getFirstPathParam} from 'utils/urls';
 
 import './MenuGroup.scss';

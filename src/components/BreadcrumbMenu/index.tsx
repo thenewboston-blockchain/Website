@@ -2,8 +2,8 @@ import React, {FC, ReactNode, useEffect, useState} from 'react';
 import useOnclickOutside from 'react-cool-onclickoutside';
 import {useLocation} from 'react-router-dom';
 import clsx from 'clsx';
-
 import {Icon, IconType} from '@thenewboston/ui';
+
 import {Shadow} from 'components';
 import './BreadcrumbMenu.scss';
 

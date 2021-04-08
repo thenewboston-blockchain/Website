@@ -2,8 +2,8 @@ import React, {FC, ReactNode, useState} from 'react';
 import {useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
 import clsx from 'clsx';
-
 import {Icon, IconType} from '@thenewboston/ui';
+
 import {A} from 'components';
 import {selectActiveUser} from 'selectors/state';
 import './TopNavMobileMenu.scss';

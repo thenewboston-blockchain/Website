@@ -1,7 +1,7 @@
 import React, {FC, memo, ReactNode} from 'react';
 import clsx from 'clsx';
-
 import {Icon, IconType} from '@thenewboston/ui';
+
 import {Asset} from 'types/assets';
 import {A, PageTitle} from 'components';
 import {socialMediaUrls} from 'utils/social-media';
