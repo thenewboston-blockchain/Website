@@ -457,12 +457,12 @@
     ]
   },
   {
-    "title": "Website API",
-    "description": "Architect, build, and maintain thenewboston website API.",
+    "title": "Back-End",
+    "description": "Architect, build, and maintain the backend architecture of thenewboston.",
     "platforms": [
       {
         "name": "github",
-        "label": "Website-API",
+        "label": "Back-End",
         "link": "https://github.com/thenewboston-developers/Website-API"
       }
     ],
