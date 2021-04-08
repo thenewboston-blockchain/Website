@@ -479,6 +479,19 @@
           "profileImage": "https://avatars.githubusercontent.com/u/12385482?v=4"
         },
         "hourlyRate": 900
+      },
+      {
+        "title": "DevOps Engineer",
+        "isLead": false,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "84",
+          "discordUsername": "truyenhv#5481",
+          "displayName": "Truyen Hoang",
+          "githubUsername": "truyenhv",
+          "profileImage": "https://avatars.githubusercontent.com/u/32347748?v=4"
+        },
+        "hourlyRate": 900
       }
     ],
     "responsibilities": [
