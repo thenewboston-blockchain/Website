@@ -12,9 +12,13 @@ const InternalBountyAccountRefills: FC = () => {
         reward payments when bounties are completed. These payments will also be monitored by the auditing team.
       </p>
       <p>
-        When the funds in a teams bounty account are depleted the team lead may request additional funding via a GitHub
-        issue. When the majority of auditors approve the request (after verifying that all previous funds have been used
-        properly) the issue will be labeled as <strong>Approved</strong>. At that time, the governors will send the
+        When the funds in a team's bounty account are depleted the team lead may request additional funding via a GitHub
+        issue in the{' '}
+        <a href="https://github.com/thenewboston-developers/Activity-Reports" target="_blank" rel="noreferrer">
+          Activity-Reports
+        </a>{' '}
+        repository. When the majority of auditors approve the request (after verifying that all previous funds have been
+        used properly) the issue will be labeled as <strong>Approved</strong>. At that time, the governors will send the
         coins and label the issue as <strong>Paid</strong>. Once a ticket has been paid the GitHub issue may be closed.
       </p>
       <p>Note that bounties will now be paid out by the team lead to contributors as they are completed.</p>
