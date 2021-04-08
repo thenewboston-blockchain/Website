@@ -7,8 +7,6 @@ import {PageDataObject} from 'types/page-data';
 import {TeamMember, TeamName, TeamsUrlParams, TeamTabOptions} from 'types/teams';
 import {getTeamMembers} from 'utils/data';
 
-import InternalHowToSetUpPaymentBoard from './Resources/InternalHowToSetUpPaymentBoard';
-import InternalTeamLeadOnboarding from './Resources/InternalTeamLeadOnboarding';
 import InternalTeamMemberPayments from './Resources/InternalTeamMemberPayments';
 import InternalBountyAccountRefills from './Resources/InternalBountyAccountRefills';
 import TeamMemberCard from './TeamMemberCard';
@@ -32,14 +30,6 @@ const pageData: PageDataObject = {
   'bounty-account-refills': {
     content: <InternalBountyAccountRefills />,
     name: 'Bounty Account Refills',
-  },
-  'how-to-set-up-payment-board': {
-    content: <InternalHowToSetUpPaymentBoard />,
-    name: 'How to set up payment boards',
-  },
-  'team-lead-onboarding': {
-    content: <InternalTeamLeadOnboarding />,
-    name: 'How to onboard team leads',
   },
   'team-member-payments': {
     content: <InternalTeamMemberPayments />,
