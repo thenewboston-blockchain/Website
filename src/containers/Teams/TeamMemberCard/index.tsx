@@ -37,7 +37,9 @@ const TeamMemberCard: FC<ComponentProps> = ({
       <div className="TeamMemberCard__details-title">{titles.join(', ')}</div>
       <div>Discord: {discordUsername || '-'}</div>
       <div>Github: {githubUsername ? <A href={`https://github.com/${githubUsername}`}>{githubUsername}</A> : '-'}</div>
-      <div>Hourly Rate: {hourlyRate}</div>
+      <div>
+        Hourly Rate: <span className="TeamMemberCard__details-pay">{hourlyRate.toLocaleString()}</span>
+      </div>
     </div>
   );
 
