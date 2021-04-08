@@ -1,8 +1,9 @@
 import React, {FC} from 'react';
 import {useSelector} from 'react-redux';
 import {useParams} from 'react-router-dom';
+import {Icon, IconType} from '@thenewboston/ui';
 
-import {A, Avatar, CopyableAccountNumber, Icon, IconType, Qr} from 'components';
+import {A, Avatar, CopyableAccountNumber, Qr} from 'components';
 import EditUserModal from 'containers/EditUserModal';
 import {useBooleanState} from 'hooks';
 import {selectActiveUser} from 'selectors/state';

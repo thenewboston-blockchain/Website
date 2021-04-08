@@ -25,7 +25,6 @@ import Footer from './Footer';
 import {Button} from './FormElements';
 import GoToTop from './GoToTop';
 import HashLink from './HashLink';
-import Icon, {IconType} from './Icon';
 import Label from './Label';
 import Layout from './Layout';
 import MarketingButton from './MarketingButton';
@@ -74,8 +73,6 @@ export {
   Footer,
   GoToTop,
   HashLink,
-  Icon,
-  IconType,
   Label,
   LabelFilter,
   Layout,

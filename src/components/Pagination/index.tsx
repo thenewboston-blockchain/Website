@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {NavLink, useLocation} from 'react-router-dom';
+import {Icon, IconType} from '@thenewboston/ui';
 
-import {Icon, IconType} from 'components';
 import {NavigationItem} from 'types/navigation';
 import './Pagination.scss';
 
