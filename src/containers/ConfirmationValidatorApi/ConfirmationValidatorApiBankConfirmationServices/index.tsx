@@ -1,5 +1,4 @@
 import React, {FC} from 'react';
-import {NavLink} from 'react-router-dom';
 
 import {DocContainer, DocEndpoint, RequestResponseSnippet} from 'components';
 
@@ -8,16 +7,12 @@ const ConfirmationValidatorApiBankConfirmationServices: FC = () => {
     <DocContainer
       className="ConfirmationValidatorApiBankConfirmationServices"
       title="Bank Confirmation Services"
-      lastUpdated="07 Dec 2020"
+      lastUpdated="31 Mar 2021"
     >
       <p>
         Bank confirmation services are created by the confirmation validator when a transaction is received from a
         connected bank. Upon receiving this payment, it is implied that the sending bank is purchasing confirmation
         services.
-      </p>
-      <p>
-        More information about the confirmation process can be found in the{' '}
-        <NavLink to="/guide/confirmation-services">Confirmation Services</NavLink> section of the guide.
       </p>
 
       <DocEndpoint endpoint="/bank_confirmation_services" method="GET" />

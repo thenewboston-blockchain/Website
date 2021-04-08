@@ -1,19 +1,14 @@
 import React, {FC} from 'react';
-import {NavLink} from 'react-router-dom';
 
 import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSnippet, TableParams} from 'components';
 
 const BankApiBanks: FC = () => {
   return (
-    <DocContainer className="BankApiBanks" title="Banks" lastUpdated="15 Jan 2021">
+    <DocContainer className="BankApiBanks" title="Banks" lastUpdated="31 Mar 2021">
       <p>
         All banks have the option of connecting to other banks. Although it is not a requirement, it is often useful for
         a bank to inspect the trust levels assigned by other banks. This data is used primarily in determining which
         primary validator to elect as well as which confirmation validators to connect to and purchase services from.
-      </p>
-      <p>
-        More information about banks can be found in the <NavLink to="/guide/banks">Banks</NavLink> section of the
-        guide.
       </p>
 
       <DocEndpoint endpoint="/banks?limit=2&offset=4" method="GET" />
