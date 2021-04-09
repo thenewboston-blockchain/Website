@@ -7,11 +7,12 @@ import {NavOption} from 'types/option';
 import {Category, TutorialsUrlParams} from 'types/tutorials';
 
 import Playlists from './Playlists';
+import WatchPlaylist from './WatchPlaylist';
 import './Tutorials.scss';
 
 const Tutorials: FC = () => {
   const history = useHistory();
-  const {category: categoryParam} = useParams<TutorialsUrlParams>();
+  const {category: categoryParam, playlistId: playlistIdParam} = useParams<TutorialsUrlParams>();
 
   const [loading, setLoading] = useState<boolean>(true);
   const [errorMessage, setErrorMessage] = useState<string>('');
@@ -66,8 +67,8 @@ const Tutorials: FC = () => {
       <PageTitle title="Tutorials" />
       <div className="Tutorials">
         <aside className="Tutorials__left-menu">{renderCategoryFilter()}</aside>
-        <div className="Tutorials__playlists-list">
-          <Playlists category={categoryFilter} />
+        <div className="Tutorials__right-content">
+          {playlistIdParam ? <WatchPlaylist playlistId={playlistIdParam} /> : <Playlists category={categoryFilter} />}
         </div>
       </div>
     </>

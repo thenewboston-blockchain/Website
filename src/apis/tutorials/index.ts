@@ -14,6 +14,6 @@ export async function getPlaylists(category: string) {
   return axios.get(`${process.env.REACT_APP_BACKEND_API}/playlists`, standardHeaders());
 }
 
-export async function getVideos(playlist: Playlist) {
-  return axios.get(`${process.env.REACT_APP_BACKEND_API}/videos?playlist=${playlist.uuid}`, standardHeaders());
+export async function getPlaylist(playlistId: string) {
+  return axios.get(`${process.env.REACT_APP_BACKEND_API}/playlists/${playlistId}`, standardHeaders());
 }
