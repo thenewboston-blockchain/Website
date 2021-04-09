@@ -1,6 +1,7 @@
 import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'react';
+import {Icon, IconType} from '@thenewboston/ui';
 
-import {Button, CodeSnippet, Icon, IconType, Loader, PageTitle, Tab, Tabs} from 'components';
+import {Button, CodeSnippet, Loader, PageTitle, Tab, Tabs} from 'components';
 import {Release} from 'types/github';
 import {fetchGithubReleases} from 'utils/github';
 import {displayToast} from 'utils/toast';

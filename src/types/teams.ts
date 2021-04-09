@@ -1,13 +1,14 @@
 export enum TeamName {
   all = 'All',
   audit = 'Audit',
+  backEnd = 'Back-End',
   blockchain = 'Blockchain',
   community = 'Community',
   design = 'Design',
+  devOps = 'DevOps',
   education = 'Education',
   frontEnd = 'Front-End',
   marketing = 'Marketing',
-  websiteApi = 'Website API',
 }
 
 interface Contributor {

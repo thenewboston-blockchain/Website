@@ -1,8 +1,9 @@
 import React, {FC, memo, ReactNode} from 'react';
 import clsx from 'clsx';
+import {Icon, IconType} from '@thenewboston/ui';
 
 import {Asset} from 'types/assets';
-import {A, Icon, IconType, PageTitle} from 'components';
+import {A, PageTitle} from 'components';
 import {socialMediaUrls} from 'utils/social-media';
 import TnbLogo from 'assets/images/TNB-Logo.png';
 import TnbLogoAndWordmark from 'assets/images/TNB-LogoAndWordmark.png';
@@ -41,7 +42,7 @@ const Assets: FC = () => {
         })}
       >
         <A className="Assets__download-button" href={asset.downloadLink} newWindow={false}>
-          <Icon icon={IconType.downloadIcon} />
+          <Icon icon={IconType.download} totalSize={42} />
         </A>
         <div className="Assets__card">
           <img alt={`tnb logo`} className={clsx('Assets__logo')} src={asset.imageUrl} />

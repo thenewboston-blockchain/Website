@@ -1,7 +1,8 @@
 import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
 import {Link, useHistory, useParams} from 'react-router-dom';
+import {Icon, IconType} from '@thenewboston/ui';
 
-import {BreadcrumbMenu, EmptyPage, FlatNavLinks, Icon, IconType, PageTitle} from 'components';
+import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
 import {TEAMS} from 'constants/teams';
 import {PageDataObject} from 'types/page-data';
 import {TeamMember, TeamName, TeamsUrlParams, TeamTabOptions} from 'types/teams';
