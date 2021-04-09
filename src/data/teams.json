@@ -124,8 +124,8 @@
     "platforms": [
       {
         "name": "github",
-        "label": "thenewboston-python",
-        "link": "https://github.com/thenewboston-developers/thenewboston-python"
+        "label": "Community",
+        "link": "https://github.com/thenewboston-developers/Management/projects/7"
       }
     ],
     "contributors": [
@@ -360,7 +360,13 @@
   {
     "title": "Education",
     "description": "Create educational content for the community, primarily focused around video tutorials.",
-    "platforms": [],
+    "platforms": [
+      {
+        "name": "github",
+        "label": "Education",
+        "link": "https://github.com/thenewboston-developers/Management/projects/10"
+      }
+    ],
     "contributors": [
       {
         "title": "Head of Education",
