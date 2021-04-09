@@ -75,6 +75,46 @@
     ]
   },
   {
+    "title": "Back-End",
+    "description": "Architect, build, and maintain the backend architecture of thenewboston.",
+    "platforms": [
+      {
+        "name": "github",
+        "label": "Back-End",
+        "link": "https://github.com/thenewboston-developers/Website-API"
+      }
+    ],
+    "contributors": [
+      {
+        "title": "Lead Website API Developer",
+        "isLead": true,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "18",
+          "discordUsername": "Justin N.#6061",
+          "displayName": "Justin Ndwiga",
+          "githubUsername": "ThaDeveloper",
+          "profileImage": "https://avatars.githubusercontent.com/u/12385482?v=4"
+        },
+        "hourlyRate": 900
+      }
+    ],
+    "responsibilities": [
+      {
+        "item": "Create and implement the source code for all API endpoints",
+        "subitems": []
+      },
+      {
+        "item": "Test source code and debug code",
+        "subitems": []
+      },
+      {
+        "item": "Evaluate existing applications for performance updates and modifications",
+        "subitems": []
+      }
+    ]
+  },
+  {
     "title": "Blockchain",
     "description": "Build and maintain the blockchain for thenewboston digital currency network.",
     "platforms": [
@@ -252,6 +292,46 @@
       },
       {
         "item": "Give design reviews to members within the community",
+        "subitems": []
+      }
+    ]
+  },
+  {
+    "title": "DevOps",
+    "description": "Architect, maintain, and monitor our various computer systems. Strive to improve network performance while communicating any issues to various team members.",
+    "platforms": [
+      {
+        "name": "github",
+        "label": "DevOps",
+        "link": "https://github.com/thenewboston-developers/DevOps"
+      }
+    ],
+    "contributors": [
+      {
+        "title": "Lead DevOps Engineer",
+        "isLead": true,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "84",
+          "discordUsername": "truyenhv#5481",
+          "displayName": "Truyen Hoang",
+          "githubUsername": "truyenhv",
+          "profileImage": "https://avatars.githubusercontent.com/u/32347748?v=4"
+        },
+        "hourlyRate": 900
+      }
+    ],
+    "responsibilities": [
+      {
+        "item": "Plan and build the network infrastructure",
+        "subitems": []
+      },
+      {
+        "item": "Maintain CI/CD pipelines",
+        "subitems": []
+      },
+      {
+        "item": "Implement network monitoring tools",
         "subitems": []
       }
     ]
@@ -452,59 +532,6 @@
       },
       {
         "item": "Requests graphics and images from the design team",
-        "subitems": []
-      }
-    ]
-  },
-  {
-    "title": "Back-End",
-    "description": "Architect, build, and maintain the backend architecture of thenewboston.",
-    "platforms": [
-      {
-        "name": "github",
-        "label": "Back-End",
-        "link": "https://github.com/thenewboston-developers/Website-API"
-      }
-    ],
-    "contributors": [
-      {
-        "title": "Lead Website API Developer",
-        "isLead": true,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "18",
-          "discordUsername": "Justin N.#6061",
-          "displayName": "Justin Ndwiga",
-          "githubUsername": "ThaDeveloper",
-          "profileImage": "https://avatars.githubusercontent.com/u/12385482?v=4"
-        },
-        "hourlyRate": 900
-      },
-      {
-        "title": "DevOps Engineer",
-        "isLead": false,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "84",
-          "discordUsername": "truyenhv#5481",
-          "displayName": "Truyen Hoang",
-          "githubUsername": "truyenhv",
-          "profileImage": "https://avatars.githubusercontent.com/u/32347748?v=4"
-        },
-        "hourlyRate": 900
-      }
-    ],
-    "responsibilities": [
-      {
-        "item": "Create and implement the source code for all API endpoints",
-        "subitems": []
-      },
-      {
-        "item": "Test source code and debug code",
-        "subitems": []
-      },
-      {
-        "item": "Evaluate existing applications for performance updates and modifications",
         "subitems": []
       }
     ]
