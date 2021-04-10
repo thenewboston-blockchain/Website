@@ -31,6 +31,7 @@ export async function getCoreTeams(): Promise<CoreTeam[]> {
               hourly_rate: teamMember.hourly_rate,
               is_lead: teamMember.is_lead,
               job_title: teamMember.job_title,
+              pk: teamMember.pk,
               team: teamMember.team,
               user,
               weekly_commitment_hours: teamMember.weekly_commitment_hours,

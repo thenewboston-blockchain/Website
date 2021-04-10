@@ -1,18 +1,5 @@
 import {User} from 'types/app/User';
 
-export enum TeamName {
-  all = 'All',
-  audit = 'Audit',
-  backEnd = 'Back-End',
-  blockchain = 'Blockchain',
-  community = 'Community',
-  design = 'Design',
-  devOps = 'DevOps',
-  education = 'Education',
-  frontEnd = 'Front-End',
-  marketing = 'Marketing',
-}
-
 export type Team = {
   team_members_meta: TeamMember[];
   created_date: string;
@@ -22,7 +9,7 @@ export type Team = {
   about: string;
   responsibilities: string;
   github: string;
-  slack: string;
+  discord: string;
 };
 
 export type CoreTeam = Omit<Team, 'team_members_meta'> & {
@@ -32,6 +19,7 @@ export type CoreTeam = Omit<Team, 'team_members_meta'> & {
 export type TeamMember = {
   is_lead: boolean;
   job_title: string;
+  pk: string;
   user: User;
 };
 

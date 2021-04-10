@@ -4,11 +4,11 @@ import {Icon, IconType} from '@thenewboston/ui';
 
 import {api as teamsApi} from 'apis/teams';
 import {A, BreadcrumbMenu, EmptyPage, FlatNavLinks, Loader, PageTitle} from 'components';
-import {TeamPathname} from 'constants/teams';
+import {allTeamsFilter} from 'constants/teams';
 import {APIState, APIProgress, INITIAL_API_STATE} from 'types/api';
 import {NavigationItem} from 'types/navigation';
 import {PageDataObject} from 'types/page-data';
-import {CoreTeamMember, CoreTeam, TeamName, TeamsUrlParams, TeamTabOptions} from 'types/teams';
+import {CoreTeamMember, CoreTeam, TeamsUrlParams, TeamTabOptions} from 'types/teams';
 
 import InternalTeamMemberPayments from './Resources/InternalTeamMemberPayments';
 import InternalBountyAccountRefills from './Resources/InternalBountyAccountRefills';
@@ -49,12 +49,12 @@ const Teams: FC = () => {
   const history = useHistory();
   const {team: teamParam, tab: tabParam, resource: resourceParam} = useParams<TeamsUrlParams>();
   const [filteredMembers, setFilteredMembers] = useState<CoreTeamMember[]>([]);
-  const [teamFilter, setTeamFilter] = useState<TeamName>(TeamName.all);
+  const [teamFilter, setTeamFilter] = useState<string>(allTeamsFilter.title);
   const [teams, setTeams] = useState<CoreTeam[]>([]);
   const [apiState, setAPIState] = useState<APIState>(INITIAL_API_STATE);
 
   useEffect(() => {
-    const isAllTeams = teamParam === TeamName.all;
+    const isAllTeams = teamParam === allTeamsFilter.pathname;
     if (teamParam && tabParam) {
       if (isAllTeams) {
         const isInvalidTabForAll = !(tabParam === TeamTabOptions.members || tabParam === TeamTabOptions.resources);
@@ -95,8 +95,8 @@ const Teams: FC = () => {
   }, []);
 
   useEffect(() => {
-    if (teamParam === TeamPathname.all) {
-      setTeamFilter(TeamName.all);
+    if (teamParam === allTeamsFilter.pathname) {
+      setTeamFilter(allTeamsFilter.title);
       return;
     }
 
@@ -106,7 +106,7 @@ const Teams: FC = () => {
 
     const team = teams.find(({title}) => title === teamParam);
     if (team) {
-      setTeamFilter(team.title as TeamName);
+      setTeamFilter(team.title);
     } else {
       history.push(`/teams`);
     }
@@ -117,7 +117,7 @@ const Teams: FC = () => {
       const teamLeads: CoreTeamMember[] = [];
       const otherMembers: CoreTeamMember[] = [];
       let filteredTeams = teams;
-      if (teamFilter !== TeamName.all) {
+      if (teamFilter !== allTeamsFilter.title) {
         filteredTeams = [teams.find(({title}) => title.toLowerCase() === teamFilter.toLowerCase())] as CoreTeam[];
       }
       filteredTeams.forEach((team) => {
@@ -143,7 +143,7 @@ const Teams: FC = () => {
 
   const handleNavOptionClick = useCallback(
     (option: string) => (): void => {
-      if (option === TeamName.all) {
+      if (option === allTeamsFilter.pathname) {
         history.push(`/teams/${option}/${TeamTabOptions.members}`);
       } else {
         history.push(`/teams/${option}/${TeamTabOptions.overview}`);
@@ -153,10 +153,7 @@ const Teams: FC = () => {
   );
 
   const renderTeamFilter = (): ReactNode => {
-    const navLinkOptions = [
-      {pathname: TeamPathname.all, title: TeamPathname.all},
-      ...teams.map((team) => ({pathname: team.title, title: team.title})),
-    ];
+    const navLinkOptions = [{...allTeamsFilter}, ...teams.map((team) => ({pathname: team.title, title: team.title}))];
     return (
       <FlatNavLinks handleOptionClick={handleNavOptionClick} options={navLinkOptions} selectedOption={teamParam} />
     );
@@ -165,15 +162,15 @@ const Teams: FC = () => {
   const renderTeamMembers = useCallback((): ReactNode => {
     if (!filteredMembers.length) return <EmptyPage />;
 
-    return filteredMembers.map(({user, hourly_rate, is_lead, job_title}) => (
+    return filteredMembers.map(({user, hourly_rate, is_lead, job_title, pk}) => (
       <TeamMemberCard
-        displayName={user.display_name || ''}
-        githubUsername={user.github_username || ''}
+        displayName={user.display_name}
+        githubUsername={user.github_username}
         isLead={is_lead}
         hourlyRate={hourly_rate}
-        key={user.account_number || ''}
-        profileImage={user.profile_image || ''}
-        discordUsername={user.discord_username || ''}
+        key={pk}
+        profileImage={user.profile_image}
+        discordUsername={user.discord_username}
         titles={[job_title]}
       />
     ));
@@ -258,7 +255,9 @@ const Teams: FC = () => {
               <>{renderResourceDoc()}</>
             ) : (
               <>
-                <h1 className="Teams__team-heading">{teamFilter === TeamName.all ? 'All' : teamFilter}</h1>
+                <h1 className="Teams__team-heading">
+                  {teamFilter === allTeamsFilter.title ? allTeamsFilter.title : teamFilter}
+                </h1>
                 <TeamTabs team={teamParam} tab={tabParam || ''} />
                 <div className="Teams__tab-panel">{renderTabPanel()}</div>
               </>

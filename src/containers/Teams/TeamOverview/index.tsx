@@ -15,16 +15,20 @@ const TeamOverview: FC<ComponentProps> = ({team}) => {
       <>
         <h4 className="TeamOverview__sub-heading"> About the team </h4>
         <p className="TeamOverview__description">{team.about}</p>
-        <div className="TeamOverview__social">
-          <Icon className="TeamOverview__social-icon" icon={IconType.github} size={18} />
-          <A className="TeamOverview__social-title" href={team.github}>
-            {team.github}
-          </A>
-        </div>
-        <div className="TeamOverview__social">
-          <Icon className="TeamOverview__social-icon" icon={IconType.discord} size={18} />
-          <p className="TeamOverview__social-title TeamOverview__social-title--sail-gray"> #{team.slack} </p>
-        </div>
+        {team.github && (
+          <div className="TeamOverview__social">
+            <Icon className="TeamOverview__social-icon" icon={IconType.github} size={18} />
+            <A className="TeamOverview__social-title" href={team.github}>
+              {team.github.substring(team.github.lastIndexOf('/') + 1)}
+            </A>
+          </div>
+        )}
+        {team.discord && (
+          <div className="TeamOverview__social">
+            <Icon className="TeamOverview__social-icon" icon={IconType.discord} size={18} />
+            <p className="TeamOverview__social-title TeamOverview__social-title--sail-gray">{team.discord}</p>
+          </div>
+        )}
       </>
     );
   }, [team]);
