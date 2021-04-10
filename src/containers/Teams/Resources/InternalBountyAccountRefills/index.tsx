@@ -13,7 +13,7 @@ const InternalBountyAccountRefills: FC = () => {
       </p>
       <p>
         When the funds in a team's bounty account are depleted the team lead may request additional funding via a GitHub
-        issue in the <A href="https://github.com/thenewboston-developers/Activity-Reports">Activity-Reports</A>{' '}
+        issue in the <A href="https://github.com/thenewboston-developers/Contributor-Payments">Contributor-Payments</A>{' '}
         repository. When the majority of auditors approve the request (after verifying that all previous funds have been
         used properly) the issue will be labeled as <strong>Approved</strong>. At that time, the governors will send the
         coins and label the issue as <strong>Paid</strong>. Once a ticket has been paid the GitHub issue may be closed.
