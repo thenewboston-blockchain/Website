@@ -9,8 +9,8 @@ const InternalTeamMemberPayments: FC = () => {
     <DocContainer className="Resource" title="Team Member Payments">
       <p>
         All team members are eligible to submit a timesheet each day via a GitHub issue in the{' '}
-        <A href="https://github.com/thenewboston-developers/Activity-Reports">Activity-Reports</A> repository. This will
-        be a record of all tasks that the team member worked on that day including:
+        <A href="https://github.com/thenewboston-developers/Contributor-Payments">Contributor-Payments</A> repository.
+        This will be a record of all tasks that the team member worked on that day including:
       </p>
       <DocList variant="ul">
         <li>a short description of the task</li>
@@ -28,7 +28,7 @@ const InternalTeamMemberPayments: FC = () => {
       </p>
       <p>
         All timesheet items must include a proof of work. This can either be a pull request, public GitHub branch,
-        graphics, wireframes, screenshots, etc… For recording meetings, there should be a link to the notes from that
+        graphics, wireframes, screenshots, etc... For recording meetings, there should be a link to the notes from that
         meeting. For certain types of work that is more difficult to produce an auditable proof of work such as
         auditing, product management (messaging various team members, etc...), or others those team members can include
         a detailed description/summary of the work. We understand that not all work is easily trackable and for these
@@ -43,11 +43,6 @@ const InternalTeamMemberPayments: FC = () => {
         labeled as <strong>Approved</strong>. At that time, the governors will send payment and label the issue as{' '}
         <strong>Paid</strong>. Once a ticket has been paid the GitHub issue may be closed. To clarify, team members will
         now be paid as soon as the timesheet has been approved, which would ideally be daily.
-      </p>
-      <p>
-        When sending payments, the coin value will be calculated using both the time worked and the hourly rate
-        specified{' '}
-        <A href="https://docs.google.com/spreadsheets/u/0/d/109TS__HEndsbOU40EEDSXtB-J6vuysz4EavLjIkcc7A/edit">here</A>.
       </p>
       <DocImage alt="team payment process" maxWidth={720} src={TeamPaymentProcess} />
     </DocContainer>

@@ -5,13 +5,13 @@
     "platforms": [
       {
         "name": "github",
-        "label": "Activity-Reports",
-        "link": "https://github.com/thenewboston-developers/Activity-Reports"
+        "label": "Contributor-Payments",
+        "link": "https://github.com/thenewboston-developers/Contributor-Payments"
       },
       {
         "name": "github",
-        "label": "Project-Proposals",
-        "link": "https://github.com/thenewboston-developers/Project-Proposals"
+        "label": "Projects",
+        "link": "https://github.com/thenewboston-developers/Projects"
       }
     ],
     "contributors": [
