@@ -30,11 +30,14 @@ const TeamOverview: FC<ComponentProps> = ({team}) => {
   }, [team]);
 
   const renderTeamResponsibilities = useCallback((): ReactNode => {
+    // note: responsibilities is stored as a string in the BE, currently dividing into each point
+    // based on newline. May need to ask BE to store it as an array of strings instead.
+    const responsibilities = team.responsibilities.split('\n');
     return (
       <>
         <h4 className="TeamOverview__sub-heading"> Role and Responsibilities </h4>
         <DocList className="TeamOverview__responsibilities-item" variant="ul">
-          {team.responsibilities && <li>{team.responsibilities}</li>}
+          {responsibilities && responsibilities.map((responsibility, i) => <li key={i}>{responsibility}</li>)}
         </DocList>
       </>
     );

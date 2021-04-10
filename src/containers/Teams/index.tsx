@@ -83,8 +83,9 @@ const Teams: FC = () => {
       try {
         setAPIState({...apiState, progress: APIProgress.REQ});
         const coreTeams = await teamsApi.getCoreTeams();
+        const sortedCoreTeams = coreTeams.sort((team1, team2) => (team1.title > team2.title ? 1 : -1));
         setAPIState({...apiState, progress: APIProgress.SUCCESS});
-        setTeams(coreTeams);
+        setTeams(sortedCoreTeams);
       } catch (err) {
         setAPIState({error: err, progress: APIProgress.ERR});
       }
