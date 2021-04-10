@@ -1,4 +1,7 @@
-export type VideoType = 'youtube' | 'vimeo';
+export enum Source {
+  vimeo = 'vimeo',
+  youtube = 'youtube',
+}
 
 export interface CreatedModified {
   created_date: string;
@@ -23,7 +26,7 @@ export interface Video extends CreatedModified {
   title: string;
   uuid: string;
   video_id: string;
-  video_type: VideoType;
+  video_type: Source;
 }
 
 export interface Playlist extends CreatedModified {
@@ -32,7 +35,7 @@ export interface Playlist extends CreatedModified {
   description: string;
   language: string;
   playlist_id: string;
-  playlist_type: string;
+  playlist_type: Source;
   published_at: string;
   thumbnail: string;
   title: string;

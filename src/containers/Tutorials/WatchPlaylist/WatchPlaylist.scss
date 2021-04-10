@@ -1,5 +1,79 @@
 .WatchPlaylist {
+  color: var(--color-sail-gray-900);
   display: grid;
   gap: 32px;
   grid-template-columns: auto 280px;
+
+  &__list {
+    line-height: 125%;
+
+    &-body {
+      padding: 8px 0;
+    }
+
+    &-header {
+      border-bottom: 1px solid var(--color-sail-gray-100);
+      display: flex;
+      flex-direction: column;
+      height: 48px;
+      justify-content: center;
+      padding: 8px 0;
+    }
+
+    &-heading {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    &-length {
+      color: var(--color-sail-gray-400);
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+
+    &-video {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: 40px auto;
+      margin-bottom: 8px;
+      padding: 4px;
+
+      &:hover {
+        background: var(--color-sail-gray-50);
+        cursor: pointer;
+      }
+
+      &-author {
+        color: var(--color-sail-gray-400);
+      }
+
+      &-bottom {
+        display: flex;
+        font-size: 12px;
+        justify-content: space-between;
+      }
+
+      &-duration {
+        color: var(--color-sail-cyan-800);
+      }
+
+      &-number {
+        display: grid;
+        font-size: 12px;
+        place-items: center;
+      }
+
+      &-top {
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 4px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 228px;
+      }
+    }
+  }
 }

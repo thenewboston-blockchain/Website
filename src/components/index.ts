@@ -47,6 +47,7 @@ import {TableBorderGrid, TableParams, TableVertical} from './Table';
 import Tabs, {Tab} from './Tabs';
 import TimeFilter from './TimeFilter';
 import TotalAmount from './TotalAmount';
+import VideoPlayer from './VideoPlayer';
 
 export {
   A,
@@ -101,6 +102,7 @@ export {
   Tabs,
   TimeFilter,
   TotalAmount,
+  VideoPlayer,
 };
 
 export type {Tab};
