@@ -8,9 +8,9 @@
   display: grid;
   grid-template-columns: 30px auto;
   margin: 12px;
-  max-width: 392px;
   padding: 18px;
   row-gap: 12px;
+  width: 100%;
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.04);
@@ -34,10 +34,14 @@
     width: 100%;
   }
 
+  @media (min-width: 480px) {
+    width: 392px;
+  }
+
   @media (min-width: 768px) {
     column-gap: 24px;
-    max-width: 540px;
     padding: 18px 24px;
+    width: 540px;
 
     &__description {
       grid-column: 2;
