@@ -1,13 +1,21 @@
 import React, {FC} from 'react';
+import {NavLink} from 'react-router-dom';
 
-import {A, DocContainer, StepIndicator, TableBorderGrid} from 'components';
+import {A, DocContainer, DocSubSection, StepIndicator, TableBorderGrid} from 'components';
 
+import {ProjectsOverviewNav} from '../ProjectsOverview';
 import './ProjectsMilestones.scss';
+
+enum ProjectsMilestonesNav {
+  overview = 'overview',
+  milestonePayoutRequestProcess = 'milestone-payout-request-process',
+  samplePayoutRequest = 'sample-payout-request',
+  proofOfWork = 'proof-of-work',
+}
 
 const ProjectsMilestones: FC = () => {
   const renderAcceptableProofOfWork = () => (
-    <>
-      <h2>Acceptable Proof of Work</h2>
+    <DocSubSection id={ProjectsMilestonesNav.proofOfWork} title="Acceptable Proof of Work">
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={1}
@@ -56,7 +64,7 @@ const ProjectsMilestones: FC = () => {
           </>
         }
       />
-    </>
+    </DocSubSection>
   );
 
   const renderMilestoneCaption = (heading: string, text: string) => (
@@ -67,14 +75,13 @@ const ProjectsMilestones: FC = () => {
   );
 
   const renderMilestonePayoutRequestProcess = () => (
-    <>
-      <h2>Milestone Payout Request Process</h2>
+    <DocSubSection id={ProjectsMilestonesNav.milestonePayoutRequestProcess} title="Milestone Payout Request Process">
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={1}
         text={
           <>
-            Upon completion of a milestone, the project manager will submit a{' '}
+            Upon completion of a milestone, the project lead will submit a{' '}
             <A href="https://github.com/thenewboston-developers/Project-Proposals/issues/new?assignees=&labels=&template=payout-request.md&title=NAME_OF_PROJECT+-+NAME_OF_MILESTONE+-+MILESTONE_NUMBER">
               Payout Request
             </A>{' '}
@@ -85,14 +92,14 @@ const ProjectsMilestones: FC = () => {
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={2}
-        text="The audit team will then review the proof of work to ensure that all objectives have been met. The audit team will leave a comment if there are any questions or clarifications that are needed."
+        text="The government will then review the proof of work to ensure that all objectives have been met. The government will leave a comment if there are any questions or clarifications that are needed."
       />
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={3}
         text={
           <>
-            Once a milestone has been accepted by the audit team, payment will be sent and the project lead may then
+            Once a milestone has been accepted by the government, payment will be sent and the project lead may then
             complete the next{' '}
             <A href="https://github.com/thenewboston-developers/Project-Proposals/issues/new?assignees=&labels=&template=milestone-proposal.md&title=NAME_OF_PROJECT+-+NAME_OF_MILESTONE+-+MILESTONE_NUMBER">
               Milestone Proposal
@@ -101,7 +108,7 @@ const ProjectsMilestones: FC = () => {
           </>
         }
       />
-    </>
+    </DocSubSection>
   );
 
   const renderProofOfWork = (number: number, title: string) => (
@@ -123,8 +130,7 @@ const ProjectsMilestones: FC = () => {
   );
 
   const renderSamplePayoutRequest = () => (
-    <>
-      <h2>Sample Payout Request (with Proof of Work)</h2>
+    <DocSubSection id={ProjectsMilestonesNav.samplePayoutRequest} title="Sample Payout Request (with Proof of Work)">
       {renderMilestoneCaption('Milestone 1', 'Completion of navigation, landing page, and initial deployment')}
       {renderMilestoneCaption('Requested Payment Upon Completion', '36,000 coins')}
       <TableBorderGrid
@@ -139,16 +145,19 @@ const ProjectsMilestones: FC = () => {
       {renderProofOfWork(1, 'Functional top navigation menu linking to empty placeholder pages')}
       {renderProofOfWork(2, 'Fully responsive, hifi landing page')}
       {renderProofOfWork(3, 'Website deployed to live environment hosted on AWS')}
-    </>
+      {renderMilestoneCaption('Project Reviewer', 'John Doe')}
+      {renderMilestoneCaption('Project Wallet', 'b8fc2c7874c410b9747d214b6772b469df088fbf561bc2f4fe8a6dada3e6f137')}
+    </DocSubSection>
   );
 
   return (
-    <DocContainer className="ProjectsMilestones" title="Milestones & Payouts">
+    <DocContainer className="ProjectsMilestones" id={ProjectsMilestonesNav.overview} title="Milestones & Payouts">
       <p>
         All projects will be funded based on the completion of milestones. All milestones will include a list of all
         quantifiable objectives and estimated coin value of each. Upon completion of the milestone, each objective will
         be reviewed by thenewboston team and once all objectives have been verified as completed, coins will then be
-        rewarded.
+        rewarded. The milestones should be planned and written with the help of a{' '}
+        <NavLink to={`/projects/overview#${ProjectsOverviewNav.reviewer}`}>project reviewer</NavLink>.
       </p>
       {renderMilestonePayoutRequestProcess()}
       {renderSamplePayoutRequest()}
