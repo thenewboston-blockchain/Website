@@ -70,9 +70,8 @@ const ProjectsOverview: FC = () => {
           and the project reviewer will receive 10,000, making the total payout for the milestone 110,000.
         </p>
       </DocSubSection>
-      <DocSubSection id={ProjectsOverviewNav.milestones} title="Proposal/Roadmap, Milestones, and Objectives">
+      <DocSubSection id={ProjectsOverviewNav.milestones} title="Project Roadmap, Milestones, and Objectives">
         <DocImage alt="roadmap diagram" maxWidth={680} src={RoadmapMilestoneOverview} />
-        <p>TODO: i think the above picture's left box should say Project Proposal / Project Roadmap</p>
       </DocSubSection>
       <DocSubSection id={ProjectsOverviewNav.lead} title="Project Lead">
         <p>As project lead, you will be responsible for the following:</p>
