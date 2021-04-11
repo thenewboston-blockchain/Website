@@ -84,8 +84,8 @@ const Teams: FC = () => {
         setAPIState({...apiState, progress: APIProgress.REQ});
         const coreTeams = await teamsApi.getCoreTeams();
         const sortedCoreTeams = coreTeams.sort((team1, team2) => (team1.title > team2.title ? 1 : -1));
-        setAPIState({...apiState, progress: APIProgress.SUCCESS});
         setTeams(sortedCoreTeams);
+        setAPIState({...apiState, progress: APIProgress.SUCCESS});
       } catch (err) {
         setAPIState({error: err, progress: APIProgress.ERR});
       }
@@ -118,7 +118,7 @@ const Teams: FC = () => {
       const otherMembers: CoreTeamMember[] = [];
       let filteredTeams = teams;
       if (teamFilter !== allTeamsFilter.title) {
-        filteredTeams = [teams.find(({title}) => title.toLowerCase() === teamFilter.toLowerCase())] as CoreTeam[];
+        filteredTeams = teams.filter(({title}) => title.toLowerCase() === teamFilter.toLowerCase());
       }
       filteredTeams.forEach((team) => {
         team.core_members_meta.forEach((teamMember) => {
