@@ -16,9 +16,9 @@ const ProjectsOverview: FC = () => {
     <DocContainer className="ProjectsOverview" id={ProjectsOverviewNav.overview} title="Overview">
       <p>
         Contributors can earn coins by working on apps, games, tools, and other software for the thenewboston network.
-        To receive funding, project proposals will be submitted to the thenewboston government who will review the
-        details of the proposal to ensure that all rules and guidelines are met. Once approved, coins will be rewarded
-        as milestones are completed throughout the development process.
+        To receive funding, project proposals will be submitted to the thenewboston team who will review the details of
+        the proposal to ensure that all rules and guidelines are met. Once approved, coins will be rewarded as
+        milestones are completed throughout the development process.
       </p>
       <p>
         These projects will improve our network through the continuous creation of new apps, games, and tools while also
