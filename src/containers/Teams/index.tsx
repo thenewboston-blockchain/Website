@@ -49,7 +49,7 @@ const Teams: FC = () => {
   const history = useHistory();
   const {team: teamParam, tab: tabParam, resource: resourceParam} = useParams<TeamsUrlParams>();
   const [filteredMembers, setFilteredMembers] = useState<CoreTeamMember[]>([]);
-  const [teamFilter, setTeamFilter] = useState<string>(allTeamsFilter.title);
+  const [teamFilter, setTeamFilter] = useState<string>('');
   const [teams, setTeams] = useState<CoreTeam[]>([]);
   const [apiState, setAPIState] = useState<APIState>(INITIAL_API_STATE);
 
@@ -95,12 +95,12 @@ const Teams: FC = () => {
   }, []);
 
   useEffect(() => {
-    if (teamParam === allTeamsFilter.pathname) {
-      setTeamFilter(allTeamsFilter.title);
+    if (apiState.progress !== APIProgress.SUCCESS) {
       return;
     }
 
-    if (apiState.progress !== APIProgress.SUCCESS || teams.length === 0) {
+    if (teamParam === allTeamsFilter.pathname) {
+      setTeamFilter(allTeamsFilter.title);
       return;
     }
 
@@ -113,6 +113,10 @@ const Teams: FC = () => {
   }, [history, teamParam, teams, apiState]);
 
   useEffect(() => {
+    if (apiState.progress !== APIProgress.SUCCESS || !teamFilter) {
+      return;
+    }
+
     const getFilteredMembers = (): CoreTeamMember[] => {
       const teamLeads: CoreTeamMember[] = [];
       const otherMembers: CoreTeamMember[] = [];
@@ -131,10 +135,6 @@ const Teams: FC = () => {
       });
       return teamLeads.concat(otherMembers);
     };
-
-    if (apiState.progress !== APIProgress.SUCCESS || teams.length === 0) {
-      return;
-    }
 
     const members = getFilteredMembers();
     const sortedMembers = sortTeamMembers(members);
@@ -234,10 +234,12 @@ const Teams: FC = () => {
     }
   }, [renderResources, renderTeamMembers, tabParam, teamFilter, teams]);
 
+  const isReadyToDisplay = apiState.progress === APIProgress.SUCCESS && teamFilter && filteredMembers.length;
+
   return (
     <>
       <PageTitle title="Teams" />
-      {apiState.progress === APIProgress.REQ ? (
+      {!isReadyToDisplay ? (
         <div className="Teams__loader-container">
           <Loader />
         </div>
