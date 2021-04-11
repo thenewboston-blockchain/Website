@@ -2,9 +2,7 @@ import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
 import {DocContainer, DocImage, DocSubSection} from 'components';
-
 import RoadmapMilestoneOverview from './RoadmapMilestoneOverview.png';
-import './ProjectsOverview.scss';
 
 enum ProjectsOverviewNav {
   overview = 'overview',
