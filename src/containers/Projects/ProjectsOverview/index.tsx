@@ -25,7 +25,7 @@ const ProjectsOverview: FC = () => {
         allowing for a more widespread distribution of coins to many contributors.
       </p>
       <p>
-        In order to maintain the quality of the projects, and the reasonableness of the price of the milestone payouts,
+        In order to maintain the quality of the projects and the reasonableness of the price of the milestone payouts,
         there will be strict <NavLink to="/projects/rules">guidelines</NavLink> that the project must follow, and the{' '}
         <NavLink to={`#${ProjectsOverviewNav.lead}`}>project lead</NavLink> must submit detailed{' '}
         <NavLink to="/projects/milestones">milestone reports</NavLink> to receive payments. To help with this process,
@@ -41,23 +41,24 @@ const ProjectsOverview: FC = () => {
         </p>
         <p>
           If you, as a project lead, have a project in mind, you should solidify your project ideas in writing, and then
-          reach out to one of the project reviewers with your idea. The project reviewer will then help you write out
-          your project proposal and roadmap. The project reviewer will ensure that your proposal is sound, and he/she
-          will ensure that your milestones are written with enough detail, and that each objective is quantifiable.
-          He/she will also ensure that milestones are spaced about reasonably, such that the project will get steady
-          funding throughout it's development phase.
+          reach out to one of the project reviewers with your idea. The project reviewer will then help write out the
+          project proposal and roadmaps. The project reviewer will ensure that your proposal is sound, and he/she will
+          ensure that your milestones are written with enough detail, and that each objective is quantifiable. He/she
+          will also ensure that milestones are spaced about reasonably, such that the project will get steady funding
+          throughout it's development phase. We recommend that milestones be spaced out in monthly increments to achieve
+          this, but this is not a requirement.
         </p>
         <p>
           One of the more tougher challenges will be to put estimated coin amounts to each objectives of your
           milestones. The project reviewer will ensure that the amount that you put next to each objective is
-          reasonable, and if any amounts look suspicious on the surface, will help you write detailed reports explaining
-          why that amount is justified.
+          reasonable, and if any amounts look suspicious on the surface, he/she will help you write detailed reports
+          explaining why that amount is justified.
         </p>
         <p>
           Ideally, each reports that you submit to the government (project proposal, milestone reports, etc) should have
-          been reviewed properly by the project reviewer, such that it will not raise any concerns from the government
-          and/or the community. But should concerns arise, the project reviewer will help fight for your case, and
-          negotiate with the government to come to a reasonable compromise.
+          been reviewed properly by the project reviewer such that it will not raise any concerns from the government
+          and/or the community. But should concerns arise, the project reviewer will help fight for your case, and help
+          you negotiate with the government to come to a reasonable compromise.
         </p>
         <p>
           Each projects must have one, and only one, project reviewer. If, at any point, the project lead is unhappy
@@ -66,7 +67,7 @@ const ProjectsOverview: FC = () => {
         <p>
           Project reviewers will receive 10% commission on each successful milestone payouts, at no cost to the project.
           For example, if a milestone was worth 100,000 in coins, the project will receive 100,000 from the government,
-          and the project reviewer will also receive 10,000 from the government.
+          and the project reviewer will receive 10,000, making the total payout for the milestone 110,000.
         </p>
       </DocSubSection>
       <DocSubSection id={ProjectsOverviewNav.milestones} title="Proposal/Roadmap, Milestones, and Objectives">
