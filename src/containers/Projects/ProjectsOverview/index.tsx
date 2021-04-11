@@ -4,7 +4,7 @@ import {NavLink} from 'react-router-dom';
 import {DocContainer, DocImage, DocSubSection} from 'components';
 import RoadmapMilestoneOverview from './RoadmapMilestoneOverview.png';
 
-enum ProjectsOverviewNav {
+export enum ProjectsOverviewNav {
   overview = 'overview',
   milestones = 'milestones',
   reviewer = 'reviewer',
