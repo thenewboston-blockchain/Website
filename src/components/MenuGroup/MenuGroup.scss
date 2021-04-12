@@ -11,6 +11,7 @@
   &__submenu {
     display: none;
     flex-direction: column;
+    padding-left: 62px;
 
     &--expanded {
       display: flex;
@@ -20,8 +21,9 @@
       border-radius: 8px;
       color: var(--color-sail-gray-400);
       margin-right: 16px;
-      padding: 6px 0 6px 62px;
+      padding: 6px 0 6px 0px;
       transition: color 0.1s ease;
+      width: fit-content;
 
       &:first-of-type {
         padding-top: 8px;
