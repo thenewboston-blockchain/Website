@@ -1,4 +1,5 @@
 import React, {FC, ReactNode, useEffect, useState} from 'react';
+import {format, parseISO} from 'date-fns';
 
 import {getPlaylist} from 'apis/tutorials';
 import {Playlist, Video} from 'types/tutorials';
@@ -60,8 +61,17 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
   if (!playlist || !currentVideo) return <p>Failed to load video!</p>;
   return (
     <div className="WatchPlaylist">
-      <div className="WatchPlaylist__video">
-        <VideoPlayer source={playlist.playlist_type} videoId={currentVideo.video_id} />
+      <div className="WatchPlaylist__main">
+        <VideoPlayer className="WatchPlaylist__video" source={playlist.playlist_type} videoId={currentVideo.video_id} />
+        <div className="WatchPlaylist__video-details">
+          <h4 className="WatchPlaylist__video-title"> {currentVideo.title} </h4>
+          <p className="WatchPlaylist__video-date">
+            Date Published: {format(parseISO(currentVideo.published_at), 'MMM dd, yyyy')}{' '}
+          </p>
+          <p className="WatchPlaylist__video-author">
+            Youtube Channel: <span className="WatchPlaylist__video-author-name">{currentVideo.author}</span>
+          </p>
+        </div>
       </div>
       {renderVideoList()}
     </div>

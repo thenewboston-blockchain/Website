@@ -76,4 +76,30 @@
       }
     }
   }
+
+  &__video {
+    line-height: 125%;
+    margin-bottom: 24px;
+
+    &-author {
+      font-size: 14px;
+      margin-bottom: 0px;
+
+      &-name {
+        color: var(--color-secondary);
+      }
+    }
+
+    &-date {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    &-title {
+      color: var(--color-sail-gray-900);
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+  }
 }
