@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import {bemify} from '@thenewboston/utils';
 
 import {Source} from 'types/tutorials';
+import {getVideoUrl} from 'utils/urls';
 
 import './VideoPlayer.scss';
 
@@ -27,7 +28,7 @@ const VideoPlayer: FC<VideoPlayerProps> = ({className, controls = true, onEnded,
           height="100%"
           onEnded={onEnded}
           playing={playing}
-          url={`https://www.youtube.com/watch?v=${videoId}`}
+          url={getVideoUrl(videoId, Source.youtube)}
           width="100%"
         />
       ) : (
@@ -37,7 +38,7 @@ const VideoPlayer: FC<VideoPlayerProps> = ({className, controls = true, onEnded,
           height="100%"
           onEnded={onEnded}
           playing={playing}
-          url={`https://www.vimeo.com/${videoId}`}
+          url={getVideoUrl(videoId, Source.vimeo)}
           width="100%"
         />
       )}

@@ -1,3 +1,8 @@
+export enum TimeFormat {
+  digital = 'digital',
+  english = 'english',
+}
+
 export enum Source {
   vimeo = 'vimeo',
   youtube = 'youtube',

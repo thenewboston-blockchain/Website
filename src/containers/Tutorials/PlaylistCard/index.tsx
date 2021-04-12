@@ -1,6 +1,8 @@
-import React, {FC} from 'react';
-import {Link, useHistory, useParams} from 'react-router-dom';
-import {TutorialsUrlParams, Video} from 'types/tutorials';
+import React, {FC, useMemo} from 'react';
+import {useHistory, useParams} from 'react-router-dom';
+
+import {TimeFormat, TutorialsUrlParams, Video} from 'types/tutorials';
+import {getFormattedTime} from 'utils/time';
 
 import './PlaylistCard.scss';
 
@@ -20,6 +22,8 @@ const PlaylistCard: FC<PlaylistCardProps> = ({author, title, thumbnail, uuid, vi
     history.push(`/tutorials/${categoryParam}/${uuid}`);
   };
 
+  const totalDuration = useMemo(() => video_list.reduce((acc, video) => acc + video.duration, 0), [video_list]);
+
   return (
     <div className="PlaylistCard" onClick={openPlaylist} role="button" tabIndex={0}>
       <div className="PlaylistCard__top">
@@ -33,7 +37,7 @@ const PlaylistCard: FC<PlaylistCardProps> = ({author, title, thumbnail, uuid, vi
         <p className="PlaylistCard__details">
           <span className="PlaylistCard__details-videos">{video_list.length} videos</span>
           &bull;
-          <span className="PlaylistCard__details-duration">45 min</span>
+          <span className="PlaylistCard__details-duration">{getFormattedTime(totalDuration, TimeFormat.english)}</span>
         </p>
       </div>
     </div>

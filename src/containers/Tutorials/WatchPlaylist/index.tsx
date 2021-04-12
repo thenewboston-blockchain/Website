@@ -3,10 +3,11 @@ import {format, parseISO} from 'date-fns';
 import clsx from 'clsx';
 
 import {getPlaylist} from 'apis/tutorials';
-import {Playlist, Video} from 'types/tutorials';
+import {Loader, VideoPlayer} from 'components';
+import {Playlist, TimeFormat, Video} from 'types/tutorials';
+import {getFormattedTime} from 'utils/time';
 
 import './WatchPlaylist.scss';
-import {Loader, VideoPlayer} from 'components';
 
 interface WatchPlaylistProps {
   playlistId: string;
@@ -67,7 +68,9 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
               <div className="WatchPlaylist__list-video-top">{video.title}</div>
               <div className="WatchPlaylist__list-video-bottom">
                 <span className="WatchPlaylist__list-video-author">{video.author}</span>
-                <span className="WatchPlaylist__list-video-duration">{video.duration}</span>
+                <span className="WatchPlaylist__list-video-duration">
+                  {getFormattedTime(video.duration, TimeFormat.digital)}
+                </span>
               </div>
             </div>
           </div>
@@ -90,7 +93,7 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
         <div className="WatchPlaylist__video-details">
           <h4 className="WatchPlaylist__video-title"> {currentVideo.title} </h4>
           <p className="WatchPlaylist__video-date">
-            Date Published: {format(parseISO(currentVideo.published_at), 'MMM dd, yyyy')}{' '}
+            Date Published: {format(parseISO(currentVideo.published_at), 'MMM dd, yyyy')}
           </p>
           <p className="WatchPlaylist__video-author">
             Youtube Channel: <span className="WatchPlaylist__video-author-name">{currentVideo.author}</span>
