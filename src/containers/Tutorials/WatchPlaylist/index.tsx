@@ -1,5 +1,6 @@
 import React, {FC, ReactNode, useEffect, useState} from 'react';
 import {format, parseISO} from 'date-fns';
+import clsx from 'clsx';
 
 import {getPlaylist} from 'apis/tutorials';
 import {Playlist, Video} from 'types/tutorials';
@@ -42,7 +43,16 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
       </div>
       <div className="WatchPlaylist__list-body">
         {playlist?.video_list.map((video, index) => (
-          <div className="WatchPlaylist__list-video" key={video.video_id}>
+          <div
+            className={clsx(
+              'WatchPlaylist__list-video',
+              currentVideo?.uuid === video.uuid && 'WatchPlaylist__list-video--active',
+            )}
+            key={video.video_id}
+            onClick={() => setCurrentVideo(video)}
+            role="button"
+            tabIndex={0}
+          >
             <div className="WatchPlaylist__list-video-number">{index + 1}</div>
             <div className="WatchPlaylist__list-video-details">
               <div className="WatchPlaylist__list-video-top">{video.title}</div>

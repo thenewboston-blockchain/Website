@@ -39,6 +39,11 @@
       grid-template-columns: 40px auto;
       margin-bottom: 8px;
       padding: 4px;
+      transition: 0.2s ease-in-out background;
+
+      &--active {
+        background: var(--color-sail-gray-50);
+      }
 
       &:hover {
         background: var(--color-sail-gray-50);
