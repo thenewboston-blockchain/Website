@@ -1,4 +1,4 @@
-import React, {FC, ReactNode, useEffect, useState} from 'react';
+import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
 import {format, parseISO} from 'date-fns';
 import clsx from 'clsx';
 
@@ -34,6 +34,15 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
       }
     })();
   }, [playlistId]);
+
+  const handleVideoEnd = useCallback((): void => {
+    if (playlist?.video_list.length) {
+      const index = playlist.video_list.findIndex((video) => video.uuid === currentVideo?.uuid);
+      if (index !== -1 && index !== playlist.video_list.length - 1) {
+        setCurrentVideo(playlist.video_list[index + 1]);
+      }
+    }
+  }, [currentVideo, playlist]);
 
   const renderVideoList = (): ReactNode => (
     <div className="WatchPlaylist__list">
@@ -72,7 +81,12 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
   return (
     <div className="WatchPlaylist">
       <div className="WatchPlaylist__main">
-        <VideoPlayer className="WatchPlaylist__video" source={playlist.playlist_type} videoId={currentVideo.video_id} />
+        <VideoPlayer
+          className="WatchPlaylist__video"
+          onEnded={handleVideoEnd}
+          source={playlist.playlist_type}
+          videoId={currentVideo.video_id}
+        />
         <div className="WatchPlaylist__video-details">
           <h4 className="WatchPlaylist__video-title"> {currentVideo.title} </h4>
           <p className="WatchPlaylist__video-date">

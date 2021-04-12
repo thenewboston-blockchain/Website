@@ -11,11 +11,13 @@ import './VideoPlayer.scss';
 interface VideoPlayerProps {
   className?: string;
   controls?: boolean;
+  onEnded?(): void;
+  playing?: boolean;
   source: Source;
   videoId: string;
 }
 
-const VideoPlayer: FC<VideoPlayerProps> = ({className, controls = true, source, videoId}) => {
+const VideoPlayer: FC<VideoPlayerProps> = ({className, controls = true, onEnded, playing = true, source, videoId}) => {
   return (
     <div className={clsx('VideoPlayer', className)}>
       {source === Source.youtube ? (
@@ -23,6 +25,8 @@ const VideoPlayer: FC<VideoPlayerProps> = ({className, controls = true, source, 
           className={clsx('VideoPlayer__player', {...bemify(className, '__player')})}
           controls={controls}
           height="100%"
+          onEnded={onEnded}
+          playing={playing}
           url={`https://www.youtube.com/watch?v=${videoId}`}
           width="100%"
         />
@@ -31,6 +35,8 @@ const VideoPlayer: FC<VideoPlayerProps> = ({className, controls = true, source, 
           className={clsx('VideoPlayer__player', {...bemify(className, '__player')})}
           controls={controls}
           height="100%"
+          onEnded={onEnded}
+          playing={playing}
           url={`https://www.vimeo.com/${videoId}`}
           width="100%"
         />
