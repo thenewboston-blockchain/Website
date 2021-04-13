@@ -54,11 +54,11 @@ const ProjectsOverview: FC = () => {
       </DocSubSection>
       <DocSubSection id={ProjectsOverviewNav.reviewer} title="Project Reviewer">
         <p>
-          Project Reviewers are <NavLink to="/teams">core members</NavLink> within the thenewboston community that will
-          help project leads in the entire journey of the project creation: from the very beginning of finalizing your
-          project proposal, to helping the project get properly funded. To ensure the quality of our projects,
-          partnering up with a project reviewer will <strong>be required</strong> in order for the project to be
-          approved.
+          Project Reviewers are <NavLink to="/teams/All/Members?title=project%20reviewer">core members</NavLink> within
+          the thenewboston community that will help project leads in the entire journey of the project creation: from
+          the very beginning of finalizing your project proposal, to helping the project get properly funded. To ensure
+          the quality of our projects, partnering up with a project reviewer will <strong>be required</strong> in order
+          for the project to be approved.
         </p>
         <p>
           If you, as a project lead, have a project in mind, you should solidify your project ideas and submit the

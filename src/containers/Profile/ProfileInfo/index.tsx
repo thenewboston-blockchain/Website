@@ -46,15 +46,12 @@ const ProfileInfo: FC<ComponentProps> = ({user}) => {
   };
 
   const renderMemberDetails = (member: TeamMember) => {
-    const {teams, titles} = member;
+    const {team, title} = member;
     return (
       <>
-        {teams &&
-          teams.map((team, index) => (
-            <div className="ProfileInfo__member-title" key={team.title}>
-              {titles[index]} on <A href={`/teams/${getTeamPathname(team.title)}`}>{team.title}</A>
-            </div>
-          ))}
+        <div className="ProfileInfo__member-title" key={team}>
+          {title} on <A href={`/teams/${getTeamPathname(team)}`}>{team}</A>
+        </div>
         <div className="ProfileInfo__member-discord">
           <Icon className="ProfileInfo__member-discord-icon" icon={IconType.discord} size={18} />
           {user.discord_username}
