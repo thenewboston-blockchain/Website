@@ -14,5 +14,27 @@
       "2+ years of experience in Django",
       "4+ years of experience in Python"
     ]
+  },
+  {
+    "openingId": "project-reviewer",
+    "category": "Engineering",
+    "description": "We are looking for Project Reviewer, who will help and support Project Leads to complete their projects.",
+    "position": "Project Reviewer",
+    "responsibilities": [
+      "Ability to actively communicate with each team and community of thenewboston",
+      "Detail-oriented in scoping projects & getting good estimates",
+      "Familiarity with blockchain & thenewboston in general"
+    ],
+    "technologyRequirements": [
+      "Actively recruit projects",
+      "Work with the project lead and negotiate on price (milestone by milestone), milestones, objectives and make sure they are crystal clear",
+      "Check Project Lead's GitHub history and background to ensure they are able to tackle the project",
+      "Let project leads know that they will be getting paid per milestone",
+      "Ensure proposed milestones requires some amount of work to be done",
+      "Submit completed projects proposals to government for review",
+      "Review milestones as they come in / QA",
+      "Ensure progress of the project remains on track",
+      "Update the community on the progress of the project"
+    ]
   }
 ]
