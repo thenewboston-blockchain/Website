@@ -7,7 +7,7 @@ export type Team = {
   pk: string;
   title: string;
   about: string;
-  responsibilities: string;
+  responsibilities: string[];
   github: string;
   discord: string;
 };

@@ -5,9 +5,8 @@ export type GetTeamResponse = {
   pk: string;
   title: string;
   about: string;
-  responsibilities: string;
+  responsibilities: string[];
   github: string;
-  slack: string;
   discord: string;
 };
 
