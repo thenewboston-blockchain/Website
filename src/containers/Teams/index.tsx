@@ -5,6 +5,7 @@ import {Icon, IconType} from '@thenewboston/ui';
 import {api as teamsApi} from 'apis/teams';
 import {A, BreadcrumbMenu, EmptyPage, FlatNavLinks, Loader, PageTitle} from 'components';
 import {allTeamsFilter} from 'constants/teams';
+import useQueryParams from 'hooks/useQueryParams';
 import {APIState, APIProgress, INITIAL_API_STATE} from 'types/api';
 import {NavigationItem} from 'types/navigation';
 import {PageDataObject} from 'types/page-data';
@@ -48,10 +49,13 @@ const externalLinks: NavigationItem[] = [
 const Teams: FC = () => {
   const history = useHistory();
   const {team: teamParam, tab: tabParam, resource: resourceParam} = useParams<TeamsUrlParams>();
+  const queryParams = useQueryParams();
   const [filteredMembers, setFilteredMembers] = useState<CoreTeamMember[]>([]);
   const [teamFilter, setTeamFilter] = useState<string>('');
   const [teams, setTeams] = useState<CoreTeam[]>([]);
   const [apiState, setAPIState] = useState<APIState>(INITIAL_API_STATE);
+
+  const queryTitle = queryParams.get('title');
 
   useEffect(() => {
     const isAllTeams = teamParam === allTeamsFilter.pathname;
@@ -138,8 +142,12 @@ const Teams: FC = () => {
 
     const members = getFilteredMembers();
     const sortedMembers = sortTeamMembers(members);
-    setFilteredMembers(sortedMembers);
-  }, [apiState, teamFilter, teams]);
+    if (queryTitle) {
+      setFilteredMembers(sortedMembers.filter((member) => member.job_title.toLowerCase() === queryTitle.toLowerCase()));
+    } else {
+      setFilteredMembers(sortedMembers);
+    }
+  }, [apiState, queryTitle, teamFilter, teams]);
 
   const handleNavOptionClick = useCallback(
     (option: string) => (): void => {
@@ -171,7 +179,7 @@ const Teams: FC = () => {
         key={pk}
         profileImage={user.profile_image}
         discordUsername={user.discord_username}
-        titles={[job_title]}
+        title={job_title}
       />
     ));
   }, [filteredMembers]);
