@@ -2,7 +2,7 @@
   &__grid {
     display: grid;
     gap: 16px;
-    grid-template-columns: repeat(3, 320px);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   &__header {
@@ -10,5 +10,17 @@
     font-size: 36px;
     line-height: 1.25;
     margin: 16px 0 32px;
+  }
+
+  @media (max-width: 786px) {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
   }
 }

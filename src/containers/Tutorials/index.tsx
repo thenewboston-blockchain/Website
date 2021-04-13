@@ -2,7 +2,7 @@ import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
 import {useHistory, useParams} from 'react-router';
 
 import {getCategories} from 'apis/tutorials';
-import {FlatNavLinks, Loader, PageTitle} from 'components';
+import {BreadcrumbMenu, FlatNavLinks, Loader, PageTitle} from 'components';
 import {NavOption} from 'types/option';
 import {Category, TutorialsUrlParams} from 'types/tutorials';
 
@@ -66,6 +66,12 @@ const Tutorials: FC = () => {
     <>
       <PageTitle title="Tutorials" />
       <div className="Tutorials">
+        <BreadcrumbMenu
+          className="Tutorials__BreadcrumbMenu"
+          menuItems={renderCategoryFilter()}
+          pageName={categoryFilter}
+          sectionName="Tutorials"
+        />
         <aside className="Tutorials__left-menu">{renderCategoryFilter()}</aside>
         <div className="Tutorials__right-content">
           {playlistIdParam ? <WatchPlaylist playlistId={playlistIdParam} /> : <Playlists category={categoryFilter} />}
