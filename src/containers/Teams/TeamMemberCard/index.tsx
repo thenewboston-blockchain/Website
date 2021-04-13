@@ -11,7 +11,7 @@ interface ComponentProps {
   hourlyRate: number;
   isLead: boolean;
   profileImage: string;
-  titles: string[];
+  title: string;
 }
 
 const TeamMemberCard: FC<ComponentProps> = ({
@@ -21,7 +21,7 @@ const TeamMemberCard: FC<ComponentProps> = ({
   hourlyRate,
   isLead,
   profileImage,
-  titles,
+  title,
 }) => {
   const renderAvatar = () => (
     <div className="TeamMemberCard__user-avatar">
@@ -34,7 +34,7 @@ const TeamMemberCard: FC<ComponentProps> = ({
   const renderMemberDetails = () => (
     <div className="TeamMemberCard__details">
       <h2 className="TeamMemberCard__details-name">{displayName}</h2>
-      <div className="TeamMemberCard__details-title">{titles.join(', ')}</div>
+      <div className="TeamMemberCard__details-title">{title}</div>
       <div>Discord: {discordUsername || '-'}</div>
       <div>Github: {githubUsername ? <A href={`https://github.com/${githubUsername}`}>{githubUsername}</A> : '-'}</div>
       <div>

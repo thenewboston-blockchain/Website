@@ -4,6 +4,7 @@ import {Icon, IconType} from '@thenewboston/ui';
 
 import {A, BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
 import {TEAMS} from 'constants/teams';
+import useQueryParams from 'hooks/useQueryParams';
 import {NavigationItem} from 'types/navigation';
 import {PageDataObject} from 'types/page-data';
 import {TeamMember, TeamName, TeamsUrlParams, TeamTabOptions} from 'types/teams';
@@ -49,8 +50,11 @@ const externalLinks: NavigationItem[] = [
 const Teams: FC = () => {
   const history = useHistory();
   const {team: teamParam, tab: tabParam, resource: resourceParam} = useParams<TeamsUrlParams>();
+  const queryParams = useQueryParams();
   const [filteredMembers, setFilteredMembers] = useState<TeamMember[]>(teamMembers);
   const [teamFilter, setTeamFilter] = useState<TeamName>(TeamName.all);
+
+  const queryTitle = queryParams.get('title');
 
   useEffect(() => {
     const isAllTeams = teamParam === TeamName.all;
@@ -87,26 +91,18 @@ const Teams: FC = () => {
   }, [history, teamParam]);
 
   useEffect(() => {
-    const getFilteredMembers = (): TeamMember[] => {
-      const teamLeads: TeamMember[] = [];
-      const otherMembers: TeamMember[] = [];
-      teamMembers.forEach((member) => {
-        const {teams} = member;
-        const matchingTeam = teams.find(({title}) => title.toLowerCase() === teamFilter.toLowerCase());
-        if (matchingTeam) {
-          if (matchingTeam.isLead) {
-            teamLeads.push({...member, isLead: true});
-          } else {
-            otherMembers.push({...member, isLead: false});
-          }
-        }
-      });
-      return teamLeads.concat(otherMembers);
-    };
+    const getFilteredMembers = () =>
+      teamMembers.filter((teamMember) => teamMember.team.toLowerCase() === teamFilter.toLowerCase());
+
     const members = teamFilter === TeamName.all ? teamMembers : getFilteredMembers();
     const sortedMembers = sortTeamMembers(members);
-    setFilteredMembers(sortedMembers);
-  }, [teamFilter]);
+
+    if (queryTitle) {
+      setFilteredMembers(sortedMembers.filter((member) => member.title.toLowerCase() === queryTitle.toLowerCase()));
+    } else {
+      setFilteredMembers(sortedMembers);
+    }
+  }, [queryTitle, teamFilter]);
 
   const handleNavOptionClick = useCallback(
     (option: string) => (): void => {
@@ -126,7 +122,7 @@ const Teams: FC = () => {
   const renderTeamMembers = useCallback((): ReactNode => {
     if (!filteredMembers.length) return <EmptyPage />;
     return filteredMembers.map(
-      ({contributorId, discordUsername, displayName, githubUsername, hourlyRate, isLead, profileImage, titles}) => (
+      ({contributorId, discordUsername, displayName, githubUsername, hourlyRate, isLead, profileImage, title}) => (
         <TeamMemberCard
           displayName={displayName}
           discordUsername={discordUsername}
@@ -135,7 +131,7 @@ const Teams: FC = () => {
           isLead={isLead}
           key={contributorId}
           profileImage={profileImage}
-          titles={titles}
+          title={title}
         />
       ),
     );
