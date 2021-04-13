@@ -85,26 +85,49 @@ const ProjectsMilestones: FC = () => {
             <A href="https://github.com/thenewboston-developers/Project-Proposals/issues/new?assignees=&labels=&template=payout-request.md&title=NAME_OF_PROJECT+-+NAME_OF_MILESTONE+-+MILESTONE_NUMBER">
               Payout Request
             </A>{' '}
-            including valid proof of work for all objectives.
+            including valid proof of work for all objectives. The issue should have a tag of the designated project
+            reviewer.
           </>
         }
       />
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={2}
-        text="The government will then review the proof of work to ensure that all objectives have been met. The government will leave a comment if there are any questions or clarifications that are needed."
+        text={
+          <>
+            The project reviewer will see the payout request issue, and collaborate with the project lead to solidify
+            the report. Once the report has been finalized, the project reviewer will close the issue, and submit a PR
+            updating the project directory.
+          </>
+        }
       />
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={3}
+        text="The government will then review the proof of work to ensure that all objectives have been met. The government will leave a comment if there are any questions or clarifications that are needed."
+      />
+      <StepIndicator
+        className="ProjectsMilestones__StepIndicator"
+        number={4}
         text={
           <>
-            Once a milestone has been accepted by the government, payment will be sent and the project lead may then
-            complete the next{' '}
+            Once a milestone has been accepted by the government, the PR will be merged, and the payment will be sent
+            and the project lead may then complete the next{' '}
             <A href="https://github.com/thenewboston-developers/Project-Proposals/issues/new?assignees=&labels=&template=milestone-proposal.md&title=NAME_OF_PROJECT+-+NAME_OF_MILESTONE+-+MILESTONE_NUMBER">
               Milestone Proposal
             </A>{' '}
-            according to their next roadmap milestone.
+            according to their next roadmap milestone. The dedicated project reviewer will be tagged as a label again.
+          </>
+        }
+      />
+      <StepIndicator
+        className="ProjectsMilestones__StepIndicator"
+        number={5}
+        text={
+          <>
+            The milestone will then be reviewed by the project reviewer, and the two will collaborate again to finalize
+            the milestone. Once it's ready, the project reviewer will submit another PR containing the finalized version
+            of the next milestone for the government to review.
           </>
         }
       />
