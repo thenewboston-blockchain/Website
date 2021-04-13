@@ -2,8 +2,9 @@ import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
 import {Link, useHistory, useParams} from 'react-router-dom';
 import {Icon, IconType} from '@thenewboston/ui';
 
-import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
+import {A, BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
 import {TEAMS} from 'constants/teams';
+import {NavigationItem} from 'types/navigation';
 import {PageDataObject} from 'types/page-data';
 import {TeamMember, TeamName, TeamsUrlParams, TeamTabOptions} from 'types/teams';
 import {getTeamMembers} from 'utils/data';
@@ -37,6 +38,13 @@ const pageData: PageDataObject = {
     name: 'Team Member Payments',
   },
 };
+
+const externalLinks: NavigationItem[] = [
+  {
+    name: 'Meeting Notes Template',
+    url: 'https://docs.google.com/document/d/15P7MPPGgC2O3ZhOWryOeuW1K5EO9TL8_TBWR4Z2-_eo/edit?usp=sharing',
+  },
+];
 
 const Teams: FC = () => {
   const history = useHistory();
@@ -140,6 +148,11 @@ const Teams: FC = () => {
           <Link className="Teams__resources-item" key={key} to={`/teams/${teamParam}/${tabParam}/${key}`}>
             {value.name}
           </Link>
+        ))}
+        {externalLinks.map((externalLink) => (
+          <A className="Teams__resources-item" href={externalLink.url} key={externalLink.name} newWindow>
+            {externalLink.name}
+          </A>
         ))}
       </>
     );
