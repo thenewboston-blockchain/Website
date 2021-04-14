@@ -1,8 +1,8 @@
 import React, {FC, useMemo} from 'react';
 import clsx from 'clsx';
 import capitalize from 'lodash/capitalize';
+import {Icon, IconType} from '@thenewboston/ui';
 import {bemify} from '@thenewboston/utils';
-import {Icon, IconType} from 'components';
 
 import './DocCallout.scss';
 

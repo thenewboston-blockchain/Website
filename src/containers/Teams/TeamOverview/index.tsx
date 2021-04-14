@@ -1,5 +1,6 @@
 import React, {FC, Fragment, ReactNode, useCallback} from 'react';
-import {A, DocList, Icon, IconType} from 'components';
+import {Icon, IconType} from '@thenewboston/ui';
+import {A, DocList} from 'components';
 import {TeamName} from 'types/teams';
 import {getTeamData} from 'utils/data';
 

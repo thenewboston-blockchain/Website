@@ -2,10 +2,10 @@ import {SocialMedia} from 'types/social-media';
 
 export const socialMediaUrls = {
   [SocialMedia.discord]: 'https://discord.gg/thenewboston',
-  [SocialMedia.facebook]: 'https://www.facebook.com/TheNewBoston-464114846956315/',
+  [SocialMedia.facebook]: 'https://www.facebook.com/thenewbostoncoin/',
   [SocialMedia.github]: 'https://github.com/thenewboston-developers',
-  [SocialMedia.instagram]: 'https://www.instagram.com/thenewboston_official/',
-  [SocialMedia.linkedin]: 'https://www.linkedin.com/company/thenewboston-developers/',
+  [SocialMedia.instagram]: 'https://www.instagram.com/thenewbostoncoin/',
+  [SocialMedia.linkedin]: 'https://www.linkedin.com/company/thenewbostoncoin/',
   [SocialMedia.reddit]: 'https://www.reddit.com/r/thenewboston/',
   [SocialMedia.twitch]: 'https://twitch.tv/thenewboston/profile',
   [SocialMedia.twitter]: 'https://twitter.com/thenewboston_og',
@@ -14,10 +14,10 @@ export const socialMediaUrls = {
 
 export const socialMediaHandles = {
   [SocialMedia.discord]: 'discord',
-  [SocialMedia.facebook]: 'TheNewBoston',
+  [SocialMedia.facebook]: 'thenewbostoncoin',
   [SocialMedia.github]: 'thenewboston-developers',
-  [SocialMedia.instagram]: '@thenewboston_official',
-  [SocialMedia.linkedin]: 'thenewboston',
+  [SocialMedia.instagram]: '@thenewbostoncoin',
+  [SocialMedia.linkedin]: 'thenewbostoncoin',
   [SocialMedia.reddit]: 'r/thenewboston',
   [SocialMedia.twitch]: 'thenewboston',
   [SocialMedia.twitter]: '@thenewboston_og',

@@ -93,7 +93,13 @@ const Footer: FC<ComponentProps> = ({className}) => {
       SocialMedia.discord,
       SocialMedia.twitch,
     ].map((website) => (
-      <SocialMediaIcon className="Footer__SocialMediaLink" iconSize={28} key={website} website={website} />
+      <SocialMediaIcon
+        className="Footer__SocialMediaLink"
+        iconSize={28}
+        key={website}
+        totalSize={28}
+        website={website}
+      />
     ));
 
   const renderNavLists = () =>

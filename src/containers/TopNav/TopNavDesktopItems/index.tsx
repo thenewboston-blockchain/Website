@@ -1,8 +1,9 @@
 import React, {useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
+import {IconType} from '@thenewboston/ui';
 
-import {Avatar, Button, IconType} from 'components';
+import {Avatar, Button} from 'components';
 import TopNavLink from 'containers/TopNav/TopNavLink';
 import TopNavPopover, {TopNavPopoverItemType} from 'containers/TopNav/TopNavPopover';
 import {selectActiveUser} from 'selectors/state';
@@ -18,7 +19,7 @@ const communityPopoverItems: TopNavPopoverItemType[] = [
   },
   {
     description: 'Join the team building the app',
-    iconType: IconType.humanHandsUp,
+    iconType: IconType.humanHandsup,
     title: 'Openings',
     to: '/openings',
   },
@@ -45,7 +46,7 @@ const getStartedPopoverItems: TopNavPopoverItemType[] = [
   },
   {
     description: 'Watch tutorials made by the community',
-    iconType: IconType.video,
+    iconType: IconType.playBoxMultiple,
     title: 'Tutorials',
     to: '/tutorials',
   },

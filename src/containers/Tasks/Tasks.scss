@@ -20,7 +20,9 @@
   }
 
   &__loader-container {
+    display: flex;
     height: 80vh;
+    justify-content: center;
     margin-top: 64px;
   }
 

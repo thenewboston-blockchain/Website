@@ -1,13 +1,14 @@
 export enum TeamName {
   all = 'All',
   audit = 'Audit',
+  backEnd = 'Back-End',
   blockchain = 'Blockchain',
   community = 'Community',
   design = 'Design',
+  devOps = 'DevOps',
   education = 'Education',
   frontEnd = 'Front-End',
   marketing = 'Marketing',
-  websiteApi = 'Website API',
 }
 
 interface Contributor {
@@ -44,20 +45,16 @@ export interface TeamContributor {
   title: string;
 }
 
-interface TeamLead {
-  title: string;
-  isLead: boolean;
-}
-
 export interface TeamMember {
-  contributorId: string;
+  contributorId: number;
   discordUsername: string;
   displayName: string;
   githubUsername: string;
+  hourlyRate: number;
   isLead: boolean;
   profileImage: string;
-  teams: TeamLead[];
-  titles: string[];
+  team: string;
+  title: string;
 }
 
 export interface TeamsUrlParams {

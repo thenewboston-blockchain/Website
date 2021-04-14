@@ -1,4 +1,5 @@
 import parse from 'date-fns/parse';
+
 import {TEAMS} from 'constants/teams';
 import {RawTask, Task, TaskDict} from 'types/github';
 import {Opening} from 'types/openings';
@@ -28,77 +29,43 @@ export const getTasks = (): TaskDict => {
   return results;
 };
 
-export const getTeamMemberByGithubUsername = (github_username: string): TeamMember | null => {
-  let member: TeamMember | null = null;
-
+export const getTeamMemberByGithubUsername = (githubParam: string): TeamMember | null => {
   teams.forEach((team) => {
-    const {title: teamTitle, contributors: teamContributors} = team;
-    teamContributors.forEach((teamMember: any) => {
-      if (teamMember.contributor.githubUsername === github_username) {
-        const {title: userTitle, isLead, contributor} = teamMember;
-        const {contributorId, ...otherProps} = contributor;
-        if (!member) {
-          member = {
-            contributorId,
-            isLead,
-            teams: [{isLead, title: teamTitle}],
-            titles: [userTitle],
-            ...otherProps,
-          };
-        } else {
-          const {teams: addedTeams, titles, isLead: isLeadForAddedTeams} = member;
-          const teamNameExists =
-            addedTeams.findIndex(({title}: {title: string}) => title.toLowerCase() === teamTitle.toLowerCase()) !== -1;
-          const titleExists =
-            titles.findIndex((title: string) => title.toLowerCase() === userTitle.toLowerCase()) !== -1;
-          member = {
-            ...member,
-            isLead: isLeadForAddedTeams || isLead,
-            teams: teamNameExists ? addedTeams : addedTeams.concat([{isLead, title: teamTitle}]),
-            titles: titleExists ? titles : titles.concat([userTitle]),
-          };
-        }
+    const {contributors} = team;
+    contributors.forEach((teamMember) => {
+      const {githubUsername} = teamMember.contributor;
+      if (githubUsername === githubParam) {
+        const {contributor} = teamMember;
+
+        return {
+          ...contributor,
+          contributorId: parseInt(contributor.contributorId, 10),
+        } as TeamMember;
       }
     });
   });
 
-  return member;
+  return null;
 };
 
 export const getTeamMembers = (): TeamMember[] => {
-  const members: any = {};
+  const teamMembers: TeamMember[] = [];
+
   teams.forEach((team) => {
-    team.contributors.forEach((teamMember: any) => {
-      const {title: userTitle, isLead, createdDate, contributor} = teamMember;
-      const {contributorId, ...otherProps} = contributor;
-      if (!members[contributorId]) {
-        members[contributorId] = {
-          contributorId,
-          createdDate,
-          isLead,
-          teams: [{isLead, title: team.title}],
-          titles: [userTitle],
-          ...otherProps,
-        };
-      } else {
-        const member = members[contributorId];
-        const {teams: addedTeams, titles, isLead: isLeadForAddedTeams} = member;
-        const teamNameExists =
-          addedTeams.findIndex(({title}: {title: string}) => title.toLowerCase() === team.title.toLowerCase()) !== -1;
-        const titleExists = titles.findIndex((title: string) => title.toLowerCase() === userTitle.toLowerCase()) !== -1;
-        members[contributorId] = {
-          ...member,
-          isLead: isLeadForAddedTeams || isLead,
-          teams: teamNameExists ? addedTeams : addedTeams.concat([{isLead, title: team.title}]),
-          titles: titleExists ? titles : titles.concat([userTitle]),
-        };
-      }
+    team.contributors.forEach((teamMember) => {
+      const {title, isLead, contributor, hourlyRate} = teamMember;
+      teamMembers.push({
+        ...contributor,
+        contributorId: parseInt(contributor.contributorId, 10),
+        hourlyRate,
+        isLead,
+        team: team.title,
+        title,
+      });
     });
   });
 
-  return Object.entries(members)
-    .sort(([, a]: [string, any], [, b]: [string, any]) => a.contributorId - b.contributorId)
-    .map(([, member]) => member) as TeamMember[];
+  return teamMembers.sort((memberA, memberB) => memberA.contributorId - memberB.contributorId);
 };
 
 export const getTeamData = (
