@@ -8,7 +8,28 @@
     line-height: 125%;
 
     &-body {
+      max-height: 480px;
+      overflow-y: scroll;
       padding: 8px 0;
+      /* for firefox */
+      scrollbar-width: thin;
+
+      &::-webkit-scrollbar {
+        border-radius: 2px;
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: var(--color-white);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: var(--color-blue-gray-200);
+
+        &:hover {
+          background: var(--color-blue-gray-300);
+        }
+      }
     }
 
     &-header {
@@ -111,6 +132,11 @@
   @media (max-width: 768px) {
     gap: 40px;
     grid-template-columns: auto;
+
+    &__list-body {
+      max-height: none;
+      overflow-y: auto;
+    }
 
     &__list-video-top {
       overflow: auto;

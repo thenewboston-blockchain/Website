@@ -63,6 +63,7 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
             onClick={() => setCurrentVideo(video)}
             role="button"
             tabIndex={0}
+            title={video.title}
           >
             <div className="WatchPlaylist__list-video-number">
               {video.uuid === currentVideo?.uuid ? <Icon icon={IconType.play} /> : index + 1}
