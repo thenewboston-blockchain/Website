@@ -26,7 +26,7 @@ const TeamOverview: FC<ComponentProps> = ({team}) => {
         {team.discord && (
           <div className="TeamOverview__social">
             <Icon className="TeamOverview__social-icon" icon={IconType.discord} size={18} />
-            <p className="TeamOverview__social-title TeamOverview__social-title--sail-gray">{team.discord}</p>
+            <div className="TeamOverview__social-title TeamOverview__social-title--sail-gray">{team.discord}</div>
           </div>
         )}
       </>
