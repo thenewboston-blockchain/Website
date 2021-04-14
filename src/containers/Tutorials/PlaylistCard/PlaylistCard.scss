@@ -17,8 +17,7 @@
   &__bottom {
     color: var(--color-sail-gray-900);
     line-height: 125%;
-    padding: 16px;
-    padding-top: 12px;
+    padding: 8px 16px 24px;
   }
 
   &__details {
@@ -37,6 +36,7 @@
 
   &__title {
     font-weight: 500;
+    line-height: 125%;
     margin-bottom: 4px;
   }
 

@@ -30,15 +30,15 @@ const PlaylistCard: FC<PlaylistCardProps> = ({author, title, thumbnail, uuid, vi
         <img alt={title} className="PlaylistCard__thumbnail" src={thumbnail} />
       </div>
       <div className="PlaylistCard__bottom">
-        <p className="PlaylistCard__title">{title}</p>
-        <p className="PlaylistCard__author">
+        <div className="PlaylistCard__title">{title}</div>
+        <div className="PlaylistCard__author">
           Author: <span className="PlaylistCard__author-name">{author}</span>
-        </p>
-        <p className="PlaylistCard__details">
+        </div>
+        <div className="PlaylistCard__details">
           <span className="PlaylistCard__details-videos">{video_list.length} videos</span>
           &bull;
           <span className="PlaylistCard__details-duration">{getFormattedTime(totalDuration, TimeFormat.english)}</span>
-        </p>
+        </div>
       </div>
     </div>
   );
