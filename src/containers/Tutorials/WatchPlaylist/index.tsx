@@ -4,7 +4,7 @@ import {format, parseISO} from 'date-fns';
 
 import {getPlaylist} from 'apis/tutorials';
 import {Loader, VideoPlayer} from 'components';
-import {Playlist, TimeFormat, Video} from 'types/tutorials';
+import {Playlist, Source, TimeFormat, Video} from 'types/tutorials';
 import {getFormattedTime} from 'utils/time';
 
 import './WatchPlaylist.scss';
@@ -100,7 +100,8 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
             Date Published: {format(parseISO(currentVideo.published_at), 'MMM dd, yyyy')}
           </div>
           <div className="WatchPlaylist__video-author">
-            Youtube Channel: <span className="WatchPlaylist__video-author-name">{currentVideo.author}</span>
+            {playlist.playlist_type === Source.youtube ? 'Youtube' : 'Vimeo'} Channel:{' '}
+            <span className="WatchPlaylist__video-author-name">{currentVideo.author}</span>
           </div>
         </div>
       </div>
