@@ -16,7 +16,7 @@ export async function getCoreTeams(): Promise<CoreTeam[]> {
   );
 
   if (!response.data) {
-    return [];
+    throw new Error('Error while fetching core teams, please try again.');
   }
 
   return Promise.all(

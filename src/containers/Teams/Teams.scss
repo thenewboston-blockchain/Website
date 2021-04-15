@@ -25,6 +25,26 @@
     display: none;
   }
 
+  &__error {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: center;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+
+    h1 {
+      font-weight: 400;
+      margin-bottom: 24px;
+    }
+
+    h3 {
+      font-weight: 900;
+    }
+  }
+
   &__left-menu {
     grid-column: 1 / span 1;
   }

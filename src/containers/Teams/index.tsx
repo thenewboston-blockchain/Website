@@ -91,7 +91,7 @@ const Teams: FC = () => {
         setTeams(sortedCoreTeams);
         setAPIState({...apiState, progress: APIProgress.SUCCESS});
       } catch (err) {
-        setAPIState({error: err, progress: APIProgress.ERR});
+        setAPIState({error: err.message, progress: APIProgress.ERR});
       }
     };
     fetchAndProcessTeams();
@@ -243,6 +243,15 @@ const Teams: FC = () => {
   }, [renderResources, renderTeamMembers, tabParam, teamFilter, teams]);
 
   const isReadyToDisplay = apiState.progress === APIProgress.SUCCESS && teamFilter && filteredMembers.length;
+
+  if (apiState.progress === APIProgress.ERR) {
+    return (
+      <div className="Teams__error">
+        <h1>Core Team</h1>
+        <h3>{apiState.error}</h3>
+      </div>
+    );
+  }
 
   return (
     <>
