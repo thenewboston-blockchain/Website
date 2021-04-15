@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import {IconType} from '@thenewboston/ui';
 
 import {Avatar, Button} from 'components';
+import {isCreateAccountAllowed, isSignInAllowed} from 'config';
 import TopNavLink from 'containers/TopNav/TopNavLink';
 import TopNavPopover, {TopNavPopoverItemType} from 'containers/TopNav/TopNavPopover';
 import {selectActiveUser} from 'selectors/state';
@@ -116,8 +117,10 @@ const TopNavDesktopItems = () => {
     if (activeUser) return null;
     return (
       <>
-        <TopNavLink className="TopNavDesktopItems__right-item" text="Create Account" to="/create-account" />
-        <TopNavLink className="TopNavDesktopItems__right-item" text="Sign In" to="/sign-in" />
+        {isCreateAccountAllowed && (
+          <TopNavLink className="TopNavDesktopItems__right-item" text="Create Account" to="/create-account" />
+        )}
+        {isSignInAllowed && <TopNavLink className="TopNavDesktopItems__right-item" text="Sign In" to="/sign-in" />}
       </>
     );
   };
