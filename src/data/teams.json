@@ -53,6 +53,19 @@
           "profileImage": "https://avatars1.githubusercontent.com/u/20350674?v=4"
         },
         "hourlyRate": 600
+      },
+      {
+        "title": "Auditor",
+        "isLead": false,
+        "createdDate": "2021-04-12T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "19",
+          "discordUsername": "MrSky#5242",
+          "displayName": "MrSky",
+          "githubUsername": "mrbusysky",
+          "profileImage": "https://avatars.githubusercontent.com/u/58412572?v=4"
+        },
+        "hourlyRate": 300
       }
     ],
     "responsibilities": [
@@ -194,19 +207,6 @@
           "profileImage": "https://avatars.githubusercontent.com/u/72809444?s=460&u=e2138725222fb09a546d7d1e164cf64f5583648b&v=4"
         },
         "hourlyRate": 800
-      },
-      {
-        "title": "Project Reviewer",
-        "isLead": false,
-        "createdDate": "2021-04-12T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "19",
-          "discordUsername": "MrSky#5242",
-          "displayName": "MrSky",
-          "githubUsername": "mrbusysky",
-          "profileImage": "https://avatars.githubusercontent.com/u/58412572?v=4"
-        },
-        "hourlyRate": 300
       }
     ],
     "responsibilities": [
