@@ -180,7 +180,7 @@ const ProjectsMilestones: FC = () => {
         quantifiable objectives and estimated coin value of each. Upon completion of the milestone, each objective will
         be reviewed by thenewboston team and once all objectives have been verified as completed, coins will then be
         rewarded. The milestones should be planned and written with the help of a{' '}
-        <NavLink to={`/projects/overview#${ProjectsOverviewNav.reviewer}`}>project reviewer</NavLink>.
+        <NavLink to={`/projects/overview#${ProjectsOverviewNav.auditors}`}>project auditor</NavLink>.
       </p>
       {renderMilestonePayoutRequestProcess()}
       {renderSamplePayoutRequest()}
