@@ -91,11 +91,17 @@ const ProfileInfo: FC<ComponentProps> = ({user}) => {
     );
   };
 
-  return apiState.progress === APIProgress.REQ || apiState.progress === APIProgress.INIT ? (
-    <div className="ProfileInfo__loader-container">
-      <Loader />
-    </div>
-  ) : (
+  const isLoading = apiState.progress === APIProgress.REQ || apiState.progress === APIProgress.INIT;
+
+  if (isLoading) {
+    return (
+      <div className="ProfileInfo__loader-container">
+        <Loader />
+      </div>
+    );
+  }
+
+  return (
     <>
       <div className="ProfileInfo">
         <div className="ProfileInfo__top-section">
