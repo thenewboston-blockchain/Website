@@ -3,7 +3,6 @@ import React, {FC} from 'react';
 import {A, DocContainer, DocSubSection, Label} from 'components';
 
 import './ProjectsProposalSubmissionProcess.scss';
-import {NavLink} from 'react-router-dom';
 
 enum ProjectsProposalSubmissionProcessNav {
   overview = 'overview',
