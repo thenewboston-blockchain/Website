@@ -12,10 +12,8 @@ Team: [TEAM NAME]
 {
   "title": [JOB TITLE],
   "isLead": [true OR false],
-  "payPerDay": 2800,
-  "createdDate": "2020-07-08T02:14:59.307535Z",
+  "hourlyRate": [HOURLY RATE],
   "contributor": {
-    "contributorId": [CONTRIBUTOR ID],
     "discordUsername": [DISCORD USERNAME],
     "displayName": [DISPLAY NAME],
     "githubUsername": [GITHUB USERNAME],
