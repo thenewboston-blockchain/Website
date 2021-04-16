@@ -9,8 +9,11 @@ interface ComponentProps {
   team: CoreTeam;
 }
 
+const githubTeamName = 'thenewboston-developers/';
+
 const TeamOverview: FC<ComponentProps> = ({team}) => {
   const renderTeamDescription = useCallback((): ReactNode => {
+    const repoName = team.github.substring(team.github.lastIndexOf(githubTeamName) + githubTeamName.length);
     return (
       <>
         <h4 className="TeamOverview__sub-heading"> About the team </h4>
@@ -19,7 +22,7 @@ const TeamOverview: FC<ComponentProps> = ({team}) => {
           <div className="TeamOverview__social">
             <Icon className="TeamOverview__social-icon" icon={IconType.github} size={18} />
             <A className="TeamOverview__social-title" href={team.github}>
-              {team.github.substring(team.github.lastIndexOf('/') + 1)}
+              {repoName}
             </A>
           </div>
         )}
