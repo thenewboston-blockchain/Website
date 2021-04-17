@@ -22,7 +22,7 @@ const ProjectsOverview: FC = () => {
       </p>
       <p>
         To maintain the quality of projects there are strict{' '}
-        <NavLink to="/projects/rules">rules and guidelines</NavLink> that projects must follow as well as detailed{' '}
+        <NavLink to="/projects/rules">rules and guidelines</NavLink> that projects must follow, as well as detailed{' '}
         <NavLink to="/projects/milestones">milestone reports</NavLink> that the{' '}
         <NavLink to={`#${ProjectsOverviewNav.lead}`}>project lead</NavLink> must submit to receive payments.
       </p>
@@ -33,21 +33,21 @@ const ProjectsOverview: FC = () => {
           <li>Creating a detailed roadmap</li>
           <li>Specifying milestones, objectives, and estimated timelines</li>
           <li>Completing objectives according to your submitted milestones</li>
-          <li>Managing all aspects of the project including planning, design, development, and so on</li>
+          <li>Managing all aspects of the project, including planning, design, development, and so on</li>
         </ul>
         <p>
-          Once you complete a draft of your project proposal you may submit it by using the{' '}
+          Once you complete a draft of your project proposal, submit it by using the{' '}
           <A href="https://github.com/thenewboston-developers/Project-Proposals/issues/new?assignees=&labels=Project&template=project-proposal.md&title=NAME_OF_YOUR_PROJECT">
             project proposal
           </A>{' '}
-          template. A project auditor will help you finalize the project submission if any changes are needed. See the{' '}
-          <NavLink to="/projects/proposals">proposal submission process</NavLink> for more details.
+          template. A project auditor will help you complete the project submission if any changes are essential. See
+          the <NavLink to="/projects/proposals">proposal submission process</NavLink> for more details.
         </p>
       </DocSubSection>
       <DocSubSection id={ProjectsOverviewNav.auditors} title="Auditors">
         <p>
           Auditors will work with you to help ensure that your proposal is sound, your milestones are clear, and that
-          each objective is quantifiable. They will also help to assign reasonable coin values to each milestone in
+          each objective is quantifiable. They will also help in assigning reasonable coin values to each milestone in
           order to receive funding throughout development. We suggest aiming for 2-3 weeks worth of work per milestone,
           but this is not a strict requirement.
         </p>
@@ -60,13 +60,13 @@ const ProjectsOverview: FC = () => {
           </li>
           <li>Collaborating with the project lead to set estimated milestone dates</li>
           <li>Setting coin amounts for milestone payouts</li>
-          <li>Reviewing completed milestones to ensure all objectives are meet</li>
+          <li>Reviewing completed milestones to ensure the project meets every objective</li>
         </ul>
       </DocSubSection>
       <DocSubSection id={ProjectsOverviewNav.milestones} title="Roadmap, Milestones, and Objectives">
         <p>
           Your roadmap outlines the major components of your project. The relationship between roadmaps, milestones, and
-          objectives can be seen below.
+          objectives is the following:
         </p>
         <DocImage alt="roadmap diagram" maxWidth={600} src={RoadmapMilestoneOverview} />
       </DocSubSection>
