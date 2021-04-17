@@ -3,6 +3,7 @@ import {useHistory, useParams} from 'react-router';
 
 import {getCategories} from 'apis/tutorials';
 import {BreadcrumbMenu, FlatNavLinks, Loader, PageTitle} from 'components';
+import {allTutorialsFilter} from 'constants/tutorials';
 import {NavOption} from 'types/option';
 import {Category, TutorialsUrlParams} from 'types/tutorials';
 
@@ -17,7 +18,7 @@ const Tutorials: FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [errorMessage, setErrorMessage] = useState<string>('');
   const [categories, setCategories] = useState<NavOption[]>([]);
-  const [categoryFilter, setCategoryFilter] = useState<string>('All');
+  const [categoryFilter, setCategoryFilter] = useState<string>(allTutorialsFilter.title);
 
   useEffect(() => {
     (async (): Promise<void> => {
@@ -28,7 +29,7 @@ const Tutorials: FC = () => {
           pathname: category.name,
           title: category.name,
         }));
-        updatedCategories.unshift({pathname: 'All', title: 'All'});
+        updatedCategories.unshift(allTutorialsFilter);
         setCategories(updatedCategories);
       } catch (error) {
         setErrorMessage(error.message);
@@ -43,7 +44,7 @@ const Tutorials: FC = () => {
       if (categories.some((category: NavOption) => category.pathname === categoryParam)) {
         setCategoryFilter(categoryParam);
       } else {
-        history.replace('/tutorials/All');
+        history.replace(`/tutorials/${allTutorialsFilter.pathname}`);
       }
     }
   }, [categories, loading, categoryParam, history]);
