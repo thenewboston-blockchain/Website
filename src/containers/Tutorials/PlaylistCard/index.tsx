@@ -27,7 +27,7 @@ const PlaylistCard: FC<PlaylistCardProps> = ({author, title, thumbnail, uuid, vi
   return (
     <div className="PlaylistCard" onClick={openPlaylist} role="button" tabIndex={0}>
       <div className="PlaylistCard__top">
-        <img alt={title} className="PlaylistCard__thumbnail" src={thumbnail} />
+        <img alt={title} className="PlaylistCard__thumbnail" loading="lazy" src={thumbnail} />
       </div>
       <div className="PlaylistCard__bottom">
         <div className="PlaylistCard__title">{title}</div>
