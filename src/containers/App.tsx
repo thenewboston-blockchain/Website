@@ -18,6 +18,7 @@ import Guidelines from './Guidelines';
 import Home from './Home';
 import Openings from './Openings';
 import PrimaryValidatorApi from './PrimaryValidatorApi';
+import PrivacyPolicy from './PrivacyPolicy';
 import Profile from './Profile';
 import Projects from './Projects';
 import SignIn from './SignIn';
@@ -25,6 +26,7 @@ import SignOut from './SignOut';
 import Social from './Social';
 import StyleGuide from './StyleGuide';
 import Tasks from './Tasks';
+import TermsOfUse from './TermsOfUse';
 import Teams from './Teams';
 import WebMap from './Webmap';
 
@@ -81,9 +83,11 @@ const App: FC = () => {
           <Route path="/governance/:chapter?" component={Governance} />
           <Route path="/guide/:chapter?" component={Guide} />
           <Route path="/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
+          <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route path="/projects/:chapter?" component={Projects} />
           <Route exact path="/sign-in" component={SignIn} />
           <Route exact path="/sign-out" component={SignOut} />
+          <Route path="/terms-of-use" component={TermsOfUse} />
           <Route path="/style-guide/:chapter?" component={StyleGuide} />
           <Route path="/users/:userId" component={Profile} />
           <Route path="/webmap" component={WebMap} />

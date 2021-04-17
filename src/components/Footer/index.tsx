@@ -76,6 +76,14 @@ const navLists = [
         title: 'Donate',
         url: '/donate',
       },
+      {
+        title: 'Terms of Use',
+        url: '/terms-of-use',
+      },
+      {
+        title: 'Privacy Policy',
+        url: '/privacy-policy',
+      },
     ],
   },
 ];
