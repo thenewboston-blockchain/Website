@@ -35,7 +35,9 @@ const Playlists: FC<PlaylistsParams> = ({category}) => {
     <div className="Playlists">
       <div className="Playlists__header">{category}</div>
       {loading ? (
-        <Loader />
+        <div className="Playlists__loader">
+          <Loader />
+        </div>
       ) : (
         <div className="Playlists__grid">
           {playlists.map(({author, title, thumbnail, video_list, uuid}) => (

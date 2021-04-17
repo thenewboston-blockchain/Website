@@ -62,7 +62,12 @@ const Tutorials: FC = () => {
     );
   };
 
-  if (loading) return <Loader />;
+  if (loading)
+    return (
+      <div className="Tutorials__loader">
+        <Loader />
+      </div>
+    );
   return (
     <>
       <PageTitle title="Tutorials" />

@@ -12,6 +12,11 @@
     margin: 16px 0 32px;
   }
 
+  &__loader {
+    display: grid;
+    place-items: center;
+  }
+
   @media (max-width: 786px) {
     &__grid {
       grid-template-columns: repeat(2, 1fr);

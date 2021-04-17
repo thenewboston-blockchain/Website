@@ -83,7 +83,12 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
     </div>
   );
 
-  if (loading) return <Loader />;
+  if (loading)
+    return (
+      <div className="WatchPlaylist__loader">
+        <Loader />
+      </div>
+    );
   if (!playlist || !currentVideo) return <p>Failed to load video!</p>;
   return (
     <div className="WatchPlaylist">

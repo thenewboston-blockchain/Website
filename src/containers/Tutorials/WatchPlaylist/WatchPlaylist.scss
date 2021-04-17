@@ -104,6 +104,11 @@
     }
   }
 
+  &__loader {
+    display: grid;
+    place-items: center;
+  }
+
   &__video {
     line-height: 125%;
     margin-bottom: 24px;
