@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import {format, parseISO} from 'date-fns';
 
 import {getPlaylist} from 'apis/tutorials';
-import {Loader, VideoPlayer} from 'components';
+import {EmptyPage, Loader, VideoPlayer} from 'components';
 import {Playlist, Source, TimeFormat, Video} from 'types/tutorials';
 import {getFormattedTime} from 'utils/time';
 
@@ -30,6 +30,9 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
           setCurrentVideo(fetchedPlaylist.video_list[0]);
         }
       } catch (error) {
+        if (error.response.status === 404) {
+          return setErrorMessage('Playlist not found!');
+        }
         setErrorMessage(error.message);
       } finally {
         setLoading(false);
@@ -89,7 +92,8 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
         <Loader />
       </div>
     );
-  if (!playlist || !currentVideo) return <p>Failed to load video!</p>;
+  if (errorMessage) return <div className="WatchPlaylist__error">{errorMessage}</div>;
+  if (!playlist || !currentVideo) return <EmptyPage />;
   return (
     <div className="WatchPlaylist">
       <div className="WatchPlaylist__main">

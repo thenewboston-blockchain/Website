@@ -1,7 +1,7 @@
-import React, {FC, useEffect, useState} from 'react';
+import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
 
 import {getPlaylists} from 'apis/tutorials';
-import {Loader} from 'components';
+import {EmptyPage, Loader} from 'components';
 import {Playlist} from 'types/tutorials';
 
 import PlaylistCard from '../PlaylistCard';
@@ -31,6 +31,25 @@ const Playlists: FC<PlaylistsParams> = ({category}) => {
     })();
   }, [category]);
 
+  const renderPlaylistGrid = useCallback((): ReactNode => {
+    if (errorMessage) return <div className="Playlists__error">{errorMessage}</div>;
+    if (!playlists.length) return <EmptyPage />;
+    return (
+      <div className="Playlists__grid">
+        {playlists.map(({author, title, thumbnail, video_list, uuid}) => (
+          <PlaylistCard
+            author={author}
+            key={uuid}
+            title={title}
+            thumbnail={thumbnail}
+            uuid={uuid}
+            video_list={video_list}
+          />
+        ))}
+      </div>
+    );
+  }, [errorMessage, playlists]);
+
   return (
     <div className="Playlists">
       <div className="Playlists__header">{category}</div>
@@ -39,18 +58,7 @@ const Playlists: FC<PlaylistsParams> = ({category}) => {
           <Loader />
         </div>
       ) : (
-        <div className="Playlists__grid">
-          {playlists.map(({author, title, thumbnail, video_list, uuid}) => (
-            <PlaylistCard
-              author={author}
-              key={uuid}
-              title={title}
-              thumbnail={thumbnail}
-              uuid={uuid}
-              video_list={video_list}
-            />
-          ))}
-        </div>
+        renderPlaylistGrid()
       )}
     </div>
   );

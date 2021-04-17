@@ -5,6 +5,14 @@
   grid-template-columns: auto 280px;
   margin-top: 20px;
 
+  &__error {
+    align-items: center;
+    color: var(--color-danger);
+    display: flex;
+    height: 64px;
+    justify-content: center;
+  }
+
   &__list {
     line-height: 125%;
 

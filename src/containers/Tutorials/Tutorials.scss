@@ -7,6 +7,14 @@
     display: none;
   }
 
+  &__error {
+    align-items: center;
+    color: var(--color-danger);
+    display: flex;
+    height: 64px;
+    justify-content: center;
+  }
+
   &__left-menu {
     grid-column: 1 / span 1;
   }

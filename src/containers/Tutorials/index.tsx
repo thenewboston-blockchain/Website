@@ -68,6 +68,7 @@ const Tutorials: FC = () => {
         <Loader />
       </div>
     );
+  if (errorMessage) return <div className="Tutorials__error">{errorMessage}</div>;
   return (
     <>
       <PageTitle title="Tutorials" />
