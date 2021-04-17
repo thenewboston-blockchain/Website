@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
 
 import {A} from 'components';
+import {isCreateAccountAllowed, isSignInAllowed} from 'config';
 import {selectActiveUser} from 'selectors/state';
 import './TopNavMobileMenu.scss';
 
@@ -68,8 +69,8 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice,
         </>
       ) : (
         <>
-          {renderOtherSmallDeviceLink('Create Account', '/create-account')}
-          {renderOtherSmallDeviceLink('Sign In', '/sign-in')}
+          {isCreateAccountAllowed && renderOtherSmallDeviceLink('Create Account', '/create-account')}
+          {isSignInAllowed && renderOtherSmallDeviceLink('Sign In', '/sign-in')}
         </>
       )}
       {renderOtherSmallDeviceLink('Download', '/download')}

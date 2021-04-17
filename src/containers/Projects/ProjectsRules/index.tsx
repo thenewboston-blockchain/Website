@@ -6,15 +6,15 @@ import './ProjectsRules.scss';
 
 const ProjectsRules: FC = () => {
   const steps: ReactNode[] = [
-    'Must be centered around thenewboston network and/or community.',
-    'Must clearly add value to thenewboston network and/or community.',
-    'For applications involving a user interface (UI), simple mock-ups must be provided in the project proposal. These do not have to be high fidelity designs, basic wireframes are acceptable.',
+    'Projects must be centered on thenewboston network and/or community.',
+    'Projects must clearly add value to thenewboston network and/or community.',
+    'For applications involving a user interface (UI), simple mock-ups must be provided in the project proposal. (Basic wireframes are acceptable, high fidelity designs are not a requirement.)',
     'Software projects must be open source.',
     'Projects involving gambling or illegal activities of any kind are not allowed.',
     'Projects promoting abusive advertisements are not allowed.',
     'Projects dealing with explicit content or pornography are not allowed.',
-    "Projects which use the user's personal information for any purpose must take prior permission from the user or inform them clearly.",
-    'thenewboston is not liable for copyright or other intellectual property rights, property damage, misuse of coins.',
+    "Projects that use the user's personal information for any purpose must take prior permission from the user and inform them clearly.",
+    'thenewboston is not liable for copyright or other intellectual property rights, property damage, or misuse of coins.',
   ];
 
   const renderSteps = () => {

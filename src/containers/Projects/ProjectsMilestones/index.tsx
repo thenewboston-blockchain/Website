@@ -24,7 +24,7 @@ const ProjectsMilestones: FC = () => {
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={2}
-        text="Link to a Pull Request or Issue with Pull Request linked for the addition of a new feature and the screenshot/recording showing the new feature in action."
+        text="Link to a pull request or issue with pull request linked for the addition of a new feature and the screenshot/recording showing the new feature in action."
       />
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
@@ -83,51 +83,37 @@ const ProjectsMilestones: FC = () => {
           <>
             Upon completion of a milestone, the project lead will submit a{' '}
             <A href="https://github.com/thenewboston-developers/Project-Proposals/issues/new?assignees=&labels=&template=payout-request.md&title=NAME_OF_PROJECT+-+NAME_OF_MILESTONE+-+MILESTONE_NUMBER">
-              Payout Request
+              payout request
             </A>{' '}
-            including valid proof of work for all objectives. The issue should have a tag of the designated project
-            reviewer.
+            including valid proof of work for all objectives.
           </>
         }
       />
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={2}
-        text={
-          <>
-            The project reviewer will see the payout request issue, and collaborate with the project lead to solidify
-            the report. Once the report has been finalized, the project reviewer will close the issue, and submit a PR
-            updating the project directory.
-          </>
-        }
+        text="The auditors will then review the proof of work to ensure that all objectives have been met. The auditors will leave a comment if there are any questions or clarifications that are needed."
       />
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={3}
-        text="The government will then review the proof of work to ensure that all objectives have been met. The government will leave a comment if there are any questions or clarifications that are needed."
+        text={
+          <>
+            Once a milestone has been accepted, the payment will be sent and the project lead may then complete the next{' '}
+            <A href="https://github.com/thenewboston-developers/Project-Proposals/issues/new?assignees=&labels=&template=milestone-proposal.md&title=NAME_OF_PROJECT+-+NAME_OF_MILESTONE+-+MILESTONE_NUMBER">
+              milestone proposal
+            </A>{' '}
+            according to the next roadmap milestone.
+          </>
+        }
       />
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={4}
         text={
           <>
-            Once a milestone has been accepted by the government, the PR will be merged, and the payment will be sent
-            and the project lead may then complete the next{' '}
-            <A href="https://github.com/thenewboston-developers/Project-Proposals/issues/new?assignees=&labels=&template=milestone-proposal.md&title=NAME_OF_PROJECT+-+NAME_OF_MILESTONE+-+MILESTONE_NUMBER">
-              Milestone Proposal
-            </A>{' '}
-            according to their next roadmap milestone. The dedicated project reviewer will be tagged as a label again.
-          </>
-        }
-      />
-      <StepIndicator
-        className="ProjectsMilestones__StepIndicator"
-        number={5}
-        text={
-          <>
-            The milestone will then be reviewed by the project reviewer, and the two will collaborate again to finalize
-            the milestone. Once it's ready, the project reviewer will submit another PR containing the finalized version
-            of the next milestone for the government to review.
+            The newly proposed milestone will then be reviewed by an auditor who will work with the project lead to
+            complete all information. The auditor will then submit the new milestone to the government for final review.
           </>
         }
       />
@@ -176,11 +162,13 @@ const ProjectsMilestones: FC = () => {
   return (
     <DocContainer className="ProjectsMilestones" id={ProjectsMilestonesNav.overview} title="Milestones & Payouts">
       <p>
-        All projects will be funded based on the completion of milestones. All milestones will include a list of all
-        quantifiable objectives and estimated coin value of each. Upon completion of the milestone, each objective will
-        be reviewed by thenewboston team and once all objectives have been verified as completed, coins will then be
-        rewarded. The milestones should be planned and written with the help of a{' '}
-        <NavLink to={`/projects/overview#${ProjectsOverviewNav.reviewer}`}>project reviewer</NavLink>.
+        All projects will be funded based on the completion of milestones. Each milestone will include a list of related
+        objectives. Upon completion of a milestone, each objective will be reviewed by the auditors and once all
+        objectives have been verified as completed, coins will then be rewarded.
+      </p>
+      <p>
+        Milestones are planned and written with the help of a{' '}
+        <NavLink to={`/projects/overview#${ProjectsOverviewNav.auditors}`}>project auditor</NavLink>.
       </p>
       {renderMilestonePayoutRequestProcess()}
       {renderSamplePayoutRequest()}
