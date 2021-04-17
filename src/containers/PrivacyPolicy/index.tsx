@@ -289,7 +289,7 @@ const PrivacyPolicy: FC = () => {
           <strong>Your Rights</strong>
           <ul className="PrivacyPolicy__list">
             <li>
-              <strong>Opt-out.</strong>ou may contact us anytime to opt-out of: (i) direct marketing communications;
+              <strong>Opt-out.</strong> You may contact us anytime to opt-out of: (i) direct marketing communications;
               (ii) automated decision-making and/or profiling; (iii) our collection of sensitive personal data; (iv) any
               new processing of your personal data that we may carry out beyond the original purpose; or (v) the
               transfer of your personal data outside the EEA. Please note that your use of some of the website may be
