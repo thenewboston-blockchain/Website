@@ -64,6 +64,11 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
             )}
             key={video.video_id}
             onClick={() => setCurrentVideo(video)}
+            onKeyDown={(event: React.KeyboardEvent<HTMLDivElement>) => {
+              if (event.key === 'Enter') {
+                setCurrentVideo(video);
+              }
+            }}
             role="button"
             tabIndex={0}
             title={video.title}

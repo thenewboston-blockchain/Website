@@ -22,10 +22,16 @@ const PlaylistCard: FC<PlaylistCardProps> = ({author, title, thumbnail, uuid, vi
     history.push(`/tutorials/${categoryParam}/${uuid}`);
   };
 
+  const handleKeydown = (event: React.KeyboardEvent<HTMLDivElement>): void => {
+    if (event.key === 'Enter') {
+      openPlaylist();
+    }
+  };
+
   const totalDuration = useMemo(() => video_list.reduce((acc, video) => acc + video.duration, 0), [video_list]);
 
   return (
-    <div className="PlaylistCard" onClick={openPlaylist} role="button" tabIndex={0}>
+    <div className="PlaylistCard" onClick={openPlaylist} onKeyDown={handleKeydown} role="button" tabIndex={0}>
       <div className="PlaylistCard__top">
         <img alt={title} className="PlaylistCard__thumbnail" loading="lazy" src={thumbnail} />
       </div>
