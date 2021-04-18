@@ -40,62 +40,60 @@ const TermsOfUse: FC = () => {
 
         <h2 className="TermsOfUse__subtitle">Use Restrictions</h2>
         <p>
-          Your permission to use the Site is conditioned upon the following Use Restrictions and Conduct Restrictions:
-          You agree that you will not under any circumstances:
+          Your permission to use the Website is conditioned upon the following Use Restrictions and Conduct
+          Restrictions: You agree that you will not under any circumstances:
         </p>
         <ul className="TermsOfUse__list">
           <li>
             post any information that is abusive, threatening, obscene, defamatory, libelous, or racially, sexually,
-            religiously, or otherwise objectionable and offensive;
+            religiously, or otherwise objectionable and offensive
           </li>
           <li>use the service for any unlawful purpose or for the promotion of illegal activities;</li>
-          <li>attempt to, or harass, abuse or harm another person or group;</li>
-          <li>use another user's account without permission;</li>
-          <li>provide false or inaccurate information when registering an account;</li>
-          <li>interfere or attempt to interfere with the proper functioning of the Service;</li>
+          <li>attempt to, or harass, abuse, or harm another person or group</li>
+          <li>use another user's account without permission</li>
+          <li>provide false or inaccurate information when registering an account</li>
+          <li>interfere or attempt to interfere with the proper functioning of the Service</li>
           <li>
             make any automated use of the system, or take any action that we deem to impose or to potentially impose an
-            unreasonable or disproportionately large load on our servers or network infrastructure;
+            unreasonable or disproportionately large load on our servers or network infrastructure
           </li>
           <li>
-            bypass any robot exclusion headers or other measures we take to restrict access to the Service or use any
+            bypass any robot exclusion headers or other measures we take to restrict access to the Service, or use any
             software, technology, or device to scrape, spider, or crawl the Service or harvest or manipulate data
           </li>
-          <li>
-            publish or link to malicious content intended to damage or disrupt another user's browser or computer.
-          </li>
+          <li>publish or link to malicious content intended to damage or disrupt another user's browser or computer</li>
         </ul>
 
         <h2 className="TermsOfUse__subtitle">Posting and Conduct Restrictions</h2>
         <p>
-          When you create your own personalized account, you may be able to provide ("User Content"). You are solely
-          responsible for the User Content that you post, upload, link to or otherwise make available via the Service.
-          You agree that we are only acting as a passive conduit for your online distribution and publication of your
-          User Content. The Company, however, reserves the right to remove any User Content from the Service at its
-          discretion. The following rules pertain to User Content. By transmitting and submitting any User Content while
-          using the Service, you agree as follows:
+          When you create your own personalized account, you may be able to provide user content ("User Content"). You
+          are solely responsible for the User Content that you post, upload, link to or otherwise make available through
+          the Service. You agree that we are only acting as a passive conduit for your online distribution and
+          publication of your User Content. The company, however, reserves the right to remove any User Content from the
+          Service at its discretion. The following rules pertain to User Content. By transmitting and submitting any
+          User Content while using the Service, you agree as following:
         </p>
         <ul className="TermsOfUse__list">
           <li>
             You are solely responsible for your account and the activity that occurs while signed in to or while using
-            your account;
+            your account
           </li>
-          <li>You will not post information that is malicious, false or inaccurate;</li>
+          <li>You will not post information that is malicious, false or inaccurate</li>
           <li>
             You will not submit content that is copyrighted or subject to third party proprietary rights, including
             privacy, publicity, trade secret, etc., unless you are the owner of such rights or have the appropriate
-            permission from their rightful owner to specifically submit such content; and
+            permission from their rightful owner to specifically submit such content
           </li>
           <li>
             You hereby affirm we have the right to determine whether any of your User Content submissions are
             appropriate and comply with these Terms of Service, remove any and/or all of your submissions, and terminate
-            your account with or without prior notice.
+            your account with or without prior notice
           </li>
         </ul>
         <p>
           You understand and agree that any liability, loss or damage that occurs as a result of the use of any User
-          Content that you make available or access through your use of the Service is solely your responsibility. The
-          Company is not responsible for any public display or misuse of your User Content. The Company does not, and
+          Content that you make available, or access through your use of the Service, is solely your responsibility. The
+          Company is not responsible for any public display, or misuse of your User Content. The company does not, and
           cannot, pre-screen or monitor all User Content. However, at our discretion, we, or the technology we employ,
           may monitor and/or record your interactions with the Service.
         </p>
@@ -103,19 +101,19 @@ const TermsOfUse: FC = () => {
         <h2 className="TermsOfUse__subtitle">Online Content Disclaimer</h2>
         <p>
           Opinions, advice, statements, offers, or other information or content made available through the Service, but
-          not directly by the Company, are those of their respective authors, and should not necessarily be relied upon.
-          Such authors are solely responsible for such content. The Company does not guarantee the accuracy,
-          completeness, or usefulness of any information on the Service and neither does the Company adopt nor endorse,
-          nor is the Company responsible for the accuracy or reliability of any opinion, advice, or statement made by
-          parties other than the Company. The Company takes no responsibility and assumes no liability for any User
+          not directly by the company, are those of their respective authors, and should not necessarily be relied upon.
+          Such authors are solely responsible for such content. The company does not guarantee the accuracy,
+          completeness, or usefulness of any information on the Service and neither does the company adopt nor endorse,
+          nor is the company responsible for the accuracy or reliability of any opinion, advice, or statement made by
+          parties other than the company. The company takes no responsibility, and assumes no liability for any User
           Content that you or any other user or third party posts or sends over the Service. Under no circumstances will
-          the Company be responsible for any loss or damage resulting from anyone's reliance on information or other
-          content posted on the Service, or transmitted to users. Though the Company strives to enforce these Terms of
-          Use, you may be exposed to User Content that is inaccurate or objectionable. The Company reserves the right,
+          the company be responsible for any loss or damage resulting from anyone's reliance on information or other
+          content posted on the Service, or transmitted to users. Though the company strives to enforce these Terms of
+          Use, you may be exposed to User Content that is inaccurate or objectionable. The company reserves the right,
           but has no obligation, to monitor the materials posted in the public areas of the service or to limit or deny
           a user's access to the Service or take other appropriate action if a user violates these Terms of Use or
           engages in any activity that violates the rights of any person or entity or which we deem unlawful, offensive,
-          abusive, harmful or malicious. The Company shall have the right to remove any such material that in its sole
+          abusive, harmful or malicious. The company shall have the right to remove any such material that in its sole
           opinion violates, or is alleged to violate, the law or this agreement or which might be offensive, or that
           might violate the rights, harm, or threaten the safety of users or others. Unauthorized use may result in
           criminal and/or civil prosecution under the law. If you become aware of misuse of our Service, please contact
@@ -128,19 +126,19 @@ const TermsOfUse: FC = () => {
 
         <h2 className="TermsOfUse__subtitle">Links to other sites and/or materials </h2>
         <p>
-          As part of the Service, the Company may provide you with convenient links to third party website(s) ("Third
+          As part of the Service, the company may provide you with convenient links to third party website(s) ("Third
           Party Sites") as well as content or items belonging to or originating from third parties (the"Third Party
           Applications, Software or Content"). These links are provided as a courtesy to Service subscribers. The
-          Company has no control over Third Party Sites and Third Party Applications, Software or Content or the
+          company has no control over Third Party Sites and Third Party Applications, Software or Content or the
           promotions, materials, information, goods or services available on these Third Party Sites or Third Party
           Applications, Software or Content. Such Third Party Sites and Third Party Applications, Software or Content
-          are not investigated, monitored or checked for accuracy, appropriateness, or completeness by the Company, and
-          the Company is not responsible for any Third Party Sites accessed through the Site or any Third Party
+          are not investigated, monitored or checked for accuracy, appropriateness, or completeness by the company, and
+          the company is not responsible for any Third Party Sites accessed through the Site or any Third Party
           Applications, Software or Content posted on, available through or installed from the Site, including the
           content, accuracy, offensiveness, opinions, reliability, privacy practices or other policies of or contained
-          in the Third Party Sites or the Third Party Applications, Software or Content. Inclusion of, linking to or
+          in the Third Party Sites or the Third Party Applications, Software or Content. Inclusion of, linking to, or
           permitting the use or installation of any Third Party Site or any Third Party Applications, Software or
-          Content does not imply approval or endorsement thereof by the Company. If you decide to leave the Site and
+          Content does not imply approval or endorsement thereof by the company. If you decide to leave the Site and
           access the Third Party Sites or to use or install any Third Party Applications, Software or Content, you do so
           at your own risk and you should be aware that our terms and policies no longer govern. You should review the
           applicable terms and policies, including privacy and data gathering practices, of any site to which you
@@ -149,10 +147,10 @@ const TermsOfUse: FC = () => {
 
         <h2 className="TermsOfUse__subtitle">Copyright Complaints and Copyright Agent</h2>
         <div>
-          <strong>(a) Termination of Repeat Infringe Accounts.</strong> The Company respects the intellectual property
-          rights of others and requests that the users do the same. The Company has adopted and implemented a policy
+          <strong>(a) Termination of Repeat Infringe Accounts.</strong> The company respects the intellectual property
+          rights of others and requests that the users do the same. The company has adopted and implemented a policy
           that provides for the termination in appropriate circumstances of users of the Service who are repeat
-          infringers The Company may terminate access for participants or users who are found repeatedly to provide or
+          infringers. The company may terminate access for participants or users who are found repeatedly to provide or
           post protected third party content without necessary rights and permissions.
         </div>
         <br />
@@ -199,16 +197,16 @@ const TermsOfUse: FC = () => {
           <ul>
             <li>
               Your physical or electronic signature; A description of the content that has been removed and the location
-              at which the content appeared before it was removed;
+              at which the content appeared before it was removed
             </li>
             <li>
               A statement that you have a good faith belief that the content was removed as a result of mistake or a
-              misidentification of the content; and
+              misidentification of the content
             </li>
             <li>
               Your name, address, telephone number, and email address, a statement that you consent to the laws of
               California and a statement that you will accept service of process from the person who provided
-              notification of the alleged infringement.
+              notification of the alleged infringement
             </li>
           </ul>
         </div>
