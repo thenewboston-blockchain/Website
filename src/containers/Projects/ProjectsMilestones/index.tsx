@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {A, DocContainer, DocSubSection, StepIndicator, TableBorderGrid} from 'components';
+import {A, CalloutType, DocCallout, DocContainer, DocSubSection, StepIndicator, TableBorderGrid} from 'components';
 
 import {ProjectsOverviewNav} from '../ProjectsOverview';
 import './ProjectsMilestones.scss';
@@ -19,48 +19,48 @@ const ProjectsMilestones: FC = () => {
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={1}
-        text="For all design-only related work including UI/UX a publicly viewable Figma, Adobe XD, or other URL must be provided."
+        text="For all design-only related work, including UI/UX: a publicly viewable Figma, Adobe XD, or other URL"
       />
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={2}
-        text="Link to a pull request or issue with pull request linked for the addition of a new feature and the screenshot/recording showing the new feature in action."
+        text="For the addition of a new feature: link to a pull request or issue with pull request linked, and the screenshot/recording showing the new feature in action"
       />
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={3}
-        text="Complete URL of the page where a new feature has been added if the website is live."
+        text="For live websites: complete URL of the page showing a new feature"
       />
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={4}
-        text="For all documentation-related work, a publicly viewable Google Doc URL must be provided. Research-related Google Docs should have a clear description of the research and its findings."
+        text="For all documentation-related work: a publicly viewable Google Doc URL (research-related Google Docs must have a clear description of the research and its findings)"
       />
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={5}
-        text="Link to the Google Play Store, App Store, Chrome Web Store, etc... in case of published applications."
+        text="For published applications: link to the Google Play Store, App Store, Chrome Web Store, and so on"
       />
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={6}
-        text="For marketing and social media related work, links to all the posts and user engagement data (if available)."
+        text="For marketing and social media related work: links to all the posts and user engagement data (if available)"
       />
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={7}
-        text="Diagrams, documentation, screenshots, config files, etc... for DevOps-related work."
+        text="For DevOps-related work: diagrams, documentation, screenshots, config files, and so on"
       />
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={8}
         text={
           <>
-            For backend API Postman collection/ swagger doc should be submitted as proof of work. Learn more about{' '}
+            For backend APIs: Postman collection/swagger doc (for details, see{' '}
             <A href="https://learning.postman.com/docs/publishing-your-api/documenting-your-api/">
               documenting your API
             </A>
-            .
+            ).
           </>
         }
       />
@@ -81,7 +81,7 @@ const ProjectsMilestones: FC = () => {
         number={1}
         text={
           <>
-            Upon completion of a milestone, the project lead will submit a{' '}
+            Upon completion of a milestone, the project lead must submit a{' '}
             <A href="https://github.com/thenewboston-developers/Project-Proposals/issues/new?assignees=&labels=&template=payout-request.md&title=NAME_OF_PROJECT+-+NAME_OF_MILESTONE+-+MILESTONE_NUMBER">
               payout request
             </A>{' '}
@@ -92,14 +92,14 @@ const ProjectsMilestones: FC = () => {
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={2}
-        text="The auditors will then review the proof of work to ensure that all objectives have been met. The auditors will leave a comment if there are any questions or clarifications that are needed."
+        text="Auditors will then review proof of work to ensure that all objectives have been met. In case of questions or required clarifications, they will leave a comment."
       />
       <StepIndicator
         className="ProjectsMilestones__StepIndicator"
         number={3}
         text={
           <>
-            Once a milestone has been accepted, the payment will be sent and the project lead may then complete the next{' '}
+            Once a milestone has been accepted, the payment will be sent. The project lead can then complete the next{' '}
             <A href="https://github.com/thenewboston-developers/Project-Proposals/issues/new?assignees=&labels=&template=milestone-proposal.md&title=NAME_OF_PROJECT+-+NAME_OF_MILESTONE+-+MILESTONE_NUMBER">
               milestone proposal
             </A>{' '}
@@ -112,8 +112,8 @@ const ProjectsMilestones: FC = () => {
         number={4}
         text={
           <>
-            The newly proposed milestone will then be reviewed by an auditor who will work with the project lead to
-            complete all information. The auditor will then submit the new milestone to the government for final review.
+            An auditor will review the newly proposed milestone and will work with the project lead to complete all
+            essential information. The auditor will then submit the new milestone to the government for final review.
           </>
         }
       />
@@ -162,14 +162,14 @@ const ProjectsMilestones: FC = () => {
   return (
     <DocContainer className="ProjectsMilestones" id={ProjectsMilestonesNav.overview} title="Milestones & Payouts">
       <p>
-        All projects will be funded based on the completion of milestones. Each milestone will include a list of related
-        objectives. Upon completion of a milestone, each objective will be reviewed by the auditors and once all
-        objectives have been verified as completed, coins will then be rewarded.
+        All projects are funded based on the completion of milestones, and each milestone must include a list of related
+        objectives. Upon completion of a milestone, each objective will be reviewed by the auditors. Once the auditors
+        verify all objectives are completed, coins will then be rewarded.
       </p>
-      <p>
-        Milestones are planned and written with the help of a{' '}
+      <DocCallout type={CalloutType.important}>
+        Project leads must plan and write milestones with the help of a{' '}
         <NavLink to={`/projects/overview#${ProjectsOverviewNav.auditors}`}>project auditor</NavLink>.
-      </p>
+      </DocCallout>
       {renderMilestonePayoutRequestProcess()}
       {renderSamplePayoutRequest()}
       {renderAcceptableProofOfWork()}
