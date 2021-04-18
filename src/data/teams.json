@@ -150,6 +150,19 @@
           "profileImage": "https://avatars.githubusercontent.com/u/749833?v=4"
         },
         "hourlyRate": 1200
+      },
+      {
+        "title": "Blockchain Developer",
+        "isLead": false,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "20",
+          "discordUsername": "andbortnik#8958",
+          "displayName": "Andrey Bortnikov",
+          "githubUsername": "andbortnik",
+          "profileImage": "https://avatars.githubusercontent.com/u/17045710?v=4"
+        },
+        "hourlyRate": 1000
       }
     ],
     "responsibilities": [
