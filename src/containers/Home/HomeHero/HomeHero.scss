@@ -29,6 +29,7 @@ $title-width: 480px;
   position: relative;
 
   @media (max-width: 1200px) {
+    align-items: center;
     flex-direction: column;
     height: unset;
     padding-bottom: 60px;
@@ -106,6 +107,7 @@ $title-width: 480px;
     height: 100%;
     max-width: $right-width;
     position: relative;
+    width: $right-width;
 
     @media (max-width: 1200px) {
       margin: 60px 12px 0;
