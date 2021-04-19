@@ -63,7 +63,10 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
               currentVideo?.uuid === video.uuid && 'WatchPlaylist__list-video--active',
             )}
             key={video.video_id}
-            onClick={() => setCurrentVideo(video)}
+            onClick={() => {
+              window.scrollTo(0, 0);
+              setCurrentVideo(video);
+            }}
             onKeyDown={(event: React.KeyboardEvent<HTMLDivElement>) => {
               if (event.key === 'Enter') {
                 setCurrentVideo(video);
