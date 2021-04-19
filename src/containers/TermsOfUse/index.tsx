@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 
+import clsx from 'clsx';
 import {A, PageTitle} from 'components';
 
 import './TermsOfUse.scss';
@@ -22,7 +23,7 @@ const TermsOfUse: FC = () => {
           to these Terms of Use. If you do not agree to these Terms of Use, you may not access or use the Service.
         </p>
 
-        <h2 className="TermsOfUse__subtitle">Privacy Policy</h2>
+        <h2 className={clsx('TermsOfUse__subtitle', 'TermsOfUse__first-subtitle')}>Privacy Policy</h2>
         <p>
           The company respects the privacy of its Service users. Please refer to the Company's Privacy Policy which
           explains how we collect, use, and disclose information that pertains to your privacy. When you access or use

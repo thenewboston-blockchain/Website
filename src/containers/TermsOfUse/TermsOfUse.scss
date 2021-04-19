@@ -17,10 +17,10 @@
     font-size: 20px;
     font-weight: 500;
     margin-top: 40px;
-  }
 
-  h2:first-of-type {
-    margin-top: 80px;
+    &.TermsOfUse__first-subtitle {
+      margin-top: 80px;
+    }
   }
 
   &__list {

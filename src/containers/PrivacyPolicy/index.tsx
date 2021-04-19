@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 
+import clsx from 'clsx';
 import {A, PageTitle} from 'components';
 
 import './PrivacyPolicy.scss';
@@ -11,7 +12,7 @@ const PrivacyPolicy: FC = () => {
       <div className="PrivacyPolicy">
         <p>Last Updated: April 5, 2021</p>
         <h1 className="PrivacyPolicy__title">Privacy Policy</h1>
-        <h2 className="PrivacyPolicy__subtitle">Introduction</h2>
+        <h2 className={clsx('PrivacyPolicy__subtitle', 'PrivacyPolicy__first-subtitle')}>Introduction</h2>
         <p>
           This privacy policy (“Policy”) describes how thenewboston in California (“Company,” “we” and “our”) processes,
           collects, uses and shares personal data when using this website{' '}
