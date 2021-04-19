@@ -8,7 +8,7 @@ import PlaylistCard from '../PlaylistCard';
 import './Playlists.scss';
 
 interface PlaylistsParams {
-  category: string;
+  category: string | null;
 }
 
 const Playlists: FC<PlaylistsParams> = ({category}) => {
@@ -19,10 +19,12 @@ const Playlists: FC<PlaylistsParams> = ({category}) => {
   useEffect(() => {
     (async (): Promise<void> => {
       try {
-        setLoading(true);
-        const {data} = await getPlaylists(category);
-        const {results: fetchedPlaylists} = data;
-        setPlaylists(fetchedPlaylists);
+        if (category) {
+          setLoading(true);
+          const {data} = await getPlaylists(category);
+          const {results: fetchedPlaylists} = data;
+          setPlaylists(fetchedPlaylists);
+        }
       } catch (error) {
         setErrorMessage(error.message);
       } finally {

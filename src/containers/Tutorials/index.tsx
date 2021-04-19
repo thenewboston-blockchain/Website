@@ -18,7 +18,7 @@ const Tutorials: FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [errorMessage, setErrorMessage] = useState<string>('');
   const [categories, setCategories] = useState<NavOption[]>([]);
-  const [categoryFilter, setCategoryFilter] = useState<string>(allTutorialsFilter.title);
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
 
   useEffect(() => {
     (async (): Promise<void> => {
@@ -58,7 +58,11 @@ const Tutorials: FC = () => {
 
   const renderCategoryFilter = (): ReactNode => {
     return (
-      <FlatNavLinks handleOptionClick={handleNavOptionClick} options={categories} selectedOption={categoryFilter} />
+      <FlatNavLinks
+        handleOptionClick={handleNavOptionClick}
+        options={categories}
+        selectedOption={categoryFilter ?? allTutorialsFilter.title}
+      />
     );
   };
 
@@ -76,7 +80,7 @@ const Tutorials: FC = () => {
         <BreadcrumbMenu
           className="Tutorials__BreadcrumbMenu"
           menuItems={renderCategoryFilter()}
-          pageName={categoryFilter}
+          pageName={categoryFilter ?? allTutorialsFilter.title}
           sectionName="Tutorials"
         />
         <aside className="Tutorials__left-menu">{renderCategoryFilter()}</aside>
