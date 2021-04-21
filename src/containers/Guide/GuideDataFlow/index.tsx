@@ -2,6 +2,7 @@ import React, {FC} from 'react';
 
 import {DocContainer, DocImage, DocList} from 'components';
 
+import NetworkFlow from './NetworkFlow.png';
 import RequestFlow from './RequestFlow.png';
 
 const GuideDataFlow: FC = () => {
@@ -9,7 +10,7 @@ const GuideDataFlow: FC = () => {
     <DocContainer className="GuideDataFlow" title="Data Flow" lastUpdated="21 Apr 2021">
       <DocImage alt="request flow" maxWidth={600} src={RequestFlow} />
       <p>
-        <strong>General Flow</strong>
+        <strong>User Request Flow</strong>
       </p>
       <DocList variant="ol">
         <li>Users send requests to their active node.</li>
@@ -29,6 +30,15 @@ const GuideDataFlow: FC = () => {
           blockchain. Validators will only add a block to their blockchain once they receive the majority of receipt
           confirmations from all other validators.
         </li>
+      </DocList>
+      <DocImage alt="network flow" maxWidth={760} src={NetworkFlow} />
+      <p>
+        <strong>Network Data Flow</strong>
+      </p>
+      <DocList variant="ol">
+        <li>Nodes will forward user requests to the PV.</li>
+        <li>The PV will then generate a blockchain, which is simply an ordered list of valid requests.</li>
+        <li>That blockchain will then be broadcast to all other validators for verification.</li>
       </DocList>
     </DocContainer>
   );
