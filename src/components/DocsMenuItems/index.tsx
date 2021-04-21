@@ -182,6 +182,10 @@ export const guideNavigationData = [
     url: '/guide/accounts',
   },
   {
+    name: 'Block Types',
+    url: '/guide/block-types',
+  },
+  {
     name: 'Blocks',
     url: '/guide/blocks',
   },
