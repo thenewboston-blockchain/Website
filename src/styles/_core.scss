@@ -11,9 +11,7 @@ html {
 body {
   background: var(--color-bg);
   color: var(--color-primary);
-  font-family: var(--font-family-default);
-  font-size: var(--font-size-regular);
-  line-height: 1.5;
+  @extend %body1;
 }
 
 #popover-root {
@@ -33,13 +31,28 @@ strong {
   font-weight: 800;
 }
 
+h1 {
+  @extend %h1;
+}
+
+h2 {
+  @extend %h2;
+}
+
+h3 {
+  @extend %h3;
+}
+
+h4 {
+  @extend %h4;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  line-height: 1;
   margin: 0;
 }
 
