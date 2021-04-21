@@ -186,6 +186,10 @@ export const guideNavigationData = [
     url: '/guide/blocks',
   },
   {
+    name: 'Network Initialization',
+    url: '/guide/network-initialization',
+  },
+  {
     name: 'Transaction Fees',
     url: '/guide/transaction-fees',
   },

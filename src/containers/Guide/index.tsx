@@ -11,6 +11,7 @@ import GuideBlockchainArchitecture from './GuideBlockchainArchitecture';
 import GuideBlocks from './GuideBlocks';
 import GuideForkPrevention from './GuideForkPrevention';
 import GuideIntroduction from './GuideIntroduction';
+import GuideNetworkInitialization from './GuideNetworkInitialization';
 import GuideNodeIdentifier from './GuideNodeIdentifier';
 import GuideNodes from './GuideNodes';
 import GuideRootAccountFile from './GuideRootAccountFile';
@@ -47,6 +48,10 @@ const pageData: PageDataObject = {
   introduction: {
     content: <GuideIntroduction />,
     name: 'Introduction',
+  },
+  'network-initialization': {
+    content: <GuideNetworkInitialization />,
+    name: 'Network Initialization',
   },
   'node-identifier': {
     content: <GuideNodeIdentifier />,
