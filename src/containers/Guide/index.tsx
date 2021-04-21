@@ -9,6 +9,7 @@ import GuideAccounts from './GuideAccounts';
 import GuideBestPractices from './GuideBestPractices';
 import GuideBlockchainArchitecture from './GuideBlockchainArchitecture';
 import GuideBlocks from './GuideBlocks';
+import GuideDataFlow from './GuideDataFlow';
 import GuideForkPrevention from './GuideForkPrevention';
 import GuideIntroduction from './GuideIntroduction';
 import GuideNetworkInitialization from './GuideNetworkInitialization';
@@ -40,6 +41,10 @@ const pageData: PageDataObject = {
   blocks: {
     content: <GuideBlocks />,
     name: 'Blocks',
+  },
+  'data-flow': {
+    content: <GuideDataFlow />,
+    name: 'Data Flow',
   },
   'fork-prevention': {
     content: <GuideForkPrevention />,
