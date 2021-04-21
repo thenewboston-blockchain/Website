@@ -21,12 +21,12 @@
 
     &__handle {
       display: none;
-      font-weight: 600;
+      font-weight: var(--semibold);
     }
   }
 
   &__handle {
-    font-weight: 600;
+    font-weight: var(--semibold);
     grid-column: 2;
   }
 

@@ -1,3 +1,5 @@
+@import 'styles/font-mixins';
+
 $comparison-cards-container: 690px;
 $content-container-padding-lr: 64px;
 $summary-mr: 70px;
@@ -55,10 +57,8 @@ $summary-width: 420px;
   }
 
   &__title {
-    font-family: var(--font-family-inter-bold);
-    font-size: 36px;
-    font-weight: 800;
-    line-height: 1.2;
+    @extend %display2;
+    font-weight: var(--medium);
     margin-top: 30px;
     max-width: 290px;
 

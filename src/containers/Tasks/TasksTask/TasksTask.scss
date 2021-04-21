@@ -60,7 +60,7 @@
     color: var(--color-primary);
     display: block;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: var(--medium);
     @include word-wrap;
 
     &:hover {

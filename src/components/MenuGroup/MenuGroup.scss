@@ -1,6 +1,6 @@
 .MenuGroup {
   $self: &;
-  font-weight: 700;
+  font-weight: var(--medium);
 
   &:last-of-type {
     #{$self}__toggle:not(#{$self}__toggle--expanded) {
@@ -70,6 +70,6 @@
   }
 
   &__title {
-    font-weight: 700;
+    font-weight: var(--medium);
   }
 }
