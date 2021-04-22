@@ -4,14 +4,26 @@ import {DocContainer, DocImage, DocList} from 'components';
 
 import NetworkFlow from './NetworkFlow.png';
 import RequestFlow from './RequestFlow.png';
+import ValidatorFlow from './ValidatorFlow.png';
+import './GuideNetworkOverview.scss';
 
-const GuideDataFlow: FC = () => {
-  return (
-    <DocContainer className="GuideDataFlow" title="Data Flow" lastUpdated="21 Apr 2021">
-      <DocImage alt="request flow" maxWidth={580} src={RequestFlow} />
-      <p>
-        <strong>User Request Flow</strong>
-      </p>
+const GuideNetworkOverview: FC = () => {
+  const renderNetworkDataFlow = () => (
+    <>
+      <h2>Network Data Flow</h2>
+      <DocList variant="ol">
+        <li>Nodes will forward user requests to the PV.</li>
+        <li>The PV will then generate a blockchain, which is simply an ordered list of valid requests.</li>
+        <li>That blockchain will then be broadcast to all other validators for verification.</li>
+      </DocList>
+      <DocImage alt="network flow" maxWidth={680} src={NetworkFlow} />
+      <hr />
+    </>
+  );
+
+  const renderUserRequestFlow = () => (
+    <>
+      <h2>User Request Flow</h2>
       <DocList variant="ol">
         <li>Users send requests to their active node.</li>
         <li>
@@ -31,17 +43,32 @@ const GuideDataFlow: FC = () => {
           confirmations from all other validators.
         </li>
       </DocList>
-      <DocImage alt="network flow" maxWidth={740} src={NetworkFlow} />
-      <p>
-        <strong>Network Data Flow</strong>
-      </p>
+      <DocImage alt="user request flow" maxWidth={560} src={RequestFlow} />
+      <hr />
+    </>
+  );
+
+  const renderValidatorFlow = () => (
+    <>
+      <h2>Validator Flow</h2>
       <DocList variant="ol">
-        <li>Nodes will forward user requests to the PV.</li>
-        <li>The PV will then generate a blockchain, which is simply an ordered list of valid requests.</li>
-        <li>That blockchain will then be broadcast to all other validators for verification.</li>
+        <li>ABC</li>
       </DocList>
+      <DocImage alt="validator flow" maxWidth={540} src={ValidatorFlow} />
+    </>
+  );
+
+  return (
+    <DocContainer className="GuideNetworkOverview" title="Network Overview" lastUpdated="21 Apr 2021">
+      <p>
+        The following diagrams will outline the general flow of data throughout the network. In later sections we will
+        be taking a look at each of the individual processes in more detail.
+      </p>
+      {renderUserRequestFlow()}
+      {renderNetworkDataFlow()}
+      {renderValidatorFlow()}
     </DocContainer>
   );
 };
 
-export default GuideDataFlow;
+export default GuideNetworkOverview;

@@ -182,44 +182,16 @@ export const guideNavigationData = [
     url: '/guide/components',
   },
   {
-    name: 'Data Flow',
-    url: '/guide/data-flow',
-  },
-  {
-    name: 'Accounts',
-    url: '/guide/accounts',
-  },
-  {
     name: 'Block Types',
     url: '/guide/block-types',
   },
   {
-    name: 'Blocks',
-    url: '/guide/blocks',
+    name: 'Network Overview',
+    url: '/guide/network-overview',
   },
   {
     name: 'Network Initialization',
     url: '/guide/network-initialization',
-  },
-  {
-    name: 'Transaction Fees',
-    url: '/guide/transaction-fees',
-  },
-  {
-    name: 'Root Account File',
-    url: '/guide/root-account-file',
-  },
-  {
-    name: 'Nodes',
-    url: '/guide/nodes',
-  },
-  {
-    name: 'Blockchain Architecture',
-    url: '/guide/blockchain-architecture',
-  },
-  {
-    name: 'Node Identifier',
-    url: '/guide/node-identifier',
   },
   {
     name: 'Schedule',
@@ -230,12 +202,40 @@ export const guideNavigationData = [
     url: '/guide/schedule-adjustments',
   },
   {
+    name: 'Accounts',
+    url: '/guide/accounts',
+  },
+  {
+    name: 'Transfers',
+    url: '/guide/transfers',
+  },
+  {
+    name: 'Fees',
+    url: '/guide/fees',
+  },
+  {
+    name: 'Nodes',
+    url: '/guide/nodes',
+  },
+  {
+    name: 'Node Identifier',
+    url: '/guide/node-identifier',
+  },
+  {
     name: 'Fork Prevention',
     url: '/guide/fork-prevention',
   },
   {
     name: 'Best Practices',
     url: '/guide/best-practices',
+  },
+  {
+    name: 'Root Account File',
+    url: '/guide/root-account-file',
+  },
+  {
+    name: 'Blockchain Architecture',
+    url: '/guide/blockchain-architecture',
   },
 ];
 

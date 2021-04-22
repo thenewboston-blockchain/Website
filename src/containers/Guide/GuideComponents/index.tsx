@@ -14,7 +14,7 @@ const GuideComponents: FC = () => {
         altColors
         rows={[
           ['Account', 'Anonymous digital identity on the network through which a user can send and receive coins'],
-          ['Transfer Request', 'A users request to transfer of coins from one account to another'],
+          ['Transfer', 'The movement of coins from one account to another'],
           ['Block', 'A change to the network'],
           ['Blockchain', 'Ordered list of blocks'],
           [
@@ -30,12 +30,17 @@ const GuideComponents: FC = () => {
             'Request data that has been signed by a node indicating that it conforms to network protocol',
           ],
           [
+            'Validator',
+            'Elected node responsible for the validation of data and the generation of blocks to add to the blockchain',
+          ],
+          ['Validator Schedule', 'A list of nodes that are scheduled to act as network validators'],
+          [
             'Primary Validator (PV)',
-            'Elected node that accepts node signed requests from other nodes; after successful validation of each request, it creates a new block which is then forwarded to the other validators for verification',
+            "Validator that accepts requests from other nodes; after successful validation of each request, it creates a new block which is first added to it's own blockchain and then forwarded to the confirmation validators",
           ],
           [
-            'Validator',
-            'Elected node that will receive blocks from the PV, validate those results, and if valid add that block to their blockchain',
+            'Confirmation Validator (CV)',
+            'Validator that will receive blocks from the PV, validate those results, and if valid add that block to their blockchain',
           ],
           [
             'Confirmation',

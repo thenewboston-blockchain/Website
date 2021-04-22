@@ -7,20 +7,20 @@ import {PageData, PageDataObject} from 'types/page-data';
 
 import GuideAccounts from './GuideAccounts';
 import GuideBestPractices from './GuideBestPractices';
-import GuideBlockchainArchitecture from './GuideBlockchainArchitecture';
-import GuideBlocks from './GuideBlocks';
 import GuideBlockTypes from './GuideBlockTypes';
+import GuideBlockchainArchitecture from './GuideBlockchainArchitecture';
 import GuideComponents from './GuideComponents';
-import GuideDataFlow from './GuideDataFlow';
+import GuideFees from './GuideFees';
 import GuideForkPrevention from './GuideForkPrevention';
 import GuideIntroduction from './GuideIntroduction';
 import GuideNetworkInitialization from './GuideNetworkInitialization';
+import GuideNetworkOverview from './GuideNetworkOverview';
 import GuideNodeIdentifier from './GuideNodeIdentifier';
 import GuideNodes from './GuideNodes';
 import GuideRootAccountFile from './GuideRootAccountFile';
 import GuideSchedule from './GuideSchedule';
 import GuideScheduleAdjustments from './GuideScheduleAdjustments';
-import GuideTransactionFees from './GuideTransactionFees';
+import GuideTransfers from './GuideTransfers';
 
 const defaultPageData: PageData = {
   content: <Redirect to="/guide/introduction" />,
@@ -44,17 +44,13 @@ const pageData: PageDataObject = {
     content: <GuideBlockchainArchitecture />,
     name: 'Blockchain Architecture',
   },
-  blocks: {
-    content: <GuideBlocks />,
-    name: 'Blocks',
-  },
   components: {
     content: <GuideComponents />,
     name: 'Components',
   },
-  'data-flow': {
-    content: <GuideDataFlow />,
-    name: 'Data Flow',
+  fees: {
+    content: <GuideFees />,
+    name: 'Fees',
   },
   'fork-prevention': {
     content: <GuideForkPrevention />,
@@ -67,6 +63,10 @@ const pageData: PageDataObject = {
   'network-initialization': {
     content: <GuideNetworkInitialization />,
     name: 'Network Initialization',
+  },
+  'network-overview': {
+    content: <GuideNetworkOverview />,
+    name: 'Network Overview',
   },
   'node-identifier': {
     content: <GuideNodeIdentifier />,
@@ -88,9 +88,9 @@ const pageData: PageDataObject = {
     content: <GuideScheduleAdjustments />,
     name: 'Schedule Adjustments',
   },
-  'transaction-fees': {
-    content: <GuideTransactionFees />,
-    name: 'Transaction Fees',
+  transfers: {
+    content: <GuideTransfers />,
+    name: 'Transfers',
   },
 };
 
