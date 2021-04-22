@@ -60,7 +60,7 @@ const GuideBlocks: FC = () => {
         See <NavLink to="/guide/transaction-fees">Transaction Fees</NavLink> for details about fees that relate to
         transactions.
       </p>
-      <DocSubHeader>Dissecting a block</DocSubHeader>
+      <DocSubHeader>Dissecting a Block</DocSubHeader>
       <p>
         The signing process produces digital signatures using the{' '}
         <A href="https://ed25519.cr.yp.to/">Ed25519 Digital Signature Algorithm</A>. This ensures that the account owner

@@ -182,6 +182,10 @@ export const guideNavigationData = [
     url: '/guide/components',
   },
   {
+    name: 'Data Flow',
+    url: '/guide/data-flow',
+  },
+  {
     name: 'Accounts',
     url: '/guide/accounts',
   },
@@ -212,10 +216,6 @@ export const guideNavigationData = [
   {
     name: 'Blockchain Architecture',
     url: '/guide/blockchain-architecture',
-  },
-  {
-    name: 'Data Flow',
-    url: '/guide/data-flow',
   },
   {
     name: 'Node Identifier',
