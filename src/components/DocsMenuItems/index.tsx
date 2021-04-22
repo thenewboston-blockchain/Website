@@ -178,6 +178,10 @@ export const guideNavigationData = [
     url: '/guide/introduction',
   },
   {
+    name: 'Components',
+    url: '/guide/components',
+  },
+  {
     name: 'Accounts',
     url: '/guide/accounts',
   },
