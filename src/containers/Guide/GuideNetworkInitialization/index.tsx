@@ -12,13 +12,12 @@ const GuideNetworkInitialization: FC = () => {
   return (
     <DocContainer className="GuideNetworkInitialization" title="Network Initialization" lastUpdated="21 Apr 2021">
       <p>
-        The beta network will be initialized by a single node and a genesis block. This will be the very first block in
-        the beta blockchain.
+        The network is initialized from a single node and a genesis block. This block is the very first block in the
+        blockchain.
       </p>
       <DocImage alt="genesis block" maxWidth={400} src={GenesisBlock} />
       <p>
-        The genesis block will consist of the minimum amount of information required to initialize a new network
-        including:
+        The genesis block consists of the minimum amount of information required to initialize a new network including:
       </p>
       <DocList variant="ul">
         <li>All account information from alpha</li>

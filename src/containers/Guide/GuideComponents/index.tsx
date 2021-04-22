@@ -29,11 +29,11 @@ const GuideComponents: FC = () => {
             'Node Signed Request (NSR)',
             'Request data that has been signed by a node indicating that it conforms to network protocol',
           ],
+          ['Schedule', 'A list of upcoming validators'],
           [
             'Validator',
             'Elected node responsible for the validation of data and the generation of blocks to add to the blockchain',
           ],
-          ['Validator Schedule', 'A list of nodes that are scheduled to act as network validators'],
           [
             'Primary Validator (PV)',
             "Validator that accepts requests from other nodes; after successful validation of each request, it creates a new block which is first added to it's own blockchain and then forwarded to the confirmation validators",
