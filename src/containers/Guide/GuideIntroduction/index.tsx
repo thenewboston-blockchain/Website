@@ -32,8 +32,9 @@ const GuideIntroduction: FC = () => {
       </p>
       <p>
         By removing unrelated transactions from blocks, we can substantially reduce the average network block size. This
-        is accomplished by constructing blocks that group related transactions only. Transactions now refer to groups of
-        transactions that must be processed together. For details, see <NavLink to="/guide/blocks">Blocks</NavLink>.
+        is accomplished by constructing blocks that group related transactions only. Transfers now refer to groups of
+        transactions that must be processed together. For details, see{' '}
+        <NavLink to="/guide/transfers">Transfers</NavLink>.
       </p>
       <p>
         When implemented correctly, these improvements, along with others discussed throughout this documentation,
