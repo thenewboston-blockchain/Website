@@ -52,7 +52,10 @@ const GuideNetworkOverview: FC = () => {
     <>
       <h2>Validator Flow</h2>
       <DocList variant="ol">
-        <li>ABC</li>
+        <li>The PV will broadcast the block to all confirmation validators.</li>
+        <li>Each CV will independently process block and compare PVs results with their own.</li>
+        <li>If results match, CV will add the block to its blockchain.</li>
+        <li>Nodes will listen for these confirmations (CVs blocks) and stream that information to the user.</li>
       </DocList>
       <DocImage alt="validator flow" maxWidth={540} src={ValidatorFlow} />
     </>
