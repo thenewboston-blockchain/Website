@@ -7,10 +7,11 @@ import {PageData, PageDataObject} from 'types/page-data';
 
 import GuideAccounts from './GuideAccounts';
 import GuideBestPractices from './GuideBestPractices';
-import GuideBlockchainArchitecture from './GuideBlockchainArchitecture';
-import GuideBlocks from './GuideBlocks';
 import GuideBlockTypes from './GuideBlockTypes';
-import GuideDataFlow from './GuideDataFlow';
+import GuideBlockchainArchitecture from './GuideBlockchainArchitecture';
+import GuideComponents from './GuideComponents';
+import GuideFees from './GuideFees';
+import GuideFlows from './GuideFlows';
 import GuideForkPrevention from './GuideForkPrevention';
 import GuideIntroduction from './GuideIntroduction';
 import GuideNetworkInitialization from './GuideNetworkInitialization';
@@ -19,7 +20,7 @@ import GuideNodes from './GuideNodes';
 import GuideRootAccountFile from './GuideRootAccountFile';
 import GuideSchedule from './GuideSchedule';
 import GuideScheduleAdjustments from './GuideScheduleAdjustments';
-import GuideTransactionFees from './GuideTransactionFees';
+import GuideTransfers from './GuideTransfers';
 
 const defaultPageData: PageData = {
   content: <Redirect to="/guide/introduction" />,
@@ -43,13 +44,17 @@ const pageData: PageDataObject = {
     content: <GuideBlockchainArchitecture />,
     name: 'Blockchain Architecture',
   },
-  blocks: {
-    content: <GuideBlocks />,
-    name: 'Blocks',
+  components: {
+    content: <GuideComponents />,
+    name: 'Components',
   },
-  'data-flow': {
-    content: <GuideDataFlow />,
-    name: 'Data Flow',
+  fees: {
+    content: <GuideFees />,
+    name: 'Fees',
+  },
+  flows: {
+    content: <GuideFlows />,
+    name: 'Flows',
   },
   'fork-prevention': {
     content: <GuideForkPrevention />,
@@ -83,9 +88,9 @@ const pageData: PageDataObject = {
     content: <GuideScheduleAdjustments />,
     name: 'Schedule Adjustments',
   },
-  'transaction-fees': {
-    content: <GuideTransactionFees />,
-    name: 'Transaction Fees',
+  transfers: {
+    content: <GuideTransfers />,
+    name: 'Transfers',
   },
 };
 

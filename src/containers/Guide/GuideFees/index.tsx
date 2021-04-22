@@ -2,11 +2,11 @@ import React, {FC} from 'react';
 
 import {DocContainer, DocList, DocSubHeader, TableVertical} from 'components';
 
-import './GuideTransactionFees.scss';
+import './GuideFees.scss';
 
-const GuideTransactionFees: FC = () => {
+const GuideFees: FC = () => {
   return (
-    <DocContainer className="GuideTransactionFees" title="Transaction Fees" lastUpdated="24 Mar 2021">
+    <DocContainer className="GuideFees" title="Fees" lastUpdated="22 Apr 2021">
       <p>
         Through the collection of transaction fees, individuals are motivated to maintain nodes. Node maintainers set
         their own transaction fee amounts. End users will probably use the nodes that offer the lowest transaction fees.
@@ -34,10 +34,10 @@ const GuideTransactionFees: FC = () => {
         rows={[
           [
             'Coins being sent to Brian',
-            <span className="GuideTransactionFees__text-placeholder">Enter the amount of coins here...</span>,
+            <span className="GuideFees__text-placeholder">Enter the amount of coins here...</span>,
           ],
-          ['Node fee (coins)', <span className="GuideTransactionFees__text-light">2</span>],
-          ['PV fee (coins)', <span className="GuideTransactionFees__text-light">1</span>],
+          ['Node fee (coins)', <span className="GuideFees__text-light">2</span>],
+          ['PV fee (coins)', <span className="GuideFees__text-light">1</span>],
         ]}
       />
 
@@ -85,4 +85,4 @@ const GuideTransactionFees: FC = () => {
   );
 };
 
-export default GuideTransactionFees;
+export default GuideFees;
