@@ -11,23 +11,30 @@ const GuideComponents: FC = () => {
       altColors
       rows={[
         ['Account', 'Anonymous digital identity on the network through which a user can send and receive coins'],
-        ['Transaction', 'Transfer of coins from one account to another'],
-        ['Block', "Group of one or more transactions along with the sender's account number and a signature"],
+        ['Transfer Request', 'A users request to transfer of coins from one account to another'],
+        ['Block', 'A change to the network'],
+        ['Blockchain', 'Ordered list of blocks'],
         [
           'Signature',
-          'Unique value that verifies authenticity of a digital document (included with every block to prove that the account owner has authorized all the related transactions)',
+          'Unique value that verifies authenticity of a digital document (included with every block to prove that the user has authorized the request)',
         ],
-        ['Node', 'Network server that has several responsibilities, such as routing blocks and transaction validation'],
-        ['Node Block', 'A block signed by a node indicating that it conforms to network protocol'],
+        [
+          'Node',
+          'Network server that has several responsibilities, such as checking that requests conform to network protocol and routing blocks',
+        ],
+        [
+          'Node Signed Request',
+          'Request data that has been signed by a node indicating that it conforms to network protocol',
+        ],
         [
           'Primary Validator (PV)',
-          'Designated node that accepts blocks from other nodes; after successful validation/confirmation of each block, it creates a new confirmation block which is added to the blockchain',
+          'Elected node that accepts node signed requests from other nodes; after successful validation of each request, it creates a new block which is then forwarded to the other validators for verification',
         ],
         [
-          'Confirmation',
-          'A block signed by a node to establish that transactions have been added to the blockchain; confirms validation of transactions and successful transfer of coins',
+          'Validator',
+          'Elected node that will receive blocks from the PV, validate those results, and if valid add that block to their blockchain',
         ],
-        ['Blockchain', 'Ordered list of confirmations'],
+        ['Confirmation', 'A block signed by a validator as indication that the block has been added to the blockchain'],
       ]}
     />
   );
