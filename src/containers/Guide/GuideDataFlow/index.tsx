@@ -8,7 +8,7 @@ import RequestFlow from './RequestFlow.png';
 const GuideDataFlow: FC = () => {
   return (
     <DocContainer className="GuideDataFlow" title="Data Flow" lastUpdated="21 Apr 2021">
-      <DocImage alt="request flow" maxWidth={600} src={RequestFlow} />
+      <DocImage alt="request flow" maxWidth={580} src={RequestFlow} />
       <p>
         <strong>User Request Flow</strong>
       </p>
@@ -31,7 +31,7 @@ const GuideDataFlow: FC = () => {
           confirmations from all other validators.
         </li>
       </DocList>
-      <DocImage alt="network flow" maxWidth={760} src={NetworkFlow} />
+      <DocImage alt="network flow" maxWidth={740} src={NetworkFlow} />
       <p>
         <strong>Network Data Flow</strong>
       </p>
