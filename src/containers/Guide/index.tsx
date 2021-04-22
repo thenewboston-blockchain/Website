@@ -9,6 +9,8 @@ import GuideAccounts from './GuideAccounts';
 import GuideBestPractices from './GuideBestPractices';
 import GuideBlockchainArchitecture from './GuideBlockchainArchitecture';
 import GuideBlocks from './GuideBlocks';
+import GuideBlockTypes from './GuideBlockTypes';
+import GuideDataFlow from './GuideDataFlow';
 import GuideForkPrevention from './GuideForkPrevention';
 import GuideIntroduction from './GuideIntroduction';
 import GuideNetworkInitialization from './GuideNetworkInitialization';
@@ -33,6 +35,10 @@ const pageData: PageDataObject = {
     content: <GuideBestPractices />,
     name: 'Best Practices',
   },
+  'block-types': {
+    content: <GuideBlockTypes />,
+    name: 'Block Types',
+  },
   'blockchain-architecture': {
     content: <GuideBlockchainArchitecture />,
     name: 'Blockchain Architecture',
@@ -40,6 +46,10 @@ const pageData: PageDataObject = {
   blocks: {
     content: <GuideBlocks />,
     name: 'Blocks',
+  },
+  'data-flow': {
+    content: <GuideDataFlow />,
+    name: 'Data Flow',
   },
   'fork-prevention': {
     content: <GuideForkPrevention />,

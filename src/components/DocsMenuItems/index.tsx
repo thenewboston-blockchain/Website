@@ -182,6 +182,10 @@ export const guideNavigationData = [
     url: '/guide/accounts',
   },
   {
+    name: 'Block Types',
+    url: '/guide/block-types',
+  },
+  {
     name: 'Blocks',
     url: '/guide/blocks',
   },
@@ -204,6 +208,10 @@ export const guideNavigationData = [
   {
     name: 'Blockchain Architecture',
     url: '/guide/blockchain-architecture',
+  },
+  {
+    name: 'Data Flow',
+    url: '/guide/data-flow',
   },
   {
     name: 'Node Identifier',
