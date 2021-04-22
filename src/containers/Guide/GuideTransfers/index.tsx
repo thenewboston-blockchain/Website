@@ -15,14 +15,14 @@ import {NavLink} from 'react-router-dom';
 
 import BalanceLockAndKey from './BalanceLockAndKey.png';
 import BlockDetails from './BlockDetails.png';
-import './GuideBlocks.scss';
+import './GuideTransfers.scss';
 
-const GuideBlocks: FC = () => {
+const GuideTransfers: FC = () => {
   return (
-    <DocContainer className="GuideBlocks" title="Blocks" lastUpdated="07 Mar 2021">
+    <DocContainer className="GuideTransfers" title="Transfers" lastUpdated="22 Apr 2021">
       <p>
-        A block is a group of one or more transactions. Within a single block, there are often multiple transactions
-        (usually fees) with different recipients. The following simplified example outlines the structure of a block.
+        A transfer is a group of one or more transactions. Within a single block, there are often multiple transactions
+        (usually fees) with different recipients. The following simplified example outlines the structure of a transfer.
       </p>
       <DocSubHeader>Example</DocSubHeader>
       <p>Amy sends 100 coins to her friend Brian.</p>
@@ -31,8 +31,8 @@ const GuideBlocks: FC = () => {
         rows={[
           [<strong>Description</strong>, <strong>Coins</strong>],
           ['Coins being sent to Brian', '100'],
-          ['Node fee', <span className="GuideBlocks__text-light">2</span>],
-          ['PV fee', <span className="GuideBlocks__text-light">1</span>],
+          ['Node fee', <span className="GuideTransfers__text-light">2</span>],
+          ['PV fee', <span className="GuideTransfers__text-light">1</span>],
           ['Total', '103'],
         ]}
       />
@@ -60,7 +60,7 @@ const GuideBlocks: FC = () => {
         See <NavLink to="/guide/transaction-fees">Transaction Fees</NavLink> for details about fees that relate to
         transactions.
       </p>
-      <DocSubHeader>Dissecting a block</DocSubHeader>
+      <DocSubHeader>Dissecting a Block</DocSubHeader>
       <p>
         The signing process produces digital signatures using the{' '}
         <A href="https://ed25519.cr.yp.to/">Ed25519 Digital Signature Algorithm</A>. This ensures that the account owner
@@ -120,4 +120,4 @@ const GuideBlocks: FC = () => {
   );
 };
 
-export default GuideBlocks;
+export default GuideTransfers;

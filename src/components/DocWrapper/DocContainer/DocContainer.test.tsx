@@ -7,8 +7,6 @@ import DocContainer, {DocContainerProps} from '.';
 const baseProps: DocContainerProps = {
   className: 'Test',
   id: 'test-id',
-  introSection: 'Intro Section',
-  introTitle: 'Intro Title',
   lastUpdated: '06 Mar 2021',
   title: 'Test Title',
 };
@@ -45,18 +43,6 @@ describe('DocContainer Component', () => {
     const href = id.getAttribute('href');
 
     expect(href).toBe('#test-id');
-  });
-
-  it('renders with introSection passed in', () => {
-    render(<DocContainer {...baseProps} />);
-
-    expect(screen.queryByText('Intro Section')).toBeTruthy();
-  });
-
-  it('renders with introTitle passed in', () => {
-    render(<DocContainer {...baseProps} />);
-
-    expect(screen.getByTestId('DocContainer__page-title').textContent).toBe('Intro Title');
   });
 
   it('renders with lastUpdated passed in', () => {
