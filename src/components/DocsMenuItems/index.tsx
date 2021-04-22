@@ -186,8 +186,8 @@ export const guideNavigationData = [
     url: '/guide/block-types',
   },
   {
-    name: 'Network Overview',
-    url: '/guide/network-overview',
+    name: 'Flows',
+    url: '/guide/flows',
   },
   {
     name: 'Network Initialization',

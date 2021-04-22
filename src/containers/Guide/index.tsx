@@ -11,10 +11,10 @@ import GuideBlockTypes from './GuideBlockTypes';
 import GuideBlockchainArchitecture from './GuideBlockchainArchitecture';
 import GuideComponents from './GuideComponents';
 import GuideFees from './GuideFees';
+import GuideFlows from './GuideFlows';
 import GuideForkPrevention from './GuideForkPrevention';
 import GuideIntroduction from './GuideIntroduction';
 import GuideNetworkInitialization from './GuideNetworkInitialization';
-import GuideNetworkOverview from './GuideNetworkOverview';
 import GuideNodeIdentifier from './GuideNodeIdentifier';
 import GuideNodes from './GuideNodes';
 import GuideRootAccountFile from './GuideRootAccountFile';
@@ -52,6 +52,10 @@ const pageData: PageDataObject = {
     content: <GuideFees />,
     name: 'Fees',
   },
+  flows: {
+    content: <GuideFlows />,
+    name: 'Flows',
+  },
   'fork-prevention': {
     content: <GuideForkPrevention />,
     name: 'Fork Prevention',
@@ -63,10 +67,6 @@ const pageData: PageDataObject = {
   'network-initialization': {
     content: <GuideNetworkInitialization />,
     name: 'Network Initialization',
-  },
-  'network-overview': {
-    content: <GuideNetworkOverview />,
-    name: 'Network Overview',
   },
   'node-identifier': {
     content: <GuideNodeIdentifier />,

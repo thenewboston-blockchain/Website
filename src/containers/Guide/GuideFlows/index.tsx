@@ -5,9 +5,9 @@ import {DocContainer, DocImage, DocList} from 'components';
 import NetworkFlow from './NetworkFlow.png';
 import RequestFlow from './RequestFlow.png';
 import ValidatorFlow from './ValidatorFlow.png';
-import './GuideNetworkOverview.scss';
+import './GuideFlows.scss';
 
-const GuideNetworkOverview: FC = () => {
+const GuideFlows: FC = () => {
   const renderNetworkDataFlow = () => (
     <>
       <h2>Network Data Flow</h2>
@@ -62,10 +62,10 @@ const GuideNetworkOverview: FC = () => {
   );
 
   return (
-    <DocContainer className="GuideNetworkOverview" title="Network Overview" lastUpdated="21 Apr 2021">
+    <DocContainer className="GuideFlows" title="Flows" lastUpdated="21 Apr 2021">
       <p>
-        The following diagrams will outline the general flow of data throughout the network. In later sections we will
-        be taking a look at each of the individual processes in more detail.
+        The following diagrams will outline the main flows of data throughout the network. In later sections we will be
+        taking a look at each of the individual processes in more detail.
       </p>
       {renderUserRequestFlow()}
       {renderNetworkDataFlow()}
@@ -74,4 +74,4 @@ const GuideNetworkOverview: FC = () => {
   );
 };
 
-export default GuideNetworkOverview;
+export default GuideFlows;
