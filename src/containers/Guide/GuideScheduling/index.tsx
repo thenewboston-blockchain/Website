@@ -6,7 +6,6 @@ import {CalloutType, DocCallout, DocContainer, DocImage, DocList} from 'componen
 import PVInitializationProcess from './PVInitializationProcess.png';
 import PVInitializationProcessMultipleCandidates from './PVInitializationProcessMultipleCandidates.png';
 import Round from './Round.png';
-import Schedule from './Schedule.png';
 import ScheduleGeneration from './ScheduleGeneration.png';
 
 const GuideScheduling: FC = () => {
@@ -18,7 +17,7 @@ const GuideScheduling: FC = () => {
         ensure that the network will always have an active PV. The details of the process are outlined below.
       </p>
 
-      <DocCallout type={CalloutType.important}>
+      <DocCallout type={CalloutType.note}>
         Note that this process involves boost which will be covered in the{' '}
         <NavLink to="/governance/locked-coins-and-boosting">Locked Coins &amp; Boosting</NavLink> section.
       </DocCallout>
@@ -44,44 +43,27 @@ const GuideScheduling: FC = () => {
       </p>
       <DocImage alt="schedule generation" maxWidth={600} src={ScheduleGeneration} />
 
-      <DocCallout type={CalloutType.warning}>
-        The following documentation is out of date. For information on the updated scheduling process, please refer to
-        the <NavLink to="/guide/network-initialization">Network Initialization</NavLink> section.
-      </DocCallout>
-
       <DocList variant="ol">
-        <li>Each of the top 20 nodes will take turns acting as PV for a block day.</li>
+        <li>Each of the scheduled validators will act as PV for one block day.</li>
+        <li>After the PV generates a block, that block will be sent to all other CVs for additional confirmation.</li>
         <li>
-          During (or before) a node's turn as PV the other 19 nodes may vote to skip the upcoming PV node if any issues
-          are found (performance, error, offline, etc...).
-        </li>
-        <li>
-          After the PV validates and then signs a confirmation block it will be sent to the 19 other nodes for
-          additional confirmation.
-        </li>
-        <li>
-          Once &gt;50% of other nodes confirm receipt, each node will validate the block and upon successful validation
-          add the block to it’s blockchain.
-        </li>
-        <li>
-          This process will continue until all 20 nodes have had a turn as PV (or skipped) when a new schedule will be
-          created and the process will start again.
+          Once &gt;50% of CVs confirm receipt, each CV will validate the block and upon successful validation add the
+          block to it's blockchain.
         </li>
       </DocList>
 
-      <p>
-        At the beginning of each round the highest boosted nodes will produce the PV schedule to add to the blockchain.
-        This will assign each node to a future set amount of blocks they will be responsible for initially validating.
-      </p>
-
-      <DocImage alt="round" maxWidth={500} src={Schedule} />
+      <DocCallout type={CalloutType.important}>
+        All scheduling information is stored on the blockchain. The propagation of schedule blocks throughout the
+        network allow all nodes to remain aware of the validators.
+      </DocCallout>
 
       <p>
-        Each of the top 20 nodes will take turns acting as PV while the other 19 nodes act as auditing validators to
-        validate the results.
+        The job of the PV is not to maintain the single source of truth for all account balances, but rather propose a
+        valid ordering of blocks to forward to the CVs. This architecture not only allows for a highly efficient method
+        of distributed consensus, but also maintains a shared state across a peer-to-peer network by enabling all CVs to
+        produce identical blockchains.
       </p>
-
-      <DocImage alt="round" maxWidth={520} src={Round} />
+      <DocImage alt="round" maxWidth={460} src={Round} />
     </DocContainer>
   );
 };
