@@ -34,8 +34,8 @@ const Button: FC<BaseButtonProps> = ({
 
   return (
     <button
-      className={clsx('Button', `Button--${variant}`, `Button--${color}`, className, {
-        'Button--disabled': disabled,
+      className={clsx('FormButton', `FormButton--${variant}`, `FormButton--${color}`, className, {
+        'FormButton--disabled': disabled,
         ...bemify(className, `--${variant}`),
         ...bemify(className, `--${color}`),
         ...bemify(className, '--disabled', disabled),
