@@ -18,8 +18,8 @@ import GuideNetworkInitialization from './GuideNetworkInitialization';
 import GuideNodeIdentifier from './GuideNodeIdentifier';
 import GuideNodes from './GuideNodes';
 import GuideRootAccountFile from './GuideRootAccountFile';
-import GuideSchedule from './GuideSchedule';
 import GuideScheduleAdjustments from './GuideScheduleAdjustments';
+import GuideScheduling from './GuideScheduling';
 import GuideTransfers from './GuideTransfers';
 
 const defaultPageData: PageData = {
@@ -80,13 +80,13 @@ const pageData: PageDataObject = {
     content: <GuideRootAccountFile />,
     name: 'Root Account File',
   },
-  schedule: {
-    content: <GuideSchedule />,
-    name: 'Schedule',
-  },
   'schedule-adjustments': {
     content: <GuideScheduleAdjustments />,
     name: 'Schedule Adjustments',
+  },
+  scheduling: {
+    content: <GuideScheduling />,
+    name: 'scheduling',
   },
   transfers: {
     content: <GuideTransfers />,

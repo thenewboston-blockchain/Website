@@ -194,8 +194,8 @@ export const guideNavigationData = [
     url: '/guide/network-initialization',
   },
   {
-    name: 'Schedule',
-    url: '/guide/schedule',
+    name: 'Scheduling',
+    url: '/guide/scheduling',
   },
   {
     name: 'Schedule Adjustments',
