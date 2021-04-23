@@ -50,10 +50,12 @@ const GuideFlows: FC = () => {
     <>
       <h2>Validator Flow</h2>
       <DocList variant="ol">
-        <li>The PV will broadcast all blocks to the CVs.</li>
-        <li>Each CV will independently process block and compare PVs results with their own.</li>
-        <li>If results match, CV will add the block to its blockchain.</li>
-        <li>Nodes will listen for these confirmations (CVs blocks) and stream that information to the user.</li>
+        <li>The PV will broadcast each block to the CVs.</li>
+        <li>The CVs will independently validate each block and compare the PVs results with their own.</li>
+        <li>If the results match, the CV will add the block to its blockchain.</li>
+        <li>
+          Nodes will listen for these confirmations (CVs verified blocks) and stream that information to the end user.
+        </li>
       </DocList>
       <DocImage alt="validator flow" maxWidth={540} src={ValidatorFlow} />
     </>
