@@ -182,8 +182,8 @@ export const guideNavigationData = [
     url: '/guide/components',
   },
   {
-    name: 'Block Types',
-    url: '/guide/block-types',
+    name: 'Blocks',
+    url: '/guide/blocks',
   },
   {
     name: 'Flows',
@@ -194,8 +194,8 @@ export const guideNavigationData = [
     url: '/guide/network-initialization',
   },
   {
-    name: 'Schedule',
-    url: '/guide/schedule',
+    name: 'Scheduling',
+    url: '/guide/scheduling',
   },
   {
     name: 'Schedule Adjustments',

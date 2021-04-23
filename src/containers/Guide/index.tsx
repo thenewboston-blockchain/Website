@@ -7,8 +7,8 @@ import {PageData, PageDataObject} from 'types/page-data';
 
 import GuideAccounts from './GuideAccounts';
 import GuideBestPractices from './GuideBestPractices';
-import GuideBlockTypes from './GuideBlockTypes';
 import GuideBlockchainArchitecture from './GuideBlockchainArchitecture';
+import GuideBlocks from './GuideBlocks';
 import GuideComponents from './GuideComponents';
 import GuideFees from './GuideFees';
 import GuideFlows from './GuideFlows';
@@ -18,8 +18,8 @@ import GuideNetworkInitialization from './GuideNetworkInitialization';
 import GuideNodeIdentifier from './GuideNodeIdentifier';
 import GuideNodes from './GuideNodes';
 import GuideRootAccountFile from './GuideRootAccountFile';
-import GuideSchedule from './GuideSchedule';
 import GuideScheduleAdjustments from './GuideScheduleAdjustments';
+import GuideScheduling from './GuideScheduling';
 import GuideTransfers from './GuideTransfers';
 
 const defaultPageData: PageData = {
@@ -36,13 +36,13 @@ const pageData: PageDataObject = {
     content: <GuideBestPractices />,
     name: 'Best Practices',
   },
-  'block-types': {
-    content: <GuideBlockTypes />,
-    name: 'Block Types',
-  },
   'blockchain-architecture': {
     content: <GuideBlockchainArchitecture />,
     name: 'Blockchain Architecture',
+  },
+  blocks: {
+    content: <GuideBlocks />,
+    name: 'Blocks',
   },
   components: {
     content: <GuideComponents />,
@@ -80,13 +80,13 @@ const pageData: PageDataObject = {
     content: <GuideRootAccountFile />,
     name: 'Root Account File',
   },
-  schedule: {
-    content: <GuideSchedule />,
-    name: 'Schedule',
-  },
   'schedule-adjustments': {
     content: <GuideScheduleAdjustments />,
     name: 'Schedule Adjustments',
+  },
+  scheduling: {
+    content: <GuideScheduling />,
+    name: 'scheduling',
   },
   transfers: {
     content: <GuideTransfers />,

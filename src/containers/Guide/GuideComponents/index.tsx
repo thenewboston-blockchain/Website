@@ -7,8 +7,7 @@ const GuideComponents: FC = () => {
     <DocContainer className="GuideComponents" title="Components" lastUpdated="22 Apr 2021">
       <p>
         The system has many components, each of which plays a specific role in secure transfer of coins (the currency of
-        the system) between accounts. Other sections of our documentation discuss these elements in more detail, but for
-        now, we examine a simplified network composed of the core components. A basic glossary follows:
+        the system) between accounts. Other sections of our documentation discuss these elements in more detail.
       </p>
       <TableVertical
         altColors
