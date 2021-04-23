@@ -7,8 +7,8 @@ import {PageData, PageDataObject} from 'types/page-data';
 
 import GuideAccounts from './GuideAccounts';
 import GuideBestPractices from './GuideBestPractices';
-import GuideBlockTypes from './GuideBlockTypes';
 import GuideBlockchainArchitecture from './GuideBlockchainArchitecture';
+import GuideBlocks from './GuideBlocks';
 import GuideComponents from './GuideComponents';
 import GuideFees from './GuideFees';
 import GuideFlows from './GuideFlows';
@@ -36,13 +36,13 @@ const pageData: PageDataObject = {
     content: <GuideBestPractices />,
     name: 'Best Practices',
   },
-  'block-types': {
-    content: <GuideBlockTypes />,
-    name: 'Block Types',
-  },
   'blockchain-architecture': {
     content: <GuideBlockchainArchitecture />,
     name: 'Blockchain Architecture',
+  },
+  blocks: {
+    content: <GuideBlocks />,
+    name: 'Blocks',
   },
   components: {
     content: <GuideComponents />,
