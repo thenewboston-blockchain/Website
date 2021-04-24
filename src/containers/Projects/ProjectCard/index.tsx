@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 
+import {useHistory} from 'react-router';
 import {Avatar} from 'components';
 import Button from 'components/Button';
 import {Icon, IconType} from '@thenewboston/ui';
@@ -8,12 +9,14 @@ import './ProjectCard.scss';
 
 type Props = {
   description: string;
+  id: string;
   logoUrl: string;
   projectLead: string;
   title: string;
 };
 
-const ProjectCard: FC<Props> = ({description, logoUrl, projectLead, title}) => {
+const ProjectCard: FC<Props> = ({description, id, logoUrl, projectLead, title}) => {
+  const history = useHistory();
   return (
     <div className="ProjectCard">
       <div className="ProjectCard__top-container">
@@ -29,7 +32,7 @@ const ProjectCard: FC<Props> = ({description, logoUrl, projectLead, title}) => {
       <div className="ProjectCard__description">{description}</div>
       <Button
         className="ProjectCard__details-button"
-        onClick={() => console.log('visit profile details')}
+        onClick={() => history.push(`/projects/${id}`)}
         iconRight={<Icon icon={IconType.chevronRight} size={16} />}
         type="empty"
         rounded

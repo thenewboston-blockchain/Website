@@ -20,7 +20,14 @@ const ListOfProjects: FC = () => {
       {projects.map((project, i) => {
         const {description, logoUrl, projectLead, title} = project;
         return (
-          <ProjectCard description={description} logoUrl={logoUrl} projectLead={projectLead} title={title} key={i} />
+          <ProjectCard
+            description={description}
+            id={i.toString()}
+            logoUrl={logoUrl}
+            projectLead={projectLead}
+            title={title}
+            key={i}
+          />
         );
       })}
     </div>

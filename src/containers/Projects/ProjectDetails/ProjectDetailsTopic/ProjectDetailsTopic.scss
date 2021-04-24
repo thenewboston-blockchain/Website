@@ -1,0 +1,30 @@
+.ProjectDetailsTopic {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  margin-bottom: 120px;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content-overview {
+    // body1
+    color: var(--color-sail-gray-500);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+
+  &__content-title {
+    color: var(--color-sail-blue-900);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+}

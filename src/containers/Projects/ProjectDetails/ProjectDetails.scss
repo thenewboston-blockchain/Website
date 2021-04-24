@@ -1,0 +1,9 @@
+.ProjectDetails {
+  background-color: var(--color-white);
+  margin-bottom: 100px;
+
+  &__main-container {
+    display: flex;
+    flex-direction: row;
+  }
+}
