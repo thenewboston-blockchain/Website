@@ -1,4 +1,5 @@
 import React, {FC} from 'react';
+import {NavLink} from 'react-router-dom';
 
 import {
   A,
@@ -11,7 +12,6 @@ import {
   TableBorderGrid,
   TableVertical,
 } from 'components';
-import {NavLink} from 'react-router-dom';
 
 import BalanceLockAndKey from './BalanceLockAndKey.png';
 import BlockDetails from './BlockDetails.png';
@@ -38,37 +38,36 @@ const GuideTransfers: FC = () => {
       />
 
       <p>
-        After Amy creates the block shown above, the network must validate several aspects of the block and all related
-        transactions, including the following:
+        After Amy creates the request shown above, the network must validate several aspects of the request and all
+        related transactions, including the following:
       </p>
       <TableVertical
         altColors
         rows={[
           [<strong>Validation</strong>, <strong>Description</strong>],
           [
-            'Amy has signed the block.',
-            'The term "sign" is preferred over "create" because Amy might sign (authorize) blocks that she did not originate. For example, a shopping website builds the block while Amy adds items to her cart.',
+            'Amy has signed the request.',
+            'The term "sign" is preferred over "create" because Amy might sign (authorize) request that she did not originate. For example, a shopping website builds the request while Amy adds items to her cart.',
           ],
           ['Amy has enough coins in her account.', 'The users cannot spend more coins than what they have.'],
           [
-            'The block is not being validated more than once.',
-            'This is critical for preventing nodes from collecting additional transaction fees by validating the same block multiple times.',
+            'The request is not being validated more than once.',
+            'This is critical for preventing nodes from collecting additional transaction fees by validating the same request multiple times.',
           ],
         ]}
       />
       <p>
-        See <NavLink to="/guide/transaction-fees">Transaction Fees</NavLink> for details about fees that relate to
-        transactions.
+        See the <NavLink to="/guide/fees">Fees</NavLink> section for details about fees that relate to transfers.
       </p>
-      <DocSubHeader>Dissecting a Block</DocSubHeader>
+      <DocSubHeader>Dissecting a Transfer Request</DocSubHeader>
       <p>
         The signing process produces digital signatures using the{' '}
         <A href="https://ed25519.cr.yp.to/">Ed25519 Digital Signature Algorithm</A>. This ensures that the account owner
-        has indeed signed the set of transactions within any given block.
+        has indeed signed the set of transactions within a transfer request.
       </p>
       <DocCallout type={CalloutType.note}>
-        Although the account owner is often referred to by name, the actual network architecture never stores the name
-        of individuals. Instead, each account relates to the owner by their account number.
+        Although the account owner is often referred to by name throughout the documentation, the actual network does
+        not store the name of individuals. Instead, each account relates to the owner by their account number.
       </DocCallout>
       <p>
         In cryptography, the account number is often referred to as the <strong>public-key</strong>. An account number
