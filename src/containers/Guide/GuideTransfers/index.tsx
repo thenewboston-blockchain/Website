@@ -1,4 +1,5 @@
 import React, {FC} from 'react';
+import {NavLink} from 'react-router-dom';
 
 import {
   A,
@@ -11,7 +12,6 @@ import {
   TableBorderGrid,
   TableVertical,
 } from 'components';
-import {NavLink} from 'react-router-dom';
 
 import BalanceLockAndKey from './BalanceLockAndKey.png';
 import BlockDetails from './BlockDetails.png';
