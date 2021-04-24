@@ -5,17 +5,14 @@
 
   &__empty {
     background-color: var(--color-white);
-    border: none;
+    border: 1px solid var(--color-white);
     color: var(--color-primary);
+    transition: 0.2s;
 
     &:hover {
       background-color: var(--color-blue-50);
       border: 1px solid var(--color-gray-200);
     }
-  }
-
-  &__icon-right {
-    width: 16px;
   }
 
   &__outlined {

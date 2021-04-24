@@ -16,7 +16,7 @@ const Button: FC<Props> = ({children, className, iconRight, onClick, rounded = f
   return (
     <button className={clsx('Button', `Button__${type}`, {'Button--rounded': rounded}, className)} onClick={onClick}>
       {children}
-      <div className="Button__icon-right">{iconRight}</div>
+      {iconRight && <div className="Button__icon-right">{iconRight}</div>}
     </button>
   );
 };
