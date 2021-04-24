@@ -26,7 +26,7 @@ const ProjectsHero: FC = () => {
               >
                 Propose a Project
               </Button>
-              <Button onClick={() => history.push('/projects/overview')} rounded type="outlined">
+              <Button onClick={() => history.push('/project-rules/overview')} rounded type="outlined">
                 Rules and Guide
               </Button>
             </div>

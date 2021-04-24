@@ -11,7 +11,7 @@ import ProjectsProposalSubmissionProcess from './ProjectsProposalSubmissionProce
 import ProjectsRules from './ProjectsRules';
 
 const defaultPageData: PageData = {
-  content: <Redirect to="/projects/overview" />,
+  content: <Redirect to="/project-rules/overview" />,
   name: '',
 };
 

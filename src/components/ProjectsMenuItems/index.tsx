@@ -7,19 +7,19 @@ import {NavigationItem} from 'types/navigation';
 export const projectsNavigationData = [
   {
     name: 'Overview',
-    url: '/projects/overview',
+    url: '/project-rules/overview',
   },
   {
     name: 'Rules & Guidelines',
-    url: '/projects/rules',
+    url: '/project-rules/rules',
   },
   {
     name: 'Proposal Submission Process',
-    url: '/projects/proposals',
+    url: '/project-rules/proposals',
   },
   {
     name: 'Milestones & Payouts',
-    url: '/projects/milestones',
+    url: '/project-rules/milestones',
   },
 ];
 
@@ -33,7 +33,7 @@ const ProjectsMenuItems: FC = () => {
   };
 
   return (
-    <MenuGroup title="Projects" urlBase="projects">
+    <MenuGroup title="Projects" urlBase="project-rules">
       {renderNavLinks(projectsNavigationData)}
     </MenuGroup>
   );

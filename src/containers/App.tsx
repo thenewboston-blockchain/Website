@@ -83,7 +83,8 @@ const App: FC = () => {
           <Route path="/guide/:chapter?" component={Guide} />
           <Route path="/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
           <Route exact path="/projects" component={Projects} />
-          <Route path="/projects/:chapter" component={ProjectRulesAndGuide} />
+          <Route path="/projects/:projectId" component={Projects} />
+          <Route path="/project-rules/:chapter" component={ProjectRulesAndGuide} />
           <Route exact path="/sign-in" component={SignIn} />
           <Route exact path="/sign-out" component={SignOut} />
           <Route path="/style-guide/:chapter?" component={StyleGuide} />
