@@ -11,3 +11,7 @@ export interface AuthResponse {
 export interface Token {
   token: string;
 }
+
+export interface APIArrayResponse<T> {
+  results: T[];
+}
