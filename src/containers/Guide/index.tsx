@@ -5,10 +5,12 @@ import {DashboardLayout, DocsMenuItems, Pagination} from 'components';
 import {guideNavigationData} from 'components/DocsMenuItems';
 import {PageData, PageDataObject} from 'types/page-data';
 
+import GuideAccountLock from './GuideAccountLock';
 import GuideAccounts from './GuideAccounts';
 import GuideBestPractices from './GuideBestPractices';
 import GuideBlockchainArchitecture from './GuideBlockchainArchitecture';
 import GuideBlocks from './GuideBlocks';
+import GuideBlockStructure from './GuideBlockStructure';
 import GuideComponents from './GuideComponents';
 import GuideFees from './GuideFees';
 import GuideFlows from './GuideFlows';
@@ -20,7 +22,6 @@ import GuideNodes from './GuideNodes';
 import GuideRootAccountFile from './GuideRootAccountFile';
 import GuideScheduleAdjustments from './GuideScheduleAdjustments';
 import GuideScheduling from './GuideScheduling';
-import GuideTransfers from './GuideTransfers';
 
 const defaultPageData: PageData = {
   content: <Redirect to="/guide/introduction" />,
@@ -28,6 +29,10 @@ const defaultPageData: PageData = {
 };
 
 const pageData: PageDataObject = {
+  'account-lock': {
+    content: <GuideAccountLock />,
+    name: 'Account Lock',
+  },
   accounts: {
     content: <GuideAccounts />,
     name: 'Accounts',
@@ -35,6 +40,10 @@ const pageData: PageDataObject = {
   'best-practices': {
     content: <GuideBestPractices />,
     name: 'Best Practices',
+  },
+  'block-structure': {
+    content: <GuideBlockStructure />,
+    name: 'Block Structure',
   },
   'blockchain-architecture': {
     content: <GuideBlockchainArchitecture />,
@@ -87,10 +96,6 @@ const pageData: PageDataObject = {
   scheduling: {
     content: <GuideScheduling />,
     name: 'scheduling',
-  },
-  transfers: {
-    content: <GuideTransfers />,
-    name: 'Transfers',
   },
 };
 

@@ -17,8 +17,8 @@ const InternalTeamMemberPayments: FC = () => {
         <li>proof of work</li>
         <li>estimated time spent on each task (half hour increments)</li>
         <ul>
-          <li>~30 minutes</li>
-          <li>~1.5 hours</li>
+          <li>0.5 hours</li>
+          <li>1.5 hours</li>
         </ul>
       </DocList>
       <p>

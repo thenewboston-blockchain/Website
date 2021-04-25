@@ -186,8 +186,16 @@ export const guideNavigationData = [
     url: '/guide/blocks',
   },
   {
+    name: 'Nodes',
+    url: '/guide/nodes',
+  },
+  {
     name: 'Flows',
     url: '/guide/flows',
+  },
+  {
+    name: 'Fork Prevention',
+    url: '/guide/fork-prevention',
   },
   {
     name: 'Network Initialization',
@@ -206,24 +214,20 @@ export const guideNavigationData = [
     url: '/guide/accounts',
   },
   {
-    name: 'Transfers',
-    url: '/guide/transfers',
+    name: 'Block Structure',
+    url: '/guide/block-structure',
   },
   {
-    name: 'Fees',
-    url: '/guide/fees',
-  },
-  {
-    name: 'Nodes',
-    url: '/guide/nodes',
+    name: 'Account Lock',
+    url: '/guide/account-lock',
   },
   {
     name: 'Node Identifier',
     url: '/guide/node-identifier',
   },
   {
-    name: 'Fork Prevention',
-    url: '/guide/fork-prevention',
+    name: 'Fees',
+    url: '/guide/fees',
   },
   {
     name: 'Best Practices',
@@ -285,6 +289,10 @@ const DocsMenuItems: FC = () => {
         {renderNavLinks(guideNavigationData)}
       </MenuGroup>
 
+      <MenuGroup title="Governance" urlBase="governance">
+        {renderNavLinks(governanceNavigationData)}
+      </MenuGroup>
+
       <MenuGroup title="Account Manager" urlBase="account-manager">
         {renderNavLinks(accountManagerNavigationData)}
       </MenuGroup>
@@ -297,10 +305,6 @@ const DocsMenuItems: FC = () => {
       <MenuGroup title="Style Guides" urlBase="style-guide">
         <NavLink to="/style-guide/react">React / JSX</NavLink>
         <NavLink to="/style-guide/css">CSS / SASS</NavLink>
-      </MenuGroup>
-
-      <MenuGroup title="Governance" urlBase="governance">
-        {renderNavLinks(governanceNavigationData)}
       </MenuGroup>
 
       <MenuGroup title="Bank API" urlBase="bank-api">
