@@ -53,19 +53,6 @@
           "profileImage": "https://avatars1.githubusercontent.com/u/20350674?v=4"
         },
         "hourlyRate": 600
-      },
-      {
-        "title": "Auditor",
-        "isLead": false,
-        "createdDate": "2021-04-12T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "19",
-          "discordUsername": "MrSky#5242",
-          "displayName": "MrSky",
-          "githubUsername": "mrbusysky",
-          "profileImage": "https://avatars.githubusercontent.com/u/58412572?v=4"
-        },
-        "hourlyRate": 600
       }
     ],
     "responsibilities": [
