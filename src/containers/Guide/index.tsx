@@ -8,13 +8,13 @@ import {PageData, PageDataObject} from 'types/page-data';
 import GuideAccountLock from './GuideAccountLock';
 import GuideAccounts from './GuideAccounts';
 import GuideBestPractices from './GuideBestPractices';
+import GuideBlockStructure from './GuideBlockStructure';
 import GuideBlockchainArchitecture from './GuideBlockchainArchitecture';
 import GuideBlocks from './GuideBlocks';
-import GuideBlockStructure from './GuideBlockStructure';
-import GuideComponents from './GuideComponents';
 import GuideFees from './GuideFees';
 import GuideFlows from './GuideFlows';
 import GuideForkPrevention from './GuideForkPrevention';
+import GuideGlossary from './GuideGlossary';
 import GuideIntroduction from './GuideIntroduction';
 import GuideNetworkInitialization from './GuideNetworkInitialization';
 import GuideNodeIdentifier from './GuideNodeIdentifier';
@@ -53,10 +53,6 @@ const pageData: PageDataObject = {
     content: <GuideBlocks />,
     name: 'Blocks',
   },
-  components: {
-    content: <GuideComponents />,
-    name: 'Components',
-  },
   fees: {
     content: <GuideFees />,
     name: 'Fees',
@@ -68,6 +64,10 @@ const pageData: PageDataObject = {
   'fork-prevention': {
     content: <GuideForkPrevention />,
     name: 'Fork Prevention',
+  },
+  glossary: {
+    content: <GuideGlossary />,
+    name: 'glossary',
   },
   introduction: {
     content: <GuideIntroduction />,
