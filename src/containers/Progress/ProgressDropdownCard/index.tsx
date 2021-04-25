@@ -3,6 +3,7 @@ import React, {FC, useEffect, useState, useRef} from 'react';
 import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
 import {BaseIssue} from 'types/github';
+import ProgressIssueCard from '../ProgressIssueCard';
 import './ProgressDropdownCard.scss';
 
 type Props = {
@@ -34,26 +35,35 @@ const ProgressDropdownCard: FC<Props> = ({name, responsibility, issues}) => {
 
   return (
     <div className="ProgressDropdownCard">
-      <div className="ProgressDropdownCard__left-container">
-        <div className="ProgressDropdownCard__title">
-          <div className="ProgressDropdownCard__title-name">{name}</div>
-          <div className="ProgressDropdownCard__title-responsibility">{responsibility}</div>
-        </div>
-        <div className="ProgressDropdownCard__progress" ref={progressBarRef}>
-          <div className="ProgressDropdownCard__progress-bar">
-            <div
-              className={clsx('ProgressDropdownCard__progress-bar', 'ProgressDropdownCard__progress-bar--filled')}
-              style={{
-                width: `${filledProgressBarWidth}px`,
-              }}
-            />
+      <div className="ProgressDropdownCard__dropdown-container">
+        <div className="ProgressDropdownCard__left-container">
+          <div className="ProgressDropdownCard__title">
+            <div className="ProgressDropdownCard__title-name">{name}</div>
+            <div className="ProgressDropdownCard__title-responsibility">{responsibility}</div>
           </div>
-          <div className="ProgressDropdownCard__progress-percentage">
-            {Math.floor(progressFraction * 100)}% complete
+          <div className="ProgressDropdownCard__progress" ref={progressBarRef}>
+            <div className="ProgressDropdownCard__progress-bar">
+              <div
+                className={clsx('ProgressDropdownCard__progress-bar', 'ProgressDropdownCard__progress-bar--filled')}
+                style={{
+                  width: `${filledProgressBarWidth}px`,
+                }}
+              />
+            </div>
+            <div className="ProgressDropdownCard__progress-percentage">
+              {Math.floor(progressFraction * 100)}% complete
+            </div>
           </div>
         </div>
+        <Icon icon={IconType.chevronDown} onClick={toggleExpanded} />
       </div>
-      <Icon icon={IconType.chevronDown} onClick={toggleExpanded} />
+      {expanded && (
+        <div className="ProgressDropdownCard__issues-container">
+          {issues.map((issue) => {
+            return <ProgressIssueCard issue={issue} key={issue.id} />;
+          })}
+        </div>
+      )}
     </div>
   );
 };

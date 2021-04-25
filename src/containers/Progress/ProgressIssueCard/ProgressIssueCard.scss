@@ -1,3 +1,58 @@
 .ProgressIssueCard {
+  align-items: center;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-100);
+  border-radius: 10px;
   display: flex;
+  height: 64px;
+  justify-content: space-between;
+  padding: 13px 18px;
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__left-container {
+    display: flex;
+  }
+
+  &__issue-title {
+    -webkit-box-orient: vertical;
+    color: var(--color-secondary);
+    cursor: pointer;
+    display: -webkit-box;
+    font-size: 14px;
+    font-weight: 700;
+    -webkit-line-clamp: 1; /* max number of lines to show */
+    // h4 bold
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__issue-opened-by {
+    color: var(--color-gray-600);
+    // b1 regular
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &__icon-closed {
+    color: #cd3d64;
+  }
+
+  &__icon-open {
+    color: #1ea672;
+  }
+
+  &__assignees {
+    display: flex;
+    // row reverse to organically stack avatars without explicitly setting z-index
+    flex-direction: row-reverse;
+  }
+
+  &__assignee-avatar {
+    margin-left: -5px;
+  }
 }

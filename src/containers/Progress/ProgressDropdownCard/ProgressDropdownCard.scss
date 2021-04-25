@@ -1,16 +1,30 @@
 .ProgressDropdownCard {
-  align-items: center;
   background-color: var(--color-gray-050);
   border-radius: 8px;
-  display: flex;
-  justify-content: space-between;
   margin: 8px 40px;
   padding: 24px;
   width: 100%;
 
-  @media (max-width: 700px) {
-    align-items: flex-start;
-    justify-content: unset;
+  &:hover {
+    background-color: var(--color-gray-075);
+  }
+
+  &__dropdown-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 700px) {
+      align-items: flex-start;
+      justify-content: unset;
+    }
+  }
+
+  &__issues-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 32px;
   }
 
   &__left-container {

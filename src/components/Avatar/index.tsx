@@ -9,9 +9,11 @@ import DefaultUserAvatar from 'assets/images/default-avatar.png';
 import './Avatar.scss';
 
 export interface AvatarProps {
+  bordered?: boolean;
   className?: string;
   size: number;
   src: string;
+  onClick?: () => void;
 }
 
 export const getImageSizeBasedOnDeviceRatio = (size: number): number => {
@@ -33,7 +35,7 @@ export const getFormattedSrc = (src: string, size: number): string => {
   }
 };
 
-const AvatarImgWithFallback: FC<AvatarProps> = ({className, size, src}) => {
+const AvatarImgWithFallback: FC<AvatarProps> = ({bordered, className, size, src, onClick}) => {
   const [srcPrimary, setSrcPrimary] = useState<string>('');
   const {src: srcWithFallback} = useImage({srcList: [srcPrimary, DefaultUserAvatar]});
 
@@ -44,12 +46,13 @@ const AvatarImgWithFallback: FC<AvatarProps> = ({className, size, src}) => {
   return (
     <img
       alt="Avatar"
-      className={clsx('Avatar', className)}
+      className={clsx('Avatar', {'Avatar--bordered': bordered, 'Avatar--clickable': !!onClick}, className)}
       crossOrigin="anonymous"
       data-testid="Avatar"
       height={size}
       key={srcWithFallback}
       src={srcWithFallback}
+      onClick={onClick}
       width={size}
     />
   );
