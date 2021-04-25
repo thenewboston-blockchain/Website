@@ -218,10 +218,6 @@ export const guideNavigationData = [
     url: '/guide/account-lock',
   },
   {
-    name: 'Transfers',
-    url: '/guide/transfers',
-  },
-  {
     name: 'Fees',
     url: '/guide/fees',
   },
@@ -232,6 +228,10 @@ export const guideNavigationData = [
   {
     name: 'Node Identifier',
     url: '/guide/node-identifier',
+  },
+  {
+    name: 'Transfers',
+    url: '/guide/transfers',
   },
   {
     name: 'Best Practices',
