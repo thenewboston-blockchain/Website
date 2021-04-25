@@ -41,7 +41,7 @@ const GuideGlossary: FC = () => {
           ],
           ['Schedule', 'A list of upcoming validators'],
           ['Signature', 'Value that confirms authenticity of a digital document'],
-          ['Signed Request (NSR)', 'Request data that has been signed by an account owner'],
+          ['Signed Request (SR)', 'Request data that has been signed by an account owner'],
           [
             'Validator',
             'Elected node responsible for the validation of data and the generation of blocks to add to the blockchain',

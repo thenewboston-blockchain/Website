@@ -186,6 +186,10 @@ export const guideNavigationData = [
     url: '/guide/blocks',
   },
   {
+    name: 'Block Structure',
+    url: '/guide/block-structure',
+  },
+  {
     name: 'Nodes',
     url: '/guide/nodes',
   },
@@ -208,10 +212,6 @@ export const guideNavigationData = [
   {
     name: 'Accounts',
     url: '/guide/accounts',
-  },
-  {
-    name: 'Block Structure',
-    url: '/guide/block-structure',
   },
   {
     name: 'Account Lock',
