@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {DocContainer, DocImage, TableVertical} from 'components';
+import {CalloutType, DocCallout, DocContainer, DocImage, TableVertical} from 'components';
 
 import Nodes from './Nodes.png';
 
@@ -35,12 +35,12 @@ const GuideNodes: FC = () => {
         ]}
       />
 
-      <p>
+      <DocCallout type={CalloutType.note}>
         Users may also indicate their most trusted nodes by boosting them, as described in the{' '}
         <NavLink to="/governance/locked-coins-and-boosting">locked coins and node boosting</NavLink> documentation. The
         top boosted nodes on the network will be designated as validators and will be responsible for the creation of
         the blockchain.
-      </p>
+      </DocCallout>
     </DocContainer>
   );
 };
