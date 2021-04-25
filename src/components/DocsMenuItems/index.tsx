@@ -190,6 +190,10 @@ export const guideNavigationData = [
     url: '/guide/flows',
   },
   {
+    name: 'Fork Prevention',
+    url: '/guide/fork-prevention',
+  },
+  {
     name: 'Network Initialization',
     url: '/guide/network-initialization',
   },
@@ -206,6 +210,10 @@ export const guideNavigationData = [
     url: '/guide/accounts',
   },
   {
+    name: 'Block Structure',
+    url: '/guide/block-structure',
+  },
+  {
     name: 'Transfers',
     url: '/guide/transfers',
   },
@@ -220,10 +228,6 @@ export const guideNavigationData = [
   {
     name: 'Node Identifier',
     url: '/guide/node-identifier',
-  },
-  {
-    name: 'Fork Prevention',
-    url: '/guide/fork-prevention',
   },
   {
     name: 'Best Practices',
