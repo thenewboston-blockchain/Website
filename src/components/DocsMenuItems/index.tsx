@@ -214,6 +214,10 @@ export const guideNavigationData = [
     url: '/guide/block-structure',
   },
   {
+    name: 'Account Lock',
+    url: '/guide/account-lock',
+  },
+  {
     name: 'Transfers',
     url: '/guide/transfers',
   },

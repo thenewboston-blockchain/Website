@@ -17,6 +17,7 @@ const GuideBlockStructure: FC = () => {
         altColors
         rows={[
           ['Data Type', 'Indicator for what shape and type of data is included in the message'],
+          ['Account Number', 'Identifier for the users account'],
           ['Account Lock', 'Unique value used to ensure that the same request is not processed more than once'],
           ['Signature', 'Value used as proof that the account owner has authorized the request'],
           ['Fees', 'Payments to nodes in exchange for processing the request'],

@@ -5,6 +5,7 @@ import {DashboardLayout, DocsMenuItems, Pagination} from 'components';
 import {guideNavigationData} from 'components/DocsMenuItems';
 import {PageData, PageDataObject} from 'types/page-data';
 
+import GuideAccountLock from './GuideAccountLock';
 import GuideAccounts from './GuideAccounts';
 import GuideBestPractices from './GuideBestPractices';
 import GuideBlockchainArchitecture from './GuideBlockchainArchitecture';
@@ -29,6 +30,10 @@ const defaultPageData: PageData = {
 };
 
 const pageData: PageDataObject = {
+  'account-lock': {
+    content: <GuideAccountLock />,
+    name: 'Account Lock',
+  },
   accounts: {
     content: <GuideAccounts />,
     name: 'Accounts',

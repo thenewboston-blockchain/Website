@@ -7,13 +7,10 @@ import {
   DocCallout,
   DocContainer,
   DocImage,
-  DocList,
   DocSubHeader,
   TableBorderGrid,
   TableVertical,
 } from 'components';
-
-import BalanceLockAndKey from './BalanceLockAndKey.png';
 import BlockDetails from './BlockDetails.png';
 import './GuideTransfers.scss';
 
@@ -78,43 +75,6 @@ const GuideTransfers: FC = () => {
       </p>
 
       <DocImage alt="block details" maxWidth={530} src={BlockDetails} />
-
-      <p>
-        Before we can go into more detail regarding exactly how a block is created, we first need to understand an
-        integral aspect of the network balance sheet called the balance lock.
-      </p>
-      <p>
-        Every account on the balance sheet includes a related balance lock. This is a value that the account owner must
-        provide to "unlock" or spend their coin balance. The method to unlock a balance lock is through using balance
-        keys, which are provided within the message of every block.
-      </p>
-      <p>
-        Every message within a block is hashed, and that hash value will become the next balance lock. Because every
-        block contains a unique balance key (as created by the previous block), this ensures that for every block sent
-        over the network, the balance lock of the sender's account gets updated. So, nodes and validators cannot process
-        the same block more than once. Here is this entire process in details:
-      </p>
-
-      <DocImage alt="balance lock and key" maxWidth={1400} src={BalanceLockAndKey} />
-      <DocCallout type={CalloutType.note}>
-        There is one exception to the method in which balance locks are determined. Usually, the hash value of the
-        account owner's last sent block message determines the account's balance lock. This, however, leaves out the
-        scenario in which the account owner must access their coin balance for the very first time, before a block has
-        ever been sent. This occurs when a separate user has sent funds to an account for the very first time, but
-        before that recipient sends any coins (signs any blocks) themselves. In this case, the balance lock for the
-        account will be the recipient's account number.
-      </DocCallout>
-
-      <p>So, the following two rules outline how balance locks are determined:</p>
-      <DocList variant="ul">
-        <li>If an owner has never sent coins before, the balance lock is equal to their account number.</li>
-        <li>Otherwise, the balance lock is equal to the hash value of their most recently sent block's message.</li>
-      </DocList>
-      <DocCallout type={CalloutType.important}>
-        The balance lock for an account is only updated when that account owner sends blocks. The balance "lock and key"
-        system is similar to the lock and key for a mailbox. No mailbox key is required when inserting mail into a
-        mailbox. A key is only necessary for opening the mailbox to access the contents inside.
-      </DocCallout>
     </DocContainer>
   );
 };
