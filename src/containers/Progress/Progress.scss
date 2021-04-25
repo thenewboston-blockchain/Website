@@ -1,0 +1,11 @@
+.Progress {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+  padding: 40px;
+
+  @media (max-width: 700px) {
+    padding: 24px;
+  }
+}
