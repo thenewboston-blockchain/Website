@@ -1,5 +1,6 @@
-import React, {FC, useEffect} from 'react';
+import React, {FC, useEffect, useRef} from 'react';
 
+import {useWindowDimensions} from 'hooks';
 import {Milestone, Project, ProjectTopic, ProjectTopicTitle} from 'types/projects';
 import ProjectDetailsTopic from '../ProjectDetailsTopic';
 import {projectDetailsTopic} from '../constants';
@@ -14,18 +15,23 @@ type Props = {
 const TOP_NAV_HEIGHT = 60;
 
 const ProjectDetailsContent: FC<Props> = ({milestones, project, currentTopic}) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const {width} = useWindowDimensions();
+  const detailsHeaderHeight = width >= 480 ? 158 : 177;
   useEffect(() => {
     const element = document.getElementById(currentTopic.anchor);
     const scrollBehavior = element ? 'smooth' : 'auto';
 
     // scroll to top if it is the first topic, else scroll directly to the topic
-    const top = currentTopic.title === ProjectTopicTitle.Overview || !element ? 0 : element.offsetTop - TOP_NAV_HEIGHT;
+    const top =
+      currentTopic.title === ProjectTopicTitle.Overview || !element
+        ? 0
+        : element.offsetTop - TOP_NAV_HEIGHT - detailsHeaderHeight;
 
-    window.scrollTo({
-      behavior: scrollBehavior,
-      top,
-    });
-  }, [currentTopic]);
+    if (containerRef.current) {
+      containerRef.current.scrollTo({behavior: scrollBehavior, top});
+    }
+  }, [currentTopic, detailsHeaderHeight]);
 
   const renderMilestones = () => {
     return milestones.map((milestone) => {
@@ -38,7 +44,7 @@ const ProjectDetailsContent: FC<Props> = ({milestones, project, currentTopic}) =
     });
   };
   return (
-    <div className="ProjectDetailsContent">
+    <div className="ProjectDetailsContent" ref={containerRef}>
       <ProjectDetailsTopic
         id={projectDetailsTopic.overview.anchor}
         content={project.overview}
