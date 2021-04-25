@@ -3,7 +3,6 @@ import {NavLink} from 'react-router-dom';
 
 import {DocContainer, DocImage, TableVertical} from 'components';
 
-import NodeFlow from './NodeFlow.png';
 import Nodes from './Nodes.png';
 
 const GuideNodes: FC = () => {
@@ -21,14 +20,17 @@ const GuideNodes: FC = () => {
       <TableVertical
         altColors
         rows={[
-          ['Node', 'The default state where primary functionality is to connect end users to the network'],
+          [
+            'Node',
+            'Network server that has several responsibilities, such as checking that requests conform to network protocol and routing blocks',
+          ],
           [
             'Primary Validator (PV)',
-            'An elected node that accepts signed requests from other nodes, and after successful validation of each, creates a new block that is added to the blockchain',
+            "Validator that accepts requests from other nodes; after successful validation of each request, it creates a new block which is first added to it's own blockchain and then forwarded to the confirmation validators",
           ],
           [
             'Confirmation Validator (CV)',
-            'A node included in the current schedule that checks the results of the PV when not acting as PV itself',
+            'Validator that will receive blocks from the PV, validate those results, and if valid add that block to their blockchain',
           ],
         ]}
       />
@@ -39,8 +41,6 @@ const GuideNodes: FC = () => {
         top boosted nodes on the network will be designated as validators and will be responsible for the creation of
         the blockchain.
       </p>
-
-      <DocImage alt="node flow" maxWidth={560} src={NodeFlow} />
     </DocContainer>
   );
 };
