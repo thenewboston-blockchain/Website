@@ -9,6 +9,7 @@ import GuideAccountLock from './GuideAccountLock';
 import GuideAccounts from './GuideAccounts';
 import GuideBestPractices from './GuideBestPractices';
 import GuideBlockStructure from './GuideBlockStructure';
+import GuideBlockTypes from './GuideBlockTypes';
 import GuideBlockchainArchitecture from './GuideBlockchainArchitecture';
 import GuideBlocks from './GuideBlocks';
 import GuideFees from './GuideFees';
@@ -43,6 +44,10 @@ const pageData: PageDataObject = {
   'block-structure': {
     content: <GuideBlockStructure />,
     name: 'Block Structure',
+  },
+  'block-types': {
+    content: <GuideBlockTypes />,
+    name: 'Block Types',
   },
   'blockchain-architecture': {
     content: <GuideBlockchainArchitecture />,

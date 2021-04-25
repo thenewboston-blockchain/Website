@@ -190,6 +190,10 @@ export const guideNavigationData = [
     url: '/guide/block-structure',
   },
   {
+    name: 'Block Types',
+    url: '/guide/block-types',
+  },
+  {
     name: 'Nodes',
     url: '/guide/nodes',
   },
