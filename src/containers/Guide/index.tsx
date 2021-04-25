@@ -22,7 +22,6 @@ import GuideNodes from './GuideNodes';
 import GuideRootAccountFile from './GuideRootAccountFile';
 import GuideScheduleAdjustments from './GuideScheduleAdjustments';
 import GuideScheduling from './GuideScheduling';
-import GuideTransfers from './GuideTransfers';
 
 const defaultPageData: PageData = {
   content: <Redirect to="/guide/introduction" />,
@@ -97,10 +96,6 @@ const pageData: PageDataObject = {
   scheduling: {
     content: <GuideScheduling />,
     name: 'scheduling',
-  },
-  transfers: {
-    content: <GuideTransfers />,
-    name: 'Transfers',
   },
 };
 

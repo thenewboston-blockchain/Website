@@ -230,10 +230,6 @@ export const guideNavigationData = [
     url: '/guide/fees',
   },
   {
-    name: 'Transfers',
-    url: '/guide/transfers',
-  },
-  {
     name: 'Best Practices',
     url: '/guide/best-practices',
   },
