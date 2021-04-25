@@ -15,6 +15,7 @@ const GuideGlossary: FC = () => {
             'Account Lock',
             'A hash value that must be included in signed requests in order to authorize changes on behalf of the account',
           ],
+          ['Account Number', 'Identifier for an account'],
           ['Block', 'A description of a change to one or more objects in the network'],
           ['Blockchain', 'Ordered list of blocks'],
           [

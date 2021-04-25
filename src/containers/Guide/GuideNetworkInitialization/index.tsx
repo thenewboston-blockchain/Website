@@ -18,7 +18,7 @@ const GuideNetworkInitialization: FC = () => {
       </p>
       <DocList variant="ul">
         <li>All account information from alpha</li>
-        <li>A record of the origin node</li>
+        <li>The node registration for the creating node</li>
         <li>The initial schedule consisting a single node (the origin node)</li>
       </DocList>
       <DocImage alt="genesis block composition" maxWidth={500} src={GenesisBlockComposition} />
