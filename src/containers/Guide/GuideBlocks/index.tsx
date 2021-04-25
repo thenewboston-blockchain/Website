@@ -1,9 +1,10 @@
 import React, {FC} from 'react';
-import {NavLink} from 'react-router-dom';
 
 import {DocContainer, DocImage, DocList, DocSubHeader} from 'components';
 
 import BlockChange from './BlockChange.png';
+import GenesisBlock from './GenesisBlock.png';
+import GenesisBlockComposition from './GenesisBlockComposition.png';
 import './GuideBlocks.scss';
 
 const GuideBlocks: FC = () => {
@@ -23,8 +24,24 @@ const GuideBlocks: FC = () => {
   return (
     <DocContainer className="GuideBlocks" title="Blocks" lastUpdated="22 Apr 2021">
       <p>
-        Blocks are data structures that represent a change to the network. These changes originate from signed requests
-        and may include:
+        The network is initialized from a single node and a <strong>genesis block</strong>. This is the very first block
+        in the blockchain which defines the initial structure of the network.
+      </p>
+      <DocImage alt="genesis block" maxWidth={460} src={GenesisBlock} />
+
+      <p>
+        The genesis block consists of the minimum amount of information required to initialize a new network including:
+      </p>
+      <DocList variant="ul">
+        <li>All account information from alpha</li>
+        <li>The node registration of the source node</li>
+        <li>The initial schedule consisting a single node (the source node)</li>
+      </DocList>
+      <DocImage alt="genesis block composition" maxWidth={540} src={GenesisBlockComposition} />
+
+      <p>
+        Blocks are data structures that represent a description of change to the network. These originate from signed
+        requests and may include:
       </p>
       <DocList variant="ul">
         <li>a transfer of coins between accounts</li>
@@ -32,12 +49,8 @@ const GuideBlocks: FC = () => {
         <li>a new node being added to the network</li>
         <li>etc...</li>
       </DocList>
-      <p>
-        The very first block in the blockchain is referred to as the <strong>genesis block</strong>. This block defines
-        the initial structure of the network. We will examine the genesis block in more detail in the{' '}
-        <NavLink to="/guide/network-initialization">Network Initialization</NavLink> section.
-      </p>
-      <DocImage alt="block change" maxWidth={620} src={BlockChange} />
+      <DocImage alt="block change" maxWidth={660} src={BlockChange} />
+
       <DocSubHeader>Block Types</DocSubHeader>
       {renderBlockTypeRow(
         'Genesis',

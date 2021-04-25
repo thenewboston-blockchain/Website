@@ -198,10 +198,6 @@ export const guideNavigationData = [
     url: '/guide/fork-prevention',
   },
   {
-    name: 'Network Initialization',
-    url: '/guide/network-initialization',
-  },
-  {
     name: 'Scheduling',
     url: '/guide/scheduling',
   },

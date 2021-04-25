@@ -16,7 +16,6 @@ import GuideFlows from './GuideFlows';
 import GuideForkPrevention from './GuideForkPrevention';
 import GuideGlossary from './GuideGlossary';
 import GuideIntroduction from './GuideIntroduction';
-import GuideNetworkInitialization from './GuideNetworkInitialization';
 import GuideNodeIdentifier from './GuideNodeIdentifier';
 import GuideNodes from './GuideNodes';
 import GuideRootAccountFile from './GuideRootAccountFile';
@@ -72,10 +71,6 @@ const pageData: PageDataObject = {
   introduction: {
     content: <GuideIntroduction />,
     name: 'Introduction',
-  },
-  'network-initialization': {
-    content: <GuideNetworkInitialization />,
-    name: 'Network Initialization',
   },
   'node-identifier': {
     content: <GuideNodeIdentifier />,
