@@ -35,7 +35,7 @@ const GuideBlocks: FC = () => {
       <p>
         The very first block in the blockchain is referred to as the <strong>genesis block</strong>. This block defines
         the initial structure of the network. We will examine the genesis block in more detail in the{' '}
-        <NavLink to="/guide/transfers">Network Initialization</NavLink> section.
+        <NavLink to="/guide/network-initialization">Network Initialization</NavLink> section.
       </p>
       <DocImage alt="block change" maxWidth={620} src={BlockChange} />
       <DocSubHeader>Block Types</DocSubHeader>
