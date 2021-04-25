@@ -1,3 +1,5 @@
+import {IconType} from '@thenewboston/ui';
+
 export type Project = {
   uuid: string;
   created_date: string;
@@ -23,3 +25,34 @@ export type Milestone = {
   description: string;
   project: string;
 };
+
+export type ProjectTopicMap = {
+  [key: string]: ProjectTopic;
+};
+
+export type ProjectTopic = {
+  anchor: ProjectTopicAnchor;
+  iconType: IconType;
+  overview: string;
+  title: ProjectTopicTitle;
+};
+
+export enum ProjectTopicTitle {
+  Overview = 'Overview',
+  Problem = 'Problem',
+  TargetMarket = 'Target Market',
+  Benefits = 'Benefit to Network & Community',
+  CenteredAroundTNB = 'Centered around TNB',
+  EstimatedCompletionDate = 'Estimated completion date',
+  Roadmap = 'Roadmap',
+}
+
+export enum ProjectTopicAnchor {
+  Overview = 'topic-overview',
+  Problem = 'topic-problem',
+  TargetMarket = 'topic-target-market',
+  Benefits = 'topic-benefits',
+  CenteredAroundTNB = 'topic-centered-around-tnb',
+  EstimatedCompletionDate = 'topic-completion-date',
+  Roadmap = 'topic-roadmap',
+}

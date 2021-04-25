@@ -1,32 +1,27 @@
 import React, {FC} from 'react';
 
+import {Project} from 'types/projects';
 import ProjectCard from '../ProjectCard';
 
 import './ListOfProjects.scss';
 
-const sampleProject = {
-  description:
-    'Lorem ipsum dolor sit amet, consecteturadia adipiscing elit, sed do eiusmod tempor incididunt ut.ed do eiusmod tempor incididunt ut.',
-  logoUrl: 'https://yt3.ggpht.com/ytc/AAUvwnglVjQeNSAVO9GgKkrjIbCO_y0rOx7Yxx-2bv9r_A=s176-c-k-c0x00ffffff-no-rj',
-  projectLead: 'Skylar',
-  title: 'Keysign',
+type Props = {
+  projects: Project[];
 };
 
-const projects = [sampleProject, sampleProject, sampleProject, sampleProject, sampleProject, sampleProject];
-
-const ListOfProjects: FC = () => {
+const ListOfProjects: FC<Props> = ({projects}) => {
   return (
     <div className="ListOfProjects">
-      {projects.map((project, i) => {
-        const {description, logoUrl, projectLead, title} = project;
+      {projects.map((project) => {
+        const {description, logo, project_lead: projectLead, title, uuid} = project;
         return (
           <ProjectCard
             description={description}
-            id={i.toString()}
-            logoUrl={logoUrl}
+            id={uuid}
+            logoUrl={logo}
             projectLead={projectLead}
             title={title}
-            key={i}
+            key={uuid}
           />
         );
       })}

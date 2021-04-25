@@ -3,16 +3,19 @@ import {useParams} from 'react-router-dom';
 
 import {api as projectsApi} from 'apis/projects';
 import {Project, Milestone} from 'types/projects';
-import {dummyMilestones, dummyProject} from './ProjectDetails/constants';
+import {Loader} from 'components';
 import ListOfProjects from './ListOfProjects';
 import ProjectsHero from './ProjectsHero';
 import ProjectDetails from './ProjectDetails';
+
+import './Projects.scss';
 
 const Projects: FC = () => {
   const {projectId} = useParams<{projectId: string}>();
   const [projects, setProjects] = useState<Project[]>([]);
   const [milestones, setMilestones] = useState<Milestone[]>([]);
   const isValidProjectId = projects.length && projects.some((project) => project.uuid === projectId);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     (async function getProjects() {
@@ -21,6 +24,8 @@ const Projects: FC = () => {
         setProjects(projectsResponse);
       } catch (err) {
         // handle error
+      } finally {
+        setIsLoading(false);
       }
     })();
   }, []);
@@ -38,9 +43,13 @@ const Projects: FC = () => {
     })();
   }, [isValidProjectId, projectId]);
 
-  // TODO: remove when hooked up with api, currently testing the project details page by
-  // uncommenting the following line
-  // return <ProjectDetails milestones={dummyMilestones} project={dummyProject} />;
+  if (isLoading) {
+    return (
+      <div className="Projects__loading-container">
+        <Loader />
+      </div>
+    );
+  }
 
   if (isValidProjectId) {
     const selectedProject = projects.find((project) => project.uuid === projectId) as Project;
@@ -50,7 +59,7 @@ const Projects: FC = () => {
   return (
     <>
       <ProjectsHero />
-      <ListOfProjects />
+      <ListOfProjects projects={projects} />
     </>
   );
 };

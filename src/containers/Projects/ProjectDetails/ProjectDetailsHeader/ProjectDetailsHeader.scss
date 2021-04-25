@@ -3,10 +3,11 @@
   background-color: var(--color-white);
   display: flex;
   flex-direction: row;
-  padding: 47px 0;
+  padding: 47px;
 
   @media (max-width: 480px) {
     align-items: flex-start;
+    padding: 24px;
   }
 
   &__left-container {
@@ -35,11 +36,6 @@
 
   &__project-lead {
     color: var(--color-sail-gray-300);
-  }
-
-  &__project-lead-container {
-    display: flex;
-    gap: 5px;
   }
 
   &__project-lead-name {
