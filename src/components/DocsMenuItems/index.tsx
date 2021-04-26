@@ -178,12 +178,20 @@ export const guideNavigationData = [
     url: '/guide/introduction',
   },
   {
-    name: 'Components',
-    url: '/guide/components',
+    name: 'Glossary',
+    url: '/guide/glossary',
   },
   {
     name: 'Blocks',
     url: '/guide/blocks',
+  },
+  {
+    name: 'Block Structure',
+    url: '/guide/block-structure',
+  },
+  {
+    name: 'Block Types',
+    url: '/guide/block-types',
   },
   {
     name: 'Nodes',
@@ -198,10 +206,6 @@ export const guideNavigationData = [
     url: '/guide/fork-prevention',
   },
   {
-    name: 'Network Initialization',
-    url: '/guide/network-initialization',
-  },
-  {
     name: 'Scheduling',
     url: '/guide/scheduling',
   },
@@ -212,10 +216,6 @@ export const guideNavigationData = [
   {
     name: 'Accounts',
     url: '/guide/accounts',
-  },
-  {
-    name: 'Block Structure',
-    url: '/guide/block-structure',
   },
   {
     name: 'Account Lock',

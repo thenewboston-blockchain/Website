@@ -55,6 +55,7 @@ const GuideFlows: FC = () => {
         <li>If the results match, the CV will add the block to its blockchain.</li>
         <li>
           Nodes will listen for these confirmations (CVs verified blocks) and stream that information to the end user.
+          Similar to other blockchains, nodes will choose how many confirmations are acceptable for a given use case.
         </li>
       </DocList>
       <DocImage alt="validator flow" maxWidth={540} src={ValidatorFlow} />

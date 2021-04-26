@@ -50,8 +50,6 @@ const GovernanceRatesAndAmounts: FC = () => {
           rows={[
             ['Cast vote for governor', '1 or more votes'],
             ['Update or remove governor application', '1,000,000 points'],
-            ['Submit project proposal', '200,000,000 points'],
-            ['Update or remove project proposal', '1,000,000 points'],
           ]}
         />
       </>
@@ -94,10 +92,6 @@ const GovernanceRatesAndAmounts: FC = () => {
         <li>Beta - 8 members</li>
         <li>By launch - 20 members</li>
         <li>Release funds from the budget - 50% or more signatures required</li>
-        <li>
-          No minimum number of total votes required before the government can take action but we will allow project
-          proposals after 1 week
-        </li>
       </DocList>
 
       <DocSubHeader>Nodes</DocSubHeader>
