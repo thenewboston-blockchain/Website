@@ -8,15 +8,15 @@ import {PageData, PageDataObject} from 'types/page-data';
 import GuideAccountLock from './GuideAccountLock';
 import GuideAccounts from './GuideAccounts';
 import GuideBestPractices from './GuideBestPractices';
+import GuideBlockStructure from './GuideBlockStructure';
+import GuideBlockTypes from './GuideBlockTypes';
 import GuideBlockchainArchitecture from './GuideBlockchainArchitecture';
 import GuideBlocks from './GuideBlocks';
-import GuideBlockStructure from './GuideBlockStructure';
-import GuideComponents from './GuideComponents';
 import GuideFees from './GuideFees';
 import GuideFlows from './GuideFlows';
 import GuideForkPrevention from './GuideForkPrevention';
+import GuideGlossary from './GuideGlossary';
 import GuideIntroduction from './GuideIntroduction';
-import GuideNetworkInitialization from './GuideNetworkInitialization';
 import GuideNodeIdentifier from './GuideNodeIdentifier';
 import GuideNodes from './GuideNodes';
 import GuideRootAccountFile from './GuideRootAccountFile';
@@ -45,6 +45,10 @@ const pageData: PageDataObject = {
     content: <GuideBlockStructure />,
     name: 'Block Structure',
   },
+  'block-types': {
+    content: <GuideBlockTypes />,
+    name: 'Block Types',
+  },
   'blockchain-architecture': {
     content: <GuideBlockchainArchitecture />,
     name: 'Blockchain Architecture',
@@ -52,10 +56,6 @@ const pageData: PageDataObject = {
   blocks: {
     content: <GuideBlocks />,
     name: 'Blocks',
-  },
-  components: {
-    content: <GuideComponents />,
-    name: 'Components',
   },
   fees: {
     content: <GuideFees />,
@@ -69,13 +69,13 @@ const pageData: PageDataObject = {
     content: <GuideForkPrevention />,
     name: 'Fork Prevention',
   },
+  glossary: {
+    content: <GuideGlossary />,
+    name: 'glossary',
+  },
   introduction: {
     content: <GuideIntroduction />,
     name: 'Introduction',
-  },
-  'network-initialization': {
-    content: <GuideNetworkInitialization />,
-    name: 'Network Initialization',
   },
   'node-identifier': {
     content: <GuideNodeIdentifier />,
