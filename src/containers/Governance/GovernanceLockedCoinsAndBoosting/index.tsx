@@ -22,12 +22,11 @@ const GovernanceLockedCoinsAndBoosting: FC = () => {
         <li>The ability to boost a node of their choosing</li>
       </DocList>
       <p>
-        Points are used to perform various actions on the network. Certain actions (such as submitting project
-        proposals) are available to all registered users while other actions (such as voting on project proposals) are
-        restricted to government members only. Unlike coins, points refill over time. The refill rate is proportional to
-        the amount of coins locked.
+        Points are used to perform various actions on the network. Certain actions are available to all registered users
+        while other actions are restricted to governors only. Unlike coins, points refill over time. The refill rate is
+        proportional to the amount of coins locked.
       </p>
-      <DocImage alt="node boosting" maxWidth={640} src={NodeBoosting} />
+      <DocImage alt="node boosting" maxWidth={540} src={NodeBoosting} />
     </DocContainer>
   );
 };

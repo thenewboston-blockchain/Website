@@ -28,13 +28,13 @@ const GovernanceOverview: FC = () => {
   return (
     <DocContainer className="GovernanceOverview" title="Overview" lastUpdated="07 Mar 2021">
       <p>
-        Our governance structure enables user voting for all core aspects of the network, both in terms of people and
-        validation nodes. Any user from the public is able to apply to become a governor where other users are then able
-        to vote for their desired candidates. The nodes that are responsible for the validation of blocks are also
-        chosen by the users through a "boosting" system as described in later sections.
+        Our governance structure enables voting for all core aspects of the network, both in terms of people and
+        validation nodes. Any individual is able to apply to become a governor where other individuals are then able to
+        vote for their desired candidates. The nodes that are responsible for the validation of blocks are also chosen
+        by individuals through a "boosting" system as described in later sections.
       </p>
       {renderGlossary()}
-      <DocImage alt="governance-overview" maxWidth={1200} src={Overview} />
+      <DocImage alt="governance-overview" maxWidth={900} src={Overview} />
     </DocContainer>
   );
 };

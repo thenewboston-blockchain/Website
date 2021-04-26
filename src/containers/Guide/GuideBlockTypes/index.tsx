@@ -38,11 +38,7 @@ const GuideBlockTypes: FC = () => {
       {renderBlockTypeRow('Node Boost', '#f9d2de', 'Vote for a node to be included in the schedule')}
       {renderBlockTypeRow('Schedule', '#99d5ca', 'Addition of a node to the list of upcoming validators')}
       {renderBlockTypeRow('Username Registration', '#ffbbb1', 'The purchase of a username by an account')}
-      {renderBlockTypeRow(
-        'Governor Registration',
-        '#ffdba9',
-        'Enables a registered account to be eligible for governor',
-      )}
+      {renderBlockTypeRow('Governor Application', '#ffdba9', 'Enables an account to be eligible for governor')}
       {renderBlockTypeRow('Vote purchase', '#c7e8ac', 'The purchase of one or more votes for a given account')}
       {renderBlockTypeRow('Governor Vote', '#ffeca9', 'Places one or more vote for a governor')}
     </DocContainer>
