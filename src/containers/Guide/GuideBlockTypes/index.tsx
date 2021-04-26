@@ -11,7 +11,7 @@ const GuideBlockTypes: FC = () => {
     </div>
   );
 
-  const renderBlockTypeRow = (name: string, description: string, backgroundColor: string) => (
+  const renderBlockTypeRow = (name: string, backgroundColor: string, description: string) => (
     <div className="GuideBlockTypes__block-type-row">
       {renderBlock(name, backgroundColor)}
       <div className="GuideBlockTypes__block-type-row--description">{description}</div>
@@ -28,15 +28,23 @@ const GuideBlockTypes: FC = () => {
         The genesis block is excluded in this documentation as it has both a special use case and structure. For more
         details on the genesis block, see the <NavLink to="/guide/blocks">Blocks</NavLink> section of the documentation.
       </DocCallout>
-      {renderBlockTypeRow('Coin Transfer', 'Transfer of coins between accounts', '#b2d6ef')}
-      {renderBlockTypeRow('Node Registration', 'Nodes enrollment onto the network', '#d1bcd2')}
-      {renderBlockTypeRow('Schedule', 'Addition of a node to the list of upcoming validators', '#99d5ca')}
-      {renderBlockTypeRow('Username Registration', 'The purchase of a username by an account', '#f9d2de')}
+      {renderBlockTypeRow('Coin Transfer', '#b2d6ef', 'Transfer of coins between accounts')}
       {renderBlockTypeRow(
-        'Lock',
+        'Coin Lock',
+        '#e5e5e5',
         'The locking of coins in exchange for points and the ability to boost a node',
-        '#ffeca9',
       )}
+      {renderBlockTypeRow('Node Registration', '#d1bcd2', 'Nodes enrollment onto the network')}
+      {renderBlockTypeRow('Node Boost', '#f9d2de', 'Vote for a node to be included in the schedule')}
+      {renderBlockTypeRow('Schedule', '#99d5ca', 'Addition of a node to the list of upcoming validators')}
+      {renderBlockTypeRow('Username Registration', '#ffbbb1', 'The purchase of a username by an account')}
+      {renderBlockTypeRow(
+        'Governor Registration',
+        '#ffdba9',
+        'Enables a registered account to be eligible for governor',
+      )}
+      {renderBlockTypeRow('Vote purchase', '#c7e8ac', 'The purchase of one or more votes for a given account')}
+      {renderBlockTypeRow('Governor Vote', '#ffeca9', 'Places one or more vote for a governor')}
     </DocContainer>
   );
 };

@@ -6,9 +6,10 @@ $block-size: 100px;
     border: 3px solid #5e5e5e;
     border-radius: 6px;
     display: flex;
+    flex-shrink: 0;
     height: $block-size;
     justify-content: center;
-    margin-right: 16px;
+    margin-right: 24px;
     padding: 4px;
     width: $block-size;
 
@@ -21,7 +22,7 @@ $block-size: 100px;
   &__block-type-row {
     border-bottom: 1px solid #e6e6e6;
     display: flex;
-    padding: 16px 0;
+    padding: 24px 0;
 
     &--description {
       margin-top: 8px;
