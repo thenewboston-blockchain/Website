@@ -10,8 +10,8 @@ const GovernanceUsernamesAndVotes: FC = () => {
       <p>
         Usernames may be purchased for a fee that will be paid directly to the budget (see{' '}
         <NavLink to="/governance/budgets">Budgets</NavLink>) and used in place of an account number. Usernames are
-        required to participate in the voting process for both voters and applicants. This will simplify the voting
-        process by allowing usernames to act as identities rather than account numbers.
+        required to participate in the voting process for both voters and applicants. This will increase transparency in
+        the voting system by enabling usernames to act as identities rather than account numbers.
       </p>
 
       <p>
