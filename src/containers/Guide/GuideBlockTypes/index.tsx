@@ -1,7 +1,8 @@
 import React, {FC} from 'react';
 
-import {DocContainer} from 'components';
+import {CalloutType, DocCallout, DocContainer} from 'components';
 import './GuideBlockTypes.scss';
+import {NavLink} from 'react-router-dom';
 
 const GuideBlockTypes: FC = () => {
   const renderBlock = (name: string, backgroundColor: string) => (
@@ -19,12 +20,14 @@ const GuideBlockTypes: FC = () => {
 
   return (
     <DocContainer className="GuideBlockTypes" title="Block Types" lastUpdated="25 Apr 2021">
-      <p>Here are some block types.</p>
-      {renderBlockTypeRow(
-        'Genesis',
-        'First block of the blockchain that defines the initial structure of the network',
-        '#e5e5e5',
-      )}
+      <p>
+        The following section documents the message fields found in each block type. This excludes account lock and
+        fees, as those fields are common to all block types.
+      </p>
+      <DocCallout type={CalloutType.important}>
+        The genesis block is excluded in this documentation as it has both a special use case and structure. For more
+        details on the genesis block, see the <NavLink to="/guide/blocks">Blocks</NavLink> section of the documentation.
+      </DocCallout>
       {renderBlockTypeRow('Coin Transfer', 'Transfer of coins between accounts', '#b2d6ef')}
       {renderBlockTypeRow('Node Registration', 'Nodes enrollment onto the network', '#d1bcd2')}
       {renderBlockTypeRow('Schedule', 'Addition of a node to the list of upcoming validators', '#99d5ca')}
