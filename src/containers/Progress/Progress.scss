@@ -8,4 +8,12 @@
   @media (max-width: 700px) {
     padding: 24px;
   }
+
+  &__loading-container {
+    align-items: center;
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    width: 100%;
+  }
 }
