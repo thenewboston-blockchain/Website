@@ -18,22 +18,28 @@ const Progress: FC = () => {
   const endDate = '4/20';
   const [milestoneState, setMilestoneState] = useState<MilestoneState>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   useEffect(() => {
     // TODO: confirm if the milestones will only be in the Management repo, or in the
     // repository of each team.
     async function getMilestones() {
-      const milestoneResponse = await githubApi.getMilestones('Management');
-      const milestonePromises = milestoneResponse.data.map(async (milestone) => {
-        const issuesResponse = await githubApi.getIssuesForMilestone('Management', milestone.number);
-        return {
-          issues: issuesResponse.data,
-          milestone,
-        };
-      });
-      const milestoneResult = await Promise.all(milestonePromises);
-      setMilestoneState(milestoneResult);
-      setIsLoading(false);
+      try {
+        const milestoneResponse = await githubApi.getMilestones('Management');
+        const milestonePromises = milestoneResponse.data.map(async (milestone) => {
+          const issuesResponse = await githubApi.getIssuesForMilestone('Management', milestone.number);
+          return {
+            issues: issuesResponse.data,
+            milestone,
+          };
+        });
+        const milestoneResult = await Promise.all(milestonePromises);
+        setMilestoneState(milestoneResult);
+      } catch (err) {
+        setErrorMessage(err.message);
+      } finally {
+        setIsLoading(false);
+      }
     }
     getMilestones();
   }, []);
@@ -44,6 +50,10 @@ const Progress: FC = () => {
         <Loader />
       </div>
     );
+  }
+
+  if (errorMessage) {
+    return <div className="Progress__error-container">{errorMessage}</div>;
   }
 
   const milestoneUrl = milestoneState[0].milestone.html_url;
