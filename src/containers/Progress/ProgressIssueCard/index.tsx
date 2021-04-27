@@ -24,7 +24,7 @@ const ProgressIssueCard: FC<Props> = ({issue}) => {
         <div className="ProgressIssueCard__details">
           <div
             className="ProgressIssueCard__issue-title"
-            onClick={() => window.open(issue.html_url, '_blank')}
+            onClick={() => window.open(issue.html_url, '_blank', 'noopener noreferrer')}
             role="button"
             tabIndex={0}
           >
@@ -45,7 +45,7 @@ const ProgressIssueCard: FC<Props> = ({issue}) => {
                 src={assignee.avatar_url}
                 key={assignee.id}
                 size={24}
-                onClick={() => window.open(assignee.html_url, '_blank')}
+                onClick={() => window.open(assignee.html_url, '_blank', 'noopener noreferrer')}
               />
             );
           })}

@@ -25,6 +25,41 @@
     flex-direction: column;
     gap: 4px;
     margin-top: 32px;
+
+    &--empty {
+      // h4 medium
+      color: var(--color-sail-gray-400);
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 32px;
+    }
+  }
+
+  &__github-container {
+    // b1 regular
+    align-items: center;
+    color: var(--color-sail-gray-900);
+    display: flex;
+    font-size: 12px;
+    font-weight: 400;
+    gap: 16px;
+    margin-right: 46px;
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &__github-repo {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+  }
+
+  &__right-container {
+    align-items: center;
+    display: flex;
   }
 
   &__left-container {

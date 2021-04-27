@@ -2,6 +2,7 @@ import React, {FC, useState, useEffect} from 'react';
 
 import * as githubApi from 'apis/github';
 import {BaseIssue, Milestone} from 'types/github';
+import {getRepositoryUrlFromMilestoneUrl} from 'utils/github';
 import {Loader} from 'components';
 import ProgressHeader from './ProgressHeader';
 import ProgressDropdownCard from './ProgressDropdownCard';
@@ -45,6 +46,8 @@ const Progress: FC = () => {
     );
   }
 
+  const milestoneUrl = milestoneState[0].milestone.html_url;
+
   return (
     <div className="Progress">
       <ProgressHeader
@@ -57,21 +60,25 @@ const Progress: FC = () => {
         name="Audit"
         responsibility="Ensures the accuracy and integrity of all government and team payments."
         issues={milestoneState[0].issues}
+        repoPaths={[getRepositoryUrlFromMilestoneUrl(milestoneUrl)]}
       />
       <ProgressDropdownCard
         name="Back-end"
         responsibility="Architect, build, and maintain the backend architecture of TNB."
         issues={milestoneState[0].issues}
+        repoPaths={[getRepositoryUrlFromMilestoneUrl(milestoneUrl)]}
       />
       <ProgressDropdownCard
         name="Blockchain"
         responsibility="Build and maintain the blockchain for TNB digital currency network."
         issues={milestoneState[0].issues}
+        repoPaths={[getRepositoryUrlFromMilestoneUrl(milestoneUrl)]}
       />
       <ProgressDropdownCard
         name="Community"
         responsibility="Create the strategy, standards and  oversee the overall TNB product."
         issues={milestoneState[0].issues}
+        repoPaths={[getRepositoryUrlFromMilestoneUrl(milestoneUrl)]}
       />
     </div>
   );

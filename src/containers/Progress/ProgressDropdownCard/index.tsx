@@ -9,10 +9,11 @@ import './ProgressDropdownCard.scss';
 type Props = {
   name: string;
   responsibility: string;
+  repoPaths: string[];
   issues: BaseIssue[];
 };
 
-const ProgressDropdownCard: FC<Props> = ({name, responsibility, issues}) => {
+const ProgressDropdownCard: FC<Props> = ({name, responsibility, repoPaths, issues}) => {
   const [expanded, setExpanded] = useState<boolean>(false);
   const progressBarRef = useRef<HTMLDivElement>(null);
   const [filledProgressBarWidth, setFilledProgressBarWidth] = useState<number>(0);
@@ -55,15 +56,36 @@ const ProgressDropdownCard: FC<Props> = ({name, responsibility, issues}) => {
             </div>
           </div>
         </div>
-        <Icon icon={IconType.chevronDown} onClick={toggleExpanded} />
-      </div>
-      {expanded && (
-        <div className="ProgressDropdownCard__issues-container">
-          {issues.map((issue) => {
-            return <ProgressIssueCard issue={issue} key={issue.id} />;
-          })}
+        <div className="ProgressDropdownCard__right-container">
+          <div className="ProgressDropdownCard__github-container">
+            {repoPaths.map((repoPath) => {
+              return (
+                <div
+                  className="ProgressDropdownCard__github-repo"
+                  key={repoPath}
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => window.open(repoPath, '_blank', 'noopener noreferrer')}
+                >
+                  <Icon icon={IconType.github} size={12} />
+                  {repoPath.substring(repoPath.lastIndexOf('/') + 1)}
+                </div>
+              );
+            })}
+          </div>
+          <Icon icon={IconType.chevronDown} onClick={toggleExpanded} />
         </div>
-      )}
+      </div>
+      {expanded &&
+        (issues.length > 0 ? (
+          <div className="ProgressDropdownCard__issues-container">
+            {issues.map((issue) => {
+              return <ProgressIssueCard issue={issue} key={issue.id} />;
+            })}
+          </div>
+        ) : (
+          <div className="ProgressDropdownCard__issues-container--empty">No issues available.</div>
+        ))}
     </div>
   );
 };

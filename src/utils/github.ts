@@ -37,3 +37,7 @@ export const fetchGithubReleases = async (queryParams: FetchGithubReleasesParams
 const getRepositoryName = (repositoryUrl: string) => {
   return repositoryUrl.replace('https://api.github.com/repos/thenewboston-developers/', '');
 };
+
+export const getRepositoryUrlFromMilestoneUrl = (milestoneUrl: string) => {
+  return milestoneUrl.substring(0, milestoneUrl.indexOf('milestone') - 1);
+};
