@@ -125,13 +125,13 @@ $title-width: 480px;
 
   &__subtitle {
     @extend %h3;
-    font-weight: var(--medium);
+    font-weight: var(--font-weight-medium);
     margin-top: 30px;
   }
 
   &__title {
     @extend %display1;
-    font-weight: var(--medium);
+    font-weight: var(--font-weight-medium);
   }
 
   &__wrapper {

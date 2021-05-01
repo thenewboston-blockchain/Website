@@ -33,27 +33,21 @@
     url('./fonts/Inter/web/woff/Inter-Bold.woff') format('woff');
 }
 
-@font-face {
-  font-family: JetBrainsMono;
-  src: url('./fonts/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
-    url('./fonts/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff') format('woff');
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
 
 :root {
-  --font-family-inter: Inter;
-  --font-family-mono-roboto: 'Roboto Mono', monospace;
-  --font-family-jetbrains: JetBrainsMono, monospace;
+  // font family
+  --font-family-default: Inter;
+  --font-family-mono: 'Roboto Mono', monospace;
 
-  // font weights
-  --bold: 700;
-  --semibold: 600;
-  --medium: 500;
-  --regular: 400;
-  --light: 300;
+  // font weight
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+  --font-weight-light: 300;
 
-  // line heights
+  // line height
   --line-height-display1: 52.5px;
   --line-height-display2: 45px;
   --line-height-h1: 28.8px;
@@ -66,7 +60,7 @@
   --line-height-body4: 16px;
   --line-height-body5: 12px;
 
-  // font sizes
+  // font size
   --font-size-display1: 42px;
   --font-size-display2: 34px;
   --font-size-h1: 24px;

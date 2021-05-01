@@ -15,7 +15,7 @@
   h2 {
     color: var(--color-sail-gray-900);
     font-size: 20px;
-    font-weight: var(--medium);
+    font-weight: var(--font-weight-medium);
     margin-top: 40px;
 
     &.TermsOfUse__first-subtitle {
@@ -37,7 +37,7 @@
 
   &__title {
     font-size: 44px;
-    font-weight: var(--semibold);
+    font-weight: var(--font-weight-semibold);
     margin-bottom: 30px;
     margin-top: 30px;
   }
