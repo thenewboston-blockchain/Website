@@ -260,7 +260,7 @@ const TimelineIcon: FC<CustomIconProps> = ({onClick, size = 24, state = 'default
         />
         {state === 'default' && (
           <g style={{mixBlendMode: 'saturation'}}>
-            <rect x="1" width={size} height={size} fill="white" />
+            <rect x="1" width="32" height="32" fill="white" />
           </g>
         )}
       </g>

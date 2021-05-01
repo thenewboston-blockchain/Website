@@ -47,7 +47,7 @@ const ProblemIcon: FC<CustomIconProps> = ({onClick, size = 24, state = 'default'
       />
       {state === 'default' && (
         <g style={{mixBlendMode: 'saturation'}}>
-          <rect width={size} height={size} fill="white" />
+          <rect width="32" height="32" fill="white" />
         </g>
       )}
       <defs>
