@@ -1,12 +1,12 @@
 import React, {FC} from 'react';
 
-import {Icon, IconType} from '@thenewboston/ui';
+import {ProjectIcon, ProjectIconType} from 'components/ProjectIcons';
 
 import './ProjectDetailsTopic.scss';
 
 type Props = {
   content: React.ReactNode;
-  iconType: IconType;
+  iconType: ProjectIconType;
   id: string;
   title: string;
   overview: string;
@@ -15,7 +15,7 @@ type Props = {
 const ProjectDetailsTopic: FC<Props> = ({content, iconType, id, title, overview}) => {
   return (
     <div className="ProjectDetailsTopic" id={id}>
-      <Icon icon={iconType} size={96} />
+      <ProjectIcon icon={iconType} size={96} state="active" />
       <div className="ProjectDetailsTopic__content">
         <h1 className="ProjectDetailsTopic__content-title">{title}</h1>
         <h4 className="ProjectDetailsTopic__content-overview">{overview}</h4>

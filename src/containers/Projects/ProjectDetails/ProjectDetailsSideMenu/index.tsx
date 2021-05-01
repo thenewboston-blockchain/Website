@@ -3,7 +3,7 @@ import React, {FC, useState} from 'react';
 import clsx from 'clsx';
 
 import {ProjectTopic} from 'types/projects';
-import {Icon} from '@thenewboston/ui';
+import {ProjectIcon} from 'components/ProjectIcons';
 import {useWindowDimensions} from 'hooks';
 import {projectDetailsTopic} from '../constants';
 
@@ -30,11 +30,15 @@ const ProjectDetailsSideMenu: FC<Props> = ({currentTopic, onClick}) => {
     <div className="ProjectDetailsSideMenu">
       {Object.values(projectDetailsTopic).map((topic) => {
         const {iconType, title} = topic;
+        const isActive = currentTopic.title === title;
+        const isHovered = hoveredTopicTitle === title;
+        /* eslint-disable-next-line no-nested-ternary */
+        const iconState = isActive ? 'active' : isHovered ? 'hover' : 'default';
         return (
           <div
             className={clsx('ProjectDetailsSideMenu__topic', {
-              'ProjectDetailsSideMenu__topic--active': currentTopic.title === title,
-              'ProjectDetailsSideMenu__topic--hovered': hoveredTopicTitle === title,
+              'ProjectDetailsSideMenu__topic--active': isActive,
+              'ProjectDetailsSideMenu__topic--hovered': isHovered,
             })}
             key={title}
             role="button"
@@ -43,7 +47,7 @@ const ProjectDetailsSideMenu: FC<Props> = ({currentTopic, onClick}) => {
             onMouseLeave={handleMouseLeave}
             tabIndex={0}
           >
-            <Icon icon={iconType} size={32} />
+            <ProjectIcon icon={iconType} size={32} state={iconState} />
             {shouldShowTopicTitle && title}
           </div>
         );

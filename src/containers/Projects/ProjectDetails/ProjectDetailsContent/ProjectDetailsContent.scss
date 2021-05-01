@@ -6,8 +6,17 @@ $details-header-height-480: 177px;
   background-color: var(--color-white);
   box-shadow: 0px 8px 88px 0px #0000000d;
   max-height: calc(100vh - #{$top-nav-height} - #{$details-header-height});
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
   overflow-y: scroll;
   padding: 32px;
+  scrollbar-width: none; /* Firefox */
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   &__milestone {
     color: var(--color-sail-gray-600);

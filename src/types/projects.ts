@@ -1,4 +1,4 @@
-import {IconType} from '@thenewboston/ui';
+import {ProjectIconType} from 'components/ProjectIcons';
 
 export type Project = {
   uuid: string;
@@ -32,7 +32,7 @@ export type ProjectTopicMap = {
 
 export type ProjectTopic = {
   anchor: ProjectTopicAnchor;
-  iconType: IconType;
+  iconType: ProjectIconType;
   overview: string;
   title: ProjectTopicTitle;
 };
