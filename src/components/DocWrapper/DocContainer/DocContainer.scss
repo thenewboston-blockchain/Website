@@ -20,12 +20,12 @@
   &__last-updated {
     color: var(--color-sail-gray-500);
     font-size: 14px;
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
   }
 
   &__page-title {
     font-size: 36px;
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
     line-height: 1.2;
 
     &:hover {

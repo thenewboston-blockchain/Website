@@ -15,7 +15,7 @@
     padding: 4px 8px;
 
     &:first-child {
-      font-weight: 700;
+      font-weight: var(--font-weight-semibold);
       padding-right: 16px;
       white-space: nowrap;
     }
