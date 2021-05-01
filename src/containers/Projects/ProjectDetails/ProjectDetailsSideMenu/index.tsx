@@ -25,7 +25,7 @@ const ProjectDetailsSideMenu: FC<Props> = ({currentTopic, onClick}) => {
   const handleMouseLeave = () => {
     setHoveredTopicTitle('');
   };
-  const shouldShowTopicTitle = width > 768;
+  const shouldShowDetails = width > 992;
   return (
     <div className="ProjectDetailsSideMenu">
       {Object.values(projectDetailsTopic).map((topic) => {
@@ -44,12 +44,11 @@ const ProjectDetailsSideMenu: FC<Props> = ({currentTopic, onClick}) => {
             onMouseLeave={handleMouseLeave}
             tabIndex={0}
           >
-            <ProjectIcon icon={iconType} size={32} state={iconState} />
-            {shouldShowTopicTitle && (
+            <ProjectIcon icon={iconType} size={shouldShowDetails ? 32 : 24} state={iconState} />
+            {shouldShowDetails && (
               <div
                 className={clsx('ProjectDetailsSideMenu__topic-title', {
                   'ProjectDetailsSideMenu__topic-title--active': isActive,
-                  'ProjectDetailsSideMenu__topic-title--hovered': isHovered,
                 })}
               >
                 {title}

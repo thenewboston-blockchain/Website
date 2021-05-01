@@ -1,0 +1,5 @@
+$top-nav-height: 60px;
+$details-header-height: 158px;
+$details-header-height-480: 241px;
+$top-content-height: calc(#{$top-nav-height} + #{$details-header-height});
+$top-content-height-480: calc(#{$top-nav-height} + #{$details-header-height-480});

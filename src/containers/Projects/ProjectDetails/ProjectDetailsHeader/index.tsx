@@ -28,7 +28,7 @@ const ProjectDetailsHeader: FC<Props> = ({github, logoUrl, projectLead, title}) 
   }, [projectLead]);
   return (
     <div className="ProjectDetailsHeader">
-      <Avatar src={logoUrl} size={64} />
+      <Avatar className="ProjectDetailsHeader__avatar" src={logoUrl} size={40} />
       <div className="ProjectDetailsHeader__main-container">
         <div className="ProjectDetailsHeader__left-container">
           <div className="ProjectDetailsHeader__title-container">

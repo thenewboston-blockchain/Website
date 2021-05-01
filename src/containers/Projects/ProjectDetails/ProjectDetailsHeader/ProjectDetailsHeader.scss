@@ -1,12 +1,20 @@
+@import '../../shared';
+
 .ProjectDetailsHeader {
   align-items: center;
   background-color: var(--color-white);
   display: flex;
   flex-direction: row;
+  height: $details-header-height;
   padding: 47px;
+  position: sticky;
+  top: $top-nav-height;
+  z-index: 100;
 
   @media (max-width: 480px) {
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: $details-header-height-480;
     padding: 24px;
   }
 
@@ -23,8 +31,15 @@
     width: 100%;
 
     @media (max-width: 480px) {
+      align-items: center;
       flex-direction: column;
       gap: 30px;
+    }
+  }
+
+  &__avatar {
+    @media (max-width: 480px) {
+      margin-bottom: 25px;
     }
   }
 
@@ -32,6 +47,19 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    @media (max-width: 480px) {
+      text-align: center;
+    }
+  }
+
+  &__project-lead-container {
+    -webkit-box-orient: vertical;
+    // max one line to prevent it from affecting height of header
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* max number of lines to show */
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__project-lead {

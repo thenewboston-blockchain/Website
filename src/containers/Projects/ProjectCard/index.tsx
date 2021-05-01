@@ -2,9 +2,9 @@ import React, {FC, useEffect, useState} from 'react';
 
 import {getUser} from 'apis/users';
 import {api as projectApi} from 'apis/projects';
-import {useHistory} from 'react-router';
 import {Avatar} from 'components';
 import Button from 'components/Button';
+import {useWindowDimensions} from 'hooks';
 import {User} from 'types/app/User';
 import {Icon, IconType} from '@thenewboston/ui';
 
@@ -20,6 +20,7 @@ type Props = {
 
 const ProjectCard: FC<Props> = ({description, id, logoUrl, projectLead, title}) => {
   const [projectLeadUser, setProjectLeadUser] = useState<User | null>(null);
+  const {width} = useWindowDimensions();
 
   useEffect(() => {
     (async function () {
@@ -31,11 +32,10 @@ const ProjectCard: FC<Props> = ({description, id, logoUrl, projectLead, title}) 
     })();
   }, [projectLead]);
 
-  const history = useHistory();
   return (
     <div className="ProjectCard">
       <div className="ProjectCard__top-container">
-        <Avatar src={logoUrl} size={64} />
+        <Avatar src={logoUrl} size={width > 768 ? 64 : 20} />
         <div className="ProjectCard__title-container">
           <h1 className="ProjectCard__project-title">{title}</h1>
           <div className="ProjectCard__project-lead-container">
@@ -47,7 +47,7 @@ const ProjectCard: FC<Props> = ({description, id, logoUrl, projectLead, title}) 
       <div className="ProjectCard__description">{description}</div>
       <Button
         className="ProjectCard__details-button"
-        onClick={() => history.push(`/projects/${id}`)}
+        onClick={() => window.open(`/projects/${id}`, '_blank', 'noreferrer noopener')}
         iconRight={<Icon icon={IconType.chevronRight} size={16} />}
         type="empty"
         rounded

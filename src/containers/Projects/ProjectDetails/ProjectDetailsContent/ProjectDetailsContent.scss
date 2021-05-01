@@ -1,22 +1,10 @@
-$top-nav-height: 60px;
-$details-header-height: 158px;
-$details-header-height-480: 177px;
+@import '../../shared';
 
 .ProjectDetailsContent {
   background-color: var(--color-white);
   box-shadow: 0px 8px 88px 0px #0000000d;
-  max-height: calc(100vh - #{$top-nav-height} - #{$details-header-height});
-
-  /* Hide scrollbar for IE, Edge and Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
-  overflow-y: scroll;
+  margin-bottom: 120px;
   padding: 32px;
-  scrollbar-width: none; /* Firefox */
-
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  &::-webkit-scrollbar {
-    display: none;
-  }
 
   &__milestone {
     color: var(--color-sail-gray-600);
@@ -31,9 +19,5 @@ $details-header-height-480: 177px;
   &__milestone-number {
     font-weight: var(--font-weight-bold);
     margin-bottom: 8px;
-  }
-
-  @media (max-width: 480px) {
-    max-height: calc(100vh - #{$top-nav-height} - #{$details-header-height-480});
   }
 }

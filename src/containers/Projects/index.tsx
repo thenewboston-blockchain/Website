@@ -21,7 +21,8 @@ const Projects: FC = () => {
     (async function getProjects() {
       try {
         const projectsResponse = await projectsApi.getProjects();
-        setProjects(projectsResponse);
+        const sortedProjects = projectsResponse.sort((a, b) => (a.title > b.title ? 1 : -1));
+        setProjects(sortedProjects);
       } catch (err) {
         // handle error
       } finally {

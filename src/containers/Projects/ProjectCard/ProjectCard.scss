@@ -1,11 +1,11 @@
 @import 'styles/font-mixins';
 
-$card-width-original: 512px;
+$card-width-original: 384px;
 $card-height-original: 324px;
 
-$card-width-992: 376px;
+$card-width-992: 432px;
 
-$card-width-768: 328px;
+$card-width-768: 320px;
 $card-height-768: 262px;
 
 $card-height-480: 324px;
@@ -50,6 +50,10 @@ $padding-768: 24px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    @media (max-width: 768px) {
+      gap: 2px;
+    }
   }
 
   &__top-container {
@@ -58,6 +62,12 @@ $padding-768: 24px;
     flex-direction: row;
     gap: 20px;
     margin-bottom: 35px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 2px;
+      text-align: center;
+    }
   }
 
   &__details-button {
@@ -69,7 +79,8 @@ $padding-768: 24px;
 
     @media (max-width: 768px) {
       bottom: $padding-768;
-      right: $padding-768;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
@@ -85,6 +96,7 @@ $padding-768: 24px;
 
     @media (max-width: 768px) {
       -webkit-line-clamp: 3; /* max number of lines to show */
+      text-align: center;
     }
 
     @media (max-width: 480px) {

@@ -1,10 +1,16 @@
+@import 'styles/font-mixins';
+@import '../../shared';
+
 .ProjectDetailsSideMenu {
   background-color: var(--color-white);
   border-radius: 0px 0px 0px 12px;
   box-shadow: 0px 8px 88px rgba(0, 0, 0, 0.05);
   flex-shrink: 0;
   height: fit-content;
+  left: 0;
   padding: 32px;
+  position: sticky;
+  top: $top-content-height;
   width: 438px;
 
   @media (max-width: 1200px) {
@@ -12,15 +18,12 @@
   }
 
   @media (max-width: 992px) {
-    width: 320px;
-  }
-
-  @media (max-width: 768px) {
-    width: 112px;
+    padding: 24px;
+    width: 72px;
   }
 
   @media (max-width: 480px) {
-    width: 88px;
+    top: $top-content-height-480;
   }
 
   &__topic {
@@ -36,18 +39,13 @@
   &__topic-title {
     color: var(--color-gray-500);
     font-weight: var(--font-weight-regular);
+    @extend %h3;
 
     &:hover {
       color: var(--color-cyan-800);
-      font-weight: var(--font-weight-bold);
     }
 
     &--active {
-      color: var(--color-cyan-800);
-      font-weight: var(--font-weight-bold);
-    }
-
-    &--hovered {
       color: var(--color-cyan-800);
       font-weight: var(--font-weight-bold);
     }
