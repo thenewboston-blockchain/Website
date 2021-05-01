@@ -1,4 +1,5 @@
 @import '../../shared';
+@import 'styles/z-index';
 
 .ProjectDetailsHeader {
   align-items: center;
@@ -9,7 +10,7 @@
   padding: 47px;
   position: sticky;
   top: $top-nav-height;
-  z-index: 100;
+  z-index: $z-index-project-header;
 
   @media (max-width: 480px) {
     align-items: center;
@@ -22,6 +23,10 @@
     align-items: center;
     display: flex;
     flex-direction: row;
+
+    @media (max-width: 480px) {
+      margin-bottom: 30px;
+    }
   }
 
   &__main-container {
@@ -33,7 +38,7 @@
     @media (max-width: 480px) {
       align-items: center;
       flex-direction: column;
-      gap: 30px;
+      margin-left: 0px;
     }
   }
 
@@ -46,7 +51,6 @@
   &__title-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
 
     @media (max-width: 480px) {
       text-align: center;
@@ -72,5 +76,6 @@
 
   &__project-title {
     color: var(--color-blue-900);
+    margin-bottom: 10px;
   }
 }

@@ -31,9 +31,12 @@
     cursor: pointer;
     display: flex;
     flex-direction: row;
-    gap: 18px;
     margin-bottom: 32px;
     outline: none;
+  }
+
+  &__icon {
+    margin-right: 18px;
   }
 
   &__topic-title {

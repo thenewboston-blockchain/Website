@@ -44,7 +44,12 @@ const ProjectDetailsSideMenu: FC<Props> = ({currentTopic, onClick}) => {
             onMouseLeave={handleMouseLeave}
             tabIndex={0}
           >
-            <ProjectIcon icon={iconType} size={shouldShowDetails ? 32 : 24} state={iconState} />
+            <ProjectIcon
+              className="ProjectDetailsSideMenu__icon"
+              icon={iconType}
+              size={shouldShowDetails ? 32 : 24}
+              state={iconState}
+            />
             {shouldShowDetails && (
               <div
                 className={clsx('ProjectDetailsSideMenu__topic-title', {

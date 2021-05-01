@@ -15,7 +15,7 @@ type Props = {
 const ProjectDetailsTopic: FC<Props> = ({content, iconType, id, title, overview}) => {
   return (
     <div className="ProjectDetailsTopic" id={id}>
-      <ProjectIcon icon={iconType} size={96} state="active" />
+      <ProjectIcon className="ProjectDetailsTopic__icon" icon={iconType} size={96} state="active" />
       <div className="ProjectDetailsTopic__content">
         <h1 className="ProjectDetailsTopic__content-title">{title}</h1>
         <h4 className="ProjectDetailsTopic__content-overview">{overview}</h4>

@@ -4,11 +4,18 @@
   align-items: flex-start;
   display: flex;
   flex-direction: row;
-  gap: 32px;
   margin-bottom: 120px;
 
   @media (max-width: 480px) {
     flex-direction: column;
+  }
+
+  &__icon {
+    margin-right: 32px;
+
+    @media (max-width: 480px) {
+      margin-bottom: 15px;
+    }
   }
 
   &__content {

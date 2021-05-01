@@ -49,10 +49,13 @@ $padding-768: 24px;
   &__title-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+  }
+
+  &__avatar {
+    margin-right: 20px;
 
     @media (max-width: 768px) {
-      gap: 2px;
+      margin-right: 20px;
     }
   }
 
@@ -60,12 +63,10 @@ $padding-768: 24px;
     align-items: center;
     display: flex;
     flex-direction: row;
-    gap: 20px;
     margin-bottom: 35px;
 
     @media (max-width: 768px) {
       flex-direction: column;
-      gap: 2px;
       text-align: center;
     }
   }
@@ -108,11 +109,11 @@ $padding-768: 24px;
     @extend %h4;
     color: var(--color-sail-gray-300);
     font-weight: var(--font-weight-medium);
+    margin-right: 5px;
   }
 
   &__project-lead-container {
     display: flex;
-    gap: 5px;
   }
 
   &__project-lead-name {
@@ -125,5 +126,10 @@ $padding-768: 24px;
     @extend %h1;
     color: var(--color-blue-900);
     font-weight: var(--font-weight-bold);
+    margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 2px;
+    }
   }
 }

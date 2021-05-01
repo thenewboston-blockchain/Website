@@ -35,7 +35,7 @@ const ProjectCard: FC<Props> = ({description, id, logoUrl, projectLead, title}) 
   return (
     <div className="ProjectCard">
       <div className="ProjectCard__top-container">
-        <Avatar src={logoUrl} size={width > 768 ? 64 : 20} />
+        <Avatar className="ProjectCard__avatar" src={logoUrl} size={width > 768 ? 64 : 20} />
         <div className="ProjectCard__title-container">
           <h1 className="ProjectCard__project-title">{title}</h1>
           <div className="ProjectCard__project-lead-container">
