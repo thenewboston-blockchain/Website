@@ -5,7 +5,7 @@ import {APIArrayResponse} from 'types/api';
 import {CoreTeamMember, Team, CoreTeam} from 'types/teams';
 import {GetCoreTeamResponse, GetCoreTeamMemberResponse, GetTeamMemberResponse} from './types';
 
-export async function getTeamById(id: string): Promise<Team> {
+export async function getTeamById(id: string): Promise<Team | null> {
   const response = await axios.get(`${process.env.REACT_APP_BACKEND_API}/teams/${id}`);
   return response.data ? response.data : null;
 }
