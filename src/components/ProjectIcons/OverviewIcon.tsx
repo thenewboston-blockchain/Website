@@ -2,24 +2,18 @@ import React, {FC} from 'react';
 
 import {CustomIconProps} from './types';
 
-const OverviewIcon: FC<CustomIconProps> = ({
-  className,
-  color = 'currentColor',
-  onClick,
-  size = 24,
-  state = 'default',
-}) => {
+const OverviewIcon: FC<CustomIconProps> = ({onClick, size = 24, state = 'default'}) => {
   return (
-    <svg className={className} width={size} height={size} fill={color} onClick={onClick} viewBox="0 0 32 32">
-      <g clipPath="url(#clip0)">
+    <svg width={size} height={size} onClick={onClick} viewBox="0 0 32 32">
+      <g clipPath="url(#overviewIconClip0)">
         <path
           d="M3.29347 21.0901C6.211 27.8893 13.9124 30.8098 19.9465 30.3119C21.5941 30.1759 24.909 29.9024 27.4974 27.4618C32.4681 22.775 31.7026 12.9784 26.9442 7.21062C26.3314 6.4679 22.0898 1.49137 15.48 1.55804C10.6407 1.60678 7.24403 4.33244 6.83097 4.67196C6.30932 5.10097 5.1585 6.12028 4.12141 7.73745C1.68445 11.537 1.47027 16.8412 3.29347 21.0901Z"
-          fill="url(#paint0_linear)"
+          fill="url(#overviewIcon0_linear)"
         />
         <path
           opacity="0.72"
           d="M4.55675 6.30677C4.55675 5.29749 5.37741 4.47925 6.38969 4.47925H21.9768C22.8367 4.47925 23.5458 5.15114 23.5895 6.00746L24.7401 28.5391C24.7744 29.2092 24.2453 29.7744 23.5725 29.7866L5.70756 30.1102C5.0754 30.1216 4.55664 29.6139 4.55664 28.9834V6.30677H4.55675Z"
-          fill="url(#paint1_linear)"
+          fill="url(#overviewIcon1_linear)"
         />
         <path
           d="M8.31818 29.7272C8.31818 29.7272 8.31775 29.7272 8.31765 29.7272L6.31867 29.7013C5.65024 29.6927 5.10645 29.1435 5.10645 28.477V25.4679C5.10645 25.4444 5.1256 25.4253 5.14913 25.4253C5.17267 25.4253 5.19182 25.4443 5.19182 25.4679V28.477C5.19182 29.0972 5.69785 29.6082 6.31974 29.6162L8.31872 29.642C8.34225 29.6424 8.36119 29.6617 8.36087 29.6851C8.36055 29.7085 8.3415 29.7272 8.31818 29.7272Z"
@@ -31,7 +25,7 @@ const OverviewIcon: FC<CustomIconProps> = ({
         />
         <path
           d="M5.83399 4.82589C5.83207 4.50301 6.11696 4.25309 6.43781 4.29639C8.56634 4.58418 15.8859 5.47431 21.9377 5.01117C22.2137 4.99005 22.4531 5.19858 22.4679 5.4741L23.6744 28.1061C23.6909 28.4164 23.4532 28.6818 23.1421 28.7001C20.5969 28.8503 10.1148 29.4309 6.37597 29.0404C6.14842 29.0166 5.97564 28.8256 5.97436 28.5975L5.83399 4.82589Z"
-          fill="url(#paint2_linear)"
+          fill="url(#overviewIcon2_linear)"
         />
         <path
           d="M6.08497 5.39316C6.08315 5.08244 6.35724 4.84191 6.6661 4.88362C8.7145 5.16063 15.7585 6.01716 21.5823 5.5714C21.8479 5.55103 22.0784 5.75167 22.0925 6.01695L23.2535 27.7968C23.2694 28.0955 23.0407 28.3508 22.7412 28.3684C20.2919 28.513 10.2045 29.0717 6.6064 28.6959C6.38741 28.6731 6.22116 28.4892 6.21988 28.2696L6.08497 5.39316Z"
@@ -39,7 +33,7 @@ const OverviewIcon: FC<CustomIconProps> = ({
         />
         <path
           d="M14.4818 6.89698L14.7204 11.5663C14.7283 11.7216 14.8663 11.8451 15.0373 11.8495C15.9885 11.8739 18.9525 11.9396 20.6262 11.8603C20.8155 11.8513 20.9653 11.7121 20.9715 11.5399C21.0034 10.6641 21.0733 8.11543 20.8537 7.04994C20.8183 6.87778 20.6556 6.7517 20.463 6.74562L14.8406 6.56684C14.638 6.56044 14.4724 6.71277 14.4818 6.89698Z"
-          fill="url(#paint3_linear)"
+          fill="url(#overviewIcon3_linear)"
         />
         <g opacity="0.6">
           <path
@@ -128,7 +122,7 @@ const OverviewIcon: FC<CustomIconProps> = ({
         <path
           opacity="0.72"
           d="M15.1501 1.40705C14.587 1.01654 14.0975 1.02422 13.7529 1.12566C13.4385 1.21814 13.2348 1.52076 13.2646 1.8462L13.4132 3.46358L15.1817 3.62006C15.1819 3.62017 16.2543 2.17292 15.1501 1.40705ZM14.3724 2.7119C14.1288 2.7119 13.9314 2.5151 13.9314 2.27222C13.9314 2.02934 14.1288 1.83254 14.3724 1.83254C14.616 1.83254 14.8134 2.02934 14.8134 2.27222C14.8134 2.5151 14.6159 2.7119 14.3724 2.7119Z"
-          fill="url(#paint4_linear)"
+          fill="url(#overviewIcon4_linear)"
         />
         <path
           d="M13.5901 2.78318C13.5683 2.78318 13.5496 2.76665 13.5476 2.74446L13.524 2.48686C13.5218 2.4635 13.5391 2.44281 13.5626 2.44057C13.5866 2.43833 13.6069 2.45561 13.609 2.47907L13.6327 2.73667C13.6348 2.76003 13.6176 2.78073 13.594 2.78297C13.5927 2.78318 13.5914 2.78318 13.5901 2.78318ZM13.5437 2.27843C13.5218 2.27843 13.5032 2.2619 13.5012 2.23971L13.4832 2.0442C13.4548 1.73422 13.6504 1.44548 13.9484 1.3578C14.1595 1.29572 14.3769 1.28676 14.5948 1.33134C14.6179 1.33604 14.6327 1.35854 14.628 1.38158C14.6233 1.40452 14.601 1.41924 14.5776 1.41465C14.3736 1.37305 14.17 1.38126 13.9726 1.4394C13.7134 1.51566 13.5434 1.76676 13.5682 2.03641L13.5861 2.23193C13.5883 2.25529 13.571 2.27598 13.5475 2.27822C13.5463 2.27833 13.545 2.27843 13.5437 2.27843Z"
@@ -137,7 +131,7 @@ const OverviewIcon: FC<CustomIconProps> = ({
         <path
           opacity="0.72"
           d="M10.999 4.50888V3.69565C10.999 3.41491 11.2324 3.19016 11.5137 3.19976L17.1369 3.39187C17.3865 3.4004 17.5886 3.59677 17.6035 3.84531L17.6505 4.62664L10.999 4.50888Z"
-          fill="url(#paint5_linear)"
+          fill="url(#overviewIcon5_linear)"
         />
         <path
           d="M13.097 3.50658H12.8544C12.8307 3.50658 12.8115 3.48752 12.8115 3.46386C12.8115 3.4402 12.8307 3.42114 12.8544 3.42114H13.097C13.1207 3.42114 13.1399 3.4402 13.1399 3.46386C13.1398 3.48752 13.1207 3.50658 13.097 3.50658Z"
@@ -149,7 +143,7 @@ const OverviewIcon: FC<CustomIconProps> = ({
         />
         <path
           d="M8.70774 4.71443C8.72133 4.43283 8.95423 4.2115 9.23699 4.2115L19.0702 4.21118C19.4238 4.21118 19.726 4.46483 19.7863 4.81225L19.7947 4.86014C19.8607 5.24062 19.5669 5.58857 19.1796 5.58857H9.09138C8.85966 5.58857 8.6749 5.39539 8.68602 5.16457L8.70774 4.71443Z"
-          fill="url(#paint6_linear)"
+          fill="url(#overviewIcon6_linear)"
         />
         {state === 'default' && (
           <g style={{mixBlendMode: 'saturation'}}>
@@ -159,7 +153,7 @@ const OverviewIcon: FC<CustomIconProps> = ({
       </g>
       <defs>
         <linearGradient
-          id="paint0_linear"
+          id="overviewIcon0_linear"
           x1="0.334521"
           y1="34.1116"
           x2="21.4998"
@@ -170,7 +164,7 @@ const OverviewIcon: FC<CustomIconProps> = ({
           <stop offset="1" stopColor="#E9EFFD" />
         </linearGradient>
         <linearGradient
-          id="paint1_linear"
+          id="overviewIcon1_linear"
           x1="14.6426"
           y1="28.5967"
           x2="13.2174"
@@ -181,7 +175,7 @@ const OverviewIcon: FC<CustomIconProps> = ({
           <stop offset="1" stopColor="#1A0F91" />
         </linearGradient>
         <linearGradient
-          id="paint2_linear"
+          id="overviewIcon2_linear"
           x1="2.48934"
           y1="34.5266"
           x2="20.5946"
@@ -192,7 +186,7 @@ const OverviewIcon: FC<CustomIconProps> = ({
           <stop offset="1" stopColor="#4042E2" />
         </linearGradient>
         <linearGradient
-          id="paint3_linear"
+          id="overviewIcon3_linear"
           x1="21.0079"
           y1="9.23248"
           x2="14.4815"
@@ -203,7 +197,7 @@ const OverviewIcon: FC<CustomIconProps> = ({
           <stop offset="1" stopColor="#E9EFFD" />
         </linearGradient>
         <linearGradient
-          id="paint4_linear"
+          id="overviewIcon4_linear"
           x1="16.8892"
           y1="-0.912704"
           x2="9.74651"
@@ -214,7 +208,7 @@ const OverviewIcon: FC<CustomIconProps> = ({
           <stop offset="1" stopColor="#1A0F91" />
         </linearGradient>
         <linearGradient
-          id="paint5_linear"
+          id="overviewIcon5_linear"
           x1="17.675"
           y1="-0.316694"
           x2="10.5324"
@@ -225,7 +219,7 @@ const OverviewIcon: FC<CustomIconProps> = ({
           <stop offset="1" stopColor="#1A0F91" />
         </linearGradient>
         <linearGradient
-          id="paint6_linear"
+          id="overviewIcon6_linear"
           x1="16.7715"
           y1="0.258735"
           x2="11.8437"
@@ -235,7 +229,7 @@ const OverviewIcon: FC<CustomIconProps> = ({
           <stop stopColor="#4F52FF" />
           <stop offset="1" stopColor="#4042E2" />
         </linearGradient>
-        <clipPath id="clip0">
+        <clipPath id="overviewIconClip0">
           <rect width="32" height="32" fill="white" transform="translate(0.486328)" />
         </clipPath>
       </defs>

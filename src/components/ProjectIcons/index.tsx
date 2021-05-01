@@ -91,7 +91,7 @@ const ProjectIcon = forwardRef<HTMLDivElement, IconProps & CustomIconProps>(
 
     const renderIcon = useCallback((): ReactNode => {
       const iconBaseProps = {
-        'data-testid': 'Icon__svg',
+        'data-testid': 'ProjectIcon__svg',
       };
 
       switch (icon) {
@@ -118,12 +118,12 @@ const ProjectIcon = forwardRef<HTMLDivElement, IconProps & CustomIconProps>(
 
     return (
       <div
-        className={clsx('Icon', className, {
-          'Icon--button': !!onClick,
-          'Icon--disabled': disabled,
+        className={clsx('ProjectIcon', className, {
+          'ProjectIcon--button': !!onClick,
+          'ProjectIcon--disabled': disabled,
           ...bemify(className, '--disabled', disabled),
         })}
-        data-testid={dataTestId || 'Icon'}
+        data-testid={dataTestId || 'ProjectIcon'}
         ref={ref}
         role={!!onClick ? 'button' : 'img'}
         onClick={handleClick}

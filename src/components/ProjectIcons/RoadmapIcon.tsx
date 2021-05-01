@@ -2,20 +2,14 @@ import React, {FC} from 'react';
 
 import {CustomIconProps} from './types';
 
-const RoadmapIcon: FC<CustomIconProps> = ({
-  className,
-  color = 'currentColor',
-  onClick,
-  size = 24,
-  state = 'default',
-}) => {
+const RoadmapIcon: FC<CustomIconProps> = ({onClick, size = 24, state = 'default'}) => {
   return (
-    <svg className={className} width={size} height={size} fill={color} onClick={onClick} viewBox="0 0 32 32">
-      <g clipPath="url(#clip0)">
+    <svg width={size} height={size} onClick={onClick} viewBox="0 0 32 32">
+      <g clipPath="url(#roadmapIconClip0)">
         <circle cx="27.4895" cy="27.3493" r="3.35469" fill="#E3E8EE" />
         <path
           d="M28.098 27.7908C22.2486 33.9465 13.2636 32.1255 11.9356 31.8328C10.2624 31.4641 6.28167 30.5869 3.31098 27.1237C-1.23698 21.8215 -0.777786 13.5347 2.73461 7.94798C3.75666 6.32238 7.19603 1.49135 13.6549 0.440998C14.0324 0.379579 20.7768 -0.606586 26.2036 3.93418C26.9352 4.54641 28.1163 5.65518 29.1514 7.2696C32.3623 12.2776 33.8819 21.7039 28.098 27.7908Z"
-          fill="url(#paint0_linear)"
+          fill="url(#roadmapIcon0_linear)"
         />
         <path
           d="M3.50988 11.5981H12.1245C12.5866 11.2074 11.8048 10.3209 10.9889 10.2613C10.634 10.2348 10.1862 10.3086 9.67391 10.4164C9.55532 8.84596 8.87886 1.78822 6.32672 2.07205C3.4577 2.38993 6.32672 5.1799 7.1379 6.8327C7.73846 8.05693 8.37223 9.8119 8.66159 10.6397C8.42915 10.6899 8.18722 10.7391 7.94149 10.7845C7.56104 9.61985 6.14646 5.70403 4.34763 5.93203C2.23476 6.19883 3.08389 7.76932 4.58102 8.70121C5.67967 9.38617 7.02785 10.3606 7.6692 10.8308C7.12652 10.9188 6.55916 10.9784 5.98422 10.9652C4.50892 10.9311 3.78882 11.3654 3.50988 11.5981Z"
@@ -26,7 +20,7 @@ const RoadmapIcon: FC<CustomIconProps> = ({
           d="M23.2615 8.27905H8.2373V28.0541H23.7708V27.2836L24.0255 25.7427L25.0441 24.4586L26.3173 23.945V11.3609L23.2615 8.27905Z"
           fill="#91B3FA"
         />
-        <g clipPath="url(#clip1)">
+        <g clipPath="url(#roadmapIconClip1)">
           <path
             d="M26.8819 23.5339V11.1039C26.8819 11.0036 26.8423 10.908 26.7715 10.8376L23.7582 7.82422C23.6877 7.75341 23.5921 7.71387 23.4919 7.71387H8.04854C7.84016 7.71387 7.67188 7.88215 7.67188 8.09053V28.0539C7.67188 28.2622 7.84016 28.4305 8.04854 28.4305H23.8498C24.4056 29.5447 25.5542 30.3139 26.8819 30.3139C28.7512 30.3139 30.2719 28.7932 30.2719 26.9239C30.2719 25.0545 28.7512 23.5339 26.8819 23.5339ZM23.8685 8.99983L25.5959 10.7272H23.8685V8.99983ZM8.42521 27.6772V8.4672H23.1152V11.1039C23.1152 11.3122 23.2835 11.4805 23.4919 11.4805H26.1285V23.6212C24.6211 23.9652 23.4919 25.314 23.4919 26.9239C23.4919 27.183 23.5239 27.4346 23.5792 27.6772H8.42521ZM26.8819 29.5605C25.4284 29.5605 24.2452 28.3774 24.2452 26.9239C24.2452 25.4704 25.4284 24.2872 26.8819 24.2872C28.3354 24.2872 29.5185 25.4704 29.5185 26.9239C29.5185 28.3774 28.3354 29.5605 26.8819 29.5605Z"
             fill="#F7FAFC"
@@ -51,7 +45,7 @@ const RoadmapIcon: FC<CustomIconProps> = ({
       </g>
       <defs>
         <linearGradient
-          id="paint0_linear"
+          id="roadmapIcon0_linear"
           x1="32.0825"
           y1="35.0824"
           x2="3.12916"
@@ -61,10 +55,10 @@ const RoadmapIcon: FC<CustomIconProps> = ({
           <stop stopColor="#DAE3FE" />
           <stop offset="1" stopColor="#E9EFFD" />
         </linearGradient>
-        <clipPath id="clip0">
+        <clipPath id="roadmapIconClip0">
           <rect width="32" height="32" fill="white" transform="translate(0.431641)" />
         </clipPath>
-        <clipPath id="clip1">
+        <clipPath id="roadmapIconClip1">
           <rect width="22.6" height="22.6" fill="white" transform="translate(7.67188 7.71387)" />
         </clipPath>
       </defs>

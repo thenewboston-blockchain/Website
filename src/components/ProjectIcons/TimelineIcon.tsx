@@ -2,16 +2,10 @@ import React, {FC} from 'react';
 
 import {CustomIconProps} from './types';
 
-const TimelineIcon: FC<CustomIconProps> = ({
-  className,
-  color = 'currentColor',
-  onClick,
-  size = 24,
-  state = 'default',
-}) => {
+const TimelineIcon: FC<CustomIconProps> = ({onClick, size = 24, state = 'default'}) => {
   return (
-    <svg className={className} width={size} height={size} fill={color} onClick={onClick} viewBox="0 0 32 32">
-      <g clipPath="url(#clip0)">
+    <svg width={size} height={size} onClick={onClick} viewBox="0 0 32 32">
+      <g clipPath="url(#timelineIcon0)">
         <path
           d="M30.7232 29.2965C30.7232 29.2965 34.5564 23.1049 31.3715 16.4017C28.5456 10.4542 25.2508 10.8608 22.8335 13.2744C21.8039 14.3024 18.8355 13.4011 16.3091 7.34917C12.8636 -0.903996 0.920568 4.10155 3.09817 16.799C4.15202 22.9437 -0.108897 23.1671 2.06215 29.3093L30.7232 29.2965Z"
           fill="#EBF3FA"
@@ -271,7 +265,7 @@ const TimelineIcon: FC<CustomIconProps> = ({
         )}
       </g>
       <defs>
-        <clipPath id="clip0">
+        <clipPath id="timelineIcon0">
           <rect width="32" height="32" fill="white" transform="translate(0 0.309326)" />
         </clipPath>
       </defs>
