@@ -5,18 +5,23 @@ import {DashboardLayout, DocsMenuItems, Pagination} from 'components';
 import {guideNavigationData} from 'components/DocsMenuItems';
 import {PageData, PageDataObject} from 'types/page-data';
 
+import GuideAccountLock from './GuideAccountLock';
 import GuideAccounts from './GuideAccounts';
 import GuideBestPractices from './GuideBestPractices';
+import GuideBlockStructure from './GuideBlockStructure';
+import GuideBlockTypes from './GuideBlockTypes';
 import GuideBlockchainArchitecture from './GuideBlockchainArchitecture';
 import GuideBlocks from './GuideBlocks';
+import GuideFees from './GuideFees';
+import GuideFlows from './GuideFlows';
 import GuideForkPrevention from './GuideForkPrevention';
+import GuideGlossary from './GuideGlossary';
 import GuideIntroduction from './GuideIntroduction';
 import GuideNodeIdentifier from './GuideNodeIdentifier';
 import GuideNodes from './GuideNodes';
 import GuideRootAccountFile from './GuideRootAccountFile';
-import GuideSchedule from './GuideSchedule';
 import GuideScheduleAdjustments from './GuideScheduleAdjustments';
-import GuideTransactionFees from './GuideTransactionFees';
+import GuideScheduling from './GuideScheduling';
 
 const defaultPageData: PageData = {
   content: <Redirect to="/guide/introduction" />,
@@ -24,6 +29,10 @@ const defaultPageData: PageData = {
 };
 
 const pageData: PageDataObject = {
+  'account-lock': {
+    content: <GuideAccountLock />,
+    name: 'Account Lock',
+  },
   accounts: {
     content: <GuideAccounts />,
     name: 'Accounts',
@@ -31,6 +40,14 @@ const pageData: PageDataObject = {
   'best-practices': {
     content: <GuideBestPractices />,
     name: 'Best Practices',
+  },
+  'block-structure': {
+    content: <GuideBlockStructure />,
+    name: 'Block Structure',
+  },
+  'block-types': {
+    content: <GuideBlockTypes />,
+    name: 'Block Types',
   },
   'blockchain-architecture': {
     content: <GuideBlockchainArchitecture />,
@@ -40,9 +57,21 @@ const pageData: PageDataObject = {
     content: <GuideBlocks />,
     name: 'Blocks',
   },
+  fees: {
+    content: <GuideFees />,
+    name: 'Fees',
+  },
+  flows: {
+    content: <GuideFlows />,
+    name: 'Flows',
+  },
   'fork-prevention': {
     content: <GuideForkPrevention />,
     name: 'Fork Prevention',
+  },
+  glossary: {
+    content: <GuideGlossary />,
+    name: 'glossary',
   },
   introduction: {
     content: <GuideIntroduction />,
@@ -60,17 +89,13 @@ const pageData: PageDataObject = {
     content: <GuideRootAccountFile />,
     name: 'Root Account File',
   },
-  schedule: {
-    content: <GuideSchedule />,
-    name: 'Schedule',
-  },
   'schedule-adjustments': {
     content: <GuideScheduleAdjustments />,
     name: 'Schedule Adjustments',
   },
-  'transaction-fees': {
-    content: <GuideTransactionFees />,
-    name: 'Transaction Fees',
+  scheduling: {
+    content: <GuideScheduling />,
+    name: 'scheduling',
   },
 };
 

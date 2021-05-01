@@ -29,11 +29,9 @@ const GuideAccounts: FC = () => {
       <DocImage alt="key pair" maxWidth={380} src={KeyPair} />
 
       <p>
-        The account number of an account operates like a username, but is unique across the entire network (rather than
-        a single website). Use of signing keys secures all accounts and proves ownership of coins. Signing keys are also
-        used in the process of "signing" a block. This enables users to create secure transactions that the network can
-        further validate without revealing the signing key itself. The signing key must always remain private to the
-        account owner.
+        The account number operates like a username, but is unique across the entire network (rather than a single
+        website). Use of signing keys secures all accounts and proves ownership of coins. The signing key must always
+        remain private to the account owner.
       </p>
 
       <p>A simplified overview of each key is the following:</p>
@@ -44,7 +42,7 @@ const GuideAccounts: FC = () => {
 
       <DocList variant="ul">
         <li>Must remain private to the owner</li>
-        <li>Allows the account owner to securely sign (authorize) the sending of coins</li>
+        <li>Allows the account owner to securely sign requests</li>
       </DocList>
 
       <p>
