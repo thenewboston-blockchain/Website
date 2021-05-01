@@ -1,4 +1,5 @@
 export interface Opening {
+  applicationUrl: string;
   category: OpeningCategory;
   description: string;
   openingId: string;
@@ -6,7 +7,6 @@ export interface Opening {
   project?: ProjectProposal;
   responsibilities: string[];
   technologyRequirements: string[];
-  applicationUrl: string;
 }
 
 export enum OpeningCategory {
