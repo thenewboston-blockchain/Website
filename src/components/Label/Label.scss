@@ -1,7 +1,7 @@
 .Label {
   border-radius: 2em;
   display: inline-block;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   padding: 2px 8px;
 
   &:focus {

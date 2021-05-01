@@ -22,8 +22,8 @@
 
   &__user-login {
     display: block;
-    font-size: var(--font-size-medium);
-    font-weight: 700;
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-semibold);
     line-height: 1.25;
 
     &:hover {

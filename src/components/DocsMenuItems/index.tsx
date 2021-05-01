@@ -178,60 +178,68 @@ export const guideNavigationData = [
     url: '/guide/introduction',
   },
   {
-    name: 'Accounts',
-    url: '/guide/accounts',
-  },
-  {
-    name: 'Block Types',
-    url: '/guide/block-types',
+    name: 'Glossary',
+    url: '/guide/glossary',
   },
   {
     name: 'Blocks',
     url: '/guide/blocks',
   },
   {
-    name: 'Network Initialization',
-    url: '/guide/network-initialization',
+    name: 'Block Structure',
+    url: '/guide/block-structure',
   },
   {
-    name: 'Transaction Fees',
-    url: '/guide/transaction-fees',
-  },
-  {
-    name: 'Root Account File',
-    url: '/guide/root-account-file',
+    name: 'Block Types',
+    url: '/guide/block-types',
   },
   {
     name: 'Nodes',
     url: '/guide/nodes',
   },
   {
-    name: 'Blockchain Architecture',
-    url: '/guide/blockchain-architecture',
-  },
-  {
-    name: 'Data Flow',
-    url: '/guide/data-flow',
-  },
-  {
-    name: 'Node Identifier',
-    url: '/guide/node-identifier',
-  },
-  {
-    name: 'Schedule',
-    url: '/guide/schedule',
-  },
-  {
-    name: 'Schedule Adjustments',
-    url: '/guide/schedule-adjustments',
+    name: 'Flows',
+    url: '/guide/flows',
   },
   {
     name: 'Fork Prevention',
     url: '/guide/fork-prevention',
   },
   {
+    name: 'Scheduling',
+    url: '/guide/scheduling',
+  },
+  {
+    name: 'Schedule Adjustments',
+    url: '/guide/schedule-adjustments',
+  },
+  {
+    name: 'Accounts',
+    url: '/guide/accounts',
+  },
+  {
+    name: 'Account Lock',
+    url: '/guide/account-lock',
+  },
+  {
+    name: 'Node Identifier',
+    url: '/guide/node-identifier',
+  },
+  {
+    name: 'Fees',
+    url: '/guide/fees',
+  },
+  {
     name: 'Best Practices',
     url: '/guide/best-practices',
+  },
+  {
+    name: 'Root Account File',
+    url: '/guide/root-account-file',
+  },
+  {
+    name: 'Blockchain Architecture',
+    url: '/guide/blockchain-architecture',
   },
 ];
 
@@ -281,6 +289,10 @@ const DocsMenuItems: FC = () => {
         {renderNavLinks(guideNavigationData)}
       </MenuGroup>
 
+      <MenuGroup title="Governance" urlBase="governance">
+        {renderNavLinks(governanceNavigationData)}
+      </MenuGroup>
+
       <MenuGroup title="Account Manager" urlBase="account-manager">
         {renderNavLinks(accountManagerNavigationData)}
       </MenuGroup>
@@ -293,10 +305,6 @@ const DocsMenuItems: FC = () => {
       <MenuGroup title="Style Guides" urlBase="style-guide">
         <NavLink to="/style-guide/react">React / JSX</NavLink>
         <NavLink to="/style-guide/css">CSS / SASS</NavLink>
-      </MenuGroup>
-
-      <MenuGroup title="Governance" urlBase="governance">
-        {renderNavLinks(governanceNavigationData)}
       </MenuGroup>
 
       <MenuGroup title="Bank API" urlBase="bank-api">

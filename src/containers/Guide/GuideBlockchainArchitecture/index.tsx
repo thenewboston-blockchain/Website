@@ -1,14 +1,18 @@
 import React, {FC} from 'react';
-
-import {DocContainer, DocImage, DocList, TableVertical} from 'components';
 import {NavLink} from 'react-router-dom';
+
+import {CalloutType, DocCallout, DocContainer, DocImage, DocList, TableVertical} from 'components';
 
 import BlockchainArchitecture from './BlockchainArchitecture.png';
 import BlockchainSync from './BlockchainSync.png';
 
 const GuideBlockchainArchitecture: FC = () => {
   return (
-    <DocContainer className="GuideBlockchainArchitecture" title="Blockchain Architecture" lastUpdated="28 Mar 2021">
+    <DocContainer className="GuideBlockchainArchitecture" title="Blockchain Architecture" lastUpdated="24 Apr 2021">
+      <DocCallout type={CalloutType.warning}>
+        This section of the documentation has not yet been updated to reflect the beta architecture.
+      </DocCallout>
+
       <p>
         Every Primary Validator (PV) provides important pieces of data that all nodes must use to validate network
         transactions.

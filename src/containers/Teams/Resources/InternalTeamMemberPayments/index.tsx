@@ -17,8 +17,8 @@ const InternalTeamMemberPayments: FC = () => {
         <li>proof of work</li>
         <li>estimated time spent on each task (half hour increments)</li>
         <ul>
-          <li>~30 minutes</li>
-          <li>~1.5 hours</li>
+          <li>0.5 hours</li>
+          <li>1.5 hours</li>
         </ul>
       </DocList>
       <p>
@@ -41,8 +41,11 @@ const InternalTeamMemberPayments: FC = () => {
         validate all proof of work. They may also respond with a comment if any questions arise or additional
         clarification from the submitter is needed. Once the majority of auditors have validated the work it will be
         labeled as <strong>Approved</strong>. At that time, the governors will send payment and label the issue as{' '}
-        <strong>Paid</strong>. Once a ticket has been paid the GitHub issue may be closed. To clarify, team members will
-        now be paid as soon as the timesheet has been approved, which would ideally be daily.
+        <strong>Paid</strong>. Once a ticket has been paid the GitHub issue may be closed.
+      </p>
+      <p>
+        The deadline for timesheet submission is 24 hours after 11:59PM PST for the given work day. Timesheets submitted
+        after the deadline will not be paid.
       </p>
       <DocImage alt="team payment process" maxWidth={720} src={TeamPaymentProcess} />
     </DocContainer>

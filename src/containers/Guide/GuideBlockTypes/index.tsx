@@ -1,9 +1,8 @@
 import React, {FC} from 'react';
 
-import {DocContainer, DocImage, DocSubHeader} from 'components';
-
-import BlockChange from './BlockChange.png';
+import {CalloutType, DocCallout, DocContainer} from 'components';
 import './GuideBlockTypes.scss';
+import {NavLink} from 'react-router-dom';
 
 const GuideBlockTypes: FC = () => {
   const renderBlock = (name: string, backgroundColor: string) => (
@@ -12,7 +11,7 @@ const GuideBlockTypes: FC = () => {
     </div>
   );
 
-  const renderBlockTypeRow = (name: string, description: string, backgroundColor: string) => (
+  const renderBlockTypeRow = (name: string, backgroundColor: string, description: string) => (
     <div className="GuideBlockTypes__block-type-row">
       {renderBlock(name, backgroundColor)}
       <div className="GuideBlockTypes__block-type-row--description">{description}</div>
@@ -20,36 +19,28 @@ const GuideBlockTypes: FC = () => {
   );
 
   return (
-    <DocContainer className="GuideBlockTypes" title="Block Types" lastUpdated="21 Apr 2021">
+    <DocContainer className="GuideBlockTypes" title="Block Types" lastUpdated="25 Apr 2021">
       <p>
-        Networks are first created from a Genesis block. The Genesis block will define the initial structure of the
-        network. This is also the very first block in the blockchain.
+        The following section documents the message fields found in each block type. This excludes account lock and
+        fees, as those fields are common to all block types.
       </p>
-      <p>
-        Each additional block added to the blockchain represents a change to the network. These changes originate from
-        user requests and may include a transfer of coins between accounts, a new node being added to the network, the
-        registration of a username, and so on.
-      </p>
-      <DocImage alt="block change" maxWidth={620} src={BlockChange} />
-      <p>
-        When a block is added to the blockchain by the PV, that block will be forwarded to all other validators for
-        verification. The block will include not only the original request, but also the resulting changes to the
-        underlying data. When the validators receive this block, they will process the users request and compare their
-        resulting changes to those from the PV.
-      </p>
-      <p>
-        This continuous validation of ordered blocks and comparison of results enables all nodes in the network to
-        remain in sync. This is the mechanism that allows the network nodes to remain distributed yet maintain a shared
-        state.
-      </p>
-
-      <DocSubHeader>Block Type Definitions</DocSubHeader>
-      {renderBlockTypeRow('Genesis', 'First block of the blockchain', '#e5e5e5')}
-      {renderBlockTypeRow('Tx', 'Transfer of coins between accounts', '#b2d6ef')}
-      {renderBlockTypeRow('Node Registration', 'Nodes registration onto the network', '#d1bcd2')}
-      {renderBlockTypeRow('Schedule', 'Addition of a node to the PV schedule', '#99d5ca')}
-      {renderBlockTypeRow('Username Registration', 'The purchase of a username by an account', '#f9d2de')}
-      {renderBlockTypeRow('Lock', 'The locking of coins', '#ffeca9')}
+      <DocCallout type={CalloutType.important}>
+        The genesis block is excluded in this documentation as it has both a special use case and structure. For more
+        details on the genesis block, see the <NavLink to="/guide/blocks">Blocks</NavLink> section of the documentation.
+      </DocCallout>
+      {renderBlockTypeRow('Coin Transfer', '#b2d6ef', 'Transfer of coins between accounts')}
+      {renderBlockTypeRow(
+        'Coin Lock',
+        '#e5e5e5',
+        'The locking of coins in exchange for points and the ability to boost a node',
+      )}
+      {renderBlockTypeRow('Node Registration', '#d1bcd2', 'Nodes enrollment onto the network')}
+      {renderBlockTypeRow('Node Boost', '#f9d2de', 'Vote for a node to be included in the schedule')}
+      {renderBlockTypeRow('Schedule', '#99d5ca', 'Addition of a node to the list of upcoming validators')}
+      {renderBlockTypeRow('Username Registration', '#ffbbb1', 'The purchase of a username by an account')}
+      {renderBlockTypeRow('Governor Application', '#ffdba9', 'Enables an account to be eligible for governor')}
+      {renderBlockTypeRow('Vote purchase', '#c7e8ac', 'The purchase of one or more votes for a given account')}
+      {renderBlockTypeRow('Governor Vote', '#ffeca9', 'Places one or more vote for a governor')}
     </DocContainer>
   );
 };
