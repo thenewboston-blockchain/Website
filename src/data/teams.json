@@ -33,6 +33,19 @@
         "isLead": false,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
+          "contributorId": "8",
+          "discordUsername": "TristanS#6395",
+          "displayName": "Tristan Spearing",
+          "githubUsername": "tspearing",
+          "profileImage": "https://avatars1.githubusercontent.com/u/77364430?&v=4"
+        },
+        "hourlyRate": 800
+      },
+      {
+        "title": "Auditor",
+        "isLead": false,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
           "contributorId": "14",
           "discordUsername": "Manish#4379",
           "displayName": "Manish Ram",
@@ -451,54 +464,6 @@
     ]
   },
   {
-    "title": "Education",
-    "description": "Create educational content for the community, primarily focused around video tutorials.",
-    "platforms": [
-      {
-        "name": "github",
-        "label": "Education",
-        "link": "https://github.com/thenewboston-developers/Management/projects/10"
-      }
-    ],
-    "contributors": [
-      {
-        "title": "Head of Education",
-        "isLead": true,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "1",
-          "discordUsername": "Bucky#2734",
-          "displayName": "Bucky Roberts",
-          "githubUsername": "buckyroberts",
-          "profileImage": "https://avatars2.githubusercontent.com/u/8547538?v=4"
-        },
-        "hourlyRate": 1000
-      }
-    ],
-    "responsibilities": [
-      {
-        "item": "Gather feedback from the community to determine the most requested videos",
-        "subitems": []
-      },
-      {
-        "item": "Design course outlines",
-        "subitems": []
-      },
-      {
-        "item": "Record, edit, and upload high quality video tutorials",
-        "subitems": []
-      },
-      {
-        "item": "Grow the community and collaborate with marketing",
-        "subitems": []
-      },
-      {
-        "item": "Share all course content on GitHub",
-        "subitems": []
-      }
-    ]
-  },
-  {
     "title": "Marketing",
     "description": "Manage all marketing content including email, SEO, and media buys. Develop and execute marketing strategies as well as focus on user behaviour and contact collection.",
     "platforms": [
@@ -510,17 +475,17 @@
     ],
     "contributors": [
       {
-        "title": "Head of Marketing Team",
+        "title": "Head of Marketing",
         "isLead": true,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "8",
-          "discordUsername": "TristanS#6395",
-          "displayName": "Tristan Spearing",
-          "githubUsername": "tspearing",
-          "profileImage": "https://avatars1.githubusercontent.com/u/77364430?&v=4"
+          "contributorId": "1",
+          "discordUsername": "Bucky#2734",
+          "displayName": "Bucky Roberts",
+          "githubUsername": "buckyroberts",
+          "profileImage": "https://avatars2.githubusercontent.com/u/8547538?v=4"
         },
-        "hourlyRate": 800
+        "hourlyRate": 1000
       },
       {
         "title": "Social Media Moderator",
