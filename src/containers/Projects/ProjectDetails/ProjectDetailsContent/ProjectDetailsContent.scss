@@ -21,14 +21,15 @@ $details-header-height-480: 177px;
   &__milestone {
     color: var(--color-sail-gray-600);
   }
+
   &__milestone-description {
     color: var(--color-sail-gray-600);
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
     margin-bottom: 40px;
   }
 
   &__milestone-number {
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     margin-bottom: 8px;
   }
 

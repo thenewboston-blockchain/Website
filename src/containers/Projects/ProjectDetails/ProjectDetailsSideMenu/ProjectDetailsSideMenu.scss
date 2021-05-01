@@ -25,28 +25,31 @@
 
   &__topic {
     align-items: center;
-    color: var(--color-gray-500);
     cursor: pointer;
     display: flex;
     flex-direction: row;
-    font-weight: 400;
     gap: 18px;
     margin-bottom: 32px;
     outline: none;
+  }
+
+  &__topic-title {
+    color: var(--color-gray-500);
+    font-weight: var(--font-weight-regular);
 
     &:hover {
       color: var(--color-cyan-800);
-      font-weight: 700;
+      font-weight: var(--font-weight-bold);
     }
 
     &--active {
       color: var(--color-cyan-800);
-      font-weight: 700;
+      font-weight: var(--font-weight-bold);
     }
 
     &--hovered {
       color: var(--color-cyan-800);
-      font-weight: 700;
+      font-weight: var(--font-weight-bold);
     }
   }
 }

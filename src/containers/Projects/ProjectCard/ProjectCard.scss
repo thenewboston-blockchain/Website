@@ -1,3 +1,5 @@
+@import 'styles/font-mixins';
+
 $card-width-original: 512px;
 $card-height-original: 324px;
 
@@ -59,7 +61,9 @@ $padding-768: 24px;
   }
 
   &__details-button {
+    @extend %body1;
     bottom: $padding;
+    font-weight: var(--font-weight-regular);
     position: absolute;
     right: $padding;
 
@@ -70,9 +74,11 @@ $padding-768: 24px;
   }
 
   &__description {
+    @extend %h3;
     -webkit-box-orient: vertical;
     color: var(--color-sail-gray-400);
     display: -webkit-box;
+    font-weight: var(--font-weight-regular);
     -webkit-line-clamp: 5; /* max number of lines to show */
     overflow: hidden;
     text-overflow: ellipsis;
@@ -87,7 +93,9 @@ $padding-768: 24px;
   }
 
   &__project-lead {
+    @extend %h4;
     color: var(--color-sail-gray-300);
+    font-weight: var(--font-weight-medium);
   }
 
   &__project-lead-container {
@@ -96,10 +104,14 @@ $padding-768: 24px;
   }
 
   &__project-lead-name {
+    @extend %h4;
     color: var(--color-sail-gray-700);
+    font-weight: var(--font-weight-medium);
   }
 
   &__project-title {
+    @extend %h1;
     color: var(--color-blue-900);
+    font-weight: var(--font-weight-bold);
   }
 }

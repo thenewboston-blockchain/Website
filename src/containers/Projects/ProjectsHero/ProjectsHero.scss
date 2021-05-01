@@ -1,3 +1,5 @@
+@import 'styles/font-mixins';
+
 $gap-width: 50px;
 $left-pl: 64px;
 $right-width: 714px;
@@ -81,16 +83,16 @@ $title-width: 480px;
 
   &__subtitle {
     color: var(--color-gray-500);
-    font-size: var(--font-size-regular);
-    font-weight: normal;
+    font-weight: var(--font-weight-regular);
     line-height: 1.5;
     margin-bottom: 40px;
     margin-top: 30px;
+    @extend %h3;
   }
 
   &__title {
-    font-size: 42px;
-    font-weight: 800;
+    @extend %display1;
+    font-weight: var(--font-weight-bold);
     line-height: 1.25;
   }
 

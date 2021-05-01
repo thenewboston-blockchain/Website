@@ -1,3 +1,5 @@
+@import 'styles/font-mixins';
+
 .ProjectDetailsTopic {
   align-items: flex-start;
   display: flex;
@@ -15,22 +17,21 @@
   }
 
   &__content-overview {
-    // body1
     color: var(--color-sail-gray-500);
-    font-size: 14px;
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
     margin-bottom: 32px;
+    @extend %body1;
   }
 
   &__content-title {
     color: var(--color-sail-blue-900);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     margin-bottom: 8px;
   }
 
   &__content-main {
     color: var(--color-sail-gray-600);
-    // h3 regular
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
+    @extend %h3;
   }
 }

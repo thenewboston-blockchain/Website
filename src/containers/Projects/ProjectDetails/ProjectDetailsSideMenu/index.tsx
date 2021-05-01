@@ -36,10 +36,7 @@ const ProjectDetailsSideMenu: FC<Props> = ({currentTopic, onClick}) => {
         const iconState = isActive ? 'active' : isHovered ? 'hover' : 'default';
         return (
           <div
-            className={clsx('ProjectDetailsSideMenu__topic', {
-              'ProjectDetailsSideMenu__topic--active': isActive,
-              'ProjectDetailsSideMenu__topic--hovered': isHovered,
-            })}
+            className="ProjectDetailsSideMenu__topic"
             key={title}
             role="button"
             onClick={() => onClick(topic)}
@@ -48,7 +45,16 @@ const ProjectDetailsSideMenu: FC<Props> = ({currentTopic, onClick}) => {
             tabIndex={0}
           >
             <ProjectIcon icon={iconType} size={32} state={iconState} />
-            {shouldShowTopicTitle && title}
+            {shouldShowTopicTitle && (
+              <div
+                className={clsx('ProjectDetailsSideMenu__topic-title', {
+                  'ProjectDetailsSideMenu__topic-title--active': isActive,
+                  'ProjectDetailsSideMenu__topic-title--hovered': isHovered,
+                })}
+              >
+                {title}
+              </div>
+            )}
           </div>
         );
       })}
