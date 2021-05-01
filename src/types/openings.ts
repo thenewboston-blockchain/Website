@@ -1,4 +1,5 @@
 export interface Opening {
+  applicationUrl: string;
   category: OpeningCategory;
   description: string;
   openingId: string;
