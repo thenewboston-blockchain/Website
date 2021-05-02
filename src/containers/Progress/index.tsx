@@ -41,7 +41,7 @@ const Progress: FC = () => {
 
         if (milestone.length > 0) {
           // there should only be one milestone per repository at a time, get the latest one if there's multiple
-          const lastMilestone = milestone[milestone.length - 1];
+          const lastMilestone = milestone[0];
           const issuesResponse = await githubApi.getIssuesForMilestone(repoName, lastMilestone.number);
 
           if (teamMilestone) {
@@ -85,7 +85,12 @@ const Progress: FC = () => {
     // start date and end date will be from created date to due date
     if (communityMilestone) {
       setStartDate(format(new Date(communityMilestone.milestone.created_at), 'MM/DD'));
-      setEndDate(format(new Date(communityMilestone.milestone.due_on), 'MM/DD'));
+
+      if (communityMilestone.milestone.due_on) {
+        setEndDate(format(new Date(communityMilestone.milestone.due_on), 'MM/DD'));
+      } else {
+        setEndDate('N.A.');
+      }
     }
   }, [communityMilestone]);
 
