@@ -1,4 +1,5 @@
 @import '../../shared';
+@import 'styles/font-mixins';
 
 .ProjectDetailsContent {
   background-color: var(--color-white);
@@ -11,6 +12,7 @@
   }
 
   &__milestone-description {
+    @extend %h3;
     color: var(--color-sail-gray-600);
     font-weight: var(--font-weight-regular);
     margin-bottom: 40px;

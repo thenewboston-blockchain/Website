@@ -1,8 +1,10 @@
 import React, {FC, useEffect} from 'react';
 
 import {format} from 'fecha';
+import Linkify from 'linkifyjs/react';
 import {useWindowDimensions} from 'hooks';
 import {Milestone, Project, ProjectTopic, ProjectTopicTitle} from 'types/projects';
+import {getMultiLineDivFromString} from 'utils/strings';
 import ProjectDetailsTopic from '../ProjectDetailsTopic';
 import {projectDetailsTopic} from '../constants';
 import './ProjectDetailsContent.scss';
@@ -37,8 +39,10 @@ const ProjectDetailsContent: FC<Props> = ({milestones, project, currentTopic}) =
     return milestones.map((milestone) => {
       return (
         <div className="ProjectDetailsContent__milestone" key={milestone.number}>
-          <h2 className="ProjectDetailsContent__milestone-number">Milestone {milestone.number}</h2>
-          <h2 className="ProjectDetailsContent__milestone-description">{milestone.description}</h2>
+          <h3 className="ProjectDetailsContent__milestone-number">Milestone {milestone.number}</h3>
+          <div className="ProjectDetailsContent__milestone-description">
+            <Linkify options={{target: '_blank'}}>{getMultiLineDivFromString(milestone.description)}</Linkify>
+          </div>
         </div>
       );
     });

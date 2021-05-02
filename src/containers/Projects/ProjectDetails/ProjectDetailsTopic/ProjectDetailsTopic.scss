@@ -23,6 +23,10 @@
     flex-direction: column;
   }
 
+  &__content-main {
+    @extend %h3;
+  }
+
   &__content-overview {
     color: var(--color-sail-gray-500);
     font-weight: var(--font-weight-regular);

@@ -91,7 +91,7 @@ $padding-768: 24px;
     color: var(--color-sail-gray-400);
     display: -webkit-box;
     font-weight: var(--font-weight-regular);
-    -webkit-line-clamp: 5; /* max number of lines to show */
+    -webkit-line-clamp: 4; /* max number of lines to show */
     overflow: hidden;
     text-overflow: ellipsis;
 
@@ -124,9 +124,15 @@ $padding-768: 24px;
 
   &__project-title {
     @extend %h1;
+
+    -webkit-box-orient: vertical;
     color: var(--color-blue-900);
+    display: -webkit-box;
     font-weight: var(--font-weight-bold);
+    -webkit-line-clamp: 1; /* max number of lines to show */
     margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     @media (max-width: 768px) {
       margin-bottom: 2px;
