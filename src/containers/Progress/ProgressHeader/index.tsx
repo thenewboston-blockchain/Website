@@ -6,7 +6,7 @@ type Props = {
   goal: string;
   startDate: string;
   endDate: string;
-  weekNumber: number;
+  weekNumber: string;
 };
 
 const ProgressHeader: FC<Props> = ({endDate, goal, startDate, weekNumber}) => {

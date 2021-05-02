@@ -19,6 +19,7 @@ const Progress: FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [startDate, setStartDate] = useState<string>('');
   const [endDate, setEndDate] = useState<string>('');
+  const [sprintNumber, setSprintNumber] = useState<string>('');
 
   // milestone states
   const [auditMilestone, setAuditMilestone] = useState<MilestoneState | undefined>(undefined);
@@ -28,6 +29,7 @@ const Progress: FC = () => {
   const [designMilestone, setDesignMilestone] = useState<MilestoneState | undefined>(undefined);
   const [devOpsMilestone, setDevOpsMilestone] = useState<MilestoneState | undefined>(undefined);
   const [frontEndMilestone, setFrontEndMilestone] = useState<MilestoneState | undefined>(undefined);
+  const [generalMilestone, setGeneralMilestone] = useState<MilestoneState | undefined>(undefined);
   const [marketingMilestone, setMarketingMilestone] = useState<MilestoneState | undefined>(undefined);
 
   async function getMilestone(teamName: Exclude<TeamName, 'All'>, setter: (state: MilestoneState) => void) {
@@ -37,11 +39,11 @@ const Progress: FC = () => {
       const teamMilestoneDetail = teamMilestoneDetails[teamName];
       const teamMilestonePromises = teamMilestoneDetail.repositoryNames.map(async (repoName) => {
         const milestoneResponse = await githubApi.getMilestones(repoName);
-        const milestone = milestoneResponse.data;
+        const milestones = milestoneResponse.data;
 
-        if (milestone.length > 0) {
+        if (milestones.length > 0) {
           // there should only be one milestone per repository at a time, get the latest one if there's multiple
-          const lastMilestone = milestone[0];
+          const lastMilestone = milestones[0];
           const issuesResponse = await githubApi.getIssuesForMilestone(repoName, lastMilestone.number);
 
           if (teamMilestone) {
@@ -61,17 +63,44 @@ const Progress: FC = () => {
     }
   }
 
+  function getFilteredMilestone(milestones: Milestone[], title: string) {
+    return milestones.filter((milestone) => milestone.title.toLowerCase().includes(title.toLowerCase()))[0];
+  }
+
+  async function setMilestonesFromCommunityRepo() {
+    try {
+      const teamMilestoneDetail = teamMilestoneDetails.Community;
+      const repoName = teamMilestoneDetail.repositoryNames[0]; // assumption: community only has one repo
+      const milestoneResponse = await githubApi.getMilestones(repoName);
+      const milestones = milestoneResponse.data;
+      const audit = getFilteredMilestone(milestones, TeamName.audit);
+      const community = getFilteredMilestone(milestones, TeamName.community);
+      const general = getFilteredMilestone(milestones, 'Sprint');
+
+      const [auditIssues, communityIssues, generalIssues] = await Promise.all([
+        githubApi.getIssuesForMilestone(repoName, audit.number),
+        githubApi.getIssuesForMilestone(repoName, community.number),
+        githubApi.getIssuesForMilestone(repoName, general.number),
+      ]);
+
+      setAuditMilestone({issues: auditIssues.data, milestone: audit});
+      setCommunityMilestone({issues: communityIssues.data, milestone: community});
+      setGeneralMilestone({issues: generalIssues.data, milestone: general});
+    } catch (err) {
+      // TBD on how to handle errors since there are so many different milestones
+    }
+  }
+
   async function setAllMilestones() {
     setIsLoading(true);
     await Promise.all([
-      getMilestone(TeamName.audit, (milestone) => setAuditMilestone(milestone)),
       getMilestone(TeamName.backEnd, (milestone) => setBackEndMilestone(milestone)),
       getMilestone(TeamName.blockchain, (milestone) => setBlockchainMilestone(milestone)),
-      getMilestone(TeamName.community, (milestone) => setCommunityMilestone(milestone)),
       getMilestone(TeamName.design, (milestone) => setDesignMilestone(milestone)),
       getMilestone(TeamName.devOps, (milestone) => setDevOpsMilestone(milestone)),
       getMilestone(TeamName.frontEnd, (milestone) => setFrontEndMilestone(milestone)),
       getMilestone(TeamName.marketing, (milestone) => setMarketingMilestone(milestone)),
+      setMilestonesFromCommunityRepo(),
     ]);
     setIsLoading(false);
   }
@@ -82,17 +111,24 @@ const Progress: FC = () => {
   }, []);
 
   useEffect(() => {
-    // start date and end date will be from created date to due date
-    if (communityMilestone) {
-      setStartDate(format(new Date(communityMilestone.milestone.created_at), 'MM/DD'));
+    if (generalMilestone) {
+      setStartDate(format(new Date(generalMilestone.milestone.created_at), 'MM/DD'));
 
-      if (communityMilestone.milestone.due_on) {
-        setEndDate(format(new Date(communityMilestone.milestone.due_on), 'MM/DD'));
+      if (generalMilestone.milestone.due_on) {
+        setEndDate(format(new Date(generalMilestone.milestone.due_on), 'MM/DD'));
       } else {
         setEndDate('N.A.');
       }
+
+      // get sprint number based on title, the title should be in the format of "Sprint [NO]"
+      const sprintNo = generalMilestone.milestone.title.replace(/^\D+/g, '');
+      if (sprintNo) {
+        setSprintNumber(sprintNo);
+      } else {
+        setSprintNumber('N.A.');
+      }
     }
-  }, [communityMilestone]);
+  }, [generalMilestone]);
 
   if (isLoading) {
     return (
@@ -102,9 +138,9 @@ const Progress: FC = () => {
     );
   }
 
-  // community's milestone's description will be the goal of overall sprint, if fetching of
-  // community milestone failed, display error message
-  if (!communityMilestone) {
+  // general milestone's description will be the goal of overall sprint, if fetching of
+  // general milestone failed, display error message
+  if (!generalMilestone) {
     return (
       <div className="Progress__error-container">
         Error while fetching milestones from GitHub. Please try again later.
@@ -115,10 +151,10 @@ const Progress: FC = () => {
   return (
     <div className="Progress">
       <ProgressHeader
-        goal={communityMilestone.milestone.description}
+        goal={generalMilestone.milestone.description}
         startDate={startDate}
         endDate={endDate}
-        weekNumber={communityMilestone.milestone.number}
+        weekNumber={sprintNumber}
       />
       {auditMilestone && (
         <ProgressDropdownCard
