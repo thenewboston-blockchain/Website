@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 
+import clsx from 'clsx';
 import {Avatar} from 'components';
 import {useWindowDimensions} from 'hooks';
 import {Icon, IconType} from '@thenewboston/ui';
@@ -7,19 +8,24 @@ import {BaseIssue} from 'types/github';
 import './ProgressIssueCard.scss';
 
 type Props = {
+  className?: string;
   issue: BaseIssue;
 };
 
-const ProgressIssueCard: FC<Props> = ({issue}) => {
+const ProgressIssueCard: FC<Props> = ({className, issue}) => {
   const {width} = useWindowDimensions();
   return (
-    <div className="ProgressIssueCard">
+    <div className={clsx('ProgressIssueCard', className)}>
       <div className="ProgressIssueCard__left-container">
         {issue.state === 'open' ? (
           <Icon className="ProgressIssueCard__icon-open" icon={IconType.alertCircleOutline} size={20} />
         ) : (
-          // TODO: update to alert circle checked outline when PR is merged
-          <Icon className="ProgressIssueCard__icon-closed" icon={IconType.alertCircleOutline} size={20} />
+          <Icon
+            className="ProgressIssueCard__icon-closed"
+            icon={IconType.alertCircleCheckOutline}
+            size={20}
+            color="#CD3D64"
+          />
         )}
         <div className="ProgressIssueCard__details">
           <div

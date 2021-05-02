@@ -80,7 +80,7 @@ const ProgressDropdownCard: FC<Props> = ({name, responsibility, repoPaths, issue
         (issues.length > 0 ? (
           <div className="ProgressDropdownCard__issues-container">
             {issues.map((issue) => {
-              return <ProgressIssueCard issue={issue} key={issue.id} />;
+              return <ProgressIssueCard className="ProgressDropdownCard__issue" issue={issue} key={issue.id} />;
             })}
           </div>
         ) : (

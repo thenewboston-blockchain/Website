@@ -1,3 +1,5 @@
+@import 'styles/font-mixins';
+
 .ProgressIssueCard {
   align-items: center;
   background-color: var(--color-white);
@@ -18,14 +20,13 @@
   }
 
   &__issue-title {
+    @extend %h4;
     -webkit-box-orient: vertical;
     color: var(--color-secondary);
     cursor: pointer;
     display: -webkit-box;
-    font-size: 14px;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     -webkit-line-clamp: 1; /* max number of lines to show */
-    // h4 bold
     outline: none;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -33,9 +34,8 @@
 
   &__issue-opened-by {
     color: var(--color-gray-600);
-    // b1 regular
-    font-size: 12px;
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
+    @extend %body1;
   }
 
   &__icon-closed {

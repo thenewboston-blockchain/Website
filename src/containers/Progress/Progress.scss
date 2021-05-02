@@ -1,3 +1,5 @@
+@import 'styles/font-mixins';
+
 .Progress {
   align-items: center;
   display: flex;
@@ -20,11 +22,10 @@
   &__error-container {
     align-items: center;
     display: flex;
-    // h1 bold
-    font-size: 24px;
-    font-weight: 700;
+    font-weight: var(--font-weight-nold);
     height: 80vh;
     justify-content: center;
     width: 100%;
+    @extend %h1;
   }
 }

@@ -19,9 +19,8 @@ const communityPopoverItems: TopNavPopoverItemType[] = [
     to: '/social',
   },
   {
-    // TODO: change iconType to chartTimelineVariantShimmer when ui lib PR merged
     description: 'Stay up to date with our weekly sprints',
-    iconType: IconType.humanHandsup,
+    iconType: IconType.chartTimelineVariantShimmer,
     title: 'Weekly Progress',
     to: '/progress',
   },
