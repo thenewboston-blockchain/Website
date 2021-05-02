@@ -6,7 +6,6 @@ import {Avatar} from 'components';
 import Button from 'components/Button';
 import {useWindowDimensions} from 'hooks';
 import {User} from 'types/app/User';
-import {getMultiLineDivFromString} from 'utils/strings';
 import {Icon, IconType} from '@thenewboston/ui';
 
 import './ProjectCard.scss';
@@ -45,7 +44,7 @@ const ProjectCard: FC<Props> = ({description, id, logoUrl, projectLead, title}) 
           </div>
         </div>
       </div>
-      <div className="ProjectCard__description">{getMultiLineDivFromString(description)}</div>
+      <div className="ProjectCard__description">{description}</div>
       <Button
         className="ProjectCard__details-button"
         onClick={() => window.open(`/projects/${id}`, '_blank', 'noreferrer noopener')}
