@@ -1,6 +1,7 @@
 import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
 import clsx from 'clsx';
-import {format, parseISO} from 'date-fns';
+import format from 'date-fns/format';
+import parseISO from 'date-fns/parseISO';
 
 import {getPlaylist} from 'apis/tutorials';
 import {EmptyPage, Loader, VideoPlayer} from 'components';
@@ -21,7 +22,7 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
   const [errorMessage, setErrorMessage] = useState<string>('');
 
   useEffect(() => {
-    (async (): Promise<void> => {
+    const fetchData = async (): Promise<void> => {
       try {
         setLoading(true);
         const playlistResponse = await getPlaylist(playlistId);
@@ -37,7 +38,9 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
       } finally {
         setLoading(false);
       }
-    })();
+    };
+
+    fetchData();
   }, [playlistId]);
 
   const handleVideoEnd = useCallback((): void => {
