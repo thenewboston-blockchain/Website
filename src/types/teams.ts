@@ -6,7 +6,6 @@ export enum TeamName {
   community = 'Community',
   design = 'Design',
   devOps = 'DevOps',
-  education = 'Education',
   frontEnd = 'Front-End',
   marketing = 'Marketing',
 }

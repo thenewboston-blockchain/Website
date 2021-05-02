@@ -37,12 +37,6 @@ export const teamMilestoneDetails: Record<Exclude<TeamName, 'All'>, TeamMileston
     responsibility: 'Architect, maintain, and monitor our various computer systems.',
     teamName: TeamName.devOps,
   },
-  // TODO: Confirm the repository name for Education Team
-  Education: {
-    repositoryNames: ['Management'],
-    responsibility: 'Educational content for the community focused around video tutorials.',
-    teamName: TeamName.education,
-  },
   'Front-End': {
     repositoryNames: ['Account-Manager', 'Website'],
     responsibility: 'Implement visual elements that users see and interact with on web.',

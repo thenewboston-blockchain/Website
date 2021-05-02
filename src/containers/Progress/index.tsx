@@ -27,7 +27,6 @@ const Progress: FC = () => {
   const [communityMilestone, setCommunityMilestone] = useState<MilestoneState | undefined>(undefined);
   const [designMilestone, setDesignMilestone] = useState<MilestoneState | undefined>(undefined);
   const [devOpsMilestone, setDevOpsMilestone] = useState<MilestoneState | undefined>(undefined);
-  const [educationMilestone, setEducationMilestone] = useState<MilestoneState | undefined>(undefined);
   const [frontEndMilestone, setFrontEndMilestone] = useState<MilestoneState | undefined>(undefined);
   const [marketingMilestone, setMarketingMilestone] = useState<MilestoneState | undefined>(undefined);
 
@@ -71,7 +70,6 @@ const Progress: FC = () => {
       getMilestone(TeamName.community, (milestone) => setCommunityMilestone(milestone)),
       getMilestone(TeamName.design, (milestone) => setDesignMilestone(milestone)),
       getMilestone(TeamName.devOps, (milestone) => setDevOpsMilestone(milestone)),
-      getMilestone(TeamName.education, (milestone) => setEducationMilestone(milestone)),
       getMilestone(TeamName.frontEnd, (milestone) => setFrontEndMilestone(milestone)),
       getMilestone(TeamName.marketing, (milestone) => setMarketingMilestone(milestone)),
     ]);
@@ -163,14 +161,6 @@ const Progress: FC = () => {
           responsibility={teamMilestoneDetails[TeamName.devOps].responsibility}
           issues={devOpsMilestone.issues}
           repoNames={teamMilestoneDetails[TeamName.devOps].repositoryNames}
-        />
-      )}
-      {educationMilestone && (
-        <ProgressDropdownCard
-          name={teamMilestoneDetails[TeamName.education].teamName}
-          responsibility={teamMilestoneDetails[TeamName.education].responsibility}
-          issues={educationMilestone.issues}
-          repoNames={teamMilestoneDetails[TeamName.education].repositoryNames}
         />
       )}
       {frontEndMilestone && (
