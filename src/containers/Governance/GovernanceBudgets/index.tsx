@@ -16,7 +16,7 @@ const GovernanceBudgets: FC = () => {
         similar to a multisig transaction.
       </p>
 
-      <DocImage alt="budgets" maxWidth={760} src={Budgets} />
+      <DocImage alt="budgets" maxWidth={720} src={Budgets} />
     </DocContainer>
   );
 };

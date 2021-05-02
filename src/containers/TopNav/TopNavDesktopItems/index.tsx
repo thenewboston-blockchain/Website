@@ -53,6 +53,12 @@ const getStartedPopoverItems: TopNavPopoverItemType[] = [
     to: '/guide/introduction',
   },
   {
+    description: 'Watch tutorials made by the community',
+    iconType: IconType.playBoxMultiple,
+    title: 'Tutorials',
+    to: '/tutorials',
+  },
+  {
     description: 'Pick up tasks within GitHub and earn coins',
     iconSize: 28,
     iconType: IconType.github,

@@ -92,7 +92,7 @@ const BankApiConfirmationBlocks: FC = () => {
         "balance_key": "e6a41b658e17ab2db4355176c8160de6a66b07e5cbdd85244b55b38b4fd26e92",
         "txs": [
           {
-            "amount": 4.125,
+            "amount": 4,
             "recipient": "484b3176c63d5f37d808404af1a12c4b9649cd6f6769f35bdf5a816133623fbc"
           },
           {
@@ -111,20 +111,20 @@ const BankApiConfirmationBlocks: FC = () => {
     "updated_balances": [
       {
         "account_number": "0cdd4ba04456ca169baca3d66eace869520c62fe84421329086e03d91a68acdb",
-        "balance": "4294967014.5000000000000000",
+        "balance": 4294967014,
         "balance_lock": "729ce6ce619aeedf260221c7687c51d8a6845fbb5407b11c8cd26eaa7c8a6125"
       },
       {
         "account_number": "484b3176c63d5f37d808404af1a12c4b9649cd6f6769f35bdf5a816133623fbc",
-        "balance": "191.5000000000000000"
+        "balance": 191
       },
       {
         "account_number": "5e12967707909e62b2bb2036c209085a784fabbc3deccefee70052b6181c8ed8",
-        "balance": "18.0000000000000000"
+        "balance": 18
       },
       {
         "account_number": "ad1f8845c6a1abb6011a2a434a079a087c460657aad54329a84b406dce8bf314",
-        "balance": "72.0000000000000000"
+        "balance": 72
       }
     ]
   },

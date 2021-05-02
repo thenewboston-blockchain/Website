@@ -78,7 +78,7 @@ const BankApiInvalidBlocks: FC = () => {
         "balance_key": "ce51f0d9facaa7d3e69657429dd3f961ce70077a8efb53dcda508c7c0a19d2e3",
         "txs": [
           {
-            "amount": 12.5,
+            "amount": 12,
             "recipient": "484b3176c63d5f37d808404af1a12c4b9649cd6f6769f35bdf5a816133623fbc"
           },
           {

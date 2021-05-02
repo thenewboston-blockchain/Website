@@ -2,7 +2,7 @@
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(85, 108, 214, 0.18);
   display: flex;
-  font-size: var(--font-size-regular);
+  font-size: var(--font-size-h3);
   line-height: 1.25;
   margin: 0 0 12px;
   min-width: 0;
@@ -26,8 +26,8 @@
     }
 
     &-name {
-      font-size: var(--font-size-medium);
-      font-weight: 500;
+      font-size: var(--font-size-h2);
+      font-weight: var(--font-weight-medium);
       line-height: 25px;
       overflow: hidden;
       text-overflow: ellipsis;
