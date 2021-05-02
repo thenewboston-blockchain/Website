@@ -23,13 +23,15 @@ const ProjectCard: FC<Props> = ({description, id, logoUrl, projectLead, title}) 
   const {width} = useWindowDimensions();
 
   useEffect(() => {
-    (async function () {
+    const fetchData = async () => {
       // We require to call two extra APIs just to get the project lead's name, perhaps we
       // should adopt a BFF design
       const projectMemberResponse = await projectApi.getProjectMemberById(projectLead);
       const userResponse = await getUser({uuid: projectMemberResponse.user});
       setProjectLeadUser(userResponse);
-    })();
+    };
+
+    fetchData();
   }, [projectLead]);
 
   return (

@@ -25,6 +25,7 @@
 
   &__content-main {
     @extend %h3;
+    white-space: pre-line;
   }
 
   &__content-overview {

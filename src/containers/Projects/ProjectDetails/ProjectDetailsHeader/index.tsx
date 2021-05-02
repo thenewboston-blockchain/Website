@@ -17,15 +17,19 @@ type Props = {
 
 const ProjectDetailsHeader: FC<Props> = ({github, logoUrl, projectLead, title}) => {
   const [projectLeadUser, setProjectLeadUser] = useState<User | null>(null);
+
   useEffect(() => {
-    (async function () {
+    const fetchData = async () => {
       // We require to call two extra APIs just to get the project lead's name, perhaps we
       // should adopt a BFF design
       const projectMemberResponse = await projectApi.getProjectMemberById(projectLead);
       const userResponse = await getUser({uuid: projectMemberResponse.user});
       setProjectLeadUser(userResponse);
-    })();
+    };
+
+    fetchData();
   }, [projectLead]);
+
   return (
     <div className="ProjectDetailsHeader">
       <Avatar className="ProjectDetailsHeader__avatar" src={logoUrl} size={40} />
