@@ -3,17 +3,18 @@ import React, {FC, useEffect, useState, useRef} from 'react';
 import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
 import {BaseIssue} from 'types/github';
+import {getRepositoryUrl} from 'utils/github';
 import ProgressIssueCard from '../ProgressIssueCard';
 import './ProgressDropdownCard.scss';
 
 type Props = {
   name: string;
   responsibility: string;
-  repoPaths: string[];
+  repoNames: string[];
   issues: BaseIssue[];
 };
 
-const ProgressDropdownCard: FC<Props> = ({name, responsibility, repoPaths, issues}) => {
+const ProgressDropdownCard: FC<Props> = ({name, responsibility, repoNames, issues}) => {
   const [expanded, setExpanded] = useState<boolean>(false);
   const progressBarRef = useRef<HTMLDivElement>(null);
   const [filledProgressBarWidth, setFilledProgressBarWidth] = useState<number>(0);
@@ -58,17 +59,17 @@ const ProgressDropdownCard: FC<Props> = ({name, responsibility, repoPaths, issue
         </div>
         <div className="ProgressDropdownCard__right-container">
           <div className="ProgressDropdownCard__github-container">
-            {repoPaths.map((repoPath) => {
+            {repoNames.map((repoName) => {
               return (
                 <div
                   className="ProgressDropdownCard__github-repo"
-                  key={repoPath}
+                  key={repoName}
                   role="button"
                   tabIndex={0}
-                  onClick={() => window.open(repoPath, '_blank', 'noopener noreferrer')}
+                  onClick={() => window.open(getRepositoryUrl(repoName), '_blank', 'noopener noreferrer')}
                 >
                   <Icon icon={IconType.github} size={12} />
-                  {repoPath.substring(repoPath.lastIndexOf('/') + 1)}
+                  {repoName}
                 </div>
               );
             })}

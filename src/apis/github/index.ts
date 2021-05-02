@@ -13,11 +13,13 @@ export async function getAccountManagerReleases(params: FetchGithubReleasesParam
 }
 
 export async function getMilestones(repoPathName: string) {
-  return axios.get<Milestone[]>(`https://api.github.com/repos/thenewboston-developers/${repoPathName}/milestones`);
+  return axios.get<Milestone[]>(
+    `https://api.github.com/repos/thenewboston-developers/${repoPathName}/milestones?state=open`,
+  );
 }
 
 export async function getIssuesForMilestone(repoPathName: string, milestoneNumber: number) {
   return axios.get<BaseIssue[]>(
-    `https://api.github.com/repos/thenewboston-developers/${repoPathName}/issues?milestone=${milestoneNumber}`,
+    `https://api.github.com/repos/thenewboston-developers/${repoPathName}/issues?milestone=${milestoneNumber}&state=all`,
   );
 }

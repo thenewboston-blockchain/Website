@@ -1,47 +1,86 @@
 import React, {FC, useState, useEffect} from 'react';
 
 import * as githubApi from 'apis/github';
-import {BaseIssue, Milestone} from 'types/github';
-import {getRepositoryUrlFromMilestoneUrl} from 'utils/github';
 import {Loader} from 'components';
+import {BaseIssue, Milestone} from 'types/github';
+import {TeamName} from 'types/teams';
+import {teamMilestoneDetails} from './constants';
 import ProgressHeader from './ProgressHeader';
 import ProgressDropdownCard from './ProgressDropdownCard';
 import './Progress.scss';
 
-type MilestoneState = Array<{
+type MilestoneState = {
   milestone: Milestone;
   issues: BaseIssue[];
-}>;
+};
 
 const Progress: FC = () => {
   const startDate = '4/13';
   const endDate = '4/20';
-  const [milestoneState, setMilestoneState] = useState<MilestoneState>([]);
+
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  // milestone states
+  const [auditMilestone, setAuditMilestone] = useState<MilestoneState | undefined>(undefined);
+  const [backEndMilestone, setBackEndMilestone] = useState<MilestoneState | undefined>(undefined);
+  const [blockchainMilestone, setBlockchainMilestone] = useState<MilestoneState | undefined>(undefined);
+  const [communityMilestone, setCommunityMilestone] = useState<MilestoneState | undefined>(undefined);
+  const [designMilestone, setDesignMilestone] = useState<MilestoneState | undefined>(undefined);
+  const [devOpsMilestone, setDevOpsMilestone] = useState<MilestoneState | undefined>(undefined);
+  const [educationMilestone, setEducationMilestone] = useState<MilestoneState | undefined>(undefined);
+  const [frontEndMilestone, setFrontEndMilestone] = useState<MilestoneState | undefined>(undefined);
+  const [marketingMilestone, setMarketingMilestone] = useState<MilestoneState | undefined>(undefined);
+
+  async function getMilestone(teamName: Exclude<TeamName, 'All'>, setter: (state: MilestoneState) => void) {
+    try {
+      // get milestones for a team's repositories
+      let teamMilestone: MilestoneState | undefined;
+      const teamMilestoneDetail = teamMilestoneDetails[teamName];
+      const teamMilestonePromises = teamMilestoneDetail.repositoryNames.map(async (repoName) => {
+        const milestoneResponse = await githubApi.getMilestones(repoName);
+        const milestone = milestoneResponse.data;
+
+        if (milestone.length > 0) {
+          // there should only be one milestone per repository at a time, get the latest one if there's multiple
+          const lastMilestone = milestone[milestone.length - 1];
+          const issuesResponse = await githubApi.getIssuesForMilestone(repoName, lastMilestone.number);
+
+          if (teamMilestone) {
+            teamMilestone = {issues: {...issuesResponse.data, ...teamMilestone.issues}, milestone: lastMilestone};
+          } else {
+            teamMilestone = {issues: issuesResponse.data, milestone: lastMilestone};
+          }
+        }
+      });
+      await Promise.all(teamMilestonePromises);
+
+      if (teamMilestone) {
+        setter(teamMilestone);
+      }
+    } catch (err) {
+      // TBD on how to handle errors since there are so many different milestones
+    }
+  }
+
+  async function setAllMilestones() {
+    setIsLoading(true);
+    await Promise.all([
+      getMilestone(TeamName.audit, (milestone) => setAuditMilestone(milestone)),
+      getMilestone(TeamName.backEnd, (milestone) => setBackEndMilestone(milestone)),
+      getMilestone(TeamName.blockchain, (milestone) => setBlockchainMilestone(milestone)),
+      getMilestone(TeamName.community, (milestone) => setCommunityMilestone(milestone)),
+      getMilestone(TeamName.design, (milestone) => setDesignMilestone(milestone)),
+      getMilestone(TeamName.devOps, (milestone) => setDevOpsMilestone(milestone)),
+      getMilestone(TeamName.education, (milestone) => setEducationMilestone(milestone)),
+      getMilestone(TeamName.frontEnd, (milestone) => setFrontEndMilestone(milestone)),
+      getMilestone(TeamName.marketing, (milestone) => setMarketingMilestone(milestone)),
+    ]);
+    setIsLoading(false);
+  }
 
   useEffect(() => {
-    // TODO: confirm if the milestones will only be in the Management repo, or in the
-    // repository of each team.
-    async function getMilestones() {
-      try {
-        const milestoneResponse = await githubApi.getMilestones('Management');
-        const milestonePromises = milestoneResponse.data.map(async (milestone) => {
-          const issuesResponse = await githubApi.getIssuesForMilestone('Management', milestone.number);
-          return {
-            issues: issuesResponse.data,
-            milestone,
-          };
-        });
-        const milestoneResult = await Promise.all(milestonePromises);
-        setMilestoneState(milestoneResult);
-      } catch (err) {
-        setErrorMessage(err.message);
-      } finally {
-        setIsLoading(false);
-      }
-    }
-    getMilestones();
+    setAllMilestones();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (isLoading) {
@@ -52,44 +91,96 @@ const Progress: FC = () => {
     );
   }
 
-  if (errorMessage) {
-    return <div className="Progress__error-container">{errorMessage}</div>;
+  // community's milestone's description will be the goal of overall sprint, if fetching of
+  // community milestone failed, display error message
+  if (!communityMilestone) {
+    return (
+      <div className="Progress__error-container">
+        Error while fetching milestones from GitHub. Please try again later.
+      </div>
+    );
   }
-
-  const milestoneUrl = milestoneState[0].milestone.html_url;
 
   return (
     <div className="Progress">
       <ProgressHeader
-        goal={milestoneState[0].milestone.description}
+        goal={communityMilestone.milestone.description}
         startDate={startDate}
         endDate={endDate}
-        weekNumber={milestoneState[0].milestone.number}
+        weekNumber={communityMilestone.milestone.number}
       />
-      <ProgressDropdownCard
-        name="Audit"
-        responsibility="Ensures the accuracy and integrity of all government and team payments."
-        issues={milestoneState[0].issues}
-        repoPaths={[getRepositoryUrlFromMilestoneUrl(milestoneUrl)]}
-      />
-      <ProgressDropdownCard
-        name="Back-end"
-        responsibility="Architect, build, and maintain the backend architecture of TNB."
-        issues={milestoneState[0].issues}
-        repoPaths={[getRepositoryUrlFromMilestoneUrl(milestoneUrl)]}
-      />
-      <ProgressDropdownCard
-        name="Blockchain"
-        responsibility="Build and maintain the blockchain for TNB digital currency network."
-        issues={milestoneState[0].issues}
-        repoPaths={[getRepositoryUrlFromMilestoneUrl(milestoneUrl)]}
-      />
-      <ProgressDropdownCard
-        name="Community"
-        responsibility="Create the strategy, standards and  oversee the overall TNB product."
-        issues={milestoneState[0].issues}
-        repoPaths={[getRepositoryUrlFromMilestoneUrl(milestoneUrl)]}
-      />
+      {auditMilestone && (
+        <ProgressDropdownCard
+          name={teamMilestoneDetails[TeamName.audit].teamName}
+          responsibility={teamMilestoneDetails[TeamName.audit].responsibility}
+          issues={auditMilestone.issues}
+          repoNames={teamMilestoneDetails[TeamName.audit].repositoryNames}
+        />
+      )}
+      {backEndMilestone && (
+        <ProgressDropdownCard
+          name={teamMilestoneDetails[TeamName.backEnd].teamName}
+          responsibility={teamMilestoneDetails[TeamName.backEnd].responsibility}
+          issues={backEndMilestone.issues}
+          repoNames={teamMilestoneDetails[TeamName.backEnd].repositoryNames}
+        />
+      )}
+      {blockchainMilestone && (
+        <ProgressDropdownCard
+          name={teamMilestoneDetails[TeamName.blockchain].teamName}
+          responsibility={teamMilestoneDetails[TeamName.blockchain].responsibility}
+          issues={blockchainMilestone.issues}
+          repoNames={teamMilestoneDetails[TeamName.blockchain].repositoryNames}
+        />
+      )}
+      {communityMilestone && (
+        <ProgressDropdownCard
+          name={teamMilestoneDetails[TeamName.community].teamName}
+          responsibility={teamMilestoneDetails[TeamName.community].responsibility}
+          issues={communityMilestone.issues}
+          repoNames={teamMilestoneDetails[TeamName.community].repositoryNames}
+        />
+      )}
+      {designMilestone && (
+        <ProgressDropdownCard
+          name={teamMilestoneDetails[TeamName.design].teamName}
+          responsibility={teamMilestoneDetails[TeamName.design].responsibility}
+          issues={designMilestone.issues}
+          repoNames={teamMilestoneDetails[TeamName.design].repositoryNames}
+        />
+      )}
+      {devOpsMilestone && (
+        <ProgressDropdownCard
+          name={teamMilestoneDetails[TeamName.devOps].teamName}
+          responsibility={teamMilestoneDetails[TeamName.devOps].responsibility}
+          issues={devOpsMilestone.issues}
+          repoNames={teamMilestoneDetails[TeamName.devOps].repositoryNames}
+        />
+      )}
+      {educationMilestone && (
+        <ProgressDropdownCard
+          name={teamMilestoneDetails[TeamName.education].teamName}
+          responsibility={teamMilestoneDetails[TeamName.education].responsibility}
+          issues={educationMilestone.issues}
+          repoNames={teamMilestoneDetails[TeamName.education].repositoryNames}
+        />
+      )}
+      {frontEndMilestone && (
+        <ProgressDropdownCard
+          name={teamMilestoneDetails[TeamName.frontEnd].teamName}
+          responsibility={teamMilestoneDetails[TeamName.frontEnd].responsibility}
+          issues={frontEndMilestone.issues}
+          repoNames={teamMilestoneDetails[TeamName.frontEnd].repositoryNames}
+        />
+      )}
+      {marketingMilestone && (
+        <ProgressDropdownCard
+          name={teamMilestoneDetails[TeamName.marketing].teamName}
+          responsibility={teamMilestoneDetails[TeamName.marketing].responsibility}
+          issues={marketingMilestone.issues}
+          repoNames={teamMilestoneDetails[TeamName.marketing].repositoryNames}
+        />
+      )}
     </div>
   );
 };
