@@ -21,10 +21,9 @@ const Tutorials: FC = () => {
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
 
   useEffect(() => {
-    (async (): Promise<void> => {
+    const fetchData = async (): Promise<void> => {
       try {
-        const {data} = await getCategories();
-        const {results: fetchedCategories} = data;
+        const fetchedCategories = await getCategories();
         const updatedCategories = fetchedCategories.map((category: Category) => ({
           pathname: category.name,
           title: category.name,
@@ -36,7 +35,9 @@ const Tutorials: FC = () => {
       } finally {
         setLoading(false);
       }
-    })();
+    };
+
+    fetchData();
   }, []);
 
   useEffect(() => {

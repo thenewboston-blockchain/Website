@@ -17,20 +17,21 @@ const Playlists: FC<PlaylistsParams> = ({category}) => {
   const [errorMessage, setErrorMessage] = useState<string>('');
 
   useEffect(() => {
-    (async (): Promise<void> => {
-      try {
-        if (category) {
+    if (category) {
+      const fetchData = async (): Promise<void> => {
+        try {
           setLoading(true);
-          const {data} = await getPlaylists(category);
-          const {results: fetchedPlaylists} = data;
+          const fetchedPlaylists = await getPlaylists(category);
           setPlaylists(fetchedPlaylists);
+        } catch (error) {
+          setErrorMessage(error.message);
+        } finally {
+          setLoading(false);
         }
-      } catch (error) {
-        setErrorMessage(error.message);
-      } finally {
-        setLoading(false);
-      }
-    })();
+      };
+
+      fetchData();
+    }
   }, [category]);
 
   const renderPlaylistGrid = useCallback((): ReactNode => {

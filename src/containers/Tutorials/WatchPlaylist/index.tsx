@@ -24,10 +24,10 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
     (async (): Promise<void> => {
       try {
         setLoading(true);
-        const {data: fetchedPlaylist} = await getPlaylist(playlistId);
-        setPlaylist(fetchedPlaylist);
-        if (fetchedPlaylist.video_list.length) {
-          setCurrentVideo(fetchedPlaylist.video_list[0]);
+        const playlistResponse = await getPlaylist(playlistId);
+        setPlaylist(playlistResponse);
+        if (playlistResponse.video_list.length) {
+          setCurrentVideo(playlistResponse.video_list[0]);
         }
       } catch (error) {
         if (error.response.status === 404) {

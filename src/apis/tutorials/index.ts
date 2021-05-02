@@ -1,24 +1,42 @@
-import axios, {AxiosResponse} from 'axios';
+import axios from 'axios';
 import {allTutorialsFilter} from 'constants/tutorials';
-import {Playlist} from 'types/tutorials';
+import {Category, Playlist} from 'types/tutorials';
 import {standardHeaders} from 'utils/requests';
 
 import {CategoriesResponse, PlaylistsResponse} from './types';
 
-export async function getCategories(): Promise<AxiosResponse<CategoriesResponse>> {
-  return axios.get<CategoriesResponse>(`${process.env.REACT_APP_BACKEND_API}/categories`, standardHeaders());
+export async function getCategories(): Promise<Category[]> {
+  const response = await axios.get<CategoriesResponse>(
+    `${process.env.REACT_APP_BACKEND_API}/categories`,
+    standardHeaders(),
+  );
+
+  return response.data.results;
 }
 
-export async function getPlaylists(category: string): Promise<AxiosResponse<PlaylistsResponse>> {
+export async function getPlaylists(category: string): Promise<Playlist[]> {
   if (category !== allTutorialsFilter.title) {
-    return axios.get<PlaylistsResponse>(
+    const response = await axios.get<PlaylistsResponse>(
       `${process.env.REACT_APP_BACKEND_API}/playlists?category=${category}`,
       standardHeaders(),
     );
+
+    return response.data.results;
   }
-  return axios.get<PlaylistsResponse>(`${process.env.REACT_APP_BACKEND_API}/playlists`, standardHeaders());
+
+  const response = await axios.get<PlaylistsResponse>(
+    `${process.env.REACT_APP_BACKEND_API}/playlists`,
+    standardHeaders(),
+  );
+
+  return response.data.results;
 }
 
-export async function getPlaylist(playlistId: string): Promise<AxiosResponse<Playlist>> {
-  return axios.get<Playlist>(`${process.env.REACT_APP_BACKEND_API}/playlists/${playlistId}`, standardHeaders());
+export async function getPlaylist(playlistId: string): Promise<Playlist> {
+  const response = await axios.get<Playlist>(
+    `${process.env.REACT_APP_BACKEND_API}/playlists/${playlistId}`,
+    standardHeaders(),
+  );
+
+  return response.data;
 }
