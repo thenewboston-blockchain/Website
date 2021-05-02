@@ -8,6 +8,7 @@ $card-width-480: 360px;
   display: grid;
   grid-template-columns: $card-width-original $card-width-original $card-width-original;
   justify-content: center;
+  justify-items: center;
   margin-bottom: 32px;
   row-gap: 32px;
 

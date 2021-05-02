@@ -58,10 +58,10 @@ const Projects: FC = () => {
   }
 
   return (
-    <>
+    <div className="Projects">
       <ProjectsHero />
       <ListOfProjects projects={projects} />
-    </>
+    </div>
   );
 };
 
