@@ -109,12 +109,9 @@ $padding-768: 24px;
     @extend %h4;
     color: var(--color-sail-gray-300);
     font-weight: var(--font-weight-medium);
-    margin-right: 5px;
   }
 
   &__project-lead-container {
-    display: flex;
-
     @media (max-width: 768px) {
       align-self: center;
     }

@@ -39,8 +39,8 @@ const ProjectCard: FC<Props> = ({description, id, logoUrl, projectLead, title}) 
         <div className="ProjectCard__title-container">
           <h1 className="ProjectCard__project-title">{title}</h1>
           <div className="ProjectCard__project-lead-container">
-            <h4 className="ProjectCard__project-lead">Project Lead: </h4>
-            <h4 className="ProjectCard__project-lead-name">{projectLeadUser?.display_name}</h4>
+            <span className="ProjectCard__project-lead">Project Lead: </span>
+            <span className="ProjectCard__project-lead-name">{projectLeadUser?.display_name}</span>
           </div>
         </div>
       </div>
