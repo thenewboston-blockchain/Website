@@ -58,6 +58,10 @@
     display: flex;
     margin-bottom: 16px;
     outline: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__right-container {
@@ -107,6 +111,10 @@
     @media (max-width: 700px) {
       width: 100%;
     }
+  }
+
+  &__toggle-icon {
+    outline: none;
   }
 
   &__progress-bar {

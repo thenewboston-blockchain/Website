@@ -74,7 +74,11 @@ const ProgressDropdownCard: FC<Props> = ({name, responsibility, repoNames, issue
               );
             })}
           </div>
-          <Icon icon={IconType.chevronDown} onClick={toggleExpanded} />
+          <Icon
+            className="ProgressDropdownCard__toggle-icon"
+            icon={expanded ? IconType.chevronUp : IconType.chevronDown}
+            onClick={toggleExpanded}
+          />
         </div>
       </div>
       {expanded &&
