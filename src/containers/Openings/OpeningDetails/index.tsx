@@ -3,7 +3,6 @@ import {useHistory, useLocation} from 'react-router-dom';
 import {Icon, IconType} from '@thenewboston/ui';
 
 import {A, Button} from 'components';
-import {OPENINGS_GOOGLE_FORM_LINK} from 'constants/urls';
 import {Opening} from 'types/openings';
 
 import './OpeningDetails.scss';
@@ -61,7 +60,7 @@ const OpeningDetails: FC<ComponentProps> = ({opening}) => {
           <Icon className="OpeningDetails__back-icon" icon={IconType.arrowLeft} />
           <span className="OpeningDetails__back-text">Back</span>
         </div>
-        <Button onClick={() => window.open(OPENINGS_GOOGLE_FORM_LINK)}>Apply</Button>
+        <Button onClick={() => window.open(opening.applicationUrl, '_blank', 'noreferrer noopener')}>Apply</Button>
       </div>
       {renderContent()}
     </div>
