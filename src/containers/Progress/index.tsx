@@ -2,6 +2,7 @@ import React, {FC, useState, useEffect} from 'react';
 
 import * as githubApi from 'apis/github';
 import {Loader} from 'components';
+import {format} from 'fecha';
 import {BaseIssue, Milestone} from 'types/github';
 import {TeamName} from 'types/teams';
 import {teamMilestoneDetails} from './constants';
@@ -15,10 +16,9 @@ type MilestoneState = {
 };
 
 const Progress: FC = () => {
-  const startDate = '4/13';
-  const endDate = '4/20';
-
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [startDate, setStartDate] = useState<string>('');
+  const [endDate, setEndDate] = useState<string>('');
 
   // milestone states
   const [auditMilestone, setAuditMilestone] = useState<MilestoneState | undefined>(undefined);
@@ -82,6 +82,14 @@ const Progress: FC = () => {
     setAllMilestones();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    // start date and end date will be from created date to due date
+    if (communityMilestone) {
+      setStartDate(format(new Date(communityMilestone.milestone.created_at), 'MM/DD'));
+      setEndDate(format(new Date(communityMilestone.milestone.due_on), 'MM/DD'));
+    }
+  }, [communityMilestone]);
 
   if (isLoading) {
     return (
