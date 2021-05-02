@@ -1,6 +1,7 @@
 import React, {FC, useEffect} from 'react';
+import format from 'date-fns/format';
+import parseISO from 'date-fns/parseISO';
 
-import {format} from 'fecha';
 import {useWindowDimensions} from 'hooks';
 import {Milestone, Project, ProjectTopic, ProjectTopicTitle} from 'types/projects';
 import ProjectDetailsTopic from '../ProjectDetailsTopic';
@@ -82,7 +83,7 @@ const ProjectDetailsContent: FC<Props> = ({milestones, project, currentTopic}) =
       />
       <ProjectDetailsTopic
         id={projectDetailsTopic.estimated_completion_date.anchor}
-        content={format(new Date(project.estimated_completion_date), 'D MMMM YYYY - ddd')}
+        content={format(parseISO(project.estimated_completion_date), 'dd LLLL u - eeee ')}
         iconType={projectDetailsTopic.estimated_completion_date.iconType}
         overview={projectDetailsTopic.estimated_completion_date.overview}
         title={projectDetailsTopic.estimated_completion_date.title}
