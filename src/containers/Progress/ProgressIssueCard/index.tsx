@@ -41,7 +41,7 @@ const ProgressIssueCard: FC<Props> = ({className, issue}) => {
           </div>
         </div>
       </div>
-      {width >= 414 && (
+      {width >= 768 && (
         <div className="ProgressIssueCard__assignees">
           {issue.assignees.map((assignee, i) => {
             return (

@@ -23,14 +23,18 @@
   }
 
   &__issues-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 32px;
+    display: none;
 
     &--empty {
       @extend %h4;
       color: var(--color-sail-gray-400);
       font-weight: var(--font-weight-medium);
+      margin-top: 32px;
+    }
+
+    &--expanded {
+      display: flex;
+      flex-direction: column;
       margin-top: 32px;
     }
   }

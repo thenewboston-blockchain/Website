@@ -81,16 +81,19 @@ const ProgressDropdownCard: FC<Props> = ({name, responsibility, repoNames, issue
           />
         </div>
       </div>
-      {expanded &&
-        (issues.length > 0 ? (
-          <div className="ProgressDropdownCard__issues-container">
-            {issues.map((issue) => {
-              return <ProgressIssueCard className="ProgressDropdownCard__issue" issue={issue} key={issue.id} />;
-            })}
-          </div>
-        ) : (
-          <div className="ProgressDropdownCard__issues-container--empty">No issues available.</div>
-        ))}
+      {issues.length > 0 ? (
+        <div
+          className={clsx('ProgressDropdownCard__issues-container', {
+            'ProgressDropdownCard__issues-container--expanded': expanded,
+          })}
+        >
+          {issues.map((issue) => {
+            return <ProgressIssueCard className="ProgressDropdownCard__issue" issue={issue} key={issue.id} />;
+          })}
+        </div>
+      ) : (
+        <div className="ProgressDropdownCard__issues-container--empty">No issues available.</div>
+      )}
     </div>
   );
 };
