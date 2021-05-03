@@ -12,6 +12,9 @@ export interface Token {
   token: string;
 }
 
-export interface APIArrayResponse<T> {
+export interface PaginatedResponse<T> {
+  count: number;
+  next: number | null;
+  previous: number | null;
   results: T[];
 }
