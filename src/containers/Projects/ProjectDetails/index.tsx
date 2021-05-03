@@ -8,11 +8,10 @@ import {projectDetailsTopic} from './constants';
 import './ProjectDetails.scss';
 
 type Props = {
-  milestones: Milestone[];
   project: Project;
 };
 
-const ProjectDetails: FC<Props> = ({milestones, project}) => {
+const ProjectDetails: FC<Props> = ({project}) => {
   const [currentTopic, setCurrentTopic] = useState<ProjectTopic>(projectDetailsTopic.overview);
   const {title, logo, github_url: github, project_lead: projectLead} = project;
 
@@ -25,7 +24,7 @@ const ProjectDetails: FC<Props> = ({milestones, project}) => {
       <ProjectDetailsHeader github={github} logoUrl={logo} title={title} projectLead={projectLead} />
       <div className="ProjectDetails__main-container">
         <ProjectDetailsSideMenu currentTopic={currentTopic} onClick={handleSideMenuClick} />
-        <ProjectDetailsContent milestones={milestones} project={project} currentTopic={currentTopic} />
+        <ProjectDetailsContent project={project} currentTopic={currentTopic} />
       </div>
     </div>
   );

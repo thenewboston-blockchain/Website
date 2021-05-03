@@ -15,6 +15,7 @@ export type Project = {
   centered_around_tnb: string;
   estimated_completion_date: string;
   project_lead: string;
+  milestones: Milestone[];
 };
 
 export type Milestone = {

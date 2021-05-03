@@ -12,24 +12,6 @@ export async function getProjects(): Promise<Project[]> {
   return response.data.results;
 }
 
-export async function getMilestones(): Promise<Milestone[]> {
-  const response = await axios.get<PaginatedResponse<Milestone>>(`${process.env.REACT_APP_BACKEND_API}/milestones`);
-  if (!response.data) {
-    throw new Error('Error while fetching milestones, please try again.');
-  }
-  return response.data.results;
-}
-
-export async function getMilestonesByProject(id: string): Promise<Milestone[]> {
-  const response = await axios.get<PaginatedResponse<Milestone>>(
-    `${process.env.REACT_APP_BACKEND_API}/milestones?project=${id}`,
-  );
-  if (!response.data) {
-    throw new Error('Error while fetching milestones, please try again.');
-  }
-  return response.data.results;
-}
-
 export async function getProjectMemberById(id: string) {
   const response = await axios.get(`${process.env.REACT_APP_BACKEND_API}/project_members/${id}`);
   if (!response.data) {

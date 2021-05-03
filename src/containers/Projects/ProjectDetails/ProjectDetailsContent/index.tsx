@@ -9,7 +9,6 @@ import {projectDetailsTopic} from '../constants';
 import './ProjectDetailsContent.scss';
 
 type Props = {
-  milestones: Milestone[];
   project: Project;
   currentTopic: ProjectTopic;
 };
@@ -18,7 +17,7 @@ const TOP_NAV_HEIGHT = 60;
 const DETAILS_CONTAINER_HEIGHT = 158;
 const DETAILS_CONTAINER_HEIGHT_480 = 241;
 
-const ProjectDetailsContent: FC<Props> = ({milestones, project, currentTopic}) => {
+const ProjectDetailsContent: FC<Props> = ({project, currentTopic}) => {
   const {width} = useWindowDimensions();
   const detailsHeaderHeight = width >= 480 ? DETAILS_CONTAINER_HEIGHT : DETAILS_CONTAINER_HEIGHT_480;
   useEffect(() => {
@@ -35,7 +34,7 @@ const ProjectDetailsContent: FC<Props> = ({milestones, project, currentTopic}) =
   }, [currentTopic, detailsHeaderHeight]);
 
   const renderMilestones = () => {
-    return milestones.map((milestone) => {
+    return project.milestones.map((milestone) => {
       return (
         <div className="ProjectDetailsContent__milestone" key={milestone.number}>
           <h3 className="ProjectDetailsContent__milestone-number">Milestone {milestone.number}</h3>

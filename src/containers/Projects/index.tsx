@@ -2,7 +2,7 @@ import React, {FC, useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 
 import {api as projectsApi} from 'apis/projects';
-import {Project, Milestone} from 'types/projects';
+import {Project} from 'types/projects';
 import {Loader} from 'components';
 import ListOfProjects from './ListOfProjects';
 import ProjectsHero from './ProjectsHero';
@@ -13,7 +13,6 @@ import './Projects.scss';
 const Projects: FC = () => {
   const {projectId} = useParams<{projectId: string}>();
   const [projects, setProjects] = useState<Project[]>([]);
-  const [milestones, setMilestones] = useState<Milestone[]>([]);
   const isValidProjectId = projects.length && projects.some((project) => project.uuid === projectId);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -31,19 +30,6 @@ const Projects: FC = () => {
     })();
   }, []);
 
-  useEffect(() => {
-    (async function getMilestones() {
-      try {
-        if (isValidProjectId) {
-          const milestonesResponse = await projectsApi.getMilestonesByProject(projectId);
-          setMilestones(milestonesResponse);
-        }
-      } catch (err) {
-        // handle error
-      }
-    })();
-  }, [isValidProjectId, projectId]);
-
   if (isLoading) {
     return (
       <div className="Projects__loading-container">
@@ -54,7 +40,7 @@ const Projects: FC = () => {
 
   if (isValidProjectId) {
     const selectedProject = projects.find((project) => project.uuid === projectId) as Project;
-    return <ProjectDetails milestones={milestones} project={selectedProject} />;
+    return <ProjectDetails project={selectedProject} />;
   }
 
   return (
