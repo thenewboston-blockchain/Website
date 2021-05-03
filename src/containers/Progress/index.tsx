@@ -2,7 +2,7 @@ import React, {FC, useState, useEffect} from 'react';
 
 import * as githubApi from 'apis/github';
 import {Loader} from 'components';
-import {format} from 'fecha';
+import {format} from 'date-fns';
 import {BaseIssue, Milestone} from 'types/github';
 import {TeamName} from 'types/teams';
 import {teamMilestoneDetails} from './constants';
@@ -112,10 +112,10 @@ const Progress: FC = () => {
 
   useEffect(() => {
     if (generalMilestone) {
-      setStartDate(format(new Date(generalMilestone.milestone.created_at), 'MM/DD'));
+      setStartDate(format(new Date(generalMilestone.milestone.created_at), 'MM/dd'));
 
       if (generalMilestone.milestone.due_on) {
-        setEndDate(format(new Date(generalMilestone.milestone.due_on), 'MM/DD'));
+        setEndDate(format(new Date(generalMilestone.milestone.due_on), 'MM/dd'));
       } else {
         setEndDate('N.A.');
       }
