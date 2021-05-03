@@ -1,8 +1,7 @@
 import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
 
-import {Button, BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
-import {OPENINGS_GOOGLE_FORM_LINK} from 'constants/urls';
+import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
 import {getOpenings} from 'utils/data';
 import {NavOption} from 'types/option';
 import {OpeningCategory, OpeningsUrlParams} from 'types/openings';
@@ -98,7 +97,6 @@ const Openings: FC = () => {
           <div className="Openings__opening-list">
             <div className="Openings__opening-list-heading-container">
               <h1 className="Openings__opening-list-heading">Openings</h1>
-              <Button onClick={() => window.open(OPENINGS_GOOGLE_FORM_LINK)}>Apply</Button>
             </div>
             {renderOpenings()}
           </div>
