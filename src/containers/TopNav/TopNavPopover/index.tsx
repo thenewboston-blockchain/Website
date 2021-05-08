@@ -29,6 +29,7 @@ interface ComponentProps {
   setAnchorEl(newEl: HTMLButtonElement | null): void;
 }
 
+// TODO: hover instead of clicking to expand popover
 const TopNavPopover: FC<ComponentProps> = ({
   anchorEl,
   buttonText,

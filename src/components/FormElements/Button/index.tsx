@@ -10,6 +10,7 @@ export interface BaseButtonProps {
   disabled?: boolean;
   focused?: boolean;
   onClick?(e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void;
+  rounded?: boolean;
   type?: 'button' | 'reset' | 'submit';
   variant?: 'contained' | 'link' | 'outlined';
 }
@@ -21,6 +22,7 @@ const Button: FC<BaseButtonProps> = ({
   disabled = false,
   focused = false,
   onClick,
+  rounded = false,
   type = 'button',
   variant = 'contained',
 }) => {
@@ -36,6 +38,7 @@ const Button: FC<BaseButtonProps> = ({
     <button
       className={clsx('Button', `Button--${variant}`, `Button--${color}`, className, {
         'Button--disabled': disabled,
+        'Button--rounded': rounded,
         ...bemify(className, `--${variant}`),
         ...bemify(className, `--${color}`),
         ...bemify(className, '--disabled', disabled),

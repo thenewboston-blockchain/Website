@@ -31,10 +31,56 @@ const communityPopoverItems: TopNavPopoverItemType[] = [
     to: '/openings',
   },
   {
+    description: 'Watch tutorials made by the community',
+    iconType: IconType.playBoxMultiple,
+    title: 'Tutorials',
+    to: '/tutorials',
+  },
+];
+
+const getStartedPopoverItems: TopNavPopoverItemType[] = [
+  {
+    description: 'Pick up tasks within GitHub and earn coins',
+    iconSize: 28,
+    iconType: IconType.github,
+    title: 'Tasks',
+    to: '/tasks',
+  },
+  {
+    description: 'Propose ideas you want built',
+    iconType: IconType.hammerWrench,
+    title: 'Projects',
+    to: '/projects/overview',
+  },
+];
+
+const resourcesPopoverItems: TopNavPopoverItemType[] = [
+  {
+    description: 'Start reading into Guides and APIs',
+    iconType: IconType.fileDocument,
+    title: 'Documentation',
+    to: '/guide/introduction',
+  },
+  {
+    description: 'Download thenewboston assets',
+    iconType: IconType.fileDownload,
+    title: 'Assets',
+    to: '/assets',
+  },
+];
+
+const aboutPopoverItems: TopNavPopoverItemType[] = [
+  {
     description: 'Meet our awesome teams',
     iconType: IconType.accountGroup,
     title: 'Teams',
     to: '/teams',
+  },
+  {
+    description: 'Support thenewboston',
+    iconType: IconType.currencyUsd,
+    title: 'Donate',
+    to: '/donate',
   },
   {
     description: 'Read up on our community culture',
@@ -44,61 +90,13 @@ const communityPopoverItems: TopNavPopoverItemType[] = [
   },
 ];
 
-const getStartedPopoverItems: TopNavPopoverItemType[] = [
-  {
-    description: 'Start reading into Guides and APIs',
-    iconType: IconType.fileDocument,
-    title: 'Documentation',
-    to: '/guide/introduction',
-  },
-  {
-    description: 'Watch tutorials made by the community',
-    iconType: IconType.playBoxMultiple,
-    title: 'Tutorials',
-    to: '/tutorials',
-  },
-  {
-    description: 'Pick up tasks within GitHub and earn coins',
-    iconSize: 28,
-    iconType: IconType.github,
-    title: 'Tasks',
-    to: '/tasks',
-  },
-];
-
-const morePopoverItems: TopNavPopoverItemType[] = [
-  {
-    description: 'Propose ideas you want built',
-    iconType: IconType.hammerWrench,
-    title: 'Projects',
-    to: '/projects/overview',
-  },
-  {
-    description: 'Download thenewboston assets',
-    iconType: IconType.fileDownload,
-    title: 'Assets',
-    to: '/assets',
-  },
-  {
-    description: 'Frequently asked questions',
-    iconType: IconType.forum,
-    title: 'FAQ',
-    to: '/faq',
-  },
-  {
-    description: 'Support thenewboston',
-    iconType: IconType.currencyUsd,
-    title: 'Donate',
-    to: '/donate',
-  },
-];
-
 const TopNavDesktopItems = () => {
   const activeUser = useSelector(selectActiveUser);
   const [activeUserAnchorEl, setActiveUserAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [communityAnchorEl, setCommunityAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [getStartedAnchorEl, setGetStartedAnchorEl] = useState<HTMLButtonElement | null>(null);
-  const [moreAnchorEl, setMoreAnchorEl] = useState<HTMLButtonElement | null>(null);
+  const [resourcesAnchorEl, setResourcesAnchorEl] = useState<HTMLButtonElement | null>(null);
+  const [aboutAnchorEl, setAboutAnchorEl] = useState<HTMLButtonElement | null>(null);
 
   const activeUserPopoverItems = useMemo<TopNavPopoverItemType[]>(() => {
     if (activeUser) {
@@ -156,17 +154,28 @@ const TopNavDesktopItems = () => {
         setAnchorEl={setCommunityAnchorEl}
       />
       <TopNavPopover
-        anchorEl={moreAnchorEl}
-        buttonText="More"
+        anchorEl={resourcesAnchorEl}
+        buttonText="Resources"
         className="TopNavDesktopItems__right-item"
-        items={morePopoverItems}
-        popoverId="more-popover"
-        setAnchorEl={setMoreAnchorEl}
+        items={resourcesPopoverItems}
+        popoverId="resources-popover"
+        setAnchorEl={setResourcesAnchorEl}
       />
+      <TopNavPopover
+        anchorEl={aboutAnchorEl}
+        buttonText="About"
+        className="TopNavDesktopItems__right-item"
+        items={aboutPopoverItems}
+        popoverId="about-popover"
+        setAnchorEl={setAboutAnchorEl}
+      />
+      <Link className="TopNavDesktopItems__right-item TopNavDesktopItems__link" tabIndex={-1} to="/faq">
+        FAQ
+      </Link>
       <div className="TopNavDesktopItems__separator" />
       {renderAuthButtons()}
       <Link className="TopNavDesktopItems__right-item TopNavDesktopItems__download-button" tabIndex={-1} to="/download">
-        <Button>Download</Button>
+        <Button rounded>Download Wallet</Button>
       </Link>
       {renderActiveUser()}
     </>
