@@ -64,7 +64,7 @@ const resourcesPopoverItems: TopNavPopoverItemType[] = [
   {
     description: 'Download thenewboston assets',
     iconType: IconType.fileDownload,
-    title: 'Assets',
+    title: 'Media Kit',
     to: '/assets',
   },
 ];

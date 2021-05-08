@@ -1,9 +1,9 @@
 @import 'styles/font-mixins';
 
-$gap-width: 50px;
+$gap-width: 112px;
 $left-pl: 64px;
-$right-width: 714px;
-$title-width: 480px;
+$right-width: 630px;
+$title-width: 622px;
 
 @keyframes fadeIn {
   from {
@@ -27,7 +27,8 @@ $title-width: 480px;
   display: flex;
   height: 687px;
   justify-content: center;
-  padding-top: 33px;
+  padding-bottom: 120px;
+  padding-top: 72px;
   position: relative;
 
   @media (max-width: 1200px) {
@@ -37,7 +38,26 @@ $title-width: 480px;
     padding-bottom: 60px;
   }
 
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    margin: 48px 0 64px 0;
+
+    &--learn-more {
+      margin-right: 16px;
+    }
+
+    @media (max-width: 992px) {
+      margin: 32px 0 54px 0;
+    }
+
+    @media (max-width: 414px) {
+      margin: 24px 0 32px 0;
+    }
+  }
+
   &__hello-world {
+    color: var(--color-gray-500);
     display: block;
     margin-bottom: 30px;
 
@@ -53,8 +73,22 @@ $title-width: 480px;
   }
 
   &__image {
-    max-width: 695px;
-    width: 100%;
+    max-width: 538px;
+    width: 538px;
+
+    @media (max-width: 992px) {
+      max-width: 442px;
+      width: 442px;
+    }
+
+    @media (max-width: 768px) {
+      max-width: 405px;
+      width: 405px;
+    }
+
+    @media (max-width: 414px) {
+      display: none;
+    }
   }
 
   &__left {
@@ -62,7 +96,6 @@ $title-width: 480px;
     display: flex;
     justify-content: center;
     margin-right: $gap-width;
-    padding: 128px 0 128px $left-pl;
 
     @media (max-width: 1200px) {
       margin-right: 0;
@@ -81,35 +114,48 @@ $title-width: 480px;
   }
 
   &__SocialMediaLink {
-    background: var(--color-sail-gray-900);
+    align-items: center;
     border-radius: 50%;
-    box-shadow: 0 4px 4px rgba(4, 34, 53, 0.25);
-    color: var(--color-white);
+    color: var(--color-gray-200);
     display: flex;
-    height: 42px;
+    height: 64px;
     justify-content: center;
-    transition: background-color 0.1s ease-in;
-    width: 42px;
+    width: 64px;
 
     &:not(:last-child) {
-      margin-right: 18px;
+      margin-right: 40px;
     }
 
     &:hover {
-      background: var(--color-primary-hover);
+      border-radius: 16px;
+      box-shadow: 0px 0px 25px 0px #91b3fa59;
+    }
+
+    &--discord {
+      &:hover {
+        color: #7289da;
+      }
+    }
+
+    &--github {
+      &:hover {
+        color: #131f41;
+      }
+    }
+    &--youtube {
+      &:hover {
+        color: #ff0302;
+      }
     }
   }
 
   &__social-media-links {
     display: flex;
-    margin-top: 32px;
   }
 
   &__right {
-    height: 100%;
     max-width: $right-width;
     position: relative;
-    width: $right-width;
 
     @media (max-width: 1200px) {
       margin: 60px 12px 0;
@@ -125,18 +171,20 @@ $title-width: 480px;
 
   &__subtitle {
     @extend %h3;
-    font-weight: var(--font-weight-medium);
+    color: var(--color-gray-500);
+    font-weight: var(--font-weight-regular);
     margin-top: 30px;
   }
 
   &__title {
-    @extend %display1;
-    font-weight: var(--font-weight-medium);
+    @extend %display2;
+    font-weight: var(--font-weight-semibold);
   }
 
   &__wrapper {
     align-items: center;
     display: flex;
+    justify-content: center;
     max-width: $title-width + $gap-width + $right-width + $left-pl;
 
     @media (max-width: 1200px) {
