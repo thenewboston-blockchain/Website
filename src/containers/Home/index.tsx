@@ -3,13 +3,13 @@ import React, {FC} from 'react';
 
 import HomeHero from './HomeHero';
 import HomeInstantTransactions from './HomeInstantTransactions';
-import HomeSteps from './HomeSteps';
+import HomeValues from './HomeValues';
 
 const Home: FC = () => (
   <>
     <PageTitle title="Home" />
     <HomeHero />
-    <HomeSteps />
+    <HomeValues />
     <HomeInstantTransactions />
   </>
 );

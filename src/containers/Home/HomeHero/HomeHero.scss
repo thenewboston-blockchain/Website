@@ -27,8 +27,7 @@ $title-width: 622px;
   display: flex;
   height: 687px;
   justify-content: center;
-  padding-bottom: 120px;
-  padding-top: 72px;
+  padding: 72px 0;
   position: relative;
 
   @media (max-width: 1200px) {
@@ -36,6 +35,10 @@ $title-width: 622px;
     flex-direction: column;
     height: unset;
     padding-bottom: 60px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 0;
   }
 
   &__buttons {
