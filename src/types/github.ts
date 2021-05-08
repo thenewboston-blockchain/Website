@@ -71,6 +71,7 @@ export enum Repository {
   bank = 'Bank',
   design = 'Design',
   kotlinSdk = 'Kotlin-SDK',
+  marketing = 'Marketing',
   thenewbostonPython = 'thenewboston-python',
   thenewbostonPythonclient = 'thenewboston-python-client',
   thenewbostonJs = 'thenewboston-js',
