@@ -418,6 +418,19 @@
         "hourlyRate": 900
       },
       {
+        "title": "Mobile Developer",
+        "isLead": false,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "19",
+          "discordUsername": "zinoadidi#1554",
+          "displayName": "Zino Adidi",
+          "githubUsername": "zinoadidi",
+          "profileImage": "https://avatars.githubusercontent.com/u/30411401?v=4"
+        },
+        "hourlyRate": 800
+      },
+      {
         "title": "Technical Writer",
         "isLead": false,
         "createdDate": "2020-07-08T02:14:59.307535Z",
