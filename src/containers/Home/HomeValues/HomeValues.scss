@@ -1,7 +1,12 @@
 @import 'styles/font-mixins';
 
 .HomeValues {
+  margin-bottom: 84px;
   position: relative;
+
+  @media (max-width: 600px) {
+    margin-bottom: 72px;
+  }
 
   &__main {
     align-items: center;

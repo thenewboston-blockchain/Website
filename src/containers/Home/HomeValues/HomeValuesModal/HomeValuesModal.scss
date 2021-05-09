@@ -3,6 +3,7 @@
 .HomeValuesModal {
   // white on top half, blue 100 on bottom half
   background-image: linear-gradient(to bottom, #ffffff 50%, rgba(214, 236, 255, 0.1) 50%);
+  margin-bottom: 84px;
   padding: 0 48px;
 
   @media (max-width: 992px) {

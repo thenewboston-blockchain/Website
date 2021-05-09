@@ -4,6 +4,7 @@ import React, {FC} from 'react';
 import HomeHero from './HomeHero';
 import HomeValues from './HomeValues';
 import GetStarted from './GetStarted';
+import HomeFaq from './HomeFaq';
 
 const Home: FC = () => (
   <>
@@ -11,6 +12,7 @@ const Home: FC = () => (
     <HomeHero />
     <HomeValues />
     <GetStarted />
+    <HomeFaq />
   </>
 );
 

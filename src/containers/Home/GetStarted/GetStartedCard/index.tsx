@@ -1,7 +1,6 @@
 import React, {FC} from 'react';
 
 import Button from 'components/Button';
-import {useWindowDimensions} from 'hooks';
 import {Icon, IconType} from '@thenewboston/ui';
 
 import './GetStartedCard.scss';
@@ -14,8 +13,6 @@ type Props = {
 };
 
 const GetStartedCard: FC<Props> = ({description, icon, title, to}) => {
-  const {width} = useWindowDimensions();
-
   return (
     <div className="GetStartedCard">
       <div className="GetStartedCard__top-container">
