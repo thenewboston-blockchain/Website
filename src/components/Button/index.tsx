@@ -17,12 +17,12 @@ const Button: FC<Props> = ({children, className, iconLeft, iconRight, onClick, r
   return (
     <button
       className={clsx(
+        className,
         'ButtonV2',
         `ButtonV2__${type}`,
         {'ButtonV2--rounded': rounded},
         {'ButtonV2--left-icon-missing': !iconLeft},
         {'ButtonV2--right-icon-missing': !iconRight},
-        className,
       )}
       onClick={onClick}
     >

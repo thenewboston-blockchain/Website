@@ -1,15 +1,36 @@
 .Footer {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 35% 65%;
+  position: relative;
 
-  @media (max-width: 992px) {
-    grid-template-columns: auto;
+  @media (max-width: 1400px) {
+    grid-template-columns: auto auto;
     grid-template-rows: auto;
+  }
+
+  @media (max-width: 414px) {
+    grid-template-columns: auto;
   }
 
   &__right {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+
+    @media (max-width: 1400px) {
+      grid-column: span 2;
+      justify-content: space-between;
+      margin-top: 80px;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      justify-content: unset;
+    }
+
+    @media (max-width: 480px) {
+      flex-direction: column; // single column
+    }
   }
 
   &__SocialMediaLink {
@@ -26,5 +47,21 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 42px;
+  }
+
+  &__download-button {
+    border: 1px solid var(--color-white);
+    display: flex;
+    justify-self: flex-end;
+    width: fit-content;
+
+    &:hover {
+      background-color: var(--color-white);
+      color: var(--color-primary);
+    }
+
+    @media (max-width: 480px) {
+      margin-top: 120px;
+    }
   }
 }
