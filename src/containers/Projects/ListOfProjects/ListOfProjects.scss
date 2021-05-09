@@ -1,23 +1,21 @@
-$card-width-original: 384px;
-$card-width-992: 432px;
-$card-width-768: 320px;
-$card-width-480: 360px;
+@import '../shared';
 
 .ListOfProjects {
   column-gap: 32px;
   display: grid;
-  grid-template-columns: $card-width-original $card-width-original $card-width-original;
+  grid-template-columns: minmax($card-min-width-original, $card-width-original) minmax($card-min-width-original, $card-width-original)
+    minmax($card-min-width-original, $card-width-original);
   justify-content: center;
   justify-items: center;
   margin-bottom: 32px;
   row-gap: 32px;
 
   @media (max-width: 992px) {
-    grid-template-columns: $card-width-992 $card-width-992;
+    grid-template-columns: minmax($card-min-width-992, $card-width-992) minmax($card-min-width-992, $card-width-992);
   }
 
   @media (max-width: 768px) {
-    grid-template-columns: $card-width-768 $card-width-768;
+    grid-template-columns: minmax($card-min-width-768, $card-width-768) minmax($card-min-width-768, $card-width-768);
   }
 
   @media (max-width: 480px) {
