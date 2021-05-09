@@ -10,6 +10,7 @@ export interface BaseInputProps {
   disabled?: boolean;
   error?: boolean;
   focused?: boolean;
+  fullWidth?: boolean;
   name?: string;
   onBlur?(e: FocusEvent<HTMLInputElement>): void;
   onChange?(e: ChangeEvent<HTMLInputElement>): void;
@@ -24,6 +25,7 @@ const Input: FC<BaseInputProps> = ({
   disabled = false,
   error = false,
   focused = false,
+  fullWidth = false,
   name,
   onBlur,
   onChange,
@@ -44,6 +46,7 @@ const Input: FC<BaseInputProps> = ({
       autoComplete={autoComplete}
       className={clsx('Input', className, {
         'Input--error': error,
+        'Input--full-width': fullWidth,
         ...bemify(className, '--error', error),
       })}
       disabled={disabled}
