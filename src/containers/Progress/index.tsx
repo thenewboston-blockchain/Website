@@ -2,7 +2,7 @@ import React, {FC, useState, useEffect} from 'react';
 
 import * as githubApi from 'apis/github';
 import {Loader} from 'components';
-import {format} from 'date-fns';
+import {format, subDays} from 'date-fns';
 import {BaseIssue, Milestone} from 'types/github';
 import {TeamName} from 'types/teams';
 import {teamMilestoneDetails} from './constants';
@@ -112,11 +112,14 @@ const Progress: FC = () => {
 
   useEffect(() => {
     if (generalMilestone) {
-      setStartDate(format(new Date(generalMilestone.milestone.created_at), 'MM/dd'));
-
+      // get biweekly sprint duration, which is from [due_on - 14 days, due_on]
       if (generalMilestone.milestone.due_on) {
-        setEndDate(format(new Date(generalMilestone.milestone.due_on), 'MM/dd'));
+        const due = new Date(generalMilestone.milestone.due_on);
+        const start = subDays(due, 14);
+        setEndDate(format(due, 'MM/dd'));
+        setStartDate(format(start, 'MM/dd'));
       } else {
+        setStartDate('N.A.');
         setEndDate('N.A.');
       }
 
