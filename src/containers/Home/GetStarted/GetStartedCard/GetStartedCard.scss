@@ -8,9 +8,9 @@ $padding-768: 24px;
   border-radius: 12px;
   box-shadow: 0px 0px 30px 0px #e5eaf47a;
   height: $card-height-original;
+  max-width: $card-width-original;
   padding: $padding;
   position: relative;
-  width: $card-width-original;
 
   &:hover {
     box-shadow: 0px 0px 30px 0px #e5eaf47a;
@@ -18,22 +18,22 @@ $padding-768: 24px;
   }
 
   @media (max-width: 992px) {
-    width: $card-width-992;
+    max-width: $card-width-992;
   }
 
   @media (max-width: 768px) {
     height: $card-height-768;
+    max-width: $card-width-768;
     padding: $padding-768;
-    width: $card-width-768;
   }
 
-  @media (max-width: 480px) {
-    height: $card-height-480;
-    width: $card-width-480;
+  @media (max-width: 550px) {
+    height: $card-height-550;
+    max-width: $card-width-550;
   }
 
   @media (max-width: 376px) {
-    width: 100vw;
+    max-width: 100vw;
   }
 
   &__top-container {
