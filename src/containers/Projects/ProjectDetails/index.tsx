@@ -1,6 +1,6 @@
 import React, {FC, useState} from 'react';
 
-import {Milestone, Project, ProjectTopic} from 'types/projects';
+import {Project, ProjectTopic} from 'types/projects';
 import ProjectDetailsContent from './ProjectDetailsContent';
 import ProjectDetailsHeader from './ProjectDetailsHeader';
 import ProjectDetailsSideMenu from './ProjectDetailsSideMenu';

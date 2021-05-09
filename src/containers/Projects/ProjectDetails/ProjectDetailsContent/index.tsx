@@ -3,7 +3,7 @@ import format from 'date-fns/format';
 import parseISO from 'date-fns/parseISO';
 
 import {useWindowDimensions} from 'hooks';
-import {Milestone, Project, ProjectTopic, ProjectTopicTitle} from 'types/projects';
+import {Project, ProjectTopic, ProjectTopicTitle} from 'types/projects';
 import ProjectDetailsTopic from '../ProjectDetailsTopic';
 import {projectDetailsTopic} from '../constants';
 import './ProjectDetailsContent.scss';
