@@ -1,9 +1,9 @@
 import React, {FC} from 'react';
 
 import {useWindowDimensions} from 'hooks';
-import BlazingFastIcon from './BlazingFastIcon';
-import CommunityBuiltIcon from './CommunityBuiltIcon';
-import LowFeesIcon from './LowFeesIcon';
+import BlazingFastIcon from '../../icons/BlazingFastIcon';
+import CommunityBuiltIcon from '../../icons/CommunityBuiltIcon';
+import LowFeesIcon from '../../icons/LowFeesIcon';
 
 import './HomeValuesModal.scss';
 
