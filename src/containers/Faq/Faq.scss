@@ -69,4 +69,10 @@
     color: var(--color-gray-500);
     font-weight: var(--font-weight-regular);
   }
+
+  &__empty-questions {
+    @extend %display2;
+    font-weight: var(--font-weight-semibold);
+    text-align: center;
+  }
 }

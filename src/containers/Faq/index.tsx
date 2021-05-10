@@ -1,10 +1,10 @@
-import React, {FC, memo, useState} from 'react';
+import React, {FC, memo, useEffect, useState} from 'react';
 
 import {PageTitle} from 'components';
 import {Input} from 'components/FormElements';
 import FaqDropdownCard from 'components/FaqDropdownCard';
 import Button from 'components/Button';
-import {faqQuestionsAndAnswers, FaqTopic, FaqContent} from 'constants/faq';
+import {faqQuestionsAndAnswers, FaqTopic, FaqContent, TopicQuestionAndAnswers} from 'constants/faq';
 import {useWindowDimensions} from 'hooks';
 import Feedback from './Feedback';
 import SideMenu from './FaqSideMenu';
@@ -13,8 +13,50 @@ import './Faq.scss';
 
 const Faq: FC = () => {
   const [selectedFilter, setSelectedFilter] = useState<FaqTopic>(FaqTopic.All);
+  const [filteredQnAs, setFilteredQnAs] = useState<TopicQuestionAndAnswers[]>(faqQuestionsAndAnswers);
   const [searchValue, setSearchValue] = useState('');
   const {width} = useWindowDimensions();
+
+  const filterQnAs = () => {
+    // set filtered question and answers based on filters
+    let filtered = faqQuestionsAndAnswers;
+    if (selectedFilter !== 'All') {
+      filtered = faqQuestionsAndAnswers.filter((faqTopic) => faqTopic.topic === selectedFilter);
+    }
+
+    // finish if there is no search query
+    if (searchValue.trim() === '') {
+      setFilteredQnAs(filtered);
+      return;
+    }
+
+    const matchedQnAs = filtered
+      .map((faqTopic) => {
+        return {
+          content: faqTopic.content.filter((qna) =>
+            qna.question.toString().toLowerCase().includes(searchValue.toLowerCase()),
+          ),
+          topic: faqTopic.topic,
+        };
+      }) // filter questions that match with search query
+      .filter((faqTopic) => faqTopic.content.length > 0); // filter out topics that does not have any questions that are matched
+
+    setFilteredQnAs(matchedQnAs);
+  };
+
+  useEffect(() => {
+    filterQnAs();
+    // eslint-disable-next-line
+  }, [selectedFilter]);
+
+  const renderQuestionsAndAnswers = () => {
+    if (filteredQnAs.length === 0) {
+      return <div className="Faq__empty-questions">No related questions found.</div>;
+    }
+    return filteredQnAs.map((faqTopic) => {
+      return renderTopicQuestionsAndAnswers(faqTopic.topic, faqTopic.content);
+    });
+  };
 
   const renderTopicQuestionsAndAnswers = (topic: string, content: FaqContent[]) => {
     return (
@@ -27,13 +69,10 @@ const Faq: FC = () => {
     );
   };
 
-  const renderQuestionsAndAnswers = () => {
-    if (selectedFilter === 'All') {
-      return Object.entries(faqQuestionsAndAnswers).map(([topic, content]) => {
-        return renderTopicQuestionsAndAnswers(topic, content);
-      });
+  const handleSearchKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      filterQnAs();
     }
-    return renderTopicQuestionsAndAnswers(selectedFilter, faqQuestionsAndAnswers[selectedFilter]);
   };
 
   return (
@@ -53,7 +92,6 @@ const Faq: FC = () => {
             </div>
           )}
           <div className="Faq__content-main">
-            {/* TODO: work on logic of search */}
             <div className="Faq__search">
               <Input
                 className="Faq__search-input"
@@ -61,8 +99,9 @@ const Faq: FC = () => {
                 value={searchValue}
                 placeholder="Search for questions"
                 onChange={(e) => setSearchValue(e.target.value)}
+                onKeyDown={handleSearchKeyDown}
               />
-              <Button rounded onClick={() => console.log(searchValue)}>
+              <Button rounded onClick={filterQnAs}>
                 Search
               </Button>
             </div>

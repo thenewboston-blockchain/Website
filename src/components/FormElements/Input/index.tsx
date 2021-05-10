@@ -12,6 +12,7 @@ export interface BaseInputProps {
   focused?: boolean;
   fullWidth?: boolean;
   name?: string;
+  onKeyDown?(e: React.KeyboardEvent<HTMLInputElement>): void;
   onBlur?(e: FocusEvent<HTMLInputElement>): void;
   onChange?(e: ChangeEvent<HTMLInputElement>): void;
   placeholder?: string;
@@ -29,6 +30,7 @@ const Input: FC<BaseInputProps> = ({
   name,
   onBlur,
   onChange,
+  onKeyDown,
   placeholder = 'Enter',
   type = 'text',
   value,
@@ -53,6 +55,7 @@ const Input: FC<BaseInputProps> = ({
       name={name}
       onBlur={onBlur}
       onChange={onChange}
+      onKeyDown={onKeyDown}
       placeholder={placeholder}
       ref={inputRef}
       type={type}

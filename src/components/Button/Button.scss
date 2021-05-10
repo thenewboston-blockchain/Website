@@ -24,8 +24,14 @@
 
   &__primary {
     background-color: var(--color-primary);
-    border: none;
+    border: 1px solid transparent;
     color: var(--color-white);
+
+    &:hover {
+      background-color: var(--color-white);
+      border: 1px solid var(--color-primary);
+      color: var(--color-primary);
+    }
   }
 
   &__icon-left {
