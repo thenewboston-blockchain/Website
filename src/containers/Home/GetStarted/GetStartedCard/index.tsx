@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 
+import {useHistory} from 'react-router';
 import Button from 'components/Button';
 import {Icon, IconType} from '@thenewboston/ui';
 
@@ -13,6 +14,7 @@ type Props = {
 };
 
 const GetStartedCard: FC<Props> = ({description, icon, title, to}) => {
+  const history = useHistory();
   return (
     <div className="GetStartedCard">
       <div className="GetStartedCard__top-container">
@@ -22,7 +24,7 @@ const GetStartedCard: FC<Props> = ({description, icon, title, to}) => {
       <div className="GetStartedCard__description">{description}</div>
       <Button
         className="GetStartedCard__details-button"
-        onClick={() => window.open(to, '_blank', 'noreferrer noopener')}
+        onClick={() => history.push(to)}
         iconRight={<Icon icon={IconType.chevronRight} size={16} />}
         type="empty"
         rounded
