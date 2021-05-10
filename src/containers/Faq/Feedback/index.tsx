@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 
+import {sendFeedback} from 'apis/faq';
 import {Form, FormButton, FormInput, FormTextArea} from 'components/FormComponents';
 import yup from 'utils/yup';
 import './Feedback.scss';
@@ -19,9 +20,17 @@ const validationSchema = yup.object().shape({
 type FormValues = typeof initialValues;
 
 const Feedback = () => {
-  const handleSubmit = ({content, emailAddress, name}: FormValues) => {
-    // TODO: send email
-    console.log(`${emailAddress} (${name}): ${content}`);
+  const [sendFeedbackSuccess, setSendFeedbackSuccess] = useState(false);
+  const [hasSent, setHasSent] = useState(false);
+  const handleSubmit = async ({content, emailAddress, name}: FormValues) => {
+    try {
+      await sendFeedback(name, emailAddress, content);
+      setSendFeedbackSuccess(true);
+    } catch (err) {
+      setSendFeedbackSuccess(false);
+    } finally {
+      setHasSent(true);
+    }
   };
 
   return (
@@ -56,6 +65,8 @@ const Feedback = () => {
             </>
           )}
         </Form>
+        {hasSent && sendFeedbackSuccess && <div>Sent feedback successfully. We will get back to you ASAP.</div>}
+        {hasSent && !sendFeedbackSuccess && <div>Error while sending feedback. Please try again later.</div>}
       </div>
     </div>
   );
