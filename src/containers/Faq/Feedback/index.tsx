@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 
 import {sendFeedback} from 'apis/faq';
 import {Form, FormButton, FormInput, FormTextArea} from 'components/FormComponents';
+import Toast from 'components/Toast';
 import yup from 'utils/yup';
 import './Feedback.scss';
 
@@ -24,6 +25,7 @@ const Feedback = () => {
   const [hasSent, setHasSent] = useState(false);
   const handleSubmit = async ({content, emailAddress, name}: FormValues) => {
     try {
+      setHasSent(false);
       await sendFeedback(name, emailAddress, content);
       setSendFeedbackSuccess(true);
     } catch (err) {
@@ -65,8 +67,10 @@ const Feedback = () => {
             </>
           )}
         </Form>
-        {hasSent && sendFeedbackSuccess && <div>Sent feedback successfully. We will get back to you ASAP.</div>}
-        {hasSent && !sendFeedbackSuccess && <div>Error while sending feedback. Please try again later.</div>}
+        {hasSent && sendFeedbackSuccess && <Toast type="success">Success! Thank you for your feedback</Toast>}
+        {hasSent && !sendFeedbackSuccess && (
+          <Toast type="warning">Sorry, there was an error with your submission. Please try again later.</Toast>
+        )}
       </div>
     </div>
   );

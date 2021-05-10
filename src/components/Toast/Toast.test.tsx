@@ -5,6 +5,13 @@ import '@testing-library/jest-dom/extend-expect';
 import Toast from './index';
 
 describe('Toast component', () => {
+  beforeAll(() => {
+    const portal = document.createElement('div');
+    portal.setAttribute('id', 'toast-root');
+
+    document.body.appendChild(portal);
+  });
+
   test('renders with children', () => {
     render(<Toast type="warning">Hello World</Toast>);
 

@@ -1,5 +1,6 @@
 import React, {FC, useMemo} from 'react';
 import clsx from 'clsx';
+import {createPortal} from 'react-dom';
 import {Icon, IconType} from '@thenewboston/ui';
 import {bemify} from '@thenewboston/utils';
 
@@ -16,13 +17,13 @@ const Toast: FC<ComponentProps> = ({children, className, type = 'warning'}) => {
   const iconType = useMemo<IconType>(() => {
     switch (type) {
       case 'success':
-        return IconType.thumbsUp;
+        return IconType.checkCircle;
       default:
         return IconType.alertCircleOutline;
     }
   }, [type]);
 
-  return (
+  return createPortal(
     <div
       className={clsx('Toast', className, {
         [`Toast--${type}`]: true,
@@ -38,12 +39,14 @@ const Toast: FC<ComponentProps> = ({children, className, type = 'warning'}) => {
         })}
         icon={iconType}
         size={20}
+        totalSize={20}
         dataTestId="Toast__icon"
       />
       <div className={clsx('Toast__text', {...bemify(className, '__text')})} data-testid="Toast__text">
         {children}
       </div>
-    </div>
+    </div>,
+    document.getElementById('toast-root')!,
   );
 };
 
