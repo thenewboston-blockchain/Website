@@ -91,7 +91,9 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
         question: 'Where can I download the Account Manager?',
         answer: (
           <span>
-            <A href="/download">https://thenewboston/download</A>
+            <A newWindow={false} href="/download">
+              https://thenewboston/download
+            </A>
           </span>
         ),
         id: 'where-download-account-manager',
@@ -108,7 +110,11 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
         answer: (
           <span>
             We have a <A href="https://discord.gg/thenewboston">discord server</A> where most of our communication takes
-            place. Feel free to follow us on our various <A href="/social">social media accounts</A> as well.
+            place. Feel free to follow us on our various{' '}
+            <A newWindow={false} href="/social">
+              social media accounts
+            </A>{' '}
+            as well.
           </span>
         ),
         id: 'how-do-i-join',
@@ -124,7 +130,10 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
         question: 'How does the governance system work?',
         answer: (
           <span>
-            Check out our <A href="/governance/overview">docs</A>
+            Check out our{' '}
+            <A newWindow={false} href="/governance/overview">
+              docs
+            </A>
           </span>
         ),
         id: 'how-does-governance-work',
@@ -133,7 +142,15 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
         question: 'I’m new to crypto, where can I learn more?',
         answer: (
           <span>
-            Check out our <A href="/glossary">glossary</A> and <A href="/tutorials">youtube videos</A>.
+            Check out our{' '}
+            <A newWindow={false} href="/glossary">
+              glossary
+            </A>{' '}
+            and{' '}
+            <A newWindow={false} href="/tutorials">
+              youtube videos
+            </A>
+            .
           </span>
         ),
         id: 'new-to-crypto',
@@ -182,7 +199,9 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
         question: 'Are there guides for using the Account Manager?',
         answer: (
           <span>
-            <A href="/account-manager/get-started">Here</A>
+            <A newWindow={false} href="/account-manager/get-started">
+              Here
+            </A>
           </span>
         ),
         id: 'account-manager-guides',
@@ -191,7 +210,14 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
         question: 'How do I create a bank or PV?',
         answer: (
           <span>
-            <A href="/account-manager/created-bank">Bank</A>, <A href="/account-manager/created-validator">PV</A>.
+            <A newWindow={false} href="/account-manager/created-bank">
+              Bank
+            </A>
+            ,{' '}
+            <A newWindow={false} href="/account-manager/created-validator">
+              PV
+            </A>
+            .
           </span>
         ),
         id: 'how-to-create-bank-pv',
