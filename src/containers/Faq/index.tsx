@@ -34,7 +34,7 @@ const Faq: FC = () => {
       .map((faqTopic) => {
         return {
           content: faqTopic.content.filter((qna) =>
-            qna.question.toString().toLowerCase().includes(searchValue.toLowerCase()),
+            qna.question.toString().toLowerCase().includes(searchValue.trim().toLowerCase()),
           ),
           topic: faqTopic.topic,
         };
