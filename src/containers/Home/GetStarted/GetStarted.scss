@@ -48,5 +48,9 @@
     @extend %display2;
     font-weight: var(--font-weight-semibold);
     margin-bottom: 72px;
+
+    @media (max-width: 414px) {
+      margin-bottom: 48px;
+    }
   }
 }

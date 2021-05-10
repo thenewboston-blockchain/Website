@@ -6,15 +6,16 @@ import clsx from 'clsx';
 import './FaqDropdownCard.scss';
 
 type Props = {
+  className?: string;
   question: ReactNode;
   answer: ReactNode;
 };
 
-const FaqDropdownCard: FC<Props> = ({answer, question}) => {
+const FaqDropdownCard: FC<Props> = ({answer, className, question}) => {
   const [expanded, setExpanded] = useState(false);
   const toggleExpanded = () => setExpanded((prev) => !prev);
   return (
-    <div className="FaqDropdownCard">
+    <div className={`FaqDropdownCard ${className}`}>
       <div className="FaqDropdownCard__dropdown-container">
         <div className="FaqDropdownCard__left-container">
           <div className="FaqDropdownCard__question">{question}</div>

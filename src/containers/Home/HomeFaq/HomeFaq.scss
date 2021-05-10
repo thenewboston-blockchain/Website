@@ -32,4 +32,10 @@
       margin-bottom: 74px;
     }
   }
+
+  &__dropdown-card {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
 }

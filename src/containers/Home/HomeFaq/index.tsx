@@ -14,7 +14,14 @@ const HomeFaq: FC = () => {
         {getTopQuestionsAndAnswers()
           .slice(0, 5)
           .map((qna) => {
-            return <FaqDropdownCard key={qna.id} question={qna.question} answer={qna.answer} />;
+            return (
+              <FaqDropdownCard
+                className="HomeFaq__dropdown-card"
+                key={qna.id}
+                question={qna.question}
+                answer={qna.answer}
+              />
+            );
           })}
       </div>
       <Link to="/faq">View more</Link>
