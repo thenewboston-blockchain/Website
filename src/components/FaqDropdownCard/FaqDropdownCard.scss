@@ -38,6 +38,14 @@
     }
   }
 
+  &__toggle-icon {
+    outline: none;
+
+    &:focus {
+      background-color: transparent;
+    }
+  }
+
   &__question {
     color: var(--color-sail-gray-700);
     font-weight: var(--font-weight-medium);
