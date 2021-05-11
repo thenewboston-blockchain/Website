@@ -1,10 +1,16 @@
 import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'react';
-import {Icon, IconType} from '@thenewboston/ui';
+import {Link} from 'react-router-dom';
 
-import {Button, CodeSnippet, Loader, PageTitle, Tab, Tabs} from 'components';
+import {Button, CodeSnippet, Loader, PageTitle} from 'components';
 import {Release} from 'types/github';
 import {fetchGithubReleases} from 'utils/github';
 import {displayToast} from 'utils/toast';
+import ReleaseNotes from './ReleaseNotes';
+
+// icons
+import LinuxIcon from './icons/LinuxIcon';
+import MacOsIcon from './icons/MacOsIcon';
+import WindowsIcon from './icons/WindowsIcon';
 
 import './Download.scss';
 
@@ -15,17 +21,6 @@ enum Os {
 }
 
 const Download: FC = () => {
-  const userOsMatcher = /Windows|Linux|Mac/gi.exec(navigator.userAgent);
-  let userOsTabIndex = 0;
-
-  if (userOsMatcher && userOsMatcher[0] === 'Mac') {
-    userOsTabIndex = 1;
-  }
-
-  if (userOsMatcher && userOsMatcher[0] === 'Linux') {
-    userOsTabIndex = 2;
-  }
-
   const [loading, setLoading] = useState<boolean>(true);
   const [releases, setReleases] = useState<Release[]>([]);
 
@@ -60,6 +55,12 @@ const Download: FC = () => {
     return '';
   }, []);
 
+  const renderOsIcon = useCallback((os: Os) => {
+    if (os === Os.Windows) return <WindowsIcon />;
+    if (os === Os.Mac) return <MacOsIcon />;
+    if (os === Os.Linux) return <LinuxIcon />;
+  }, []);
+
   const getDownloadLink = useCallback(
     (os: Os): string =>
       latestReleaseNumber
@@ -73,39 +74,37 @@ const Download: FC = () => {
   const renderInstructions = useCallback((os: Os): ReactNode => {
     if (os === Os.Windows) {
       return (
-        <>
-          <div className="instruction-container__li">
+        <ol type="1" className="instruction-container__ol">
+          <li className="instruction-container__li">
             <span className="instruction-container__instruction">Download thenewboston</span>
-          </div>
-          <div className="instruction-container__li">
+          </li>
+          <li className="instruction-container__li">
             <span className="instruction-container__instruction">Click on the downloaded file</span>
-          </div>
-          <div className="instruction-container__li">
+          </li>
+          <li className="instruction-container__li">
             <span className="instruction-container__instruction">
-              You will get a modal that says 'Windows protected your PC'. Click <strong>More info</strong>
+              You will get a modal that says 'Windows protected your PC'. Click More info
             </span>
-          </div>
-          <div className="instruction-container__li">
-            <span className="instruction-container__instruction">
-              Then click <strong>Run anyway</strong>
-            </span>
-          </div>
-        </>
+          </li>
+          <li className="instruction-container__li">
+            <span className="instruction-container__instruction">Then click Run anyway</span>
+          </li>
+        </ol>
       );
     }
     if (os === Os.Mac) {
       return (
-        <>
-          <div className="instruction-container__li">
+        <ol type="1" className="instruction-container__ol">
+          <li className="instruction-container__li">
             <span className="instruction-container__instruction">Download thenewboston</span>
-          </div>
-          <div className="instruction-container__li">
+          </li>
+          <li className="instruction-container__li">
             <span className="instruction-container__instruction">Click on the downloaded file</span>
-          </div>
-          <div className="instruction-container__li">
+          </li>
+          <li className="instruction-container__li">
             <span className="instruction-container__instruction">Drag and drop the app to the Applications folder</span>
-          </div>
-          <div className="instruction-container__li">
+          </li>
+          <li className="instruction-container__li">
             <span className="instruction-container__instruction">
               Open the app. If you see an error because the Account Manager app is not from the App Store check out{' '}
               <a href="https://support.apple.com/en-us/HT202491" target="_blank" rel="noreferrer">
@@ -113,66 +112,54 @@ const Download: FC = () => {
               </a>{' '}
               to allow the install.
             </span>
-          </div>
-        </>
+          </li>
+        </ol>
       );
     }
     if (os === Os.Linux) {
       return (
-        <>
-          <div className="instruction-container__li">
+        <ol type="1" className="instruction-container__ol">
+          <li className="instruction-container__li">
             <span className="instruction-container__instruction">Download thenewboston</span>
-          </div>
-          <div className="instruction-container__li">
+          </li>
+          <li className="instruction-container__li">
             <span className="instruction-container__instruction">To run thenewboston, make it executable</span>
-          </div>
+          </li>
           <CodeSnippet code="$ chmod a+x TNB-Account-Manager-*.AppImage" />
-          <div className="instruction-container__li">
+          <li className="instruction-container__li">
             <span className="instruction-container__instruction">Run!</span>
-          </div>
+          </li>
           <CodeSnippet code="$ ./TNB-Account-Manager-*.AppImage" />
-        </>
+        </ol>
       );
     }
 
     return null;
   }, []);
 
-  const renderTabPanel = useCallback(
+  const renderDownloadCard = useCallback(
     (os: Os) => (
-      <div className="Download__tab-panel">
+      <div className="Download__card">
+        {renderOsIcon(os)}
+        <div className="Download__card-title">{os}</div>
         <a className="Download__download-link" href={getDownloadLink(os)} tabIndex={-1}>
-          <Button className="Download__download-button" disabled={!latestReleaseNumber}>
-            <span>Download for {os}</span>
-            <Icon className="Download__download-icon" icon={IconType.arrowCollapseDown} size={18} />
+          <Button className="Download__download-button" disabled={!latestReleaseNumber} rounded>
+            <span>Download</span>
           </Button>
         </a>
         <div className="instruction-container">
-          <h2 className="instruction-container__title">Installation Instructions</h2>
+          <h2 className="instruction-container__title">Installation Instruction</h2>
           {renderInstructions(os)}
         </div>
       </div>
     ),
-    [getDownloadLink, latestReleaseNumber, renderInstructions],
+    [getDownloadLink, latestReleaseNumber, renderInstructions, renderOsIcon],
   );
 
-  const tabs = useMemo<Tab[]>(
-    () => [
-      {
-        component: renderTabPanel(Os.Windows),
-        label: Os.Windows,
-      },
-      {
-        component: renderTabPanel(Os.Mac),
-        label: Os.Mac,
-      },
-      {
-        component: renderTabPanel(Os.Linux),
-        label: Os.Linux,
-      },
-    ],
-    [renderTabPanel],
-  );
+  const scrollToReleaseNotes = () => {
+    const element = document.getElementById('release-notes');
+    window.scrollTo({behavior: 'smooth', top: element?.offsetTop || 0});
+  };
 
   return (
     <>
@@ -182,7 +169,34 @@ const Download: FC = () => {
           <Loader />
         ) : (
           <>
-            <Tabs defaultTab={userOsTabIndex} tabs={tabs} latestReleaseNumber={latestReleaseNumber} />
+            <div className="Download__main-background">
+              <div className="Download__main-content">
+                <div className="Download__title">Download Wallet</div>
+                <div className="Download__subtitle">
+                  Send and receive TNB coins with thenewboston Free and Secure Wallet
+                </div>
+                <div className="Download__latest-release">LATEST RELEASE 1.0.0-alpha.{latestReleaseNumber}</div>
+                <div className="Download__buttons-container">
+                  <div
+                    className="Download__buttons--release"
+                    tabIndex={-1}
+                    role="button"
+                    onClick={scrollToReleaseNotes}
+                  >
+                    Release notes
+                  </div>
+                  <Link to="/account-manager/get-started">How to use</Link>
+                </div>
+                <div className="Download__cards-container">
+                  {renderDownloadCard(Os.Windows)}
+                  {renderDownloadCard(Os.Mac)}
+                  {renderDownloadCard(Os.Linux)}
+                </div>
+              </div>
+            </div>
+            <div className="Download__release-notes" id="release-notes">
+              <ReleaseNotes />
+            </div>
           </>
         )}
       </div>

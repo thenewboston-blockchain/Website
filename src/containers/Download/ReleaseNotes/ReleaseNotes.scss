@@ -1,0 +1,8 @@
+@import 'styles/font-mixins';
+
+.ReleaseNotes {
+  &__title {
+    @extend %display2;
+    font-weight: var(--font-weight-medium);
+  }
+}
