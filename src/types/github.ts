@@ -226,17 +226,9 @@ export interface Task extends BaseTask {
 export type TaskDict = Dict<Task[]>;
 
 export type Milestone = {
-  url: string;
-  html_url: string;
-  labels_url: string;
+  description: string;
+  due_on: string;
   id: number;
   number: number;
   title: string;
-  description: string;
-  open_issues: number;
-  closed_issues: number;
-  state: 'open' | 'closed';
-  created_at: string;
-  updated_at: string;
-  due_on: string;
 };
