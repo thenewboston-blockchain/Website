@@ -280,6 +280,19 @@
           "profileImage": "https://avatars.githubusercontent.com/u/35629401?v=4"
         },
         "hourlyRate": 1200
+      },
+      {
+        "title": "UI/UX Designer",
+        "isLead": false,
+        "createdDate": "2021-05-12T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "20",
+          "discordUsername": "DreamHope#566",
+          "displayName": "Valeriia Tkachuk",
+          "githubUsername": "VTFrontdev",
+          "profileImage": "https://avatars.githubusercontent.com/u/73844599?v=4"
+        },
+        "hourlyRate": 1200
       }
     ],
     "responsibilities": [
