@@ -38,8 +38,7 @@ const Progress: FC = () => {
       let teamMilestone: MilestoneState | undefined;
       const teamMilestoneDetail = teamMilestoneDetails[teamName];
       const teamMilestonePromises = teamMilestoneDetail.repositoryNames.map(async (repoName) => {
-        const milestoneResponse = await githubApi.getMilestones(repoName);
-        const milestones = milestoneResponse.data;
+        const milestones = await githubApi.getMilestones(repoName);
 
         if (milestones.length > 0) {
           // there should only be one milestone per repository at a time, get the latest one if there's multiple
@@ -47,9 +46,9 @@ const Progress: FC = () => {
           const issuesResponse = await githubApi.getIssuesForMilestone(repoName, lastMilestone.number);
 
           if (teamMilestone) {
-            teamMilestone = {issues: {...issuesResponse.data, ...teamMilestone.issues}, milestone: lastMilestone};
+            teamMilestone = {issues: {...issuesResponse, ...teamMilestone.issues}, milestone: lastMilestone};
           } else {
-            teamMilestone = {issues: issuesResponse.data, milestone: lastMilestone};
+            teamMilestone = {issues: issuesResponse, milestone: lastMilestone};
           }
         }
       });
@@ -71,8 +70,7 @@ const Progress: FC = () => {
     try {
       const teamMilestoneDetail = teamMilestoneDetails.Community;
       const repoName = teamMilestoneDetail.repositoryNames[0]; // assumption: community only has one repo
-      const milestoneResponse = await githubApi.getMilestones(repoName);
-      const milestones = milestoneResponse.data;
+      const milestones = await githubApi.getMilestones(repoName);
       const audit = getFilteredMilestone(milestones, TeamName.audit);
       const community = getFilteredMilestone(milestones, TeamName.community);
       const general = getFilteredMilestone(milestones, 'Sprint');
@@ -83,9 +81,9 @@ const Progress: FC = () => {
         githubApi.getIssuesForMilestone(repoName, general.number),
       ]);
 
-      setAuditMilestone({issues: auditIssues.data, milestone: audit});
-      setCommunityMilestone({issues: communityIssues.data, milestone: community});
-      setGeneralMilestone({issues: generalIssues.data, milestone: general});
+      setAuditMilestone({issues: auditIssues, milestone: audit});
+      setCommunityMilestone({issues: communityIssues, milestone: community});
+      setGeneralMilestone({issues: generalIssues, milestone: general});
     } catch (err) {
       // TBD on how to handle errors since there are so many different milestones
     }

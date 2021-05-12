@@ -6,9 +6,9 @@ import * as api from 'apis/github';
 export const fetchGithubIssues = async (): Promise<Issue[]> => {
   const promises = REPOSITORIES.map((repoName) => api.getIssuesForRepo(repoName.pathname));
 
-  const results = await Promise.all(promises);
-  const issues = results
-    .reduce((acc: Issue[], {data}) => [...acc, ...data], [])
+  const issuesResponse = await Promise.all(promises);
+  const issues = issuesResponse
+    .reduce((acc: Issue[], currentIssues) => [...acc, ...currentIssues], [])
     .filter(({pull_request}: any) => !pull_request);
 
   return issues.map((issue) => {
@@ -22,9 +22,9 @@ export const fetchGithubIssues = async (): Promise<Issue[]> => {
 };
 
 export const fetchGithubReleases = async (queryParams: FetchGithubReleasesParams): Promise<Release[]> => {
-  const {data} = await api.getAccountManagerReleases(queryParams);
+  const releases = await api.getAccountManagerReleases(queryParams);
 
-  return data.map((release: BaseRelease) => {
+  return releases.map((release: BaseRelease) => {
     const {tag_name: tagName} = release;
     const alphaVersion = tagName.replace('v1.0.0-alpha.', '');
     return {
