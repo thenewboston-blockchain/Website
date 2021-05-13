@@ -39,6 +39,10 @@ const navLists = [
         url: '/social',
       },
       {
+        title: 'Weekly Progress',
+        url: '/progress',
+      },
+      {
         title: 'Openings',
         url: '/openings',
       },
