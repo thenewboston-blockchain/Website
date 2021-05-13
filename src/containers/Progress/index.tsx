@@ -1,8 +1,8 @@
 import React, {FC, useState, useEffect} from 'react';
+import subDays from 'date-fns/subDays';
 
 import * as githubApi from 'apis/github';
 import {Loader} from 'components';
-import {format, subDays} from 'date-fns';
 import {BaseIssue, Milestone} from 'types/github';
 import {TeamName} from 'types/teams';
 import {teamMilestoneDetails} from './constants';
@@ -17,9 +17,9 @@ type MilestoneState = {
 
 const Progress: FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [startDate, setStartDate] = useState<string>('');
-  const [endDate, setEndDate] = useState<string>('');
-  const [sprintNumber, setSprintNumber] = useState<string>('');
+  const [startDate, setStartDate] = useState<Date | null>(null);
+  const [endDate, setEndDate] = useState<Date | null>(null);
+  const [sprintNumber, setSprintNumber] = useState<number | null>(null);
 
   // milestone states
   const [auditMilestone, setAuditMilestone] = useState<MilestoneState | undefined>(undefined);
@@ -112,21 +112,21 @@ const Progress: FC = () => {
     if (generalMilestone) {
       // get weekly sprint duration, which is from [due_on - 7 days, due_on]
       if (generalMilestone.milestone.due_on) {
-        const due = new Date(generalMilestone.milestone.due_on);
-        const start = subDays(due, 7);
-        setEndDate(format(due, 'MM/dd'));
-        setStartDate(format(start, 'MM/dd'));
+        const end = new Date(generalMilestone.milestone.due_on);
+        const start = subDays(end, 7);
+        setEndDate(end);
+        setStartDate(start);
       } else {
-        setStartDate('N.A.');
-        setEndDate('N.A.');
+        setStartDate(null);
+        setEndDate(null);
       }
 
       // get sprint number based on title, the title should be in the format of "Sprint [NO]"
       const sprintNo = generalMilestone.milestone.title.replace(/^\D+/g, '');
       if (sprintNo) {
-        setSprintNumber(sprintNo);
+        setSprintNumber(parseInt(sprintNo, 10));
       } else {
-        setSprintNumber('N.A.');
+        setSprintNumber(null);
       }
     }
   }, [generalMilestone]);

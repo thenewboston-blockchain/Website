@@ -9,17 +9,17 @@
   text-align: center;
 
   &__header {
+    @extend %display2;
     color: var(--color-sail-blue-900);
     font-weight: var(--font-weight-semibold);
     margin-bottom: 24px;
-    @extend %display2;
   }
 
   &__header-overview {
+    @extend %body1;
     color: var(--color-gray-600);
     font-weight: var(--font-weight-regular);
     margin-bottom: 40px;
-    @extend %body1;
   }
 
   &__divider {

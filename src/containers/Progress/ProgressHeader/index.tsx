@@ -1,12 +1,15 @@
 import React, {FC} from 'react';
+import format from 'date-fns/format';
 
 import './ProgressHeader.scss';
 
+const formatDate = (date: Date | null): string => (date ? format(date, 'MM/dd') : 'N/A');
+
 type Props = {
   goal: string;
-  startDate: string;
-  endDate: string;
-  weekNumber: string;
+  startDate: Date | null;
+  endDate: Date | null;
+  weekNumber: number | null;
 };
 
 const ProgressHeader: FC<Props> = ({endDate, goal, startDate, weekNumber}) => {
@@ -20,9 +23,9 @@ const ProgressHeader: FC<Props> = ({endDate, goal, startDate, weekNumber}) => {
       <div className="ProgressHeader__divider" />
       <div className="ProgressHeader__date">
         <span className="ProgressHeader__date-range">
-          {startDate} - {endDate}
+          {formatDate(startDate)} - {formatDate(endDate)}
         </span>
-        <span className="ProgressHeader__date-week">Week {weekNumber}</span>
+        <span className="ProgressHeader__date-week">Week {weekNumber || '-'}</span>
       </div>
       <div className="ProgressHeader__goal">{goal}</div>
     </div>
