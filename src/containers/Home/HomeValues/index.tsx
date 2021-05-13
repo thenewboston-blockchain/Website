@@ -21,7 +21,7 @@ const HomeValues: FC = () => {
     <div className="HomeValues">
       <HomeValuesModal />
       <div className="HomeValues__main">
-        <ValuesIllustration width={iconSize.width} height={iconSize.height} />
+        <ValuesIllustration className="HomeValues__illustration" width={iconSize.width} height={iconSize.height} />
         <div className="HomeValues__main-right">
           <div className="HomeValues__main-title">The value comes from you</div>
           <div className="HomeValues__main-description">

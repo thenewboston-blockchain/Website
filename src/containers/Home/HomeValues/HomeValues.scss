@@ -23,6 +23,10 @@
     }
   }
 
+  &__illustration {
+    min-width: 200px;
+  }
+
   &__main-right {
     display: flex;
     flex-direction: column;

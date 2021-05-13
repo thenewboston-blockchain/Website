@@ -1,8 +1,19 @@
 import React, {FC} from 'react';
 
-const ValuesIllustration: FC<{width?: number; height?: number}> = ({width = 456, height = 376}) => {
+const ValuesIllustration: FC<{className?: string; width?: number; height?: number}> = ({
+  className,
+  width = 456,
+  height = 376,
+}) => {
   return (
-    <svg width={width} height={height} viewBox="0 0 456 376" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      width={width}
+      height={height}
+      viewBox="0 0 456 376"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <rect width="456" height="376" fill="#FBFDFF" />
       <path
         d="M381.004 113.902L263.134 74.24L263.048 74.1429L200.773 10.5493L150.842 56.0056L150.105 55.2072L200.816 9.04956L263.73 73.3013L380.592 112.629L428.552 46.8777L429.429 47.5143L381.004 113.902Z"
