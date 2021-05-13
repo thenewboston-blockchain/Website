@@ -109,7 +109,6 @@ export interface BaseIssue {
   assignee: Assignee;
   assignees: Assignee[];
   locked: boolean;
-  active_lock_reason: string;
   comments: number;
   closed_at?: any;
   created_at: string;
@@ -226,3 +225,11 @@ export interface Task extends BaseTask {
 }
 
 export type TaskDict = Dict<Task[]>;
+
+export type Milestone = {
+  description: string;
+  due_on: string;
+  id: number;
+  number: number;
+  title: string;
+};

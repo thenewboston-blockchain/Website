@@ -95,6 +95,7 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice,
             'Community',
             <>
               {renderMobileLink('Join the Community!', '/social')}
+              {renderMobileLink('Weekly Progress', '/progress')}
               {renderMobileLink('Openings', '/openings')}
               {renderMobileLink('Teams', '/teams')}
               {renderMobileLink('Community Guidelines', '/guidelines')}

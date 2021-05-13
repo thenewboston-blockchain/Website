@@ -1,0 +1,31 @@
+@import 'styles/font-mixins';
+
+.Progress {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+  padding: 40px;
+
+  @media (max-width: 700px) {
+    padding: 24px;
+  }
+
+  &__loading-container {
+    align-items: center;
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__error-container {
+    @extend %h1;
+    align-items: center;
+    display: flex;
+    font-weight: var(--font-weight-nold);
+    height: 80vh;
+    justify-content: center;
+    width: 100%;
+  }
+}

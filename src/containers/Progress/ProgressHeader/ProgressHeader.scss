@@ -1,0 +1,54 @@
+@import 'styles/font-mixins';
+
+.ProgressHeader {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 80px 24px;
+  max-width: 480px;
+  text-align: center;
+
+  &__header {
+    @extend %display2;
+    color: var(--color-sail-blue-900);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 24px;
+  }
+
+  &__header-overview {
+    @extend %body1;
+    color: var(--color-gray-600);
+    font-weight: var(--font-weight-regular);
+    margin-bottom: 40px;
+  }
+
+  &__divider {
+    border-bottom: 1px solid var(--color-sail-gray-300);
+    width: 48px;
+  }
+
+  &__date {
+    color: var(--color-sail-gray-900);
+    font-size: 24px;
+    margin: 40px 0 24px 0;
+  }
+
+  &__date-range {
+    @extend %h1;
+    border-right: 1px solid var(--color-sail-gray-100);
+    font-weight: var(--font-weight-bold);
+    padding-right: 12px;
+  }
+
+  &__date-week {
+    @extend %h1;
+    font-weight: var(--font-weight-regular);
+    margin-left: 12px;
+  }
+
+  &__goal {
+    @extend %body1;
+    color: var(--color-gray-600);
+    font-weight: var(--font-weight-regular);
+  }
+}
