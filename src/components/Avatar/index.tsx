@@ -13,7 +13,7 @@ export interface AvatarProps {
   className?: string;
   size: number;
   src: string;
-  onClick?: () => void;
+  onClick?(): void;
 }
 
 export const getImageSizeBasedOnDeviceRatio = (size: number): number => {
@@ -35,7 +35,7 @@ export const getFormattedSrc = (src: string, size: number): string => {
   }
 };
 
-const AvatarImgWithFallback: FC<AvatarProps> = ({bordered, className, size, src, onClick}) => {
+const AvatarImgWithFallback: FC<AvatarProps> = ({bordered, className, onClick, size, src}) => {
   const [srcPrimary, setSrcPrimary] = useState<string>('');
   const {src: srcWithFallback} = useImage({srcList: [srcPrimary, DefaultUserAvatar]});
 
