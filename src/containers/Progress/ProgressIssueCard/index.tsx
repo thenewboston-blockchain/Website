@@ -20,12 +20,7 @@ const ProgressIssueCard: FC<Props> = ({className, issue}) => {
         {issue.state === 'open' ? (
           <Icon className="ProgressIssueCard__icon-open" icon={IconType.alertCircleOutline} size={20} />
         ) : (
-          <Icon
-            className="ProgressIssueCard__icon-closed"
-            icon={IconType.alertCircleCheckOutline}
-            size={20}
-            color="#CD3D64"
-          />
+          <Icon className="ProgressIssueCard__icon-closed" icon={IconType.alertCircleCheckOutline} size={20} />
         )}
         <div className="ProgressIssueCard__details">
           <div

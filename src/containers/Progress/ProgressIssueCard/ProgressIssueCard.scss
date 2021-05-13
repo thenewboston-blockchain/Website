@@ -22,27 +22,23 @@
   &__issue-title {
     @extend %h4;
 
-    -webkit-box-orient: vertical;
     color: var(--color-secondary);
     cursor: pointer;
     display: -webkit-box;
     font-weight: var(--font-weight-bold);
-    -webkit-line-clamp: 1; /* max number of lines to show */
     outline: none;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
   &__issue-opened-by {
-    -webkit-box-orient: vertical;
+    @extend %body1;
     color: var(--color-gray-600);
     display: -webkit-box;
     font-weight: var(--font-weight-regular);
-    -webkit-line-clamp: 1; /* max number of lines to show */
     outline: none;
     overflow: hidden;
     text-overflow: ellipsis;
-    @extend %body1;
   }
 
   &__icon-closed {
