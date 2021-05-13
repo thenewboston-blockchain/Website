@@ -53,19 +53,6 @@
           "profileImage": "https://avatars0.githubusercontent.com/u/22790904?s=400&u=643810e6c9d5686df409132b01863f9e065df6c1&v=4"
         },
         "hourlyRate": 600
-      },
-      {
-        "title": "Auditor",
-        "isLead": false,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "15",
-          "discordUsername": "itsNikhil#0844",
-          "displayName": "Nikhil Taneja",
-          "githubUsername": "itsnikhil",
-          "profileImage": "https://avatars1.githubusercontent.com/u/20350674?v=4"
-        },
-        "hourlyRate": 600
       }
     ],
     "responsibilities": [
@@ -293,6 +280,19 @@
           "profileImage": "https://avatars.githubusercontent.com/u/35629401?v=4"
         },
         "hourlyRate": 1200
+      },
+      {
+        "title": "UI/UX Designer",
+        "isLead": false,
+        "createdDate": "2021-05-12T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "20",
+          "discordUsername": "DreamHope#566",
+          "displayName": "Valeriia Tkachuk",
+          "githubUsername": "VTFrontdev",
+          "profileImage": "https://avatars.githubusercontent.com/u/73844599?v=4"
+        },
+        "hourlyRate": 1200
       }
     ],
     "responsibilities": [
@@ -416,6 +416,19 @@
           "profileImage": "https://avatars0.githubusercontent.com/u/32864116?v=4"
         },
         "hourlyRate": 900
+      },
+      {
+        "title": "Mobile Developer",
+        "isLead": false,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "19",
+          "discordUsername": "zinoadidi#1554",
+          "displayName": "Zino Adidi",
+          "githubUsername": "zinoadidi",
+          "profileImage": "https://avatars.githubusercontent.com/u/30411401?v=4"
+        },
+        "hourlyRate": 800
       },
       {
         "title": "Technical Writer",

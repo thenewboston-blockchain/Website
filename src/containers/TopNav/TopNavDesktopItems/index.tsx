@@ -19,6 +19,12 @@ const communityPopoverItems: TopNavPopoverItemType[] = [
     to: '/social',
   },
   {
+    description: 'Stay up to date with our weekly sprints',
+    iconType: IconType.chartTimelineVariantShimmer,
+    title: 'Weekly Progress',
+    to: '/progress',
+  },
+  {
     description: 'Join the team building the app',
     iconType: IconType.humanHandsup,
     title: 'Openings',

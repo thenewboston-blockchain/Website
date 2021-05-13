@@ -25,8 +25,8 @@ const Tasks: FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [repositoryFilter, setRepositoryFilter] = useState<Repository>(Repository.all);
   const [selectedLabelNames, setSelectedLabelNames] = useState<string[]>([]);
-  const [sortByOption, setSortByOption] = useState<string>(SortBy.none);
-  const [sortByOrder, setSortByOrder] = useState<'asc' | 'desc'>('asc');
+  const [sortByOption, setSortByOption] = useState<string>(SortBy.created);
+  const [sortByOrder, setSortByOrder] = useState<'asc' | 'desc'>('desc');
 
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
@@ -151,7 +151,7 @@ const Tasks: FC = () => {
             )}
             <DropdownInput
               callbackOnChange={handleDropdownChange}
-              defaultOption={SortBy.none}
+              defaultOption={SortBy.created}
               options={dropdownOptions}
             />
           </div>
