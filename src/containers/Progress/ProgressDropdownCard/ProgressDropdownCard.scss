@@ -48,7 +48,6 @@
     align-items: center;
     color: var(--color-sail-gray-900);
     display: flex;
-    font-weight: var(--font-weight-regular);
     margin-right: 46px;
 
     @media (max-width: 1200px) {
@@ -96,16 +95,15 @@
   }
 
   &__title-name {
+    @extend %h3;
     color: var(--color-sail-gray-900);
     font-weight: var(--font-weight-medium);
     margin-bottom: 8px;
-    @extend %h3;
   }
 
   &__title-responsibility {
-    color: var(--color-sail-gray-400);
-    font-weight: var(--font-weight-regular);
     @extend %body1;
+    color: var(--color-sail-gray-400);
   }
 
   &__progress {
@@ -142,8 +140,7 @@
   }
 
   &__progress-percentage {
-    color: var(--color-primary);
-    font-weight: var(--font-weight-regular);
     @extend %body1;
+    color: var(--color-primary);
   }
 }

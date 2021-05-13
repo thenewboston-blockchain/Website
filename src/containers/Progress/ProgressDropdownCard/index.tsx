@@ -1,4 +1,4 @@
-import React, {FC, useEffect, useState, useRef} from 'react';
+import React, {FC, useState, useRef, useMemo} from 'react';
 
 import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
@@ -17,23 +17,13 @@ type Props = {
 const ProgressDropdownCard: FC<Props> = ({name, responsibility, repoNames, issues}) => {
   const [expanded, setExpanded] = useState<boolean>(false);
   const progressBarRef = useRef<HTMLDivElement>(null);
-  const [filledProgressBarWidth, setFilledProgressBarWidth] = useState<number>(0);
   const toggleExpanded = () => {
     setExpanded((prevExpanded) => !prevExpanded);
   };
-  const progressFraction = issues.filter((issue) => issue.state === 'closed').length / (issues.length * 1.0);
-
-  useEffect(() => {
-    const calculateProgressBarWidth = () => {
-      if (progressBarRef.current) {
-        setFilledProgressBarWidth(progressBarRef.current.clientWidth * progressFraction);
-      }
-    };
-    calculateProgressBarWidth();
-    window.addEventListener('resize', calculateProgressBarWidth);
-    return () => window.removeEventListener('resize', calculateProgressBarWidth);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [progressBarRef, progressFraction]);
+  const progressPercentage = useMemo(
+    () => (issues.filter((issue) => issue.state === 'closed').length / (issues.length || 1)) * 100,
+    [issues],
+  );
 
   return (
     <div className="ProgressDropdownCard">
@@ -48,13 +38,11 @@ const ProgressDropdownCard: FC<Props> = ({name, responsibility, repoNames, issue
               <div
                 className={clsx('ProgressDropdownCard__progress-bar', 'ProgressDropdownCard__progress-bar--filled')}
                 style={{
-                  width: `${filledProgressBarWidth}px`,
+                  width: `${progressPercentage}%`,
                 }}
               />
             </div>
-            <div className="ProgressDropdownCard__progress-percentage">
-              {Math.floor(progressFraction * 100)}% complete
-            </div>
+            <div className="ProgressDropdownCard__progress-percentage">{Math.floor(progressPercentage)}% complete</div>
           </div>
         </div>
         <div className="ProgressDropdownCard__right-container">
