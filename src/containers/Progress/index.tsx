@@ -69,7 +69,7 @@ const Progress: FC = () => {
   async function setMilestonesFromCommunityRepo() {
     try {
       const teamMilestoneDetail = teamMilestoneDetails.Community;
-      const repoName = teamMilestoneDetail.repositoryNames[0]; // assumption: community only has one repo
+      const repoName = teamMilestoneDetail.repositoryNames[0]; // assumption: community only has one repo. Change in v2
       const milestones = await githubApi.getMilestones(repoName);
       const audit = getFilteredMilestone(milestones, TeamName.audit);
       const community = getFilteredMilestone(milestones, TeamName.community);
@@ -110,10 +110,10 @@ const Progress: FC = () => {
 
   useEffect(() => {
     if (generalMilestone) {
-      // get biweekly sprint duration, which is from [due_on - 14 days, due_on]
+      // get weekly sprint duration, which is from [due_on - 7 days, due_on]
       if (generalMilestone.milestone.due_on) {
         const due = new Date(generalMilestone.milestone.due_on);
-        const start = subDays(due, 14);
+        const start = subDays(due, 7);
         setEndDate(format(due, 'MM/dd'));
         setStartDate(format(start, 'MM/dd'));
       } else {

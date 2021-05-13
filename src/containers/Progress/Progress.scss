@@ -20,12 +20,12 @@
   }
 
   &__error-container {
+    @extend %h1;
     align-items: center;
     display: flex;
     font-weight: var(--font-weight-nold);
     height: 80vh;
     justify-content: center;
     width: 100%;
-    @extend %h1;
   }
 }
