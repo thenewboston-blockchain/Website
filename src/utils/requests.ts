@@ -18,3 +18,15 @@ export function standardHeaders() {
     },
   };
 }
+
+export function githubHeaders(eTag: string) {
+  return {
+    headers: {
+      'If-None-Match': `"${eTag}"`, // provide cached etag to see if resource has been updated
+    },
+  };
+}
+
+export function validateGitHubApiStatus(status: number) {
+  return (status >= 200 && status <= 299) || status === 304;
+}
