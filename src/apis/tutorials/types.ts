@@ -1,10 +1,10 @@
-import {Category, Playlist} from 'types/tutorials';
+import {Playlist, PlaylistCategory} from 'types/tutorials';
 
-export interface CategoriesResponse {
+export interface PlaylistCategoriesResponse {
   count: number;
   next: number | null;
   previous: number | null;
-  results: Category[];
+  results: PlaylistCategory[];
 }
 
 export interface PlaylistsResponse {

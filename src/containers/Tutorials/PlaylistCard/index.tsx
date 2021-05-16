@@ -8,18 +8,18 @@ import './PlaylistCard.scss';
 
 interface PlaylistCardProps {
   author: string;
-  title: string;
+  pk: string;
   thumbnail: string;
-  uuid: string;
+  title: string;
   video_list: Video[];
 }
 
-const PlaylistCard: FC<PlaylistCardProps> = ({author, title, thumbnail, uuid, video_list}) => {
+const PlaylistCard: FC<PlaylistCardProps> = ({author, pk, title, thumbnail, video_list}) => {
   const history = useHistory();
-  const {category: categoryParam} = useParams<TutorialsUrlParams>();
+  const {category: playlistCategoryParam} = useParams<TutorialsUrlParams>();
 
   const openPlaylist = (): void => {
-    history.push(`/tutorials/${categoryParam}/${uuid}`);
+    history.push(`/tutorials/${playlistCategoryParam}/${pk}`);
   };
 
   const handleKeydown = (event: React.KeyboardEvent<HTMLDivElement>): void => {
@@ -28,7 +28,7 @@ const PlaylistCard: FC<PlaylistCardProps> = ({author, title, thumbnail, uuid, vi
     }
   };
 
-  const totalDuration = useMemo(() => video_list.reduce((acc, video) => acc + video.duration, 0), [video_list]);
+  const totalDuration = useMemo(() => video_list.reduce((acc, video) => acc + video.duration_seconds, 0), [video_list]);
 
   return (
     <div className="PlaylistCard" onClick={openPlaylist} onKeyDown={handleKeydown} role="button" tabIndex={0}>
