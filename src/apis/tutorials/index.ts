@@ -1,6 +1,6 @@
 import axios from 'axios';
 import {allTutorialsFilter} from 'constants/tutorials';
-import {Playlist, PlaylistCategory} from 'types/tutorials';
+import {Playlist, PlaylistCategory, Instructor} from 'types/tutorials';
 import {standardHeaders} from 'utils/requests';
 
 import {PlaylistCategoriesResponse, PlaylistsResponse} from './types';
@@ -35,6 +35,15 @@ export async function getPlaylists(category: string): Promise<Playlist[]> {
 export async function getPlaylist(playlistId: string): Promise<Playlist> {
   const response = await axios.get<Playlist>(
     `${process.env.REACT_APP_BACKEND_API}/playlists/${playlistId}`,
+    standardHeaders(),
+  );
+
+  return response.data;
+}
+
+export async function getInstructor(instructorId: string): Promise<Instructor> {
+  const response = await axios.get<Instructor>(
+    `${process.env.REACT_APP_BACKEND_API}/instructors/${instructorId}`,
     standardHeaders(),
   );
 
