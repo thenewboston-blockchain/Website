@@ -19,7 +19,6 @@ export interface PlaylistCategory extends CreatedModified {
 }
 
 export interface Video extends CreatedModified {
-  author: string;
   categories: string[];
   description: string;
   duration_seconds: number;
@@ -35,9 +34,9 @@ export interface Video extends CreatedModified {
 }
 
 export interface Playlist extends CreatedModified {
-  author: string;
   categories: string[];
   description: string;
+  instructor: string;
   language: string;
   pk: string;
   playlist_id: string;
@@ -51,4 +50,13 @@ export interface Playlist extends CreatedModified {
 export interface TutorialsUrlParams {
   category: string;
   playlistId: string;
+}
+
+export interface Instructor {
+  pk: string;
+  name: string;
+  youtube_url: string;
+  vimeo_url: string;
+  created_date: string;
+  modified_date: string;
 }
