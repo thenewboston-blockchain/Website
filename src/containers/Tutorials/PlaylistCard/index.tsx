@@ -28,7 +28,7 @@ const PlaylistCard: FC<PlaylistCardProps> = ({author, pk, title, thumbnail, vide
     }
   };
 
-  const totalDuration = useMemo(() => video_list.reduce((acc, video) => acc + video.duration, 0), [video_list]);
+  const totalDuration = useMemo(() => video_list.reduce((acc, video) => acc + video.duration_seconds, 0), [video_list]);
 
   return (
     <div className="PlaylistCard" onClick={openPlaylist} onKeyDown={handleKeydown} role="button" tabIndex={0}>

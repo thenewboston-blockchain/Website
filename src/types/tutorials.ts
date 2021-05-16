@@ -22,7 +22,7 @@ export interface Video extends CreatedModified {
   author: string;
   categories: string[];
   description: string;
-  duration: number;
+  duration_seconds: number;
   language: string;
   playlist: string | null;
   published_at: string;
