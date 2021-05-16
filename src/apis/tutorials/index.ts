@@ -1,13 +1,13 @@
 import axios from 'axios';
 import {allTutorialsFilter} from 'constants/tutorials';
-import {Category, Playlist} from 'types/tutorials';
+import {Playlist, PlaylistCategory} from 'types/tutorials';
 import {standardHeaders} from 'utils/requests';
 
-import {CategoriesResponse, PlaylistsResponse} from './types';
+import {PlaylistCategoriesResponse, PlaylistsResponse} from './types';
 
-export async function getCategories(): Promise<Category[]> {
-  const response = await axios.get<CategoriesResponse>(
-    `${process.env.REACT_APP_BACKEND_API}/categories`,
+export async function getPlaylistCategories(): Promise<PlaylistCategory[]> {
+  const response = await axios.get<PlaylistCategoriesResponse>(
+    `${process.env.REACT_APP_BACKEND_API}/playlist_categories`,
     standardHeaders(),
   );
 

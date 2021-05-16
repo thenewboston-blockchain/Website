@@ -13,7 +13,7 @@ export interface CreatedModified {
   modified_date: string;
 }
 
-export interface Category extends CreatedModified {
+export interface PlaylistCategory extends CreatedModified {
   pk: string;
   name: string;
 }
@@ -39,12 +39,12 @@ export interface Playlist extends CreatedModified {
   categories: string[];
   description: string;
   language: string;
+  pk: string;
   playlist_id: string;
   playlist_type: Source;
   published_at: string;
   thumbnail: string;
   title: string;
-  uuid: string;
   video_list: Video[];
 }
 

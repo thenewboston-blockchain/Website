@@ -39,15 +39,8 @@ const Playlists: FC<PlaylistsParams> = ({category}) => {
     if (!playlists.length) return <EmptyPage />;
     return (
       <div className="Playlists__grid">
-        {playlists.map(({author, title, thumbnail, video_list, uuid}) => (
-          <PlaylistCard
-            author={author}
-            key={uuid}
-            title={title}
-            thumbnail={thumbnail}
-            uuid={uuid}
-            video_list={video_list}
-          />
+        {playlists.map(({author, pk, title, thumbnail, video_list}) => (
+          <PlaylistCard author={author} key={pk} pk={pk} thumbnail={thumbnail} title={title} video_list={video_list} />
         ))}
       </div>
     );
