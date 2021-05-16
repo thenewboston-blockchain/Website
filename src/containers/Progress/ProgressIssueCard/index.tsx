@@ -18,9 +18,14 @@ const ProgressIssueCard: FC<Props> = ({className, issue}) => {
     <div className={clsx('ProgressIssueCard', className)}>
       <div className="ProgressIssueCard__left-container">
         {issue.state === 'open' ? (
-          <Icon className="ProgressIssueCard__icon-open" icon={IconType.alertCircleOutline} size={20} />
+          <Icon className="ProgressIssueCard__icon-open" icon={IconType.alertCircleOutline} size={20} totalSize={20} />
         ) : (
-          <Icon className="ProgressIssueCard__icon-closed" icon={IconType.alertCircleCheckOutline} size={20} />
+          <Icon
+            className="ProgressIssueCard__icon-closed"
+            icon={IconType.alertCircleCheckOutline}
+            size={20}
+            totalSize={20}
+          />
         )}
         <div className="ProgressIssueCard__details">
           <div
