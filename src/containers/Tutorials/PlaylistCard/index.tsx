@@ -1,3 +1,4 @@
+import {A} from 'components';
 import React, {FC, useMemo} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
 
@@ -8,13 +9,14 @@ import './PlaylistCard.scss';
 
 interface PlaylistCardProps {
   author: string;
+  authorUrl: string;
   pk: string;
   thumbnail: string;
   title: string;
   video_list: Video[];
 }
 
-const PlaylistCard: FC<PlaylistCardProps> = ({author, pk, title, thumbnail, video_list}) => {
+const PlaylistCard: FC<PlaylistCardProps> = ({author, authorUrl, pk, title, thumbnail, video_list}) => {
   const history = useHistory();
   const {category: playlistCategoryParam} = useParams<TutorialsUrlParams>();
 
@@ -38,7 +40,7 @@ const PlaylistCard: FC<PlaylistCardProps> = ({author, pk, title, thumbnail, vide
       <div className="PlaylistCard__bottom">
         <div className="PlaylistCard__title">{title}</div>
         <div className="PlaylistCard__author">
-          Author: <span className="PlaylistCard__author-name">{author}</span>
+          Author: <A href={authorUrl}>{author}</A>
         </div>
         <div className="PlaylistCard__details">
           <span className="PlaylistCard__details-videos">{video_list.length} videos</span>
