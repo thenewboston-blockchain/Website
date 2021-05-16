@@ -87,7 +87,7 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
               <div className="WatchPlaylist__list-video-bottom">
                 <span className="WatchPlaylist__list-video-author">{video.author}</span>
                 <span className="WatchPlaylist__list-video-duration">
-                  {getFormattedTime(video.duration, TimeFormat.digital)}
+                  {getFormattedTime(video.duration_seconds, TimeFormat.digital)}
                 </span>
               </div>
             </div>
