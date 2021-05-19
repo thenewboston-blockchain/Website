@@ -1,4 +1,4 @@
-import React, {FC, useState, useRef, useMemo} from 'react';
+import React, {FC, useState, useMemo} from 'react';
 
 import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
@@ -16,7 +16,7 @@ type Props = {
 
 const ProgressDropdownCard: FC<Props> = ({name, responsibility, repoNames, issues}) => {
   const [expanded, setExpanded] = useState<boolean>(false);
-  const progressBarRef = useRef<HTMLDivElement>(null);
+
   const toggleExpanded = () => {
     setExpanded((prevExpanded) => !prevExpanded);
   };
@@ -33,7 +33,7 @@ const ProgressDropdownCard: FC<Props> = ({name, responsibility, repoNames, issue
             <div className="ProgressDropdownCard__title-name">{name}</div>
             <div className="ProgressDropdownCard__title-responsibility">{responsibility}</div>
           </div>
-          <div className="ProgressDropdownCard__progress" ref={progressBarRef}>
+          <div className="ProgressDropdownCard__progress">
             <div className="ProgressDropdownCard__progress-bar">
               <div
                 className={clsx('ProgressDropdownCard__progress-bar', 'ProgressDropdownCard__progress-bar--filled')}
