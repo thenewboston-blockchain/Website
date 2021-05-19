@@ -11,22 +11,24 @@ import TnbLogoAndWordmarkWhite from 'assets/images/TNB-LogoAndWordmarkWhite.png'
 
 import './Assets.scss';
 
+const MARKETING_ASSETS_ROOT_DIR = `${socialMediaUrls.github}/Marketing/raw/master/Assets`;
+
 const assets: Asset[] = [
   {
     backgroundColor: 'light',
-    downloadLink: `${socialMediaUrls.github}/Marketing/raw/master/Logo.zip`,
+    downloadLink: `${MARKETING_ASSETS_ROOT_DIR}/Logo.zip`,
     imageUrl: TnbLogo,
     subtext: 'TNB-Logo.Zip',
   },
   {
     backgroundColor: 'light',
-    downloadLink: `${socialMediaUrls.github}/Marketing/raw/master/Logo-and-Wordmark.zip`,
+    downloadLink: `${MARKETING_ASSETS_ROOT_DIR}/Logo-and-Wordmark.zip`,
     imageUrl: TnbLogoAndWordmark,
     subtext: 'TNB-Logo-and-Wordmark.Zip',
   },
   {
     backgroundColor: 'dark',
-    downloadLink: `${socialMediaUrls.github}/Marketing/raw/master/Logo-and-Wordmark-white.zip`,
+    downloadLink: `${MARKETING_ASSETS_ROOT_DIR}/Logo-and-Wordmark-white.zip`,
     imageUrl: TnbLogoAndWordmarkWhite,
     subtext: 'TNB-Logo-and-Wordmark-white.Zip',
   },
