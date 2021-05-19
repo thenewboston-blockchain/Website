@@ -194,19 +194,6 @@
           "profileImage": "https://avatars.githubusercontent.com/u/60430226?v=4"
         },
         "hourlyRate": 800
-      },
-      {
-        "title": "Head of Human Resources",
-        "isLead": false,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "11",
-          "discordUsername": "MsChrishaph#0709",
-          "displayName": "Chrisha",
-          "githubUsername": "Chrisha1212",
-          "profileImage": "https://avatars.githubusercontent.com/u/72809444?s=460&u=e2138725222fb09a546d7d1e164cf64f5583648b&v=4"
-        },
-        "hourlyRate": 800
       }
     ],
     "responsibilities": [
@@ -278,19 +265,6 @@
           "displayName": "Kashif Ahmad",
           "githubUsername": "kashikushi",
           "profileImage": "https://avatars.githubusercontent.com/u/35629401?v=4"
-        },
-        "hourlyRate": 1200
-      },
-      {
-        "title": "UI/UX Designer",
-        "isLead": false,
-        "createdDate": "2021-05-12T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "21",
-          "discordUsername": "DreamHope#566",
-          "displayName": "Valeriia Tkachuk",
-          "githubUsername": "VTFrontdev",
-          "profileImage": "https://avatars.githubusercontent.com/u/73844599?v=4"
         },
         "hourlyRate": 1200
       }
@@ -512,6 +486,19 @@
           "profileImage": "https://avatars2.githubusercontent.com/u/58598872?&v=4"
         },
         "hourlyRate": 600
+      },
+      {
+        "title": "Digital Marketing Specialist",
+        "isLead": false,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "11",
+          "discordUsername": "MsChrishaph#0709",
+          "displayName": "Chrisha",
+          "githubUsername": "Chrisha1212",
+          "profileImage": "https://avatars.githubusercontent.com/u/72809444?s=460&u=e2138725222fb09a546d7d1e164cf64f5583648b&v=4"
+        },
+        "hourlyRate": 800
       }
     ],
     "responsibilities": [
