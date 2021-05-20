@@ -3,9 +3,9 @@ import clsx from 'clsx';
 import format from 'date-fns/format';
 import parseISO from 'date-fns/parseISO';
 
-import {getPlaylist} from 'apis/tutorials';
-import {EmptyPage, Loader, VideoPlayer} from 'components';
-import {Playlist, Source, TimeFormat, Video} from 'types/tutorials';
+import {getPlaylist, getInstructor} from 'apis/tutorials';
+import {A, EmptyPage, Loader, VideoPlayer} from 'components';
+import {Instructor, Playlist, Source, TimeFormat, Video} from 'types/tutorials';
 import {getFormattedTime} from 'utils/time';
 
 import './WatchPlaylist.scss';
@@ -18,6 +18,7 @@ interface WatchPlaylistProps {
 const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [playlist, setPlaylist] = useState<Playlist | null>(null);
+  const [instructor, setInstructor] = useState<Instructor | null>(null);
   const [currentVideo, setCurrentVideo] = useState<Video | null>(null);
   const [errorMessage, setErrorMessage] = useState<string>('');
 
@@ -26,7 +27,9 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
       try {
         setLoading(true);
         const playlistResponse = await getPlaylist(playlistId);
+        const instructorResponse = await getInstructor(playlistResponse.instructor);
         setPlaylist(playlistResponse);
+        setInstructor(instructorResponse);
         if (playlistResponse.video_list.length) {
           setCurrentVideo(playlistResponse.video_list[0]);
         }
@@ -85,9 +88,9 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
             <div className="WatchPlaylist__list-video-details">
               <div className="WatchPlaylist__list-video-top">{video.title}</div>
               <div className="WatchPlaylist__list-video-bottom">
-                <span className="WatchPlaylist__list-video-author">{video.author}</span>
+                <span className="WatchPlaylist__list-video-author">{instructor?.name}</span>
                 <span className="WatchPlaylist__list-video-duration">
-                  {getFormattedTime(video.duration, TimeFormat.digital)}
+                  {getFormattedTime(video.duration_seconds, TimeFormat.digital)}
                 </span>
               </div>
             </div>
@@ -121,7 +124,11 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
           </div>
           <div className="WatchPlaylist__video-author">
             {playlist.playlist_type === Source.youtube ? 'Youtube' : 'Vimeo'} Channel:{' '}
-            <span className="WatchPlaylist__video-author-name">{currentVideo.author}</span>
+            {instructor && (
+              <A href={playlist.playlist_type === Source.youtube ? instructor.youtube_url : instructor.vimeo_url}>
+                {instructor.name}
+              </A>
+            )}
           </div>
         </div>
       </div>
