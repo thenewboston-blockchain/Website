@@ -1,9 +1,8 @@
 import axios from 'axios';
 import {allTutorialsFilter} from 'constants/tutorials';
+import {PaginatedResponse} from 'types/api';
 import {Playlist, PlaylistCategory, Instructor} from 'types/tutorials';
 import {standardHeaders} from 'utils/requests';
-
-import {PlaylistCategoriesResponse, PlaylistsResponse} from './types';
 
 export async function getPlaylistCategories(): Promise<PlaylistCategory[]> {
   const response = await axios.get<PaginatedResponse<PlaylistCategory>>(
