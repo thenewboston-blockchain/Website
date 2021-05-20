@@ -2,9 +2,9 @@ import React, {FC} from 'react';
 
 import {CustomIconProps} from './types';
 
-const ProblemIcon: FC<CustomIconProps> = ({onClick, size = 24, state = 'default'}) => {
+const ProblemIcon: FC<CustomIconProps> = ({size, state}) => {
   return (
-    <svg width={size} height={size} onClick={onClick} viewBox="0 0 32 32">
+    <svg width={size} height={size} viewBox={`0 0 32 32`}>
       <path
         d="M27.0614 26.5587C26.47 27.1824 25.9104 27.5846 25.4683 27.9024C20.2715 31.6378 14.1224 30.5489 12.8154 30.283C10.8856 29.8904 7.15523 29.1314 4.45821 25.9542C0.377905 21.1473 1.01325 13.5742 4.17825 8.5751C4.75729 7.66068 7.81522 2.58537 14.0307 1.77153C17.7922 1.27895 22.1769 2.27237 25.3523 4.93744C32.0174 10.5314 31.5429 21.8323 27.0614 26.5587Z"
         fill="url(#problemIcon0_linear)"

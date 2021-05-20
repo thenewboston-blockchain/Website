@@ -2,9 +2,9 @@ import React, {FC} from 'react';
 
 import {CustomIconProps} from './types';
 
-const TargetIcon: FC<CustomIconProps> = ({onClick, size = 24, state = 'default'}) => {
+const TargetIcon: FC<CustomIconProps> = ({size, state}) => {
   return (
-    <svg width={size} height={size} onClick={onClick} viewBox="0 0 32 32">
+    <svg width={size} height={size} viewBox={`0 0 32 32`}>
       <g clipPath="url(#targetIconClip0)">
         <path
           d="M32.1236 23.8124C29.1557 21.6005 28.3473 23.0926 28.8095 20.0373C29.2722 16.9819 29.8189 8.27924 23.336 8.64965C16.853 9.02006 16.5473 13.1972 11.3967 10.4291C6.24608 7.66106 -0.197378 14.9111 3.25842 19.4096C6.59324 23.7504 -4.70059 23.9786 2.79818 29.8942C3.35373 30.3321 3.99916 30.5789 4.66632 30.5789L30.1453 30.4978C31.4742 30.4978 32.2303 29.9893 33.0945 28.7924C33.852 27.7438 33.5848 24.9016 32.1236 23.8124Z"

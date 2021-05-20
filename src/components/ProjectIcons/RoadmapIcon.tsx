@@ -2,9 +2,9 @@ import React, {FC} from 'react';
 
 import {CustomIconProps} from './types';
 
-const RoadmapIcon: FC<CustomIconProps> = ({onClick, size = 24, state = 'default'}) => {
+const RoadmapIcon: FC<CustomIconProps> = ({size, state}) => {
   return (
-    <svg width={size} height={size} onClick={onClick} viewBox="0 0 32 32">
+    <svg width={size} height={size} viewBox={`0 0 32 32`}>
       <g clipPath="url(#roadmapIconClip0)">
         <circle cx="27.4895" cy="27.3493" r="3.35469" fill="#E3E8EE" />
         <path

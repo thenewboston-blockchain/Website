@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {ProjectIcon, ProjectIconType} from 'components/ProjectIcons';
+import ProjectIcon, {ProjectIconSize, ProjectIconType} from 'components/ProjectIcons';
 import './ProjectDetailsTopic.scss';
 
 interface ComponentProps {
@@ -14,7 +14,7 @@ interface ComponentProps {
 const ProjectDetailsTopic: FC<ComponentProps> = ({content, iconType, id, title, overview}) => {
   return (
     <div className="ProjectDetailsTopic" id={id}>
-      <ProjectIcon className="ProjectDetailsTopic__icon" icon={iconType} size={96} state="active" />
+      <ProjectIcon className="ProjectDetailsTopic__icon" icon={iconType} size={ProjectIconSize.large} state="active" />
       <div className="ProjectDetailsTopic__content">
         <h1 className="ProjectDetailsTopic__content-title">{title}</h1>
         <h4 className="ProjectDetailsTopic__content-overview">{overview}</h4>

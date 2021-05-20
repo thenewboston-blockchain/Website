@@ -1,7 +1,7 @@
-import React, {forwardRef, HTMLAttributes, ReactNode, useCallback, useMemo} from 'react';
-
-import {bemify} from '@thenewboston/utils';
+/* eslint-disable react/jsx-props-no-spreading */
+import React, {FC, ReactNode, useCallback} from 'react';
 import clsx from 'clsx';
+
 import BenefitsIcon from './BenefitsIcon';
 import IntegrationIcon from './IntegrationIcon';
 import MilestonesIcon from './MilestonesIcon';
@@ -23,118 +23,63 @@ export enum ProjectIconType {
   Timeline = 'Timeline',
 }
 
-export interface IconProps extends HTMLAttributes<HTMLDivElement> {
-  /** Optional. Extra classNames you can pass. Storybook options: black, white, primary, secondary, tertiary, alert. */
-  className?: string;
-  /** Optional. identifies a DOM node for testing purposes. */
-  dataTestId?: string;
-  /** Optional. disabled onClick event if onClick is passed. */
-  disabled?: boolean;
-  /** Required. pass in the icon type, using the ProjectIconType enum. */
-  icon: ProjectIconType;
-  /** Optional. add an onClick event handler. */
-  onClick?(e?: React.MouseEvent<HTMLDivElement, MouseEvent>): void;
-  /** Optional. add an onKeyDown event handler. */
-  onKeyDown?(e?: React.KeyboardEvent<HTMLDivElement>): void;
-  /** Optional. size of the actual icon. */
-  size?: number;
-  /** Optional. size of the icon + paddings. Ignored if value is smaller than size.  */
-  totalSize?: number | 'unset';
-  /** Optional. disables focus. Only works if there is also an onClick handler.  */
-  unfocusable?: boolean;
+export enum ProjectIconSize {
+  small = 'small',
+  medium = 'medium',
+  large = 'large',
 }
 
-/* eslint-disable */
-const ProjectIcon = forwardRef<HTMLDivElement, IconProps & CustomIconProps>(
-  (
-    {
-      className,
-      dataTestId,
-      disabled = false,
-      icon,
-      onClick,
-      onKeyDown,
-      size,
-      totalSize = 30,
-      unfocusable = false,
+export interface ComponentProps extends CustomIconProps {
+  className?: string;
+  dataTestId?: string;
+  icon: ProjectIconType;
+  size: ProjectIconSize;
+}
+
+const ProjectIcon: FC<ComponentProps> = ({className, dataTestId, icon, size, state}) => {
+  const renderIcon = useCallback((): ReactNode => {
+    let sizeNumber: number;
+    if (size === ProjectIconSize.small) {
+      sizeNumber = 24;
+    } else if (size === ProjectIconSize.medium) {
+      sizeNumber = 32;
+    } else {
+      sizeNumber = 96;
+    }
+
+    const iconProps = {
+      'data-testid': 'ProjectIcon__svg',
+      size: sizeNumber,
       state,
-    },
-    ref,
-  ) => {
-    const divStyle = useMemo(() => {
-      if (totalSize === 'unset') return {};
-      const divSize = Math.max(size || 0, totalSize);
-      return {height: divSize, width: divSize};
-    }, [size, totalSize]);
-
-    const tabIndex = useMemo(() => (unfocusable || disabled || !onClick ? undefined : 0), [
-      disabled,
-      onClick,
-      unfocusable,
-    ]);
-
-    const handleClick = (e?: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
-      if (disabled || !onClick) return;
-
-      onClick(e);
     };
 
-    const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>): void => {
-      if (!onClick) return;
+    switch (icon) {
+      case ProjectIconType.Benefits:
+        return <BenefitsIcon {...iconProps} />;
+      case ProjectIconType.Integration:
+        return <IntegrationIcon {...iconProps} />;
+      case ProjectIconType.Milestone:
+        return <MilestonesIcon {...iconProps} />;
+      case ProjectIconType.Overview:
+        return <OverviewIcon {...iconProps} />;
+      case ProjectIconType.Problem:
+        return <ProblemIcon {...iconProps} />;
+      case ProjectIconType.Roadmap:
+        return <RoadmapIcon {...iconProps} />;
+      case ProjectIconType.Target:
+        return <TargetIcon {...iconProps} />;
+      case ProjectIconType.Timeline:
+        return <TimelineIcon {...iconProps} />;
+      default:
+        return null;
+    }
+  }, [icon, size, state]);
 
-      if (e.key === 'Enter' && !disabled) {
-        handleClick();
-      }
+  return (
+    <div className={clsx('ProjectIcon', className)} data-testid={dataTestId || 'ProjectIcon'}>
+      {renderIcon()}
+    </div>
+  );
+};
 
-      onKeyDown?.(e);
-    };
-
-    const renderIcon = useCallback((): ReactNode => {
-      const iconBaseProps = {
-        'data-testid': 'ProjectIcon__svg',
-      };
-
-      switch (icon) {
-        case ProjectIconType.Benefits:
-          return <BenefitsIcon {...iconBaseProps} size={size || 24} state={state} />;
-        case ProjectIconType.Integration:
-          return <IntegrationIcon {...iconBaseProps} size={size || 24} state={state} />;
-        case ProjectIconType.Milestone:
-          return <MilestonesIcon {...iconBaseProps} size={size || 24} state={state} />;
-        case ProjectIconType.Overview:
-          return <OverviewIcon {...iconBaseProps} size={size || 24} state={state} />;
-        case ProjectIconType.Problem:
-          return <ProblemIcon {...iconBaseProps} size={size || 24} state={state} />;
-        case ProjectIconType.Roadmap:
-          return <RoadmapIcon {...iconBaseProps} size={size || 24} state={state} />;
-        case ProjectIconType.Target:
-          return <TargetIcon {...iconBaseProps} size={size || 24} state={state} />;
-        case ProjectIconType.Timeline:
-          return <TimelineIcon {...iconBaseProps} size={size || 24} state={state} />;
-        default:
-          return null;
-      }
-    }, [icon, size, state]);
-
-    return (
-      <div
-        className={clsx('ProjectIcon', className, {
-          'ProjectIcon--button': !!onClick,
-          'ProjectIcon--disabled': disabled,
-          ...bemify(className, '--disabled', disabled),
-        })}
-        data-testid={dataTestId || 'ProjectIcon'}
-        ref={ref}
-        role={!!onClick ? 'button' : 'img'}
-        onClick={handleClick}
-        onKeyDown={handleKeyDown}
-        style={divStyle}
-        tabIndex={tabIndex}
-      >
-        {renderIcon()}
-      </div>
-    );
-  },
-);
-
-export {ProjectIcon};
+export default ProjectIcon;

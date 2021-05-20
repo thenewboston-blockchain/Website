@@ -2,9 +2,9 @@ import React, {FC} from 'react';
 
 import {CustomIconProps} from './types';
 
-const BenefitsIcon: FC<CustomIconProps> = ({onClick, size = 24, state = 'default'}) => {
+const BenefitsIcon: FC<CustomIconProps> = ({size, state}) => {
   return (
-    <svg width={size} height={size} onClick={onClick} viewBox="0 0 32 32">
+    <svg width={size} height={size} viewBox={`0 0 32 32`}>
       <g clipPath="url(#clip0)">
         <path
           d="M27.3629 26.2612C22.266 31.6339 14.437 30.0445 13.2799 29.7891C11.8219 29.4672 8.35337 28.7017 5.76488 25.679C1.80205 21.0513 2.20216 13.8188 5.26267 8.94277C6.15322 7.52398 9.15009 3.30753 14.7779 2.3908C15.1069 2.33719 20.9836 1.47649 25.7122 5.43959C26.3497 5.97394 27.3788 6.94166 28.2807 8.35069C31.0785 12.7216 32.4026 20.9487 27.3629 26.2612Z"
@@ -198,7 +198,7 @@ const BenefitsIcon: FC<CustomIconProps> = ({onClick, size = 24, state = 'default
           d="M17.0132 8.9209H16.6719L17.2977 9.54667L16.6719 10.1724H17.0132L17.639 9.54667L17.0132 8.9209Z"
           fill="white"
         />
-        <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="16" y="8" width="3" height="3">
+        <mask id="mask0" maskUnits="userSpaceOnUse" x="16" y="8" width="3" height="3">
           <circle cx="17.0699" cy="9.5467" r="1.024" fill="#C4C4C4" />
         </mask>
         <g mask="url(#mask0)">

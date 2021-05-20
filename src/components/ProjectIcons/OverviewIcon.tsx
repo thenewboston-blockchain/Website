@@ -2,9 +2,9 @@ import React, {FC} from 'react';
 
 import {CustomIconProps} from './types';
 
-const OverviewIcon: FC<CustomIconProps> = ({onClick, size = 24, state = 'default'}) => {
+const OverviewIcon: FC<CustomIconProps> = ({size, state}) => {
   return (
-    <svg width={size} height={size} onClick={onClick} viewBox="0 0 32 32">
+    <svg width={size} height={size} viewBox={`0 0 32 32`}>
       <g clipPath="url(#overviewIconClip0)">
         <path
           d="M3.29347 21.0901C6.211 27.8893 13.9124 30.8098 19.9465 30.3119C21.5941 30.1759 24.909 29.9024 27.4974 27.4618C32.4681 22.775 31.7026 12.9784 26.9442 7.21062C26.3314 6.4679 22.0898 1.49137 15.48 1.55804C10.6407 1.60678 7.24403 4.33244 6.83097 4.67196C6.30932 5.10097 5.1585 6.12028 4.12141 7.73745C1.68445 11.537 1.47027 16.8412 3.29347 21.0901Z"

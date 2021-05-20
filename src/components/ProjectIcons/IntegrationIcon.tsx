@@ -2,9 +2,9 @@ import React, {FC} from 'react';
 
 import {CustomIconProps} from './types';
 
-const IntegrationIcon: FC<CustomIconProps> = ({onClick, size = 24, state = 'default'}) => {
+const IntegrationIcon: FC<CustomIconProps> = ({size, state}) => {
   return (
-    <svg width={size} height={size} onClick={onClick} viewBox="0 0 32 32">
+    <svg width={size} height={size} viewBox={`0 0 32 32`}>
       <path
         d="M26.7753 26.6759C21.2826 32.4563 12.8455 30.7463 11.5984 30.4714C10.0273 30.1252 6.28927 29.3015 3.49971 26.0495C-0.770934 21.0705 -0.339735 13.2891 2.95849 8.043C3.91822 6.51652 7.14787 1.98006 13.2129 0.993761C13.5674 0.936086 19.9006 0.0100533 24.9964 4.27394C25.6835 4.84884 26.7925 5.89001 27.7645 7.40598C30.7796 12.1086 32.2066 20.9602 26.7753 26.6759Z"
         fill="url(#integrationIcon0_linear)"
@@ -27,7 +27,7 @@ const IntegrationIcon: FC<CustomIconProps> = ({onClick, size = 24, state = 'defa
         d="M8.6614 9.8999H5.60449L11.2088 15.5042L5.60449 21.1086H8.6614L14.2657 15.5042L8.6614 9.8999Z"
         fill="white"
       />
-      <mask id="integrationIconMask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="6" width="19" height="19">
+      <mask id="integrationIconMask0" maskUnits="userSpaceOnUse" x="0" y="6" width="19" height="19">
         <circle cx="9.17073" cy="15.5042" r="9.17073" fill="#C4C4C4" />
       </mask>
       <g mask="url(#integrationIconMask0)">

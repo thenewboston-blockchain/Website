@@ -1,12 +1,11 @@
 import React, {FC, useState} from 'react';
-
 import clsx from 'clsx';
 
-import {ProjectTopic} from 'types/projects';
-import {ProjectIcon} from 'components/ProjectIcons';
+import ProjectIcon, {ProjectIconSize} from 'components/ProjectIcons';
 import {useWindowDimensions} from 'hooks';
-import {projectDetailsTopic} from '../constants';
+import {ProjectTopic} from 'types/projects';
 
+import {projectDetailsTopic} from '../constants';
 import './ProjectDetailsSideMenu.scss';
 
 type Props = {
@@ -47,7 +46,7 @@ const ProjectDetailsSideMenu: FC<Props> = ({currentTopic, onClick}) => {
             <ProjectIcon
               className="ProjectDetailsSideMenu__icon"
               icon={iconType}
-              size={shouldShowDetails ? 32 : 24}
+              size={shouldShowDetails ? ProjectIconSize.medium : ProjectIconSize.small}
               state={iconState}
             />
             {shouldShowDetails && (
