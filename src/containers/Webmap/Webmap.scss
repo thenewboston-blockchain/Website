@@ -1,11 +1,13 @@
 @import '~leaflet/dist/leaflet.css';
+@import 'styles/z-index';
+
 $map-bottom-offset: 200px;
 
 .Map {
   height: calc(100vh - #{$map-bottom-offset});
   margin-top: 10px;
   width: 100%;
-  z-index: 0;
+  z-index: $z-index-webmap;
 
   &__Popup {
     &-heading {
