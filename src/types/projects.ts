@@ -1,7 +1,7 @@
 import {ProjectIconType} from 'components/ProjectIcons';
 
 export type Project = {
-  uuid: string;
+  pk: string;
   created_date: string;
   modified_date: string;
   title: string;

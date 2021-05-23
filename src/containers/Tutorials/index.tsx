@@ -1,5 +1,5 @@
 import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
-import {useHistory, useParams} from 'react-router';
+import {useHistory, useParams} from 'react-router-dom';
 
 import {getPlaylistCategories} from 'apis/tutorials';
 import {BreadcrumbMenu, FlatNavLinks, Loader, PageTitle} from 'components';

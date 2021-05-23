@@ -1,5 +1,5 @@
-import React, {FC, useEffect, useState} from 'react';
-import {useParams} from 'react-router-dom';
+import React, {FC, useEffect, useMemo, useState} from 'react';
+import {Redirect, useParams} from 'react-router-dom';
 
 import {api as projectsApi} from 'apis/projects';
 import {Project} from 'types/projects';
@@ -13,8 +13,17 @@ import './Projects.scss';
 const Projects: FC = () => {
   const {projectId} = useParams<{projectId: string}>();
   const [projects, setProjects] = useState<Project[]>([]);
-  const isValidProjectId = projects.length && projects.some((project) => project.uuid === projectId);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  const isValidProjectId = useMemo<boolean>(
+    () => !!(projectId && projects.length && projects.some((project) => project.pk === projectId)),
+    [projectId, projects],
+  );
+
+  const selectedProject = useMemo<Project | null>(
+    () => (isValidProjectId ? projects.find((project) => project.pk === projectId) || null : null),
+    [isValidProjectId, projects, projectId],
+  );
 
   useEffect(() => {
     (async function getProjects() {
@@ -38,17 +47,20 @@ const Projects: FC = () => {
     );
   }
 
-  if (isValidProjectId) {
-    const selectedProject = projects.find((project) => project.uuid === projectId) as Project;
+  if (!projectId) {
+    return (
+      <div className="Projects">
+        <ProjectsHero />
+        <ListOfProjects projects={projects} />
+      </div>
+    );
+  }
+
+  if (selectedProject) {
     return <ProjectDetails project={selectedProject} />;
   }
 
-  return (
-    <div className="Projects">
-      <ProjectsHero />
-      <ListOfProjects projects={projects} />
-    </div>
-  );
+  return <Redirect to="/projects" />;
 };
 
 export default Projects;

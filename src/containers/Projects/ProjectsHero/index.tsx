@@ -20,7 +20,12 @@ const ProjectsHero: FC = () => {
             <div className="ProjectsHero__cta-container">
               <Button
                 className="ProjectsHero__first-button"
-                onClick={() => window.open('http://t.ly/9iyM', '_blank')}
+                onClick={() =>
+                  window.open(
+                    'https://github.com/thenewboston-developers/Projects/issues/new?assignees=&labels=Project&template=project-proposal.md&title=NAME_OF_YOUR_PROJECT',
+                    '_blank',
+                  )
+                }
                 rounded
                 type="primary"
               >

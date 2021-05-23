@@ -13,15 +13,15 @@ const ListOfProjects: FC<Props> = ({projects}) => {
   return (
     <div className="ListOfProjects">
       {projects.map((project) => {
-        const {description, logo, project_lead: projectLead, title, uuid} = project;
+        const {description, logo, project_lead: projectLead, title, pk} = project;
         return (
           <ProjectCard
             description={description}
-            id={uuid}
+            id={pk}
             logoUrl={logo}
             projectLead={projectLead}
             title={title}
-            key={uuid}
+            key={pk}
           />
         );
       })}
