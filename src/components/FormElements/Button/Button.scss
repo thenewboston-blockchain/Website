@@ -1,11 +1,11 @@
 .FormButton {
   $self: &;
-  border-radius: 3px;
+  border-radius: 100px;
   border-style: solid;
   border-width: 1px;
   box-shadow: 0 4px 4px rgba(4, 34, 53, 0.25);
   cursor: pointer;
-  padding: 9px 12px;
+  padding: 11px 12px;
   transition: all 0.1s;
 
   &--disabled {
