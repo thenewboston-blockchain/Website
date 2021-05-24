@@ -20,19 +20,6 @@
         "isLead": true,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "3",
-          "discordUsername": "Chuy#5318",
-          "displayName": "Jesus Avina",
-          "githubUsername": "javina89",
-          "profileImage": "https://avatars.githubusercontent.com/u/13725042?s=460&u=ea84af4231fdf89f8454b485de5ee3df49321621&v=4"
-        },
-        "hourlyRate": 700
-      },
-      {
-        "title": "Auditor",
-        "isLead": false,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
           "contributorId": "8",
           "discordUsername": "TristanS#6395",
           "displayName": "Tristan Spearing",
