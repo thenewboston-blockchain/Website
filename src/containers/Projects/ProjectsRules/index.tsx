@@ -8,6 +8,7 @@ const ProjectsRules: FC = () => {
   const steps: ReactNode[] = [
     'Projects must be centered on thenewboston network and/or community.',
     'Projects must clearly add value to thenewboston network and/or community.',
+    `Projects should not depend on altering the base architecture or protocol of thenewboston blockchain for it's completion.`,
     'For applications involving a user interface (UI), simple mock-ups must be provided in the project proposal. (Basic wireframes are acceptable, high fidelity designs are not a requirement.)',
     'Software projects must be open source.',
     'Projects involving gambling or illegal activities of any kind are not allowed.',
