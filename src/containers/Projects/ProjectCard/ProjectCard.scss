@@ -6,15 +6,14 @@ $padding-768: 24px;
 
 .ProjectCard {
   border-radius: 12px;
-  box-shadow: 0px 0px 30px 0px #e5eaf47a;
+  box-shadow: 0 0 30px 0 #e5eaf47a;
   height: $card-height-original;
   max-width: $card-width-original;
   padding: $padding;
   position: relative;
 
   &:hover {
-    box-shadow: 0px 0px 30px 0px #e5eaf47a;
-    box-shadow: 0px 7px 40px 0px #e9effd;
+    box-shadow: 0 7px 40px 0 #e9effd;
   }
 
   @media (max-width: 992px) {
@@ -63,7 +62,9 @@ $padding-768: 24px;
 
   &__details-button {
     @extend %body1;
+    align-items: center;
     bottom: $padding;
+    display: flex;
     font-weight: var(--font-weight-regular);
     position: absolute;
     right: $padding;
@@ -73,6 +74,10 @@ $padding-768: 24px;
       left: 50%;
       transform: translateX(-50%);
     }
+  }
+
+  &__details-icon {
+    margin-left: 6px;
   }
 
   &__description {

@@ -2,8 +2,7 @@ import React, {FC, useEffect, useState} from 'react';
 
 import {getUser} from 'apis/users';
 import {api as projectApi} from 'apis/projects';
-import {Avatar} from 'components';
-import Button from 'components/Button';
+import {Avatar, Button} from 'components';
 import {Icon, IconType} from '@thenewboston/ui';
 import {User} from 'types/app/User';
 import './ProjectDetailsHeader.scss';
@@ -45,11 +44,11 @@ const ProjectDetailsHeader: FC<Props> = ({github, logoUrl, projectLead, title}) 
         </div>
         <div className="ProjectDetailsHeader__right-container">
           <Button
-            iconLeft={<Icon icon={IconType.github} size={24} />}
+            className="ProjectDetailsHeader__github-button"
             onClick={() => window.open(github, '_blank')}
-            rounded
-            type="outlined"
+            variant="outlined"
           >
+            <Icon className="ProjectDetailsHeader__github-icon" icon={IconType.github} size={24} totalSize="unset" />
             {title}
           </Button>
         </div>

@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {useHistory} from 'react-router-dom';
 
-import Button from 'components/Button';
+import {Button} from 'components';
 import ProjectsHeroImage from './ProjectsHeroImage';
 import './ProjectsHero.scss';
 
@@ -26,12 +26,11 @@ const ProjectsHero: FC = () => {
                     '_blank',
                   )
                 }
-                rounded
-                type="primary"
+                variant="contained"
               >
                 Propose a Project
               </Button>
-              <Button onClick={() => history.push('/project-rules/overview')} rounded type="outlined">
+              <Button onClick={() => history.push('/project-rules/overview')} variant="outlined">
                 Rules and Guide
               </Button>
             </div>

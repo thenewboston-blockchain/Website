@@ -3,8 +3,7 @@ import {useHistory} from 'react-router-dom';
 
 import {getUser} from 'apis/users';
 import {api as projectApi} from 'apis/projects';
-import {Avatar} from 'components';
-import Button from 'components/Button';
+import {Avatar, Button} from 'components';
 import {useWindowDimensions} from 'hooks';
 import {User} from 'types/app/User';
 import {Icon, IconType} from '@thenewboston/ui';
@@ -51,14 +50,9 @@ const ProjectCard: FC<Props> = ({description, id, logoUrl, projectLead, title}) 
         </div>
       </div>
       <div className="ProjectCard__description">{description}</div>
-      <Button
-        className="ProjectCard__details-button"
-        onClick={handleButtonClick}
-        iconRight={<Icon icon={IconType.chevronRight} size={16} />}
-        type="empty"
-        rounded
-      >
+      <Button className="ProjectCard__details-button" onClick={handleButtonClick} variant="link">
         View Details
+        <Icon className="ProjectCard__details-icon" icon={IconType.chevronRight} size={16} totalSize="unset" />
       </Button>
     </div>
   );

@@ -19,6 +19,15 @@
     padding: 24px;
   }
 
+  &__github-button {
+    align-items: center;
+    display: flex;
+  }
+
+  &__github-icon {
+    margin-right: 6px;
+  }
+
   &__left-container {
     align-items: center;
     display: flex;
