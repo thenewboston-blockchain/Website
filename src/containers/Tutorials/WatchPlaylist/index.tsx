@@ -48,7 +48,7 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
 
   const handleVideoEnd = useCallback((): void => {
     if (playlist?.video_list.length) {
-      const index = playlist.video_list.findIndex((video) => video.uuid === currentVideo?.uuid);
+      const index = playlist.video_list.findIndex((video) => video.pk === currentVideo?.pk);
       if (index !== -1 && index !== playlist.video_list.length - 1) {
         setCurrentVideo(playlist.video_list[index + 1]);
       }
@@ -66,7 +66,7 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
           <div
             className={clsx(
               'WatchPlaylist__list-video',
-              currentVideo?.uuid === video.uuid && 'WatchPlaylist__list-video--active',
+              currentVideo?.pk === video.pk && 'WatchPlaylist__list-video--active',
             )}
             key={video.video_id}
             onClick={() => {
@@ -83,7 +83,7 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
             title={video.title}
           >
             <div className="WatchPlaylist__list-video-number">
-              {video.uuid === currentVideo?.uuid ? <Icon icon={IconType.play} /> : index + 1}
+              {video.pk === currentVideo?.pk ? <Icon icon={IconType.play} /> : index + 1}
             </div>
             <div className="WatchPlaylist__list-video-details">
               <div className="WatchPlaylist__list-video-top">{video.title}</div>

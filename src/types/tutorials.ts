@@ -28,7 +28,7 @@ export interface Video extends CreatedModified {
   tags: string[];
   thumbnail: string;
   title: string;
-  uuid: string;
+  pk: string;
   video_id: string;
   video_type: Source;
 }
