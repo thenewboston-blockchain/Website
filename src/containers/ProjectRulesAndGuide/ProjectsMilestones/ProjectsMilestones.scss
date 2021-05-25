@@ -29,9 +29,9 @@
     }
 
     &__text {
+      @extend %h3;
       color: var(--color-primary);
       font-weight: var(--font-weight-regular);
-      @extend %h3;
     }
   }
 
