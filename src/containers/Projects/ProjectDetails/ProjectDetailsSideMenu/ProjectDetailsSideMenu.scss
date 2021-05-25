@@ -3,8 +3,8 @@
 
 .ProjectDetailsSideMenu {
   background-color: var(--color-white);
-  border-radius: 0px 0px 0px 12px;
-  box-shadow: 0px 8px 88px rgba(0, 0, 0, 0.05);
+  border-radius: 0 0 0 12px;
+  box-shadow: 0 8px 88px rgba(0, 0, 0, 0.05);
   flex-shrink: 0;
   height: fit-content;
   left: 0;
@@ -40,9 +40,9 @@
   }
 
   &__topic-title {
+    @extend %h3;
     color: var(--color-gray-500);
     font-weight: var(--font-weight-regular);
-    @extend %h3;
 
     &:hover {
       color: var(--color-cyan-800);
