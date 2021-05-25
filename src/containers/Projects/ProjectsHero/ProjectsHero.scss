@@ -82,12 +82,12 @@ $title-width: 480px;
   }
 
   &__subtitle {
+    @extend %h3;
     color: var(--color-gray-500);
     font-weight: var(--font-weight-regular);
     line-height: 1.5;
     margin-bottom: 40px;
     margin-top: 30px;
-    @extend %h3;
   }
 
   &__title {
