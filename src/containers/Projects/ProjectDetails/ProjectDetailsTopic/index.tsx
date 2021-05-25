@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import ProjectIcon, {ProjectIconSize, ProjectIconType} from 'components/ProjectIcons';
+import ProjectIcon, {ProjectIconSize, ProjectIconType} from '../../ProjectIcons';
 import './ProjectDetailsTopic.scss';
 
 interface ComponentProps {

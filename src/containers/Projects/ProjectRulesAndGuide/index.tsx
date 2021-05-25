@@ -1,10 +1,10 @@
 import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
-import {DashboardLayout, ProjectsMenuItems, Pagination} from 'components';
-import {projectsNavigationData} from 'components/ProjectsMenuItems';
+import {DashboardLayout, Pagination} from 'components';
 import {PageData, PageDataObject} from 'types/page-data';
 
+import ProjectsMenuItems, {projectsNavigationData} from '../ProjectsMenuItems';
 import ProjectsMilestones from './ProjectsMilestones';
 import ProjectsOverview from './ProjectsOverview';
 import ProjectsProposalSubmissionProcess from './ProjectsProposalSubmissionProcess';

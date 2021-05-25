@@ -1,4 +1,4 @@
-import {ProjectIconType} from 'components/ProjectIcons';
+import {ProjectIconType} from 'containers/Projects/ProjectIcons';
 
 export type Project = {
   pk: string;

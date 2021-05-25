@@ -1,10 +1,10 @@
 import React, {FC, useState} from 'react';
 import clsx from 'clsx';
 
-import ProjectIcon, {ProjectIconSize} from 'components/ProjectIcons';
 import {useWindowDimensions} from 'hooks';
 import {ProjectTopic} from 'types/projects';
 
+import ProjectIcon, {ProjectIconSize} from '../../ProjectIcons';
 import {projectDetailsTopic} from '../constants';
 import './ProjectDetailsSideMenu.scss';
 

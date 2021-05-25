@@ -1,6 +1,5 @@
-import {ProjectIconType} from 'components/ProjectIcons';
-
 import {ProjectTopicAnchor, ProjectTopicMap, ProjectTopicTitle} from 'types/projects';
+import {ProjectIconType} from '../ProjectIcons';
 
 /* eslint-disable */
 export const projectDetailsTopic: ProjectTopicMap = {

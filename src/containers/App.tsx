@@ -21,7 +21,7 @@ import PrimaryValidatorApi from './PrimaryValidatorApi';
 import Profile from './Profile';
 import Progress from './Progress';
 import Projects from './Projects';
-import ProjectRulesAndGuide from './ProjectRulesAndGuide';
+import ProjectRulesAndGuide from './Projects/ProjectRulesAndGuide';
 import SignIn from './SignIn';
 import SignOut from './SignOut';
 import Social from './Social';
