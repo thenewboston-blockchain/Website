@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
 
 import {Project} from 'types/projects';
-import ProjectCard from '../ProjectCard';
 
+import ProjectCard from '../ProjectCard';
 import './ListOfProjects.scss';
 
 type Props = {
