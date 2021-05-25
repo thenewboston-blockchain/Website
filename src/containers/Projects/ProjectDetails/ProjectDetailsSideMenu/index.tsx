@@ -10,13 +10,15 @@ import './ProjectDetailsSideMenu.scss';
 
 type Props = {
   currentTopic: ProjectTopic;
-  onClick: (topic: ProjectTopic) => void;
+  onClick(topic: ProjectTopic): void;
 };
 
 const ProjectDetailsSideMenu: FC<Props> = ({currentTopic, onClick}) => {
   const [hoveredTopicTitle, setHoveredTopicTitle] = useState<string>('');
 
   const {width} = useWindowDimensions();
+  const shouldShowDetails = width > 992;
+
   const handleMouseEnter = (title: string) => {
     setHoveredTopicTitle(title);
   };
@@ -24,15 +26,21 @@ const ProjectDetailsSideMenu: FC<Props> = ({currentTopic, onClick}) => {
   const handleMouseLeave = () => {
     setHoveredTopicTitle('');
   };
-  const shouldShowDetails = width > 992;
+
   return (
     <div className="ProjectDetailsSideMenu">
       {Object.values(projectDetailsTopic).map((topic) => {
         const {iconType, title} = topic;
         const isActive = currentTopic.title === title;
         const isHovered = hoveredTopicTitle === title;
-        /* eslint-disable-next-line no-nested-ternary */
-        const iconState = isActive ? 'active' : isHovered ? 'hover' : 'default';
+
+        let iconState: 'default' | 'active' | 'hover' = 'default';
+        if (isActive) {
+          iconState = 'active';
+        } else if (isHovered) {
+          iconState = 'hover';
+        }
+
         return (
           <div
             className="ProjectDetailsSideMenu__topic"
