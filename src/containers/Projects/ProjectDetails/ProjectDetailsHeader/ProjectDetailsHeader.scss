@@ -67,12 +67,17 @@
   }
 
   &__project-lead-container {
-    -webkit-box-orient: vertical;
-    // max one line to prevent it from affecting height of header
-    display: -webkit-box;
-    -webkit-line-clamp: 1; /* max number of lines to show */
+    max-width: 500px;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    @media (max-width: 992px) {
+      max-width: 350px;
+    }
+
+    @media (max-width: 578px) {
+      max-width: 250px;
+    }
   }
 
   &__project-lead {
