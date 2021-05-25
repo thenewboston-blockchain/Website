@@ -29,10 +29,9 @@
   }
 
   &__content-overview {
-    color: var(--color-sail-gray-500);
-    font-weight: var(--font-weight-regular);
-    margin-bottom: 32px;
     @extend %body1;
+    color: var(--color-sail-gray-500);
+    margin-bottom: 32px;
   }
 
   &__content-title {
@@ -42,8 +41,8 @@
   }
 
   &__content-main {
+    @extend %h3;
     color: var(--color-sail-gray-600);
     font-weight: var(--font-weight-regular);
-    @extend %h3;
   }
 }
