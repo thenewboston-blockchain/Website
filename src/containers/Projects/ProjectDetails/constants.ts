@@ -1,27 +1,7 @@
 import {ProjectTopicAnchor, ProjectTopicMap, ProjectTopicTitle} from 'types/projects';
 import {ProjectIconType} from '../ProjectIcons';
 
-/* eslint-disable */
 export const projectDetailsTopic: ProjectTopicMap = {
-  overview: {
-    anchor: ProjectTopicAnchor.Overview,
-    iconType: ProjectIconType.Overview,
-    overview:
-      'A brief summary, situation, plan, and outline about the project, bigger picture, functionality and the possible outcome from this project',
-    title: ProjectTopicTitle.Overview,
-  },
-  problem: {
-    anchor: ProjectTopicAnchor.Problem,
-    iconType: ProjectIconType.Problem,
-    overview: 'A precise information about the problem that this project is going to solve.',
-    title: ProjectTopicTitle.Problem,
-  },
-  target_market: {
-    anchor: ProjectTopicAnchor.TargetMarket,
-    iconType: ProjectIconType.Target,
-    overview: 'A description of the group of users to whom TNB wants to provide the service.',
-    title: ProjectTopicTitle.TargetMarket,
-  },
   benefits: {
     anchor: ProjectTopicAnchor.Benefits,
     iconType: ProjectIconType.Benefits,
@@ -41,10 +21,29 @@ export const projectDetailsTopic: ProjectTopicMap = {
     overview: 'A specific date of project completion.',
     title: ProjectTopicTitle.EstimatedCompletionDate,
   },
+  overview: {
+    anchor: ProjectTopicAnchor.Overview,
+    iconType: ProjectIconType.Overview,
+    overview:
+      'A brief summary, situation, plan, and outline about the project, bigger picture, functionality and the possible outcome from this project',
+    title: ProjectTopicTitle.Overview,
+  },
+  problem: {
+    anchor: ProjectTopicAnchor.Problem,
+    iconType: ProjectIconType.Problem,
+    overview: 'A precise information about the problem that this project is going to solve.',
+    title: ProjectTopicTitle.Problem,
+  },
   roadmap: {
     anchor: ProjectTopicAnchor.Roadmap,
     iconType: ProjectIconType.Roadmap,
     overview: 'A schedule of a lengthy project by breaking into realistic achiveable milestones.',
     title: ProjectTopicTitle.Roadmap,
+  },
+  target_market: {
+    anchor: ProjectTopicAnchor.TargetMarket,
+    iconType: ProjectIconType.Target,
+    overview: 'A description of the group of users to whom TNB wants to provide the service.',
+    title: ProjectTopicTitle.TargetMarket,
   },
 };
