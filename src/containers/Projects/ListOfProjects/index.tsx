@@ -12,8 +12,7 @@ type Props = {
 const ListOfProjects: FC<Props> = ({projects}) => {
   return (
     <div className="ListOfProjects">
-      {projects.map((project) => {
-        const {description, logo, project_lead: projectLead, title, pk} = project;
+      {projects.map(({description, logo, project_lead: projectLead, title, pk}) => {
         return (
           <ProjectCard
             description={description}
