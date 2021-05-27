@@ -3,6 +3,7 @@ import clsx from 'clsx';
 
 import {useWindowDimensions} from 'hooks';
 import {ProjectTopic} from 'types/projects';
+import {sortByNumberKey} from 'utils/sort';
 
 import ProjectIcon, {ProjectIconSize} from '../../ProjectIcons';
 import {projectDetailsTopic} from '../constants';
@@ -12,6 +13,8 @@ type Props = {
   currentTopic: ProjectTopic;
   onClick(topic: ProjectTopic): void;
 };
+
+const orderedProjectDetailsTopic = Object.values(projectDetailsTopic).sort(sortByNumberKey('position'));
 
 const ProjectDetailsSideMenu: FC<Props> = ({currentTopic, onClick}) => {
   const [hoveredTopicTitle, setHoveredTopicTitle] = useState<string>('');
@@ -29,7 +32,7 @@ const ProjectDetailsSideMenu: FC<Props> = ({currentTopic, onClick}) => {
 
   return (
     <div className="ProjectDetailsSideMenu">
-      {Object.values(projectDetailsTopic).map((topic) => {
+      {orderedProjectDetailsTopic.map((topic) => {
         const {iconType, title} = topic;
         const isActive = currentTopic.title === title;
         const isHovered = hoveredTopicTitle === title;

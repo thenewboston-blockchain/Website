@@ -20,6 +20,7 @@ const DETAILS_CONTAINER_HEIGHT_480 = 241;
 const ProjectDetailsContent: FC<Props> = ({project, currentTopic}) => {
   const {width} = useWindowDimensions();
   const detailsHeaderHeight = width >= 480 ? DETAILS_CONTAINER_HEIGHT : DETAILS_CONTAINER_HEIGHT_480;
+
   useEffect(() => {
     const element = document.getElementById(currentTopic.anchor);
     const scrollBehavior = element ? 'smooth' : 'auto';
