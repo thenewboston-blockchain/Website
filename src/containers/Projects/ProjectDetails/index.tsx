@@ -13,7 +13,7 @@ type Props = {
 
 const ProjectDetails: FC<Props> = ({project}) => {
   const [currentTopic, setCurrentTopic] = useState<ProjectTopic>(projectDetailsTopic.overview);
-  const {title, logo, github_url: github, project_lead: projectLead} = project;
+  const {title, logo, github_url: github, project_lead_display_name: projectLeadDisplayName} = project;
 
   const handleSideMenuClick = (topic: ProjectTopic) => {
     setCurrentTopic(topic);
@@ -21,7 +21,12 @@ const ProjectDetails: FC<Props> = ({project}) => {
 
   return (
     <div className="ProjectDetails">
-      <ProjectDetailsHeader github={github} logoUrl={logo} title={title} projectLead={projectLead} />
+      <ProjectDetailsHeader
+        github={github}
+        logoUrl={logo}
+        title={title}
+        projectLeadDisplayName={projectLeadDisplayName}
+      />
       <div className="ProjectDetails__main-container">
         <ProjectDetailsSideMenu currentTopic={currentTopic} onClick={handleSideMenuClick} />
         <ProjectDetailsContent project={project} currentTopic={currentTopic} />

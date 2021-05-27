@@ -11,11 +11,3 @@ export async function getProjects(): Promise<Project[]> {
   }
   return response.data.results;
 }
-
-export async function getProjectMemberById(id: string) {
-  const response = await axios.get(`${process.env.REACT_APP_BACKEND_API}/project_members/${id}`);
-  if (!response.data) {
-    throw new Error('Error while fetching project member, please try again.');
-  }
-  return response.data;
-}

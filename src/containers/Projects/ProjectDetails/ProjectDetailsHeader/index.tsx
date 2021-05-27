@@ -1,32 +1,17 @@
-import React, {FC, useEffect, useState} from 'react';
+import React, {FC} from 'react';
 import {Icon, IconType} from '@thenewboston/ui';
 
-import {getUser} from 'apis/users';
-import {api as projectApi} from 'apis/projects';
 import {Avatar, Button} from 'components';
-import {User} from 'types/app/User';
 import './ProjectDetailsHeader.scss';
 
 type Props = {
   github: string;
   logoUrl: string;
-  projectLead: string;
+  projectLeadDisplayName: string;
   title: string;
 };
 
-const ProjectDetailsHeader: FC<Props> = ({github, logoUrl, projectLead, title}) => {
-  const [projectLeadUser, setProjectLeadUser] = useState<User | null>(null);
-
-  useEffect(() => {
-    (async () => {
-      // We require to call two extra APIs just to get the project lead's name, perhaps we
-      // should adopt a BFF design
-      const projectMemberResponse = await projectApi.getProjectMemberById(projectLead);
-      const userResponse = await getUser({uuid: projectMemberResponse.user});
-      setProjectLeadUser(userResponse);
-    })();
-  }, [projectLead]);
-
+const ProjectDetailsHeader: FC<Props> = ({github, logoUrl, projectLeadDisplayName, title}) => {
   return (
     <div className="ProjectDetailsHeader">
       <Avatar className="ProjectDetailsHeader__avatar" src={logoUrl} size={40} />
@@ -36,7 +21,7 @@ const ProjectDetailsHeader: FC<Props> = ({github, logoUrl, projectLead, title}) 
             <h1 className="ProjectDetailsHeader__project-title">{title}</h1>
             <div className="ProjectDetailsHeader__project-lead-container">
               <span className="ProjectDetailsHeader__project-lead">Project Lead: </span>
-              <span className="ProjectDetailsHeader__project-lead-name">{projectLeadUser?.display_name || ''}</span>
+              <span className="ProjectDetailsHeader__project-lead-name">{projectLeadDisplayName}</span>
             </div>
           </div>
         </div>

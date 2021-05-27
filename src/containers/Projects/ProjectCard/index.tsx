@@ -1,11 +1,8 @@
-import React, {FC, useEffect, useState} from 'react';
+import React, {FC} from 'react';
 import {useHistory} from 'react-router-dom';
 
-import {getUser} from 'apis/users';
-import {api as projectApi} from 'apis/projects';
 import {Avatar, Button} from 'components';
 import {useWindowDimensions} from 'hooks';
-import {User} from 'types/app/User';
 import {Icon, IconType} from '@thenewboston/ui';
 
 import './ProjectCard.scss';
@@ -14,24 +11,13 @@ type Props = {
   description: string;
   id: string;
   logoUrl: string;
-  projectLead: string;
+  projectLeadDisplayName: string;
   title: string;
 };
 
-const ProjectCard: FC<Props> = ({description, id, logoUrl, projectLead, title}) => {
+const ProjectCard: FC<Props> = ({description, id, logoUrl, projectLeadDisplayName, title}) => {
   const history = useHistory();
-  const [projectLeadUser, setProjectLeadUser] = useState<User | null>(null);
   const {width} = useWindowDimensions();
-
-  useEffect(() => {
-    (async () => {
-      // We require to call two extra APIs just to get the project lead's name, perhaps we
-      // should adopt a BFF design
-      const projectMemberResponse = await projectApi.getProjectMemberById(projectLead);
-      const userResponse = await getUser({uuid: projectMemberResponse.user});
-      setProjectLeadUser(userResponse);
-    })();
-  }, [projectLead]);
 
   const handleButtonClick = (): void => {
     history.push(`/projects/${id}`);
@@ -45,7 +31,7 @@ const ProjectCard: FC<Props> = ({description, id, logoUrl, projectLead, title}) 
           <h1 className="ProjectCard__project-title">{title}</h1>
           <div className="ProjectCard__project-lead-container">
             <span className="ProjectCard__project-lead">Project Lead: </span>
-            <span className="ProjectCard__project-lead-name">{projectLeadUser?.display_name || ''}</span>
+            <span className="ProjectCard__project-lead-name">{projectLeadDisplayName}</span>
           </div>
         </div>
       </div>
