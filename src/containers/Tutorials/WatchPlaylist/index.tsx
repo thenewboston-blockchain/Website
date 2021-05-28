@@ -4,7 +4,7 @@ import format from 'date-fns/format';
 import parseISO from 'date-fns/parseISO';
 
 import {getPlaylist} from 'apis/tutorials';
-import {A, EmptyPage, Loader, VideoPlayer} from 'components';
+import {A, EmptyPage, Loader, PageTitle, VideoPlayer} from 'components';
 import {Instructor, Playlist, Source, TimeFormat, Video} from 'types/tutorials';
 import {getFormattedTime} from 'utils/time';
 
@@ -109,6 +109,10 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
   if (!playlist || !currentVideo) return <EmptyPage />;
   return (
     <div className="WatchPlaylist">
+      <PageTitle
+        ogDescription={currentVideo.description || undefined}
+        title={`${currentVideo.title} | ${playlist.title}`}
+      />
       <div className="WatchPlaylist__main">
         <VideoPlayer
           className="WatchPlaylist__video"
