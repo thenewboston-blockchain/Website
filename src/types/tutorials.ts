@@ -36,7 +36,7 @@ export interface Video extends CreatedModified {
 export interface Playlist extends CreatedModified {
   categories: string[];
   description: string;
-  instructor: string;
+  instructor: Instructor;
   language: string;
   pk: string;
   playlist_id: string;

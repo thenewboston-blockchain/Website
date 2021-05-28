@@ -1,8 +1,8 @@
 import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
 
-import {getPlaylists, getInstructor} from 'apis/tutorials';
+import {getPlaylists} from 'apis/tutorials';
 import {EmptyPage, Loader} from 'components';
-import {Playlist, Instructor, Source} from 'types/tutorials';
+import {Playlist, Source} from 'types/tutorials';
 
 import PlaylistCard from '../PlaylistCard';
 import './Playlists.scss';
@@ -10,14 +10,10 @@ import './Playlists.scss';
 interface PlaylistsParams {
   category: string | null;
 }
-interface PlaylistState {
-  instructor: Instructor;
-  playlist: Playlist;
-}
 
 const Playlists: FC<PlaylistsParams> = ({category}) => {
   const [loading, setLoading] = useState<boolean>(true);
-  const [playlists, setPlaylists] = useState<PlaylistState[]>([]);
+  const [playlists, setPlaylists] = useState<Playlist[]>([]);
   const [errorMessage, setErrorMessage] = useState<string>('');
 
   useEffect(() => {
@@ -26,12 +22,7 @@ const Playlists: FC<PlaylistsParams> = ({category}) => {
         try {
           setLoading(true);
           const fetchedPlaylists = await getPlaylists(category);
-          const fetchedPlaylistsWithInstructors = await Promise.all(
-            fetchedPlaylists.map(async (fetchedPlaylist) => {
-              return {instructor: await getInstructor(fetchedPlaylist.instructor), playlist: fetchedPlaylist};
-            }),
-          );
-          setPlaylists(fetchedPlaylistsWithInstructors);
+          setPlaylists(fetchedPlaylists);
         } catch (error) {
           setErrorMessage(error.message);
         } finally {
@@ -48,7 +39,8 @@ const Playlists: FC<PlaylistsParams> = ({category}) => {
     if (!playlists.length) return <EmptyPage />;
     return (
       <div className="Playlists__grid">
-        {playlists.map(({instructor, playlist}) => {
+        {playlists.map((playlist) => {
+          const {instructor} = playlist;
           return (
             <PlaylistCard
               author={instructor.name}
