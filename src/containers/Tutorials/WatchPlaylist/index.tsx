@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import format from 'date-fns/format';
 import parseISO from 'date-fns/parseISO';
 
-import {getPlaylist, getInstructor} from 'apis/tutorials';
+import {getPlaylist} from 'apis/tutorials';
 import {A, EmptyPage, Loader, VideoPlayer} from 'components';
 import {Instructor, Playlist, Source, TimeFormat, Video} from 'types/tutorials';
 import {getFormattedTime} from 'utils/time';
@@ -27,9 +27,8 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
       try {
         setLoading(true);
         const playlistResponse = await getPlaylist(playlistId);
-        const instructorResponse = await getInstructor(playlistResponse.instructor);
         setPlaylist(playlistResponse);
-        setInstructor(instructorResponse);
+        setInstructor(playlistResponse.instructor);
         if (playlistResponse.video_list.length) {
           setCurrentVideo(playlistResponse.video_list[0]);
         }
