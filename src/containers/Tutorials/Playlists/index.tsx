@@ -21,8 +21,8 @@ const Playlists: FC<PlaylistsParams> = ({category}) => {
       const fetchData = async (): Promise<void> => {
         try {
           setLoading(true);
-          const fetchedPlaylists = await getPlaylists(category);
-          setPlaylists(fetchedPlaylists);
+          const playlistsResponse = await getPlaylists(category);
+          setPlaylists(playlistsResponse);
         } catch (error) {
           setErrorMessage(error.message);
         } finally {
