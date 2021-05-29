@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import format from 'date-fns/format';
 import parseISO from 'date-fns/parseISO';
 
-import {getPlaylist, getInstructor} from 'apis/tutorials';
+import {getPlaylist} from 'apis/tutorials';
 import {A, EmptyPage, Loader, VideoPlayer} from 'components';
 import {Instructor, Playlist, Source, TimeFormat, Video} from 'types/tutorials';
 import {getFormattedTime} from 'utils/time';
@@ -27,9 +27,8 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
       try {
         setLoading(true);
         const playlistResponse = await getPlaylist(playlistId);
-        const instructorResponse = await getInstructor(playlistResponse.instructor);
         setPlaylist(playlistResponse);
-        setInstructor(instructorResponse);
+        setInstructor(playlistResponse.instructor);
         if (playlistResponse.video_list.length) {
           setCurrentVideo(playlistResponse.video_list[0]);
         }
@@ -48,7 +47,7 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
 
   const handleVideoEnd = useCallback((): void => {
     if (playlist?.video_list.length) {
-      const index = playlist.video_list.findIndex((video) => video.uuid === currentVideo?.uuid);
+      const index = playlist.video_list.findIndex((video) => video.pk === currentVideo?.pk);
       if (index !== -1 && index !== playlist.video_list.length - 1) {
         setCurrentVideo(playlist.video_list[index + 1]);
       }
@@ -66,7 +65,7 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
           <div
             className={clsx(
               'WatchPlaylist__list-video',
-              currentVideo?.uuid === video.uuid && 'WatchPlaylist__list-video--active',
+              currentVideo?.pk === video.pk && 'WatchPlaylist__list-video--active',
             )}
             key={video.video_id}
             onClick={() => {
@@ -83,7 +82,7 @@ const WatchPlaylist: FC<WatchPlaylistProps> = ({playlistId}) => {
             title={video.title}
           >
             <div className="WatchPlaylist__list-video-number">
-              {video.uuid === currentVideo?.uuid ? <Icon icon={IconType.play} /> : index + 1}
+              {video.pk === currentVideo?.pk ? <Icon icon={IconType.play} /> : index + 1}
             </div>
             <div className="WatchPlaylist__list-video-details">
               <div className="WatchPlaylist__list-video-top">{video.title}</div>
