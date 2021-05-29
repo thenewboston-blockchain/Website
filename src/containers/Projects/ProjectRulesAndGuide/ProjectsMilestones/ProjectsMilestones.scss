@@ -1,3 +1,5 @@
+@import 'styles/font-mixins';
+
 .ProjectsMilestones {
   &__caption {
     margin: 12px 0;
@@ -27,9 +29,9 @@
     }
 
     &__text {
+      @extend %h3;
       color: var(--color-primary);
-      font-size: var(--font-size-h3);
-      font-weight: normal;
+      font-weight: var(--font-weight-regular);
     }
   }
 

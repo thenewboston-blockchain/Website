@@ -1,12 +1,11 @@
 import axios from 'axios';
 import {allTutorialsFilter} from 'constants/tutorials';
+import {PaginatedResponse} from 'types/api';
 import {Playlist, PlaylistCategory, Instructor} from 'types/tutorials';
 import {standardHeaders} from 'utils/requests';
 
-import {PlaylistCategoriesResponse, PlaylistsResponse} from './types';
-
 export async function getPlaylistCategories(): Promise<PlaylistCategory[]> {
-  const response = await axios.get<PlaylistCategoriesResponse>(
+  const response = await axios.get<PaginatedResponse<PlaylistCategory>>(
     `${process.env.REACT_APP_BACKEND_API}/playlist_categories`,
     standardHeaders(),
   );
@@ -16,7 +15,7 @@ export async function getPlaylistCategories(): Promise<PlaylistCategory[]> {
 
 export async function getPlaylists(category: string): Promise<Playlist[]> {
   if (category !== allTutorialsFilter.title) {
-    const response = await axios.get<PlaylistsResponse>(
+    const response = await axios.get<PaginatedResponse<Playlist>>(
       `${process.env.REACT_APP_BACKEND_API}/playlists?category=${category}`,
       standardHeaders(),
     );
@@ -24,7 +23,7 @@ export async function getPlaylists(category: string): Promise<Playlist[]> {
     return response.data.results;
   }
 
-  const response = await axios.get<PlaylistsResponse>(
+  const response = await axios.get<PaginatedResponse<Playlist>>(
     `${process.env.REACT_APP_BACKEND_API}/playlists`,
     standardHeaders(),
   );
