@@ -37,28 +37,25 @@ $offset-480: $top-nav-height + $details-container-height-480 + $wiggle-room;
   &__content {
     display: flex;
     flex-direction: column;
-  }
 
-  &__content-main {
-    @extend %h3;
-    white-space: pre-line;
-  }
+    &-main {
+      @extend %h3;
+      color: var(--color-sail-gray-600);
+      font-weight: var(--font-weight-regular);
+      white-space: pre-line;
+    }
 
-  &__content-overview {
-    @extend %body1;
-    color: var(--color-sail-gray-500);
-    margin-bottom: 32px;
-  }
+    &-overview {
+      @extend %body1;
+      color: var(--color-sail-gray-500);
+      font-weight: var(--font-weight-medium);
+      margin-bottom: 32px;
+    }
 
-  &__content-title {
-    color: var(--color-sail-blue-900);
-    font-weight: var(--font-weight-bold);
-    margin-bottom: 8px;
-  }
-
-  &__content-main {
-    @extend %h3;
-    color: var(--color-sail-gray-600);
-    font-weight: var(--font-weight-regular);
+    &-title {
+      color: var(--color-sail-blue-900);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: 8px;
+    }
   }
 }
