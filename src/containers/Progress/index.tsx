@@ -2,7 +2,7 @@ import React, {FC, useState, useEffect} from 'react';
 import subDays from 'date-fns/subDays';
 
 import * as githubApi from 'apis/github';
-import {Loader} from 'components';
+import {Loader, PageTitle} from 'components';
 import {BaseIssue, Milestone} from 'types/github';
 import {TeamName} from 'types/teams';
 import {teamMilestoneDetails} from './constants';
@@ -150,78 +150,81 @@ const Progress: FC = () => {
   }
 
   return (
-    <div className="Progress">
-      <ProgressHeader
-        goal={generalMilestone.milestone.description}
-        startDate={startDate}
-        endDate={endDate}
-        weekNumber={sprintNumber}
-      />
-      {auditMilestone && (
-        <ProgressDropdownCard
-          name={teamMilestoneDetails[TeamName.audit].teamName}
-          responsibility={teamMilestoneDetails[TeamName.audit].responsibility}
-          issues={auditMilestone.issues}
-          repoNames={teamMilestoneDetails[TeamName.audit].repositoryNames}
+    <>
+      <PageTitle ogDescription="Weekly Progress" title="Weekly Progress" />
+      <div className="Progress">
+        <ProgressHeader
+          goal={generalMilestone.milestone.description}
+          startDate={startDate}
+          endDate={endDate}
+          weekNumber={sprintNumber}
         />
-      )}
-      {backEndMilestone && (
-        <ProgressDropdownCard
-          name={teamMilestoneDetails[TeamName.backEnd].teamName}
-          responsibility={teamMilestoneDetails[TeamName.backEnd].responsibility}
-          issues={backEndMilestone.issues}
-          repoNames={teamMilestoneDetails[TeamName.backEnd].repositoryNames}
-        />
-      )}
-      {blockchainMilestone && (
-        <ProgressDropdownCard
-          name={teamMilestoneDetails[TeamName.blockchain].teamName}
-          responsibility={teamMilestoneDetails[TeamName.blockchain].responsibility}
-          issues={blockchainMilestone.issues}
-          repoNames={teamMilestoneDetails[TeamName.blockchain].repositoryNames}
-        />
-      )}
-      {communityMilestone && (
-        <ProgressDropdownCard
-          name={teamMilestoneDetails[TeamName.community].teamName}
-          responsibility={teamMilestoneDetails[TeamName.community].responsibility}
-          issues={communityMilestone.issues}
-          repoNames={teamMilestoneDetails[TeamName.community].repositoryNames}
-        />
-      )}
-      {designMilestone && (
-        <ProgressDropdownCard
-          name={teamMilestoneDetails[TeamName.design].teamName}
-          responsibility={teamMilestoneDetails[TeamName.design].responsibility}
-          issues={designMilestone.issues}
-          repoNames={teamMilestoneDetails[TeamName.design].repositoryNames}
-        />
-      )}
-      {devOpsMilestone && (
-        <ProgressDropdownCard
-          name={teamMilestoneDetails[TeamName.devOps].teamName}
-          responsibility={teamMilestoneDetails[TeamName.devOps].responsibility}
-          issues={devOpsMilestone.issues}
-          repoNames={teamMilestoneDetails[TeamName.devOps].repositoryNames}
-        />
-      )}
-      {frontEndMilestone && (
-        <ProgressDropdownCard
-          name={teamMilestoneDetails[TeamName.frontEnd].teamName}
-          responsibility={teamMilestoneDetails[TeamName.frontEnd].responsibility}
-          issues={frontEndMilestone.issues}
-          repoNames={teamMilestoneDetails[TeamName.frontEnd].repositoryNames}
-        />
-      )}
-      {marketingMilestone && (
-        <ProgressDropdownCard
-          name={teamMilestoneDetails[TeamName.marketing].teamName}
-          responsibility={teamMilestoneDetails[TeamName.marketing].responsibility}
-          issues={marketingMilestone.issues}
-          repoNames={teamMilestoneDetails[TeamName.marketing].repositoryNames}
-        />
-      )}
-    </div>
+        {auditMilestone && (
+          <ProgressDropdownCard
+            name={teamMilestoneDetails[TeamName.audit].teamName}
+            responsibility={teamMilestoneDetails[TeamName.audit].responsibility}
+            issues={auditMilestone.issues}
+            repoNames={teamMilestoneDetails[TeamName.audit].repositoryNames}
+          />
+        )}
+        {backEndMilestone && (
+          <ProgressDropdownCard
+            name={teamMilestoneDetails[TeamName.backEnd].teamName}
+            responsibility={teamMilestoneDetails[TeamName.backEnd].responsibility}
+            issues={backEndMilestone.issues}
+            repoNames={teamMilestoneDetails[TeamName.backEnd].repositoryNames}
+          />
+        )}
+        {blockchainMilestone && (
+          <ProgressDropdownCard
+            name={teamMilestoneDetails[TeamName.blockchain].teamName}
+            responsibility={teamMilestoneDetails[TeamName.blockchain].responsibility}
+            issues={blockchainMilestone.issues}
+            repoNames={teamMilestoneDetails[TeamName.blockchain].repositoryNames}
+          />
+        )}
+        {communityMilestone && (
+          <ProgressDropdownCard
+            name={teamMilestoneDetails[TeamName.community].teamName}
+            responsibility={teamMilestoneDetails[TeamName.community].responsibility}
+            issues={communityMilestone.issues}
+            repoNames={teamMilestoneDetails[TeamName.community].repositoryNames}
+          />
+        )}
+        {designMilestone && (
+          <ProgressDropdownCard
+            name={teamMilestoneDetails[TeamName.design].teamName}
+            responsibility={teamMilestoneDetails[TeamName.design].responsibility}
+            issues={designMilestone.issues}
+            repoNames={teamMilestoneDetails[TeamName.design].repositoryNames}
+          />
+        )}
+        {devOpsMilestone && (
+          <ProgressDropdownCard
+            name={teamMilestoneDetails[TeamName.devOps].teamName}
+            responsibility={teamMilestoneDetails[TeamName.devOps].responsibility}
+            issues={devOpsMilestone.issues}
+            repoNames={teamMilestoneDetails[TeamName.devOps].repositoryNames}
+          />
+        )}
+        {frontEndMilestone && (
+          <ProgressDropdownCard
+            name={teamMilestoneDetails[TeamName.frontEnd].teamName}
+            responsibility={teamMilestoneDetails[TeamName.frontEnd].responsibility}
+            issues={frontEndMilestone.issues}
+            repoNames={teamMilestoneDetails[TeamName.frontEnd].repositoryNames}
+          />
+        )}
+        {marketingMilestone && (
+          <ProgressDropdownCard
+            name={teamMilestoneDetails[TeamName.marketing].teamName}
+            responsibility={teamMilestoneDetails[TeamName.marketing].responsibility}
+            issues={marketingMilestone.issues}
+            repoNames={teamMilestoneDetails[TeamName.marketing].repositoryNames}
+          />
+        )}
+      </div>
+    </>
   );
 };
 

@@ -1,7 +1,7 @@
 import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
-import {DashboardLayout, DocsMenuItems, Pagination} from 'components';
+import {DashboardLayout, DocsMenuItems, PageTitle, Pagination} from 'components';
 import {bankApiNavigationData} from 'components/DocsMenuItems';
 import NodeApiConnectionRequests from 'containers/NodeApi/NodeApiConnectionRequests';
 import NodeApiCrawl from 'containers/NodeApi/NodeApiCrawl';
@@ -89,6 +89,7 @@ const BankApi: FC = () => {
 
   return (
     <DashboardLayout menuItems={<DocsMenuItems />} pageName={name} sectionName="Bank API">
+      <PageTitle ogDescription={`${name} | Bank API`} title={name} />
       {content}
       <Pagination navigationData={bankApiNavigationData} />
     </DashboardLayout>

@@ -1,7 +1,7 @@
 import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
-import {DashboardLayout, DocsMenuItems} from 'components';
+import {DashboardLayout, DocsMenuItems, PageTitle} from 'components';
 import {PageData, PageDataObject} from 'types/page-data';
 
 import DeploymentGuideBank from './DeploymentGuideBank';
@@ -33,6 +33,7 @@ const DeploymentGuide: FC = () => {
 
   return (
     <DashboardLayout menuItems={<DocsMenuItems />} pageName={name} sectionName="Deployment Guide">
+      <PageTitle ogDescription={`${name} Deployment Guide`} title={`${name} Deployment Guide`} />
       {content}
     </DashboardLayout>
   );

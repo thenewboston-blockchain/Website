@@ -1,5 +1,5 @@
 import React, {FC, ReactNode, useEffect, useMemo, useState} from 'react';
-import {useHistory} from 'react-router';
+import {useHistory} from 'react-router-dom';
 import clsx from 'clsx';
 
 import './TeamTabs.scss';
