@@ -1,7 +1,7 @@
 import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
-import {DashboardLayout, DocsMenuItems} from 'components';
+import {DashboardLayout, DocsMenuItems, PageTitle} from 'components';
 import {PageData, PageDataObject} from 'types/page-data';
 
 import StyleGuideCss from './StyleGuideCss';
@@ -33,6 +33,7 @@ const StyleGuide: FC = () => {
 
   return (
     <DashboardLayout menuItems={<DocsMenuItems />} pageName={name} sectionName="Style Guide">
+      <PageTitle ogDescription={`${name} Style Guide`} title={`${name} Style Guide`} />
       {content}
     </DashboardLayout>
   );

@@ -1,7 +1,7 @@
 import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
 
 import {getPlaylists} from 'apis/tutorials';
-import {EmptyPage, Loader} from 'components';
+import {EmptyPage, Loader, PageTitle} from 'components';
 import {Playlist, Source} from 'types/tutorials';
 
 import PlaylistCard from '../PlaylistCard';
@@ -58,16 +58,22 @@ const Playlists: FC<PlaylistsParams> = ({category}) => {
   }, [errorMessage, playlists]);
 
   return (
-    <div className="Playlists">
-      <div className="Playlists__header">{category}</div>
-      {loading ? (
-        <div className="Playlists__loader">
-          <Loader />
-        </div>
-      ) : (
-        renderPlaylistGrid()
-      )}
-    </div>
+    <>
+      <PageTitle
+        ogDescription={category ? `${category} Tutorials` : undefined}
+        title={category ? `${category} Tutorials` : 'Tutorials'}
+      />
+      <div className="Playlists">
+        <div className="Playlists__header">{category}</div>
+        {loading ? (
+          <div className="Playlists__loader">
+            <Loader />
+          </div>
+        ) : (
+          renderPlaylistGrid()
+        )}
+      </div>
+    </>
   );
 };
 
