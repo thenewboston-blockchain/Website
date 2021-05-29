@@ -20,7 +20,7 @@ type Props = {
 const TOP_NAV_HEIGHT = 60;
 const DETAILS_CONTAINER_HEIGHT = 158;
 const DETAILS_CONTAINER_HEIGHT_480 = 241;
-const WIGGLE_ROOM = 32;
+const WIGGLE_ROOM = 64;
 
 let debounce = false;
 
@@ -88,7 +88,7 @@ const ProjectDetails: FC<Props> = ({project}) => {
         return;
       }
       setCurrentTopicPosition(0);
-    }, 300),
+    }, 100),
     window,
     true,
   );
