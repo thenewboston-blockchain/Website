@@ -1,12 +1,13 @@
-import React, {FC, ReactNode, useRef, useState} from 'react';
+import React, {FC, ReactNode, useEffect, useRef, useState} from 'react';
+import {useLocation} from 'react-router-dom';
 import format from 'date-fns/format';
 import parseISO from 'date-fns/parseISO';
 import throttle from 'lodash/throttle';
 
 import {useEventListener, useWindowDimensions} from 'hooks';
-import {Project, ProjectTopicTitle} from 'types/projects';
+import {Project} from 'types/projects';
 
-import {orderedProjectDetailsTopic, projectDetailsTopic} from './constants';
+import {projectDetailsTopic} from './constants';
 import ProjectDetailsHeader from './ProjectDetailsHeader';
 import ProjectDetailsSideMenu from './ProjectDetailsSideMenu';
 import ProjectDetailsTopic from './ProjectDetailsTopic';
@@ -21,7 +22,11 @@ const DETAILS_CONTAINER_HEIGHT = 158;
 const DETAILS_CONTAINER_HEIGHT_480 = 241;
 const WIGGLE_ROOM = 32;
 
+let debounce = false;
+
 const ProjectDetails: FC<Props> = ({project}) => {
+  const {hash} = useLocation();
+
   const overviewRef = useRef<HTMLDivElement>(null);
   const problemRef = useRef<HTMLDivElement>(null);
   const targetMarketRef = useRef<HTMLDivElement>(null);
@@ -38,19 +43,23 @@ const ProjectDetails: FC<Props> = ({project}) => {
   const roadmapOffset = roadmapRef.current?.offsetTop || -1;
 
   const [currentTopicPosition, setCurrentTopicPosition] = useState<number>(0);
-  const [disableScrollEvent, setDisableScrollEvent] = useState<boolean>(false);
   const {title, logo, github_url: github, project_lead_display_name: projectLeadDisplayName} = project;
 
   const {width} = useWindowDimensions();
   const detailsHeaderHeight = width >= 480 ? DETAILS_CONTAINER_HEIGHT : DETAILS_CONTAINER_HEIGHT_480;
-  const currentTopic = orderedProjectDetailsTopic[currentTopicPosition];
+
+  // This is used so that the hash change does not trigger the scroll event listener
+  useEffect(() => {
+    debounce = true;
+    setTimeout(() => {
+      debounce = false;
+    }, 100);
+  }, [hash]);
 
   useEventListener(
     'scroll',
     throttle(() => {
-      if (disableScrollEvent) {
-        return;
-      }
+      if (debounce) return;
 
       const scrollHeight = window.scrollY + TOP_NAV_HEIGHT + detailsHeaderHeight + WIGGLE_ROOM;
 
@@ -83,24 +92,6 @@ const ProjectDetails: FC<Props> = ({project}) => {
     window,
     true,
   );
-
-  const handleSideMenuClick = (position: number) => {
-    const positionTopic = orderedProjectDetailsTopic[position];
-
-    const element = document.getElementById(positionTopic.anchor)!;
-
-    setDisableScrollEvent(true);
-    // scroll to top if it is the first topic, else scroll directly to the topic
-    const top =
-      currentTopic.title === ProjectTopicTitle.Overview
-        ? 0
-        : element.offsetTop - TOP_NAV_HEIGHT - detailsHeaderHeight - WIGGLE_ROOM;
-
-    window.scrollTo({behavior: 'smooth', top});
-    setTimeout(() => {
-      setDisableScrollEvent(false);
-    }, 300);
-  };
 
   const renderMainContent = (): ReactNode => {
     return (
@@ -185,7 +176,10 @@ const ProjectDetails: FC<Props> = ({project}) => {
         projectLeadDisplayName={projectLeadDisplayName}
       />
       <div className="ProjectDetails__main-container">
-        <ProjectDetailsSideMenu currentTopicPosition={currentTopicPosition} onClick={handleSideMenuClick} />
+        <ProjectDetailsSideMenu
+          currentTopicPosition={currentTopicPosition}
+          setCurrentTopicPosition={setCurrentTopicPosition}
+        />
         {renderMainContent()}
       </div>
     </div>

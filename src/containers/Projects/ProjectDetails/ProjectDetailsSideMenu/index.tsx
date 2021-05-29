@@ -1,5 +1,5 @@
 import React, {FC, useState} from 'react';
-import {useHistory, useLocation} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import clsx from 'clsx';
 
 import {useWindowDimensions} from 'hooks';
@@ -11,12 +11,11 @@ import './ProjectDetailsSideMenu.scss';
 
 type Props = {
   currentTopicPosition: number;
-  onClick(position: number): void;
+  setCurrentTopicPosition(position: number): void;
 };
 
-const ProjectDetailsSideMenu: FC<Props> = ({currentTopicPosition, onClick}) => {
+const ProjectDetailsSideMenu: FC<Props> = ({currentTopicPosition, setCurrentTopicPosition}) => {
   const history = useHistory();
-  const {pathname} = useLocation();
   const [hoveredTopicTitle, setHoveredTopicTitle] = useState<string>('');
   const currentTopic = orderedProjectDetailsTopic[currentTopicPosition];
 
@@ -24,8 +23,8 @@ const ProjectDetailsSideMenu: FC<Props> = ({currentTopicPosition, onClick}) => {
   const shouldShowDetails = width > 992;
 
   const handleMenuClick = (topic: ProjectTopic) => (): void => {
-    onClick(topic.position);
-    history.push(`${pathname}#${topic.anchor}`);
+    setCurrentTopicPosition(topic.position);
+    history.push(`#${topic.anchor}`);
   };
 
   const handleMouseEnter = (title: string) => {
