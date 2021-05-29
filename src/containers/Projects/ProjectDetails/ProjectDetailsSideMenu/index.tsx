@@ -4,6 +4,7 @@ import clsx from 'clsx';
 
 import {useWindowDimensions} from 'hooks';
 import {ProjectTopic} from 'types/projects';
+import {isTouchScreenDevice} from 'utils/device';
 
 import ProjectIcon, {ProjectIconSize} from '../../ProjectIcons';
 import {orderedProjectDetailsTopic} from '../constants';
@@ -28,6 +29,10 @@ const ProjectDetailsSideMenu: FC<Props> = ({currentTopicPosition, setCurrentTopi
   };
 
   const handleMouseEnter = (title: string) => {
+    // touch screen devices does not need to have hover effect
+    if (isTouchScreenDevice()) {
+      return;
+    }
     setHoveredTopicTitle(title);
   };
 
