@@ -1,54 +1,66 @@
-import React, {FC, useMemo} from 'react';
+import React, {FC, useEffect, useMemo, useState} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
-import {DashboardLayout, ProjectsMenuItems, Pagination, PageTitle} from 'components';
-import {projectsNavigationData} from 'components/ProjectsMenuItems';
-import {PageData, PageDataObject} from 'types/page-data';
+import {api as projectsApi} from 'apis/projects';
+import {Project} from 'types/projects';
+import {Loader} from 'components';
+import ListOfProjects from './ListOfProjects';
+import ProjectsHero from './ProjectsHero';
+import ProjectDetails from './ProjectDetails';
 
-import ProjectsMilestones from './ProjectsMilestones';
-import ProjectsOverview from './ProjectsOverview';
-import ProjectsProposalSubmissionProcess from './ProjectsProposalSubmissionProcess';
-import ProjectsRules from './ProjectsRules';
-
-const defaultPageData: PageData = {
-  content: <Redirect to="/projects/overview" />,
-  name: '',
-};
-
-const pageData: PageDataObject = {
-  milestones: {
-    content: <ProjectsMilestones />,
-    name: 'Milestones & Payouts',
-  },
-  overview: {
-    content: <ProjectsOverview />,
-    name: 'Overview',
-  },
-  proposals: {
-    content: <ProjectsProposalSubmissionProcess />,
-    name: 'Proposal Submission Process',
-  },
-  rules: {
-    content: <ProjectsRules />,
-    name: 'Rules & Guidelines',
-  },
-};
-
-const getPageData = (chapter: string): PageData => {
-  return pageData[chapter] || defaultPageData;
-};
+import './Projects.scss';
 
 const Projects: FC = () => {
-  const {chapter} = useParams<{chapter: string}>();
-  const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
+  const {projectId} = useParams<{projectId: string}>();
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  return (
-    <DashboardLayout menuItems={<ProjectsMenuItems />} pageName={name} sectionName="Projects">
-      <PageTitle ogDescription={`${name} | Projects`} title={name} />
-      {content}
-      <Pagination navigationData={projectsNavigationData} />
-    </DashboardLayout>
+  const isValidProjectId = useMemo<boolean>(
+    () => !!(projectId && projects.length && projects.some((project) => project.pk === projectId)),
+    [projectId, projects],
   );
+
+  const selectedProject = useMemo<Project | null>(
+    () => (isValidProjectId ? projects.find((project) => project.pk === projectId) || null : null),
+    [isValidProjectId, projects, projectId],
+  );
+
+  useEffect(() => {
+    (async function getProjects() {
+      try {
+        const projectsResponse = await projectsApi.getProjects();
+        const sortedProjects = projectsResponse.sort((a, b) => (a.title > b.title ? 1 : -1));
+        setProjects(sortedProjects);
+      } catch (err) {
+        // handle error
+      } finally {
+        setIsLoading(false);
+      }
+    })();
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="Projects__loading-container">
+        <Loader />
+      </div>
+    );
+  }
+
+  if (!projectId) {
+    return (
+      <div className="Projects">
+        <ProjectsHero />
+        <ListOfProjects projects={projects} />
+      </div>
+    );
+  }
+
+  if (selectedProject) {
+    return <ProjectDetails project={selectedProject} />;
+  }
+
+  return <Redirect to="/projects" />;
 };
 
 export default Projects;

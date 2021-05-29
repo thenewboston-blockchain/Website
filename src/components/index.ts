@@ -35,7 +35,6 @@ import Loader from './Loader';
 import PageTitle from './PageTitle';
 import Pagination from './Pagination';
 import Popover from './Popover';
-import ProjectsMenuItems from './ProjectsMenuItems';
 import Qr from './Qr';
 import {QueryParamsOffsetAndLimit} from './QueryParams';
 import Shadow from './Shadow';
@@ -84,7 +83,6 @@ export {
   PageTitle,
   Pagination,
   Popover,
-  ProjectsMenuItems,
   Qr,
   QueryParamsOffsetAndLimit,
   RequestResponseSnippet,

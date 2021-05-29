@@ -1,3 +1,5 @@
+@import 'styles/z-index';
+
 * {
   box-sizing: border-box;
 }
@@ -17,13 +19,13 @@ body {
 #popover-root {
   position: fixed;
   top: 0;
-  z-index: 200;
+  z-index: $z-index-popover-root;
 }
 
 #slide-up-root {
   bottom: 0;
   position: fixed;
-  z-index: 150;
+  z-index: $z-index-slideup-root;
 }
 
 b,
