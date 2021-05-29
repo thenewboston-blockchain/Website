@@ -191,7 +191,10 @@ const Teams: FC = () => {
 
   return (
     <>
-      <PageTitle title="Teams" />
+      <PageTitle
+        ogDescription={teamFilter === TeamName.all ? 'All Teams' : `${teamFilter} Team`}
+        title={teamFilter === TeamName.all ? 'All Teams' : `${teamFilter} Team`}
+      />
       <div className="Teams">
         <BreadcrumbMenu
           className="Teams__BreadcrumbMenu"

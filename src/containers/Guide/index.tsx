@@ -1,7 +1,7 @@
 import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
-import {DashboardLayout, DocsMenuItems, Pagination} from 'components';
+import {DashboardLayout, DocsMenuItems, PageTitle, Pagination} from 'components';
 import {guideNavigationData} from 'components/DocsMenuItems';
 import {PageData, PageDataObject} from 'types/page-data';
 
@@ -71,7 +71,7 @@ const pageData: PageDataObject = {
   },
   glossary: {
     content: <GuideGlossary />,
-    name: 'glossary',
+    name: 'Glossary',
   },
   introduction: {
     content: <GuideIntroduction />,
@@ -109,6 +109,7 @@ const Guide: FC = () => {
 
   return (
     <DashboardLayout menuItems={<DocsMenuItems />} pageName={name} sectionName="Guide">
+      <PageTitle ogDescription={`${name} | Guide`} title={name} />
       {content}
       <Pagination navigationData={guideNavigationData} />
     </DashboardLayout>

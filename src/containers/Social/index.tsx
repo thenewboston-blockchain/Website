@@ -22,7 +22,7 @@ const Social: FC = () => {
 
   return (
     <>
-      <PageTitle title="Social" />
+      <PageTitle title="Join the Community!" />
       <div className="Social">
         <h1 className="Social__heading">Be a part of the community</h1>
         <h2 className="Social__subtext">

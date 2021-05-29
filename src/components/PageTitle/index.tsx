@@ -29,11 +29,11 @@ const PageTitle: FC<PageTitleProps> = ({
   return (
     <Helmet>
       <title>{title} | thenewboston</title>
-      <meta property="og:url" content={ogUrl} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:title" content={ogTitle} />
-      <meta property="og:description" content={ogDescription} />
+      <meta name="description" property="og:description" content={ogDescription} />
       <meta property="og:image" content={ogImageUrl} />
+      <meta property="og:title" content={ogTitle} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={ogUrl} />
     </Helmet>
   );
 };

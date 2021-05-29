@@ -82,7 +82,7 @@ const Openings: FC = () => {
 
   return (
     <>
-      <PageTitle title="Openings" />
+      <PageTitle ogDescription={`${categoryParam} Openings`} title={`${categoryParam} Openings`} />
       <div className="Openings">
         <BreadcrumbMenu
           className="Openings__BreadcrumbMenu"
