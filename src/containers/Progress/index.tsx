@@ -1,4 +1,4 @@
-import React, {FC, useState, useEffect} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import subDays from 'date-fns/subDays';
 
 import * as githubApi from 'apis/github';
