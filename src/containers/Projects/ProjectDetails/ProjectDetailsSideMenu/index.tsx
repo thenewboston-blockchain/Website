@@ -1,26 +1,32 @@
 import React, {FC, useState} from 'react';
+import {useHistory, useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 
 import {useWindowDimensions} from 'hooks';
 import {ProjectTopic} from 'types/projects';
-import {sortByNumberKey} from 'utils/sort';
 
 import ProjectIcon, {ProjectIconSize} from '../../ProjectIcons';
-import {projectDetailsTopic} from '../constants';
+import {orderedProjectDetailsTopic} from '../constants';
 import './ProjectDetailsSideMenu.scss';
 
 type Props = {
-  currentTopic: ProjectTopic;
-  onClick(topic: ProjectTopic): void;
+  currentTopicPosition: number;
+  onClick(position: number): void;
 };
 
-const orderedProjectDetailsTopic = Object.values(projectDetailsTopic).sort(sortByNumberKey('position'));
-
-const ProjectDetailsSideMenu: FC<Props> = ({currentTopic, onClick}) => {
+const ProjectDetailsSideMenu: FC<Props> = ({currentTopicPosition, onClick}) => {
+  const history = useHistory();
+  const {pathname} = useLocation();
   const [hoveredTopicTitle, setHoveredTopicTitle] = useState<string>('');
+  const currentTopic = orderedProjectDetailsTopic[currentTopicPosition];
 
   const {width} = useWindowDimensions();
   const shouldShowDetails = width > 992;
+
+  const handleMenuClick = (topic: ProjectTopic) => (): void => {
+    onClick(topic.position);
+    history.push(`${pathname}#${topic.anchor}`);
+  };
 
   const handleMouseEnter = (title: string) => {
     setHoveredTopicTitle(title);
@@ -49,7 +55,7 @@ const ProjectDetailsSideMenu: FC<Props> = ({currentTopic, onClick}) => {
             className="ProjectDetailsSideMenu__topic"
             key={title}
             role="button"
-            onClick={() => onClick(topic)}
+            onClick={handleMenuClick(topic)}
             onMouseEnter={() => handleMouseEnter(title)}
             onMouseLeave={handleMouseLeave}
             tabIndex={0}
