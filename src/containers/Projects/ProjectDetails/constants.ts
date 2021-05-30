@@ -43,7 +43,7 @@ export const projectDetailsTopic: ProjectTopicMap = {
   roadmap: {
     anchor: ProjectTopicAnchor.Roadmap,
     iconType: ProjectIconType.Roadmap,
-    overview: 'A schedule of a lengthy project by breaking into realistic achiveable milestones.',
+    overview: 'A schedule of a lengthy project by breaking into realistic achievable milestones.',
     position: 6,
     title: ProjectTopicTitle.Roadmap,
   },
