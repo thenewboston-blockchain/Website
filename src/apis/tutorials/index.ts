@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {allTutorialsFilter} from 'constants/tutorials';
 import {PaginatedResponse} from 'types/api';
-import {Playlist, PlaylistCategory, Instructor} from 'types/tutorials';
+import {Instructor, Playlist, PlaylistCategory} from 'types/tutorials';
 import {standardHeaders} from 'utils/requests';
 
 export async function getPlaylistCategories(): Promise<PlaylistCategory[]> {

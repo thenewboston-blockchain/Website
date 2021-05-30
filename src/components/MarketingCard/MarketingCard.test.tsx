@@ -3,7 +3,7 @@ import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
 import {SocialMedia} from 'types/social-media';
-import {socialMediaUrls, socialMediaHandles, socialMediaDescriptions} from 'utils/social-media';
+import {socialMediaDescriptions, socialMediaHandles, socialMediaUrls} from 'utils/social-media';
 
 import MarketingCard, {MarketingCardProps} from '.';
 

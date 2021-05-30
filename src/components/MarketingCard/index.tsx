@@ -4,7 +4,7 @@ import {bemify} from '@thenewboston/utils';
 
 import {A} from 'components';
 import {SocialMedia} from 'types/social-media';
-import {socialMediaUrls, socialMediaHandles, socialMediaDescriptions} from 'utils/social-media';
+import {socialMediaDescriptions, socialMediaHandles, socialMediaUrls} from 'utils/social-media';
 
 import DiscordLogo from 'assets/logos/Discord.png';
 import FacebookLogo from 'assets/logos/Facebook.png';

@@ -1,7 +1,7 @@
 import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
-import {DashboardLayout, Pagination} from 'components';
+import {DashboardLayout, PageTitle, Pagination} from 'components';
 import {PageData, PageDataObject} from 'types/page-data';
 
 import ProjectsMenuItems, {projectsNavigationData} from '../ProjectsMenuItems';
@@ -44,6 +44,7 @@ const Projects: FC = () => {
 
   return (
     <DashboardLayout menuItems={<ProjectsMenuItems />} pageName={name} sectionName="Projects">
+      <PageTitle ogDescription={`${name} | Projects`} title={name} />
       {content}
       <Pagination navigationData={projectsNavigationData} />
     </DashboardLayout>

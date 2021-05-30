@@ -1,4 +1,4 @@
-import React, {FC, useState, useMemo} from 'react';
+import React, {FC, useMemo, useState} from 'react';
 
 import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';

@@ -2,7 +2,7 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
-import DocCallout, {DocCalloutProps, CalloutType} from '.';
+import DocCallout, {CalloutType, DocCalloutProps} from '.';
 
 const baseProps: DocCalloutProps = {
   className: 'Test',
