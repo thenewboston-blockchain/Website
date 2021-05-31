@@ -10,7 +10,6 @@ export interface BaseButtonProps {
   disabled?: boolean;
   focused?: boolean;
   onClick?(e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void;
-  rounded?: boolean;
   type?: 'button' | 'reset' | 'submit';
   variant?: 'contained' | 'link' | 'outlined';
 }
@@ -22,7 +21,6 @@ const Button: FC<BaseButtonProps> = ({
   disabled = false,
   focused = false,
   onClick,
-  rounded = false,
   type = 'button',
   variant = 'contained',
 }) => {
@@ -34,11 +32,12 @@ const Button: FC<BaseButtonProps> = ({
     }
   }, [focused, buttonRef]);
 
+  // temporarily changed className to ButtonWebsite so that it does not conflict with
+  // @thenewboston/ui 's styling
   return (
     <button
-      className={clsx('Button', `Button--${variant}`, `Button--${color}`, className, {
-        'Button--disabled': disabled,
-        'Button--rounded': rounded,
+      className={clsx('ButtonWebsite', `ButtonWebsite--${variant}`, `ButtonWebsite--${color}`, className, {
+        'ButtonWebsite--disabled': disabled,
         ...bemify(className, `--${variant}`),
         ...bemify(className, `--${color}`),
         ...bemify(className, '--disabled', disabled),

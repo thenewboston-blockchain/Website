@@ -1,5 +1,5 @@
 import React, {FC, KeyboardEvent, ReactNode, useCallback, useEffect, useRef} from 'react';
-import {useHistory} from 'react-router';
+import {useHistory} from 'react-router-dom';
 import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
 

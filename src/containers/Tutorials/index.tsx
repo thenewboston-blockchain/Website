@@ -1,11 +1,11 @@
 import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
-import {useHistory, useParams} from 'react-router';
+import {useHistory, useParams} from 'react-router-dom';
 
-import {getCategories} from 'apis/tutorials';
+import {getPlaylistCategories} from 'apis/tutorials';
 import {BreadcrumbMenu, FlatNavLinks, Loader, PageTitle} from 'components';
 import {allTutorialsFilter} from 'constants/tutorials';
 import {NavOption} from 'types/option';
-import {Category, TutorialsUrlParams} from 'types/tutorials';
+import {PlaylistCategory, TutorialsUrlParams} from 'types/tutorials';
 
 import Playlists from './Playlists';
 import WatchPlaylist from './WatchPlaylist';
@@ -17,19 +17,19 @@ const Tutorials: FC = () => {
 
   const [loading, setLoading] = useState<boolean>(true);
   const [errorMessage, setErrorMessage] = useState<string>('');
-  const [categories, setCategories] = useState<NavOption[]>([]);
-  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+  const [playlistCategories, setPlaylistCategories] = useState<NavOption[]>([]);
+  const [playlistCategoryFilter, setPlaylistCategoryFilter] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
       try {
-        const fetchedCategories = await getCategories();
-        const updatedCategories = fetchedCategories.map((category: Category) => ({
-          pathname: category.name,
-          title: category.name,
+        const fetchedPlaylistCategories = await getPlaylistCategories();
+        const updatedPlaylistCategories = fetchedPlaylistCategories.map((playlistCategory: PlaylistCategory) => ({
+          pathname: playlistCategory.name,
+          title: playlistCategory.name,
         }));
-        updatedCategories.unshift(allTutorialsFilter);
-        setCategories(updatedCategories);
+        updatedPlaylistCategories.unshift(allTutorialsFilter);
+        setPlaylistCategories(updatedPlaylistCategories);
       } catch (error) {
         setErrorMessage(error.message);
       } finally {
@@ -42,13 +42,13 @@ const Tutorials: FC = () => {
 
   useEffect(() => {
     if (!loading) {
-      if (categories.some((category: NavOption) => category.pathname === categoryParam)) {
-        setCategoryFilter(categoryParam);
+      if (playlistCategories.some((playlistCategory: NavOption) => playlistCategory.pathname === categoryParam)) {
+        setPlaylistCategoryFilter(categoryParam);
       } else {
         history.replace(`/tutorials/${allTutorialsFilter.pathname}`);
       }
     }
-  }, [categories, loading, categoryParam, history]);
+  }, [playlistCategories, loading, categoryParam, history]);
 
   const handleNavOptionClick = useCallback(
     (option: string) => (): void => {
@@ -61,8 +61,8 @@ const Tutorials: FC = () => {
     return (
       <FlatNavLinks
         handleOptionClick={handleNavOptionClick}
-        options={categories}
-        selectedOption={categoryFilter ?? allTutorialsFilter.title}
+        options={playlistCategories}
+        selectedOption={playlistCategoryFilter ?? allTutorialsFilter.title}
       />
     );
   };
@@ -81,12 +81,16 @@ const Tutorials: FC = () => {
         <BreadcrumbMenu
           className="Tutorials__BreadcrumbMenu"
           menuItems={renderCategoryFilter()}
-          pageName={categoryFilter ?? allTutorialsFilter.title}
+          pageName={playlistCategoryFilter ?? allTutorialsFilter.title}
           sectionName="Tutorials"
         />
         <aside className="Tutorials__left-menu">{renderCategoryFilter()}</aside>
         <div className="Tutorials__right-content">
-          {playlistIdParam ? <WatchPlaylist playlistId={playlistIdParam} /> : <Playlists category={categoryFilter} />}
+          {playlistIdParam ? (
+            <WatchPlaylist playlistId={playlistIdParam} />
+          ) : (
+            <Playlists category={playlistCategoryFilter} />
+          )}
         </div>
       </div>
     </>

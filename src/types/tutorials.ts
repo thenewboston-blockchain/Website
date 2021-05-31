@@ -13,42 +13,50 @@ export interface CreatedModified {
   modified_date: string;
 }
 
-export interface Category extends CreatedModified {
+export interface PlaylistCategory extends CreatedModified {
   pk: string;
   name: string;
 }
 
 export interface Video extends CreatedModified {
-  author: string;
   categories: string[];
   description: string;
-  duration: number;
+  duration_seconds: number;
   language: string;
   playlist: string | null;
   published_at: string;
   tags: string[];
   thumbnail: string;
   title: string;
-  uuid: string;
+  pk: string;
   video_id: string;
   video_type: Source;
 }
 
 export interface Playlist extends CreatedModified {
-  author: string;
   categories: string[];
   description: string;
+  instructor: Instructor;
   language: string;
+  pk: string;
   playlist_id: string;
   playlist_type: Source;
   published_at: string;
   thumbnail: string;
   title: string;
-  uuid: string;
   video_list: Video[];
 }
 
 export interface TutorialsUrlParams {
   category: string;
   playlistId: string;
+}
+
+export interface Instructor {
+  pk: string;
+  name: string;
+  youtube_url: string;
+  vimeo_url: string;
+  created_date: string;
+  modified_date: string;
 }

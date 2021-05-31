@@ -50,7 +50,7 @@ const getStartedPopoverItems: TopNavPopoverItemType[] = [
     description: 'Propose ideas you want built',
     iconType: IconType.hammerWrench,
     title: 'Projects',
-    to: '/projects/overview',
+    to: '/projects',
   },
 ];
 

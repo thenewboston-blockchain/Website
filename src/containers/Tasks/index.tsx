@@ -131,7 +131,7 @@ const Tasks: FC = () => {
 
   return (
     <>
-      <PageTitle title="Tasks" />
+      <PageTitle ogDescription={`${repositoryFilter} Tasks`} title={`${repositoryFilter} Tasks`} />
       <div className="Tasks">
         <BreadcrumbMenu
           className="Tasks__BreadcrumbMenu"

@@ -1,3 +1,5 @@
+@import 'styles/z-index';
+
 $dropdown-height: 316px;
 $mobile-dropdown-height: 1000px;
 $top-nav-height: 60px;
@@ -57,7 +59,7 @@ $top-nav-height: 60px;
     position: relative;
     transition: background 0.1s ease-in;
     width: $top-nav-height;
-    z-index: 3;
+    z-index: $z-index-top-nav-mobile-button;
 
     @media (hover: hover) and (pointer: fine) {
       &:hover {
@@ -109,7 +111,7 @@ $top-nav-height: 60px;
     position: fixed;
     top: $top-nav-height;
     width: 100%;
-    z-index: 2;
+    z-index: $z-index-top-nav-mobile-dropdown;
 
     @media (max-width: 992px) {
       animation: mobileSlideDown 0.3s forwards;
@@ -153,7 +155,7 @@ $top-nav-height: 60px;
     position: fixed;
     top: $top-nav-height;
     width: 100%;
-    z-index: 1;
+    z-index: $z-index-top-nav-mobile-overlay;
   }
 
   &__separator {

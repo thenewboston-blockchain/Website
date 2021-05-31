@@ -1,3 +1,5 @@
+@import 'styles/z-index';
+
 $dropdown-height: 316px;
 $mobile-dropdown-height: 1000px;
 $top-nav-height: 60px;
@@ -31,7 +33,7 @@ $top-nav-height: 60px;
     flex: 1;
     height: $top-nav-height;
     position: relative;
-    z-index: 3;
+    z-index: $z-index-top-nav;
   }
 
   &__right {

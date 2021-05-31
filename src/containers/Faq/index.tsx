@@ -77,7 +77,7 @@ const Faq: FC = () => {
 
   return (
     <>
-      <PageTitle title="FAQ" />
+      <PageTitle title="FAQ's" />
       <div className="Faq">
         <div className="Faq__title-container">
           <div className="Faq__title">Frequently Asked Questions</div>

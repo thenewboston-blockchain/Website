@@ -1,7 +1,7 @@
 import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
-import {DashboardLayout, DocsMenuItems, Pagination} from 'components';
+import {DashboardLayout, DocsMenuItems, PageTitle, Pagination} from 'components';
 import {confirmationValidatorApiNavigationData} from 'components/DocsMenuItems';
 import NodeApiClean from 'containers/NodeApi/NodeApiClean';
 import NodeApiConnectionRequests from 'containers/NodeApi/NodeApiConnectionRequests';
@@ -79,6 +79,7 @@ const ConfirmationValidatorApi: FC = () => {
 
   return (
     <DashboardLayout menuItems={<DocsMenuItems />} pageName={name} sectionName="Confirmation Validator API">
+      <PageTitle ogDescription={`${name} | Confirmation Validator API`} title={name} />
       {content}
       <Pagination navigationData={confirmationValidatorApiNavigationData} />
     </DashboardLayout>

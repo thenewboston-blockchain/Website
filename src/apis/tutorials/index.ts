@@ -1,13 +1,12 @@
 import axios from 'axios';
 import {allTutorialsFilter} from 'constants/tutorials';
-import {Category, Playlist} from 'types/tutorials';
+import {PaginatedResponse} from 'types/api';
+import {Instructor, Playlist, PlaylistCategory} from 'types/tutorials';
 import {standardHeaders} from 'utils/requests';
 
-import {CategoriesResponse, PlaylistsResponse} from './types';
-
-export async function getCategories(): Promise<Category[]> {
-  const response = await axios.get<CategoriesResponse>(
-    `${process.env.REACT_APP_BACKEND_API}/categories`,
+export async function getPlaylistCategories(): Promise<PlaylistCategory[]> {
+  const response = await axios.get<PaginatedResponse<PlaylistCategory>>(
+    `${process.env.REACT_APP_BACKEND_API}/playlist_categories`,
     standardHeaders(),
   );
 
@@ -16,7 +15,7 @@ export async function getCategories(): Promise<Category[]> {
 
 export async function getPlaylists(category: string): Promise<Playlist[]> {
   if (category !== allTutorialsFilter.title) {
-    const response = await axios.get<PlaylistsResponse>(
+    const response = await axios.get<PaginatedResponse<Playlist>>(
       `${process.env.REACT_APP_BACKEND_API}/playlists?category=${category}`,
       standardHeaders(),
     );
@@ -24,7 +23,7 @@ export async function getPlaylists(category: string): Promise<Playlist[]> {
     return response.data.results;
   }
 
-  const response = await axios.get<PlaylistsResponse>(
+  const response = await axios.get<PaginatedResponse<Playlist>>(
     `${process.env.REACT_APP_BACKEND_API}/playlists`,
     standardHeaders(),
   );
@@ -35,6 +34,15 @@ export async function getPlaylists(category: string): Promise<Playlist[]> {
 export async function getPlaylist(playlistId: string): Promise<Playlist> {
   const response = await axios.get<Playlist>(
     `${process.env.REACT_APP_BACKEND_API}/playlists/${playlistId}`,
+    standardHeaders(),
+  );
+
+  return response.data;
+}
+
+export async function getInstructor(instructorId: string): Promise<Instructor> {
+  const response = await axios.get<Instructor>(
+    `${process.env.REACT_APP_BACKEND_API}/instructors/${instructorId}`,
     standardHeaders(),
   );
 

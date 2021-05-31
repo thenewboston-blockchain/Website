@@ -1,5 +1,5 @@
 import {AMOUNT_COLOR, REPOSITORIES} from 'constants/github';
-import {BaseRelease, Issue, Release, FetchGithubReleasesParams} from 'types/github';
+import {BaseRelease, FetchGithubReleasesParams, Issue, Release} from 'types/github';
 import {REGEX} from 'constants/regex';
 import * as api from 'apis/github';
 

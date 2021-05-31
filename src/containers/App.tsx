@@ -21,6 +21,7 @@ import PrimaryValidatorApi from './PrimaryValidatorApi';
 import Profile from './Profile';
 import Progress from './Progress';
 import Projects from './Projects';
+import ProjectRulesAndGuide from './Projects/ProjectRulesAndGuide';
 import SignIn from './SignIn';
 import SignOut from './SignOut';
 import Social from './Social';
@@ -84,7 +85,8 @@ const App: FC = () => {
           <Route path="/guide/:chapter?" component={Guide} />
           <Route path="/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
           <Route path="/progress" component={Progress} />
-          <Route path="/projects/:chapter?" component={Projects} />
+          <Route path="/projects/:projectId?" component={Projects} />
+          <Route path="/project-rules/:chapter" component={ProjectRulesAndGuide} />
           <Route exact path="/sign-in" component={SignIn} />
           <Route exact path="/sign-out" component={SignOut} />
           <Route path="/style-guide/:chapter?" component={StyleGuide} />
