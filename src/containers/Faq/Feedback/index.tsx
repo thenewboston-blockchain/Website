@@ -60,7 +60,7 @@ const Feedback = () => {
                   placeholder="What do you want to talk about?"
                   name="content"
                 />
-                <FormButton className="Feedback__form-button" rounded disabled={!isValid} type="submit">
+                <FormButton className="Feedback__form-button" disabled={!isValid} type="submit">
                   Submit
                 </FormButton>
               </div>

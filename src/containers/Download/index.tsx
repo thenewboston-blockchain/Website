@@ -143,7 +143,7 @@ const Download: FC = () => {
         {renderOsIcon(os)}
         <div className="Download__card-title">{os}</div>
         <a className="Download__download-link" href={getDownloadLink(os)} tabIndex={-1}>
-          <Button className="Download__download-button" disabled={!latestReleaseNumber} rounded>
+          <Button className="Download__download-button" disabled={!latestReleaseNumber}>
             <span>Download</span>
           </Button>
         </a>

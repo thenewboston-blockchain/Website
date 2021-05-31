@@ -9,7 +9,7 @@ import './HomeValues.scss';
 
 const HomeValues: FC = () => {
   const {width} = useWindowDimensions();
-  let iconSize = {height: 376, width: 456};
+  let iconSize;
   if (width < 600) {
     iconSize = {height: 188, width: 235};
   } else if (width < 768) {
@@ -30,10 +30,10 @@ const HomeValues: FC = () => {
           </div>
           <div className="HomeValues__main-buttons">
             <Link className="HomeValues__main-buttons--create" tabIndex={-1} to="/projects/overview">
-              <Button rounded>Create Projects</Button>
+              <Button>Create Projects</Button>
             </Link>
             <Link className="HomeValues__main-buttons--earn" tabIndex={-1} to="/tasks/All">
-              <Button rounded>Complete Bounties</Button>
+              <Button>Complete Bounties</Button>
             </Link>
           </div>
         </div>

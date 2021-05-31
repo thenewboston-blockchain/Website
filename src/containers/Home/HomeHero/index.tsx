@@ -51,10 +51,10 @@ const HomeHero: FC = () => {
             </h2>
             <div className="HomeHero__buttons">
               <Link className="HomeHero__buttons--learn-more" tabIndex={-1} to="/guide/introduction">
-                <Button rounded>Learn More</Button>
+                <Button>Learn More</Button>
               </Link>
               <Link className="HomeHero__buttons--earn-coins" tabIndex={-1} to="/tasks/All">
-                <Button rounded>Earn Coins</Button>
+                <Button>Earn Coins</Button>
               </Link>
             </div>
             <div className="HomeHero__social-media-links">{renderSocialMediaLinks()}</div>

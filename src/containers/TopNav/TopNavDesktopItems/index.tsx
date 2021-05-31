@@ -175,7 +175,7 @@ const TopNavDesktopItems = () => {
       <div className="TopNavDesktopItems__separator" />
       {renderAuthButtons()}
       <Link className="TopNavDesktopItems__right-item TopNavDesktopItems__download-button" tabIndex={-1} to="/download">
-        <Button rounded>Download Wallet</Button>
+        <Button>Download Wallet</Button>
       </Link>
       {renderActiveUser()}
     </>
