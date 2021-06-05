@@ -3,15 +3,15 @@ import clsx from 'clsx';
 
 import './DocEndpoint.scss';
 
-interface ComponentProps {
+export interface DocEndpointProps {
   className?: string;
   endpoint: string;
   method: 'GET' | 'POST' | 'PATCH' | 'DELETE';
 }
 
-const DocEndpoint: FC<ComponentProps> = ({className, endpoint, method}) => {
+const DocEndpoint: FC<DocEndpointProps> = ({className, endpoint, method}) => {
   return (
-    <h2 className={clsx('DocEndpoint', className)}>
+    <h2 className={clsx('DocEndpoint', className)} data-testid="DocEndpoint">
       {method} {endpoint}
     </h2>
   );

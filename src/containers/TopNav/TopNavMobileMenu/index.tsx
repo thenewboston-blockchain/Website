@@ -1,29 +1,24 @@
-import React, {ReactNode, useEffect, useState} from 'react';
+import React, {FC, ReactNode, useState} from 'react';
 import {useSelector} from 'react-redux';
-import {Link, useLocation} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import clsx from 'clsx';
+import {Icon, IconType} from '@thenewboston/ui';
 
-import {A, Icon, IconType} from 'components';
-import {useBooleanState, useWindowDimensions} from 'hooks';
+import {A} from 'components';
+import {isCreateAccountAllowed, isSignInAllowed} from 'config';
 import {selectActiveUser} from 'selectors/state';
 import './TopNavMobileMenu.scss';
 
-const TopNavMobileMenu = () => {
+interface ComponentProps {
+  closeMenu(): void;
+  menuOpen: boolean;
+  smallDevice: boolean;
+  toggleMenu(): void;
+}
+
+const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice, toggleMenu}) => {
   const activeUser = useSelector(selectActiveUser);
-  const [menuOpen, toggleMenu, , closeMenu] = useBooleanState(false);
   const [openSection, setOpenSection] = useState<'community' | 'getStarted' | 'more' | 'other' | null>(null);
-  const [smallDevice, setSmallDevice] = useState(false);
-  const {pathname} = useLocation();
-  const {width} = useWindowDimensions();
-
-  useEffect(() => {
-    closeMenu();
-  }, [closeMenu, pathname]);
-
-  useEffect(() => {
-    if (width > 1200) closeMenu();
-    setSmallDevice(width < 992);
-  }, [closeMenu, menuOpen, width]);
 
   const handleColumnTitleClick = (section: 'community' | 'getStarted' | 'more' | 'other') => (): void => {
     if (!smallDevice) return;
@@ -38,7 +33,7 @@ const TopNavMobileMenu = () => {
     return (
       <div className="TopNavMobileMenu__column">
         <button className="TopNavMobileMenu__title-wrapper" onClick={handleColumnTitleClick(section)}>
-          <span className="TopNavMobileMenu__column-title">{title}</span>
+          <span className="TopNavMobileMenu__column-title TopNavMobileMenu__column-title--accordion">{title}</span>
           {smallDevice && (
             <span className="TopNavMobileMenu__icon-holder">
               <Icon
@@ -74,8 +69,8 @@ const TopNavMobileMenu = () => {
         </>
       ) : (
         <>
-          {renderOtherSmallDeviceLink('Create Account', '/create-account')}
-          {renderOtherSmallDeviceLink('Sign In', '/sign-in')}
+          {isCreateAccountAllowed && renderOtherSmallDeviceLink('Create Account', '/create-account')}
+          {isSignInAllowed && renderOtherSmallDeviceLink('Sign In', '/sign-in')}
         </>
       )}
       {renderOtherSmallDeviceLink('Download', '/download')}
@@ -91,6 +86,7 @@ const TopNavMobileMenu = () => {
             'Get Started',
             <>
               {renderMobileLink('Documentation', '/guide/introduction')}
+              {renderMobileLink('Tutorials', '/tutorials')}
               {renderMobileLink('Tasks', '/tasks')}
             </>,
           )}
@@ -99,16 +95,17 @@ const TopNavMobileMenu = () => {
             'Community',
             <>
               {renderMobileLink('Join the Community!', '/social')}
+              {renderMobileLink('Weekly Progress', '/progress')}
               {renderMobileLink('Openings', '/openings')}
               {renderMobileLink('Teams', '/teams')}
-              {renderMobileLink('Leaderboard', '/leaderboard/All')}
+              {renderMobileLink('Community Guidelines', '/guidelines')}
             </>,
           )}
           {renderColumn(
             'more',
             'More',
             <>
-              {renderMobileLink('Project Proposals', '/project-proposals/overview')}
+              {renderMobileLink('Projects', '/projects')}
               {renderMobileLink('Blog', 'https://thenewboston.blog/', true)}
               {renderMobileLink('Assets', '/assets')}
               {renderMobileLink('FAQ', '/faq')}

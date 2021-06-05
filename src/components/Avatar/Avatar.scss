@@ -1,7 +1,15 @@
 .Avatar {
   border-radius: 50%;
-}
 
-.Placeholder {
-  background: var(--color-sail-gray-100);
+  &--bordered {
+    border: 2px solid var(--color-white);
+  }
+
+  &--clickable {
+    cursor: pointer;
+  }
+
+  &--placeholder {
+    background: var(--color-sail-gray-100);
+  }
 }

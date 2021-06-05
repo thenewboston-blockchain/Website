@@ -1,5 +1,4 @@
 import React, {FC} from 'react';
-import {NavLink} from 'react-router-dom';
 
 import {DocContainer, DocEndpoint, RequestResponseSnippet, TableParams} from 'components';
 
@@ -13,10 +12,6 @@ const ConfirmationValidatorApiPrimaryValidatorUpdated: FC = () => {
       <p>
         The last step in the resync process is the notice that is sent from banks to their CVs to indicate that they are
         leaving the current network and switching to a new PV (a new network).
-      </p>
-      <p>
-        More information about the updating of primary validators can be found in the{' '}
-        <NavLink to="/guide/resync-process">Resync Process</NavLink> section of the guide.
       </p>
 
       <DocEndpoint endpoint="/primary_validator_updated" method="POST" />

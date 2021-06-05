@@ -14,12 +14,13 @@ interface ComponentProps {
 
 const CodeSnippet: FC<ComponentProps> = ({className, code, heading, language = SnippetLang.bash}) => {
   return (
-    <div className={clsx('CodeSnippet', className)}>
+    <div className={clsx('CodeSnippet', className)} data-testid="CodeSnippet">
       {heading ? (
         <div
           className={clsx('CodeSnippet__heading', {
             ...bemify(className, '__heading'),
           })}
+          data-testid="CodeSnippet__heading"
         >
           {heading}:
         </div>

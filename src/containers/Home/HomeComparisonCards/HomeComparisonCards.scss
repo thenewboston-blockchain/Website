@@ -1,3 +1,5 @@
+@import 'styles/font-mixins';
+
 .HomeComparisonCards {
   display: flex;
   justify-content: center;
@@ -30,14 +32,13 @@
     margin-top: 48px;
 
     &-attribute {
-      font-size: var(--font-size-medium);
-      font-weight: 500;
+      @extend %h2;
       margin-top: 6px;
     }
 
     &-value {
-      font-size: 36px;
-      font-weight: 300;
+      @extend %display2;
+      font-weight: var(--font-weight-light);
     }
   }
 

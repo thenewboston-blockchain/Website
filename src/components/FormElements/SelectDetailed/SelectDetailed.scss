@@ -2,12 +2,11 @@
   $self: &;
 
   &.SelectDetailed {
-    height: 48px;
+    height: 52px;
 
     #{$self}__single-value,
     #{$self}__placeholder,
     #{$self}__input {
-      font-family: var(--font-family-mono);
       height: 100%;
       margin-top: 6px;
       padding-right: 42px;
@@ -30,7 +29,7 @@
   .Select__option {
     border-bottom: 1px solid var(--color-gray-100);
     height: unset;
-    padding: 6px 81px 6px 6px;
+    padding: 6px 60px 6px 6px;
 
     &:last-child {
       border-bottom: none;
@@ -46,11 +45,10 @@
 
   .SelectDetailed__option-label {
     color: var(--color-gray-500);
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-body3);
   }
 
   .SelectDetailed__option-value {
-    font-family: var(--font-family-mono);
     word-break: break-all;
   }
 }

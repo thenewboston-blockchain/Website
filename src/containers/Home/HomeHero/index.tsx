@@ -26,8 +26,14 @@ const HomeHero: FC = () => {
   }, [animationState]);
 
   const renderSocialMediaLinks = () =>
-    [SocialMedia.slack, SocialMedia.github, SocialMedia.youtube].map((website) => (
-      <SocialMediaIcon className="HomeHero__SocialMediaLink" iconSize={30} key={website} website={website} />
+    [SocialMedia.github, SocialMedia.discord, SocialMedia.youtube].map((website) => (
+      <SocialMediaIcon
+        className="HomeHero__SocialMediaLink"
+        iconSize={30}
+        key={website}
+        totalSize={42}
+        website={website}
+      />
     ));
 
   return (

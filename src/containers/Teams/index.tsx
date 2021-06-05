@@ -1,16 +1,17 @@
 import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
 import {Link, useHistory, useParams} from 'react-router-dom';
+import {Icon, IconType} from '@thenewboston/ui';
 
-import {BreadcrumbMenu, EmptyPage, FlatNavLinks, Icon, IconType, PageTitle} from 'components';
+import {A, BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
 import {TEAMS} from 'constants/teams';
+import useQueryParams from 'hooks/useQueryParams';
+import {NavigationItem} from 'types/navigation';
 import {PageDataObject} from 'types/page-data';
 import {TeamMember, TeamName, TeamsUrlParams, TeamTabOptions} from 'types/teams';
 import {getTeamMembers} from 'utils/data';
 
-import InternalHowToSetUpPaymentBoard from './Resources/InternalHowToSetUpPaymentBoard';
-import InternalNewUserOperations from './Resources/InternalNewUserOperations';
-import InternalProductDevelopment from './Resources/InternalProductDevelopment';
-import InternalTeamLeadOnboarding from './Resources/InternalTeamLeadOnboarding';
+import InternalTeamMemberPayments from './Resources/InternalTeamMemberPayments';
+import InternalBountyAccountRefills from './Resources/InternalBountyAccountRefills';
 import TeamMemberCard from './TeamMemberCard';
 import TeamOverview from './TeamOverview';
 import TeamTabs from './TeamTabs';
@@ -29,29 +30,31 @@ const sortTeamMembers = (members: TeamMember[]): TeamMember[] => {
 };
 
 const pageData: PageDataObject = {
-  'how-to-set-up-payment-board': {
-    content: <InternalHowToSetUpPaymentBoard />,
-    name: 'How to set up payment boards',
+  'bounty-account-refills': {
+    content: <InternalBountyAccountRefills />,
+    name: 'Bounty Account Refills',
   },
-  'new-user-operations': {
-    content: <InternalNewUserOperations />,
-    name: 'How to onboard new users',
-  },
-  'product-development': {
-    content: <InternalProductDevelopment />,
-    name: 'How the product development process works',
-  },
-  'team-lead-onboarding': {
-    content: <InternalTeamLeadOnboarding />,
-    name: 'How to onboard team leads',
+  'team-member-payments': {
+    content: <InternalTeamMemberPayments />,
+    name: 'Team Member Payments',
   },
 };
+
+const externalLinks: NavigationItem[] = [
+  {
+    name: 'Meeting Notes Template',
+    url: 'https://docs.google.com/document/d/15P7MPPGgC2O3ZhOWryOeuW1K5EO9TL8_TBWR4Z2-_eo/edit?usp=sharing',
+  },
+];
 
 const Teams: FC = () => {
   const history = useHistory();
   const {team: teamParam, tab: tabParam, resource: resourceParam} = useParams<TeamsUrlParams>();
+  const queryParams = useQueryParams();
   const [filteredMembers, setFilteredMembers] = useState<TeamMember[]>(teamMembers);
   const [teamFilter, setTeamFilter] = useState<TeamName>(TeamName.all);
+
+  const queryTitle = queryParams.get('title');
 
   useEffect(() => {
     const isAllTeams = teamParam === TeamName.all;
@@ -88,26 +91,18 @@ const Teams: FC = () => {
   }, [history, teamParam]);
 
   useEffect(() => {
-    const getFilteredMembers = (): TeamMember[] => {
-      const teamLeads: TeamMember[] = [];
-      const otherMembers: TeamMember[] = [];
-      teamMembers.forEach((member) => {
-        const {teams} = member;
-        const matchingTeam = teams.find(({title}) => title.toLowerCase() === teamFilter.toLowerCase());
-        if (matchingTeam) {
-          if (matchingTeam.isLead) {
-            teamLeads.push({...member, isLead: true});
-          } else {
-            otherMembers.push({...member, isLead: false});
-          }
-        }
-      });
-      return teamLeads.concat(otherMembers);
-    };
+    const getFilteredMembers = () =>
+      teamMembers.filter((teamMember) => teamMember.team.toLowerCase() === teamFilter.toLowerCase());
+
     const members = teamFilter === TeamName.all ? teamMembers : getFilteredMembers();
     const sortedMembers = sortTeamMembers(members);
-    setFilteredMembers(sortedMembers);
-  }, [teamFilter]);
+
+    if (queryTitle) {
+      setFilteredMembers(sortedMembers.filter((member) => member.title.toLowerCase() === queryTitle.toLowerCase()));
+    } else {
+      setFilteredMembers(sortedMembers);
+    }
+  }, [queryTitle, teamFilter]);
 
   const handleNavOptionClick = useCallback(
     (option: string) => (): void => {
@@ -127,16 +122,16 @@ const Teams: FC = () => {
   const renderTeamMembers = useCallback((): ReactNode => {
     if (!filteredMembers.length) return <EmptyPage />;
     return filteredMembers.map(
-      ({contributorId, displayName, githubUsername, isLead, payPerDay, profileImage, slackUsername, titles}) => (
+      ({contributorId, discordUsername, displayName, githubUsername, hourlyRate, isLead, profileImage, title}) => (
         <TeamMemberCard
           displayName={displayName}
+          discordUsername={discordUsername}
           githubUsername={githubUsername}
+          hourlyRate={hourlyRate}
           isLead={isLead}
           key={contributorId}
-          payPerDay={payPerDay}
           profileImage={profileImage}
-          slackUsername={slackUsername}
-          titles={titles}
+          title={title}
         />
       ),
     );
@@ -149,6 +144,11 @@ const Teams: FC = () => {
           <Link className="Teams__resources-item" key={key} to={`/teams/${teamParam}/${tabParam}/${key}`}>
             {value.name}
           </Link>
+        ))}
+        {externalLinks.map((externalLink) => (
+          <A className="Teams__resources-item" href={externalLink.url} key={externalLink.name} newWindow>
+            {externalLink.name}
+          </A>
         ))}
       </>
     );
@@ -191,7 +191,10 @@ const Teams: FC = () => {
 
   return (
     <>
-      <PageTitle title="Teams" />
+      <PageTitle
+        ogDescription={teamFilter === TeamName.all ? 'All Teams' : `${teamFilter} Team`}
+        title={teamFilter === TeamName.all ? 'All Teams' : `${teamFilter} Team`}
+      />
       <div className="Teams">
         <BreadcrumbMenu
           className="Teams__BreadcrumbMenu"

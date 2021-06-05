@@ -1,0 +1,15 @@
+.ProjectsRules {
+  &__StepIndicator {
+    margin-bottom: 16px;
+
+    &__bubble {
+      margin-right: 30px;
+    }
+
+    &__text {
+      color: var(--color-primary);
+      font-size: var(--font-size-h3);
+      font-weight: normal;
+    }
+  }
+}

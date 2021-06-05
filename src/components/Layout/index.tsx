@@ -6,11 +6,11 @@ import {Footer, GoToTop} from 'components';
 import TopNav from 'containers/TopNav';
 import './Layout.scss';
 
-interface ComponentProps {
+export interface LayoutProps {
   children: ReactNode;
 }
 
-const Layout: FC<ComponentProps> = ({children}) => {
+const Layout: FC<LayoutProps> = ({children}) => {
   const {hash, pathname} = useLocation();
   const isHomepage = pathname === '/';
   const isProfilePage = pathname.includes('/profile');
@@ -19,22 +19,23 @@ const Layout: FC<ComponentProps> = ({children}) => {
     if (!hash) {
       window.scrollTo(0, 0);
     } else {
-      setTimeout(() => {
-        const id = hash.replace('#', '');
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView();
-        }
-      }, 0);
+      const id = hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView();
+      }
     }
   }, [hash, pathname]);
 
   return (
-    <div className="Layout">
+    <div className="Layout" data-testid="Layout">
       <div className="Layout__top-nav-wrapper">
         <TopNav className="Layout__TopNav" />
       </div>
-      <div className={clsx({Layout__content: !(isHomepage || isProfilePage), Layout__home: isHomepage})}>
+      <div
+        className={clsx({Layout__content: !(isHomepage || isProfilePage), Layout__home: isHomepage})}
+        data-testid="Layout__content"
+      >
         {children}
       </div>
       <div className="Layout__footer-wrapper">

@@ -1,9 +1,10 @@
 import React, {useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
+import {IconType} from '@thenewboston/ui';
 
-import DefaultUserAvatar from 'assets/images/default-avatar.png';
-import {Button, IconType} from 'components';
+import {Avatar, Button} from 'components';
+import {isCreateAccountAllowed, isSignInAllowed} from 'config';
 import TopNavLink from 'containers/TopNav/TopNavLink';
 import TopNavPopover, {TopNavPopoverItemType} from 'containers/TopNav/TopNavPopover';
 import {selectActiveUser} from 'selectors/state';
@@ -12,14 +13,20 @@ import './TopNavDesktopItems.scss';
 
 const communityPopoverItems: TopNavPopoverItemType[] = [
   {
-    description: 'Slack, GitHub, YouTube, LinkedIn, etc',
+    description: 'Discord, GitHub, YouTube, LinkedIn, etc',
     iconType: IconType.earth,
     title: 'Join the Community!',
     to: '/social',
   },
   {
+    description: 'Stay up to date with our weekly sprints',
+    iconType: IconType.chartTimelineVariantShimmer,
+    title: 'Weekly Progress',
+    to: '/progress',
+  },
+  {
     description: 'Join the team building the app',
-    iconType: IconType.humanHandsUp,
+    iconType: IconType.humanHandsup,
     title: 'Openings',
     to: '/openings',
   },
@@ -30,10 +37,10 @@ const communityPopoverItems: TopNavPopoverItemType[] = [
     to: '/teams',
   },
   {
-    description: 'View the highest ranked contributors',
-    iconType: IconType.trophy,
-    title: 'Leaderboard',
-    to: '/leaderboard/All',
+    description: 'Read up on our community culture',
+    iconType: IconType.notebookCheckOutline,
+    title: 'Community Guidelines',
+    to: '/guidelines',
   },
 ];
 
@@ -43,6 +50,12 @@ const getStartedPopoverItems: TopNavPopoverItemType[] = [
     iconType: IconType.fileDocument,
     title: 'Documentation',
     to: '/guide/introduction',
+  },
+  {
+    description: 'Watch tutorials made by the community',
+    iconType: IconType.playBoxMultiple,
+    title: 'Tutorials',
+    to: '/tutorials',
   },
   {
     description: 'Pick up tasks within GitHub and earn coins',
@@ -57,15 +70,8 @@ const morePopoverItems: TopNavPopoverItemType[] = [
   {
     description: 'Propose ideas you want built',
     iconType: IconType.hammerWrench,
-    title: 'Project Proposals',
-    to: '/project-proposals/overview',
-  },
-  {
-    description: 'Stay updated on crypto and thenewboston',
-    iconType: IconType.textBox,
-    isExternal: true,
-    title: 'Blog',
-    to: 'https://thenewboston.blog/',
+    title: 'Projects',
+    to: '/projects',
   },
   {
     description: 'Download thenewboston assets',
@@ -109,10 +115,9 @@ const TopNavDesktopItems = () => {
     const {profile_image: profileImage} = activeUser;
     return (
       <TopNavPopover
+        className="TopNavDesktopItems__profile-image"
         anchorEl={activeUserAnchorEl}
-        customButtonContent={
-          <img alt="profile" className="TopNavDesktopItems__profile-image" src={profileImage || DefaultUserAvatar} />
-        }
+        customButtonContent={<Avatar src={profileImage} size={36} />}
         items={activeUserPopoverItems}
         popoverId="active-user-popover"
         setAnchorEl={setActiveUserAnchorEl}
@@ -124,8 +129,10 @@ const TopNavDesktopItems = () => {
     if (activeUser) return null;
     return (
       <>
-        <TopNavLink className="TopNavDesktopItems__right-item" text="Create Account" to="/create-account" />
-        <TopNavLink className="TopNavDesktopItems__right-item" text="Sign In" to="/sign-in" />
+        {isCreateAccountAllowed && (
+          <TopNavLink className="TopNavDesktopItems__right-item" text="Create Account" to="/create-account" />
+        )}
+        {isSignInAllowed && <TopNavLink className="TopNavDesktopItems__right-item" text="Sign In" to="/sign-in" />}
       </>
     );
   };

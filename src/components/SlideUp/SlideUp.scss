@@ -1,3 +1,5 @@
+@import 'styles/z-index';
+
 @keyframes addOverlay {
   from {
     background: rgba(0, 0, 0, 0);
@@ -11,7 +13,7 @@
   bottom: 0;
   position: absolute;
   width: 100vw;
-  z-index: 2;
+  z-index: $z-index-slideup;
 
   &__content {
     background: var(--color-white);
@@ -26,6 +28,6 @@
     position: fixed;
     top: 0;
     width: 100vw;
-    z-index: 2;
+    z-index: $z-index-slideup-overlay;
   }
 }

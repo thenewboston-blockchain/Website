@@ -28,7 +28,7 @@ const SlideUpAccountDetails: FC<ComponentProps> = ({account_number, close, githu
     <SlideUp className="SlideUpAccountDetails__SlideUp" close={close}>
       <div className="SlideUpAccountDetails__inner-wrapper">
         <div>
-          <Avatar alt={github_username} size={54} src={github_avatar_url} />
+          <Avatar size={54} src={github_avatar_url} />
         </div>
         {renderRight()}
       </div>

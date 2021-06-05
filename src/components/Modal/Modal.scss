@@ -1,3 +1,5 @@
+@import 'styles/z-index';
+
 $modal-header-height: 48px;
 $modal-header-height-mobile: 75px;
 $modal-footer-height: 60px;
@@ -72,7 +74,7 @@ $break-mobile: 640px;
 
   h2 {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
     line-height: 125%;
   }
 
@@ -100,7 +102,7 @@ $break-mobile: 640px;
     height: 100%;
     position: fixed;
     width: 100vw;
-    z-index: 20;
+    z-index: $z-index-modal;
 
     &__close-icon {
       left: 23px;

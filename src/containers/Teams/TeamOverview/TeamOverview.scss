@@ -1,3 +1,5 @@
+@import 'styles/font-mixins';
+
 .TeamOverview {
   display: grid;
   grid-gap: 12px;
@@ -16,7 +18,7 @@
 
   &__description {
     color: var(--color-sail-gray-900);
-    font-size: var(--font-size-small-regular);
+    font-size: var(--font-size-h4);
     line-height: 1.5;
     margin-bottom: 24px;
   }
@@ -26,7 +28,7 @@
     grid-area: 1 / 2 / 2 / 2;
 
     &-item {
-      font-size: var(--font-size-small-regular);
+      font-size: var(--font-size-h4);
       line-height: 21px;
     }
   }
@@ -41,7 +43,7 @@
     }
 
     &-title {
-      font-size: var(--font-size-small-regular);
+      font-size: var(--font-size-h4);
       line-height: 125%;
       margin-bottom: 0;
 
@@ -53,8 +55,8 @@
 
   &__sub-heading {
     color: var(--color-sail-gray-900);
-    font-size: var(--font-size-regular);
-    font-weight: 500;
+    font-size: var(--h4);
+    font-weight: var(--font-weight-medium);
     line-height: 125%;
     margin-bottom: 30px;
   }

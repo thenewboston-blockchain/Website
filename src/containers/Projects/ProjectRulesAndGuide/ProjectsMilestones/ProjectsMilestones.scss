@@ -1,0 +1,51 @@
+@import 'styles/font-mixins';
+
+.ProjectsMilestones {
+  &__caption {
+    margin: 12px 0;
+
+    &-heading {
+      font-weight: 800;
+    }
+
+    &-text {
+      margin-top: 2px;
+    }
+  }
+
+  &__proof-of-work {
+    margin-bottom: 24px;
+
+    &-heading {
+      font-weight: 800;
+    }
+  }
+
+  &__StepIndicator {
+    margin-bottom: 16px;
+
+    &__bubble {
+      margin-right: 30px;
+    }
+
+    &__text {
+      @extend %h3;
+      color: var(--color-primary);
+      font-weight: var(--font-weight-regular);
+    }
+  }
+
+  &__TableBorderGrid {
+    margin-top: 24px;
+
+    &__td {
+      &:nth-child(1) {
+        min-width: 32px;
+      }
+
+      strong {
+        white-space: nowrap;
+      }
+    }
+  }
+}

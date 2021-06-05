@@ -3,14 +3,14 @@ import clsx from 'clsx';
 
 import './HashLink.scss';
 
-interface ComponentProps {
+export interface HashLinkProps {
   className?: string;
   id: string;
 }
 
-const HashLink: FC<ComponentProps> = ({className, id}) => {
+const HashLink: FC<HashLinkProps> = ({className, id}) => {
   return (
-    <a className={clsx('HashLink', className)} href={`#${id}`}>
+    <a className={clsx('HashLink', className)} data-testid="HashLink" href={`#${id}`}>
       #
     </a>
   );

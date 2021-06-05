@@ -7,7 +7,17 @@ import ContributorTasks from './ContributorTasks';
 import CopyableAccountNumber from './CopyableAccountNumber';
 import DashboardLayout from './DashboardLayout';
 import DocsMenuItems from './DocsMenuItems';
-import {DocContainer, DocEndpoint, DocImage, DocInlineCode, DocList, DocSubSection} from './DocWrapper';
+import {
+  CalloutType,
+  DocCallout,
+  DocContainer,
+  DocEndpoint,
+  DocImage,
+  DocInlineCode,
+  DocList,
+  DocSubHeader,
+  DocSubSection,
+} from './DocWrapper';
 import DropdownInput from './DropdownInput';
 import EmptyPage from './EmptyPage';
 import FlatNavLinks from './FlatNavLinks';
@@ -15,7 +25,6 @@ import Footer from './Footer';
 import {Button} from './FormElements';
 import GoToTop from './GoToTop';
 import HashLink from './HashLink';
-import Icon, {IconType} from './Icon';
 import Label from './Label';
 import Layout from './Layout';
 import MarketingButton from './MarketingButton';
@@ -23,7 +32,6 @@ import MarketingCard from './MarketingCard';
 import MenuGroup from './MenuGroup';
 import LabelFilter from './LabelFilter';
 import Loader from './Loader';
-import OrganizationMenuItems from './OrganizationMenuItems';
 import PageTitle from './PageTitle';
 import Pagination from './Pagination';
 import Popover from './Popover';
@@ -37,6 +45,7 @@ import {TableBorderGrid, TableParams, TableVertical} from './Table';
 import Tabs, {Tab} from './Tabs';
 import TimeFilter from './TimeFilter';
 import TotalAmount from './TotalAmount';
+import VideoPlayer from './VideoPlayer';
 
 export {
   A,
@@ -44,15 +53,18 @@ export {
   Avatar,
   BreadcrumbMenu,
   Button,
+  CalloutType,
   CodeSnippet,
   ContributorTasks,
   CopyableAccountNumber,
   DashboardLayout,
+  DocCallout,
   DocContainer,
   DocEndpoint,
   DocImage,
   DocInlineCode,
   DocList,
+  DocSubHeader,
   DocSubSection,
   DocsMenuItems,
   DropdownInput,
@@ -61,8 +73,6 @@ export {
   Footer,
   GoToTop,
   HashLink,
-  Icon,
-  IconType,
   Label,
   LabelFilter,
   Layout,
@@ -70,7 +80,6 @@ export {
   MarketingButton,
   MarketingCard,
   MenuGroup,
-  OrganizationMenuItems,
   PageTitle,
   Pagination,
   Popover,
@@ -88,6 +97,7 @@ export {
   Tabs,
   TimeFilter,
   TotalAmount,
+  VideoPlayer,
 };
 
 export type {Tab};

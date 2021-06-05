@@ -2,8 +2,9 @@ import React, {FC, ReactNode, useEffect, useState} from 'react';
 import useOnclickOutside from 'react-cool-onclickoutside';
 import {useLocation} from 'react-router-dom';
 import clsx from 'clsx';
+import {Icon, IconType} from '@thenewboston/ui';
 
-import {Icon, IconType, Shadow} from 'components';
+import {Shadow} from 'components';
 import './BreadcrumbMenu.scss';
 
 interface ComponentProps {
@@ -32,8 +33,14 @@ const BreadcrumbMenu: FC<ComponentProps> = ({className, menuItems, pageName, sec
 
   const renderBreadcrumbBar = (): ReactNode => {
     return (
-      <div className="BreadcrumbMenu__bar" onClick={() => setOpen(!open)} role="button" tabIndex={0}>
-        <div className="BreadcrumbMenu__navigation">
+      <div
+        className="BreadcrumbMenu__bar"
+        onClick={() => setOpen(!open)}
+        role="button"
+        tabIndex={0}
+        data-testid="BreadcrumbMenu__bar"
+      >
+        <div className="BreadcrumbMenu__navigation" data-testid="BreadcrumbMenu__navigation">
           {sectionName}
           <Icon icon={IconType.menuRight} size={24} />
           {pageName}
@@ -46,7 +53,7 @@ const BreadcrumbMenu: FC<ComponentProps> = ({className, menuItems, pageName, sec
   const renderDropdownMenu = (): ReactNode => {
     if (!open) return null;
     return (
-      <div className="BreadcrumbMenu__dropdown-menu" ref={ref}>
+      <div className="BreadcrumbMenu__dropdown-menu" ref={ref} data-testid="BreadcrumbMenu__dropdown-menu">
         <Shadow />
         {menuItems}
       </div>
@@ -55,14 +62,17 @@ const BreadcrumbMenu: FC<ComponentProps> = ({className, menuItems, pageName, sec
 
   const renderToggle = (): ReactNode => {
     return (
-      <div className={clsx('BreadcrumbMenu__toggle-container', {'BreadcrumbMenu__toggle-container--open': open})}>
+      <div
+        className={clsx('BreadcrumbMenu__toggle-container', {'BreadcrumbMenu__toggle-container--open': open})}
+        data-testid="BreadcrumbMenu__toggle-container"
+      >
         <Icon className="BreadcrumbMenu__toggle-arrow" icon={IconType.chevronDown} size={24} />
       </div>
     );
   };
 
   return (
-    <div className={clsx('BreadcrumbMenu', className)}>
+    <div className={clsx('BreadcrumbMenu', className)} data-testid="BreadcrumbMenu">
       {renderBreadcrumbBar()}
       {renderDropdownMenu()}
     </div>

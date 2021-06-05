@@ -1,0 +1,61 @@
+@import 'styles/font-mixins';
+$top-nav-height: 60px;
+$details-container-height: 158px;
+$details-container-height-480: 241px;
+$wiggle-room: 32px;
+$offset: $top-nav-height + $details-container-height + $wiggle-room;
+$offset-480: $top-nav-height + $details-container-height-480 + $wiggle-room;
+
+.ProjectDetailsTopic {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 120px;
+  position: relative;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+
+  &__anchor {
+    position: absolute;
+    top: #{-$offset};
+
+    @media (max-width: 480px) {
+      top: #{-$offset-480};
+    }
+  }
+
+  &__icon {
+    margin-right: 32px;
+
+    @media (max-width: 480px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    &-main {
+      @extend %h3;
+      color: var(--color-sail-gray-600);
+      font-weight: var(--font-weight-regular);
+      white-space: pre-line;
+    }
+
+    &-overview {
+      @extend %body1;
+      color: var(--color-sail-gray-500);
+      font-weight: var(--font-weight-medium);
+      margin-bottom: 32px;
+    }
+
+    &-title {
+      color: var(--color-sail-blue-900);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: 8px;
+    }
+  }
+}

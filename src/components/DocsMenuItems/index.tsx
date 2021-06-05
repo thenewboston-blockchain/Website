@@ -4,37 +4,6 @@ import {NavLink} from 'react-router-dom';
 import {MenuGroup} from 'components';
 import {NavigationItem} from 'types/navigation';
 
-export const governanceNavigationData = [
-  {
-    name: 'Overview',
-    url: '/governance/overview',
-  },
-  {
-    name: 'Usernames & Votes',
-    url: '/governance/usernames-and-votes',
-  },
-  {
-    name: 'Locked Coins & Bank Boosting',
-    url: '/governance/locked-coins-and-banking-boosting',
-  },
-  {
-    name: 'Points & Refill Logic',
-    url: '/governance/points-and-refill-logic',
-  },
-  {
-    name: 'Coins vs. Points',
-    url: '/governance/coins-vs-points',
-  },
-  {
-    name: 'Application & Election Process',
-    url: '/governance/application-and-election-process',
-  },
-  {
-    name: 'Budgets',
-    url: '/governance/budgets',
-  },
-];
-
 export const accountManagerNavigationData = [
   {
     name: 'Get Started',
@@ -168,66 +137,109 @@ export const confirmationValidatorApiNavigationData = [
   },
 ];
 
+export const governanceNavigationData = [
+  {
+    name: 'Overview',
+    url: '/governance/overview',
+  },
+  {
+    name: 'Usernames & Votes',
+    url: '/governance/usernames-and-votes',
+  },
+  {
+    name: 'Locked Coins & Boosting',
+    url: '/governance/locked-coins-and-boosting',
+  },
+  {
+    name: 'Points & Refill Logic',
+    url: '/governance/points-and-refill-logic',
+  },
+  {
+    name: 'Coins vs. Points',
+    url: '/governance/coins-vs-points',
+  },
+  {
+    name: 'Election Process',
+    url: '/governance/election-process',
+  },
+  {
+    name: 'Budgets',
+    url: '/governance/budgets',
+  },
+  {
+    name: 'Rates & Amounts',
+    url: '/governance/rates-and-amounts',
+  },
+];
+
 export const guideNavigationData = [
   {
     name: 'Introduction',
     url: '/guide/introduction',
   },
   {
-    name: 'Accounts',
-    url: '/guide/accounts',
+    name: 'Glossary',
+    url: '/guide/glossary',
   },
   {
     name: 'Blocks',
     url: '/guide/blocks',
   },
   {
-    name: 'Transaction Fees',
-    url: '/guide/transaction-fees',
+    name: 'Block Structure',
+    url: '/guide/block-structure',
   },
   {
-    name: 'Root Account File',
-    url: '/guide/root-account-file',
+    name: 'Block Types',
+    url: '/guide/block-types',
   },
   {
-    name: 'Banks',
-    url: '/guide/banks',
+    name: 'Nodes',
+    url: '/guide/nodes',
   },
   {
-    name: 'Validators',
-    url: '/guide/validators',
+    name: 'Flows',
+    url: '/guide/flows',
   },
   {
-    name: 'Confirmation Validators',
-    url: '/guide/confirmation-validators',
+    name: 'Fork Prevention',
+    url: '/guide/fork-prevention',
   },
   {
-    name: 'Confirmation Services',
-    url: '/guide/confirmation-services',
+    name: 'Scheduling',
+    url: '/guide/scheduling',
   },
   {
-    name: 'Node Identifiers',
-    url: '/guide/node-identifiers',
+    name: 'Schedule Adjustments',
+    url: '/guide/schedule-adjustments',
   },
   {
-    name: 'Resync Triggers',
-    url: '/guide/resync-triggers',
+    name: 'Accounts',
+    url: '/guide/accounts',
   },
   {
-    name: 'Resync Process',
-    url: '/guide/resync-process',
+    name: 'Account Lock',
+    url: '/guide/account-lock',
   },
   {
-    name: 'Trust',
-    url: '/guide/trust',
+    name: 'Node Identifier',
+    url: '/guide/node-identifier',
+  },
+  {
+    name: 'Fees',
+    url: '/guide/fees',
   },
   {
     name: 'Best Practices',
     url: '/guide/best-practices',
   },
   {
-    name: 'Future Development',
-    url: '/guide/future-development',
+    name: 'Root Account File',
+    url: '/guide/root-account-file',
+  },
+  {
+    name: 'Blockchain Architecture',
+    url: '/guide/blockchain-architecture',
   },
 ];
 
@@ -277,6 +289,10 @@ const DocsMenuItems: FC = () => {
         {renderNavLinks(guideNavigationData)}
       </MenuGroup>
 
+      <MenuGroup title="Governance" urlBase="governance">
+        {renderNavLinks(governanceNavigationData)}
+      </MenuGroup>
+
       <MenuGroup title="Account Manager" urlBase="account-manager">
         {renderNavLinks(accountManagerNavigationData)}
       </MenuGroup>
@@ -289,10 +305,6 @@ const DocsMenuItems: FC = () => {
       <MenuGroup title="Style Guides" urlBase="style-guide">
         <NavLink to="/style-guide/react">React / JSX</NavLink>
         <NavLink to="/style-guide/css">CSS / SASS</NavLink>
-      </MenuGroup>
-
-      <MenuGroup title="Governance" urlBase="governance">
-        {renderNavLinks(governanceNavigationData)}
       </MenuGroup>
 
       <MenuGroup title="Bank API" urlBase="bank-api">
