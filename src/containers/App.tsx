@@ -29,7 +29,7 @@ import StyleGuide from './StyleGuide';
 import Tasks from './Tasks';
 import Teams from './Teams';
 import Tutorials from './Tutorials';
-import WebMap from './Webmap';
+// import WebMap from './Webmap';
 
 interface GoogleAnalyticsWindow extends Window {
   ga: any;
@@ -93,7 +93,7 @@ const App: FC = () => {
           <Redirect exact path="/tutorials" to="/tutorials/All" />
           <Route exact path="/tutorials/:category/:playlistId?" component={Tutorials} />
           <Route path="/users/:userId" component={Profile} />
-          <Route path="/webmap" component={WebMap} />
+          {/* <Route path="/webmap" component={WebMap} /> */}
           <Redirect to="/" />
         </Switch>
       </Layout>
