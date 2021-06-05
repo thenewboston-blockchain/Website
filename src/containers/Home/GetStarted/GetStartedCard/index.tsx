@@ -1,9 +1,8 @@
 import React, {FC} from 'react';
-
 import {useHistory} from 'react-router';
-import Button from 'components/Button';
 import {Icon, IconType} from '@thenewboston/ui';
 
+import {Button} from 'components';
 import './GetStartedCard.scss';
 
 type Props = {
@@ -22,15 +21,12 @@ const GetStartedCard: FC<Props> = ({description, icon, title, to}) => {
         <h3 className="GetStartedCard__card-title">{title}</h3>
       </div>
       <div className="GetStartedCard__description">{description}</div>
-      <Button
-        className="GetStartedCard__details-button"
-        onClick={() => history.push(to)}
-        iconRight={<Icon icon={IconType.chevronRight} size={16} />}
-        type="empty"
-        rounded
-      >
-        View Details
-      </Button>
+      <div className="GetStartedCard__button-container">
+        <Button className="GetStartedCard__details-button" onClick={() => history.push(to)} variant="link">
+          View Details
+          <Icon icon={IconType.chevronRight} size={16} />
+        </Button>
+      </div>
     </div>
   );
 };

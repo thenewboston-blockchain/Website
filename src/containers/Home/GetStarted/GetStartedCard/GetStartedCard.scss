@@ -6,15 +6,14 @@ $padding-768: 24px;
 
 .GetStartedCard {
   border-radius: 12px;
-  box-shadow: 0px 0px 30px 0px #e5eaf47a;
+  box-shadow: 0 0 30px 0 #e5eaf47a;
   height: $card-height-original;
   max-width: $card-width-original;
   padding: $padding;
   position: relative;
 
   &:hover {
-    box-shadow: 0px 0px 30px 0px #e5eaf47a;
-    box-shadow: 0px 7px 40px 0px #e9effd;
+    box-shadow: 0 7px 40px 0 #e9effd;
   }
 
   @media (max-width: 992px) {
@@ -36,30 +35,9 @@ $padding-768: 24px;
     max-width: 100vw;
   }
 
-  &__top-container {
-    align-items: center;
+  &__button-container {
     display: flex;
-    flex-direction: row;
-    margin-bottom: 27px;
-  }
-
-  &__details-button {
-    @extend %body1;
-    bottom: $padding;
-    font-weight: var(--font-weight-regular);
-    position: absolute;
-    right: $padding;
-  }
-
-  &__description {
-    @extend %h3;
-    -webkit-box-orient: vertical;
-    color: var(--color-sail-gray-400);
-    display: -webkit-box;
-    font-weight: var(--font-weight-regular);
-    -webkit-line-clamp: 3; /* max number of lines to show */
-    overflow: hidden;
-    text-overflow: ellipsis;
+    flex-direction: row-reverse;
   }
 
   &__card-title {
@@ -73,5 +51,31 @@ $padding-768: 24px;
     @media (max-width: 768px) {
       margin-bottom: 2px;
     }
+  }
+
+  &__description {
+    @extend %h3;
+    -webkit-box-orient: vertical;
+    color: var(--color-sail-gray-400);
+    display: -webkit-box;
+    font-weight: var(--font-weight-regular);
+    -webkit-line-clamp: 3; /* max number of lines to show */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__details-button {
+    @extend %body1;
+    align-items: center;
+    bottom: $padding;
+    display: flex;
+    font-weight: var(--font-weight-regular);
+  }
+
+  &__top-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 27px;
   }
 }

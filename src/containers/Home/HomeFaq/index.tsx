@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
-
 import {Link} from 'react-router-dom';
-import FaqDropdownCard from 'components/FaqDropdownCard';
+
+import {FaqDropdownCard} from 'components';
 import {getTopQuestionsAndAnswers} from 'utils/faq';
 
 import './HomeFaq.scss';

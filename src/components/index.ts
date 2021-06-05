@@ -20,9 +20,10 @@ import {
 } from './DocWrapper';
 import DropdownInput from './DropdownInput';
 import EmptyPage from './EmptyPage';
+import FaqDropdownCard from './FaqDropdownCard';
 import FlatNavLinks from './FlatNavLinks';
 import Footer from './Footer';
-import {Button} from './FormElements';
+import {Button, Input} from './FormElements';
 import GoToTop from './GoToTop';
 import HashLink from './HashLink';
 import Label from './Label';
@@ -69,10 +70,12 @@ export {
   DocsMenuItems,
   DropdownInput,
   EmptyPage,
+  FaqDropdownCard,
   FlatNavLinks,
   Footer,
   GoToTop,
   HashLink,
+  Input,
   Label,
   LabelFilter,
   Layout,

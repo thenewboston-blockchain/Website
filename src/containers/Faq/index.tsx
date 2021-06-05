@@ -1,9 +1,6 @@
 import React, {FC, memo, useEffect, useState} from 'react';
 
-import {PageTitle} from 'components';
-import {Input} from 'components/FormElements';
-import FaqDropdownCard from 'components/FaqDropdownCard';
-import Button from 'components/Button';
+import {Button, FaqDropdownCard, Input, PageTitle} from 'components';
 import {faqQuestionsAndAnswers, FaqTopic, FaqContent, TopicQuestionAndAnswers} from 'constants/faq';
 import {useWindowDimensions} from 'hooks';
 import Feedback from './Feedback';
@@ -101,9 +98,7 @@ const Faq: FC = () => {
                 onChange={(e) => setSearchValue(e.target.value)}
                 onKeyDown={handleSearchKeyDown}
               />
-              <Button rounded onClick={filterQnAs}>
-                Search
-              </Button>
+              <Button onClick={filterQnAs}>Search</Button>
             </div>
             <div>{renderQuestionsAndAnswers()}</div>
           </div>
