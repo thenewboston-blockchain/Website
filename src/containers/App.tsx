@@ -1,7 +1,8 @@
-import React, {FC} from 'react';
+import React, {FC, lazy} from 'react';
 import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom';
 
 import {Layout} from 'components';
+import withSuspense from 'hoc/withSuspense';
 
 import AccountManager from './AccountManager';
 import Assets from './Assets';
@@ -20,7 +21,6 @@ import Openings from './Openings';
 import PrimaryValidatorApi from './PrimaryValidatorApi';
 import Profile from './Profile';
 import Progress from './Progress';
-import Projects from './Projects';
 import ProjectRulesAndGuide from './Projects/ProjectRulesAndGuide';
 import SignIn from './SignIn';
 import SignOut from './SignOut';
@@ -28,8 +28,13 @@ import Social from './Social';
 import StyleGuide from './StyleGuide';
 import Tasks from './Tasks';
 import Teams from './Teams';
-import Tutorials from './Tutorials';
 // import WebMap from './Webmap';
+
+/**
+ * Lazy load pages that may contribute a lot to the bundle size
+ */
+const Projects = lazy(() => import('./Projects'));
+const Tutorials = lazy(() => import('./Tutorials'));
 
 interface GoogleAnalyticsWindow extends Window {
   ga: any;
@@ -85,13 +90,13 @@ const App: FC = () => {
           <Route path="/guide/:chapter?" component={Guide} />
           <Route path="/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
           <Route path="/progress" component={Progress} />
-          <Route path="/projects/:projectId?" component={Projects} />
+          <Route path="/projects/:projectId?" component={withSuspense(Projects)} />
           <Route path="/project-rules/:chapter" component={ProjectRulesAndGuide} />
           <Route exact path="/sign-in" component={SignIn} />
           <Route exact path="/sign-out" component={SignOut} />
           <Route path="/style-guide/:chapter?" component={StyleGuide} />
           <Redirect exact path="/tutorials" to="/tutorials/All" />
-          <Route exact path="/tutorials/:category/:playlistId?" component={Tutorials} />
+          <Route exact path="/tutorials/:category/:playlistId?" component={withSuspense(Tutorials)} />
           <Route path="/users/:userId" component={Profile} />
           {/* <Route path="/webmap" component={WebMap} /> */}
           <Redirect to="/" />
