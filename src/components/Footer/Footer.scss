@@ -49,19 +49,25 @@
     margin-top: 42px;
   }
 
-  &__download-button {
-    border: 1px solid var(--color-white);
+  &__download-container {
+    align-items: flex-start;
     display: flex;
-    justify-self: flex-end;
-    width: fit-content;
-
-    &:hover {
-      background-color: var(--color-white);
-      color: var(--color-primary);
-    }
+    flex-direction: row-reverse;
 
     @media (max-width: 480px) {
+      flex-direction: row;
       margin-top: 120px;
+    }
+  }
+
+  // need to increase specificity to override base css
+  &__download-button.ButtonWebsite.ButtonWebsite--outlined {
+    color: var(--color-white);
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &:hover {
+      color: var(--color-primary);
     }
   }
 }

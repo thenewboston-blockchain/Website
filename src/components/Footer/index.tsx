@@ -4,8 +4,7 @@ import clsx from 'clsx';
 import {useHistory} from 'react-router';
 
 import Logo from 'assets/svgs/thenewboston-white.svg';
-import SocialMediaIcon from 'components/SocialMediaIcon';
-import Button from 'components/Button';
+import {Button, SocialMediaIcon} from 'components';
 import {useWindowDimensions} from 'hooks';
 import {SocialMedia} from 'types/social-media';
 
@@ -116,16 +115,20 @@ const Footer: FC<ComponentProps> = ({className}) => {
         <div className="Footer__social-media-links">{renderSocialMediaLinks()}</div>
       </div>
       {shouldRenderDownloadWithNavlists && (
-        <Button rounded className="Footer__download-button" onClick={() => history.push('/download')}>
-          Download Wallet
-        </Button>
+        <div className="Footer__download-container">
+          <Button className="Footer__download-button" onClick={() => history.push('/download')} variant="outlined">
+            Download Wallet
+          </Button>
+        </div>
       )}
       <div className="Footer__right">
         {renderNavLists()}
         {!shouldRenderDownloadWithNavlists && (
-          <Button rounded className="Footer__download-button" onClick={() => history.push('/download')}>
-            Download Wallet
-          </Button>
+          <div className="Footer__download-container">
+            <Button className="Footer__download-button" onClick={() => history.push('/download')} variant="outlined">
+              Download Wallet
+            </Button>
+          </div>
         )}
       </div>
     </footer>
