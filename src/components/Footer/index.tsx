@@ -74,6 +74,10 @@ const navLists = [
         title: 'Donate',
         url: '/donate',
       },
+      {
+        title: 'FAQ',
+        url: '/faq',
+      },
     ],
   },
 ];
