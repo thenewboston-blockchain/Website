@@ -1,25 +1,27 @@
 import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
-import {DashboardLayout, DocsMenuItems, Pagination} from 'components';
+import {DashboardLayout, DocsMenuItems, PageTitle, Pagination} from 'components';
 import {guideNavigationData} from 'components/DocsMenuItems';
 import {PageData, PageDataObject} from 'types/page-data';
 
+import GuideAccountLock from './GuideAccountLock';
 import GuideAccounts from './GuideAccounts';
-import GuideBanks from './GuideBanks';
 import GuideBestPractices from './GuideBestPractices';
+import GuideBlockStructure from './GuideBlockStructure';
+import GuideBlockTypes from './GuideBlockTypes';
+import GuideBlockchainArchitecture from './GuideBlockchainArchitecture';
 import GuideBlocks from './GuideBlocks';
-import GuideConfirmationServices from './GuideConfirmationServices';
-import GuideConfirmationValidators from './GuideConfirmationValidators';
-import GuideFutureDevelopment from './GuideFutureDevelopment';
+import GuideFees from './GuideFees';
+import GuideFlows from './GuideFlows';
+import GuideForkPrevention from './GuideForkPrevention';
+import GuideGlossary from './GuideGlossary';
 import GuideIntroduction from './GuideIntroduction';
 import GuideNodeIdentifier from './GuideNodeIdentifier';
-import GuideResyncProcess from './GuideResyncProcess';
-import GuideResyncTriggers from './GuideResyncTriggers';
+import GuideNodes from './GuideNodes';
 import GuideRootAccountFile from './GuideRootAccountFile';
-import GuideTransactionFees from './GuideTransactionFees';
-import GuideTrust from './GuideTrust';
-import GuideValidators from './GuideValidators';
+import GuideScheduleAdjustments from './GuideScheduleAdjustments';
+import GuideScheduling from './GuideScheduling';
 
 const defaultPageData: PageData = {
   content: <Redirect to="/guide/introduction" />,
@@ -27,65 +29,73 @@ const defaultPageData: PageData = {
 };
 
 const pageData: PageDataObject = {
+  'account-lock': {
+    content: <GuideAccountLock />,
+    name: 'Account Lock',
+  },
   accounts: {
     content: <GuideAccounts />,
     name: 'Accounts',
-  },
-  banks: {
-    content: <GuideBanks />,
-    name: 'Banks',
   },
   'best-practices': {
     content: <GuideBestPractices />,
     name: 'Best Practices',
   },
+  'block-structure': {
+    content: <GuideBlockStructure />,
+    name: 'Block Structure',
+  },
+  'block-types': {
+    content: <GuideBlockTypes />,
+    name: 'Block Types',
+  },
+  'blockchain-architecture': {
+    content: <GuideBlockchainArchitecture />,
+    name: 'Blockchain Architecture',
+  },
   blocks: {
     content: <GuideBlocks />,
     name: 'Blocks',
   },
-  'confirmation-services': {
-    content: <GuideConfirmationServices />,
-    name: 'Confirmation Services',
+  fees: {
+    content: <GuideFees />,
+    name: 'Fees',
   },
-  'confirmation-validators': {
-    content: <GuideConfirmationValidators />,
-    name: 'Confirmation Validators',
+  flows: {
+    content: <GuideFlows />,
+    name: 'Flows',
   },
-  'future-development': {
-    content: <GuideFutureDevelopment />,
-    name: 'Future Development',
+  'fork-prevention': {
+    content: <GuideForkPrevention />,
+    name: 'Fork Prevention',
+  },
+  glossary: {
+    content: <GuideGlossary />,
+    name: 'Glossary',
   },
   introduction: {
     content: <GuideIntroduction />,
     name: 'Introduction',
   },
-  'node-identifiers': {
+  'node-identifier': {
     content: <GuideNodeIdentifier />,
-    name: 'Node Identifiers',
+    name: 'Node Identifier',
   },
-  'resync-process': {
-    content: <GuideResyncProcess />,
-    name: 'Resync Process',
-  },
-  'resync-triggers': {
-    content: <GuideResyncTriggers />,
-    name: 'Resync Triggers',
+  nodes: {
+    content: <GuideNodes />,
+    name: 'Nodes',
   },
   'root-account-file': {
     content: <GuideRootAccountFile />,
     name: 'Root Account File',
   },
-  'transaction-fees': {
-    content: <GuideTransactionFees />,
-    name: 'Transaction Fees',
+  'schedule-adjustments': {
+    content: <GuideScheduleAdjustments />,
+    name: 'Schedule Adjustments',
   },
-  trust: {
-    content: <GuideTrust />,
-    name: 'Trust',
-  },
-  validators: {
-    content: <GuideValidators />,
-    name: 'Validators',
+  scheduling: {
+    content: <GuideScheduling />,
+    name: 'scheduling',
   },
 };
 
@@ -99,6 +109,7 @@ const Guide: FC = () => {
 
   return (
     <DashboardLayout menuItems={<DocsMenuItems />} pageName={name} sectionName="Guide">
+      <PageTitle ogDescription={`${name} | Guide`} title={name} />
       {content}
       <Pagination navigationData={guideNavigationData} />
     </DashboardLayout>

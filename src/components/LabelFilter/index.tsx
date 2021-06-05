@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import {Label} from 'components';
 import './LabelFilter.scss';
 
-interface ComponentProps {
+export interface LabelFilterProps {
   className?: string;
   handleLabelClick(labelName: string): () => void;
   selectedLabelNames: string[];
@@ -19,13 +19,20 @@ const LABEL_COLORS = {
   suggestion: 'f8b886',
 };
 
-const LabelFilter: FC<ComponentProps> = ({className, handleLabelClick, selectedLabelNames}) => {
+const DEFAULT_LABEL_COLOR = 'e3e8ee';
+
+const LabelFilter: FC<LabelFilterProps> = ({className, handleLabelClick, selectedLabelNames}) => {
   const renderLabels = () => {
     return Object.entries(LABEL_COLORS).map(([labelName, hexColor]) => (
-      <button className="LabelFilter__button" key={labelName} onClick={handleLabelClick(labelName)}>
+      <button
+        className="LabelFilter__button"
+        data-testid="LabelFilter__button"
+        key={labelName}
+        onClick={handleLabelClick(labelName)}
+      >
         <Label
           className="LabelFilter__label"
-          color={selectedLabelNames.includes(labelName) ? hexColor : 'e3e8ee'}
+          color={selectedLabelNames.includes(labelName) ? hexColor : DEFAULT_LABEL_COLOR}
           key={labelName}
           name={labelName}
         />
@@ -33,7 +40,11 @@ const LabelFilter: FC<ComponentProps> = ({className, handleLabelClick, selectedL
     ));
   };
 
-  return <div className={clsx('LabelFilter', className)}>{renderLabels()}</div>;
+  return (
+    <div className={clsx('LabelFilter', className)} data-testid="LabelFilter">
+      {renderLabels()}
+    </div>
+  );
 };
 
 export default LabelFilter;

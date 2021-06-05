@@ -29,13 +29,4 @@ Write a few sentences describing the position here.
 
 #### Reports To
 - First Name: [FIRST NAME HERE]
-- Slack Name: [SLACK NAME HERE]
-
-#### Pay
-- 2,800 coins/day
-
-#### Application channels
-- Slack - Message [SLACK NAME HERE]
-- LinkedIn
-- Twitter
-- Reddit
+- Discord Username: [DISCORD USERNAME HERE]

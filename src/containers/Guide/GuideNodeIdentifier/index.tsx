@@ -3,15 +3,14 @@ import {NavLink} from 'react-router-dom';
 
 import {DocContainer, DocImage, RequestResponseSnippet} from 'components';
 
-import ConnectionNID from './ConnectionNID.png';
-import NID from './NID.png';
+import NodeIdentifiers from './NodeIdentifiers.png';
 
 const GuideNodeIdentifier: FC = () => {
   return (
-    <DocContainer className="GuideNodeIdentifier" title="Node Identifier" lastUpdated="07 Dec 2020">
+    <DocContainer className="GuideNodeIdentifier" title="Node Identifier" lastUpdated="06 Mar 2021">
       <p>The node identifier (or NID) system is a separate key-pair used by nodes to sign requests to other nodes.</p>
 
-      <DocImage alt="node identifier" maxWidth={1000} src={NID} />
+      <DocImage alt="node identifiers" maxWidth={900} src={NodeIdentifiers} />
 
       <p>
         When a node is first deployed, it will provide a unique NID to the network. As nodes become connected, they will
@@ -45,9 +44,6 @@ const GuideNodeIdentifier: FC = () => {
         allows node owners to easily manage multiple nodes from the same client application. Users maintaining multiple
         nodes can simply import the NID signing keys of all nodes they wish to manage.
       </p>
-
-      <DocImage alt="connection nid" maxWidth={1000} src={ConnectionNID} />
-
       <p>
         Although all nodes are already configured with an account number (the public key from a separate key-pair), the
         purposes of the two key-pair systems are quite different. A server's NID should never change after deployment.
@@ -62,26 +58,26 @@ const GuideNodeIdentifier: FC = () => {
       <RequestResponseSnippet
         code={`{
   "primary_validator": {
-    "account_number": "ad1f8845c6a1abb6011a2a434a079a087c460657aad54329a84b406dce8bf314",
-    "ip_address": "64.225.47.205",
-    "node_identifier": "3afdf37573f1a511def0bd85553404b7091a76bcd79cdcebba1310527b167521",
+    "account_number": "c7498d45482098a4c4e2b2fa405fdb00e5bc74bf4739c43417e7c50ff08c4109",
+    "ip_address": "54.241.124.162",
+    "node_identifier": "354804f86a2f5fa5c2f7bfc5da6bae78ec18beea2c991c6eca00877bf0ea9f01",
     "port": 80,
     "protocol": "http",
     "version": "v1.0",
-    "default_transaction_fee": "4.0000000000000000",
-    "root_account_file": "https://gist.githubusercontent.com/buckyroberts/519b5cb82a0a5b5d4ae8a2175b722520/raw/9237deb449e27cab93cb89ea3346ecdfc61fe9ea/0.json",
-    "root_account_file_hash": "4694e1ee1dcfd8ee5f989e59ae40a9f751812bf5ca52aca2766b322c4060672b",
+    "default_transaction_fee": 1,
+    "root_account_file": "http://54.241.124.162:80/media/root_account_file.json",
+    "root_account_file_hash": "ab9b95e5bb1dc66dd57ebf2cb8a8dece41748389d68077f74c916659f4bd2f1b",
     "seed_block_identifier": "",
-    "daily_confirmation_rate": null,
+    "daily_confirmation_rate": 1,
     "trust": "100.00"
   },
-  "account_number": "5e12967707909e62b2bb2036c209085a784fabbc3deccefee70052b6181c8ed8",
-  "ip_address": "167.99.173.247",
-  "node_identifier": "d5356888dc9303e44ce52b1e06c3165a7759b9df1e6a6dfbd33ee1c3df1ab4d1",
+  "account_number": "9a275161478536d0a5b88ff05d429b9a9e63d0032a46e7a6a8f088da89c69da5",
+  "ip_address": "13.57.215.62",
+  "node_identifier": "59af0721c572e6032b835722b5fec22110daad069dc135f1e81794747dbe626f",
   "port": 80,
   "protocol": "http",
   "version": "v1.0",
-  "default_transaction_fee": "1.0000000000000000",
+  "default_transaction_fee": 1,
   "node_type": "BANK"
 }`}
         heading="Response"

@@ -64,6 +64,15 @@
     width: 91px;
   }
 
+  &__member-discord {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__member-discord-icon {
+    margin-right: 10px;
+  }
+
   &__member-github {
     display: flex;
     flex-direction: row;
@@ -73,21 +82,12 @@
     margin-right: 10px;
   }
 
-  &__member-slack {
-    display: flex;
-    flex-direction: row;
-  }
-
-  &__member-slack-icon {
-    margin-right: 10px;
-  }
-
   &__member-title {
     margin-bottom: 10px;
   }
 
   &__name {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-h2);
     font-weight: 701;
     margin-bottom: 10px;
   }

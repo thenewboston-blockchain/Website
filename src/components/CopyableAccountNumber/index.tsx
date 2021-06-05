@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import clsx from 'clsx';
+import {Icon, IconType} from '@thenewboston/ui';
 
-import Icon, {IconType} from 'components/Icon';
 import {displayToast} from 'utils/toast';
 
 import './CopyableAccountNumber.scss';
@@ -19,11 +19,11 @@ const CopyableAccountNumber: FC<ComponentProps> = ({accountNumber, className, is
   };
 
   return (
-    <div className={clsx('CopyableAccountNumber', className)}>
+    <div className={clsx('CopyableAccountNumber', className)} data-testid="CopyableAccountNumber">
       <div className="CopyableAccountNumber__top">
         <div className="CopyableAccountNumber__label">Account Number</div>
         {!isCopyButtonAtBottom && (
-          <CopyToClipboard onCopy={handleCopy} text={accountNumber}>
+          <CopyToClipboard onCopy={handleCopy} text={accountNumber} data-testid="CopyButton">
             <div className="CopyableAccountNumber__copy-container">
               <Icon className="CopyableAccountNumber__copy-icon" icon={IconType.contentCopy} size={22} />
               <div className="CopyableAccountNumber__copy-text">Copy</div>
@@ -33,7 +33,7 @@ const CopyableAccountNumber: FC<ComponentProps> = ({accountNumber, className, is
       </div>
       <div className="CopyableAccountNumber__account-number">{accountNumber}</div>
       {isCopyButtonAtBottom && (
-        <CopyToClipboard onCopy={handleCopy} text={accountNumber}>
+        <CopyToClipboard onCopy={handleCopy} text={accountNumber} data-testid="CopyButton">
           <div className="CopyableAccountNumber__copy-container">
             <Icon className="CopyableAccountNumber__copy-icon" icon={IconType.contentCopy} size={22} />
             <div className="CopyableAccountNumber__copy-text">Copy</div>

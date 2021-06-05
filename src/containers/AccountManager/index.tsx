@@ -1,7 +1,7 @@
 import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
-import {DashboardLayout, DocsMenuItems, Pagination} from 'components';
+import {DashboardLayout, DocsMenuItems, PageTitle, Pagination} from 'components';
 import {accountManagerNavigationData} from 'components/DocsMenuItems';
 import {PageData, PageDataObject} from 'types/page-data';
 
@@ -59,6 +59,7 @@ const AccountManager: FC = () => {
 
   return (
     <DashboardLayout menuItems={<DocsMenuItems />} pageName={name} sectionName="Account Manager">
+      <PageTitle ogDescription={`${name} | Account Manager`} title={name} />
       {content}
       <Pagination navigationData={accountManagerNavigationData} />
     </DashboardLayout>

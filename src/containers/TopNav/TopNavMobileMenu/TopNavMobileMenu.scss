@@ -1,3 +1,5 @@
+@import 'styles/z-index';
+
 $dropdown-height: 316px;
 $mobile-dropdown-height: 1000px;
 $top-nav-height: 60px;
@@ -13,18 +15,22 @@ $top-nav-height: 60px;
 
 @keyframes mobileSlideDown {
   from {
+    opacity: 0;
     top: $top-nav-height - $mobile-dropdown-height;
   }
   to {
+    opacity: 1;
     top: $top-nav-height;
   }
 }
 
 @keyframes slideDown {
   from {
+    opacity: 0;
     top: $top-nav-height - $dropdown-height;
   }
   to {
+    opacity: 1;
     top: $top-nav-height;
   }
 }
@@ -33,7 +39,6 @@ $top-nav-height: 60px;
   display: none;
 
   @media (max-width: 1200px) {
-    background-color: var(--color-bg);
     display: block;
   }
 
@@ -43,7 +48,6 @@ $top-nav-height: 60px;
     border: none;
     display: flex;
     justify-content: space-between;
-    outline: none;
     padding: unset;
   }
 
@@ -55,10 +59,12 @@ $top-nav-height: 60px;
     position: relative;
     transition: background 0.1s ease-in;
     width: $top-nav-height;
-    z-index: 3;
+    z-index: $z-index-top-nav-mobile-button;
 
-    &:hover {
-      background: rgba(0, 0, 0, 0.1);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background: rgba(0, 0, 0, 0.1);
+      }
     }
   }
 
@@ -85,10 +91,13 @@ $top-nav-height: 60px;
   &__column-title {
     background-color: transparent;
     border: 0;
-    color: var(--color-sail-gray-300);
     cursor: pointer;
     outline: none;
     padding: 0;
+
+    &--accordion {
+      color: var(--color-sail-gray-400);
+    }
   }
 
   &__dropdown-container {
@@ -102,7 +111,7 @@ $top-nav-height: 60px;
     position: fixed;
     top: $top-nav-height;
     width: 100%;
-    z-index: 2;
+    z-index: $z-index-top-nav-mobile-dropdown;
 
     @media (max-width: 992px) {
       animation: mobileSlideDown 0.3s forwards;
@@ -125,6 +134,7 @@ $top-nav-height: 60px;
     margin-top: 24px;
     padding: 0;
     text-align: unset;
+    width: fit-content;
 
     &:hover {
       text-decoration: underline;
@@ -145,7 +155,7 @@ $top-nav-height: 60px;
     position: fixed;
     top: $top-nav-height;
     width: 100%;
-    z-index: 1;
+    z-index: $z-index-top-nav-mobile-overlay;
   }
 
   &__separator {

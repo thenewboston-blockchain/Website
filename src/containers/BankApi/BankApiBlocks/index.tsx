@@ -5,14 +5,13 @@ import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSni
 
 const BankApiBlocks: FC = () => {
   return (
-    <DocContainer className="BankApiBlocks" title="Blocks" lastUpdated="15 Jan 2021">
+    <DocContainer className="BankApiBlocks" title="Blocks" lastUpdated="31 Mar 2021">
       <p>
         A block is a group of one or more transactions. There are often multiple transactions (usually fees) to
         different recipients within a single block.
       </p>
       <p>
-        More information about blocks can be found in the <NavLink to="/guide/blocks">Blocks</NavLink> section of the
-        guide.
+        For more information, see <NavLink to="/guide/blocks">Blocks</NavLink>.
       </p>
 
       <DocEndpoint endpoint="/blocks" method="GET" />
@@ -71,7 +70,7 @@ const BankApiBlocks: FC = () => {
     "balance_key": "ce51f0d9facaa7d3e69657429dd3f961ce70077a8efb53dcda508c7c0a19d2e3",
     "txs": [
       {
-        "amount": 12.5,
+        "amount": 12,
         "recipient": "484b3176c63d5f37d808404af1a12c4b9649cd6f6769f35bdf5a816133623fbc"
       },
       {

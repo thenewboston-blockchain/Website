@@ -42,10 +42,11 @@ const NodeApiCrawl: FC = () => {
       />
       <RequestResponseSnippet
         code={`{
-    data={
-        "crawl": "start" (or "stop")
-    },
-    signature="b4d335fa7662216acbcccccccccccccc688c8057cbe9193ddc8e6fb3702ba1d979e43b09e06c6c7c38358bbee5243dc37a52c5212298c2259be48285e3da130c"
+  message: { 
+    crawl: "start" (or "stop")
+   },
+  node_identifier: "01181490ac0fa6f73bd980adb81f1a3e72f81eb6b4ccab4dac8b6db7544e5eb1",
+  signature: "27ece75566498d54abe2cc816a904c84185f19579b8a96e93789da8beb91e6e2e89306ac4754cf09e0545810cc29c67cef7aceea4ac62b243dc4d61315b89c05"
 }`}
         heading="Request (Client > Node)"
       />

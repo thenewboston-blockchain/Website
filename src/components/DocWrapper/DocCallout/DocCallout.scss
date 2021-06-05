@@ -1,0 +1,40 @@
+.DocCallout {
+  border-left: 4px solid;
+  margin: 40px 0;
+  padding: 16px 24px;
+
+  &--important {
+    border-color: var(--color-yellow-400);
+  }
+
+  &--note {
+    border-color: var(--color-secondary);
+  }
+
+  &--warning {
+    border-color: var(--color-danger);
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    margin-bottom: 18px;
+
+    &--important {
+      color: var(--color-yellow-400);
+    }
+
+    &--note {
+      color: var(--color-secondary);
+    }
+
+    &--warning {
+      color: var(--color-danger);
+    }
+  }
+
+  &__icon {
+    margin-right: 9px;
+  }
+}

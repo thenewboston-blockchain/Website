@@ -1,8 +1,9 @@
 import React, {FC, KeyboardEvent, ReactNode, useCallback, useEffect, useRef} from 'react';
-import {useHistory} from 'react-router';
+import {useHistory} from 'react-router-dom';
 import clsx from 'clsx';
+import {Icon, IconType} from '@thenewboston/ui';
 
-import {Icon, IconType, Popover} from 'components';
+import {Popover} from 'components';
 import {useWindowDimensions} from 'hooks';
 
 import TopNavPopoverItem from './TopNavPopoverItem';
@@ -39,6 +40,7 @@ const TopNavPopover: FC<ComponentProps> = ({
 }) => {
   const history = useHistory();
   const itemsRef = useRef<HTMLAnchorElement[]>([]);
+  const popoverButtonRef = useRef<HTMLButtonElement>(null);
   const {clientWidth} = useWindowDimensions();
 
   const popoverIsOpen = !!anchorEl;
@@ -56,7 +58,21 @@ const TopNavPopover: FC<ComponentProps> = ({
   const handleOptionKeyDown = (to: string, index: number, disabled?: boolean) => (
     e: KeyboardEvent<HTMLAnchorElement>,
   ): void => {
+    if (e.shiftKey && e.key === 'Tab') {
+      // Shift + Tab at first item -> focus at last item
+      if (index === 0) {
+        e.preventDefault();
+        itemsRef.current[items.length - 1]?.focus();
+      }
+      return;
+    }
+
     if (e.key === 'Tab') {
+      // Tab at the last item -> focus at first item
+      if (index === items.length - 1) {
+        e.preventDefault();
+        itemsRef.current[0]?.focus();
+      }
       return;
     }
 
@@ -64,6 +80,7 @@ const TopNavPopover: FC<ComponentProps> = ({
 
     if (e.key === 'Escape') {
       unsetAnchorEl();
+      popoverButtonRef.current?.focus(); // focus back to popover button when close popover
       return;
     }
 
@@ -99,7 +116,7 @@ const TopNavPopover: FC<ComponentProps> = ({
 
   return (
     <>
-      <button className={clsx('TopNavPopover', className)} onClick={handleButtonClick}>
+      <button className={clsx('TopNavPopover', className)} onClick={handleButtonClick} ref={popoverButtonRef}>
         {customButtonContent || (
           <>
             {buttonText}
@@ -147,6 +164,12 @@ const TopNavPopover: FC<ComponentProps> = ({
             <TopNavPopoverItemSimple
               closePopover={unsetAnchorEl}
               handleKeyDown={handleOptionKeyDown(to, index)}
+              key={title}
+              ref={(el) => {
+                if (el) {
+                  itemsRef.current[index] = el;
+                }
+              }}
               title={title}
               to={to}
             />

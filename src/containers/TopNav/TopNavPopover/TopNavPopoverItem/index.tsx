@@ -1,7 +1,8 @@
 import React, {forwardRef, KeyboardEvent} from 'react';
 import {Link} from 'react-router-dom';
+import {Icon, IconType} from '@thenewboston/ui';
 
-import {A, Icon, IconType} from 'components';
+import {A} from 'components';
 
 import './TopNavPopoverItem.scss';
 
@@ -25,7 +26,7 @@ const TopNavPopoverItem = forwardRef<HTMLAnchorElement, ComponentProps>(
     const renderChildren = () => {
       return (
         <>
-          <Icon className="TopNavPopoverItem__icon" icon={iconType} size={iconSize} />
+          <Icon className="TopNavPopoverItem__icon" icon={iconType} size={iconSize} totalSize={42} />
           <div className="TopNavPopoverItem__right">
             <span className="TopNavPopoverItem__title">{title}</span>
             <span className="TopNavPopoverItem__description">{description}</span>

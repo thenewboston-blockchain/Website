@@ -1,11 +1,10 @@
 import React, {FC} from 'react';
-import {NavLink} from 'react-router-dom';
 
 import {DocContainer, DocEndpoint, QueryParamsOffsetAndLimit, RequestResponseSnippet, TableParams} from 'components';
 
 const BankApiInvalidBlocks: FC = () => {
   return (
-    <DocContainer className="BankApiInvalidBlocks" title="Invalid Blocks" lastUpdated="15 Jan 2021">
+    <DocContainer className="BankApiInvalidBlocks" title="Invalid Blocks" lastUpdated="31 Mar 2021">
       <p>
         Invalid blocks are blocks sent from confirmation validators to their banks as an indication that a block that
         had been received from the primary validator was unable to be validated. This may be due to improper formatting,
@@ -16,10 +15,6 @@ const BankApiInvalidBlocks: FC = () => {
         As banks receive these invalid block notices from their confirmation validators, they will automatically
         decrease the trust of their primary validator. The amount by which the primary validators trust is decreased is
         calculated based on the weighted trust of the sending confirmation validator.
-      </p>
-      <p>
-        Additional information about invalid blocks can be found in the{' '}
-        <NavLink to="/guide/resync-triggers">Resync Triggers</NavLink> section of the guide.
       </p>
 
       <DocEndpoint endpoint="/invalid_blocks" method="GET" />
@@ -83,7 +78,7 @@ const BankApiInvalidBlocks: FC = () => {
         "balance_key": "ce51f0d9facaa7d3e69657429dd3f961ce70077a8efb53dcda508c7c0a19d2e3",
         "txs": [
           {
-            "amount": 12.5,
+            "amount": 12,
             "recipient": "484b3176c63d5f37d808404af1a12c4b9649cd6f6769f35bdf5a816133623fbc"
           },
           {

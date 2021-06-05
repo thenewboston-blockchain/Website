@@ -39,6 +39,10 @@ const navLists = [
         url: '/social',
       },
       {
+        title: 'Weekly Progress',
+        url: '/progress',
+      },
+      {
         title: 'Openings',
         url: '/openings',
       },
@@ -47,8 +51,8 @@ const navLists = [
         url: '/teams',
       },
       {
-        title: 'Leaderboard',
-        url: '/leaderboard/All',
+        title: 'Community Guidelines',
+        url: '/guidelines',
       },
     ],
   },
@@ -56,8 +60,8 @@ const navLists = [
     header: 'More',
     links: [
       {
-        title: 'Project Proposals',
-        url: '/project-proposals/overview',
+        title: 'Projects',
+        url: '/projects/overview',
       },
       {
         isExternal: true,
@@ -83,7 +87,6 @@ const navLists = [
 const Footer: FC<ComponentProps> = ({className}) => {
   const renderSocialMediaLinks = () =>
     [
-      SocialMedia.slack,
       SocialMedia.github,
       SocialMedia.youtube,
       SocialMedia.reddit,
@@ -94,14 +97,20 @@ const Footer: FC<ComponentProps> = ({className}) => {
       SocialMedia.discord,
       SocialMedia.twitch,
     ].map((website) => (
-      <SocialMediaIcon className="Footer__SocialMediaLink" iconSize={28} key={website} website={website} />
+      <SocialMediaIcon
+        className="Footer__SocialMediaLink"
+        iconSize={28}
+        key={website}
+        totalSize={28}
+        website={website}
+      />
     ));
 
   const renderNavLists = () =>
     navLists.map((list) => <FooterNavList header={list.header} key={list.header} links={list.links} />);
 
   return (
-    <footer className={clsx('Footer', className)}>
+    <footer className={clsx('Footer', className)} data-testid="Footer">
       <div className="Footer__left">
         <Link to="/">
           <img src={Logo} alt="thenewboston logo" />

@@ -1,3 +1,5 @@
+@import 'styles/z-index';
+
 $navigation-bars-height: 100px; // TopNav.height + BreadcrumbMenu__bar.height
 
 .BreadcrumbMenu {
@@ -7,7 +9,7 @@ $navigation-bars-height: 100px; // TopNav.height + BreadcrumbMenu__bar.height
     align-items: center;
     cursor: pointer;
     display: flex;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     height: 40px;
     justify-content: space-between;
     max-width: 100vw;
@@ -31,7 +33,7 @@ $navigation-bars-height: 100px; // TopNav.height + BreadcrumbMenu__bar.height
     right: 0;
     top: $navigation-bars-height;
     width: 100vw;
-    z-index: 2;
+    z-index: $z-index-breadcrumb;
   }
 
   &__navigation {

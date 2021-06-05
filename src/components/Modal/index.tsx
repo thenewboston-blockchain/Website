@@ -1,11 +1,11 @@
-import React, {CSSProperties, FC, ReactNode, useMemo} from 'react';
+import React, {CSSProperties, FC, ReactNode, useCallback, useEffect, useMemo} from 'react';
 import {createPortal} from 'react-dom';
 import clsx from 'clsx';
 import noop from 'lodash/noop';
+import {Icon, IconType} from '@thenewboston/ui';
 import {bemify} from '@thenewboston/utils';
 
 import {Form, FormButton, FormButtonProps} from 'components/FormComponents';
-import Icon, {IconType} from 'components/Icon';
 import Loader from 'components/FormElements/Loader';
 import {GenericFormValues} from 'types/forms';
 import {GenericFunction} from 'types/generic';
@@ -46,6 +46,20 @@ const Modal: FC<ComponentProps> = ({
   submitting = false,
   validationSchema,
 }) => {
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        close();
+      }
+    },
+    [close],
+  );
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [handleKeyDown]);
+
   const ignoreDirty = useMemo<boolean>(() => ignoreDirtyProps || Object.keys(initialValues).length === 0, [
     ignoreDirtyProps,
     initialValues,
@@ -196,13 +210,17 @@ const Modal: FC<ComponentProps> = ({
           />
         </div>
         <Form initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
-          <div className={clsx('Modal__header_mobile', {...bemify(className, '__header_mobile')})}>
-            {footer || renderResponsiveHeader()}
-          </div>
-          <div className={clsx('Modal__content', {...bemify(className, '__content')})}>{children}</div>
-          <div className={clsx('Modal__footer', {...bemify(className, '__footer')})}>
-            {footer || renderDefaultFooter()}
-          </div>
+          {() => (
+            <>
+              <div className={clsx('Modal__header_mobile', {...bemify(className, '__header_mobile')})}>
+                {footer || renderResponsiveHeader()}
+              </div>
+              <div className={clsx('Modal__content', {...bemify(className, '__content')})}>{children}</div>
+              <div className={clsx('Modal__footer', {...bemify(className, '__footer')})}>
+                {footer || renderDefaultFooter()}
+              </div>
+            </>
+          )}
         </Form>
       </div>
     </>,

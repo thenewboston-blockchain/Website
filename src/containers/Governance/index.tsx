@@ -1,17 +1,18 @@
 import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
-import {DashboardLayout, DocsMenuItems, Pagination} from 'components';
+import {DashboardLayout, DocsMenuItems, PageTitle, Pagination} from 'components';
 import {governanceNavigationData} from 'components/DocsMenuItems';
 import {PageData, PageDataObject} from 'types/page-data';
 
 import GovernanceBudgets from './GovernanceBudgets';
 import GovernanceCoinsVsPoints from './GovernanceCoinsVsPoints';
-import GovernanceApplicationAndElectionProcess from './GovernanceApplicationAndElectionProcess';
-import GovernanceLockedCoinsAndBankBoosting from './GovernanceLockedCoinsAndBankBoosting';
-import GovernancePointsAndRefillLogic from './GovernancePointsAndRefillLogic';
-import GovernanceUsernamesAndVotes from './GovernanceUsernamesAndVotes';
+import GovernanceElectionProcess from './GovernanceElectionProcess';
+import GovernanceLockedCoinsAndBoosting from './GovernanceLockedCoinsAndBoosting';
 import GovernanceOverview from './GovernanceOverview';
+import GovernancePointsAndRefillLogic from './GovernancePointsAndRefillLogic';
+import GovernanceRatesAndAmounts from './GovernanceRatesAndAmounts';
+import GovernanceUsernamesAndVotes from './GovernanceUsernamesAndVotes';
 
 const defaultPageData: PageData = {
   content: <Redirect to="/governance/overview" />,
@@ -19,10 +20,6 @@ const defaultPageData: PageData = {
 };
 
 const pageData: PageDataObject = {
-  'application-and-election-process': {
-    content: <GovernanceApplicationAndElectionProcess />,
-    name: 'Application & Election Process',
-  },
   budgets: {
     content: <GovernanceBudgets />,
     name: 'Budgets',
@@ -31,9 +28,13 @@ const pageData: PageDataObject = {
     content: <GovernanceCoinsVsPoints />,
     name: 'Coins vs Points',
   },
-  'locked-coins-and-banking-boosting': {
-    content: <GovernanceLockedCoinsAndBankBoosting />,
-    name: 'Locked Coins & Bank Boosting',
+  'election-process': {
+    content: <GovernanceElectionProcess />,
+    name: 'Election Process',
+  },
+  'locked-coins-and-boosting': {
+    content: <GovernanceLockedCoinsAndBoosting />,
+    name: 'Locked Coins & Boosting',
   },
   overview: {
     content: <GovernanceOverview />,
@@ -42,6 +43,10 @@ const pageData: PageDataObject = {
   'points-and-refill-logic': {
     content: <GovernancePointsAndRefillLogic />,
     name: 'Points & Refill Logic',
+  },
+  'rates-and-amounts': {
+    content: <GovernanceRatesAndAmounts />,
+    name: 'Rates & Amounts',
   },
   'usernames-and-votes': {
     content: <GovernanceUsernamesAndVotes />,
@@ -59,6 +64,7 @@ const Governance: FC = () => {
 
   return (
     <DashboardLayout menuItems={<DocsMenuItems />} pageName={name} sectionName="Governance">
+      <PageTitle ogDescription={`${name} | Governance`} title={name} />
       {content}
       <Pagination navigationData={governanceNavigationData} />
     </DashboardLayout>

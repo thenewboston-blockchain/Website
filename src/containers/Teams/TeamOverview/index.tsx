@@ -1,5 +1,6 @@
 import React, {FC, Fragment, ReactNode, useCallback} from 'react';
-import {A, DocList, Icon, IconType} from 'components';
+import {Icon, IconType} from '@thenewboston/ui';
+import {A, DocList} from 'components';
 import {TeamName} from 'types/teams';
 import {getTeamData} from 'utils/data';
 
@@ -21,7 +22,7 @@ const TeamOverview: FC<ComponentProps> = ({teamFilter}) => {
           <div className="TeamOverview__social" key={`${name}-${label}`}>
             <Icon
               className="TeamOverview__social-icon"
-              icon={name === 'github' ? IconType.github : IconType.slack}
+              icon={name === 'github' ? IconType.github : IconType.discord}
               size={18}
             />
             {name === 'github' ? (

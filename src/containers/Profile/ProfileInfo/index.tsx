@@ -1,9 +1,9 @@
 import React, {FC} from 'react';
 import {useSelector} from 'react-redux';
 import {useParams} from 'react-router-dom';
+import {Icon, IconType} from '@thenewboston/ui';
 
-import DefaultUserAvatar from 'assets/images/default-avatar.png';
-import {A, Avatar, CopyableAccountNumber, Icon, IconType, Qr} from 'components';
+import {A, Avatar, CopyableAccountNumber, Qr} from 'components';
 import EditUserModal from 'containers/EditUserModal';
 import {useBooleanState} from 'hooks';
 import {selectActiveUser} from 'selectors/state';
@@ -46,18 +46,15 @@ const ProfileInfo: FC<ComponentProps> = ({user}) => {
   };
 
   const renderMemberDetails = (member: TeamMember) => {
-    const {teams, titles} = member;
+    const {team, title} = member;
     return (
       <>
-        {teams &&
-          teams.map((team, index) => (
-            <div className="ProfileInfo__member-title" key={team.title}>
-              {titles[index]} on <A href={`/teams/${getTeamPathname(team.title)}`}>{team.title}</A>
-            </div>
-          ))}
-        <div className="ProfileInfo__member-slack">
-          <Icon className="ProfileInfo__member-slack-icon" icon={IconType.slack} size={18} />
-          {user.slack_username}
+        <div className="ProfileInfo__member-title" key={team}>
+          {title} on <A href={`/teams/${getTeamPathname(team)}`}>{team}</A>
+        </div>
+        <div className="ProfileInfo__member-discord">
+          <Icon className="ProfileInfo__member-discord-icon" icon={IconType.discord} size={18} />
+          {user.discord_username}
         </div>
         <div className="ProfileInfo__member-github">
           <Icon className="ProfileInfo__member-github-icon" icon={IconType.github} size={18} />
@@ -74,12 +71,7 @@ const ProfileInfo: FC<ComponentProps> = ({user}) => {
       <div className="ProfileInfo">
         <div className="ProfileInfo__top-section">
           {renderBackdrop(memberDetails?.isLead || false)}
-          <Avatar
-            alt={user.github_username}
-            className="ProfileInfo__profile-picture"
-            size={178}
-            src={user.profile_image || DefaultUserAvatar}
-          />
+          <Avatar className="ProfileInfo__profile-picture" size={178} src={user.profile_image} />
         </div>
         <div className="ProfileInfo__details">
           <div className="ProfileInfo__user-details">

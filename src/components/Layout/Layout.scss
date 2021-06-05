@@ -1,3 +1,5 @@
+@import 'styles/z-index';
+
 $top-nav-height: 60px;
 $footer-height: 348px;
 
@@ -10,8 +12,7 @@ $footer-height: 348px;
   }
 
   &__content,
-  &__Footer,
-  &__TopNav {
+  &__Footer {
     @media (min-width: 1366px) {
       margin-left: auto;
       margin-right: auto;
@@ -29,10 +30,8 @@ $footer-height: 348px;
   }
 
   &__top-nav-wrapper {
-    backdrop-filter: saturate(180%) blur(20px);
-    background: rgba(255, 255, 255, 0.8);
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: $z-index-layout;
   }
 }

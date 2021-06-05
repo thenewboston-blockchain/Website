@@ -1,11 +1,10 @@
-.Button {
+.ButtonWebsite {
   $self: &;
-  border-radius: 3px;
+  border-radius: 100px;
   border-style: solid;
   border-width: 1px;
-  box-shadow: 0 4px 4px rgba(4, 34, 53, 0.25);
   cursor: pointer;
-  padding: 9px 12px;
+  padding: 11px 12px;
   transition: all 0.1s;
 
   &--disabled {
@@ -26,8 +25,9 @@
 
       &#{$self}--disabled,
       &#{$self}--disabled:hover {
-        background: var(--color-primary);
-        border-color: var(--color-primary);
+        background: var(--color-primary-disabled);
+        border-color: var(--color-primary-disabled);
+        color: var(--color-white);
       }
     }
 
@@ -56,11 +56,11 @@
     background: transparent;
 
     &#{$self}--primary {
-      border-color: var(--color-primary);
+      border-color: var(--color-gray-200);
       color: var(--color-primary);
 
       &:hover {
-        background: var(--color-primary);
+        background: var(--color-gray-100);
       }
 
       &#{$self}--disabled,
