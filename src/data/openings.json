@@ -1,42 +1,42 @@
 [
-    {
-      "openingId": "senior-python-django-developer",
-      "category": "Engineering",
-      "description": "We are looking for a Senior Python / Django Developer to help us build out both our digital currency network and Website API.",
-      "position": "Senior Python / Django Developer",
-      "responsibilities": [
-        "Designing and creating RESTful APIs",
-        "Participating in architectural, design and product discussions",
-        "Working in an environment with an excellent team of engineers"
-      ],
-      "technologyRequirements": [
-        "Experience with Celery, DRF, and pytest",
-        "2+ years of experience in Django",
-        "4+ years of experience in Python"
-      ],
-      "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
-    },
-    {
-      "openingId": "ux-designer",
-      "category": "Design",
-      "description": "We’re looking for a creative and motivated UX designer that basically will help improve thenewboston.com web app.",
-      "position": "UX Designer",
-      "responsibilities": [
-        "Creates innovative solutions for a wide variety of product design challenges, including Web design features.",
-        "Plans and defines a strategy for the direction of future iterations.",
-        "Advocates for design solutions, highlighting inputs that influenced the decisions including business and user goals, demographic and usage data, and research findings.",
-        "Works alongside engineers and product managers throughout all stages of the production cycle.",
-        "Develops and maintains detailed user interface specifications.",
-        "Presents design work to multiple teams and senior leadership for review and feedback."
-      ],
-      "technologyRequirements": [
-        "Fluency in best practices for web-based information architecture and design.",
-        "Strong knowledge of usability principles and techniques.",
-        "Excellent communication and presentation.",
-        "Experience working in a collaborative multidisciplinary team and working directly with developers for implementation of designs.",
-        "Figma is required and must understand how to manage style guides.",
-        "Ability to work on improving design continuously."
-      ],
-      "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSc2dbvqlUrU5liVK8_mYPI6PYPBT-_gMeQiRxDW7-Y7cXTFNg/viewform"
-    }
-  ]
+  {
+    "openingId":"senior-python-django-developer",
+    "category":"Engineering",
+    "description":"We are looking for a Senior Python / Django Developer to help us build out both our digital currency network and Website API.",
+    "position":"Senior Python / Django Developer",
+    "responsibilities":[
+      "Designing and creating RESTful APIs",
+      "Participating in architectural, design and product discussions",
+      "Working in an environment with an excellent team of engineers"
+    ],
+    "technologyRequirements":[
+      "Experience with Celery, DRF, and pytest",
+      "2+ years of experience in Django",
+      "4+ years of experience in Python"
+    ],
+    "applicationUrl":"https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
+  },
+  {
+    "openingId":"ux-designer",
+    "category":"Design",
+    "description":"We’re looking for a creative and motivated UX designer that basically will help improve thenewboston.com web app.",
+    "position":"UX Designer",
+    "responsibilities":[
+      "Creates innovative solutions for a wide variety of product design challenges, including Web design features.",
+      "Plans and defines a strategy for the direction of future iterations.",
+      "Advocates for design solutions, highlighting inputs that influenced the decisions including business and user goals, demographic and usage data, and research findings.",
+      "Works alongside engineers and product managers throughout all stages of the production cycle.",
+      "Develops and maintains detailed user interface specifications.",
+      "Presents design work to multiple teams and senior leadership for review and feedback."
+    ],
+    "technologyRequirements":[
+      "Fluency in best practices for web-based information architecture and design.",
+      "Strong knowledge of usability principles and techniques.",
+      "Excellent communication and presentation.",
+      "Experience working in a collaborative multidisciplinary team and working directly with developers for implementation of designs.",
+      "Figma is required and must understand how to manage style guides.",
+      "Ability to work on improving design continuously."
+    ],
+    "applicationUrl":"https://docs.google.com/forms/d/e/1FAIpQLSc2dbvqlUrU5liVK8_mYPI6PYPBT-_gMeQiRxDW7-Y7cXTFNg/viewform"
+  }
+]
