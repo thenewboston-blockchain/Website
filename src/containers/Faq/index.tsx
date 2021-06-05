@@ -28,7 +28,7 @@ const questionsAnswers: FaqContent[] = [
     question: 'What is the goal of the digital currency project?',
   },
   {
-    answer: '2,032,628,357 coins',
+    answer: '1,032,628,343 TNBC',
     id: 'is-there-a-max-supply',
     question: 'Is there a max supply?',
   },
