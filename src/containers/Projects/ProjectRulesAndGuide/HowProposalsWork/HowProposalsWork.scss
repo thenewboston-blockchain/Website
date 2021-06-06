@@ -1,0 +1,40 @@
+.HowProposalsWork {
+  &__heading {
+    color: var(--color-gray-900);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 125%;
+    margin-bottom: 16px;
+  }
+
+  &__step {
+    box-shadow: inset 0px -1px 1px #e6e6e6;
+    color: var(--color-gray-700);
+    padding: 8px 0;
+
+    &-heading {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 120%;
+      margin-bottom: 8px;
+    }
+
+    &-text {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 8px;
+      margin-top: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__tagline {
+    color: var(--color-gray-700);
+    font-size: 16px;
+    margin-bottom: 64px;
+    margin-top: 0;
+  }
+}

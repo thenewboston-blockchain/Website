@@ -1,54 +1,35 @@
-import React, {FC, useMemo} from 'react';
-import {Redirect, useParams} from 'react-router-dom';
+import React, {FC} from 'react';
 
-import {DashboardLayout, PageTitle, Pagination} from 'components';
-import {PageData, PageDataObject} from 'types/page-data';
+import HowProposalsWork from './HowProposalsWork';
+import Rules from './Rules';
+import './ProjectRules.scss';
 
-import ProjectsMenuItems, {projectsNavigationData} from '../ProjectsMenuItems';
-import ProjectsMilestones from './ProjectsMilestones';
-import ProjectsOverview from './ProjectsOverview';
-import ProjectsProposalSubmissionProcess from './ProjectsProposalSubmissionProcess';
-import ProjectsRules from './ProjectsRules';
-
-const defaultPageData: PageData = {
-  content: <Redirect to="/project-rules/overview" />,
-  name: '',
-};
-
-const pageData: PageDataObject = {
-  milestones: {
-    content: <ProjectsMilestones />,
-    name: 'Milestones & Payouts',
-  },
-  overview: {
-    content: <ProjectsOverview />,
-    name: 'Overview',
-  },
-  proposals: {
-    content: <ProjectsProposalSubmissionProcess />,
-    name: 'Proposal Submission Process',
-  },
-  rules: {
-    content: <ProjectsRules />,
-    name: 'Rules & Guidelines',
-  },
-};
-
-const getPageData = (chapter: string): PageData => {
-  return pageData[chapter] || defaultPageData;
-};
-
-const Projects: FC = () => {
-  const {chapter} = useParams<{chapter: string}>();
-  const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
+const ProjectsRules: FC = () => {
+  const SECTIONS = ['How Proposals Work', 'Rules', 'Submission Process', 'Milestone & Payouts'];
 
   return (
-    <DashboardLayout menuItems={<ProjectsMenuItems />} pageName={name} sectionName="Projects">
-      <PageTitle ogDescription={`${name} | Projects`} title={name} />
-      {content}
-      <Pagination navigationData={projectsNavigationData} />
-    </DashboardLayout>
+    <div className="ProjectRules">
+      <header className="ProjectRules__banner">
+        <h1 className="ProjectRules__banner-headline">Project Rules and Guidelines</h1>
+        <p className="ProjectRules__banner-text">The detailed guidelines about how the projects works. </p>
+      </header>
+      <main className="ProjectRules__main">
+        <aside className="ProjectRules__sidebar">
+          {SECTIONS.map((section) => (
+            <button className="ProjectRules__sidebar-item" key={section}>
+              {section}
+            </button>
+          ))}
+        </aside>
+        <section className="ProjectRules__content">
+          <HowProposalsWork />
+          <hr className="ProjectRules__divider" />
+          <Rules />
+          <hr className="ProjectRules__divider" />
+        </section>
+      </main>
+    </div>
   );
 };
 
-export default Projects;
+export default ProjectsRules;

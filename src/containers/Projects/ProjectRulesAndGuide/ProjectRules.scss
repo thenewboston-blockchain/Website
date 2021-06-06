@@ -1,0 +1,59 @@
+.ProjectRules {
+  &__banner {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: center;
+
+    &-headline {
+      font-size: 42px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 125%;
+    }
+
+    &-text {
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 16px;
+    }
+  }
+
+  &__divider {
+    border-top: 1px solid var(--color-gray-075);
+    margin: 120px auto;
+  }
+
+  &__main {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 240px auto;
+    padding: 48px 72px;
+  }
+
+  &__sidebar {
+    box-shadow: 0px 8px 88px rgba(0, 0, 0, 0.05);
+    padding: 24px;
+
+    &-item {
+      background: var(--color-white);
+      border: none;
+      color: var(--color-blue-900);
+      cursor: pointer;
+      display: block;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: left;
+      width: 100%;
+
+      &-active {
+        font-weight: 700;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
