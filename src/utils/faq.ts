@@ -1,7 +1,5 @@
 import {faqQuestionsAndAnswers, FaqContent} from 'types/faq';
 
 export const getTopQuestionsAndAnswers = (): FaqContent[] => {
-  return faqQuestionsAndAnswers
-    .map((faqTopic) => faqTopic.content.filter((qna) => qna.isTop))
-    .reduce((a, b) => [...a, ...b], []);
+  return faqQuestionsAndAnswers.map((faqTopic) => faqTopic.content.filter((qna) => qna.isTop)).flat();
 };
