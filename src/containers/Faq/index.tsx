@@ -1,59 +1,71 @@
-import React, {FC, memo, useEffect, useState} from 'react';
+import React, {FC, useCallback, useEffect, useMemo, useState} from 'react';
+import {useHistory, useParams} from 'react-router-dom';
 
 import {Button, FaqDropdownCard, Input, PageTitle} from 'components';
-import {faqQuestionsAndAnswers, FaqTopic, FaqContent, TopicQuestionAndAnswers} from 'constants/faq';
 import {useWindowDimensions} from 'hooks';
-import Feedback from './Feedback';
-import SideMenu from './FaqSideMenu';
+import {FaqContent, faqFilters, FaqFilterType, faqQuestionsAndAnswers} from 'types/faq';
 
+import Feedback from './Feedback';
+import FaqSideMenu from './FaqSideMenu';
 import './Faq.scss';
 
+const HIDE_LEFT_MENU_WIDTH = 600;
+
+const faqFilterKeyMap = Object.values(FaqFilterType).reduce(
+  (acc, filterType) => ({...acc, [filterType]: true}),
+  {} as {[key: string]: boolean},
+);
+
 const Faq: FC = () => {
-  const [selectedFilter, setSelectedFilter] = useState<FaqTopic>(FaqTopic.All);
-  const [filteredQnAs, setFilteredQnAs] = useState<TopicQuestionAndAnswers[]>(faqQuestionsAndAnswers);
-  const [searchValue, setSearchValue] = useState('');
+  const history = useHistory();
+  const {filter} = useParams<{filter: FaqFilterType}>();
+  const [searchText, setSearchText] = useState<string>(''); // search input value
+  const [searchQuery, setSearchQuery] = useState<string>(''); // what is actually being used as filter
   const {width} = useWindowDimensions();
 
-  const filterQnAs = () => {
-    // set filtered question and answers based on filters
-    let filtered = faqQuestionsAndAnswers;
-    if (selectedFilter !== 'All') {
-      filtered = faqQuestionsAndAnswers.filter((faqTopic) => faqTopic.topic === selectedFilter);
+  useEffect(() => {
+    if (!faqFilterKeyMap[filter]) {
+      history.replace(`/faq/${FaqFilterType.all}`);
+    }
+  }, [filter, history]);
+
+  const filteredQnAsByFilterType = useMemo(() => {
+    if (width <= HIDE_LEFT_MENU_WIDTH) {
+      return faqQuestionsAndAnswers;
     }
 
-    // finish if there is no search query
-    if (searchValue.trim() === '') {
-      setFilteredQnAs(filtered);
-      return;
+    if (filter !== FaqFilterType.all) {
+      return faqQuestionsAndAnswers.filter((faqTopic) => faqTopic.topic === filter);
+    }
+    return faqQuestionsAndAnswers;
+  }, [filter, width]);
+
+  const filteredQnAsBySearchQuery = useMemo(() => {
+    const sanitizedSearch = searchQuery.trim().toLowerCase();
+
+    if (!sanitizedSearch) {
+      return filteredQnAsByFilterType;
     }
 
-    const matchedQnAs = filtered
+    return filteredQnAsByFilterType
       .map((faqTopic) => {
         return {
-          content: faqTopic.content.filter((qna) =>
-            qna.question.toString().toLowerCase().includes(searchValue.trim().toLowerCase()),
-          ),
+          // filter questions that match with search query
+          content: faqTopic.content.filter((qna) => qna.question.toString().toLowerCase().includes(searchQuery)),
           topic: faqTopic.topic,
         };
-      }) // filter questions that match with search query
-      .filter((faqTopic) => faqTopic.content.length > 0); // filter out topics that does not have any questions that are matched
+      })
+      .filter((faqTopic) => faqTopic.content.length > 0); // filter types that have no questions
+  }, [filteredQnAsByFilterType, searchQuery]);
 
-    setFilteredQnAs(matchedQnAs);
-  };
-
-  useEffect(() => {
-    filterQnAs();
-    // eslint-disable-next-line
-  }, [selectedFilter]);
-
-  const renderQuestionsAndAnswers = () => {
-    if (filteredQnAs.length === 0) {
+  const renderQuestionsAndAnswers = useCallback(() => {
+    if (filteredQnAsBySearchQuery.length === 0) {
       return <div className="Faq__empty-questions">No related questions found.</div>;
     }
-    return filteredQnAs.map((faqTopic) => {
+    return filteredQnAsBySearchQuery.map((faqTopic) => {
       return renderTopicQuestionsAndAnswers(faqTopic.topic, faqTopic.content);
     });
-  };
+  }, [filteredQnAsBySearchQuery]);
 
   const renderTopicQuestionsAndAnswers = (topic: string, content: FaqContent[]) => {
     return (
@@ -66,9 +78,14 @@ const Faq: FC = () => {
     );
   };
 
+  const handleClearClick = (): void => {
+    setSearchQuery('');
+    setSearchText('');
+  };
+
   const handleSearchKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
-      filterQnAs();
+      setSearchQuery(searchText);
     }
   };
 
@@ -83,9 +100,9 @@ const Faq: FC = () => {
           </div>
         </div>
         <div className="Faq__content">
-          {width > 600 && (
+          {width > HIDE_LEFT_MENU_WIDTH && (
             <div className="Faq__sidemenu">
-              <SideMenu selectedFilter={selectedFilter} setSelectedFilter={setSelectedFilter} />
+              <FaqSideMenu />
             </div>
           )}
           <div className="Faq__content-main">
@@ -93,12 +110,22 @@ const Faq: FC = () => {
               <Input
                 className="Faq__search-input"
                 fullWidth
-                value={searchValue}
+                value={searchText}
                 placeholder="Search for questions"
-                onChange={(e) => setSearchValue(e.target.value)}
+                onChange={(e) => setSearchText(e.target.value)}
                 onKeyDown={handleSearchKeyDown}
               />
-              <Button onClick={filterQnAs}>Search</Button>
+              <Button
+                className="Faq__search-clear"
+                disabled={!searchText && !searchQuery}
+                onClick={handleClearClick}
+                variant="outlined"
+              >
+                Clear
+              </Button>
+              <Button disabled={!searchText} onClick={() => setSearchQuery(searchText)}>
+                Search
+              </Button>
             </div>
             <div>{renderQuestionsAndAnswers()}</div>
           </div>
@@ -109,4 +136,6 @@ const Faq: FC = () => {
   );
 };
 
-export default memo(Faq);
+export {FaqFilterType, faqFilters};
+
+export default Faq;

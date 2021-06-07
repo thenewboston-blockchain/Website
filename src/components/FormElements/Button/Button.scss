@@ -66,9 +66,9 @@
 
       &#{$self}--disabled,
       &#{$self}--disabled:hover {
-        background: var(--color-primary);
-        border-color: var(--color-primary);
-        color: var(--color-primary);
+        background: var(--color-gray-050);
+        border-color: var(--color-gray-050);
+        color: var(--color-gray-200);
       }
     }
 

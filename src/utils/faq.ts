@@ -1,4 +1,4 @@
-import {faqQuestionsAndAnswers, FaqContent} from 'constants/faq';
+import {faqQuestionsAndAnswers, FaqContent} from 'types/faq';
 
 export const getTopQuestionsAndAnswers = (): FaqContent[] => {
   return faqQuestionsAndAnswers

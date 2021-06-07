@@ -1,26 +1,25 @@
 import React from 'react';
 
-import {FaqTopic} from 'constants/faq';
+import {FaqFilterType} from 'types/faq';
 import {CustomIconProps} from './types';
-
 import AllIcons from './AllIcon';
 import CoinsIcon from './CoinsIcon';
 import CommunityIcon from './CommunityIcon';
 import HowToIcon from './HowToIcon';
 import ProjectsIcon from './ProjectsIcon';
 
-const FaqIcons = ({onClick, size, state, topic}: CustomIconProps & {topic: FaqTopic}) => {
+const FaqIcons = ({size, state, topic}: CustomIconProps & {topic: FaqFilterType}) => {
   switch (topic) {
-    case FaqTopic.All:
-      return <AllIcons onClick={onClick} size={size} state={state} />;
-    case FaqTopic.Coins:
-      return <CoinsIcon onClick={onClick} size={size} state={state} />;
-    case FaqTopic.Community:
-      return <CommunityIcon onClick={onClick} size={size} state={state} />;
-    case FaqTopic.HowToGuides:
-      return <HowToIcon onClick={onClick} size={size} state={state} />;
-    case FaqTopic.Projects:
-      return <ProjectsIcon onClick={onClick} size={size} state={state} />;
+    case FaqFilterType.all:
+      return <AllIcons size={size} state={state} />;
+    case FaqFilterType.coins:
+      return <CoinsIcon size={size} state={state} />;
+    case FaqFilterType.community:
+      return <CommunityIcon size={size} state={state} />;
+    case FaqFilterType.howTo:
+      return <HowToIcon size={size} state={state} />;
+    case FaqFilterType.projects:
+      return <ProjectsIcon size={size} state={state} />;
     default:
       return null;
   }

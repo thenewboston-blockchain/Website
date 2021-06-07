@@ -2,16 +2,9 @@ import React, {FC} from 'react';
 
 import {CustomIconProps} from './types';
 
-const CoinsIcon: FC<CustomIconProps> = ({onClick, size = 24, state = 'default'}) => {
+const CoinsIcon: FC<CustomIconProps> = ({size = 24, state = 'default'}) => {
   return (
-    <svg
-      onClick={onClick}
-      width={size}
-      height={size}
-      viewBox="0 0 32 32"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width={size} height={size} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#faqCoinsClip0)">
         <path
           d="M2.807 21.09c2.918 6.8 10.619 9.72 16.653 9.222 1.648-.136 4.963-.41 7.551-2.85 4.97-4.687 4.205-14.484-.553-20.252-.613-.742-4.854-5.719-11.464-5.652-4.84.049-8.236 2.774-8.65 3.114a13.299 13.299 0 00-2.709 3.065c-2.437 3.8-2.651 9.104-.828 13.353z"

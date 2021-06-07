@@ -2,16 +2,9 @@ import React, {FC} from 'react';
 
 import {CustomIconProps} from './types';
 
-const AllIcon: FC<CustomIconProps> = ({onClick, size = 24, state = 'default'}) => {
+const AllIcon: FC<CustomIconProps> = ({size = 24, state = 'default'}) => {
   return (
-    <svg
-      onClick={onClick}
-      width={size}
-      height={size}
-      viewBox="0 0 32 32"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width={size} height={size} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#faqAllClip0)">
         <path
           d="M26.9039 26.2614C21.807 31.634 13.978 30.0447 12.8209 29.7892C11.363 29.4674 7.89439 28.7018 5.30589 25.6792C1.34306 21.0515 1.74318 13.8189 4.80368 8.94292C5.69423 7.52413 8.6911 3.30768 14.319 2.39095C14.6479 2.33735 20.5246 1.47664 25.2532 5.43974C25.8907 5.97409 26.9198 6.94181 27.8217 8.35085C30.6195 12.7218 31.9436 20.9489 26.9039 26.2614Z"

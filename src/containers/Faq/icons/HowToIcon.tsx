@@ -2,16 +2,9 @@ import React, {FC} from 'react';
 
 import {CustomIconProps} from './types';
 
-const HowToIcon: FC<CustomIconProps> = ({onClick, size = 24, state = 'default'}) => {
+const HowToIcon: FC<CustomIconProps> = ({size = 24, state = 'default'}) => {
   return (
-    <svg
-      onClick={onClick}
-      width={size}
-      height={size}
-      viewBox="0 0 32 32"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width={size} height={size} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M27.0614 26.5588C26.47 27.1825 25.9104 27.5846 25.4683 27.9024C20.2715 31.6378 14.1224 30.549 12.8154 30.2831C10.8856 29.8904 7.15523 29.1314 4.45821 25.9542C0.377905 21.1473 1.01325 13.5743 4.17825 8.57516C4.75729 7.66074 7.81522 2.58544 14.0307 1.77159C17.7922 1.27901 22.1769 2.27243 25.3523 4.9375C32.0174 10.5314 31.5429 21.8323 27.0614 26.5588Z"
         fill="url(#faqHowToPaint0_linear)"

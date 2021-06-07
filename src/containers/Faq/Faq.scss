@@ -36,6 +36,10 @@
     width: 100%;
   }
 
+  &__search-clear {
+    margin-right: 12px;
+  }
+
   &__search-input {
     height: 40px;
     margin-right: 24px;
@@ -71,7 +75,7 @@
     margin-bottom: 15px;
 
     @media (max-width: 992px) {
-      // TODO: Extend h1 styling here broski
+      @include h1;
     }
   }
 

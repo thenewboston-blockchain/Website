@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import React, {FC} from 'react';
 
 import {sendFeedback} from 'apis/faq';
 import {Form, FormButton, FormInput, FormTextArea} from 'components/FormComponents';
-import Toast from 'components/Toast';
+import {displayErrorToast, displayToast} from 'utils/toast';
 import yup from 'utils/yup';
+
 import './Feedback.scss';
 
 const initialValues = {
@@ -20,18 +21,13 @@ const validationSchema = yup.object().shape({
 
 type FormValues = typeof initialValues;
 
-const Feedback = () => {
-  const [sendFeedbackSuccess, setSendFeedbackSuccess] = useState(false);
-  const [hasSent, setHasSent] = useState(false);
+const Feedback: FC = () => {
   const handleSubmit = async ({content, emailAddress, name}: FormValues) => {
     try {
-      setHasSent(false);
       await sendFeedback(name, emailAddress, content);
-      setSendFeedbackSuccess(true);
+      displayToast('Success! Thank you for your feedback', 'success');
     } catch (err) {
-      setSendFeedbackSuccess(false);
-    } finally {
-      setHasSent(true);
+      displayErrorToast('Sorry, there was an error with your submission. Please try again later.');
     }
   };
 
@@ -67,10 +63,6 @@ const Feedback = () => {
             </>
           )}
         </Form>
-        {hasSent && sendFeedbackSuccess && <Toast type="success">Success! Thank you for your feedback</Toast>}
-        {hasSent && !sendFeedbackSuccess && (
-          <Toast type="warning">Sorry, there was an error with your submission. Please try again later.</Toast>
-        )}
       </div>
     </div>
   );

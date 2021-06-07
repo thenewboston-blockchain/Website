@@ -1,52 +1,61 @@
 import React, {FC, useState} from 'react';
-
+import {useHistory, useParams} from 'react-router-dom';
 import clsx from 'clsx';
 
-import {FaqTopic} from 'constants/faq';
+import {faqFilters, FaqFilterType} from 'types/faq';
 import FaqIcon from '../icons';
-
 import './FaqSideMenu.scss';
 
-type Props = {
-  selectedFilter: FaqTopic;
-  setSelectedFilter: (filter: FaqTopic) => void;
-};
+const FaqSideMenu: FC = () => {
+  const history = useHistory();
+  const {filter} = useParams<{filter: FaqFilterType}>();
+  const [hoveredFaqFilter, setHoveredFaqFilter] = useState<FaqFilterType | null>(null);
 
-const FaqSideMenu: FC<Props> = ({selectedFilter, setSelectedFilter}) => {
-  const [hoveredTopicTitle, setHoveredTopicTitle] = useState<string>('');
-  const handleMouseEnter = (title: string) => {
-    setHoveredTopicTitle(title);
+  const handleFilterClick = (faqFilter: FaqFilterType) => (): void => {
+    history.push(`/faq/${faqFilter}`);
   };
 
-  const handleMouseLeave = () => {
-    setHoveredTopicTitle('');
+  const handleMouseEnter = (faqFilter: FaqFilterType) => (): void => {
+    setHoveredFaqFilter(faqFilter);
+  };
+
+  const handleMouseLeave = (): void => {
+    setHoveredFaqFilter(null);
   };
 
   return (
     <div className="FaqSideMenu">
-      {Object.values(FaqTopic).map((topic) => {
-        const isActive = topic === selectedFilter;
-        const isHovered = hoveredTopicTitle === topic;
-        /* eslint-disable-next-line no-nested-ternary */
-        const iconState = isActive ? 'active' : isHovered ? 'hover' : 'default';
+      {Object.values(FaqFilterType).map((faqFilterType) => {
+        const isActive = faqFilterType === filter;
+        const isHovered = hoveredFaqFilter === faqFilterType;
+
+        let iconState: 'active' | 'hover' | 'default';
+        if (isActive) {
+          iconState = 'active';
+        } else if (isHovered) {
+          iconState = 'hover';
+        } else {
+          iconState = 'default';
+        }
+
         return (
           <div
             className="FaqSideMenu__topic"
-            key={topic}
+            key={faqFilterType}
             role="button"
-            onClick={() => setSelectedFilter(topic)}
-            onMouseEnter={() => handleMouseEnter(topic)}
+            onClick={handleFilterClick(faqFilterType)}
+            onMouseEnter={handleMouseEnter(faqFilterType)}
             onMouseLeave={handleMouseLeave}
             tabIndex={0}
           >
-            <FaqIcon topic={topic} size={28} state={iconState} />
+            <FaqIcon topic={faqFilterType} size={28} state={iconState} />
             <div
               className={clsx('FaqSideMenu__topic-title', {
                 'FaqSideMenu__topic-title--active': isActive,
                 'FaqSideMenu__topic-title--hovered': isHovered,
               })}
             >
-              {topic}
+              {faqFilters[faqFilterType].label}
             </div>
           </div>
         );
