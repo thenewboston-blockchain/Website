@@ -3,6 +3,7 @@
 $top-nav-height: 60px;
 
 .FaqDropdownCard {
+  $self: &;
   background-color: var(--color-white);
   border-radius: 8px;
   box-shadow: 0 0 24px 0 rgba(229, 234, 244, 0.58);
@@ -34,6 +35,12 @@ $top-nav-height: 60px;
     }
   }
 
+  &__HashLink {
+    @extend %h3;
+    display: none;
+    margin-left: 8px;
+  }
+
   &__left-container {
     align-items: center;
     display: flex;
@@ -42,6 +49,12 @@ $top-nav-height: 60px;
       align-items: flex-start;
       flex-direction: column;
       width: 100%;
+    }
+
+    &:hover {
+      #{$self}__HashLink {
+        display: inline;
+      }
     }
   }
 

@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
 
 import {useBooleanState} from 'hooks';
+import {HashLink} from 'components';
 import './FaqDropdownCard.scss';
 
 type Props = {
@@ -31,6 +32,7 @@ const FaqDropdownCard: FC<Props> = ({answer, className, id, question}) => {
           <Link className="FaqDropdownCard__question" to={`${pathname}#${id}`}>
             {question}
           </Link>
+          <HashLink className="FaqDropdownCard__HashLink" id={id} />
         </div>
         <Icon
           className="FaqDropdownCard__toggle-icon"
