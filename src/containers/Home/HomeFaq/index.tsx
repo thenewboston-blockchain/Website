@@ -18,6 +18,7 @@ const HomeFaq: FC = () => {
               <FaqDropdownCard
                 className="HomeFaq__dropdown-card"
                 key={qna.id}
+                id={qna.id}
                 question={qna.question}
                 answer={qna.answer}
               />

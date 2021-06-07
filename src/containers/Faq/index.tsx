@@ -72,7 +72,13 @@ const Faq: FC = () => {
       <div className="Faq__topic" key={topic}>
         <div className="Faq__topic-title">{topic}</div>
         {content.map((qna) => (
-          <FaqDropdownCard className="Faq__dropdown-card" key={qna.id} question={qna.question} answer={qna.answer} />
+          <FaqDropdownCard
+            className="Faq__dropdown-card"
+            id={qna.id}
+            key={qna.id}
+            question={qna.question}
+            answer={qna.answer}
+          />
         ))}
       </div>
     );

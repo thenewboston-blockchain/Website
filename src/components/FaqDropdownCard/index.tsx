@@ -1,24 +1,36 @@
-import React, {FC, useState, ReactNode} from 'react';
-
-import {Icon, IconType} from '@thenewboston/ui';
+import React, {FC, ReactNode, useEffect} from 'react';
+import {Link, useLocation} from 'react-router-dom';
 import clsx from 'clsx';
+import {Icon, IconType} from '@thenewboston/ui';
 
+import {useBooleanState} from 'hooks';
 import './FaqDropdownCard.scss';
 
 type Props = {
-  className?: string;
-  question: ReactNode;
   answer: ReactNode;
+  className?: string;
+  id: string;
+  question: ReactNode;
 };
 
-const FaqDropdownCard: FC<Props> = ({answer, className, question}) => {
-  const [expanded, setExpanded] = useState(false);
-  const toggleExpanded = () => setExpanded((prev) => !prev);
+const FaqDropdownCard: FC<Props> = ({answer, className, id, question}) => {
+  const {hash, pathname} = useLocation();
+  const [expanded, toggleExpanded, setExpandedAsTrue] = useBooleanState(false);
+
+  useEffect(() => {
+    if (hash.slice(1) === id) {
+      setExpandedAsTrue();
+    }
+  }, [hash, id, pathname, setExpandedAsTrue]);
+
   return (
-    <div className={`FaqDropdownCard ${className}`}>
+    <div className={clsx('FaqDropdownCard', className)}>
+      <div className="FaqDropdownCard__anchor" id={id} />
       <div className="FaqDropdownCard__dropdown-container">
         <div className="FaqDropdownCard__left-container">
-          <div className="FaqDropdownCard__question">{question}</div>
+          <Link className="FaqDropdownCard__question" to={`${pathname}#${id}`}>
+            {question}
+          </Link>
         </div>
         <Icon
           className="FaqDropdownCard__toggle-icon"

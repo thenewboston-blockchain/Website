@@ -1,16 +1,24 @@
 @import 'styles/font-mixins';
 
+$top-nav-height: 60px;
+
 .FaqDropdownCard {
   background-color: var(--color-white);
   border-radius: 8px;
-  box-shadow: 0px 0px 24px 0px rgba(229, 234, 244, 0.58);
+  box-shadow: 0 0 24px 0 rgba(229, 234, 244, 0.58);
   min-height: 80px;
   padding: 24px;
+  position: relative;
 
   &__dropdown-container {
     align-items: center;
     display: flex;
     justify-content: space-between;
+  }
+
+  &__anchor {
+    position: absolute;
+    top: #{-$top-nav-height};
   }
 
   &__answer {
@@ -46,8 +54,8 @@
   }
 
   &__question {
+    @extend %h3;
     color: var(--color-sail-gray-700);
     font-weight: var(--font-weight-medium);
-    @extend %h3;
   }
 }
