@@ -58,28 +58,15 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
         question: 'Is there going to be an ICO?',
       },
       {
-        // TODO: update the link for proof of value
         answer: (
           <span>
             Coins are only minted through adding value to the platform. Approved projects that build apps on top of
-            thenewboston blockchain receive coin payouts when specific milestones are reached (see{' '}
-            <A href="">Proof of Value</A>).
+            thenewboston blockchain receive coin payouts when specific milestones are reached.
           </span>
         ),
         id: 'how-are-coins-minted',
         isTop: true,
         question: 'How are coins minted?',
-      },
-      {
-        answer: (
-          <span>
-            Currently all trading takes place via{' '}
-            <A href="https://tnbcrow.pythonanywhere.com/">https://tnbcrow.pythonanywhere.com/</A> though we expect to
-            list on various exchanges when we go live.
-          </span>
-        ),
-        id: 'what-exchanges-are-coins-on',
-        question: 'What exchanges are the coins on?',
       },
       {
         answer: 'No, we have our own blockchain.',
@@ -208,11 +195,7 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
       },
       {
         // TODO: update product roadmap link
-        answer: (
-          <span>
-            <A href="">Here</A>
-          </span>
-        ),
+        answer: <span>To be determined.</span>,
         id: 'product-roadmap',
         question: 'Is there a product roadmap?',
       },
