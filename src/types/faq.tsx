@@ -4,7 +4,7 @@ import {A} from 'components';
 export interface FaqContent {
   answer: JSX.Element | string;
   id: string;
-  isTop?: boolean; // top question TODO: Dont need?
+  isTop?: boolean; // top questions to be featured on homepage
   question: JSX.Element | string;
 }
 
