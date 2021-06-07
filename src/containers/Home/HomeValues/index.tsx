@@ -3,12 +3,13 @@ import {Link} from 'react-router-dom';
 
 import {Button} from 'components';
 import {useWindowDimensions} from 'hooks';
-import HomeValuesModal from './HomeValuesModal';
+import HomeValuesCard from './HomeValuesCard';
 import ValuesIllustration from './ValuesIllustration';
 import './HomeValues.scss';
 
 const HomeValues: FC = () => {
   const {width} = useWindowDimensions();
+
   let iconSize;
   if (width < 600) {
     iconSize = {height: 188, width: 235};
@@ -17,9 +18,10 @@ const HomeValues: FC = () => {
   } else {
     iconSize = {height: 376, width: 456};
   }
+
   return (
     <div className="HomeValues">
-      <HomeValuesModal />
+      <HomeValuesCard />
       <div className="HomeValues__main">
         <ValuesIllustration className="HomeValues__illustration" width={iconSize.width} height={iconSize.height} />
         <div className="HomeValues__main-right">

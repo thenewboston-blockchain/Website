@@ -1,13 +1,12 @@
-import React, {FC, useEffect, useRef} from 'react';
-import clsx from 'clsx';
+import React, {FC, useCallback, useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom';
+import clsx from 'clsx';
 
-import {AnimationState} from 'constants/animation';
 import {Button} from 'components';
 import SocialMediaIcon from 'components/SocialMediaIcon';
+import {AnimationState} from 'constants/animation';
+import {useAnimationState, useShuffle} from 'hooks';
 import {SocialMedia} from 'types/social-media';
-import useAnimationState from 'hooks/useAnimationState';
-import useShuffle from 'hooks/useShuffle';
 
 import HelloWorld, {defaultHelloWorld, HelloWorldKeys} from './hello-world';
 import HeroV2Svg from './HeroV2.svg';
@@ -27,16 +26,19 @@ const HomeHero: FC = () => {
     shouldShuffle.current = animationState === AnimationState.ZERO;
   }, [animationState]);
 
-  const renderSocialMediaLinks = () =>
-    [SocialMedia.discord, SocialMedia.github, SocialMedia.youtube].map((website) => (
-      <SocialMediaIcon
-        className={`HomeHero__SocialMediaLink HomeHero__SocialMediaLink--${website}`}
-        iconSize={40}
-        key={website}
-        totalSize={42}
-        website={website}
-      />
-    ));
+  const renderSocialMediaLinks = useCallback(
+    () =>
+      [SocialMedia.discord, SocialMedia.github, SocialMedia.youtube].map((website) => (
+        <SocialMediaIcon
+          className={`HomeHero__SocialMediaLink HomeHero__SocialMediaLink--${website}`}
+          iconSize={40}
+          key={website}
+          totalSize={42}
+          website={website}
+        />
+      )),
+    [],
+  );
 
   return (
     <div className="HomeHero">

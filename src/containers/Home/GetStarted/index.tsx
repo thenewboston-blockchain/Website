@@ -1,14 +1,14 @@
 import React, {FC} from 'react';
 
+import {
+  CommunityBuiltIcon,
+  CompleteBountiesIcon,
+  CreateProposalsIcon,
+  DownloadWalletIcon,
+  ReadDocumentationIcon,
+  ViewOpeningsIcon,
+} from '../icons';
 import GetStartedCard from './GetStartedCard';
-
-// icons
-import CompleteBountiesIcon from '../icons/CompleteBountiesIcon';
-import CreateProposalsIcon from '../icons/CreateProposalsIcon';
-import DownloadWalletIcon from '../icons/DownloadWalletIcon';
-import JoinTheCommunityIcon from '../icons/CommunityBuiltIcon';
-import ReadDocumentationIcon from '../icons/ReadDocumentationIcon';
-import ViewOpeningsIcon from '../icons/ViewOpeningsIcon';
 
 import './GetStarted.scss';
 
@@ -27,7 +27,7 @@ const getStartedDetails = [
   },
   {
     description: 'Lorem ipsum dolor sit ametconsecteturadsaxzia adipiscing elit, sed do eiusmod tempor.',
-    icon: <JoinTheCommunityIcon size={40} />,
+    icon: <CommunityBuiltIcon size={40} />,
     title: 'Join the Community',
     to: '/social',
   },
@@ -56,8 +56,7 @@ const GetStarted: FC = () => {
     <div className="GetStarted">
       <div className="GetStarted__title">Get Started</div>
       <div className="GetStarted__main">
-        {getStartedDetails.map((detail) => {
-          const {description, icon, title, to} = detail;
+        {getStartedDetails.map(({description, icon, title, to}) => {
           return <GetStartedCard key={title} description={description} icon={icon} title={title} to={to} />;
         })}
       </div>
