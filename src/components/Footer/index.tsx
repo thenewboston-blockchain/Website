@@ -1,7 +1,6 @@
-import React, {FC, memo} from 'react';
-import {Link} from 'react-router-dom';
+import React, {FC, memo, useCallback} from 'react';
+import {Link, useHistory} from 'react-router-dom';
 import clsx from 'clsx';
-import {useHistory} from 'react-router';
 
 import Logo from 'assets/svgs/thenewboston-white.svg';
 import {Button, SocialMediaIcon} from 'components';
@@ -83,33 +82,39 @@ const navLists = [
 ];
 
 const Footer: FC<ComponentProps> = ({className}) => {
-  const renderSocialMediaLinks = () =>
-    [
-      SocialMedia.github,
-      SocialMedia.youtube,
-      SocialMedia.reddit,
-      SocialMedia.linkedin,
-      SocialMedia.facebook,
-      SocialMedia.instagram,
-      SocialMedia.twitter,
-      SocialMedia.discord,
-      SocialMedia.twitch,
-    ].map((website) => (
-      <SocialMediaIcon
-        className="Footer__SocialMediaLink"
-        iconSize={28}
-        key={website}
-        totalSize={28}
-        website={website}
-      />
-    ));
-
-  const renderNavLists = () =>
-    navLists.map((list) => <FooterNavList header={list.header} key={list.header} links={list.links} />);
-
   const history = useHistory();
   const {width} = useWindowDimensions();
   const shouldRenderDownloadWithNavlists = width < 1400 && width > 480;
+
+  const renderSocialMediaLinks = useCallback(
+    () =>
+      [
+        SocialMedia.github,
+        SocialMedia.youtube,
+        SocialMedia.reddit,
+        SocialMedia.linkedin,
+        SocialMedia.facebook,
+        SocialMedia.instagram,
+        SocialMedia.twitter,
+        SocialMedia.discord,
+        SocialMedia.twitch,
+      ].map((website) => (
+        <SocialMediaIcon
+          className="Footer__SocialMediaLink"
+          iconSize={28}
+          key={website}
+          totalSize={28}
+          website={website}
+        />
+      )),
+    [],
+  );
+
+  const renderNavLists = useCallback(
+    () => navLists.map((list) => <FooterNavList header={list.header} key={list.header} links={list.links} />),
+    [],
+  );
+
   return (
     <footer className={clsx('Footer', className)} data-testid="Footer">
       <div className="Footer__left">
