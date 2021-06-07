@@ -1,5 +1,7 @@
 @import 'styles/font-mixins';
 
+$top-nav-height: 60px;
+
 .Download {
   display: flex;
   flex-direction: column;
@@ -24,12 +26,8 @@
     display: flex;
     flex-direction: column;
     max-width: 1366px;
-    padding: 48px;
+    padding: 48px 0;
     width: 100%;
-
-    @media (max-width: 600px) {
-      flex-direction: 24px;
-    }
   }
 
   &__title {
@@ -68,12 +66,17 @@
   }
 
   &__cards-container {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+    display: grid;
+    grid-column-gap: 32px;
+    grid-row-gap: 24px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
-    @media (max-width: 600px) {
-      flex-direction: column;
+    @media (max-width: 992px) {
+      grid-column-gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
     }
   }
 
@@ -81,41 +84,19 @@
     align-items: center;
     background-color: var(--color-white);
     border-radius: 12px;
-    box-shadow: 0px 0px 30px 0px rgba(229, 234, 244, 0.48);
+    box-shadow: 0 0 30px 0 rgba(229, 234, 244, 0.48);
     display: flex;
     flex: 1 0 0;
     flex-direction: column;
-    max-width: 384px;
-    min-width: 288px;
     padding: 48px;
 
-    &:not(:last-child) {
-      margin-right: 32px;
-    }
-
     @media (max-width: 992px) {
-      max-width: 288px;
-      min-width: 216px;
       padding: 24px;
     }
 
     @media (max-width: 768px) {
-      max-width: 216px;
-      min-width: 180px;
-      padding: 24px 16px;
-
-      &:not(:last-child) {
-        margin-right: 16px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      max-width: unset;
+      margin: 0 36px;
       padding: 48px 32px;
-      &:not(:last-child) {
-        margin-bottom: 24px;
-        margin-right: 0px;
-      }
     }
   }
 
@@ -170,7 +151,6 @@
     &__li {
       @extend %body1;
       color: var(--color-gray-500);
-      font-weight: var(--font-weight-regular);
     }
 
     &__title {
@@ -181,8 +161,23 @@
     }
   }
 
+  &__release-notes {
+    position: relative;
+  }
+
+  &__release-notes-anchor {
+    display: none;
+    top: #{-$top-nav-height};
+  }
+
   .CodeSnippet {
     @extend %body1;
     font-weight: var(--font-size-regular);
+
+    @media (max-width: 768px) {
+      pre {
+        max-width: calc(100vw - 100px);
+      }
+    }
   }
 }

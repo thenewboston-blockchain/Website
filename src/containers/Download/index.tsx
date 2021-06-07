@@ -1,17 +1,13 @@
 import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'react';
 import {Link} from 'react-router-dom';
 
-import {Button, CodeSnippet, Loader, PageTitle} from 'components';
+import {A, Button, CodeSnippet, Loader, PageTitle} from 'components';
 import {Release} from 'types/github';
 import {fetchGithubReleases} from 'utils/github';
-import {displayToast} from 'utils/toast';
+import {displayErrorToast} from 'utils/toast';
+
 import ReleaseNotes from './ReleaseNotes';
-
-// icons
-import LinuxIcon from './icons/LinuxIcon';
-import MacOsIcon from './icons/MacOsIcon';
-import WindowsIcon from './icons/WindowsIcon';
-
+import {LinuxIcon, MacOsIcon, WindowsIcon} from './icons';
 import './Download.scss';
 
 enum Os {
@@ -25,7 +21,7 @@ const Download: FC = () => {
   const [releases, setReleases] = useState<Release[]>([]);
 
   useEffect(() => {
-    const fetchData = async (): Promise<void> => {
+    (async (): Promise<void> => {
       try {
         const response = await fetchGithubReleases({
           page: 1,
@@ -33,12 +29,11 @@ const Download: FC = () => {
         });
         setReleases(response);
       } catch (error) {
-        displayToast('Network Error');
+        displayErrorToast('Network Error');
       } finally {
         setLoading(false);
       }
-    };
-    fetchData();
+    })();
   }, []);
 
   const latestReleaseNumber = useMemo<number | null>(() => {
@@ -71,71 +66,86 @@ const Download: FC = () => {
     [getOsExtension, latestReleaseNumber],
   );
 
-  const renderInstructions = useCallback((os: Os): ReactNode => {
-    if (os === Os.Windows) {
-      return (
-        <ol type="1" className="instruction-container__ol">
-          <li className="instruction-container__li">
-            <span className="instruction-container__instruction">Download thenewboston</span>
-          </li>
-          <li className="instruction-container__li">
-            <span className="instruction-container__instruction">Click on the downloaded file</span>
-          </li>
-          <li className="instruction-container__li">
-            <span className="instruction-container__instruction">
-              You will get a modal that says 'Windows protected your PC'. Click More info
-            </span>
-          </li>
-          <li className="instruction-container__li">
-            <span className="instruction-container__instruction">Then click Run anyway</span>
-          </li>
-        </ol>
-      );
-    }
-    if (os === Os.Mac) {
-      return (
-        <ol type="1" className="instruction-container__ol">
-          <li className="instruction-container__li">
-            <span className="instruction-container__instruction">Download thenewboston</span>
-          </li>
-          <li className="instruction-container__li">
-            <span className="instruction-container__instruction">Click on the downloaded file</span>
-          </li>
-          <li className="instruction-container__li">
-            <span className="instruction-container__instruction">Drag and drop the app to the Applications folder</span>
-          </li>
-          <li className="instruction-container__li">
-            <span className="instruction-container__instruction">
-              Open the app. If you see an error because the Account Manager app is not from the App Store check out{' '}
-              <a href="https://support.apple.com/en-us/HT202491" target="_blank" rel="noreferrer">
-                these instructions
-              </a>{' '}
-              to allow the install.
-            </span>
-          </li>
-        </ol>
-      );
-    }
-    if (os === Os.Linux) {
-      return (
-        <ol type="1" className="instruction-container__ol">
-          <li className="instruction-container__li">
-            <span className="instruction-container__instruction">Download thenewboston</span>
-          </li>
-          <li className="instruction-container__li">
-            <span className="instruction-container__instruction">To run thenewboston, make it executable</span>
-          </li>
-          <CodeSnippet code="$ chmod a+x TNB-Account-Manager-*.AppImage" />
-          <li className="instruction-container__li">
-            <span className="instruction-container__instruction">Run!</span>
-          </li>
-          <CodeSnippet code="$ ./TNB-Account-Manager-*.AppImage" />
-        </ol>
-      );
-    }
+  const windowsInstructions = useMemo(
+    () => (
+      <ol type="1" className="instruction-container__ol">
+        <li className="instruction-container__li">
+          <span className="instruction-container__instruction">Download thenewboston</span>
+        </li>
+        <li className="instruction-container__li">
+          <span className="instruction-container__instruction">Click on the downloaded file</span>
+        </li>
+        <li className="instruction-container__li">
+          <span className="instruction-container__instruction">
+            You will get a modal that says 'Windows protected your PC'. Click More info
+          </span>
+        </li>
+        <li className="instruction-container__li">
+          <span className="instruction-container__instruction">Then click Run anyway</span>
+        </li>
+      </ol>
+    ),
+    [],
+  );
 
-    return null;
-  }, []);
+  const macInstructions = useMemo(
+    () => (
+      <ol type="1" className="instruction-container__ol">
+        <li className="instruction-container__li">
+          <span className="instruction-container__instruction">Download thenewboston</span>
+        </li>
+        <li className="instruction-container__li">
+          <span className="instruction-container__instruction">Click on the downloaded file</span>
+        </li>
+        <li className="instruction-container__li">
+          <span className="instruction-container__instruction">Drag and drop the app to the Applications folder</span>
+        </li>
+        <li className="instruction-container__li">
+          <span className="instruction-container__instruction">
+            Open the app. If you see an error because the Account Manager app is not from the App Store check out{' '}
+            <A href="https://support.apple.com/en-us/HT202491">these instructions</A> to allow the install.
+          </span>
+        </li>
+      </ol>
+    ),
+    [],
+  );
+
+  const linuxInstructions = useMemo(
+    () => (
+      <ol type="1" className="instruction-container__ol">
+        <li className="instruction-container__li">
+          <span className="instruction-container__instruction">Download thenewboston</span>
+        </li>
+        <li className="instruction-container__li">
+          <span className="instruction-container__instruction">To run thenewboston, make it executable</span>
+        </li>
+        <CodeSnippet code="$ chmod a+x TNB-Account-Manager-*.AppImage" />
+        <li className="instruction-container__li">
+          <span className="instruction-container__instruction">Run!</span>
+        </li>
+        <CodeSnippet code="$ ./TNB-Account-Manager-*.AppImage" />
+      </ol>
+    ),
+    [],
+  );
+
+  const renderInstructions = useCallback(
+    (os: Os): ReactNode => {
+      if (os === Os.Windows) {
+        return windowsInstructions;
+      }
+      if (os === Os.Mac) {
+        return macInstructions;
+      }
+      if (os === Os.Linux) {
+        return linuxInstructions;
+      }
+
+      return null;
+    },
+    [linuxInstructions, macInstructions, windowsInstructions],
+  );
 
   const renderDownloadCard = useCallback(
     (os: Os) => (
@@ -194,7 +204,8 @@ const Download: FC = () => {
                 </div>
               </div>
             </div>
-            <div className="Download__release-notes" id="release-notes">
+            <div className="Download__release-notes">
+              <div className="Download__release-notes-anchor" id="release-notes" />
               <ReleaseNotes />
             </div>
           </>
