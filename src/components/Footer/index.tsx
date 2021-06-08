@@ -57,6 +57,10 @@ const navLists = [
         url: '/guide/introduction',
       },
       {
+        title: 'Tutorials',
+        url: '/tutorials',
+      },
+      {
         title: 'Media Kit',
         url: '/assets',
       },
@@ -73,6 +77,11 @@ const navLists = [
         title: 'Donate',
         url: '/donate',
       },
+    ],
+  },
+  {
+    header: 'FAQ',
+    links: [
       {
         title: 'FAQ',
         url: '/faq',

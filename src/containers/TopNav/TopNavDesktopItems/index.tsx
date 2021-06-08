@@ -31,10 +31,10 @@ const communityPopoverItems: TopNavPopoverItemType[] = [
     to: '/openings',
   },
   {
-    description: 'Watch tutorials made by the community',
-    iconType: IconType.playBoxMultiple,
-    title: 'Tutorials',
-    to: '/tutorials',
+    description: 'Read up on our community culture',
+    iconType: IconType.notebookCheckOutline,
+    title: 'Community Guidelines',
+    to: '/guidelines',
   },
 ];
 
@@ -62,6 +62,12 @@ const resourcesPopoverItems: TopNavPopoverItemType[] = [
     to: '/guide/introduction',
   },
   {
+    description: 'Watch tutorials made by the community',
+    iconType: IconType.playBoxMultiple,
+    title: 'Tutorials',
+    to: '/tutorials',
+  },
+  {
     description: 'Download thenewboston assets',
     iconType: IconType.fileDownload,
     title: 'Media Kit',
@@ -81,12 +87,6 @@ const aboutPopoverItems: TopNavPopoverItemType[] = [
     iconType: IconType.currencyUsd,
     title: 'Donate',
     to: '/donate',
-  },
-  {
-    description: 'Read up on our community culture',
-    iconType: IconType.notebookCheckOutline,
-    title: 'Community Guidelines',
-    to: '/guidelines',
   },
 ];
 
