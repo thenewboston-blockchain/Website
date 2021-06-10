@@ -1,5 +1,5 @@
 import {useEffect, useRef, useState} from 'react';
-import {shuffle} from 'lodash-es';
+import shuffle from 'lodash/shuffle';
 
 function useShuffle(defaultEntry: string, entries: {[key: string]: string}, keys: string[], shouldShuffle = false) {
   const [entry, setEntry] = useState(defaultEntry);

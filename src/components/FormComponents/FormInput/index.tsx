@@ -30,9 +30,15 @@ const FormInput: FC<ComponentProps> = ({
   };
 
   return (
-    <div className={clsx('FormInput FormFieldComponent', className)}>
+    <div className="FormInput FormFieldComponent">
       {renderFormLabel(name, className, label, required)}
-      <Field {...baseInputProps} as={Input} className="FormField" error={error} onChange={handleChangeAndValidate} />
+      <Field
+        {...baseInputProps}
+        as={Input}
+        className={clsx('FormField', className)}
+        error={error}
+        onChange={handleChangeAndValidate}
+      />
       {hideErrorBlock ? null : renderFormError(name, className, hideErrorText)}
     </div>
   );

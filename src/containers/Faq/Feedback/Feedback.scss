@@ -1,0 +1,72 @@
+@import 'styles/font-mixins';
+
+.Feedback {
+  border-radius: 16px;
+  box-shadow: 0 8px 81px 0 rgba(0, 0, 0, 0.07);
+
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 48px;
+  }
+
+  &__title {
+    @extend %h1;
+    color: var(--color-blue-900);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    @extend %h3;
+    color: var(--color-gray-500);
+    font-weight: var(--font-weight-regular);
+    margin-bottom: 48px;
+    text-align: center;
+
+    @media (max-width: 600px) {
+      font-size: var(--font-size-body1);
+    }
+  }
+
+  &__form {
+    display: flex;
+    width: 100%;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+
+  &__form-left {
+    flex: 40%;
+    margin-right: 24px;
+
+    @media (max-width: 600px) {
+      margin-right: 0;
+    }
+  }
+
+  &__form-right {
+    display: flex;
+    flex: 60%;
+    flex-direction: column;
+  }
+
+  &__form-input {
+    height: 40px;
+  }
+
+  &__form-text-area {
+    height: 160px;
+  }
+
+  &__form-button {
+    align-self: flex-end;
+  }
+}

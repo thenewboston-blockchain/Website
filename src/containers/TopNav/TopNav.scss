@@ -39,6 +39,7 @@ $top-nav-height: 60px;
   &__right {
     align-items: center;
     display: flex;
+    height: $top-nav-height;
   }
 
   &__wrapper {

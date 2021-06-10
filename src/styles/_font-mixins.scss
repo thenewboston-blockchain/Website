@@ -74,3 +74,10 @@
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-body5);
 }
+
+// mixins only used for responsive styling
+@mixin h1 {
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+}

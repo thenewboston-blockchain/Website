@@ -1,0 +1,40 @@
+@import 'styles/font-mixins';
+
+.HomeFaq {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 130px;
+  max-width: 1366px;
+  padding: 0 40px;
+
+  @media (max-width: 414px) {
+    margin-bottom: 106px;
+  }
+
+  &__title {
+    @extend %display2;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 72px;
+    text-align: center;
+
+    @media (max-width: 414px) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__main {
+    margin-bottom: 82px;
+    width: 100%;
+
+    @media (max-width: 414px) {
+      margin-bottom: 74px;
+    }
+  }
+
+  &__dropdown-card {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+}
