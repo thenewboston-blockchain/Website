@@ -194,7 +194,6 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
         question: 'What apps are being built on top of this blockchain?',
       },
       {
-        // TODO: update product roadmap link
         answer: <span>To be determined.</span>,
         id: 'product-roadmap',
         question: 'Is there a product roadmap?',

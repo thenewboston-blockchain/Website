@@ -14,37 +14,37 @@ import './GetStarted.scss';
 
 const getStartedDetails = [
   {
-    description: 'Lorem ipsum dolor sit ametconsecteturadsaxzia adipiscing elit, sed do eiusmod tempor.',
+    description: 'Learn about thenewboston blockchain.',
     icon: <ReadDocumentationIcon size={40} />,
     title: 'Read Documentation',
     to: '/guide/introduction',
   },
   {
-    description: 'Lorem ipsum dolor sit ametconsecteturadsaxzia adipiscing elit, sed do eiusmod tempor.',
+    description: 'Interact with the network using our official wallet.',
     icon: <DownloadWalletIcon size={40} />,
     title: 'Download Wallet',
     to: '/download',
   },
   {
-    description: 'Lorem ipsum dolor sit ametconsecteturadsaxzia adipiscing elit, sed do eiusmod tempor.',
+    description: 'Connect with the community to learn, grow, and create.',
     icon: <CommunityBuiltIcon size={40} />,
     title: 'Join the Community',
     to: '/social',
   },
   {
-    description: 'Lorem ipsum dolor sit ametconsecteturadsaxzia adipiscing elit, sed do eiusmod tempor.',
+    description: 'Earn coins by building projects, gaining skills, and working as a team.',
     icon: <CreateProposalsIcon size={40} />,
     title: 'Create Proposals',
     to: '/projects/overview',
   },
   {
-    description: 'Lorem ipsum dolor sit ametconsecteturadsaxzia adipiscing elit, sed do eiusmod tempor.',
+    description: 'Work on bug fixes, graphics, and other small tasks to earn coins.',
     icon: <CompleteBountiesIcon size={40} />,
     title: 'Complete Bounties',
     to: '/tasks/All',
   },
   {
-    description: 'Lorem ipsum dolor sit ametconsecteturadsaxzia adipiscing elit, sed do eiusmod tempor.',
+    description: 'Apply to be part of the core team.',
     icon: <ViewOpeningsIcon size={40} />,
     title: 'View Openings',
     to: '/openings/All',
