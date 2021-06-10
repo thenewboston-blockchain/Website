@@ -40,8 +40,7 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice,
             </span>
           )}
         </button>
-
-        {(!smallDevice || openSection === section) && <div className="TopNavMobileMenu__links">{links}</div>}
+        <div className="TopNavMobileMenu__links">{!smallDevice || openSection === section ? links : null}</div>
       </div>
     );
   };

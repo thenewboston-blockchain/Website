@@ -68,7 +68,7 @@ $top-nav-height: 60px;
   }
 
   &__chevron-icon {
-    color: var(--color-sail-gray-300);
+    color: var(--color-sail-gray-500);
     transition: transform 0.3s ease-in-out;
 
     &--open {
@@ -84,14 +84,12 @@ $top-nav-height: 60px;
         margin-right: 0;
       }
     }
-    margin-bottom: 24px;
   }
 
   &__column-title {
     background-color: transparent;
     border: 0;
     cursor: pointer;
-    margin-bottom: 16px;
     outline: none;
     padding: 0;
 
@@ -141,10 +139,22 @@ $top-nav-height: 60px;
       flex-direction: row-reverse;
       grid-row: 2;
     }
+
+    @media (max-width: 768px) {
+      justify-content: center;
+      margin: 32px 0;
+    }
   }
 
   &__icon-holder {
     display: inline-block;
+  }
+
+  &__links {
+    @media (max-width: 768px) {
+      border-bottom: 1px solid var(--color-gray-100);
+      margin-bottom: 16px;
+    }
   }
 
   &__links-container {
@@ -174,6 +184,12 @@ $top-nav-height: 60px;
       width: unset;
     }
 
+    @media (max-width: 768px) {
+      &:last-child {
+        padding-bottom: 16px;
+      }
+    }
+
     &:hover {
       text-decoration: underline;
     }
@@ -194,8 +210,16 @@ $top-nav-height: 60px;
     align-items: center;
     background: transparent;
     border: none;
+    cursor: default;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 16px;
     padding: unset;
+    width: 100%;
+
+    @media (max-width: 768px) {
+      cursor: pointer;
+      margin-bottom: 14px;
+    }
   }
 }
