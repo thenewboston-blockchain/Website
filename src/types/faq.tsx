@@ -77,7 +77,7 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
         answer:
           'Locked coins are frozen and can’t be moved without incurring a penalty. Locking coins is always voluntary.',
         id: 'locked-up-coins',
-        question: 'What does it mean when coins are "Locked Up"?',
+        question: 'What does it mean when coins are "locked up"?',
       },
       {
         answer: 'To build a better economy which helps people from all over the world.',
@@ -93,12 +93,12 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
         answer:
           'Most crypto projects start with an idea and then try to build a community. We started as an open source community that started building its own cryptocurrency when Bucky Roberts found a way to speed up blockchain transaction time to nearly real-time.',
         id: 'how-is-project-different',
-        question: 'How is this project different from other crypto’s?',
+        question: 'How is this project different from other cryptos?',
       },
       {
         answer: 'Like bitcoin and ethereum we have our own blockchain and block explorer. The code is all open source',
         id: 'how-is-project-similar',
-        question: 'How is this project similar to other crypto’s?',
+        question: 'How is this project similar to other cryptos?',
       },
       {
         answer: (
