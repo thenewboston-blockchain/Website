@@ -6,8 +6,8 @@ import RequestResponseSnippet, {RequestResponseSnippetProps} from '.';
 
 const baseProps: RequestResponseSnippetProps = {
   code: `// Testing
-  // TNB To the moon
-  console.log('TNB is heading to the moon');`,
+  // TNB is amazing
+  console.log('TNB is amazing');`,
 };
 
 const baseTestId = 'RequestResponseSnippet';
@@ -37,8 +37,8 @@ describe('RequestResponseSnippet', () => {
   it('renders with code passed in and heading not present', () => {
     render(<RequestResponseSnippet {...baseProps} />);
     expect(screen.getByText('// Testing')).toBeTruthy();
-    expect(screen.getByText('// TNB To the moon')).toBeTruthy();
-    expect(screen.getByText("console.log('TNB is heading to the moon');")).toBeTruthy();
+    expect(screen.getByText('// TNB is amazing')).toBeTruthy();
+    expect(screen.getByText("console.log('TNB is amazing');")).toBeTruthy();
     expect(screen.queryByTestId(headingTestId)).not.toBeTruthy();
   });
 
