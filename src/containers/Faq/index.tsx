@@ -70,7 +70,7 @@ const Faq: FC = () => {
   const renderTopicQuestionsAndAnswers = (topic: string, content: FaqContent[]) => {
     return (
       <div className="Faq__topic" key={topic}>
-        <div className="Faq__topic-title">{topic}</div>
+        <div className="Faq__topic-title">{faqFilters[topic].label}</div>
         {content.map((qna) => (
           <FaqDropdownCard
             className="Faq__dropdown-card"

@@ -9,11 +9,11 @@ export interface FaqContent {
 }
 
 export enum FaqFilterType {
-  all = 'All',
-  coins = 'Coins',
-  community = 'Community',
-  projects = 'Projects',
-  howTo = 'How to Guides',
+  all = 'all',
+  coins = 'coins',
+  community = 'community',
+  projects = 'projects',
+  howTo = 'HowTo',
 }
 
 export const faqFilters: {
