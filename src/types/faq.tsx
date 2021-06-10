@@ -9,11 +9,11 @@ export interface FaqContent {
 }
 
 export enum FaqFilterType {
-  all = 'all',
-  coins = 'coins',
-  community = 'community',
-  projects = 'projects',
-  howTo = 'how-to',
+  all = 'All',
+  coins = 'Coins',
+  community = 'Community',
+  projects = 'Projects',
+  howTo = 'How to Guides',
 }
 
 export const faqFilters: {
@@ -40,7 +40,7 @@ export const faqFilters: {
   },
   [FaqFilterType.howTo]: {
     key: FaqFilterType.howTo,
-    label: 'How to guides',
+    label: 'How to Guides',
   },
 };
 
@@ -121,7 +121,7 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
       {
         answer: (
           <span>
-            We have a <A href="https://discord.gg/thenewboston">discord server</A> where most of our communication takes
+            We have a <A href="https://discord.gg/thenewboston">Discord server</A> where most of our communication takes
             place. Feel free to follow us on our various{' '}
             <A newWindow={false} href="/social">
               social media accounts
@@ -160,7 +160,7 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
             </A>{' '}
             and{' '}
             <A newWindow={false} href="/tutorials">
-              youtube videos
+              YouTube videos
             </A>
             .
           </span>

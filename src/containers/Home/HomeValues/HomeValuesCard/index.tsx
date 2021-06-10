@@ -29,7 +29,7 @@ const HomeValuesCard: FC = () => {
           <div className="HomeValuesCard__column-text-container">
             <div className="HomeValuesCard__column-title">Blazing Fast</div>
             <div className="HomeValuesCard__column-description">
-              With an average blocktime of 0.015 seconds and 3238 transactions per second, account updates are nearly
+              With an average blocktime of 0.015 seconds and 3,238 transactions per second, account updates are nearly
               instant.
             </div>
           </div>
