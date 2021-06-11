@@ -110,7 +110,7 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
         ),
         id: 'where-download-account-manager',
         isTop: true,
-        question: 'Where can I download the Account Manager?',
+        question: 'Where can I download the Wallet?',
       },
       {
         answer:
@@ -212,7 +212,7 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
           </span>
         ),
         id: 'account-manager-guides',
-        question: 'Are there guides for using the Account Manager?',
+        question: 'Are there guides for using the Wallet?',
       },
       {
         answer: (

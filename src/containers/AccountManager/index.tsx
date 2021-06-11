@@ -58,8 +58,8 @@ const AccountManager: FC = () => {
   const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
 
   return (
-    <DashboardLayout menuItems={<DocsMenuItems />} pageName={name} sectionName="Account Manager">
-      <PageTitle ogDescription={`${name} | Account Manager`} title={name} />
+    <DashboardLayout menuItems={<DocsMenuItems />} pageName={name} sectionName="Wallet">
+      <PageTitle ogDescription={`${name} | Wallet`} title={name} />
       {content}
       <Pagination navigationData={accountManagerNavigationData} />
     </DashboardLayout>

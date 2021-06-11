@@ -102,7 +102,7 @@ const Download: FC = () => {
         </li>
         <li className="instruction-container__li">
           <span className="instruction-container__instruction">
-            Open the app. If you see an error because the Account Manager app is not from the App Store check out{' '}
+            Open the app. If you see an error because the Wallet app is not from the App Store check out{' '}
             <A href="https://support.apple.com/en-us/HT202491">these instructions</A> to allow the install.
           </span>
         </li>

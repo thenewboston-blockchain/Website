@@ -10,8 +10,8 @@ const GuideAccounts: FC = () => {
     <DocContainer className="GuideAccounts" title="Accounts" lastUpdated="06 Mar 2021">
       <p>
         <strong>Accounts</strong> are anonymous digital identities on the network where coins can be sent to and from.{' '}
-        <strong>Account managers</strong> are software applications (such as mobile apps or desktop software) that
-        individuals use to create new accounts, manage existing accounts, and send coins.
+        <strong>Wallets</strong> are software applications (such as mobile apps or desktop software) that individuals
+        use to create new accounts, manage existing accounts, and send coins.
       </p>
       <p>
         When sending coins, users enter the amount they wish to send along with the account number of the recipient and
@@ -22,8 +22,8 @@ const GuideAccounts: FC = () => {
       <DocImage alt="accounts simple" maxWidth={600} src={AccountsSimple} />
 
       <p>
-        When users first download an account manager, it guides them through creating a <strong>key pair</strong>. A key
-        pair comprises two keys, a <strong>signing key</strong> and an <strong>account number</strong>.
+        When users first download a wallet, it guides them through creating a <strong>key pair</strong>. A key pair
+        comprises two keys, a <strong>signing key</strong> and an <strong>account number</strong>.
       </p>
 
       <DocImage alt="key pair" maxWidth={380} src={KeyPair} />
@@ -70,8 +70,8 @@ const GuideAccounts: FC = () => {
 
       <DocCallout type={CalloutType.important}>
         Users can have over one account, and they can create and manage several accounts (key pairs) through the same
-        account manager app. This can be thought of as an individual having multiple email addresses, yet managing all
-        of their email accounts from a single app.
+        wallet app. This can be thought of as an individual having multiple email addresses, yet managing all of their
+        email accounts from a single app.
       </DocCallout>
       <p>Terms "account" and "user account" are used interchangeably throughout this documentation.</p>
     </DocContainer>

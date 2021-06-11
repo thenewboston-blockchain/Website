@@ -293,7 +293,7 @@ const DocsMenuItems: FC = () => {
         {renderNavLinks(governanceNavigationData)}
       </MenuGroup>
 
-      <MenuGroup title="Account Manager" urlBase="account-manager">
+      <MenuGroup title="Wallet" urlBase="account-manager">
         {renderNavLinks(accountManagerNavigationData)}
       </MenuGroup>
 
