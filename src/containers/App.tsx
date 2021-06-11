@@ -28,7 +28,6 @@ import Social from './Social';
 import StyleGuide from './StyleGuide';
 import Tasks from './Tasks';
 import Teams from './Teams';
-// import WebMap from './Webmap';
 
 /**
  * Lazy load pages that may contribute a lot to the bundle size
@@ -99,7 +98,6 @@ const App: FC = () => {
           <Redirect exact path="/tutorials" to="/tutorials/All" />
           <Route exact path="/tutorials/:category/:playlistId?" component={withSuspense(Tutorials)} />
           <Route path="/users/:userId" component={Profile} />
-          {/* <Route path="/webmap" component={WebMap} /> */}
           <Redirect to="/" />
         </Switch>
       </Layout>
