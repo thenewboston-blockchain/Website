@@ -103,8 +103,6 @@ $top-nav-height: 60px;
     background: var(--color-white);
     border-radius: 0 0 25px 25px;
     box-shadow: 0 6px 6px rgba(4, 34, 53, 0.3);
-    display: grid;
-    grid-template-columns: 1fr auto;
     height: $dropdown-height;
     left: 0;
     padding: 60px;
@@ -115,13 +113,11 @@ $top-nav-height: 60px;
 
     @media (max-width: 992px) {
       grid-template-columns: 1fr;
-      grid-template-rows: auto auto;
       height: $dropdown-height-992;
     }
 
     @media (max-width: 768px) {
       animation: mobileSlideDown 0.3s forwards;
-      grid-template-rows: repeat(2, minmax(0, max-content));
       height: fit-content;
       padding: 50px 36px 18px;
     }
