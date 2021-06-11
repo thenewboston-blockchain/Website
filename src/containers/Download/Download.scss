@@ -1,9 +1,11 @@
+@import 'styles/font-mixins';
+
+$top-nav-height: 60px;
+
 .Download {
   display: flex;
   flex-direction: column;
-  margin: 5% auto;
   position: relative;
-  width: 75vw;
 
   @media (max-width: 480px) {
     margin: 5% auto;
@@ -11,25 +13,110 @@
     width: 100%;
   }
 
-  &__tab-panel {
-    @media (max-width: 480px) {
-      margin-top: 2vw;
+  &__main-background {
+    align-self: center;
+    background-color: var(--color-gray-050);
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  &__main-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 1366px;
+    padding: 48px 0;
+    width: 100%;
+  }
+
+  &__title {
+    @extend %display2;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    @extend %body1;
+    color: var(--color-gray-500);
+    font-weight: var(--font-weight-regular);
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  &__latest-release {
+    @extend %h4;
+    color: var(--color-gray-500);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 26px;
+    text-transform: uppercase;
+  }
+
+  &__buttons-container {
+    display: flex;
+    margin-bottom: 74px;
+  }
+
+  &__buttons--release {
+    color: var(--color-secondary);
+    cursor: pointer;
+    margin-right: 48px;
+    outline: none;
+  }
+
+  &__cards-container {
+    display: grid;
+    grid-column-gap: 32px;
+    grid-row-gap: 24px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    @media (max-width: 992px) {
+      grid-column-gap: 16px;
     }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    align-items: center;
+    background-color: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 0 30px 0 rgba(229, 234, 244, 0.48);
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: column;
+    padding: 48px;
+
+    @media (max-width: 992px) {
+      padding: 24px;
+    }
+
+    @media (max-width: 768px) {
+      margin: 0 36px;
+      padding: 48px 32px;
+    }
+  }
+
+  &__card-title {
+    @extend %h1;
+    font-weight: var(--font-weight-bold);
+    margin: 16px 0 48px 0;
   }
 
   &__download-button {
     align-items: center;
     display: flex;
-    margin-top: 6vh;
+    justify-content: center;
     white-space: nowrap;
-
-    @media (max-width: 768px) {
-      margin: 0 auto;
-    }
+    width: 100%;
   }
 
-  &__download-icon {
-    margin-left: 12px;
+  &__download-link {
+    margin-bottom: 48px;
+    width: 100%;
   }
 
   &__latest-version {
@@ -49,70 +136,48 @@
   }
 
   .instruction-container {
-    counter-reset: instruction;
+    width: 100%;
 
     @media (max-width: 768px) {
       display: flex;
       flex-direction: column;
       margin: 0 auto;
-      margin-bottom: 3vh;
-      width: 100%;
+    }
+
+    &__ol {
+      padding-inline-start: 16px;
     }
 
     &__li {
-      align-items: center;
-      display: flex;
-      margin: 1.5vh 0;
-      width: 85%;
-
-      span {
-        margin-left: 2vw;
-
-        @media (max-width: 480px) {
-          margin-left: 4vw;
-        }
-      }
-
-      &::before {
-        align-items: center;
-        background: var(--color-tertiary);
-        border-radius: 50%;
-        color: var(--color-white);
-        content: counter(instruction);
-        counter-increment: instruction;
-        display: inline-flex;
-        flex-shrink: 0;
-        font-size: var(--font-size-h2);
-        font-weight: 800;
-        height: 36px;
-        justify-content: center;
-        width: 36px;
-
-        @media (max-width: 480px) {
-          margin-left: 7.5%;
-        }
-      }
+      @extend %body1;
+      color: var(--color-gray-500);
     }
 
     &__title {
-      font-size: 20px;
-      font-weight: 800;
-      margin-bottom: 3vh;
-      margin-top: 6vh;
-      text-align: start;
-
-      @media (max-width: 768px) {
-        text-align: center;
-      }
+      @extend %h4;
+      color: var(--color-gray-500);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: 16px;
     }
   }
 
+  &__release-notes {
+    position: relative;
+  }
+
+  &__release-notes-anchor {
+    display: none;
+    top: #{-$top-nav-height};
+  }
+
   .CodeSnippet {
-    margin: 2vh 0;
-    @media (max-width: 480px) {
-      margin: 1vh 0;
-      margin-left: 7.5%;
-      width: 85%;
+    @extend %body1;
+    font-weight: var(--font-size-regular);
+
+    @media (max-width: 768px) {
+      pre {
+        max-width: calc(100vw - 100px);
+      }
     }
   }
 }

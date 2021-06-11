@@ -52,6 +52,7 @@ describe('Footer component', () => {
 
     expect(screen.getByText('Get Started')).toBeTruthy();
     expect(screen.getByText('Community')).toBeTruthy();
-    expect(screen.getByText('More')).toBeTruthy();
+    expect(screen.getByText('Resources')).toBeTruthy();
+    expect(screen.getByText('About')).toBeTruthy();
   });
 });

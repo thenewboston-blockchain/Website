@@ -32,10 +32,12 @@ const Button: FC<BaseButtonProps> = ({
     }
   }, [focused, buttonRef]);
 
+  // temporarily changed className to ButtonWebsite so that it does not conflict with
+  // @thenewboston/ui 's styling
   return (
     <button
-      className={clsx('Button', `Button--${variant}`, `Button--${color}`, className, {
-        'Button--disabled': disabled,
+      className={clsx('ButtonWebsite', `ButtonWebsite--${variant}`, `ButtonWebsite--${color}`, className, {
+        'ButtonWebsite--disabled': disabled,
         ...bemify(className, `--${variant}`),
         ...bemify(className, `--${color}`),
         ...bemify(className, '--disabled', disabled),

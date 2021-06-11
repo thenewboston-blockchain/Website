@@ -20,9 +20,10 @@ import {
 } from './DocWrapper';
 import DropdownInput from './DropdownInput';
 import EmptyPage from './EmptyPage';
+import FaqDropdownCard from './FaqDropdownCard';
 import FlatNavLinks from './FlatNavLinks';
 import Footer from './Footer';
-import {Button} from './FormElements';
+import {Button, ErrorMessage, Input} from './FormElements';
 import GoToTop from './GoToTop';
 import HashLink from './HashLink';
 import Label from './Label';
@@ -37,6 +38,7 @@ import Pagination from './Pagination';
 import Popover from './Popover';
 import Qr from './Qr';
 import {QueryParamsOffsetAndLimit} from './QueryParams';
+import RequiredAsterisk from './RequiredAsterisk';
 import Shadow from './Shadow';
 import SlideUp from './SlideUp';
 import SocialMediaIcon from './SocialMediaIcon';
@@ -69,10 +71,13 @@ export {
   DocsMenuItems,
   DropdownInput,
   EmptyPage,
+  ErrorMessage,
+  FaqDropdownCard,
   FlatNavLinks,
   Footer,
   GoToTop,
   HashLink,
+  Input,
   Label,
   LabelFilter,
   Layout,
@@ -86,6 +91,7 @@ export {
   Qr,
   QueryParamsOffsetAndLimit,
   RequestResponseSnippet,
+  RequiredAsterisk,
   Shadow,
   SlideUp,
   SnippetLang,
