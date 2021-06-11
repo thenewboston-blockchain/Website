@@ -108,7 +108,7 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
             </A>
           </span>
         ),
-        id: 'where-download-account-manager',
+        id: 'where-download-wallet',
         isTop: true,
         question: 'Where can I download the Wallet?',
       },
@@ -211,7 +211,7 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
             </A>
           </span>
         ),
-        id: 'account-manager-guides',
+        id: 'wallet-guides',
         question: 'Are there guides for using the Wallet?',
       },
       {
