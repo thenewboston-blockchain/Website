@@ -1,9 +1,10 @@
-import React, {FC, memo} from 'react';
-import {Link} from 'react-router-dom';
+import React, {FC, memo, useCallback} from 'react';
+import {Link, useHistory} from 'react-router-dom';
 import clsx from 'clsx';
 
 import Logo from 'assets/svgs/thenewboston-white.svg';
-import SocialMediaIcon from 'components/SocialMediaIcon';
+import {Button, SocialMediaIcon} from 'components';
+import {useWindowDimensions} from 'hooks';
 import {SocialMedia} from 'types/social-media';
 
 import FooterNavList from './FooterNavList';
@@ -18,16 +19,12 @@ const navLists = [
     header: 'Get Started',
     links: [
       {
-        title: 'Documentation',
-        url: '/guide/introduction',
-      },
-      {
         title: 'Tasks',
         url: '/tasks',
       },
       {
-        title: 'Download',
-        url: '/download',
+        title: 'Projects',
+        url: '/projects/overview',
       },
     ],
   },
@@ -47,34 +44,34 @@ const navLists = [
         url: '/openings',
       },
       {
-        title: 'Team',
-        url: '/teams',
-      },
-      {
         title: 'Community Guidelines',
         url: '/guidelines',
       },
     ],
   },
   {
-    header: 'More',
+    header: 'Resources',
     links: [
       {
-        title: 'Projects',
-        url: '/projects/overview',
+        title: 'Documentation',
+        url: '/guide/introduction',
       },
       {
-        isExternal: true,
-        title: 'Blog',
-        url: 'https://thenewboston.blog/',
+        title: 'Tutorials',
+        url: '/tutorials',
       },
       {
-        title: 'Assets',
+        title: 'Media Kit',
         url: '/assets',
       },
+    ],
+  },
+  {
+    header: 'About',
+    links: [
       {
-        title: 'FAQ',
-        url: '/faq',
+        title: 'Team',
+        url: '/teams',
       },
       {
         title: 'Donate',
@@ -82,32 +79,50 @@ const navLists = [
       },
     ],
   },
+  {
+    header: 'FAQ',
+    links: [
+      {
+        title: 'FAQ',
+        url: '/faq',
+      },
+    ],
+  },
 ];
 
 const Footer: FC<ComponentProps> = ({className}) => {
-  const renderSocialMediaLinks = () =>
-    [
-      SocialMedia.github,
-      SocialMedia.youtube,
-      SocialMedia.reddit,
-      SocialMedia.linkedin,
-      SocialMedia.facebook,
-      SocialMedia.instagram,
-      SocialMedia.twitter,
-      SocialMedia.discord,
-      SocialMedia.twitch,
-    ].map((website) => (
-      <SocialMediaIcon
-        className="Footer__SocialMediaLink"
-        iconSize={28}
-        key={website}
-        totalSize={28}
-        website={website}
-      />
-    ));
+  const history = useHistory();
+  const {width} = useWindowDimensions();
+  const shouldRenderDownloadWithNavlists = width < 1400 && width > 480;
 
-  const renderNavLists = () =>
-    navLists.map((list) => <FooterNavList header={list.header} key={list.header} links={list.links} />);
+  const renderSocialMediaLinks = useCallback(
+    () =>
+      [
+        SocialMedia.github,
+        SocialMedia.youtube,
+        SocialMedia.reddit,
+        SocialMedia.linkedin,
+        SocialMedia.facebook,
+        SocialMedia.instagram,
+        SocialMedia.twitter,
+        SocialMedia.discord,
+        SocialMedia.twitch,
+      ].map((website) => (
+        <SocialMediaIcon
+          className="Footer__SocialMediaLink"
+          iconSize={28}
+          key={website}
+          totalSize={28}
+          website={website}
+        />
+      )),
+    [],
+  );
+
+  const renderNavLists = useCallback(
+    () => navLists.map((list) => <FooterNavList header={list.header} key={list.header} links={list.links} />),
+    [],
+  );
 
   return (
     <footer className={clsx('Footer', className)} data-testid="Footer">
@@ -117,7 +132,23 @@ const Footer: FC<ComponentProps> = ({className}) => {
         </Link>
         <div className="Footer__social-media-links">{renderSocialMediaLinks()}</div>
       </div>
-      <div className="Footer__right">{renderNavLists()}</div>
+      {shouldRenderDownloadWithNavlists && (
+        <div className="Footer__download-container">
+          <Button className="Footer__download-button" onClick={() => history.push('/download')} variant="outlined">
+            Download Wallet
+          </Button>
+        </div>
+      )}
+      <div className="Footer__right">
+        {renderNavLists()}
+        {!shouldRenderDownloadWithNavlists && (
+          <div className="Footer__download-container">
+            <Button className="Footer__download-button" onClick={() => history.push('/download')} variant="outlined">
+              Download Wallet
+            </Button>
+          </div>
+        )}
+      </div>
     </footer>
   );
 };

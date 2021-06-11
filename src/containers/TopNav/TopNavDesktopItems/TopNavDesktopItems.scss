@@ -1,3 +1,5 @@
+@import 'styles/font-mixins';
+
 .TopNavDesktopItems {
   &__download-button {
     margin-right: 24px;
@@ -13,6 +15,12 @@
 
   &__right-item {
     margin-left: 42px;
+  }
+
+  &__link {
+    @extend %body1;
+    color: var(--color-gray-500);
+    font-weight: var(--font-weight-regular);
   }
 
   &__separator {

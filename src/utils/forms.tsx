@@ -1,14 +1,20 @@
 import React, {ReactNode} from 'react';
 import clsx from 'clsx';
-import {ErrorMessage} from 'formik';
+import {ErrorMessage as FormikErrorMessageWrapper} from 'formik';
 import {bemify} from '@thenewboston/utils';
 
-import RequiredAsterisk from 'components/RequiredAsterisk';
+import {ErrorMessage, RequiredAsterisk} from 'components';
 
 export const renderFormError = (name: string, classNames: string | undefined, hideErrorText = false): ReactNode => (
-  <span className={clsx('FormFieldComponent__error-message', {...bemify(classNames, '__error-message')})}>
-    {hideErrorText ? null : <ErrorMessage name={name} />}
-  </span>
+  <div className={clsx('FormFieldComponent__error-message', {...bemify(classNames, '__error-message')})}>
+    {hideErrorText ? null : (
+      <FormikErrorMessageWrapper name={name}>
+        {(message) => (
+          <ErrorMessage className={clsx({...bemify(classNames, '__ErrorMessage')})}>{message}</ErrorMessage>
+        )}
+      </FormikErrorMessageWrapper>
+    )}
+  </div>
 );
 
 export const renderFormLabel = (

@@ -10,7 +10,9 @@ export interface BaseInputProps {
   disabled?: boolean;
   error?: boolean;
   focused?: boolean;
+  fullWidth?: boolean;
   name?: string;
+  onKeyDown?(e: React.KeyboardEvent<HTMLInputElement>): void;
   onBlur?(e: FocusEvent<HTMLInputElement>): void;
   onChange?(e: ChangeEvent<HTMLInputElement>): void;
   placeholder?: string;
@@ -24,9 +26,11 @@ const Input: FC<BaseInputProps> = ({
   disabled = false,
   error = false,
   focused = false,
+  fullWidth = false,
   name,
   onBlur,
   onChange,
+  onKeyDown,
   placeholder = 'Enter',
   type = 'text',
   value,
@@ -44,12 +48,14 @@ const Input: FC<BaseInputProps> = ({
       autoComplete={autoComplete}
       className={clsx('Input', className, {
         'Input--error': error,
+        'Input--full-width': fullWidth,
         ...bemify(className, '--error', error),
       })}
       disabled={disabled}
       name={name}
       onBlur={onBlur}
       onChange={onChange}
+      onKeyDown={onKeyDown}
       placeholder={placeholder}
       ref={inputRef}
       type={type}

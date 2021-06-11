@@ -18,4 +18,8 @@
   &--error {
     border-color: var(--color-alert);
   }
+
+  &--full-width {
+    width: 100%;
+  }
 }

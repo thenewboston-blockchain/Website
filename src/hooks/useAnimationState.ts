@@ -1,5 +1,5 @@
-import {AnimationState} from 'constants/animation';
 import {useEffect, useState} from 'react';
+import {AnimationState} from 'constants/animation';
 
 function useAnimationState(defaultState: string, zeroToOneTransitionTime: number, oneToZeroTransitionTime: number) {
   const [animationState, setAnimationState] = useState(defaultState);

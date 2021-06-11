@@ -12,7 +12,7 @@ import CreateAccount from './CreateAccount';
 import DeploymentGuide from './DeploymentGuide';
 import Donate from './Donate';
 import Download from './Download';
-import Faq from './Faq';
+import Faq, {faqFilters, FaqFilterType} from './Faq';
 import Governance from './Governance';
 import Guide from './Guide';
 import Guidelines from './Guidelines';
@@ -72,7 +72,8 @@ const App: FC = () => {
           <Route exact path="/guidelines" component={Guidelines} />
           <Route exact path="/create-account" render={() => <CreateAccount disabled />} />
           <Route exact path="/donate" component={Donate} />
-          <Route exact path="/faq" component={Faq} />
+          <Redirect exact from="/faq" to={`/faq/${faqFilters[FaqFilterType.all]}`} />
+          <Route exact path="/faq/:filter" component={Faq} />
           <Route exact path="/assets" component={Assets} />
           <Redirect exact from="/openings" to="/openings/All" />
           <Route exact path="/openings/:category/:openingId?" render={() => <Openings />} />
