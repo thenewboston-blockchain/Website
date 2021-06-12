@@ -11,6 +11,7 @@ $padding-768: 24px;
   max-width: $card-width-original;
   padding: $padding;
   position: relative;
+  width: 100%;
 
   &:hover {
     box-shadow: 0 7px 40px 0 #e9effd;
@@ -36,8 +37,9 @@ $padding-768: 24px;
   }
 
   &__button-container {
-    display: flex;
-    flex-direction: row-reverse;
+    bottom: 15px;
+    position: absolute;
+    right: 15px;
   }
 
   &__card-title {
