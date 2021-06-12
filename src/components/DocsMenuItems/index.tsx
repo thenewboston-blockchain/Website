@@ -4,34 +4,34 @@ import {NavLink} from 'react-router-dom';
 import {MenuGroup} from 'components';
 import {NavigationItem} from 'types/navigation';
 
-export const accountManagerNavigationData = [
+export const walletNavigationData = [
   {
     name: 'Get Started',
-    url: '/account-manager/get-started',
+    url: '/wallet/get-started',
   },
   {
     name: 'Create an Account',
-    url: '/account-manager/create-an-account',
+    url: '/wallet/create-an-account',
   },
   {
     name: 'Add Friends',
-    url: '/account-manager/add-friends',
+    url: '/wallet/add-friends',
   },
   {
     name: 'Send Coins',
-    url: '/account-manager/send-coins',
+    url: '/wallet/send-coins',
   },
   {
     name: 'Edit Nicknames',
-    url: '/account-manager/edit-nicknames',
+    url: '/wallet/edit-nicknames',
   },
   {
     name: 'Create a Bank',
-    url: '/account-manager/create-bank',
+    url: '/wallet/create-bank',
   },
   {
     name: 'Create a Validator',
-    url: '/account-manager/create-validator',
+    url: '/wallet/create-validator',
   },
 ];
 
@@ -293,8 +293,8 @@ const DocsMenuItems: FC = () => {
         {renderNavLinks(governanceNavigationData)}
       </MenuGroup>
 
-      <MenuGroup title="Account Manager" urlBase="account-manager">
-        {renderNavLinks(accountManagerNavigationData)}
+      <MenuGroup title="Wallet" urlBase="wallet">
+        {renderNavLinks(walletNavigationData)}
       </MenuGroup>
 
       <MenuGroup title="Deployment Guides" urlBase="deployment-guide">

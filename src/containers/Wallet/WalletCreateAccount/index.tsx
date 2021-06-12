@@ -5,13 +5,13 @@ import {DocContainer, DocImage, DocSubSection} from 'components';
 import AccountOverview from './AccountOverview.png';
 import CreateNewAccountModal from './CreateNewAccountModal.png';
 
-enum AccountManagerCreateAccountNav {
+enum WalletCreateAccountNav {
   accountOverview = 'account-overview',
 }
 
-const AccountManagerCreateAccount: FC = () => {
+const WalletCreateAccount: FC = () => {
   return (
-    <DocContainer className="AccountManagerCreateAccount" title="Create an Account" lastUpdated="07 Dec 2020">
+    <DocContainer className="WalletCreateAccount" title="Create an Account" lastUpdated="07 Dec 2020">
       <p>
         <strong>Accounts</strong> are anonymous digital identities on the network where coins may be sent to and from.
         To create an account, click the plus button to the right of "Accounts" on the left side menu. After filling out
@@ -20,7 +20,7 @@ const AccountManagerCreateAccount: FC = () => {
 
       <DocImage alt="create new account modal" bordered maxWidth={1200} src={CreateNewAccountModal} />
 
-      <DocSubSection id={AccountManagerCreateAccountNav.accountOverview} title="Account Overview">
+      <DocSubSection id={WalletCreateAccountNav.accountOverview} title="Account Overview">
         <p>
           After creating an account, you will be taken to your account overview page. Here you can see your balance,
           account number, and signing key. Your account number is what you will share with anyone who wishes to send you
@@ -39,4 +39,4 @@ const AccountManagerCreateAccount: FC = () => {
   );
 };
 
-export default AccountManagerCreateAccount;
+export default WalletCreateAccount;

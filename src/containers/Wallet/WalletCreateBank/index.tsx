@@ -5,13 +5,13 @@ import {DocContainer, DocImage, DocSubSection} from 'components';
 import BankOverview from './BankOverview.png';
 import CreateBank from './CreateBank.png';
 
-enum AccountManagerCreateBankNav {
+enum WalletCreateBankNav {
   bankOverview = 'bank-overview',
 }
 
-const AccountManagerCreateBank: FC = () => {
+const WalletCreateBank: FC = () => {
   return (
-    <DocContainer className="AccountManagerCreateBank" title="Create a Bank" lastUpdated="07 Dec 2020">
+    <DocContainer className="WalletCreateBank" title="Create a Bank" lastUpdated="07 Dec 2020">
       <p>
         <strong>Banks</strong> play a critical role regarding several aspects of the network. They act as the bond
         between end users and the network and have several responsibilities to each. To create a Bank, click the plus
@@ -21,7 +21,7 @@ const AccountManagerCreateBank: FC = () => {
 
       <DocImage alt="create bank modal" bordered maxWidth={1200} src={CreateBank} />
 
-      <DocSubSection id={AccountManagerCreateBankNav.bankOverview} title="Bank Overview">
+      <DocSubSection id={WalletCreateBankNav.bankOverview} title="Bank Overview">
         <p>
           After creating a bank, you will be taken to your bank overview page. Here you can see your Tx Fee (Transaction
           Fee), how many confirmation services your bank has, the network ID and bank account number and an overview of
@@ -34,4 +34,4 @@ const AccountManagerCreateBank: FC = () => {
   );
 };
 
-export default AccountManagerCreateBank;
+export default WalletCreateBank;
