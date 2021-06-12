@@ -5,6 +5,7 @@ $top-nav-height: 60px;
 .Download {
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
   position: relative;
 
   @media (max-width: 480px) {
