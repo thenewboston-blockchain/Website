@@ -170,8 +170,21 @@
     ],
     "contributors": [
       {
-        "title": "Product Manager",
+        "title": "Head of Community",
         "isLead": true,
+        "createdDate": "2020-07-08T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "1",
+          "discordUsername": "Bucky#2734",
+          "displayName": "Bucky Roberts",
+          "githubUsername": "buckyroberts",
+          "profileImage": "https://avatars2.githubusercontent.com/u/8547538?v=4"
+        },
+        "hourlyRate": 1000
+      },
+      {
+        "title": "Product Manager",
+        "isLead": false,
         "createdDate": "2021-03-02T02:14:59.307535Z",
         "contributor": {
           "contributorId": "7",
@@ -453,24 +466,11 @@
         "isLead": true,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "1",
-          "discordUsername": "Bucky#2734",
-          "displayName": "Bucky Roberts",
-          "githubUsername": "buckyroberts",
-          "profileImage": "https://avatars2.githubusercontent.com/u/8547538?v=4"
-        },
-        "hourlyRate": 1000
-      },
-      {
-        "title": "Social Media Moderator",
-        "isLead": false,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "10",
-          "discordUsername": "Bojan#6836",
-          "displayName": "Bojan Ilijevski",
-          "githubUsername": "bojan-ilijevski",
-          "profileImage": "https://avatars2.githubusercontent.com/u/58598872?&v=4"
+          "contributorId": "11",
+          "discordUsername": "MsChrishaph#0709",
+          "displayName": "Chrisha",
+          "githubUsername": "Chrisha1212",
+          "profileImage": "https://avatars.githubusercontent.com/u/72809444?s=460&u=e2138725222fb09a546d7d1e164cf64f5583648b&v=4"
         },
         "hourlyRate": 800
       },
@@ -479,11 +479,11 @@
         "isLead": false,
         "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "11",
-          "discordUsername": "MsChrishaph#0709",
-          "displayName": "Chrisha",
-          "githubUsername": "Chrisha1212",
-          "profileImage": "https://avatars.githubusercontent.com/u/72809444?s=460&u=e2138725222fb09a546d7d1e164cf64f5583648b&v=4"
+          "contributorId": "10",
+          "discordUsername": "Bojan#6836",
+          "displayName": "Bojan Ilijevski",
+          "githubUsername": "bojan-ilijevski",
+          "profileImage": "https://avatars2.githubusercontent.com/u/58598872?&v=4"
         },
         "hourlyRate": 800
       }
