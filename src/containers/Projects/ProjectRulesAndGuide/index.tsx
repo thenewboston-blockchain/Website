@@ -3,6 +3,7 @@ import React, {FC} from 'react';
 import HowProposalsWork from './HowProposalsWork';
 import Rules from './Rules';
 import ProposalSubmissionProcess from './ProposalSubmissionProcess';
+import MilestonesAndPayouts from './MilestonesAndPayouts';
 import './ProjectRules.scss';
 
 const ProjectsRules: FC = () => {
@@ -29,6 +30,7 @@ const ProjectsRules: FC = () => {
           <hr className="ProjectRules__divider" />
           <ProposalSubmissionProcess />
           <hr className="ProjectRules__divider" />
+          <MilestonesAndPayouts />
         </section>
       </main>
     </div>

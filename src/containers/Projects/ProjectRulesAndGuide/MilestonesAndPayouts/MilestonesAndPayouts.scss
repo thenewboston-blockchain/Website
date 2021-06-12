@@ -1,0 +1,117 @@
+.MilestonesAndPayouts {
+  &__heading {
+    color: var(--color-gray-900);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 125%;
+    margin-bottom: 48px;
+  }
+
+  &__note {
+    border-left: 2px solid var(--color-yellow-400);
+    margin-bottom: 64px;
+    padding-left: 16px;
+
+    &-highlight {
+      color: var(--color-yellow-400);
+      font-weight: 700;
+      line-height: 143%;
+      margin-bottom: 10px;
+    }
+
+    &-text {
+      color: var(--color-gray-700);
+      font-size: 14px;
+      line-height: 143%;
+      margin: 0;
+    }
+  }
+
+  &__pow {
+    margin-bottom: 88px;
+
+    &-heading {
+      color: var(--color-gray-900);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 120%;
+      margin-bottom: 64px;
+    }
+
+    &-table {
+      &-row {
+        box-shadow: inset 0px -1px 1px #e6e6e6;
+        display: grid;
+        gap: 32px;
+        grid-template-columns: 120px auto 120px;
+        padding: 32px 40px;
+
+        &-heading {
+          align-self: center;
+          color: var(--color-blue-900);
+          font-size: 16px;
+          line-height: 120%;
+        }
+
+        &-text {
+          align-self: center;
+          color: var(--color-gray-700);
+          font-size: 16px;
+          line-height: 120%;
+        }
+      }
+    }
+  }
+
+  &__process {
+    margin-bottom: 120px;
+
+    &-heading {
+      color: var(--color-gray-900);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 120%;
+      margin-bottom: 64px;
+    }
+
+    &-step {
+      box-shadow: inset 0px -1px 1px #e6e6e6;
+      display: grid;
+      gap: 32px;
+      grid-template-columns: 56px auto;
+      padding: 32px;
+
+      &-text {
+        align-self: center;
+        color: var(--color-gray-700);
+        font-size: 16px;
+        line-height: 120%;
+      }
+    }
+  }
+
+  &__roadmap {
+    margin-bottom: 120px;
+    padding: 40px;
+
+    &-heading {
+      color: var(--color-gray-900);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 120%;
+      margin-bottom: 8px;
+    }
+
+    &-illustration {
+      height: auto;
+      width: 100%;
+    }
+
+    &-text {
+      color: var(--color-gray-700);
+      font-size: 16px;
+      line-height: 120%;
+      margin-bottom: 88px;
+    }
+  }
+}
