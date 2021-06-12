@@ -193,7 +193,7 @@ const Download: FC = () => {
                   >
                     Release notes
                   </div>
-                  <Link to="/account-manager/get-started">How to use</Link>
+                  <Link to="/wallet/get-started">How to use</Link>
                 </div>
                 <div className="Download__cards-container">
                   {renderDownloadCard(Os.Windows)}

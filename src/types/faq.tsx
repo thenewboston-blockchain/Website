@@ -206,7 +206,7 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
       {
         answer: (
           <span>
-            <A newWindow={false} href="/account-manager/get-started">
+            <A newWindow={false} href="/wallet/get-started">
               Here
             </A>
           </span>
@@ -217,11 +217,11 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
       {
         answer: (
           <span>
-            <A newWindow={false} href="/account-manager/created-bank">
+            <A newWindow={false} href="/wallet/created-bank">
               Bank
             </A>
             ,{' '}
-            <A newWindow={false} href="/account-manager/created-validator">
+            <A newWindow={false} href="/wallet/created-validator">
               PV
             </A>
             .

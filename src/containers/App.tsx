@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom
 
 import {Layout} from 'components';
 
-import AccountManager from './AccountManager';
+import Wallet from './Wallet';
 import Assets from './Assets';
 import BankApi from './BankApi';
 import ConfirmationValidatorApi from './ConfirmationValidatorApi';
@@ -77,7 +77,7 @@ const App: FC = () => {
           <Route exact path="/tasks/:repository" component={Tasks} />
           <Redirect exact path="/teams" to="/teams/All/Members" />
           <Route exact path="/teams/:team/:tab?/:resource?" component={Teams} />
-          <Route path="/account-manager/:chapter?" component={AccountManager} />
+          <Route path="/wallet/:chapter?" component={Wallet} />
           <Route path="/bank-api/:chapter?" component={BankApi} />
           <Route path="/confirmation-validator-api/:chapter?" component={ConfirmationValidatorApi} />
           <Route path="/deployment-guide/:chapter?" component={DeploymentGuide} />

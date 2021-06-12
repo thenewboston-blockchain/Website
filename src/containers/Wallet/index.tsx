@@ -2,49 +2,49 @@ import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
 import {DashboardLayout, DocsMenuItems, PageTitle, Pagination} from 'components';
-import {accountManagerNavigationData} from 'components/DocsMenuItems';
+import {walletNavigationData} from 'components/DocsMenuItems';
 import {PageData, PageDataObject} from 'types/page-data';
 
-import AccountManagerAddFriends from './AccountManagerAddFriends';
-import AccountManagerCreateAccount from './AccountManagerCreateAccount';
-import AccountManagerCreateBank from './AccountManagerCreateBank';
-import AccountManagerCreateValidator from './AccountManagerCreateValidator';
-import AccountManagerEditNicknames from './AccountManagerEditNicknames';
-import AccountManagerGetStarted from './AccountManagerGetStarted';
-import AccountManagerSendCoins from './AccountManagerSendCoins';
+import WalletAddFriends from './WalletAddFriends';
+import WalletCreateAccount from './WalletCreateAccount';
+import WalletCreateBank from './WalletCreateBank';
+import WalletCreateValidator from './WalletCreateValidator';
+import WalletEditNicknames from './WalletEditNicknames';
+import WalletGetStarted from './WalletGetStarted';
+import WalletSendCoins from './WalletSendCoins';
 
 const defaultPageData: PageData = {
-  content: <Redirect to="/account-manager/get-started" />,
+  content: <Redirect to="/wallet/get-started" />,
   name: '',
 };
 
 const pageData: PageDataObject = {
   'add-friends': {
-    content: <AccountManagerAddFriends />,
+    content: <WalletAddFriends />,
     name: 'Add Friends',
   },
   'create-an-account': {
-    content: <AccountManagerCreateAccount />,
+    content: <WalletCreateAccount />,
     name: 'Create an Account',
   },
   'create-bank': {
-    content: <AccountManagerCreateBank />,
+    content: <WalletCreateBank />,
     name: 'Create a Bank',
   },
   'create-validator': {
-    content: <AccountManagerCreateValidator />,
+    content: <WalletCreateValidator />,
     name: 'Create a Validator',
   },
   'edit-nicknames': {
-    content: <AccountManagerEditNicknames />,
+    content: <WalletEditNicknames />,
     name: 'Edit Nicknames',
   },
   'get-started': {
-    content: <AccountManagerGetStarted />,
+    content: <WalletGetStarted />,
     name: 'Get Started',
   },
   'send-coins': {
-    content: <AccountManagerSendCoins />,
+    content: <WalletSendCoins />,
     name: 'Send Coins',
   },
 };
@@ -53,7 +53,7 @@ const getPageData = (chapter: string): PageData => {
   return pageData[chapter] || defaultPageData;
 };
 
-const AccountManager: FC = () => {
+const Wallet: FC = () => {
   const {chapter} = useParams<{chapter: string}>();
   const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
 
@@ -61,9 +61,9 @@ const AccountManager: FC = () => {
     <DashboardLayout menuItems={<DocsMenuItems />} pageName={name} sectionName="Wallet">
       <PageTitle ogDescription={`${name} | Wallet`} title={name} />
       {content}
-      <Pagination navigationData={accountManagerNavigationData} />
+      <Pagination navigationData={walletNavigationData} />
     </DashboardLayout>
   );
 };
 
-export default AccountManager;
+export default Wallet;
