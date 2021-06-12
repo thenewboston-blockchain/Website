@@ -28,6 +28,15 @@
     margin-right: 6px;
   }
 
+  &__github-title {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* max number of lines to show */
+    overflow: hidden;
+    text-align: start;
+    text-overflow: ellipsis;
+  }
+
   &__left-container {
     align-items: center;
     display: flex;
@@ -54,6 +63,14 @@
   &__avatar {
     @media (max-width: 480px) {
       margin-bottom: 25px;
+    }
+  }
+
+  &__back-button {
+    margin-right: 10px;
+    @media (max-width: 480px) {
+      left: 20px;
+      position: absolute;
     }
   }
 
@@ -89,7 +106,12 @@
   }
 
   &__project-title {
+    -webkit-box-orient: vertical;
     color: var(--color-blue-900);
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* max number of lines to show */
     margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
