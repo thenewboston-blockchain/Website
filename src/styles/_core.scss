@@ -16,6 +16,11 @@ body {
   @extend %body1;
 }
 
+body{
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
 #popover-root {
   position: fixed;
   top: 0;
