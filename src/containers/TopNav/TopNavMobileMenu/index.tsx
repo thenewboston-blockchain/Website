@@ -1,12 +1,9 @@
 import React, {FC, ReactNode, useState} from 'react';
-import {useSelector} from 'react-redux';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
 
-import {A} from 'components';
-import {isCreateAccountAllowed, isSignInAllowed} from 'config';
-import {selectActiveUser} from 'selectors/state';
+import {A, Button} from 'components';
 import './TopNavMobileMenu.scss';
 
 interface ComponentProps {
@@ -16,20 +13,18 @@ interface ComponentProps {
   toggleMenu(): void;
 }
 
-const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice, toggleMenu}) => {
-  const activeUser = useSelector(selectActiveUser);
-  const [openSection, setOpenSection] = useState<'community' | 'getStarted' | 'more' | 'other' | null>(null);
+type SectionStrings = 'community' | 'getStarted' | 'resources' | 'about' | 'faq';
 
-  const handleColumnTitleClick = (section: 'community' | 'getStarted' | 'more' | 'other') => (): void => {
+const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice, toggleMenu}) => {
+  const history = useHistory();
+  const [openSection, setOpenSection] = useState<SectionStrings | null>(null);
+
+  const handleColumnTitleClick = (section: SectionStrings) => (): void => {
     if (!smallDevice) return;
     setOpenSection(openSection === section ? null : section);
   };
 
-  const renderColumn = (
-    section: 'community' | 'getStarted' | 'more' | 'other',
-    title: string,
-    links: ReactNode,
-  ): ReactNode => {
+  const renderColumn = (section: SectionStrings, title: string, links: ReactNode): ReactNode => {
     return (
       <div className="TopNavMobileMenu__column">
         <button className="TopNavMobileMenu__title-wrapper" onClick={handleColumnTitleClick(section)}>
@@ -45,95 +40,60 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice,
             </span>
           )}
         </button>
-
-        {(!smallDevice || openSection === section) && <div className="TopNavMobileMenu__links">{links}</div>}
+        <div className="TopNavMobileMenu__links">{!smallDevice || openSection === section ? links : null}</div>
       </div>
     );
   };
-
-  const renderOtherSmallDeviceLink = (title: string, to: string): ReactNode => (
-    <div className="TopNavMobileMenu__column TopNavMobileMenu__not-visible-tab">
-      <Link to={to}>
-        <button className="TopNavMobileMenu__column-title">{title}</button>
-      </Link>
-    </div>
-  );
-
-  const renderOtherSmallDeviceLinks = (): ReactNode => (
-    <>
-      <div className="TopNavMobileMenu__separator TopNavMobileMenu__not-visible-tab" />
-      {activeUser ? (
-        <>
-          {renderOtherSmallDeviceLink('Your Profile', `/users/${activeUser.pk}`)}
-          {renderOtherSmallDeviceLink('Sign Out', '/sign-out')}
-        </>
-      ) : (
-        <>
-          {isCreateAccountAllowed && renderOtherSmallDeviceLink('Create Account', '/create-account')}
-          {isSignInAllowed && renderOtherSmallDeviceLink('Sign In', '/sign-in')}
-        </>
-      )}
-      {renderOtherSmallDeviceLink('Download', '/download')}
-    </>
-  );
 
   const renderMenu = (): ReactNode => {
     return (
       <>
         <div className="TopNavMobileMenu__dropdown-container">
-          {renderColumn(
-            'getStarted',
-            'Get Started',
-            <>
-              {renderMobileLink('Documentation', '/guide/introduction')}
-              {renderMobileLink('Tutorials', '/tutorials')}
-              {renderMobileLink('Tasks', '/tasks')}
-            </>,
-          )}
-          {renderColumn(
-            'community',
-            'Community',
-            <>
-              {renderMobileLink('Join the Community!', '/social')}
-              {renderMobileLink('Weekly Progress', '/progress')}
-              {renderMobileLink('Openings', '/openings')}
-              {renderMobileLink('Teams', '/teams')}
-              {renderMobileLink('Community Guidelines', '/guidelines')}
-            </>,
-          )}
-          {renderColumn(
-            'more',
-            'More',
-            <>
-              {renderMobileLink('Projects', '/projects')}
-              {renderMobileLink('Blog', 'https://thenewboston.blog/', true)}
-              {renderMobileLink('Assets', '/assets')}
-              {renderMobileLink('FAQ', '/faq')}
-              {renderMobileLink('Donate', '/donate')}
-            </>,
-          )}
-          {smallDevice
-            ? renderOtherSmallDeviceLinks()
-            : renderColumn(
-                'other',
-                'Other',
-                <>
-                  {activeUser ? (
-                    <>
-                      {renderMobileLink('Your Profile', `/users/${activeUser.pk}`)}
-                      {renderMobileLink('Sign Out', '/sign-out')}
-                    </>
-                  ) : (
-                    <>
-                      {renderMobileLink('Create Account', '/create-account')}
-                      {renderMobileLink('Sign In', '/sign-in')}
-                    </>
-                  )}
-                  {renderMobileLink('Download', '/download')}
-                </>,
-              )}
+          <div className="TopNavMobileMenu__links-container">
+            {renderColumn(
+              'getStarted',
+              'Get Started',
+              <>
+                {renderMobileLink('Tasks', '/tasks')}
+                {renderMobileLink('Projects', '/projects/overview')}
+              </>,
+            )}
+            {renderColumn(
+              'community',
+              'Community',
+              <>
+                {renderMobileLink('Join the Community!', '/social')}
+                {renderMobileLink('Weekly Progress', '/progress')}
+                {renderMobileLink('Openings', '/openings')}
+                {renderMobileLink('Community Guidelines', '/guidelines')}
+              </>,
+            )}
+            {renderColumn(
+              'resources',
+              'Resources',
+              <>
+                {renderMobileLink('Documentation', '/guide/introduction')}
+                {renderMobileLink('Tutorials', '/tutorials')}
+                {renderMobileLink('Media Kit', '/assets')}
+              </>,
+            )}
+            {renderColumn(
+              'about',
+              'About',
+              <>
+                {renderMobileLink('Teams', '/teams')}
+                {renderMobileLink('Donate', '/donate')}
+              </>,
+            )}
+            {renderColumn('faq', 'FAQ', <>{renderMobileLink('FAQ', '/faq')}</>)}
+          </div>
+          <div className="TopNavMobileMenu__download-container">
+            <Button className="TopNavMobileMenu__download-button" onClick={() => history.push('/download')}>
+              Download Wallet
+            </Button>
+          </div>
         </div>
-        <div className={clsx('TopNavMobileMenu__overlay')} onClick={closeMenu} role="button" tabIndex={0} />
+        <div className="TopNavMobileMenu__overlay" onClick={closeMenu} role="button" tabIndex={0} />
       </>
     );
   };

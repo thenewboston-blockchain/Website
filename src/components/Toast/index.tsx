@@ -16,7 +16,7 @@ const Toast: FC<ComponentProps> = ({children, className, type = 'warning'}) => {
   const iconType = useMemo<IconType>(() => {
     switch (type) {
       case 'success':
-        return IconType.thumbsUp;
+        return IconType.checkCircle;
       default:
         return IconType.alertCircleOutline;
     }
@@ -28,7 +28,6 @@ const Toast: FC<ComponentProps> = ({children, className, type = 'warning'}) => {
         [`Toast--${type}`]: true,
         ...bemify(className, `--${type}`),
       })}
-      data-testid="Toast"
     >
       <Icon
         className={clsx('Toast__icon', {
@@ -37,12 +36,8 @@ const Toast: FC<ComponentProps> = ({children, className, type = 'warning'}) => {
           ...bemify(className, `__icon--${type}`),
         })}
         icon={iconType}
-        size={20}
-        dataTestId="Toast__icon"
       />
-      <div className={clsx('Toast__text', {...bemify(className, '__text')})} data-testid="Toast__text">
-        {children}
-      </div>
+      <div className={clsx('Toast__text', {...bemify(className, '__text')})}>{children}</div>
     </div>
   );
 };

@@ -1,0 +1,54 @@
+@import 'styles/font-mixins';
+@import '../shared';
+
+.FaqSideMenu {
+  background-color: var(--color-white);
+  border-radius: 0 0 0 12px;
+  box-shadow: 0 8px 88px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+  padding: 32px;
+  width: $side-menu-width;
+
+  @media (max-width: 992px) {
+    width: $side-menu-width-992;
+  }
+
+  &__topic {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 32px;
+    outline: none;
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+    }
+  }
+
+  &__topic-title {
+    @extend %h3;
+    color: var(--color-gray-500);
+    font-weight: var(--font-weight-regular);
+    margin-left: 16px;
+
+    &:hover {
+      color: var(--color-cyan-800);
+    }
+
+    &--hovered {
+      color: var(--color-cyan-800);
+    }
+
+    &--active {
+      color: var(--color-cyan-800);
+      font-weight: var(--font-weight-bold);
+    }
+
+    @media (max-width: 992px) {
+      font-size: var(--font-size-body1);
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+}

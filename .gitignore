@@ -99,3 +99,5 @@ out/
 # VS Code
 .vs/
 .vscode/
+
+build/

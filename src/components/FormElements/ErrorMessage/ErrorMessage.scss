@@ -1,0 +1,10 @@
+.ErrorMessage {
+  align-items: center;
+  display: flex;
+
+  &__icon {
+    color: var(--color-alert);
+    margin-left: 6px;
+    margin-right: 3px;
+  }
+}

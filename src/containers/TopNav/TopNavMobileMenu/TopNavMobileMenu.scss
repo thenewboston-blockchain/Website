@@ -1,6 +1,7 @@
 @import 'styles/z-index';
 
-$dropdown-height: 316px;
+$dropdown-height: 284px;
+$dropdown-height-992: 400px;
 $mobile-dropdown-height: 1000px;
 $top-nav-height: 60px;
 
@@ -9,7 +10,7 @@ $top-nav-height: 60px;
     background: rgba(0, 0, 0, 0);
   }
   to {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -28,6 +29,10 @@ $top-nav-height: 60px;
   from {
     opacity: 0;
     top: $top-nav-height - $dropdown-height;
+
+    @media (max-width: 992px) {
+      top: $top-nav-height - $dropdown-height-992;
+    }
   }
   to {
     opacity: 1;
@@ -42,19 +47,13 @@ $top-nav-height: 60px;
     display: block;
   }
 
-  &__title-wrapper {
+  &__button {
     align-items: center;
     background: transparent;
     border: none;
     display: flex;
-    justify-content: space-between;
-    padding: unset;
-  }
-
-  &__button {
-    background: transparent;
-    border: none;
     height: $top-nav-height;
+    justify-content: center;
     outline: none;
     position: relative;
     transition: background 0.1s ease-in;
@@ -69,7 +68,7 @@ $top-nav-height: 60px;
   }
 
   &__chevron-icon {
-    color: var(--color-sail-gray-300);
+    color: var(--color-sail-gray-500);
     transition: transform 0.3s ease-in-out;
 
     &--open {
@@ -81,11 +80,10 @@ $top-nav-height: 60px;
     &:not(:last-child) {
       margin-right: 60px;
 
-      @media (max-width: 992px) {
+      @media (max-width: 768px) {
         margin-right: 0;
       }
     }
-    margin-bottom: 24px;
   }
 
   &__column-title {
@@ -103,8 +101,10 @@ $top-nav-height: 60px;
   &__dropdown-container {
     animation: slideDown 0.3s forwards;
     background: var(--color-white);
+    border-radius: 0 0 25px 25px;
     box-shadow: 0 6px 6px rgba(4, 34, 53, 0.3);
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto;
     height: $dropdown-height;
     left: 0;
     padding: 60px;
@@ -114,15 +114,59 @@ $top-nav-height: 60px;
     z-index: $z-index-top-nav-mobile-dropdown;
 
     @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      height: $dropdown-height-992;
+    }
+
+    @media (max-width: 768px) {
       animation: mobileSlideDown 0.3s forwards;
-      flex-direction: column;
-      height: $mobile-dropdown-height;
+      display: block;
+      height: fit-content;
       padding: 50px 36px 18px;
+    }
+  }
+
+  &__download-button {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__download-container {
+    @media (max-width: 992px) {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: row-reverse;
+      grid-row: 2;
+    }
+
+    @media (max-width: 768px) {
+      justify-content: center;
+      margin: 32px 0;
     }
   }
 
   &__icon-holder {
     display: inline-block;
+  }
+
+  &__links {
+    @media (max-width: 768px) {
+      border-bottom: 1px solid var(--color-gray-100);
+      margin-bottom: 16px;
+    }
+  }
+
+  &__links-container {
+    display: flex;
+
+    @media (max-width: 992px) {
+      justify-content: space-between;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   &__link {
@@ -131,19 +175,23 @@ $top-nav-height: 60px;
     color: var(--color-primary);
     display: block;
     line-height: 1;
-    margin-top: 24px;
+    margin-bottom: 15px;
     padding: 0;
     text-align: unset;
     width: fit-content;
 
+    @media (max-width: 992px) {
+      width: unset;
+    }
+
+    @media (max-width: 768px) {
+      &:last-child {
+        padding-bottom: 16px;
+      }
+    }
+
     &:hover {
       text-decoration: underline;
-    }
-  }
-
-  &__not-visible-tab {
-    @media (min-width: 992px) {
-      display: none;
     }
   }
 
@@ -158,10 +206,20 @@ $top-nav-height: 60px;
     z-index: $z-index-top-nav-mobile-overlay;
   }
 
-  &__separator {
-    background-color: #c1c9d2;
-    height: 0.5px;
-    margin-bottom: 20px;
-    width: 40px;
+  &__title-wrapper {
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: default;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding: unset;
+    width: 100%;
+
+    @media (max-width: 768px) {
+      cursor: pointer;
+      margin-bottom: 14px;
+    }
   }
 }
