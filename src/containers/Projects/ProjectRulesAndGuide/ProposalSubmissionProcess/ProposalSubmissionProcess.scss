@@ -1,0 +1,84 @@
+.ProposalSubmissionProcess {
+  &__heading {
+    color: var(--color-gray-900);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 125%;
+    margin-bottom: 16px;
+  }
+
+  &__step {
+    box-shadow: inset 0px -1px 1px #e6e6e6;
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 56px auto;
+    padding: 32px;
+
+    &-content {
+      color: var(--color-gray-500);
+    }
+
+    &-header {
+      margin-bottom: 36px;
+    }
+
+    &-heading {
+      color: var(--color-gray-900);
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 125%;
+      margin-bottom: 8px;
+    }
+
+    &-label {
+      color: var(--color-white);
+      font-weight: 400;
+    }
+
+    &-listing {
+      &-header {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 143%;
+        margin-bottom: 8px;
+      }
+
+      &-item {
+        line-height: 143%;
+      }
+
+      &-items {
+        font-size: 12px;
+      }
+    }
+
+    &-note {
+      border-left: 1px solid var(--color-orange-400);
+      font-size: 12px;
+      line-height: 133%;
+      margin: 0;
+      margin-bottom: 16px;
+      padding-left: 10px;
+    }
+
+    &-sub-text {
+      color: var(--color-gray-700);
+      font-size: 16px;
+      line-height: 120%;
+      margin: 0;
+    }
+
+    &-text {
+      font-size: 14px;
+      line-height: 143%;
+      margin-bottom: 28px;
+    }
+  }
+
+  &__tagline {
+    color: var(--color-gray-700);
+    font-size: 16px;
+    margin-bottom: 64px;
+    margin-top: 0;
+  }
+}

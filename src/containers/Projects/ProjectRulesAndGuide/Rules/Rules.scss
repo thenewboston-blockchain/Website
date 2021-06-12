@@ -24,6 +24,10 @@
     }
 
     &-item {
+      &::marker {
+        font-weight: 700;
+      }
+
       &:not(:last-child) {
         margin-bottom: 8px;
       }

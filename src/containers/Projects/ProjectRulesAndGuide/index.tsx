@@ -2,6 +2,7 @@ import React, {FC} from 'react';
 
 import HowProposalsWork from './HowProposalsWork';
 import Rules from './Rules';
+import ProposalSubmissionProcess from './ProposalSubmissionProcess';
 import './ProjectRules.scss';
 
 const ProjectsRules: FC = () => {
@@ -25,6 +26,8 @@ const ProjectsRules: FC = () => {
           <HowProposalsWork />
           <hr className="ProjectRules__divider" />
           <Rules />
+          <hr className="ProjectRules__divider" />
+          <ProposalSubmissionProcess />
           <hr className="ProjectRules__divider" />
         </section>
       </main>
