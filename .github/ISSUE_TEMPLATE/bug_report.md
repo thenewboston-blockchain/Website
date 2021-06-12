@@ -36,4 +36,4 @@ Add any other context about the problem here.
 **Account Number**
 Your account number where the reward coins for this bug bounty will be sent (pending review and approval).
 
-[How to Create an Account](https://thenewboston.com/account-manager/create-an-account)
+[How to Create an Account](https://thenewboston.com/wallet/create-an-account)

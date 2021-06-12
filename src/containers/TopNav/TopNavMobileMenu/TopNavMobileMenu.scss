@@ -121,7 +121,7 @@ $top-nav-height: 60px;
 
     @media (max-width: 768px) {
       animation: mobileSlideDown 0.3s forwards;
-      grid-template-rows: repeat(2, minmax(0, max-content));
+      display: block;
       height: fit-content;
       padding: 50px 36px 18px;
     }
