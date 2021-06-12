@@ -1,5 +1,25 @@
 [
   {
+    "openingId": "react-native-developer",
+    "category": "Engineering",
+    "description": "Looking for a skilled React Native developer with 2+ years of experience building mobile apps for both Android and iOS. The ideal must have the following skills and must be able to perform the following roles and responsibilities.",
+    "position": "React Native Developer",
+    "responsibilities": [
+      "Build pixel-perfect, buttery smooth UIs across both mobile platforms.",
+      "Leverage native APIs for deep integrations with both platforms.",
+      "Maintain code and write automated tests to ensure the product is of the highest quality."
+    ],
+    "technologyRequirements": [
+      "Firm grasp of the JavaScript and its nuances, including ES6+ syntax",
+      "Knowledge of functional or object-oriented programming",
+      "Understanding of REST APIs, the document request model, and offline storage",
+      "Familiarity with native build tools, like XCode, Gradle, Android Studio, IntelliJ",
+      "Can work with third-party dependencies and debug dependency conflicts",
+      "Experience with automated testing suites, like Jest or Mocha"
+    ],
+    "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
+  },
+  {
     "openingId": "senior-python-django-developer",
     "category": "Engineering",
     "description": "We are looking for a Senior Python / Django Developer to help us build out both our digital currency network and Website API.",
