@@ -24,7 +24,7 @@ const TopNav: FC<ComponentProps> = ({className}) => {
 
   useEffect(() => {
     if (width > 1200) closeMobileMenu();
-    setSmallDevice(width <= 992);
+    setSmallDevice(width < 768);
   }, [closeMobileMenu, smallDevice, width]);
 
   const renderRightItems = (): ReactNode => {
