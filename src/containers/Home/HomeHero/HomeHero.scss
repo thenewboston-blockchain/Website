@@ -127,6 +127,7 @@ $title-width: 592px;
     height: 64px;
     justify-content: center;
     width: 64px;
+    transition: background-color 0s, color 0s;
 
     &:not(:last-child) {
       margin-right: 40px;
