@@ -2,7 +2,7 @@
   $self: &;
   border-radius: 100px;
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   cursor: pointer;
   min-height: 40px;
   padding: 11px 20px;
@@ -20,8 +20,9 @@
       border-color: var(--color-primary);
 
       &:hover {
-        background: var(--color-primary-hover);
-        border-color: var(--color-primary-hover);
+        background: var(--color-white);
+        border: 2px solid var(--color-primary);
+        color: var(--color-primary);
       }
 
       &#{$self}--disabled,
@@ -57,11 +58,11 @@
     background: transparent;
 
     &#{$self}--primary {
-      border-color: var(--color-gray-200);
+      border-color: var(--color-white);
       color: var(--color-primary);
 
       &:hover {
-        background: var(--color-gray-100);
+        background: var(--color-white);
       }
 
       &#{$self}--disabled,
