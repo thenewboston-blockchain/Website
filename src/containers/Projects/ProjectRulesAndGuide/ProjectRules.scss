@@ -33,8 +33,12 @@
   }
 
   &__sidebar {
+    align-self: start;
     box-shadow: 0px 8px 88px rgba(0, 0, 0, 0.05);
     padding: 24px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 308px;
 
     &-item {
       background: var(--color-white);
@@ -54,6 +58,23 @@
       &:not(:last-child) {
         margin-bottom: 24px;
       }
+    }
+  }
+
+  @media (max-width: 992px) {
+    &__main {
+      grid-template-columns: auto;
+      padding: 48px;
+    }
+
+    &__sidebar {
+      display: none;
+    }
+  }
+
+  @media (max-width: 414px) {
+    &__main {
+      padding: 24px;
     }
   }
 }

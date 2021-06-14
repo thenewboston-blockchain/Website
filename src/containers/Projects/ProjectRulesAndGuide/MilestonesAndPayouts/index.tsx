@@ -1,10 +1,16 @@
 import React, {FC} from 'react';
 
+import {useWindowDimensions} from 'hooks';
+
 import {Step1, Step2, Step3, Step4} from '../assets/icons';
 import RoadmapIllustration from '../assets/img/roadmap.png';
 import './MilestonesAndPayouts.scss';
 
 const MilestonesAndPayouts: FC = () => {
+  const SMALL_DEVICE_WIDTH = 768;
+
+  const {width} = useWindowDimensions();
+
   return (
     <div className="MilestonesAndPayouts" id="milestones-and-payouts">
       <h1 className="MilestonesAndPayouts__heading">Milestones And Payouts</h1>
@@ -33,6 +39,7 @@ const MilestonesAndPayouts: FC = () => {
             for all objectives.
           </div>
         </div>
+        {width <= SMALL_DEVICE_WIDTH && <hr className="MilestonesAndPayouts__process-divider" />}
         <div className="MilestonesAndPayouts__process-step">
           <div className="MilestonesAndPayouts__process-step-count">
             <Step2 />
@@ -42,6 +49,7 @@ const MilestonesAndPayouts: FC = () => {
             required clarifications, they will leave a comment.
           </div>
         </div>
+        {width <= SMALL_DEVICE_WIDTH && <hr className="MilestonesAndPayouts__process-divider" />}
         <div className="MilestonesAndPayouts__process-step">
           <div className="MilestonesAndPayouts__process-step-count">
             <Step3 />
@@ -51,6 +59,7 @@ const MilestonesAndPayouts: FC = () => {
             milestone proposal according to the next roadmap milestone.
           </div>
         </div>
+        {width <= SMALL_DEVICE_WIDTH && <hr className="MilestonesAndPayouts__process-divider" />}
         <div className="MilestonesAndPayouts__process-step">
           <div className="MilestonesAndPayouts__process-step-count">
             <Step4 />
@@ -60,6 +69,7 @@ const MilestonesAndPayouts: FC = () => {
             essential information. The auditor will then submit the new milestone to the government for final review.
           </div>
         </div>
+        {width <= SMALL_DEVICE_WIDTH && <hr className="MilestonesAndPayouts__process-divider" />}
       </div>
       <div className="MilestonesAndPayouts__pow">
         <h3 className="MilestonesAndPayouts__pow-heading">Acceptable Proof of Work</h3>

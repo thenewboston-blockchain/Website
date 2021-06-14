@@ -81,4 +81,36 @@
     margin-bottom: 64px;
     margin-top: 0;
   }
+
+  @media (max-width: 992px) {
+    &__step {
+      padding: 32px 0px;
+
+      &-header {
+        margin-bottom: 48px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__step {
+      box-shadow: none;
+
+      &-divider {
+        border-top: 1px solid #e6e6e6;
+        margin: 0;
+        width: 60%;
+      }
+    }
+  }
+
+  @media (max-width: 414px) {
+    &__step {
+      grid-template-columns: auto;
+
+      &-divider {
+        width: 100%;
+      }
+    }
+  }
 }

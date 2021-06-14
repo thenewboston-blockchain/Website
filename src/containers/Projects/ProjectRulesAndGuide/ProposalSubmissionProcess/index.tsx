@@ -1,11 +1,16 @@
 import React, {FC} from 'react';
 
 import {Label} from 'components';
+import {useWindowDimensions} from 'hooks';
 
 import {Step1, Step2, Step3, Step4} from '../assets/icons';
 import './ProposalSubmissionProcess.scss';
 
 const ProposalSubmissionProcess: FC = () => {
+  const SMALL_DEVICE_WIDTH = 768;
+
+  const {width} = useWindowDimensions();
+
   return (
     <div className="ProposalSubmissionProcess" id="proposal-submission-process">
       <h1 className="ProposalSubmissionProcess__heading">Proposal Submission Process</h1>
@@ -56,6 +61,7 @@ const ProposalSubmissionProcess: FC = () => {
           </div>
         </div>
       </div>
+      {width <= SMALL_DEVICE_WIDTH && <hr className="ProposalSubmissionProcess__step-divider" />}
       <div className="ProposalSubmissionProcess__step">
         <div className="ProposalSubmissionProcess__step-count">
           <Step2 />
@@ -103,6 +109,7 @@ const ProposalSubmissionProcess: FC = () => {
           </div>
         </div>
       </div>
+      {width <= SMALL_DEVICE_WIDTH && <hr className="ProposalSubmissionProcess__step-divider" />}
       <div className="ProposalSubmissionProcess__step">
         <div className="ProposalSubmissionProcess__step-count">
           <Step3 />
@@ -127,6 +134,7 @@ const ProposalSubmissionProcess: FC = () => {
           </div>
         </div>
       </div>
+      {width <= SMALL_DEVICE_WIDTH && <hr className="ProposalSubmissionProcess__step-divider" />}
       <div className="ProposalSubmissionProcess__step">
         <div className="ProposalSubmissionProcess__step-count">
           <Step4 />
@@ -146,6 +154,7 @@ const ProposalSubmissionProcess: FC = () => {
           </div>
         </div>
       </div>
+      {width <= SMALL_DEVICE_WIDTH && <hr className="ProposalSubmissionProcess__step-divider" />}
     </div>
   );
 };
