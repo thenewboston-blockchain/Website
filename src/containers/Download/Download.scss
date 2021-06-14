@@ -1,6 +1,7 @@
 @import 'styles/font-mixins';
 
 $top-nav-height: 60px;
+$scroll-bar-width: 20px;
 
 .Download {
   display: flex;
@@ -18,6 +19,7 @@ $top-nav-height: 60px;
     background-color: var(--color-gray-050);
     display: flex;
     justify-content: center;
+    width: calc(100vw - #{$scroll-bar-width});
   }
 
   &__main-content {
