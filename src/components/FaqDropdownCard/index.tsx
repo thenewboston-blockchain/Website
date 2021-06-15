@@ -29,7 +29,7 @@ const FaqDropdownCard: FC<Props> = ({answer, className, id, question}) => {
       <div className="FaqDropdownCard__anchor" id={id} />
       <div className="FaqDropdownCard__dropdown-container">
         <div className="FaqDropdownCard__left-container">
-          <Link className="FaqDropdownCard__question" to={`${pathname}#${id}`}>
+          <Link className="FaqDropdownCard__question" to={`${pathname}#${id}`} onClick={toggleExpanded}>
             {question}
           </Link>
           <HashLink className="FaqDropdownCard__HashLink" id={id} />

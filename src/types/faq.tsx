@@ -108,9 +108,9 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
             </A>
           </span>
         ),
-        id: 'where-download-account-manager',
+        id: 'where-download-wallet',
         isTop: true,
-        question: 'Where can I download the Account Manager?',
+        question: 'Where can I download the Wallet?',
       },
       {
         answer:
@@ -206,22 +206,22 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
       {
         answer: (
           <span>
-            <A newWindow={false} href="/account-manager/get-started">
+            <A newWindow={false} href="/wallet/get-started">
               Here
             </A>
           </span>
         ),
-        id: 'account-manager-guides',
-        question: 'Are there guides for using the Account Manager?',
+        id: 'wallet-guides',
+        question: 'Are there guides for using the Wallet?',
       },
       {
         answer: (
           <span>
-            <A newWindow={false} href="/account-manager/created-bank">
+            <A newWindow={false} href="/wallet/created-bank">
               Bank
             </A>
             ,{' '}
-            <A newWindow={false} href="/account-manager/created-validator">
+            <A newWindow={false} href="/wallet/created-validator">
               PV
             </A>
             .
