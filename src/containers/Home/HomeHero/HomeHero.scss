@@ -126,6 +126,7 @@ $title-width: 592px;
     display: flex;
     height: 64px;
     justify-content: center;
+    transition: all 0s;
     width: 64px;
 
     &:not(:last-child) {
