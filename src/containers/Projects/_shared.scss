@@ -1,8 +1,8 @@
 $top-nav-height: 60px;
 $details-header-height: 158px;
-$details-header-height-480: 241px;
+$details-header-height-576: 241px;
 $top-content-height: calc(#{$top-nav-height} + #{$details-header-height});
-$top-content-height-480: calc(#{$top-nav-height} + #{$details-header-height-480});
+$top-content-height-576: calc(#{$top-nav-height} + #{$details-header-height-576});
 
 // cards
 $card-width-original: 384px;

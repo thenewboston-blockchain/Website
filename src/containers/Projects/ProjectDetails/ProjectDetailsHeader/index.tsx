@@ -41,7 +41,7 @@ const ProjectDetailsHeader: FC<Props> = ({github, logoUrl, projectLeadDisplayNam
             variant="outlined"
           >
             <Icon className="ProjectDetailsHeader__github-icon" icon={IconType.github} size={24} totalSize="unset" />
-            <span className="ProjectDetailsHeader__github-title">{title}</span>
+            <span className="ProjectDetailsHeader__github-title">GitHub</span>
           </Button>
         </div>
       </div>
