@@ -126,8 +126,8 @@ $title-width: 592px;
     display: flex;
     height: 64px;
     justify-content: center;
+    transition: all 0s;
     width: 64px;
-    transition: background-color 0s, color 0s;
 
     &:not(:last-child) {
       margin-right: 40px;
