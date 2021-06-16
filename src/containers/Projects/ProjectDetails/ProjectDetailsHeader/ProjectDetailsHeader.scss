@@ -12,10 +12,10 @@
   top: $top-nav-height;
   z-index: $z-index-project-header;
 
-  @media (max-width: 480px) {
+  @media (max-width: 576px) {
     align-items: center;
     flex-direction: column;
-    height: $details-header-height-480;
+    height: $details-header-height-576;
     padding: 24px;
   }
 
@@ -28,12 +28,16 @@
     margin-right: 6px;
   }
 
+  &__github-title {
+    text-align: start;
+  }
+
   &__left-container {
     align-items: center;
     display: flex;
     flex-direction: row;
 
-    @media (max-width: 480px) {
+    @media (max-width: 576px) {
       margin-bottom: 30px;
     }
   }
@@ -44,7 +48,7 @@
     margin-left: 22px;
     width: 100%;
 
-    @media (max-width: 480px) {
+    @media (max-width: 576px) {
       align-items: center;
       flex-direction: column;
       margin-left: 0;
@@ -52,8 +56,16 @@
   }
 
   &__avatar {
-    @media (max-width: 480px) {
+    @media (max-width: 576px) {
       margin-bottom: 25px;
+    }
+  }
+
+  &__back-button {
+    margin-right: 10px;
+
+    @media (max-width: 576px) {
+      display: none;
     }
   }
 
@@ -61,7 +73,7 @@
     display: flex;
     flex-direction: column;
 
-    @media (max-width: 480px) {
+    @media (max-width: 576px) {
       text-align: center;
     }
   }
@@ -91,5 +103,16 @@
   &__project-title {
     color: var(--color-blue-900);
     margin-bottom: 10px;
+    max-width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media (max-width: 992px) {
+      max-width: 300px;
+    }
+
+    @media (max-width: 576px) {
+      max-width: unset;
+    }
   }
 }
