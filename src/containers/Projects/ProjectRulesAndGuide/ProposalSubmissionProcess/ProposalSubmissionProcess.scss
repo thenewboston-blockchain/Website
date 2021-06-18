@@ -105,6 +105,11 @@
   }
 
   @media (max-width: 414px) {
+    &__heading {
+      font-size: 24px;
+      line-height: 120%;
+    }
+
     &__step {
       grid-template-columns: auto;
 

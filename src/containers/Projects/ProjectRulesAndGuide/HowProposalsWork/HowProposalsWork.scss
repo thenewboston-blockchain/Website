@@ -37,4 +37,11 @@
     margin-bottom: 64px;
     margin-top: 0;
   }
+
+  @media (max-width: 414px) {
+    &__heading {
+      font-size: 24px;
+      line-height: 120%;
+    }
+  }
 }
