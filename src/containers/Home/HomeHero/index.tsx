@@ -1,15 +1,16 @@
-import React, {FC, useCallback, useEffect, useRef} from 'react';
+import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
 import {Link} from 'react-router-dom';
 import clsx from 'clsx';
 
 import {Button} from 'components';
 import SocialMediaIcon from 'components/SocialMediaIcon';
 import {AnimationState} from 'constants/animation';
-import {useAnimationState, useShuffle} from 'hooks';
+import {useAnimationState, useShuffle, useWindowDimensions} from 'hooks';
 import {SocialMedia} from 'types/social-media';
 
 import HelloWorld, {defaultHelloWorld, HelloWorldKeys} from './hello-world';
 import HeroV2Svg from './HeroV2.svg';
+import HeroV2WebP from './HeroV2.webp';
 import './HomeHero.scss';
 
 const HelloFadeClass = {
@@ -21,6 +22,8 @@ const HomeHero: FC = () => {
   const animationState = useAnimationState(AnimationState.ONE, 1000, 4000);
   const shouldShuffle = useRef(false);
   const helloText = useShuffle(defaultHelloWorld, HelloWorld, HelloWorldKeys, shouldShuffle.current);
+  const [isHeroImageLoaded, setIsHeroImageLoaded] = useState(false);
+  const {width} = useWindowDimensions();
 
   useEffect(() => {
     shouldShuffle.current = animationState === AnimationState.ZERO;
@@ -62,9 +65,27 @@ const HomeHero: FC = () => {
             <div className="HomeHero__social-media-links">{renderSocialMediaLinks()}</div>
           </div>
         </div>
-        <div className="HomeHero__right">
-          <img alt="hero" className="HomeHero__image" src={HeroV2Svg} />
-        </div>
+        {width > 414 && (
+          <div className="HomeHero__right">
+            <img
+              alt="hero"
+              className={clsx('HomeHero__image HomeHero__image-placeholder', {
+                'HomeHero__image-placeholder--loaded': isHeroImageLoaded,
+              })}
+              src={HeroV2WebP}
+            />
+            <img
+              alt="hero"
+              className={clsx('HomeHero__image HomeHero__image-real', {
+                'HomeHero__image-real--loaded': isHeroImageLoaded,
+              })}
+              src={HeroV2Svg}
+              onLoad={() => {
+                setIsHeroImageLoaded(true);
+              }}
+            />
+          </div>
+        )}
       </div>
     </div>
   );
