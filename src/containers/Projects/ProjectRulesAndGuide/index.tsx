@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {Link, useLocation} from 'react-router-dom';
+import {Link} from 'react-scroll';
 
 import HowProposalsWork from './HowProposalsWork';
 import Rules from './Rules';
@@ -13,8 +13,6 @@ interface Section {
 }
 
 const ProjectsRules: FC = () => {
-  const {hash, pathname} = useLocation();
-
   const SECTIONS: Section[] = [
     {
       id: 'how-proposals-work',
@@ -43,7 +41,16 @@ const ProjectsRules: FC = () => {
       <main className="ProjectRules__main">
         <aside className="ProjectRules__sidebar">
           {SECTIONS.map((section) => (
-            <Link className="ProjectRules__sidebar-item" key={section.id} to={`${pathname}#${section.id}`}>
+            <Link
+              activeClass="ProjectRules__sidebar-item-active"
+              className="ProjectRules__sidebar-item"
+              hashSpy
+              key={section.id}
+              offset={-64}
+              smooth
+              spy
+              to={section.id}
+            >
               {section.title}
             </Link>
           ))}
