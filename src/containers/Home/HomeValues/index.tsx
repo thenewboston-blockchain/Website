@@ -1,14 +1,17 @@
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
 import {Link} from 'react-router-dom';
+import clsx from 'clsx';
 
 import {Button} from 'components';
 import {useWindowDimensions} from 'hooks';
 import HomeValuesCard from './HomeValuesCard';
-import ValuesIllustration from './ValuesIllustration';
+import ValuesIllustrationWebP from './ValuesIllustration.webp';
+import ValuesIllustrationSvg from './ValuesIllustration.svg';
 import './HomeValues.scss';
 
 const HomeValues: FC = () => {
   const {width} = useWindowDimensions();
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   let iconSize;
   if (width < 600) {
@@ -23,7 +26,28 @@ const HomeValues: FC = () => {
     <div className="HomeValues">
       <HomeValuesCard />
       <div className="HomeValues__main">
-        <ValuesIllustration className="HomeValues__illustration" width={iconSize.width} height={iconSize.height} />
+        <div className="HomeValues__illustration-container" style={{height: iconSize.height, width: iconSize.width}}>
+          <img
+            alt="HomeValuesIllustration"
+            className={clsx('HomeValues__illustration HomeValues__illustration-placeholder', {
+              'HomeValues__illustration-placeholder--loaded': isImageLoaded,
+            })}
+            width={iconSize.width}
+            height={iconSize.height}
+            src={ValuesIllustrationWebP}
+          />
+          <img
+            alt="HomeValuesIllustration"
+            className={clsx('HomeValues__illustration HomeValues__illustration-real', {
+              'HomeValues__illustration-real--loaded': isImageLoaded,
+            })}
+            loading="lazy"
+            width={iconSize.width}
+            height={iconSize.height}
+            src={ValuesIllustrationSvg}
+            onLoad={() => setIsImageLoaded(true)}
+          />
+        </div>
         <div className="HomeValues__main-right">
           <div className="HomeValues__main-title">The value comes from you</div>
           <div className="HomeValues__main-description">

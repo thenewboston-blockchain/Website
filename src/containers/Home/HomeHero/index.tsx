@@ -79,6 +79,7 @@ const HomeHero: FC = () => {
               className={clsx('HomeHero__image HomeHero__image-real', {
                 'HomeHero__image-real--loaded': isHeroImageLoaded,
               })}
+              loading="lazy"
               src={HeroV2Svg}
               onLoad={() => {
                 setIsHeroImageLoaded(true);
