@@ -1,5 +1,11 @@
 import React, {FC} from 'react';
+import {Icon, IconType} from '@thenewboston/ui';
 
+import AppStoreLogo from 'assets/logos/App Store.png';
+import ChromeLogo from 'assets/logos/Chrome.png';
+import DocsLogo from 'assets/logos/Docs.png';
+import FigmaLogo from 'assets/logos/Figma.png';
+import PlayStoreLogo from 'assets/logos/Play Store.png';
 import {useWindowDimensions} from 'hooks';
 
 import {Step1, Step2, Step3, Step4} from '../assets/icons';
@@ -15,7 +21,10 @@ const MilestonesAndPayouts: FC = () => {
     <div className="MilestonesAndPayouts" id="milestones-and-payouts">
       <h1 className="MilestonesAndPayouts__heading">Milestones And Payouts</h1>
       <div className="MilestonesAndPayouts__note">
-        <p className="MilestonesAndPayouts__note-highlight">Important</p>
+        <span className="MilestonesAndPayouts__note-highlight">
+          <Icon className="MilestonesAndPayouts__note-highlight-icon" icon={IconType.alertCircleOutline} />
+          Important
+        </span>
         <p className="MilestonesAndPayouts__note-text">
           Project leads must plan and write milestones with the help of a project auditor.
         </p>
@@ -79,7 +88,11 @@ const MilestonesAndPayouts: FC = () => {
             <p className="MilestonesAndPayouts__pow-table-row-text">
               For all design-only related work, including UI/UX: a publicly viewable Figma, Adobe XD, or other URL
             </p>
-            <div className="MilestonesAndPayouts__pow-table-row-icons" />
+            <div className="MilestonesAndPayouts__pow-table-row-apps">
+              <div className="MilestonesAndPayouts__pow-table-row-apps-logo">
+                <img alt="Figma" className="MilestonesAndPayouts__pow-table-row-apps-logo-image" src={FigmaLogo} />
+              </div>
+            </div>
           </div>
           <div className="MilestonesAndPayouts__pow-table-row">
             <h4 className="MilestonesAndPayouts__pow-table-row-heading"> New Feature </h4>
@@ -87,14 +100,14 @@ const MilestonesAndPayouts: FC = () => {
               For the addition of a new feature: link to a pull request or issue with pull request linked, and the
               screenshot /recording showing the new feature in action
             </p>
-            <div className="MilestonesAndPayouts__pow-table-row-icons" />
+            <div className="MilestonesAndPayouts__pow-table-row-apps" />
           </div>
           <div className="MilestonesAndPayouts__pow-table-row">
             <h4 className="MilestonesAndPayouts__pow-table-row-heading"> Live Website </h4>
             <p className="MilestonesAndPayouts__pow-table-row-text">
               For live websites: complete URL of the page showing a new feature
             </p>
-            <div className="MilestonesAndPayouts__pow-table-row-icons" />
+            <div className="MilestonesAndPayouts__pow-table-row-apps" />
           </div>
           <div className="MilestonesAndPayouts__pow-table-row">
             <h4 className="MilestonesAndPayouts__pow-table-row-heading"> Documentation </h4>
@@ -102,14 +115,36 @@ const MilestonesAndPayouts: FC = () => {
               For all documentation-related work: a publicly viewable Google Doc URL (research-related Google Docs must
               have a clear description of the research and its findings)
             </p>
-            <div className="MilestonesAndPayouts__pow-table-row-icons" />
+            <div className="MilestonesAndPayouts__pow-table-row-apps">
+              <div className="MilestonesAndPayouts__pow-table-row-apps-logo">
+                <img alt="Docs" className="MilestonesAndPayouts__pow-table-row-apps-logo-image" src={DocsLogo} />
+              </div>
+            </div>
           </div>
           <div className="MilestonesAndPayouts__pow-table-row">
             <h4 className="MilestonesAndPayouts__pow-table-row-heading"> Published Applications </h4>
             <p className="MilestonesAndPayouts__pow-table-row-text">
               For published applications: link to the Google Play Store, App Store, Chrome Web Store, and so on
             </p>
-            <div className="MilestonesAndPayouts__pow-table-row-icons" />
+            <div className="MilestonesAndPayouts__pow-table-row-apps">
+              <div className="MilestonesAndPayouts__pow-table-row-apps-logo">
+                <img
+                  alt="PlayStore"
+                  className="MilestonesAndPayouts__pow-table-row-apps-logo-image"
+                  src={PlayStoreLogo}
+                />
+              </div>
+              <div className="MilestonesAndPayouts__pow-table-row-apps-logo">
+                <img
+                  alt="AppStore"
+                  className="MilestonesAndPayouts__pow-table-row-apps-logo-image"
+                  src={AppStoreLogo}
+                />
+              </div>
+              <div className="MilestonesAndPayouts__pow-table-row-apps-logo">
+                <img alt="Chrome" className="MilestonesAndPayouts__pow-table-row-apps-logo-image" src={ChromeLogo} />
+              </div>
+            </div>
           </div>
           <div className="MilestonesAndPayouts__pow-table-row">
             <h4 className="MilestonesAndPayouts__pow-table-row-heading"> Marketing/ Social Media </h4>
@@ -117,21 +152,21 @@ const MilestonesAndPayouts: FC = () => {
               For marketing and social media related work: links to all the posts and user engagement data (if
               available)
             </p>
-            <div className="MilestonesAndPayouts__pow-table-row-icons" />
+            <div className="MilestonesAndPayouts__pow-table-row-apps" />
           </div>
           <div className="MilestonesAndPayouts__pow-table-row">
             <h4 className="MilestonesAndPayouts__pow-table-row-heading"> DevOps </h4>
             <p className="MilestonesAndPayouts__pow-table-row-text">
               For DevOps-related work: diagrams, documentation, screenshots, config files, and so on
             </p>
-            <div className="MilestonesAndPayouts__pow-table-row-icons" />
+            <div className="MilestonesAndPayouts__pow-table-row-apps" />
           </div>
           <div className="MilestonesAndPayouts__pow-table-row">
             <h4 className="MilestonesAndPayouts__pow-table-row-heading"> Backend APIs </h4>
             <p className="MilestonesAndPayouts__pow-table-row-text">
               For DevOps-related work: diagrams, documentation, screenshots, config files, and so on
             </p>
-            <div className="MilestonesAndPayouts__pow-table-row-icons" />
+            <div className="MilestonesAndPayouts__pow-table-row-apps" />
           </div>
         </div>
       </div>
