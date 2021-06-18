@@ -1,10 +1,20 @@
 .ProjectRules {
   &__banner {
     align-items: center;
+    background-image: url('./assets/img/banner-xl.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     height: 200px;
     justify-content: center;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    top: 60px;
+    width: 100vw;
+    z-index: 1;
 
     &-headline {
       font-size: 42px;
@@ -18,6 +28,10 @@
       line-height: 20px;
       margin-top: 16px;
     }
+  }
+
+  &__content {
+    margin-top: 200px;
   }
 
   &__divider {
@@ -55,6 +69,10 @@
         font-weight: 700;
       }
 
+      &:hover {
+        font-weight: 500;
+      }
+
       &:not(:last-child) {
         margin-bottom: 24px;
       }
@@ -62,6 +80,10 @@
   }
 
   @media (max-width: 992px) {
+    &__banner {
+      background-image: url('./assets/img/banner-lg.svg');
+    }
+
     &__main {
       grid-template-columns: auto;
       padding: 48px;
@@ -72,7 +94,26 @@
     }
   }
 
+  @media (max-width: 768px) {
+    &__banner {
+      background-image: url('./assets/img/banner-md.svg');
+      padding: 36px;
+
+      &-headline {
+        font-size: 36px;
+      }
+    }
+  }
+
   @media (max-width: 414px) {
+    &__banner {
+      background-image: url('./assets/img/banner-sm.svg');
+
+      &-headline {
+        font-size: 24px;
+      }
+    }
+
     &__main {
       padding: 24px;
     }

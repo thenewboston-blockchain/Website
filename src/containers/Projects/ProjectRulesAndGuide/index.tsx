@@ -46,7 +46,7 @@ const ProjectsRules: FC = () => {
               className="ProjectRules__sidebar-item"
               hashSpy
               key={section.id}
-              offset={-64}
+              offset={-308}
               smooth
               spy
               to={section.id}
