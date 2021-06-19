@@ -31,29 +31,7 @@
   &__illustration {
     left: 50%;
     max-width: 538px;
-    min-width: 325px;
     min-width: 200px;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    &-placeholder {
-      filter: blur(25px);
-      opacity: 1;
-
-      &--loaded {
-        opacity: 0;
-      }
-    }
-
-    &-real {
-      filter: blur(25px);
-      transition: filter 1s linear;
-
-      &--loaded {
-        filter: blur(0px);
-      }
-    }
   }
 
   &__main-right {

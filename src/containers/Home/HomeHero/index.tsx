@@ -1,16 +1,16 @@
-import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
+import React, {FC, useCallback, useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom';
 import clsx from 'clsx';
 
-import {Button} from 'components';
+import {Button, ImageWithBlurredPlaceholder} from 'components';
 import SocialMediaIcon from 'components/SocialMediaIcon';
 import {AnimationState} from 'constants/animation';
 import {useAnimationState, useShuffle, useWindowDimensions} from 'hooks';
 import {SocialMedia} from 'types/social-media';
 
 import HelloWorld, {defaultHelloWorld, HelloWorldKeys} from './hello-world';
-import HeroV2Svg from './HeroV2.svg';
-import HeroV2WebP from './HeroV2.webp';
+import HeroV2 from './HeroV2.svg';
+import HeroV2Placeholder from './HeroV2.webp';
 import './HomeHero.scss';
 
 const HelloFadeClass = {
@@ -22,7 +22,6 @@ const HomeHero: FC = () => {
   const animationState = useAnimationState(AnimationState.ONE, 1000, 4000);
   const shouldShuffle = useRef(false);
   const helloText = useShuffle(defaultHelloWorld, HelloWorld, HelloWorldKeys, shouldShuffle.current);
-  const [isHeroImageLoaded, setIsHeroImageLoaded] = useState(false);
   const {width} = useWindowDimensions();
 
   useEffect(() => {
@@ -66,26 +65,12 @@ const HomeHero: FC = () => {
           </div>
         </div>
         {width > 414 && (
-          <div className="HomeHero__right">
-            <img
-              alt="hero"
-              className={clsx('HomeHero__image HomeHero__image-placeholder', {
-                'HomeHero__image-placeholder--loaded': isHeroImageLoaded,
-              })}
-              src={HeroV2WebP}
-            />
-            <img
-              alt="hero"
-              className={clsx('HomeHero__image HomeHero__image-real', {
-                'HomeHero__image-real--loaded': isHeroImageLoaded,
-              })}
-              loading="lazy"
-              src={HeroV2Svg}
-              onLoad={() => {
-                setIsHeroImageLoaded(true);
-              }}
-            />
-          </div>
+          <ImageWithBlurredPlaceholder
+            alt="Home Hero Image"
+            containerClassName="HomeHero__right"
+            placeholderSrc={HeroV2Placeholder}
+            realSrc={HeroV2}
+          />
         )}
       </div>
     </div>

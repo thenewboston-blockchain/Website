@@ -26,6 +26,7 @@ import Footer from './Footer';
 import {Button, ErrorMessage, Input} from './FormElements';
 import GoToTop from './GoToTop';
 import HashLink from './HashLink';
+import ImageWithBlurredPlaceholder from './ImageWithBlurredPlaceholder';
 import Label from './Label';
 import Layout from './Layout';
 import MarketingButton from './MarketingButton';
@@ -77,6 +78,7 @@ export {
   Footer,
   GoToTop,
   HashLink,
+  ImageWithBlurredPlaceholder,
   Input,
   Label,
   LabelFilter,

@@ -1,17 +1,15 @@
-import React, {FC, useState} from 'react';
+import React, {FC} from 'react';
 import {Link} from 'react-router-dom';
-import clsx from 'clsx';
 
-import {Button} from 'components';
+import {Button, ImageWithBlurredPlaceholder} from 'components';
 import {useWindowDimensions} from 'hooks';
 import HomeValuesCard from './HomeValuesCard';
-import ValuesIllustrationWebP from './ValuesIllustration.webp';
-import ValuesIllustrationSvg from './ValuesIllustration.svg';
+import ValuesIllustrationPlaceholder from './ValuesIllustration.webp';
+import ValuesIllustration from './ValuesIllustration.svg';
 import './HomeValues.scss';
 
 const HomeValues: FC = () => {
   const {width} = useWindowDimensions();
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   let iconSize;
   if (width < 600) {
@@ -26,28 +24,16 @@ const HomeValues: FC = () => {
     <div className="HomeValues">
       <HomeValuesCard />
       <div className="HomeValues__main">
-        <div className="HomeValues__illustration-container" style={{height: iconSize.height, width: iconSize.width}}>
-          <img
-            alt="HomeValuesIllustration"
-            className={clsx('HomeValues__illustration HomeValues__illustration-placeholder', {
-              'HomeValues__illustration-placeholder--loaded': isImageLoaded,
-            })}
-            width={iconSize.width}
-            height={iconSize.height}
-            src={ValuesIllustrationWebP}
-          />
-          <img
-            alt="HomeValuesIllustration"
-            className={clsx('HomeValues__illustration HomeValues__illustration-real', {
-              'HomeValues__illustration-real--loaded': isImageLoaded,
-            })}
-            loading="lazy"
-            width={iconSize.width}
-            height={iconSize.height}
-            src={ValuesIllustrationSvg}
-            onLoad={() => setIsImageLoaded(true)}
-          />
-        </div>
+        <ImageWithBlurredPlaceholder
+          alt="Illustration about TNBC's Values"
+          containerClassName="HomeValues__illustration-container"
+          placeholderImageClassName="HomeValues__illustration"
+          realImageClassName="HomeValues__illustration"
+          height={iconSize.height}
+          placeholderSrc={ValuesIllustrationPlaceholder}
+          realSrc={ValuesIllustration}
+          width={iconSize.width}
+        />
         <div className="HomeValues__main-right">
           <div className="HomeValues__main-title">The value comes from you</div>
           <div className="HomeValues__main-description">
