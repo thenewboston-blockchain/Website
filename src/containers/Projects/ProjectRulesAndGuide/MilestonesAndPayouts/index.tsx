@@ -7,6 +7,7 @@ import DocsLogo from 'assets/logos/Docs.png';
 import FigmaLogo from 'assets/logos/Figma.png';
 import PlayStoreLogo from 'assets/logos/Play Store.png';
 import {A} from 'components';
+import {MEDIUM_DEVICE_WIDTH} from 'constants/breakpoints';
 import {useWindowDimensions} from 'hooks';
 
 import {Step1, Step2, Step3, Step4} from '../assets/icons';
@@ -14,8 +15,6 @@ import RoadmapIllustration from '../assets/img/roadmap.png';
 import './MilestonesAndPayouts.scss';
 
 const MilestonesAndPayouts: FC = () => {
-  const SMALL_DEVICE_WIDTH = 768;
-
   const {width} = useWindowDimensions();
 
   return (
@@ -49,7 +48,7 @@ const MilestonesAndPayouts: FC = () => {
             for all objectives.
           </div>
         </div>
-        {width <= SMALL_DEVICE_WIDTH && <hr className="MilestonesAndPayouts__process-divider" />}
+        {width <= MEDIUM_DEVICE_WIDTH && <hr className="MilestonesAndPayouts__process-divider" />}
         <div className="MilestonesAndPayouts__process-step">
           <div className="MilestonesAndPayouts__process-step-count">
             <Step2 />
@@ -59,7 +58,7 @@ const MilestonesAndPayouts: FC = () => {
             required clarifications, they will leave a comment.
           </div>
         </div>
-        {width <= SMALL_DEVICE_WIDTH && <hr className="MilestonesAndPayouts__process-divider" />}
+        {width <= MEDIUM_DEVICE_WIDTH && <hr className="MilestonesAndPayouts__process-divider" />}
         <div className="MilestonesAndPayouts__process-step">
           <div className="MilestonesAndPayouts__process-step-count">
             <Step3 />
@@ -72,7 +71,7 @@ const MilestonesAndPayouts: FC = () => {
             according to the next roadmap milestone.
           </div>
         </div>
-        {width <= SMALL_DEVICE_WIDTH && <hr className="MilestonesAndPayouts__process-divider" />}
+        {width <= MEDIUM_DEVICE_WIDTH && <hr className="MilestonesAndPayouts__process-divider" />}
         <div className="MilestonesAndPayouts__process-step">
           <div className="MilestonesAndPayouts__process-step-count">
             <Step4 />
@@ -82,7 +81,7 @@ const MilestonesAndPayouts: FC = () => {
             essential information. The auditor will then submit the new milestone to the government for final review.
           </div>
         </div>
-        {width <= SMALL_DEVICE_WIDTH && <hr className="MilestonesAndPayouts__process-divider" />}
+        {width <= MEDIUM_DEVICE_WIDTH && <hr className="MilestonesAndPayouts__process-divider" />}
       </div>
       <div className="MilestonesAndPayouts__pow">
         <h3 className="MilestonesAndPayouts__pow-heading">Acceptable Proof of Work</h3>

@@ -1,14 +1,13 @@
 import React, {FC} from 'react';
 
 import {A, Label} from 'components';
+import {MEDIUM_DEVICE_WIDTH} from 'constants/breakpoints';
 import {useWindowDimensions} from 'hooks';
 
 import {Step1, Step2, Step3, Step4} from '../assets/icons';
 import './ProposalSubmissionProcess.scss';
 
 const ProposalSubmissionProcess: FC = () => {
-  const SMALL_DEVICE_WIDTH = 768;
-
   const {width} = useWindowDimensions();
 
   return (
@@ -65,7 +64,7 @@ const ProposalSubmissionProcess: FC = () => {
           </div>
         </div>
       </div>
-      {width <= SMALL_DEVICE_WIDTH && <hr className="ProposalSubmissionProcess__step-divider" />}
+      {width <= MEDIUM_DEVICE_WIDTH && <hr className="ProposalSubmissionProcess__step-divider" />}
       <div className="ProposalSubmissionProcess__step">
         <div className="ProposalSubmissionProcess__step-count">
           <Step2 />
@@ -113,7 +112,7 @@ const ProposalSubmissionProcess: FC = () => {
           </div>
         </div>
       </div>
-      {width <= SMALL_DEVICE_WIDTH && <hr className="ProposalSubmissionProcess__step-divider" />}
+      {width <= MEDIUM_DEVICE_WIDTH && <hr className="ProposalSubmissionProcess__step-divider" />}
       <div className="ProposalSubmissionProcess__step">
         <div className="ProposalSubmissionProcess__step-count">
           <Step3 />
@@ -141,7 +140,7 @@ const ProposalSubmissionProcess: FC = () => {
           </div>
         </div>
       </div>
-      {width <= SMALL_DEVICE_WIDTH && <hr className="ProposalSubmissionProcess__step-divider" />}
+      {width <= MEDIUM_DEVICE_WIDTH && <hr className="ProposalSubmissionProcess__step-divider" />}
       <div className="ProposalSubmissionProcess__step">
         <div className="ProposalSubmissionProcess__step-count">
           <Step4 />
@@ -161,7 +160,7 @@ const ProposalSubmissionProcess: FC = () => {
           </div>
         </div>
       </div>
-      {width <= SMALL_DEVICE_WIDTH && <hr className="ProposalSubmissionProcess__step-divider" />}
+      {width <= MEDIUM_DEVICE_WIDTH && <hr className="ProposalSubmissionProcess__step-divider" />}
     </div>
   );
 };
