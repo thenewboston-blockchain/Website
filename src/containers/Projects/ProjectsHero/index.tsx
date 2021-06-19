@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {useHistory} from 'react-router-dom';
 
-import {Button, ImageWithBlurredPlaceholder} from 'components';
+import {Button, ProgressiveImage} from 'components';
 import ProjectsHeroImage from './ProjectsHeroImage.svg';
 import ProjectsHeroImagePlaceholder from './ProjectsHeroImage.webp';
 import './ProjectsHero.scss';
@@ -37,7 +37,7 @@ const ProjectsHero: FC = () => {
             </div>
           </div>
         </div>
-        <ImageWithBlurredPlaceholder
+        <ProgressiveImage
           alt="Projects Hero Image"
           containerClassName="ProjectsHero__right"
           placeholderSrc={ProjectsHeroImagePlaceholder}

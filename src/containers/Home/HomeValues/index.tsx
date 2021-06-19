@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {Link} from 'react-router-dom';
 
-import {Button, ImageWithBlurredPlaceholder} from 'components';
+import {Button, ProgressiveImage} from 'components';
 import {useWindowDimensions} from 'hooks';
 import HomeValuesCard from './HomeValuesCard';
 import ValuesIllustrationPlaceholder from './ValuesIllustration.webp';
@@ -24,7 +24,7 @@ const HomeValues: FC = () => {
     <div className="HomeValues">
       <HomeValuesCard />
       <div className="HomeValues__main">
-        <ImageWithBlurredPlaceholder
+        <ProgressiveImage
           alt="Illustration about TNBC's Values"
           containerClassName="HomeValues__illustration-container"
           placeholderImageClassName="HomeValues__illustration"

@@ -2,7 +2,7 @@ import React, {FC, useCallback, useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom';
 import clsx from 'clsx';
 
-import {Button, ImageWithBlurredPlaceholder} from 'components';
+import {Button, ProgressiveImage} from 'components';
 import SocialMediaIcon from 'components/SocialMediaIcon';
 import {AnimationState} from 'constants/animation';
 import {useAnimationState, useShuffle, useWindowDimensions} from 'hooks';
@@ -65,7 +65,7 @@ const HomeHero: FC = () => {
           </div>
         </div>
         {width > 414 && (
-          <ImageWithBlurredPlaceholder
+          <ProgressiveImage
             alt="Home Hero Image"
             containerClassName="HomeHero__right"
             placeholderSrc={HeroV2Placeholder}

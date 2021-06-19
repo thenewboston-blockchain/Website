@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import clsx from 'clsx';
 
-import './ImageWithBlurredPlaceholder.scss';
+import './ProgressiveImage.scss';
 
 type Props = {
   alt: string;
@@ -14,7 +14,7 @@ type Props = {
   realImageClassName?: string;
 };
 
-const ImageWithBlurredPlaceholder = ({
+const ProgressiveImage = ({
   alt,
   containerClassName,
   height,
@@ -26,13 +26,13 @@ const ImageWithBlurredPlaceholder = ({
 }: Props) => {
   const [isLoaded, setIsLoaded] = useState(false);
   return (
-    <div className={clsx('ImageWithBlurredPlaceholder', containerClassName)} style={{height, width}}>
+    <div className={clsx('ProgressiveImage', containerClassName)} style={{height, width}}>
       <img
         alt={alt}
         className={clsx(
-          'ImageWithBlurredPlaceholder-placeholder',
+          'ProgressiveImage-placeholder',
           {
-            'ImageWithBlurredPlaceholder-placeholder--loaded': isLoaded,
+            'ProgressiveImage-placeholder--loaded': isLoaded,
           },
           placeholderImageClassName,
         )}
@@ -43,9 +43,9 @@ const ImageWithBlurredPlaceholder = ({
       <img
         alt={alt}
         className={clsx(
-          'ImageWithBlurredPlaceholder-real',
+          'ProgressiveImage-real',
           {
-            'ImageWithBlurredPlaceholder-real--loaded': isLoaded,
+            'ProgressiveImage-real--loaded': isLoaded,
           },
           realImageClassName,
         )}
@@ -59,4 +59,4 @@ const ImageWithBlurredPlaceholder = ({
   );
 };
 
-export default ImageWithBlurredPlaceholder;
+export default ProgressiveImage;
