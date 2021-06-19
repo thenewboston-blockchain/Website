@@ -176,7 +176,9 @@ const Download: FC = () => {
       <PageTitle title="Download" />
       <div className="Download">
         {loading ? (
-          <Loader />
+          <div className="Download__loading-container">
+            <Loader />
+          </div>
         ) : (
           <>
             <div className="Download__main-background">
