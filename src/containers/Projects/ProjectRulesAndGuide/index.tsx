@@ -12,7 +12,7 @@ interface Section {
   title: string;
 }
 
-const ProjectsRules: FC = () => {
+const ProjectRules: FC = () => {
   const SECTIONS: Section[] = [
     {
       id: 'how-proposals-work',
@@ -69,4 +69,4 @@ const ProjectsRules: FC = () => {
   );
 };
 
-export default ProjectsRules;
+export default ProjectRules;

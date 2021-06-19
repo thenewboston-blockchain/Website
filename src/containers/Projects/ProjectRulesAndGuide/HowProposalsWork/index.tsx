@@ -15,7 +15,7 @@ const HowProposalsWork: FC = () => {
         <h3 className="HowProposalsWork__step-heading">Submit proposal</h3>
         <p className="HowProposalsWork__step-text">
           To receive funding, you must{' '}
-          <A href="#rules" newWindow={false}>
+          <A href="#proposal-submission-process" newWindow={false}>
             submit your project proposal
           </A>{' '}
           to thenewboston team who will review the details of the proposal to ensure it meets all rules and guidelines.
@@ -35,11 +35,11 @@ const HowProposalsWork: FC = () => {
             rules and guidelines
           </A>{' '}
           that projects must follow, as well as detailed{' '}
-          <A href="#" newWindow={false}>
+          <A href="#milestones-and-payouts" newWindow={false}>
             milestone reports
           </A>{' '}
           that the{' '}
-          <A href="#" newWindow={false}>
+          <A href="#milestones-and-payouts" newWindow={false}>
             project lead
           </A>{' '}
           must submit to receive payments

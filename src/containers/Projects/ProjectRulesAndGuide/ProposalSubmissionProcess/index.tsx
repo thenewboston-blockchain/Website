@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {Label} from 'components';
+import {A, Label} from 'components';
 import {useWindowDimensions} from 'hooks';
 
 import {Step1, Step2, Step3, Step4} from '../assets/icons';
@@ -25,7 +25,11 @@ const ProposalSubmissionProcess: FC = () => {
           <div className="ProposalSubmissionProcess__step-header">
             <h3 className="ProposalSubmissionProcess__step-heading"> Submission </h3>
             <p className="ProposalSubmissionProcess__step-sub-text">
-              To submit a project proposal, fill out all project details using the project proposal template.
+              To submit a project proposal, fill out all project details using the{' '}
+              <A href="#" newWindow={false}>
+                project proposal
+              </A>{' '}
+              template.
             </p>
           </div>
           <div className="ProposalSubmissionProcess__step-content">
@@ -118,7 +122,10 @@ const ProposalSubmissionProcess: FC = () => {
           <div className="ProposalSubmissionProcess__step-header">
             <h3 className="ProposalSubmissionProcess__step-heading"> Repository </h3>
             <p className="ProposalSubmissionProcess__step-sub-text">
-              If and when the proposal is accepted, the auditor will create a new directory within the project's folder
+              If and when the proposal is accepted, the auditor will create a new directory within the{' '}
+              <A href="#" newWindow={false}>
+                project's folder
+              </A>{' '}
               with the completed version of the project proposal.
             </p>
           </div>

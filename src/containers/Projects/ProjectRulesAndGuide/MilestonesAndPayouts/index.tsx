@@ -6,6 +6,7 @@ import ChromeLogo from 'assets/logos/Chrome.png';
 import DocsLogo from 'assets/logos/Docs.png';
 import FigmaLogo from 'assets/logos/Figma.png';
 import PlayStoreLogo from 'assets/logos/Play Store.png';
+import {A} from 'components';
 import {useWindowDimensions} from 'hooks';
 
 import {Step1, Step2, Step3, Step4} from '../assets/icons';
@@ -64,8 +65,11 @@ const MilestonesAndPayouts: FC = () => {
             <Step3 />
           </div>
           <div className="MilestonesAndPayouts__process-step-text">
-            Once a milestone has been accepted, the payment will be sent. The project lead can then complete the next
-            milestone proposal according to the next roadmap milestone.
+            Once a milestone has been accepted, the payment will be sent. The project lead can then complete the next{' '}
+            <A href="#" newWindow={false}>
+              milestone proposal
+            </A>{' '}
+            according to the next roadmap milestone.
           </div>
         </div>
         {width <= SMALL_DEVICE_WIDTH && <hr className="MilestonesAndPayouts__process-divider" />}
