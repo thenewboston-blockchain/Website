@@ -37,7 +37,7 @@
     margin-top: 0;
   }
 
-  @media (max-width: 414px) {
+  @media (max-width: 480px) {
     &__heading {
       @include h1;
     }
