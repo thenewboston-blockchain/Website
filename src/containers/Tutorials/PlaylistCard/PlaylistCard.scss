@@ -30,6 +30,13 @@
     }
   }
 
+  &__top {
+    height: 0;
+    /* Formula is: (height / width * 100%) */
+    padding-top: calc(360 / 640 * 100%);
+    position: relative;
+  }
+
   &__title {
     font-weight: 500;
     line-height: 125%;
@@ -38,6 +45,9 @@
 
   &__thumbnail {
     height: auto;
-    width: 100%;
+    left: 0;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
   }
 }
