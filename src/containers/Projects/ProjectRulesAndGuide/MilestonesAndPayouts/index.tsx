@@ -65,7 +65,7 @@ const MilestonesAndPayouts: FC = () => {
           </div>
           <div className="MilestonesAndPayouts__process-step-text">
             Once a milestone has been accepted, the payment will be sent. The project lead can then complete the next{' '}
-            <A href="#" newWindow={false}>
+            <A href="https://github.com/thenewboston-developers/Projects/issues/new?assignees=&labels=Milestone&template=milestone-proposal.md&title=NAME_OF_PROJECT+-+NAME_OF_MILESTONE+-+MILESTONE_NUMBER">
               milestone proposal
             </A>{' '}
             according to the next roadmap milestone.

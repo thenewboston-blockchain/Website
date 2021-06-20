@@ -25,7 +25,7 @@ const ProposalSubmissionProcess: FC = () => {
             <h3 className="ProposalSubmissionProcess__step-heading"> Submission </h3>
             <p className="ProposalSubmissionProcess__step-sub-text">
               To submit a project proposal, fill out all project details using the{' '}
-              <A href="#" newWindow={false}>
+              <A href="https://github.com/thenewboston-developers/Projects/issues/new?assignees=&labels=Project&template=project-proposal.md&title=NAME_OF_YOUR_PROJECT">
                 project proposal
               </A>{' '}
               template.
@@ -122,9 +122,7 @@ const ProposalSubmissionProcess: FC = () => {
             <h3 className="ProposalSubmissionProcess__step-heading"> Repository </h3>
             <p className="ProposalSubmissionProcess__step-sub-text">
               If and when the proposal is accepted, the auditor will create a new directory within the{' '}
-              <A href="#" newWindow={false}>
-                project's folder
-              </A>{' '}
+              <A href="https://github.com/thenewboston-developers/Projects/tree/master/projects">project's folder</A>{' '}
               with the completed version of the project proposal.
             </p>
           </div>

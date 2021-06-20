@@ -38,11 +38,7 @@ const HowProposalsWork: FC = () => {
           <A href="#milestones-and-payouts" newWindow={false}>
             milestone reports
           </A>{' '}
-          that the{' '}
-          <A href="#milestones-and-payouts" newWindow={false}>
-            project lead
-          </A>{' '}
-          must submit to receive payments
+          that the project lead must submit to receive payments
         </p>
       </div>
     </div>
