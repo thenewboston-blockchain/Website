@@ -1,6 +1,8 @@
 import React, {FC} from 'react';
 import {Link} from 'react-scroll';
 
+import {NAVBAR_HEIGHT} from 'constants/offsets';
+
 import HowProposalsWork from './HowProposalsWork';
 import Rules from './Rules';
 import ProposalSubmissionProcess from './ProposalSubmissionProcess';
@@ -13,6 +15,8 @@ interface Section {
 }
 
 const ProjectRules: FC = () => {
+  const BANNER_HEIGHT = 200;
+
   const SECTIONS: Section[] = [
     {
       id: 'how-proposals-work',
@@ -46,7 +50,7 @@ const ProjectRules: FC = () => {
               className="ProjectRules__sidebar-item"
               hashSpy
               key={section.id}
-              offset={-308}
+              offset={-(NAVBAR_HEIGHT + BANNER_HEIGHT + 48)} // Navbar + Banner + Padding
               smooth
               spy
               to={section.id}
