@@ -1,9 +1,10 @@
+@import 'styles/font-mixins';
+
 .MilestonesAndPayouts {
   &__heading {
+    @extend %display2;
     color: var(--color-gray-900);
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 125%;
+    font-weight: var(--font-weight-bold);
     margin-bottom: 48px;
   }
 
@@ -16,8 +17,7 @@
       align-items: center;
       color: var(--color-yellow-400);
       display: flex;
-      font-weight: 700;
-      line-height: 143%;
+      font-weight: var(--font-weight-bold);
       margin-bottom: 10px;
 
       &-icon {
@@ -26,9 +26,8 @@
     }
 
     &-text {
+      @extend %h4;
       color: var(--color-gray-700);
-      font-size: 14px;
-      line-height: 143%;
       margin: 0;
     }
   }
@@ -37,10 +36,9 @@
     margin-bottom: 88px;
 
     &-heading {
+      @extend %h2;
       color: var(--color-gray-900);
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 120%;
+      font-weight: var(--font-weight-bold);
       margin-bottom: 64px;
     }
 
@@ -69,19 +67,17 @@
         }
 
         &-heading {
+          @extend %h3;
           align-self: center;
           border-right: 1px solid var(--color-gray-075);
           color: var(--color-blue-900);
-          font-size: 16px;
-          line-height: 120%;
           padding-right: 8px;
         }
 
         &-text {
+          @extend %h3;
           align-self: center;
           color: var(--color-gray-700);
-          font-size: 16px;
-          line-height: 120%;
           margin: 0;
         }
       }
@@ -92,10 +88,9 @@
     margin-bottom: 120px;
 
     &-heading {
+      @extend %h2;
       color: var(--color-gray-900);
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 120%;
+      font-weight: var(--font-weight-bold);
       margin-bottom: 64px;
     }
 
@@ -107,10 +102,9 @@
       padding: 32px;
 
       &-text {
+        @extend %h3;
         align-self: center;
         color: var(--color-gray-700);
-        font-size: 16px;
-        line-height: 120%;
       }
     }
   }
@@ -121,10 +115,9 @@
     padding: 40px;
 
     &-heading {
+      @extend %h2;
       color: var(--color-gray-900);
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 120%;
+      font-weight: var(--font-weight-bold);
       margin-bottom: 8px;
     }
 
@@ -134,9 +127,8 @@
     }
 
     &-text {
+      @extend %h3;
       color: var(--color-gray-700);
-      font-size: 16px;
-      line-height: 120%;
       margin-bottom: 88px;
     }
   }
@@ -176,8 +168,7 @@
 
   @media (max-width: 414px) {
     &__heading {
-      font-size: 24px;
-      line-height: 120%;
+      @include h1;
     }
 
     &__pow {

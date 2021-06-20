@@ -1,17 +1,17 @@
+@import 'styles/font-mixins';
+
 .Rules {
   &__heading {
+    @extend %display2;
     color: var(--color-gray-900);
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 125%;
+    font-weight: var(--font-weight-bold);
     margin-bottom: 16px;
   }
 
   &__list {
     &-heading {
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 120%;
+      @extend %h1;
+      font-weight: var(--font-weight-bold);
       margin-bottom: 24px;
 
       &--green {
@@ -25,7 +25,7 @@
 
     &-item {
       &::marker {
-        font-weight: 700;
+        font-weight: var(--font-weight-bold);
       }
 
       &:not(:last-child) {
@@ -34,9 +34,8 @@
     }
 
     &-items {
+      @extend %h4;
       color: var(--color-gray-700);
-      font-size: 14px;
-      line-height: 20px;
       margin-bottom: 8px;
       margin-top: 0;
       padding-inline-start: 20px;
@@ -48,16 +47,15 @@
   }
 
   &__tagline {
+    @extend %h3;
     color: var(--color-gray-700);
-    font-size: 16px;
     margin-bottom: 64px;
     margin-top: 0;
   }
 
   @media (max-width: 414px) {
     &__heading {
-      font-size: 24px;
-      line-height: 120%;
+      @include h1;
     }
   }
 }
