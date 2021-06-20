@@ -96,10 +96,16 @@
     &__banner {
       background-image: url('./assets/img/banner-md.svg');
       padding: 36px;
+      position: static;
+      width: unset;
 
       &-headline {
         @include display2;
       }
+    }
+
+    &__content {
+      margin-top: 0;
     }
   }
 
