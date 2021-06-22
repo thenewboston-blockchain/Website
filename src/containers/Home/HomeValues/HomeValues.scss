@@ -23,7 +23,14 @@
     }
   }
 
+  &__illustration-container {
+    min-width: 200px;
+    position: relative;
+  }
+
   &__illustration {
+    left: 50%;
+    max-width: 538px;
     min-width: 200px;
   }
 
