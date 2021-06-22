@@ -143,7 +143,22 @@
     &__pow {
       &-table {
         &-row {
-          padding: 28px 32px;
+          box-shadow: none;
+          grid-template-areas: 'heading heading heading' 'text text apps';
+          grid-template-columns: none;
+          padding: 28px 0px;
+
+          &-apps {
+            grid-area: apps;
+          }
+
+          &-heading {
+            grid-area: heading;
+          }
+
+          &-text {
+            grid-area: text;
+          }
         }
       }
     }
@@ -174,14 +189,7 @@
     &__pow {
       &-table {
         &-row {
-          box-shadow: none;
-          grid-template-areas: 'heading heading' 'text apps';
-          grid-template-columns: none;
-          padding: 28px 0px;
-
           &-apps {
-            grid-area: apps;
-
             &-logo {
               height: 32px;
               width: 32px;
@@ -191,14 +199,6 @@
                 width: 16px;
               }
             }
-          }
-
-          &-heading {
-            grid-area: heading;
-          }
-
-          &-text {
-            grid-area: text;
           }
         }
       }
