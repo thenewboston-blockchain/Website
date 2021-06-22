@@ -1,10 +1,11 @@
 import React, {FC} from 'react';
 import {Link} from 'react-router-dom';
 
-import {Button} from 'components';
+import {Button, ProgressiveImage} from 'components';
 import {useWindowDimensions} from 'hooks';
 import HomeValuesCard from './HomeValuesCard';
-import ValuesIllustration from './ValuesIllustration';
+import ValuesIllustrationPlaceholder from './ValuesIllustration.webp';
+import ValuesIllustration from './ValuesIllustration.svg';
 import './HomeValues.scss';
 
 const HomeValues: FC = () => {
@@ -23,7 +24,16 @@ const HomeValues: FC = () => {
     <div className="HomeValues">
       <HomeValuesCard />
       <div className="HomeValues__main">
-        <ValuesIllustration className="HomeValues__illustration" width={iconSize.width} height={iconSize.height} />
+        <ProgressiveImage
+          alt="Illustration about TNBC's Values"
+          containerClassName="HomeValues__illustration-container"
+          placeholderImageClassName="HomeValues__illustration"
+          realImageClassName="HomeValues__illustration"
+          height={iconSize.height}
+          placeholderSrc={ValuesIllustrationPlaceholder}
+          realSrc={ValuesIllustration}
+          width={iconSize.width}
+        />
         <div className="HomeValues__main-right">
           <div className="HomeValues__main-title">The value comes from you</div>
           <div className="HomeValues__main-description">

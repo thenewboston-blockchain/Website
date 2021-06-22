@@ -1,8 +1,9 @@
 import React, {FC} from 'react';
 import {useHistory} from 'react-router-dom';
 
-import {Button} from 'components';
-import ProjectsHeroImage from './ProjectsHeroImage';
+import {Button, ProgressiveImage} from 'components';
+import ProjectsHeroImage from './ProjectsHeroImage.svg';
+import ProjectsHeroImagePlaceholder from './ProjectsHeroImage.webp';
 import './ProjectsHero.scss';
 
 const ProjectsHero: FC = () => {
@@ -36,9 +37,14 @@ const ProjectsHero: FC = () => {
             </div>
           </div>
         </div>
-        <div className="ProjectsHero__right">
-          <ProjectsHeroImage />
-        </div>
+        <ProgressiveImage
+          alt="Projects Hero Image"
+          containerClassName="ProjectsHero__right"
+          placeholderSrc={ProjectsHeroImagePlaceholder}
+          realSrc={ProjectsHeroImage}
+          width={564}
+          height={372}
+        />
       </div>
     </div>
   );

@@ -26,6 +26,7 @@ import Footer from './Footer';
 import {Button, ErrorMessage, Input} from './FormElements';
 import GoToTop from './GoToTop';
 import HashLink from './HashLink';
+import ProgressiveImage from './ProgressiveImage';
 import Label from './Label';
 import Layout from './Layout';
 import MarketingButton from './MarketingButton';
@@ -88,6 +89,7 @@ export {
   PageTitle,
   Pagination,
   Popover,
+  ProgressiveImage,
   Qr,
   QueryParamsOffsetAndLimit,
   RequestResponseSnippet,

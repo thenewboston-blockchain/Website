@@ -2,14 +2,15 @@ import React, {FC, useCallback, useEffect, useRef} from 'react';
 import {Link} from 'react-router-dom';
 import clsx from 'clsx';
 
-import {Button} from 'components';
+import {Button, ProgressiveImage} from 'components';
 import SocialMediaIcon from 'components/SocialMediaIcon';
 import {AnimationState} from 'constants/animation';
-import {useAnimationState, useShuffle} from 'hooks';
+import {useAnimationState, useShuffle, useWindowDimensions} from 'hooks';
 import {SocialMedia} from 'types/social-media';
 
 import HelloWorld, {defaultHelloWorld, HelloWorldKeys} from './hello-world';
-import HeroV2Svg from './HeroV2.svg';
+import HeroV2 from './HeroV2.svg';
+import HeroV2Placeholder from './HeroV2.webp';
 import './HomeHero.scss';
 
 const HelloFadeClass = {
@@ -21,6 +22,7 @@ const HomeHero: FC = () => {
   const animationState = useAnimationState(AnimationState.ONE, 1000, 4000);
   const shouldShuffle = useRef(false);
   const helloText = useShuffle(defaultHelloWorld, HelloWorld, HelloWorldKeys, shouldShuffle.current);
+  const {width} = useWindowDimensions();
 
   useEffect(() => {
     shouldShuffle.current = animationState === AnimationState.ZERO;
@@ -62,9 +64,14 @@ const HomeHero: FC = () => {
             <div className="HomeHero__social-media-links">{renderSocialMediaLinks()}</div>
           </div>
         </div>
-        <div className="HomeHero__right">
-          <img alt="hero" className="HomeHero__image" src={HeroV2Svg} />
-        </div>
+        {width > 414 && (
+          <ProgressiveImage
+            alt="Home Hero Image"
+            containerClassName="HomeHero__right"
+            placeholderSrc={HeroV2Placeholder}
+            realSrc={HeroV2}
+          />
+        )}
       </div>
     </div>
   );
