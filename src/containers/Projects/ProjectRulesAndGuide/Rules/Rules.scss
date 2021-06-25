@@ -1,0 +1,61 @@
+@import 'styles/font-mixins';
+
+.Rules {
+  &__heading {
+    @extend %display2;
+    color: var(--color-gray-900);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    &-heading {
+      @extend %h1;
+      font-weight: var(--font-weight-bold);
+      margin-bottom: 24px;
+
+      &--green {
+        color: var(--color-green-300);
+      }
+
+      &--red {
+        color: var(--color-red-400);
+      }
+    }
+
+    &-item {
+      &::marker {
+        font-weight: var(--font-weight-bold);
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+
+    &-items {
+      @extend %h4;
+      color: var(--color-gray-700);
+      margin-bottom: 8px;
+      margin-top: 0;
+      padding-inline-start: 20px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__tagline {
+    @extend %h3;
+    color: var(--color-gray-700);
+    margin-bottom: 64px;
+    margin-top: 0;
+  }
+
+  @media (max-width: 480px) {
+    &__heading {
+      @include h1;
+    }
+  }
+}
