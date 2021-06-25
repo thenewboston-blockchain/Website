@@ -2,7 +2,7 @@ import React, {FC, useEffect, useState} from 'react';
 import subDays from 'date-fns/subDays';
 
 import * as githubApi from 'apis/github';
-import {Loader, PageTitle} from 'components';
+import {Container, Loader, PageTitle} from 'components';
 import {BaseIssue, Milestone} from 'types/github';
 import {TeamName} from 'types/teams';
 import {teamMilestoneDetails} from './constants';
@@ -152,7 +152,7 @@ const Progress: FC = () => {
   return (
     <>
       <PageTitle ogDescription="Weekly Progress" title="Weekly Progress" />
-      <div className="Progress">
+      <Container className="Progress">
         <ProgressHeader
           goal={generalMilestone.milestone.description}
           startDate={startDate}
@@ -223,7 +223,7 @@ const Progress: FC = () => {
             repoNames={teamMilestoneDetails[TeamName.marketing].repositoryNames}
           />
         )}
-      </div>
+      </Container>
     </>
   );
 };

@@ -1,7 +1,7 @@
 import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
 
-import {BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
+import {BreadcrumbMenu, Container, EmptyPage, FlatNavLinks, PageTitle} from 'components';
 import {getOpenings} from 'utils/data';
 import {NavOption} from 'types/option';
 import {OpeningCategory, OpeningsUrlParams} from 'types/openings';
@@ -83,7 +83,7 @@ const Openings: FC = () => {
   return (
     <>
       <PageTitle ogDescription={`${categoryParam} Openings`} title={`${categoryParam} Openings`} />
-      <div className="Openings">
+      <Container className="Openings">
         <BreadcrumbMenu
           className="Openings__BreadcrumbMenu"
           menuItems={renderCategoryFilter()}
@@ -101,7 +101,7 @@ const Openings: FC = () => {
             {renderOpenings()}
           </div>
         )}
-      </div>
+      </Container>
     </>
   );
 };
