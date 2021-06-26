@@ -51,7 +51,7 @@ const Faq: FC = () => {
       .map((faqTopic) => {
         return {
           // filter questions that match with search query
-          content: faqTopic.content.filter((qna) => qna.question.toString().toLowerCase().includes(searchQuery)),
+          content: faqTopic.content.filter((qna) => qna.question.toString().toLowerCase().includes(sanitizedSearch)),
           topic: faqTopic.topic,
         };
       })
