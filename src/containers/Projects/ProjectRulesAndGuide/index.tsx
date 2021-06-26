@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import {Link} from 'react-scroll';
 
+import {Container} from 'components';
 import {NAVBAR_HEIGHT} from 'constants/offsets';
 
 import HowProposalsWork from './HowProposalsWork';
@@ -42,7 +43,7 @@ const ProjectRules: FC = () => {
         <h1 className="ProjectRules__banner-headline">Project Rules and Guidelines</h1>
         <p className="ProjectRules__banner-text">The detailed guidelines about how the projects works. </p>
       </header>
-      <main className="ProjectRules__main">
+      <Container className="ProjectRules__main" element="main">
         <aside className="ProjectRules__sidebar">
           {SECTIONS.map((section) => (
             <Link
@@ -68,7 +69,7 @@ const ProjectRules: FC = () => {
           <hr className="ProjectRules__divider" />
           <MilestonesAndPayouts />
         </section>
-      </main>
+      </Container>
     </div>
   );
 };

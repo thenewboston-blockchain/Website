@@ -3,6 +3,7 @@ import AuthContainer from './AuthContainer';
 import Avatar from './Avatar';
 import BreadcrumbMenu from './BreadcrumbMenu';
 import {CodeSnippet, RequestResponseSnippet, SnippetLang} from './CodeSnippet';
+import Container from './Container';
 import ContributorTasks from './ContributorTasks';
 import CopyableAccountNumber from './CopyableAccountNumber';
 import DashboardLayout from './DashboardLayout';
@@ -58,6 +59,7 @@ export {
   Button,
   CalloutType,
   CodeSnippet,
+  Container,
   ContributorTasks,
   CopyableAccountNumber,
   DashboardLayout,

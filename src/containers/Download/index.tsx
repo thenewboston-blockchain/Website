@@ -1,7 +1,7 @@
 import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'react';
 import {Link} from 'react-router-dom';
 
-import {A, Button, CodeSnippet, Loader, PageTitle} from 'components';
+import {A, Button, CodeSnippet, Container, Loader, PageTitle} from 'components';
 import {Release} from 'types/github';
 import {fetchGithubReleases} from 'utils/github';
 import {displayErrorToast} from 'utils/toast';
@@ -182,7 +182,7 @@ const Download: FC = () => {
         ) : (
           <>
             <div className="Download__main-background">
-              <div className="Download__main-content">
+              <Container className="Download__main-content">
                 <div className="Download__title">Download Wallet</div>
                 <div className="Download__subtitle">Send and receive coins with our free and secure wallet</div>
                 <div className="Download__latest-release">LATEST RELEASE 1.0.0-alpha.{latestReleaseNumber}</div>
@@ -202,12 +202,12 @@ const Download: FC = () => {
                   {renderDownloadCard(Os.Mac)}
                   {renderDownloadCard(Os.Linux)}
                 </div>
-              </div>
+              </Container>
             </div>
-            <div className="Download__release-notes">
+            <Container className="Download__release-notes">
               <div className="Download__release-notes-anchor" id="release-notes" />
               <ReleaseNotes />
-            </div>
+            </Container>
           </>
         )}
       </div>

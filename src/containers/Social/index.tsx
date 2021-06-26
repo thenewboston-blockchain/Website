@@ -1,6 +1,6 @@
 import React, {FC, ReactNode} from 'react';
 
-import {MarketingCard, PageTitle} from 'components';
+import {Container, MarketingCard, PageTitle} from 'components';
 import {SocialMedia} from 'types/social-media';
 
 import './Social.scss';
@@ -23,13 +23,13 @@ const Social: FC = () => {
   return (
     <>
       <PageTitle title="Join the Community!" />
-      <div className="Social">
+      <Container className="Social">
         <h1 className="Social__heading">Be a part of the community</h1>
         <h2 className="Social__subtext">
           Explore ways to get involved, earn coins and stay up-to-date with the latest announcements and events.
         </h2>
         {renderSocialCards()}
-      </div>
+      </Container>
     </>
   );
 };

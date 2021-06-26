@@ -3,10 +3,6 @@
 $top-nav-height: 60px;
 
 .Download {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-
   @media (max-width: 480px) {
     margin: 5% auto;
     padding: 0;
@@ -26,16 +22,13 @@ $top-nav-height: 60px;
     background-color: var(--color-gray-050);
     display: flex;
     justify-content: center;
-    width: 100vw;
   }
 
   &__main-content {
     align-items: center;
     display: flex;
     flex-direction: column;
-    max-width: 1366px;
     padding: 48px 0;
-    width: 100%;
   }
 
   &__title {
@@ -127,22 +120,6 @@ $top-nav-height: 60px;
     width: 100%;
   }
 
-  &__latest-version {
-    padding: 18px 12px;
-    position: absolute;
-    right: 0;
-    text-align: end;
-    top: 0;
-
-    @media (max-width: 768px) {
-      margin-top: 4%;
-      padding: 2% 0;
-
-      position: initial;
-      text-align: center;
-    }
-  }
-
   .instruction-container {
     width: 100%;
 
@@ -170,7 +147,9 @@ $top-nav-height: 60px;
   }
 
   &__release-notes {
-    position: relative;
+    @media (max-width: 1366px) {
+      padding: 0 24px;
+    }
   }
 
   &__release-notes-anchor {

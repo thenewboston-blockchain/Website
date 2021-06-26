@@ -3,7 +3,7 @@ import {Redirect, useParams} from 'react-router-dom';
 
 import {api as projectsApi} from 'apis/projects';
 import {Project} from 'types/projects';
-import {Loader, PageTitle} from 'components';
+import {Container, Loader, PageTitle} from 'components';
 import ListOfProjects from './ListOfProjects';
 import ProjectsHero from './ProjectsHero';
 import ProjectDetails from './ProjectDetails';
@@ -54,10 +54,10 @@ const Projects: FC = () => {
           ogDescription="Earn coins by building apps, games, tools, and other software for thenewboston network."
           title="Projects"
         />
-        <div className="Projects">
+        <Container className="Projects">
           <ProjectsHero />
           <ListOfProjects projects={projects} />
-        </div>
+        </Container>
       </>
     );
   }
@@ -66,7 +66,9 @@ const Projects: FC = () => {
     return (
       <>
         <PageTitle ogDescription={selectedProject.description} title={selectedProject.title} />
-        <ProjectDetails project={selectedProject} />
+        <Container>
+          <ProjectDetails project={selectedProject} />
+        </Container>
       </>
     );
   }

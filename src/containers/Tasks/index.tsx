@@ -5,7 +5,16 @@ import parseISO from 'date-fns/parseISO';
 import intersection from 'lodash/intersection';
 import {Icon, IconType} from '@thenewboston/ui';
 
-import {BreadcrumbMenu, DropdownInput, EmptyPage, FlatNavLinks, LabelFilter, Loader, PageTitle} from 'components';
+import {
+  BreadcrumbMenu,
+  Container,
+  DropdownInput,
+  EmptyPage,
+  FlatNavLinks,
+  LabelFilter,
+  Loader,
+  PageTitle,
+} from 'components';
 import {fetchGithubIssues} from 'utils/github';
 import {GenericVoidFunction} from 'types/generic';
 import {Issue, Repository, RepositoryUrlParams} from 'types/github';
@@ -132,7 +141,7 @@ const Tasks: FC = () => {
   return (
     <>
       <PageTitle ogDescription={`${repositoryFilter} Tasks`} title={`${repositoryFilter} Tasks`} />
-      <div className="Tasks">
+      <Container className="Tasks">
         <BreadcrumbMenu
           className="Tasks__BreadcrumbMenu"
           menuItems={renderFilters()}
@@ -163,7 +172,7 @@ const Tasks: FC = () => {
             renderTasks()
           )}
         </div>
-      </div>
+      </Container>
     </>
   );
 };

@@ -2,6 +2,7 @@ import React, {FC, ReactNode, useEffect, useState} from 'react';
 import {useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 
+import {Container} from 'components';
 import {useBooleanState, useWindowDimensions} from 'hooks';
 import TopNavDesktopItems from './TopNavDesktopItems';
 import TopNavLogo from './TopNavLogo';
@@ -43,12 +44,12 @@ const TopNav: FC<ComponentProps> = ({className}) => {
 
   return (
     <div className={clsx('TopNav__wrapper', {'TopNav__wrapper--mobile-menu-open': mobileMenuIsOpen})}>
-      <header className={clsx('TopNav', className)}>
+      <Container className={clsx('TopNav', className)} element="header">
         <div className="TopNav__left">
           <TopNavLogo />
         </div>
         {renderRightItems()}
-      </header>
+      </Container>
     </div>
   );
 };
