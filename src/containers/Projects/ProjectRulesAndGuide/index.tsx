@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import {Link} from 'react-scroll';
 
+import {Container} from 'components';
 import {NAVBAR_HEIGHT} from 'constants/offsets';
 
 import HowProposalsWork from './HowProposalsWork';
@@ -8,7 +9,6 @@ import Rules from './Rules';
 import ProposalSubmissionProcess from './ProposalSubmissionProcess';
 import MilestonesAndPayouts from './MilestonesAndPayouts';
 import './ProjectRules.scss';
-import {Container} from '../../../components';
 
 interface Section {
   id: string;
