@@ -1,4 +1,4 @@
-import React, {forwardRef} from 'react';
+import React, {FC} from 'react';
 import {useHistory, useLocation} from 'react-router-dom';
 
 import ProjectIcon, {ProjectIconSize, ProjectIconType} from '../../ProjectIcons';
@@ -11,15 +11,14 @@ interface ComponentProps {
   title: string;
 }
 
-const ProjectDetailsTopic = forwardRef<HTMLDivElement, ComponentProps>(({content, iconType, id, title}, ref) => {
+const ProjectDetailsTopic: FC<ComponentProps> = ({content, iconType, id, title}) => {
   const history = useHistory();
   const {pathname} = useLocation();
 
   return (
-    <div className="ProjectDetailsTopic" ref={ref}>
+    <div className="ProjectDetailsTopic" id={id}>
       <ProjectIcon className="ProjectDetailsTopic__icon" icon={iconType} size={ProjectIconSize.large} state="active" />
       <div className="ProjectDetailsTopic__content">
-        <div className="ProjectDetailsTopic__anchor" id={id} />
         <h1 className="ProjectDetailsTopic__content-title" onClick={() => history.push(`${pathname}#${id}`)}>
           {title}
         </h1>
@@ -27,6 +26,6 @@ const ProjectDetailsTopic = forwardRef<HTMLDivElement, ComponentProps>(({content
       </div>
     </div>
   );
-});
+};
 
 export default ProjectDetailsTopic;
