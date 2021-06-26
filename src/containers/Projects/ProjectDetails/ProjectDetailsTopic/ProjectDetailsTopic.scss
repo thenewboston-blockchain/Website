@@ -45,13 +45,6 @@ $offset-480: $top-nav-height + $details-container-height-480 + $wiggle-room;
       white-space: pre-line;
     }
 
-    &-overview {
-      @extend %body1;
-      color: var(--color-sail-gray-500);
-      font-weight: var(--font-weight-medium);
-      margin-bottom: 32px;
-    }
-
     &-title {
       color: var(--color-sail-blue-900);
       font-weight: var(--font-weight-bold);
