@@ -2,6 +2,10 @@
 
 * {
   box-sizing: border-box;
+
+  &:focus {
+    outline-color: var(--color-gray-100);
+  }
 }
 
 body,
@@ -11,9 +15,9 @@ html {
 }
 
 body {
+  @extend %body1;
   background: var(--color-bg);
   color: var(--color-primary);
-  @extend %body1;
 }
 
 #popover-root {

@@ -100,7 +100,6 @@ const ProjectDetails: FC<Props> = ({project}) => {
           id={projectDetailsTopic.overview.anchor}
           content={project.overview}
           iconType={projectDetailsTopic.overview.iconType}
-          overview={projectDetailsTopic.overview.overview}
           ref={overviewRef}
           title={projectDetailsTopic.overview.title}
         />
@@ -108,7 +107,6 @@ const ProjectDetails: FC<Props> = ({project}) => {
           id={projectDetailsTopic.problem.anchor}
           content={project.problem}
           iconType={projectDetailsTopic.problem.iconType}
-          overview={projectDetailsTopic.problem.overview}
           ref={problemRef}
           title={projectDetailsTopic.problem.title}
         />
@@ -116,7 +114,6 @@ const ProjectDetails: FC<Props> = ({project}) => {
           id={projectDetailsTopic.target_market.anchor}
           content={project.target_market}
           iconType={projectDetailsTopic.target_market.iconType}
-          overview={projectDetailsTopic.target_market.overview}
           ref={targetMarketRef}
           title={projectDetailsTopic.target_market.title}
         />
@@ -124,7 +121,6 @@ const ProjectDetails: FC<Props> = ({project}) => {
           id={projectDetailsTopic.benefits.anchor}
           content={project.benefits}
           iconType={projectDetailsTopic.benefits.iconType}
-          overview={projectDetailsTopic.benefits.overview}
           ref={benefitsRef}
           title={projectDetailsTopic.benefits.title}
         />
@@ -132,7 +128,6 @@ const ProjectDetails: FC<Props> = ({project}) => {
           id={projectDetailsTopic.centered_around_tnb.anchor}
           content={project.centered_around_tnb}
           iconType={projectDetailsTopic.centered_around_tnb.iconType}
-          overview={projectDetailsTopic.centered_around_tnb.overview}
           ref={centeredAroundTnbRef}
           title={projectDetailsTopic.centered_around_tnb.title}
         />
@@ -140,7 +135,6 @@ const ProjectDetails: FC<Props> = ({project}) => {
           id={projectDetailsTopic.estimated_completion_date.anchor}
           content={format(parseISO(project.estimated_completion_date), 'dd LLLL u - eeee ')}
           iconType={projectDetailsTopic.estimated_completion_date.iconType}
-          overview={projectDetailsTopic.estimated_completion_date.overview}
           ref={estimatedCompletionDateRef}
           title={projectDetailsTopic.estimated_completion_date.title}
         />
@@ -148,7 +142,6 @@ const ProjectDetails: FC<Props> = ({project}) => {
           id={projectDetailsTopic.roadmap.anchor}
           content={renderMilestones()}
           iconType={projectDetailsTopic.roadmap.iconType}
-          overview={projectDetailsTopic.roadmap.overview}
           ref={roadmapRef}
           title={projectDetailsTopic.roadmap.title}
         />

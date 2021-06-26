@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
 
 import {Asset} from 'types/assets';
-import {A, PageTitle} from 'components';
+import {A, Container, PageTitle} from 'components';
 import {socialMediaUrls} from 'utils/social-media';
 import TnbLogo from 'assets/images/TNB-Logo.png';
 import TnbLogoAndWordmark from 'assets/images/TNB-LogoAndWordmark.png';
@@ -57,11 +57,11 @@ const Assets: FC = () => {
   return (
     <>
       <PageTitle title="Assets" />
-      <div className="Assets">
+      <Container className="Assets">
         <h1 className="Assets__heading">Download thenewboston assets</h1>
         <h2 className="Assets__subtext">All assets of thenewboston at one place for you to download.</h2>
         <div className="Assets__cards-container">{assets.map((asset: Asset) => renderCard(asset))}</div>
-      </div>
+      </Container>
     </>
   );
 };

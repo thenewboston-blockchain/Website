@@ -1,7 +1,7 @@
 import React, {FC, useCallback, useEffect, useMemo, useState} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
 
-import {Button, FaqDropdownCard, Input, PageTitle} from 'components';
+import {Button, Container, FaqDropdownCard, Input, PageTitle} from 'components';
 import {useWindowDimensions} from 'hooks';
 import {FaqContent, faqFilters, FaqFilterType, faqQuestionsAndAnswers} from 'types/faq';
 
@@ -51,7 +51,7 @@ const Faq: FC = () => {
       .map((faqTopic) => {
         return {
           // filter questions that match with search query
-          content: faqTopic.content.filter((qna) => qna.question.toString().toLowerCase().includes(searchQuery)),
+          content: faqTopic.content.filter((qna) => qna.question.toString().toLowerCase().includes(sanitizedSearch)),
           topic: faqTopic.topic,
         };
       })
@@ -98,7 +98,7 @@ const Faq: FC = () => {
   return (
     <>
       <PageTitle title="FAQ's" />
-      <div className="Faq">
+      <Container className="Faq">
         <div className="Faq__title-container">
           <div className="Faq__title">Frequently Asked Questions</div>
           <div className="Faq__subtitle">
@@ -137,7 +137,7 @@ const Faq: FC = () => {
           </div>
         </div>
         <Feedback />
-      </div>
+      </Container>
     </>
   );
 };

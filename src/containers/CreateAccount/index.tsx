@@ -1,7 +1,7 @@
 import React, {FC, ReactNode, useState} from 'react';
 
 import * as api from 'apis/users';
-import {AuthContainer} from 'components';
+import {AuthContainer, Container} from 'components';
 import {Form, FormButton, FormInput} from 'components/FormComponents';
 import {formatAPIError} from 'utils/errors';
 import yup from 'utils/yup';
@@ -102,7 +102,7 @@ const CreateAccount: FC<ComponentProps> = ({disabled = false}) => {
   });
 
   return (
-    <div className="CreateAccount">
+    <Container className="CreateAccount">
       {disabled ? (
         renderDisabledMessage()
       ) : (
@@ -110,7 +110,7 @@ const CreateAccount: FC<ComponentProps> = ({disabled = false}) => {
           {renderAuthContainerContent()}
         </AuthContainer>
       )}
-    </div>
+    </Container>
   );
 };
 

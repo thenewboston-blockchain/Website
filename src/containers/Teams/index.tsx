@@ -2,7 +2,7 @@ import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
 import {Link, useHistory, useParams} from 'react-router-dom';
 import {Icon, IconType} from '@thenewboston/ui';
 
-import {A, BreadcrumbMenu, EmptyPage, FlatNavLinks, PageTitle} from 'components';
+import {A, BreadcrumbMenu, Container, EmptyPage, FlatNavLinks, PageTitle} from 'components';
 import {TEAMS} from 'constants/teams';
 import useQueryParams from 'hooks/useQueryParams';
 import {NavigationItem} from 'types/navigation';
@@ -195,7 +195,7 @@ const Teams: FC = () => {
         ogDescription={teamFilter === TeamName.all ? 'All Teams' : `${teamFilter} Team`}
         title={teamFilter === TeamName.all ? 'All Teams' : `${teamFilter} Team`}
       />
-      <div className="Teams">
+      <Container className="Teams">
         <BreadcrumbMenu
           className="Teams__BreadcrumbMenu"
           menuItems={renderTeamFilter()}
@@ -214,7 +214,7 @@ const Teams: FC = () => {
             </>
           )}
         </section>
-      </div>
+      </Container>
     </>
   );
 };

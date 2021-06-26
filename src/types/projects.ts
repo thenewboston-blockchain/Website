@@ -35,7 +35,6 @@ export type ProjectTopicMap = {
 export type ProjectTopic = {
   anchor: ProjectTopicAnchor;
   iconType: ProjectIconType;
-  overview: string;
   position: number;
   title: ProjectTopicTitle;
 };

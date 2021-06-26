@@ -1,54 +1,77 @@
-import React, {FC, useMemo} from 'react';
-import {Redirect, useParams} from 'react-router-dom';
+import React, {FC} from 'react';
+import {Link} from 'react-scroll';
 
-import {DashboardLayout, PageTitle, Pagination} from 'components';
-import {PageData, PageDataObject} from 'types/page-data';
+import {Container} from 'components';
+import {NAVBAR_HEIGHT} from 'constants/offsets';
 
-import ProjectsMenuItems, {projectsNavigationData} from '../ProjectsMenuItems';
-import ProjectsMilestones from './ProjectsMilestones';
-import ProjectsOverview from './ProjectsOverview';
-import ProjectsProposalSubmissionProcess from './ProjectsProposalSubmissionProcess';
-import ProjectsRules from './ProjectsRules';
+import HowProposalsWork from './HowProposalsWork';
+import Rules from './Rules';
+import ProposalSubmissionProcess from './ProposalSubmissionProcess';
+import MilestonesAndPayouts from './MilestonesAndPayouts';
+import './ProjectRules.scss';
 
-const defaultPageData: PageData = {
-  content: <Redirect to="/project-rules/overview" />,
-  name: '',
-};
+interface Section {
+  id: string;
+  title: string;
+}
 
-const pageData: PageDataObject = {
-  milestones: {
-    content: <ProjectsMilestones />,
-    name: 'Milestones & Payouts',
-  },
-  overview: {
-    content: <ProjectsOverview />,
-    name: 'Overview',
-  },
-  proposals: {
-    content: <ProjectsProposalSubmissionProcess />,
-    name: 'Proposal Submission Process',
-  },
-  rules: {
-    content: <ProjectsRules />,
-    name: 'Rules & Guidelines',
-  },
-};
+const ProjectRules: FC = () => {
+  const BANNER_HEIGHT = 200;
 
-const getPageData = (chapter: string): PageData => {
-  return pageData[chapter] || defaultPageData;
-};
-
-const Projects: FC = () => {
-  const {chapter} = useParams<{chapter: string}>();
-  const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
+  const SECTIONS: Section[] = [
+    {
+      id: 'how-proposals-work',
+      title: 'How Proposals Work',
+    },
+    {
+      id: 'rules',
+      title: 'Rules',
+    },
+    {
+      id: 'proposal-submission-process',
+      title: 'Submission Process',
+    },
+    {
+      id: 'milestones-and-payouts',
+      title: 'Milestones & Payouts',
+    },
+  ];
 
   return (
-    <DashboardLayout menuItems={<ProjectsMenuItems />} pageName={name} sectionName="Projects">
-      <PageTitle ogDescription={`${name} | Projects`} title={name} />
-      {content}
-      <Pagination navigationData={projectsNavigationData} />
-    </DashboardLayout>
+    <div className="ProjectRules">
+      <header className="ProjectRules__banner">
+        <h1 className="ProjectRules__banner-headline">Project Rules and Guidelines</h1>
+        <p className="ProjectRules__banner-text">The detailed guidelines about how the projects works. </p>
+      </header>
+      <Container className="ProjectRules__main" element="main">
+        <aside className="ProjectRules__sidebar">
+          {SECTIONS.map((section) => (
+            <Link
+              activeClass="ProjectRules__sidebar-item-active"
+              className="ProjectRules__sidebar-item"
+              hashSpy
+              key={section.id}
+              offset={-(NAVBAR_HEIGHT + BANNER_HEIGHT + 48)} // Navbar + Banner + Padding
+              smooth
+              spy
+              to={section.id}
+            >
+              {section.title}
+            </Link>
+          ))}
+        </aside>
+        <section className="ProjectRules__content">
+          <HowProposalsWork />
+          <hr className="ProjectRules__divider" />
+          <Rules />
+          <hr className="ProjectRules__divider" />
+          <ProposalSubmissionProcess />
+          <hr className="ProjectRules__divider" />
+          <MilestonesAndPayouts />
+        </section>
+      </Container>
+    </div>
   );
 };
 
-export default Projects;
+export default ProjectRules;

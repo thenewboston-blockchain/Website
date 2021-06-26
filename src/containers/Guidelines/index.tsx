@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {PageTitle} from 'components';
+import {Container, PageTitle} from 'components';
 
 import './Guidelines.scss';
 
@@ -8,7 +8,7 @@ const Guidelines: FC = () => {
   return (
     <>
       <PageTitle title="Community Guidelines" />
-      <div className="Guidelines">
+      <Container className="Guidelines" maxWidth={720}>
         <h1 className="Guidelines__title">Community Guidelines</h1>
         <h2 className="Guidelines__subtitle">Overview</h2>
         <p>We at thenewboston have two goals:</p>
@@ -64,7 +64,7 @@ const Guidelines: FC = () => {
             member.
           </li>
         </ol>
-      </div>
+      </Container>
     </>
   );
 };
