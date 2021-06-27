@@ -8,7 +8,7 @@ $top-nav-height: 60px;
 .Analytics {
   display: grid;
   grid-template-columns: 352px auto;
-  grid-template-rows: [icon-start title-start] 78px [icon-end left-menu-start] 29px [title-end content-start] min-content [ left-menu-end content-end];
+  grid-template-rows: [icon-start title-start] 78px [icon-end left-menu-start] 29px [title-end content-start] min-content [left-menu-end content-end];
 
   @media (max-width: 992px) {
     grid-template-columns: auto;
