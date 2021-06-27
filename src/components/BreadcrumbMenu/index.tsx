@@ -9,12 +9,13 @@ import './BreadcrumbMenu.scss';
 
 interface ComponentProps {
   className?: string;
+  hideSectionName?: boolean;
   menuItems: ReactNode;
   pageName: string;
   sectionName: string;
 }
 
-const BreadcrumbMenu: FC<ComponentProps> = ({className, menuItems, pageName, sectionName}) => {
+const BreadcrumbMenu: FC<ComponentProps> = ({className, hideSectionName = false, menuItems, pageName, sectionName}) => {
   const {pathname} = useLocation();
   const [open, setOpen] = useState(false);
 
@@ -41,8 +42,12 @@ const BreadcrumbMenu: FC<ComponentProps> = ({className, menuItems, pageName, sec
         data-testid="BreadcrumbMenu__bar"
       >
         <div className="BreadcrumbMenu__navigation" data-testid="BreadcrumbMenu__navigation">
-          {sectionName}
-          <Icon icon={IconType.menuRight} size={24} />
+          {!hideSectionName && (
+            <>
+              {sectionName}
+              <Icon icon={IconType.menuRight} size={24} />
+            </>
+          )}
           {pageName}
         </div>
         {renderToggle()}
