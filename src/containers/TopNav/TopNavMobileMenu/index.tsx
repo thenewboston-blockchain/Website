@@ -13,7 +13,7 @@ interface ComponentProps {
   toggleMenu(): void;
 }
 
-type SectionStrings = 'community' | 'getStarted' | 'resources' | 'about' | 'faq';
+type SectionStrings = 'community' | 'getStarted' | 'resources' | 'about' | 'faq' | 'developer';
 
 const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice, toggleMenu}) => {
   const history = useHistory();
@@ -68,6 +68,7 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice,
                 {renderMobileLink('Community Guidelines', '/guidelines')}
               </>,
             )}
+            {renderColumn('developer', 'Developer', <>{renderMobileLink('Developer', '/developer-portal')}</>)}
             {renderColumn(
               'resources',
               'Resources',

@@ -1,0 +1,16 @@
+.Particles {
+  /* stylelint-disable declaration-no-important */
+  // the canvas uses element.style to set its height, have to use !important
+  // to override its height
+  &__canvas {
+    height: 400px !important;
+
+    @media (min-width: 772px) {
+      height: 528px !important;
+    }
+
+    @media (min-width: 992px) {
+      height: 720px !important;
+    }
+  }
+}
