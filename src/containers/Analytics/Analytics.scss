@@ -8,22 +8,11 @@ $top-nav-height: 60px;
 .Analytics {
   display: grid;
   grid-template-columns: 352px auto;
-  grid-template-rows: [icon-start title-start] 78px [icon-end left-menu-start] 29px [title-end content-start] min-content [left-menu-end content-end];
+  grid-template-rows: [icon-start title-start] 78px [icon-end left-menu-start] 29px [title-end main-start] min-content [left-menu-end main-end];
 
   @media (max-width: 992px) {
     grid-template-columns: auto;
-    grid-template-rows: fit-content(0) auto;
-  }
-
-  &__BreadcrumbMenu {
-    display: none;
-
-    @media (max-width: 992px) {
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
-      display: block;
-      grid-column: 1 / span 1;
-      grid-row: 1 / span 1;
-    }
+    grid-template-rows: unset;
   }
 
   &__icon-container {
@@ -31,7 +20,16 @@ $top-nav-height: 60px;
     border-bottom: $border;
     border-right: $border;
     display: flex;
-    padding-left: 24px;
+    padding: 0 24px;
+
+    @media (max-width: 992px) {
+      height: 64px;
+      padding: 0 48px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 0 24px;
+    }
   }
 
   &__icon-text {
@@ -51,6 +49,25 @@ $top-nav-height: 60px;
     }
   }
 
+  &__main-container {
+    display: grid;
+    grid-column: 2 / -1;
+    grid-row: main-start / main-end;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 170px;
+
+    @media (max-width: 992px) {
+      grid-column: unset;
+      grid-row: unset;
+      padding: 0 12px;
+    }
+
+    @media (max-width: 768px) {
+      display: block;
+      padding: 0;
+    }
+  }
+
   &__title {
     @extend %display2;
     display: inline;
@@ -62,6 +79,17 @@ $top-nav-height: 60px;
     grid-column: 2 / -1;
     grid-row: title-start / title-end;
     padding: 32px;
+
+    @media (max-width: 992px) {
+      grid-column: unset;
+      grid-row: unset;
+      padding: 32px 48px;
+    }
+
+    @media (max-width: 768px) {
+      border-bottom: none;
+      padding: 32px 24px;
+    }
   }
 
   &__weekly {
@@ -72,5 +100,18 @@ $top-nav-height: 60px;
 
   &__wrapper {
     border-top: $border;
+  }
+
+  .AnalyticsGraph {
+    border-bottom: $border;
+    border-right: $border;
+
+    &:nth-child(even) {
+      border-right: none;
+    }
+
+    @media (max-width: 768px) {
+      border-right: none;
+    }
   }
 }
