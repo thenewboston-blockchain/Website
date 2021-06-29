@@ -7,6 +7,7 @@ export default function ParticlesBackground() {
   return (
     <Particles
       id="tsparticles"
+      className="Particles__container"
       canvasClassName="Particles__canvas"
       options={{
         background: {

@@ -72,7 +72,7 @@ const App: FC = () => {
           <Route exact path="/guidelines" component={Guidelines} />
           <Route exact path="/create-account" render={() => <CreateAccount disabled />} />
           <Route exact path="/donate" component={Donate} />
-          <Route exact path="/developer-portal" component={withSuspense(DeveloperPortal)} />
+          <Route exact path="/developer" component={withSuspense(DeveloperPortal)} />
           <Redirect exact from="/faq" to={`/faq/${faqFilters[FaqFilterType.all]}`} />
           <Route exact path="/faq/:filter" component={Faq} />
           <Route exact path="/assets" component={Assets} />

@@ -1,3 +1,76 @@
+@import 'styles/font-mixins';
+
 .DeveloperPortalCards {
   background-color: var(--color-gray-900);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 24px 48px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      padding: 48px 48px;
+    }
+
+    @media (min-width: 992px) {
+      padding: 72px 48px;
+    }
+
+    @media (min-width: 1366px) {
+      padding: 72px 0;
+    }
+  }
+
+  &__card {
+    background-color: #0e1733;
+    border-radius: 12px;
+    color: white;
+    height: 285px;
+    padding: 24px 24px;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    @media (min-width: 768px) {
+      min-width: 324px;
+      &:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 24px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      min-width: 432px;
+      padding: 48px 24px;
+      &:not(:last-child) {
+        margin-right: 36px;
+      }
+    }
+  }
+
+  &__card-icon {
+    margin-bottom: 16px;
+  }
+
+  &__card-title {
+    @extend %h2;
+    color: white;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 16px;
+  }
+
+  &__card-description {
+    @extend %body1;
+    color: var(--color-gray-500);
+    margin-bottom: 16px;
+  }
+
+  &__card-button {
+    align-items: center;
+    display: flex;
+  }
 }

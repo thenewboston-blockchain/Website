@@ -68,7 +68,7 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice,
                 {renderMobileLink('Community Guidelines', '/guidelines')}
               </>,
             )}
-            {renderColumn('developer', 'Developer', <>{renderMobileLink('Developer', '/developer-portal')}</>)}
+            {renderColumn('developer', 'Developer', <>{renderMobileLink('Developer', '/developer')}</>)}
             {renderColumn(
               'resources',
               'Resources',

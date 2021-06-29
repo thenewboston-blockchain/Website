@@ -2,6 +2,8 @@
   /* stylelint-disable declaration-no-important */
   // the canvas uses element.style to set its height, have to use !important
   // to override its height
+
+  &__container,
   &__canvas {
     height: 400px !important;
 

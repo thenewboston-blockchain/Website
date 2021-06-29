@@ -1,5 +1,6 @@
 import React from 'react';
 
+import {PageTitle} from 'components';
 import DeveloperPortalHero from './DeveloperPortalHero';
 import DeveloperPortalCards from './DeveloperPortalCards';
 import DocumentationSitemap from './DocumentationSitemap';
@@ -9,11 +10,14 @@ import './DeveloperPortal.scss';
 
 export default function DeveloperPortal() {
   return (
-    <div className="DeveloperPortal">
-      <DeveloperPortalHero />
-      <DeveloperPortalCards />
-      <Tools />
-      <DocumentationSitemap />
-    </div>
+    <>
+      <PageTitle title="Developer Portal" />
+      <div className="DeveloperPortal">
+        <DeveloperPortalHero />
+        <DeveloperPortalCards />
+        <Tools />
+        <DocumentationSitemap />
+      </div>
+    </>
   );
 }

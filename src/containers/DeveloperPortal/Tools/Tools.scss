@@ -1,3 +1,22 @@
+@import 'styles/font-mixins';
+
 .Tools {
   background: #f6f9fc;
+
+  &__container {
+    padding: 24px 24px;
+
+    @media (min-width: 768px) {
+      padding: 48px 48px;
+    }
+
+    @media (min-width: 1366px) {
+      padding: 72px 0;
+    }
+  }
+
+  &__title {
+    @extend %display2;
+    font-weight: var(--font-weight-semibold);
+  }
 }
