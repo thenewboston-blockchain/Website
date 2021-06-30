@@ -1,10 +1,4 @@
 @import 'styles/font-mixins';
-$top-nav-height: 60px;
-$details-container-height: 158px;
-$details-container-height-480: 241px;
-$wiggle-room: 32px;
-$offset: $top-nav-height + $details-container-height + $wiggle-room;
-$offset-480: $top-nav-height + $details-container-height-480 + $wiggle-room;
 
 .ProjectDetailsTopic {
   align-items: flex-start;
@@ -15,15 +9,6 @@ $offset-480: $top-nav-height + $details-container-height-480 + $wiggle-room;
 
   @media (max-width: 480px) {
     flex-direction: column;
-  }
-
-  &__anchor {
-    position: absolute;
-    top: #{-$offset};
-
-    @media (max-width: 480px) {
-      top: #{-$offset-480};
-    }
   }
 
   &__icon {

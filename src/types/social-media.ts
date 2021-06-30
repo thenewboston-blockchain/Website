@@ -4,6 +4,7 @@ export enum SocialMedia {
   github = 'github',
   instagram = 'instagram',
   linkedin = 'linkedin',
+  pinterest = 'pinterest',
   reddit = 'reddit',
   twitch = 'twitch',
   twitter = 'twitter',
