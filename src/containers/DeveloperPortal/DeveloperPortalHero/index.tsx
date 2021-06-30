@@ -13,8 +13,7 @@ export default function DeveloperPortalHero() {
         <Link to="/" className="DeveloperPortalHero__link">
           Home
         </Link>
-        {/* TODO james: update living whitepaper link when ready */}
-        <Link to="/" className="DeveloperPortalHero__link">
+        <Link to="/developer/whitepaper" className="DeveloperPortalHero__link">
           Living Whitepaper
         </Link>
         <Link to="/projects" className="DeveloperPortalHero__link">

@@ -15,13 +15,13 @@ export default function DocumentationSitemap() {
         <div className="DocumentationSitemap__topics">
           <div className="DocumentationSitemap__topic-container">
             <div className="DocumentationSitemap__topic-header">Living Whitepaper</div>
-            <A href="/" newWindow={false} className="DocumentationSitemap__link">
+            <A href="/developer/whitepaper" newWindow={false} className="DocumentationSitemap__link">
               Principal Entities on the Network
             </A>
-            <A href="/" newWindow={false} className="DocumentationSitemap__link">
+            <A href="/developer/whitepaper" newWindow={false} className="DocumentationSitemap__link">
               Principal Events and Processes on the Network
             </A>
-            <A href="/" newWindow={false} className="DocumentationSitemap__link">
+            <A href="/developer/whitepaper" newWindow={false} className="DocumentationSitemap__link">
               Architecture - Deep Dive
             </A>
           </div>

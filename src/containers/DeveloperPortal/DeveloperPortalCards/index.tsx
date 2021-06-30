@@ -7,7 +7,6 @@ import ArchitectureIcon from '../icons/ArchitectureIcon';
 import ProjectsIcon from '../icons/ProjectsIcon';
 import './DeveloperPortalCards.scss';
 
-// TODO james: update links when ready
 export default function DeveloperPortalCards() {
   const history = useHistory();
 
@@ -22,7 +21,11 @@ export default function DeveloperPortalCards() {
           <div className="DeveloperPortalCards__card-description">
             Lorm Ipsun dolor sit Lorm Ipsun dolor sitLorm Ipsun dolor sit,dolor sitLorm Ipsun dolor sit,dolor sit
           </div>
-          <Button className="DeveloperPortalCards__card-button" variant="outlined" onClick={() => history.push('/')}>
+          <Button
+            className="DeveloperPortalCards__card-button"
+            variant="outlined"
+            onClick={() => history.push('/developer/whitepaper')}
+          >
             Learn More
             <Icon icon={IconType.chevronRight} size={16} />
           </Button>
