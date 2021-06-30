@@ -35,7 +35,6 @@ import Teams from './Teams';
 const DeveloperPortal = lazy(() => import('./DeveloperPortal'));
 const Projects = lazy(() => import('./Projects'));
 const Tutorials = lazy(() => import('./Tutorials'));
-const WhitePaper = lazy(() => import('./WhitePaper'));
 
 interface GoogleAnalyticsWindow extends Window {
   ga: any;
@@ -74,7 +73,6 @@ const App: FC = () => {
           <Route exact path="/create-account" render={() => <CreateAccount disabled />} />
           <Route exact path="/donate" component={Donate} />
           <Route exact path="/developer" component={withSuspense(DeveloperPortal)} />
-          <Route exact path="/developer/whitepaper" component={withSuspense(WhitePaper)} />
           <Redirect exact from="/faq" to={`/faq/${faqFilters[FaqFilterType.all]}`} />
           <Route exact path="/faq/:filter" component={Faq} />
           <Route exact path="/assets" component={Assets} />

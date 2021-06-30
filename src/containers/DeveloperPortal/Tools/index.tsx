@@ -21,7 +21,8 @@ export default function Tools() {
             <div className="Tools__tool-description">
               Lorm Ipsun dolor sit Lorm Ipsun dolor sitLorm Ipsun dolor sit,dolor
             </div>
-            <Button className="Tools__tool-button" variant="outlined" onClick={() => history.push('/projects')}>
+            {/* TODO: update link when ready */}
+            <Button className="Tools__tool-button" variant="outlined" onClick={() => history.push('/')}>
               Learn More
               <Icon icon={IconType.chevronRight} size={16} />
             </Button>

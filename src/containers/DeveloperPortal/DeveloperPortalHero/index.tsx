@@ -6,6 +6,7 @@ import developerPortalImage from './Portal.png';
 
 import './DeveloperPortalHero.scss';
 
+// TODO: update links when ready
 export default function DeveloperPortalHero() {
   return (
     <div className="DeveloperPortalHero">
@@ -13,7 +14,7 @@ export default function DeveloperPortalHero() {
         <Link to="/" className="DeveloperPortalHero__link">
           Home
         </Link>
-        <Link to="/developer/whitepaper" className="DeveloperPortalHero__link">
+        <Link to="/" className="DeveloperPortalHero__link">
           Living Whitepaper
         </Link>
         <Link to="/projects" className="DeveloperPortalHero__link">

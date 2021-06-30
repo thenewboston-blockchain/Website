@@ -21,11 +21,8 @@ export default function DeveloperPortalCards() {
           <div className="DeveloperPortalCards__card-description">
             Lorm Ipsun dolor sit Lorm Ipsun dolor sitLorm Ipsun dolor sit,dolor sitLorm Ipsun dolor sit,dolor sit
           </div>
-          <Button
-            className="DeveloperPortalCards__card-button"
-            variant="outlined"
-            onClick={() => history.push('/developer/whitepaper')}
-          >
+          {/* TODO: update link when ready */}
+          <Button className="DeveloperPortalCards__card-button" variant="outlined" onClick={() => history.push('/')}>
             Learn More
             <Icon icon={IconType.chevronRight} size={16} />
           </Button>
