@@ -32,7 +32,7 @@ export default function ParticlesBackground() {
           },
           modes: {
             bubble: {
-              distance: 400,
+              distance: 100,
               duration: 2,
               opacity: 0.8,
               size: 40,
@@ -73,7 +73,7 @@ export default function ParticlesBackground() {
               enable: true,
               value_area: 800,
             },
-            value: 150,
+            value: 200,
           },
           opacity: {
             value: 0.5,

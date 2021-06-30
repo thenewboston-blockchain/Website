@@ -49,6 +49,10 @@
       margin-bottom: 70px;
     }
 
+    &:last-child {
+      margin-bottom: 146px;
+    }
+
     @media (min-width: 768px) {
       margin-bottom: 0;
       width: 165px;
@@ -68,6 +72,9 @@
   &__link {
     @extend %body1;
     color: var(--color-gray-500);
-    margin-bottom: 8px;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
   }
 }
