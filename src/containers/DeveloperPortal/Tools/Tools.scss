@@ -1,7 +1,10 @@
 @import 'styles/font-mixins';
 
 .Tools {
-  background: #f6f9fc;
+  background: url('./background-pattern.png');
+  background-color: #f6f9fc;
+  background-position: center;
+  background-size: cover;
 
   &__container {
     padding: 24px 24px;
@@ -18,5 +21,50 @@
   &__title {
     @extend %display2;
     font-weight: var(--font-weight-semibold);
+    margin-bottom: 48px;
+  }
+
+  &__content-container {
+    background-color: white;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    padding: 32px 64.5px;
+  }
+
+  &__tool {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    text-align: center;
+  }
+
+  &__tool-icon {
+    align-items: center;
+    background-color: #0e1733;
+    border-radius: 6px;
+    display: flex;
+    height: 64px;
+    justify-content: center;
+    margin-bottom: 24px;
+    width: 64px;
+  }
+
+  &__tool-title {
+    @extend %h1;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 24px;
+  }
+
+  &__tool-description {
+    @extend %body1;
+    color: var(--color-gray-500);
+    margin-bottom: 24px;
+  }
+
+  &__tool-button {
+    align-items: center;
+    display: flex;
   }
 }

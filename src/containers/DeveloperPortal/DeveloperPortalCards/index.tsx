@@ -15,7 +15,9 @@ export default function DeveloperPortalCards() {
     <div className="DeveloperPortalCards">
       <Container className="DeveloperPortalCards__container">
         <div className="DeveloperPortalCards__card">
-          <ArchitectureIcon className="DeveloperPortalCards__card-icon" size={64} />
+          <div className="DeveloperPortalCards__card-icon">
+            <ArchitectureIcon size={36} />
+          </div>
           <div className="DeveloperPortalCards__card-title">Living Whitepaper</div>
           <div className="DeveloperPortalCards__card-description">
             Lorm Ipsun dolor sit Lorm Ipsun dolor sitLorm Ipsun dolor sit,dolor sitLorm Ipsun dolor sit,dolor sit
@@ -26,7 +28,9 @@ export default function DeveloperPortalCards() {
           </Button>
         </div>
         <div className="DeveloperPortalCards__card">
-          <ProjectsIcon className="DeveloperPortalCards__card-icon" size={64} />
+          <div className="DeveloperPortalCards__card-icon">
+            <ProjectsIcon size={36} />
+          </div>
           <div className="DeveloperPortalCards__card-title">Projects</div>
           <div className="DeveloperPortalCards__card-description">
             Lorm Ipsun dolor sit Lorm Ipsun dolor sitLorm Ipsun dolor sit,dolor sitLorm Ipsun dolor sit,dolor sit

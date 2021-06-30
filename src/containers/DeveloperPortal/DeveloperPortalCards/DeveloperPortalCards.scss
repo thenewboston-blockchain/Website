@@ -24,10 +24,12 @@
   }
 
   &__card {
+    background: url('./card-bg-992.png');
     background-color: #0e1733;
+    background-position: right;
+    background-size: cover;
     border-radius: 12px;
     color: white;
-    height: 285px;
     padding: 24px 24px;
     width: 100%;
 
@@ -36,6 +38,10 @@
     }
 
     @media (min-width: 768px) {
+      background: url('./card-bg-768.png');
+      background-color: #0e1733;
+      background-position: right;
+      background-size: cover;
       min-width: 324px;
       &:not(:last-child) {
         margin-bottom: 0;
@@ -44,6 +50,10 @@
     }
 
     @media (min-width: 992px) {
+      background: url('./card-bg-1366.png');
+      background-color: #0e1733;
+      background-position: right;
+      background-size: cover;
       min-width: 432px;
       padding: 48px 24px;
       &:not(:last-child) {
@@ -53,7 +63,14 @@
   }
 
   &__card-icon {
+    align-items: center;
+    background: var(--color-gray-900);
+    border-radius: 6px;
+    display: flex;
+    height: 64px;
+    justify-content: center;
     margin-bottom: 16px;
+    width: 64px;
   }
 
   &__card-title {
@@ -69,8 +86,14 @@
     margin-bottom: 16px;
   }
 
-  &__card-button {
+  // need to increase specificity to override base css
+  &__card-button.ButtonWebsite.ButtonWebsite--outlined {
     align-items: center;
+    color: var(--color-gray-200);
     display: flex;
+
+    &:hover {
+      color: var(--color-primary);
+    }
   }
 }

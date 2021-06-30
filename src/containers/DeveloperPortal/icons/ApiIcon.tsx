@@ -1,8 +1,15 @@
 import React, {FC} from 'react';
 
-const ApiIcon: FC<{size?: number}> = ({size = 40}) => {
+const ApiIcon: FC<{size?: number; className?: string}> = ({className, size = 40}) => {
   return (
-    <svg width={size} height={size} viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={className}
+      width={size}
+      height={size}
+      viewBox="0 0 38 38"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <g clipPath="url(#dp_api_clip0)">
         <circle cx="19" cy="19" r="7" fill="white" />
         <path

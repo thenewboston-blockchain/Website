@@ -1,6 +1,10 @@
 @import 'styles/font-mixins';
 
 .DocumentationSitemap {
+  background: url('./background-pattern.png');
+  background-position: center;
+  background-size: cover;
+
   &__container {
     padding: 24px 24px;
     text-align: center;
