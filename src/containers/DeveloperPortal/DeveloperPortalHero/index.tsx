@@ -1,13 +1,27 @@
 import React from 'react';
 
+import {ProgressiveImage} from 'components';
+import {useWindowDimensions} from 'hooks';
 import {Link} from 'react-router-dom';
 import Particles from '../Particles';
 import developerPortalImage from './Portal.webp';
+import developerPortalPlaceholderImage from './PortalPlaceholder.webp';
 
 import './DeveloperPortalHero.scss';
 
 // TODO: update links when ready
 export default function DeveloperPortalHero() {
+  const {width} = useWindowDimensions();
+
+  let imageSize = 558;
+  if (width < 768) {
+    imageSize = 280;
+  } else if (width < 992) {
+    imageSize = 412;
+  } else {
+    imageSize = 558;
+  }
+
   return (
     <div className="DeveloperPortalHero">
       <div className="DeveloperPortalHero__links-container">
@@ -22,7 +36,14 @@ export default function DeveloperPortalHero() {
         </Link>
       </div>
       <Particles />
-      <img alt="Developer Portal" src={developerPortalImage} className="DeveloperPortalHero__main-image" />
+      <ProgressiveImage
+        alt="Developer Portal"
+        containerClassName="DeveloperPortalHero__main-image"
+        height={imageSize}
+        placeholderSrc={developerPortalPlaceholderImage}
+        realSrc={developerPortalImage}
+        width={imageSize}
+      />
     </div>
   );
 }

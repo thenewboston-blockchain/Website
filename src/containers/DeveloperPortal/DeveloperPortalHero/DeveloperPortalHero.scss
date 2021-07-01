@@ -8,15 +8,6 @@
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 558px;
-
-    @media (max-width: 992px) {
-      width: 412px;
-    }
-
-    @media (max-width: 768px) {
-      width: 280px;
-    }
   }
 
   &__links-container {
