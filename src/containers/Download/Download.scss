@@ -72,12 +72,20 @@ $top-nav-height: 60px;
     grid-row-gap: 24px;
     grid-template-columns: repeat(3, minmax(0, 1fr));
 
+    @media (max-width: 1366px) {
+      padding: 0 24px;
+    }
+
     @media (max-width: 992px) {
       grid-column-gap: 16px;
     }
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
+    }
+
+    @media (max-width: 414px) {
+      padding: 0;
     }
   }
 
@@ -96,7 +104,6 @@ $top-nav-height: 60px;
     }
 
     @media (max-width: 768px) {
-      margin: 0 36px;
       padding: 48px 32px;
     }
   }
