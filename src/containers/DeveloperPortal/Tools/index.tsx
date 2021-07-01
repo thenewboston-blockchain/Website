@@ -19,7 +19,8 @@ export default function Tools() {
             </div>
             <div className="Tools__tool-title">APIs</div>
             <div className="Tools__tool-description">
-              Lorm Ipsun dolor sit Lorm Ipsun dolor sitLorm Ipsun dolor sit,dolor
+              This is the core of our technical documentation. If you develop in languages other than JavaScript and
+              Python, or if you would prefer to work in Vanilla JavaScript or Python, this is your starting point.
             </div>
             {/* TODO: update link when ready */}
             <Button className="Tools__tool-button" variant="outlined" onClick={() => history.push('/')}>

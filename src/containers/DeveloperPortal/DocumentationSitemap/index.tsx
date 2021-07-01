@@ -9,9 +9,6 @@ export default function DocumentationSitemap() {
     <div className="DocumentationSitemap">
       <Container className="DocumentationSitemap__container">
         <div className="DocumentationSitemap__title">Documentation Sitemap</div>
-        <div className="DocumentationSitemap__subtitle">
-          Lorm Ipsun dolor sit Lorm Ipsun dolor sitLorm Ipsun dolor sit Lorm Ipsun dolor sit Lorm Ipsun dolo`r
-        </div>
         <div className="DocumentationSitemap__topics">
           <div className="DocumentationSitemap__topic-container">
             <div className="DocumentationSitemap__topic-header">Living Whitepaper</div>

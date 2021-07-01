@@ -19,7 +19,9 @@ export default function DeveloperPortalCards() {
           </div>
           <div className="DeveloperPortalCards__card-title">Living Whitepaper</div>
           <div className="DeveloperPortalCards__card-description">
-            Lorm Ipsun dolor sit Lorm Ipsun dolor sitLorm Ipsun dolor sit,dolor sitLorm Ipsun dolor sit,dolor sit
+            Our living whitepaper is a constantly evolving set of technical docs about thenewboston blockchain
+            architecture, including its Governance model. This is a must-read for all developers on thenewboston
+            blockchain.
           </div>
           {/* TODO: update link when ready */}
           <Button className="DeveloperPortalCards__card-button" variant="outlined" onClick={() => history.push('/')}>
@@ -33,7 +35,8 @@ export default function DeveloperPortalCards() {
           </div>
           <div className="DeveloperPortalCards__card-title">Projects</div>
           <div className="DeveloperPortalCards__card-description">
-            Lorm Ipsun dolor sit Lorm Ipsun dolor sitLorm Ipsun dolor sit,dolor sitLorm Ipsun dolor sit,dolor sit
+            Earn coins by building apps, games, tools, and other software for thenewboston network. Learn how to submit
+            your project proposal, or study how other community members structure their own projects.
           </div>
           <Button
             className="DeveloperPortalCards__card-button"

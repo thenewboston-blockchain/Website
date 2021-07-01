@@ -21,13 +21,7 @@
   &__title {
     @extend %display2;
     font-weight: var(--font-weight-semibold);
-    margin-bottom: 16px;
-  }
-
-  &__subtitle {
-    @extend %body1;
-    color: var(--color-gray-500);
-    margin-bottom: 80px;
+    margin-bottom: 48px;
   }
 
   &__topics {
