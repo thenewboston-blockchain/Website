@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {FC} from 'react';
 
-import Particles from 'react-tsparticles';
+import ReactParticles from 'react-tsparticles';
 import './Particles.scss';
 
-export default function ParticlesBackground() {
+const Particles: FC = () => {
   return (
-    <Particles
+    <ReactParticles
       id="tsparticles"
       className="Particles__container"
       canvasClassName="Particles__canvas"
@@ -89,4 +89,6 @@ export default function ParticlesBackground() {
       }}
     />
   );
-}
+};
+
+export default Particles;

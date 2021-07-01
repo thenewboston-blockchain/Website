@@ -1,13 +1,13 @@
-import React from 'react';
-
+import React, {FC} from 'react';
 import {Icon, IconType} from '@thenewboston/ui';
+
 import {Button, Container} from 'components';
 import {useHistory} from 'react-router';
 import ArchitectureIcon from '../icons/ArchitectureIcon';
 import ProjectsIcon from '../icons/ProjectsIcon';
 import './DeveloperPortalCards.scss';
 
-export default function DeveloperPortalCards() {
+const DeveloperPortalCards: FC = () => {
   const history = useHistory();
 
   return (
@@ -50,4 +50,6 @@ export default function DeveloperPortalCards() {
       </Container>
     </div>
   );
-}
+};
+
+export default DeveloperPortalCards;

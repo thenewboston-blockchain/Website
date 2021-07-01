@@ -1,12 +1,12 @@
-import React from 'react';
-
-import {Icon, IconType} from '@thenewboston/ui';
-import {Button, Container} from 'components';
+import React, {FC} from 'react';
 import {useHistory} from 'react-router';
+import {Icon, IconType} from '@thenewboston/ui';
+
+import {Button, Container} from 'components';
 import ApiIcon from '../icons/ApiIcon';
 import './Tools.scss';
 
-export default function Tools() {
+const Tools: FC = () => {
   const history = useHistory();
   return (
     <div className="Tools">
@@ -33,4 +33,6 @@ export default function Tools() {
       </Container>
     </div>
   );
-}
+};
+
+export default Tools;

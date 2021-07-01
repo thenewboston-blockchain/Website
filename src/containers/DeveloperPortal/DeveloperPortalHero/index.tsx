@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 
 import {ProgressiveImage} from 'components';
 import {useWindowDimensions} from 'hooks';
@@ -10,10 +10,10 @@ import developerPortalPlaceholderImage from './PortalPlaceholder.webp';
 import './DeveloperPortalHero.scss';
 
 // TODO: update links when ready
-export default function DeveloperPortalHero() {
+const DeveloperPortalHero: FC = () => {
   const {width} = useWindowDimensions();
 
-  let imageSize = 558;
+  let imageSize: number;
   if (width < 768) {
     imageSize = 280;
   } else if (width < 992) {
@@ -46,4 +46,6 @@ export default function DeveloperPortalHero() {
       />
     </div>
   );
-}
+};
+
+export default DeveloperPortalHero;

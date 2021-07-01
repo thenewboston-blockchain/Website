@@ -1,14 +1,13 @@
-import React from 'react';
+import React, {FC} from 'react';
 
 import {PageTitle} from 'components';
 import DeveloperPortalHero from './DeveloperPortalHero';
 import DeveloperPortalCards from './DeveloperPortalCards';
 import DocumentationSitemap from './DocumentationSitemap';
 import Tools from './Tools';
-
 import './DeveloperPortal.scss';
 
-export default function DeveloperPortal() {
+const DeveloperPortal: FC = () => {
   return (
     <>
       <PageTitle title="Developer Portal" />
@@ -20,4 +19,6 @@ export default function DeveloperPortal() {
       </div>
     </>
   );
-}
+};
+
+export default DeveloperPortal;
