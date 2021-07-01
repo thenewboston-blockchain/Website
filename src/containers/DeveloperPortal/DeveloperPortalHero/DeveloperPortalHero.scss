@@ -8,14 +8,14 @@
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 280px;
+    width: 558px;
 
-    @media (min-width: 768px) {
+    @media (max-width: 992px) {
       width: 412px;
     }
 
-    @media (min-width: 992px) {
-      width: 558px;
+    @media (max-width: 768px) {
+      width: 280px;
     }
   }
 
@@ -34,12 +34,12 @@
     color: white;
 
     &:not(:last-child) {
-      margin-right: 24px;
+      margin-right: 48px;
     }
 
-    @media (min-width: 772px) {
+    @media (max-width: 772px) {
       &:not(:last-child) {
-        margin-right: 48px;
+        margin-right: 24px;
       }
     }
   }

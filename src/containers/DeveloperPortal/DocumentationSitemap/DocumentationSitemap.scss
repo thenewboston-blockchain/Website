@@ -6,15 +6,15 @@
   background-size: cover;
 
   &__container {
-    padding: 24px 24px;
+    padding: 72px 0;
     text-align: center;
 
-    @media (min-width: 768px) {
+    @media (max-width: 1366px) {
       padding: 48px 48px;
     }
 
-    @media (min-width: 1366px) {
-      padding: 72px 0;
+    @media (max-width: 768px) {
+      padding: 24px 24px;
     }
   }
 
@@ -32,36 +32,37 @@
 
   &__topics {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
 
-    @media (min-width: 768px) {
-      flex-direction: row;
+    @media (max-width: 768px) {
+      flex-direction: column;
     }
   }
 
   &__topic-container {
     display: flex;
     flex-direction: column;
-    padding: 0 32px;
+    margin-bottom: 0;
+    padding: 0;
     text-align: start;
-    width: 100%;
-    &:not(:last-child) {
-      margin-bottom: 70px;
-    }
 
-    &:last-child {
-      margin-bottom: 146px;
-    }
+    width: 240px;
 
-    @media (min-width: 768px) {
-      margin-bottom: 0;
-      padding: 0;
+    @media (max-width: 992px) {
+      padding: 0 32px;
       width: 165px;
     }
 
-    @media (min-width: 992px) {
-      width: 240px;
+    @media (max-width: 768px) {
+      &:not(:last-child) {
+        margin-bottom: 70px;
+      }
+
+      &:last-child {
+        margin-bottom: 146px;
+      }
+      width: 100%;
     }
   }
 

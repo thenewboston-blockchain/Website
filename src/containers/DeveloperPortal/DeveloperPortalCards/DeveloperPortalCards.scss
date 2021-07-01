@@ -5,59 +5,56 @@
 
   &__container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: 0 auto;
-    padding: 48px 24px;
+    padding: 48px 48px;
 
-    @media (min-width: 768px) {
-      flex-direction: row;
-      padding: 48px 48px;
-    }
-
-    @media (min-width: 992px) {
+    @media (max-width: 1366px) {
       padding: 72px 48px;
     }
 
-    @media (min-width: 1366px) {
-      padding: 72px 0;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 48px 24px;
     }
   }
 
   &__card {
-    background: url('./card-bg-992.png');
+    background: url('./card-bg-1366.png');
     background-color: #0e1733;
     background-position: right;
     background-size: cover;
     border-radius: 12px;
     color: white;
-    padding: 24px 24px;
-    width: 100%;
+    min-width: 432px;
+    padding: 48px 24px;
 
     &:not(:last-child) {
-      margin-bottom: 24px;
+      margin-right: 36px;
     }
 
-    @media (min-width: 768px) {
+    @media (max-width: 992px) {
       background: url('./card-bg-768.png');
       background-color: #0e1733;
       background-position: right;
       background-size: cover;
       min-width: 324px;
+      padding: 24px 24px;
       &:not(:last-child) {
-        margin-bottom: 0;
         margin-right: 24px;
       }
     }
 
-    @media (min-width: 992px) {
-      background: url('./card-bg-1366.png');
+    @media (max-width: 768px) {
+      background: url('./card-bg-992.png');
       background-color: #0e1733;
       background-position: right;
       background-size: cover;
-      min-width: 432px;
-      padding: 48px 24px;
+      width: 100%;
+
       &:not(:last-child) {
-        margin-right: 36px;
+        margin-bottom: 24px;
+        margin-right: 0;
       }
     }
   }

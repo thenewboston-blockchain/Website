@@ -5,14 +5,14 @@
 
   &__container,
   &__canvas {
-    height: 400px !important;
+    height: 720px !important;
 
-    @media (min-width: 772px) {
+    @media (max-width: 992px) {
       height: 528px !important;
     }
 
-    @media (min-width: 992px) {
-      height: 720px !important;
+    @media (max-width: 772px) {
+      height: 400px !important;
     }
   }
 }

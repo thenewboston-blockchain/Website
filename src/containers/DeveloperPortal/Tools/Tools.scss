@@ -7,14 +7,14 @@
   background-size: cover;
 
   &__container {
-    padding: 24px 24px;
+    padding: 72px 0;
 
-    @media (min-width: 768px) {
+    @media (max-width: 1366px) {
       padding: 48px 48px;
     }
 
-    @media (min-width: 1366px) {
-      padding: 72px 0;
+    @media (max-width: 768px) {
+      padding: 24px 24px;
     }
   }
 
