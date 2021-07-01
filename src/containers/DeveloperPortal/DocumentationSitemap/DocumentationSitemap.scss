@@ -43,6 +43,7 @@
   &__topic-container {
     display: flex;
     flex-direction: column;
+    padding: 0 32px;
     text-align: start;
     width: 100%;
     &:not(:last-child) {
@@ -55,6 +56,7 @@
 
     @media (min-width: 768px) {
       margin-bottom: 0;
+      padding: 0;
       width: 165px;
     }
 
