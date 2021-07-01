@@ -87,5 +87,26 @@
       "Ability to speak intelligently about the organization and respond to any technical inquiries posed by a possible hiring."
     ],
     "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
+  },
+  {
+    "openingId": "human-resources-head",
+    "category": "Community",
+    "description": "Our company is looking for a Head of Human Resources to join our team. to oversee all personnel-related matters and ensure we use our resources beneficially.",
+    "position": "Head of Human Resources",
+    "responsibilities": [
+      "Working with team leads to write job descriptions.",
+      "Overseeing the application process.",
+      "Overseeing the interview process.",
+      "Overseeing payments and accounting.",
+      "Documenting standard memo conventions for payments.",
+      "Assisting team leads with the onboarding process.",
+      "Oversee creation of the new recruiting team."
+    ],
+    "technologyRequirements": [
+      "Leadership abilities",
+      "Familiar with Github",
+      "Knowledgable with Gsuite"
+    ],
+    "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
   }
 ]
