@@ -58,6 +58,15 @@
       flex-direction: row;
       margin-top: 120px;
     }
+    @media (max-width: 1450px) {
+      flex-direction: row;
+      margin-right: -5%;
+    }
+    @media (max-width: 1400px) {
+      flex-direction: row;
+      margin-right: 0%;
+      
+    }
   }
 
   // need to increase specificity to override base css
