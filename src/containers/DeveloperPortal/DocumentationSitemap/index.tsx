@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 
-import {A, Container} from 'components';
+import {Container} from 'components';
+import {Link} from 'react-router-dom';
 import './DocumentationSitemap.scss';
 
 // TODO: update links when ready
@@ -12,40 +13,41 @@ const DocumentationSitemap: FC = () => {
         <div className="DocumentationSitemap__topics">
           <div className="DocumentationSitemap__topic-container">
             <div className="DocumentationSitemap__topic-header">Living Whitepaper</div>
-            <A className="DocumentationSitemap__link" href="/" newWindow={false}>
+            <Link className="DocumentationSitemap__link" to="/">
               Principal Entities on the Network
-            </A>
-            <A className="DocumentationSitemap__link" href="/" newWindow={false}>
+            </Link>
+            <Link className="DocumentationSitemap__link" to="/">
               Principal Events and Processes on the Network
-            </A>
-            <A className="DocumentationSitemap__link" href="/" newWindow={false}>
+            </Link>
+            <Link className="DocumentationSitemap__link" to="/">
               Architecture - Deep Dive
-            </A>
+            </Link>
           </div>
           <div className="DocumentationSitemap__topic-container">
             <div className="DocumentationSitemap__topic-header">Projects</div>
-            <A
+            <Link
               className="DocumentationSitemap__link"
-              href="https://github.com/thenewboston-developers/Projects/issues/new?assignees=&labels=Project&template=project-proposal.md&title=NAME_OF_YOUR_PROJECT"
+              to={{
+                pathname:
+                  'https://github.com/thenewboston-developers/Projects/issues/new?assignees=&labels=Project&template=project-proposal.md&title=NAME_OF_YOUR_PROJECT',
+              }}
+              target="_blank"
             >
               Propose a Project
-            </A>
-            <A className="DocumentationSitemap__link" href="/projects" newWindow={false}>
+            </Link>
+
+            <Link className="DocumentationSitemap__link" to="/projects">
               Approved Projects
-            </A>
-            <A
-              className="DocumentationSitemap__link"
-              href="/project-rules/overview#how-proposals-work"
-              newWindow={false}
-            >
+            </Link>
+            <Link className="DocumentationSitemap__link" to="/project-rules/overview#how-proposals-work">
               Rules and Guidelines
-            </A>
+            </Link>
           </div>
           <div className="DocumentationSitemap__topic-container">
             <div className="DocumentationSitemap__topic-header">Tools</div>
-            <A className="DocumentationSitemap__link" href="/" newWindow={false}>
+            <Link className="DocumentationSitemap__link" to="/">
               APIs
-            </A>
+            </Link>
           </div>
         </div>
       </Container>
