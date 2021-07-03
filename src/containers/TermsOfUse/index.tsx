@@ -12,7 +12,7 @@ const TermsOfUse: FC = () => {
       <div className="TermsOfUse__main-text">
         <p className="TermsOfUse__text">
           This website (the “Site”) is operated by TheNewBoston (“we”, “us”, “our”). To contact us, please email
-          contact@thenewboston.com.{' '}
+          contact@thenewboston.com.
         </p>
         <p className="TermsOfUse__text">
           By using our Site, you confirm that you accept these Terms of Use (“Terms”) and you agree to comply with them.
