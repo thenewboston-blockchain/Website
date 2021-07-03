@@ -12,7 +12,7 @@
     @extend %centered-position;
     filter: blur(20px);
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
 
     &--loaded {
@@ -24,7 +24,7 @@
     @extend %centered-position;
     filter: blur(20px);
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: filter 0.75s linear;
     width: 100%;
 
