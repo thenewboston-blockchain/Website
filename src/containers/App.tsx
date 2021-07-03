@@ -28,6 +28,7 @@ import Social from './Social';
 import StyleGuide from './StyleGuide';
 import Tasks from './Tasks';
 import Teams from './Teams';
+import TermsOfUse from './TermsOfUse';
 
 /**
  * Lazy load pages that may contribute a lot to the bundle size
@@ -97,6 +98,7 @@ const App: FC = () => {
           <Route path="/style-guide/:chapter?" component={StyleGuide} />
           <Redirect exact path="/tutorials" to="/tutorials/All" />
           <Route exact path="/tutorials/:category/:playlistId?" component={withSuspense(Tutorials)} />
+          <Route exact path="/terms-of-use" component={TermsOfUse} />
           <Route path="/users/:userId" component={Profile} />
           <Redirect to="/" />
         </Switch>
