@@ -1,0 +1,37 @@
+@import 'styles/font-mixins';
+
+.DeveloperPortalHero {
+  position: relative;
+
+  &__main-image {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__links-container {
+    display: flex;
+    flex-direction: row;
+    left: 50%;
+    margin-top: 26px;
+    position: absolute;
+    transform: translateX(-50%);
+    width: fit-content;
+  }
+
+  &__link {
+    @extend %body1;
+    color: white;
+
+    &:not(:last-child) {
+      margin-right: 48px;
+    }
+
+    @media (max-width: 772px) {
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+    }
+  }
+}

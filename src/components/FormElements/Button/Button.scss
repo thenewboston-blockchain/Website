@@ -61,7 +61,7 @@
   }
 
   &--outlined {
-    background: var(--color-white);
+    background: transparent;
 
     &#{$self}--primary {
       border-color: var(--color-gray-200);

@@ -32,6 +32,7 @@ import Teams from './Teams';
 /**
  * Lazy load pages that may contribute a lot to the bundle size
  */
+const DeveloperPortal = lazy(() => import('./DeveloperPortal'));
 const Projects = lazy(() => import('./Projects'));
 const Tutorials = lazy(() => import('./Tutorials'));
 
@@ -71,6 +72,7 @@ const App: FC = () => {
           <Route exact path="/guidelines" component={Guidelines} />
           <Route exact path="/create-account" render={() => <CreateAccount disabled />} />
           <Route exact path="/donate" component={Donate} />
+          <Route exact path="/developer" component={withSuspense(DeveloperPortal)} />
           <Redirect exact from="/faq" to={`/faq/${faqFilters[FaqFilterType.all]}`} />
           <Route exact path="/faq/:filter" component={Faq} />
           <Route exact path="/assets" component={Assets} />
