@@ -49,7 +49,7 @@ const PrivacyPolicy: FC = () => {
         <h2 className="PrivacyPolicy__section-heading">INFORMATION YOU GIVE US</h2>
         <p className="PrivacyPolicy__text">
           We will collect the personal information that you provide us. For example, we will ask you to provide personal
-          information,such as your name, address, email address as part of normal business transactions. Users may
+          information, such as your name, address, email address as part of normal business transactions. Users may
           provide TheNewBoston information in the following scenarios:
         </p>
         <p className="PrivacyPolicy__text">
@@ -59,7 +59,7 @@ const PrivacyPolicy: FC = () => {
         </p>
         <p className="PrivacyPolicy__text">
           Surveys and other forms of communication - Occasionally, our Site may request information. Participation in
-          these is completely voluntary.You may choose whether or not to participate and therefore, disclose this
+          these is completely voluntary. You may choose whether or not to participate and therefore, disclose this
           information. Information requested may include contact information (such as name or email) and demographic
           information (such as age level). Contact information may be used to market to you about third party products
           and services. Your information may also be provided to third parties and used for purposes of monitoring or
