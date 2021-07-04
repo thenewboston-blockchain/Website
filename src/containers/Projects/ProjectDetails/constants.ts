@@ -33,12 +33,6 @@ export const projectDetailsTopic: ProjectTopicMap = {
     position: 1,
     title: ProjectTopicTitle.Problem,
   },
-  roadmap: {
-    anchor: ProjectTopicAnchor.Roadmap,
-    iconType: ProjectIconType.Roadmap,
-    position: 6,
-    title: ProjectTopicTitle.Roadmap,
-  },
   target_market: {
     anchor: ProjectTopicAnchor.TargetMarket,
     iconType: ProjectIconType.Target,

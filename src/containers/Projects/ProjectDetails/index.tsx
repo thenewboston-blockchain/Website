@@ -56,25 +56,8 @@ const ProjectDetails: FC<Props> = ({project}) => {
           iconType={projectDetailsTopic.estimated_completion_date.iconType}
           title={projectDetailsTopic.estimated_completion_date.title}
         />
-        <ProjectDetailsTopic
-          id={projectDetailsTopic.roadmap.anchor}
-          content={renderMilestones()}
-          iconType={projectDetailsTopic.roadmap.iconType}
-          title={projectDetailsTopic.roadmap.title}
-        />
       </div>
     );
-  };
-
-  const renderMilestones = (): ReactNode => {
-    return project.milestones.map((milestone) => {
-      return (
-        <div className="ProjectDetails__milestone" key={milestone.number}>
-          <h3 className="ProjectDetails__milestone-number">Milestone {milestone.number}</h3>
-          <div className="ProjectDetails__milestone-description">{milestone.description}</div>
-        </div>
-      );
-    });
   };
 
   return (
