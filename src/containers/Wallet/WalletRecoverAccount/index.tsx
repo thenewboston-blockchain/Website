@@ -15,7 +15,7 @@ const WalletRecoverAccount: FC = () => {
         After filling out a Nickname for the account and the signing key, click the "Add" button to create the account.
       </p>
 
-      <DocImage alt="send coins modal" bordered maxWidth={1200} src={RecoverAccount} />
+      <DocImage alt="recover account modal" bordered maxWidth={1200} src={RecoverAccount} />
     </DocContainer>
   );
 };
