@@ -11,7 +11,7 @@ const TermsOfUse: FC = () => {
       <h1 className="TermsOfUse__heading">Terms of Use</h1>
       <div className="TermsOfUse__main-text">
         <p className="TermsOfUse__text">
-          This website (the “Site”) is operated by TheNewBoston (“we”, “us”, “our”). To contact us, please email
+          This website (the “Site”) is operated by thenewboston (“we”, “us”, “our”). To contact us, please email
           contact@thenewboston.com.
         </p>
         <p className="TermsOfUse__text">

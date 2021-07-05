@@ -11,13 +11,13 @@ const PrivacyPolicy: FC = () => {
       <h1 className="PrivacyPolicy__heading">Privacy Policy</h1>
       <div className="PrivacyPolicy__main-text">
         <p className="PrivacyPolicy__text">
-          This Privacy Policy governs the manner in which TheNewBoston collects, uses, maintains, and discloses
+          This Privacy Policy governs the manner in which thenewboston collects, uses, maintains, and discloses
           information collected from users (each, a "User" or "you") on the www.thenewboston.com website and all
-          products and services offered by TheNewBoston ("Site").
+          products and services offered by thenewboston ("Site").
         </p>
         <p className="PrivacyPolicy__text">
-          By using the Site or otherwise providing information to TheNewBoston, you agree to our Privacy Policy. If you
-          do not agree with this policy or its terms, please do not visit or use our Site. The TheNewBoston Terms and
+          By using the Site or otherwise providing information to thenewboston, you agree to our Privacy Policy. If you
+          do not agree with this policy or its terms, please do not visit or use our Site. The thenewboston Terms and
           Conditions are incorporated within the terms of this Privacy Policy. Please make sure you read and agree to
           them before using our Site.
         </p>
@@ -50,7 +50,7 @@ const PrivacyPolicy: FC = () => {
         <p className="PrivacyPolicy__text">
           We will collect the personal information that you provide us. For example, we will ask you to provide personal
           information, such as your name, address, email address as part of normal business transactions. Users may
-          provide TheNewBoston information in the following scenarios:
+          provide thenewboston information in the following scenarios:
         </p>
         <p className="PrivacyPolicy__text">
           Registration - In order to use certain parts of the Site, you may first need to register. The registration
@@ -83,12 +83,12 @@ const PrivacyPolicy: FC = () => {
       <section className="PrivacyPolicy__section">
         <h2 className="PrivacyPolicy__section-heading">HOW WE USE AND SHARE COLLECTED INFORMATION</h2>
         <p className="PrivacyPolicy__text">
-          TheNewBoston collects information to provide our services to you for our legitimate interests in better
+          thenewboston collects information to provide our services to you for our legitimate interests in better
           understanding our user interactions and to create better products and services. We also share personal
           information we collect from the site to third parties that assist us in providing our services, in
           understanding how you use our Site, and to provide advertising to us and on our behalf. These third parties
           are obligated to protect the information they process on our behalf in accordance with our policies and
-          applicable law. Specifically, TheNewBoston collects and uses Users' personal information for the following
+          applicable law. Specifically, thenewboston collects and uses Users' personal information for the following
           purposes:
         </p>
         <p className="PrivacyPolicy__text">
@@ -100,10 +100,10 @@ const PrivacyPolicy: FC = () => {
           information, etc. If, at any time, you would like to unsubscribe from receiving future emails, we include
           detailed unsubscribe instructions at the bottom of each email or you may contact us through our Site. Protect
           our rights or comply with legal process - We may disclose your personal information to comply with any court
-          order, legal process, or respond to any governmental or regulatory request; or to protect TheNewBoston's
-          rights or property or the safety of TheNewBoston, its community members, or other individuals. <br />
+          order, legal process, or respond to any governmental or regulatory request; or to protect thenewboston's
+          rights or property or the safety of thenewboston, its community members, or other individuals. <br />
           To market other products of Services to You - We may use your personal information in association with third
-          party vendors, marketing firms or companies to market other non TheNewBoston products or services. For
+          party vendors, marketing firms or companies to market other non thenewboston products or services. For
           example, through Google Ads and Google Analytics, we create remarketing audiences based on specific user
           behavior, demographic information and interest data, and share these lists with Adwords. We also use
           demographic and interest data in analytics reports to create automated profiles for marketing purposes. We
@@ -127,7 +127,7 @@ const PrivacyPolicy: FC = () => {
           YOUR RIGHTS: ACCESSING, UPDATING OR DELETING YOUR PERSONAL INFORMATION
         </h2>
         <p className="PrivacyPolicy__text">
-          If possible, you may log in to TheNewBoston to review and update your registration information. You may also
+          If possible, you may log in to thenewboston to review and update your registration information. You may also
           delete your account at any time. Most data requests on your registration page will be updated automatically.
           Otherwise, we will make commercially reasonable efforts to provide you with reasonable access to your personal
           or other account information we maintain within 30 days of your access request. If we cannot honor your
@@ -165,7 +165,7 @@ const PrivacyPolicy: FC = () => {
       <section className="PrivacyPolicy__section">
         <h2 className="PrivacyPolicy__section-heading">CHANGES TO THIS PRIVACY POLICY</h2>
         <p className="PrivacyPolicy__text">
-          TheNewBoston has the discretion to update this privacy policy at any time. We encourage Users to frequently
+          thenewboston has the discretion to update this privacy policy at any time. We encourage Users to frequently
           check this page for any changes and stay informed about how we help protect the personal information we
           collect. You acknowledge and agree that it is your responsibility to review this Privacy Policy periodically
           and become aware of modifications.
@@ -174,14 +174,14 @@ const PrivacyPolicy: FC = () => {
       <section className="PrivacyPolicy__section">
         <h2 className="PrivacyPolicy__section-heading">U.S. WEBSITE</h2>
         <p className="PrivacyPolicy__text">
-          TheNewBoston operates in the United States of America, under U.S. law. Any information you choose to send to
-          this Site or TheNewBoston will be transferred to TheNewBoston in the U.S., and its service providers, subject
+          thenewboston operates in the United States of America, under U.S. law. Any information you choose to send to
+          this Site or thenewboston will be transferred to thenewboston in the U.S., and its service providers, subject
           to the laws of the United States. Some jurisdictions, such as the European Union, do not consider the U.S.
           legal system to offer protections that are "adequate" in their judgment. If you do not wish your information
-          to be subject to U.S. law, please do not send it to TheNewBoston.
+          to be subject to U.S. law, please do not send it to thenewboston.
         </p>
         <p className="PrivacyPolicy__text">
-          TheNewBoston does not intend to offer its product or Services in any jurisdiction where the offering of such
+          thenewboston does not intend to offer its product or Services in any jurisdiction where the offering of such
           products or Services would be contrary to applicable local law, and any such offer of products or Services is
           void if illegal under applicable law.
         </p>
