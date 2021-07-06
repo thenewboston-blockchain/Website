@@ -14,6 +14,10 @@ export const walletNavigationData = [
     url: '/wallet/create-an-account',
   },
   {
+    name: 'Recover an Account',
+    url: '/wallet/recover-an-account',
+  },
+  {
     name: 'Add Friends',
     url: '/wallet/add-friends',
   },
