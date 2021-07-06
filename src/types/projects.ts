@@ -46,7 +46,6 @@ export enum ProjectTopicTitle {
   Benefits = 'Benefit to Network & Community',
   CenteredAroundTNB = 'Centered around TNB',
   EstimatedCompletionDate = 'Estimated completion date',
-  Roadmap = 'Roadmap',
 }
 
 export enum ProjectTopicAnchor {
@@ -56,5 +55,4 @@ export enum ProjectTopicAnchor {
   Benefits = 'topic-benefits',
   CenteredAroundTNB = 'topic-centered-around-tnb',
   EstimatedCompletionDate = 'topic-completion-date',
-  Roadmap = 'topic-roadmap',
 }

@@ -7,7 +7,6 @@ import IntegrationIcon from './IntegrationIcon';
 import MilestonesIcon from './MilestonesIcon';
 import OverviewIcon from './OverviewIcon';
 import ProblemIcon from './ProblemIcon';
-import RoadmapIcon from './RoadmapIcon';
 import TargetIcon from './TargetIcon';
 import TimelineIcon from './TimelineIcon';
 import {CustomIconProps} from './types';
@@ -18,7 +17,6 @@ export enum ProjectIconType {
   Milestone = 'Milestone',
   Overview = 'Overview',
   Problem = 'Problem',
-  Roadmap = 'Roadmap',
   Target = 'Target',
   Timeline = 'Timeline',
 }
@@ -64,8 +62,6 @@ const ProjectIcon: FC<ComponentProps> = ({className, dataTestId, icon, size, sta
         return <OverviewIcon {...iconProps} />;
       case ProjectIconType.Problem:
         return <ProblemIcon {...iconProps} />;
-      case ProjectIconType.Roadmap:
-        return <RoadmapIcon {...iconProps} />;
       case ProjectIconType.Target:
         return <TargetIcon {...iconProps} />;
       case ProjectIconType.Timeline:
