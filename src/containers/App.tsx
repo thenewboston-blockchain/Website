@@ -19,6 +19,7 @@ import Guidelines from './Guidelines';
 import Home from './Home';
 import Openings from './Openings';
 import PrimaryValidatorApi from './PrimaryValidatorApi';
+import PrivacyPolicy from './PrivacyPolicy';
 import Profile from './Profile';
 import Progress from './Progress';
 import ProjectRulesAndGuide from './Projects/ProjectRulesAndGuide';
@@ -28,6 +29,7 @@ import Social from './Social';
 import StyleGuide from './StyleGuide';
 import Tasks from './Tasks';
 import Teams from './Teams';
+import TermsOfUse from './TermsOfUse';
 
 /**
  * Lazy load pages that may contribute a lot to the bundle size
@@ -91,6 +93,7 @@ const App: FC = () => {
           <Route path="/governance/:chapter?" component={Governance} />
           <Route path="/guide/:chapter?" component={Guide} />
           <Route path="/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
+          <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route path="/progress" component={Progress} />
           <Route path="/projects/:projectId?" component={withSuspense(Projects)} />
           <Route path="/project-rules/:chapter" component={ProjectRulesAndGuide} />
@@ -99,6 +102,7 @@ const App: FC = () => {
           <Route path="/style-guide/:chapter?" component={StyleGuide} />
           <Redirect exact path="/tutorials" to="/tutorials/All" />
           <Route exact path="/tutorials/:category/:playlistId?" component={withSuspense(Tutorials)} />
+          <Route exact path="/terms-of-use" component={TermsOfUse} />
           <Route path="/users/:userId" component={Profile} />
           <Redirect to="/" />
         </Switch>
