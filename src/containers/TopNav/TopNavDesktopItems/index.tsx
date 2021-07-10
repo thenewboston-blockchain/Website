@@ -36,6 +36,13 @@ const communityPopoverItems: TopNavPopoverItemType[] = [
     title: 'Community Guidelines',
     to: '/guidelines',
   },
+  {
+    description: 'Stay updated with our latest articles',
+    iconType: IconType.textBox,
+    isExternal: true,
+    title: 'Blog',
+    to: 'https://blog.thenewboston.com',
+  },
 ];
 
 const getStartedPopoverItems: TopNavPopoverItemType[] = [

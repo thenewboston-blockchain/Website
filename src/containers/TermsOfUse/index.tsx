@@ -7,6 +7,7 @@ import './TermsOfUse.scss';
 const TermsOfUse: FC = () => {
   return (
     <Container className="TermsOfUse" maxWidth={720}>
+      <p className="TermsOfUse__effective">Effective: June 22, 2021</p>
       <p className="TermsOfUse__last-updated">Last Updated: June 22, 2021</p>
       <h1 className="TermsOfUse__heading">Terms of Use</h1>
       <div className="TermsOfUse__main-text">
