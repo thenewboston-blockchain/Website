@@ -11,10 +11,24 @@
     margin-bottom: 24px;
   }
 
+  &__effective {
+    @extend %body1;
+    margin-bottom: 48px;
+    margin-top: 0;
+
+    @media (max-width: 768px) {
+      margin-bottom: 24px;
+    }
+  }
+
   &__last-updated {
     @extend %body1;
     margin-bottom: 48px;
     margin-top: 0;
+
+    @media (max-width: 768px) {
+      margin-bottom: 24px;
+    }
   }
 
   &__list {

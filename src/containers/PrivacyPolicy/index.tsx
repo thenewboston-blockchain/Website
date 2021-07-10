@@ -7,6 +7,7 @@ import './PrivacyPolicy.scss';
 const PrivacyPolicy: FC = () => {
   return (
     <Container className="PrivacyPolicy" maxWidth={720}>
+      <p className="PrivacyPolicy__effective">Effective: June 22, 2021</p>
       <p className="PrivacyPolicy__last-updated">Last Updated: June 22, 2021</p>
       <h1 className="PrivacyPolicy__heading">Privacy Policy</h1>
       <div className="PrivacyPolicy__main-text">
