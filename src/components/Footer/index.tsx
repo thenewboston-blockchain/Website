@@ -46,6 +46,11 @@ const navLists = [
         title: 'Community Guidelines',
         url: '/guidelines',
       },
+      {
+        isExternal: true,
+        title: 'Blog',
+        url: 'https://blog.thenewboston.com',
+      },
     ],
   },
   {
