@@ -9,7 +9,6 @@ import developerPortalPlaceholderImage from './PortalPlaceholder.webp';
 
 import './DeveloperPortalHero.scss';
 
-// TODO: update links when ready
 const DeveloperPortalHero: FC = () => {
   const {width} = useWindowDimensions();
 
@@ -28,7 +27,7 @@ const DeveloperPortalHero: FC = () => {
         <Link to="/" className="DeveloperPortalHero__link">
           Home
         </Link>
-        <Link to="/" className="DeveloperPortalHero__link">
+        <Link to="/developer/whitepaper" className="DeveloperPortalHero__link">
           Living Whitepaper
         </Link>
         <Link to="/projects" className="DeveloperPortalHero__link">

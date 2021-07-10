@@ -5,6 +5,7 @@ import {Layout} from 'components';
 import withSuspense from 'hoc/withSuspense';
 
 import Wallet from './Wallet';
+import ArchitectureDeepDive from './ArchitectureDeepDive';
 import Assets from './Assets';
 import BankApi from './BankApi';
 import ConfirmationValidatorApi from './ConfirmationValidatorApi';
@@ -17,8 +18,11 @@ import Governance from './Governance';
 import Guide from './Guide';
 import Guidelines from './Guidelines';
 import Home from './Home';
+import LivingWhitepaper from './LivingWhitepaper';
 import Openings from './Openings';
 import PrimaryValidatorApi from './PrimaryValidatorApi';
+import PrincipalEntities from './PrincipalEntities';
+import PrincipalEventsAndProcesses from './PrincipalEventsAndProcesses';
 import PrivacyPolicy from './PrivacyPolicy';
 import Profile from './Profile';
 import Progress from './Progress';
@@ -75,6 +79,14 @@ const App: FC = () => {
           <Route exact path="/create-account" render={() => <CreateAccount disabled />} />
           <Route exact path="/donate" component={Donate} />
           <Route exact path="/developer" component={withSuspense(DeveloperPortal)} />
+          <Route exact path="/developer/whitepaper" component={LivingWhitepaper} />
+          <Route exact path="/developer/whitepaper/principal-entities/:chapter?" component={PrincipalEntities} />
+          <Route
+            exact
+            path="/developer/whitepaper/principal-events/:chapter?"
+            component={PrincipalEventsAndProcesses}
+          />
+          <Route exact path="/developer/whitepaper/architecture/:chapter?" component={ArchitectureDeepDive} />
           <Redirect exact from="/faq" to={`/faq/${faqFilters[FaqFilterType.all]}`} />
           <Route exact path="/faq/:filter" component={Faq} />
           <Route exact path="/assets" component={Assets} />
