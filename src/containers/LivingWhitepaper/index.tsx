@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 
 import {Button, Divider} from 'components';
 import {useHistory} from 'react-router';
@@ -8,7 +8,7 @@ import LivingWhitepaperCover from './assets/LivingWhitepaperCover.webp';
 
 import './LivingWhitepaper.scss';
 
-const LivingWhitepaper = () => {
+const LivingWhitepaper: FC = () => {
   const history = useHistory();
   return (
     <DeveloperPortalLayout pageName="Living Whitepaper">

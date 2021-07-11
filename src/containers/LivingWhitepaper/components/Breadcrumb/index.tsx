@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 
 import clsx from 'clsx';
 
@@ -8,7 +8,7 @@ type Props = {
   className?: string;
 };
 
-const Breadcrumb = ({className}: Props) => {
+const Breadcrumb: FC<Props> = ({className}) => {
   return <div className={clsx('Breadcrumb', className)}>Developer {'>'} Living Whitepaper</div>;
 };
 

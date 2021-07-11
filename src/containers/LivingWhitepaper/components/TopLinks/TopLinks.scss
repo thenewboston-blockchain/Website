@@ -1,19 +1,11 @@
 @import 'styles/font-mixins';
 
 .TopLinks {
+  align-items: center;
   background-color: var(--color-cyan-900);
+  display: flex;
   height: 72px;
-  width: 100%;
-
-  &__container {
-    display: flex;
-    flex-direction: row;
-    left: 50%;
-    margin-top: 26px;
-    position: absolute;
-    transform: translateX(-50%);
-    width: fit-content;
-  }
+  justify-content: center;
 
   &__link {
     @extend %body1;

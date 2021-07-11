@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {FC} from 'react';
 
 import DeveloperPortalLayout from '../../components/DeveloperPortalLayout';
 
-const ArchitectureDeepDive = () => {
+const ArchitectureDeepDive: FC = () => {
   return (
     <DeveloperPortalLayout pageName="Living Whitepaper | Architecture Deep Dive">
       ArchitectureDeepDive

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC, ReactNode} from 'react';
 
 import {Container, Divider, PageTitle} from 'components';
 import TopLinks from '../TopLinks';
@@ -7,11 +7,11 @@ import Breadcrumb from '../Breadcrumb';
 import './DeveloperPortalLayout.scss';
 
 type Props = {
-  children?: React.ReactNode;
+  children?: ReactNode;
   pageName: string;
 };
 
-const DeveloperPortalLayout = ({children, pageName}: Props) => {
+const DeveloperPortalLayout: FC<Props> = ({children, pageName}) => {
   return (
     <>
       <PageTitle title={pageName} />

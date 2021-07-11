@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {FC} from 'react';
 
 import DeveloperPortalLayout from '../../components/DeveloperPortalLayout';
 
-const PrincipalEventsAndProcesses = () => {
+const PrincipalEventsAndProcesses: FC = () => {
   return (
     <DeveloperPortalLayout pageName="Living Whitepaper | Principal Events and Processes">
       PrincipalEventsAndProcesses
