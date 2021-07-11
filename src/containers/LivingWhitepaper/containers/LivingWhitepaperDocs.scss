@@ -1,0 +1,38 @@
+@import 'styles/font-mixins';
+
+.LivingWhitepaperDocs {
+  &__page-title {
+    @extend %body1;
+    color: var(--color-gray-300);
+    margin-bottom: 48px;
+
+    @media (max-width: 1366px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__section-title {
+    @extend %h1;
+    color: var(--color-gray-800);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 16px;
+  }
+
+  &__topic-heading {
+    @extend %h2;
+    color: var(--color-gray-700);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 32px;
+  }
+
+  &__emphasized-text {
+    @extend %h4;
+    color: var(--color-gray-800);
+    font-weight: var(--font-weight-bold);
+  }
+
+  &__description {
+    @extend %body1;
+    color: var(--color-gray-500);
+  }
+}
