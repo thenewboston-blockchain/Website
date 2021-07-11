@@ -9,19 +9,19 @@
     display: flex;
     height: 248px;
     justify-content: space-between;
-    padding: 48px 74px;
+    padding: 48px 72px;
 
     @media (max-width: 768px) {
       flex-direction: column;
       height: fit-content;
-      padding: 45px 40px;
+      padding: 48px 40px;
     }
   }
 
   &__hero-title {
     @media (max-width: 768px) {
       align-self: start;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
   }
 
@@ -38,15 +38,15 @@
   }
 
   &__hero-icon {
-    width: 340px;
+    width: 344px;
 
     @media (max-width: 1366px) {
-      width: 267px;
+      width: 264px;
     }
 
     @media (max-width: 768px) {
       align-self: flex-end;
-      width: 193px;
+      width: 192px;
     }
   }
 
@@ -97,10 +97,10 @@
   }
 
   &__cover-image {
-    width: 363px;
+    width: 360px;
 
     @media (max-width: 1366px) {
-      width: 253px;
+      width: 256px;
     }
 
     @media (max-width: 768px) {
@@ -120,7 +120,7 @@
     &--main {
       @extend %h1;
       color: var(--color-white);
-      margin-right: 10px;
+      margin-right: 16px;
     }
 
     &--side {
