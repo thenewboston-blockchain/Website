@@ -32,6 +32,7 @@ const HomeHero: FC = () => {
       <div className="HomeHero__wrapper">
         <div className="HomeHero__left">
           <div className="HomeHero__left-content-container">
+            <span className="HomeHero__hello-world">Hello World</span>
             <h1 className="HomeHero__title">We're Building a Better Economy</h1>
             <h2 className="HomeHero__subtitle">
               thenewboston is a blockchain platform for everyone. We are an open source community developing
