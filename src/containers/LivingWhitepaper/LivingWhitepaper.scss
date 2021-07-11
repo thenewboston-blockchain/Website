@@ -1,0 +1,52 @@
+@import 'styles/font-mixins';
+
+.LivingWhitepaper {
+  &__hero {
+    align-items: center;
+    background: url('./assets/LivingWhitepaperBg.webp');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    height: 248px;
+    justify-content: space-between;
+    padding: 48px 74px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      height: fit-content;
+      padding: 45px 40px;
+    }
+  }
+
+  &__hero-title {
+    @media (max-width: 768px) {
+      align-self: start;
+      margin-bottom: 18px;
+    }
+  }
+
+  &__hero-title-living {
+    @extend %h4;
+    color: var(--color-neutral-500);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  &__hero-title-whitepaper {
+    @extend %display2;
+    color: var(--color-cyan-900);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  &__hero-icon {
+    width: 340px;
+
+    @media (max-width: 1366px) {
+      width: 267px;
+    }
+
+    @media (max-width: 768px) {
+      align-self: flex-end;
+      width: 193px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import 'styles/font-mixins';
+
+.TopLinks {
+  background-color: var(--color-cyan-900);
+  height: 72px;
+  width: 100%;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    left: 50%;
+    margin-top: 26px;
+    position: absolute;
+    transform: translateX(-50%);
+    width: fit-content;
+  }
+
+  &__link {
+    @extend %body1;
+    color: white;
+
+    &:not(:last-child) {
+      margin-right: 48px;
+    }
+
+    @media (max-width: 772px) {
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+    }
+  }
+}
