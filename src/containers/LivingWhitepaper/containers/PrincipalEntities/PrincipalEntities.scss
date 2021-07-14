@@ -1,0 +1,80 @@
+@import 'styles/font-mixins';
+
+.PrincipalEntities {
+  padding: 48px;
+
+  &__divider {
+    margin: 48px 0;
+  }
+
+  &__heading {
+    @extend %body3;
+    color: var(--color-gray-300);
+    margin-bottom: 48px;
+  }
+
+  &__section {
+    &-heading {
+      @extend %h1;
+      font-weight: var(--font-weight-bold);
+    }
+
+    &-image {
+      &-container {
+        text-align: center;
+      }
+    }
+
+    &-list {
+      @extend %body1;
+      color: var(--color-gray-500);
+      padding-inline-start: 20px;
+
+      &-item {
+        padding: 16px 0;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid var(--color-gray-075);
+        }
+      }
+    }
+
+    &-paragraph {
+      @extend %body1;
+      color: var(--color-gray-500);
+      margin-bottom: 16px;
+      text-align: justify;
+
+      &--mb-0 {
+        margin-bottom: 0px;
+      }
+
+      &--mb-48 {
+        margin-bottom: 48px;
+      }
+    }
+
+    &-sub-heading {
+      @extend %h2;
+      font-weight: var(--font-weight-medium);
+    }
+
+    &-text {
+      @extend %body1;
+      color: var(--color-gray-500);
+
+      &--black {
+        color: var(--color-gray-800);
+        font-weight: var(--font-weight-bold);
+      }
+
+      &--bold {
+        font-weight: var(--font-weight-bold);
+      }
+
+      &--highlight {
+        color: var(--color-gray-800);
+      }
+    }
+  }
+}
