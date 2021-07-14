@@ -3,8 +3,9 @@ import React, {FC} from 'react';
 import {Divider} from 'components';
 
 import DeveloperPortalLayout from '../../components/DeveloperPortalLayout';
-import AccountSimpleImage from '../../assets/account-simple.svg';
+import AccountsImage from '../../assets/accounts.svg';
 import KeysImage from '../../assets/keys.svg';
+import NodesImage from '../../assets/nodes.svg';
 import './PrincipalEntities.scss';
 
 const PrincipalEntities: FC = () => {
@@ -60,20 +61,20 @@ const PrincipalEntities: FC = () => {
             Every account has:
           </p>
           <ul className="PrincipalEntities__section-list">
-            <li className="PrincipalEntities__section-list-item">
+            <li className="PrincipalEntities__section-list-item PrincipalEntities__section-list-item--spaced">
               <span className="PrincipalEntities__section-text PrincipalEntities__section-text--black">
                 Account number
               </span>
               , which acts as a receiving address. Other users can send coins to the owner of an account using that
               account number, so every account number is public on the network (public key).
             </li>
-            <li className="PrincipalEntities__section-list-item">
+            <li className="PrincipalEntities__section-list-item PrincipalEntities__section-list-item--spaced">
               <span className="PrincipalEntities__section-text PrincipalEntities__section-text--black">
                 Account signing key
               </span>
               , which secures the account and proves ownership of the account (private key).
             </li>
-            <li className="PrincipalEntities__section-list-item">
+            <li className="PrincipalEntities__section-list-item PrincipalEntities__section-list-item--spaced">
               <span className="PrincipalEntities__section-text PrincipalEntities__section-text--black">
                 Account state
               </span>
@@ -89,12 +90,7 @@ const PrincipalEntities: FC = () => {
           </p>
           {/* TODO: replace all images with ProgressiveImage */}
           <div className="PrincipalEntities__section-image-container">
-            <img
-              alt="Account Simple"
-              className="PrincipalEntities__section-image"
-              src={AccountSimpleImage}
-              loading="lazy"
-            />
+            <img alt="Account Simple" className="PrincipalEntities__section-image" src={AccountsImage} loading="lazy" />
           </div>
           <p className="PrincipalEntities__section-paragraph">
             When users first download an account manager, it guides them through creating a key pair. A{' '}
@@ -125,6 +121,59 @@ const PrincipalEntities: FC = () => {
             Users can have more than one account and they can create and manage several accounts (key pairs) through the
             same account manager app. This is similar to an individual that has multiple email addresses and manages all
             of these email accounts using a single app.
+          </p>
+        </section>
+        <Divider className="PrincipalEntities__divider" />
+        <section className="PrincipalEntities__section">
+          <h2 className="PrincipalEntities__section-heading">Nodes</h2>
+          <p className="PrincipalEntities__section-paragraph">
+            The network uses multiple nodes, which are servers with several responsibilities. Nodes connect users or
+            client apps to the network, or enable important processes, such as transaction validation.
+          </p>
+          <div className="PrincipalEntities__nodes">
+            <div className="PrincipalEntities__nodes-left">
+              <img
+                alt="Account Simple"
+                className="PrincipalEntities__section-image"
+                src={NodesImage}
+                loading="lazy"
+                width="100px"
+              />
+            </div>
+            <div className="PrincipalEntities__nodes-right">
+              <p className="PrincipalEntities__section-paragraph">
+                <span className="PrincipalEntities__section-text--highlight">Connection node</span> is the node that
+                receives a request from a user or a client app, and shares this request with other nodes on the network
+                for further processing. <br />
+                When users first download applications like the Wallet, they are assigned to a default connection node,
+                however, they can choose to connect to the network through a different connection node later.
+              </p>
+            </div>
+          </div>
+        </section>
+        <Divider className="PrincipalEntities__divider" />
+        <section className="PrincipalEntities__section">
+          <h2 className="PrincipalEntities__section-heading">Blocks and Blockchain</h2>
+          <p className="PrincipalEntities__section-paragraph">
+            <span className="PrincipalEntities__section-text--highlight">Blocks</span> are structures that store data.
+            These data describe changes to the network and originate from signed change requests, such as:
+          </p>
+          <ul className="PrincipalEntities__section-list">
+            <li className="PrincipalEntities__section-list-item">Transfers of coins between accounts</li>
+            <li className="PrincipalEntities__section-list-item">New nodes being added to the network</li>
+            <li className="PrincipalEntities__section-list-item">Locking of coins</li>
+          </ul>
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--mt-32">
+            <span className="PrincipalEntities__section-text--highlight">Blockchain</span> is a group of blocks ordered
+            chronologically.
+          </p>
+        </section>
+        <Divider className="PrincipalEntities__divider" />
+        <section className="PrincipalEntities__section">
+          <h2 className="PrincipalEntities__section-heading">Validators</h2>
+          <p className="PrincipalEntities__section-paragraph">
+            <span className="PrincipalEntities__section-text--highlight">Validators</span> are elected nodes that handle
+            the validation of data and the generation of blocks that are added to the blockchain.
           </p>
         </section>
         <Divider className="PrincipalEntities__divider" />

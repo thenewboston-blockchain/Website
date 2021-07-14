@@ -31,10 +31,14 @@
       padding-inline-start: 20px;
 
       &-item {
-        padding: 16px 0;
+        padding: 4px 0;
 
-        &:not(:last-child) {
-          border-bottom: 1px solid var(--color-gray-075);
+        &--spaced {
+          padding: 16px 0;
+
+          &:not(:last-child) {
+            border-bottom: 1px solid var(--color-gray-075);
+          }
         }
       }
     }
@@ -51,6 +55,10 @@
 
       &--mb-48 {
         margin-bottom: 48px;
+      }
+
+      &--mt-32 {
+        margin-top: 32px;
       }
     }
 
@@ -75,6 +83,15 @@
       &--highlight {
         color: var(--color-gray-800);
       }
+    }
+  }
+
+  /* section specific styles */
+  &__nodes {
+    display: flex;
+
+    &-left {
+      margin-right: 32px;
     }
   }
 }
