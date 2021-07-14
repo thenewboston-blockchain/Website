@@ -4,6 +4,7 @@ import {Divider} from 'components';
 
 import DeveloperPortalLayout from '../../components/DeveloperPortalLayout';
 import AccountsImage from '../../assets/accounts.svg';
+import BudgetsImage from '../../assets/budgets.svg';
 import KeysImage from '../../assets/keys.svg';
 import NodesImage from '../../assets/nodes.svg';
 import NodeBoostingImage from '../../assets/node-boosting.svg';
@@ -331,6 +332,44 @@ const PrincipalEntities: FC = () => {
               available coin supply.
             </li>
           </ul>
+        </section>
+        <Divider className="PrincipalEntities__divider" />
+        <section className="PrincipalEntities__section">
+          <h2 className="PrincipalEntities__section-heading">Budget</h2>
+          <p className="PrincipalEntities__section-paragraph">
+            The existing / alpha Treasury will be burnt in favor of an updated minting process by the Treasury Board.
+            Minted coins will be deposited to the budget account which is collectively managed by all members of the
+            government. Both the minting process and the dispersion of coins from the budget require a majority of
+            signatures, similar to a multisig transaction.
+          </p>
+          <div className="PrincipalEntities__section-image-container">
+            <img
+              alt="Budgets"
+              className="PrincipalEntities__section-image"
+              src={BudgetsImage}
+              loading="lazy"
+              width="420px"
+            />
+          </div>
+        </section>
+        <Divider className="PrincipalEntities__divider" />
+        <section className="PrincipalEntities__section">
+          <h2 className="PrincipalEntities__section-heading">Fees</h2>
+          <p className="PrincipalEntities__section-paragraph">
+            Through the collection of fees individuals receive rewards for maintaining nodes on the network. Users pay
+            these fees to their connection node in exchange for the processing of their requests.
+          </p>
+          <p className="PrincipalEntities__section-paragraph">
+            Node owners set their own fee amounts. Users will always consider these amounts when choosing their
+            connection nodes, and although they will often consider additional factors (such as server reliability), the
+            node fee will be the key consideration for most users of the network.
+          </p>
+          <p className="PrincipalEntities__section-paragraph">
+            Besides the node fee, there is an additional fee paid to the PV. The governors set this fee by majority
+            vote, rather than having each validator set their own fee. This prevents nodes from having to determine a
+            new PV fee when new validators join the network, or when existing PV responsibilities change. The PV fee is
+            set directly on the blockchain, resulting in one unified PV fee across the entire network.
+          </p>
         </section>
         <Divider className="PrincipalEntities__divider" />
       </div>
