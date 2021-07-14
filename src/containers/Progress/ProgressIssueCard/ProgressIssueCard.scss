@@ -29,6 +29,7 @@
     outline: none;
     overflow: hidden;
     text-overflow: ellipsis;
+    word-break: break-all;
   }
 
   &__issue-opened-by {
