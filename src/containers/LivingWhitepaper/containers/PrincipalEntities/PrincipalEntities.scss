@@ -14,6 +14,10 @@
   }
 
   &__section {
+    &-divider {
+      margin: 16px 0;
+    }
+
     &-heading {
       @extend %h1;
       font-weight: var(--font-weight-bold);
@@ -32,6 +36,10 @@
 
       &-item {
         padding: 4px 0;
+
+        &--dense {
+          padding: 2px 0;
+        }
 
         &--spaced {
           padding: 16px 0;
@@ -53,8 +61,21 @@
         margin-bottom: 0px;
       }
 
+      &--mb-8 {
+        margin-bottom: 8px;
+      }
+
+      &--mb-32 {
+        margin-bottom: 32px;
+      }
+
       &--mb-48 {
         margin-bottom: 48px;
+      }
+
+      &--my-0 {
+        margin-bottom: 0px;
+        margin-top: 0px;
       }
 
       &--mt-32 {
