@@ -4,7 +4,6 @@ import {Container} from 'components';
 import {Link} from 'react-router-dom';
 import './DocumentationSitemap.scss';
 
-// TODO: update links when ready
 const DocumentationSitemap: FC = () => {
   return (
     <div className="DocumentationSitemap">
@@ -13,13 +12,13 @@ const DocumentationSitemap: FC = () => {
         <div className="DocumentationSitemap__topics">
           <div className="DocumentationSitemap__topic-container">
             <div className="DocumentationSitemap__topic-header">Living Whitepaper</div>
-            <Link className="DocumentationSitemap__link" to="/">
+            <Link className="DocumentationSitemap__link" to="/developer/whitepaper/principal-entities">
               Principal Entities on the Network
             </Link>
-            <Link className="DocumentationSitemap__link" to="/">
+            <Link className="DocumentationSitemap__link" to="/developer/whitepaper/principal-events">
               Principal Events and Processes on the Network
             </Link>
-            <Link className="DocumentationSitemap__link" to="/">
+            <Link className="DocumentationSitemap__link" to="/developer/whitepaper/architecture">
               Architecture - Deep Dive
             </Link>
           </div>

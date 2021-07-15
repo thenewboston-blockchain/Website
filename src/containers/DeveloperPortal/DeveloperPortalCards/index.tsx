@@ -23,8 +23,11 @@ const DeveloperPortalCards: FC = () => {
             architecture, including its Governance model. This is a must-read for all developers on thenewboston
             blockchain.
           </div>
-          {/* TODO: update link when ready */}
-          <Button className="DeveloperPortalCards__card-button" variant="outlined" onClick={() => history.push('/')}>
+          <Button
+            className="DeveloperPortalCards__card-button"
+            variant="outlined"
+            onClick={() => history.push('/developer/whitepaper')}
+          >
             Learn More
             <Icon icon={IconType.chevronRight} size={16} />
           </Button>

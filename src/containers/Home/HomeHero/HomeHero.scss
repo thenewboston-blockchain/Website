@@ -5,24 +5,6 @@ $left-pl: 64px;
 $right-width: 600px;
 $title-width: 592px;
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
 .HomeHero {
   display: flex;
   height: 687px;
@@ -63,16 +45,6 @@ $title-width: 592px;
     color: var(--color-gray-500);
     display: block;
     margin-bottom: 30px;
-
-    &--fade-in {
-      animation: fadeIn 1s ease-in-out;
-      opacity: 1;
-    }
-
-    &--fade-out {
-      animation: fadeOut 1s ease-in-out;
-      opacity: 0;
-    }
   }
 
   &__image {
