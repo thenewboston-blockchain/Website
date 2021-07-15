@@ -3,6 +3,22 @@
 .PrincipalEntities {
   padding: 48px;
 
+  &__bottom-bar {
+    color: var(--color-cyan-900);
+    display: flex;
+    justify-content: flex-end;
+
+    &-content {
+      align-items: center;
+      cursor: pointer;
+      display: flex;
+
+      &-text {
+        margin-right: 12px;
+      }
+    }
+  }
+
   &__divider {
     margin: 48px 0;
   }
@@ -78,6 +94,11 @@
         margin-top: 0px;
       }
 
+      &--my-8 {
+        margin-bottom: 8px;
+        margin-top: 8px;
+      }
+
       &--mt-32 {
         margin-top: 32px;
       }
@@ -108,6 +129,32 @@
   }
 
   /* section specific styles */
+  &__governance {
+    display: flex;
+
+    &-left {
+      margin-right: 32px;
+
+      &-note {
+        background: var(--color-blue-50);
+        border-left: 2px solid var(--color-cyan-500);
+        padding: 16px;
+
+        &-icon {
+          margin-right: 16px;
+        }
+
+        &-title {
+          align-items: center;
+          color: var(--color-cyan-500);
+          display: flex;
+          font-weight: var(--font-weight-semibold);
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
   &__nodes {
     display: flex;
 

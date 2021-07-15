@@ -1,16 +1,21 @@
 import React, {FC} from 'react';
+import {useHistory} from 'react-router-dom';
+import {Icon, IconType} from '@thenewboston/ui';
 
 import {Divider} from 'components';
 
 import DeveloperPortalLayout from '../../components/DeveloperPortalLayout';
 import AccountsImage from '../../assets/accounts.svg';
 import BudgetsImage from '../../assets/budgets.svg';
+import ElectionProcessImage from '../../assets/election-process.svg';
 import KeysImage from '../../assets/keys.svg';
 import NodesImage from '../../assets/nodes.svg';
 import NodeBoostingImage from '../../assets/node-boosting.svg';
 import './PrincipalEntities.scss';
 
 const PrincipalEntities: FC = () => {
+  const history = useHistory();
+
   return (
     <DeveloperPortalLayout pageName="Living Whitepaper | Principal Entities">
       <div className="PrincipalEntities">
@@ -335,6 +340,66 @@ const PrincipalEntities: FC = () => {
         </section>
         <Divider className="PrincipalEntities__divider" />
         <section className="PrincipalEntities__section">
+          <h2 className="PrincipalEntities__section-heading">Governance</h2>
+          <p className="PrincipalEntities__section-paragraph">
+            Our governance structure enables <span className="PrincipalEntities__section-text--highlight">voting</span>{' '}
+            for all core aspects of the network. The network stores all votes on the chain.{' '}
+            <span className="PrincipalEntities__section-text--highlight">Government</span> is a group of individuals
+            elected by registered users of the network to govern. Among others, governors own the{' '}
+            <span className="PrincipalEntities__section-text--highlight">budget</span>, which is a shared account
+            managed by the entire government. The budget requires a multisig to access. Our treasury board comprises the
+            highest voted members of the government. These members mint new coins into the budget through multisig that
+            requires majority agreement. Any treasurer can propose the amount for initial minting. This also counts as a
+            "yes" vote. All other treasurers must vote yes or no on whether to mint those coins or not. If the majority
+            of treasurers vote yes, the coins are minted into the budget account.
+          </p>
+          <div className="PrincipalEntities__governance">
+            <div className="PrincipalEntities__governance-left">
+              <p className="PrincipalEntities__section-paragraph">
+                Any individual can apply to become a governor (candidate) and all individuals can vote for their desired
+                candidates.
+              </p>
+              <p className="PrincipalEntities__section-paragraph">
+                Voter and applicant accounts must have a{' '}
+                <span className="PrincipalEntities__section-text--highlight">username</span> to take part in the voting
+                process. A network address (public key) with a username is called a registered user. Every username is
+                unique across the entire network and it is an alias that can be purchased with coins. Once an account
+                owner purchases a username, it's theirs for life.
+              </p>
+              <div className="PrincipalEntities__governance-left-note">
+                <div className="PrincipalEntities__governance-left-note-title">
+                  <Icon className="PrincipalEntities__governance-left-note-icon" icon={IconType.pencil} size={20} />
+                  Note
+                </div>
+                <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-0">
+                  Usernames cannot <span className="PrincipalEntities__section-text--highlight">replace</span> account
+                  numbers. Even when an account owner purchases a username, the network uses account numbers in the
+                  signing process.
+                </p>
+              </div>
+              <p className="PrincipalEntities__section-paragraph">
+                Usernames can be purchased for a fee that is directly paid to the budget. The username system ensures
+                transparency and accountability in voting by enabling human readable strings to act as identities,
+                rather than account numbers which are anonymous.
+              </p>
+              <p className="PrincipalEntities__section-paragraph">
+                All usernames come with a single vote by default. Once a username has been registered, additional votes
+                can be purchased for that username.
+              </p>
+            </div>
+            <div className="PrincipalEntities__governance-right">
+              <img
+                alt="Election Process"
+                className="PrincipalEntities__section-image"
+                src={ElectionProcessImage}
+                loading="lazy"
+                width="380px"
+              />
+            </div>
+          </div>
+        </section>
+        <Divider className="PrincipalEntities__divider" />
+        <section className="PrincipalEntities__section">
           <h2 className="PrincipalEntities__section-heading">Budget</h2>
           <p className="PrincipalEntities__section-paragraph">
             The existing / alpha Treasury will be burnt in favor of an updated minting process by the Treasury Board.
@@ -372,6 +437,151 @@ const PrincipalEntities: FC = () => {
           </p>
         </section>
         <Divider className="PrincipalEntities__divider" />
+        <section className="PrincipalEntities__section">
+          <h2 className="PrincipalEntities__section-heading">Glossary of Main Entities</h2>
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--mt-32 PrincipalEntities__section-paragraph--mb-8  PrincipalEntities__section-text--black">
+            Account
+          </p>
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8">
+            Account Anonymous digital identity on the network through which a user can send and receive coins
+          </p>
+          <Divider className="PrincipalEntities__section-divider" />
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8 PrincipalEntities__section-text--black">
+            Account Balance
+          </p>
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8">
+            The amount of coins owned by an account
+          </p>
+          <Divider className="PrincipalEntities__section-divider" />
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8 PrincipalEntities__section-text--black">
+            Account Number
+          </p>
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8">
+            Account Number Identifier of an account
+          </p>
+          <Divider className="PrincipalEntities__section-divider" />
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8 PrincipalEntities__section-text--black">
+            Account State
+          </p>
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8">
+            Attributes of the account that can change over time, such as the account balance
+          </p>
+          <Divider className="PrincipalEntities__section-divider" />
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8 PrincipalEntities__section-text--black">
+            Block
+          </p>
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8">
+            A description of a change to one or more objects in the network
+          </p>
+          <Divider className="PrincipalEntities__section-divider" />
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8 PrincipalEntities__section-text--black">
+            Blockchain
+          </p>
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8">
+            List of blocks ordered chronologically
+          </p>
+          <Divider className="PrincipalEntities__section-divider" />
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8 PrincipalEntities__section-text--black">
+            Budget
+          </p>
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8">
+            Budget Shared account managed by the government that requires a multisig to access
+          </p>
+          <Divider className="PrincipalEntities__section-divider" />
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8 PrincipalEntities__section-text--black">
+            Confirmation
+          </p>
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8">
+            A block signed by a validator as indication that the block has been added to their blockchain
+          </p>
+          <Divider className="PrincipalEntities__section-divider" />
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8 PrincipalEntities__section-text--black">
+            Confirmation Validator (CV)
+          </p>
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8">
+            Confirmation Validator (CV) Validator that will receive blocks from the PV, validate those results, and if
+            valid add that block to their blockchain
+          </p>
+          <Divider className="PrincipalEntities__section-divider" />
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8 PrincipalEntities__section-text--black">
+            Government
+          </p>
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8">
+            Group of individuals elected by registered users to govern
+          </p>
+          <Divider className="PrincipalEntities__section-divider" />
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8 PrincipalEntities__section-text--black">
+            Locked Coins
+          </p>
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8">
+            Coins that are frozen for a set amount of time to prevent them from being withdrawn
+          </p>
+          <Divider className="PrincipalEntities__section-divider" />
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8 PrincipalEntities__section-text--black">
+            Node
+          </p>
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8">
+            Network server that has several responsibilities, such as checking that requests conform to network protocol
+            and routing blocks
+          </p>
+          <Divider className="PrincipalEntities__section-divider" />
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8 PrincipalEntities__section-text--black">
+            Primary Validator (PV)
+          </p>
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8">
+            Validator that accepts requests from other nodes; after successful validation of each request, it creates a
+            new block which is first added to it's own blockchain and then forwarded to the confirmation validators
+          </p>
+          <Divider className="PrincipalEntities__section-divider" />
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8 PrincipalEntities__section-text--black">
+            Points
+          </p>
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8">
+            An amount of refillable units that are awarded in exchange for locking coins
+          </p>
+          <Divider className="PrincipalEntities__section-divider" />
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8 PrincipalEntities__section-text--black">
+            Registered Users
+          </p>
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8">
+            Registered Users Individual users of the network that have a username
+          </p>
+          <Divider className="PrincipalEntities__section-divider" />
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8 PrincipalEntities__section-text--black">
+            Treasury Board
+          </p>
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8">
+            Highest voted members of government who mint new coins
+          </p>
+          <Divider className="PrincipalEntities__section-divider" />
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8 PrincipalEntities__section-text--black">
+            Username
+          </p>
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8">
+            A globally unique network identifier linked to an account number
+          </p>
+          <Divider className="PrincipalEntities__section-divider" />
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8 PrincipalEntities__section-text--black">
+            Vote
+          </p>
+          <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-8">
+            Registered users choice for governor
+          </p>
+        </section>
+        <Divider className="PrincipalEntities__divider" />
+        <div className="PrincipalEntities__bottom-bar">
+          <div
+            className="PrincipalEntities__bottom-bar-content"
+            onClick={() => history.push('/developer/whitepaper/principal-events')}
+            role="button"
+            tabIndex={0}
+          >
+            <span className="PrincipalEntities__bottom-bar-content-text">
+              Principal Events and Processes on the Network
+            </span>
+            <Icon icon={IconType.chevronRight} />
+          </div>
+        </div>
       </div>
     </DeveloperPortalLayout>
   );
