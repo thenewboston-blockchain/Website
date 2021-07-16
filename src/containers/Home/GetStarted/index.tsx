@@ -1,13 +1,11 @@
 import React, {FC} from 'react';
 
-import {
-  CommunityBuiltIcon,
-  CompleteBountiesIcon,
-  CreateProposalsIcon,
-  DownloadWalletIcon,
-  ReadDocumentationIcon,
-  ViewOpeningsIcon,
-} from '../icons';
+import CommunityBuiltIcon from '../icons/CommunityBuiltIcon.png';
+import CompleteBountiesIcon from '../icons/CompleteBountiesIcon.png';
+import CreateProposalsIcon from '../icons/CreateProposalsIcon.png';
+import DownloadWalletIcon from '../icons/DownloadWalletIcon.png';
+import ReadDocumentationIcon from '../icons/ReadDocumentationIcon.png';
+import ViewOpeningsIcon from '../icons/ViewOpeningsIcon.png';
 import GetStartedCard from './GetStartedCard';
 
 import './GetStarted.scss';
@@ -15,37 +13,37 @@ import './GetStarted.scss';
 const getStartedDetails = [
   {
     description: 'Learn about thenewboston blockchain.',
-    icon: <ReadDocumentationIcon size={40} />,
+    icon: <img alt="Read Documentation" className="GetStarted__icon" src={ReadDocumentationIcon} />,
     title: 'Read Documentation',
     to: '/guide/introduction',
   },
   {
     description: 'Interact with the network using our official wallet.',
-    icon: <DownloadWalletIcon size={40} />,
+    icon: <img alt="Download Wallet" className="GetStarted__icon" src={DownloadWalletIcon} />,
     title: 'Download Wallet',
     to: '/download',
   },
   {
     description: 'Connect with the community to learn, grow, and create.',
-    icon: <CommunityBuiltIcon size={40} />,
+    icon: <img alt="Join the Community" className="GetStarted__icon" src={CommunityBuiltIcon} />,
     title: 'Join the Community',
     to: '/social',
   },
   {
     description: 'Earn coins by building projects, gaining skills, and working as a team.',
-    icon: <CreateProposalsIcon size={40} />,
+    icon: <img alt="Create Proposals" className="GetStarted__icon" src={CreateProposalsIcon} />,
     title: 'Create Proposals',
     to: '/projects/overview',
   },
   {
     description: 'Work on bug fixes, graphics, and other small tasks to earn coins.',
-    icon: <CompleteBountiesIcon size={40} />,
+    icon: <img alt="Complete Bounties" className="GetStarted__icon" src={CompleteBountiesIcon} />,
     title: 'Complete Bounties',
     to: '/tasks/All',
   },
   {
     description: 'Apply to be part of the core team.',
-    icon: <ViewOpeningsIcon size={40} />,
+    icon: <img alt="View Openings" className="GetStarted__icon" src={ViewOpeningsIcon} />,
     title: 'View Openings',
     to: '/openings/All',
   },

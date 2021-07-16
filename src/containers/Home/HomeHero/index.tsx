@@ -6,8 +6,8 @@ import SocialMediaIcon from 'components/SocialMediaIcon';
 import {useWindowDimensions} from 'hooks';
 import {SocialMedia} from 'types/social-media';
 
-import HeroV2 from './HeroV2.svg';
-import HeroV2Placeholder from './HeroV2.webp';
+import HeroV2 from './HeroV2.png';
+import HeroV2Placeholder from './HeroV2Placeholder.webp';
 import './HomeHero.scss';
 
 const HomeHero: FC = () => {
