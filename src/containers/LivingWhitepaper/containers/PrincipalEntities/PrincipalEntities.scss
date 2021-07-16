@@ -40,6 +40,11 @@
     }
 
     &-image {
+      &--fit {
+        height: auto;
+        max-width: 100%;
+      }
+
       &-container {
         text-align: center;
       }
@@ -160,6 +165,35 @@
 
     &-left {
       margin-right: 32px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 24px;
+
+    &__heading {
+      margin-bottom: 24px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 24px 48px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 24px;
+
+    &__governance {
+      flex-direction: column;
+
+      &-left {
+        margin-bottom: 32px;
+        margin-right: 0px;
+      }
+
+      &-right {
+        text-align: center;
+      }
     }
   }
 }

@@ -97,7 +97,13 @@ const PrincipalEntities: FC = () => {
           </p>
           {/* TODO: replace all images with ProgressiveImage */}
           <div className="PrincipalEntities__section-image-container">
-            <img alt="Account Simple" className="PrincipalEntities__section-image" src={AccountsImage} loading="lazy" />
+            <img
+              alt="Account Simple"
+              className="PrincipalEntities__section-image PrincipalEntities__section-image--fit"
+              src={AccountsImage}
+              loading="lazy"
+              width="420px"
+            />
           </div>
           <p className="PrincipalEntities__section-paragraph">
             When users first download an account manager, it guides them through creating a key pair. A{' '}
@@ -276,7 +282,7 @@ const PrincipalEntities: FC = () => {
           <div className="PrincipalEntities__section-image-container">
             <img
               alt="Node Boosting"
-              className="PrincipalEntities__section-image"
+              className="PrincipalEntities__section-image PrincipalEntities__section-image--fit"
               src={NodeBoostingImage}
               loading="lazy"
               width="360px"
@@ -393,7 +399,7 @@ const PrincipalEntities: FC = () => {
                 className="PrincipalEntities__section-image"
                 src={ElectionProcessImage}
                 loading="lazy"
-                width="380px"
+                width="312px"
               />
             </div>
           </div>
@@ -410,7 +416,7 @@ const PrincipalEntities: FC = () => {
           <div className="PrincipalEntities__section-image-container">
             <img
               alt="Budgets"
-              className="PrincipalEntities__section-image"
+              className="PrincipalEntities__section-image PrincipalEntities__section-image--fit"
               src={BudgetsImage}
               loading="lazy"
               width="420px"
