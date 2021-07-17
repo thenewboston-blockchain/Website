@@ -11,7 +11,7 @@
       padding: 32px 48px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
       display: none;
     }
   }
@@ -20,7 +20,7 @@
     border-left: 1px solid var(--color-gray-075);
     width: 100%;
 
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
       border-left: none;
     }
   }

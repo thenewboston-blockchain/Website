@@ -168,7 +168,7 @@
     }
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: 1366px) {
     padding: 24px;
 
     &__heading {
@@ -176,11 +176,11 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     padding: 24px 48px;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     padding: 24px;
 
     &__governance {
