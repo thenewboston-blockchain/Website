@@ -65,6 +65,7 @@
 
   &__main-left {
     margin-right: 48px;
+
     @media (max-width: 768px) {
       margin-right: 0px;
     }
@@ -125,7 +126,7 @@
       padding-right: 48px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 480px) {
       padding: 72px 28px;
       padding-right: 28px;
     }
