@@ -54,4 +54,10 @@
       margin-bottom: 48px;
     }
   }
+
+  &__icon {
+    height: 40px;
+    object-fit: contain;
+    width: 40px;
+  }
 }
