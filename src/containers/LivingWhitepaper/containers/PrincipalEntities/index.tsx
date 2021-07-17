@@ -1,8 +1,6 @@
 import React, {FC} from 'react';
-import {useHistory} from 'react-router-dom';
-import {Icon, IconType} from '@thenewboston/ui';
 
-import {Divider} from 'components';
+import {Divider, Navigation, Note, NoteType} from 'components';
 
 import DeveloperPortalLayout from '../../components/DeveloperPortalLayout';
 import AccountsImage from '../../assets/accounts.svg';
@@ -14,8 +12,6 @@ import NodeBoostingImage from '../../assets/node-boosting.svg';
 import './PrincipalEntities.scss';
 
 const PrincipalEntities: FC = () => {
-  const history = useHistory();
-
   return (
     <DeveloperPortalLayout pageName="Living Whitepaper | Principal Entities">
       <div className="PrincipalEntities">
@@ -372,17 +368,12 @@ const PrincipalEntities: FC = () => {
                 unique across the entire network and it is an alias that can be purchased with coins. Once an account
                 owner purchases a username, it's theirs for life.
               </p>
-              <div className="PrincipalEntities__governance-left-note">
-                <div className="PrincipalEntities__governance-left-note-title">
-                  <Icon className="PrincipalEntities__governance-left-note-icon" icon={IconType.pencil} size={20} />
-                  Note
-                </div>
-                <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-0">
-                  Usernames cannot <span className="PrincipalEntities__section-text--highlight">replace</span> account
+              <Note
+                text="Usernames cannot replace account
                   numbers. Even when an account owner purchases a username, the network uses account numbers in the
-                  signing process.
-                </p>
-              </div>
+                  signing process."
+                type={NoteType.Information}
+              />
               <p className="PrincipalEntities__section-paragraph">
                 Usernames can be purchased for a fee that is directly paid to the budget. The username system ensures
                 transparency and accountability in voting by enabling human readable strings to act as identities,
@@ -576,17 +567,11 @@ const PrincipalEntities: FC = () => {
         </section>
         <Divider className="PrincipalEntities__divider" />
         <div className="PrincipalEntities__bottom-bar">
-          <div
-            className="PrincipalEntities__bottom-bar-content"
-            onClick={() => history.push('/developer/whitepaper/principal-events')}
-            role="button"
-            tabIndex={0}
-          >
-            <span className="PrincipalEntities__bottom-bar-content-text">
-              Principal Events and Processes on the Network
-            </span>
-            <Icon icon={IconType.chevronRight} />
-          </div>
+          <Navigation
+            path="/developer/whitepaper/principal-events"
+            text="Principal Events and Processes on the Network"
+            type="right"
+          />
         </div>
       </div>
     </DeveloperPortalLayout>
