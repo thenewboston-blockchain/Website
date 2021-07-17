@@ -1,5 +1,41 @@
+@import 'styles/font-mixins';
+
 .Breadcrumb {
   align-items: center;
   display: flex;
-  height: 56px;
+  flex-wrap: wrap;
+  min-height: 56px;
+
+  @media (max-width: 1366px) {
+    padding: 0 48px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 12px 24px;
+  }
+
+  &__link-container {
+    align-items: center;
+    color: var(--color-gray-400);
+    display: flex;
+
+    @media (max-width: 768px) {
+      margin: 12px 0;
+    }
+  }
+
+  &__link {
+    @extend %h4;
+    color: var(--color-gray-400);
+    line-height: 14px; // allow text to be centered by setting line-height to be the same as font size
+
+    &--active {
+      color: var(--color-gray-600);
+      font-weight: var(--font-weight-medium);
+    }
+  }
+
+  &__icon {
+    margin: 0 8px;
+  }
 }

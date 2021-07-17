@@ -9,10 +9,11 @@ export interface DocImageProps {
   bordered?: boolean;
   className?: string;
   maxWidth: number;
+  width?: number;
   src: string;
 }
 
-const DocImage: FC<DocImageProps> = ({alt, bordered, className, maxWidth, src}) => {
+const DocImage: FC<DocImageProps> = ({alt, bordered, className, maxWidth, src, width}) => {
   return (
     <div className={clsx('DocImage', className)} data-testid="DocImage">
       <img
@@ -23,7 +24,7 @@ const DocImage: FC<DocImageProps> = ({alt, bordered, className, maxWidth, src}) 
         })}
         data-testid="DocImage__img"
         src={src}
-        style={{maxWidth}}
+        style={{maxWidth, width}}
       />
     </div>
   );

@@ -3,6 +3,10 @@
 .ArchitectureDeepDive {
   padding: 32px 48px;
 
+  @media (max-width: 768px) {
+    padding: 24px;
+  }
+
   &__page-title {
     @extend %body1;
     color: var(--color-gray-300);
@@ -49,6 +53,10 @@
     @media (max-width: 768px) {
       margin: 24px 0;
     }
+  }
+
+  &__points {
+    padding-inline-start: 24px;
   }
 
   &__point {

@@ -118,4 +118,8 @@
       margin-top: 24px;
     }
   }
+
+  &__icon {
+    object-fit: contain;
+  }
 }

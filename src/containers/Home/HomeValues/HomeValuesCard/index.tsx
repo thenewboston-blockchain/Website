@@ -1,7 +1,9 @@
 import React, {FC} from 'react';
 
 import {useWindowDimensions} from 'hooks';
-import {BlazingFastIcon, CommunityBuiltIcon, LowFeesIcon} from '../../icons';
+import BlazingFastIcon from '../../icons/BlazingFastIcon.png';
+import CommunityBuiltIcon from '../../icons/CommunityBuiltIcon.png';
+import LowFeesIcon from '../../icons/LowFeesIcon.png';
 import './HomeValuesCard.scss';
 
 const HomeValuesCard: FC = () => {
@@ -16,7 +18,7 @@ const HomeValuesCard: FC = () => {
     <div className="HomeValuesCard">
       <div className="HomeValuesCard__main">
         <div className="HomeValuesCard__column">
-          <LowFeesIcon size={iconSize} />
+          <img alt="Low Fees" className="HomeValuesCard__icon" height={iconSize} src={LowFeesIcon} width={iconSize} />
           <div className="HomeValuesCard__column-text-container">
             <div className="HomeValuesCard__column-title">Low Fees</div>
             <div className="HomeValuesCard__column-description">
@@ -25,7 +27,13 @@ const HomeValuesCard: FC = () => {
           </div>
         </div>
         <div className="HomeValuesCard__column">
-          <BlazingFastIcon size={iconSize} />
+          <img
+            alt="Blazing Fast"
+            className="HomeValuesCard__icon"
+            height={iconSize}
+            src={BlazingFastIcon}
+            width={iconSize}
+          />
           <div className="HomeValuesCard__column-text-container">
             <div className="HomeValuesCard__column-title">Blazing Fast</div>
             <div className="HomeValuesCard__column-description">
@@ -35,7 +43,13 @@ const HomeValuesCard: FC = () => {
           </div>
         </div>
         <div className="HomeValuesCard__column">
-          <CommunityBuiltIcon size={iconSize} />
+          <img
+            alt="Blazing Fast"
+            className="HomeValuesCard__icon"
+            height={iconSize}
+            src={CommunityBuiltIcon}
+            width={iconSize}
+          />
           <div className="HomeValuesCard__column-text-container">
             <div className="HomeValuesCard__column-title">Community Built</div>
             <div className="HomeValuesCard__column-description">

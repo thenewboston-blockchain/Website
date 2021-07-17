@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom';
 import {Button, ProgressiveImage} from 'components';
 import {useWindowDimensions} from 'hooks';
 import HomeValuesCard from './HomeValuesCard';
-import ValuesIllustrationPlaceholder from './ValuesIllustration.webp';
-import ValuesIllustration from './ValuesIllustration.svg';
+import ValuesIllustrationPlaceholder from './ValuesIllustrationPlaceholder.webp';
+import ValuesIllustration from './ValuesIllustration.webp';
 import './HomeValues.scss';
 
 const HomeValues: FC = () => {

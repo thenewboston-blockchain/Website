@@ -369,9 +369,13 @@ const PrincipalEntities: FC = () => {
                 owner purchases a username, it's theirs for life.
               </p>
               <Note
-                text="Usernames cannot replace account
-                  numbers. Even when an account owner purchases a username, the network uses account numbers in the
-                  signing process."
+                text={
+                  <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--mb-0">
+                    Usernames cannot <span className="PrincipalEntities__section-text--highlight">replace</span> account
+                    numbers. Even when an account owner purchases a username, the network uses account numbers in the
+                    signing process.
+                  </p>
+                }
                 type={NoteType.Information}
               />
               <p className="PrincipalEntities__section-paragraph">
