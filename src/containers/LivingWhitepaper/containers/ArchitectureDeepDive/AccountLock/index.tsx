@@ -35,13 +35,15 @@ const AccountLock = () => {
       <div className="ArchitectureDeepDive__emphasized-text AccountLock__emphasized-text">
         So, the following two rules outline how account locks are determined:
       </div>
-      <li className="ArchitectureDeepDive__point">
-        If an account owner has never made a signed change request before, their account lock is equal to their account
-        number.
-      </li>
-      <li className="ArchitectureDeepDive__point">
-        Otherwise, the account lock is equal to the hash value of their most recent signed change request message.
-      </li>
+      <ul className="ArchitectureDeepDive__points">
+        <li className="ArchitectureDeepDive__point">
+          If an account owner has never made a signed change request before, their account lock is equal to their
+          account number.
+        </li>
+        <li className="ArchitectureDeepDive__point">
+          Otherwise, the account lock is equal to the hash value of their most recent signed change request message.
+        </li>
+      </ul>
       <Divider className="ArchitectureDeepDive__section-divider" />
     </div>
   );

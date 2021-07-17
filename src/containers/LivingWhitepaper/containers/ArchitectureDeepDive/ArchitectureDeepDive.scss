@@ -55,6 +55,10 @@
     }
   }
 
+  &__points {
+    padding-inline-start: 24px;
+  }
+
   &__point {
     @extend %body1;
     color: var(--color-gray-500);

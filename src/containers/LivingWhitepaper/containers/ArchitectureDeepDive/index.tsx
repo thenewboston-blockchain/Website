@@ -28,7 +28,7 @@ const ArchitectureDeepDive: FC = () => {
         <div className="ArchitectureDeepDive__navigation">
           <Navigation
             path="/developer/whitepaper/principal-entities"
-            text="Principal Events and Processes on the Network"
+            text="Principal Entities on the Network"
             type="right"
           />
         </div>

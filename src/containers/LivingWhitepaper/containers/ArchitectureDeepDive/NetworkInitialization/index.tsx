@@ -21,9 +21,11 @@ const NetworkInitialization = () => {
         The blockchain genesis state consists of the minimum amount of data and information required to initialize a new
         network including:
       </p>
-      <li className="ArchitectureDeepDive__point">All account information from previous network (alpha)</li>
-      <li className="ArchitectureDeepDive__point">The node registration of the source node</li>
-      <li className="ArchitectureDeepDive__point">The initial schedule comprising a single node (the source node)</li>
+      <ul className="ArchitectureDeepDive__points">
+        <li className="ArchitectureDeepDive__point">All account information from previous network (alpha)</li>
+        <li className="ArchitectureDeepDive__point">The node registration of the source node</li>
+        <li className="ArchitectureDeepDive__point">The initial schedule comprising a single node (the source node)</li>
+      </ul>
       <DocImage alt="Genesis Block Composition" maxWidth={245} src={GenesisBlockCompositionImage} />
       <p className="ArchitectureDeepDive__description">
         From that point onward, all blocks become structures of data that represent all changes to the network. These

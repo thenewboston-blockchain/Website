@@ -29,36 +29,48 @@ const BlockStructure = () => {
       <DocImage alt="Block Structure" maxWidth={479} src={BlockStructureImage} />
 
       <div className="ArchitectureDeepDive__topic-heading">Signed Change Request Fields</div>
-      <li className="ArchitectureDeepDive__point">
-        <span className="ArchitectureDeepDive__emphasized-text">Type</span> - Type of the signed change request (defines
-        the message structure)
-      </li>
+      <ul className="ArchitectureDeepDive__points">
+        <li className="ArchitectureDeepDive__point">
+          <span className="ArchitectureDeepDive__emphasized-text">Type</span> - Type of the signed change request
+          (defines the message structure)
+        </li>
+      </ul>
       <Divider className="ArchitectureDeepDive__point-divider" />
-      <li className="ArchitectureDeepDive__point">
-        <span className="ArchitectureDeepDive__emphasized-text">Signer</span> - Account number (public key) of the
-        entity that signed the signed change request
-      </li>
+      <ul className="ArchitectureDeepDive__points">
+        <li className="ArchitectureDeepDive__point">
+          <span className="ArchitectureDeepDive__emphasized-text">Signer</span> - Account number (public key) of the
+          entity that signed the signed change request
+        </li>
+      </ul>
       <Divider className="ArchitectureDeepDive__point-divider" />
-      <li className="ArchitectureDeepDive__point">
-        <span className="ArchitectureDeepDive__emphasized-text">Message</span> - The shape and contents of this vary
-        based on data type
-      </li>
+      <ul className="ArchitectureDeepDive__points">
+        <li className="ArchitectureDeepDive__point">
+          <span className="ArchitectureDeepDive__emphasized-text">Message</span> - The shape and contents of this vary
+          based on data type
+        </li>
+      </ul>
       <Divider className="ArchitectureDeepDive__point-divider" />
-      <li className="ArchitectureDeepDive__point">
-        <span className="ArchitectureDeepDive__emphasized-text">Signature</span> - Value used as proof that the account
-        owner has authorized the request
-      </li>
+      <ul className="ArchitectureDeepDive__points">
+        <li className="ArchitectureDeepDive__point">
+          <span className="ArchitectureDeepDive__emphasized-text">Signature</span> - Value used as proof that the
+          account owner has authorized the request
+        </li>
+      </ul>
 
       <div className="ArchitectureDeepDive__topic-heading">Message Fields</div>
-      <li className="ArchitectureDeepDive__point">
-        <span className="ArchitectureDeepDive__emphasized-text">Account Lock</span> - Unique value used to ensure that
-        the same request is not processed more than once
-      </li>
+      <ul className="ArchitectureDeepDive__points">
+        <li className="ArchitectureDeepDive__point">
+          <span className="ArchitectureDeepDive__emphasized-text">Account Lock</span> - Unique value used to ensure that
+          the same request is not processed more than once
+        </li>
+      </ul>
       <Divider className="ArchitectureDeepDive__point-divider" />
-      <li className="ArchitectureDeepDive__point">
-        <span className="ArchitectureDeepDive__emphasized-text">Fees</span> - Payments to nodes in exchange for
-        processing the request
-      </li>
+      <ul className="ArchitectureDeepDive__points">
+        <li className="ArchitectureDeepDive__point">
+          <span className="ArchitectureDeepDive__emphasized-text">Fees</span> - Payments to nodes in exchange for
+          processing the request
+        </li>
+      </ul>
       <Divider className="ArchitectureDeepDive__section-divider" />
     </div>
   );
