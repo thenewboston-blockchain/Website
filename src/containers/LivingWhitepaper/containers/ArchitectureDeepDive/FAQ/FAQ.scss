@@ -1,3 +1,7 @@
-// stylelint-disable block-no-empty
 .FAQ {
+  margin-bottom: 54px;
+
+  @media (max-width: 1366px) {
+    margin-bottom: 32px;
+  }
 }
