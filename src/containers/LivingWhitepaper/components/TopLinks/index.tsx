@@ -7,8 +7,8 @@ import './TopLinks.scss';
 const TopLinks: FC = () => {
   return (
     <div className="TopLinks">
-      <Link to="/" className="TopLinks__link">
-        Home
+      <Link to="/developer" className="TopLinks__link">
+        Developer
       </Link>
       <Link to="/developer/whitepaper" className="TopLinks__link">
         Living Whitepaper

@@ -1,0 +1,41 @@
+@import 'styles/font-mixins';
+
+.Note {
+  padding: 16px;
+
+  &--important {
+    background-color: #fffde8;
+    border-left: 2px solid var(--color-orange-500);
+  }
+
+  &--information {
+    background-color: var(--color-blue-50);
+    border-left: 2px solid var(--color-cyan-500);
+  }
+
+  &__highlight {
+    align-items: center;
+    color: var(--color-yellow-400);
+    display: flex;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 10px;
+
+    &--important {
+      color: var(--color-orange-500);
+    }
+
+    &--information {
+      color: var(--color-cyan-500);
+    }
+  }
+
+  &__highlight-icon {
+    margin-right: 12px;
+  }
+
+  &__text {
+    @extend %body1;
+    color: var(--color-gray-500);
+    margin: 0;
+  }
+}
