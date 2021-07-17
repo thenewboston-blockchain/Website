@@ -1,3 +1,4 @@
+@import 'src/styles/mixins';
 @import 'styles/font-mixins';
 
 .Breadcrumb {
@@ -28,14 +29,36 @@
     @extend %h4;
     color: var(--color-gray-400);
     line-height: 14px; // allow text to be centered by setting line-height to be the same as font size
+    text-align: left;
 
     &--active {
       color: var(--color-gray-600);
       font-weight: var(--font-weight-medium);
+      text-align: left;
     }
   }
 
   &__icon {
     margin: 0 8px;
+  }
+
+  &__button {
+    @include top-nav-button;
+    display: flex;
+    padding-left: 0;
+  }
+
+  &__Popover {
+    padding: 16px;
+    width: 240px;
+
+    &-link {
+      color: var(--color-gray-500);
+      display: block;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
   }
 }
