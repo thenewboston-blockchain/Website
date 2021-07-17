@@ -34,6 +34,7 @@ import Layout from './Layout';
 import MarketingButton from './MarketingButton';
 import MarketingCard from './MarketingCard';
 import MenuGroup from './MenuGroup';
+import Navigation from './Navigation';
 import Note, {NoteType} from './Note';
 import LabelFilter from './LabelFilter';
 import Loader from './Loader';
@@ -91,6 +92,7 @@ export {
   MarketingButton,
   MarketingCard,
   MenuGroup,
+  Navigation,
   Note,
   NoteType,
   PageTitle,
