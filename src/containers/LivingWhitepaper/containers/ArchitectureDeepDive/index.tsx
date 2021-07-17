@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 
+import {Navigation} from 'components';
 import DeveloperPortalLayout from '../../components/DeveloperPortalLayout';
 
 import AccountLock from './AccountLock';
@@ -24,6 +25,13 @@ const ArchitectureDeepDive: FC = () => {
         <ConsensusCV />
         <NetworkInitialization />
         <FAQ />
+        <div className="ArchitectureDeepDive__navigation">
+          <Navigation
+            path="/developer/whitepaper/principal-entities"
+            text="Principal Events and Processes on the Network"
+            type="right"
+          />
+        </div>
       </div>
     </DeveloperPortalLayout>
   );
