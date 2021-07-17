@@ -23,14 +23,14 @@ const Breadcrumb: FC<Props> = ({className}) => {
       {pathnames.map((pathname, index) => {
         if (index < pathnames.length - 1) {
           return (
-            <div className="Breadcrumb__link-container">
+            <div className="Breadcrumb__link-container" key={pathname}>
               <span className="Breadcrumb__link">{PATHNAME_TO_TITLE_MAPPING[pathname]}</span>
               <Icon className="Breadcrumb__icon" icon={IconType.chevronRight} size={16} totalSize={16} />
             </div>
           );
         }
         return (
-          <div className="Breadcrumb__link-container">
+          <div className="Breadcrumb__link-container" key={pathname}>
             <span className="Breadcrumb__link--active">{PATHNAME_TO_TITLE_MAPPING[pathname]}</span>
             {width < 992 && <Icon className="Breadcrumb__icon" icon={IconType.chevronDown} size={16} totalSize={16} />}
           </div>
