@@ -1,4 +1,5 @@
-import React, {FC} from 'react';
+import React, {FC, ReactNode} from 'react';
+import clsx from 'clsx';
 
 import {Icon, IconType} from '@thenewboston/ui';
 import './Note.scss';
@@ -9,7 +10,8 @@ export enum NoteType {
 }
 
 type Props = {
-  text: string;
+  className?: string;
+  text: ReactNode;
   type: NoteType;
 };
 
@@ -18,15 +20,15 @@ const TYPE_TO_ICON_AND_TITLE_MAPPING: Record<NoteType, {icon: IconType; title: s
   [NoteType.Information]: {icon: IconType.pencil, title: 'Note'},
 };
 
-const Note: FC<Props> = ({text, type}) => {
+const Note: FC<Props> = ({className, text, type}) => {
   const {icon, title} = TYPE_TO_ICON_AND_TITLE_MAPPING[type];
   return (
-    <div className={`Note Note--${type}`}>
+    <div className={clsx(`Note Note--${type}`, className)}>
       <span className={`Note__highlight Note__highlight--${type}`}>
         <Icon className={`Note__highlight-icon Note__highlight-icon--${type}`} icon={icon} />
         {title}
       </span>
-      <p className="Note__text">{text}</p>
+      <div className="Note__text">{text}</div>
     </div>
   );
 };

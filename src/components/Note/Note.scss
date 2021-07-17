@@ -1,6 +1,8 @@
 @import 'styles/font-mixins';
 
 .Note {
+  padding: 16px;
+
   &--important {
     background-color: #fffde8;
     border-left: 2px solid var(--color-orange-500);
@@ -10,9 +12,6 @@
     background-color: var(--color-blue-50);
     border-left: 2px solid var(--color-cyan-500);
   }
-
-  margin-bottom: 64px;
-  padding: 16px;
 
   &__highlight {
     align-items: center;
