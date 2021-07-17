@@ -1,0 +1,38 @@
+@import 'src/styles/mixins';
+
+.SideMenu {
+  &__section {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__section-header {
+    @include top-nav-button;
+    display: flex;
+    font-weight: var(--font-weight-medium);
+    justify-content: space-between;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+
+    &--active {
+      color: var(--color-gray-900);
+      font-weight: var(--font-weight-bold);
+    }
+  }
+
+  &__link {
+    color: var(--color-gray-400);
+    display: block;
+    font-weight: var(--font-weight-medium);
+
+    &:not(:last-child) {
+      margin: 8px 0;
+    }
+
+    &--active {
+      color: var(--color-gray-900);
+    }
+  }
+}

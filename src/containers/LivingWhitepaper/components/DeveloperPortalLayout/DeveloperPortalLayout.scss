@@ -5,10 +5,11 @@
   }
 
   &__left-content {
-    width: 256px;
+    padding: 32px 32px 32px 0;
 
     @media (max-width: 1366px) {
       padding: 32px 48px;
+      width: 256px;
     }
 
     @media (max-width: 992px) {
