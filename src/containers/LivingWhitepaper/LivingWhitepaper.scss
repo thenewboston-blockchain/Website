@@ -16,10 +16,6 @@
       height: fit-content;
       padding: 48px 40px;
     }
-
-    @media (max-width: 480px) {
-      padding: 40px 28px;
-    }
   }
 
   &__hero-title {
@@ -57,10 +53,6 @@
   &__main {
     display: flex;
     padding: 72px 48px;
-
-    @media (max-width: 480px) {
-      padding: 72px 28px;
-    }
   }
 
   &__main-left {
@@ -119,17 +111,7 @@
 
   &__topics {
     background-color: var(--color-cyan-900);
-    padding: 72px 48px;
-    padding-right: 72px;
-
-    @media (max-width: 768px) {
-      padding-right: 48px;
-    }
-
-    @media (max-width: 480px) {
-      padding: 72px 28px;
-      padding-right: 28px;
-    }
+    padding: 48px 72px;
   }
 
   &__topics-title {
