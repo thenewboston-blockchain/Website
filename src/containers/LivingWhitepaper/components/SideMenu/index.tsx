@@ -85,7 +85,7 @@ const SideMenu: FC = () => {
                 className={clsx('SideMenu__link')}
                 hashSpy
                 key={selection.url}
-                offset={-NAVBAR_HEIGHT}
+                offset={-(NAVBAR_HEIGHT + TOP_LINK_HEIGHT + BREADCRUMB_HEIGHT)}
                 smooth
                 spy
                 to={selectionHash}
@@ -118,7 +118,7 @@ const SideMenu: FC = () => {
                 className={clsx('SideMenu__link')}
                 hashSpy
                 key={selection.url}
-                offset={-NAVBAR_HEIGHT}
+                offset={-(NAVBAR_HEIGHT + TOP_LINK_HEIGHT + BREADCRUMB_HEIGHT)}
                 smooth
                 spy
                 to={selectionHash}
