@@ -163,10 +163,12 @@
       &--highlight {
         color: var(--color-gray-800);
       }
+
+      &--italics {
+        font-style: italic;
+      }
     }
   }
-
-  /* section specific styles */
 
   @media (max-width: 1366px) {
     padding: 24px;

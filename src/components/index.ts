@@ -6,6 +6,7 @@ import {CodeSnippet, RequestResponseSnippet, SnippetLang} from './CodeSnippet';
 import Container from './Container';
 import ContributorTasks from './ContributorTasks';
 import CopyableAccountNumber from './CopyableAccountNumber';
+import DataTable from './DataTable';
 import Divider from './Divider';
 import DashboardLayout from './DashboardLayout';
 import DocsMenuItems from './DocsMenuItems';
@@ -66,6 +67,7 @@ export {
   ContributorTasks,
   CopyableAccountNumber,
   DashboardLayout,
+  DataTable,
   Divider,
   DocCallout,
   DocContainer,
