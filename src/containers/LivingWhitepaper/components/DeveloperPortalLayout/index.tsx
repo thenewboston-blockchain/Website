@@ -17,10 +17,12 @@ const DeveloperPortalLayout: FC<Props> = ({children, pageName}) => {
     <>
       <PageTitle title={pageName} />
       <TopLinks />
-      <Container>
-        <Breadcrumb />
-      </Container>
-      <Divider />
+      <div className="DeveloperPortalLayout__breadcrumb">
+        <Container>
+          <Breadcrumb />
+        </Container>
+        <Divider />
+      </div>
       <Container>
         <div className="DeveloperPortalLayout__main-content">
           <div className="DeveloperPortalLayout__left-content">

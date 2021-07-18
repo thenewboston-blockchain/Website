@@ -1,11 +1,13 @@
 @import 'src/styles/mixins';
 @import 'styles/font-mixins';
+@import '../../shared';
 
 .Breadcrumb {
   align-items: center;
+  background-color: white;
   display: flex;
   flex-wrap: wrap;
-  min-height: 56px;
+  min-height: $breadcrumbs-height;
 
   @media (max-width: 1366px) {
     padding: 0 48px;

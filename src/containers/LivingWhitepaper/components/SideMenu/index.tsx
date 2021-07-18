@@ -14,6 +14,9 @@ import {
 
 import './SideMenu.scss';
 
+const TOP_LINK_HEIGHT = 72;
+const BREADCRUMB_HEIGHT = 56;
+
 const SideMenu: FC = () => {
   const {pathname} = useLocation();
   const history = useHistory();
@@ -23,7 +26,7 @@ const SideMenu: FC = () => {
   const isArchitectureSelected = pathname.includes(architecturePath);
 
   return (
-    <>
+    <div className="SideMenu">
       <div className="SideMenu__section">
         <button
           className={clsx(
@@ -49,7 +52,7 @@ const SideMenu: FC = () => {
                 className={clsx('SideMenu__link')}
                 hashSpy
                 key={selection.url}
-                offset={-NAVBAR_HEIGHT}
+                offset={-(NAVBAR_HEIGHT + TOP_LINK_HEIGHT + BREADCRUMB_HEIGHT)}
                 smooth
                 spy
                 to={selectionHash}
@@ -125,7 +128,7 @@ const SideMenu: FC = () => {
             );
           })}
       </div>
-    </>
+    </div>
   );
 };
 
