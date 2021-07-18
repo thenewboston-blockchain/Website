@@ -24,8 +24,13 @@
 
   &__link {
     color: var(--color-gray-400);
+    cursor: pointer;
     display: block;
     font-weight: var(--font-weight-medium);
+
+    &:hover {
+      color: var(--color-blue-gray-1000);
+    }
 
     &:not(:last-child) {
       margin: 8px 0;
