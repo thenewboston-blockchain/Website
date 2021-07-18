@@ -1,0 +1,20 @@
+@import 'styles/font-mixins';
+
+.Navigation {
+  align-items: center;
+  color: var(--color-cyan-900);
+  cursor: pointer;
+  display: flex;
+
+  &__text {
+    @extend %body1;
+  }
+
+  &__right-icon {
+    margin-left: 12px;
+  }
+
+  &__left-icon {
+    margin-right: 12px;
+  }
+}

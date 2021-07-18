@@ -6,6 +6,7 @@ import {CodeSnippet, RequestResponseSnippet, SnippetLang} from './CodeSnippet';
 import Container from './Container';
 import ContributorTasks from './ContributorTasks';
 import CopyableAccountNumber from './CopyableAccountNumber';
+import DataTable from './DataTable';
 import Divider from './Divider';
 import DashboardLayout from './DashboardLayout';
 import DocsMenuItems from './DocsMenuItems';
@@ -34,6 +35,8 @@ import Layout from './Layout';
 import MarketingButton from './MarketingButton';
 import MarketingCard from './MarketingCard';
 import MenuGroup from './MenuGroup';
+import Navigation from './Navigation';
+import Note, {NoteType} from './Note';
 import LabelFilter from './LabelFilter';
 import Loader from './Loader';
 import PageTitle from './PageTitle';
@@ -64,6 +67,7 @@ export {
   ContributorTasks,
   CopyableAccountNumber,
   DashboardLayout,
+  DataTable,
   Divider,
   DocCallout,
   DocContainer,
@@ -90,6 +94,9 @@ export {
   MarketingButton,
   MarketingCard,
   MenuGroup,
+  Navigation,
+  Note,
+  NoteType,
   PageTitle,
   Pagination,
   Popover,

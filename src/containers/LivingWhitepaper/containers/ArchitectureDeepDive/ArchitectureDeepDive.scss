@@ -1,0 +1,82 @@
+@import 'styles/font-mixins';
+
+.ArchitectureDeepDive {
+  padding: 48px;
+
+  @media (max-width: 1366px) {
+    padding: 24px;
+  }
+
+  @media (max-width: 992px) {
+    padding: 24px 48px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 24px;
+  }
+
+  &__page-title {
+    @extend %body3;
+    color: var(--color-gray-300);
+    margin-bottom: 48px;
+
+    @media (max-width: 1366px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__section-title {
+    @extend %h1;
+    color: var(--color-gray-800);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 16px;
+  }
+
+  &__topic-heading {
+    @extend %h2;
+    color: var(--color-gray-700);
+    font-weight: var(--font-weight-medium);
+    margin: 32px 0;
+  }
+
+  &__emphasized-text {
+    @extend %h4;
+    color: var(--color-gray-800);
+    font-weight: var(--font-weight-bold);
+  }
+
+  &__description {
+    @extend %body1;
+    color: var(--color-gray-500);
+    margin: 16px 0;
+    text-align: justify;
+  }
+
+  &__point-divider {
+    margin: 16px 0;
+  }
+
+  &__section-divider {
+    margin: 48px 0;
+
+    @media (max-width: 768px) {
+      margin: 24px 0;
+    }
+  }
+
+  &__points {
+    padding-inline-start: 24px;
+  }
+
+  &__point {
+    @extend %body1;
+    color: var(--color-gray-500);
+    margin: 8px 0;
+    text-align: justify;
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
