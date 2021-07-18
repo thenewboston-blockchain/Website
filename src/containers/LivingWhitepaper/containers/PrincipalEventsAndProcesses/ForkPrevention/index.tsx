@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {Note, NoteType} from 'components';
+import {Divider, Note, NoteType} from 'components';
 
 import ForkPrevention1Image from '../../../assets/fork-prevention-1.svg';
 import ForkPrevention2Image from '../../../assets/fork-prevention-2.svg';
@@ -29,55 +29,62 @@ const ForkPrevention: FC = () => {
       <p className="PrincipalEvents__section-paragraph">
         This example showcases the validation threshold process from the perspective of a CV (CV6).
       </p>
-      <ul className="PrincipalEvents__section-list">
-        <li className="PrincipalEvents__section-list-item PrincipalEvents__section-list-item--spaced">
+      <ul className="PrincipalEvents__section-list PrincipalEvents__section-list--mb-0">
+        <li className="PrincipalEvents__section-list-item">
           <span className="PrincipalEvents__section-text--black">Step 1</span> - CV6 first receives a block with the
           hash ag3v from the PV.
-          <div className="PrincipalEvents__section-image-container PrincipalEvents__section-image-container--spaced">
-            <img
-              alt="Fork Prevention 1"
-              className="PrincipalEvents__section-image PrincipalEvents__section-image--fit"
-              src={ForkPrevention1Image}
-              loading="lazy"
-              width="520px"
-            />
-          </div>
-        </li>
-        <li className="PrincipalEvents__section-list-item PrincipalEvents__section-list-item--spaced">
-          <span className="PrincipalEvents__section-text--black">Step 2</span> - Before block validation begins, CV6
-          listens to other CVs to ensure they received identical blocks.
-          <div className="PrincipalEvents__section-image-container PrincipalEvents__section-image-container--spaced">
-            <img
-              alt="Fork Prevention 2"
-              className="PrincipalEvents__section-image PrincipalEvents__section-image--fit"
-              src={ForkPrevention2Image}
-              loading="lazy"
-              width="520px"
-            />
-          </div>
-          <Note
-            text="CV6's block is the block coming from the PV. Each CV treats the block they received from the PV as a block for themselves."
-            type={NoteType.Information}
-          />
-        </li>
-        <li className="PrincipalEvents__section-list-item PrincipalEvents__section-list-item--spaced">
-          <span className="PrincipalEvents__section-text--black">Step 3</span> - Once CV6 confirms that the majority of
-          other CVs have received the same block, the validation threshold is met and block validation begins.
-          <div className="PrincipalEvents__section-image-container PrincipalEvents__section-image-container--spaced">
-            <img
-              alt="Fork Prevention 3"
-              className="PrincipalEvents__section-image PrincipalEvents__section-image--fit"
-              src={ForkPrevention3Image}
-              loading="lazy"
-              width="520px"
-            />
-          </div>
-          <Note
-            text="Even if all 5 blocks (100%) were received from the other CV's, CV6 would still need to wait for the one from the PV. The block from the PV is also the block CV6 broadcasts to all other CVs."
-            type={NoteType.Information}
-          />
         </li>
       </ul>
+      <div className="PrincipalEvents__section-image-container PrincipalEvents__section-image-container--spaced">
+        <img
+          alt="Fork Prevention 1"
+          className="PrincipalEvents__section-image PrincipalEvents__section-image--fit"
+          src={ForkPrevention1Image}
+          loading="lazy"
+          width="520px"
+        />
+      </div>
+      <Divider className="PrincipalEvents__section-divider" />
+      <ul className="PrincipalEvents__section-list PrincipalEvents__section-list--mb-0">
+        <li className="PrincipalEvents__section-list-item">
+          <span className="PrincipalEvents__section-text--black">Step 2</span> - Before block validation begins, CV6
+          listens to other CVs to ensure they received identical blocks.
+        </li>
+      </ul>
+      <div className="PrincipalEvents__section-image-container PrincipalEvents__section-image-container--spaced">
+        <img
+          alt="Fork Prevention 2"
+          className="PrincipalEvents__section-image PrincipalEvents__section-image--fit"
+          src={ForkPrevention2Image}
+          loading="lazy"
+          width="520px"
+        />
+      </div>
+      <Note
+        text="CV6's block is the block coming from the PV. Each CV treats the block they received from the PV as a block for themselves."
+        type={NoteType.Information}
+      />
+      <Divider className="PrincipalEvents__section-divider" />
+      <ul className="PrincipalEvents__section-list PrincipalEvents__section-list--mb-0">
+        <li className="PrincipalEvents__section-list-item">
+          <span className="PrincipalEvents__section-text--black">Step 3</span> - Once CV6 confirms that the majority of
+          other CVs have received the same block, the validation threshold is met and block validation begins.
+        </li>
+      </ul>
+      <div className="PrincipalEvents__section-image-container PrincipalEvents__section-image-container--spaced">
+        <img
+          alt="Fork Prevention 3"
+          className="PrincipalEvents__section-image PrincipalEvents__section-image--fit"
+          src={ForkPrevention3Image}
+          loading="lazy"
+          width="520px"
+        />
+      </div>
+      <Note
+        text="Even if all 5 blocks (100%) were received from the other CV's, CV6 would still need to wait for the one from the PV. The block from the PV is also the block CV6 broadcasts to all other CVs."
+        type={NoteType.Information}
+      />
+      <Divider className="PrincipalEvents__section-divider" />
       <p className="PrincipalEvents__section-paragraph PrincipalEvents__section-text--black">
         Alternative Step 3: What happens if the validation threshold is not met?
       </p>
