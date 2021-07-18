@@ -12,7 +12,7 @@ const Overview: FC = () => {
         className="Overview"
         columns={['Process / Event', 'Description']}
         data={[
-          ['Coin Transfer', 'Coin Transfer	Transfer of coins between accounts'],
+          ['Coin Transfer', 'Transfer of coins between accounts'],
           ['Node Registration', 'Node’s enrollment onto the network'],
           ['Coin Locking', 'The locking of coins in exchange for points and the ability to boost a node'],
           ['Node Boosting', 'Voting for a node to be included in the validator schedule'],
