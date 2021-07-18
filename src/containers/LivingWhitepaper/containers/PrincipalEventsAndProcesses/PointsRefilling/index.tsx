@@ -1,6 +1,8 @@
 import React, {FC} from 'react';
 
-import {Divider, Note, NoteType} from 'components';
+import {DataTable, Divider, Note, NoteType} from 'components';
+
+import './PointsRefilling.scss';
 
 const PointsRefilling: FC = () => {
   return (
@@ -42,6 +44,16 @@ const PointsRefilling: FC = () => {
         every 4 network days.
       </p>
       <h3 className="PrincipalEvents__section-sub-heading">Example</h3>
+      <DataTable
+        className="PointsRefilling"
+        columns={['Time', 'Events', 'Points Balance', 'Notes']}
+        data={[
+          ['Network Day 1', 'User locks 24 coins', '2,400,000', 'Refill rate sets to 600,000 points/day'],
+          ['Network Day 1', 'User spends 2,000,000 points', '400,000', 'Points subtracted'],
+          ['Network Day 2', '1 network day passes', '1,000,000', 'Points refilling'],
+          ['Network Day 3', '1 network day passes', '1,600,000', 'Points refilling'],
+        ]}
+      />
     </section>
   );
 };
