@@ -35,6 +35,27 @@ export enum PrincipleEntitiesId {
   Glossary = 'glossary',
 }
 
+export enum PrincipalEventsId {
+  Overview = 'overview',
+  Scheduling = 'scheduling',
+  DataFlows = 'data-flows',
+  ScheduleAdjustment = 'schedule-adjustment',
+  ValidatorDataFlow = 'validator-data-flow',
+  NetworkDataFlow = 'network-data-flow',
+  ForkPrevention = 'fork-prevention',
+  HandlingPV = 'handling-pv',
+  PointsRefilling = 'points-refilling',
+  ElectionProcess = 'election-process',
+  RatesAndAmounts = 'rates-and-amounts',
+  ConversionRates = 'conversion-rates',
+  UsernameAndVotes = 'username-and-votes',
+  LockedCoinsAndBoosts = 'locked-coins-and-boosts',
+  Points = 'points',
+  TreasuryBoard = 'treasury-board',
+  Government = 'government',
+  Nodes = 'nodes',
+}
+
 export const principalEntitiesPath = '/developer/whitepaper/principal-entities';
 export const principalEventsPath = '/developer/whitepaper/principal-events';
 export const architecturePath = '/developer/whitepaper/architecture';
@@ -136,8 +157,77 @@ export const PATHNAME_TO_DROPDOWN_SELECTIONS: Record<string, {title: string; url
       url: `${principalEntitiesPath}#${PrincipleEntitiesId.Glossary}`,
     },
   ],
-  // TODO: fill in the rest
-  'principal-events': [],
+  'principal-events': [
+    {
+      title: 'Overview',
+      url: `${principalEventsPath}#${PrincipalEventsId.Overview}`,
+    },
+    {
+      title: 'Scheduling',
+      url: `${principalEventsPath}#${PrincipalEventsId.Scheduling}`,
+    },
+    {
+      title: 'Data Flows',
+      url: `${principalEventsPath}#${PrincipalEventsId.DataFlows}`,
+    },
+    {
+      title: 'Validator Data Flow',
+      url: `${principalEventsPath}#${PrincipalEventsId.ValidatorDataFlow}`,
+    },
+    {
+      title: 'Network Data Flow',
+      url: `${principalEventsPath}#${PrincipalEventsId.NetworkDataFlow}`,
+    },
+    {title: 'Schedule Adjustment', url: `${principalEventsPath}#${PrincipalEventsId.ScheduleAdjustment}`},
+    {
+      title: 'Fork Prevention and Validation Threshold',
+      url: `${principalEventsPath}#${PrincipalEventsId.ForkPrevention}`,
+    },
+    {
+      title: 'Handling PV non-responsiveness',
+      url: `${principalEventsPath}#${PrincipalEventsId.HandlingPV}`,
+    },
+    {
+      title: 'Points Refilling',
+      url: `${principalEventsPath}#${PrincipalEventsId.PointsRefilling}`,
+    },
+    {
+      title: 'Election Process',
+      url: `${principalEventsPath}#${PrincipalEventsId.ElectionProcess}`,
+    },
+    {
+      title: 'Rates & Amounts',
+      url: `${principalEventsPath}#${PrincipalEventsId.RatesAndAmounts}`,
+    },
+    {
+      title: 'Conversion Rates',
+      url: `${principalEventsPath}#${PrincipalEventsId.ConversionRates}`,
+    },
+    {
+      title: 'Username & Votes',
+      url: `${principalEventsPath}#${PrincipalEventsId.UsernameAndVotes}`,
+    },
+    {
+      title: 'Locked Coins & Boosts',
+      url: `${principalEventsPath}#${PrincipalEventsId.LockedCoinsAndBoosts}`,
+    },
+    {
+      title: 'Points',
+      url: `${principalEventsPath}#${PrincipalEventsId.Points}`,
+    },
+    {
+      title: 'Treasury Board',
+      url: `${principalEventsPath}#${PrincipalEventsId.TreasuryBoard}`,
+    },
+    {
+      title: 'Government',
+      url: `${principalEventsPath}#${PrincipalEventsId.Government}`,
+    },
+    {
+      title: 'Nodes',
+      url: `${principalEventsPath}#${PrincipalEventsId.Nodes}`,
+    },
+  ],
   whitepaper: [
     {
       title: PATHNAME_TO_TITLE_MAPPING['principal-entities'],

@@ -15,7 +15,7 @@ import {
 import './SideMenu.scss';
 
 const SideMenu: FC = () => {
-  const {pathname, hash} = useLocation();
+  const {pathname} = useLocation();
   const history = useHistory();
 
   const isPrincipalEntitiesSelected = pathname.includes(principalEntitiesPath);
