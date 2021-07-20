@@ -7,7 +7,7 @@
   background-color: white;
   display: flex;
   flex-wrap: wrap;
-  height: $breadcrumbs-height;
+  min-height: $breadcrumbs-height;
 
   @media (max-width: 1366px) {
     padding: 0 48px;
@@ -15,12 +15,6 @@
 
   @media (max-width: 992px) {
     padding: 12px 24px;
-  }
-
-  @media (max-width: 768px) {
-    // have to hard code it to two rows for now in order to accurately
-    // estimate the height for react-scroll
-    height: $breadcrumbs-height * 2;
   }
 
   &__link-container {
@@ -68,6 +62,16 @@
   &__Popover {
     padding: 16px;
     width: 240px;
+
+    @media (max-height: 1000px) {
+      max-height: 400px;
+      overflow-y: scroll;
+    }
+
+    @media (max-height: 600px) {
+      max-height: 200px;
+      overflow-y: scroll;
+    }
 
     &-link {
       color: var(--color-gray-500);
