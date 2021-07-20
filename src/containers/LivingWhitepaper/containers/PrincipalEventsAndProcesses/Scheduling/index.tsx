@@ -4,10 +4,8 @@ import {PrincipalEventsId} from '../../../constants';
 
 const Scheduling: FC = () => {
   return (
-    <section className="PrincipalEvents__section">
-      <h2 className="PrincipalEvents__section-heading" id={PrincipalEventsId.Scheduling}>
-        Scheduling
-      </h2>
+    <section className="PrincipalEvents__section" id={PrincipalEventsId.Scheduling}>
+      <h2 className="PrincipalEvents__section-heading">Scheduling</h2>
       <p className="PrincipalEvents__section-paragraph">
         Nodes register on the network through a{' '}
         <span className="PrincipalEvents__section-text--highlight">Node Registration</span> block. This block informs

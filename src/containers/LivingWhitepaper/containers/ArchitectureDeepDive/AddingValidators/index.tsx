@@ -12,10 +12,8 @@ import '../ArchitectureDeepDive.scss';
 
 const AddingValidators = () => {
   return (
-    <div className="AddingValidators">
-      <div className="ArchitectureDeepDive__section-title" id={ArchitectureDeepDiveId.AddingValidators}>
-        Adding Validators to the Schedule
-      </div>
+    <section className="AddingValidators" id={ArchitectureDeepDiveId.AddingValidators}>
+      <h2 className="ArchitectureDeepDive__section-title">Adding Validators to the Schedule</h2>
       <p className="ArchitectureDeepDive__description">
         The goal of this process is to add more validators to the schedule to ensure that the network will always have a
         PV. The details of the process follow.
@@ -58,7 +56,7 @@ const AddingValidators = () => {
         />
       </div>
       <Divider className="ArchitectureDeepDive__section-divider" />
-    </div>
+    </section>
   );
 };
 

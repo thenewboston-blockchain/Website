@@ -7,10 +7,8 @@ import GovernanceOverviewImage from '../../../assets/governance-overview.svg';
 
 const ElectionProcess: FC = () => {
   return (
-    <section className="PrincipalEvents__section">
-      <h2 className="PrincipalEvents__section-heading" id={PrincipalEventsId.ElectionProcess}>
-        Election Process
-      </h2>
+    <section className="PrincipalEvents__section" id={PrincipalEventsId.ElectionProcess}>
+      <h2 className="PrincipalEvents__section-heading">Election Process</h2>
       <p className="PrincipalEvents__section-paragraph PrincipalEvents__section-paragraph--mb-32">
         Registered users can use points to apply for government positions. Once an application is submitted all
         registered users (excluding the candidate) can begin voting for that candidate. The top X candidates will be

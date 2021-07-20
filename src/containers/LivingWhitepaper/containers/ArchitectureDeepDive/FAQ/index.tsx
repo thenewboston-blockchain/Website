@@ -8,13 +8,11 @@ import '../ArchitectureDeepDive.scss';
 
 const FAQ = () => {
   return (
-    <div className="FAQ">
-      <div className="ArchitectureDeepDive__section-title" id={ArchitectureDeepDiveId.Faq}>
-        FAQs
-      </div>
-      <div className="ArchitectureDeepDive__emphasized-text">
+    <section className="FAQ" id={ArchitectureDeepDiveId.Faq}>
+      <h2 className="ArchitectureDeepDive__section-title">FAQs</h2>
+      <p className="ArchitectureDeepDive__emphasized-text">
         How does the governance model shield the chain against bad actors?
-      </div>
+      </p>
       <p className="ArchitectureDeepDive__description">
         For the government to pay out any coins and also the treasury to mint new coins, a majority vote is essential.
         So, even if there is a bad actor that got in somehow, they would still need to convince all others to vote with
@@ -35,7 +33,7 @@ const FAQ = () => {
         Every registered user can purchase votes, which they can cast for one or more candidates. Special blocks store
         the record of those votes being purchased on the blockchain, or those votes being cast.
       </p>
-    </div>
+    </section>
   );
 };
 
