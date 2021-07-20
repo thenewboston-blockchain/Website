@@ -1,4 +1,5 @@
 @import '../../shared';
+@import 'styles/z-index';
 
 .DeveloperPortalLayout {
   &__main-content {
@@ -18,5 +19,6 @@
   &__breadcrumb {
     position: sticky;
     top: $top-nav-height + $top-links-height;
+    z-index: $z-index-whitepaper-breadcrumb;
   }
 }
