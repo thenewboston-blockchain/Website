@@ -3,7 +3,7 @@ import {RouteComponentProps, withRouter} from 'react-router-dom';
 import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
 
-import {getFirstPathParam} from 'utils/urls';
+import {getFirstPathParam, getFirstThreePathParams} from 'utils/urls';
 
 import './MenuGroup.scss';
 
@@ -14,7 +14,9 @@ interface ComponentProps extends RouteComponentProps {
 }
 
 const MenuGroup: FC<ComponentProps> = ({children, role, location, title, urlBase}) => {
-  const [expanded, toggleExpanded] = useState(getFirstPathParam(location.pathname) === urlBase);
+  const [expanded, toggleExpanded] = useState(
+    getFirstPathParam(location.pathname) === urlBase || getFirstThreePathParams(location.pathname) === urlBase,
+  );
 
   return (
     <div className="MenuGroup" data-testid="MenuGroup" role={role}>

@@ -1,10 +1,11 @@
 import React, {FC} from 'react';
 
+import {PrincipalEventsId} from '../../../constants';
 import ScheduleAdjustmentImage from '../../../assets/schedule-adjustment.svg';
 
 const ScheduleAdjustment: FC = () => {
   return (
-    <section className="PrincipalEvents__section">
+    <section className="PrincipalEvents__section" id={PrincipalEventsId.ScheduleAdjustment}>
       <h2 className="PrincipalEvents__section-heading">Schedule Adjustment</h2>
       <p className="PrincipalEvents__section-paragraph">
         At the end of their turn, the responsibility of being PV transitions to the next validator on the validator

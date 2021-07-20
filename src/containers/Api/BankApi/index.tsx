@@ -1,11 +1,7 @@
 import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
-import {DashboardLayout, DocsMenuItems, PageTitle, Pagination} from 'components';
-import {bankApiNavigationData} from 'components/DocsMenuItems';
-import NodeApiConnectionRequests from 'containers/NodeApi/NodeApiConnectionRequests';
-import NodeApiCrawl from 'containers/NodeApi/NodeApiCrawl';
-import NodeApiClean from 'containers/NodeApi/NodeApiClean';
+import {DashboardLayout, PageTitle, Pagination} from 'components';
 import {PageData, PageDataObject} from 'types/page-data';
 
 import BankApiAccounts from './BankApiAccounts';
@@ -19,8 +15,13 @@ import BankApiUpgradeNotice from './BankApiUpgradeNotice';
 import BankApiValidatorConfirmationServices from './BankApiValidatorConfirmationServices';
 import BankApiValidators from './BankApiValidators';
 
+import ApiDocsMenuItems, {bankApiNavigationData} from '../ApiDocsMenuItems';
+import NodeApiConnectionRequests from '../NodeApi/NodeApiConnectionRequests';
+import NodeApiCrawl from '../NodeApi/NodeApiCrawl';
+import NodeApiClean from '../NodeApi/NodeApiClean';
+
 const defaultPageData: PageData = {
-  content: <Redirect to="/bank-api/accounts" />,
+  content: <Redirect to="/developer/api/bank-api/accounts" />,
   name: '',
 };
 
@@ -88,7 +89,7 @@ const BankApi: FC = () => {
   const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
 
   return (
-    <DashboardLayout menuItems={<DocsMenuItems />} pageName={name} sectionName="Bank API">
+    <DashboardLayout menuItems={<ApiDocsMenuItems />} pageName={name} sectionName="Bank API">
       <PageTitle ogDescription={`${name} | Bank API`} title={name} />
       {content}
       <Pagination navigationData={bankApiNavigationData} />

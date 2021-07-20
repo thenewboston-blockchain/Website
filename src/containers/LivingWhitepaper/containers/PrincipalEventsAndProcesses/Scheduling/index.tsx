@@ -1,8 +1,10 @@
 import React, {FC} from 'react';
 
+import {PrincipalEventsId} from '../../../constants';
+
 const Scheduling: FC = () => {
   return (
-    <section className="PrincipalEvents__section">
+    <section className="PrincipalEvents__section" id={PrincipalEventsId.Scheduling}>
       <h2 className="PrincipalEvents__section-heading">Scheduling</h2>
       <p className="PrincipalEvents__section-paragraph">
         Nodes register on the network through a{' '}

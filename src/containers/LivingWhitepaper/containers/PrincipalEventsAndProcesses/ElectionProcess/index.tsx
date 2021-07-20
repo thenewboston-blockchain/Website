@@ -1,12 +1,13 @@
 import React, {FC} from 'react';
 
 import {Note, NoteType} from 'components';
+import {PrincipalEventsId} from '../../../constants';
 
 import GovernanceOverviewImage from '../../../assets/governance-overview.svg';
 
 const ElectionProcess: FC = () => {
   return (
-    <section className="PrincipalEvents__section">
+    <section className="PrincipalEvents__section" id={PrincipalEventsId.ElectionProcess}>
       <h2 className="PrincipalEvents__section-heading">Election Process</h2>
       <p className="PrincipalEvents__section-paragraph PrincipalEvents__section-paragraph--mb-32">
         Registered users can use points to apply for government positions. Once an application is submitted all
