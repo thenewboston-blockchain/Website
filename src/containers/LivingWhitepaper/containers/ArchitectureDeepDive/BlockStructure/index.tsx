@@ -8,8 +8,10 @@ import '../ArchitectureDeepDive.scss';
 
 const BlockStructure = () => {
   return (
-    <div className="BlockStructure" id={ArchitectureDeepDiveId.BlockStructure}>
-      <div className="ArchitectureDeepDive__section-title">Block Structure</div>
+    <div className="BlockStructure">
+      <div className="ArchitectureDeepDive__section-title" id={ArchitectureDeepDiveId.BlockStructure}>
+        Block Structure
+      </div>
       <p className="ArchitectureDeepDive__description">
         All blocks follow the same general structure. This structure provides a clear description of change to one or
         more objects in the network, including both the original request and the resulting updates. Before outlining the

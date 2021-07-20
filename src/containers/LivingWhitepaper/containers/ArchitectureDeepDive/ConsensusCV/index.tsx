@@ -12,8 +12,10 @@ import '../ArchitectureDeepDive.scss';
 
 const ConsensusCV = () => {
   return (
-    <div className="ConsensusCV" id={ArchitectureDeepDiveId.Consensus}>
-      <div className="ArchitectureDeepDive__section-title">Consensus between Confirmation Validators</div>
+    <div className="ConsensusCV">
+      <div className="ArchitectureDeepDive__section-title" id={ArchitectureDeepDiveId.Consensus}>
+        Consensus between Confirmation Validators
+      </div>
       <p className="ArchitectureDeepDive__description">
         The decision of whether or not to skip a PV is determined by consensus between the CVs. This process happens
         when a PV’s blocks are scrutinized and directly affects the schedule. When a majority of CVs vote to skip the PV

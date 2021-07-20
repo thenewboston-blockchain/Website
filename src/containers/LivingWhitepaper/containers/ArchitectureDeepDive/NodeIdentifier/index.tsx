@@ -8,8 +8,10 @@ import '../ArchitectureDeepDive.scss';
 
 const NodeIdentifier = () => {
   return (
-    <div className="NodeIdentifier" id={ArchitectureDeepDiveId.NodeIdentifier}>
-      <div className="ArchitectureDeepDive__section-title">Node Identifier</div>
+    <div className="NodeIdentifier">
+      <div className="ArchitectureDeepDive__section-title" id={ArchitectureDeepDiveId.NodeIdentifier}>
+        Node Identifier
+      </div>
       <p className="ArchitectureDeepDive__description">
         The node identifier (NID) system is a separate key-pair that nodes use for signing requests to other nodes.
       </p>

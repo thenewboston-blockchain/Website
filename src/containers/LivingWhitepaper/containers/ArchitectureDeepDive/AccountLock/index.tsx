@@ -9,8 +9,10 @@ import '../ArchitectureDeepDive.scss';
 
 const AccountLock = () => {
   return (
-    <div className="AccountLock" id={ArchitectureDeepDiveId.AccountLock}>
-      <div className="ArchitectureDeepDive__section-title">Account Lock</div>
+    <div className="AccountLock">
+      <div className="ArchitectureDeepDive__section-title" id={ArchitectureDeepDiveId.AccountLock}>
+        Account Lock
+      </div>
       <p className="ArchitectureDeepDive__description">
         Every account on the network has a related account lock, which is a hash value that must be included in all
         signed change requests to allow changes on behalf of the account. This lock prevents nodes from processing the

@@ -10,8 +10,10 @@ import '../ArchitectureDeepDive.scss';
 
 const NetworkInitialization = () => {
   return (
-    <div className="NetworkInitialization" id={ArchitectureDeepDiveId.NetworkInitialization}>
-      <div className="ArchitectureDeepDive__section-title">Network Initialization</div>
+    <div className="NetworkInitialization">
+      <div className="ArchitectureDeepDive__section-title" id={ArchitectureDeepDiveId.NetworkInitialization}>
+        Network Initialization
+      </div>
       <p className="ArchitectureDeepDive__description">
         The beta network is initialized from a single node and the blockchain genesis state. This is the state of the
         blockchain that defines the initial structure of the network and derives from any prior state of the network
