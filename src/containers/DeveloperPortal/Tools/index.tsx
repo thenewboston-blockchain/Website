@@ -23,8 +23,11 @@ const Tools: FC = () => {
               Python, or if you prefer to work in Vanilla JavaScript or plain Python without using our SDKs and
               Libraries, this is your starting point.
             </div>
-            {/* TODO: update link when ready */}
-            <Button className="Tools__tool-button" variant="outlined" onClick={() => history.push('/')}>
+            <Button
+              className="Tools__tool-button"
+              variant="outlined"
+              onClick={() => history.push('/developer/api/bank-api')}
+            >
               Learn More
               <Icon icon={IconType.chevronRight} size={16} />
             </Button>

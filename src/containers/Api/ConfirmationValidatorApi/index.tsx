@@ -1,11 +1,7 @@
 import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
-import {DashboardLayout, DocsMenuItems, PageTitle, Pagination} from 'components';
-import {confirmationValidatorApiNavigationData} from 'components/DocsMenuItems';
-import NodeApiClean from 'containers/NodeApi/NodeApiClean';
-import NodeApiConnectionRequests from 'containers/NodeApi/NodeApiConnectionRequests';
-import NodeApiCrawl from 'containers/NodeApi/NodeApiCrawl';
+import {DashboardLayout, PageTitle, Pagination} from 'components';
 import {PageData, PageDataObject} from 'types/page-data';
 
 import ConfirmationValidatorApiAccounts from './ConfirmationValidatorApiAccounts';
@@ -17,8 +13,13 @@ import ConfirmationValidatorApiPrimaryValidatorUpdated from './ConfirmationValid
 import ConfirmationValidatorApiUpgradeRequest from './ConfirmationValidatorApiUpgradeRequest';
 import ConfirmationValidatorApiValidators from './ConfirmationValidatorApiValidators';
 
+import ApiDocsMenuItems, {confirmationValidatorApiNavigationData} from '../ApiDocsMenuItems';
+import NodeApiClean from '../NodeApi/NodeApiClean';
+import NodeApiConnectionRequests from '../NodeApi/NodeApiConnectionRequests';
+import NodeApiCrawl from '../NodeApi/NodeApiCrawl';
+
 const defaultPageData: PageData = {
-  content: <Redirect to="/confirmation-validator-api/accounts" />,
+  content: <Redirect to="/developer/api/confirmation-validator-api/accounts" />,
   name: '',
 };
 
@@ -78,7 +79,7 @@ const ConfirmationValidatorApi: FC = () => {
   const {content, name} = useMemo(() => getPageData(chapter), [chapter]);
 
   return (
-    <DashboardLayout menuItems={<DocsMenuItems />} pageName={name} sectionName="Confirmation Validator API">
+    <DashboardLayout menuItems={<ApiDocsMenuItems />} pageName={name} sectionName="Confirmation Validator API">
       <PageTitle ogDescription={`${name} | Confirmation Validator API`} title={name} />
       {content}
       <Pagination navigationData={confirmationValidatorApiNavigationData} />

@@ -7,8 +7,8 @@ import withSuspense from 'hoc/withSuspense';
 import Wallet from './Wallet';
 import ArchitectureDeepDive from './LivingWhitepaper/containers/ArchitectureDeepDive';
 import Assets from './Assets';
-import BankApi from './BankApi';
-import ConfirmationValidatorApi from './ConfirmationValidatorApi';
+import BankApi from './Api/BankApi';
+import ConfirmationValidatorApi from './Api/ConfirmationValidatorApi';
 import CreateAccount from './CreateAccount';
 import DeploymentGuide from './DeploymentGuide';
 import Donate from './Donate';
@@ -20,7 +20,7 @@ import Guidelines from './Guidelines';
 import Home from './Home';
 import LivingWhitepaper from './LivingWhitepaper';
 import Openings from './Openings';
-import PrimaryValidatorApi from './PrimaryValidatorApi';
+import PrimaryValidatorApi from './Api/PrimaryValidatorApi';
 import PrincipalEntities from './LivingWhitepaper/containers/PrincipalEntities';
 import PrincipalEventsAndProcesses from './LivingWhitepaper/containers/PrincipalEventsAndProcesses';
 import PrivacyPolicy from './PrivacyPolicy';
@@ -98,13 +98,13 @@ const App: FC = () => {
           <Redirect exact path="/teams" to="/teams/All/Members" />
           <Route exact path="/teams/:team/:tab?/:resource?" component={Teams} />
           <Route path="/wallet/:chapter?" component={Wallet} />
-          <Route path="/bank-api/:chapter?" component={BankApi} />
-          <Route path="/confirmation-validator-api/:chapter?" component={ConfirmationValidatorApi} />
+          <Route path="/developer/api/bank-api/:chapter?" component={BankApi} />
+          <Route path="/developer/api/confirmation-validator-api/:chapter?" component={ConfirmationValidatorApi} />
           <Route path="/deployment-guide/:chapter?" component={DeploymentGuide} />
           <Route path="/download" component={Download} />
           <Route path="/governance/:chapter?" component={Governance} />
           <Route path="/guide/:chapter?" component={Guide} />
-          <Route path="/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
+          <Route path="/developer/api/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route path="/progress" component={Progress} />
           <Route path="/projects/:projectId?" component={withSuspense(Projects)} />
