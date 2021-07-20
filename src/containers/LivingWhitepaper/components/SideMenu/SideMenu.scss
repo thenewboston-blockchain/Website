@@ -55,4 +55,8 @@
       color: var(--color-gray-900);
     }
   }
+
+  &__toggle-icon {
+    align-self: flex-start;
+  }
 }
