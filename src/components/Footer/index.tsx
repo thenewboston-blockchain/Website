@@ -54,6 +54,15 @@ const navLists = [
     ],
   },
   {
+    header: 'Developer',
+    links: [
+      {
+        title: 'Developer',
+        url: '/developer',
+      },
+    ],
+  },
+  {
     header: 'Resources',
     links: [
       {

@@ -44,7 +44,7 @@ const DocumentationSitemap: FC = () => {
           </div>
           <div className="DocumentationSitemap__topic-container">
             <div className="DocumentationSitemap__topic-header">Tools</div>
-            <Link className="DocumentationSitemap__link" to="/">
+            <Link className="DocumentationSitemap__link" to="/developer/api/bank-api">
               APIs
             </Link>
           </div>

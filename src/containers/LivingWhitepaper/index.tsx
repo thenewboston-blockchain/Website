@@ -33,7 +33,8 @@ const LivingWhitepaper: FC = () => {
             >
               Explore Document
             </Button>
-            <Button variant="outlined">Download PDF</Button>
+            {/* TODO: remove when PDF is ready */}
+            {/* <Button variant="outlined">Download PDF</Button> */}
           </div>
           <Divider />
           <div className="LivingWhitepaper__language-title">Language</div>

@@ -160,6 +160,9 @@ const TopNavDesktopItems = () => {
         popoverId="community-popover"
         setAnchorEl={setCommunityAnchorEl}
       />
+      <Link className="TopNavDesktopItems__right-item TopNavDesktopItems__link" tabIndex={-1} to="/developer">
+        Developer
+      </Link>
       <TopNavPopover
         anchorEl={resourcesAnchorEl}
         buttonText="Resources"

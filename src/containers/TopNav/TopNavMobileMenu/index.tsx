@@ -69,6 +69,7 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice,
                 {renderMobileLink('Blog', 'https://blog.thenewboston.com', true)}
               </>,
             )}
+            {renderColumn('developer', 'Developer', <>{renderMobileLink('Developer', '/developer')}</>)}
             {renderColumn(
               'resources',
               'Resources',
