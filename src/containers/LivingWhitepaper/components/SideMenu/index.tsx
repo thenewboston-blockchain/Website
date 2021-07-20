@@ -15,9 +15,12 @@ import {
 import './SideMenu.scss';
 
 const TOP_LINK_HEIGHT = 72;
-const BREADCRUMB_HEIGHT = 56;
 
-const SideMenu: FC = () => {
+type Props = {
+  breadcrumbHeight: number;
+};
+
+const SideMenu: FC<Props> = ({breadcrumbHeight}) => {
   const {pathname} = useLocation();
   const history = useHistory();
 
@@ -52,7 +55,7 @@ const SideMenu: FC = () => {
                 className={clsx('SideMenu__link')}
                 hashSpy
                 key={selection.url}
-                offset={-(NAVBAR_HEIGHT + TOP_LINK_HEIGHT + BREADCRUMB_HEIGHT)}
+                offset={-(NAVBAR_HEIGHT + TOP_LINK_HEIGHT + breadcrumbHeight)}
                 smooth
                 spy
                 to={selectionHash}
@@ -84,8 +87,9 @@ const SideMenu: FC = () => {
                 activeClass="SideMenu__link--active"
                 className={clsx('SideMenu__link')}
                 hashSpy
+                isDynamic
                 key={selection.url}
-                offset={-(NAVBAR_HEIGHT + TOP_LINK_HEIGHT + BREADCRUMB_HEIGHT)}
+                offset={-(NAVBAR_HEIGHT + TOP_LINK_HEIGHT + breadcrumbHeight)}
                 smooth
                 spy
                 to={selectionHash}
@@ -118,7 +122,7 @@ const SideMenu: FC = () => {
                 className={clsx('SideMenu__link')}
                 hashSpy
                 key={selection.url}
-                offset={-(NAVBAR_HEIGHT + TOP_LINK_HEIGHT + BREADCRUMB_HEIGHT)}
+                offset={-(NAVBAR_HEIGHT + TOP_LINK_HEIGHT + breadcrumbHeight)}
                 smooth
                 spy
                 to={selectionHash}

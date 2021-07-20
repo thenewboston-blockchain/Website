@@ -1,10 +1,12 @@
 @import 'src/styles/mixins';
 @import '../../shared';
+@import 'styles/z-index';
 
 .SideMenu {
   padding: 32px 32px 32px 0;
   position: sticky;
   top: $top-nav-height + $top-links-height + $breadcrumbs-height;
+  z-index: $z-index-whitepaper-sidemenu;
 
   @media (max-width: 1366px) {
     padding: 32px 48px;
@@ -52,5 +54,9 @@
     &--active {
       color: var(--color-gray-900);
     }
+  }
+
+  &__toggle-icon {
+    align-self: flex-start;
   }
 }

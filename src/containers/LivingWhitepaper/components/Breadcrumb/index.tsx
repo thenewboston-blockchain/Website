@@ -14,17 +14,17 @@ import './Breadcrumb.scss';
 
 type Props = {
   className?: string;
+  breadcrumbHeight: number;
 };
 
 const TOP_LINK_HEIGHT = 72;
 
-const Breadcrumb: FC<Props> = ({className}) => {
+const Breadcrumb: FC<Props> = ({breadcrumbHeight, className}) => {
   const location = useLocation();
   const {width} = useWindowDimensions();
   const [whitepaperDropdownEl, setWhitepaperDropdownEl] = useState<HTMLButtonElement | null>(null);
   const [sectionDropdownEl, setSectionDropdownEl] = useState<HTMLButtonElement | null>(null);
   const pathnames = location.pathname.slice(1).split('/');
-  const BREADCRUMB_HEIGHT = width < 768 ? 112 : 56;
 
   const toggleWhitepaperDropdown = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     if (!e) return;
@@ -51,11 +51,16 @@ const Breadcrumb: FC<Props> = ({className}) => {
       {pathnames.map((pathname, index) => {
         // developer
         if (index === 0) {
-          return (
+          return width > 992 ? (
             <div className="Breadcrumb__link-container" key={pathname}>
               <span className="Breadcrumb__link">{PATHNAME_TO_TITLE_MAPPING[pathname]}</span>
               <Icon className="Breadcrumb__icon" icon={IconType.chevronRight} size={16} totalSize={16} />
             </div>
+          ) : (
+            <ReactRouterLink className="Breadcrumb__link-container" key={pathname} to={`/${pathname}`}>
+              <span className="Breadcrumb__link">{PATHNAME_TO_TITLE_MAPPING[pathname]}</span>
+              <Icon className="Breadcrumb__icon" icon={IconType.chevronRight} size={16} totalSize={16} />
+            </ReactRouterLink>
           );
         }
 
@@ -80,7 +85,7 @@ const Breadcrumb: FC<Props> = ({className}) => {
                     <Icon
                       className="Breadcrumb__icon"
                       id={pathname}
-                      icon={IconType.chevronDown}
+                      icon={whitepaperDropdownEl ? IconType.chevronUp : IconType.chevronDown}
                       size={16}
                       totalSize={16}
                     />
@@ -93,7 +98,7 @@ const Breadcrumb: FC<Props> = ({className}) => {
                     id="whitepaper"
                     open={!!whitepaperDropdownEl}
                     transformOrigin={{horizontal: 'center', vertical: 'top'}}
-                    transformOffset={{horizontal: 50, vertical: 12}}
+                    transformOffset={{horizontal: 0, vertical: 12}}
                   >
                     {PATHNAME_TO_DROPDOWN_SELECTIONS.whitepaper.map((selection) => {
                       return (
@@ -121,7 +126,7 @@ const Breadcrumb: FC<Props> = ({className}) => {
                   <Icon
                     className="Breadcrumb__icon"
                     id={pathname}
-                    icon={IconType.chevronDown}
+                    icon={sectionDropdownEl ? IconType.chevronUp : IconType.chevronDown}
                     size={16}
                     totalSize={16}
                   />
@@ -134,7 +139,7 @@ const Breadcrumb: FC<Props> = ({className}) => {
                   id={pathname}
                   open={!!sectionDropdownEl}
                   transformOrigin={{horizontal: 'center', vertical: 'top'}}
-                  transformOffset={{horizontal: 50, vertical: 12}}
+                  transformOffset={{horizontal: 0, vertical: 12}}
                 >
                   {PATHNAME_TO_DROPDOWN_SELECTIONS[pathname].map((selection) => {
                     const selectionHash = selection.url.slice(selection.url.indexOf('#') + 1);
@@ -144,7 +149,7 @@ const Breadcrumb: FC<Props> = ({className}) => {
                         className="Breadcrumb__Popover-link"
                         hashSpy
                         key={selection.url}
-                        offset={-(NAVBAR_HEIGHT + TOP_LINK_HEIGHT + BREADCRUMB_HEIGHT)}
+                        offset={-(NAVBAR_HEIGHT + TOP_LINK_HEIGHT + breadcrumbHeight)}
                         smooth
                         spy
                         to={selectionHash}
