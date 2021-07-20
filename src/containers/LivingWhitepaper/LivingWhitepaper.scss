@@ -140,13 +140,23 @@
     &:not(:last-child) {
       margin-bottom: 24px;
     }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.04);
+    }
   }
 
   &__topic-title {
     @extend %h2;
     color: var(--color-white);
+    display: flex;
     font-weight: var(--font-weight-medium);
     margin-bottom: 16px;
+  }
+
+  &__topic-icon {
+    color: var(--color-blue-300);
+    margin-left: 8px;
   }
 
   &__topic-description {

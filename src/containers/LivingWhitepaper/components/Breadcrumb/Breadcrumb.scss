@@ -36,6 +36,7 @@
   &__link {
     @extend %h4;
     color: var(--color-gray-400);
+    font-weight: var(--font-weight-regular);
     line-height: 14px; // allow text to be centered by setting line-height to be the same as font size
     text-align: left;
 
@@ -44,10 +45,18 @@
       font-weight: var(--font-weight-medium);
       text-align: left;
     }
+
+    &:hover {
+      color: var(--color-blue-gray-900);
+    }
   }
 
   &__icon {
     margin: 0 8px;
+
+    &--active {
+      color: var(--color-gray-600);
+    }
   }
 
   &__button {

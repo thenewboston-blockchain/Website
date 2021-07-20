@@ -80,7 +80,7 @@ const Breadcrumb: FC<Props> = ({className}) => {
                     <Icon
                       className="Breadcrumb__icon"
                       id={pathname}
-                      icon={IconType.chevronDown}
+                      icon={whitepaperDropdownEl ? IconType.chevronUp : IconType.chevronDown}
                       size={16}
                       totalSize={16}
                     />
@@ -121,7 +121,7 @@ const Breadcrumb: FC<Props> = ({className}) => {
                   <Icon
                     className="Breadcrumb__icon"
                     id={pathname}
-                    icon={IconType.chevronDown}
+                    icon={sectionDropdownEl ? IconType.chevronUp : IconType.chevronDown}
                     size={16}
                     totalSize={16}
                   />
