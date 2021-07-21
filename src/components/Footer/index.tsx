@@ -60,6 +60,14 @@ const navLists = [
         title: 'Developer',
         url: '/developer',
       },
+      {
+        title: 'Living Whitepaper',
+        url: '/developer/whitepaper',
+      },
+      {
+        title: 'Projects',
+        url: '/projects',
+      },
     ],
   },
   {
