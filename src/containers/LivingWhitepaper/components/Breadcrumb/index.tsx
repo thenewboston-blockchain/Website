@@ -53,7 +53,9 @@ const Breadcrumb: FC<Props> = ({breadcrumbHeight, className}) => {
         if (index === 0) {
           return width > 992 ? (
             <div className="Breadcrumb__link-container" key={pathname}>
-              <span className="Breadcrumb__link">{PATHNAME_TO_TITLE_MAPPING[pathname]}</span>
+              <ReactRouterLink className="Breadcrumb__link" to={`/${pathname}`}>
+                {PATHNAME_TO_TITLE_MAPPING[pathname]}
+              </ReactRouterLink>
               <Icon className="Breadcrumb__icon" icon={IconType.chevronRight} size={16} totalSize={16} />
             </div>
           ) : (
@@ -71,9 +73,12 @@ const Breadcrumb: FC<Props> = ({breadcrumbHeight, className}) => {
             <div className="Breadcrumb__link-container" key={pathname}>
               {width > 992 ? (
                 <>
-                  <span className={clsx('Breadcrumb__link', isLastIndex && 'Breadcrumb__link--active')}>
+                  <ReactRouterLink
+                    className={clsx('Breadcrumb__link', isLastIndex && 'Breadcrumb__link--active')}
+                    to={`/developer/${pathname}`}
+                  >
                     {PATHNAME_TO_TITLE_MAPPING[pathname]}
-                  </span>
+                  </ReactRouterLink>
                   <Icon className="Breadcrumb__icon" icon={IconType.chevronRight} size={16} totalSize={16} />
                 </>
               ) : (
