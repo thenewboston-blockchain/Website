@@ -1,32 +1,17 @@
-import React, {FC, useCallback, useEffect, useRef} from 'react';
+import React, {FC, useCallback} from 'react';
 import {Link} from 'react-router-dom';
-import clsx from 'clsx';
 
 import {Button, ProgressiveImage} from 'components';
 import SocialMediaIcon from 'components/SocialMediaIcon';
-import {AnimationState} from 'constants/animation';
-import {useAnimationState, useShuffle, useWindowDimensions} from 'hooks';
+import {useWindowDimensions} from 'hooks';
 import {SocialMedia} from 'types/social-media';
 
-import HelloWorld, {defaultHelloWorld, HelloWorldKeys} from './hello-world';
-import HeroV2 from './HeroV2.svg';
-import HeroV2Placeholder from './HeroV2.webp';
+import HeroV2 from './HeroV2.png';
+import HeroV2Placeholder from './HeroV2Placeholder.webp';
 import './HomeHero.scss';
 
-const HelloFadeClass = {
-  [AnimationState.ONE]: 'HomeHero__hello-world--fade-in',
-  [AnimationState.ZERO]: 'HomeHero__hello-world--fade-out',
-};
-
 const HomeHero: FC = () => {
-  const animationState = useAnimationState(AnimationState.ONE, 1000, 4000);
-  const shouldShuffle = useRef(false);
-  const helloText = useShuffle(defaultHelloWorld, HelloWorld, HelloWorldKeys, shouldShuffle.current);
   const {width} = useWindowDimensions();
-
-  useEffect(() => {
-    shouldShuffle.current = animationState === AnimationState.ZERO;
-  }, [animationState]);
 
   const renderSocialMediaLinks = useCallback(
     () =>
@@ -47,7 +32,7 @@ const HomeHero: FC = () => {
       <div className="HomeHero__wrapper">
         <div className="HomeHero__left">
           <div className="HomeHero__left-content-container">
-            <span className={clsx('HomeHero__hello-world', HelloFadeClass[animationState])}>{helloText}</span>
+            <span className="HomeHero__hello-world">Hello World</span>
             <h1 className="HomeHero__title">We're Building a Better Economy</h1>
             <h2 className="HomeHero__subtitle">
               thenewboston is a blockchain platform for everyone. We are an open source community developing

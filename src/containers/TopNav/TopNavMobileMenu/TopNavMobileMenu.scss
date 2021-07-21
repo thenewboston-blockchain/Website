@@ -113,7 +113,7 @@ $top-nav-height: 60px;
     width: 100%;
     z-index: $z-index-top-nav-mobile-dropdown;
 
-    @media (max-width: 992px) {
+    @media (max-width: 1080px) {
       grid-template-columns: 1fr;
       grid-template-rows: auto auto;
       height: $dropdown-height-992;
@@ -133,7 +133,7 @@ $top-nav-height: 60px;
   }
 
   &__download-container {
-    @media (max-width: 992px) {
+    @media (max-width: 1080px) {
       align-items: flex-start;
       display: flex;
       flex-direction: row-reverse;

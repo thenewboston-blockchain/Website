@@ -11,6 +11,7 @@ import FacebookLogo from './logos/FacebookLogo.png';
 import GitHubLogo from './logos/GitHubLogo.png';
 import InstagramLogo from './logos/InstagramLogo.png';
 import LinkedInLogo from './logos/LinkedInLogo.png';
+import PinterestLogo from './logos/PinterestLogo.png';
 import RedditLogo from './logos/RedditLogo.png';
 import TwitchLogo from './logos/TwitchLogo.png';
 import TwitterLogo from './logos/TwitterLogo.png';
@@ -40,6 +41,7 @@ const MarketingButton: FC<ComponentProps> = ({className, customLink, website}) =
     github: renderImage(GitHubLogo),
     instagram: renderImage(InstagramLogo),
     linkedin: renderImage(LinkedInLogo),
+    pinterest: renderImage(PinterestLogo),
     reddit: renderImage(RedditLogo),
     twitch: renderImage(TwitchLogo),
     twitter: renderImage(TwitterLogo),

@@ -1,32 +1,24 @@
 import React, {FC, useState} from 'react';
-import {useHistory} from 'react-router-dom';
+import {Link} from 'react-scroll';
 import clsx from 'clsx';
 
+import {NAVBAR_HEIGHT} from 'constants/offsets';
 import {useWindowDimensions} from 'hooks';
-import {ProjectTopic} from 'types/projects';
 import {isTouchScreenDevice} from 'utils/device';
 
 import ProjectIcon, {ProjectIconSize} from '../../ProjectIcons';
 import {orderedProjectDetailsTopic} from '../constants';
 import './ProjectDetailsSideMenu.scss';
 
-type Props = {
-  currentTopicPosition: number;
-  setCurrentTopicPosition(position: number): void;
-};
-
-const ProjectDetailsSideMenu: FC<Props> = ({currentTopicPosition, setCurrentTopicPosition}) => {
-  const history = useHistory();
+const ProjectDetailsSideMenu: FC = () => {
+  const BANNER_HEIGHT = 158;
+  const BANNER_HEIGHT_480 = 241;
   const [hoveredTopicTitle, setHoveredTopicTitle] = useState<string>('');
-  const currentTopic = orderedProjectDetailsTopic[currentTopicPosition];
+  const [currentTopicAnchor, setCurrentTopicAnchor] = useState<string>('');
 
   const {width} = useWindowDimensions();
   const shouldShowDetails = width > 992;
-
-  const handleMenuClick = (topic: ProjectTopic) => (): void => {
-    setCurrentTopicPosition(topic.position);
-    history.push(`#${topic.anchor}`);
-  };
+  const detailsBannerHeight = width > 480 ? BANNER_HEIGHT : BANNER_HEIGHT_480;
 
   const handleMouseEnter = (title: string) => {
     // touch screen devices does not need to have hover effect
@@ -40,11 +32,15 @@ const ProjectDetailsSideMenu: FC<Props> = ({currentTopicPosition, setCurrentTopi
     setHoveredTopicTitle('');
   };
 
+  const handleSetActive = (anchor: string) => {
+    setCurrentTopicAnchor(anchor);
+  };
+
   return (
     <div className="ProjectDetailsSideMenu">
       {orderedProjectDetailsTopic.map((topic) => {
-        const {iconType, title} = topic;
-        const isActive = currentTopic.title === title;
+        const {anchor, iconType, title} = topic;
+        const isActive = anchor === currentTopicAnchor;
         const isHovered = hoveredTopicTitle === title;
 
         let iconState: 'default' | 'active' | 'hover' = 'default';
@@ -55,14 +51,17 @@ const ProjectDetailsSideMenu: FC<Props> = ({currentTopicPosition, setCurrentTopi
         }
 
         return (
-          <div
+          <Link
             className="ProjectDetailsSideMenu__topic"
-            key={title}
-            role="button"
-            onClick={handleMenuClick(topic)}
+            key={anchor}
+            offset={-(NAVBAR_HEIGHT + detailsBannerHeight + 32)} // Navbar + Banner + Padding
             onMouseEnter={() => handleMouseEnter(title)}
             onMouseLeave={handleMouseLeave}
-            tabIndex={0}
+            onSetActive={() => handleSetActive(anchor)}
+            hashSpy
+            smooth
+            spy
+            to={anchor}
           >
             <ProjectIcon
               className="ProjectDetailsSideMenu__icon"
@@ -79,7 +78,7 @@ const ProjectDetailsSideMenu: FC<Props> = ({currentTopicPosition, setCurrentTopi
                 {title}
               </div>
             )}
-          </div>
+          </Link>
         );
       })}
     </div>

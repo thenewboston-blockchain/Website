@@ -6,9 +6,10 @@ import withSuspense from 'hoc/withSuspense';
 import {AnalyticsType} from 'types/analytics';
 
 import Analytics from './Analytics';
+import ArchitectureDeepDive from './LivingWhitepaper/containers/ArchitectureDeepDive';
 import Assets from './Assets';
-import BankApi from './BankApi';
-import ConfirmationValidatorApi from './ConfirmationValidatorApi';
+import BankApi from './Api/BankApi';
+import ConfirmationValidatorApi from './Api/ConfirmationValidatorApi';
 import CreateAccount from './CreateAccount';
 import DeploymentGuide from './DeploymentGuide';
 import Donate from './Donate';
@@ -18,8 +19,12 @@ import Governance from './Governance';
 import Guide from './Guide';
 import Guidelines from './Guidelines';
 import Home from './Home';
+import LivingWhitepaper from './LivingWhitepaper';
 import Openings from './Openings';
-import PrimaryValidatorApi from './PrimaryValidatorApi';
+import PrimaryValidatorApi from './Api/PrimaryValidatorApi';
+import PrincipalEntities from './LivingWhitepaper/containers/PrincipalEntities';
+import PrincipalEventsAndProcesses from './LivingWhitepaper/containers/PrincipalEventsAndProcesses';
+import PrivacyPolicy from './PrivacyPolicy';
 import Profile from './Profile';
 import Progress from './Progress';
 import ProjectRulesAndGuide from './Projects/ProjectRulesAndGuide';
@@ -29,11 +34,13 @@ import Social from './Social';
 import StyleGuide from './StyleGuide';
 import Tasks from './Tasks';
 import Teams from './Teams';
+import TermsOfUse from './TermsOfUse';
 import Wallet from './Wallet';
 
 /**
  * Lazy load pages that may contribute a lot to the bundle size
  */
+const DeveloperPortal = lazy(() => import('./DeveloperPortal'));
 const Projects = lazy(() => import('./Projects'));
 const Tutorials = lazy(() => import('./Tutorials'));
 
@@ -72,36 +79,47 @@ const App: FC = () => {
           <Route exact path="/" component={Home} />
           <Redirect exact from="/analytics" to={`/analytics/${AnalyticsType.community}`} />
           <Route exact path="/analytics/:type" component={Analytics} />
-          <Route exact path="/assets" component={Assets} />
-          <Route path="/bank-api/:chapter?" component={BankApi} />
-          <Route path="/confirmation-validator-api/:chapter?" component={ConfirmationValidatorApi} />
+          <Route exact path="/guidelines" component={Guidelines} />
           <Route exact path="/create-account" render={() => <CreateAccount disabled />} />
-          <Route path="/deployment-guide/:chapter?" component={DeploymentGuide} />
           <Route exact path="/donate" component={Donate} />
-          <Route path="/download" component={Download} />
+          <Route exact path="/developer" component={withSuspense(DeveloperPortal)} />
+          <Route exact path="/developer/whitepaper" component={LivingWhitepaper} />
+          <Route exact path="/developer/whitepaper/principal-entities/:chapter?" component={PrincipalEntities} />
+          <Route
+            exact
+            path="/developer/whitepaper/principal-events/:chapter?"
+            component={PrincipalEventsAndProcesses}
+          />
+          <Route exact path="/developer/whitepaper/architecture/:chapter?" component={ArchitectureDeepDive} />
           <Redirect exact from="/faq" to={`/faq/${faqFilters[FaqFilterType.all]}`} />
           <Route exact path="/faq/:filter" component={Faq} />
-          <Route path="/governance/:chapter?" component={Governance} />
-          <Route path="/guide/:chapter?" component={Guide} />
-          <Route exact path="/guidelines" component={Guidelines} />
+          <Route exact path="/assets" component={Assets} />
           <Redirect exact from="/openings" to="/openings/All" />
           <Route exact path="/openings/:category/:openingId?" render={() => <Openings />} />
-          <Route path="/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
+          <Route exact path="/social" component={Social} />
+          <Redirect exact from="/tasks" to="/tasks/All" />
+          <Route exact path="/tasks/:repository" component={Tasks} />
+          <Redirect exact path="/teams" to="/teams/All/Members" />
+          <Route exact path="/teams/:team/:tab?/:resource?" component={Teams} />
+          <Route path="/wallet/:chapter?" component={Wallet} />
+          <Route path="/developer/api/bank-api/:chapter?" component={BankApi} />
+          <Route path="/developer/api/confirmation-validator-api/:chapter?" component={ConfirmationValidatorApi} />
+          <Route path="/deployment-guide/:chapter?" component={DeploymentGuide} />
+          <Route path="/download" component={Download} />
+          <Route path="/governance/:chapter?" component={Governance} />
+          <Route path="/guide/:chapter?" component={Guide} />
+          <Route path="/developer/api/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
+          <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route path="/progress" component={Progress} />
           <Route path="/projects/:projectId?" component={withSuspense(Projects)} />
           <Route path="/project-rules/:chapter" component={ProjectRulesAndGuide} />
           <Route exact path="/sign-in" component={SignIn} />
           <Route exact path="/sign-out" component={SignOut} />
-          <Route exact path="/social" component={Social} />
           <Route path="/style-guide/:chapter?" component={StyleGuide} />
-          <Redirect exact from="/tasks" to="/tasks/All" />
-          <Route exact path="/tasks/:repository" component={Tasks} />
-          <Redirect exact path="/teams" to="/teams/All/Members" />
-          <Route exact path="/teams/:team/:tab?/:resource?" component={Teams} />
           <Redirect exact path="/tutorials" to="/tutorials/All" />
           <Route exact path="/tutorials/:category/:playlistId?" component={withSuspense(Tutorials)} />
+          <Route exact path="/terms-of-use" component={TermsOfUse} />
           <Route path="/users/:userId" component={Profile} />
-          <Route path="/wallet/:chapter?" component={Wallet} />
           <Redirect to="/" />
         </Switch>
       </Layout>

@@ -36,6 +36,13 @@ const communityPopoverItems: TopNavPopoverItemType[] = [
     title: 'Community Guidelines',
     to: '/guidelines',
   },
+  {
+    description: 'Stay updated with our latest articles',
+    iconType: IconType.textBox,
+    isExternal: true,
+    title: 'Blog',
+    to: 'https://blog.thenewboston.com',
+  },
 ];
 
 const getStartedPopoverItems: TopNavPopoverItemType[] = [
@@ -159,6 +166,9 @@ const TopNavDesktopItems = () => {
         popoverId="community-popover"
         setAnchorEl={setCommunityAnchorEl}
       />
+      <Link className="TopNavDesktopItems__right-item TopNavDesktopItems__link" tabIndex={-1} to="/developer">
+        Developer
+      </Link>
       <TopNavPopover
         anchorEl={resourcesAnchorEl}
         buttonText="Resources"

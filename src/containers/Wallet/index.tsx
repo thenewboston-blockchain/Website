@@ -11,6 +11,7 @@ import WalletCreateBank from './WalletCreateBank';
 import WalletCreateValidator from './WalletCreateValidator';
 import WalletEditNicknames from './WalletEditNicknames';
 import WalletGetStarted from './WalletGetStarted';
+import WalletRecoverAccount from './WalletRecoverAccount';
 import WalletSendCoins from './WalletSendCoins';
 
 const defaultPageData: PageData = {
@@ -42,6 +43,10 @@ const pageData: PageDataObject = {
   'get-started': {
     content: <WalletGetStarted />,
     name: 'Get Started',
+  },
+  'recover-an-account': {
+    content: <WalletRecoverAccount />,
+    name: 'Recover An Account',
   },
   'send-coins': {
     content: <WalletSendCoins />,

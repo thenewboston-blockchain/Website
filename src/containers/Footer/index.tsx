@@ -4,7 +4,6 @@ import clsx from 'clsx';
 
 import Logo from 'assets/svgs/thenewboston-white.svg';
 import {Button, SocialMediaIcon} from 'components';
-import {useWindowDimensions} from 'hooks';
 import {SocialMedia} from 'types/social-media';
 
 import FooterNavList from './FooterNavList';
@@ -48,6 +47,28 @@ const navLists = [
         title: 'Community Guidelines',
         url: '/guidelines',
       },
+      {
+        isExternal: true,
+        title: 'Blog',
+        url: 'https://blog.thenewboston.com',
+      },
+    ],
+  },
+  {
+    header: 'Developer',
+    links: [
+      {
+        title: 'Developer',
+        url: '/developer',
+      },
+      {
+        title: 'Living Whitepaper',
+        url: '/developer/whitepaper',
+      },
+      {
+        title: 'Projects',
+        url: '/projects',
+      },
     ],
   },
   {
@@ -78,6 +99,14 @@ const navLists = [
         title: 'Donate',
         url: '/donate',
       },
+      {
+        title: 'Terms of Use',
+        url: '/terms-of-use',
+      },
+      {
+        title: 'Privacy Policy',
+        url: '/privacy-policy',
+      },
     ],
   },
   {
@@ -93,8 +122,6 @@ const navLists = [
 
 const Footer: FC<ComponentProps> = ({className}) => {
   const history = useHistory();
-  const {width} = useWindowDimensions();
-  const shouldRenderDownloadWithNavlists = width < 1400 && width > 480;
 
   const renderSocialMediaLinks = useCallback(
     () =>
@@ -108,6 +135,7 @@ const Footer: FC<ComponentProps> = ({className}) => {
         SocialMedia.twitter,
         SocialMedia.discord,
         SocialMedia.twitch,
+        SocialMedia.pinterest,
       ].map((website) => (
         <SocialMediaIcon
           className="Footer__SocialMediaLink"
@@ -128,28 +156,17 @@ const Footer: FC<ComponentProps> = ({className}) => {
   return (
     <footer className={clsx('Footer', className)} data-testid="Footer">
       <div className="Footer__left">
-        <Link to="/">
-          <img src={Logo} alt="thenewboston logo" />
-        </Link>
-        <div className="Footer__social-media-links">{renderSocialMediaLinks()}</div>
-      </div>
-      {shouldRenderDownloadWithNavlists && (
-        <div className="Footer__download-container">
-          <Button className="Footer__download-button" onClick={() => history.push('/download')} variant="outlined">
-            Download Wallet
-          </Button>
+        <div className="Footer__left-brand-details">
+          <Link to="/">
+            <img src={Logo} alt="thenewboston logo" />
+          </Link>
+          <div className="Footer__social-media-links">{renderSocialMediaLinks()}</div>
         </div>
-      )}
-      <div className="Footer__right">
-        {renderNavLists()}
-        {!shouldRenderDownloadWithNavlists && (
-          <div className="Footer__download-container">
-            <Button className="Footer__download-button" onClick={() => history.push('/download')} variant="outlined">
-              Download Wallet
-            </Button>
-          </div>
-        )}
+        <Button className="Footer__download-button" onClick={() => history.push('/download')} variant="outlined">
+          Download Wallet
+        </Button>
       </div>
+      <div className="Footer__right">{renderNavLists()}</div>
     </footer>
   );
 };
