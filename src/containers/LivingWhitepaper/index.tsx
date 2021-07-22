@@ -74,9 +74,7 @@ const LivingWhitepaper: FC = () => {
           </div>
           <div className="LivingWhitepaper__topic-description">
             This documentation outlines an efficient and scalable peer-to-peer consensus mechanism that allows for
-            highly efficient transaction validation within a decentralized network.This documentation outlines an
-            efficient and scalable peer-to-peer consensus mechanism that allows for highly efficient transaction
-            validation within a decentralized network.
+            highly efficient transaction validation within a decentralized network.
           </div>
         </div>
         <div
