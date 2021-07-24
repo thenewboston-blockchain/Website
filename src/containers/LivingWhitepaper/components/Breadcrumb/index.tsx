@@ -153,6 +153,7 @@ const Breadcrumb: FC<Props> = ({breadcrumbHeight, className}) => {
                         activeClass="SideMenu__link--active"
                         className="Breadcrumb__Popover-link"
                         hashSpy
+                        ignoreCancelEvents
                         key={selection.url}
                         offset={-(NAVBAR_HEIGHT + TOP_LINK_HEIGHT + breadcrumbHeight)}
                         smooth
