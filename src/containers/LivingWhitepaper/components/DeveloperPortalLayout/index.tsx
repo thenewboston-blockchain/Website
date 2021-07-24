@@ -28,6 +28,7 @@ const DeveloperPortalLayout: FC<Props> = ({children, pageName}) => {
     if (hash) {
       setTimeout(() => {
         scroller.scrollTo(hash.slice(1), {
+          ignoreCancelEvents: true,
           offset: -TOTAL_OFFSET,
         });
       }, TIMEOUT_DELAY);

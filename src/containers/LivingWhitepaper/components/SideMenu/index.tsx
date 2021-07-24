@@ -52,6 +52,7 @@ const SideMenu: FC<Props> = ({breadcrumbHeight}) => {
                 activeClass="SideMenu__link--active"
                 className={clsx('SideMenu__link')}
                 hashSpy
+                ignoreCancelEvents
                 key={selection.url}
                 offset={-(NAVBAR_HEIGHT + LIVING_WHITEPAPER_TOP_LINKS_HEIGHT + breadcrumbHeight)}
                 smooth
@@ -85,7 +86,7 @@ const SideMenu: FC<Props> = ({breadcrumbHeight}) => {
                 activeClass="SideMenu__link--active"
                 className={clsx('SideMenu__link')}
                 hashSpy
-                isDynamic
+                ignoreCancelEvents
                 key={selection.url}
                 offset={-(NAVBAR_HEIGHT + LIVING_WHITEPAPER_TOP_LINKS_HEIGHT + breadcrumbHeight)}
                 smooth
@@ -119,6 +120,7 @@ const SideMenu: FC<Props> = ({breadcrumbHeight}) => {
                 activeClass="SideMenu__link--active"
                 className={clsx('SideMenu__link')}
                 hashSpy
+                ignoreCancelEvents
                 key={selection.url}
                 offset={-(NAVBAR_HEIGHT + LIVING_WHITEPAPER_TOP_LINKS_HEIGHT + breadcrumbHeight)}
                 smooth
