@@ -306,11 +306,11 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
         answer: (
           <span>
             Check out our{' '}
-            <A newWindow={false} href="/glossary">
-              glossary
+            <A newWindow href="https://blog.thenewboston.com/category/crypto-101-series/">
+              Crypto 101 series in our blog
             </A>{' '}
             and{' '}
-            <A newWindow={false} href="/tutorials">
+            <A newWindow={false} href="/tutorials/Digital%20Currency">
               YouTube videos
             </A>
             .
@@ -550,11 +550,11 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
       {
         answer: (
           <span>
-            <A newWindow={false} href="/wallet/created-bank">
+            <A newWindow={false} href="/wallet/create-bank">
               Bank
             </A>
             ,{' '}
-            <A newWindow={false} href="/wallet/created-validator">
+            <A newWindow={false} href="/wallet/create-validator">
               PV
             </A>
             .
