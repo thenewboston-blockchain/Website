@@ -1,5 +1,7 @@
 import React, {FC} from 'react';
 
+import {Link} from 'react-router-dom';
+
 import {Divider, Note, NoteType} from 'components';
 import {PrincipalEventsId} from '../../../constants';
 
@@ -16,8 +18,9 @@ const ForkPrevention: FC = () => {
         Every CV informs all other CVs when a block has been received from the PV. This is to secure the network against
         the unlikely event of a malicious PV attempting to fork the network by sending multiple versions of the same
         block to different CVs. To ensure that all CVs are building identical blockchains, after each block is received
-        and before its validation, CVs must broadcast data that uniquely identifies each block ([hash value of the
-        block]()) to all other CVs.
+        and before its validation, CVs must broadcast data that uniquely identifies each block (
+        <Link to="/developer/whitepaper/principal-entities#blocks-and-blockchain">hash value of the block</Link>) to all
+        other CVs.
       </p>
       <p className="PrincipalEvents__section-paragraph PrincipalEvents__section-paragraph--mb-32">
         After confirming that the majority of CVs have received identical blocks, the{' '}

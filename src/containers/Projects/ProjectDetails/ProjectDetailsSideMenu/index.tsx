@@ -1,5 +1,6 @@
-import React, {FC, useState} from 'react';
-import {Link} from 'react-scroll';
+import React, {FC, useEffect, useState} from 'react';
+import {useLocation} from 'react-router';
+import {Link, scroller} from 'react-scroll';
 import clsx from 'clsx';
 
 import {NAVBAR_HEIGHT} from 'constants/offsets';
@@ -10,15 +11,32 @@ import ProjectIcon, {ProjectIconSize} from '../../ProjectIcons';
 import {orderedProjectDetailsTopic} from '../constants';
 import './ProjectDetailsSideMenu.scss';
 
+const BANNER_HEIGHT = 158;
+const BANNER_HEIGHT_480 = 241;
+const TIMEOUT_DELAY = 100;
+
 const ProjectDetailsSideMenu: FC = () => {
-  const BANNER_HEIGHT = 158;
-  const BANNER_HEIGHT_480 = 241;
   const [hoveredTopicTitle, setHoveredTopicTitle] = useState<string>('');
   const [currentTopicAnchor, setCurrentTopicAnchor] = useState<string>('');
+
+  const {hash} = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      setTimeout(() => {
+        scroller.scrollTo(hash.slice(1), {
+          ignoreCancelEvents: true,
+          offset: -TOTAL_OFFSET,
+        });
+      }, TIMEOUT_DELAY);
+    }
+    // eslint-disable-next-line
+  }, []);
 
   const {width} = useWindowDimensions();
   const shouldShowDetails = width > 992;
   const detailsBannerHeight = width > 480 ? BANNER_HEIGHT : BANNER_HEIGHT_480;
+  const TOTAL_OFFSET = NAVBAR_HEIGHT + detailsBannerHeight + 32;
 
   const handleMouseEnter = (title: string) => {
     // touch screen devices does not need to have hover effect
@@ -54,6 +72,7 @@ const ProjectDetailsSideMenu: FC = () => {
           <Link
             className="ProjectDetailsSideMenu__topic"
             key={anchor}
+            ignoreCancelEvents
             offset={-(NAVBAR_HEIGHT + detailsBannerHeight + 32)} // Navbar + Banner + Padding
             onMouseEnter={() => handleMouseEnter(title)}
             onMouseLeave={handleMouseLeave}

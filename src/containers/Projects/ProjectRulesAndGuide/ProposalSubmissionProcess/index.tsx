@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {A, Label} from 'components';
+import {Label} from 'components';
 import {MEDIUM_DEVICE_WIDTH} from 'constants/breakpoints';
 import {useWindowDimensions} from 'hooks';
 
@@ -25,9 +25,13 @@ const ProposalSubmissionProcess: FC = () => {
             <h3 className="ProposalSubmissionProcess__step-heading"> Submission </h3>
             <p className="ProposalSubmissionProcess__step-sub-text">
               To submit a project proposal, fill out all project details using the{' '}
-              <A href="https://github.com/thenewboston-developers/Projects/issues/new?assignees=&labels=Project&template=project-proposal.md&title=NAME_OF_YOUR_PROJECT">
+              <a
+                href="https://github.com/thenewboston-developers/Projects/issues/new?assignees=&labels=Project&template=project-proposal.md&title=NAME_OF_YOUR_PROJECT"
+                target="_blank"
+                rel="noreferrer"
+              >
                 project proposal
-              </A>{' '}
+              </a>{' '}
               template.
             </p>
           </div>
@@ -122,7 +126,13 @@ const ProposalSubmissionProcess: FC = () => {
             <h3 className="ProposalSubmissionProcess__step-heading"> Repository </h3>
             <p className="ProposalSubmissionProcess__step-sub-text">
               If and when the proposal is accepted, the auditor will create a new directory within the{' '}
-              <A href="https://github.com/thenewboston-developers/Projects/tree/master/projects">project's folder</A>{' '}
+              <a
+                href="https://github.com/thenewboston-developers/Projects/tree/master/projects"
+                target="_blank"
+                rel="noreferrer"
+              >
+                project's folder
+              </a>{' '}
               with the completed version of the project proposal.
             </p>
           </div>

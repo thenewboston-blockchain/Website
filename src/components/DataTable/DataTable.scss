@@ -3,6 +3,8 @@
 .DataTable {
   &__table {
     box-shadow: 0 1px 13px rgba(0, 0, 0, 0.06);
+    display: block;
+    overflow-x: scroll;
     width: 100%;
 
     &-tbody {
@@ -13,6 +15,7 @@
 
         &-td {
           @extend %body1;
+          min-width: 120px;
           padding: 8px 16px;
 
           &:not(:last-child) {
