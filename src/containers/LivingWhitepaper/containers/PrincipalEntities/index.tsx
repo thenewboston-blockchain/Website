@@ -399,7 +399,7 @@ const PrincipalEntities: FC = () => {
                 className="PrincipalEntities__section-image"
                 src={ElectionProcessImage}
                 loading="lazy"
-                width="312px"
+                width="280px"
               />
             </div>
           </div>

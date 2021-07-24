@@ -1,5 +1,7 @@
 import React, {FC} from 'react';
 
+import {Link} from 'react-router-dom';
+
 import {PrincipalEventsId} from '../../../constants';
 import ScheduleAdjustmentImage from '../../../assets/schedule-adjustment.svg';
 
@@ -25,7 +27,11 @@ const ScheduleAdjustment: FC = () => {
         <br />
         The decision of whether or not to skip a PV requires a consensus agreement by the CVs. CVs’ votes on whether or
         not to skip a PV are weighted equally, rather than being weighted by boost. For details about how this happens,
-        see [Consensus between Confirmation Validators]().
+        see{' '}
+        <Link to="/developer/whitepaper/architecture#architecture-consensus">
+          Consensus between Confirmation Validators
+        </Link>
+        .
       </p>
       <div className="PrincipalEvents__section-image-container">
         <img
