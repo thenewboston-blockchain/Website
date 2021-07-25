@@ -63,12 +63,6 @@ const getStartedPopoverItems: TopNavPopoverItemType[] = [
 
 const resourcesPopoverItems: TopNavPopoverItemType[] = [
   {
-    description: 'Start reading into Guides and APIs',
-    iconType: IconType.fileDocument,
-    title: 'Documentation',
-    to: '/guide/introduction',
-  },
-  {
     description: 'Watch tutorials made by the community',
     iconType: IconType.playBoxMultiple,
     title: 'Tutorials',

@@ -15,7 +15,6 @@ import Donate from './Donate';
 import Download from './Download';
 import Faq, {faqFilters, FaqFilterType} from './Faq';
 import Governance from './Governance';
-import Guide from './Guide';
 import Guidelines from './Guidelines';
 import Home from './Home';
 import LivingWhitepaper from './LivingWhitepaper';
@@ -103,7 +102,6 @@ const App: FC = () => {
           <Route path="/deployment-guide/:chapter?" component={DeploymentGuide} />
           <Route path="/download" component={Download} />
           <Route path="/governance/:chapter?" component={Governance} />
-          <Route path="/guide/:chapter?" component={Guide} />
           <Route path="/developer/api/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route path="/progress" component={Progress} />
