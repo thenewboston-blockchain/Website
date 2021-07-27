@@ -27,19 +27,6 @@
           "profileImage": "https://avatars1.githubusercontent.com/u/77364430?&v=4"
         },
         "hourlyRate": 900
-      },
-      {
-        "title": "Auditor",
-        "isLead": false,
-        "createdDate": "2020-07-08T02:14:59.307535Z",
-        "contributor": {
-          "contributorId": "14",
-          "discordUsername": "Manish#4379",
-          "displayName": "Manish Ram",
-          "githubUsername": "manishram",
-          "profileImage": "https://avatars0.githubusercontent.com/u/22790904?s=400&u=643810e6c9d5686df409132b01863f9e065df6c1&v=4"
-        },
-        "hourlyRate": 800
       }
     ],
     "responsibilities": [
@@ -185,13 +172,13 @@
       {
         "title": "Product Manager",
         "isLead": false,
-        "createdDate": "2021-03-02T02:14:59.307535Z",
+        "createdDate": "2020-07-08T02:14:59.307535Z",
         "contributor": {
-          "contributorId": "7",
-          "discordUsername": "Muhammad Anas Azam Bhatti#3383",
-          "displayName": "Muhammad Anas Azam Bhatti",
-          "githubUsername": "ma2b0043",
-          "profileImage": "https://avatars.githubusercontent.com/u/60430226?v=4"
+          "contributorId": "14",
+          "discordUsername": "Manish#4379",
+          "displayName": "Manish Ram",
+          "githubUsername": "manishram",
+          "profileImage": "https://avatars0.githubusercontent.com/u/22790904?s=400&u=643810e6c9d5686df409132b01863f9e065df6c1&v=4"
         },
         "hourlyRate": 800
       }
@@ -319,6 +306,19 @@
           "profileImage": "https://avatars.githubusercontent.com/u/32347748?v=4"
         },
         "hourlyRate": 900
+      },
+      {
+        "title": "DevOps Engineer",
+        "isLead": false,
+        "createdDate": "2021-03-02T02:14:59.307535Z",
+        "contributor": {
+          "contributorId": "7",
+          "discordUsername": "Muhammad Anas Azam Bhatti#3383",
+          "displayName": "Muhammad Anas Azam Bhatti",
+          "githubUsername": "ma2b0043",
+          "profileImage": "https://avatars.githubusercontent.com/u/60430226?v=4"
+        },
+        "hourlyRate": 800
       }
     ],
     "responsibilities": [
