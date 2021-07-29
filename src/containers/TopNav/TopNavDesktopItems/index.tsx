@@ -63,10 +63,10 @@ const getStartedPopoverItems: TopNavPopoverItemType[] = [
 
 const resourcesPopoverItems: TopNavPopoverItemType[] = [
   {
-    description: 'Start reading into Guides and APIs',
+    description: 'Start reading into Guides',
     iconType: IconType.fileDocument,
     title: 'Documentation',
-    to: '/guide/introduction',
+    to: '/wallet',
   },
   {
     description: 'Watch tutorials made by the community',

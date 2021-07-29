@@ -74,7 +74,7 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice,
               'resources',
               'Resources',
               <>
-                {renderMobileLink('Documentation', '/guide/introduction')}
+                {renderMobileLink('Documentation', '/wallet')}
                 {renderMobileLink('Tutorials', '/tutorials')}
                 {renderMobileLink('Media Kit', '/assets')}
               </>,
