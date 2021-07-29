@@ -75,7 +75,7 @@ const navLists = [
     links: [
       {
         title: 'Documentation',
-        url: '/guide/introduction',
+        url: '/wallet',
       },
       {
         title: 'Tutorials',

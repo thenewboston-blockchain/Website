@@ -39,7 +39,7 @@ const HomeHero: FC = () => {
               decentralized apps with the goal of helping the whole world move into the cryptocurrency era.
             </h2>
             <div className="HomeHero__buttons">
-              <Link className="HomeHero__buttons--learn-more" tabIndex={-1} to="/guide/introduction">
+              <Link className="HomeHero__buttons--learn-more" tabIndex={-1} to="/developer/whitepaper">
                 <Button>Learn More</Button>
               </Link>
               <Link className="HomeHero__buttons--earn-coins" tabIndex={-1} to="/tasks/All">
