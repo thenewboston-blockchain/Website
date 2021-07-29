@@ -74,6 +74,10 @@ const navLists = [
     header: 'Resources',
     links: [
       {
+        title: 'Documentation',
+        url: '/wallet',
+      },
+      {
         title: 'Tutorials',
         url: '/tutorials',
       },

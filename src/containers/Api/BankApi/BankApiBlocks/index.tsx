@@ -11,7 +11,8 @@ const BankApiBlocks: FC = () => {
         different recipients within a single block.
       </p>
       <p>
-        For more information, see <NavLink to="/guide/blocks">Blocks</NavLink>.
+        For more information, see{' '}
+        <NavLink to="/developer/whitepaper/principal-entities#blocks-and-blockchain">Blocks</NavLink>.
       </p>
 
       <DocEndpoint endpoint="/blocks" method="GET" />
