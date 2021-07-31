@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
 
 import {Container, ProgressiveImage} from 'components';
-import AppStoreHeroImage from './AppStoreHero.png';
-import AppStoreHeroImagePlaceholder from './AppStoreHero.webp';
+import AppStoreHeroImage from '../../../assets/AppStoreHero.png';
+import AppStoreHeroImagePlaceholder from '../../../assets/AppStoreHero.webp';
 import './AppStoreHero.scss';
 
 const AppStoreHero: FC = () => {

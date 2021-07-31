@@ -1,11 +1,11 @@
 import React, {FC} from 'react';
 
-import AppStoreHero from './AppStoreHero';
+import AppStoreHome from './containers/AppStoreHome';
 
 const AppStore: FC = () => {
   return (
     <>
-      <AppStoreHero />
+      <AppStoreHome />
     </>
   );
 };
