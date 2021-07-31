@@ -1,0 +1,71 @@
+@import 'styles/font-mixins';
+
+.AppStoreHero {
+  background: rgba(246, 249, 252, 0.36);
+  display: flex;
+  justify-content: center;
+  min-height: 352px;
+
+  &__container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    @media (max-width: 1366px) {
+      padding: 48px;
+    }
+
+    @media (max-width: 768px) {
+      align-items: center;
+      flex-direction: column;
+      padding: 48px 24px;
+    }
+  }
+
+  &__left {
+    margin-right: 48px;
+
+    @media (max-width: 768px) {
+      margin-right: 0;
+    }
+
+    &-subtitle {
+      @extend %h3;
+      color: var(--color-gray-500);
+      font-weight: var(--font-weight-regular);
+      line-height: 1.5;
+      margin-top: 16px;
+
+      @media (max-width: 768px) {
+        margin-bottom: 48px;
+        text-align: center;
+      }
+    }
+
+    &-title {
+      @extend %display2;
+      font-weight: var(--font-weight-bold);
+      line-height: 1.25;
+
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__right {
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+
+    &-image {
+      max-width: 695px;
+      width: 100%;
+
+      @media (max-width: 768px) {
+        max-width: 100%;
+      }
+    }
+  }
+}

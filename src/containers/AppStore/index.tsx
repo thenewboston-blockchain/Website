@@ -1,7 +1,13 @@
 import React, {FC} from 'react';
 
+import AppStoreHero from './AppStoreHero';
+
 const AppStore: FC = () => {
-  return <>hello world</>;
+  return (
+    <>
+      <AppStoreHero />
+    </>
+  );
 };
 
 export default AppStore;
