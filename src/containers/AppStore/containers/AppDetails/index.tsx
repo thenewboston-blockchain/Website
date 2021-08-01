@@ -5,6 +5,7 @@ import AppDetailsSlider from './AppDetailsSlider';
 import AppDetailsOverview from './AppDetailsOverview';
 
 import SampleAppLogo from '../../assets/SampleAppLogo.png';
+import SampleAppBanner from '../../assets/SampleAppBg.png';
 
 import './AppDetails.scss';
 
@@ -23,7 +24,10 @@ const AppDetails: FC<Props> = ({appId}) => {
         title="Portico"
         websiteUrl="https://google.com"
       />
-      <AppDetailsSlider className="AppDetails__slider" imageUrls={[]} />
+      <AppDetailsSlider
+        className="AppDetails__slider"
+        imageUrls={[SampleAppBanner, SampleAppLogo, SampleAppBanner, SampleAppBanner, SampleAppBanner]}
+      />
       <AppDetailsOverview
         className="AppDetails__overview"
         description={`Keep all your travel ideas in one place.

@@ -22,7 +22,8 @@ const AppCard: FC<Props> = ({bannerUrl, description, id, logoUrl, title, website
     history.push(`/app-store/${id}`);
   };
 
-  const handleVisitWebsite = (): void => {
+  const handleVisitWebsite = (event: React.MouseEvent<HTMLDivElement>): void => {
+    event.stopPropagation(); // prevent from calling the click event at parent, i.e. clicking of card
     window.open(websiteUrl, '_blank', 'noopener noreferrer');
   };
 
