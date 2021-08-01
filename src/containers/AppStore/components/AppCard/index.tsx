@@ -42,7 +42,7 @@ const AppCard: FC<Props> = ({bannerUrl, description, id, logoUrl, title, website
             onMouseLeave={() => setIsHovered(false)}
             tabIndex={0}
           >
-            <span className="AppCard__app-website-text">Website</span>
+            <span className="AppCard__app-website-text">{isHovered ? websiteUrl : 'Website'}</span>
             <Icon
               icon={isHovered ? IconType.arrowRight : IconType.chevronRight}
               size={isHovered ? 20 : 16}

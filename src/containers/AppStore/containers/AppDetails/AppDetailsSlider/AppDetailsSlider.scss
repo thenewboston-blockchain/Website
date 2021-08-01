@@ -1,0 +1,10 @@
+.AppDetailsSlider {
+  background: rgba(246, 249, 252, 0.5);
+  padding: 64px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

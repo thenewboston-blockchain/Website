@@ -1,0 +1,73 @@
+@import 'styles/font-mixins';
+
+.AppDetailsTopSection {
+  padding: 48px 0;
+
+  @media (max-width: 1366px) {
+    padding: 48px;
+  }
+
+  @media (max-width: 992px) {
+    padding: 24px;
+  }
+
+  &__back {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 48px;
+
+    &-icon {
+      color: var(--color-gray-400);
+      margin-right: 8px;
+    }
+
+    &-text {
+      @extend %body1;
+      color: var(--color-gray-600);
+    }
+  }
+
+  &__main {
+    align-items: center;
+    display: flex;
+  }
+
+  &__avatar {
+    margin-right: 32px;
+  }
+
+  &__details-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__app-title {
+    @extend %h2;
+    color: var(--color-gray-800);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 8px;
+  }
+
+  &__app-description {
+    @extend %body1;
+    color: var(--color-gray-500);
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  &__app-website {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+
+    &:hover {
+      color: var(--color-blue-500);
+      font-weight: var(--font-weight-bold);
+    }
+
+    &-text {
+      margin-right: 8px;
+    }
+  }
+}
