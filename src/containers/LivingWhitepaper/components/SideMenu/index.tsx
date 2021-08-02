@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 
 import {Icon, IconType} from '@thenewboston/ui';
 import clsx from 'clsx';
-import {NAVBAR_HEIGHT} from 'constants/offsets';
+import {NAVBAR_HEIGHT, LIVING_WHITEPAPER_TOP_LINKS_HEIGHT} from 'constants/offsets';
 import {Link} from 'react-scroll';
 import {useLocation, useHistory} from 'react-router';
 import {
@@ -13,8 +13,6 @@ import {
 } from '../../constants';
 
 import './SideMenu.scss';
-
-const TOP_LINK_HEIGHT = 72;
 
 type Props = {
   breadcrumbHeight: number;
@@ -54,8 +52,9 @@ const SideMenu: FC<Props> = ({breadcrumbHeight}) => {
                 activeClass="SideMenu__link--active"
                 className={clsx('SideMenu__link')}
                 hashSpy
+                ignoreCancelEvents
                 key={selection.url}
-                offset={-(NAVBAR_HEIGHT + TOP_LINK_HEIGHT + breadcrumbHeight)}
+                offset={-(NAVBAR_HEIGHT + LIVING_WHITEPAPER_TOP_LINKS_HEIGHT + breadcrumbHeight)}
                 smooth
                 spy
                 to={selectionHash}
@@ -87,9 +86,9 @@ const SideMenu: FC<Props> = ({breadcrumbHeight}) => {
                 activeClass="SideMenu__link--active"
                 className={clsx('SideMenu__link')}
                 hashSpy
-                isDynamic
+                ignoreCancelEvents
                 key={selection.url}
-                offset={-(NAVBAR_HEIGHT + TOP_LINK_HEIGHT + breadcrumbHeight)}
+                offset={-(NAVBAR_HEIGHT + LIVING_WHITEPAPER_TOP_LINKS_HEIGHT + breadcrumbHeight)}
                 smooth
                 spy
                 to={selectionHash}
@@ -121,8 +120,9 @@ const SideMenu: FC<Props> = ({breadcrumbHeight}) => {
                 activeClass="SideMenu__link--active"
                 className={clsx('SideMenu__link')}
                 hashSpy
+                ignoreCancelEvents
                 key={selection.url}
-                offset={-(NAVBAR_HEIGHT + TOP_LINK_HEIGHT + breadcrumbHeight)}
+                offset={-(NAVBAR_HEIGHT + LIVING_WHITEPAPER_TOP_LINKS_HEIGHT + breadcrumbHeight)}
                 smooth
                 spy
                 to={selectionHash}

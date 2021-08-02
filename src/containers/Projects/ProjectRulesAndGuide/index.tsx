@@ -1,5 +1,6 @@
-import React, {FC} from 'react';
-import {Link} from 'react-scroll';
+import React, {FC, useEffect} from 'react';
+import {Link, scroller} from 'react-scroll';
+import {useLocation} from 'react-router';
 
 import {Container} from 'components';
 import {NAVBAR_HEIGHT} from 'constants/offsets';
@@ -15,8 +16,24 @@ interface Section {
   title: string;
 }
 
+const BANNER_HEIGHT = 200;
+const TOTAL_OFFSET = BANNER_HEIGHT + NAVBAR_HEIGHT + 48;
+const TIMEOUT_DELAY = 100;
+
 const ProjectRules: FC = () => {
-  const BANNER_HEIGHT = 200;
+  const {hash} = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      setTimeout(() => {
+        scroller.scrollTo(hash.slice(1), {
+          ignoreCancelEvents: true,
+          offset: -TOTAL_OFFSET,
+        });
+      }, TIMEOUT_DELAY);
+    }
+    // eslint-disable-next-line
+  }, []);
 
   const SECTIONS: Section[] = [
     {
@@ -50,8 +67,9 @@ const ProjectRules: FC = () => {
               activeClass="ProjectRules__sidebar-item-active"
               className="ProjectRules__sidebar-item"
               hashSpy
+              ignoreCancelEvents
               key={section.id}
-              offset={-(NAVBAR_HEIGHT + BANNER_HEIGHT + 48)} // Navbar + Banner + Padding
+              offset={-TOTAL_OFFSET}
               smooth
               spy
               to={section.id}

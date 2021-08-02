@@ -15,7 +15,7 @@ const getStartedDetails = [
     description: 'Learn about thenewboston blockchain.',
     icon: <img alt="Read Documentation" className="GetStarted__icon" src={ReadDocumentationIcon} />,
     title: 'Read Documentation',
-    to: '/guide/introduction',
+    to: '/developer/whitepaper',
   },
   {
     description: 'Interact with the network using our official wallet.',

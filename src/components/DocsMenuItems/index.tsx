@@ -39,112 +39,6 @@ export const walletNavigationData = [
   },
 ];
 
-export const governanceNavigationData = [
-  {
-    name: 'Overview',
-    url: '/governance/overview',
-  },
-  {
-    name: 'Usernames & Votes',
-    url: '/governance/usernames-and-votes',
-  },
-  {
-    name: 'Locked Coins & Boosting',
-    url: '/governance/locked-coins-and-boosting',
-  },
-  {
-    name: 'Points & Refill Logic',
-    url: '/governance/points-and-refill-logic',
-  },
-  {
-    name: 'Coins vs. Points',
-    url: '/governance/coins-vs-points',
-  },
-  {
-    name: 'Election Process',
-    url: '/governance/election-process',
-  },
-  {
-    name: 'Budgets',
-    url: '/governance/budgets',
-  },
-  {
-    name: 'Rates & Amounts',
-    url: '/governance/rates-and-amounts',
-  },
-];
-
-export const guideNavigationData = [
-  {
-    name: 'Introduction',
-    url: '/guide/introduction',
-  },
-  {
-    name: 'Glossary',
-    url: '/guide/glossary',
-  },
-  {
-    name: 'Blocks',
-    url: '/guide/blocks',
-  },
-  {
-    name: 'Block Structure',
-    url: '/guide/block-structure',
-  },
-  {
-    name: 'Block Types',
-    url: '/guide/block-types',
-  },
-  {
-    name: 'Nodes',
-    url: '/guide/nodes',
-  },
-  {
-    name: 'Flows',
-    url: '/guide/flows',
-  },
-  {
-    name: 'Fork Prevention',
-    url: '/guide/fork-prevention',
-  },
-  {
-    name: 'Scheduling',
-    url: '/guide/scheduling',
-  },
-  {
-    name: 'Schedule Adjustments',
-    url: '/guide/schedule-adjustments',
-  },
-  {
-    name: 'Accounts',
-    url: '/guide/accounts',
-  },
-  {
-    name: 'Account Lock',
-    url: '/guide/account-lock',
-  },
-  {
-    name: 'Node Identifier',
-    url: '/guide/node-identifier',
-  },
-  {
-    name: 'Fees',
-    url: '/guide/fees',
-  },
-  {
-    name: 'Best Practices',
-    url: '/guide/best-practices',
-  },
-  {
-    name: 'Root Account File',
-    url: '/guide/root-account-file',
-  },
-  {
-    name: 'Blockchain Architecture',
-    url: '/guide/blockchain-architecture',
-  },
-];
-
 const DocsMenuItems: FC = () => {
   const renderNavLinks = (navigationData: NavigationItem[]) => {
     return navigationData.map(({name, url}) => (
@@ -156,14 +50,6 @@ const DocsMenuItems: FC = () => {
 
   return (
     <>
-      <MenuGroup title="Guide" urlBase="guide">
-        {renderNavLinks(guideNavigationData)}
-      </MenuGroup>
-
-      <MenuGroup title="Governance" urlBase="governance">
-        {renderNavLinks(governanceNavigationData)}
-      </MenuGroup>
-
       <MenuGroup title="Wallet" urlBase="wallet">
         {renderNavLinks(walletNavigationData)}
       </MenuGroup>
