@@ -3,7 +3,6 @@ import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom
 
 import {Layout} from 'components';
 import withSuspense from 'hoc/withSuspense';
-import {AnalyticsType} from 'types/analytics';
 
 import Analytics from './Analytics';
 import ArchitectureDeepDive from './LivingWhitepaper/containers/ArchitectureDeepDive';
@@ -75,8 +74,7 @@ const App: FC = () => {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Redirect exact from="/analytics" to={`/analytics/${AnalyticsType.community}`} />
-          <Route exact path="/analytics/:type" component={Analytics} />
+          <Route exact path="/analytics/:type?" component={Analytics} />
           <Route exact path="/guidelines" component={Guidelines} />
           <Route exact path="/create-account" render={() => <CreateAccount disabled />} />
           <Route exact path="/donate" component={Donate} />

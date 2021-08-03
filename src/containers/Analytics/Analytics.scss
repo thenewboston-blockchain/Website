@@ -49,6 +49,12 @@ $top-nav-height: 60px;
     }
   }
 
+  &__loading-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
   &__main-container {
     display: grid;
     grid-column: 2 / -1;

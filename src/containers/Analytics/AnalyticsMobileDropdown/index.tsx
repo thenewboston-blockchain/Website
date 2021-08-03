@@ -4,17 +4,16 @@ import {Icon, IconType} from '@thenewboston/ui';
 
 import {Popover} from 'components';
 import {useWindowDimensions} from 'hooks';
-import {AnalyticsType} from 'types/analytics';
+import {AnalyticsCategory} from 'types/analytics';
 
-import {getAnalyticTypeLabel} from '../utils';
 import './AnalyticsMobileDropdown.scss';
 
 interface AnalyticsMobileDropdownProps {
   navLinks: ReactNode;
-  selectedType: AnalyticsType;
+  selectedCategory: AnalyticsCategory | null;
 }
 
-const AnalyticsMobileDropdown: FC<AnalyticsMobileDropdownProps> = ({navLinks, selectedType}) => {
+const AnalyticsMobileDropdown: FC<AnalyticsMobileDropdownProps> = ({navLinks, selectedCategory}) => {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
   const {clientWidth} = useWindowDimensions();
 
@@ -35,7 +34,7 @@ const AnalyticsMobileDropdown: FC<AnalyticsMobileDropdownProps> = ({navLinks, se
   return (
     <>
       <button className="AnalyticsMobileDropdown" onClick={handleButtonClick}>
-        <span className="AnalyticsMobileDropdown__type">{getAnalyticTypeLabel(selectedType)}</span>
+        <span className="AnalyticsMobileDropdown__type">{selectedCategory?.title || ''}</span>
         <Icon
           className={clsx('AnalyticsMobileDropdown__toggle', {'AnalyticsMobileDropdown__toggle--open': popoverIsOpen})}
           icon={IconType.chevronDown}
