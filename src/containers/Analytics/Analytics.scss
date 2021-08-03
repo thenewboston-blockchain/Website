@@ -56,10 +56,8 @@ $top-nav-height: 60px;
   }
 
   &__main-container {
-    display: grid;
     grid-column: 2 / -1;
     grid-row: main-start / main-end;
-    grid-template-columns: 1fr 1fr;
     margin-bottom: 170px;
 
     @media (max-width: 992px) {
@@ -69,7 +67,6 @@ $top-nav-height: 60px;
     }
 
     @media (max-width: 768px) {
-      display: block;
       padding: 0;
     }
   }

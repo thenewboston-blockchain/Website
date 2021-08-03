@@ -3,11 +3,18 @@ export interface AnalyticsUrlParams {
 }
 
 export interface Analytics {
-  test: string;
+  data: AnalyticsData[];
+  pk: string;
+  title: string;
 }
 
 export interface AnalyticsCategory {
   key: string;
   title: string;
   analytics: Analytics[];
+}
+
+export interface AnalyticsData {
+  date: string;
+  value: number;
 }

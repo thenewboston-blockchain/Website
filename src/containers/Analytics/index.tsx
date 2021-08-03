@@ -5,10 +5,11 @@ import {getAnalyticsCategories} from 'apis/analytics';
 import {Container, FlatNavLinks, PageTitle, Loader} from 'components';
 import {useWindowDimensions} from 'hooks';
 import {AnalyticsCategory, AnalyticsUrlParams} from 'types/analytics';
+import {displayErrorToast} from 'utils/toast';
 
 import AnalyticsIcon from './AnalyticsIcon';
-import AnalyticsGraph from './AnalyticsGraph';
 import AnalyticsMobileDropdown from './AnalyticsMobileDropdown';
+import SelectedAnalytics from './SelectedAnalytics';
 import './Analytics.scss';
 
 const Analytics: FC = () => {
@@ -22,11 +23,16 @@ const Analytics: FC = () => {
   useEffect(() => {
     (async () => {
       setLoading(true);
-      const analyticsCategoriesResponse = await getAnalyticsCategories();
-      if (analyticsCategoriesResponse.length) {
-        setCategories(analyticsCategoriesResponse);
+      try {
+        const analyticsCategoriesResponse = await getAnalyticsCategories();
+        if (analyticsCategoriesResponse.length) {
+          setCategories(analyticsCategoriesResponse);
+        }
+      } catch (error) {
+        displayErrorToast('Network Error');
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
     })();
   }, []);
 
@@ -94,10 +100,7 @@ const Analytics: FC = () => {
             <span className="Analytics__weekly">WEEKLY</span>
           </div>
           <div className="Analytics__main-container">
-            <AnalyticsGraph title="Total Coins Distributed" />
-            <AnalyticsGraph title="Total Coins Distributed to Core" />
-            <AnalyticsGraph title="Total Coins Distributed to Faucet" />
-            <AnalyticsGraph title="Total Coins Distributed to Projects" />
+            <SelectedAnalytics selectedCategory={selectedCategory} />
           </div>
         </Container>
       )}
