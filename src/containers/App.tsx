@@ -11,6 +11,7 @@ import BankApi from './Api/BankApi';
 import ConfirmationValidatorApi from './Api/ConfirmationValidatorApi';
 import CreateAccount from './CreateAccount';
 import DeploymentGuide from './DeploymentGuide';
+import DeveloperPortalProjects from './DeveloperPortalProjects';
 import Donate from './Donate';
 import Download from './Download';
 import Faq, {faqFilters, FaqFilterType} from './Faq';
@@ -77,6 +78,7 @@ const App: FC = () => {
           <Route exact path="/create-account" render={() => <CreateAccount disabled />} />
           <Route exact path="/donate" component={Donate} />
           <Route exact path="/developer" component={withSuspense(DeveloperPortal)} />
+          <Route exact path="/developer/projects" component={DeveloperPortalProjects} />
           <Route exact path="/developer/whitepaper" component={LivingWhitepaper} />
           <Route exact path="/developer/whitepaper/principal-entities/:chapter?" component={PrincipalEntities} />
           <Route

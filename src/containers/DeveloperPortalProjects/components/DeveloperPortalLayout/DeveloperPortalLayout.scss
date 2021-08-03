@@ -1,0 +1,24 @@
+@import '../../shared';
+@import 'styles/z-index';
+
+.DeveloperPortalLayout {
+  &__main-content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__right-content {
+    border-left: 1px solid var(--color-gray-075);
+    width: 100%;
+
+    @media (max-width: 992px) {
+      border-left: none;
+    }
+  }
+
+  &__breadcrumb {
+    position: sticky;
+    top: $top-nav-height + $top-links-height;
+    z-index: $z-index-whitepaper-breadcrumb;
+  }
+}
