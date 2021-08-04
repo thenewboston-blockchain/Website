@@ -47,7 +47,7 @@ const SelectedAnalytics: FC<ComponentProps> = ({selectedCategory}) => {
   return (
     <div className="SelectedAnalytics">
       {analytics.map((analytic) => (
-        <AnalyticsGraph key={analytic.pk} title={analytic.title} />
+        <AnalyticsGraph data={analytic.data} key={analytic.pk} title={analytic.title} />
       ))}
     </div>
   );
