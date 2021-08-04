@@ -177,5 +177,20 @@
     ],
     "requirements": ["Social Media Marketing tools", "G-suite"],
     "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
+  },
+  {
+    "openingId": "community-engagement-specialist",
+    "category": "Community",
+    "description": "We are looking for a fun, sociable individual that can engage with our community, organize events, and promote a healthy atmosphere.",
+    "position": "Community Engagement Specialist",
+    "responsibilities": [
+      "Encourage conversations within the community.",
+      "Brainstorm ideas on games, contests, activities, etc within the community.",
+      "Help answer general questions for people within the community.",
+      "Stay up to date with community discussions.",
+      "Gather feedback from the community and create documentation on community feedback weekly."
+    ],
+    "requirements": ["Well-spoken, well-written", "Must be fun, chill, and dope", "Sociable"],
+    "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
   }
 ]
