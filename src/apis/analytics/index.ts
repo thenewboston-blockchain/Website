@@ -5,7 +5,7 @@ import {PaginatedResponse} from 'types/api';
 
 export async function getAnalytics(category: string): Promise<Analytics[]> {
   const response = await axios.get<PaginatedResponse<Analytics>>(
-    `${process.env.REACT_APP_BACKEND_API}/analytics?analytics_category=${category}`,
+    `${process.env.REACT_APP_BACKEND_API}/analytics?category=${category}`,
   );
 
   if (!response.data) {
