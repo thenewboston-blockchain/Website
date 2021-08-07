@@ -80,7 +80,7 @@ const App: FC = () => {
           <Route exact path="/donate" component={Donate} />
           <Route exact path="/developer" component={withSuspense(DeveloperPortal)} />
           <Route exact path="/developer/projects" component={DeveloperPortalProjects} />
-          <Route exact path="/developer/project-rules" component={DeveloperPortalProjectRulesAndGuidelines} />
+          <Route exact path="/developer/projects/rules" component={DeveloperPortalProjectRulesAndGuidelines} />
           <Route exact path="/developer/whitepaper" component={LivingWhitepaper} />
           <Route exact path="/developer/whitepaper/principal-entities/:chapter?" component={PrincipalEntities} />
           <Route
