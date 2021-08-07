@@ -83,6 +83,8 @@
   }
 
   &__roadmap {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 48px;
     padding: 40px 0;
 
@@ -94,7 +96,9 @@
     }
 
     &-illustration {
+      align-self: center;
       height: auto;
+      max-width: 530px;
       width: 100%;
     }
 

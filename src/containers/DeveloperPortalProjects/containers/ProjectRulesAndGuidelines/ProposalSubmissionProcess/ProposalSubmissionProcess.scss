@@ -12,10 +12,12 @@
     display: grid;
     gap: 32px;
     grid-template-columns: 56px auto;
-    padding: 64px 0;
+    padding: 0;
+    padding-top: 64px;
 
     &:not(:last-child) {
       box-shadow: inset 0px -1px 0px var(--color-gray-075);
+      padding: 64px 0;
     }
 
     &-content {
