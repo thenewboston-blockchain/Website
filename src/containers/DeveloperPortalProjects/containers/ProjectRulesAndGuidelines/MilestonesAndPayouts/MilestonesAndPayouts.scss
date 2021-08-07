@@ -1,0 +1,154 @@
+@import 'styles/font-mixins';
+
+.ProjectRulesMilestonesAndPayouts {
+  &__heading {
+    @extend %h2;
+    color: var(--color-gray-900);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 48px;
+  }
+
+  &__note {
+    margin-bottom: 64px;
+  }
+
+  &__pow {
+    margin-bottom: 88px;
+
+    &-heading {
+      @extend %h2;
+      color: var(--color-gray-700);
+      font-weight: var(--font-weight-regular);
+      margin-bottom: 64px;
+    }
+
+    &-table {
+      &-row {
+        padding: 16px 0px;
+
+        &-heading {
+          @extend %h4;
+          align-self: center;
+          color: var(--color-blue-900);
+          margin-bottom: 8px;
+        }
+
+        &-text {
+          @extend %body1;
+          color: var(--color-gray-500);
+          margin: 0;
+          text-align: justify;
+        }
+      }
+    }
+  }
+
+  &__process {
+    margin-bottom: 48px;
+
+    &-heading {
+      @extend %h2;
+      color: var(--color-gray-700);
+      font-weight: var(--font-weight-regular);
+      margin-bottom: 64px;
+    }
+
+    &-step {
+      align-items: center;
+      display: grid;
+      gap: 32px;
+      grid-template-columns: 56px auto;
+      padding: 32px 0;
+
+      &-text {
+        @extend %body1;
+        color: var(--color-gray-500);
+        text-align: justify;
+
+        &--bold {
+          font-weight: var(--font-weight-medium);
+        }
+      }
+    }
+  }
+
+  &__roadmap {
+    margin-bottom: 48px;
+    padding: 40px 0;
+
+    &-heading {
+      @extend %h2;
+      color: var(--color-gray-700);
+      font-weight: var(--font-weight-regular);
+      margin-bottom: 8px;
+    }
+
+    &-illustration {
+      height: auto;
+      width: 100%;
+    }
+
+    &-text {
+      @extend %body1;
+      color: var(--color-gray-500);
+      margin-bottom: 88px;
+      text-align: justify;
+    }
+  }
+
+  @media (max-width: 992px) {
+    &__roadmap {
+      padding: 48px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__pow {
+      &-table {
+        &-row {
+          grid-template-columns: none;
+          padding: 28px 0px;
+
+          &-heading {
+            grid-area: heading;
+          }
+
+          &-text {
+            grid-area: text;
+          }
+        }
+      }
+    }
+
+    &__process {
+      &-step {
+        padding: 32px 0;
+      }
+    }
+
+    &__roadmap {
+      padding: 32px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__heading {
+      @include h1;
+    }
+
+    &__process {
+      &-divider {
+        width: 100%;
+      }
+
+      &-step {
+        gap: 16px;
+        grid-template-columns: auto;
+      }
+    }
+
+    &__roadmap {
+      padding: 24px;
+    }
+  }
+}

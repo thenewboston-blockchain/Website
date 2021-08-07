@@ -27,7 +27,9 @@ const Projects: FC = () => {
         </div>
         <div className="Projects__main-buttons">
           <Button className="Projects__button-project">Propose a Project</Button>
-          <Button variant="outlined">Rules & Guidelines</Button>
+          <Button onClick={() => history.push('/developer/project-rules')} variant="outlined">
+            Rules & Guidelines
+          </Button>
         </div>
       </div>
       <div className="Projects__showcase">
