@@ -85,7 +85,9 @@ const MilestonesAndPayouts: FC = () => {
           <div className="ProjectRulesMilestonesAndPayouts__pow-table-row">
             <h4 className="ProjectRulesMilestonesAndPayouts__pow-table-row-heading"> Design </h4>
             <p className="ProjectRulesMilestonesAndPayouts__pow-table-row-text">
-              For all design-only related work, including UI/UX, use a publicly viewable Figma, Adobe XD, or other URL.
+              For all design-only related work, including UI/UX, use a publicly viewable{' '}
+              <A href="https://www.figma.com">Figma</A>, <A href="https://www.adobe.com/products/xd.html">Adobe XD</A>,
+              or other URL.
             </p>
           </div>
           <Divider />
@@ -115,7 +117,9 @@ const MilestonesAndPayouts: FC = () => {
           <div className="ProjectRulesMilestonesAndPayouts__pow-table-row">
             <h4 className="ProjectRulesMilestonesAndPayouts__pow-table-row-heading"> Published Applications </h4>
             <p className="ProjectRulesMilestonesAndPayouts__pow-table-row-text">
-              For published applications, use links to the Google Play Store, App Store, Chrome Web Store, and so on.
+              For published applications, use links to the <A href="https://play.google.com/store">Google Play Store</A>
+              , <A href="https://www.apple.com/app-store/">App Store</A>,{' '}
+              <A href="https://chrome.google.com/webstore">Chrome Web Store</A>, and so on.
             </p>
           </div>
           <Divider />

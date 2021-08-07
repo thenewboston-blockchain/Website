@@ -3,15 +3,17 @@
 .ProjectRulesAndGuidelines {
   &__container {
     padding: 48px;
+    padding-bottom: 120px;
 
     @media (max-width: 1366px) {
-      padding: 48px 32px;
+      padding: 48px 32px 120px;
     }
     @media (max-width: 992px) {
       padding: 48px;
+      padding-bottom: 120px;
     }
     @media (max-width: 768px) {
-      padding: 48px 24px;
+      padding: 48px 24px 120px;
     }
   }
 

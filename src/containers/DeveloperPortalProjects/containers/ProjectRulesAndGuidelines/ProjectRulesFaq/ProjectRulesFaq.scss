@@ -1,6 +1,10 @@
 @import 'styles/font-mixins';
 
 .ProjectRulesFaq {
+  &__heading {
+    margin-bottom: 32px;
+  }
+
   &__illustration {
     height: auto;
     margin-bottom: 32px;
