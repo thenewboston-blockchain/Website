@@ -5,26 +5,29 @@
     @extend %h2;
     color: var(--color-gray-900);
     font-weight: var(--font-weight-bold);
-    margin-bottom: 48px;
+    margin-bottom: 32px;
   }
 
   &__note {
-    margin-bottom: 64px;
+    margin-bottom: 48px;
   }
 
   &__pow {
-    margin-bottom: 88px;
-
     &-heading {
       @extend %h2;
       color: var(--color-gray-700);
       font-weight: var(--font-weight-regular);
-      margin-bottom: 64px;
+      margin-bottom: 16px;
     }
 
     &-table {
       &-row {
         padding: 16px 0px;
+
+        &:last-child {
+          padding: 0px;
+          padding-top: 16px;
+        }
 
         &-heading {
           @extend %h4;
@@ -50,7 +53,7 @@
       @extend %h2;
       color: var(--color-gray-700);
       font-weight: var(--font-weight-regular);
-      margin-bottom: 64px;
+      margin-bottom: 16px;
     }
 
     &-step {
@@ -70,6 +73,13 @@
         }
       }
     }
+
+    &-text {
+      @extend %body1;
+      color: var(--color-gray-500);
+      margin-bottom: 32px;
+      text-align: justify;
+    }
   }
 
   &__roadmap {
@@ -80,7 +90,7 @@
       @extend %h2;
       color: var(--color-gray-700);
       font-weight: var(--font-weight-regular);
-      margin-bottom: 8px;
+      margin-bottom: 16px;
     }
 
     &-illustration {
@@ -91,14 +101,15 @@
     &-text {
       @extend %body1;
       color: var(--color-gray-500);
-      margin-bottom: 88px;
+      margin: 0;
+      margin-bottom: 32px;
       text-align: justify;
     }
   }
 
   @media (max-width: 992px) {
     &__roadmap {
-      padding: 48px;
+      padding: 48px 0;
     }
   }
 
@@ -107,7 +118,13 @@
       &-table {
         &-row {
           grid-template-columns: none;
+
           padding: 28px 0px;
+
+          &:last-child {
+            padding: 0px;
+            padding-top: 28px;
+          }
 
           &-heading {
             grid-area: heading;
@@ -143,7 +160,6 @@
 
       &-step {
         gap: 16px;
-        grid-template-columns: auto;
       }
     }
 

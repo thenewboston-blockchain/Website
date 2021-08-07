@@ -28,16 +28,11 @@ const Rules: FC = () => {
       <div className="ProjectRules__list">
         <h3 className="ProjectRules__list-heading">Your project must NOT:</h3>
         <ol className="ProjectRules__list-items">
+          <li className="ProjectRules__list-item">Involve gambling or illegal activities of any kind.</li>
+          <li className="ProjectRules__list-item">Promote abusive advertisements.</li>
           <li className="ProjectRules__list-item">
-            Projects involving gambling or illegal activities of any kind are not allowed.
-          </li>
-          <li className="ProjectRules__list-item">Projects promoting abusive advertisements are not allowed.</li>
-          <li className="ProjectRules__list-item">
-            Projects dealing with explicit content or pornography are not allowed.
-          </li>
-          <li className="ProjectRules__list-item">
-            thenewboston is not liable for copyright or other intellectual property rights, property damage, or misuse
-            of coins.
+            Deal with explicit content or pornography. thenewboston is not liable for copyright or other intellectual
+            property rights, property damage, or misuse of coins.
           </li>
         </ol>
       </div>

@@ -33,6 +33,10 @@ const MilestonesAndPayouts: FC = () => {
       </div>
       <div className="ProjectRulesMilestonesAndPayouts__process">
         <h3 className="ProjectRulesMilestonesAndPayouts__process-heading">Milestone Payout Request Process</h3>
+        <p className="ProjectRulesMilestonesAndPayouts__process-text">
+          Your roadmap outlines the major components of your project. The relationship between roadmaps, milestones, and
+          objectives is the following:
+        </p>
         <div className="ProjectRulesMilestonesAndPayouts__process-step">
           <div className="ProjectRulesMilestonesAndPayouts__process-step-count">
             <img alt="Step 1" height={56} src={Step1} width={56} />
@@ -112,14 +116,6 @@ const MilestonesAndPayouts: FC = () => {
             <h4 className="ProjectRulesMilestonesAndPayouts__pow-table-row-heading"> Published Applications </h4>
             <p className="ProjectRulesMilestonesAndPayouts__pow-table-row-text">
               For published applications, use links to the Google Play Store, App Store, Chrome Web Store, and so on.
-            </p>
-          </div>
-          <Divider />
-          <div className="ProjectRulesMilestonesAndPayouts__pow-table-row">
-            <h4 className="ProjectRulesMilestonesAndPayouts__pow-table-row-heading"> Marketing/ Social Media </h4>
-            <p className="ProjectRulesMilestonesAndPayouts__pow-table-row-text">
-              For marketing and social media related work: links to all the posts and user engagement data (if
-              available)
             </p>
           </div>
           <Divider />

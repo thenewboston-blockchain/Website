@@ -52,6 +52,7 @@
 
       &-items {
         @extend %body3;
+        padding-inline-start: 20px;
       }
     }
 
@@ -86,6 +87,11 @@
   @media (max-width: 992px) {
     &__step {
       padding: 32px 0px;
+
+      &:last-child {
+        padding: 0px;
+        padding-top: 32px;
+      }
 
       &-header {
         margin-bottom: 48px;

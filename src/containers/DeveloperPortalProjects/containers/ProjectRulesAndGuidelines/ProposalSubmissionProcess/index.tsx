@@ -90,7 +90,8 @@ const ProposalSubmissionProcess: FC = () => {
                 color="F5925E"
                 className="ProjectRulesProposalSubmissionProcess__step-label"
                 name="Pending Review"
-              />
+              />{' '}
+              label.
             </p>
             <p className="ProjectRulesProposalSubmissionProcess__step-note">
               You must then leave a comment on the original proposal (GitHub issue) noting the GitHub repository URL(s)

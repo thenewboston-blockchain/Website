@@ -5,6 +5,7 @@ import DeveloperPortalLayout from '../../components/DeveloperPortalLayout';
 import HowProposalsWork from './HowProposalsWork';
 import MilestonesAndPayouts from './MilestonesAndPayouts';
 import ProposalSubmissionProcess from './ProposalSubmissionProcess';
+import ProjectRulesFaq from './ProjectRulesFaq';
 import Rules from './Rules';
 
 import './ProjectRulesAndGuidelines.scss';
@@ -21,6 +22,8 @@ const ProjectRulesAndGuidelines = () => {
         <ProposalSubmissionProcess />
         <Divider className="ProjectRulesAndGuidelines__divider" />
         <MilestonesAndPayouts />
+        <Divider className="ProjectRulesAndGuidelines__divider" />
+        <ProjectRulesFaq />
       </div>
     </DeveloperPortalLayout>
   );

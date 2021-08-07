@@ -10,7 +10,10 @@
 
   &__step {
     color: var(--color-gray-700);
-    padding: 8px 0;
+
+    &:not(:last-child) {
+      padding: 8px 0;
+    }
 
     &-heading {
       @extend %h4;
@@ -21,9 +24,12 @@
     &-text {
       @extend %body1;
       color: var(--color-gray-500);
-      margin-bottom: 8px;
       margin-top: 0;
       text-align: justify;
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
     }
 
     &:not(:last-child) {
@@ -35,7 +41,7 @@
   &__tagline {
     @extend %body1;
     color: var(--color-gray-500);
-    margin-bottom: 64px;
+    margin-bottom: 48px;
     margin-top: 0;
     text-align: justify;
   }
