@@ -1,4 +1,5 @@
 export const PATHNAME_TO_TITLE_MAPPING: Record<string, string> = {
+  'approved-projects': 'Approved Projects',
   architecture: 'Architecture - Deep Dive',
   developer: 'Developer',
   'principal-entities': 'Principal Entities on the Network',
@@ -19,10 +20,15 @@ export enum ProjectRulesId {
 export const projectRulesPath = '/developer/projects/rules';
 
 export const PATHNAME_TO_DROPDOWN_SELECTIONS: Record<string, {title: string; url: string}[]> = {
+  'approved-projects': [],
   projects: [
     {
       title: 'Rules & Guidelines',
       url: projectRulesPath,
+    },
+    {
+      title: 'Approved Projects',
+      url: '/developer/projects/approved-projects',
     },
   ],
   rules: [

@@ -46,7 +46,6 @@ const Breadcrumb: FC<Props> = ({breadcrumbHeight, className}) => {
     }
   };
 
-  console.log(pathnames);
   return (
     <div className={clsx('Breadcrumb', className)}>
       {pathnames.map((pathname, index) => {
