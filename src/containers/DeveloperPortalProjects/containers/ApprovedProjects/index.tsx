@@ -5,6 +5,7 @@ import {api as projectsApi} from 'apis/projects';
 import {Loader} from 'components';
 import DeveloperPortalLayout from 'containers/DeveloperPortalProjects/components/DeveloperPortalLayout';
 import {Project} from 'types/projects';
+import {approvedProjectsPath} from '../../constants';
 
 import './ApprovedProjects.scss';
 
@@ -14,6 +15,7 @@ const ApprovedProjects = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [projects, setProjects] = useState<Project[]>([]);
+  const [projectUrls, setProjectUrls] = useState<{title: string; url: string}[] | null>(null);
 
   useEffect(() => {
     (async function getProjects() {
@@ -21,6 +23,14 @@ const ApprovedProjects = () => {
         const projectsResponse = await projectsApi.getProjects();
         const sortedProjects = projectsResponse.sort((a, b) => (a.title > b.title ? 1 : -1));
         setProjects(sortedProjects);
+        setProjectUrls(
+          sortedProjects.map((project) => {
+            return {
+              title: project.title,
+              url: `${approvedProjectsPath}/${project.pk}`,
+            };
+          }),
+        );
       } catch (err) {
         setError(err.message);
       } finally {
@@ -31,7 +41,7 @@ const ApprovedProjects = () => {
 
   if (error) return <div className="ApprovedProjects__error">{error}</div>;
   return (
-    <DeveloperPortalLayout pageName="Approved Projects">
+    <DeveloperPortalLayout approvedProjectUrls={projectUrls} pageName="Approved Projects">
       <div className="ApprovedProjects">
         <div className="ApprovedProjects__heading">Approved Projects</div>
         {isLoading ? (

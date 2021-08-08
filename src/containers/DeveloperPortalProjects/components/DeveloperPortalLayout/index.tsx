@@ -14,11 +14,17 @@ import './DeveloperPortalLayout.scss';
 type Props = {
   children?: ReactNode;
   pageName: string;
+  approvedProjectUrls?:
+    | {
+        title: string;
+        url: string;
+      }[]
+    | null;
 };
 
 const TIMEOUT_DELAY = 200;
 
-const DeveloperPortalLayout: FC<Props> = ({children, pageName}) => {
+const DeveloperPortalLayout: FC<Props> = ({approvedProjectUrls, children, pageName}) => {
   const [breadcrumbHeight, setBreadcrumbHeight] = useState(56);
   const {hash} = useLocation();
   const TOTAL_OFFSET = NAVBAR_HEIGHT + LIVING_WHITEPAPER_TOP_LINKS_HEIGHT + breadcrumbHeight;
@@ -43,7 +49,7 @@ const DeveloperPortalLayout: FC<Props> = ({children, pageName}) => {
         {({measureRef}) => (
           <div className="DeveloperPortalLayout__breadcrumb" ref={measureRef}>
             <Container>
-              <Breadcrumb breadcrumbHeight={breadcrumbHeight} />
+              <Breadcrumb approvedProjectUrls={approvedProjectUrls} breadcrumbHeight={breadcrumbHeight} />
             </Container>
             <Divider />
           </div>
@@ -52,7 +58,7 @@ const DeveloperPortalLayout: FC<Props> = ({children, pageName}) => {
       <Container>
         <div className="DeveloperPortalLayout__main-content">
           <div className="DeveloperPortalLayout__left-content">
-            <SideMenu breadcrumbHeight={breadcrumbHeight} />
+            <SideMenu approvedProjectUrls={approvedProjectUrls} breadcrumbHeight={breadcrumbHeight} />
           </div>
           <div className="DeveloperPortalLayout__right-content">{children}</div>
         </div>

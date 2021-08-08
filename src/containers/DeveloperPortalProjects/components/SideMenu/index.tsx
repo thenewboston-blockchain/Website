@@ -6,22 +6,57 @@ import {A} from 'components';
 import {NAVBAR_HEIGHT, LIVING_WHITEPAPER_TOP_LINKS_HEIGHT} from 'constants/offsets';
 import {Link} from 'react-scroll';
 import {useLocation, useHistory} from 'react-router';
-import {PATHNAME_TO_DROPDOWN_SELECTIONS, projectRulesPath} from '../../constants';
+import {PATHNAME_TO_DROPDOWN_SELECTIONS, approvedProjectsPath, projectRulesPath} from '../../constants';
 
 import './SideMenu.scss';
 
 type Props = {
   breadcrumbHeight: number;
+  approvedProjectUrls?:
+    | {
+        title: string;
+        url: string;
+      }[]
+    | null;
 };
 
-const SideMenu: FC<Props> = ({breadcrumbHeight}) => {
+const SideMenu: FC<Props> = ({approvedProjectUrls, breadcrumbHeight}) => {
   const {pathname} = useLocation();
   const history = useHistory();
 
+  const isApprovedProjectsSelected = pathname.includes(approvedProjectsPath);
   const isProjectRulesSelected = pathname.includes(projectRulesPath);
 
   return (
     <div className="SideMenu">
+      <div className="SideMenu__section">
+        <button
+          className={clsx('SideMenu__section-header', isApprovedProjectsSelected && 'SideMenu__section-header--active')}
+          onClick={() => history.push(approvedProjectsPath)}
+        >
+          <div>APPROVED PROJECTS</div>
+          <Icon
+            className="SideMenu__toggle-icon"
+            icon={isProjectRulesSelected ? IconType.chevronUp : IconType.chevronDown}
+            size={20}
+            totalSize={20}
+          />
+        </button>
+        {isApprovedProjectsSelected &&
+          approvedProjectUrls &&
+          approvedProjectUrls.map((selection) => {
+            return (
+              <A
+                className={clsx('SideMenu__link', 'SideMenu__approved-projects-link')}
+                href={selection.url}
+                key={selection.url}
+                newWindow={false}
+              >
+                {selection.title}
+              </A>
+            );
+          })}
+      </div>
       <div className="SideMenu__section">
         <button
           className={clsx('SideMenu__section-header', isProjectRulesSelected && 'SideMenu__section-header--active')}
