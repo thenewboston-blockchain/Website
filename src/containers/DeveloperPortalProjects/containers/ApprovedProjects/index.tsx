@@ -35,7 +35,7 @@ const ApprovedProjects = () => {
       <div className="ApprovedProjects">
         <div className="ApprovedProjects__heading">Approved Projects</div>
         {isLoading ? (
-          <Loader />
+          <Loader className="ApprovedProjects__loader" />
         ) : (
           <div className="ApprovedProjects__grid">
             {projects.map((project) => (

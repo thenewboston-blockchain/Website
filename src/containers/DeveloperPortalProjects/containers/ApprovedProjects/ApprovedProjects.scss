@@ -13,10 +13,10 @@
     padding: 48px 24px;
   }
 
-  &__heading {
-    @extend %body3;
-    color: var(--color-gray-300);
-    margin-bottom: 48px;
+  &__error {
+    color: var(--color-alert);
+    padding: 24px;
+    text-align: center;
   }
 
   &__grid {
@@ -57,5 +57,15 @@
         margin-bottom: 16px;
       }
     }
+  }
+
+  &__heading {
+    @extend %body3;
+    color: var(--color-gray-300);
+    margin-bottom: 48px;
+  }
+
+  &__loader {
+    margin: 0 auto;
   }
 }
