@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-import {A, Divider, Note, NoteType} from 'components';
+import {Divider, Note, NoteType} from 'components';
 
 import ProjectReviewers from '../../../assets/ProjectReviewers.png';
 
