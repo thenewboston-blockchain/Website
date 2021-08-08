@@ -3,16 +3,17 @@
 @import 'styles/z-index';
 
 .SideMenu {
+  box-sizing: content-box;
   max-height: calc(100vh - #{$top-nav-height} - #{$top-links-height} - #{$breadcrumbs-height});
   overflow-y: scroll;
   padding: 32px 32px 32px 0;
   position: sticky;
   top: $top-nav-height + $top-links-height + $breadcrumbs-height;
+  width: 256px;
   z-index: $z-index-whitepaper-sidemenu;
 
   @media (max-width: 1366px) {
     padding: 32px 48px;
-    width: 256px;
   }
 
   @media (max-width: 992px) {

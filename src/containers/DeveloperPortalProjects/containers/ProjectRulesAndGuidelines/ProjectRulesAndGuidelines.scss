@@ -1,0 +1,33 @@
+@import 'styles/font-mixins';
+
+.ProjectRulesAndGuidelines {
+  &__container {
+    padding: 48px;
+    padding-bottom: 120px;
+
+    @media (max-width: 1366px) {
+      padding: 48px 32px 120px;
+    }
+    @media (max-width: 992px) {
+      padding: 48px;
+      padding-bottom: 120px;
+    }
+    @media (max-width: 768px) {
+      padding: 48px 24px 120px;
+    }
+  }
+
+  &__page-title {
+    @extend %body3;
+    color: var(--color-gray-300);
+    margin-bottom: 48px;
+
+    @media (max-width: 1366px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__divider {
+    margin: 48px auto;
+  }
+}

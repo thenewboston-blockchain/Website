@@ -22,17 +22,17 @@ const TOP_LINK_HEIGHT = 72;
 const Breadcrumb: FC<Props> = ({breadcrumbHeight, className}) => {
   const location = useLocation();
   const {width} = useWindowDimensions();
-  const [whitepaperDropdownEl, setWhitepaperDropdownEl] = useState<HTMLButtonElement | null>(null);
+  const [projectsDropdownEl, setProjectsDropdownEl] = useState<HTMLButtonElement | null>(null);
   const [sectionDropdownEl, setSectionDropdownEl] = useState<HTMLButtonElement | null>(null);
   const pathnames = location.pathname.slice(1).split('/');
 
   const toggleWhitepaperDropdown = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     if (!e) return;
 
-    if (whitepaperDropdownEl) {
-      setWhitepaperDropdownEl(null);
+    if (projectsDropdownEl) {
+      setProjectsDropdownEl(null);
     } else {
-      setWhitepaperDropdownEl(e.currentTarget);
+      setProjectsDropdownEl(e.currentTarget);
     }
   };
 
@@ -46,6 +46,7 @@ const Breadcrumb: FC<Props> = ({breadcrumbHeight, className}) => {
     }
   };
 
+  console.log(pathnames);
   return (
     <div className={clsx('Breadcrumb', className)}>
       {pathnames.map((pathname, index) => {
@@ -66,7 +67,7 @@ const Breadcrumb: FC<Props> = ({breadcrumbHeight, className}) => {
           );
         }
 
-        // whitepaper
+        // projects
         const isLastIndex = index === pathnames.length - 1;
         if (index === 1) {
           return (
@@ -90,22 +91,22 @@ const Breadcrumb: FC<Props> = ({breadcrumbHeight, className}) => {
                     <Icon
                       className="Breadcrumb__icon"
                       id={pathname}
-                      icon={whitepaperDropdownEl ? IconType.chevronUp : IconType.chevronDown}
+                      icon={projectsDropdownEl ? IconType.chevronUp : IconType.chevronDown}
                       size={16}
                       totalSize={16}
                     />
                   </button>
                   <Popover
-                    anchorEl={whitepaperDropdownEl}
+                    anchorEl={projectsDropdownEl}
                     anchorOrigin={{horizontal: 'center', vertical: 'bottom'}}
                     className="Breadcrumb__Popover"
-                    closePopover={() => setWhitepaperDropdownEl(null)}
+                    closePopover={() => setProjectsDropdownEl(null)}
                     id="whitepaper"
-                    open={!!whitepaperDropdownEl}
+                    open={!!projectsDropdownEl}
                     transformOrigin={{horizontal: 'center', vertical: 'top'}}
                     transformOffset={{horizontal: 0, vertical: 12}}
                   >
-                    {PATHNAME_TO_DROPDOWN_SELECTIONS.whitepaper.map((selection) => {
+                    {PATHNAME_TO_DROPDOWN_SELECTIONS[pathname].map((selection) => {
                       return (
                         <ReactRouterLink className="Breadcrumb__Popover-link" key={selection.url} to={selection.url}>
                           {selection.title}
@@ -119,7 +120,7 @@ const Breadcrumb: FC<Props> = ({breadcrumbHeight, className}) => {
           );
         }
 
-        // section
+        // section or rules
         return (
           <div className="Breadcrumb__link-container" key={pathname}>
             {width > 992 ? (
@@ -144,7 +145,7 @@ const Breadcrumb: FC<Props> = ({breadcrumbHeight, className}) => {
                   id={pathname}
                   open={!!sectionDropdownEl}
                   transformOrigin={{horizontal: 'center', vertical: 'top'}}
-                  transformOffset={{horizontal: 0, vertical: 12}}
+                  transformOffset={{horizontal: 50, vertical: 12}}
                 >
                   {PATHNAME_TO_DROPDOWN_SELECTIONS[pathname].map((selection) => {
                     const selectionHash = selection.url.slice(selection.url.indexOf('#') + 1);

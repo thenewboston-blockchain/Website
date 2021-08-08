@@ -11,7 +11,7 @@ const Projects: FC = () => {
   const history = useHistory();
 
   return (
-    <DeveloperPortalLayout pageName="Living Whitepaper">
+    <DeveloperPortalLayout pageName="Projects">
       <div className="Projects__hero">
         <div className="Projects__hero-title">
           <div className="Projects__hero-title-tnb">thenewboston</div>
@@ -26,8 +26,20 @@ const Projects: FC = () => {
           elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         </div>
         <div className="Projects__main-buttons">
-          <Button className="Projects__button-project">Propose a Project</Button>
-          <Button variant="outlined">Rules & Guidelines</Button>
+          <Button
+            className="Projects__button-project"
+            onClick={() =>
+              window.open(
+                'https://github.com/thenewboston-developers/Projects/issues/new?assignees=&labels=Project&template=project-proposal.md&title=NAME_OF_YOUR_PROJECT',
+                '_blank',
+              )
+            }
+          >
+            Propose a Project
+          </Button>
+          <Button onClick={() => history.push('/developer/projects/rules')} variant="outlined">
+            Rules & Guidelines
+          </Button>
         </div>
       </div>
       <div className="Projects__showcase">
