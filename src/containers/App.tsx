@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom
 import {Layout} from 'components';
 import withSuspense from 'hoc/withSuspense';
 
-import Wallet from './Wallet';
+import Analytics from './Analytics';
 import ArchitectureDeepDive from './LivingWhitepaper/containers/ArchitectureDeepDive';
 import Assets from './Assets';
 import BankApi from './Api/BankApi';
@@ -35,6 +35,7 @@ import StyleGuide from './StyleGuide';
 import Tasks from './Tasks';
 import Teams from './Teams';
 import TermsOfUse from './TermsOfUse';
+import Wallet from './Wallet';
 
 /**
  * Lazy load pages that may contribute a lot to the bundle size
@@ -76,6 +77,7 @@ const App: FC = () => {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/analytics/:type?" component={Analytics} />
           <Route exact path="/guidelines" component={Guidelines} />
           <Route exact path="/create-account" render={() => <CreateAccount disabled />} />
           <Route exact path="/donate" component={Donate} />
