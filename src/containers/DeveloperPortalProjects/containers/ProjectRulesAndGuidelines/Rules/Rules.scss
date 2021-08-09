@@ -1,0 +1,51 @@
+@import 'styles/font-mixins';
+
+.ProjectRules {
+  &__heading {
+    @extend %h1;
+    color: var(--color-gray-900);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 16px;
+  }
+
+  &__list {
+    &-heading {
+      @extend %h2;
+      font-weight: var(--font-weight-medium);
+      margin-bottom: 24px;
+    }
+
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+
+    &-items {
+      @extend %body1;
+      color: var(--color-gray-500);
+      margin-bottom: 8px;
+      margin-top: 0;
+      padding-inline-start: 20px;
+      text-align: justify;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__tagline {
+    @extend %body1;
+    color: var(--color-gray-500);
+    margin-bottom: 32px;
+    margin-top: 0;
+    text-align: justify;
+  }
+
+  @media (max-width: 480px) {
+    &__heading {
+      @include h1;
+    }
+  }
+}

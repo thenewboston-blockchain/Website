@@ -89,23 +89,6 @@
     "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
   },
   {
-    "openingId": "human-resources-head",
-    "category": "Community",
-    "description": "Our company is looking for a Head of Human Resources to join our team. to oversee all personnel-related matters and ensure we use our resources beneficially.",
-    "position": "Head of Human Resources",
-    "responsibilities": [
-      "Working with team leads to write job descriptions.",
-      "Overseeing the application process.",
-      "Overseeing the interview process.",
-      "Overseeing payments and accounting.",
-      "Documenting standard memo conventions for payments.",
-      "Assisting team leads with the onboarding process.",
-      "Overseeing the creation of the new recruiting team."
-    ],
-    "requirements": ["Leadership abilities", "Familiar with Github", "Knowledgeable with Gsuite"],
-    "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
-  },
-  {
     "openingId": "marketing-specialist",
     "category": "Marketing",
     "description": "The Marketing Team is looking for a responsible Marketing Specialist that will help us with our daily tasks that keep the department functioning and facilitate the duties of the Head of Marketing.",
@@ -176,6 +159,21 @@
       "Communicate and Engage with thenewboston Community."
     ],
     "requirements": ["Social Media Marketing tools", "G-suite"],
+    "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
+  },
+  {
+    "openingId": "community-engagement-specialist",
+    "category": "Community",
+    "description": "We are looking for a fun, sociable individual that can engage with our community, organize events, and promote a healthy atmosphere.",
+    "position": "Community Engagement Specialist",
+    "responsibilities": [
+      "Encourage conversations within the community.",
+      "Brainstorm ideas on games, contests, activities, etc within the community.",
+      "Help answer general questions for people within the community.",
+      "Stay up to date with community discussions.",
+      "Gather feedback from the community and create documentation on community feedback weekly."
+    ],
+    "requirements": ["Well-spoken, well-written", "Must be fun, chill, and dope", "Sociable"],
     "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
   }
 ]
