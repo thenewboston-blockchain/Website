@@ -5,7 +5,7 @@ import {CustomIconProps} from './types';
 const ProjectsIcon: FC<CustomIconProps> = ({size = 24, state = 'default'}) => {
   return (
     <svg width={size} height={size} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g clipPath="url(#faqProjectsClip)">
+      <g clipPath="url(#faqProjectsClip0)">
         <path
           d="M28.1538 27.6166C27.3217 28.4598 26.5771 28.9554 26.007 29.3296C20.4474 32.9788 14.0921 31.927 12.1272 31.5675C8.95711 30.9875 6.28116 30.5783 3.98189 28.5363C-1.24253 23.8965 -0.988403 14.2171 3.00368 8.22122C3.47707 7.51032 7.46309 1.70197 13.8321 0.883519C13.9879 0.863516 14.104 0.852053 14.2059 0.84149C15.1912 0.738889 21.2967 0.197678 26.2752 4.29789C26.9878 4.88484 28.1347 5.94344 29.1982 7.55808C33.0868 13.462 33.0991 22.6056 28.1538 27.6166Z"
           fill="url(#faqProjectsPaint0_linear)"
@@ -101,12 +101,12 @@ const ProjectsIcon: FC<CustomIconProps> = ({size = 24, state = 'default'}) => {
           strokeLinecap="round"
           strokeLinejoin="round"
         />
+        {state === 'default' && (
+          <g style={{mixBlendMode: 'saturation'}}>
+            <rect y="-0.299377" width="32" height="32" fill="white" />
+          </g>
+        )}
       </g>
-      {state === 'default' && (
-        <g style={{mixBlendMode: 'saturation'}}>
-          <rect y="-0.299377" width="32" height="32" fill="white" />
-        </g>
-      )}
       <defs>
         <linearGradient
           id="faqProjectsPaint0_linear"
