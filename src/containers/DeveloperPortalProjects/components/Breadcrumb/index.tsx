@@ -146,7 +146,7 @@ const Breadcrumb: FC<Props> = ({breadcrumbHeight, className}) => {
                   transformOrigin={{horizontal: 'center', vertical: 'top'}}
                   transformOffset={{horizontal: 50, vertical: 12}}
                 >
-                  {PATHNAME_TO_DROPDOWN_SELECTIONS[pathname].map((selection) => {
+                  {PATHNAME_TO_DROPDOWN_SELECTIONS[pathname]?.map((selection) => {
                     const selectionHash = selection.url.slice(selection.url.indexOf('#') + 1);
                     return (
                       <Link

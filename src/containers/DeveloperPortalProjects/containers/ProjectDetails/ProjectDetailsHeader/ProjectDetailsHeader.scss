@@ -1,0 +1,101 @@
+@import '../../../shared';
+@import 'styles/z-index';
+@import 'styles/font-mixins';
+
+.ProjectDetailsHeader {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: row;
+  height: $details-header-height;
+  position: sticky;
+  top: $top-nav-height + $top-links-height + $breadcrumbs-height;
+  z-index: $z-index-project-header;
+
+  @media (max-width: 768px) {
+    height: $details-header-height-768;
+  }
+
+  &__github-button {
+    align-items: center;
+    display: flex;
+  }
+
+  &__github-icon {
+    margin-right: 6px;
+  }
+
+  &__github-title {
+    text-align: start;
+  }
+
+  &__left-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: 768px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__main-container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 32px;
+    width: 100%;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__avatar {
+    border: 2px solid var(--color-gray-050);
+  }
+
+  &__title-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__project-lead-container {
+    @extend %body3;
+    max-width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media (max-width: 992px) {
+      max-width: 350px;
+    }
+
+    @media (max-width: 578px) {
+      max-width: 250px;
+    }
+  }
+
+  &__project-lead {
+    color: var(--color-sail-gray-300);
+  }
+
+  &__project-lead-name {
+    color: var(--color-sail-gray-700);
+  }
+
+  &__project-title {
+    @extend %h1;
+    color: var(--color-blue-900);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media (max-width: 992px) {
+      max-width: 300px;
+    }
+
+    @media (max-width: 768px) {
+      max-width: unset;
+    }
+  }
+}
