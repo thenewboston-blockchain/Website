@@ -61,7 +61,7 @@ const ApprovedProjects = () => {
   if (isLoading) return <Loader className="ApprovedProjects__loader" />;
   if (error) return <div className="ApprovedProjects__error">{error}</div>;
   return (
-    <DeveloperPortalLayout approvedProjectUrls={projectUrls} pageName="Approved Projects">
+    <DeveloperPortalLayout approvedProjectUrls={projectUrls} pageName="Approved Projects" projectName={project?.title}>
       {project ? (
         <ProjectDetails project={project} nextProject={nextProject} />
       ) : (

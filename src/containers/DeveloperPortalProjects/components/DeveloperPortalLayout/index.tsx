@@ -20,11 +20,12 @@ type Props = {
         url: string;
       }[]
     | null;
+  projectName?: string;
 };
 
 const TIMEOUT_DELAY = 200;
 
-const DeveloperPortalLayout: FC<Props> = ({approvedProjectUrls, children, pageName}) => {
+const DeveloperPortalLayout: FC<Props> = ({approvedProjectUrls, children, pageName, projectName}) => {
   const [breadcrumbHeight, setBreadcrumbHeight] = useState(56);
   const {hash} = useLocation();
   const TOTAL_OFFSET = NAVBAR_HEIGHT + LIVING_WHITEPAPER_TOP_LINKS_HEIGHT + breadcrumbHeight;
@@ -49,7 +50,11 @@ const DeveloperPortalLayout: FC<Props> = ({approvedProjectUrls, children, pageNa
         {({measureRef}) => (
           <div className="DeveloperPortalLayout__breadcrumb" ref={measureRef}>
             <Container>
-              <Breadcrumb approvedProjectUrls={approvedProjectUrls} breadcrumbHeight={breadcrumbHeight} />
+              <Breadcrumb
+                approvedProjectUrls={approvedProjectUrls}
+                breadcrumbHeight={breadcrumbHeight}
+                projectName={projectName}
+              />
             </Container>
             <Divider />
           </div>
