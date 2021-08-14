@@ -1,0 +1,40 @@
+@import 'styles/font-mixins';
+
+.ProjectDetailsTopic {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+
+  &__icon {
+    margin-right: 32px;
+
+    @media (max-width: 480px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    &-main {
+      @extend %body1;
+      color: var(--color-sail-gray-500);
+      font-weight: var(--font-weight-regular);
+      line-height: 143%;
+      text-align: justify;
+      white-space: pre-line;
+    }
+
+    &-title {
+      color: var(--color-sail-blue-900);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: 8px;
+    }
+  }
+}

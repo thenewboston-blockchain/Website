@@ -1,0 +1,32 @@
+.ProjectDetails {
+  padding: 48px;
+  padding-top: 0px;
+
+  @media (max-width: 768px) {
+    padding: 24px;
+    padding-top: 0px;
+  }
+
+  &__bottom-bar {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__divider {
+    border-top: 1px solid var(--color-gray-075);
+    margin: 48px 0;
+  }
+
+  &__error {
+    color: var(--color-alert);
+    padding: 24px;
+    text-align: center;
+  }
+
+  &__loader-container {
+    display: grid;
+    height: 48px;
+    place-items: center;
+  }
+}

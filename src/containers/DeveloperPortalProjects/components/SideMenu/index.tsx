@@ -6,6 +6,7 @@ import {A} from 'components';
 import {NAVBAR_HEIGHT, LIVING_WHITEPAPER_TOP_LINKS_HEIGHT} from 'constants/offsets';
 import {Link} from 'react-scroll';
 import {useLocation, useHistory} from 'react-router';
+import {Link as ReactRouterLink} from 'react-router-dom';
 import {PATHNAME_TO_DROPDOWN_SELECTIONS, approvedProjectsPath, projectRulesPath} from '../../constants';
 
 import './SideMenu.scss';
@@ -56,14 +57,13 @@ const SideMenu: FC<Props> = ({approvedProjectUrls, breadcrumbHeight}) => {
           approvedProjectUrls &&
           approvedProjectUrls.map((selection) => {
             return (
-              <A
+              <ReactRouterLink
                 className={clsx('SideMenu__link', 'SideMenu__approved-projects-link')}
-                href={selection.url}
+                to={selection.url}
                 key={selection.url}
-                newWindow={false}
               >
                 {selection.title}
-              </A>
+              </ReactRouterLink>
             );
           })}
       </div>
