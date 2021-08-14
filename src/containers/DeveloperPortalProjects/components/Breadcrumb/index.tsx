@@ -15,11 +15,17 @@ import './Breadcrumb.scss';
 type Props = {
   className?: string;
   breadcrumbHeight: number;
+  approvedProjectUrls?:
+    | {
+        title: string;
+        url: string;
+      }[]
+    | null;
 };
 
 const TOP_LINK_HEIGHT = 72;
 
-const Breadcrumb: FC<Props> = ({breadcrumbHeight, className}) => {
+const Breadcrumb: FC<Props> = ({approvedProjectUrls, breadcrumbHeight, className}) => {
   const location = useLocation();
   const {width} = useWindowDimensions();
   const [projectsDropdownEl, setProjectsDropdownEl] = useState<HTMLButtonElement | null>(null);
@@ -119,7 +125,7 @@ const Breadcrumb: FC<Props> = ({breadcrumbHeight, className}) => {
           );
         }
 
-        // section or rules
+        // rules or approved projects
         return (
           <div className="Breadcrumb__link-container" key={pathname}>
             {width > 992 ? (
@@ -146,24 +152,33 @@ const Breadcrumb: FC<Props> = ({breadcrumbHeight, className}) => {
                   transformOrigin={{horizontal: 'center', vertical: 'top'}}
                   transformOffset={{horizontal: 50, vertical: 12}}
                 >
-                  {PATHNAME_TO_DROPDOWN_SELECTIONS[pathname]?.map((selection) => {
-                    const selectionHash = selection.url.slice(selection.url.indexOf('#') + 1);
-                    return (
-                      <Link
-                        activeClass="SideMenu__link--active"
-                        className="Breadcrumb__Popover-link"
-                        hashSpy
-                        ignoreCancelEvents
-                        key={selection.url}
-                        offset={-(NAVBAR_HEIGHT + TOP_LINK_HEIGHT + breadcrumbHeight)}
-                        smooth
-                        spy
-                        to={selectionHash}
-                      >
-                        {selection.title}
-                      </Link>
-                    );
-                  })}
+                  {pathname === 'approved-projects'
+                    ? approvedProjectUrls &&
+                      approvedProjectUrls.map((selection) => {
+                        return (
+                          <ReactRouterLink className="Breadcrumb__Popover-link" key={selection.url} to={selection.url}>
+                            {selection.title}
+                          </ReactRouterLink>
+                        );
+                      })
+                    : PATHNAME_TO_DROPDOWN_SELECTIONS[pathname].map((selection) => {
+                        const selectionHash = selection.url.slice(selection.url.indexOf('#') + 1);
+                        return (
+                          <Link
+                            activeClass="SideMenu__link--active"
+                            className="Breadcrumb__Popover-link"
+                            hashSpy
+                            ignoreCancelEvents
+                            key={selection.url}
+                            offset={-(NAVBAR_HEIGHT + TOP_LINK_HEIGHT + breadcrumbHeight)}
+                            smooth
+                            spy
+                            to={selectionHash}
+                          >
+                            {selection.title}
+                          </Link>
+                        );
+                      })}
                 </Popover>
               </>
             )}

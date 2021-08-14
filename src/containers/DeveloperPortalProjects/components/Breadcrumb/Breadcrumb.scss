@@ -60,13 +60,10 @@
   }
 
   &__Popover {
+    max-height: 400px;
+    overflow-y: scroll;
     padding: 16px;
     width: 240px;
-
-    @media (max-height: 1000px) {
-      max-height: 400px;
-      overflow-y: scroll;
-    }
 
     @media (max-height: 600px) {
       max-height: 200px;

@@ -17,9 +17,11 @@ export enum ProjectRulesId {
   Rules = 'rules',
 }
 
+export const approvedProjectsPath = '/developer/projects/approved-projects';
 export const projectRulesPath = '/developer/projects/rules';
 
 export const PATHNAME_TO_DROPDOWN_SELECTIONS: Record<string, {title: string; url: string}[]> = {
+  'approved-projects': [], // selections will be obtained from calling API
   projects: [
     {
       title: 'Rules & Guidelines',
@@ -27,7 +29,7 @@ export const PATHNAME_TO_DROPDOWN_SELECTIONS: Record<string, {title: string; url
     },
     {
       title: 'Approved Projects',
-      url: '/developer/projects/approved-projects',
+      url: approvedProjectsPath,
     },
   ],
   rules: [
