@@ -1,0 +1,75 @@
+@import 'styles/font-mixins';
+
+.PrivacyPolicy {
+  color: var(--color-gray-600);
+  padding: 48px 0 120px;
+
+  &__email {
+    color: var(--color-gray-600);
+    display: inline-block;
+    margin-bottom: 8px;
+    text-decoration: underline;
+  }
+
+  &__heading {
+    @extend %display2;
+    color: var(--color-gray-900);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 24px;
+  }
+
+  &__effective {
+    @extend %body1;
+    margin-bottom: 48px;
+    margin-top: 0;
+
+    @media (max-width: 768px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__last-updated {
+    @extend %body1;
+    margin-bottom: 48px;
+    margin-top: 0;
+
+    @media (max-width: 768px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 8px;
+    padding-inline-start: 20px;
+  }
+
+  &__main-text {
+    margin-bottom: 24px;
+  }
+
+  &__section {
+    margin-bottom: 24px;
+
+    &-heading {
+      @extend %h2;
+      color: var(--color-gray-900);
+      font-weight: var(--font-weight-medium);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__text {
+    @extend %body1;
+    margin-bottom: 8px;
+    margin-top: 0;
+  }
+
+  @media (max-width: 786px) {
+    padding: 48px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 48px 24px;
+  }
+}

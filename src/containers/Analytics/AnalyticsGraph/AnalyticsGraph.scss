@@ -1,0 +1,11 @@
+@import 'styles/font-mixins';
+
+.AnalyticsGraph {
+  padding: 32px;
+
+  &__title {
+    @extend %h3;
+    display: block;
+    margin-bottom: 28px;
+  }
+}

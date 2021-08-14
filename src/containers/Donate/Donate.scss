@@ -14,8 +14,8 @@
     margin-left: 6px;
     margin-right: 6px;
     margin-top: 12px;
-    max-width: 357px;
     padding: 18px;
+    width: 357px;
   }
 
   &__cards-container {
@@ -77,8 +77,8 @@
   }
 
   &__subtext {
-    font-size: var(--font-size-regular);
-    font-weight: 300;
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-light);
     line-height: 1.5;
     margin: 0 auto 48px;
     max-width: 480px;

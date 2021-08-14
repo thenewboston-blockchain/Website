@@ -1,6 +1,6 @@
 import React, {FC, memo, ReactNode} from 'react';
 import clsx from 'clsx';
-import {PageTitle} from 'components';
+import {Container, PageTitle} from 'components';
 
 import BitcoinLogo from 'assets/svgs/bitcoin.svg';
 import EthereumLogo from 'assets/svgs/ethereum.svg';
@@ -54,7 +54,7 @@ const Social: FC = () => {
   return (
     <>
       <PageTitle title="Donate" />
-      <div className="Donate">
+      <Container className="Donate">
         <h1 className="Donate__heading">Donate to thenewboston</h1>
         <h2 className="Donate__subtext">
           All donations will go to thenewboston to help fund the team to continue to develop the community and create
@@ -65,7 +65,7 @@ const Social: FC = () => {
           {renderCard(Crypto.bitcoin)}
           {renderCard(Crypto.ethereum)}
         </div>
-      </div>
+      </Container>
     </>
   );
 };

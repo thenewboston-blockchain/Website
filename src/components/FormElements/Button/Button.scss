@@ -1,18 +1,24 @@
-.Button {
+.ButtonWebsite {
   $self: &;
-  border-radius: 3px;
+  border-radius: 100px;
   border-style: solid;
   border-width: 1px;
-  box-shadow: 0 4px 4px rgba(4, 34, 53, 0.25);
   cursor: pointer;
-  padding: 9px 12px;
+  min-height: 40px;
+  padding: 0 16px;
   transition: all 0.1s;
+
+  &:focus {
+    box-shadow: 0 0 0 8px var(--color-gray-100);
+    outline: none;
+  }
 
   &--disabled {
     cursor: auto;
   }
 
   &--contained {
+    border-width: 2px;
     color: var(--color-white);
 
     &#{$self}--primary {
@@ -20,14 +26,15 @@
       border-color: var(--color-primary);
 
       &:hover {
-        background: var(--color-primary-hover);
-        border-color: var(--color-primary-hover);
+        background: var(--color-white);
+        border-color: var(--color-gray-900);
+        color: var(--color-gray-900);
       }
 
       &#{$self}--disabled,
       &#{$self}--disabled:hover {
-        background: var(--color-primary-disabled);
-        border-color: var(--color-primary-disabled);
+        background: var(--color-sail-gray-400);
+        border-color: var(--color-sail-gray-400);
         color: var(--color-white);
       }
     }
@@ -57,28 +64,34 @@
     background: transparent;
 
     &#{$self}--primary {
-      border-color: var(--color-primary);
+      border-color: var(--color-gray-200);
       color: var(--color-primary);
 
       &:hover {
-        background: var(--color-primary);
+        background: var(--color-gray-050);
       }
 
       &#{$self}--disabled,
       &#{$self}--disabled:hover {
-        background: var(--color-primary);
-        border-color: var(--color-primary);
-        color: var(--color-primary);
+        background: var(--color-white);
+        border-color: var(--color-white);
+        color: var(--color-gray-200);
       }
     }
 
     &#{$self}--secondary {
-      border-color: var(--color-secondary);
+      border-color: var(--color-blue-400);
       color: var(--color-secondary);
 
       &:hover {
-        border-color: var(--color-secondary);
-        color: var(--color-secondary);
+        background: var(--color-blue-100);
+      }
+
+      &#{$self}--disabled,
+      &#{$self}--disabled:hover {
+        background: var(--color-white);
+        border-color: var(--color-white);
+        color: var(--color-gray-200);
       }
     }
 
@@ -96,6 +109,7 @@
   &--link {
     background: transparent;
     border-color: transparent;
+    border-style: dashed;
 
     &:hover {
       text-decoration: underline;
@@ -104,9 +118,27 @@
     &#{$self}--primary {
       color: var(--color-primary);
 
+      &:focus {
+        border-color: var(--color-primary);
+      }
+
       &#{$self}--disabled,
       &#{$self}--disabled:hover {
-        color: var(--color-primary);
+        color: var(--color-gray-200);
+        text-decoration: none;
+      }
+    }
+
+    &#{$self}--secondary {
+      color: var(--color-secondary);
+
+      &:focus {
+        border-color: var(--color-secondary);
+      }
+
+      &#{$self}--disabled,
+      &#{$self}--disabled:hover {
+        color: var(--color-gray-200);
         text-decoration: none;
       }
     }

@@ -1,0 +1,28 @@
+@import 'styles/font-mixins';
+
+.Navigation {
+  align-items: center;
+  color: var(--color-cyan-900);
+  cursor: pointer;
+  display: flex;
+  height: 24px;
+
+  &:hover {
+    color: var(--color-blue-500);
+    font-weight: var(--font-weight-bold);
+  }
+
+  &__text {
+    @extend %body1;
+
+    font-weight: inherit;
+  }
+
+  &__right-icon {
+    margin-left: 12px;
+  }
+
+  &__left-icon {
+    margin-right: 12px;
+  }
+}

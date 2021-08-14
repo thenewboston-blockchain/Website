@@ -3,13 +3,13 @@ import {Link, useHistory, useParams} from 'react-router-dom';
 import {Icon, IconType} from '@thenewboston/ui';
 
 import {api as teamsApi} from 'apis/teams';
-import {A, BreadcrumbMenu, EmptyPage, FlatNavLinks, Loader, PageTitle} from 'components';
-import {allTeamsFilter} from 'constants/teams';
+import {A, BreadcrumbMenu, Container, EmptyPage, FlatNavLinks, Loader, PageTitle} from 'components';
+import {allTeamsFilter, TEAMS} from 'constants/teams';
 import useQueryParams from 'hooks/useQueryParams';
 import {APIState, APIProgress, INITIAL_API_STATE} from 'types/api';
 import {NavigationItem} from 'types/navigation';
 import {PageDataObject} from 'types/page-data';
-import {CoreTeamMember, CoreTeam, TeamsUrlParams, TeamTabOptions} from 'types/teams';
+import {CoreTeamMember, CoreTeam, TeamMember, TeamName, TeamsUrlParams, TeamTabOptions} from 'types/teams';
 
 import InternalTeamMemberPayments from './Resources/InternalTeamMemberPayments';
 import InternalBountyAccountRefills from './Resources/InternalBountyAccountRefills';
@@ -255,13 +255,16 @@ const Teams: FC = () => {
 
   return (
     <>
-      <PageTitle title="Teams" />
+      <PageTitle
+        ogDescription={teamFilter === TeamName.all ? 'All Teams' : `${teamFilter} Team`}
+        title={teamFilter === TeamName.all ? 'All Teams' : `${teamFilter} Team`}
+      />
       {!isReadyToDisplay ? (
         <div className="Teams__loader-container">
           <Loader />
         </div>
       ) : (
-        <div className="Teams">
+        <Container className="Teams">
           <BreadcrumbMenu
             className="Teams__BreadcrumbMenu"
             menuItems={renderTeamFilter()}
@@ -282,7 +285,7 @@ const Teams: FC = () => {
               </>
             )}
           </section>
-        </div>
+        </Container>
       )}
     </>
   );

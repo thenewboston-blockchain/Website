@@ -1,6 +1,6 @@
 import React, {FC, ReactNode} from 'react';
 
-import {BreadcrumbMenu, PageTitle} from 'components';
+import {BreadcrumbMenu, Container, PageTitle} from 'components';
 import './DashboardLayout.scss';
 
 export interface DashboardLayoutProps {
@@ -14,7 +14,7 @@ const DashboardLayout: FC<DashboardLayoutProps> = ({children, menuItems, pageNam
   return (
     <>
       <PageTitle title={`${sectionName}`} />
-      <div className="DashboardLayout">
+      <Container className="DashboardLayout">
         <BreadcrumbMenu
           className="DashboardLayout__BreadcrumbMenu"
           menuItems={menuItems}
@@ -27,7 +27,7 @@ const DashboardLayout: FC<DashboardLayoutProps> = ({children, menuItems, pageNam
         <div className="DashboardLayout__main-content" data-testid="DashboardLayout__main-content_test">
           {children}
         </div>
-      </div>
+      </Container>
     </>
   );
 };

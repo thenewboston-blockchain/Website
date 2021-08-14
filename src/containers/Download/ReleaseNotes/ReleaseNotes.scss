@@ -1,0 +1,16 @@
+@import 'styles/font-mixins';
+
+.ReleaseNotes {
+  margin: 40px 0 122px;
+
+  &__title {
+    @extend %display2;
+    font-weight: var(--font-weight-medium);
+  }
+
+  &__wip {
+    color: var(--color-gray-300);
+    font-style: italic;
+    margin-top: 12px;
+  }
+}

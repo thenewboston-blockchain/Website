@@ -1,0 +1,81 @@
+@import 'styles/font-mixins';
+
+.HomeValues {
+  margin-bottom: 84px;
+  position: relative;
+
+  @media (max-width: 600px) {
+    margin-bottom: 72px;
+  }
+
+  &__main {
+    align-items: center;
+    background: rgba(214, 236, 255, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 72px 48px;
+
+    @media (max-width: 600px) {
+      align-items: center;
+      flex-direction: column;
+      padding: 40px 24px;
+    }
+  }
+
+  &__illustration-container {
+    min-width: 200px;
+    position: relative;
+  }
+
+  &__illustration {
+    left: 50%;
+    max-width: 538px;
+    min-width: 200px;
+  }
+
+  &__main-right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 144px;
+    max-width: 552px;
+
+    @media (max-width: 992px) {
+      margin-left: 96px;
+    }
+
+    @media (max-width: 768px) {
+      margin-left: 40px;
+    }
+
+    @media (max-width: 600px) {
+      align-items: center;
+      margin-left: 0;
+      margin-top: 60px;
+      padding: 0 32px;
+      text-align: center;
+    }
+  }
+
+  &__main-title {
+    @extend %display2;
+    color: var(--color-blue-900);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 24px;
+  }
+
+  &__main-description {
+    @extend %h3;
+    color: var(--color-gray-500);
+    margin-bottom: 48px;
+  }
+
+  &__main-buttons {
+    display: flex;
+    flex-direction: row;
+
+    &--create {
+      margin-right: 16px;
+    }
+  }
+}

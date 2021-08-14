@@ -4,13 +4,14 @@ import {bemify} from '@thenewboston/utils';
 
 import {A} from 'components';
 import {SocialMedia} from 'types/social-media';
-import {socialMediaUrls, socialMediaHandles, socialMediaDescriptions} from 'utils/social-media';
+import {socialMediaDescriptions, socialMediaHandles, socialMediaUrls} from 'utils/social-media';
 
 import DiscordLogo from 'assets/logos/Discord.png';
 import FacebookLogo from 'assets/logos/Facebook.png';
 import GitHubLogo from 'assets/logos/GitHub.png';
 import InstagramLogo from 'assets/logos/Instagram.png';
 import LinkedInLogo from 'assets/logos/LinkedIn.png';
+import PinterestLogo from 'assets/logos/Pinterest.png';
 import RedditLogo from 'assets/logos/Reddit.png';
 import TwitchLogo from 'assets/logos/Twitch.png';
 import TwitterLogo from 'assets/logos/Twitter.png';
@@ -40,6 +41,7 @@ const MarketingCard: FC<MarketingCardProps> = ({className, customLink, website})
     github: renderImage(GitHubLogo),
     instagram: renderImage(InstagramLogo),
     linkedin: renderImage(LinkedInLogo),
+    pinterest: renderImage(PinterestLogo),
     reddit: renderImage(RedditLogo),
     twitch: renderImage(TwitchLogo),
     twitter: renderImage(TwitterLogo),

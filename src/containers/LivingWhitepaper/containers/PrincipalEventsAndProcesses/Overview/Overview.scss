@@ -1,0 +1,16 @@
+.Overview {
+  &__table {
+    margin-bottom: 32px;
+    margin-top: 32px;
+
+    &-tbody {
+      &-tr {
+        &-td {
+          &:not(:first-child) {
+            color: var(--color-gray-600);
+          }
+        }
+      }
+    }
+  }
+}

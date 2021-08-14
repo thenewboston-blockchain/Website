@@ -1,0 +1,29 @@
+@import 'styles/font-mixins';
+
+.AddingValidators {
+  &__important {
+    display: flex;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__important-text {
+    margin-right: 32px;
+
+    @media (max-width: 768px) {
+      margin-right: 0px;
+    }
+  }
+
+  &__important-title {
+    @extend %h2;
+    color: var(--color-gray-700);
+    font-weight: var(--font-weight-medium);
+  }
+
+  &__important-image {
+    width: 284px;
+  }
+}

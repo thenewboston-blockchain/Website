@@ -1,3 +1,5 @@
+@import 'styles/z-index';
+
 $top-nav-height: 60px;
 $footer-height: 348px;
 
@@ -9,17 +11,8 @@ $footer-height: 348px;
     min-height: calc(100vh - #{$top-nav-height + $footer-height});
   }
 
-  &__content,
-  &__Footer {
-    @media (min-width: 1366px) {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 1366px;
-    }
-  }
-
   &__footer-wrapper {
-    background: var(--color-sail-blue-900);
+    background: var(--color-primary);
     padding: 60px 60px 120px;
 
     @media (max-width: 992px) {
@@ -30,6 +23,6 @@ $footer-height: 348px;
   &__top-nav-wrapper {
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: $z-index-layout;
   }
 }

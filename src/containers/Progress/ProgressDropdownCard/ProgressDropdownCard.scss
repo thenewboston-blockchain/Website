@@ -1,0 +1,146 @@
+@import 'styles/font-mixins';
+
+.ProgressDropdownCard {
+  background-color: var(--color-gray-050);
+  border-radius: 8px;
+  margin: 8px 40px;
+  padding: 24px;
+  width: 100%;
+
+  &:hover {
+    background-color: var(--color-gray-075);
+  }
+
+  &__dropdown-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 700px) {
+      align-items: flex-start;
+      justify-content: unset;
+    }
+  }
+
+  &__issues-container {
+    display: none;
+
+    &--empty {
+      @extend %h4;
+      color: var(--color-sail-gray-400);
+      font-weight: var(--font-weight-medium);
+      margin-top: 32px;
+    }
+
+    &--expanded {
+      display: flex;
+      flex-direction: column;
+      margin-top: 32px;
+    }
+  }
+
+  &__issue {
+    margin-bottom: 4px;
+  }
+
+  &__github-container {
+    @extend %body1;
+    align-items: center;
+    color: var(--color-sail-gray-900);
+    display: flex;
+    margin-right: 46px;
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &__github-repo {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 16px;
+    outline: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__right-container {
+    align-items: center;
+    display: flex;
+  }
+
+  &__left-container {
+    align-items: center;
+    display: flex;
+
+    @media (max-width: 700px) {
+      align-items: flex-start;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    max-width: 184px;
+
+    @media (max-width: 700px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__title-name {
+    @extend %h3;
+    color: var(--color-sail-gray-900);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 8px;
+  }
+
+  &__title-responsibility {
+    @extend %body1;
+    color: var(--color-sail-gray-400);
+  }
+
+  &__progress {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 700px) {
+      width: 100%;
+    }
+  }
+
+  &__toggle-icon {
+    outline: none;
+  }
+
+  &__progress-bar {
+    background-color: var(--color-gray-100);
+    border-radius: 100px;
+    height: 8px;
+    margin-bottom: 8px;
+    position: relative;
+    width: 400px;
+
+    @media (max-width: 700px) {
+      width: 100%;
+    }
+
+    &--filled {
+      background-color: var(--color-green-300);
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  &__progress-percentage {
+    @extend %body1;
+    color: var(--color-primary);
+  }
+}

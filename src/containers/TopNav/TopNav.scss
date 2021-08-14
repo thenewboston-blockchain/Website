@@ -1,3 +1,5 @@
+@import 'styles/z-index';
+
 $dropdown-height: 316px;
 $mobile-dropdown-height: 1000px;
 $top-nav-height: 60px;
@@ -19,24 +21,19 @@ $top-nav-height: 60px;
   height: $top-nav-height;
   justify-content: space-between;
 
-  @media (min-width: 1366px) {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1366px;
-  }
-
   &__left {
     align-items: center;
     display: flex;
     flex: 1;
     height: $top-nav-height;
     position: relative;
-    z-index: 3;
+    z-index: $z-index-top-nav;
   }
 
   &__right {
     align-items: center;
     display: flex;
+    height: $top-nav-height;
   }
 
   &__wrapper {

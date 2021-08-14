@@ -1,0 +1,20 @@
+$top-nav-height: 60px;
+$details-header-height: 158px;
+$details-header-height-576: 241px;
+$top-content-height: calc(#{$top-nav-height} + #{$details-header-height});
+$top-content-height-576: calc(#{$top-nav-height} + #{$details-header-height-576});
+
+// cards
+$card-width-original: 384px;
+$card-min-width-original: 300px;
+$card-height-original: 324px;
+
+$card-width-992: 432px;
+$card-min-width-992: 330px;
+
+$card-width-768: 320px;
+$card-min-width-768: 220px;
+$card-height-768: 262px;
+
+$card-height-480: 324px;
+$card-width-480: 376px;

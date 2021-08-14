@@ -1,31 +1,23 @@
 .Toast {
-  border-left-style: solid;
-  border-left-width: 3px;
   display: flex;
   padding: 12px;
 
   &--success {
-    border-left-color: var(--color-tertiary);
+    background: var(--color-tertiary);
   }
 
   &--warning {
-    border-left-color: var(--color-danger);
+    background: var(--color-alert);
   }
 
   &__icon {
-    margin-right: 14px;
-
-    &--success {
-      color: var(--color-tertiary);
-    }
-
-    &--warning {
-      color: var(--color-danger);
-    }
+    color: var(--color-white);
+    margin-right: 12px;
   }
 
   &__text {
-    color: var(--color-black);
-    font-weight: 700;
+    align-items: center;
+    color: var(--color-white);
+    display: flex;
   }
 }

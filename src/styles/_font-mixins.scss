@@ -1,0 +1,89 @@
+%display1 {
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-display1);
+  line-height: var(--line-height-display1);
+}
+
+%display2 {
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-display2);
+  line-height: var(--line-height-display2);
+}
+
+%h1 {
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+}
+
+%h2 {
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+}
+
+%h3 {
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+}
+
+%h4 {
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
+}
+
+%body1 {
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-body1);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body1);
+}
+
+%body2 {
+  font-family: var(--font-family-mono);
+  -webkit-font-feature-settings: 'tnum';
+  -moz-font-feature-settings: 'tnum';
+  font-feature-settings: 'tnum';
+  font-size: var(--font-size-body2);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body2);
+}
+
+%body3 {
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-body3);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body3);
+}
+
+%body4 {
+  font-family: var(--font-family-default);
+  -webkit-font-feature-settings: 'tnum';
+  -moz-font-feature-settings: 'tnum';
+  font-feature-settings: 'tnum';
+  font-size: var(--font-size-body4);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body4);
+}
+
+%body5 {
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-body5);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body5);
+}
+
+// mixins only used for responsive styling
+@mixin h1 {
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+}
+
+@mixin display2 {
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-display2);
+  line-height: var(--line-height-display2);
+}

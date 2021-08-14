@@ -1,6 +1,5 @@
 .MenuGroup {
   $self: &;
-  font-weight: 700;
 
   &:last-of-type {
     #{$self}__toggle:not(#{$self}__toggle--expanded) {
@@ -21,7 +20,7 @@
       border-radius: 8px;
       color: var(--color-sail-gray-400);
       margin-right: 16px;
-      padding: 6px 0 6px 0px;
+      padding: 6px 0 6px 0;
       transition: color 0.1s ease;
       width: fit-content;
 
@@ -70,6 +69,6 @@
   }
 
   &__title {
-    font-weight: 700;
+    font-weight: var(--font-weight-semibold);
   }
 }

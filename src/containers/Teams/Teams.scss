@@ -1,3 +1,5 @@
+@import 'styles/font-mixins';
+
 .Teams {
   $self: &;
   display: grid;
@@ -75,9 +77,8 @@
   }
 
   &__team-heading {
-    font-family: var(--font-family-inter-light);
-    font-size: 36px;
-    line-height: 1.25;
+    @extend %display2;
+    font-weight: var(--font-weight-light);
     margin: 16px 0 28px;
   }
 

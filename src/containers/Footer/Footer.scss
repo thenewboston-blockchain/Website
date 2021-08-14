@@ -1,0 +1,84 @@
+.Footer {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  position: relative;
+
+  @media (max-width: 1400px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  @media (max-width: 414px) {
+    grid-template-columns: auto;
+  }
+
+  &__left {
+    @media (max-width: 1400px) {
+      align-items: flex-start;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 786px) {
+      flex-direction: column;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (max-width: 1400px) {
+      grid-column: span 2;
+      justify-content: space-between;
+      margin-top: 80px;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      justify-content: unset;
+    }
+
+    @media (max-width: 480px) {
+      flex-direction: column; // single column
+    }
+  }
+
+  &__SocialMediaLink {
+    color: var(--color-white);
+    margin-top: 18px;
+
+    &:not(:last-child) {
+      margin-right: 18px;
+    }
+  }
+
+  &__social-media-links {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 32px;
+  }
+
+  // need to increase specificity to override base css
+  &__download-button.ButtonWebsite.ButtonWebsite--outlined {
+    background: var(--color-primary);
+    color: var(--color-white);
+    margin-top: 48px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    @media (max-width: 1400px) {
+      margin-top: 0;
+    }
+
+    @media (max-width: 786px) {
+      margin-top: 48px;
+    }
+  }
+}

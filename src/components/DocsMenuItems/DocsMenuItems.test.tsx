@@ -22,6 +22,6 @@ describe('DocsMenuItems component', () => {
     );
     const link = screen.getByText('Get Started');
     expect(link).toBeTruthy();
-    expect(link?.getAttribute('href')).toEqual('/account-manager/get-started');
+    expect(link?.getAttribute('href')).toEqual('/wallet/get-started');
   });
 });

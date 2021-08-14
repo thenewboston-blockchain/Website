@@ -1,52 +1,92 @@
+@import 'styles/font-mixins';
+@import './shared';
+
 .Faq {
   $self: &;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 720px;
   min-height: 700px;
   padding-bottom: 120px;
 
-  &__answer {
-    line-height: 24px;
-    margin-top: 6px;
+  @media (max-width: 1366px) {
+    padding: 0 48px 120px 48px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 0 24px 120px 24px;
   }
 
   &__content {
-    @media (max-width: 768px) {
-      margin: 0 24px 12px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 96px;
+  }
+
+  &__sidemenu {
+    margin-right: 32px;
+  }
+
+  &__content-main {
+    width: 100%;
+  }
+
+  &__search {
+    align-items: center;
+    display: flex;
+    margin-bottom: 57px;
+    width: 100%;
+  }
+
+  &__search-clear {
+    margin-right: 12px;
+  }
+
+  &__search-input {
+    height: 40px;
+    margin-right: 24px;
+  }
+
+  &__dropdown-card {
+    &:not(:last-child) {
+      margin-bottom: 16px;
     }
   }
 
-  &__HashLink {
-    display: none;
-    padding-left: 8px;
+  &__topic {
+    &:not(:last-child) {
+      margin-bottom: 72px;
+    }
   }
 
-  &__question {
-    font-size: 20px;
-    line-height: 24px;
-    margin-top: 60px;
+  &__topic-title {
+    @extend %h1;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 32px;
+  }
 
-    &::before {
-      content: ' ';
-      display: block;
-      height: 60px;
-      margin-top: -60px;
-      pointer-events: none;
-      visibility: hidden;
-    }
-
-    &:hover {
-      #{$self}__HashLink {
-        display: inline;
-        text-decoration: none;
-      }
-    }
+  &__title-container {
+    margin: 48px 0 78px 0;
+    padding: 0 45px;
+    text-align: center;
   }
 
   &__title {
-    font-size: 36px;
-    line-height: 1.25;
-    margin-top: 60px;
+    @extend %display2;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 15px;
+
+    @media (max-width: 992px) {
+      @include h1;
+    }
+  }
+
+  &__subtitle {
+    @extend %body1;
+    color: var(--color-gray-500);
+    font-weight: var(--font-weight-regular);
+  }
+
+  &__empty-questions {
+    @extend %display2;
+    font-weight: var(--font-weight-semibold);
+    text-align: center;
   }
 }

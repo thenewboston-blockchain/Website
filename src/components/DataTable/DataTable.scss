@@ -1,0 +1,43 @@
+@import 'styles/font-mixins';
+
+.DataTable {
+  &__table {
+    box-shadow: 0 1px 13px rgba(0, 0, 0, 0.06);
+    display: block;
+    overflow-x: scroll;
+    width: 100%;
+
+    &-tbody {
+      &-tr {
+        &:not(:last-child) {
+          border-bottom: 1px solid var(--color-gray-075);
+        }
+
+        &-td {
+          @extend %body1;
+          min-width: 120px;
+          padding: 8px 16px;
+
+          &:not(:last-child) {
+            border-right: 1px solid var(--color-gray-075);
+          }
+        }
+      }
+    }
+
+    &-thead {
+      background: var(--color-blue-800);
+      color: var(--color-white);
+
+      &-th {
+        @extend %body1;
+        padding: 8px 16px;
+        text-align: left;
+
+        &:not(:last-child) {
+          border-right: 1px solid var(--color-white);
+        }
+      }
+    }
+  }
+}

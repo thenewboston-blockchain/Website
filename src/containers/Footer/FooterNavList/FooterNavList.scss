@@ -1,0 +1,25 @@
+.FooterNavList {
+  list-style-type: none;
+  margin-right: 50px;
+  padding-inline-start: 0;
+
+  &:last-child {
+    margin-right: unset;
+  }
+
+  @media (max-width: 992px) {
+    margin-top: 60px;
+  }
+
+  &__header {
+    color: var(--color-sail-gray-400);
+  }
+
+  &__item {
+    margin-top: 24px;
+  }
+
+  &__item-link {
+    color: var(--color-white);
+  }
+}

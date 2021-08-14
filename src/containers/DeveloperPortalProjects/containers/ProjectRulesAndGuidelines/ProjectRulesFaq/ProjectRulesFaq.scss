@@ -1,0 +1,50 @@
+@import 'styles/font-mixins';
+
+.ProjectRulesFaq {
+  &__heading {
+    margin-bottom: 32px;
+  }
+
+  &__illustration {
+    height: auto;
+    margin-bottom: 32px;
+    max-width: 480px;
+    width: 100%;
+  }
+
+  &__question {
+    @extend %h4;
+    color: var(--color-gray-800);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 8px;
+    text-align: justify;
+  }
+
+  &__answer {
+    @extend %body1;
+    color: var(--color-gray-500);
+    margin-bottom: 24px;
+    text-align: justify;
+
+    &-items {
+      margin-bottom: 8px;
+      margin-top: 0;
+      padding-inline-start: 20px;
+    }
+
+    &-item {
+      @extend %body1;
+      color: var(--color-gray-500);
+      margin-bottom: 8px;
+      text-align: justify;
+    }
+  }
+
+  &__divider {
+    margin: 24px 0;
+  }
+
+  &__inner-divider {
+    margin: 16px 0;
+  }
+}

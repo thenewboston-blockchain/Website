@@ -1,0 +1,53 @@
+.PlaylistCard {
+  transition: 0.2s ease-in-out box-shadow;
+
+  &:hover {
+    box-shadow: 0px 2px 5px 1px var(--color-sail-gray-100);
+    cursor: pointer;
+  }
+
+  &__author {
+    margin-bottom: 4px;
+  }
+
+  &__bottom {
+    color: var(--color-sail-gray-900);
+    line-height: 125%;
+    padding: 8px 16px 24px;
+  }
+
+  &__details {
+    color: var(--color-sail-gray-500);
+    font-size: 14px;
+    margin-bottom: 0px;
+
+    &-duration {
+      margin-left: 8px;
+    }
+
+    &-videos {
+      margin-right: 8px;
+    }
+  }
+
+  &__top {
+    height: 0;
+    /* Formula is: (height / width * 100%) */
+    padding-top: calc(360 / 640 * 100%);
+    position: relative;
+  }
+
+  &__title {
+    font-weight: 500;
+    line-height: 125%;
+    margin-bottom: 4px;
+  }
+
+  &__thumbnail {
+    height: auto;
+    left: 0;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+  }
+}

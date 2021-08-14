@@ -5,7 +5,16 @@ import parseISO from 'date-fns/parseISO';
 import intersection from 'lodash/intersection';
 import {Icon, IconType} from '@thenewboston/ui';
 
-import {BreadcrumbMenu, DropdownInput, EmptyPage, FlatNavLinks, LabelFilter, Loader, PageTitle} from 'components';
+import {
+  BreadcrumbMenu,
+  Container,
+  DropdownInput,
+  EmptyPage,
+  FlatNavLinks,
+  LabelFilter,
+  Loader,
+  PageTitle,
+} from 'components';
 import {fetchGithubIssues} from 'utils/github';
 import {GenericVoidFunction} from 'types/generic';
 import {Issue, Repository, RepositoryUrlParams} from 'types/github';
@@ -25,8 +34,8 @@ const Tasks: FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [repositoryFilter, setRepositoryFilter] = useState<Repository>(Repository.all);
   const [selectedLabelNames, setSelectedLabelNames] = useState<string[]>([]);
-  const [sortByOption, setSortByOption] = useState<string>(SortBy.none);
-  const [sortByOrder, setSortByOrder] = useState<'asc' | 'desc'>('asc');
+  const [sortByOption, setSortByOption] = useState<string>(SortBy.created);
+  const [sortByOrder, setSortByOrder] = useState<'asc' | 'desc'>('desc');
 
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
@@ -131,8 +140,8 @@ const Tasks: FC = () => {
 
   return (
     <>
-      <PageTitle title="Tasks" />
-      <div className="Tasks">
+      <PageTitle ogDescription={`${repositoryFilter} Tasks`} title={`${repositoryFilter} Tasks`} />
+      <Container className="Tasks">
         <BreadcrumbMenu
           className="Tasks__BreadcrumbMenu"
           menuItems={renderFilters()}
@@ -151,7 +160,7 @@ const Tasks: FC = () => {
             )}
             <DropdownInput
               callbackOnChange={handleDropdownChange}
-              defaultOption={SortBy.none}
+              defaultOption={SortBy.created}
               options={dropdownOptions}
             />
           </div>
@@ -163,7 +172,7 @@ const Tasks: FC = () => {
             renderTasks()
           )}
         </div>
-      </div>
+      </Container>
     </>
   );
 };

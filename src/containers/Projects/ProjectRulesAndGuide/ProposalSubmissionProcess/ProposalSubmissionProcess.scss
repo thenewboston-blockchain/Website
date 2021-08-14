@@ -1,0 +1,116 @@
+@import 'styles/font-mixins';
+
+.ProposalSubmissionProcess {
+  &__heading {
+    @extend %display2;
+    color: var(--color-gray-900);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 16px;
+  }
+
+  &__step {
+    box-shadow: inset 0px -1px 1px #e6e6e6;
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 56px auto;
+    padding: 32px;
+
+    &-content {
+      color: var(--color-gray-500);
+    }
+
+    &-header {
+      margin-bottom: 36px;
+    }
+
+    &-heading {
+      @extend %h2;
+      color: var(--color-gray-900);
+      font-weight: var(--font-weight-medium);
+      margin-bottom: 8px;
+    }
+
+    &-label {
+      color: var(--color-white);
+      font-weight: var(--font-weight-regular);
+    }
+
+    &-listing {
+      &-header {
+        @extend %h4;
+        font-weight: var(--font-weight-medium);
+        margin-bottom: 8px;
+      }
+
+      &-item {
+        line-height: 143%;
+      }
+
+      &-items {
+        @extend %body3;
+      }
+    }
+
+    &-note {
+      @extend %body3;
+      border-left: 1px solid var(--color-orange-400);
+      margin: 0;
+      margin-bottom: 16px;
+      padding-left: 10px;
+    }
+
+    &-sub-text {
+      @extend %h3;
+      color: var(--color-gray-700);
+      margin: 0;
+    }
+
+    &-text {
+      @extend %h4;
+      margin-bottom: 28px;
+    }
+  }
+
+  &__tagline {
+    @extend %h3;
+    color: var(--color-gray-700);
+    margin-bottom: 64px;
+    margin-top: 0;
+  }
+
+  @media (max-width: 992px) {
+    &__step {
+      padding: 32px 0px;
+
+      &-header {
+        margin-bottom: 48px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__step {
+      box-shadow: none;
+
+      &-divider {
+        border-top: 1px solid #e6e6e6;
+        margin: 0;
+        width: 60%;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__heading {
+      @include h1;
+    }
+
+    &__step {
+      grid-template-columns: auto;
+
+      &-divider {
+        width: 100%;
+      }
+    }
+  }
+}

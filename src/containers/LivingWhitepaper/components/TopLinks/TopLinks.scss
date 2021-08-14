@@ -1,0 +1,29 @@
+@import 'styles/font-mixins';
+@import '../../shared';
+@import 'styles/z-index';
+
+.TopLinks {
+  align-items: center;
+  background-color: var(--color-cyan-900);
+  display: flex;
+  height: 72px;
+  justify-content: center;
+  position: sticky;
+  top: $top-nav-height;
+  z-index: $z-index-whitepaper-top-links;
+
+  &__link {
+    @extend %body1;
+    color: white;
+
+    &:not(:last-child) {
+      margin-right: 48px;
+    }
+
+    @media (max-width: 772px) {
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+    }
+  }
+}

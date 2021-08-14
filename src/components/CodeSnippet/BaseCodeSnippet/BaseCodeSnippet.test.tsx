@@ -6,8 +6,8 @@ import BaseCodeSnippet, {BaseCodeSnippetProps, SnippetLang} from '.';
 
 const baseProps: BaseCodeSnippetProps = {
   code: `// Testing
-  // TNB To the moon
-  console.log('TNB is heading to the moon');`,
+  // TNB is AMAZING
+  console.log('TNB is ah-ma-zing');`,
   language: SnippetLang.json,
 };
 
@@ -23,8 +23,8 @@ describe('RequestResponseSnippet', () => {
   it('renders with code passed in', () => {
     render(<BaseCodeSnippet {...baseProps} />);
     expect(screen.getByText('// Testing')).toBeTruthy();
-    expect(screen.getByText('// TNB To the moon')).toBeTruthy();
-    expect(screen.getByText("console.log('TNB is heading to the moon');")).toBeTruthy();
+    expect(screen.getByText('// TNB is AMAZING')).toBeTruthy();
+    expect(screen.getByText("console.log('TNB is ah-ma-zing');")).toBeTruthy();
   });
 
   it('renders with the default duotone dark style', () => {

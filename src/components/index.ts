@@ -3,8 +3,11 @@ import AuthContainer from './AuthContainer';
 import Avatar from './Avatar';
 import BreadcrumbMenu from './BreadcrumbMenu';
 import {CodeSnippet, RequestResponseSnippet, SnippetLang} from './CodeSnippet';
+import Container from './Container';
 import ContributorTasks from './ContributorTasks';
 import CopyableAccountNumber from './CopyableAccountNumber';
+import DataTable from './DataTable';
+import Divider from './Divider';
 import DashboardLayout from './DashboardLayout';
 import DocsMenuItems from './DocsMenuItems';
 import {
@@ -20,24 +23,27 @@ import {
 } from './DocWrapper';
 import DropdownInput from './DropdownInput';
 import EmptyPage from './EmptyPage';
+import FaqDropdownCard from './FaqDropdownCard';
 import FlatNavLinks from './FlatNavLinks';
-import Footer from './Footer';
-import {Button} from './FormElements';
+import {Button, ErrorMessage, Input} from './FormElements';
 import GoToTop from './GoToTop';
 import HashLink from './HashLink';
+import ProgressiveImage from './ProgressiveImage';
 import Label from './Label';
 import Layout from './Layout';
 import MarketingButton from './MarketingButton';
 import MarketingCard from './MarketingCard';
 import MenuGroup from './MenuGroup';
+import Navigation from './Navigation';
+import Note, {NoteType} from './Note';
 import LabelFilter from './LabelFilter';
 import Loader from './Loader';
 import PageTitle from './PageTitle';
 import Pagination from './Pagination';
 import Popover from './Popover';
-import ProjectsMenuItems from './ProjectsMenuItems';
 import Qr from './Qr';
 import {QueryParamsOffsetAndLimit} from './QueryParams';
+import RequiredAsterisk from './RequiredAsterisk';
 import Shadow from './Shadow';
 import SlideUp from './SlideUp';
 import SocialMediaIcon from './SocialMediaIcon';
@@ -46,6 +52,7 @@ import {TableBorderGrid, TableParams, TableVertical} from './Table';
 import Tabs, {Tab} from './Tabs';
 import TimeFilter from './TimeFilter';
 import TotalAmount from './TotalAmount';
+import VideoPlayer from './VideoPlayer';
 
 export {
   A,
@@ -55,9 +62,12 @@ export {
   Button,
   CalloutType,
   CodeSnippet,
+  Container,
   ContributorTasks,
   CopyableAccountNumber,
   DashboardLayout,
+  DataTable,
+  Divider,
   DocCallout,
   DocContainer,
   DocEndpoint,
@@ -69,10 +79,12 @@ export {
   DocsMenuItems,
   DropdownInput,
   EmptyPage,
+  ErrorMessage,
+  FaqDropdownCard,
   FlatNavLinks,
-  Footer,
   GoToTop,
   HashLink,
+  Input,
   Label,
   LabelFilter,
   Layout,
@@ -80,13 +92,17 @@ export {
   MarketingButton,
   MarketingCard,
   MenuGroup,
+  Navigation,
+  Note,
+  NoteType,
   PageTitle,
   Pagination,
   Popover,
-  ProjectsMenuItems,
+  ProgressiveImage,
   Qr,
   QueryParamsOffsetAndLimit,
   RequestResponseSnippet,
+  RequiredAsterisk,
   Shadow,
   SlideUp,
   SnippetLang,
@@ -98,6 +114,7 @@ export {
   Tabs,
   TimeFilter,
   TotalAmount,
+  VideoPlayer,
 };
 
 export type {Tab};

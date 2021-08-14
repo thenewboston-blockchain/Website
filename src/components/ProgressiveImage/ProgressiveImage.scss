@@ -1,0 +1,35 @@
+.ProgressiveImage {
+  position: relative;
+
+  %centered-position {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &-placeholder {
+    @extend %centered-position;
+    filter: blur(20px);
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+
+    &--loaded {
+      opacity: 0;
+    }
+  }
+
+  &-real {
+    @extend %centered-position;
+    filter: blur(20px);
+    height: 100%;
+    object-fit: contain;
+    transition: filter 0.75s linear;
+    width: 100%;
+
+    &--loaded {
+      filter: blur(0px);
+    }
+  }
+}

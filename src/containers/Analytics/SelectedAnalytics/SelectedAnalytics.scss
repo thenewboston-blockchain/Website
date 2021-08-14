@@ -1,0 +1,21 @@
+.SelectedAnalytics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+
+  &__loading-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  &__no-results {
+    color: var(--color-neutral-600);
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+}

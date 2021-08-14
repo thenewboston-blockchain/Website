@@ -1,0 +1,45 @@
+@import 'styles/font-mixins';
+
+.HowProposalsWork {
+  &__heading {
+    @extend %display2;
+    color: var(--color-gray-900);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 16px;
+  }
+
+  &__step {
+    box-shadow: inset 0px -1px 1px #e6e6e6;
+    color: var(--color-gray-700);
+    padding: 8px 0;
+
+    &-heading {
+      @extend %h2;
+      font-weight: var(--font-weight-bold);
+      margin-bottom: 8px;
+    }
+
+    &-text {
+      @extend %h4;
+      margin-bottom: 8px;
+      margin-top: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__tagline {
+    @extend %h3;
+    color: var(--color-gray-700);
+    margin-bottom: 64px;
+    margin-top: 0;
+  }
+
+  @media (max-width: 480px) {
+    &__heading {
+      @include h1;
+    }
+  }
+}

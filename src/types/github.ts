@@ -71,6 +71,7 @@ export enum Repository {
   bank = 'Bank',
   design = 'Design',
   kotlinSdk = 'Kotlin-SDK',
+  marketing = 'Marketing',
   thenewbostonPython = 'thenewboston-python',
   thenewbostonPythonclient = 'thenewboston-python-client',
   thenewbostonJs = 'thenewboston-js',
@@ -108,7 +109,6 @@ export interface BaseIssue {
   assignee: Assignee;
   assignees: Assignee[];
   locked: boolean;
-  active_lock_reason: string;
   comments: number;
   closed_at?: any;
   created_at: string;
@@ -225,3 +225,11 @@ export interface Task extends BaseTask {
 }
 
 export type TaskDict = Dict<Task[]>;
+
+export type Milestone = {
+  description: string;
+  due_on: string;
+  id: number;
+  number: number;
+  title: string;
+};
