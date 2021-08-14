@@ -2,14 +2,14 @@ import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
 import {Link, useHistory, useParams} from 'react-router-dom';
 import {Icon, IconType} from '@thenewboston/ui';
 
-import {api as teamsApi} from 'apis/teams';
+import {api as teamsApi, CoreTeamMemberResponse, CoreTeamResponse} from 'apis/teams';
 import {A, BreadcrumbMenu, Container, EmptyPage, FlatNavLinks, Loader, PageTitle} from 'components';
-import {allTeamsFilter, TEAMS} from 'constants/teams';
+import {allTeamsFilter} from 'constants/teams';
 import useQueryParams from 'hooks/useQueryParams';
 import {APIState, APIProgress, INITIAL_API_STATE} from 'types/api';
 import {NavigationItem} from 'types/navigation';
 import {PageDataObject} from 'types/page-data';
-import {CoreTeamMember, CoreTeam, TeamMember, TeamName, TeamsUrlParams, TeamTabOptions} from 'types/teams';
+import {CoreTeamMember, TeamsUrlParams, TeamTabOptions} from 'types/teams';
 
 import InternalTeamMemberPayments from './Resources/InternalTeamMemberPayments';
 import InternalBountyAccountRefills from './Resources/InternalBountyAccountRefills';
@@ -18,7 +18,7 @@ import TeamOverview from './TeamOverview';
 import TeamTabs from './TeamTabs';
 import './Teams.scss';
 
-const sortTeamMembers = (members: CoreTeamMember[]): CoreTeamMember[] => {
+const sortTeamMembers = (members: CoreTeamMemberResponse[]): CoreTeamMemberResponse[] => {
   const teamLeads = members
     .filter(({is_lead}) => is_lead)
     .sort((member1, member2) => (member1.user.display_name > member2.user.display_name ? 1 : -1));
@@ -52,7 +52,7 @@ const Teams: FC = () => {
   const queryParams = useQueryParams();
   const [filteredMembers, setFilteredMembers] = useState<CoreTeamMember[]>([]);
   const [teamFilter, setTeamFilter] = useState<string>('');
-  const [teams, setTeams] = useState<CoreTeam[]>([]);
+  const [teams, setTeams] = useState<CoreTeamResponse[]>([]);
   const [apiState, setAPIState] = useState<APIState>(INITIAL_API_STATE);
 
   const queryTitle = queryParams.get('title');
@@ -121,9 +121,9 @@ const Teams: FC = () => {
       return;
     }
 
-    const getFilteredMembers = (): CoreTeamMember[] => {
-      const teamLeads: CoreTeamMember[] = [];
-      const otherMembers: CoreTeamMember[] = [];
+    const getFilteredMembers = (): CoreTeamMemberResponse[] => {
+      const teamLeads: CoreTeamMemberResponse[] = [];
+      const otherMembers: CoreTeamMemberResponse[] = [];
       let filteredTeams = teams;
       if (teamFilter !== allTeamsFilter.title) {
         filteredTeams = teams.filter(({title}) => title.toLowerCase() === teamFilter.toLowerCase());
@@ -256,8 +256,8 @@ const Teams: FC = () => {
   return (
     <>
       <PageTitle
-        ogDescription={teamFilter === TeamName.all ? 'All Teams' : `${teamFilter} Team`}
-        title={teamFilter === TeamName.all ? 'All Teams' : `${teamFilter} Team`}
+        ogDescription={teamFilter === 'All' ? 'All Teams' : `${teamFilter} Team`}
+        title={teamFilter === 'All' ? 'All Teams' : `${teamFilter} Team`}
       />
       {!isReadyToDisplay ? (
         <div className="Teams__loader-container">

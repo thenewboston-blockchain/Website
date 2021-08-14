@@ -12,6 +12,18 @@ export type Team = {
   discord: string;
 };
 
+export enum TeamName {
+  all = 'All',
+  audit = 'Audit',
+  backEnd = 'Back-End',
+  blockchain = 'Blockchain',
+  community = 'Community',
+  design = 'Design',
+  devOps = 'DevOps',
+  frontEnd = 'Front-End',
+  marketing = 'Marketing',
+}
+
 export type CoreTeam = Omit<Team, 'team_members_meta'> & {
   core_members_meta: CoreTeamMember[];
 };

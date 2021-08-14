@@ -19,10 +19,6 @@ export interface PaginatedResponse<T> {
   results: T[];
 }
 
-export interface APIArrayResponse<T> {
-  results: T[];
-}
-
 export interface APIResponse<T> {
   data?: T;
 }

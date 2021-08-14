@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux';
 import {useParams} from 'react-router-dom';
 import {Icon, IconType} from '@thenewboston/ui';
 
-import {api as teamsApi, GetTeamMemberResponse} from 'apis/teams';
+import {api as teamsApi, TeamMemberResponse} from 'apis/teams';
 import {A, Avatar, CopyableAccountNumber, Loader, Qr} from 'components';
 import EditUserModal from 'containers/EditUserModal';
 import {useBooleanState} from 'hooks';
@@ -24,7 +24,7 @@ interface ProfileUrlParams {
 
 const ProfileInfo: FC<ComponentProps> = ({user}) => {
   const activeUser = useSelector(selectActiveUser);
-  const [memberDetails, setMemberDetails] = useState<GetTeamMemberResponse | null>(null);
+  const [memberDetails, setMemberDetails] = useState<TeamMemberResponse | null>(null);
   const [team, setTeam] = useState<Team | null>(null);
   const {userId} = useParams<ProfileUrlParams>();
   const [editUserModalIsOpen, toggleEditUserModal] = useBooleanState(false);

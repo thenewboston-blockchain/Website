@@ -1,5 +1,7 @@
-export type GetTeamResponse = {
-  team_members_meta: GetTeamMemberResponse[];
+import {User} from 'types/app/User';
+
+export type TeamResponse = {
+  team_members_meta: TeamMemberResponse[];
   created_date: string;
   modified_date: string;
   pk: string;
@@ -10,8 +12,8 @@ export type GetTeamResponse = {
   discord: string;
 };
 
-export type GetTeamMemberResponse = {
-  user: string; // foreign key to user
+export type TeamMemberResponse = {
+  user: User;
   is_lead: boolean;
   team: string; // foreign key to team
   pk: string;
@@ -20,11 +22,11 @@ export type GetTeamMemberResponse = {
   created_date: string;
 };
 
-export type GetCoreTeamResponse = Omit<GetTeamResponse, 'team_members_meta'> & {
-  core_members_meta: GetCoreTeamMemberResponse[];
+export type CoreTeamResponse = Omit<TeamResponse, 'team_members_meta'> & {
+  core_members_meta: CoreTeamMemberResponse[];
 };
 
-export type GetCoreTeamMemberResponse = GetTeamMemberResponse & {
+export type CoreTeamMemberResponse = TeamMemberResponse & {
   weekly_commitment_hours: number;
   hourly_rate: number;
   core_team: string; // foreign key to core team
