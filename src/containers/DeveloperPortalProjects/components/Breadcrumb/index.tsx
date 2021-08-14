@@ -161,7 +161,7 @@ const Breadcrumb: FC<Props> = ({approvedProjectUrls, breadcrumbHeight, className
                           </ReactRouterLink>
                         );
                       })
-                    : PATHNAME_TO_DROPDOWN_SELECTIONS[pathname].map((selection) => {
+                    : PATHNAME_TO_DROPDOWN_SELECTIONS[pathname]?.map((selection) => {
                         const selectionHash = selection.url.slice(selection.url.indexOf('#') + 1);
                         return (
                           <Link

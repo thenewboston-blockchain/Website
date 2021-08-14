@@ -10,7 +10,7 @@
   justify-content: center;
   position: sticky;
   top: $top-nav-height;
-  z-index: $z-index-whitepaper-top-links;
+  z-index: $z-index-dev-portal-top-links;
 
   &__link {
     @extend %body1;
