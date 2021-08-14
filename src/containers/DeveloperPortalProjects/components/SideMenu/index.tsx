@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
 
 import {Icon, IconType} from '@thenewboston/ui';
 import clsx from 'clsx';
@@ -27,22 +27,32 @@ const SideMenu: FC<Props> = ({approvedProjectUrls, breadcrumbHeight}) => {
   const isApprovedProjectsSelected = pathname.includes(approvedProjectsPath);
   const isProjectRulesSelected = pathname.includes(projectRulesPath);
 
+  const [shouldOpenApprovedProjects, setShouldOpenApprovedProjects] = useState(isApprovedProjectsSelected);
+  const [shouldOpenProjectRules, setShouldOpenProjectRules] = useState(isProjectRulesSelected);
+
   return (
     <div className="SideMenu">
       <div className="SideMenu__section">
         <button
           className={clsx('SideMenu__section-header', isApprovedProjectsSelected && 'SideMenu__section-header--active')}
-          onClick={() => history.push(approvedProjectsPath)}
+          onClick={() => {
+            if (!isApprovedProjectsSelected) {
+              history.push(approvedProjectsPath);
+            } else {
+              setShouldOpenApprovedProjects((isOpened) => !isOpened);
+            }
+          }}
         >
           <div>APPROVED PROJECTS</div>
           <Icon
             className="SideMenu__toggle-icon"
-            icon={isProjectRulesSelected ? IconType.chevronUp : IconType.chevronDown}
+            icon={isApprovedProjectsSelected && shouldOpenApprovedProjects ? IconType.chevronUp : IconType.chevronDown}
             size={20}
             totalSize={20}
           />
         </button>
         {isApprovedProjectsSelected &&
+          shouldOpenApprovedProjects &&
           approvedProjectUrls &&
           approvedProjectUrls.map((selection) => {
             return (
@@ -60,17 +70,24 @@ const SideMenu: FC<Props> = ({approvedProjectUrls, breadcrumbHeight}) => {
       <div className="SideMenu__section">
         <button
           className={clsx('SideMenu__section-header', isProjectRulesSelected && 'SideMenu__section-header--active')}
-          onClick={() => history.push(projectRulesPath)}
+          onClick={() => {
+            if (!isProjectRulesSelected) {
+              history.push(projectRulesPath);
+            } else {
+              setShouldOpenProjectRules((isOpened) => !isOpened);
+            }
+          }}
         >
           <div>RULES & GUIDELINES</div>
           <Icon
             className="SideMenu__toggle-icon"
-            icon={isProjectRulesSelected ? IconType.chevronUp : IconType.chevronDown}
+            icon={isProjectRulesSelected && shouldOpenProjectRules ? IconType.chevronUp : IconType.chevronDown}
             size={20}
             totalSize={20}
           />
         </button>
         {isProjectRulesSelected &&
+          shouldOpenProjectRules &&
           PATHNAME_TO_DROPDOWN_SELECTIONS.rules.map((selection) => {
             const selectionHash = selection.url.slice(selection.url.indexOf('#') + 1);
             return (
