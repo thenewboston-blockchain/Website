@@ -23,9 +23,11 @@
     flex-direction: column;
 
     &-main {
-      @extend %h3;
-      color: var(--color-sail-gray-600);
+      @extend %body1;
+      color: var(--color-sail-gray-500);
       font-weight: var(--font-weight-regular);
+      line-height: 143%;
+      text-align: justify;
       white-space: pre-line;
     }
 

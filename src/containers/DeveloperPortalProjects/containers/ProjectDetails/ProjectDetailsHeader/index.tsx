@@ -28,7 +28,7 @@ const ProjectDetailsHeader: FC<Props> = ({github, logoUrl, projectLeadDisplayNam
         <div className="ProjectDetailsHeader__right-container">
           <Button
             className="ProjectDetailsHeader__github-button"
-            onClick={() => window.open(github, '_blank')}
+            onClick={() => window.open(github, '_blank', 'noopener,noreferrer')}
             variant="outlined"
           >
             <Icon className="ProjectDetailsHeader__github-icon" icon={IconType.github} size={24} totalSize="unset" />
