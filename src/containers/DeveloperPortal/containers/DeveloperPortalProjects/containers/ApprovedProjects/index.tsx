@@ -3,7 +3,7 @@ import {useHistory, useParams} from 'react-router-dom';
 
 import {api as projectsApi} from 'apis/projects';
 import {Loader} from 'components';
-import DeveloperPortalLayout from 'containers/DeveloperPortalProjects/components/DeveloperPortalLayout';
+import DeveloperPortalLayout from 'containers/DeveloperPortal/containers/DeveloperPortalProjects/components/DeveloperPortalLayout';
 import {Project} from 'types/projects';
 import {approvedProjectsPath} from '../../constants';
 

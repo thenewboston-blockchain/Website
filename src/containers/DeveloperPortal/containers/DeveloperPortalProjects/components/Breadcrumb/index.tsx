@@ -5,7 +5,7 @@ import {NAVBAR_HEIGHT} from 'constants/offsets';
 import {useLocation} from 'react-router';
 import {useWindowDimensions} from 'hooks';
 import {PATHNAME_TO_TITLE_MAPPING, PATHNAME_TO_DROPDOWN_SELECTIONS} from '../../constants';
-import BreadcrumbSection from '../BreadcrumbSection';
+import BreadcrumbSection from '../../../../components/BreadcrumbSection';
 import {orderedProjectDetailsTopic} from '../../containers/ProjectDetails/constants';
 
 import './Breadcrumb.scss';
