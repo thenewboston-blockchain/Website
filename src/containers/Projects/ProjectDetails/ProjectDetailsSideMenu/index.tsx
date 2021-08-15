@@ -82,12 +82,14 @@ const ProjectDetailsSideMenu: FC = () => {
             spy
             to={anchor}
           >
-            <ProjectIcon
-              className="ProjectDetailsSideMenu__icon"
-              icon={iconType}
-              size={shouldShowDetails ? ProjectIconSize.medium : ProjectIconSize.small}
-              state={iconState}
-            />
+            {iconType && (
+              <ProjectIcon
+                className="ProjectDetailsSideMenu__icon"
+                icon={iconType}
+                size={shouldShowDetails ? ProjectIconSize.medium : ProjectIconSize.small}
+                state={iconState}
+              />
+            )}
             {shouldShowDetails && (
               <div
                 className={clsx('ProjectDetailsSideMenu__topic-title', {

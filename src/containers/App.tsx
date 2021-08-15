@@ -4,13 +4,16 @@ import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom
 import {Layout} from 'components';
 import withSuspense from 'hoc/withSuspense';
 
-import Wallet from './Wallet';
+import Analytics from './Analytics';
 import ArchitectureDeepDive from './LivingWhitepaper/containers/ArchitectureDeepDive';
 import Assets from './Assets';
 import BankApi from './Api/BankApi';
 import ConfirmationValidatorApi from './Api/ConfirmationValidatorApi';
 import CreateAccount from './CreateAccount';
 import DeploymentGuide from './DeploymentGuide';
+import DeveloperPortalApprovedProjects from './DeveloperPortalProjects/containers/ApprovedProjects';
+import DeveloperPortalProjects from './DeveloperPortalProjects';
+import DeveloperPortalProjectRulesAndGuidelines from './DeveloperPortalProjects/containers/ProjectRulesAndGuidelines';
 import Donate from './Donate';
 import Download from './Download';
 import Faq, {faqFilters, FaqFilterType} from './Faq';
@@ -32,6 +35,7 @@ import StyleGuide from './StyleGuide';
 import Tasks from './Tasks';
 import Teams from './Teams';
 import TermsOfUse from './TermsOfUse';
+import Wallet from './Wallet';
 
 /**
  * Lazy load pages that may contribute a lot to the bundle size
@@ -73,10 +77,18 @@ const App: FC = () => {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/analytics/:type?" component={Analytics} />
           <Route exact path="/guidelines" component={Guidelines} />
           <Route exact path="/create-account" render={() => <CreateAccount disabled />} />
           <Route exact path="/donate" component={Donate} />
           <Route exact path="/developer" component={withSuspense(DeveloperPortal)} />
+          <Route exact path="/developer/projects" component={DeveloperPortalProjects} />
+          <Route exact path="/developer/projects/rules" component={DeveloperPortalProjectRulesAndGuidelines} />
+          <Route
+            exact
+            path="/developer/projects/approved-projects/:projectId?"
+            component={DeveloperPortalApprovedProjects}
+          />
           <Route exact path="/developer/whitepaper" component={LivingWhitepaper} />
           <Route exact path="/developer/whitepaper/principal-entities/:chapter?" component={PrincipalEntities} />
           <Route

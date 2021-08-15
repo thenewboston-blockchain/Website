@@ -6,7 +6,7 @@ import './ProjectDetailsTopic.scss';
 
 interface ComponentProps {
   content: React.ReactNode;
-  iconType: ProjectIconType;
+  iconType?: ProjectIconType;
   id: string;
   title: string;
 }
@@ -17,7 +17,14 @@ const ProjectDetailsTopic: FC<ComponentProps> = ({content, iconType, id, title})
 
   return (
     <div className="ProjectDetailsTopic" id={id}>
-      <ProjectIcon className="ProjectDetailsTopic__icon" icon={iconType} size={ProjectIconSize.large} state="active" />
+      {iconType && (
+        <ProjectIcon
+          className="ProjectDetailsTopic__icon"
+          icon={iconType}
+          size={ProjectIconSize.large}
+          state="active"
+        />
+      )}
       <div className="ProjectDetailsTopic__content">
         <h1 className="ProjectDetailsTopic__content-title" onClick={() => history.push(`${pathname}#${id}`)}>
           {title}

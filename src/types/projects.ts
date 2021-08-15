@@ -34,7 +34,8 @@ export type ProjectTopicMap = {
 
 export type ProjectTopic = {
   anchor: ProjectTopicAnchor;
-  iconType: ProjectIconType;
+  // TODO: Remove iconType once Projects are moved to Dev Portal
+  iconType?: ProjectIconType;
   position: number;
   title: ProjectTopicTitle;
 };

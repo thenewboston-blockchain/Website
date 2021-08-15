@@ -43,6 +43,8 @@
     }
 
     &-title {
+      align-items: center;
+      display: flex;
       font-size: var(--font-size-h4);
       line-height: 125%;
       margin-bottom: 0;

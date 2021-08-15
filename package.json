@@ -31,6 +31,7 @@
     "react-syntax-highlighter": "^15.3.0",
     "react-toastify": "^6.0.8",
     "react-tsparticles": "^1.29.2",
+    "recharts": "^2.0.9",
     "sass": "^1.32.8",
     "yup": "^0.31.0"
   },
