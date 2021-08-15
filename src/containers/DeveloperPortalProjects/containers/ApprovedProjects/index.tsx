@@ -19,7 +19,7 @@ const ApprovedProjects = () => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [project, setProject] = useState<Project | null>(null);
   const [nextProject, setNextProject] = useState<Project | null>(null);
-  const [projectUrls, setProjectUrls] = useState<{title: string; url: string}[] | null>(null);
+  const [projectUrls, setProjectUrls] = useState<{title: string; url: string}[]>([]);
 
   useEffect(() => {
     (async function getProjects() {
