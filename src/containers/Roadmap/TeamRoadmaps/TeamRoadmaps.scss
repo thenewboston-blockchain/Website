@@ -1,0 +1,16 @@
+.TeamRoadmaps {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 72px;
+  padding: 0 48px;
+  width: 100%;
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 24px;
+  }
+}

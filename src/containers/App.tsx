@@ -42,6 +42,7 @@ import Wallet from './Wallet';
  */
 const DeveloperPortal = lazy(() => import('./DeveloperPortal'));
 const Projects = lazy(() => import('./Projects'));
+const Roadmap = lazy(() => import('./Roadmap'));
 const Tutorials = lazy(() => import('./Tutorials'));
 
 interface GoogleAnalyticsWindow extends Window {
@@ -113,6 +114,7 @@ const App: FC = () => {
           <Route path="/progress" component={Progress} />
           <Route path="/projects/:projectId?" component={withSuspense(Projects)} />
           <Route path="/project-rules/:chapter" component={ProjectRulesAndGuide} />
+          <Route path="/roadmap" component={withSuspense(Roadmap)} />
           <Route exact path="/sign-in" component={SignIn} />
           <Route exact path="/sign-out" component={SignOut} />
           <Route path="/style-guide/:chapter?" component={StyleGuide} />
