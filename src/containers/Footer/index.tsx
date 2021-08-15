@@ -23,7 +23,7 @@ const navLists = [
       },
       {
         title: 'Projects',
-        url: '/projects/overview',
+        url: '/developer/projects',
       },
       {title: 'Analytics', url: '/analytics'},
     ],
@@ -67,7 +67,7 @@ const navLists = [
       },
       {
         title: 'Projects',
-        url: '/projects',
+        url: '/developer/projects',
       },
     ],
   },

@@ -52,9 +52,15 @@
 
       &-title {
         @extend %h2;
+        -webkit-box-orient: vertical;
         color: var(--color-gray-800);
+        display: -webkit-box;
         font-weight: var(--font-weight-medium);
+        -webkit-line-clamp: 1;
         margin-bottom: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
       }
     }
   }

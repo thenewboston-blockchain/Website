@@ -73,7 +73,7 @@ const Projects: FC = () => {
     );
   }
 
-  return <Redirect to="/projects" />;
+  return <Redirect to="/developer/projects" />;
 };
 
 export default Projects;
