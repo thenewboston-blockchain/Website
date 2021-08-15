@@ -100,7 +100,7 @@
 
     &-projects {
       display: grid;
-      gap: 16px;
+      gap: 24px;
       grid-template-columns: repeat(3, 1fr);
 
       @media (max-width: 1366px) {
@@ -111,22 +111,50 @@
         grid-template-columns: auto;
       }
 
+      &-loader {
+        color: var(--color-white);
+        margin: 0 auto;
+      }
+
+      &-error {
+        @extend %body3;
+        color: var(--color-alert);
+        text-align: center;
+      }
+
       &-tile {
         border: 3px solid var(--color-gray-800);
         border-radius: 12px;
+        cursor: pointer;
         margin-bottom: 32px;
         padding: 24px;
 
+        @media (max-width: 1366px) {
+          margin-bottom: 0;
+        }
+
         &-title {
           @extend %h2;
+          -webkit-box-orient: vertical;
           color: var(--color-gray-100);
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
           margin-bottom: 16px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: normal;
         }
 
         &-description {
           @extend %body1;
+          -webkit-box-orient: vertical;
           color: var(--color-gray-300);
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
           margin-bottom: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: normal;
         }
       }
     }
