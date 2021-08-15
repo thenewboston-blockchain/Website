@@ -17,6 +17,7 @@ export type Project = {
   project_lead: string;
   project_lead_display_name: string;
   milestones: Milestone[];
+  is_featured: boolean;
 };
 
 export type Milestone = {

@@ -86,6 +86,7 @@
   &__showcase {
     background-color: var(--color-cyan-900);
     padding: 72px 48px;
+    position: relative;
 
     @media (max-width: 768px) {
       padding: 72px 24px;
@@ -114,19 +115,30 @@
       &-tile {
         border: 3px solid var(--color-gray-800);
         border-radius: 12px;
+        cursor: pointer;
         margin-bottom: 32px;
         padding: 24px;
 
         &-title {
           @extend %h2;
+          -webkit-box-orient: vertical;
           color: var(--color-gray-100);
+          display: -webkit-box;
+          -webkit-line-clamp: 1; /* max number of lines to show */
           margin-bottom: 16px;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         &-description {
           @extend %body1;
+          -webkit-box-orient: vertical;
           color: var(--color-gray-300);
+          display: -webkit-box;
+          -webkit-line-clamp: 4; /* max number of lines to show */
           margin-bottom: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
       }
     }

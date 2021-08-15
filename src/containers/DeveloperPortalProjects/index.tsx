@@ -1,7 +1,9 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 
+import {api as projectsApi} from 'apis/projects';
 import {Button} from 'components';
 import {useHistory} from 'react-router';
+import {Project} from 'types/projects';
 import DeveloperPortalLayout from './components/DeveloperPortalLayout';
 import ProjectsIcon from './assets/ProjectsIcon.webp';
 
@@ -9,6 +11,13 @@ import './Projects.scss';
 
 const Projects: FC = () => {
   const history = useHistory();
+  const [featuredProjects, setFeaturedProjects] = useState<Project[]>([]);
+
+  useEffect(() => {
+    projectsApi.getProjects().then((projects) => {
+      setFeaturedProjects(projects.filter((project) => project.is_featured));
+    });
+  }, []);
 
   return (
     <DeveloperPortalLayout pageName="Projects">
@@ -45,13 +54,20 @@ const Projects: FC = () => {
       <div className="Projects__showcase">
         <div className="Projects__showcase-title">Featured Projects</div>
         <div className="Projects__showcase-projects">
-          <div className="Projects__showcase-projects-tile">
-            <h3 className="Projects__showcase-projects-tile-title">Blockchain Explorer</h3>
-            <p className="Projects__showcase-projects-tile-description">
-              A blockchain browser for everyone. Functional Requirements of Blockchain Explorer: - The system must
-              track* all transactions in real....
-            </p>
-          </div>
+          {featuredProjects.map((project) => {
+            return (
+              <div
+                className="Projects__showcase-projects-tile"
+                key={project.pk}
+                onClick={() => history.push(`/developer/projects/approved-projects/${project.pk}`)}
+                role="button"
+                tabIndex={0}
+              >
+                <h3 className="Projects__showcase-projects-tile-title">{project.title}</h3>
+                <p className="Projects__showcase-projects-tile-description">{project.description}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </DeveloperPortalLayout>
