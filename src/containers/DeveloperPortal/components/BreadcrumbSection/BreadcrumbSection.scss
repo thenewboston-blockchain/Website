@@ -1,22 +1,7 @@
 @import 'src/styles/mixins';
-@import 'styles/font-mixins';
-@import '../../shared';
+@import 'src/styles/font-mixins';
 
-.Breadcrumb {
-  align-items: center;
-  background-color: white;
-  display: flex;
-  flex-wrap: wrap;
-  min-height: $breadcrumbs-height;
-
-  @media (max-width: 1366px) {
-    padding: 0 48px;
-  }
-
-  @media (max-width: 992px) {
-    padding: 12px 24px;
-  }
-
+.BreadcrumbSection {
   &__link-container {
     align-items: center;
     color: var(--color-gray-400);
@@ -46,6 +31,7 @@
   }
 
   &__icon {
+    color: var(--color-gray-400);
     margin: 0 8px;
 
     &--active {
@@ -60,13 +46,10 @@
   }
 
   &__Popover {
+    max-height: 400px;
+    overflow-y: scroll;
     padding: 16px;
     width: 240px;
-
-    @media (max-height: 1000px) {
-      max-height: 400px;
-      overflow-y: scroll;
-    }
 
     @media (max-height: 600px) {
       max-height: 200px;

@@ -3,7 +3,7 @@ import {useHistory, useParams} from 'react-router-dom';
 
 import {api as projectsApi} from 'apis/projects';
 import {Loader} from 'components';
-import DeveloperPortalLayout from 'containers/DeveloperPortalProjects/components/DeveloperPortalLayout';
+import DeveloperPortalLayout from 'containers/DeveloperPortal/containers/DeveloperPortalProjects/components/DeveloperPortalLayout';
 import {Project} from 'types/projects';
 import {approvedProjectsPath} from '../../constants';
 
@@ -19,7 +19,7 @@ const ApprovedProjects = () => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [project, setProject] = useState<Project | null>(null);
   const [nextProject, setNextProject] = useState<Project | null>(null);
-  const [projectUrls, setProjectUrls] = useState<{title: string; url: string}[] | null>(null);
+  const [projectUrls, setProjectUrls] = useState<{title: string; url: string}[]>([]);
 
   useEffect(() => {
     (async function getProjects() {

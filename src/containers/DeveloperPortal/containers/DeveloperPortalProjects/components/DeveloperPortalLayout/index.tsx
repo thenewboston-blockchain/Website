@@ -14,12 +14,10 @@ import './DeveloperPortalLayout.scss';
 type Props = {
   children?: ReactNode;
   pageName: string;
-  approvedProjectUrls?:
-    | {
-        title: string;
-        url: string;
-      }[]
-    | null;
+  approvedProjectUrls?: {
+    title: string;
+    url: string;
+  }[];
   projectName?: string;
 };
 
