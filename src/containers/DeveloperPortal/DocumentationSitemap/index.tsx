@@ -35,7 +35,7 @@ const DocumentationSitemap: FC = () => {
               Propose a Project
             </Link>
 
-            <Link className="DocumentationSitemap__link" to="/projects">
+            <Link className="DocumentationSitemap__link" to="/developer/projects">
               Approved Projects
             </Link>
             <Link className="DocumentationSitemap__link" to="/project-rules/overview#how-proposals-work">

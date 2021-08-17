@@ -33,7 +33,7 @@ const getStartedDetails = [
     description: 'Earn coins by building projects, gaining skills, and working as a team.',
     icon: <img alt="Create Proposals" className="GetStarted__icon" src={CreateProposalsIcon} />,
     title: 'Create Proposals',
-    to: '/projects/overview',
+    to: '/developer/projects',
   },
   {
     description: 'Work on bug fixes, graphics, and other small tasks to earn coins.',
