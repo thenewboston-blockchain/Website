@@ -1,0 +1,161 @@
+@import 'styles/font-mixins';
+
+.Projects {
+  &__hero {
+    align-items: center;
+    background: url('./assets/ProjectsBg.webp');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    height: 248px;
+    justify-content: space-between;
+    padding: 48px 72px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      height: fit-content;
+      padding: 48px 24px;
+    }
+  }
+
+  &__hero-title {
+    @media (max-width: 768px) {
+      align-self: start;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__hero-title-tnb {
+    @extend %h4;
+    color: var(--color-neutral-500);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 2px;
+  }
+
+  &__hero-title-projects {
+    @extend %display2;
+    color: var(--color-cyan-900);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  &__hero-icon {
+    width: 274px;
+
+    @media (max-width: 1366px) {
+      width: 264px;
+    }
+
+    @media (max-width: 768px) {
+      align-self: flex-end;
+      width: 192px;
+    }
+  }
+
+  &__main {
+    padding: 72px 48px;
+
+    @media (max-width: 768px) {
+      padding: 72px 24px;
+    }
+  }
+
+  &__main-title {
+    @extend %h1;
+    color: var(--color-gray-800);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 16px;
+  }
+
+  &__main-description {
+    @extend %h3;
+    color: var(--color-gray-500);
+    margin-bottom: 32px;
+  }
+
+  &__button-project {
+    margin-right: 16px;
+
+    // specific case (was not in the figma design)
+    @media (max-width: 372px) {
+      &:first-of-type {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__showcase {
+    background-color: var(--color-cyan-900);
+    padding: 72px 48px;
+    position: relative;
+
+    @media (max-width: 768px) {
+      padding: 72px 24px;
+    }
+
+    &-title {
+      @extend %h1;
+      color: var(--color-white);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: 48px;
+    }
+
+    &-projects {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(3, 1fr);
+
+      @media (max-width: 1366px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: auto;
+      }
+
+      &-loader {
+        color: var(--color-white);
+        margin: 0 auto;
+      }
+
+      &-error {
+        @extend %body3;
+        color: var(--color-alert);
+        text-align: center;
+      }
+
+      &-tile {
+        border: 3px solid var(--color-gray-800);
+        border-radius: 12px;
+        cursor: pointer;
+        margin-bottom: 32px;
+        padding: 24px;
+
+        @media (max-width: 1366px) {
+          margin-bottom: 0;
+        }
+
+        &-title {
+          @extend %h2;
+          -webkit-box-orient: vertical;
+          color: var(--color-gray-100);
+          display: -webkit-box;
+          -webkit-line-clamp: 1; /* max number of lines to show */
+          margin-bottom: 16px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        &-description {
+          @extend %body1;
+          -webkit-box-orient: vertical;
+          color: var(--color-gray-300);
+          display: -webkit-box;
+          -webkit-line-clamp: 4; /* max number of lines to show */
+          margin-bottom: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+}
