@@ -23,6 +23,9 @@ const Rules: FC = () => {
             Take prior permission from the user and inform them clearly if it uses the user’s personal information for
             any purpose.
           </li>
+          <li className="ProjectRules__list-item">
+            Have a non-TNB related project name along with a unique logo design.
+          </li>
         </ol>
       </div>
       <div className="ProjectRules__list">
