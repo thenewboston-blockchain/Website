@@ -63,7 +63,14 @@
   &__approved-projects {
     &-container {
       max-height: 400px;
+
+      -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
       overflow-y: scroll;
+      scrollbar-width: none; /* Hide scrollbar for Firefox */
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
 
     &-link {
