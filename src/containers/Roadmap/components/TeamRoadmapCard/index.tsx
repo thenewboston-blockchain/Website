@@ -1,5 +1,4 @@
 import React, {FC} from 'react';
-import clsx from 'clsx';
 
 import {ProgressBar} from 'components';
 import {RoadmapTask} from 'types/roadmap';
@@ -19,7 +18,7 @@ const TeamRoadmapCard: FC<Props> = ({percentage, tasks, title}) => {
       <div className="TeamRoadmapCard__header">
         <h1 className="TeamRoadmapCard__header-title">{title}</h1>
         <div className="TeamRoadmapCard__header-progress">
-          <ProgressBar className="TeamRoadmapCard__header-progress-bar" percentage={50} />
+          <ProgressBar className="TeamRoadmapCard__header-progress-bar" percentage={percentage} />
           <div className="TeamRoadmapCard__header-progress-percentage">{percentage}% complete</div>
         </div>
       </div>
