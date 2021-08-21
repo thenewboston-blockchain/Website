@@ -27,7 +27,6 @@ import PrincipalEventsAndProcesses from './DeveloperPortal/containers/LivingWhit
 import PrivacyPolicy from './PrivacyPolicy';
 import Profile from './Profile';
 import Progress from './Progress';
-import ProjectRulesAndGuide from './Projects/ProjectRulesAndGuide';
 import SignIn from './SignIn';
 import SignOut from './SignOut';
 import Social from './Social';
@@ -38,10 +37,9 @@ import TermsOfUse from './TermsOfUse';
 import Wallet from './Wallet';
 
 /**
- * Lazy load pages that may contribute a lot to the bundle size
+ * Lazy load pages that may contribute a lot to the bundle sizes
  */
 const DeveloperPortal = lazy(() => import('./DeveloperPortal'));
-const Projects = lazy(() => import('./Projects'));
 const Tutorials = lazy(() => import('./Tutorials'));
 
 interface GoogleAnalyticsWindow extends Window {
@@ -115,8 +113,6 @@ const App: FC = () => {
           <Route path="/developer/api/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route path="/progress" component={Progress} />
-          <Route path="/projects/:projectId?" component={withSuspense(Projects)} />
-          <Route path="/project-rules/:chapter" component={ProjectRulesAndGuide} />
           <Route exact path="/sign-in" component={SignIn} />
           <Route exact path="/sign-out" component={SignOut} />
           <Route path="/style-guide/:chapter?" component={StyleGuide} />

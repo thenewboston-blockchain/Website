@@ -44,7 +44,7 @@ const DeveloperPortalCards: FC = () => {
           <Button
             className="DeveloperPortalCards__card-button"
             variant="outlined"
-            onClick={() => history.push('/projects')}
+            onClick={() => history.push('/developer/projects')}
           >
             Learn More
             <Icon icon={IconType.chevronRight} size={16} />

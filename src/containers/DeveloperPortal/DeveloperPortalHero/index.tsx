@@ -30,7 +30,7 @@ const DeveloperPortalHero: FC = () => {
         <Link to="/developer/whitepaper" className="DeveloperPortalHero__link">
           Living Whitepaper
         </Link>
-        <Link to="/projects" className="DeveloperPortalHero__link">
+        <Link to="/developer/projects" className="DeveloperPortalHero__link">
           Projects
         </Link>
       </div>

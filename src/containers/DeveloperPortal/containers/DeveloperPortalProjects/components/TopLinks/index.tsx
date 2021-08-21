@@ -13,7 +13,7 @@ const TopLinks: FC = () => {
       <Link to="/developer/whitepaper" className="TopLinks__link">
         Living Whitepaper
       </Link>
-      <Link to="/projects" className="TopLinks__link">
+      <Link to="/developer/projects" className="TopLinks__link">
         Projects
       </Link>
     </div>
