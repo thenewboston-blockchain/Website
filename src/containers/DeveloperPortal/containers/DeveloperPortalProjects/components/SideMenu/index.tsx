@@ -52,20 +52,22 @@ const SideMenu: FC<Props> = ({approvedProjectUrls, breadcrumbHeight}) => {
             totalSize={20}
           />
         </button>
-        {isApprovedProjectsSelected &&
-          shouldOpenApprovedProjects &&
-          approvedProjectUrls &&
-          approvedProjectUrls.map((selection) => {
-            return (
-              <ReactRouterLink
-                className={clsx('SideMenu__link', 'SideMenu__approved-projects-link')}
-                to={selection.url}
-                key={selection.url}
-              >
-                {selection.title}
-              </ReactRouterLink>
-            );
-          })}
+        <div className="SideMenu__approved-projects-container">
+          {isApprovedProjectsSelected &&
+            shouldOpenApprovedProjects &&
+            approvedProjectUrls &&
+            approvedProjectUrls.map((selection) => {
+              return (
+                <ReactRouterLink
+                  className={clsx('SideMenu__link', 'SideMenu__approved-projects-link')}
+                  to={selection.url}
+                  key={selection.url}
+                >
+                  {selection.title}
+                </ReactRouterLink>
+              );
+            })}
+        </div>
       </div>
       <div className="SideMenu__section">
         <button

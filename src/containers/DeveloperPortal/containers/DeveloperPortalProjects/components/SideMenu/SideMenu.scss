@@ -60,9 +60,16 @@
     }
   }
 
-  &__approved-projects-link {
-    border-bottom: 1px solid var(--color-gray-100);
-    padding: 10px 0;
+  &__approved-projects {
+    &-container {
+      max-height: 400px;
+      overflow-y: scroll;
+    }
+
+    &-link {
+      border-bottom: 1px solid var(--color-gray-100);
+      padding: 10px 0;
+    }
   }
 
   &__toggle-icon {
