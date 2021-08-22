@@ -9,4 +9,12 @@
   &__loader {
     margin: 0 auto;
   }
+
+  &__error {
+    align-items: center;
+    color: var(--color-danger);
+    display: flex;
+    height: 64px;
+    justify-content: center;
+  }
 }

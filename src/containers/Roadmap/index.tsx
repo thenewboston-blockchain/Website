@@ -1,60 +1,66 @@
 import React, {FC, useEffect, useState} from 'react';
 
-import {getRoadmapByTeamName} from 'apis/roadmap';
-import {Loader} from 'components';
+import {getAllRoadmaps} from 'apis/roadmap';
+import {Container, Loader} from 'components';
 import {ApiProgress} from 'constants/api-progress';
 import {RoadmapTask} from 'types/roadmap';
-import {TeamName} from 'types/teams';
 
-import {ROADMAP_TEAM_NAMES} from './constants';
 import RoadmapHero from './RoadmapHero';
 import TeamRoadmaps from './TeamRoadmaps';
 
 import './Roadmap.scss';
 
 type TeamRoadmapState = {
-  teamName: TeamName;
-  tasks: RoadmapTask[];
-}[];
+  [teamName: string]: {
+    tasks: RoadmapTask[];
+  };
+};
 
 const Roadmap: FC = () => {
-  const [teamRoadmaps, setTeamRoadmaps] = useState<TeamRoadmapState>([]);
+  const [teamRoadmaps, setTeamRoadmaps] = useState<TeamRoadmapState>({});
   const [progressPercentage, setProgressPercentage] = useState(0);
   const [progress, setProgress] = useState<ApiProgress>(ApiProgress.Init);
 
   useEffect(() => {
-    setProgress(ApiProgress.Requesting);
-    let totalTasks = 0;
-    let totalCompletedTasks = 0;
+    (async () => {
+      try {
+        setProgress(ApiProgress.Requesting);
+        let totalTasks = 0;
+        let totalCompletedTasks = 0;
+        const roadmapTasks = await getAllRoadmaps();
+        const processedTeamRoadmaps = roadmapTasks.reduce((acc, roadmapTask) => {
+          totalTasks += 1;
+          if (roadmapTask.is_complete) {
+            totalCompletedTasks += 1;
+          }
+          const teamName = roadmapTask.team_name;
 
-    const getAllRoadmaps = async () => {
-      const roadmapTasksPromises = ROADMAP_TEAM_NAMES.map(async (teamName) => {
-        const roadmapTasks = await getRoadmapByTeamName(teamName);
-        return {tasks: roadmapTasks, teamName};
-      });
+          if (acc[teamName]) {
+            acc[teamName].tasks.push(roadmapTask);
+          } else {
+            acc[teamName] = {
+              tasks: [roadmapTask],
+            };
+          }
+          return acc;
+        }, {} as TeamRoadmapState);
 
-      return Promise.all(roadmapTasksPromises);
-    };
-
-    getAllRoadmaps().then((roadmapTasks) => {
-      const teamRoadmapTasks = roadmapTasks.reduce((acc, roadmapTask) => {
-        if (roadmapTask.tasks && roadmapTask.tasks.length > 0) {
-          totalTasks += roadmapTask.tasks.length;
-          totalCompletedTasks += roadmapTask.tasks.filter((task) => task.is_complete).length;
-          return [...acc, roadmapTask];
-        }
-        return acc;
-      }, [] as TeamRoadmapState);
-
-      setTeamRoadmaps(teamRoadmapTasks);
-      const averagePercentage = Math.floor((totalCompletedTasks / totalTasks) * 100);
-      setProgressPercentage(averagePercentage);
-      setProgress(ApiProgress.Success);
-    });
+        setTeamRoadmaps(processedTeamRoadmaps);
+        const averagePercentage = Math.floor((totalCompletedTasks / totalTasks) * 100);
+        setProgressPercentage(averagePercentage);
+        setProgress(ApiProgress.Success);
+      } catch (err) {
+        setProgress(ApiProgress.Error);
+      }
+    })();
   }, []);
 
   if (progress === ApiProgress.Requesting || progress === ApiProgress.Init || !teamRoadmaps) {
     return <Loader className="Roadmap__loader" />;
+  }
+
+  if (progress === ApiProgress.Error) {
+    return <div className="Roadmap__error">Error while fetching roadmap. Please try again later.</div>;
   }
 
   return (
