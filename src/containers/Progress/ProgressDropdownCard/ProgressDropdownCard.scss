@@ -120,6 +120,7 @@
   }
 
   &__progress-bar {
+    margin-bottom: 8px;
     width: 400px;
 
     @media (max-width: 700px) {
