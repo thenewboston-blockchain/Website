@@ -28,13 +28,14 @@
       margin-bottom: 38px;
 
       &-bar {
+        flex-grow: 100;
         margin-right: 16px;
-        width: 70%;
       }
 
       &-percentage {
         @extend %body1;
         color: var(--color-cyan-900);
+        white-space: nowrap;
       }
     }
   }
