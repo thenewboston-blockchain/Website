@@ -1,7 +1,7 @@
 import React, {FC, useEffect, useState} from 'react';
 
 import {getAllRoadmaps} from 'apis/roadmap';
-import {Container, Loader} from 'components';
+import {Loader} from 'components';
 import {ApiProgress} from 'constants/api-progress';
 import {RoadmapTask} from 'types/roadmap';
 

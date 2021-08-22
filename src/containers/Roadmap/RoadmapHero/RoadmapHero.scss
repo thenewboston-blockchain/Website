@@ -33,6 +33,10 @@
       color: var(--color-gray-700);
     }
 
+    @media (max-width: 992px) {
+      padding-right: 96px;
+    }
+
     @media (max-width: 768px) {
       align-self: flex-start;
       padding-right: 48px;
@@ -49,17 +53,14 @@
     }
 
     &-bar {
+      flex-grow: 100;
       margin-right: 16px;
-      width: 400px;
-
-      @media (max-width: 992px) {
-        width: 200px;
-      }
     }
 
     &-percentage {
       @extend %body1;
       color: var(--color-cyan-900);
+      white-space: nowrap;
     }
   }
 
