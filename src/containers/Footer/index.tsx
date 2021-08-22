@@ -25,7 +25,6 @@ const navLists = [
         title: 'Projects',
         url: '/developer/projects',
       },
-      {title: 'Analytics', url: '/analytics'},
     ],
   },
   {
@@ -47,6 +46,8 @@ const navLists = [
         title: 'Community Guidelines',
         url: '/guidelines',
       },
+      {title: 'Analytics', url: '/analytics'},
+      {title: 'Beta Roadmap', url: '/roadmap'},
       {
         isExternal: true,
         title: 'Blog',
