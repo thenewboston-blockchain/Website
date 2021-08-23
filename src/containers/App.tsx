@@ -40,6 +40,7 @@ import Wallet from './Wallet';
  * Lazy load pages that may contribute a lot to the bundle sizes
  */
 const DeveloperPortal = lazy(() => import('./DeveloperPortal'));
+const Roadmap = lazy(() => import('./Roadmap'));
 const Tutorials = lazy(() => import('./Tutorials'));
 
 interface GoogleAnalyticsWindow extends Window {
@@ -113,6 +114,7 @@ const App: FC = () => {
           <Route path="/developer/api/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route path="/progress" component={Progress} />
+          <Route path="/roadmap" component={withSuspense(Roadmap)} />
           <Route exact path="/sign-in" component={SignIn} />
           <Route exact path="/sign-out" component={SignOut} />
           <Route path="/style-guide/:chapter?" component={StyleGuide} />

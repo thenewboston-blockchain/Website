@@ -120,22 +120,11 @@
   }
 
   &__progress-bar {
-    background-color: var(--color-gray-100);
-    border-radius: 100px;
-    height: 8px;
     margin-bottom: 8px;
-    position: relative;
     width: 400px;
 
     @media (max-width: 700px) {
       width: 100%;
-    }
-
-    &--filled {
-      background-color: var(--color-green-300);
-      left: 0;
-      position: absolute;
-      top: 0;
     }
   }
 

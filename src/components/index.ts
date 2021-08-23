@@ -41,6 +41,7 @@ import Loader from './Loader';
 import PageTitle from './PageTitle';
 import Pagination from './Pagination';
 import Popover from './Popover';
+import ProgressBar from './ProgressBar';
 import Qr from './Qr';
 import {QueryParamsOffsetAndLimit} from './QueryParams';
 import RequiredAsterisk from './RequiredAsterisk';
@@ -98,6 +99,7 @@ export {
   PageTitle,
   Pagination,
   Popover,
+  ProgressBar,
   ProgressiveImage,
   Qr,
   QueryParamsOffsetAndLimit,
