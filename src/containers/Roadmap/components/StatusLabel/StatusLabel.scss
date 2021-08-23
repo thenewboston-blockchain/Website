@@ -8,12 +8,12 @@
   width: fit-content;
 
   &--completed {
-    background: #ebffe9;
-    color: #0e6245;
+    background: var(--color-green-050);
+    color: var(--color-green-500);
   }
 
   &--not-completed {
-    background: #fcf9e9;
-    color: #bb5504;
+    background: var(--color-yellow-050);
+    color: var(--color-yellow-500);
   }
 }
