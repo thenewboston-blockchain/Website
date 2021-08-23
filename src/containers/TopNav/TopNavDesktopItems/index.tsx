@@ -37,6 +37,18 @@ const communityPopoverItems: TopNavPopoverItemType[] = [
     to: '/guidelines',
   },
   {
+    description: 'Real time analytics',
+    iconType: IconType.chartAreaspline,
+    title: 'Analytics',
+    to: '/analytics',
+  },
+  {
+    description: 'Tasks to finish up beta app',
+    iconType: IconType.chartAreaspline,
+    title: 'Beta Roadmap',
+    to: '/roadmap',
+  },
+  {
     description: 'Stay updated with our latest articles',
     iconType: IconType.textBox,
     isExternal: true,
@@ -57,13 +69,7 @@ const getStartedPopoverItems: TopNavPopoverItemType[] = [
     description: 'Propose ideas you want built',
     iconType: IconType.hammerWrench,
     title: 'Projects',
-    to: '/projects',
-  },
-  {
-    description: 'Real time analytics',
-    iconType: IconType.chartAreaspline,
-    title: 'Analytics',
-    to: '/analytics',
+    to: '/developer/projects',
   },
 ];
 

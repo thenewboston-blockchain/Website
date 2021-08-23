@@ -1,5 +1,3 @@
-import {ProjectIconType} from 'containers/Projects/ProjectIcons';
-
 export type Project = {
   pk: string;
   created_date: string;
@@ -17,6 +15,7 @@ export type Project = {
   project_lead: string;
   project_lead_display_name: string;
   milestones: Milestone[];
+  is_featured: boolean;
 };
 
 export type Milestone = {
@@ -34,8 +33,6 @@ export type ProjectTopicMap = {
 
 export type ProjectTopic = {
   anchor: ProjectTopicAnchor;
-  // TODO: Remove iconType once Projects are moved to Dev Portal
-  iconType?: ProjectIconType;
   position: number;
   title: ProjectTopicTitle;
 };

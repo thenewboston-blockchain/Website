@@ -1,0 +1,77 @@
+@import 'styles/font-mixins';
+
+.ApprovedProjects {
+  padding: 48px;
+
+  @media (max-width: 1366px) {
+    padding: 48px 32px;
+  }
+  @media (max-width: 992px) {
+    padding: 48px;
+  }
+  @media (max-width: 768px) {
+    padding: 48px 24px;
+  }
+
+  &__error {
+    color: var(--color-alert);
+    padding: 24px;
+    text-align: center;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: 1366px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: auto;
+    }
+
+    &-card {
+      border: 3px solid var(--color-gray-100);
+      border-radius: 12px;
+      cursor: pointer;
+      padding: 24px;
+
+      &-description {
+        @extend %body1;
+        -webkit-box-orient: vertical;
+        color: var(--color-gray-400);
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+      }
+
+      &-title {
+        @extend %h2;
+        -webkit-box-orient: vertical;
+        color: var(--color-gray-800);
+        display: -webkit-box;
+        font-weight: var(--font-weight-medium);
+        -webkit-line-clamp: 1;
+        margin-bottom: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+      }
+    }
+  }
+
+  &__heading {
+    @extend %body3;
+    color: var(--color-gray-300);
+    margin-bottom: 48px;
+  }
+
+  &__loader {
+    margin: 0 auto;
+  }
+}

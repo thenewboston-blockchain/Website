@@ -5,29 +5,28 @@ import {Layout} from 'components';
 import withSuspense from 'hoc/withSuspense';
 
 import Analytics from './Analytics';
-import ArchitectureDeepDive from './LivingWhitepaper/containers/ArchitectureDeepDive';
+import ArchitectureDeepDive from './DeveloperPortal/containers/LivingWhitepaper/containers/ArchitectureDeepDive';
 import Assets from './Assets';
 import BankApi from './Api/BankApi';
 import ConfirmationValidatorApi from './Api/ConfirmationValidatorApi';
 import CreateAccount from './CreateAccount';
 import DeploymentGuide from './DeploymentGuide';
-import DeveloperPortalApprovedProjects from './DeveloperPortalProjects/containers/ApprovedProjects';
-import DeveloperPortalProjects from './DeveloperPortalProjects';
-import DeveloperPortalProjectRulesAndGuidelines from './DeveloperPortalProjects/containers/ProjectRulesAndGuidelines';
+import DeveloperPortalApprovedProjects from './DeveloperPortal/containers/DeveloperPortalProjects/containers/ApprovedProjects';
+import DeveloperPortalProjects from './DeveloperPortal/containers/DeveloperPortalProjects';
+import DeveloperPortalProjectRulesAndGuidelines from './DeveloperPortal/containers/DeveloperPortalProjects/containers/ProjectRulesAndGuidelines';
 import Donate from './Donate';
 import Download from './Download';
 import Faq, {faqFilters, FaqFilterType} from './Faq';
 import Guidelines from './Guidelines';
 import Home from './Home';
-import LivingWhitepaper from './LivingWhitepaper';
+import LivingWhitepaper from './DeveloperPortal/containers/LivingWhitepaper';
 import Openings from './Openings';
 import PrimaryValidatorApi from './Api/PrimaryValidatorApi';
-import PrincipalEntities from './LivingWhitepaper/containers/PrincipalEntities';
-import PrincipalEventsAndProcesses from './LivingWhitepaper/containers/PrincipalEventsAndProcesses';
+import PrincipalEntities from './DeveloperPortal/containers/LivingWhitepaper/containers/PrincipalEntities';
+import PrincipalEventsAndProcesses from './DeveloperPortal/containers/LivingWhitepaper/containers/PrincipalEventsAndProcesses';
 import PrivacyPolicy from './PrivacyPolicy';
 import Profile from './Profile';
 import Progress from './Progress';
-import ProjectRulesAndGuide from './Projects/ProjectRulesAndGuide';
 import SignIn from './SignIn';
 import SignOut from './SignOut';
 import Social from './Social';
@@ -38,10 +37,10 @@ import TermsOfUse from './TermsOfUse';
 import Wallet from './Wallet';
 
 /**
- * Lazy load pages that may contribute a lot to the bundle size
+ * Lazy load pages that may contribute a lot to the bundle sizes
  */
 const DeveloperPortal = lazy(() => import('./DeveloperPortal'));
-const Projects = lazy(() => import('./Projects'));
+const Roadmap = lazy(() => import('./Roadmap'));
 const Tutorials = lazy(() => import('./Tutorials'));
 
 interface GoogleAnalyticsWindow extends Window {
@@ -115,8 +114,7 @@ const App: FC = () => {
           <Route path="/developer/api/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route path="/progress" component={Progress} />
-          <Route path="/projects/:projectId?" component={withSuspense(Projects)} />
-          <Route path="/project-rules/:chapter" component={ProjectRulesAndGuide} />
+          <Route path="/roadmap" component={withSuspense(Roadmap)} />
           <Route exact path="/sign-in" component={SignIn} />
           <Route exact path="/sign-out" component={SignOut} />
           <Route path="/style-guide/:chapter?" component={StyleGuide} />

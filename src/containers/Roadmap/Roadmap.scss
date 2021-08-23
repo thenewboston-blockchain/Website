@@ -1,0 +1,20 @@
+.Roadmap {
+  display: flex;
+  flex-direction: column;
+
+  &__hero {
+    margin-bottom: 80px;
+  }
+
+  &__loader {
+    margin: 0 auto;
+  }
+
+  &__error {
+    align-items: center;
+    color: var(--color-danger);
+    display: flex;
+    height: 64px;
+    justify-content: center;
+  }
+}

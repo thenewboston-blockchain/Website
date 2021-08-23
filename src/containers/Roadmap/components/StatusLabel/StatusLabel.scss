@@ -1,0 +1,19 @@
+@import 'styles/font-mixins';
+
+.StatusLabel {
+  @extend %h4;
+  border-radius: 100px;
+  font-weight: var(--font-weight-medium);
+  padding: 3px 8px;
+  width: fit-content;
+
+  &--completed {
+    background: var(--color-green-050);
+    color: var(--color-green-500);
+  }
+
+  &--not-completed {
+    background: var(--color-yellow-050);
+    color: var(--color-yellow-500);
+  }
+}
