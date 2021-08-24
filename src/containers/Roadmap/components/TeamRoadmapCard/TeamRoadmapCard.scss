@@ -42,7 +42,7 @@
 
   &__content {
     max-height: 480px;
-    overflow-y: scroll;
+    overflow-y: auto;
 
     &::-webkit-scrollbar-track {
       display: none;
