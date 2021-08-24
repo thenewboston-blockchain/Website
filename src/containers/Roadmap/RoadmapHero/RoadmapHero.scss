@@ -19,6 +19,10 @@
     padding-left: 24px;
   }
 
+  &__container {
+    margin-left: 0;
+  }
+
   &__content {
     padding-right: 160px;
 
@@ -69,6 +73,11 @@
     max-width: 100%;
     object-fit: contain;
     width: 324px;
+
+    &-outer {
+      position: absolute;
+      right: 0;
+    }
 
     @media (max-width: 1366px) {
       width: 424px;
