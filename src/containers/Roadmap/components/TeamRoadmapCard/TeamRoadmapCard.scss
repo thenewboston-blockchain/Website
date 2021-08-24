@@ -44,6 +44,10 @@
     max-height: 480px;
     overflow-y: scroll;
 
+    &::-webkit-scrollbar-track {
+      display: none;
+    }
+
     &-task {
       margin-right: 36px;
       padding: 20px 0;
