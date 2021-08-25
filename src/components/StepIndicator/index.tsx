@@ -1,16 +1,16 @@
-import React, {FC, memo, ReactNode} from 'react';
+import React, {memo, ReactNode} from 'react';
 import clsx from 'clsx';
 import {bemify} from '@thenewboston/utils';
+import {SFC} from 'types/generic';
 
 import './StepIndicator.scss';
 
 export interface StepIndicatorProps {
-  className?: string;
   number: number;
   text: ReactNode;
 }
 
-const StepIndicator: FC<StepIndicatorProps> = ({className, number, text}) => {
+const StepIndicator: SFC<StepIndicatorProps> = ({className, number, text}) => {
   return (
     <div className={clsx('StepIndicator', className)} data-testid="StepIndicator">
       <div

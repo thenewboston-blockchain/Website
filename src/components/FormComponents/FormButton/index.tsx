@@ -1,15 +1,16 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
-import React, {FC, useMemo} from 'react';
+import React, {useMemo} from 'react';
 import {useFormikContext} from 'formik';
 import {BaseButtonProps, Button, Loader} from 'components/FormElements';
+import {SFC} from 'types/generic';
 
 export interface FormButtonProps extends BaseButtonProps {
   ignoreDirty?: boolean;
   submitting?: boolean;
 }
 
-const FormButton: FC<FormButtonProps> = ({children, ignoreDirty = false, submitting = false, ...baseButtonProps}) => {
+const FormButton: SFC<FormButtonProps> = ({children, ignoreDirty = false, submitting = false, ...baseButtonProps}) => {
   const {disabled = false, onClick, type = 'button'} = baseButtonProps;
   const {dirty, handleReset, handleSubmit, isValid} = useFormikContext();
 

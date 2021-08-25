@@ -1,18 +1,18 @@
-import React, {FC, ReactNode} from 'react';
+import React, {ReactNode} from 'react';
 import clsx from 'clsx';
 import {bemify} from '@thenewboston/utils';
 
 import {HashLink} from 'components';
+import {SFC} from 'types/generic';
 
 import './DocSubSection.scss';
 
 export interface DocSubSectionProps {
-  className?: string;
   id?: string;
   title: ReactNode;
 }
 
-const DocSubSection: FC<DocSubSectionProps> = ({children, className, id, title}) => {
+const DocSubSection: SFC<DocSubSectionProps> = ({children, className, id, title}) => {
   return (
     <>
       <h2 className={clsx('DocSubSection__h2', {...bemify(className, '__h2')})} data-testid="DocSubSection__h2" id={id}>

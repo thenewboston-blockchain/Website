@@ -1,19 +1,19 @@
-import React, {FC} from 'react';
+import React from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
 
+import {SFC} from 'types/generic';
 import {displayToast} from 'utils/toast';
 
 import './CopyableAccountNumber.scss';
 
 interface ComponentProps {
   accountNumber: string;
-  className?: string;
   isCopyButtonAtBottom?: boolean;
 }
 
-const CopyableAccountNumber: FC<ComponentProps> = ({accountNumber, className, isCopyButtonAtBottom}) => {
+const CopyableAccountNumber: SFC<ComponentProps> = ({accountNumber, className, isCopyButtonAtBottom}) => {
   const handleCopy = (): void => {
     displayToast('Account Number copied to the clipboard', 'success');
   };

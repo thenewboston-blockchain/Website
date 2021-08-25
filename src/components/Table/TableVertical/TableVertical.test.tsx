@@ -2,9 +2,10 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
+import {ClassName} from 'types/generic';
 import TableVertical, {TableVerticalProps} from '.';
 
-const baseProps: TableVerticalProps = {
+const baseProps: TableVerticalProps & ClassName = {
   className: 'Test',
   rows: [
     ['Row 1 Column 1', 'Row 1 Column 2'],

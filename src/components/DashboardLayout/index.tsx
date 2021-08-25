@@ -1,6 +1,8 @@
-import React, {FC, ReactNode} from 'react';
+import React, {ReactNode} from 'react';
+import clsx from 'clsx';
 
 import {BreadcrumbMenu, Container, PageTitle} from 'components';
+import {SFC} from 'types/generic';
 import './DashboardLayout.scss';
 
 export interface DashboardLayoutProps {
@@ -10,11 +12,11 @@ export interface DashboardLayoutProps {
   sectionName: string;
 }
 
-const DashboardLayout: FC<DashboardLayoutProps> = ({children, menuItems, pageName, sectionName}) => {
+const DashboardLayout: SFC<DashboardLayoutProps> = ({children, className, menuItems, pageName, sectionName}) => {
   return (
     <>
       <PageTitle title={`${sectionName}`} />
-      <Container className="DashboardLayout">
+      <Container className={clsx('DashboardLayout', className)}>
         <BreadcrumbMenu
           className="DashboardLayout__BreadcrumbMenu"
           menuItems={menuItems}

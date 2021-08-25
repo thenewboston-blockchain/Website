@@ -2,9 +2,10 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
+import {ClassName} from 'types/generic';
 import TableBorderGrid, {TableBorderGridProps} from '.';
 
-const baseProps: TableBorderGridProps = {
+const baseProps: TableBorderGridProps & ClassName = {
   className: 'Test',
   headers: ['Head 1', 'Head 2'],
   rows: [

@@ -1,5 +1,7 @@
-import React, {FC, useState} from 'react';
+import React, {useState} from 'react';
+import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
+import {SFC} from 'types/generic';
 
 import './DropdownInput.scss';
 
@@ -9,7 +11,7 @@ interface ComponentProps<T> {
   options: T[];
 }
 
-const DropdownInput: FC<ComponentProps<string>> = ({callbackOnChange, defaultOption, options}) => {
+const DropdownInput: SFC<ComponentProps<string>> = ({callbackOnChange, className, defaultOption, options}) => {
   const [selectedOption, setSelectedOption] = useState<string>(defaultOption);
   const handleChange = (e: React.FormEvent) => {
     const {value} = e.target as HTMLSelectElement;
@@ -17,7 +19,7 @@ const DropdownInput: FC<ComponentProps<string>> = ({callbackOnChange, defaultOpt
     callbackOnChange(value);
   };
   return (
-    <div className="DropdownInput" data-testid="DropdownInput">
+    <div className={clsx('DropdownInput', className)} data-testid="DropdownInput">
       <select
         className="DropdownInput__select-box"
         data-testid="DropdownInput__select-box"

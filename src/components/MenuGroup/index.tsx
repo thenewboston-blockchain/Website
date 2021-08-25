@@ -1,8 +1,9 @@
-import React, {FC, useState} from 'react';
+import React, {useState} from 'react';
 import {RouteComponentProps, withRouter} from 'react-router-dom';
 import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
 
+import {SFC} from 'types/generic';
 import {getFirstPathParam, getFirstThreePathParams} from 'utils/urls';
 
 import './MenuGroup.scss';
@@ -13,13 +14,13 @@ interface ComponentProps extends RouteComponentProps {
   role?: string;
 }
 
-const MenuGroup: FC<ComponentProps> = ({children, role, location, title, urlBase}) => {
+const MenuGroup: SFC<ComponentProps> = ({children, className, role, location, title, urlBase}) => {
   const [expanded, toggleExpanded] = useState(
     getFirstPathParam(location.pathname) === urlBase || getFirstThreePathParams(location.pathname) === urlBase,
   );
 
   return (
-    <div className="MenuGroup" data-testid="MenuGroup" role={role}>
+    <div className={clsx('MenuGroup', className)} data-testid="MenuGroup" role={role}>
       <button
         className={clsx('MenuGroup__toggle', {'MenuGroup__toggle--expanded': expanded})}
         onClick={() => toggleExpanded(!expanded)}

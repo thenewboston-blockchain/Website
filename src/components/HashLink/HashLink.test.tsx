@@ -2,9 +2,10 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
+import {ClassName} from 'types/generic';
 import HashLink, {HashLinkProps} from './index';
 
-const props: HashLinkProps = {
+const props: HashLinkProps & ClassName = {
   className: 'className-test',
   id: 'id-test',
 };

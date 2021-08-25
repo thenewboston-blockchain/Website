@@ -1,18 +1,17 @@
-import React, {FC} from 'react';
+import React from 'react';
 import clsx from 'clsx';
 
-import {GenericVoidFunction} from 'types/generic';
+import {GenericVoidFunction, SFC} from 'types/generic';
 import {Time, TimeFilterType} from 'types/github';
 
 import './TimeFilter.scss';
 
 export interface TimeFilterProps {
-  className?: string;
   selectedFilter: TimeFilterType;
   setSelectedFilter: GenericVoidFunction;
 }
 
-const TimeFilter: FC<TimeFilterProps> = ({className, selectedFilter, setSelectedFilter}) => {
+const TimeFilter: SFC<TimeFilterProps> = ({className, selectedFilter, setSelectedFilter}) => {
   const handleOptionClick = (i: TimeFilterType): GenericVoidFunction => (): void => {
     setSelectedFilter(i);
   };

@@ -1,17 +1,17 @@
-import React, {FC} from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import {bemify} from '@thenewboston/utils';
+import {SFC} from 'types/generic';
 
 import BaseCodeSnippet, {SnippetLang} from '../BaseCodeSnippet';
 import './RequestResponseSnippet.scss';
 
 export interface RequestResponseSnippetProps {
-  className?: string;
   code: string;
   heading?: string;
 }
 
-const RequestResponse: FC<RequestResponseSnippetProps> = ({className, code, heading}) => {
+const RequestResponse: SFC<RequestResponseSnippetProps> = ({className, code, heading}) => {
   return (
     <div className={clsx('RequestResponseSnippet', className)} data-testid="RequestResponseSnippet">
       {heading ? (

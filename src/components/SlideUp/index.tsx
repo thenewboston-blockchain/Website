@@ -1,16 +1,16 @@
-import React, {FC} from 'react';
+import React from 'react';
 import {createPortal} from 'react-dom';
 import clsx from 'clsx';
+import {SFC} from 'types/generic';
 import {bemify} from '@thenewboston/utils';
 
 import './SlideUp.scss';
 
 interface ComponentProps {
-  className?: string;
   close(): void;
 }
 
-const SlideUp: FC<ComponentProps> = ({children, className, close}) => {
+const SlideUp: SFC<ComponentProps> = ({children, className, close}) => {
   return createPortal(
     <>
       <div className="SlideUp__overlay" onClick={close} role="button" tabIndex={0} data-testid="SlideUp__overlay" />

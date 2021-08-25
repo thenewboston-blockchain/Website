@@ -1,16 +1,16 @@
-import React, {FC} from 'react';
+import React from 'react';
 import clsx from 'clsx';
 
+import {SFC} from 'types/generic';
 import {isLight} from 'utils/colors';
 import './Label.scss';
 
 export interface LabelProps {
-  className?: string;
   color: string;
   name: string;
 }
 
-const Label: FC<LabelProps> = ({className, color, name}) => {
+const Label: SFC<LabelProps> = ({className, color, name}) => {
   const hexColor = `#${color}`;
 
   return (

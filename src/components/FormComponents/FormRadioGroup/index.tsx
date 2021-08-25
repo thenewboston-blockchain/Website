@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
-import React, {FC, useMemo, useState} from 'react';
+import React, {useMemo, useState} from 'react';
 import clsx from 'clsx';
 import noop from 'lodash/noop';
 import {bemify} from '@thenewboston/utils';
@@ -8,6 +8,7 @@ import {bemify} from '@thenewboston/utils';
 import {BaseRadioProps, Radio} from 'components/FormElements';
 import {useFormContext} from 'hooks';
 import {BaseFormComponentProps, InputOption} from 'types/forms';
+import {SFC} from 'types/generic';
 import {renderFormError, renderFormLabel} from 'utils/forms';
 
 interface BaseRadioGroupProps extends Omit<BaseRadioProps, 'checked'> {
@@ -16,7 +17,7 @@ interface BaseRadioGroupProps extends Omit<BaseRadioProps, 'checked'> {
 
 type ComponentProps = BaseFormComponentProps<BaseRadioGroupProps>;
 
-const FormRadioGroup: FC<ComponentProps> = ({
+const FormRadioGroup: SFC<ComponentProps> = ({
   focused = false,
   hideErrorText = false,
   label,

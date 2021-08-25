@@ -1,4 +1,5 @@
-import React, {FC} from 'react';
+import React from 'react';
+import {SFC} from 'types/generic';
 
 import {TableParams} from 'components';
 
@@ -6,7 +7,7 @@ interface ComponentProps {
   returnedEntityName: string;
 }
 
-const QueryParamsOffsetAndLimit: FC<ComponentProps> = ({returnedEntityName}) => {
+const QueryParamsOffsetAndLimit: SFC<ComponentProps> = ({returnedEntityName}) => {
   return (
     <TableParams
       items={[

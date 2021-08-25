@@ -1,15 +1,12 @@
-import React, {FC} from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
 import {bemify} from '@thenewboston/utils';
+import {SFC} from 'types/generic';
 
 import './ErrorMessage.scss';
 
-interface ErrorMessageProps {
-  className?: string;
-}
-
-const ErrorMessage: FC<ErrorMessageProps> = ({children, className}) => {
+const ErrorMessage: SFC = ({children, className}) => {
   return (
     <div className={clsx('ErrorMessage', className)}>
       <Icon

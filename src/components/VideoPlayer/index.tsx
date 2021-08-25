@@ -1,16 +1,16 @@
-import React, {FC} from 'react';
+import React from 'react';
 import ReactPlayerYouTube from 'react-player/youtube';
 import ReactPlayerVimeo from 'react-player/vimeo';
 import clsx from 'clsx';
 import {bemify} from '@thenewboston/utils';
 
+import {SFC} from 'types/generic';
 import {Source} from 'types/tutorials';
 import {getVideoUrl} from 'utils/urls';
 
 import './VideoPlayer.scss';
 
 interface VideoPlayerProps {
-  className?: string;
   controls?: boolean;
   onEnded?(): void;
   playing?: boolean;
@@ -18,7 +18,7 @@ interface VideoPlayerProps {
   videoId: string;
 }
 
-const VideoPlayer: FC<VideoPlayerProps> = ({className, controls = true, onEnded, playing = true, source, videoId}) => {
+const VideoPlayer: SFC<VideoPlayerProps> = ({className, controls = true, onEnded, playing = true, source, videoId}) => {
   return (
     <div className={clsx('VideoPlayer', className)}>
       {source === Source.youtube ? (

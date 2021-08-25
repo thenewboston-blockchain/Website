@@ -1,14 +1,14 @@
-import React, {FC} from 'react';
+import React from 'react';
 import clsx from 'clsx';
+import {SFC} from 'types/generic';
 
 import './HashLink.scss';
 
 export interface HashLinkProps {
-  className?: string;
   id: string;
 }
 
-const HashLink: FC<HashLinkProps> = ({className, id}) => {
+const HashLink: SFC<HashLinkProps> = ({className, id}) => {
   return (
     <a className={clsx('HashLink', className)} data-testid="HashLink" href={`#${id}`}>
       #

@@ -1,8 +1,9 @@
-import React, {FC} from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import {bemify} from '@thenewboston/utils';
 
 import {A} from 'components';
+import {SFC} from 'types/generic';
 import {SocialMedia} from 'types/social-media';
 import {socialMediaDescriptions, socialMediaHandles, socialMediaUrls} from 'utils/social-media';
 
@@ -20,12 +21,11 @@ import YouTubeLogo from 'assets/logos/YouTube.png';
 import './MarketingCard.scss';
 
 export interface MarketingCardProps {
-  className?: string;
   customLink?: string;
   website: SocialMedia;
 }
 
-const MarketingCard: FC<MarketingCardProps> = ({className, customLink, website}) => {
+const MarketingCard: SFC<MarketingCardProps> = ({className, customLink, website}) => {
   const renderImage = (src: any) => (
     <img
       alt={website}

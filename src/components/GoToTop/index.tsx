@@ -1,9 +1,11 @@
-import React, {FC, useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
+import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
+import {SFC} from 'types/generic';
 
 import './GoToTop.scss';
 
-const GoToTop: FC = () => {
+const GoToTop: SFC = ({className}) => {
   const [show, setShow] = useState<boolean>(false);
 
   const handleScroll = useCallback(() => {
@@ -26,7 +28,13 @@ const GoToTop: FC = () => {
   return (
     <>
       {show && (
-        <Icon className="GoToTop" dataTestId="GoToTop" icon={IconType.chevronUp} size={50} onClick={scrollTop} />
+        <Icon
+          className={clsx('GoToTop', className)}
+          dataTestId="GoToTop"
+          icon={IconType.chevronUp}
+          size={50}
+          onClick={scrollTop}
+        />
       )}
     </>
   );
