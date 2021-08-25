@@ -1,6 +1,7 @@
-import React, {FC, ReactNode} from 'react';
+import React, {ReactNode} from 'react';
 import clsx from 'clsx';
 import {bemify} from '@thenewboston/utils';
+import {SFC} from 'types/generic';
 
 import './TableParams.scss';
 
@@ -12,12 +13,11 @@ interface Item {
 }
 
 interface ComponentProps {
-  className?: string;
   headers?: ReactNode[];
   items: Item[];
 }
 
-const TableParams: FC<ComponentProps> = ({className, headers, items}) => {
+const TableParams: SFC<ComponentProps> = ({className, headers, items}) => {
   const renderBody = (): ReactNode => {
     return (
       <tbody className={clsx('TableParams__tbody', {...bemify(className, '__tbody')})} data-testid="TableParams__tbody">

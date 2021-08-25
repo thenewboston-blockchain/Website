@@ -1,13 +1,13 @@
-import React, {FC, useEffect, useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
 import {bemify} from '@thenewboston/utils';
+import {SFC} from 'types/generic';
 
 import './Radio.scss';
 
 export interface BaseRadioProps {
   checked: boolean;
-  className?: string;
   disabled?: boolean;
   error?: boolean;
   focused?: boolean;
@@ -19,7 +19,7 @@ export interface BaseRadioProps {
   value: string;
 }
 
-const Radio: FC<BaseRadioProps> = ({
+const Radio: SFC<BaseRadioProps> = ({
   checked,
   className,
   disabled = false,

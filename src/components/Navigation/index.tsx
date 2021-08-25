@@ -1,7 +1,8 @@
-import React, {FC, useState} from 'react';
-
-import {Icon, IconType} from '@thenewboston/ui';
+import React, {useState} from 'react';
 import {useHistory} from 'react-router';
+import clsx from 'clsx';
+import {Icon, IconType} from '@thenewboston/ui';
+import {SFC} from 'types/generic';
 
 import './Navigation.scss';
 
@@ -11,13 +12,13 @@ type Props = {
   text: string;
 };
 
-const Navigation: FC<Props> = ({text, type, path}) => {
+const Navigation: SFC<Props> = ({className, text, type, path}) => {
   const history = useHistory();
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
-      className="Navigation"
+      className={clsx('Navigation', className)}
       onClick={() => history.push(path)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

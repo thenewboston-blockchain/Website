@@ -1,20 +1,20 @@
-import React, {FC, ReactNode, useEffect} from 'react';
+import React, {ReactNode, useEffect} from 'react';
 import {Link, useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
 
 import {useBooleanState} from 'hooks';
 import {HashLink} from 'components';
+import {SFC} from 'types/generic';
 import './FaqDropdownCard.scss';
 
 type Props = {
   answer: ReactNode;
-  className?: string;
   id: string;
   question: ReactNode;
 };
 
-const FaqDropdownCard: FC<Props> = ({answer, className, id, question}) => {
+const FaqDropdownCard: SFC<Props> = ({answer, className, id, question}) => {
   const {hash, pathname} = useLocation();
   const [expanded, toggleExpanded, setExpandedAsTrue] = useBooleanState(false);
 

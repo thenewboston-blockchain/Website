@@ -1,11 +1,11 @@
-import React, {ChangeEvent, FC, FocusEvent, useEffect, useRef} from 'react';
+import React, {ChangeEvent, FocusEvent, useEffect, useRef} from 'react';
 import clsx from 'clsx';
 import {bemify} from '@thenewboston/utils';
+import {SFC} from 'types/generic';
 
 import './TextArea.scss';
 
 export interface BaseInputProps {
-  className?: string;
   disabled?: boolean;
   error?: boolean;
   focused?: boolean;
@@ -16,7 +16,7 @@ export interface BaseInputProps {
   value: string;
 }
 
-const InputTextArea: FC<BaseInputProps> = ({
+const InputTextArea: SFC<BaseInputProps> = ({
   className,
   disabled = false,
   error = false,

@@ -1,11 +1,12 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
-import React, {FC, ReactNode} from 'react';
+import React, {ReactNode} from 'react';
 import {FormatOptionLabelMeta} from 'react-select';
 import clsx from 'clsx';
 
 import {BaseSelectProps, Select} from 'components/FormElements';
 import {InputOption} from 'types/forms';
+import {SFC} from 'types/generic';
 
 import './SelectDetailed.scss';
 
@@ -30,7 +31,7 @@ const formatOptionLabel = ({value, label}: InputOption, {context}: FormatOptionL
   );
 };
 
-const SelectDetailed: FC<BaseSelectProps> = ({...baseSelectProps}) => {
+const SelectDetailed: SFC<BaseSelectProps> = ({...baseSelectProps}) => {
   const {className} = baseSelectProps;
 
   return (

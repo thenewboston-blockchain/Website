@@ -1,15 +1,15 @@
+import React, {ReactNode} from 'react';
 import clsx from 'clsx';
-import React, {FC, ReactNode} from 'react';
+import {SFC} from 'types/generic';
 
 import './DataTable.scss';
 
 type Props = {
-  className?: string;
   columns: ReactNode[];
   data: ReactNode[][];
 };
 
-const DataTable: FC<Props> = ({className, columns, data}) => {
+const DataTable: SFC<Props> = ({className, columns, data}) => {
   const renderTableHeaders = (cols: ReactNode[]): ReactNode => {
     return (
       <>

@@ -1,17 +1,18 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
-import React, {FC} from 'react';
+import React from 'react';
 import {Field} from 'formik';
 import clsx from 'clsx';
 
 import {BaseInputProps, TextArea} from 'components/FormElements';
 import {useFormContext} from 'hooks';
 import {BaseFormComponentProps} from 'types/forms';
+import {SFC} from 'types/generic';
 import {renderFormError, renderFormLabel} from 'utils/forms';
 
 type ComponentProps = BaseFormComponentProps<BaseInputProps>;
 
-const FormTextArea: FC<ComponentProps> = ({hideErrorText = false, label, required = false, ...baseInputProps}) => {
+const FormTextArea: SFC<ComponentProps> = ({hideErrorText = false, label, required = false, ...baseInputProps}) => {
   const {className, name} = baseInputProps;
   const {errors, touched} = useFormContext();
   const error = !!errors[name] && !!touched[name];

@@ -1,11 +1,11 @@
-import React, {FC, useEffect, useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import clsx from 'clsx';
 import {bemify} from '@thenewboston/utils';
+import {SFC} from 'types/generic';
 
 import './Button.scss';
 
 export interface BaseButtonProps {
-  className?: string;
   color?: 'primary' | 'secondary' | 'tertiary';
   disabled?: boolean;
   focused?: boolean;
@@ -14,7 +14,7 @@ export interface BaseButtonProps {
   variant?: 'contained' | 'link' | 'outlined';
 }
 
-const Button: FC<BaseButtonProps> = ({
+const Button: SFC<BaseButtonProps> = ({
   children,
   color = 'primary',
   className,

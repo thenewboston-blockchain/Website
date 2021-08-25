@@ -1,13 +1,13 @@
-import React, {FC, ReactNode} from 'react';
+import React, {ReactNode} from 'react';
 import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
 import {bemify} from '@thenewboston/utils';
+import {SFC} from 'types/generic';
 
 import './A.scss';
 
 interface ComponentProps {
   children?: ReactNode;
-  className?: string;
   dataTestId?: string;
   href: string;
   newWindow?: boolean;
@@ -15,7 +15,7 @@ interface ComponentProps {
   iconSize?: number;
 }
 
-const A: FC<ComponentProps> = ({
+const A: SFC<ComponentProps> = ({
   children,
   className,
   dataTestId = 'A',

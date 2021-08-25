@@ -2,9 +2,10 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
+import {ClassName} from 'types/generic';
 import DocSubSection, {DocSubSectionProps} from './index';
 
-const props: DocSubSectionProps = {
+const props: DocSubSectionProps & ClassName = {
   className: 'className-test',
   id: 'id-test',
   title: 'title-test',

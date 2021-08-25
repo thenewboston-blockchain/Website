@@ -1,11 +1,11 @@
-import React, {FC} from 'react';
+import React from 'react';
 import clsx from 'clsx';
 
 import {Label} from 'components';
+import {SFC} from 'types/generic';
 import './LabelFilter.scss';
 
 export interface LabelFilterProps {
-  className?: string;
   handleLabelClick(labelName: string): () => void;
   selectedLabelNames: string[];
 }
@@ -21,7 +21,7 @@ const LABEL_COLORS = {
 
 const DEFAULT_LABEL_COLOR = 'e3e8ee';
 
-const LabelFilter: FC<LabelFilterProps> = ({className, handleLabelClick, selectedLabelNames}) => {
+const LabelFilter: SFC<LabelFilterProps> = ({className, handleLabelClick, selectedLabelNames}) => {
   const renderLabels = () => {
     return Object.entries(LABEL_COLORS).map(([labelName, hexColor]) => (
       <button

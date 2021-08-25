@@ -1,17 +1,17 @@
-import React, {FC, ReactNode} from 'react';
+import React, {ReactNode} from 'react';
 import clsx from 'clsx';
 import {bemify} from '@thenewboston/utils';
+import {SFC} from 'types/generic';
 
 import './TableVertical.scss';
 
 export interface TableVerticalProps {
   altColors?: boolean;
-  className?: string;
   innerBorders?: boolean;
   rows: ReactNode[][];
 }
 
-const TableVertical: FC<TableVerticalProps> = ({altColors = false, className, innerBorders = false, rows}) => {
+const TableVertical: SFC<TableVerticalProps> = ({altColors = false, className, innerBorders = false, rows}) => {
   const renderBody = (): ReactNode => {
     return (
       <tbody

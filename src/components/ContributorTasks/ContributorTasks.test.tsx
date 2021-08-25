@@ -2,9 +2,10 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
+import {ClassName} from 'types/generic';
 import ContributorTasks, {ContributorTasksProps} from '.';
 
-const props: ContributorTasksProps = {
+const props: ContributorTasksProps & ClassName = {
   className: 'test',
   tasks: [
     {

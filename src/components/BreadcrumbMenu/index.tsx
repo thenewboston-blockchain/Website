@@ -1,20 +1,20 @@
-import React, {FC, ReactNode, useEffect, useState} from 'react';
+import React, {ReactNode, useEffect, useState} from 'react';
 import useOnclickOutside from 'react-cool-onclickoutside';
 import {useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
 
 import {Shadow} from 'components';
+import {SFC} from 'types/generic';
 import './BreadcrumbMenu.scss';
 
 interface ComponentProps {
-  className?: string;
   menuItems: ReactNode;
   pageName: string;
   sectionName: string;
 }
 
-const BreadcrumbMenu: FC<ComponentProps> = ({className, menuItems, pageName, sectionName}) => {
+const BreadcrumbMenu: SFC<ComponentProps> = ({className, menuItems, pageName, sectionName}) => {
   const {pathname} = useLocation();
   const [open, setOpen] = useState(false);
 

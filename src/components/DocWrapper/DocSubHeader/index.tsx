@@ -1,13 +1,10 @@
-import React, {FC} from 'react';
+import React from 'react';
 import clsx from 'clsx';
+import {SFC} from 'types/generic';
 
 import './DocSubHeader.scss';
 
-interface ComponentProps {
-  className?: string;
-}
-
-const DocSubHeader: FC<ComponentProps> = ({children, className}) => {
+const DocSubHeader: SFC = ({children, className}) => {
   return (
     <h3 className={clsx('DocSubHeader', className)} data-testid="DocSubHeader">
       {children}

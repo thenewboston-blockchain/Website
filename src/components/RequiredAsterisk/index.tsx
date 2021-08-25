@@ -1,13 +1,10 @@
-import React, {FC, memo} from 'react';
+import React, {memo} from 'react';
 import clsx from 'clsx';
+import {SFC} from 'types/generic';
 
 import './RequiredAsterisk.scss';
 
-interface ComponentProps {
-  className?: string;
-}
-
-const RequiredAsterisk: FC<ComponentProps> = ({className}) => {
+const RequiredAsterisk: SFC = ({className}) => {
   return (
     <span data-testid="RequiredAsterisk" className={clsx('RequiredAsterisk', className)}>
       *

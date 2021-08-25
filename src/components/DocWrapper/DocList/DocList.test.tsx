@@ -2,9 +2,10 @@ import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
+import {ClassName} from 'types/generic';
 import DocList, {DocListProps} from './index';
 
-const props: DocListProps = {
+const props: DocListProps & ClassName = {
   className: 'test-class',
   variant: 'ul',
 };

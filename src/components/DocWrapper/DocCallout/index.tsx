@@ -1,9 +1,10 @@
-import React, {FC, useMemo} from 'react';
+import React, {useMemo} from 'react';
 import clsx from 'clsx';
 import capitalize from 'lodash/capitalize';
 import {Icon, IconType} from '@thenewboston/ui';
 import {bemify} from '@thenewboston/utils';
 
+import {SFC} from 'types/generic';
 import './DocCallout.scss';
 
 export enum CalloutType {
@@ -13,11 +14,10 @@ export enum CalloutType {
 }
 
 export interface DocCalloutProps {
-  className?: string;
   type: CalloutType;
 }
 
-const DocCallout: FC<DocCalloutProps> = ({children, className, type}) => {
+const DocCallout: SFC<DocCalloutProps> = ({children, className, type}) => {
   const modifier = useMemo<string>(() => `--${type}`, [type]);
 
   const icon = useMemo(() => {
