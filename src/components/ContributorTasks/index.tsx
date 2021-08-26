@@ -1,17 +1,17 @@
-import React, {FC} from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import format from 'date-fns/format';
 
 import {A} from 'components';
+import {SFC} from 'types/generic';
 import {Task} from 'types/github';
 import './ContributorTasks.scss';
 
 export interface ContributorTasksProps {
-  className?: string;
   tasks: Task[];
 }
 
-const ContributorTasks: FC<ContributorTasksProps> = ({className, tasks}) => {
+const ContributorTasks: SFC<ContributorTasksProps> = ({className, tasks}) => {
   const renderRows = () => {
     return tasks.map(({amount_paid, completed_date, issue_id, repository, title}: Task, index) => (
       <tr key={index} data-testid="ContributorTasks__row">

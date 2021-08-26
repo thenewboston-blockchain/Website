@@ -7,20 +7,18 @@ import {createMemoryHistory} from 'history';
 
 import store from 'store';
 
-import Layout, {LayoutProps} from '.';
+import Layout from '.';
 
 const Wrapper: FC = ({children}) => <Provider store={store}>{children}</Provider>;
 
-const baseProps: LayoutProps = {
-  children: (
-    <>
-      <h1>Hello World!</h1>
-      <div id="tnb" data-testid="hash-test">
-        Hello TNB!
-      </div>
-    </>
-  ),
-};
+const testNode = (
+  <>
+    <h1>Hello World!</h1>
+    <div id="tnb" data-testid="hash-test">
+      Hello TNB!
+    </div>
+  </>
+);
 
 describe('Layout component', () => {
   beforeAll(() => {
@@ -37,7 +35,7 @@ describe('Layout component', () => {
     const history = createMemoryHistory();
     render(
       <Router history={history}>
-        <Layout {...baseProps} />
+        <Layout>{testNode}</Layout>
       </Router>,
       {wrapper: Wrapper},
     );
@@ -49,7 +47,7 @@ describe('Layout component', () => {
     const history = createMemoryHistory();
     render(
       <Router history={history}>
-        <Layout {...baseProps} />
+        <Layout>{testNode}</Layout>
       </Router>,
       {wrapper: Wrapper},
     );
@@ -62,7 +60,7 @@ describe('Layout component', () => {
     const history = createMemoryHistory();
     render(
       <Router history={history}>
-        <Layout {...baseProps} />
+        <Layout>{testNode}</Layout>
       </Router>,
       {wrapper: Wrapper},
     );
@@ -75,7 +73,7 @@ describe('Layout component', () => {
     history.push('/home#tnb');
     render(
       <Router history={history}>
-        <Layout {...baseProps} />
+        <Layout>{testNode}</Layout>
       </Router>,
       {wrapper: Wrapper},
     );

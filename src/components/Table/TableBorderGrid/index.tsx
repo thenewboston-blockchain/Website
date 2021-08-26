@@ -1,17 +1,17 @@
-import React, {FC, ReactNode} from 'react';
+import React, {ReactNode} from 'react';
 import clsx from 'clsx';
 import {bemify} from '@thenewboston/utils';
+import {SFC} from 'types/generic';
 
 import './TableBorderGrid.scss';
 
 export interface TableBorderGridProps {
-  className?: string;
   headers?: ReactNode[];
   rows: ReactNode[][];
   title?: ReactNode;
 }
 
-const TableBorderGrid: FC<TableBorderGridProps> = ({className, headers, rows, title}) => {
+const TableBorderGrid: SFC<TableBorderGridProps> = ({className, headers, rows, title}) => {
   const renderBody = (): ReactNode => {
     return (
       <tbody className={clsx('TableBorderGrid__tbody', {...bemify(className, '__tbody')})}>

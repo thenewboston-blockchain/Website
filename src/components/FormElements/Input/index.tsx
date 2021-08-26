@@ -1,12 +1,12 @@
-import React, {ChangeEvent, FC, FocusEvent, useEffect, useRef} from 'react';
+import React, {ChangeEvent, FocusEvent, useEffect, useRef} from 'react';
 import clsx from 'clsx';
 import {bemify} from '@thenewboston/utils';
+import {SFC} from 'types/generic';
 
 import './Input.scss';
 
 export interface BaseInputProps {
   autoComplete?: 'email' | 'current-password' | 'new-password';
-  className?: string;
   disabled?: boolean;
   error?: boolean;
   focused?: boolean;
@@ -20,7 +20,7 @@ export interface BaseInputProps {
   value: string;
 }
 
-const Input: FC<BaseInputProps> = ({
+const Input: SFC<BaseInputProps> = ({
   autoComplete,
   className,
   disabled = false,

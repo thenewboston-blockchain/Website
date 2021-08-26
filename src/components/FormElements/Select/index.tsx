@@ -1,18 +1,18 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
-import React, {FC, ReactNode, useMemo} from 'react';
+import React, {ReactNode, useMemo} from 'react';
 import ReactSelect, {ActionMeta, FocusEventHandler, FormatOptionLabelMeta} from 'react-select';
 import ReactSelectCreatable from 'react-select/creatable';
 import {ValueType} from 'react-select/src/types';
 import clsx from 'clsx';
 import {bemify} from '@thenewboston/utils';
 
+import {SFC} from 'types/generic';
 import {InputOption} from 'types/forms';
 
 import './Select.scss';
 
 export interface BaseSelectProps {
-  className?: string;
   clearable?: boolean;
   creatable?: boolean;
   disabled?: boolean;
@@ -32,7 +32,7 @@ interface ComponentProps extends BaseSelectProps {
   formatOptionLabel?(option: InputOption, labelMeta: FormatOptionLabelMeta<InputOption>): ReactNode;
 }
 
-const Select: FC<ComponentProps> = ({
+const Select: SFC<ComponentProps> = ({
   className,
   clearable = false,
   creatable = false,

@@ -2,18 +2,18 @@ import React from 'react';
 import clsx from 'clsx';
 import {bemify} from '@thenewboston/utils';
 
+import {SFC} from 'types/generic';
 import {NavOption} from 'types/option';
 
 import './FlatNavLinks.scss';
 
 export interface FlatNavLinksProps {
-  className?: string;
   handleOptionClick(option: string): () => void;
   options: NavOption[];
   selectedOption: string;
 }
 
-function FlatNavLinks({className, handleOptionClick, options, selectedOption}: FlatNavLinksProps) {
+const FlatNavLinks: SFC<FlatNavLinksProps> = ({className, handleOptionClick, options, selectedOption}) => {
   const renderOptions = () => {
     return options.map((option: NavOption) => (
       <button
@@ -35,6 +35,6 @@ function FlatNavLinks({className, handleOptionClick, options, selectedOption}: F
       {renderOptions()}
     </div>
   );
-}
+};
 
 export default FlatNavLinks;

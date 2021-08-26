@@ -1,13 +1,10 @@
-import React, {FC} from 'react';
+import React from 'react';
 import clsx from 'clsx';
+import {SFC} from 'types/generic';
 
 import './DocInlineCode.scss';
 
-interface ComponentProps {
-  className?: string;
-}
-
-const DocInlineCode: FC<ComponentProps> = ({children, className}) => {
+const DocInlineCode: SFC = ({children, className}) => {
   return (
     <code className={clsx('DocInlineCode', className)} data-testid="DocInlineCode">
       {children}

@@ -1,15 +1,15 @@
-import React, {FC, ReactNode, useEffect, useState} from 'react';
+import React, {ReactNode, useEffect, useState} from 'react';
 import clsx from 'clsx';
 import QrCode from 'qrcode';
+import {SFC} from 'types/generic';
 
 interface ComponentProps {
-  className?: string;
   margin?: number;
   text: string;
   width?: number;
 }
 
-const Qr: FC<ComponentProps> = ({className, margin = 0, text, width = 140}) => {
+const Qr: SFC<ComponentProps> = ({className, margin = 0, text, width = 140}) => {
   const [qr, setQr] = useState<ReactNode | null>(null);
 
   useEffect(() => {

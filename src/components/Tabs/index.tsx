@@ -1,5 +1,6 @@
-import React, {FC, ReactNode, useState} from 'react';
+import React, {ReactNode, useState} from 'react';
 import clsx from 'clsx';
+import {SFC} from 'types/generic';
 
 import './Tabs.scss';
 
@@ -14,7 +15,7 @@ export interface TabsProps {
   latestReleaseNumber: number | null;
 }
 
-const Tabs: FC<TabsProps> = ({defaultTab = 0, tabs, latestReleaseNumber}) => {
+const Tabs: SFC<TabsProps> = ({className, defaultTab = 0, tabs, latestReleaseNumber}) => {
   const [activeTab, setActiveTab] = useState<number>(defaultTab);
 
   const renderTabs = (): ReactNode => {
@@ -41,7 +42,7 @@ const Tabs: FC<TabsProps> = ({defaultTab = 0, tabs, latestReleaseNumber}) => {
   };
 
   return (
-    <div className="Tabs" data-testid="Tabs">
+    <div className={clsx('Tabs', className)} data-testid="Tabs">
       {renderTabs()}
       <p
         className="Download__latest-version"

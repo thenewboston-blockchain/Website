@@ -1,7 +1,8 @@
-import React, {FC} from 'react';
+import React from 'react';
 import {NavLink} from 'react-router-dom';
 
 import {MenuGroup} from 'components';
+import {SFC} from 'types/generic';
 import {NavigationItem} from 'types/navigation';
 
 export const walletNavigationData = [
@@ -39,7 +40,7 @@ export const walletNavigationData = [
   },
 ];
 
-const DocsMenuItems: FC = () => {
+const DocsMenuItems: SFC = () => {
   const renderNavLinks = (navigationData: NavigationItem[]) => {
     return navigationData.map(({name, url}) => (
       <NavLink key={url} to={url}>

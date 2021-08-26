@@ -1,19 +1,19 @@
-import React, {FC, ReactNode} from 'react';
+import React, {ReactNode} from 'react';
 import clsx from 'clsx';
 import {bemify} from '@thenewboston/utils';
 
 import {HashLink} from 'components';
+import {SFC} from 'types/generic';
 
 import './DocContainer.scss';
 
 export interface DocContainerProps {
-  className?: string;
   id?: string;
   lastUpdated?: string;
   title: ReactNode;
 }
 
-const DocContainer: FC<DocContainerProps> = ({children, className, id, lastUpdated, title}) => {
+const DocContainer: SFC<DocContainerProps> = ({children, className, id, lastUpdated, title}) => {
   return (
     <section className={clsx('DocContainer', className)} data-testid="DocContainer">
       <div

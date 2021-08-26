@@ -1,4 +1,6 @@
-import React, {FC, ReactNode} from 'react';
+import React, {ReactNode} from 'react';
+import clsx from 'clsx';
+import {SFC} from 'types/generic';
 
 import './AuthContainer.scss';
 
@@ -8,9 +10,9 @@ export interface AuthContainerProps {
   heading: string;
 }
 
-const AuthContainer: FC<AuthContainerProps> = ({children, errorMessage, heading}) => {
+const AuthContainer: SFC<AuthContainerProps> = ({children, className, errorMessage, heading}) => {
   return (
-    <div className="AuthContainer" data-testid="AuthContainer">
+    <div className={clsx('AuthContainer', className)} data-testid="AuthContainer">
       <h2>{heading}</h2>
       {errorMessage && (
         <div className="AuthContainer__error-message" data-testid="AuthContainer__error-message">

@@ -1,15 +1,15 @@
-import React, {FC} from 'react';
+import React from 'react';
 import clsx from 'clsx';
+import {SFC} from 'types/generic';
 
 import './ProgressBar.scss';
 
 type Props = {
-  className?: string;
   height?: number;
   percentage: number;
 };
 
-const ProgressBar: FC<Props> = ({className, height, percentage}) => {
+const ProgressBar: SFC<Props> = ({className, height, percentage}) => {
   return (
     <div className={clsx(className, 'ProgressBar__bar')} style={{height}}>
       <div

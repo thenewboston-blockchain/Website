@@ -1,14 +1,11 @@
-import React, {FC, memo} from 'react';
+import React, {memo} from 'react';
 import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
+import {SFC} from 'types/generic';
 
 import './Loader.scss';
 
-interface ComponentProps {
-  className?: string;
-}
-
-const Loader: FC<ComponentProps> = ({className}) => {
+const Loader: SFC = ({className}) => {
   return <Icon className={clsx('Loader', className)} icon={IconType.loading} size={15.35} dataTestId="Loader" />;
 };
 

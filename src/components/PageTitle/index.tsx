@@ -1,13 +1,14 @@
-import React, {FC} from 'react';
+import React from 'react';
 import {Helmet} from 'react-helmet-async';
+import {SFC} from 'types/generic';
 
 export interface PageTitleProps {
-  title: string;
   ogDescription?: string;
   ogImageUrl?: string;
   ogTitle?: string;
   ogType?: 'website' | 'article' | 'profile' | 'book';
   ogUrl?: string;
+  title: string;
 }
 
 export const defaultOg = {
@@ -18,20 +19,22 @@ export const defaultOg = {
   url: 'https://www.thenewboston.com/',
 };
 
-const PageTitle: FC<PageTitleProps> = ({
-  title,
+const PageTitle: SFC<PageTitleProps> = ({
   ogDescription = defaultOg.description,
   ogImageUrl = defaultOg.imageUrl,
-  ogTitle = `${title} | thenewboston`,
+  ogTitle,
   ogType = defaultOg.type,
   ogUrl = defaultOg.url,
+  title,
 }) => {
+  const titleToUse = `${title} | thenewboston`;
+  const ogTitleToUse = ogTitle || titleToUse;
   return (
     <Helmet>
-      <title>{title} | thenewboston</title>
+      <title>{titleToUse}</title>
       <meta name="description" property="og:description" content={ogDescription} />
       <meta property="og:image" content={ogImageUrl} />
-      <meta property="og:title" content={ogTitle} />
+      <meta property="og:title" content={ogTitleToUse} />
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={ogUrl} />
     </Helmet>

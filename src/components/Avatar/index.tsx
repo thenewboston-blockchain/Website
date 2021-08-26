@@ -1,20 +1,13 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
-import React, {FC, Suspense, useEffect, useState} from 'react';
+import React, {Suspense, useEffect, useState} from 'react';
 import {useImage} from 'react-image';
 import clsx from 'clsx';
 
 import DefaultUserAvatar from 'assets/images/default-avatar.png';
+import {SFC} from 'types/generic';
 
 import './Avatar.scss';
-
-export interface AvatarProps {
-  bordered?: boolean;
-  className?: string;
-  size: number;
-  src: string;
-  onClick?(): void;
-}
 
 export const getImageSizeBasedOnDeviceRatio = (size: number): number => {
   const {devicePixelRatio} = window;
@@ -35,7 +28,14 @@ export const getFormattedSrc = (src: string, size: number): string => {
   }
 };
 
-const AvatarImgWithFallback: FC<AvatarProps> = ({bordered, className, onClick, size, src}) => {
+export interface AvatarProps {
+  bordered?: boolean;
+  size: number;
+  src: string;
+  onClick?(): void;
+}
+
+const AvatarImgWithFallback: SFC<AvatarProps> = ({bordered, className, onClick, size, src}) => {
   const [srcPrimary, setSrcPrimary] = useState<string>('');
   const {src: srcWithFallback} = useImage({srcList: [srcPrimary, DefaultUserAvatar]});
 
@@ -58,7 +58,7 @@ const AvatarImgWithFallback: FC<AvatarProps> = ({bordered, className, onClick, s
   );
 };
 
-const Avatar: FC<AvatarProps> = ({className, size, ...props}) => {
+const Avatar: SFC<AvatarProps> = ({className, size, ...props}) => {
   return (
     <Suspense
       fallback={

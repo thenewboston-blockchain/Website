@@ -1,7 +1,9 @@
-import React, {FC} from 'react';
+import React from 'react';
 import {NavLink, useLocation} from 'react-router-dom';
+import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
 
+import {SFC} from 'types/generic';
 import {NavigationItem} from 'types/navigation';
 import './Pagination.scss';
 
@@ -9,7 +11,7 @@ export interface PaginationProps {
   navigationData: NavigationItem[];
 }
 
-const Pagination: FC<PaginationProps> = ({navigationData}) => {
+const Pagination: SFC<PaginationProps> = ({className, navigationData}) => {
   const location = useLocation();
 
   const renderNextLink = () => {
@@ -37,7 +39,7 @@ const Pagination: FC<PaginationProps> = ({navigationData}) => {
   };
 
   return (
-    <div className="Pagination" data-testid="Pagination">
+    <div className={clsx('Pagination', className)} data-testid="Pagination">
       {renderPreviousLink()}
       {renderNextLink()}
     </div>

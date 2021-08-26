@@ -1,8 +1,9 @@
-import React, {FC} from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import {bemify} from '@thenewboston/utils';
 
 import {A} from 'components';
+import {SFC} from 'types/generic';
 import {SocialMedia} from 'types/social-media';
 import {socialMediaUrls} from 'utils/social-media';
 
@@ -20,12 +21,11 @@ import YouTubeLogo from './logos/YouTubeLogo.png';
 import './MarketingButton.scss';
 
 interface ComponentProps {
-  className?: string;
   customLink?: string;
   website: SocialMedia;
 }
 
-const MarketingButton: FC<ComponentProps> = ({className, customLink, website}) => {
+const MarketingButton: SFC<ComponentProps> = ({className, customLink, website}) => {
   const renderImage = (src: any) => (
     <img
       alt={website}
