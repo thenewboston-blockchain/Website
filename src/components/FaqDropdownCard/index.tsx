@@ -1,4 +1,4 @@
-import React, {ReactNode, useEffect} from 'react';
+import React, {ReactNode, SyntheticEvent, useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 import {Icon, IconType} from '@thenewboston/ui';
 
@@ -27,7 +27,13 @@ const FaqDropdownCard: SFC<Props> = ({answer, className, id, question}) => {
       <S.Anchor className="FaqDropdownCard__anchor" id={id} />
       <S.DropdownContainer>
         <S.LeftContainer>
-          <S.Question to={`${pathname}#${id}`} onClick={toggleExpanded}>
+          <S.Question
+            to={`${pathname}#${id}`}
+            onClick={(e: SyntheticEvent) => {
+              e.preventDefault();
+              toggleExpanded();
+            }}
+          >
             {question}
           </S.Question>
           <S.HashLink className="FaqDropdownCard__HashLink" id={id} />
