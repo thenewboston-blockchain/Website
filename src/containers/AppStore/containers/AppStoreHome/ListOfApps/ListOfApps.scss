@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: /* eslint-disable-next-line declaration-colon-space-after */
     minmax($card-min-width-original, $card-width-original) minmax($card-min-width-original, $card-width-original)
-    minmax($card-min-width-original, $card-width-original);
+    minmax($card-min-width-original, $card-width-original) minmax($card-min-width-original, $card-width-original);
   justify-content: space-between;
   justify-items: center;
   margin-bottom: 120px;
@@ -13,6 +13,9 @@
   row-gap: 120px;
 
   @media (max-width: 1366px) {
+    grid-template-columns: /* eslint-disable-next-line declaration-colon-space-after */
+      minmax($card-min-width-original, $card-width-original) minmax($card-min-width-original, $card-width-original)
+      minmax($card-min-width-original, $card-width-original);
     padding: 0 48px;
   }
 

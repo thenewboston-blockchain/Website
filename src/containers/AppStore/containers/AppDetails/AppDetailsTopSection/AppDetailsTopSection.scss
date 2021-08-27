@@ -1,14 +1,21 @@
 @import 'styles/font-mixins';
 
 .AppDetailsTopSection {
-  padding: 48px 0;
+  background-image: url('../../../assets/AppDetailsHeroBg.png');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
 
-  @media (max-width: 1366px) {
-    padding: 48px;
-  }
+  &__container {
+    padding: 48px 0;
 
-  @media (max-width: 992px) {
-    padding: 24px;
+    @media (max-width: 1366px) {
+      padding: 48px;
+    }
+
+    @media (max-width: 992px) {
+      padding: 24px;
+    }
   }
 
   &__back {

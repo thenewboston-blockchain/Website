@@ -5,29 +5,39 @@
   display: flex;
   justify-content: center;
   min-height: 352px;
+  overflow-y: hidden;
+  position: relative;
 
   &__container {
     align-items: center;
     display: flex;
     justify-content: space-between;
+    overflow-x: hidden;
     width: 100%;
 
-    @media (max-width: 1366px) {
-      padding: 48px;
-    }
-
     @media (max-width: 768px) {
-      align-items: center;
       flex-direction: column;
-      padding: 48px 24px;
     }
   }
 
   &__left {
     margin-right: 48px;
+    padding-left: 48px;
+
+    @media (max-width: 992px) {
+      margin-right: 0;
+    }
 
     @media (max-width: 768px) {
-      margin-right: 0;
+      align-self: flex-start;
+      margin-top: 56px;
+      padding: 0 24px;
+    }
+
+    &-tnb {
+      @extend %h3;
+      color: #ffcd5c;
+      font-weight: var(--font-weight-regular);
     }
 
     &-subtitle {
@@ -39,7 +49,6 @@
 
       @media (max-width: 768px) {
         margin-bottom: 48px;
-        text-align: center;
       }
     }
 
@@ -47,24 +56,70 @@
       @extend %display2;
       font-weight: var(--font-weight-bold);
       line-height: 1.25;
-
-      @media (max-width: 768px) {
-        text-align: center;
-      }
+      margin-top: 8px;
     }
   }
 
   &__right {
-    @media (max-width: 768px) {
-      max-width: 100%;
+    @media (max-width: 992px) {
+      align-self: flex-end;
+      max-width: 400px;
     }
 
-    &-image {
-      max-width: 695px;
-      width: 100%;
+    @media (max-width: 768px) {
+      bottom: -30px;
+      max-width: 100%;
+      position: relative;
+      right: -40px;
+    }
+  }
+
+  &__outside {
+    max-height: 100%;
+    position: absolute;
+    right: 0;
+  }
+
+  &__circle {
+    &-orange {
+      background-color: #febbbaf0;
+      border-radius: 50%;
+      bottom: -150px;
+      height: 200px;
+      left: 50px;
+      position: absolute;
+      width: 200px;
+      z-index: 2;
 
       @media (max-width: 768px) {
-        max-width: 100%;
+        bottom: -165px;
+        left: -20px;
+      }
+    }
+
+    &-yellow {
+      align-items: center;
+      border: 1px dashed #ffcd5c;
+      border-radius: 50%;
+      bottom: -110px;
+      display: flex;
+      height: 220px;
+      justify-content: center;
+      left: -50px;
+      position: absolute;
+      width: 220px;
+      z-index: 1;
+
+      @media (max-width: 768px) {
+        bottom: -135px;
+        left: -90px;
+      }
+
+      &--inner {
+        background-color: #ffcd5c;
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
       }
     }
   }

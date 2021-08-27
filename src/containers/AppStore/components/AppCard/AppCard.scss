@@ -1,26 +1,21 @@
 @import 'styles/font-mixins';
 
 .AppCard {
-  border-radius: 8px;
-  box-shadow: 0px 0px 22px rgba(4, 34, 53, 0.11);
   cursor: pointer;
   height: 100%;
-  padding: 16px;
   position: relative;
+  transition: transform 0.2s;
   width: 100%;
 
   &:hover {
-    box-shadow: 0 7px 40px 0 #e9effd;
+    transform: scale(1.03);
   }
 
   &__banner {
+    border-radius: 8px;
     height: 195px;
     object-fit: cover;
     width: 100%;
-  }
-
-  &__avatar {
-    margin-right: 20px;
   }
 
   &__bottom-container {
@@ -33,21 +28,31 @@
     flex-direction: column;
   }
 
+  &__app-title-description-container {
+    min-height: 114px;
+  }
+
   &__app-title {
-    @extend %h2;
+    @extend %h3;
     color: var(--color-gray-800);
     font-weight: var(--font-weight-medium);
     margin-bottom: 8px;
   }
 
   &__app-description {
-    @extend %body1;
+    @extend %body3;
+    -webkit-box-orient: vertical;
     color: var(--color-gray-500);
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* max number of lines to show */
     margin: 0;
     margin-bottom: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__app-website {
+    @extend %body1;
     align-items: center;
     cursor: pointer;
     display: flex;

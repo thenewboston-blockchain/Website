@@ -1,7 +1,6 @@
 import React, {FC, useState} from 'react';
 import {useHistory} from 'react-router';
 import {Icon, IconType} from '@thenewboston/ui';
-import {Avatar} from 'components';
 
 import './AppCard.scss';
 
@@ -9,12 +8,11 @@ type Props = {
   bannerUrl: string;
   description: string;
   id: string;
-  logoUrl: string;
   title: string;
   websiteUrl: string;
 };
 
-const AppCard: FC<Props> = ({bannerUrl, description, id, logoUrl, title, websiteUrl}) => {
+const AppCard: FC<Props> = ({bannerUrl, description, id, title, websiteUrl}) => {
   const [isHovered, setIsHovered] = useState(false);
   const history = useHistory();
 
@@ -31,10 +29,11 @@ const AppCard: FC<Props> = ({bannerUrl, description, id, logoUrl, title, website
     <div className="AppCard" role="button" onClick={handleClickCard} tabIndex={0}>
       <img alt={title} className="AppCard__banner" loading="lazy" src={bannerUrl} />
       <div className="AppCard__bottom-container">
-        <Avatar className="AppCard__avatar" src={logoUrl} shape="square" size={56} />
         <div className="AppCard__details-container">
-          <h1 className="AppCard__app-title">{title}</h1>
-          <p className="AppCard__app-description">{description}</p>
+          <div className="AppCard__app-title-description-container">
+            <h1 className="AppCard__app-title">{title}</h1>
+            <p className="AppCard__app-description">{description}</p>
+          </div>
           <div
             className="AppCard__app-website"
             role="button"
