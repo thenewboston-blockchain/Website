@@ -44,7 +44,7 @@ const communityPopoverItems: TopNavPopoverItemType[] = [
   },
   {
     description: 'Tasks to finish up beta app',
-    iconType: IconType.chartAreaspline,
+    iconType: IconType.mapMarkerCheck,
     title: 'Beta Roadmap',
     to: '/roadmap',
   },
