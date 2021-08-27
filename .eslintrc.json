@@ -18,6 +18,7 @@
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
+  "ignorePatterns": ["config-overrides.js"],
   "overrides": [
     {
       "files": ["*.test.tsx"],
