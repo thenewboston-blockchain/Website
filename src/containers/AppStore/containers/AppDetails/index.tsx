@@ -1,4 +1,9 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect, useState} from 'react';
+
+import {getAppById} from 'apis/app-store';
+import {Loader} from 'components';
+import {ApiProgress} from 'constants/api-progress';
+import {App} from 'types/app-store';
 
 import AppDetailsTopSection from './AppDetailsTopSection';
 import AppDetailsSlider from './AppDetailsSlider';
@@ -14,29 +19,43 @@ type Props = {
 };
 
 const AppDetails: FC<Props> = ({appId}) => {
-  // TODO: call API based on appId
+  const [app, setApp] = useState<App | null>(null);
+  const [progress, setProgress] = useState<ApiProgress>(ApiProgress.Init);
+
+  useEffect(() => {
+    (async function getApp() {
+      try {
+        setProgress(ApiProgress.Requesting);
+        const appResponse = await getAppById(appId);
+        setApp(appResponse);
+        setProgress(ApiProgress.Success);
+      } catch (err) {
+        setProgress(ApiProgress.Error);
+      }
+    })();
+  }, [appId]);
+
+  if (progress === ApiProgress.Error) {
+    return <div className="AppDetails__error">App is unavailable.</div>;
+  }
+
+  if (progress === ApiProgress.Requesting || progress === ApiProgress.Init || !app) {
+    return <Loader className="AppDetails__loader" />;
+  }
 
   return (
     <>
       <AppDetailsTopSection
-        description="Keep all your travel ideas in one place."
-        logoUrl={SampleAppLogo}
-        title="Portico"
-        websiteUrl="https://google.com"
+        description={app.description} // TODO: change this to tagline when ready
+        logoUrl={app.logo}
+        title={app.name}
+        websiteUrl={app.website}
       />
       <AppDetailsSlider
         className="AppDetails__slider"
-        imageUrls={[SampleAppBanner, SampleAppLogo, SampleAppBanner, SampleAppBanner, SampleAppBanner]}
+        imageUrls={[SampleAppBanner, SampleAppLogo, SampleAppBanner, SampleAppBanner, SampleAppBanner]} // TODO: change this to app.images when ready
       />
-      <AppDetailsOverview
-        className="AppDetails__overview"
-        description={`Keep all your travel ideas in one place.
-Portico helps you save, plan, organize and share amazing adventures. Built for the curious explorer, Portico is the ultimate tool for you (and your friends) to gather all your travel ideas and trip information in one place. Get inspired, get ready, and have some fun, even before you depart.
-
-Our goal is to inspire you to travel more and make it easier to do so. We believe the beauty of travel lies in being able to shed our life for a moment and to walk in another’s shoes, to better understand another culture. But travel planning can be overwhelming. We aim to simplify the trip planning process and make it more fun.
-
-Check out www.portico.travel to see the whole platform.`}
-      />
+      <AppDetailsOverview className="AppDetails__overview" description={app.description} />
     </>
   );
 };
