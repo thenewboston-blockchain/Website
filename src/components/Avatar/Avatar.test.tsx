@@ -19,13 +19,6 @@ describe('Avatar component', () => {
     expect(screen.getByTestId('Avatar--placeholder')).toBeTruthy();
   });
 
-  it('renders fallback image with default className', () => {
-    render(<Avatar {...baseProps} />);
-
-    expect(screen.getByTestId('Avatar--placeholder')).toHaveClass('Avatar');
-    expect(screen.getByTestId('Avatar--placeholder')).toHaveClass('Avatar--placeholder');
-  });
-
   it('renders fallback image with className passed in', () => {
     render(<Avatar className="test" {...baseProps} />);
 
