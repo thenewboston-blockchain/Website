@@ -2,12 +2,11 @@
 
 import React, {Suspense, useEffect, useState} from 'react';
 import {useImage} from 'react-image';
-import clsx from 'clsx';
 
 import DefaultUserAvatar from 'assets/images/default-avatar.png';
 import {SFC} from 'types/generic';
 
-import './Avatar.scss';
+import * as S from './Styles';
 
 export const getImageSizeBasedOnDeviceRatio = (size: number): number => {
   const {devicePixelRatio} = window;
@@ -44,9 +43,11 @@ const AvatarImgWithFallback: SFC<AvatarProps> = ({bordered, className, onClick, 
   }, [src, size]);
 
   return (
-    <img
+    <S.Avatar
       alt="Avatar"
-      className={clsx('Avatar', {'Avatar--bordered': bordered, 'Avatar--clickable': !!onClick}, className)}
+      bordered={bordered}
+      className={className}
+      clickable={!!onClick}
       crossOrigin="anonymous"
       data-testid="Avatar"
       height={size}
@@ -62,8 +63,8 @@ const Avatar: SFC<AvatarProps> = ({className, size, ...props}) => {
   return (
     <Suspense
       fallback={
-        <div
-          className={clsx('Avatar', 'Avatar--placeholder', className)}
+        <S.Placeholder
+          className={className}
           data-testid="Avatar--placeholder"
           style={{minHeight: size, minWidth: size}}
         />
