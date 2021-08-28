@@ -1,12 +1,12 @@
 import React from 'react';
 import {PrismLight as SyntaxHighlighter} from 'react-syntax-highlighter';
-import {duotoneDark, solarizedlight} from 'react-syntax-highlighter/dist/esm/styles/prism';
-import bashLang from 'react-syntax-highlighter/dist/esm/languages/prism/bash';
-import jsonLang from 'react-syntax-highlighter/dist/esm/languages/prism/json';
-import jsxLang from 'react-syntax-highlighter/dist/esm/languages/prism/jsx';
-import pythonLang from 'react-syntax-highlighter/dist/esm/languages/prism/python';
-import scssLang from 'react-syntax-highlighter/dist/esm/languages/prism/scss';
-import typescriptLang from 'react-syntax-highlighter/dist/esm/languages/prism/typescript';
+import {duotoneDark, solarizedlight} from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import bashLang from 'react-syntax-highlighter/dist/cjs/languages/prism/bash';
+import jsonLang from 'react-syntax-highlighter/dist/cjs/languages/prism/json';
+import jsxLang from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx';
+import pythonLang from 'react-syntax-highlighter/dist/cjs/languages/prism/python';
+import scssLang from 'react-syntax-highlighter/dist/cjs/languages/prism/scss';
+import typescriptLang from 'react-syntax-highlighter/dist/cjs/languages/prism/typescript';
 
 import {SFC} from 'types/generic';
 
