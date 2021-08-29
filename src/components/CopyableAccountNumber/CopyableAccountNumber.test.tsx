@@ -13,14 +13,9 @@ describe('CopyableAccountNumber', () => {
     expect(screen.getByTestId(baseTestId)).toBeTruthy();
   });
 
-  it('renders with default className', () => {
-    render(<CopyableAccountNumber accountNumber={BaseAccountNumber} />);
-    expect(screen.getByTestId(baseTestId)).toHaveClass('CopyableAccountNumber');
-  });
-
   it('renders with customClassName Custom', () => {
     render(<CopyableAccountNumber className="Custom" accountNumber={BaseAccountNumber} />);
-    expect(screen.getByTestId(baseTestId)).toHaveClass('CopyableAccountNumber Custom');
+    expect(screen.getByTestId(baseTestId)).toHaveClass('Custom');
   });
 
   it('renders with Account Number Text', () => {
@@ -31,19 +26,16 @@ describe('CopyableAccountNumber', () => {
   it('renders with CopyableAccountNumber__label', () => {
     render(<CopyableAccountNumber accountNumber={BaseAccountNumber} />);
     expect(screen.getByText(BaseAccountNumber)).toBeTruthy();
-    expect(screen.getByText(BaseAccountNumber)).toHaveClass('CopyableAccountNumber__account-number');
   });
 
   it('renders copy div', () => {
     render(<CopyableAccountNumber accountNumber={BaseAccountNumber} />);
     expect(screen.getByText('Copy')).toBeTruthy();
-    expect(screen.getByText('Copy')).toHaveClass('CopyableAccountNumber__copy-text');
   });
 
   it('renders icon', () => {
     render(<CopyableAccountNumber accountNumber={BaseAccountNumber} />);
     expect(screen.getByRole('img')).toBeTruthy();
-    expect(screen.getByRole('img')).toHaveClass('CopyableAccountNumber__copy-icon');
     expect(screen.getByRole('img')).toHaveClass('Icon');
   });
 });

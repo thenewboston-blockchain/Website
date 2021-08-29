@@ -51,33 +51,6 @@ describe('ContributorTasks', () => {
     expect(tasks.length).toBe(2);
   });
 
-  it('renders with default className', () => {
-    render(<ContributorTasks {...props} />);
-    const taskComp = screen.getByTestId(testIdTask);
-    const taskTitle = screen.getAllByTestId(testIdTitle);
-    const issueLink = screen.getAllByTestId(testIdLink);
-    const repo = screen.getAllByTestId(testIdRepo);
-    const dateCompleted = screen.getAllByTestId(testIdDate);
-    const amount = screen.getAllByTestId(testIdAmount);
-
-    expect(taskComp).toHaveClass(testIdTask);
-
-    expect(taskTitle[0]).toHaveClass(testIdTitle);
-    expect(taskTitle[1]).toHaveClass(testIdTitle);
-
-    expect(issueLink[0]).toHaveClass('ContributorTasks__issue-link');
-    expect(issueLink[1]).toHaveClass('ContributorTasks__issue-link');
-
-    expect(repo[0]).toHaveClass(testIdRepo);
-    expect(repo[1]).toHaveClass(testIdRepo);
-
-    expect(dateCompleted[0]).toHaveClass(testIdDate);
-    expect(dateCompleted[1]).toHaveClass(testIdDate);
-
-    expect(amount[0]).toHaveClass(testIdAmount);
-    expect(amount[1]).toHaveClass(testIdAmount);
-  });
-
   it('renders with passed in className', () => {
     render(<ContributorTasks {...props} />);
     const taskComp = screen.getByTestId(testIdTask);
