@@ -14,7 +14,7 @@ describe('DropdownInput component', () => {
   test('renders without crashing', () => {
     render(<DropdownInput {...BaseProps} />);
     const el = screen.getByTestId('DropdownInput');
-    expect(el.className).toContain('DropdownInput');
+    expect(el).toBeTruthy();
   });
 
   test('renders options', () => {
@@ -29,27 +29,6 @@ describe('DropdownInput component', () => {
     options.forEach((option, index) => {
       expect(option).toHaveValue(BaseProps.options[index]);
     });
-  });
-
-  test('renders options with classname', () => {
-    render(<DropdownInput {...BaseProps} />);
-    const options = screen.getAllByTestId('DropdownInput__option');
-    expect(options.length).toEqual(BaseProps.options.length);
-
-    options.forEach((option) => {
-      expect(option).toHaveClass('DropdownInput__option');
-    });
-  });
-
-  test('renders Icon with DropdownInput__chevron-down', () => {
-    render(<DropdownInput {...BaseProps} />);
-    const component = screen.getByTestId('DropdownInput');
-    expect(component.querySelector('.DropdownInput__chevron-down')).toBeTruthy();
-  });
-
-  test('renders select box with className DropdownInput__select-box', () => {
-    render(<DropdownInput {...BaseProps} />);
-    expect(screen.getByTestId('DropdownInput__select-box')).toHaveClass('DropdownInput__select-box');
   });
 
   test('change select value to be second', () => {
