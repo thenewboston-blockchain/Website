@@ -32,6 +32,25 @@ const Tools: FC = () => {
               <Icon icon={IconType.chevronRight} size={16} />
             </Button>
           </div>
+          <div className="Tools__tool">
+            <div className="Tools__tool-icon">
+              <ApiIcon size={36} />
+            </div>
+            <div className="Tools__tool-title">SDKs & Libraries</div>
+            <div className="Tools__tool-description">
+              This is the core of our technical documentation. If you develop in languages other than JavaScript and
+              Python, or if you prefer to work in Vanilla JavaScript or plain Python without using our SDKs and
+              Libraries, this is your starting point.
+            </div>
+            <Button
+              className="Tools__tool-button"
+              variant="outlined"
+              onClick={() => history.push('/developer/api/bank-api')}
+            >
+              Learn More
+              <Icon icon={IconType.chevronRight} size={16} />
+            </Button>
+          </div>
         </div>
       </Container>
     </div>
