@@ -45,7 +45,7 @@ const Tools: FC = () => {
             <Button
               className="Tools__tool-button"
               variant="outlined"
-              onClick={() => history.push('/developer/api/bank-api')}
+              onClick={() => history.push('/developer/sdks-and-libraries')}
             >
               Learn More
               <Icon icon={IconType.chevronRight} size={16} />

@@ -1,0 +1,36 @@
+@import 'styles/font-mixins';
+
+.SdksAndLibraries {
+  &__hero {
+    align-items: center;
+    background: url('./assets/hero-bg.webp');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    height: 248px;
+    justify-content: space-between;
+    margin-bottom: 72px;
+    padding: 48px 72px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      height: fit-content;
+      padding: 48px 24px;
+    }
+
+    &-left {
+      &-tnb {
+        @extend %h4;
+        color: var(--color-neutral-500);
+        font-weight: var(--font-weight-semibold);
+        letter-spacing: 2px;
+      }
+
+      &-title {
+        @extend %display2;
+        color: var(--color-cyan-900);
+        font-weight: var(--font-weight-semibold);
+      }
+    }
+  }
+}

@@ -27,6 +27,7 @@ import PrincipalEventsAndProcesses from './DeveloperPortal/containers/LivingWhit
 import PrivacyPolicy from './PrivacyPolicy';
 import Profile from './Profile';
 import Progress from './Progress';
+import SdksAndLibraries from './DeveloperPortal/containers/SdksAndLibraries';
 import SignIn from './SignIn';
 import SignOut from './SignOut';
 import Social from './Social';
@@ -88,6 +89,7 @@ const App: FC = () => {
             path="/developer/projects/approved-projects/:projectId?"
             component={DeveloperPortalApprovedProjects}
           />
+          <Route path="/developer/sdks-and-libraries" component={SdksAndLibraries} />
           <Route exact path="/developer/whitepaper" component={LivingWhitepaper} />
           <Route exact path="/developer/whitepaper/principal-entities/:chapter?" component={PrincipalEntities} />
           <Route
