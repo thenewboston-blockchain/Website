@@ -13,12 +13,17 @@
     padding: 48px 72px;
 
     @media (max-width: 768px) {
+      align-items: flex-start;
       flex-direction: column;
       height: fit-content;
       padding: 48px 24px;
     }
 
     &-left {
+      @media (max-width: 768px) {
+        margin-bottom: 32px;
+      }
+
       &-tnb {
         @extend %h4;
         color: var(--color-neutral-500);
@@ -30,6 +35,12 @@
         @extend %display2;
         color: var(--color-cyan-900);
         font-weight: var(--font-weight-semibold);
+      }
+    }
+
+    &-right {
+      @media (max-width: 768px) {
+        align-self: flex-end;
       }
     }
   }
