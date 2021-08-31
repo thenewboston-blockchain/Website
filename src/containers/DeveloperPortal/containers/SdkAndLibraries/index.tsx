@@ -4,6 +4,7 @@ import type {LibraryType} from 'types/libraries';
 
 import DeveloperPortalLayout from './components/DeveloperPortalLayout';
 import HeroImg from './assets/hero-img.svg';
+import TNBLogoImg from './assets/tnb-logo.svg';
 import {LIBRARIES, SDKS} from './constants';
 
 import './SdkAndLibraries.scss';
@@ -15,7 +16,7 @@ const SdkAndLibraries = () => {
         <div className="SdkAndLibraries__section-tile">
           <div className="SdkAndLibraries__section-tile-top">
             <div className="SdkAndLibraries__section-tile-top-pill">
-              <img className="SdkAndLibraries__section-tile-top-pill-img" src="" alt="TNB Icon" />
+              <img className="SdkAndLibraries__section-tile-top-pill-img" src={TNBLogoImg} alt="TNB Icon" />
               <h2 className="SdkAndLibraries__section-tile-top-pill-text">{item.language}</h2>
             </div>
           </div>
