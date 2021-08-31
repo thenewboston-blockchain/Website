@@ -38,9 +38,8 @@ const Tools: FC = () => {
             </div>
             <div className="Tools__tool-title">SDKs & Libraries</div>
             <div className="Tools__tool-description">
-              This is the core of our technical documentation. If you develop in languages other than JavaScript and
-              Python, or if you prefer to work in Vanilla JavaScript or plain Python without using our SDKs and
-              Libraries, this is your starting point.
+              Are you a JavaScript or Python developer? Are you ready to develop your awesome software for thenewboston
+              network? Our SDKs and Libraries will help you get started.
             </div>
             <Button
               className="Tools__tool-button"

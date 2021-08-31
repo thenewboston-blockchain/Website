@@ -1,8 +1,9 @@
-import React, {ReactNode} from 'react';
+import React, {ReactNode, useState} from 'react';
 
 import type {LibraryType} from 'types/libraries';
 
 import DeveloperPortalLayout from './components/DeveloperPortalLayout';
+import ConfirmationModal from './components/ConfirmationModal';
 import HeroImg from './assets/hero-img.svg';
 import TNBLogoImg from './assets/tnb-logo.svg';
 import {LIBRARIES, SDKS} from './constants';
@@ -10,10 +11,12 @@ import {LIBRARIES, SDKS} from './constants';
 import './SdkAndLibraries.scss';
 
 const SdkAndLibraries = () => {
+  const [goToUrl, setGoToUrl] = useState<string | null>(null);
+
   const renderTiles = (items: LibraryType[]): ReactNode => (
     <>
       {items.map((item) => (
-        <div className="SdkAndLibraries__section-tile">
+        <div className="SdkAndLibraries__section-tile" role="button" tabIndex={0} onClick={() => setGoToUrl(item.url)}>
           <div className="SdkAndLibraries__section-tile-top">
             <div className="SdkAndLibraries__section-tile-top-pill">
               <img className="SdkAndLibraries__section-tile-top-pill-img" src={TNBLogoImg} alt="TNB Icon" />
@@ -48,6 +51,7 @@ const SdkAndLibraries = () => {
         <h3 className="SdkAndLibraries__section-title">SDKs</h3>
         <div className="SdkAndLibraries__section-tiles">{renderTiles(SDKS)}</div>
       </section>
+      <ConfirmationModal url={goToUrl} onClose={() => setGoToUrl(null)} />
     </DeveloperPortalLayout>
   );
 };

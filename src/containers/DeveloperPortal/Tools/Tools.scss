@@ -67,6 +67,7 @@
     @extend %body1;
     color: var(--color-gray-500);
     margin-bottom: 24px;
+    max-width: 480px;
   }
 
   &__tool-button {
