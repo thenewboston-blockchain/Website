@@ -63,8 +63,8 @@ const Projects: FC = () => {
       <div className="Projects__main">
         <div className="Projects__main-title">Build with thenewboston</div>
         <div className="Projects__main-description">
-          Propose projects and work with thenewboston community. Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          Propose projects and work with thenewboston community to build apps, games, tools, and other software for
+          thenewboston network.
         </div>
         <div className="Projects__main-buttons">
           <Button
