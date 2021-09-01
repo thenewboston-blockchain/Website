@@ -12,7 +12,7 @@ import SideMenu from '../SideMenu';
 import './DeveloperPortalLayout.scss';
 
 type Props = {
-  children?: ReactNode;
+  children: (selectedLanguages: string[]) => ReactNode;
   pageName: string;
   approvedProjectUrls?: {
     title: string;
@@ -24,6 +24,8 @@ type Props = {
 const TIMEOUT_DELAY = 200;
 
 const DeveloperPortalLayout: FC<Props> = ({children, pageName}) => {
+  const [selectedLanguages, setSelectedLanguages] = useState<string[]>([]);
+
   const [breadcrumbHeight, setBreadcrumbHeight] = useState(56);
   const {hash} = useLocation();
   const TOTAL_OFFSET = NAVBAR_HEIGHT + LIVING_WHITEPAPER_TOP_LINKS_HEIGHT + breadcrumbHeight;
@@ -40,6 +42,18 @@ const DeveloperPortalLayout: FC<Props> = ({children, pageName}) => {
     }
     // eslint-disable-next-line
   }, [TOTAL_OFFSET]);
+
+  const toggleLanguage = React.useCallback(
+    (language: string) => {
+      if (selectedLanguages.includes(language)) {
+        setSelectedLanguages(selectedLanguages.filter((l) => l !== language));
+      } else {
+        setSelectedLanguages([...selectedLanguages, language]);
+      }
+    },
+    [selectedLanguages],
+  );
+
   return (
     <>
       <PageTitle title={pageName} />
@@ -57,9 +71,9 @@ const DeveloperPortalLayout: FC<Props> = ({children, pageName}) => {
       <Container>
         <div className="DeveloperPortalLayout__main-content">
           <div className="DeveloperPortalLayout__left-content">
-            <SideMenu breadcrumbHeight={breadcrumbHeight} />
+            <SideMenu selectedLanguages={selectedLanguages} toggleLanguage={toggleLanguage} />
           </div>
-          <div className="DeveloperPortalLayout__right-content">{children}</div>
+          <div className="DeveloperPortalLayout__right-content">{children(selectedLanguages)}</div>
         </div>
       </Container>
     </>

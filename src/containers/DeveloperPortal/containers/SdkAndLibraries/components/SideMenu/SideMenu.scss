@@ -1,11 +1,8 @@
-@import 'src/styles/mixins';
+@import 'styles/font-mixins';
 @import '../../shared';
 @import 'styles/z-index';
 
 .SideMenu {
-  box-sizing: content-box;
-  max-height: calc(100vh - #{$top-nav-height} - #{$top-links-height} - #{$breadcrumbs-height});
-  overflow-y: scroll;
   padding: 32px 32px 32px 0;
   position: sticky;
   top: $top-nav-height + $top-links-height + $breadcrumbs-height;
@@ -20,66 +17,29 @@
     display: none;
   }
 
-  &__section {
-    &:not(:last-child) {
-      margin-bottom: 20px;
-    }
+  &__title {
+    @extend %h4;
+    color: var(--color-gray-900);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 14px;
+    text-transform: uppercase;
   }
 
-  &__section-header {
-    @include top-nav-button;
+  &__filter {
+    @extend %body3;
+    align-items: center;
+    color: var(--color-gray-500);
+    cursor: pointer;
     display: flex;
-    font-weight: var(--font-weight-medium);
-    justify-content: space-between;
-    padding: 0;
-    text-align: left;
-    width: 100%;
+    margin-bottom: 8px;
 
-    &--active {
+    &--selected {
       color: var(--color-gray-900);
       font-weight: var(--font-weight-bold);
     }
-  }
 
-  &__link {
-    color: var(--color-gray-400);
-    cursor: pointer;
-    display: block;
-    font-weight: var(--font-weight-medium);
-
-    &:hover {
-      color: var(--color-blue-gray-1000);
+    &-icon {
+      margin-right: 8px;
     }
-
-    &:not(:last-child) {
-      margin: 8px 0;
-    }
-
-    &--active {
-      color: var(--color-gray-900);
-    }
-  }
-
-  &__approved-projects {
-    &-container {
-      max-height: 400px;
-
-      -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-      overflow-y: scroll;
-      scrollbar-width: none; /* Hide scrollbar for Firefox */
-      /* Hide scrollbar for Chrome, Safari and Opera */
-      &::-webkit-scrollbar {
-        display: none;
-      }
-    }
-
-    &-link {
-      border-bottom: 1px solid var(--color-gray-100);
-      padding: 10px 0;
-    }
-  }
-
-  &__toggle-icon {
-    align-self: flex-start;
   }
 }

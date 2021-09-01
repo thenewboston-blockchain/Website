@@ -4,6 +4,7 @@ import {Icon, IconType} from '@thenewboston/ui';
 
 import {Button, Container} from 'components';
 import ApiIcon from '../icons/ApiIcon';
+import SdkIcon from '../icons/SdkIcon';
 import './Tools.scss';
 
 const Tools: FC = () => {
@@ -34,7 +35,7 @@ const Tools: FC = () => {
           </div>
           <div className="Tools__tool">
             <div className="Tools__tool-icon">
-              <ApiIcon size={36} />
+              <SdkIcon size={36} />
             </div>
             <div className="Tools__tool-title">SDKs & Libraries</div>
             <div className="Tools__tool-description">

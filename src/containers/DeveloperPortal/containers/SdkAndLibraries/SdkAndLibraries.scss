@@ -64,6 +64,10 @@
       gap: 16px;
       grid-template-columns: 1fr 1fr;
 
+      &-empty {
+        color: var(--color-gray-500);
+      }
+
       @media (max-width: 768px) {
         gap: 48px;
         grid-template-columns: 1fr;
