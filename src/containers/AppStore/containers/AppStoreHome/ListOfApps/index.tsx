@@ -1,5 +1,6 @@
 import React, {FC, useEffect, useState} from 'react';
 
+import DefaultLogoSrc from 'assets/images/logo.png';
 import {getAllApps} from 'apis/app-store';
 import {Container, Loader} from 'components';
 import {ApiProgress} from 'constants/api-progress';
@@ -35,10 +36,11 @@ const ListOfApps: FC = () => {
   return (
     <Container className="ListOfApps">
       {apps.map((app) => {
+        const bannerUrl = app.images.length > 0 ? app.images[0].image : DefaultLogoSrc;
         return (
           <AppCard
             key={app.pk}
-            bannerUrl={''} // TODO: add image when api is ready
+            bannerUrl={bannerUrl}
             id={app.pk}
             description={app.description}
             title={app.name}

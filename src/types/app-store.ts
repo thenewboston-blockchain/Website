@@ -6,6 +6,7 @@ export interface App {
   pk: string;
   name: string;
   description: string;
+  tagline: string;
   logo: string;
   website: string;
   images: [
@@ -13,9 +14,8 @@ export interface App {
       uuid: string;
       created_date: string;
       modified_date: string;
-      date: string;
-      value: number;
-      analytics: string;
+      image: string;
+      app: string;
     },
   ];
   created_date: string;

@@ -13,11 +13,7 @@ const AppStore: FC = () => {
     return <AppDetails appId={appId} />;
   }
 
-  return (
-    <>
-      <AppStoreHome />
-    </>
-  );
+  return <AppStoreHome />;
 };
 
 export default AppStore;

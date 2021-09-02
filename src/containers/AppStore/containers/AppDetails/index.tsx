@@ -9,9 +9,6 @@ import AppDetailsTopSection from './AppDetailsTopSection';
 import AppDetailsSlider from './AppDetailsSlider';
 import AppDetailsOverview from './AppDetailsOverview';
 
-import SampleAppLogo from '../../assets/SampleAppLogo.png';
-import SampleAppBanner from '../../assets/SampleAppBg.png';
-
 import './AppDetails.scss';
 
 type Props = {
@@ -45,16 +42,8 @@ const AppDetails: FC<Props> = ({appId}) => {
 
   return (
     <>
-      <AppDetailsTopSection
-        description={app.description} // TODO: change this to tagline when ready
-        logoUrl={app.logo}
-        title={app.name}
-        websiteUrl={app.website}
-      />
-      <AppDetailsSlider
-        className="AppDetails__slider"
-        imageUrls={[SampleAppBanner, SampleAppLogo, SampleAppBanner, SampleAppBanner, SampleAppBanner]} // TODO: change this to app.images when ready
-      />
+      <AppDetailsTopSection description={app.tagline} logoUrl={app.logo} title={app.name} websiteUrl={app.website} />
+      <AppDetailsSlider className="AppDetails__slider" imageUrls={app.images.map((image) => image.image)} />
       <AppDetailsOverview className="AppDetails__overview" description={app.description} />
     </>
   );
