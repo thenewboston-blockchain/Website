@@ -1,10 +1,9 @@
 import React, {ReactNode} from 'react';
 import clsx from 'clsx';
-import {Icon, IconType} from '@thenewboston/ui';
-import {bemify} from '@thenewboston/utils';
+import {IconType} from '@thenewboston/ui';
 import {SFC} from 'types/generic';
 
-import './A.scss';
+import * as S from './Styles';
 
 interface ComponentProps {
   children?: ReactNode;
@@ -32,8 +31,7 @@ const A: SFC<ComponentProps> = ({
     <a className={clsx('A', className)} data-testid={dataTestId} href={href} rel={rel} target={target}>
       {children}
       {renderIcon && (
-        <Icon
-          className={clsx('A__Icon--new-window', {...bemify(className, '__Icon--new-window')})}
+        <S.NewWindowIcon
           dataTestId={`${dataTestId}__Icon--new-window`}
           icon={IconType.openInNew}
           size={iconSize}

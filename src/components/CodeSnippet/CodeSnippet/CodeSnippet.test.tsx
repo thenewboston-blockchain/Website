@@ -72,6 +72,5 @@ describe('CodeSnippet component', () => {
     render(<CodeSnippet heading="Heading" code={BashSampleCode} className="CustomCodeSnippet" />);
     expect(screen.queryByTestId('CodeSnippet__heading')).toBeTruthy();
     expect(screen.queryByTestId('CodeSnippet__heading')).toHaveTextContent('Heading');
-    expect(screen.queryByTestId('CodeSnippet__heading')).toHaveClass('CustomCodeSnippet__heading');
   });
 });

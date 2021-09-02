@@ -31,12 +31,6 @@ describe('BreadcrumbMenu component', () => {
     expect(screen.getByTestId('BreadcrumbMenu')).toBeTruthy();
   });
 
-  test('renders with default className', () => {
-    render(<WrappedComponent />);
-
-    expect(screen.getByTestId('BreadcrumbMenu')).toHaveClass('BreadcrumbMenu');
-  });
-
   test('renders with custom className Test', () => {
     render(<WrappedComponent className="Test" />);
 
@@ -94,18 +88,5 @@ describe('BreadcrumbMenu component', () => {
   test('renders toggle when closed', () => {
     render(<WrappedComponent />);
     expect(screen.queryByTestId('BreadcrumbMenu__toggle-container')).toBeTruthy();
-  });
-
-  test('renders toggle with updated className  when open', async () => {
-    render(<WrappedComponent />);
-    expect(screen.queryByTestId('BreadcrumbMenu__toggle-container')).toBeTruthy();
-    expect(screen.queryByTestId('BreadcrumbMenu__toggle-container')).toHaveClass('BreadcrumbMenu__toggle-container');
-
-    const menu = screen.getByTestId('BreadcrumbMenu__bar');
-    await fireEvent.click(menu);
-
-    expect(screen.queryByTestId('BreadcrumbMenu__toggle-container')).toHaveClass(
-      'BreadcrumbMenu__toggle-container--open',
-    );
   });
 });

@@ -23,13 +23,6 @@ describe('A component', () => {
     expect(el).toHaveAttribute('href', link);
   });
 
-  test('renders proper default className', () => {
-    render(<A href="/">hello</A>);
-    const el = screen.getByTestId('A');
-
-    expect(el.className).toBe('A');
-  });
-
   test('renders with classNames passed in', () => {
     render(
       <A className="test" href="/">
@@ -112,24 +105,6 @@ describe('A component', () => {
     const icon = screen.queryAllByTestId('A__Icon--new-window');
 
     expect(icon.length).toBe(0);
-  });
-
-  test('new window icon has default className', () => {
-    render(<A href="/">hello</A>);
-    const icon = screen.getByTestId('A__Icon--new-window');
-
-    expect(icon.className).toContain('A__Icon--new-window');
-  });
-
-  test('new window icon has correct className when className passed in', () => {
-    render(
-      <A className="test" href="/">
-        hello
-      </A>,
-    );
-    const icon = screen.getByTestId('A__Icon--new-window');
-
-    expect(icon.className).toContain('test__Icon--new-window');
   });
 
   test('new window icon has correct default iconTotalSize when not passed in', () => {

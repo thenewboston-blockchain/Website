@@ -1,10 +1,8 @@
 import React from 'react';
-import clsx from 'clsx';
-import {bemify} from '@thenewboston/utils';
 import {SFC} from 'types/generic';
 
 import BaseCodeSnippet, {SnippetLang} from '../BaseCodeSnippet';
-import './RequestResponseSnippet.scss';
+import * as S from './Styles';
 
 export interface RequestResponseSnippetProps {
   code: string;
@@ -13,14 +11,11 @@ export interface RequestResponseSnippetProps {
 
 const RequestResponse: SFC<RequestResponseSnippetProps> = ({className, code, heading}) => {
   return (
-    <div className={clsx('RequestResponseSnippet', className)} data-testid="RequestResponseSnippet">
+    <div className={className} data-testid="RequestResponseSnippet">
       {heading ? (
-        <div
-          className={clsx('RequestResponseSnippet__heading', {...bemify(className, '__heading')})}
-          data-testid="RequestResponseSnippet__heading"
-        >
+        <S.Heading className={className} data-testid="RequestResponseSnippet__heading">
           {heading}:
-        </div>
+        </S.Heading>
       ) : null}
       <BaseCodeSnippet code={code} language={SnippetLang.json} showLineNumbers={false} />
     </div>

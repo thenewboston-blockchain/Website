@@ -1,11 +1,9 @@
 import React from 'react';
-import clsx from 'clsx';
 import format from 'date-fns/format';
 
-import {A} from 'components';
 import {SFC} from 'types/generic';
 import {Task} from 'types/github';
-import './ContributorTasks.scss';
+import * as S from './Styles';
 
 export interface ContributorTasksProps {
   tasks: Task[];
@@ -15,43 +13,38 @@ const ContributorTasks: SFC<ContributorTasksProps> = ({className, tasks}) => {
   const renderRows = () => {
     return tasks.map(({amount_paid, completed_date, issue_id, repository, title}: Task, index) => (
       <tr key={index} data-testid="ContributorTasks__row">
-        <td className="ContributorTasks__task-title" data-testid="ContributorTasks__task-title" title={title}>
-          <A
-            className="ContributorTasks__issue-link"
+        <S.Td data-testid="ContributorTasks__task-title" title={title}>
+          <S.IssueLink
             href={`https://github.com/thenewboston-developers/${repository}/issues/${issue_id}`}
             iconSize={12}
             iconTotalSize={12}
           >
             {title}
-          </A>
-        </td>
-        <td className="ContributorTasks__repository" data-testid="ContributorTasks__repository" title={repository}>
+          </S.IssueLink>
+        </S.Td>
+        <S.Td data-testid="ContributorTasks__repository" title={repository}>
           {repository}
-        </td>
-        <td className="ContributorTasks__date-completed" data-testid="ContributorTasks__date-completed">
-          {format(completed_date, 'L/d/yy')}
-        </td>
-        <td className="ContributorTasks__amount" data-testid="ContributorTasks__amount">
-          + {parseInt(amount_paid, 10).toLocaleString()}
-        </td>
+        </S.Td>
+        <S.Td data-testid="ContributorTasks__date-completed">{format(completed_date, 'L/d/yy')}</S.Td>
+        <S.TdAmount data-testid="ContributorTasks__amount">+ {parseInt(amount_paid, 10).toLocaleString()}</S.TdAmount>
       </tr>
     ));
   };
 
   return (
-    <div className={clsx('ContributorTasks', className)} data-testid="ContributorTasks">
-      <table>
+    <S.Container className={className} data-testid="ContributorTasks">
+      <S.Table>
         <thead>
           <tr>
-            <th>Recent Task</th>
-            <th>Repository</th>
-            <th>Completed</th>
-            <th>Amount</th>
+            <S.Th>Recent Task</S.Th>
+            <S.Th>Repository</S.Th>
+            <S.Th>Completed</S.Th>
+            <S.Th>Amount</S.Th>
           </tr>
         </thead>
         <tbody>{renderRows()}</tbody>
-      </table>
-    </div>
+      </S.Table>
+    </S.Container>
   );
 };
 
