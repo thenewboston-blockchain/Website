@@ -30,6 +30,7 @@ const SideMenu: FC<Props> = ({selectedLanguages, toggleLanguage}) => {
               checked={selectedLanguages.includes(language)}
               className="SideMenu__filter-icon"
               value={language}
+              size={18}
             />
             {language}
           </div>

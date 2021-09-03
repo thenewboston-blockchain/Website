@@ -50,7 +50,7 @@ const Checkbox: SFC<BaseCheckboxProps> = ({
           ...bemify(className, '--error', error),
         })}
         disabled={disabled}
-        icon={checked ? IconType.radioboxMarked : IconType.radioboxBlank}
+        icon={checked ? IconType.checkboxMarked : IconType.checkboxBlankOutline}
         onClick={onClick}
         onKeyDown={onKeyDown}
         ref={CheckboxRef}
