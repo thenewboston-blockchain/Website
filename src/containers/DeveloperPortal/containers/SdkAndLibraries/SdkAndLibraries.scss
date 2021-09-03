@@ -12,6 +12,10 @@
     margin-bottom: 72px;
     padding: 48px 72px;
 
+    @media (max-width: 992px) {
+      padding: 48px;
+    }
+
     @media (max-width: 768px) {
       align-items: flex-start;
       flex-direction: column;
@@ -41,6 +45,12 @@
     &-right {
       @media (max-width: 768px) {
         align-self: flex-end;
+      }
+
+      &-img {
+        @media (max-width: 768px) {
+          width: 185px;
+        }
       }
     }
   }

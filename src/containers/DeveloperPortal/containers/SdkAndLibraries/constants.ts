@@ -1,5 +1,10 @@
 import {Language, LibraryType} from 'types/libraries';
 
+export const PATHNAME_TO_TITLE_MAPPING: Record<string, string> = {
+  developer: 'Developer',
+  'sdks-and-libraries': 'SDKs and Libraries',
+};
+
 export const LIBRARIES: LibraryType[] = [
   {
     description:

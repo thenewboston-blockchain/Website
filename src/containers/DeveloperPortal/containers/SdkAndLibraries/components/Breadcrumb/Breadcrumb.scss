@@ -16,4 +16,9 @@
   @media (max-width: 992px) {
     padding: 12px 24px;
   }
+
+  &__filter-icon {
+    cursor: pointer;
+    margin-left: 8px;
+  }
 }
