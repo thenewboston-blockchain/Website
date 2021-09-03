@@ -20,18 +20,10 @@ describe('RequestResponseSnippet', () => {
     expect(screen.getByTestId(baseTestId)).toBeTruthy();
   });
 
-  it('renders with default className', () => {
-    render(<RequestResponseSnippet {...baseProps} heading="Test Heading" />);
-
-    expect(screen.getByTestId(baseTestId).className).toBe('RequestResponseSnippet');
-    expect(screen.getByTestId(headingTestId).className).toBe('RequestResponseSnippet__heading');
-  });
-
   it('renders with passed in className', () => {
     render(<RequestResponseSnippet {...baseProps} className="Test" heading="Test Heading" />);
 
     expect(screen.getByTestId(baseTestId).className).toContain('Test');
-    expect(screen.getByTestId(headingTestId).className).toContain('Test__heading');
   });
 
   it('renders with code passed in and heading not present', () => {

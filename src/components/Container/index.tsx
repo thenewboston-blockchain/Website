@@ -1,10 +1,9 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
 import React, {useMemo} from 'react';
-import clsx from 'clsx';
 import {SFC} from 'types/generic';
 
-import './Container.scss';
+import * as S from './Styles';
 
 type ContainerElement = 'div' | 'header' | 'main';
 
@@ -17,7 +16,7 @@ interface ContainerProps {
 const Container: SFC<ContainerProps> = ({children, className, dataTestId, element = 'div', maxWidth = 1366}) => {
   const props = useMemo(
     () => ({
-      className: clsx('Container', className),
+      className,
       'data-testid': dataTestId,
       style: {
         maxWidth,
@@ -28,13 +27,13 @@ const Container: SFC<ContainerProps> = ({children, className, dataTestId, elemen
 
   switch (element) {
     case 'header': {
-      return <header {...props}>{children}</header>;
+      return <S.Header {...props}>{children}</S.Header>;
     }
     case 'main': {
-      return <main {...props}>{children}</main>;
+      return <S.Main {...props}>{children}</S.Main>;
     }
     default: {
-      return <div {...props}>{children}</div>;
+      return <S.Container {...props}>{children}</S.Container>;
     }
   }
 };

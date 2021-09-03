@@ -1,8 +1,10 @@
-import React, {FC, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import clsx from 'clsx';
 
 import {getAnalytics} from 'apis/analytics';
 import {Loader} from 'components';
 import {Analytics, AnalyticsCategory} from 'types/analytics';
+import {SFC} from 'types/generic';
 import {displayErrorToast} from 'utils/toast';
 
 import AnalyticsGraph from '../AnalyticsGraph';
@@ -12,7 +14,7 @@ interface ComponentProps {
   selectedCategory: AnalyticsCategory | null;
 }
 
-const SelectedAnalytics: FC<ComponentProps> = ({selectedCategory}) => {
+const SelectedAnalytics: SFC<ComponentProps> = ({className, selectedCategory}) => {
   const [analytics, setAnalytics] = useState<Analytics[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -45,7 +47,7 @@ const SelectedAnalytics: FC<ComponentProps> = ({selectedCategory}) => {
   }
 
   return (
-    <div className="SelectedAnalytics">
+    <div className={clsx('SelectedAnalytics', className)}>
       {analytics.map((analytic) => (
         <AnalyticsGraph data={analytic.data} key={analytic.pk} title={analytic.title} />
       ))}

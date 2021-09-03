@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.0",
-    "@thenewboston/ui": "^0.1.11",
+    "@thenewboston/ui": "^0.1.14",
     "@thenewboston/utils": "^1.0.0",
     "axios": "^0.21.1",
     "clsx": "^1.1.1",
@@ -33,16 +33,17 @@
     "react-tsparticles": "^1.29.2",
     "recharts": "^2.0.9",
     "sass": "^1.32.8",
+    "styled-components": "^5.3.1",
     "yup": "^0.31.0"
   },
   "scripts": {
-    "build": "react-scripts build",
+    "build": "react-app-rewired build",
     "eject": "react-scripts eject",
     "lint": "tsc --noEmit && eslint \"./src/**/*.{js,ts,tsx}\" && stylelint \"./src/**/*.{css,scss}\"",
     "prettier": "prettier --write \"{,!(node_modules)/**/}*.{ts,tsx,js,json,css,less,scss}\"",
-    "start": "react-scripts start",
+    "start": "react-app-rewired start",
     "stylelint": "stylelint \"./src/**/*.{css,scss}\" --fix",
-    "test": "react-scripts test"
+    "test": "react-app-rewired test"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -79,9 +80,12 @@
     "@types/react-scroll": "^1.8.2",
     "@types/react-select": "^3.0.23",
     "@types/react-syntax-highlighter": "^11.0.4",
+    "@types/styled-components": "^5.1.13",
     "@types/yup": "^0.29.9",
     "@typescript-eslint/eslint-plugin": "^4.4.0",
     "@typescript-eslint/parser": "^4.4.0",
+    "babel-plugin-styled-components": "^1.13.2",
+    "customize-cra": "^1.0.0",
     "eslint": "^7.10.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-airbnb-typescript": "^11.0.0",
@@ -95,9 +99,11 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.9",
     "prettier": "^2.1.2",
+    "react-app-rewired": "^2.1.8",
     "stylelint": "^13.8.0",
     "stylelint-order": "^4.1.0",
-    "typescript": "^4.0.3"
+    "typescript": "^4.0.3",
+    "typescript-plugin-styled-components": "^2.0.0"
   },
   "engines": {
     "node": ">=12"
