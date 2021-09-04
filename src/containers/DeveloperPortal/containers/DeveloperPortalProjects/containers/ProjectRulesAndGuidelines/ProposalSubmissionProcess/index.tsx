@@ -2,10 +2,7 @@ import React, {FC} from 'react';
 
 import {Label} from 'components';
 
-import Step1 from '../../../assets/1.png';
-import Step2 from '../../../assets/2.png';
-import Step3 from '../../../assets/3.png';
-import Step4 from '../../../assets/4.png';
+import Step from '../../../components/Step';
 import './ProposalSubmissionProcess.scss';
 
 const ProposalSubmissionProcess: FC = () => {
@@ -17,7 +14,7 @@ const ProposalSubmissionProcess: FC = () => {
       </p>
       <div className="ProjectRulesProposalSubmissionProcess__step">
         <div className="ProjectRulesProposalSubmissionProcess__step-count">
-          <img alt="Step 1" height={56} src={Step1} width={56} />
+          <Step size={56} number={1} />
         </div>
         <div className="ProjectRulesProposalSubmissionProcess__step-body">
           <div className="ProjectRulesProposalSubmissionProcess__step-header">
@@ -73,7 +70,7 @@ const ProposalSubmissionProcess: FC = () => {
       </div>
       <div className="ProjectRulesProposalSubmissionProcess__step">
         <div className="ProjectRulesProposalSubmissionProcess__step-count">
-          <img alt="Step 2" height={56} src={Step2} width={56} />
+          <Step size={56} number={2} />
         </div>
         <div className="ProjectRulesProposalSubmissionProcess__step-body">
           <div className="ProjectRulesProposalSubmissionProcess__step-header">
@@ -127,7 +124,7 @@ const ProposalSubmissionProcess: FC = () => {
       </div>
       <div className="ProjectRulesProposalSubmissionProcess__step">
         <div className="ProjectRulesProposalSubmissionProcess__step-count">
-          <img alt="Step 3" height={56} src={Step3} width={56} />
+          <Step size={56} number={3} />
         </div>
         <div className="ProjectRulesProposalSubmissionProcess__step-body">
           <div className="ProjectRulesProposalSubmissionProcess__step-header">
@@ -163,7 +160,7 @@ const ProposalSubmissionProcess: FC = () => {
       </div>
       <div className="ProjectRulesProposalSubmissionProcess__step">
         <div className="ProjectRulesProposalSubmissionProcess__step-count">
-          <img alt="Step 4" height={56} src={Step4} width={56} />
+          <Step size={56} number={4} />
         </div>
         <div className="ProjectRulesProposalSubmissionProcess__step-body">
           <div className="ProjectRulesProposalSubmissionProcess__step-header">

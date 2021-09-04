@@ -1,11 +1,8 @@
 import React, {FC} from 'react';
 
 import {A, Note, NoteType, Divider} from 'components';
+import Step from '../../../components/Step';
 
-import Step1 from '../../../assets/1.png';
-import Step2 from '../../../assets/2.png';
-import Step3 from '../../../assets/3.png';
-import Step4 from '../../../assets/4.png';
 import RoadmapIllustration from '../../../assets/roadmap.png';
 import './MilestonesAndPayouts.scss';
 
@@ -36,7 +33,7 @@ const MilestonesAndPayouts: FC = () => {
         <p className="ProjectRulesMilestonesAndPayouts__process-text">A detailed overview of this process follows:</p>
         <div className="ProjectRulesMilestonesAndPayouts__process-step">
           <div className="ProjectRulesMilestonesAndPayouts__process-step-count">
-            <img alt="Step 1" height={56} src={Step1} width={56} />
+            <Step size={56} number={1} />
           </div>
           <div className="ProjectRulesMilestonesAndPayouts__process-step-text">
             The project lead creates a project proposal that describes a{' '}
@@ -45,7 +42,7 @@ const MilestonesAndPayouts: FC = () => {
         </div>
         <div className="ProjectRulesMilestonesAndPayouts__process-step">
           <div className="ProjectRulesMilestonesAndPayouts__process-step-count">
-            <img alt="Step 2" height={56} src={Step2} width={56} />
+            <Step size={56} number={2} />
           </div>
           <div className="ProjectRulesMilestonesAndPayouts__process-step-text">
             Auditors review the proposal and mark it as approved or leave a response on why they do not approve it.
@@ -53,7 +50,7 @@ const MilestonesAndPayouts: FC = () => {
         </div>
         <div className="ProjectRulesMilestonesAndPayouts__process-step">
           <div className="ProjectRulesMilestonesAndPayouts__process-step-count">
-            <img alt="Step 3" height={56} src={Step3} width={56} />
+            <Step size={56} number={3} />
           </div>
           <div className="ProjectRulesMilestonesAndPayouts__process-step-text">
             The project lead begins work on the project.
@@ -61,7 +58,7 @@ const MilestonesAndPayouts: FC = () => {
         </div>
         <div className="ProjectRulesMilestonesAndPayouts__process-step">
           <div className="ProjectRulesMilestonesAndPayouts__process-step-count">
-            <img alt="Step 4" height={56} src={Step4} width={56} />
+            <Step size={56} number={4} />
           </div>
           <div className="ProjectRulesMilestonesAndPayouts__process-step-text">
             Once MVP is complete, the project lead submits a payout request including valid{' '}
@@ -71,8 +68,7 @@ const MilestonesAndPayouts: FC = () => {
         </div>
         <div className="ProjectRulesMilestonesAndPayouts__process-step">
           <div className="ProjectRulesMilestonesAndPayouts__process-step-count">
-            {/* TODO: Change to step 5 image */}
-            <img alt="Step 5" height={56} src={Step4} width={56} />
+            <Step size={56} number={5} />
           </div>
           <div className="ProjectRulesMilestonesAndPayouts__process-step-text">
             Auditors review the MVP quality, assess the value that the project adds to the community, and offer an
@@ -81,8 +77,7 @@ const MilestonesAndPayouts: FC = () => {
         </div>
         <div className="ProjectRulesMilestonesAndPayouts__process-step">
           <div className="ProjectRulesMilestonesAndPayouts__process-step-count">
-            {/* TODO: Change to step 6 image */}
-            <img alt="Step 6" height={56} src={Step4} width={56} />
+            <Step size={56} number={6} />
           </div>
           <div className="ProjectRulesMilestonesAndPayouts__process-step-text">
             The project lead can discuss the amount of coins with the auditors and negotiate a more accurate amount (for
@@ -91,8 +86,7 @@ const MilestonesAndPayouts: FC = () => {
         </div>
         <div className="ProjectRulesMilestonesAndPayouts__process-step">
           <div className="ProjectRulesMilestonesAndPayouts__process-step-count">
-            {/* TODO: Change to step 7 image */}
-            <img alt="Step 7" height={56} src={Step4} width={56} />
+            <Step size={56} number={7} />
           </div>
           <div className="ProjectRulesMilestonesAndPayouts__process-step-text">Auditors approve milestone pay out.</div>
         </div>
