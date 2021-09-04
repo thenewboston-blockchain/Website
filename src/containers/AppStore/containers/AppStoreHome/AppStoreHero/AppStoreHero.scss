@@ -5,14 +5,14 @@
   display: flex;
   justify-content: center;
   min-height: 352px;
-  overflow-y: hidden;
+  overflow: hidden;
   position: relative;
 
   &__container {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    overflow-x: hidden;
+    overflow: hidden;
     width: 100%;
 
     @media (max-width: 768px) {
