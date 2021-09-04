@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import colors from 'styles/colors';
 
+import type {Shape} from '.';
+
 interface AvatarProps {
   bordered?: boolean;
   clickable?: boolean;
-  shape?: 'circle' | 'square';
+  shape?: Shape;
 }
 
 export const Avatar = styled.img<AvatarProps>`
@@ -13,7 +15,11 @@ export const Avatar = styled.img<AvatarProps>`
   cursor: ${(props) => (props.clickable ? 'pointer' : 'none')};
 `;
 
-export const Placeholder = styled.div`
+interface PlaceholderProps {
+  shape?: Shape;
+}
+
+export const Placeholder = styled.div<PlaceholderProps>`
   background: ${colors.palette.gray['100']};
-  border-radius: 50%;
+  border-radius: ${(props) => (props.shape === 'square' ? '8px' : '50%')};
 `;

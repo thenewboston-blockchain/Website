@@ -27,12 +27,14 @@ export const getFormattedSrc = (src: string, size: number): string => {
   }
 };
 
+export type Shape = 'circle' | 'square';
+
 export interface AvatarProps {
   bordered?: boolean;
   className?: string;
   size: number;
   src: string;
-  shape?: 'circle' | 'square';
+  shape?: Shape;
   onClick?(): void;
 }
 
@@ -66,7 +68,12 @@ const Avatar: SFC<AvatarProps> = ({className, size, shape, ...props}) => {
   return (
     <Suspense
       fallback={
-        <S.Placeholder className={className} data-testid="Avatar--placeholder" style={{height: size, width: size}} />
+        <S.Placeholder
+          className={className}
+          data-testid="Avatar--placeholder"
+          shape={shape}
+          style={{height: size, width: size}}
+        />
       }
     >
       <AvatarImgWithFallback className={className} size={size} shape={shape} {...props} />
