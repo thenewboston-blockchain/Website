@@ -33,18 +33,14 @@ const MilestonesAndPayouts: FC = () => {
       </div>
       <div className="ProjectRulesMilestonesAndPayouts__process">
         <h3 className="ProjectRulesMilestonesAndPayouts__process-heading">Milestone Payout Request Process</h3>
-        <p className="ProjectRulesMilestonesAndPayouts__process-text">
-          Your roadmap outlines the major components of your project. The relationship between roadmaps, milestones, and
-          objectives is the following:
-        </p>
+        <p className="ProjectRulesMilestonesAndPayouts__process-text">A detailed overview of this process follows:</p>
         <div className="ProjectRulesMilestonesAndPayouts__process-step">
           <div className="ProjectRulesMilestonesAndPayouts__process-step-count">
             <img alt="Step 1" height={56} src={Step1} width={56} />
           </div>
           <div className="ProjectRulesMilestonesAndPayouts__process-step-text">
-            Upon completion of a milestone, you, as the project lead, must submit a payout request, including valid{' '}
-            <b className="ProjectRulesMilestonesAndPayouts__process-step-text--bold">proof of work</b> for all
-            objectives.
+            The project lead creates a project proposal that describes a{' '}
+            <b className="ProjectRulesMilestonesAndPayouts__process-step-text--bold">working MVP</b>.
           </div>
         </div>
         <div className="ProjectRulesMilestonesAndPayouts__process-step">
@@ -52,8 +48,7 @@ const MilestonesAndPayouts: FC = () => {
             <img alt="Step 2" height={56} src={Step2} width={56} />
           </div>
           <div className="ProjectRulesMilestonesAndPayouts__process-step-text">
-            Auditors will then review proof of work to ensure that you and your team have met all objectives. In case of
-            questions or required clarifications, leave a comment and tag your auditor.
+            Auditors review the proposal and mark it as approved or leave a response on why they do not approve it.
           </div>
         </div>
         <div className="ProjectRulesMilestonesAndPayouts__process-step">
@@ -61,12 +56,7 @@ const MilestonesAndPayouts: FC = () => {
             <img alt="Step 3" height={56} src={Step3} width={56} />
           </div>
           <div className="ProjectRulesMilestonesAndPayouts__process-step-text">
-            When thenewboston team accepts a milestone, they will release a payment. The project lead and their team can
-            then complete the next{' '}
-            <A href="https://github.com/thenewboston-developers/Projects/issues/new?assignees=&labels=Milestone&template=milestone-proposal.md&title=NAME_OF_PROJECT+-+NAME_OF_MILESTONE+-+MILESTONE_NUMBER">
-              milestone proposal
-            </A>{' '}
-            according to the next roadmap milestone.
+            The project lead begins work on the project.
           </div>
         </div>
         <div className="ProjectRulesMilestonesAndPayouts__process-step">
@@ -74,10 +64,42 @@ const MilestonesAndPayouts: FC = () => {
             <img alt="Step 4" height={56} src={Step4} width={56} />
           </div>
           <div className="ProjectRulesMilestonesAndPayouts__process-step-text">
-            An auditor will review the newly proposed milestone and will work with the project lead to complete all
-            essential information. The auditor will then submit the new milestone to the government for final review.
+            Once MVP is complete, the project lead submits a payout request including valid{' '}
+            <b className="ProjectRulesMilestonesAndPayouts__process-step-text--bold">proof of work</b> for all
+            objectives.
           </div>
         </div>
+        <div className="ProjectRulesMilestonesAndPayouts__process-step">
+          <div className="ProjectRulesMilestonesAndPayouts__process-step-count">
+            {/* TODO: Change to step 5 image */}
+            <img alt="Step 5" height={56} src={Step4} width={56} />
+          </div>
+          <div className="ProjectRulesMilestonesAndPayouts__process-step-text">
+            Auditors review the MVP quality, assess the value that the project adds to the community, and offer an
+            amount of TNBC.
+          </div>
+        </div>
+        <div className="ProjectRulesMilestonesAndPayouts__process-step">
+          <div className="ProjectRulesMilestonesAndPayouts__process-step-count">
+            {/* TODO: Change to step 6 image */}
+            <img alt="Step 6" height={56} src={Step4} width={56} />
+          </div>
+          <div className="ProjectRulesMilestonesAndPayouts__process-step-text">
+            The project lead can discuss the amount of coins with the auditors and negotiate a more accurate amount (for
+            example, improve descriptions, provide additional information, and so on).
+          </div>
+        </div>
+        <div className="ProjectRulesMilestonesAndPayouts__process-step">
+          <div className="ProjectRulesMilestonesAndPayouts__process-step-count">
+            {/* TODO: Change to step 7 image */}
+            <img alt="Step 7" height={56} src={Step4} width={56} />
+          </div>
+          <div className="ProjectRulesMilestonesAndPayouts__process-step-text">Auditors approve milestone pay out.</div>
+        </div>
+        <Note
+          type={NoteType.Important}
+          text="As of August 31, 2021, project leads can still make payout requests once an existing milestone is complete for the already agreed-on amount. However, their next milestone must follow the updates listed above."
+        />
       </div>
       <div className="ProjectRulesMilestonesAndPayouts__pow">
         <h3 className="ProjectRulesMilestonesAndPayouts__pow-heading">Acceptable Proof of Work</h3>
@@ -89,6 +111,11 @@ const MilestonesAndPayouts: FC = () => {
               <A href="https://www.figma.com">Figma</A>, <A href="https://www.adobe.com/products/xd.html">Adobe XD</A>,
               or other URL.
             </p>
+            <Note
+              className="ProjectRulesMilestonesAndPayouts__pow-note"
+              type={NoteType.Information}
+              text="Although such proof of design work does not suffice in making a milestone eligible for payment, the core team will still account for it in the overall valuation of the project milestone."
+            />
           </div>
           <Divider />
           <div className="ProjectRulesMilestonesAndPayouts__pow-table-row">
@@ -112,6 +139,11 @@ const MilestonesAndPayouts: FC = () => {
               For all documentation-related work: a publicly viewable Google Doc URL (research-related Google Docs must
               have a clear description of the research and its findings.)
             </p>
+            <Note
+              className="ProjectRulesMilestonesAndPayouts__pow-note"
+              type={NoteType.Information}
+              text="Although such proof of documentation work does not suffice in making a milestone eligible for payment, the core team will still account for it in the overall valuation of the project milestone."
+            />
           </div>
           <Divider />
           <div className="ProjectRulesMilestonesAndPayouts__pow-table-row">
