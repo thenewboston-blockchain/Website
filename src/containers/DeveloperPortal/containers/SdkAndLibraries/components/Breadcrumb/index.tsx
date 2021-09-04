@@ -74,7 +74,7 @@ const Breadcrumb: SFC<Props> = ({className, selectedLanguages, toggleLanguage}) 
       {/* Filter */}
       {Boolean(width < 992) && (
         <>
-          <Icon className="Breadcrumb__filter-icon" icon={IconType.sortAscending} onClick={handleButtonClick} />
+          <Icon className="Breadcrumb__filter-icon" icon={IconType.filterMenu} onClick={handleButtonClick} size={20} />
           <Popover
             anchorEl={anchorEl}
             open={isPopoverOpen}
