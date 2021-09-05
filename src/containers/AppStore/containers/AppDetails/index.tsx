@@ -1,15 +1,12 @@
 import React, {FC, useEffect, useState} from 'react';
 
 import {getAppById} from 'apis/app-store';
-import {Loader} from 'components';
 import {ApiProgress} from 'constants/api-progress';
 import {App} from 'types/app-store';
 
 import AppDetailsTopSection from './AppDetailsTopSection';
-import AppDetailsSlider from './AppDetailsSlider';
-import AppDetailsOverview from './AppDetailsOverview';
 
-import './AppDetails.scss';
+import * as S from './Styles';
 
 type Props = {
   appId: string;
@@ -33,18 +30,18 @@ const AppDetails: FC<Props> = ({appId}) => {
   }, [appId]);
 
   if (progress === ApiProgress.Error) {
-    return <div className="AppDetails__error">App is unavailable.</div>;
+    return <S.ErrorContainer>App is unavailable.</S.ErrorContainer>;
   }
 
   if (progress === ApiProgress.Requesting || progress === ApiProgress.Init || !app) {
-    return <Loader className="AppDetails__loader" />;
+    return <S.Loader className="AppDetails__loader" />;
   }
 
   return (
     <>
       <AppDetailsTopSection description={app.tagline} logoUrl={app.logo} title={app.name} websiteUrl={app.website} />
-      <AppDetailsSlider className="AppDetails__slider" imageUrls={app.images.map((image) => image.image)} />
-      <AppDetailsOverview className="AppDetails__overview" description={app.description} />
+      <S.Slider imageUrls={app.images.map((image) => image.image)} />
+      <S.Overview className="AppDetails__overview" description={app.description} />
     </>
   );
 };

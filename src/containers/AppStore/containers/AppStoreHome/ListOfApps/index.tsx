@@ -2,11 +2,11 @@ import React, {FC, useEffect, useState} from 'react';
 
 import DefaultLogoSrc from 'assets/images/logo.png';
 import {getAllApps} from 'apis/app-store';
-import {Container, Loader} from 'components';
 import {ApiProgress} from 'constants/api-progress';
 import {App} from 'types/app-store';
 import AppCard from '../../../components/AppCard';
-import './ListOfApps.scss';
+
+import * as S from './Styles';
 
 const ListOfApps: FC = () => {
   const [apps, setApps] = useState<App[]>([]);
@@ -26,15 +26,15 @@ const ListOfApps: FC = () => {
   }, []);
 
   if (progress === ApiProgress.Requesting || progress === ApiProgress.Init || !apps) {
-    return <Loader className="ListOfApps__loader" />;
+    return <S.Loader />;
   }
 
   if (progress === ApiProgress.Error) {
-    return <div className="ListOfApps__error">Error while fetching apps. Please try again later.</div>;
+    return <S.ErrorContainer>Error while fetching apps. Please try again later.</S.ErrorContainer>;
   }
 
   return (
-    <Container className="ListOfApps">
+    <S.Container>
       {apps.map((app) => {
         const bannerUrl = app.images.length > 0 ? app.images[0].image : DefaultLogoSrc;
         return (
@@ -48,7 +48,7 @@ const ListOfApps: FC = () => {
           />
         );
       })}
-    </Container>
+    </S.Container>
   );
 };
 

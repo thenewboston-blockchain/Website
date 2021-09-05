@@ -1,10 +1,8 @@
 import React, {FC} from 'react';
-import clsx from 'clsx';
 
-import {Container} from 'components';
 import ImageCarousel from '../../../components/ImageCarousel';
 
-import './AppDetailsSlider.scss';
+import * as S from './Styles';
 
 type Props = {
   className?: string;
@@ -13,11 +11,11 @@ type Props = {
 
 const AppDetailsSlider: FC<Props> = ({className, imageUrls}) => {
   return (
-    <div className={clsx('AppDetailsSlider', className)}>
-      <Container className="AppDetailsSlider__container">
+    <S.Container className={className}>
+      <S.Main>
         <ImageCarousel imageUrls={imageUrls} />
-      </Container>
-    </div>
+      </S.Main>
+    </S.Container>
   );
 };
 

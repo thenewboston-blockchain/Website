@@ -1,8 +1,7 @@
 import React, {FC, useState} from 'react';
 import {useHistory} from 'react-router';
 import {Icon, IconType} from '@thenewboston/ui';
-
-import './AppCard.scss';
+import * as S from './Styles';
 
 type Props = {
   bannerUrl: string;
@@ -26,15 +25,15 @@ const AppCard: FC<Props> = ({bannerUrl, description, id, title, websiteUrl}) => 
   };
 
   return (
-    <div className="AppCard" role="button" onClick={handleClickCard} tabIndex={0}>
-      <img alt={title} className="AppCard__banner" loading="lazy" src={bannerUrl} />
-      <div className="AppCard__bottom-container">
-        <div className="AppCard__details-container">
-          <div className="AppCard__app-title-description-container">
-            <h1 className="AppCard__app-title">{title}</h1>
-            <p className="AppCard__app-description">{description}</p>
-          </div>
-          <div
+    <S.Container role="button" onClick={handleClickCard} tabIndex={0}>
+      <S.Banner alt={title} className="AppCard__banner" loading="lazy" src={bannerUrl} />
+      <S.BottomContainer className="AppCard__bottom-container">
+        <S.DetailsContainer className="AppCard__details-container">
+          <S.AppTitleDescriptionContainer className="AppCard__app-title-description-container">
+            <S.AppTitle className="AppCard__app-title">{title}</S.AppTitle>
+            <S.AppDescription className="AppCard__app-description">{description}</S.AppDescription>
+          </S.AppTitleDescriptionContainer>
+          <S.AppWebsite
             className="AppCard__app-website"
             role="button"
             onClick={handleVisitWebsite}
@@ -42,16 +41,18 @@ const AppCard: FC<Props> = ({bannerUrl, description, id, title, websiteUrl}) => 
             onMouseLeave={() => setIsHovered(false)}
             tabIndex={0}
           >
-            <span className="AppCard__app-website-text">{isHovered ? websiteUrl : 'Website'}</span>
+            <S.AppWebsiteText className="AppCard__app-website-text">
+              {isHovered ? websiteUrl : 'Website'}
+            </S.AppWebsiteText>
             <Icon
               icon={isHovered ? IconType.arrowRight : IconType.chevronRight}
               size={isHovered ? 20 : 16}
               totalSize={isHovered ? 20 : 16}
             />
-          </div>
-        </div>
-      </div>
-    </div>
+          </S.AppWebsite>
+        </S.DetailsContainer>
+      </S.BottomContainer>
+    </S.Container>
   );
 };
 

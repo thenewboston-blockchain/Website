@@ -1,8 +1,6 @@
 import React, {FC} from 'react';
-import clsx from 'clsx';
-import {Container} from 'components';
 
-import './AppDetailsOverview.scss';
+import * as S from './Styles';
 
 type Props = {
   className?: string;
@@ -11,12 +9,12 @@ type Props = {
 
 const AppDetailsOverview: FC<Props> = ({className, description}) => {
   return (
-    <Container className={clsx('AppDetailsOverview', className)}>
-      <div className="AppDetailsOverview__content">
-        <div className="AppDetailsOverview__title">Overview</div>
-        <pre className="AppDetailsOverview__description">{description}</pre>
-      </div>
-    </Container>
+    <S.Container className={className}>
+      <S.Content>
+        <S.Title>Overview</S.Title>
+        <S.Description>{description}</S.Description>
+      </S.Content>
+    </S.Container>
   );
 };
 
