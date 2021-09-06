@@ -1,4 +1,5 @@
 import React, {FC, ReactNode, useState} from 'react';
+import {Language} from 'types/libraries';
 
 import {Container, Divider, PageTitle} from 'components';
 import TopLinks from '../TopLinks';
@@ -8,20 +9,15 @@ import SideMenu from '../SideMenu';
 import './DeveloperPortalLayout.scss';
 
 type Props = {
-  children: (selectedLanguages: string[]) => ReactNode;
+  children: (selectedLanguages: Language[]) => ReactNode;
   pageName: string;
-  approvedProjectUrls?: {
-    title: string;
-    url: string;
-  }[];
-  projectName?: string;
 };
 
 const DeveloperPortalLayout: FC<Props> = ({children, pageName}) => {
-  const [selectedLanguages, setSelectedLanguages] = useState<string[]>([]);
+  const [selectedLanguages, setSelectedLanguages] = useState<Language[]>([]);
 
   const toggleLanguage = React.useCallback(
-    (language: string) => {
+    (language: Language) => {
       if (selectedLanguages.includes(language)) {
         setSelectedLanguages(selectedLanguages.filter((l) => l !== language));
       } else {

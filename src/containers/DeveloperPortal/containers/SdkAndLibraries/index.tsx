@@ -1,6 +1,6 @@
 import React, {ReactNode, useState} from 'react';
 
-import type {LibraryType} from 'types/libraries';
+import type {Language, LibraryType} from 'types/libraries';
 
 import DeveloperPortalLayout from './components/DeveloperPortalLayout';
 import ConfirmationModal from './components/ConfirmationModal';
@@ -13,7 +13,7 @@ import './SdkAndLibraries.scss';
 const SdkAndLibraries = () => {
   const [goToUrl, setGoToUrl] = useState<string | null>(null);
 
-  const renderTiles = (items: LibraryType[], selectedLanguages: string[], section: string): ReactNode => {
+  const renderTiles = (items: LibraryType[], selectedLanguages: Language[], section: string): ReactNode => {
     const filteredItems = selectedLanguages.length
       ? items.filter((item) => selectedLanguages.includes(item.language))
       : items;

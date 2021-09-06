@@ -7,6 +7,8 @@ import {Popover} from 'components';
 import {NAVBAR_HEIGHT, BREADCRUMB_HEIGHT, TOP_LINKS_HEIGHT} from 'constants/offsets';
 import {useWindowDimensions} from 'hooks';
 import {SFC} from 'types/generic';
+import {Language} from 'types/libraries';
+
 import {PATHNAME_TO_TITLE_MAPPING} from '../../constants';
 import BreadcrumbSection from '../../../../components/BreadcrumbSection';
 import Filters from '../Filters';
@@ -15,7 +17,7 @@ import './Breadcrumb.scss';
 
 type Props = {
   selectedLanguages: string[];
-  toggleLanguage: (language: string) => void;
+  toggleLanguage: (language: Language) => void;
 };
 
 const Breadcrumb: SFC<Props> = ({className, selectedLanguages, toggleLanguage}) => {

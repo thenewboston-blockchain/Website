@@ -1,11 +1,14 @@
 import React, {FC} from 'react';
+
+import {Language} from 'types/libraries';
+
 import Filters from '../Filters';
 
 import './SideMenu.scss';
 
 type Props = {
   selectedLanguages: string[];
-  toggleLanguage: (language: string) => void;
+  toggleLanguage: (language: Language) => void;
 };
 
 const SideMenu: FC<Props> = ({selectedLanguages, toggleLanguage}) => {

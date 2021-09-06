@@ -8,7 +8,7 @@ import './Filters.scss';
 
 type Props = {
   selectedLanguages: string[];
-  toggleLanguage: (language: string) => void;
+  toggleLanguage: (language: Language) => void;
 };
 
 const Filters: FC<Props> = ({selectedLanguages, toggleLanguage}) => {
