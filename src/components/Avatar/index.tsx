@@ -31,7 +31,6 @@ export type Shape = 'circle' | 'square';
 
 export interface AvatarProps {
   bordered?: boolean;
-  className?: string;
   size: number;
   src: string;
   shape?: Shape;

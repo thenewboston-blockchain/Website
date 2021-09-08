@@ -1,4 +1,6 @@
-import React, {FC} from 'react';
+import React from 'react';
+
+import {SFC} from 'types/generic';
 
 import * as S from './Styles';
 
@@ -7,7 +9,7 @@ type Props = {
   description: string;
 };
 
-const AppDetailsOverview: FC<Props> = ({className, description}) => {
+const AppDetailsOverview: SFC<Props> = ({className, description}) => {
   return (
     <S.Container className={className}>
       <S.Content>

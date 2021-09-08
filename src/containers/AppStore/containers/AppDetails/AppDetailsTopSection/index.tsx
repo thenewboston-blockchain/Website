@@ -1,21 +1,24 @@
-import React, {FC, useState} from 'react';
+import React, {useState} from 'react';
 
 import {Icon, IconType} from '@thenewboston/ui';
 import {useHistory} from 'react-router';
 
+import {SFC} from 'types/generic';
+
 import * as S from './Styles';
 
 type Props = {
-  className?: string;
   description: string;
   logoUrl: string;
   title: string;
   websiteUrl: string;
 };
 
-const AppDetailsTopSection: FC<Props> = ({className, description, logoUrl, title, websiteUrl}) => {
+const AppDetailsTopSection: SFC<Props> = ({className, description, logoUrl, title, websiteUrl}) => {
   const history = useHistory();
+
   const [isWebsiteHovered, setIsWebsiteHovered] = useState(false);
+
   const handleVisitWebsite = (): void => {
     window.open(websiteUrl, '_blank', 'noopener noreferrer');
   };

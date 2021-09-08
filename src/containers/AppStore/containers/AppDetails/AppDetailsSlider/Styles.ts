@@ -1,8 +1,8 @@
 import styled from 'styled-components';
+
 import {Container as SharedContainer} from 'components';
 
 export const Container = styled.div`
-  background: rgba(246, 249, 252, 0.5);
   padding: 64px;
 
   @media (max-width: 1366px) {

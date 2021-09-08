@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import colors from 'styles/colors';
-
-import {Carousel as ReactCarousel} from 'react-responsive-carousel';
 import {Icon} from '@thenewboston/ui';
+import {Carousel as ReactCarousel} from 'react-responsive-carousel';
+
+import colors from 'styles/colors';
 
 const sidePadding = '100px';
 const sidePadding1366 = '50px';
@@ -81,7 +81,7 @@ export const ThumbnailContainer = styled.div`
 export const Thumbnail = styled.img`
   border: 4px solid transparent;
   cursor: pointer;
-  height: 93px;
+  height: 92px;
   object-fit: cover;
   opacity: 0.5;
   width: 148px;

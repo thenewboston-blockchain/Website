@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import {Container as SharedContainer, Avatar as SharedAvatar} from 'components';
 import {Icon} from '@thenewboston/ui';
+
+import {Container as SharedContainer, Avatar as SharedAvatar} from 'components';
 import colors from 'styles/colors';
 import {b1, h2} from 'styles/fonts';
 import {fontWeightBold} from 'styles/fonts/fontWeights';

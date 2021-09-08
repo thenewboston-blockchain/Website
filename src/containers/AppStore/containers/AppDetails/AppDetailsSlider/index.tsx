@@ -1,15 +1,15 @@
-import React, {FC} from 'react';
+import React from 'react';
 
+import {SFC} from 'types/generic';
 import ImageCarousel from '../../../components/ImageCarousel';
 
 import * as S from './Styles';
 
 type Props = {
-  className?: string;
   imageUrls: string[];
 };
 
-const AppDetailsSlider: FC<Props> = ({className, imageUrls}) => {
+const AppDetailsSlider: SFC<Props> = ({className, imageUrls}) => {
   return (
     <S.Container className={className}>
       <S.Main>
