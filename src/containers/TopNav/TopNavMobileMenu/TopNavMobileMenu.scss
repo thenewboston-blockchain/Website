@@ -1,6 +1,6 @@
 @import 'styles/z-index';
 
-$dropdown-height: 284px;
+$dropdown-height: 332px;
 $dropdown-height-992: 400px;
 $mobile-dropdown-height: 1000px;
 $top-nav-height: 60px;
@@ -92,6 +92,7 @@ $top-nav-height: 60px;
     cursor: pointer;
     outline: none;
     padding: 0;
+    text-align: start;
 
     &--accordion {
       color: var(--color-sail-gray-400);
