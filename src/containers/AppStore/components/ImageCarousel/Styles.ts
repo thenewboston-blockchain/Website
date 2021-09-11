@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 import {Icon} from '@thenewboston/ui';
 import {Carousel as ReactCarousel} from 'react-responsive-carousel';
@@ -70,7 +70,7 @@ export const ThumbnailContainer = styled.div`
   align-items: center;
   display: flex;
   max-width: 640px;
-  overflow-x: scroll;
+  overflow-x: auto;
 
   @media (max-width: 768px) {
     max-width: 100%;
@@ -78,13 +78,21 @@ export const ThumbnailContainer = styled.div`
   }
 `;
 
-export const Thumbnail = styled.img`
+export const Thumbnail = styled.img<{isSelected?: boolean}>`
   border: 4px solid transparent;
   cursor: pointer;
   height: 92px;
   object-fit: cover;
   opacity: 0.5;
   width: 148px;
+
+  ${(props) =>
+    props.isSelected &&
+    css`
+      background: none;
+      border: 4px solid ${colors.palette.neutral['200']};
+      opacity: 1;
+    `}
 
   @media (max-width: 768px) {
     height: 70px;
@@ -94,12 +102,6 @@ export const Thumbnail = styled.img`
   &:not(:last-child) {
     margin-right: 16px;
   }
-`;
-
-export const SelectedThumbnail = styled(Thumbnail)`
-  background: none;
-  border: 4px solid ${colors.palette.neutral['200']};
-  opacity: 1;
 `;
 
 const Arrow = styled(Icon)`

@@ -1,5 +1,4 @@
 import React, {FC, useState} from 'react';
-import clsx from 'clsx';
 import {IconType} from '@thenewboston/ui';
 
 import {useWindowDimensions} from 'hooks';
@@ -66,9 +65,7 @@ const ImageCarousel: FC<Props> = ({imageUrls}) => {
           return (
             <S.Thumbnail
               alt="App"
-              className={clsx({
-                'ImageCarousel__thumbnail-image--selected': index === selectedThumbnailIndex,
-              })}
+              isSelected={index === selectedThumbnailIndex}
               key={index}
               onClick={() => setSelectedThumbnailIndex(index)}
               src={imageUrl}

@@ -15,7 +15,7 @@ export const Container = styled(SharedContainer)`
 `;
 
 export const Content = styled.div`
-  max-width: 730px;
+  width: 100%;
 `;
 
 export const Title = styled.div`

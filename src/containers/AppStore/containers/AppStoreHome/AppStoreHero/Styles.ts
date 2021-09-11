@@ -26,7 +26,10 @@ export const Container = styled(SharedContainer)`
 
 export const LeftContainer = styled.div`
   margin-right: 48px;
-  padding-left: 48px;
+
+  @media (max-width: 1366px) {
+    padding-left: 48px;
+  }
 
   @media (max-width: 992px) {
     margin-right: 0;

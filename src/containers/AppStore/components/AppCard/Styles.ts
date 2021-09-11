@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import colors from 'styles/colors';
-import {h3, b3, b1} from 'styles/fonts';
+import {h3, b2, b1} from 'styles/fonts';
 import {fontWeightBold} from 'styles/fonts/fontWeights';
 
 export const Container = styled.div`
@@ -44,7 +44,7 @@ export const AppTitle = styled.h3`
 `;
 
 export const AppDescription = styled.p`
-  ${b3.regular};
+  ${b2.regular};
   -webkit-box-orient: vertical;
   color: ${colors.palette.gray['500']};
   display: -webkit-box;
