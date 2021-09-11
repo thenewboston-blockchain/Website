@@ -1,0 +1,31 @@
+@import 'styles/font-mixins';
+
+.Filters {
+  min-width: 180px;
+
+  &__title {
+    @extend %h4;
+    color: var(--color-gray-900);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 14px;
+    text-transform: uppercase;
+  }
+
+  &__filter {
+    @extend %body3;
+    align-items: center;
+    color: var(--color-gray-500);
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 8px;
+
+    &--selected {
+      color: var(--color-gray-900);
+      font-weight: var(--font-weight-bold);
+    }
+
+    &-icon {
+      margin-right: 8px;
+    }
+  }
+}

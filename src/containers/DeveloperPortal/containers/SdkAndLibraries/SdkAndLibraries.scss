@@ -1,0 +1,135 @@
+@import 'styles/font-mixins';
+
+.SdkAndLibraries {
+  &__hero {
+    align-items: center;
+    background: url('./assets/hero-bg.webp');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    height: 248px;
+    justify-content: space-between;
+    margin-bottom: 72px;
+    padding: 48px 72px;
+
+    @media (max-width: 992px) {
+      padding: 48px;
+    }
+
+    @media (max-width: 768px) {
+      align-items: flex-start;
+      flex-direction: column;
+      height: fit-content;
+      padding: 48px 24px;
+    }
+
+    &-left {
+      @media (max-width: 768px) {
+        margin-bottom: 32px;
+      }
+
+      &-tnb {
+        @extend %h4;
+        color: var(--color-neutral-500);
+        font-weight: var(--font-weight-semibold);
+        letter-spacing: 2px;
+      }
+
+      &-title {
+        @extend %display2;
+        color: var(--color-cyan-900);
+        font-weight: var(--font-weight-semibold);
+      }
+    }
+
+    &-right {
+      @media (max-width: 768px) {
+        align-self: flex-end;
+      }
+
+      &-img {
+        @media (max-width: 768px) {
+          width: 185px;
+        }
+      }
+    }
+  }
+
+  &__section {
+    margin-bottom: 120px;
+    padding: 0 48px;
+
+    @media (max-width: 768px) {
+      padding: 0 24px;
+    }
+
+    &-title {
+      @extend %h1;
+      color: var(--color-gray-800);
+      margin-bottom: 48px;
+    }
+
+    &-tiles {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1fr 1fr;
+
+      &-empty {
+        color: var(--color-gray-500);
+      }
+
+      @media (max-width: 768px) {
+        gap: 48px;
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &-tile {
+      border-radius: 8px;
+      cursor: pointer;
+      overflow: hidden;
+
+      &-top {
+        background: url('./assets/tile-bg.svg');
+        background-position: center;
+        background-size: cover;
+        display: grid;
+        height: 187px;
+        place-items: center;
+
+        &-pill {
+          align-items: center;
+          background: rgba(0, 0, 27, 0.28);
+          border-radius: 32px;
+          display: flex;
+          height: 64px;
+          padding: 12px 16px;
+
+          &-text {
+            @extend %display2;
+            border-left: 1px solid var(--color-gray-800);
+            color: var(--color-white);
+            font-weight: var(--font-weight-medium);
+            margin-left: 12px;
+            padding-left: 12px;
+          }
+        }
+      }
+
+      &-bottom {
+        &-title {
+          @extend %h2;
+          color: var(--color-neutral-900);
+          font-weight: var(--font-weight-semibold);
+          margin: 16px 0;
+        }
+
+        &-description {
+          @extend %body1;
+          color: var(--color-gray-500);
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

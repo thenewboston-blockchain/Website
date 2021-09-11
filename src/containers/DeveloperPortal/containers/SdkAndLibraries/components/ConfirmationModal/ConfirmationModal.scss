@@ -1,0 +1,66 @@
+@import 'styles/font-mixins';
+
+.ConfirmationModal {
+  background-color: rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  display: grid;
+  left: 0;
+  overflow: hidden;
+  padding: 24px;
+  place-items: center;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+
+  &__container {
+    align-items: center;
+    background: var(--color-white);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 72px 120px;
+
+    @media (max-width: 992px) {
+      padding: 72px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 48px 24px;
+    }
+  }
+
+  &__image {
+    margin-bottom: 40px;
+    min-height: 72px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__heading {
+    @extend %h1;
+    color: var(--color-cyan-900);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  &__help-text {
+    @extend %body1;
+    color: var(--color-gray-400);
+    margin-bottom: 40px;
+    margin-top: 0;
+    max-width: 380px;
+    text-align: center;
+  }
+
+  &__btn {
+    width: 120px;
+
+    &:first-child {
+      margin-right: 16px;
+    }
+  }
+}

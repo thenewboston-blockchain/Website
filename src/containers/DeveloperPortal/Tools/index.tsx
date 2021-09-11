@@ -4,6 +4,7 @@ import {Icon, IconType} from '@thenewboston/ui';
 
 import {Button, Container} from 'components';
 import ApiIcon from '../icons/ApiIcon';
+import SdkIcon from '../icons/SdkIcon';
 import './Tools.scss';
 
 const Tools: FC = () => {
@@ -27,6 +28,24 @@ const Tools: FC = () => {
               className="Tools__tool-button"
               variant="outlined"
               onClick={() => history.push('/developer/api/bank-api')}
+            >
+              Learn More
+              <Icon icon={IconType.chevronRight} size={16} />
+            </Button>
+          </div>
+          <div className="Tools__tool">
+            <div className="Tools__tool-icon">
+              <SdkIcon size={36} />
+            </div>
+            <div className="Tools__tool-title">SDKs & Libraries</div>
+            <div className="Tools__tool-description">
+              Are you a JavaScript or Python developer? Are you ready to develop your awesome software for thenewboston
+              network? Our SDKs and Libraries will help you get started.
+            </div>
+            <Button
+              className="Tools__tool-button"
+              variant="outlined"
+              onClick={() => history.push('/developer/sdks-and-libraries')}
             >
               Learn More
               <Icon icon={IconType.chevronRight} size={16} />
