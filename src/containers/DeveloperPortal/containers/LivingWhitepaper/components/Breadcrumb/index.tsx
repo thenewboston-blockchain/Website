@@ -65,7 +65,7 @@ const Breadcrumb: FC<Props> = ({breadcrumbHeight, className}) => {
             key={pathname}
             scrollOffset={-(NAVBAR_HEIGHT + TOP_LINK_HEIGHT + breadcrumbHeight)}
             title={PATHNAME_TO_TITLE_MAPPING[pathname]}
-            titleLink={`/developer/${pathname}`}
+            titleLink={`/developer/whitepaper/${pathname}`}
           />
         );
       })}
