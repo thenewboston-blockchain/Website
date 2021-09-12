@@ -196,9 +196,14 @@ const TopNavDesktopItems = () => {
       </Link>
       <div className="TopNavDesktopItems__separator" />
       {renderAuthButtons()}
-      <Link className="TopNavDesktopItems__right-item TopNavDesktopItems__download-button" tabIndex={-1} to="/download">
-        <Button>Download Wallet</Button>
-      </Link>
+      <div className="TopNavDesktopItems__right-item">
+        <Link className=" TopNavDesktopItems__app-store-button" tabIndex={-1} to="/app-store">
+          <Button variant="outlined">App Store</Button>
+        </Link>
+        <Link className="TopNavDesktopItems__download-button" tabIndex={-1} to="/download">
+          <Button>Download Wallet</Button>
+        </Link>
+      </div>
       {renderActiveUser()}
     </>
   );

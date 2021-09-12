@@ -30,8 +30,8 @@ describe('Avatar component', () => {
 
     const placeholder = screen.getByTestId('Avatar--placeholder');
 
-    expect(placeholder).toHaveStyle({'min-height': `${baseProps.size.toString()}px`});
-    expect(placeholder).toHaveStyle({'min-width': `${baseProps.size.toString()}px`});
+    expect(placeholder).toHaveStyle({height: `${baseProps.size.toString()}px`});
+    expect(placeholder).toHaveStyle({width: `${baseProps.size.toString()}px`});
   });
 
   describe('getImageSizeBasedOnDeviceRatio', () => {

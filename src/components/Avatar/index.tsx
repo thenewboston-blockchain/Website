@@ -27,14 +27,17 @@ export const getFormattedSrc = (src: string, size: number): string => {
   }
 };
 
+export type Shape = 'circle' | 'square';
+
 export interface AvatarProps {
   bordered?: boolean;
   size: number;
   src: string;
+  shape?: Shape;
   onClick?(): void;
 }
 
-const AvatarImgWithFallback: SFC<AvatarProps> = ({bordered, className, onClick, size, src}) => {
+const AvatarImgWithFallback: SFC<AvatarProps> = ({bordered, className, onClick, shape = 'circle', size, src}) => {
   const [srcPrimary, setSrcPrimary] = useState<string>('');
   const {src: srcWithFallback} = useImage({srcList: [srcPrimary, DefaultUserAvatar]});
 
@@ -52,6 +55,7 @@ const AvatarImgWithFallback: SFC<AvatarProps> = ({bordered, className, onClick, 
       data-testid="Avatar"
       height={size}
       key={srcWithFallback}
+      shape={shape}
       src={srcWithFallback}
       onClick={onClick}
       width={size}
@@ -59,18 +63,19 @@ const AvatarImgWithFallback: SFC<AvatarProps> = ({bordered, className, onClick, 
   );
 };
 
-const Avatar: SFC<AvatarProps> = ({className, size, ...props}) => {
+const Avatar: SFC<AvatarProps> = ({className, size, shape, ...props}) => {
   return (
     <Suspense
       fallback={
         <S.Placeholder
           className={className}
           data-testid="Avatar--placeholder"
-          style={{minHeight: size, minWidth: size}}
+          shape={shape}
+          style={{height: size, width: size}}
         />
       }
     >
-      <AvatarImgWithFallback className={className} size={size} {...props} />
+      <AvatarImgWithFallback className={className} size={size} shape={shape} {...props} />
     </Suspense>
   );
 };

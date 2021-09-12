@@ -43,7 +43,7 @@ $top-nav-height: 60px;
 .TopNavMobileMenu {
   display: none;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1366px) {
     display: block;
   }
 
@@ -114,7 +114,7 @@ $top-nav-height: 60px;
     width: 100%;
     z-index: $z-index-top-nav-mobile-dropdown;
 
-    @media (max-width: 1080px) {
+    @media (max-width: 1366px) {
       grid-template-columns: 1fr;
       grid-template-rows: auto auto;
       height: $dropdown-height-992;
@@ -128,17 +128,22 @@ $top-nav-height: 60px;
     }
   }
 
+  &__app-store-button,
   &__download-button {
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  &__download-container {
-    @media (max-width: 1080px) {
-      align-items: flex-start;
+  &__app-store-button {
+    margin-right: 16px;
+  }
+
+  &__buttons-container {
+    @media (max-width: 1366px) {
+      align-items: center;
       display: flex;
-      flex-direction: row-reverse;
       grid-row: 2;
+      justify-content: flex-end;
     }
 
     @media (max-width: 768px) {
