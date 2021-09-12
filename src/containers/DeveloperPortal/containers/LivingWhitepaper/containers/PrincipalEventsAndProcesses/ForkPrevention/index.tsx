@@ -45,7 +45,7 @@ const ForkPrevention: FC = () => {
           className="PrincipalEvents__section-image PrincipalEvents__section-image--fit"
           src={ForkPrevention1Image}
           loading="lazy"
-          width="520px"
+          width="640px"
         />
       </div>
       <Divider className="PrincipalEvents__section-divider" />
@@ -61,7 +61,7 @@ const ForkPrevention: FC = () => {
           className="PrincipalEvents__section-image PrincipalEvents__section-image--fit"
           src={ForkPrevention2Image}
           loading="lazy"
-          width="520px"
+          width="640px"
         />
       </div>
       <Note
@@ -81,7 +81,7 @@ const ForkPrevention: FC = () => {
           className="PrincipalEvents__section-image PrincipalEvents__section-image--fit"
           src={ForkPrevention3Image}
           loading="lazy"
-          width="520px"
+          width="640px"
         />
       </div>
       <Note
@@ -119,7 +119,7 @@ const ForkPrevention: FC = () => {
           className="PrincipalEvents__section-image PrincipalEvents__section-image--fit"
           src={ForkPreventionAlt3Image}
           loading="lazy"
-          width="520px"
+          width="640px"
         />
       </div>
     </section>

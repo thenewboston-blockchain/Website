@@ -24,7 +24,7 @@ const AccountLock = () => {
         constant changing of account locks and, in turn, the signature required to validate the message ensures that
         nodes process a signed change request exactly once.
       </p>
-      <DocImage alt="Account Lock" maxWidth={624} src={AccountLockImage} />
+      <DocImage alt="Account Lock" maxWidth={980} src={AccountLockImage} />
       <p className="ArchitectureDeepDive__emphasized-text AccountLock__emphasized-text">Note:</p>
       <p className="ArchitectureDeepDive__description">
         There is one exception to the method in which account locks are determined. Usually, the hash value of the
