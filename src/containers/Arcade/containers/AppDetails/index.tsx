@@ -1,8 +1,8 @@
 import React, {FC, useEffect, useState} from 'react';
 
-import {getAppById} from 'apis/app-store';
+import {getAppById} from 'apis/arcade';
 import {ApiProgress} from 'constants/api-progress';
-import {App} from 'types/app-store';
+import {App} from 'types/arcade';
 
 import AppDetailsTopSection from './AppDetailsTopSection';
 

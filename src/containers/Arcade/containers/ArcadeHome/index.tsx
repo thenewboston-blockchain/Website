@@ -1,15 +1,15 @@
 import React, {FC} from 'react';
 
-import AppStoreHero from './AppStoreHero';
+import ArcadeHero from './ArcadeHero';
 import ListOfApps from './ListOfApps';
 
-const AppStoreHome: FC = () => {
+const ArcadeHome: FC = () => {
   return (
     <>
-      <AppStoreHero />
+      <ArcadeHero />
       <ListOfApps />
     </>
   );
 };
 
-export default AppStoreHome;
+export default ArcadeHome;
