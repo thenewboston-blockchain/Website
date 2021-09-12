@@ -78,7 +78,7 @@ const DataFlows: FC = () => {
             className="PrincipalEvents__section-image PrincipalEvents__section-image--fit"
             src={ConfirmationProcessImage}
             loading="lazy"
-            width="496px"
+            width="560px"
           />
         </div>
         <Note

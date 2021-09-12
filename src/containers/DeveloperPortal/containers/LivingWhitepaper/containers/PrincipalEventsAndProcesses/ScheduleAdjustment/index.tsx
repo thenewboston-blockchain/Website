@@ -24,7 +24,8 @@ const ScheduleAdjustment: FC = () => {
         offline, and so on, the network switches over to the next PV as defined by the validator schedule. These types
         of issues do not result in the blacklisting of the PV because certain network disruptions are expected in a
         peer-to-peer architecture.
-        <br />
+      </p>
+      <p className="PrincipalEvents__section-paragraph">
         The decision of whether or not to skip a PV requires a consensus agreement by the CVs. CVs’ votes on whether or
         not to skip a PV are weighted equally, rather than being weighted by boost. For details about how this happens,
         see{' '}

@@ -5,7 +5,7 @@ import {b1} from 'styles/fonts';
 export const Table = styled.table`
   box-shadow: 0 1px 13px rgba(0, 0, 0, 0.06);
   display: block;
-  overflow-x: scroll;
+  overflow-x: auto;
   width: fit-content;
   max-width: 100%;
 `;
