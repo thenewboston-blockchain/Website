@@ -1,13 +1,13 @@
 import React, {FC} from 'react';
 
 import {useParams} from 'react-router-dom';
-import {AppStoreUrlParams} from 'types/arcade';
+import {ArcadeUrlParams} from 'types/arcade';
 
 import ArcadeHome from './containers/ArcadeHome';
 import AppDetails from './containers/AppDetails';
 
 const AppStore: FC = () => {
-  const {appId} = useParams<AppStoreUrlParams>();
+  const {appId} = useParams<ArcadeUrlParams>();
 
   if (appId) {
     return <AppDetails appId={appId} />;

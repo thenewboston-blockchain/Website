@@ -1,4 +1,4 @@
-export interface AppStoreUrlParams {
+export interface ArcadeUrlParams {
   appId: string;
 }
 
