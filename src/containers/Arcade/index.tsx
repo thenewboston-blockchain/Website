@@ -1,9 +1,9 @@
 import React, {FC} from 'react';
 
 import {useParams} from 'react-router-dom';
-import {AppStoreUrlParams} from 'types/app-store';
+import {AppStoreUrlParams} from 'types/arcade';
 
-import AppStoreHome from './containers/AppStoreHome';
+import ArcadeHome from './containers/ArcadeHome';
 import AppDetails from './containers/AppDetails';
 
 const AppStore: FC = () => {
@@ -13,7 +13,7 @@ const AppStore: FC = () => {
     return <AppDetails appId={appId} />;
   }
 
-  return <AppStoreHome />;
+  return <ArcadeHome />;
 };
 
 export default AppStore;

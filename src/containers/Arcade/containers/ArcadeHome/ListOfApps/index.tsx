@@ -1,9 +1,9 @@
 import React, {FC, useEffect, useState} from 'react';
 
 import DefaultLogoSrc from 'assets/images/logo.png';
-import {getAllApps} from 'apis/app-store';
+import {getAllApps} from 'apis/arcade';
 import {ApiProgress} from 'constants/api-progress';
-import {App} from 'types/app-store';
+import {App} from 'types/arcade';
 import AppCard from '../../../components/AppCard';
 
 import * as S from './Styles';

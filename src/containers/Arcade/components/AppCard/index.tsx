@@ -16,7 +16,7 @@ const AppCard: FC<Props> = ({bannerUrl, description, id, title, websiteUrl}) => 
   const history = useHistory();
 
   const handleClickCard = (): void => {
-    history.push(`/app-store/${id}`);
+    history.push(`/arcade/${id}`);
   };
 
   const handleVisitWebsite = (event: React.MouseEvent<HTMLDivElement>): void => {

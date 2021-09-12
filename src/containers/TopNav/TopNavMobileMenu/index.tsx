@@ -93,11 +93,11 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice,
           </div>
           <div className="TopNavMobileMenu__buttons-container">
             <Button
-              className="TopNavMobileMenu__app-store-button"
-              onClick={() => history.push('/app-store')}
+              className="TopNavMobileMenu__arcade-button"
+              onClick={() => history.push('/arcade')}
               variant="outlined"
             >
-              App Store
+              Arcade
             </Button>
             <Button className="TopNavMobileMenu__download-button" onClick={() => history.push('/download')}>
               Download Wallet

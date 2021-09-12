@@ -144,7 +144,7 @@ const MilestonesAndPayouts: FC = () => {
             <h4 className="ProjectRulesMilestonesAndPayouts__pow-table-row-heading"> Published Applications </h4>
             <p className="ProjectRulesMilestonesAndPayouts__pow-table-row-text">
               For published applications, use links to the <A href="https://play.google.com/store">Google Play Store</A>
-              , <A href="https://www.apple.com/app-store/">App Store</A>,{' '}
+              , <A href="https://www.apple.com/arcade/">App Store</A>,{' '}
               <A href="https://chrome.google.com/webstore">Chrome Web Store</A>, and so on.
             </p>
           </div>
