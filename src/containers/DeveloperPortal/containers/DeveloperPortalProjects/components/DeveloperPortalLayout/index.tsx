@@ -1,10 +1,12 @@
-import React, {FC, ReactNode, useEffect, useState} from 'react';
+import React, {FC, ReactNode, useEffect, useMemo, useState} from 'react';
+import Measure from 'react-measure';
+import {useLocation} from 'react-router';
+import {scroller} from 'react-scroll';
 
 import {Container, Divider, PageTitle} from 'components';
 import {NAVBAR_HEIGHT, TOP_LINKS_HEIGHT} from 'constants/offsets';
-import Measure from 'react-measure';
-import {scroller} from 'react-scroll';
-import {useLocation} from 'react-router';
+import {useWindowDimensions} from 'hooks';
+
 import TopLinks from '../TopLinks';
 import Breadcrumb from '../Breadcrumb';
 import SideMenu from '../SideMenu';
@@ -22,11 +24,22 @@ type Props = {
 };
 
 const TIMEOUT_DELAY = 200;
+const PROJECT_DETAILS_HEADER_HEIGHT = 180;
+const SECTION_PADDING = 48;
 
 const DeveloperPortalLayout: FC<Props> = ({approvedProjectUrls, children, pageName, projectName}) => {
   const [breadcrumbHeight, setBreadcrumbHeight] = useState(56);
   const {hash} = useLocation();
-  const TOTAL_OFFSET = NAVBAR_HEIGHT + TOP_LINKS_HEIGHT + breadcrumbHeight;
+
+  const {width} = useWindowDimensions();
+
+  const TOTAL_OFFSET = useMemo(() => {
+    const baseOffset = NAVBAR_HEIGHT + TOP_LINKS_HEIGHT + breadcrumbHeight + SECTION_PADDING;
+    if (width < 786) {
+      return baseOffset;
+    }
+    return baseOffset + PROJECT_DETAILS_HEADER_HEIGHT;
+  }, [breadcrumbHeight, width]);
 
   useEffect(() => {
     // hack: scroll to the correct position based on hash when page reloads
