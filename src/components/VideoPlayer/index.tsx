@@ -1,14 +1,10 @@
 import React from 'react';
-import ReactPlayerYouTube from 'react-player/youtube';
-import ReactPlayerVimeo from 'react-player/vimeo';
-import clsx from 'clsx';
-import {bemify} from '@thenewboston/utils';
 
 import {SFC} from 'types/generic';
 import {Source} from 'types/tutorials';
 import {getVideoUrl} from 'utils/urls';
 
-import './VideoPlayer.scss';
+import * as S from './Styles';
 
 interface VideoPlayerProps {
   controls?: boolean;
@@ -20,10 +16,10 @@ interface VideoPlayerProps {
 
 const VideoPlayer: SFC<VideoPlayerProps> = ({className, controls = true, onEnded, playing = true, source, videoId}) => {
   return (
-    <div className={clsx('VideoPlayer', className)}>
+    <S.Container className={className}>
       {source === Source.youtube ? (
-        <ReactPlayerYouTube
-          className={clsx('VideoPlayer__player', {...bemify(className, '__player')})}
+        <S.PlayerYouTube
+          className={className && `${className}__player`}
           controls={controls}
           height="100%"
           onEnded={onEnded}
@@ -32,8 +28,8 @@ const VideoPlayer: SFC<VideoPlayerProps> = ({className, controls = true, onEnded
           width="100%"
         />
       ) : (
-        <ReactPlayerVimeo
-          className={clsx('VideoPlayer__player', {...bemify(className, '__player')})}
+        <S.PlayerVimeo
+          className={className && `${className}__player`}
           controls={controls}
           height="100%"
           onEnded={onEnded}
@@ -42,7 +38,7 @@ const VideoPlayer: SFC<VideoPlayerProps> = ({className, controls = true, onEnded
           width="100%"
         />
       )}
-    </div>
+    </S.Container>
   );
 };
 
