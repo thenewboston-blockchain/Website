@@ -123,6 +123,10 @@ export const h2 = {
     ${h2Base};
     ${fontWeight.fontWeightRegular};
   `,
+  semibold: css`
+    ${h2Base};
+    ${fontWeight.fontWeightSemiBold};
+  `,
 };
 
 export const h3 = {
