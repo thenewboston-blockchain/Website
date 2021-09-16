@@ -14,6 +14,7 @@ import InstagramLogo from './logos/InstagramLogo.png';
 import LinkedInLogo from './logos/LinkedInLogo.png';
 import PinterestLogo from './logos/PinterestLogo.png';
 import RedditLogo from './logos/RedditLogo.png';
+import TNBGamingLogo from './logos/TNBGaming.png';
 import TwitchLogo from './logos/TwitchLogo.png';
 import TwitterLogo from './logos/TwitterLogo.png';
 import YouTubeLogo from './logos/YouTubeLogo.png';
@@ -38,6 +39,7 @@ const MarketingButton: SFC<ComponentProps> = ({className, customLink, website}) 
   const images = {
     discord: renderImage(DiscordLogo),
     facebook: renderImage(FacebookLogo),
+    gaming: renderImage(TNBGamingLogo),
     github: renderImage(GitHubLogo),
     instagram: renderImage(InstagramLogo),
     linkedin: renderImage(LinkedInLogo),
