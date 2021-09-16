@@ -12,12 +12,6 @@ describe('TotalAmount component', () => {
     expect(screen.getByText('100')).toBeTruthy();
   });
 
-  test('renders proper default className', () => {
-    render(<TotalAmount amount={100} title="total" />);
-    const el = screen.getByTestId('TotalAmount');
-    expect(el.className).toBe('TotalAmount');
-  });
-
   test('renders with classNames passed in', () => {
     render(<TotalAmount amount={100} title="total" className="test" />);
     const totalAmount = screen.getByTestId('TotalAmount');
