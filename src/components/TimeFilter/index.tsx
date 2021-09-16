@@ -1,10 +1,9 @@
 import React from 'react';
-import clsx from 'clsx';
 
 import {GenericVoidFunction, SFC} from 'types/generic';
 import {Time, TimeFilterType} from 'types/github';
 
-import './TimeFilter.scss';
+import * as S from './Styles';
 
 export interface TimeFilterProps {
   selectedFilter: TimeFilterType;
@@ -17,27 +16,32 @@ const TimeFilter: SFC<TimeFilterProps> = ({className, selectedFilter, setSelecte
   };
 
   const renderOptions = () => {
-    return [Time.days7, Time.days30, Time.all].map((option) => (
-      <button
-        className={clsx('TimeFilter__option', {
-          'TimeFilter__option--active': option === selectedFilter,
-        })}
-        data-testid="TimeFilter__option"
-        key={option}
-        onClick={handleOptionClick(option)}
-      >
-        {option}
-      </button>
-    ));
+    return [Time.days7, Time.days30, Time.all].map((option) => {
+      const isActive = option === selectedFilter;
+      return (
+        <S.Option
+          isActive={isActive}
+          className={className && `${className}__option ${isActive ? `${className}__option--active` : ''}`}
+          data-testid="TimeFilter__option"
+          key={option}
+          onClick={handleOptionClick(option)}
+        >
+          {option}
+        </S.Option>
+      );
+    });
   };
 
   return (
-    <div className={clsx('TimeFilter', className)} data-testid="TimeFilter">
-      <h2>Top Contributors</h2>
-      <div className="TimeFilter__option-container" data-testid="TimeFilter__option-container">
+    <S.Container className={className} data-testid="TimeFilter">
+      <S.Heading>Top Contributors</S.Heading>
+      <S.OptionContainer
+        className={className && `${className}__option-container`}
+        data-testid="TimeFilter__option-container"
+      >
         {renderOptions()}
-      </div>
-    </div>
+      </S.OptionContainer>
+    </S.Container>
   );
 };
 

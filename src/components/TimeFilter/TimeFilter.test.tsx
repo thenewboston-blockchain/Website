@@ -11,17 +11,6 @@ const baseProps: TimeFilterProps = {
 };
 
 describe('TimeFilter', () => {
-  it('renders proper default className', () => {
-    render(<TimeFilter {...baseProps} />);
-    const el = screen.getByTestId('TimeFilter');
-    const elOptionContainer = screen.getByTestId('TimeFilter__option-container');
-    const elOptions = screen.getAllByTestId('TimeFilter__option');
-
-    expect(el.className).toBe('TimeFilter');
-    expect(elOptionContainer.className).toBe('TimeFilter__option-container');
-    elOptions.every((elOption) => expect(elOption.className).toBe('TimeFilter__option'));
-  });
-
   it('renders with classNames passed in', () => {
     render(<TimeFilter className="Test" {...baseProps} />);
     const el = screen.getByTestId('TimeFilter');
@@ -30,11 +19,11 @@ describe('TimeFilter', () => {
   });
 
   it('renders only one active option which is the selected option', () => {
-    render(<TimeFilter {...baseProps} />);
+    render(<TimeFilter className="Test" {...baseProps} />);
     const elOptions = screen.getAllByTestId('TimeFilter__option');
 
     const selectedElOption = elOptions.filter((elOption) =>
-      elOption.className.includes('TimeFilter__option--active'),
+      elOption.className.includes('Test__option--active'),
     ) as HTMLElement[];
     expect(selectedElOption.length === 1).toBe(true);
     expect(selectedElOption[0].textContent).toBe(baseProps.selectedFilter);

@@ -142,6 +142,10 @@ export const h3 = {
     ${h3Base};
     ${fontWeight.fontWeightRegular};
   `,
+  semibold: css`
+    ${h2Base};
+    ${fontWeight.fontWeightSemiBold};
+  `,
 };
 
 export const h4 = {
