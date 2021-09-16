@@ -1,22 +1,22 @@
 import parse from 'date-fns/parse';
-import {RawTask, Task, TaskDict} from 'types/github';
+import {RawBounty, Bounty, BountyDict} from 'types/github';
 import {Opening} from 'types/openings';
 
 import openings from 'data/openings.json';
-import tasks from 'data/tasks.json';
+import bounties from 'data/bounties.json';
 
 export const getOpenings = (): Opening[] => {
   return openings as Opening[];
 };
 
-export const getTasks = (): TaskDict => {
+export const getBounties = (): BountyDict => {
   const results: any = {};
 
-  Object.entries(tasks).forEach(([githubUsername, taskList]) => {
-    results[githubUsername] = (taskList as RawTask[]).map(
-      (task: RawTask): Task => ({
-        ...task,
-        completed_date: parse(task.completed_date, 'L/d/yy', new Date()),
+  Object.entries(bounties).forEach(([githubUsername, bountyList]) => {
+    results[githubUsername] = (bountyList as RawBounty[]).map(
+      (bounty: RawBounty): Bounty => ({
+        ...bounty,
+        completed_date: parse(.completed_date, 'L/d/yy', new Date()),
       }),
     );
   });

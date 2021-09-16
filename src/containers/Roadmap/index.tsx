@@ -3,7 +3,7 @@ import React, {FC, useEffect, useState} from 'react';
 import {getAllRoadmaps} from 'apis/roadmap';
 import {Loader} from 'components';
 import {ApiProgress} from 'constants/api-progress';
-import {RoadmapTask} from 'types/roadmap';
+import {RoadmapBounty} from 'types/roadmap';
 
 import RoadmapHero from './RoadmapHero';
 import TeamRoadmaps from './TeamRoadmaps';
@@ -12,7 +12,7 @@ import './Roadmap.scss';
 
 type TeamRoadmapState = {
   [teamName: string]: {
-    tasks: RoadmapTask[];
+    bounties: RoadmapBounty[];
   };
 };
 
@@ -25,28 +25,28 @@ const Roadmap: FC = () => {
     (async () => {
       try {
         setProgress(ApiProgress.Requesting);
-        let totalTasks = 0;
-        let totalCompletedTasks = 0;
-        const roadmapTasks = await getAllRoadmaps();
-        const processedTeamRoadmaps = roadmapTasks.reduce((acc, roadmapTask) => {
-          totalTasks += 1;
-          if (roadmapTask.is_complete) {
-            totalCompletedTasks += 1;
+        let totalBounties = 0;
+        let totalCompletedBounties = 0;
+        const roadmapBounties = await getAllRoadmaps();
+        const processedTeamRoadmaps = roadmapBounties.reduce((acc, roadmapBounty) => {
+          totalBounties += 1;
+          if (roadmapBounty.is_complete) {
+            totalCompletedBounties += 1;
           }
-          const teamName = roadmapTask.team_name;
+          const teamName = roadmapBounty.team_name;
 
           if (acc[teamName]) {
-            acc[teamName].tasks.push(roadmapTask);
+            acc[teamName].bounties.push(roadmapBounty);
           } else {
             acc[teamName] = {
-              tasks: [roadmapTask],
+              bounties: [roadmapBounty],
             };
           }
           return acc;
         }, {} as TeamRoadmapState);
 
         setTeamRoadmaps(processedTeamRoadmaps);
-        const averagePercentage = Math.floor((totalCompletedTasks / totalTasks) * 100);
+        const averagePercentage = Math.floor((totalCompletedBounties / totalBounties) * 100);
         setProgressPercentage(averagePercentage);
         setProgress(ApiProgress.Success);
       } catch (err) {

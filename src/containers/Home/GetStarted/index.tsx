@@ -36,10 +36,10 @@ const getStartedDetails = [
     to: '/developer/projects',
   },
   {
-    description: 'Work on bug fixes, graphics, and other small tasks to earn coins.',
+    description: 'Work on bug fixes, graphics, and other small bounties to earn coins.',
     icon: <img alt="Complete Bounties" className="GetStarted__icon" src={CompleteBountiesIcon} />,
     title: 'Complete Bounties',
-    to: '/tasks/All',
+    to: '/bounties/All',
   },
   {
     description: 'Apply to be part of the core team.',

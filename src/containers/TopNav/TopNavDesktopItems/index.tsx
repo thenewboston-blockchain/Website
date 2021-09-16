@@ -43,7 +43,7 @@ const communityPopoverItems: TopNavPopoverItemType[] = [
     to: '/analytics',
   },
   {
-    description: 'Tasks to finish up beta app',
+    description: 'Bounties to finish up beta app',
     iconType: IconType.mapMarkerCheck,
     title: 'Beta Roadmap',
     to: '/roadmap',
@@ -59,11 +59,11 @@ const communityPopoverItems: TopNavPopoverItemType[] = [
 
 const getStartedPopoverItems: TopNavPopoverItemType[] = [
   {
-    description: 'Pick up tasks within GitHub and earn coins',
+    description: 'Pick up bounties within GitHub and earn coins',
     iconSize: 28,
     iconType: IconType.github,
-    title: 'Tasks',
-    to: '/tasks',
+    title: 'Bounties',
+    to: '/bounties',
   },
   {
     description: 'Propose ideas you want built',

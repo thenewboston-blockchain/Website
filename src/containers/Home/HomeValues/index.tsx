@@ -44,7 +44,7 @@ const HomeValues: FC = () => {
             <Link className="HomeValues__main-buttons--create" tabIndex={-1} to="/developer/projects">
               <Button>Create Projects</Button>
             </Link>
-            <Link className="HomeValues__main-buttons--earn" tabIndex={-1} to="/tasks/All">
+            <Link className="HomeValues__main-buttons--earn" tabIndex={-1} to="/bounties/All">
               <Button>Complete Bounties</Button>
             </Link>
           </div>

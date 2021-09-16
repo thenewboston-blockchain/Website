@@ -17,7 +17,7 @@ const ProgressHeader: FC<Props> = ({endDate, goal, startDate, weekNumber}) => {
     <div className="ProgressHeader">
       <div className="ProgressHeader__header">Weekly Progress</div>
       <div className="ProgressHeader__header-overview">
-        Stay updated with our weekly progress. Each task that each team works on helps us achieve our greater goal of
+        Stay updated with our weekly progress. Each bounty that each team works on helps us achieve our greater goal of
         reaching beta.
       </div>
       <div className="ProgressHeader__divider" />

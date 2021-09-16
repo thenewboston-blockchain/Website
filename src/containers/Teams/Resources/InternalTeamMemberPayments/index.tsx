@@ -10,19 +10,19 @@ const InternalTeamMemberPayments: FC = () => {
       <p>
         All team members are eligible to submit a timesheet each day via a GitHub issue in the{' '}
         <A href="https://github.com/thenewboston-developers/Contributor-Payments">Contributor-Payments</A> repository.
-        This will be a record of all tasks that the team member worked on that day including:
+        This will be a record of all bounties that the team member worked on that day including:
       </p>
       <DocList variant="ul">
-        <li>a short description of the task</li>
+        <li>a short description of the bounty</li>
         <li>proof of work</li>
-        <li>estimated time spent on each task (half hour increments)</li>
+        <li>estimated time spent on each bounty (half hour increments)</li>
         <ul>
           <li>0.5 hours</li>
           <li>1.5 hours</li>
         </ul>
       </DocList>
       <p>
-        In addition to the individual tasks the submitter will also include their account number and the total time (sum
+        In addition to the individual bounties the submitter will also include their account number and the total time (sum
         of all estimates). This is preferred rather than having another team maintain a log of account numbers for users
         to ensure the most up to date account number for the recipient is always used.
       </p>

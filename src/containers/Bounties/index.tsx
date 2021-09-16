@@ -19,13 +19,13 @@ import {fetchGithubIssues} from 'utils/github';
 import {GenericVoidFunction} from 'types/generic';
 import {Issue, Repository, RepositoryUrlParams} from 'types/github';
 import {REPOSITORY_FILTERS} from 'constants/github';
-import {SortBy} from 'types/tasks';
+import {SortBy} from 'types/bounties';
 import {sortByDateKey, sortByNumberKey} from 'utils/sort';
 
-import TasksTask from './TasksTask';
-import './Tasks.scss';
+import BountiesBounty from './BountiesBounty';
+import './Bounties.scss';
 
-const Tasks: FC = () => {
+const Bounties: FC = () => {
   const history = useHistory();
   const {repository} = useParams<RepositoryUrlParams>();
   const [dropdownOptions] = useState<string[]>([SortBy.none, SortBy.created, SortBy.reward]);
@@ -100,28 +100,28 @@ const Tasks: FC = () => {
   };
 
   const handleNavOptionClick = (option: Repository) => (): void => {
-    history.push(`/tasks/${option}`);
+    history.push(`/bounties/${option}`);
   };
 
   const renderFilters = () => (
     <>
       <FlatNavLinks handleOptionClick={handleNavOptionClick} options={REPOSITORY_FILTERS} selectedOption={repository} />
       <LabelFilter
-        className="Tasks__LabelFilter"
+        className="Bounties__LabelFilter"
         handleLabelClick={handleLabelClick}
         selectedLabelNames={selectedLabelNames}
       />
     </>
   );
 
-  const renderTasks = (): ReactNode => {
+  const renderBounties = (): ReactNode => {
     const filteredIssues = getFilteredIssues();
     if (error || !filteredIssues.length) return <EmptyPage />;
     return filteredIssues.map(
       ({amount, assignees, created_at, html_url, labels, number, repositoryName, title, user}) => {
         const createdStr = formatDistanceToNow(parseISO(created_at), {includeSeconds: true});
         return (
-          <TasksTask
+          <BountiesBounty
             amount={amount}
             assignees={assignees}
             createdAt={`${createdStr} ago`}
@@ -140,20 +140,20 @@ const Tasks: FC = () => {
 
   return (
     <>
-      <PageTitle ogDescription={`${repositoryFilter} Tasks`} title={`${repositoryFilter} Tasks`} />
-      <Container className="Tasks">
+      <PageTitle ogDescription={`${repositoryFilter} Bounties`} title={`${repositoryFilter} Bounties`} />
+      <Container className="Bounties">
         <BreadcrumbMenu
-          className="Tasks__BreadcrumbMenu"
+          className="Bounties__BreadcrumbMenu"
           menuItems={renderFilters()}
           pageName={repository}
-          sectionName="Tasks"
+          sectionName="Bounties"
         />
-        <div className="Tasks__left-menu">{renderFilters()}</div>
-        <div className="Tasks__task-list">
-          <div className="Tasks__sortby-container">
+        <div className="Bounties__left-menu">{renderFilters()}</div>
+        <div className="Bounties__bounty-list">
+          <div className="Bounties__sortby-container">
             {sortByOption !== SortBy.none && (
               <Icon
-                className="Tasks__sortby-icon"
+                className="Bounties__sortby-icon"
                 icon={sortByOrder === 'asc' ? IconType.sortAscending : IconType.sortDescending}
                 onClick={handleSorting}
               />
@@ -165,11 +165,11 @@ const Tasks: FC = () => {
             />
           </div>
           {loading ? (
-            <div className="Tasks__loader-container">
+            <div className="Bounties__loader-container">
               <Loader />
             </div>
           ) : (
-            renderTasks()
+            renderBounties()
           )}
         </div>
       </Container>
@@ -177,4 +177,4 @@ const Tasks: FC = () => {
   );
 };
 
-export default Tasks;
+export default Bounties;

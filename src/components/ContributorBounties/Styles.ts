@@ -23,7 +23,7 @@ const commonTable = css`
     text-align: right;
   }
 
-  // Recent Task (name of task)
+  // Recent Bounty (name of bounty)
   &:nth-child(1) {
     max-width: 140px;
     min-width: 140px;
