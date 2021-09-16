@@ -1,8 +1,7 @@
 import React, {ReactNode, useState} from 'react';
-import clsx from 'clsx';
 import {SFC} from 'types/generic';
 
-import './Tabs.scss';
+import * as S from './Styles';
 
 export interface Tab {
   component: ReactNode;
@@ -20,20 +19,24 @@ const Tabs: SFC<TabsProps> = ({className, defaultTab = 0, tabs, latestReleaseNum
 
   const renderTabs = (): ReactNode => {
     return (
-      <div className="Tabs__tabs-container" data-testid="Tabs__tabs-container">
-        {tabs.map(({label}, index) => (
-          <div
-            className={clsx('Tabs__tab', {'Tabs__tab--active': activeTab === index})}
-            data-testid="Tabs__tab"
-            key={label}
-            onClick={() => setActiveTab(index)}
-            role="button"
-            tabIndex={0}
-          >
-            {label}
-          </div>
-        ))}
-      </div>
+      <S.TabsContainer className={className && `${className}__tabs-container`} data-testid="Tabs__tabs-container">
+        {tabs.map(({label}, index) => {
+          const isActive = index === activeTab;
+          return (
+            <S.Tab
+              isActive={isActive}
+              className={className && `${className}__tab ${isActive ? `${className}__tab--active` : ''}`}
+              data-testid="Tabs__tab"
+              key={label}
+              onClick={() => setActiveTab(index)}
+              role="button"
+              tabIndex={0}
+            >
+              {label}
+            </S.Tab>
+          );
+        })}
+      </S.TabsContainer>
     );
   };
 
@@ -42,8 +45,9 @@ const Tabs: SFC<TabsProps> = ({className, defaultTab = 0, tabs, latestReleaseNum
   };
 
   return (
-    <div className={clsx('Tabs', className)} data-testid="Tabs">
+    <div className={className} data-testid="Tabs">
       {renderTabs()}
+      {/* TODO: refactor this to make tabs reusable */}
       <p
         className="Download__latest-version"
         data-testid="Download__latest-version"

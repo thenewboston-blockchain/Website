@@ -28,13 +28,6 @@ describe('Tabs component', () => {
     expect(tabs).toBeTruthy();
   });
 
-  test('renders with default className', () => {
-    render(<Tabs {...baseProps} />);
-
-    const tabs = screen.getByTestId('Tabs');
-    expect(tabs).toHaveClass('Tabs');
-  });
-
   test('renders latest version text correctly', () => {
     render(<Tabs {...baseProps} />);
 
@@ -43,43 +36,40 @@ describe('Tabs component', () => {
     expect(version).toHaveTextContent('Latest Version: 1.0.0-alpha.1');
   });
 
-  test('renders first tab as active by default', () => {
-    render(<Tabs {...baseProps} />);
+  test('renders only first tab as active by default', () => {
+    render(<Tabs className="Test" {...baseProps} />);
 
     const tabs = screen.getAllByTestId('Tabs__tab');
-    expect(tabs[0]).toHaveClass('Tabs__tab');
-    expect(tabs[0]).toHaveClass('Tabs__tab--active');
+
+    expect(tabs[0]).toHaveClass('Test__tab');
+    expect(tabs[0]).toHaveClass('Test__tab--active');
     expect(tabs[0]).toHaveTextContent('FirstTab');
-  });
-
-  test('renders other tabs as inactive', () => {
-    render(<Tabs {...baseProps} />);
-
-    const tabs = screen.getAllByTestId('Tabs__tab');
-    expect(tabs[1]).toHaveClass('Tabs__tab');
+    expect(tabs[1]).toHaveClass('Test__tab');
+    expect(tabs[1]).not.toHaveClass('Test__tab--active');
     expect(tabs[1]).toHaveTextContent('SecondTab');
   });
 
   test('renders a defaultTab as active', () => {
     const props = {...baseProps, defaultTab: 1};
-    render(<Tabs {...props} />);
+    render(<Tabs className="Test" {...props} />);
 
     const tabs = screen.getAllByTestId('Tabs__tab');
-    expect(tabs[1]).toHaveClass('Tabs__tab');
-    expect(tabs[1]).toHaveClass('Tabs__tab--active');
-    expect(tabs[0]).toHaveClass('Tabs__tab');
-    expect(tabs[0]).not.toHaveClass('Tabs__tab--active');
+
+    expect(tabs[1]).toHaveClass('Test__tab');
+    expect(tabs[1]).toHaveClass('Test__tab--active');
+    expect(tabs[0]).toHaveClass('Test__tab');
+    expect(tabs[0]).not.toHaveClass('Test__tab--active');
   });
 
   test('renders selected tab as active when pressed', () => {
-    render(<Tabs {...baseProps} />);
+    render(<Tabs className="Test" {...baseProps} />);
     const tabs = screen.getAllByTestId('Tabs__tab');
 
     expect(tabs[1]).toHaveTextContent('SecondTab');
-    expect(tabs[1]).not.toHaveClass('Tabs__tab--active');
+    expect(tabs[1]).not.toHaveClass('Test__tab--active');
 
     fireEvent.click(tabs[1]);
 
-    expect(tabs[1]).toHaveClass('Tabs__tab--active');
+    expect(tabs[1]).toHaveClass('Test__tab--active');
   });
 });
