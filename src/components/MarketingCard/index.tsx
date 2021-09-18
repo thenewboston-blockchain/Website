@@ -14,6 +14,7 @@ import InstagramLogo from 'assets/logos/Instagram.png';
 import LinkedInLogo from 'assets/logos/LinkedIn.png';
 import PinterestLogo from 'assets/logos/Pinterest.png';
 import RedditLogo from 'assets/logos/Reddit.png';
+import TNBGamingLogo from 'assets/logos/TNBGaming.png';
 import TwitchLogo from 'assets/logos/Twitch.png';
 import TwitterLogo from 'assets/logos/Twitter.png';
 import YouTubeLogo from 'assets/logos/YouTube.png';
@@ -38,6 +39,7 @@ const MarketingCard: SFC<MarketingCardProps> = ({className, customLink, website}
   const images = {
     discord: renderImage(DiscordLogo),
     facebook: renderImage(FacebookLogo),
+    gaming: renderImage(TNBGamingLogo),
     github: renderImage(GitHubLogo),
     instagram: renderImage(InstagramLogo),
     linkedin: renderImage(LinkedInLogo),

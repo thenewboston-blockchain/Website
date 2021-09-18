@@ -25,18 +25,24 @@
   }
 
   &__content-container {
-    background-color: white;
     border-radius: 9px;
-    display: flex;
+    display: grid;
+    gap: 48px;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
-    padding: 32px 64.5px;
+
+    @media (max-width: 768px) {
+      gap: 24px;
+      grid-template-columns: 1fr;
+    }
   }
 
   &__tool {
     align-items: center;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
-    max-width: 250px;
+    padding: 24px;
     text-align: center;
   }
 
@@ -61,6 +67,7 @@
     @extend %body1;
     color: var(--color-gray-500);
     margin-bottom: 24px;
+    max-width: 480px;
   }
 
   &__tool-button {

@@ -31,7 +31,6 @@ import HashLink from './HashLink';
 import ProgressiveImage from './ProgressiveImage';
 import Label from './Label';
 import Layout from './Layout';
-import MarketingButton from './MarketingButton';
 import MarketingCard from './MarketingCard';
 import MenuGroup from './MenuGroup';
 import Navigation from './Navigation';
@@ -48,10 +47,7 @@ import RequiredAsterisk from './RequiredAsterisk';
 import Shadow from './Shadow';
 import SlideUp from './SlideUp';
 import SocialMediaIcon from './SocialMediaIcon';
-import StepIndicator from './StepIndicator';
-import {TableBorderGrid, TableParams, TableVertical} from './Table';
-import Tabs, {Tab} from './Tabs';
-import TimeFilter from './TimeFilter';
+import TableParams from './TableParams';
 import TotalAmount from './TotalAmount';
 import VideoPlayer from './VideoPlayer';
 
@@ -90,7 +86,6 @@ export {
   LabelFilter,
   Layout,
   Loader,
-  MarketingButton,
   MarketingCard,
   MenuGroup,
   Navigation,
@@ -109,14 +104,7 @@ export {
   SlideUp,
   SnippetLang,
   SocialMediaIcon,
-  StepIndicator,
-  TableBorderGrid,
   TableParams,
-  TableVertical,
-  Tabs,
-  TimeFilter,
   TotalAmount,
   VideoPlayer,
 };
-
-export type {Tab};

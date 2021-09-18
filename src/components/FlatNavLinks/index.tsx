@@ -5,7 +5,7 @@ import {bemify} from '@thenewboston/utils';
 import {SFC} from 'types/generic';
 import {NavOption} from 'types/option';
 
-import './FlatNavLinks.scss';
+import * as S from './Styles';
 
 export interface FlatNavLinksProps {
   handleOptionClick(option: string): () => void;
@@ -16,24 +16,23 @@ export interface FlatNavLinksProps {
 const FlatNavLinks: SFC<FlatNavLinksProps> = ({className, handleOptionClick, options, selectedOption}) => {
   const renderOptions = () => {
     return options.map((option: NavOption) => (
-      <button
-        className={clsx('FlatNavLinks__option', {
-          'FlatNavLinks__option--active': option.pathname === selectedOption,
+      <S.OptionButton
+        isActive={option.pathname === selectedOption}
+        className={clsx({
           ...bemify(className, '__option'),
-          ...bemify(className, '__option--active', option.pathname === selectedOption),
         })}
         key={option.pathname}
         onClick={handleOptionClick(option.pathname)}
       >
         {option.title}
-      </button>
+      </S.OptionButton>
     ));
   };
 
   return (
-    <div className={clsx('FlatNavLinks', className)} data-testid="FlatNavLinks">
+    <S.Container className={className} data-testid="FlatNavLinks">
       {renderOptions()}
-    </div>
+    </S.Container>
   );
 };
 

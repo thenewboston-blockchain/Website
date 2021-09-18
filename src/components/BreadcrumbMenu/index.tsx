@@ -33,7 +33,13 @@ const BreadcrumbMenu: SFC<ComponentProps> = ({className, menuItems, pageName, se
 
   const renderBreadcrumbBar = (): ReactNode => {
     return (
-      <S.BreadcrumbBar onClick={() => setOpen(!open)} role="button" tabIndex={0} data-testid="BreadcrumbMenu__bar">
+      <S.BreadcrumbBar
+        className="BreadcrumbMenu__bar"
+        onClick={() => setOpen(!open)}
+        role="button"
+        tabIndex={0}
+        data-testid="BreadcrumbMenu__bar"
+      >
         <S.BreadcrumbNavigation data-testid="BreadcrumbMenu__navigation">
           {sectionName}
           <Icon icon={IconType.menuRight} size={24} />

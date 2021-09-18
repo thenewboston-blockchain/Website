@@ -1,7 +1,7 @@
 import React, {FC, ReactNode, useEffect, useState} from 'react';
 
 import {Container, Divider, PageTitle} from 'components';
-import {NAVBAR_HEIGHT, LIVING_WHITEPAPER_TOP_LINKS_HEIGHT} from 'constants/offsets';
+import {NAVBAR_HEIGHT, TOP_LINKS_HEIGHT} from 'constants/offsets';
 import Measure from 'react-measure';
 import {scroller} from 'react-scroll';
 import {useLocation} from 'react-router';
@@ -21,7 +21,7 @@ const TIMEOUT_DELAY = 200;
 const DeveloperPortalLayout: FC<Props> = ({children, pageName}) => {
   const [breadcrumbHeight, setBreadcrumbHeight] = useState(56);
   const {hash} = useLocation();
-  const TOTAL_OFFSET = NAVBAR_HEIGHT + LIVING_WHITEPAPER_TOP_LINKS_HEIGHT + breadcrumbHeight;
+  const TOTAL_OFFSET = NAVBAR_HEIGHT + TOP_LINKS_HEIGHT + breadcrumbHeight;
 
   useEffect(() => {
     // hack: scroll to the correct position based on hash when page reloads

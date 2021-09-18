@@ -50,9 +50,9 @@ const AddingValidators = () => {
         <DocImage
           alt="Round PV"
           className="AddingValidators__important-image"
-          maxWidth={284}
+          maxWidth={320}
           src={RoundImage}
-          width={284}
+          width={320}
         />
       </div>
       <Divider className="ArchitectureDeepDive__section-divider" />

@@ -44,7 +44,7 @@ const ElectionProcess: FC = () => {
           className="PrincipalEvents__section-image PrincipalEvents__section-image--fit"
           src={GovernanceOverviewImage}
           loading="lazy"
-          width="470px"
+          width="780px"
         />
       </div>
     </section>

@@ -32,7 +32,7 @@ const ConsensusCV = () => {
           out to all other validators.
         </li>
       </ul>
-      <DocImage alt="Halt Requested CV" maxWidth={624} src={HaltRequestedImage} />
+      <DocImage alt="Halt Requested CV" maxWidth={780} src={HaltRequestedImage} />
       <Divider className="ArchitectureDeepDive__point-divider" />
       <ul className="ArchitectureDeepDive__points">
         <li className="ArchitectureDeepDive__point">
@@ -48,7 +48,7 @@ const ConsensusCV = () => {
           HEAD block (its last block before halting) out to all other CVs.
         </li>
       </ul>
-      <DocImage alt="Blockchain Halted CV" maxWidth={349} src={BlockchainHaltedImage} />
+      <DocImage alt="Blockchain Halted CV" maxWidth={700} src={BlockchainHaltedImage} />
       <Divider className="ArchitectureDeepDive__point-divider" />
       <ul className="ArchitectureDeepDive__points">
         <li className="ArchitectureDeepDive__point">
@@ -64,7 +64,7 @@ const ConsensusCV = () => {
           blockchain.
         </li>
       </ul>
-      <DocImage alt="Longest Blockchain" maxWidth={349} src={LongestBlockchainImage} />
+      <DocImage alt="Longest Blockchain" maxWidth={420} src={LongestBlockchainImage} />
       <Divider className="ArchitectureDeepDive__point-divider" />
       <ul className="ArchitectureDeepDive__points">
         <li className="ArchitectureDeepDive__point">
@@ -72,7 +72,7 @@ const ConsensusCV = () => {
           determined, all other CVs sync their own blockchains up to that block.
         </li>
       </ul>
-      <DocImage alt="Syncing Blockchain" maxWidth={349} src={SyncingBlockchainsImage} />
+      <DocImage alt="Syncing Blockchain" maxWidth={500} src={SyncingBlockchainsImage} />
       <Note
         type={NoteType.Information}
         text="The receiving CV only needs a majority of responses from the other CVs before syncing. This is  because once a majority 
@@ -94,7 +94,7 @@ for that minority to have any longer blockchain, given that a majority consensus
           sync switch request, they all switch over to the new PV
         </li>
       </ul>
-      <DocImage alt="Last Step CV" maxWidth={554} src={LastStepImage} />
+      <DocImage alt="Last Step CV" maxWidth={780} src={LastStepImage} />
       <Divider className="ArchitectureDeepDive__section-divider" />
     </div>
   );

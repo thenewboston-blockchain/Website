@@ -1,6 +1,10 @@
 @import 'styles/font-mixins';
 
 .TopNavDesktopItems {
+  &__arcade-button {
+    margin-right: 16px;
+  }
+
   &__download-button {
     margin-right: 24px;
   }
@@ -14,7 +18,7 @@
   }
 
   &__right-item {
-    margin-left: 42px;
+    margin-left: 24px;
   }
 
   &__link {
@@ -30,7 +34,7 @@
     width: 0.5px;
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1366px) {
     &__download-button,
     &__profile-image,
     &__right-item,

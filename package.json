@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.0",
-    "@thenewboston/ui": "^0.1.14",
+    "@thenewboston/ui": "^0.1.16",
     "@thenewboston/utils": "^1.0.0",
     "axios": "^0.21.1",
     "clsx": "^1.1.1",
@@ -24,6 +24,7 @@
     "react-measure": "^2.5.2",
     "react-player": "^2.9.0",
     "react-redux": "^7.2.2",
+    "react-responsive-carousel": "^3.2.20",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
     "react-scroll": "^1.8.2",

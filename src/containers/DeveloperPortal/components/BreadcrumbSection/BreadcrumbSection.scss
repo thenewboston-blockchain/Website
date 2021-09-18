@@ -34,6 +34,10 @@
     color: var(--color-gray-400);
     margin: 0 8px;
 
+    @media (max-width: 414px) {
+      margin: 0 4px;
+    }
+
     &--active {
       color: var(--color-gray-600);
     }
@@ -43,6 +47,10 @@
     @include top-nav-button;
     display: flex;
     padding-left: 0;
+
+    @media (max-width: 768px) {
+      margin: 12px 0;
+    }
   }
 
   &__Popover {

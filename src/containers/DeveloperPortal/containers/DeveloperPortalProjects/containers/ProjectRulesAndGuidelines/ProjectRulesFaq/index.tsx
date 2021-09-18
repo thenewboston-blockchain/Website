@@ -63,6 +63,20 @@ const ProjectRulesFaq: FC = () => {
       </div>
       <Divider className="ProjectRulesFaq__divider" />
       <div className="ProjectRulesFaq__question-container">
+        <p className="ProjectRulesFaq__question">Why the MVP rule?</p>
+        <p className="ProjectRulesFaq__answer">
+          We have been noticing that quite a few projects that we have funded are ending up in an incomplete state
+          shortly after the initial milestone payouts. As a result, we were ending up spending coins from the Treasury
+          without the community ever receiving a working piece of software.
+        </p>
+        <p className="ProjectRulesFaq__answer">
+          A core philosophy of our project system is that the value that contributors receive in coins must be equal to
+          the value that they give to our network and/or our community. So, by funding milestones prior to the actual
+          software deliverable, we realized we are often diluting the value of our coins.
+        </p>
+      </div>
+      <Divider className="ProjectRulesFaq__divider" />
+      <div className="ProjectRulesFaq__question-container">
         <p className="ProjectRulesFaq__question">Who offers coins for proposals?</p>
         <p className="ProjectRulesFaq__answer">
           Auditors can offer an amount of coins for proposals. The project lead (proposal maker) and auditors can

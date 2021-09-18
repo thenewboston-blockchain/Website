@@ -17,7 +17,7 @@ const NetworkInitialization = () => {
         blockchain that defines the initial structure of the network and derives from any prior state of the network
         (alpha).
       </p>
-      <DocImage alt="Genesis Block" maxWidth={291} src={GenesisBlockImage} />
+      <DocImage alt="Genesis Block" maxWidth={460} src={GenesisBlockImage} />
       <p className="ArchitectureDeepDive__description">
         The blockchain genesis state consists of the minimum amount of data and information required to initialize a new
         network including:
@@ -27,13 +27,13 @@ const NetworkInitialization = () => {
         <li className="ArchitectureDeepDive__point">The node registration of the source node</li>
         <li className="ArchitectureDeepDive__point">The initial schedule comprising a single node (the source node)</li>
       </ul>
-      <DocImage alt="Genesis Block Composition" maxWidth={245} src={GenesisBlockCompositionImage} />
+      <DocImage alt="Genesis Block Composition" maxWidth={380} src={GenesisBlockCompositionImage} />
       <p className="ArchitectureDeepDive__description">
         From that point onward, all blocks become structures of data that represent all changes to the network. These
         originate from signed change requests, including transfer of coins between accounts, registration of new
         usernames, new nodes being added to the network, and so on.
       </p>
-      <DocImage alt="Genesis Block Composition" maxWidth={404} src={BlockChangeImage} />
+      <DocImage alt="Genesis Block Composition" maxWidth={530} src={BlockChangeImage} />
       <Divider className="ArchitectureDeepDive__section-divider" />
     </section>
   );

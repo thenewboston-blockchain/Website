@@ -38,16 +38,6 @@ describe('FlatNavLinks component', () => {
     expect(elements.length).toBe(props.options.length);
   });
 
-  it('renders with default className', () => {
-    render(<FlatNavLinks {...props} />);
-
-    const parent = screen.getByTestId('FlatNavLinks');
-    const child = screen.getAllByRole('button')[0];
-
-    expect(parent).toHaveClass('FlatNavLinks');
-    expect(child).toHaveClass('FlatNavLinks__option');
-  });
-
   it('renders with className passed in', () => {
     render(<FlatNavLinks {...props} className="test" />);
 
@@ -56,22 +46,6 @@ describe('FlatNavLinks component', () => {
 
     expect(parent).toHaveClass('test');
     expect(child).toHaveClass('test__option');
-  });
-
-  it('renders with --active in default className when selectedOption passed in', () => {
-    render(<FlatNavLinks {...props} />);
-
-    const child = screen.getAllByRole('button')[0];
-
-    expect(child).toHaveClass('FlatNavLinks__option--active');
-  });
-
-  it('renders with --active in className passed in when selectedOption passed in', () => {
-    render(<FlatNavLinks {...props} className="test" />);
-
-    const child = screen.getAllByRole('button')[0];
-
-    expect(child).toHaveClass('test__option--active');
   });
 
   it('renders with title passed in', () => {

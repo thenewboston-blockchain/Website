@@ -20,11 +20,13 @@ const PrincipalEntities: FC = () => {
         <section className="PrincipalEntities__section">
           <section id={PrincipleEntitiesId.Overview}>
             <h2 className="PrincipalEntities__section-heading">Overview</h2>
-            <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--mb-48">
+            <p className="PrincipalEntities__section-paragraph">
               This documentation outlines an efficient and scalable peer-to-peer consensus mechanism that allows for
               highly efficient transaction validation within a decentralized network.
-              <br /> The key idea behind this architecture is that when building a distributed payment ledger, it is not
-              the transaction processing itself that requires distribution across multiple servers. Multiple servers
+            </p>
+            <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--mb-48">
+              The key idea behind this architecture is that when building a distributed payment ledger, it is not the
+              transaction processing itself that requires distribution across multiple servers. Multiple servers
               processing the same transactions in parallel is an inherent inefficiency in a distributed network because
               work is duplicated. It is rather the ability to elect fairly a single validation server and consensual
               acceptance of the produced results that require distribution among nodes.
@@ -60,10 +62,9 @@ const PrincipalEntities: FC = () => {
         <section className="PrincipalEntities__section" id={PrincipleEntitiesId.Account}>
           <h2 className="PrincipalEntities__section-heading">Account</h2>
           <p className="PrincipalEntities__section-paragraph">
-            Accounts are anonymous digital identities on the network where coins can be sent to and from.
-            <br />
-            Account managers are software apps (such as client desktop software) that individuals use to create new
-            accounts, manage existing accounts, send coins, and receive coins.
+            Accounts are anonymous digital identities on the network where coins can be sent to and from. Account
+            managers are software apps (such as client desktop software) that individuals use to create new accounts,
+            manage existing accounts, send coins, and receive coins.
           </p>
           <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--mb-0 PrincipalEntities__section-text--bold">
             Every account has:
@@ -103,7 +104,7 @@ const PrincipalEntities: FC = () => {
               className="PrincipalEntities__section-image PrincipalEntities__section-image--fit"
               src={AccountsImage}
               loading="lazy"
-              width="420px"
+              width="520px"
             />
           </div>
           <p className="PrincipalEntities__section-paragraph">
@@ -117,7 +118,7 @@ const PrincipalEntities: FC = () => {
               className="PrincipalEntities__section-image"
               src={KeysImage}
               loading="lazy"
-              width="200px"
+              width="320px"
             />
           </div>
           <p className="PrincipalEntities__section-paragraph">
@@ -151,16 +152,16 @@ const PrincipalEntities: FC = () => {
                 className="PrincipalEntities__section-image"
                 src={NodesImage}
                 loading="lazy"
-                width="100px"
+                width="130px"
               />
             </div>
             <div className="PrincipalEntities__nodes-right">
               <p className="PrincipalEntities__section-paragraph">
                 <span className="PrincipalEntities__section-text--highlight">Connection node</span> is the node that
                 receives a request from a user or a client app, and shares this request with other nodes on the network
-                for further processing. <br />
-                When users first download applications like the Wallet, they are assigned to a default connection node,
-                however, they can choose to connect to the network through a different connection node later.
+                for further processing. When users first download applications like the Wallet, they are assigned to a
+                default connection node, however, they can choose to connect to the network through a different
+                connection node later.
               </p>
             </div>
           </div>
@@ -198,7 +199,7 @@ const PrincipalEntities: FC = () => {
             Regular node
           </p>
           <p className="PrincipalEntities__section-paragraph PrincipalEntities__section-paragraph--my-0">
-            A network server that has several responsibilities, such as
+            A network server that has several responsibilities, such as:
           </p>
           <ul className="PrincipalEntities__section-list">
             <li className="PrincipalEntities__section-list-item PrincipalEntities__section-list-item--dense">
@@ -286,7 +287,7 @@ const PrincipalEntities: FC = () => {
               className="PrincipalEntities__section-image PrincipalEntities__section-image--fit"
               src={NodeBoostingImage}
               loading="lazy"
-              width="360px"
+              width="400px"
             />
           </div>
           <p className="PrincipalEntities__section-paragraph">
@@ -399,7 +400,7 @@ const PrincipalEntities: FC = () => {
                 className="PrincipalEntities__section-image"
                 src={ElectionProcessImage}
                 loading="lazy"
-                width="280px"
+                width="410px"
               />
             </div>
           </div>
@@ -419,7 +420,7 @@ const PrincipalEntities: FC = () => {
               className="PrincipalEntities__section-image PrincipalEntities__section-image--fit"
               src={BudgetsImage}
               loading="lazy"
-              width="420px"
+              width="590px"
             />
           </div>
         </section>

@@ -91,7 +91,14 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice,
             )}
             {renderColumn('faq', 'FAQ', <>{renderMobileLink('FAQ', '/faq')}</>)}
           </div>
-          <div className="TopNavMobileMenu__download-container">
+          <div className="TopNavMobileMenu__buttons-container">
+            <Button
+              className="TopNavMobileMenu__arcade-button"
+              onClick={() => history.push('/arcade')}
+              variant="outlined"
+            >
+              Arcade
+            </Button>
             <Button className="TopNavMobileMenu__download-button" onClick={() => history.push('/download')}>
               Download Wallet
             </Button>

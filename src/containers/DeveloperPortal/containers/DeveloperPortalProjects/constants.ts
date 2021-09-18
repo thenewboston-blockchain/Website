@@ -12,6 +12,7 @@ export const PATHNAME_TO_TITLE_MAPPING: Record<string, string> = {
 export enum ProjectRulesId {
   HowProposalsWork = 'how-proposals-work',
   MilestonesAndPayouts = 'milestones-and-payouts',
+  EligibleMilestonePayments = 'eligible-milestone-payments',
   ProjectsFaq = 'projects-faq',
   ProposalSubmissionProcess = 'proposal-submission-process',
   Rules = 'rules',
@@ -48,6 +49,10 @@ export const PATHNAME_TO_DROPDOWN_SELECTIONS: Record<string, {title: string; url
     {
       title: 'Milestones & Payouts',
       url: `${projectRulesPath}#${ProjectRulesId.MilestonesAndPayouts}`,
+    },
+    {
+      title: 'Eligible Milestone Payments',
+      url: `${projectRulesPath}#${ProjectRulesId.EligibleMilestonePayments}`,
     },
     {
       title: 'Projects FAQ',

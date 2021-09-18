@@ -131,6 +131,7 @@ const Footer: FC<ComponentProps> = ({className}) => {
         SocialMedia.youtube,
         SocialMedia.reddit,
         SocialMedia.linkedin,
+        SocialMedia.gaming,
         SocialMedia.facebook,
         SocialMedia.instagram,
         SocialMedia.twitter,

@@ -55,12 +55,12 @@ const Roadmap: FC = () => {
     })();
   }, []);
 
-  if (progress === ApiProgress.Requesting || progress === ApiProgress.Init || !teamRoadmaps) {
-    return <Loader className="Roadmap__loader" />;
-  }
-
   if (progress === ApiProgress.Error) {
     return <div className="Roadmap__error">Error while fetching roadmap. Please try again later.</div>;
+  }
+
+  if (progress === ApiProgress.Requesting || progress === ApiProgress.Init || !teamRoadmaps) {
+    return <Loader className="Roadmap__loader" />;
   }
 
   return (

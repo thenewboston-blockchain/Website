@@ -11,6 +11,7 @@ const Social: FC = () => {
       <MarketingCard website={SocialMedia.discord} />
       <MarketingCard website={SocialMedia.github} />
       <MarketingCard website={SocialMedia.youtube} />
+      <MarketingCard website={SocialMedia.gaming} />
       <MarketingCard website={SocialMedia.reddit} />
       <MarketingCard website={SocialMedia.linkedin} />
       <MarketingCard website={SocialMedia.facebook} />

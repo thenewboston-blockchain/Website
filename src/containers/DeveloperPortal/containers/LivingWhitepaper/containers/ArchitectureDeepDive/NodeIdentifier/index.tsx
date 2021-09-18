@@ -14,7 +14,7 @@ const NodeIdentifier = () => {
         <p className="ArchitectureDeepDive__description">
           The node identifier (NID) system is a separate key-pair that nodes use for signing requests to other nodes.
         </p>
-        <DocImage alt="Block Structure" maxWidth={624} src={NodeIdentifiersImage} />
+        <DocImage alt="Block Structure" maxWidth={720} src={NodeIdentifiersImage} />
         <p className="ArchitectureDeepDive__description">
           When a node is first deployed, it provides a unique NID to the network. As nodes connect, they keep a record
           of each other's NID as a method of identification. Later on, as nodes exchange requests, a receiving node can

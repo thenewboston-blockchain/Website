@@ -1,6 +1,7 @@
 export enum SocialMedia {
   discord = 'discord',
   facebook = 'facebook',
+  gaming = 'gaming',
   github = 'github',
   instagram = 'instagram',
   linkedin = 'linkedin',

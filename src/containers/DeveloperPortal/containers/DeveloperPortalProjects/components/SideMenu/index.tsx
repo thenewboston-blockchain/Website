@@ -1,12 +1,13 @@
 import React, {FC, useState} from 'react';
-
-import {Icon, IconType} from '@thenewboston/ui';
 import clsx from 'clsx';
-import {A} from 'components';
-import {NAVBAR_HEIGHT, LIVING_WHITEPAPER_TOP_LINKS_HEIGHT} from 'constants/offsets';
 import {Link} from 'react-scroll';
 import {useLocation, useHistory} from 'react-router';
 import {Link as ReactRouterLink} from 'react-router-dom';
+import {Icon, IconType} from '@thenewboston/ui';
+
+import {A} from 'components';
+import {NAVBAR_HEIGHT, TOP_LINKS_HEIGHT} from 'constants/offsets';
+
 import {PATHNAME_TO_DROPDOWN_SELECTIONS, approvedProjectsPath, projectRulesPath} from '../../constants';
 
 import './SideMenu.scss';
@@ -99,7 +100,7 @@ const SideMenu: FC<Props> = ({approvedProjectUrls, breadcrumbHeight}) => {
                 hashSpy
                 ignoreCancelEvents
                 key={selection.url}
-                offset={-(NAVBAR_HEIGHT + LIVING_WHITEPAPER_TOP_LINKS_HEIGHT + breadcrumbHeight)}
+                offset={-(NAVBAR_HEIGHT + TOP_LINKS_HEIGHT + breadcrumbHeight)}
                 smooth
                 spy
                 to={selectionHash}
