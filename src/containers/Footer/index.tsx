@@ -18,8 +18,8 @@ const navLists = [
     header: 'Get Started',
     links: [
       {
-        title: 'Tasks',
-        url: '/tasks',
+        title: 'Bounties',
+        url: '/bounties',
       },
       {
         title: 'Projects',

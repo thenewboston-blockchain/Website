@@ -42,7 +42,7 @@ const HomeHero: FC = () => {
               <Link className="HomeHero__buttons--learn-more" tabIndex={-1} to="/developer/whitepaper">
                 <Button>Learn More</Button>
               </Link>
-              <Link className="HomeHero__buttons--earn-coins" tabIndex={-1} to="/tasks/All">
+              <Link className="HomeHero__buttons--earn-coins" tabIndex={-1} to="/bounties/All">
                 <Button>Earn Coins</Button>
               </Link>
             </div>

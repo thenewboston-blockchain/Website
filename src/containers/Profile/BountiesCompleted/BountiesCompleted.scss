@@ -1,12 +1,12 @@
-.TasksCompleted {
+.BountiesCompleted {
   padding: 10px;
 
-  &__ContributorTasks {
+  &__ContributorBounties {
     border-left: none;
     flex: 1;
     padding: 0 10px 0 10px;
 
-    // Recent Task (name of task)
+    // Recent Bounty (name of bounty)
     td:nth-child(1),
     th:nth-child(1) {
       max-width: 300px;
@@ -36,7 +36,7 @@
     }
 
     @media (max-width: 1366px) {
-      // Recent Task (name of task)
+      // Recent Bounty (name of bounty)
       td:nth-child(1),
       th:nth-child(1) {
         max-width: 250px;
@@ -45,7 +45,7 @@
     }
 
     @media (max-width: 1280px) {
-      // Recent Task (name of task)
+      // Recent Bounty (name of bounty)
       td:nth-child(1),
       th:nth-child(1) {
         max-width: 200px;
@@ -54,7 +54,7 @@
     }
 
     @media (max-width: 1024px) {
-      // Recent Task (name of task)
+      // Recent Bounty (name of bounty)
       td:nth-child(1),
       th:nth-child(1) {
         max-width: 150px;
@@ -119,7 +119,7 @@
     margin-bottom: 40px;
   }
 
-  &__tasks {
+  &__bounties {
     display: flex;
     justify-content: space-between;
 
@@ -150,7 +150,7 @@
     line-height: 1;
   }
 
-  &__TotalTasks {
+  &__TotalBounties {
     align-items: flex-start;
     display: flex;
     flex-basis: 100px;
@@ -176,7 +176,7 @@
   }
 
   @media (max-width: 480px) {
-    &__tasks {
+    &__bounties {
       flex-direction: column;
     }
   }

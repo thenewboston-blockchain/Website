@@ -4,7 +4,7 @@ import Avatar from './Avatar';
 import BreadcrumbMenu from './BreadcrumbMenu';
 import {CodeSnippet, RequestResponseSnippet, SnippetLang} from './CodeSnippet';
 import Container from './Container';
-import ContributorTasks from './ContributorTasks';
+import ContributorBounties from './ContributorBounties';
 import CopyableAccountNumber from './CopyableAccountNumber';
 import DataTable from './DataTable';
 import Divider from './Divider';
@@ -60,7 +60,7 @@ export {
   CalloutType,
   CodeSnippet,
   Container,
-  ContributorTasks,
+  ContributorBounties,
   CopyableAccountNumber,
   DashboardLayout,
   DataTable,

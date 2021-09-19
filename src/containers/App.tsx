@@ -8,6 +8,7 @@ import Analytics from './Analytics';
 import ArchitectureDeepDive from './DeveloperPortal/containers/LivingWhitepaper/containers/ArchitectureDeepDive';
 import Assets from './Assets';
 import BankApi from './Api/BankApi';
+import Bounties from './Bounties';
 import ConfirmationValidatorApi from './Api/ConfirmationValidatorApi';
 import CreateAccount from './CreateAccount';
 import DeploymentGuide from './DeploymentGuide';
@@ -32,7 +33,6 @@ import SignIn from './SignIn';
 import SignOut from './SignOut';
 import Social from './Social';
 import StyleGuide from './StyleGuide';
-import Tasks from './Tasks';
 import Teams from './Teams';
 import TermsOfUse from './TermsOfUse';
 import Wallet from './Wallet';
@@ -106,8 +106,8 @@ const App: FC = () => {
           <Redirect exact from="/openings" to="/openings/All" />
           <Route exact path="/openings/:category/:openingId?" render={() => <Openings />} />
           <Route exact path="/social" component={Social} />
-          <Redirect exact from="/tasks" to="/tasks/All" />
-          <Route exact path="/tasks/:repository" component={Tasks} />
+          <Redirect exact from="/bounties" to="/bounties/All" />
+          <Route exact path="/bounties/:repository" component={Bounties} />
           <Redirect exact path="/teams" to="/teams/All/Members" />
           <Route exact path="/teams/:team/:tab?/:resource?" component={Teams} />
           <Route path="/wallet/:chapter?" component={Wallet} />
