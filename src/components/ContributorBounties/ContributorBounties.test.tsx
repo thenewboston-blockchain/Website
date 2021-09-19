@@ -6,7 +6,6 @@ import {ClassName} from 'types/generic';
 import ContributorBounties, {ContributorBountiesProps} from '.';
 
 const props: ContributorBountiesProps & ClassName = {
-  className: 'test',
   bounties: [
     {
       amount_paid: '2800',
@@ -27,6 +26,7 @@ const props: ContributorBountiesProps & ClassName = {
       title: 'Front End Developer',
     },
   ],
+  className: 'test',
 };
 
 const testIdBounty = 'ContributorBounties';

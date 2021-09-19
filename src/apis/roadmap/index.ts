@@ -1,10 +1,10 @@
 import axios from 'axios';
 import {PaginatedResponse} from 'types/api';
-import {RoadmapBounty} from 'types/roadmap';
+import {RoadmapTask} from 'types/roadmap';
 import {standardHeaders} from 'utils/requests';
 
-export async function getAllRoadmaps(): Promise<RoadmapBounty[]> {
-  const response = await axios.get<PaginatedResponse<RoadmapBounty>>(
+export async function getAllRoadmaps(): Promise<RoadmapTask[]> {
+  const response = await axios.get<PaginatedResponse<RoadmapTask>>(
     `${process.env.REACT_APP_BACKEND_API}/roadmaps`,
     standardHeaders(),
   );
@@ -12,8 +12,8 @@ export async function getAllRoadmaps(): Promise<RoadmapBounty[]> {
   return response.data.results;
 }
 
-export async function getRoadmapByTeamName(teamName: string): Promise<RoadmapBounty[]> {
-  const response = await axios.get<PaginatedResponse<RoadmapBounty>>(
+export async function getRoadmapByTeamName(teamName: string): Promise<RoadmapTask[]> {
+  const response = await axios.get<PaginatedResponse<RoadmapTask>>(
     `${process.env.REACT_APP_BACKEND_API}/roadmaps?team=${teamName}`,
     standardHeaders(),
   );

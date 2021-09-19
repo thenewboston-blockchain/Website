@@ -64,7 +64,7 @@
     },
     {
       "repository": "thenewboston-js",
-      "title": "[Bounty] Create `Bank` Documentation",
+      "title": "[Task] Create `Bank` Documentation",
       "issue_id": "24",
       "pr_id": "41",
       "completed_by": "AbhayAysola",
@@ -74,7 +74,7 @@
     },
     {
       "repository": "thenewboston-js",
-      "title": "[Bounty] Implement POST Primary Validator Updated for `ConfirmationValidator`",
+      "title": "[Task] Implement POST Primary Validator Updated for `ConfirmationValidator`",
       "issue_id": "30",
       "pr_id": "32",
       "completed_by": "AbhayAysola",
@@ -84,7 +84,7 @@
     },
     {
       "repository": "thenewboston-js",
-      "title": "[Bounty] Implement POST Upgrade Request for `ConfirmationValidator`",
+      "title": "[Task] Implement POST Upgrade Request for `ConfirmationValidator`",
       "issue_id": "29",
       "pr_id": "31",
       "completed_by": "AbhayAysola",
@@ -94,7 +94,7 @@
     },
     {
       "repository": "thenewboston-js",
-      "title": "[Bounty] Implement Update Account Method for `Bank`",
+      "title": "[Task] Implement Update Account Method for `Bank`",
       "issue_id": "14",
       "pr_id": "20",
       "completed_by": "AbhayAysola",
@@ -114,7 +114,7 @@
     },
     {
       "repository": "thenewboston-js",
-      "title": "[Bounty] Create `PrimaryValidator` Documentation",
+      "title": "[Task] Create `PrimaryValidator` Documentation",
       "issue_id": "27",
       "pr_id": "55",
       "completed_by": "AbhayAysola",
@@ -250,7 +250,7 @@
     },
     {
       "repository": "thenewboston-js",
-      "title": "[Bounty] Type `PrimaryValidator.getConfig` Method Response",
+      "title": "[Task] Type `PrimaryValidator.getConfig` Method Response",
       "issue_id": "36",
       "pr_id": "40",
       "completed_by": "CNFloss",
@@ -260,7 +260,7 @@
     },
     {
       "repository": "thenewboston-js",
-      "title": "[Bounty] Implement POST Update Notice Method for `Bank`",
+      "title": "[Task] Implement POST Update Notice Method for `Bank`",
       "issue_id": "28",
       "pr_id": "33",
       "completed_by": "CNFloss",
@@ -270,7 +270,7 @@
     },
     {
       "repository": "thenewboston-js",
-      "title": "[Bounty] Create `Validator` Documentation",
+      "title": "[Task] Create `Validator` Documentation",
       "issue_id": "25",
       "pr_id": "43",
       "completed_by": "CNFloss",
@@ -1782,7 +1782,7 @@
     },
     {
       "repository": "Website",
-      "title": "When going to `/bounties`, make it automatically default to `/bounties/All`",
+      "title": "When going to `/tasks`, make it automatically default to `/tasks/All`",
       "issue_id": "349",
       "pr_id": "365",
       "completed_by": "aayushi14",
@@ -2480,7 +2480,7 @@
     },
     {
       "repository": "Website",
-      "title": "Create Bounties and Help Pages",
+      "title": "Create Tasks and Help Pages",
       "issue_id": "200",
       "pr_id": "201",
       "completed_by": "buckyroberts",
@@ -3218,7 +3218,7 @@
     },
     {
       "repository": "Website",
-      "title": "Bounty page margin",
+      "title": "Task page margin",
       "issue_id": "413",
       "pr_id": "469",
       "completed_by": "itsnikhil",
@@ -3354,7 +3354,7 @@
     },
     {
       "repository": "Website",
-      "title": "[Leaderboard] Inconsistencies in width of bounties",
+      "title": "[Leaderboard] Inconsistencies in width of tasks",
       "issue_id": "839",
       "pr_id": "840",
       "completed_by": "jamessspanggg",
@@ -3564,7 +3564,7 @@
     },
     {
       "repository": "Website",
-      "title": "Create the \"Bounties Completed\" section of the profile page",
+      "title": "Create the \"Tasks Completed\" section of the profile page",
       "issue_id": "1063",
       "pr_id": "1065",
       "completed_by": "jamessspanggg",
@@ -3738,7 +3738,7 @@
   "jroberts91": [
     {
       "repository": "Website",
-      "title": "[Leaderboard] Mismatch of issue for bounties completed",
+      "title": "[Leaderboard] Mismatch of issue for tasks completed",
       "issue_id": "1200",
       "pr_id": "1205",
       "completed_by": "jroberts91",
@@ -3958,7 +3958,7 @@
   "kush-daga": [
     {
       "repository": "Website",
-      "title": "[Feature Request] Bounties should be sortable by time and coins",
+      "title": "[Feature Request] Tasks should be sortable by time and coins",
       "issue_id": "550",
       "pr_id": "616",
       "completed_by": "kush-daga",
@@ -4232,7 +4232,7 @@
     },
     {
       "repository": "Website",
-      "title": "Bounty Left Menu Issue",
+      "title": "Task Left Menu Issue",
       "issue_id": "564",
       "pr_id": "803",
       "completed_by": "manishram",
@@ -4242,7 +4242,7 @@
     },
     {
       "repository": "Website",
-      "title": "Issue with recent bounty title",
+      "title": "Issue with recent task title",
       "issue_id": "815",
       "pr_id": "816",
       "completed_by": "manishram",
@@ -4360,7 +4360,7 @@
   "mersimoski": [
     {
       "repository": "Website",
-      "title": "Long title words break the mobile design in the bounties page",
+      "title": "Long title words break the mobile design in the tasks page",
       "issue_id": "909",
       "pr_id": "917",
       "completed_by": "mersimoski",
@@ -4438,7 +4438,7 @@
   "mrbusysky": [
     {
       "repository": "thenewboston-js",
-      "title": "[Bounty] Implement Browser Support with Browserify",
+      "title": "[Task] Implement Browser Support with Browserify",
       "issue_id": "9",
       "pr_id": "13",
       "completed_by": "mrbusysky",
@@ -4448,7 +4448,7 @@
     },
     {
       "repository": "Website",
-      "title": "Add thenewboston-js to bounties page",
+      "title": "Add thenewboston-js to tasks page",
       "issue_id": "1103",
       "pr_id": "1098",
       "completed_by": "mrbusysky",
@@ -4468,7 +4468,7 @@
     },
     {
       "repository": "Design",
-      "title": "Promoting our Project proposal bounty",
+      "title": "Promoting our Project proposal task",
       "issue_id": "104",
       "pr_id": "",
       "completed_by": "mrbusysky",
@@ -4546,7 +4546,7 @@
     },
     {
       "repository": "thenewboston-js",
-      "title": "[Bounty] Implement `Bank` POST Blocks Method",
+      "title": "[Task] Implement `Bank` POST Blocks Method",
       "issue_id": "37",
       "pr_id": "39",
       "completed_by": "nishp77",
@@ -4556,7 +4556,7 @@
     },
     {
       "repository": "thenewboston-js",
-      "title": "[Bounty] Type `ConfirmationValidator.getConfig` Method Response",
+      "title": "[Task] Type `ConfirmationValidator.getConfig` Method Response",
       "issue_id": "35",
       "pr_id": "38",
       "completed_by": "nishp77",
@@ -5118,7 +5118,7 @@
   "sno2": [
     {
       "repository": "thenewboston-js",
-      "title": "[Bounty] Implement `ServerNode` POST Request Method",
+      "title": "[Task] Implement `ServerNode` POST Request Method",
       "issue_id": "7",
       "pr_id": "8",
       "completed_by": "sno2",
@@ -5128,7 +5128,7 @@
     },
     {
       "repository": "thenewboston-js",
-      "title": "[Bounty] Type Bank Get Config Response",
+      "title": "[Task] Type Bank Get Config Response",
       "issue_id": "17",
       "pr_id": "18",
       "completed_by": "sno2",
@@ -5138,7 +5138,7 @@
     },
     {
       "repository": "thenewboston-js",
-      "title": "[Bounty] Add Axios Response Generics for `ServerNode` Request Methods",
+      "title": "[Task] Add Axios Response Generics for `ServerNode` Request Methods",
       "issue_id": "15",
       "pr_id": "16",
       "completed_by": "sno2",
@@ -5148,7 +5148,7 @@
     },
     {
       "repository": "thenewboston-js",
-      "title": "[Bounty] Create `Account` Documentation",
+      "title": "[Task] Create `Account` Documentation",
       "issue_id": "22",
       "pr_id": "34",
       "completed_by": "sno2",
@@ -5158,7 +5158,7 @@
     },
     {
       "repository": "thenewboston-js",
-      "title": "[Bounty] Refactor Account Class Construction",
+      "title": "[Task] Refactor Account Class Construction",
       "issue_id": "19",
       "pr_id": "21",
       "completed_by": "sno2",
@@ -5216,7 +5216,7 @@
   "thesanjeevsharma": [
     {
       "repository": "Website",
-      "title": "Leaderboard and Bounties Repository Filter URLs",
+      "title": "Leaderboard and Tasks Repository Filter URLs",
       "issue_id": "204",
       "pr_id": "226",
       "completed_by": "thesanjeevsharma",
@@ -5316,7 +5316,7 @@
     },
     {
       "repository": "Website",
-      "title": "Add Kotlin SDK to bounties",
+      "title": "Add Kotlin SDK to tasks",
       "issue_id": "876",
       "pr_id": "882",
       "completed_by": "thesanjeevsharma",
@@ -5654,7 +5654,7 @@
     },
     {
       "repository": "Website",
-      "title": "[Design] No Margin between Bounty Left Menu",
+      "title": "[Design] No Margin between Task Left Menu",
       "issue_id": "581",
       "pr_id": "589",
       "completed_by": "whitelionx",

@@ -26,7 +26,9 @@ const ContributorBounties: SFC<ContributorBountiesProps> = ({className, bounties
           {repository}
         </S.Td>
         <S.Td data-testid="ContributorBounties__date-completed">{format(completed_date, 'L/d/yy')}</S.Td>
-        <S.TdAmount data-testid="ContributorBounties__amount">+ {parseInt(amount_paid, 10).toLocaleString()}</S.TdAmount>
+        <S.TdAmount data-testid="ContributorBounties__amount">
+          + {parseInt(amount_paid, 10).toLocaleString()}
+        </S.TdAmount>
       </tr>
     ));
   };

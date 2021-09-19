@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 
 import {ProgressBar} from 'components';
-import {RoadmapBounty} from 'types/roadmap';
+import {RoadmapTask} from 'types/roadmap';
 import StatusLabel from '../StatusLabel';
 
 import './TeamRoadmapCard.scss';
@@ -9,10 +9,10 @@ import './TeamRoadmapCard.scss';
 type Props = {
   percentage: number;
   title: string;
-  bounties: RoadmapBounty[];
+  tasks: RoadmapTask[];
 };
 
-const TeamRoadmapCard: FC<Props> = ({percentage, bounties, title}) => {
+const TeamRoadmapCard: FC<Props> = ({percentage, tasks, title}) => {
   return (
     <div className="TeamRoadmapCard">
       <div className="TeamRoadmapCard__header">
@@ -23,14 +23,14 @@ const TeamRoadmapCard: FC<Props> = ({percentage, bounties, title}) => {
         </div>
       </div>
       <div className="TeamRoadmapCard__content">
-        {bounties.map((bounty) => {
+        {tasks.map((task) => {
           return (
-            <div className="TeamRoadmapCard__content-bounty" key={bounty.pk}>
-              <h3 className="TeamRoadmapCard__content-bounty-title">{bounty.bounty_title}</h3>
-              <h3 className="TeamRoadmapCard__content-bounty-date">
-                Expected delivery date: {bounty.estimated_completion_date}
+            <div className="TeamRoadmapCard__content-task" key={task.pk}>
+              <h3 className="TeamRoadmapCard__content-task-title">{task.task_title}</h3>
+              <h3 className="TeamRoadmapCard__content-task-date">
+                Expected delivery date: {task.estimated_completion_date}
               </h3>
-              <StatusLabel isCompleted={bounty.is_complete} />
+              <StatusLabel isCompleted={task.is_complete} />
             </div>
           );
         })}

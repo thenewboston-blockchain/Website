@@ -1,8 +1,8 @@
-export type RoadmapBounty = {
+export type RoadmapTask = {
   pk: string;
   team: string;
   team_name: string;
-  bounty_title: string;
+  task_title: string;
   estimated_completion_date: string;
   is_complete: boolean;
   created_date: string;

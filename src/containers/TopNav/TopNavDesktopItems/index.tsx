@@ -43,7 +43,7 @@ const communityPopoverItems: TopNavPopoverItemType[] = [
     to: '/analytics',
   },
   {
-    description: 'Bounties to finish up beta app',
+    description: 'Tasks to finish up beta app',
     iconType: IconType.mapMarkerCheck,
     title: 'Beta Roadmap',
     to: '/roadmap',
