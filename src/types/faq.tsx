@@ -112,11 +112,11 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
             incentive to solve the problems that really need solving. For example, if a crypto that is mined ever needs
             a new payment integration or mobile app, who would work on that? What would their incentive be? The idea
             that because there might be many people that own that currency, there are also going to be a lot of people
-            with the incentive to work on such bounties is not realistic. That's why, for example, numerous popular
-            cryptos have few integrations and bad looking UIs. With the incentive model of rewarding contributors an
-            amount of coins based on the value they have given to the network and/or the community, it not only allows
-            us to tackle these issues, but brings a more diverse range of contributors and community members to
-            thenewboston overall.
+            with the incentive to work on such tasks is not realistic. That's why, for example, numerous popular cryptos
+            have few integrations and bad looking UIs. With the incentive model of rewarding contributors an amount of
+            coins based on the value they have given to the network and/or the community, it not only allows us to
+            tackle these issues, but brings a more diverse range of contributors and community members to thenewboston
+            overall.
           </span>
         ),
         id: 'fair-distribution',

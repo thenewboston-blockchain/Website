@@ -1,9 +1,9 @@
 import parse from 'date-fns/parse';
-import {RawBounty, Bounty, BountyDict} from 'types/github';
+import {Bounty, BountyDict, RawBounty} from 'types/github';
 import {Opening} from 'types/openings';
 
+import bounties from 'data/bounties.json';
 import openings from 'data/openings.json';
-import bounties from 'data/tasks.json';
 
 export const getOpenings = (): Opening[] => {
   return openings as Opening[];

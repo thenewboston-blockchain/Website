@@ -6,8 +6,8 @@ import {Loader} from 'components';
 import {getUser} from 'dispatchers/users/user';
 import {selectUsers} from 'selectors/state';
 import {AppDispatch} from 'types/store';
-import ProfileInfo from './ProfileInfo';
 import BountiesCompleted from './BountiesCompleted';
+import ProfileInfo from './ProfileInfo';
 
 import './Profile.scss';
 
