@@ -15,7 +15,7 @@ const getStartedDetails = [
     description: 'Learn about thenewboston blockchain.',
     icon: <img alt="Read Documentation" className="GetStarted__icon" src={ReadDocumentationIcon} />,
     title: 'Read Documentation',
-    to: '/developer/whitepaper',
+    to: 'https://developer.thenewboston.com/whitepaper',
   },
   {
     description: 'Interact with the network using our official wallet.',
@@ -33,7 +33,7 @@ const getStartedDetails = [
     description: 'Earn coins by building projects, gaining skills, and working as a team.',
     icon: <img alt="Create Proposals" className="GetStarted__icon" src={CreateProposalsIcon} />,
     title: 'Create Proposals',
-    to: '/developer/projects',
+    to: 'https://developer.thenewboston.com/projects',
   },
   {
     description: 'Work on bug fixes, graphics, and other small bounties to earn coins.',

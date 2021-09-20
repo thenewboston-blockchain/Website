@@ -23,7 +23,7 @@ const navLists = [
       },
       {
         title: 'Projects',
-        url: '/developer/projects',
+        url: 'https://developer.thenewboston.com/projects',
       },
     ],
   },
@@ -60,15 +60,15 @@ const navLists = [
     links: [
       {
         title: 'Developer',
-        url: '/developer',
+        url: 'https://developer.thenewboston.com/',
       },
       {
         title: 'Living Whitepaper',
-        url: '/developer/whitepaper',
+        url: 'https://developer.thenewboston.com/whitepaper',
       },
       {
         title: 'Projects',
-        url: '/developer/projects',
+        url: 'https://developer.thenewboston.com/projects',
       },
     ],
   },

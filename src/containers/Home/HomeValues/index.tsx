@@ -41,7 +41,11 @@ const HomeValues: FC = () => {
             Value system gives everyone a chance to participate, not just coin or hardware owners.
           </div>
           <div className="HomeValues__main-buttons">
-            <Link className="HomeValues__main-buttons--create" tabIndex={-1} to="/developer/projects">
+            <Link
+              className="HomeValues__main-buttons--create"
+              tabIndex={-1}
+              to="https://developer.thenewboston.com/projects"
+            >
               <Button>Create Projects</Button>
             </Link>
             <Link className="HomeValues__main-buttons--earn" tabIndex={-1} to="/bounties/All">
