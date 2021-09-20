@@ -27,11 +27,11 @@ export interface Contributor {
   github_username: string;
 }
 
-export interface ContributorWithTasks {
+export interface ContributorWithBounties {
   account_number: string;
   github_avatar_url: string;
   github_username: string;
-  tasks: Task[];
+  Bounties: Bounty[];
 }
 
 export interface GitHubLabel {
@@ -207,7 +207,7 @@ export type FetchGithubReleasesParams = {
   per_page?: number;
 };
 
-interface BaseTask {
+interface BaseBounty {
   amount_paid: string;
   completed_by: string;
   issue_id: string;
@@ -216,15 +216,15 @@ interface BaseTask {
   title: string;
 }
 
-export interface RawTask extends BaseTask {
+export interface RawBounty extends BaseBounty {
   completed_date: string;
 }
 
-export interface Task extends BaseTask {
+export interface Bounty extends BaseBounty {
   completed_date: Date;
 }
 
-export type TaskDict = Dict<Task[]>;
+export type BountyDict = Dict<Bounty[]>;
 
 export type Milestone = {
   description: string;

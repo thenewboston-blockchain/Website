@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux';
 import {Link} from 'react-router-dom';
 import {IconType} from '@thenewboston/ui';
 
-import {Avatar, Button} from 'components';
+import {A, Avatar, Button} from 'components';
 import {isCreateAccountAllowed, isSignInAllowed} from 'config';
 import TopNavLink from 'containers/TopNav/TopNavLink';
 import TopNavPopover, {TopNavPopoverItemType} from 'containers/TopNav/TopNavPopover';
@@ -59,17 +59,18 @@ const communityPopoverItems: TopNavPopoverItemType[] = [
 
 const getStartedPopoverItems: TopNavPopoverItemType[] = [
   {
-    description: 'Pick up tasks within GitHub and earn coins',
+    description: 'Pick up bounties within GitHub and earn coins',
     iconSize: 28,
     iconType: IconType.github,
-    title: 'Tasks',
-    to: '/tasks',
+    title: 'Bounties',
+    to: '/bounties',
   },
   {
     description: 'Propose ideas you want built',
     iconType: IconType.hammerWrench,
+    isExternal: true,
     title: 'Projects',
-    to: '/developer/projects',
+    to: 'https://developer.thenewboston.com/',
   },
 ];
 
@@ -172,9 +173,13 @@ const TopNavDesktopItems = () => {
         popoverId="community-popover"
         setAnchorEl={setCommunityAnchorEl}
       />
-      <Link className="TopNavDesktopItems__right-item TopNavDesktopItems__link" tabIndex={-1} to="/developer">
+      <A
+        className="TopNavDesktopItems__right-item TopNavDesktopItems__link"
+        href="https://developer.thenewboston.com/"
+        showNewWindowIcon={false}
+      >
         Developer
-      </Link>
+      </A>
       <TopNavPopover
         anchorEl={resourcesAnchorEl}
         buttonText="Resources"

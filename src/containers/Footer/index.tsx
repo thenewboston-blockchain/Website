@@ -18,12 +18,13 @@ const navLists = [
     header: 'Get Started',
     links: [
       {
-        title: 'Tasks',
-        url: '/tasks',
+        title: 'Bounties',
+        url: '/bounties',
       },
       {
+        isExternal: true,
         title: 'Projects',
-        url: '/developer/projects',
+        url: 'https://developer.thenewboston.com/projects',
       },
     ],
   },
@@ -59,16 +60,19 @@ const navLists = [
     header: 'Developer',
     links: [
       {
+        isExternal: true,
         title: 'Developer',
-        url: '/developer',
+        url: 'https://developer.thenewboston.com/',
       },
       {
+        isExternal: true,
         title: 'Living Whitepaper',
-        url: '/developer/whitepaper',
+        url: 'https://developer.thenewboston.com/whitepaper',
       },
       {
+        isExternal: true,
         title: 'Projects',
-        url: '/developer/projects',
+        url: 'https://developer.thenewboston.com/projects',
       },
     ],
   },

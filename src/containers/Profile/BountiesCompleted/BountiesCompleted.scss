@@ -1,0 +1,183 @@
+.BountiesCompleted {
+  padding: 10px;
+
+  &__ContributorBounties {
+    border-left: none;
+    flex: 1;
+    padding: 0 10px 0 10px;
+
+    // Recent Bounty (name of bounty)
+    td:nth-child(1),
+    th:nth-child(1) {
+      max-width: 300px;
+      min-width: 300px;
+    }
+
+    // Repository
+    td:nth-child(2),
+    th:nth-child(2) {
+      display: table-cell;
+      max-width: 100px;
+      min-width: 100px;
+    }
+
+    // Completed
+    td:nth-child(3),
+    th:nth-child(3) {
+      display: table-cell;
+    }
+
+    // Amount
+    td:nth-child(4),
+    th:nth-child(4) {
+      display: table-cell;
+      max-width: 100px;
+      min-width: 100px;
+    }
+
+    @media (max-width: 1366px) {
+      // Recent Bounty (name of bounty)
+      td:nth-child(1),
+      th:nth-child(1) {
+        max-width: 250px;
+        min-width: 250px;
+      }
+    }
+
+    @media (max-width: 1280px) {
+      // Recent Bounty (name of bounty)
+      td:nth-child(1),
+      th:nth-child(1) {
+        max-width: 200px;
+        min-width: 200px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      // Recent Bounty (name of bounty)
+      td:nth-child(1),
+      th:nth-child(1) {
+        max-width: 150px;
+        min-width: 150px;
+      }
+
+      // Repository
+      td:nth-child(2),
+      th:nth-child(2) {
+        display: none;
+      }
+
+      // Completed
+      td:nth-child(3),
+      th:nth-child(3) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 840px) {
+      font-size: var(--font-size-body3);
+
+      // Repository
+      td:nth-child(2),
+      th:nth-child(2) {
+        display: table-cell;
+      }
+
+      // Completed
+      td:nth-child(3),
+      th:nth-child(3) {
+        display: table-cell;
+      }
+
+      // Amount
+      td:nth-child(4),
+      th:nth-child(4) {
+        max-width: 70px;
+        min-width: 70px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      // Repository
+      td:nth-child(2),
+      th:nth-child(2) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      border-right: none;
+      // Completed
+      td:nth-child(3),
+      th:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+
+  &__empty-page {
+    margin-bottom: 40px;
+  }
+
+  &__bounties {
+    display: flex;
+    justify-content: space-between;
+
+    &--empty {
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    padding: 18px 20px 24px;
+  }
+
+  &__totals {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+
+    @media (max-width: 480px) {
+      border-bottom: 1px solid var(--color-sail-gray-100);
+    }
+  }
+
+  &__TotalEarnings {
+    align-items: flex-end;
+    display: flex;
+    flex-basis: 100px;
+    flex-direction: column;
+    line-height: 1;
+  }
+
+  &__TotalBounties {
+    align-items: flex-start;
+    display: flex;
+    flex-basis: 100px;
+    flex-direction: column;
+    line-height: 1;
+
+    &__amount {
+      color: var(--color-black);
+    }
+  }
+
+  .TotalAmount {
+    padding: 2px 22px 22px 22px;
+
+    &__amount {
+      float: right;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 840px) {
+      font-size: var(--font-size-body3);
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__bounties {
+      flex-direction: column;
+    }
+  }
+}
