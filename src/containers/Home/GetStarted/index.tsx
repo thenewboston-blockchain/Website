@@ -14,6 +14,7 @@ const getStartedDetails = [
   {
     description: 'Learn about thenewboston blockchain.',
     icon: <img alt="Read Documentation" className="GetStarted__icon" src={ReadDocumentationIcon} />,
+    isExternal: true,
     title: 'Read Documentation',
     to: 'https://developer.thenewboston.com/whitepaper',
   },
@@ -32,6 +33,7 @@ const getStartedDetails = [
   {
     description: 'Earn coins by building projects, gaining skills, and working as a team.',
     icon: <img alt="Create Proposals" className="GetStarted__icon" src={CreateProposalsIcon} />,
+    isExternal: true,
     title: 'Create Proposals',
     to: 'https://developer.thenewboston.com/projects',
   },
@@ -54,8 +56,17 @@ const GetStarted: FC = () => {
     <div className="GetStarted">
       <div className="GetStarted__title">Get Started</div>
       <div className="GetStarted__main">
-        {getStartedDetails.map(({description, icon, title, to}) => {
-          return <GetStartedCard key={title} description={description} icon={icon} title={title} to={to} />;
+        {getStartedDetails.map(({description, icon, isExternal, title, to}) => {
+          return (
+            <GetStartedCard
+              key={title}
+              description={description}
+              icon={icon}
+              isExternal={isExternal}
+              title={title}
+              to={to}
+            />
+          );
         })}
       </div>
     </div>

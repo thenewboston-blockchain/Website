@@ -22,6 +22,7 @@ const navLists = [
         url: '/bounties',
       },
       {
+        isExternal: true,
         title: 'Projects',
         url: 'https://developer.thenewboston.com/projects',
       },
@@ -59,14 +60,17 @@ const navLists = [
     header: 'Developer',
     links: [
       {
+        isExternal: true,
         title: 'Developer',
         url: 'https://developer.thenewboston.com/',
       },
       {
+        isExternal: true,
         title: 'Living Whitepaper',
         url: 'https://developer.thenewboston.com/whitepaper',
       },
       {
+        isExternal: true,
         title: 'Projects',
         url: 'https://developer.thenewboston.com/projects',
       },

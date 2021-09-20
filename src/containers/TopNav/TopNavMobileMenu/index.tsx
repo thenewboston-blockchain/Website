@@ -55,7 +55,7 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice,
               'Get Started',
               <>
                 {renderMobileLink('Bounties', '/bounties')}
-                {renderMobileLink('Projects', 'https://developer.thenewboston.com/projects')}
+                {renderMobileLink('Projects', 'https://developer.thenewboston.com/projects', true)}
               </>,
             )}
             {renderColumn(
@@ -74,7 +74,7 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice,
             {renderColumn(
               'developer',
               'Developer',
-              <>{renderMobileLink('Developer', 'https://developer.thenewboston.com/')}</>,
+              <>{renderMobileLink('Developer', 'https://developer.thenewboston.com/', true)}</>,
             )}
             {renderColumn(
               'resources',
