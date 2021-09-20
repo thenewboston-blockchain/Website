@@ -12,6 +12,7 @@ interface ComponentProps {
   newWindow?: boolean;
   iconTotalSize?: number;
   iconSize?: number;
+  showNewWindowIcon?: boolean;
 }
 
 const A: SFC<ComponentProps> = ({
@@ -22,8 +23,9 @@ const A: SFC<ComponentProps> = ({
   iconSize = 16,
   iconTotalSize = 20,
   newWindow = true,
+  showNewWindowIcon = true,
 }) => {
-  const renderIcon = newWindow && typeof children === 'string';
+  const renderIcon = newWindow && typeof children === 'string' && showNewWindowIcon;
   const rel = newWindow ? 'noreferrer' : undefined;
   const target = newWindow ? '_blank' : '_self';
 
