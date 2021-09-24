@@ -12,7 +12,6 @@ interface AvatarProps {
 export const Avatar = styled.img<AvatarProps>`
   border-radius: ${(props) => (props.shape === 'square' ? '8px' : '50%')};
   border: ${(props) => (props.bordered ? `2px solid ${colors.white}` : 'none')};
-  cursor: ${(props) => (props.clickable ? 'pointer' : 'none')};
 `;
 
 interface PlaceholderProps {
