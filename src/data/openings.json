@@ -100,5 +100,25 @@
     ],
     "requirements": ["Well-spoken, well-written", "Must be fun, chill, and dope", "Sociable"],
     "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
+  },
+  {
+    "openingId": "senior-python-django-developer",
+    "category": "Engineering",
+    "description": "We are looking for a Senior Python / Django Developer to help us build out both our digital currency network and Website API.",
+    "position": "Senior Python / Django Developer",
+    "responsibilities": [
+      "Designing and creating RESTful APIs",
+      "Participating in architectural, design and product discussions",
+      "Working in an environment with an excellent team of engineers"  
+    ],
+  
+    "requirements": [
+      "Experience with Celery, Docker, Django REST Framework, and pytest",
+      "2+ years of experience in Django",
+      "5+ years of experience in Python",
+      "Basic understanding of blockchain"
+    ],
+
+    "applicationUrl": "https://forms.gle/mFW1ri1hPvtvA3AY6"
   }
 ]
