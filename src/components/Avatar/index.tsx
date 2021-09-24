@@ -51,7 +51,6 @@ const AvatarImgWithFallback: SFC<AvatarProps> = ({bordered, className, onClick, 
       bordered={bordered}
       className={className}
       clickable={!!onClick}
-      crossOrigin="anonymous"
       data-testid="Avatar"
       height={size}
       key={srcWithFallback}
