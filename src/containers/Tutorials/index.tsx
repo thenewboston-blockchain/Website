@@ -4,6 +4,7 @@ import {useHistory, useParams} from 'react-router-dom';
 import {getPlaylistCategories} from 'apis/tutorials';
 import {BreadcrumbMenu, Container, FlatNavLinks, Loader, PageTitle} from 'components';
 import {allTutorialsFilter} from 'constants/tutorials';
+import {ROUTES} from 'constants/routes';
 import {NavOption} from 'types/option';
 import {PlaylistCategory, TutorialsUrlParams} from 'types/tutorials';
 
@@ -45,14 +46,14 @@ const Tutorials: FC = () => {
       if (playlistCategories.some((playlistCategory: NavOption) => playlistCategory.pathname === categoryParam)) {
         setPlaylistCategoryFilter(categoryParam);
       } else {
-        history.replace(`/tutorials/${allTutorialsFilter.pathname}`);
+        history.replace(`${ROUTES.tutorials}/${allTutorialsFilter.pathname}`);
       }
     }
   }, [playlistCategories, loading, categoryParam, history]);
 
   const handleNavOptionClick = useCallback(
     (option: string) => (): void => {
-      history.push(`/tutorials/${option}`);
+      history.push(`${ROUTES.tutorials}/${option}`);
     },
     [history],
   );

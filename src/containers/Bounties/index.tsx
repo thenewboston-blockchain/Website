@@ -15,6 +15,7 @@ import {
   Loader,
   PageTitle,
 } from 'components';
+import {ROUTES} from 'constants/routes';
 import {fetchGithubIssues} from 'utils/github';
 import {GenericVoidFunction} from 'types/generic';
 import {Issue, Repository, RepositoryUrlParams} from 'types/github';
@@ -100,7 +101,7 @@ const Bounties: FC = () => {
   };
 
   const handleNavOptionClick = (option: Repository) => (): void => {
-    history.push(`/bounties/${option}`);
+    history.push(`${ROUTES.bounties}/${option}`);
   };
 
   const renderFilters = () => (

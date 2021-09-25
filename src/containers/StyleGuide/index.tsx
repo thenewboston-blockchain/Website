@@ -2,13 +2,14 @@ import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
 import {DashboardLayout, DocsMenuItems, PageTitle} from 'components';
+import {ROUTES} from 'constants/routes';
 import {PageData, PageDataObject} from 'types/page-data';
 
 import StyleGuideCss from './StyleGuideCss';
 import StyleGuideReact from './StyleGuideReact';
 
 const defaultPageData: PageData = {
-  content: <Redirect to="/style-guide/react" />,
+  content: <Redirect to={`${ROUTES.styleGuide}/react`} />,
   name: '',
 };
 

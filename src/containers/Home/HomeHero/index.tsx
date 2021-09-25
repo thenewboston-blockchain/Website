@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 
 import {A, Button, ProgressiveImage} from 'components';
 import SocialMediaIcon from 'components/SocialMediaIcon';
+import {ROUTES, URLS} from 'constants/routes';
 import {useWindowDimensions} from 'hooks';
 import {SocialMedia} from 'types/social-media';
 
@@ -41,12 +42,12 @@ const HomeHero: FC = () => {
             <div className="HomeHero__buttons">
               <A
                 className="HomeHero__buttons--learn-more"
-                href="https://developer.thenewboston.com/whitepaper"
+                href={URLS.developerPortal.whitepaper}
                 showNewWindowIcon={false}
               >
                 <Button>Learn More</Button>
               </A>
-              <Link className="HomeHero__buttons--earn-coins" tabIndex={-1} to="/bounties/All">
+              <Link className="HomeHero__buttons--earn-coins" tabIndex={-1} to={`${ROUTES.bounties}/All`}>
                 <Button>Earn Coins</Button>
               </Link>
             </div>

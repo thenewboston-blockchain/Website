@@ -4,6 +4,7 @@ import clsx from 'clsx';
 
 import './TeamTabs.scss';
 import {allTeamsFilter} from 'constants/teams';
+import {ROUTES} from 'constants/routes';
 import {TeamTabOptions} from 'types/teams';
 
 interface ComponentProps {
@@ -34,7 +35,7 @@ const TeamTabs: FC<ComponentProps> = ({team, tab}) => {
           <div
             className={clsx('TeamsTabs__tab', {'TeamsTabs__tab--active': activeTab === tabView})}
             key={tabView}
-            onClick={() => history.push(`/teams/${team}/${tabView}`)}
+            onClick={() => history.push(`${ROUTES.teams}/${team}/${tabView}`)}
             role="button"
             tabIndex={0}
           >
