@@ -5,6 +5,7 @@ import {Icon, IconType} from '@thenewboston/ui';
 import {api as teamsApi, CoreTeamMemberResponse, CoreTeamResponse} from 'apis/teams';
 import {A, BreadcrumbMenu, Container, EmptyPage, FlatNavLinks, Loader, PageTitle} from 'components';
 import {allTeamsFilter} from 'constants/teams';
+import {ROUTES} from 'constants/routes';
 import useQueryParams from 'hooks/useQueryParams';
 import {APIState, APIProgress, INITIAL_API_STATE} from 'types/api';
 import {NavigationItem} from 'types/navigation';
@@ -63,21 +64,21 @@ const Teams: FC = () => {
       if (isAllTeams) {
         const isInvalidTabForAll = !(tabParam === TeamTabOptions.members || tabParam === TeamTabOptions.resources);
         if (isInvalidTabForAll) {
-          history.replace(`/teams`);
+          history.replace(ROUTES.teams);
         }
       } else {
         const isInvalidTabForSingleTeam = !(
           tabParam === TeamTabOptions.members || tabParam === TeamTabOptions.overview
         );
         if (isInvalidTabForSingleTeam) {
-          history.replace(`/teams/${teamParam}`);
+          history.replace(`${ROUTES.teams}/${teamParam}`);
         }
       }
     } else if (teamParam && !tabParam) {
       if (isAllTeams) {
-        history.replace(`/teams/${teamParam}/${TeamTabOptions.members}`);
+        history.replace(`${ROUTES.teams}/${teamParam}/${TeamTabOptions.members}`);
       } else {
-        history.replace(`/teams/${teamParam}/${TeamTabOptions.overview}`);
+        history.replace(`${ROUTES.teams}/${teamParam}/${TeamTabOptions.overview}`);
       }
     }
   }, [history, tabParam, teamParam]);
@@ -112,7 +113,7 @@ const Teams: FC = () => {
     if (team) {
       setTeamFilter(team.title);
     } else {
-      history.push(`/teams`);
+      history.push(ROUTES.teams);
     }
   }, [history, teamParam, teams, apiState]);
 
@@ -152,9 +153,9 @@ const Teams: FC = () => {
   const handleNavOptionClick = useCallback(
     (option: string) => (): void => {
       if (option === allTeamsFilter.pathname) {
-        history.push(`/teams/${option}/${TeamTabOptions.members}`);
+        history.push(`${ROUTES.teams}/${option}/${TeamTabOptions.members}`);
       } else {
-        history.push(`/teams/${option}/${TeamTabOptions.overview}`);
+        history.push(`${ROUTES.teams}/${option}/${TeamTabOptions.overview}`);
       }
     },
     [history],
@@ -188,7 +189,7 @@ const Teams: FC = () => {
     return (
       <>
         {Object.entries(pageData).map(([key, value]) => (
-          <Link className="Teams__resources-item" key={key} to={`/teams/${teamParam}/${tabParam}/${key}`}>
+          <Link className="Teams__resources-item" key={key} to={`${ROUTES.teams}/${teamParam}/${tabParam}/${key}`}>
             {value.name}
           </Link>
         ))}
@@ -202,7 +203,7 @@ const Teams: FC = () => {
   }, [teamParam, tabParam]);
 
   const handleBackClick = useCallback((): void => {
-    history.replace(`/teams/${teamParam}/${tabParam}`);
+    history.replace(`${ROUTES.teams}/${teamParam}/${tabParam}`);
   }, [history, teamParam, tabParam]);
 
   const renderResourceDoc = useCallback((): ReactNode => {

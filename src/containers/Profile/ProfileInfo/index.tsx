@@ -5,6 +5,7 @@ import {Icon, IconType} from '@thenewboston/ui';
 
 import {api as teamsApi, TeamMemberResponse} from 'apis/teams';
 import {A, Avatar, CopyableAccountNumber, Loader, Qr} from 'components';
+import {ROUTES} from 'constants/routes';
 import EditUserModal from 'containers/EditUserModal';
 import {useBooleanState} from 'hooks';
 import {selectActiveUser} from 'selectors/state';
@@ -74,7 +75,7 @@ const ProfileInfo: FC<ComponentProps> = ({user}) => {
       <>
         {team && memberDetails && (
           <div className="ProfileInfo__member-title" key={team.title}>
-            {memberDetails.job_title} on <A href={`/teams/${team.title}`}>{team.title}</A>
+            {memberDetails.job_title} on <A href={`${ROUTES.teams}/${team.title}`}>{team.title}</A>
           </div>
         )}
         <div className="ProfileInfo__member-discord">

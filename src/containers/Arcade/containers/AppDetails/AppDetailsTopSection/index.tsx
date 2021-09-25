@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import {Icon, IconType} from '@thenewboston/ui';
 import {useHistory} from 'react-router';
 
+import {ROUTES} from 'constants/routes';
 import {SFC} from 'types/generic';
 
 import * as S from './Styles';
@@ -26,7 +27,7 @@ const AppDetailsTopSection: SFC<Props> = ({className, description, logoUrl, titl
   return (
     <S.Background className={className}>
       <S.Container>
-        <S.BackContainer onClick={() => history.push('/arcade')} role="button" tabIndex={0}>
+        <S.BackContainer onClick={() => history.push(ROUTES.arcade)} role="button" tabIndex={0}>
           <S.BackIcon icon={IconType.chevronLeft} size={28} totalSize={28} />
           <S.BackText>Apps List</S.BackText>
         </S.BackContainer>

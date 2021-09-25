@@ -4,6 +4,7 @@ import clsx from 'clsx';
 
 import Logo from 'assets/svgs/thenewboston-white.svg';
 import {Button, SocialMediaIcon} from 'components';
+import {ROUTES, URLS} from 'constants/routes';
 import {SocialMedia} from 'types/social-media';
 
 import FooterNavList from './FooterNavList';
@@ -19,12 +20,12 @@ const navLists = [
     links: [
       {
         title: 'Bounties',
-        url: '/bounties',
+        url: ROUTES.bounties,
       },
       {
         isExternal: true,
         title: 'Projects',
-        url: 'https://developer.thenewboston.com/projects',
+        url: URLS.developerPortal.projects,
       },
     ],
   },
@@ -33,26 +34,26 @@ const navLists = [
     links: [
       {
         title: 'Join the Community!',
-        url: '/social',
+        url: ROUTES.social,
       },
       {
         title: 'Weekly Progress',
-        url: '/progress',
+        url: ROUTES.progress,
       },
       {
         title: 'Openings',
-        url: '/openings',
+        url: ROUTES.openings,
       },
       {
         title: 'Community Guidelines',
-        url: '/guidelines',
+        url: ROUTES.guidelines,
       },
-      {title: 'Analytics', url: '/analytics'},
-      {title: 'Beta Roadmap', url: '/roadmap'},
+      {title: 'Analytics', url: ROUTES.analytics},
+      {title: 'Beta Roadmap', url: ROUTES.roadmap},
       {
         isExternal: true,
         title: 'Blog',
-        url: 'https://blog.thenewboston.com',
+        url: URLS.blog,
       },
     ],
   },
@@ -62,17 +63,17 @@ const navLists = [
       {
         isExternal: true,
         title: 'Developer',
-        url: 'https://developer.thenewboston.com/',
+        url: URLS.developerPortal.home,
       },
       {
         isExternal: true,
         title: 'Living Whitepaper',
-        url: 'https://developer.thenewboston.com/whitepaper',
+        url: URLS.developerPortal.whitepaper,
       },
       {
         isExternal: true,
         title: 'Projects',
-        url: 'https://developer.thenewboston.com/projects',
+        url: URLS.developerPortal.projects,
       },
     ],
   },
@@ -81,15 +82,15 @@ const navLists = [
     links: [
       {
         title: 'Documentation',
-        url: '/wallet',
+        url: ROUTES.wallet,
       },
       {
         title: 'Tutorials',
-        url: '/tutorials',
+        url: ROUTES.tutorials,
       },
       {
         title: 'Media Kit',
-        url: '/assets',
+        url: ROUTES.assets,
       },
     ],
   },
@@ -98,19 +99,19 @@ const navLists = [
     links: [
       {
         title: 'Team',
-        url: '/teams',
+        url: ROUTES.teams,
       },
       {
         title: 'Donate',
-        url: '/donate',
+        url: ROUTES.donate,
       },
       {
         title: 'Terms of Use',
-        url: '/terms-of-use',
+        url: ROUTES.termsOfUse,
       },
       {
         title: 'Privacy Policy',
-        url: '/privacy-policy',
+        url: ROUTES.privacyPolicy,
       },
     ],
   },
@@ -119,7 +120,7 @@ const navLists = [
     links: [
       {
         title: 'FAQ',
-        url: '/faq',
+        url: ROUTES.faq,
       },
     ],
   },
@@ -168,7 +169,7 @@ const Footer: FC<ComponentProps> = ({className}) => {
           </Link>
           <div className="Footer__social-media-links">{renderSocialMediaLinks()}</div>
         </div>
-        <Button className="Footer__download-button" onClick={() => history.push('/download')} variant="outlined">
+        <Button className="Footer__download-button" onClick={() => history.push(ROUTES.download)} variant="outlined">
           Download Wallet
         </Button>
       </div>

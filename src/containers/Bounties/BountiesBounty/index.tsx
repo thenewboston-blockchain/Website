@@ -2,6 +2,7 @@ import React, {FC} from 'react';
 
 import {A, Label, TotalAmount} from 'components';
 import {AMOUNT_COLOR} from 'constants/github';
+import {URLS} from 'constants/routes';
 import {Assignee, GitHubLabel, GitHubUser} from 'types/github';
 
 import './BountiesBounty.scss';
@@ -47,7 +48,7 @@ const BountiesBounty: FC<ComponentProps> = ({
   };
 
   const renderIssueLink = () => {
-    const url = `https://github.com/thenewboston-developers/${repositoryName}/issues/${number}`;
+    const url = `${URLS.github}/${repositoryName}/issues/${number}`;
     return (
       <A className="BountiesBounty__issue-details-link" href={url}>
         {`#${number}`}
@@ -62,7 +63,7 @@ const BountiesBounty: FC<ComponentProps> = ({
   };
 
   const renderRepositoryLink = () => {
-    const url = `https://github.com/thenewboston-developers/${repositoryName}`;
+    const url = `${URLS.github}/${repositoryName}`;
     return (
       <A className="BountiesBounty__issue-details-link" href={url}>
         {repositoryName}

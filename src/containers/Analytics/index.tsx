@@ -3,6 +3,7 @@ import {useHistory, useParams} from 'react-router-dom';
 
 import {getAnalyticsCategories} from 'apis/analytics';
 import {Container, FlatNavLinks, PageTitle, Loader} from 'components';
+import {ROUTES} from 'constants/routes';
 import {useWindowDimensions} from 'hooks';
 import {AnalyticsCategory, AnalyticsUrlParams} from 'types/analytics';
 import {displayErrorToast} from 'utils/toast';
@@ -41,14 +42,14 @@ const Analytics: FC = () => {
       const categoryType = categories.find((category) => category.key === type);
 
       if (!categoryType) {
-        history.replace(`/analytics/${categories[0].key}`);
+        history.replace(`${ROUTES.analytics}/${categories[0].key}`);
       } else {
         setSelectedCategory(categoryType);
       }
     }
 
     if (!type && categories.length) {
-      history.replace(`/analytics/${categories[0].key}`);
+      history.replace(`${ROUTES.analytics}/${categories[0].key}`);
     }
   }, [categories, history, type]);
 
@@ -66,7 +67,7 @@ const Analytics: FC = () => {
 
   const handleNavOptionClick = useCallback(
     (option: string) => (): void => {
-      history.push(`/analytics/${option}`);
+      history.push(`${ROUTES.analytics}/${option}`);
     },
     [history],
   );
