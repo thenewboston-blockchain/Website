@@ -2,6 +2,7 @@ import React, {FC, lazy} from 'react';
 import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom';
 
 import {Layout} from 'components';
+import {ROUTES} from 'constants/routes';
 import withSuspense from 'hoc/withSuspense';
 
 import Analytics from './Analytics';
@@ -66,34 +67,34 @@ const App: FC = () => {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/analytics/:type?" component={Analytics} />
-          <Route exact path="/arcade/:appId?" component={withSuspense(Arcade)} />
-          <Route exact path="/guidelines" component={Guidelines} />
-          <Route exact path="/create-account" render={() => <CreateAccount disabled />} />
-          <Route exact path="/donate" component={Donate} />
-          <Redirect exact from="/faq" to={`/faq/${faqFilters[FaqFilterType.all]}`} />
-          <Route exact path="/faq/:filter" component={Faq} />
-          <Route exact path="/assets" component={Assets} />
-          <Redirect exact from="/openings" to="/openings/All" />
-          <Route exact path="/openings/:category/:openingId?" render={() => <Openings />} />
-          <Route exact path="/social" component={Social} />
-          <Redirect exact from="/bounties" to="/bounties/All" />
-          <Route exact path="/bounties/:repository" component={Bounties} />
-          <Redirect exact path="/teams" to="/teams/All/Members" />
-          <Route exact path="/teams/:team/:tab?/:resource?" component={Teams} />
-          <Route path="/wallet/:chapter?" component={Wallet} />
-          <Route path="/deployment-guide/:chapter?" component={DeploymentGuide} />
-          <Route path="/download" component={Download} />
-          <Route path="/privacy-policy" component={PrivacyPolicy} />
-          <Route path="/progress" component={Progress} />
-          <Route path="/roadmap" component={withSuspense(Roadmap)} />
-          <Route exact path="/sign-in" component={SignIn} />
-          <Route exact path="/sign-out" component={SignOut} />
-          <Route path="/style-guide/:chapter?" component={StyleGuide} />
-          <Redirect exact path="/tutorials" to="/tutorials/All" />
-          <Route exact path="/tutorials/:category/:playlistId?" component={withSuspense(Tutorials)} />
-          <Route exact path="/terms-of-use" component={TermsOfUse} />
-          <Route path="/users/:userId" component={Profile} />
+          <Route exact path={`${ROUTES.analytics}/:type?`} component={Analytics} />
+          <Route exact path={`${ROUTES.arcade}/:appId?`} component={withSuspense(Arcade)} />
+          <Route exact path={ROUTES.guidelines} component={Guidelines} />
+          <Route exact path={ROUTES.createAccount} render={() => <CreateAccount disabled />} />
+          <Route exact path={ROUTES.donate} component={Donate} />
+          <Redirect exact from={ROUTES.faq} to={`${ROUTES.faq}/${faqFilters[FaqFilterType.all]}`} />
+          <Route exact path={`${ROUTES.faq}/:filter`} component={Faq} />
+          <Route exact path={ROUTES.assets} component={Assets} />
+          <Redirect exact from={ROUTES.openings} to={`${ROUTES.openings}/All`} />
+          <Route exact path={`${ROUTES.openings}/:category/:openingId?`} render={() => <Openings />} />
+          <Route exact path={ROUTES.social} component={Social} />
+          <Redirect exact from={ROUTES.bounties} to={`${ROUTES.bounties}/All`} />
+          <Route exact path={`${ROUTES.bounties}/:repository`} component={Bounties} />
+          <Redirect exact path={ROUTES.teams} to={`${ROUTES.teams}/All/Members`} />
+          <Route exact path={`${ROUTES.teams}/:team/:tab?/:resource?`} component={Teams} />
+          <Route path={`${ROUTES.wallet}/:chapter?`} component={Wallet} />
+          <Route path={`${ROUTES.deploymentGuide}/:chapter?`} component={DeploymentGuide} />
+          <Route path={ROUTES.download} component={Download} />
+          <Route path={ROUTES.privacyPolicy} component={PrivacyPolicy} />
+          <Route path={ROUTES.progress} component={Progress} />
+          <Route path={ROUTES.roadmap} component={withSuspense(Roadmap)} />
+          <Route exact path={ROUTES.signin} component={SignIn} />
+          <Route exact path={ROUTES.signout} component={SignOut} />
+          <Route path={`${ROUTES.styleGuide}/:chapter?`} component={StyleGuide} />
+          <Redirect exact path={ROUTES.tutorials} to={`${ROUTES.tutorials}/All`} />
+          <Route exact path={`${ROUTES.tutorials}/:category/:playlistId?`} component={withSuspense(Tutorials)} />
+          <Route exact path={ROUTES.termsOfUse} component={TermsOfUse} />
+          <Route path={`${ROUTES.users}/:userId`} component={Profile} />
           <Redirect to="/" />
         </Switch>
       </Layout>

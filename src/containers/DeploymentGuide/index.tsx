@@ -2,13 +2,14 @@ import React, {FC, useMemo} from 'react';
 import {Redirect, useParams} from 'react-router-dom';
 
 import {DashboardLayout, DocsMenuItems, PageTitle} from 'components';
+import {ROUTES} from 'constants/routes';
 import {PageData, PageDataObject} from 'types/page-data';
 
 import DeploymentGuideBank from './DeploymentGuideBank';
 import DeploymentGuideValidator from './DeploymentGuideValidator';
 
 const defaultPageData: PageData = {
-  content: <Redirect to="/deployment-guide/bank" />,
+  content: <Redirect to={`${ROUTES.deploymentGuide}/bank`} />,
   name: '',
 };
 

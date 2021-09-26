@@ -3,6 +3,7 @@ import {useHistory, useLocation} from 'react-router-dom';
 import {Icon, IconType} from '@thenewboston/ui';
 
 import {A, Button} from 'components';
+import {ROUTES} from 'constants/routes';
 import {Opening} from 'types/openings';
 
 import './OpeningDetails.scss';
@@ -21,7 +22,7 @@ const OpeningDetails: FC<ComponentProps> = ({opening}) => {
       return;
     }
 
-    history.replace(`/openings/${opening.category}`);
+    history.replace(`${ROUTES.openings}/${opening.category}`);
   };
 
   const renderContent = (): ReactNode => (

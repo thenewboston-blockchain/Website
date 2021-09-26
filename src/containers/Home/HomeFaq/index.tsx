@@ -2,6 +2,7 @@ import React, {FC} from 'react';
 import {Link} from 'react-router-dom';
 
 import {FaqDropdownCard} from 'components';
+import {ROUTES} from 'constants/routes';
 import {getTopQuestionsAndAnswers} from 'utils/faq';
 
 import './HomeFaq.scss';
@@ -25,7 +26,7 @@ const HomeFaq: FC = () => {
             );
           })}
       </div>
-      <Link to="/faq">View more</Link>
+      <Link to={ROUTES.faq}>View more</Link>
     </div>
   );
 };
