@@ -22,6 +22,7 @@ import {
   DocSubSection,
 } from './DocWrapper';
 import DropdownInput from './DropdownInput';
+import EmojiIcon, {EmojiType} from './EmojiIcon';
 import EmptyPage from './EmptyPage';
 import FaqDropdownCard from './FaqDropdownCard';
 import FlatNavLinks from './FlatNavLinks';
@@ -75,6 +76,8 @@ export {
   DocSubSection,
   DocsMenuItems,
   DropdownInput,
+  EmojiIcon,
+  EmojiType,
   EmptyPage,
   ErrorMessage,
   FaqDropdownCard,
