@@ -23,9 +23,9 @@ type Props = {
   marginBottom?: number;
 };
 
-const EmojiIcon: SFC<Props> = ({color, emoji, emojiSize = 40, marginBottom = 0, size = 72}) => {
+const EmojiIcon: SFC<Props> = ({className, color, emoji, emojiSize = 40, marginBottom = 0, size = 72}) => {
   return (
-    <S.Container color={color} emojiSize={emojiSize} marginBottom={marginBottom} size={size}>
+    <S.Container className={className} color={color} emojiSize={emojiSize} marginBottom={marginBottom} size={size}>
       {emoji}
     </S.Container>
   );
