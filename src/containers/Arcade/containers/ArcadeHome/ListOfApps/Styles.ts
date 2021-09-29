@@ -58,7 +58,7 @@ export const Heading = styled.h1`
 `;
 
 export const Loader = styled(SharedLoader)`
-  margin: 0 auto;
+  margin: 40px auto;
 `;
 
 export const ErrorContainer = styled.div`
