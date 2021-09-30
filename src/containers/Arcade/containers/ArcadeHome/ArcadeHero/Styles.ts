@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import {Button as SharedButton, Container as SharedContainer, EmojiIcon as SharedEmojiIcon} from 'components';
 import colors from 'styles/colors';
 import {d2, h3} from 'styles/fonts';
+import zIndex from 'styles/zIndex';
 
 export const Background = styled.div`
   align-items: center;
@@ -56,8 +57,10 @@ export const SubTitle = styled.h2`
 
 export const Button = styled(SharedButton)`
   align-items: center;
+  background-color: ${colors.white};
   display: flex;
   width: fit-content;
+  z-index: ${zIndex.arcadeHeroButton};
 `;
 
 type PositionProps = {
