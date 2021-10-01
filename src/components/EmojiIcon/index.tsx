@@ -1,7 +1,18 @@
 import React from 'react';
 
 import {SFC} from 'types/generic';
-import {AlienEmoji, ConsoleEmoji, DiceEmoji, CrossedSwordEmoji, RobotEmoji, UnicornEmoji} from './components';
+import {
+  AlienEmoji,
+  ConsoleEmoji,
+  CrossedSwordEmoji,
+  DiceEmoji,
+  DiscordEmoji,
+  MailEmoji,
+  NewspaperEmoji,
+  RobotEmoji,
+  ThoughtBalloonEmoji,
+  UnicornEmoji,
+} from './components';
 import * as S from './Styles';
 
 export enum EmojiType {
@@ -14,6 +25,10 @@ export enum EmojiType {
   GoldCup = '🏆',
   Earth = '🌎',
   RockHandSign = '🤘',
+  ThoughtBalloon = '💭',
+  Newspaper = '📰',
+  Mail = '✉️',
+  Discord = 'Discord',
 }
 
 type Props = {
@@ -35,8 +50,16 @@ const getEmojiIcon = (emojiType: EmojiType, emojiSize: number) => {
       return <CrossedSwordEmoji style={style} />;
     case EmojiType.Dice:
       return <DiceEmoji style={style} />;
+    case EmojiType.Discord:
+      return <DiscordEmoji style={style} />;
+    case EmojiType.Mail:
+      return <MailEmoji style={style} />;
+    case EmojiType.Newspaper:
+      return <NewspaperEmoji style={style} />;
     case EmojiType.Robot:
       return <RobotEmoji style={style} />;
+    case EmojiType.ThoughtBalloon:
+      return <ThoughtBalloonEmoji style={style} />;
     case EmojiType.Unicorn:
       return <UnicornEmoji style={style} />;
     default:
