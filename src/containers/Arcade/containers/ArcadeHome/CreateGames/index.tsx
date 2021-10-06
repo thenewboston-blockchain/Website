@@ -1,12 +1,15 @@
 import React from 'react';
+import {useHistory} from 'react-router';
 
+import {ROUTES} from 'constants/routes';
 import {Button} from 'components';
-import {socialMediaUrls} from 'utils/social-media';
 
 import * as S from './Styles';
 
 const CreateGames = () => {
-  const handleClick = () => window.open(socialMediaUrls.youtube, '_blank', 'noopener noreferrer');
+  const history = useHistory();
+
+  const handleClick = () => history.push(ROUTES.tutorials);
 
   return (
     <S.Wrapper>
