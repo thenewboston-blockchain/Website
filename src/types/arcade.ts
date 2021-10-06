@@ -2,9 +2,17 @@ export interface ArcadeUrlParams {
   appId: string;
 }
 
+export interface AppCategory {
+  uuid: string;
+  name: string;
+  created_date: string;
+  modified_date: string;
+}
+
 export interface App {
   pk: string;
   name: string;
+  category: AppCategory;
   description: string;
   tagline: string;
   logo: string;
