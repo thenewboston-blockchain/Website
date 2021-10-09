@@ -1,52 +1,64 @@
 import styled from 'styled-components';
+
 import colors from 'styles/colors';
+import {h1} from 'styles/fonts';
 
 import {Loader as SharedLoader, Container as SharedContainer} from 'components';
 
-const cardWidthOriginal = '373px';
-const cardMinWidthOriginal = '290px';
-const cardWidth992 = '432px';
-const cardMinWidth992 = '330px';
-const cardWidth768 = '320px';
-const cardMinWidth768 = '200px';
+export const Wrapper = styled.div`
+  background: ${colors.palette.neutral['075']};
+`;
 
 export const Container = styled(SharedContainer)`
-  column-gap: 32px;
-  display: grid;
-  grid-template-columns: /* eslint-disable-next-line declaration-colon-space-after */
-    minmax(${cardMinWidthOriginal}, ${cardWidthOriginal}) minmax(${cardMinWidthOriginal}, ${cardWidthOriginal})
-    minmax(${cardMinWidthOriginal}, ${cardWidthOriginal}) minmax(${cardMinWidthOriginal}, ${cardWidthOriginal});
-  justify-content: space-between;
-  justify-items: center;
-  margin-bottom: 120px;
-  margin-top: 104px;
-  row-gap: 120px;
+  margin: 0 auto;
+  padding: 80px 80px 120px;
+  width: min-content;
 
   @media (max-width: 1366px) {
-    grid-template-columns: /* eslint-disable-next-line declaration-colon-space-after */
-      minmax(${cardMinWidthOriginal}, ${cardWidthOriginal}) minmax(${cardMinWidthOriginal}, ${cardWidthOriginal})
-      minmax(${cardMinWidthOriginal}, ${cardWidthOriginal});
-    padding: 0 48px;
+    padding: 72px 52px 96px;
   }
 
   @media (max-width: 992px) {
-    grid-template-columns: minmax(${cardMinWidth992}, ${cardWidth992}) minmax(${cardMinWidth992}, ${cardWidth992});
+    padding: 72px 48px 96px;
   }
 
   @media (max-width: 768px) {
-    grid-template-columns: minmax(${cardMinWidth768}, ${cardWidth768}) minmax(${cardMinWidth768}, ${cardWidth768});
-    padding: 0 24px;
-    row-gap: 60px;
-  }
-
-  @media (max-width: 480px) {
-    grid-template-columns: 100%;
-    justify-content: center;
+    padding: 48px 24px 96px;
   }
 `;
 
+export const Grid = styled.div`
+  column-gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 280px);
+  row-gap: 40px;
+
+  @media (max-width: 1366px) {
+    grid-template-columns: repeat(3, 280px);
+  }
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(3, 208px);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 360px;
+    row-gap: 48px;
+  }
+
+  @media (max-width: 414px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+export const Heading = styled.h1`
+  ${h1.bold}
+  color: ${colors.palette.neutral['900']};
+  margin-bottom: 24px;
+`;
+
 export const Loader = styled(SharedLoader)`
-  margin: 0 auto;
+  margin: 40px auto;
 `;
 
 export const ErrorContainer = styled.div`

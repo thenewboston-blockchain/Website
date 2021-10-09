@@ -14,11 +14,7 @@ const zIndex = {
   topNavMobileButton: 4,
   slideupRoot: 150,
   popoverRoot: 200,
-
-  // dev portal related
-  devPortalTopLinks: 3,
-  devPortalBreadcrumb: 2,
-  devPortalSidemenu: 0,
+  arcadeHeroButton: 1,
 };
 
 export default zIndex;
