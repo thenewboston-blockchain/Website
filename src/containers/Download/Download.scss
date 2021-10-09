@@ -22,6 +22,12 @@ $top-nav-height: 60px;
     background-color: var(--color-gray-050);
     display: flex;
     justify-content: center;
+
+    @media (max-width: 768px) {
+      & > div {
+        width: 100%;
+      }
+    }
   }
 
   &__main-content {
@@ -81,7 +87,10 @@ $top-nav-height: 60px;
     }
 
     @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
       grid-template-columns: 1fr;
+      width: 100%;
     }
 
     @media (max-width: 414px) {
