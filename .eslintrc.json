@@ -64,6 +64,7 @@
     "react/no-unescaped-entities": "off",
     "react/prop-types": "off",
     "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "off",
     "sort-keys": "error"
   }
 }

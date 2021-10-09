@@ -3,7 +3,9 @@ import React, {FC, useEffect, useState} from 'react';
 import DefaultLogoSrc from 'assets/images/logo.png';
 import {getAllApps} from 'apis/arcade';
 import {ApiProgress} from 'constants/api-progress';
+import {useWindowDimensions} from 'hooks';
 import {App} from 'types/arcade';
+
 import AppCard from '../../../components/AppCard';
 
 import * as S from './Styles';
@@ -11,6 +13,21 @@ import * as S from './Styles';
 const ListOfApps: FC = () => {
   const [apps, setApps] = useState<App[]>([]);
   const [progress, setProgress] = useState<ApiProgress>(ApiProgress.Init);
+
+  const {width} = useWindowDimensions();
+
+  const thumbnailSize = React.useMemo(() => {
+    if (width >= 992) {
+      return 280;
+    }
+    if (width >= 768) {
+      return 208;
+    }
+    if (width >= 414) {
+      return 360;
+    }
+    return 280;
+  }, [width]);
 
   useEffect(() => {
     (async function getListOfApps() {
@@ -34,21 +51,26 @@ const ListOfApps: FC = () => {
   }
 
   return (
-    <S.Container>
-      {apps.map((app) => {
-        const bannerUrl = app.images.length > 0 ? app.images[0].image : DefaultLogoSrc;
-        return (
-          <AppCard
-            key={app.pk}
-            bannerUrl={bannerUrl}
-            id={app.pk}
-            description={app.description}
-            title={app.name}
-            websiteUrl={app.website}
-          />
-        );
-      })}
-    </S.Container>
+    <S.Wrapper>
+      <S.Container>
+        <S.Heading>Recent</S.Heading>
+        <S.Grid>
+          {apps.map((app) => {
+            const bannerUrl = app.images.length > 0 ? app.images[0].image : DefaultLogoSrc;
+            return (
+              <AppCard
+                key={app.pk}
+                thumbnailUrl={bannerUrl}
+                id={app.pk}
+                title={app.name}
+                category={app.category?.name ?? '-'}
+                thumbnailSize={thumbnailSize}
+              />
+            );
+          })}
+        </S.Grid>
+      </S.Container>
+    </S.Wrapper>
   );
 };
 
