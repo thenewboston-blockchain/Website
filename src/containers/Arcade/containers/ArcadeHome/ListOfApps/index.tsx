@@ -63,7 +63,7 @@ const ListOfApps: FC = () => {
                 thumbnailUrl={bannerUrl}
                 id={app.pk}
                 title={app.name}
-                category={app.category.name}
+                category={app.category?.name ?? '-'}
                 thumbnailSize={thumbnailSize}
               />
             );

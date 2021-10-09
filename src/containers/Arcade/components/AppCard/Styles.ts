@@ -10,6 +10,11 @@ type ThumbnailsProps = {
 export const Container = styled.div`
   cursor: pointer;
   position: relative;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.03);
+  }
 `;
 
 export const Thumbnail = styled.img<ThumbnailsProps>`
