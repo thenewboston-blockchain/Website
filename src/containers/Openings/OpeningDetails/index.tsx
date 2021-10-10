@@ -2,7 +2,7 @@ import React, {FC, ReactNode} from 'react';
 import {useHistory, useLocation} from 'react-router-dom';
 import {Icon, IconType} from '@thenewboston/ui';
 
-import {A, Button} from 'components';
+import {Button} from 'components';
 import {ROUTES} from 'constants/routes';
 import {Opening} from 'types/openings';
 
@@ -27,17 +27,16 @@ const OpeningDetails: FC<ComponentProps> = ({opening}) => {
 
   const renderContent = (): ReactNode => (
     <>
-      <div className="OpeningDetails__position">{opening.position}</div>
-      {opening.project && (
-        <div className="OpeningDetails__proposal">
-          Hiring for{' '}
-          {opening.project.url ? <A href={opening.project.url}>{opening.project.name}</A> : <>{opening.project.name}</>}{' '}
-          under Project Proposals.
-        </div>
-      )}
+      <div className="OpeningDetails__position">{opening.title}</div>
       <div className="OpeningDetails__description">{opening.description}</div>
-      {renderStringList(opening.responsibilities, 'Responsibilities')}
-      {renderStringList(opening.requirements, 'Requirements')}
+      {renderStringList(
+        opening.responsibilities.map((responsibility) => responsibility.title),
+        'Responsibilities',
+      )}
+      {renderStringList(
+        opening.skills.map((skill) => skill.title),
+        'Requirements',
+      )}
     </>
   );
 
@@ -61,7 +60,7 @@ const OpeningDetails: FC<ComponentProps> = ({opening}) => {
           <Icon className="OpeningDetails__back-icon" icon={IconType.arrowLeft} />
           <span className="OpeningDetails__back-text">Back</span>
         </div>
-        <Button onClick={() => window.open(opening.applicationUrl, '_blank', 'noreferrer noopener')}>Apply</Button>
+        <Button onClick={() => window.open(opening.application_form, '_blank', 'noreferrer noopener')}>Apply</Button>
       </div>
       {renderContent()}
     </div>
