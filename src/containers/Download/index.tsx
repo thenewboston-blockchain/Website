@@ -2,6 +2,7 @@ import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'r
 import {Link} from 'react-router-dom';
 
 import {A, Button, CodeSnippet, Container, Loader, PageTitle} from 'components';
+import {URLS} from 'constants/routes';
 import {Release} from 'types/github';
 import {fetchGithubReleases} from 'utils/github';
 import {displayErrorToast} from 'utils/toast';
@@ -59,7 +60,9 @@ const Download: FC = () => {
   const getDownloadLink = useCallback(
     (os: Os): string =>
       latestReleaseNumber
-        ? `https://github.com/thenewboston-developers/Account-Manager/releases/download/v1.0.0-alpha.${latestReleaseNumber}/TNB-Account-Manager-1.0.0-alpha.${latestReleaseNumber}-${getOsExtension(
+        ? `${
+            URLS.github
+          }/Account-Manager/releases/download/v1.0.0-alpha.${latestReleaseNumber}/TNB-Account-Manager-1.0.0-alpha.${latestReleaseNumber}-${getOsExtension(
             os,
           )}`
         : '',

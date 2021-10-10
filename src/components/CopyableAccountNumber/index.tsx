@@ -1,46 +1,45 @@
-import React, {FC} from 'react';
+import React from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
-import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
 
+import {SFC} from 'types/generic';
 import {displayToast} from 'utils/toast';
 
-import './CopyableAccountNumber.scss';
+import * as S from './Styles';
 
 interface ComponentProps {
   accountNumber: string;
-  className?: string;
   isCopyButtonAtBottom?: boolean;
 }
 
-const CopyableAccountNumber: FC<ComponentProps> = ({accountNumber, className, isCopyButtonAtBottom}) => {
+const CopyableAccountNumber: SFC<ComponentProps> = ({accountNumber, className, isCopyButtonAtBottom}) => {
   const handleCopy = (): void => {
     displayToast('Account Number copied to the clipboard', 'success');
   };
 
   return (
-    <div className={clsx('CopyableAccountNumber', className)} data-testid="CopyableAccountNumber">
-      <div className="CopyableAccountNumber__top">
-        <div className="CopyableAccountNumber__label">Account Number</div>
+    <S.Container className={className} data-testid="CopyableAccountNumber">
+      <S.TopContainer>
+        <S.Label>Account Number</S.Label>
         {!isCopyButtonAtBottom && (
           <CopyToClipboard onCopy={handleCopy} text={accountNumber} data-testid="CopyButton">
-            <div className="CopyableAccountNumber__copy-container">
-              <Icon className="CopyableAccountNumber__copy-icon" icon={IconType.contentCopy} size={22} />
-              <div className="CopyableAccountNumber__copy-text">Copy</div>
-            </div>
+            <S.CopyContainer>
+              <Icon icon={IconType.contentCopy} size={22} />
+              Copy
+            </S.CopyContainer>
           </CopyToClipboard>
         )}
-      </div>
-      <div className="CopyableAccountNumber__account-number">{accountNumber}</div>
+      </S.TopContainer>
+      <S.AccountNumber>{accountNumber}</S.AccountNumber>
       {isCopyButtonAtBottom && (
         <CopyToClipboard onCopy={handleCopy} text={accountNumber} data-testid="CopyButton">
-          <div className="CopyableAccountNumber__copy-container">
-            <Icon className="CopyableAccountNumber__copy-icon" icon={IconType.contentCopy} size={22} />
-            <div className="CopyableAccountNumber__copy-text">Copy</div>
-          </div>
+          <S.CopyContainer>
+            <Icon icon={IconType.contentCopy} size={22} />
+            Copy
+          </S.CopyContainer>
         </CopyToClipboard>
       )}
-    </div>
+    </S.Container>
   );
 };
 

@@ -1,17 +1,18 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
-import React, {ChangeEvent, FC} from 'react';
+import React, {ChangeEvent} from 'react';
 import {Field} from 'formik';
 import clsx from 'clsx';
 
 import {BaseInputProps, Input} from 'components/FormElements';
 import {useFormContext} from 'hooks';
 import {BaseFormComponentProps} from 'types/forms';
+import {SFC} from 'types/generic';
 import {renderFormError, renderFormLabel} from 'utils/forms';
 
 type ComponentProps = BaseFormComponentProps<BaseInputProps>;
 
-const FormInput: FC<ComponentProps> = ({
+const FormInput: SFC<ComponentProps> = ({
   hideErrorBlock = false,
   hideErrorText = false,
   label,

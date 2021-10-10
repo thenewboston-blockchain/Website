@@ -3,6 +3,7 @@ import {Redirect, useParams} from 'react-router-dom';
 
 import {DashboardLayout, DocsMenuItems, PageTitle, Pagination} from 'components';
 import {walletNavigationData} from 'components/DocsMenuItems';
+import {ROUTES} from 'constants/routes';
 import {PageData, PageDataObject} from 'types/page-data';
 
 import WalletAddFriends from './WalletAddFriends';
@@ -15,7 +16,7 @@ import WalletRecoverAccount from './WalletRecoverAccount';
 import WalletSendCoins from './WalletSendCoins';
 
 const defaultPageData: PageData = {
-  content: <Redirect to="/wallet/get-started" />,
+  content: <Redirect to={`${ROUTES.wallet}/get-started`} />,
   name: '',
 };
 

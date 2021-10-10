@@ -1,16 +1,17 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
-import React, {FC} from 'react';
+import React from 'react';
 import clsx from 'clsx';
 
 import {BaseSelectProps, Select} from 'components/FormElements';
 import useFormSelect from 'hooks/useFormSelect';
 import {BaseFormComponentProps} from 'types/forms';
+import {SFC} from 'types/generic';
 import {renderFormError, renderFormLabel} from 'utils/forms';
 
 type ComponentProps = BaseFormComponentProps<BaseSelectProps>;
 
-const FormSelect: FC<ComponentProps> = ({hideErrorText = false, label, required, ...baseSelectProps}) => {
+const FormSelect: SFC<ComponentProps> = ({hideErrorText = false, label, required, ...baseSelectProps}) => {
   const {className, name, options} = baseSelectProps;
   const {error, handleBlur, handleChange, selectedOption} = useFormSelect(name, options, baseSelectProps);
 

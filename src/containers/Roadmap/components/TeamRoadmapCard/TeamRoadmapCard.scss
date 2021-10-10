@@ -1,0 +1,74 @@
+@import 'styles/font-mixins';
+
+.TeamRoadmapCard {
+  border-radius: 12px;
+  box-shadow: 0px 0px 30px rgba(229, 234, 244, 0.8);
+  padding: 32px;
+
+  @media (max-width: 768px) {
+    padding: 32px 24px;
+  }
+
+  &__header {
+    border-bottom: 3px solid var(--color-gray-050);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 38px;
+
+    &-title {
+      @extend %h1;
+      color: var(--color-blue-900);
+      font-weight: var(--font-weight-bold);
+      margin-bottom: 38px;
+    }
+
+    &-progress {
+      align-items: center;
+      display: flex;
+      margin-bottom: 38px;
+
+      &-bar {
+        flex-grow: 100;
+        margin-right: 16px;
+      }
+
+      &-percentage {
+        @extend %body1;
+        color: var(--color-cyan-900);
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__content {
+    max-height: 480px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar-track {
+      display: none;
+    }
+
+    &-task {
+      margin-right: 36px;
+      padding: 20px 0;
+
+      &:not(:last-of-type) {
+        border-bottom: 1px solid var(--color-gray-050);
+      }
+
+      &-title {
+        @extend %h3;
+        color: var(--color-gray-900);
+        font-weight: var(--font-weight-medium);
+        margin-bottom: 8px;
+      }
+
+      &-date {
+        @extend %h4;
+        color: var(--color-gray-500);
+        font-weight: var(--font-weight-medium);
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import React, {CSSProperties, FC, ReactNode, useCallback, useEffect, useMemo} from 'react';
+import React, {CSSProperties, ReactNode, useCallback, useEffect, useMemo} from 'react';
 import {createPortal} from 'react-dom';
 import clsx from 'clsx';
 import noop from 'lodash/noop';
@@ -8,17 +8,16 @@ import {bemify} from '@thenewboston/utils';
 import {Form, FormButton, FormButtonProps} from 'components/FormComponents';
 import Loader from 'components/FormElements/Loader';
 import {GenericFormValues} from 'types/forms';
-import {GenericFunction} from 'types/generic';
+import {ClassName, GenericFunction, SFC} from 'types/generic';
 
 import './Modal.scss';
 
-export interface ModalButtonProps extends FormButtonProps {
+export interface ModalButtonProps extends FormButtonProps, ClassName {
   content: ReactNode;
 }
 
 interface ComponentProps {
   cancelButton?: ModalButtonProps | string;
-  className?: string;
   close(): void;
   footer?: ReactNode;
   header?: ReactNode;
@@ -31,7 +30,7 @@ interface ComponentProps {
   validationSchema?: any;
 }
 
-const Modal: FC<ComponentProps> = ({
+const Modal: SFC<ComponentProps> = ({
   cancelButton,
   children,
   className,

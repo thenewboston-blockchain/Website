@@ -2,6 +2,7 @@ import React, {FC, useMemo, useState} from 'react';
 
 import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
+import {ProgressBar} from 'components';
 import {BaseIssue} from 'types/github';
 import {getRepositoryUrl} from 'utils/github';
 import ProgressIssueCard from '../ProgressIssueCard';
@@ -34,14 +35,7 @@ const ProgressDropdownCard: FC<Props> = ({name, responsibility, repoNames, issue
             <div className="ProgressDropdownCard__title-responsibility">{responsibility}</div>
           </div>
           <div className="ProgressDropdownCard__progress">
-            <div className="ProgressDropdownCard__progress-bar">
-              <div
-                className={clsx('ProgressDropdownCard__progress-bar', 'ProgressDropdownCard__progress-bar--filled')}
-                style={{
-                  width: `${progressPercentage}%`,
-                }}
-              />
-            </div>
+            <ProgressBar className="ProgressDropdownCard__progress-bar" percentage={progressPercentage} />
             <div className="ProgressDropdownCard__progress-percentage">{Math.floor(progressPercentage)}% complete</div>
           </div>
         </div>

@@ -1,21 +1,21 @@
-import React, {FC, ReactNode} from 'react';
+import React, {ReactNode} from 'react';
 import clsx from 'clsx';
-import {Icon, IconType} from '@thenewboston/ui';
-import {bemify} from '@thenewboston/utils';
+import {IconType} from '@thenewboston/ui';
+import {SFC} from 'types/generic';
 
-import './A.scss';
+import * as S from './Styles';
 
 interface ComponentProps {
   children?: ReactNode;
-  className?: string;
   dataTestId?: string;
   href: string;
   newWindow?: boolean;
   iconTotalSize?: number;
   iconSize?: number;
+  showNewWindowIcon?: boolean;
 }
 
-const A: FC<ComponentProps> = ({
+const A: SFC<ComponentProps> = ({
   children,
   className,
   dataTestId = 'A',
@@ -23,8 +23,9 @@ const A: FC<ComponentProps> = ({
   iconSize = 16,
   iconTotalSize = 20,
   newWindow = true,
+  showNewWindowIcon = true,
 }) => {
-  const renderIcon = newWindow && typeof children === 'string';
+  const renderIcon = newWindow && typeof children === 'string' && showNewWindowIcon;
   const rel = newWindow ? 'noreferrer' : undefined;
   const target = newWindow ? '_blank' : '_self';
 
@@ -32,8 +33,7 @@ const A: FC<ComponentProps> = ({
     <a className={clsx('A', className)} data-testid={dataTestId} href={href} rel={rel} target={target}>
       {children}
       {renderIcon && (
-        <Icon
-          className={clsx('A__Icon--new-window', {...bemify(className, '__Icon--new-window')})}
+        <S.NewWindowIcon
           dataTestId={`${dataTestId}__Icon--new-window`}
           icon={IconType.openInNew}
           size={iconSize}

@@ -1,13 +1,10 @@
-import React, {FC} from 'react';
+import React from 'react';
 import clsx from 'clsx';
+import {SFC} from 'types/generic';
 
 import './EmptyPage.scss';
 
-interface ComponentProps {
-  className?: string;
-}
-
-const EmptyPage: FC<ComponentProps> = ({className}) => {
+const EmptyPage: SFC = ({className}) => {
   return (
     <div className={clsx('EmptyPage', className)} data-testid="EmptyPage">
       <h1>No items to display</h1>

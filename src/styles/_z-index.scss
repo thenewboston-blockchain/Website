@@ -1,24 +1,24 @@
 $z-index-webmap: 0;
 
-$z-index-project-header: 1;
+$z-index-breadcrumb: 200;
+$z-index-go-to-top: 200;
+$z-index-layout: 200;
+$z-index-modal: 200;
+$z-index-slideup-overlay: 200;
+$z-index-slideup: 200;
+$z-index-top-nav-mobile-overlay: 200;
 
-$z-index-breadcrumb: 2;
-$z-index-go-to-top: 2;
-$z-index-layout: 2;
-$z-index-modal: 2;
-$z-index-slideup-overlay: 2;
-$z-index-slideup: 2;
-$z-index-top-nav-mobile-overlay: 2;
+$z-index-top-nav-mobile-dropdown: 300;
 
-$z-index-top-nav-mobile-dropdown: 3;
+$z-index-top-nav: 400;
+$z-index-top-nav-mobile-button: 400;
 
-$z-index-top-nav: 4;
-$z-index-top-nav-mobile-button: 4;
+$z-index-slideup-root: 1500;
 
-$z-index-slideup-root: 150;
+$z-index-popover-root: 2000;
 
-$z-index-popover-root: 200;
-
-$z-index-whitepaper-top-links: 1;
-$z-index-whitepaper-breadcrumb: 1;
-$z-index-whitepaper-sidemenu: 0;
+// developer portal
+$z-index-project-header: 98;
+$z-index-dev-portal-top-links: 100;
+$z-index-dev-portal-breadcrumb: 99;
+$z-index-dev-portal-sidemenu: 0;

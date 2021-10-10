@@ -20,23 +20,6 @@
     "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
   },
   {
-    "openingId": "senior-python-django-developer",
-    "category": "Engineering",
-    "description": "We are looking for a Senior Python / Django Developer to help us build out both our digital currency network and Website API.",
-    "position": "Senior Python / Django Developer",
-    "responsibilities": [
-      "Designing and creating RESTful APIs",
-      "Participating in architectural, design and product discussions",
-      "Working in an environment with an excellent team of engineers"
-    ],
-    "requirements": [
-      "Experience with Celery, DRF, and pytest",
-      "2+ years of experience in Django",
-      "4+ years of experience in Python"
-    ],
-    "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
-  },
-  {
     "openingId": "ux-designer",
     "category": "Design",
     "description": "We’re looking for a creative and motivated UX designer that basically will help improve thenewboston.com web app.",
@@ -104,64 +87,6 @@
     "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
   },
   {
-    "openingId": "senior-seo-specialist",
-    "category": "Marketing",
-    "description": "We are looking for a talented Senior SEO Specialist to join our team.",
-    "position": "Senior SEO Specialist",
-    "responsibilities": [
-      "Develop optimization strategies that improve the search engine results rankings",
-      "Research SEO keywords to use throughout the website and marketing materials",
-      "Collect data and report on traffic, rankings, and other SEO aspects",
-      "Review technical SEO issues and recommend fixes",
-      "Collaborate with others within the marketing team to manage SEO strategy",
-      "Write compelling and high-quality website content, including blog posts and page descriptions",
-      "Update content and website links for maximum optimization and search engine rankings"
-    ],
-    "requirements": [
-      "3+ years of experience in successfully developing and executing SEO campaigns",
-      "Understanding of search engine algorithms and ranking methods",
-      "Experience with SEO industry programs, such as Google Analytics",
-      "Knowledge of keyword research and data mining tools",
-      "Able to complete competitive analysis of other organizations within the industry",
-      "Excellent written and verbal communication skills",
-      "Comfortable analyzing high volumes of data daily",
-      "Expertise in WordPress."
-    ],
-    "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
-  },
-  {
-    "openingId": "marketing-strategy-specialist-nigeria",
-    "category": "Marketing",
-    "description": "Marketing Team is looking for Marketing Specialist from Nigeria to represent thenewboston policies and values in their home region and encourage people around the world to contribute and earn our coins.",
-    "position": "Marketing Specialist Nigeria",
-    "responsibilities": [
-      "Submit a Bi-weekly Marketing Strategy that explains how you are going to promote thenewboston in facebook Group page.",
-      "Create a Weekly Social Media Marketing Plan.",
-      "Engage with your audience and encourage them to join in our community.",
-      "Working with a team to discuss marketing ideas.",
-      "Review the Group page analytics and Improved marketing strategy.",
-      "Communicate and Engage with thenewboston Community."
-    ],
-    "requirements": ["Social Media Marketing tools", "G-suite"],
-    "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
-  },
-  {
-    "openingId": "marketing-specialist-india",
-    "category": "Marketing",
-    "description": "Marketing Team is looking for Marketing Specialist from India to represent thenewboston policies and values in their home region and encourage people around the world to contribute and earn our coins.",
-    "position": "Marketing Specialist India",
-    "responsibilities": [
-      "Submit a Bi-weekly Marketing Strategy that explains how you are going to promote thenewboston in facebook Group page.",
-      "Create a Weekly Social Media Marketing Plan.",
-      "Engage with your audience and encourage them to join in our community.",
-      "Working with a team to discuss marketing ideas.",
-      "Review the Group page analytics and Improved marketing strategy.",
-      "Communicate and Engage with thenewboston Community."
-    ],
-    "requirements": ["Social Media Marketing tools", "G-suite"],
-    "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
-  },
-  {
     "openingId": "community-engagement-specialist",
     "category": "Community",
     "description": "We are looking for a fun, sociable individual that can engage with our community, organize events, and promote a healthy atmosphere.",
@@ -175,5 +100,25 @@
     ],
     "requirements": ["Well-spoken, well-written", "Must be fun, chill, and dope", "Sociable"],
     "applicationUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf4Mk-vxO3Nl193LkCSGPOrrT5uDvA27peH8du7hSnfUsxb0A/viewform"
+  },
+  {
+    "openingId": "senior-python-django-developer",
+    "category": "Engineering",
+    "description": "We are looking for a Senior Python / Django Developer to help us build out both our digital currency network and Website API.",
+    "position": "Senior Python / Django Developer",
+    "responsibilities": [
+      "Designing and creating RESTful APIs",
+      "Participating in architectural, design and product discussions",
+      "Working in an environment with an excellent team of engineers"
+    ],
+
+    "requirements": [
+      "Experience with Celery, Docker, Django REST Framework, and pytest",
+      "2+ years of experience in Django",
+      "5+ years of experience in Python",
+      "Basic understanding of blockchain"
+    ],
+
+    "applicationUrl": "https://forms.gle/mFW1ri1hPvtvA3AY6"
   }
 ]

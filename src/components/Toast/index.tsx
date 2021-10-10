@@ -1,18 +1,18 @@
-import React, {FC, useMemo} from 'react';
+import React, {useMemo} from 'react';
 import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
 import {bemify} from '@thenewboston/utils';
+import {SFC} from 'types/generic';
 
 import './Toast.scss';
 
 export type ToastType = 'success' | 'warning';
 
 interface ComponentProps {
-  className?: string;
   type: ToastType;
 }
 
-const Toast: FC<ComponentProps> = ({children, className, type = 'warning'}) => {
+const Toast: SFC<ComponentProps> = ({children, className, type = 'warning'}) => {
   const iconType = useMemo<IconType>(() => {
     switch (type) {
       case 'success':

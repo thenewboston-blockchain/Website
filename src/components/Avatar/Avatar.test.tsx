@@ -19,13 +19,6 @@ describe('Avatar component', () => {
     expect(screen.getByTestId('Avatar--placeholder')).toBeTruthy();
   });
 
-  it('renders fallback image with default className', () => {
-    render(<Avatar {...baseProps} />);
-
-    expect(screen.getByTestId('Avatar--placeholder')).toHaveClass('Avatar');
-    expect(screen.getByTestId('Avatar--placeholder')).toHaveClass('Avatar--placeholder');
-  });
-
   it('renders fallback image with className passed in', () => {
     render(<Avatar className="test" {...baseProps} />);
 
@@ -37,8 +30,8 @@ describe('Avatar component', () => {
 
     const placeholder = screen.getByTestId('Avatar--placeholder');
 
-    expect(placeholder).toHaveStyle({'min-height': `${baseProps.size.toString()}px`});
-    expect(placeholder).toHaveStyle({'min-width': `${baseProps.size.toString()}px`});
+    expect(placeholder).toHaveStyle({height: `${baseProps.size.toString()}px`});
+    expect(placeholder).toHaveStyle({width: `${baseProps.size.toString()}px`});
   });
 
   describe('getImageSizeBasedOnDeviceRatio', () => {

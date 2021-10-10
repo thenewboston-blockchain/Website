@@ -1,7 +1,8 @@
-import React, {FC, useState} from 'react';
-import {Icon, IconType} from '@thenewboston/ui';
+import React, {useState} from 'react';
+import {IconType} from '@thenewboston/ui';
+import {SFC} from 'types/generic';
 
-import './DropdownInput.scss';
+import * as S from './Styles';
 
 interface ComponentProps<T> {
   callbackOnChange: (selectedOption: string) => void;
@@ -9,7 +10,7 @@ interface ComponentProps<T> {
   options: T[];
 }
 
-const DropdownInput: FC<ComponentProps<string>> = ({callbackOnChange, defaultOption, options}) => {
+const DropdownInput: SFC<ComponentProps<string>> = ({callbackOnChange, className, defaultOption, options}) => {
   const [selectedOption, setSelectedOption] = useState<string>(defaultOption);
   const handleChange = (e: React.FormEvent) => {
     const {value} = e.target as HTMLSelectElement;
@@ -17,21 +18,16 @@ const DropdownInput: FC<ComponentProps<string>> = ({callbackOnChange, defaultOpt
     callbackOnChange(value);
   };
   return (
-    <div className="DropdownInput" data-testid="DropdownInput">
-      <select
-        className="DropdownInput__select-box"
-        data-testid="DropdownInput__select-box"
-        value={selectedOption}
-        onChange={handleChange}
-      >
+    <S.Container className={className} data-testid="DropdownInput">
+      <S.Select data-testid="DropdownInput__select-box" value={selectedOption} onChange={handleChange}>
         {options.map((option) => (
-          <option key={option} className="DropdownInput__option" value={option} data-testid="DropdownInput__option">
+          <S.Option key={option} value={option} data-testid="DropdownInput__option">
             {option}
-          </option>
+          </S.Option>
         ))}
-      </select>
-      <Icon className="DropdownInput__chevron-down" icon={IconType.chevronDown} />
-    </div>
+      </S.Select>
+      <S.ChevronDown data-testid="ChevronDown" icon={IconType.chevronDown} />
+    </S.Container>
   );
 };
 

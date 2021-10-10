@@ -4,7 +4,7 @@ import Avatar from './Avatar';
 import BreadcrumbMenu from './BreadcrumbMenu';
 import {CodeSnippet, RequestResponseSnippet, SnippetLang} from './CodeSnippet';
 import Container from './Container';
-import ContributorTasks from './ContributorTasks';
+import ContributorBounties from './ContributorBounties';
 import CopyableAccountNumber from './CopyableAccountNumber';
 import DataTable from './DataTable';
 import Divider from './Divider';
@@ -22,17 +22,16 @@ import {
   DocSubSection,
 } from './DocWrapper';
 import DropdownInput from './DropdownInput';
+import EmojiIcon, {EmojiType} from './EmojiIcon';
 import EmptyPage from './EmptyPage';
 import FaqDropdownCard from './FaqDropdownCard';
 import FlatNavLinks from './FlatNavLinks';
-import Footer from './Footer';
 import {Button, ErrorMessage, Input} from './FormElements';
 import GoToTop from './GoToTop';
 import HashLink from './HashLink';
 import ProgressiveImage from './ProgressiveImage';
 import Label from './Label';
 import Layout from './Layout';
-import MarketingButton from './MarketingButton';
 import MarketingCard from './MarketingCard';
 import MenuGroup from './MenuGroup';
 import Navigation from './Navigation';
@@ -42,16 +41,14 @@ import Loader from './Loader';
 import PageTitle from './PageTitle';
 import Pagination from './Pagination';
 import Popover from './Popover';
+import ProgressBar from './ProgressBar';
 import Qr from './Qr';
 import {QueryParamsOffsetAndLimit} from './QueryParams';
 import RequiredAsterisk from './RequiredAsterisk';
 import Shadow from './Shadow';
 import SlideUp from './SlideUp';
 import SocialMediaIcon from './SocialMediaIcon';
-import StepIndicator from './StepIndicator';
-import {TableBorderGrid, TableParams, TableVertical} from './Table';
-import Tabs, {Tab} from './Tabs';
-import TimeFilter from './TimeFilter';
+import TableParams from './TableParams';
 import TotalAmount from './TotalAmount';
 import VideoPlayer from './VideoPlayer';
 
@@ -64,7 +61,7 @@ export {
   CalloutType,
   CodeSnippet,
   Container,
-  ContributorTasks,
+  ContributorBounties,
   CopyableAccountNumber,
   DashboardLayout,
   DataTable,
@@ -79,11 +76,12 @@ export {
   DocSubSection,
   DocsMenuItems,
   DropdownInput,
+  EmojiIcon,
+  EmojiType,
   EmptyPage,
   ErrorMessage,
   FaqDropdownCard,
   FlatNavLinks,
-  Footer,
   GoToTop,
   HashLink,
   Input,
@@ -91,7 +89,6 @@ export {
   LabelFilter,
   Layout,
   Loader,
-  MarketingButton,
   MarketingCard,
   MenuGroup,
   Navigation,
@@ -100,6 +97,7 @@ export {
   PageTitle,
   Pagination,
   Popover,
+  ProgressBar,
   ProgressiveImage,
   Qr,
   QueryParamsOffsetAndLimit,
@@ -109,14 +107,7 @@ export {
   SlideUp,
   SnippetLang,
   SocialMediaIcon,
-  StepIndicator,
-  TableBorderGrid,
   TableParams,
-  TableVertical,
-  Tabs,
-  TimeFilter,
   TotalAmount,
   VideoPlayer,
 };
-
-export type {Tab};

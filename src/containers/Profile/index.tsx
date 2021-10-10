@@ -6,8 +6,8 @@ import {Loader} from 'components';
 import {getUser} from 'dispatchers/users/user';
 import {selectUsers} from 'selectors/state';
 import {AppDispatch} from 'types/store';
+import BountiesCompleted from './BountiesCompleted';
 import ProfileInfo from './ProfileInfo';
-import TasksCompleted from './TasksCompleted';
 
 import './Profile.scss';
 
@@ -49,13 +49,13 @@ const Profile: FC = () => {
     if (!user) return null;
     return (
       <div className="Profile__right-section">
-        <TasksCompleted github_username={user.github_username} />
+        <BountiesCompleted github_username={user.github_username} />
       </div>
     );
   };
 
   if (errorMessage) return <h4>{errorMessage}</h4>;
-  if (loading) return <Loader />;
+  if (loading) return <Loader className="Profile__loader" />;
 
   return (
     <div className="Profile">

@@ -3,7 +3,9 @@ import {useHistory} from 'react-router-dom';
 import clsx from 'clsx';
 
 import './TeamTabs.scss';
-import {TeamName, TeamTabOptions} from 'types/teams';
+import {allTeamsFilter} from 'constants/teams';
+import {ROUTES} from 'constants/routes';
+import {TeamTabOptions} from 'types/teams';
 
 interface ComponentProps {
   team: string;
@@ -16,7 +18,7 @@ const TeamTabs: FC<ComponentProps> = ({team, tab}) => {
 
   const tabs = useMemo(
     () =>
-      team === TeamName.all
+      team === allTeamsFilter.title
         ? [TeamTabOptions.members, TeamTabOptions.resources]
         : [TeamTabOptions.overview, TeamTabOptions.members],
     [team],
@@ -33,7 +35,7 @@ const TeamTabs: FC<ComponentProps> = ({team, tab}) => {
           <div
             className={clsx('TeamsTabs__tab', {'TeamsTabs__tab--active': activeTab === tabView})}
             key={tabView}
-            onClick={() => history.push(`/teams/${team}/${tabView}`)}
+            onClick={() => history.push(`${ROUTES.teams}/${team}/${tabView}`)}
             role="button"
             tabIndex={0}
           >

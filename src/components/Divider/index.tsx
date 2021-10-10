@@ -1,10 +1,9 @@
 import React from 'react';
+import {SFC} from 'types/generic';
+import * as S from './Styles';
 
-import clsx from 'clsx';
-import './Divider.scss';
-
-const Divider = ({className}: {className?: string}) => {
-  return <div className={clsx('Divider', className)} />;
+const Divider: SFC = ({className}) => {
+  return <S.Container className={className} />;
 };
 
 export default Divider;

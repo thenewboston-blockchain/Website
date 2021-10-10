@@ -1,45 +1,47 @@
-import React, {FC} from 'react';
+import React from 'react';
 import {NavLink} from 'react-router-dom';
 
 import {MenuGroup} from 'components';
+import {ROUTES} from 'constants/routes';
+import {SFC} from 'types/generic';
 import {NavigationItem} from 'types/navigation';
 
 export const walletNavigationData = [
   {
     name: 'Get Started',
-    url: '/wallet/get-started',
+    url: `${ROUTES.wallet}/get-started`,
   },
   {
     name: 'Create an Account',
-    url: '/wallet/create-an-account',
+    url: `${ROUTES.wallet}/create-an-account`,
   },
   {
     name: 'Recover an Account',
-    url: '/wallet/recover-an-account',
+    url: `${ROUTES.wallet}/recover-an-account`,
   },
   {
     name: 'Add Friends',
-    url: '/wallet/add-friends',
+    url: `${ROUTES.wallet}/add-friends`,
   },
   {
     name: 'Send Coins',
-    url: '/wallet/send-coins',
+    url: `${ROUTES.wallet}/send-coins`,
   },
   {
     name: 'Edit Nicknames',
-    url: '/wallet/edit-nicknames',
+    url: `${ROUTES.wallet}/edit-nicknames`,
   },
   {
     name: 'Create a Bank',
-    url: '/wallet/create-bank',
+    url: `${ROUTES.wallet}/create-bank`,
   },
   {
     name: 'Create a Validator',
-    url: '/wallet/create-validator',
+    url: `${ROUTES.wallet}/create-validator`,
   },
 ];
 
-const DocsMenuItems: FC = () => {
+const DocsMenuItems: SFC = () => {
   const renderNavLinks = (navigationData: NavigationItem[]) => {
     return navigationData.map(({name, url}) => (
       <NavLink key={url} to={url}>

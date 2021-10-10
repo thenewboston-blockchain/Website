@@ -1,15 +1,15 @@
-import React, {FC, useMemo} from 'react';
+import React, {useMemo} from 'react';
 import clsx from 'clsx';
 import {bemify} from '@thenewboston/utils';
 
+import {SFC} from 'types/generic';
 import './DocList.scss';
 
 export interface DocListProps {
-  className?: string;
   variant: 'ul' | 'ol';
 }
 
-const DocList: FC<DocListProps> = ({children, className, variant}) => {
+const DocList: SFC<DocListProps> = ({children, className, variant}) => {
   const mainClassName = useMemo(
     () =>
       clsx('DocList', className, {

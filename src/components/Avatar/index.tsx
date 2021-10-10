@@ -1,20 +1,12 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
-import React, {FC, Suspense, useEffect, useState} from 'react';
+import React, {Suspense, useEffect, useState} from 'react';
 import {useImage} from 'react-image';
-import clsx from 'clsx';
 
 import DefaultUserAvatar from 'assets/images/default-avatar.png';
+import {SFC} from 'types/generic';
 
-import './Avatar.scss';
-
-export interface AvatarProps {
-  bordered?: boolean;
-  className?: string;
-  size: number;
-  src: string;
-  onClick?(): void;
-}
+import * as S from './Styles';
 
 export const getImageSizeBasedOnDeviceRatio = (size: number): number => {
   const {devicePixelRatio} = window;
@@ -35,7 +27,17 @@ export const getFormattedSrc = (src: string, size: number): string => {
   }
 };
 
-const AvatarImgWithFallback: FC<AvatarProps> = ({bordered, className, onClick, size, src}) => {
+export type Shape = 'circle' | 'square';
+
+export interface AvatarProps {
+  bordered?: boolean;
+  size: number;
+  src: string;
+  shape?: Shape;
+  onClick?(): void;
+}
+
+const AvatarImgWithFallback: SFC<AvatarProps> = ({bordered, className, onClick, shape = 'circle', size, src}) => {
   const [srcPrimary, setSrcPrimary] = useState<string>('');
   const {src: srcWithFallback} = useImage({srcList: [srcPrimary, DefaultUserAvatar]});
 
@@ -44,13 +46,15 @@ const AvatarImgWithFallback: FC<AvatarProps> = ({bordered, className, onClick, s
   }, [src, size]);
 
   return (
-    <img
+    <S.Avatar
       alt="Avatar"
-      className={clsx('Avatar', {'Avatar--bordered': bordered, 'Avatar--clickable': !!onClick}, className)}
-      crossOrigin="anonymous"
+      bordered={bordered}
+      className={className}
+      clickable={!!onClick}
       data-testid="Avatar"
       height={size}
       key={srcWithFallback}
+      shape={shape}
       src={srcWithFallback}
       onClick={onClick}
       width={size}
@@ -58,18 +62,19 @@ const AvatarImgWithFallback: FC<AvatarProps> = ({bordered, className, onClick, s
   );
 };
 
-const Avatar: FC<AvatarProps> = ({className, size, ...props}) => {
+const Avatar: SFC<AvatarProps> = ({className, size, shape, ...props}) => {
   return (
     <Suspense
       fallback={
-        <div
-          className={clsx('Avatar', 'Avatar--placeholder', className)}
+        <S.Placeholder
+          className={className}
           data-testid="Avatar--placeholder"
-          style={{minHeight: size, minWidth: size}}
+          shape={shape}
+          style={{height: size, width: size}}
         />
       }
     >
-      <AvatarImgWithFallback className={className} size={size} {...props} />
+      <AvatarImgWithFallback className={className} size={size} shape={shape} {...props} />
     </Suspense>
   );
 };

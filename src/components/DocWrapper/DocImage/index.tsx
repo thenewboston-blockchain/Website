@@ -1,6 +1,7 @@
-import React, {FC} from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import {bemify} from '@thenewboston/utils';
+import {SFC} from 'types/generic';
 
 import './DocImage.scss';
 
@@ -13,7 +14,7 @@ export interface DocImageProps {
   src: string;
 }
 
-const DocImage: FC<DocImageProps> = ({alt, bordered, className, maxWidth, src, width}) => {
+const DocImage: SFC<DocImageProps> = ({alt, bordered, className, maxWidth, src, width}) => {
   return (
     <div className={clsx('DocImage', className)} data-testid="DocImage">
       <img

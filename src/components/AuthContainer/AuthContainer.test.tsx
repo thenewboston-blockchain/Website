@@ -10,13 +10,6 @@ describe('AuthContainer', () => {
     heading: 'Auth Container Heading',
   };
 
-  it('renders proper default className', () => {
-    render(<AuthContainer {...baseProps} />);
-    const el = screen.getByTestId('AuthContainer');
-
-    expect(el.className).toBe('AuthContainer');
-  });
-
   it('renders without error passed in', () => {
     render(<AuthContainer {...baseProps} />);
 

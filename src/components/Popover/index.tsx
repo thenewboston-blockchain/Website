@@ -1,4 +1,4 @@
-import React, {FC, ReactNode, useEffect, useMemo, useRef, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 import {useLocation} from 'react-router-dom';
 import clsx from 'clsx';
@@ -6,6 +6,7 @@ import throttle from 'lodash/throttle';
 import {bemify} from '@thenewboston/utils';
 
 import {useEventListener, useWindowDimensions} from 'hooks';
+import {SFC} from 'types/generic';
 import './Popover.scss';
 
 interface DomRect {
@@ -23,8 +24,6 @@ const initialDomRect = {height: 0, left: 0, top: 0, width: 0};
 export interface PopoverProps {
   anchorOrigin?: {horizontal: HorizontalPosition | number; vertical: VerticalPosition | number};
   anchorEl: HTMLElement | null;
-  children: ReactNode;
-  className?: string;
   closePopover(): void;
   id?: string;
   open: boolean;
@@ -32,7 +31,7 @@ export interface PopoverProps {
   transformOffset?: {horizontal: number; vertical: number};
 }
 
-const Popover: FC<PopoverProps> = ({
+const Popover: SFC<PopoverProps> = ({
   anchorEl,
   anchorOrigin = {horizontal: 'left', vertical: 'top'},
   children,

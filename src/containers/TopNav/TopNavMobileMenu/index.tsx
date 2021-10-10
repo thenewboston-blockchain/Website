@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
 
 import {A, Button} from 'components';
+import {ROUTES, URLS} from 'constants/routes';
 import './TopNavMobileMenu.scss';
 
 interface ComponentProps {
@@ -54,43 +55,56 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice,
               'getStarted',
               'Get Started',
               <>
-                {renderMobileLink('Tasks', '/tasks')}
-                {renderMobileLink('Projects', '/projects/overview')}
+                {renderMobileLink('Bounties', ROUTES.bounties)}
+                {renderMobileLink('Projects', URLS.developerPortal.projects, true)}
               </>,
             )}
             {renderColumn(
               'community',
               'Community',
               <>
-                {renderMobileLink('Join the Community!', '/social')}
-                {renderMobileLink('Weekly Progress', '/progress')}
-                {renderMobileLink('Openings', '/openings')}
-                {renderMobileLink('Community Guidelines', '/guidelines')}
-                {renderMobileLink('Blog', 'https://blog.thenewboston.com', true)}
+                {renderMobileLink('Join the Community!', ROUTES.social)}
+                {renderMobileLink('Weekly Progress', ROUTES.progress)}
+                {renderMobileLink('Openings', ROUTES.openings)}
+                {renderMobileLink('Community Guidelines', ROUTES.guidelines)}
+                {renderMobileLink('Analytics', ROUTES.analytics)}
+                {renderMobileLink('Beta Roadmap', ROUTES.roadmap)}
+                {renderMobileLink('Blog', URLS.blog, true)}
               </>,
             )}
-            {renderColumn('developer', 'Developer', <>{renderMobileLink('Developer', '/developer')}</>)}
+            {renderColumn(
+              'developer',
+              'Developer',
+              <>{renderMobileLink('Developer', URLS.developerPortal.home, true)}</>,
+            )}
             {renderColumn(
               'resources',
               'Resources',
               <>
-                {renderMobileLink('Documentation', '/wallet')}
-                {renderMobileLink('Tutorials', '/tutorials')}
-                {renderMobileLink('Media Kit', '/assets')}
+                {renderMobileLink('Documentation', ROUTES.wallet)}
+                {renderMobileLink('Tutorials', ROUTES.tutorials)}
+                {renderMobileLink('Media Kit', ROUTES.assets)}
               </>,
             )}
             {renderColumn(
               'about',
               'About',
               <>
-                {renderMobileLink('Teams', '/teams')}
-                {renderMobileLink('Donate', '/donate')}
+                {renderMobileLink('Teams', ROUTES.teams)}
+                {renderMobileLink('Donate', ROUTES.donate)}
               </>,
             )}
-            {renderColumn('faq', 'FAQ', <>{renderMobileLink('FAQ', '/faq')}</>)}
+            {renderColumn('faq', 'FAQ', <>{renderMobileLink('FAQ', ROUTES.faq)}</>)}
           </div>
-          <div className="TopNavMobileMenu__download-container">
-            <Button className="TopNavMobileMenu__download-button" onClick={() => history.push('/download')}>
+          <div className="TopNavMobileMenu__buttons-container">
+            <Button
+              className="TopNavMobileMenu__arcade-button"
+              onClick={() => history.push(ROUTES.arcade)}
+              variant="outlined"
+            >
+              Arcade
+            </Button>
+            <Button className="TopNavMobileMenu__download-button" onClick={() => history.push(ROUTES.download)}>
               Download Wallet
             </Button>
           </div>

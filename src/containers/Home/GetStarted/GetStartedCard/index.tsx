@@ -8,11 +8,12 @@ import './GetStartedCard.scss';
 type Props = {
   description: string;
   icon: React.ReactNode;
+  isExternal?: boolean;
   title: string;
   to: string;
 };
 
-const GetStartedCard: FC<Props> = ({description, icon, title, to}) => {
+const GetStartedCard: FC<Props> = ({description, icon, isExternal = false, title, to}) => {
   const history = useHistory();
   return (
     <div className="GetStartedCard">
@@ -22,7 +23,11 @@ const GetStartedCard: FC<Props> = ({description, icon, title, to}) => {
       </div>
       <div className="GetStartedCard__description">{description}</div>
       <div className="GetStartedCard__button-container">
-        <Button className="GetStartedCard__details-button" onClick={() => history.push(to)} variant="link">
+        <Button
+          className="GetStartedCard__details-button"
+          onClick={() => (isExternal ? window.open(to, '_blank', 'noopener noreferrer') : history.push(to))}
+          variant="link"
+        >
           View Details
           <Icon icon={IconType.chevronRight} size={16} />
         </Button>

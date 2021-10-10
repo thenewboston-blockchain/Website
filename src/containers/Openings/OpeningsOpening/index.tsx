@@ -2,6 +2,7 @@ import React, {FC, memo, useCallback} from 'react';
 import {Link, useLocation} from 'react-router-dom';
 
 import {OpeningCategory, ProjectProposal} from 'types/openings';
+import {ROUTES} from 'constants/routes';
 
 import './OpeningsOpening.scss';
 
@@ -30,7 +31,7 @@ const OpeningsOpening: FC<ComponentProps> = ({category, description, openingId, 
   return (
     <Link
       className="OpeningsOpening"
-      to={{pathname: `/openings/${category}/${openingId}`, state: {from: location.pathname}}}
+      to={{pathname: `${ROUTES.openings}/${category}/${openingId}`, state: {from: location.pathname}}}
     >
       <div className="OpeningsOpening__position">{renderOpeningTitle()}</div>
       <div className="OpeningsOpening__description">{description}</div>

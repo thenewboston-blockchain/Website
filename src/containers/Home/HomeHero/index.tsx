@@ -1,8 +1,9 @@
 import React, {FC, useCallback} from 'react';
 import {Link} from 'react-router-dom';
 
-import {Button, ProgressiveImage} from 'components';
+import {A, Button, ProgressiveImage} from 'components';
 import SocialMediaIcon from 'components/SocialMediaIcon';
+import {ROUTES, URLS} from 'constants/routes';
 import {useWindowDimensions} from 'hooks';
 import {SocialMedia} from 'types/social-media';
 
@@ -39,10 +40,14 @@ const HomeHero: FC = () => {
               decentralized apps with the goal of helping the whole world move into the cryptocurrency era.
             </h2>
             <div className="HomeHero__buttons">
-              <Link className="HomeHero__buttons--learn-more" tabIndex={-1} to="/developer/whitepaper">
+              <A
+                className="HomeHero__buttons--learn-more"
+                href={URLS.developerPortal.whitepaper}
+                showNewWindowIcon={false}
+              >
                 <Button>Learn More</Button>
-              </Link>
-              <Link className="HomeHero__buttons--earn-coins" tabIndex={-1} to="/tasks/All">
+              </A>
+              <Link className="HomeHero__buttons--earn-coins" tabIndex={-1} to={`${ROUTES.bounties}/All`}>
                 <Button>Earn Coins</Button>
               </Link>
             </div>

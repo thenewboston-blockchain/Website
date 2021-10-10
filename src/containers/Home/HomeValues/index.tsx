@@ -1,7 +1,8 @@
 import React, {FC} from 'react';
 import {Link} from 'react-router-dom';
 
-import {Button, ProgressiveImage} from 'components';
+import {A, Button, ProgressiveImage} from 'components';
+import {ROUTES, URLS} from 'constants/routes';
 import {useWindowDimensions} from 'hooks';
 import HomeValuesCard from './HomeValuesCard';
 import ValuesIllustrationPlaceholder from './ValuesIllustrationPlaceholder.webp';
@@ -41,10 +42,14 @@ const HomeValues: FC = () => {
             Value system gives everyone a chance to participate, not just coin or hardware owners.
           </div>
           <div className="HomeValues__main-buttons">
-            <Link className="HomeValues__main-buttons--create" tabIndex={-1} to="/projects/overview">
+            <A
+              className="HomeValues__main-buttons--create"
+              href={URLS.developerPortal.projects}
+              showNewWindowIcon={false}
+            >
               <Button>Create Projects</Button>
-            </Link>
-            <Link className="HomeValues__main-buttons--earn" tabIndex={-1} to="/tasks/All">
+            </A>
+            <Link className="HomeValues__main-buttons--earn" tabIndex={-1} to={`${ROUTES.bounties}/All`}>
               <Button>Complete Bounties</Button>
             </Link>
           </div>

@@ -1,29 +1,22 @@
-import React, {FC} from 'react';
-import clsx from 'clsx';
-import {bemify} from '@thenewboston/utils';
+import React from 'react';
+import {SFC} from 'types/generic';
 
 import BaseCodeSnippet, {SnippetLang} from '../BaseCodeSnippet';
-import './CodeSnippet.scss';
+import * as S from './Styles';
 
 interface ComponentProps {
-  className?: string;
   code: string;
   heading?: string;
   language?: SnippetLang;
 }
 
-const CodeSnippet: FC<ComponentProps> = ({className, code, heading, language = SnippetLang.bash}) => {
+const CodeSnippet: SFC<ComponentProps> = ({className, code, heading, language = SnippetLang.bash}) => {
   return (
-    <div className={clsx('CodeSnippet', className)} data-testid="CodeSnippet">
+    <div className={className} data-testid="CodeSnippet">
       {heading ? (
-        <div
-          className={clsx('CodeSnippet__heading', {
-            ...bemify(className, '__heading'),
-          })}
-          data-testid="CodeSnippet__heading"
-        >
+        <S.Heading className={className} data-testid="CodeSnippet__heading">
           {heading}:
-        </div>
+        </S.Heading>
       ) : null}
       <BaseCodeSnippet code={code} language={language} light={language === SnippetLang.bash} showLineNumbers={false} />
     </div>

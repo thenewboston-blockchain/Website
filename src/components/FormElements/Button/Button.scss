@@ -58,6 +58,16 @@
         border-color: var(--color-tertiary);
       }
     }
+
+    &#{$self}--quaternary {
+      background: var(--color-quaternary);
+      border-color: var(--color-quaternary);
+
+      &:hover {
+        background: #0073ed;
+        border-color: #0073ed;
+      }
+    }
   }
 
   &--outlined {
@@ -102,6 +112,22 @@
       &:hover {
         border-color: var(--color-tertiary);
         color: var(--color-tertiary);
+      }
+    }
+
+    &#{$self}--quaternary {
+      border-color: var(--color-neutral-200);
+      color: var(--color-neutral-200);
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      &#{$self}--disabled,
+      &#{$self}--disabled:hover {
+        background: var(--color-white);
+        border-color: var(--color-white);
+        color: var(--color-gray-200);
       }
     }
   }

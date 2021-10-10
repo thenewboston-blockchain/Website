@@ -1,9 +1,9 @@
-import React, {FC} from 'react';
+import React from 'react';
 import {Form as FormikForm, Formik} from 'formik';
 import {GenericFormValues} from 'types/forms';
+import {SFC} from 'types/generic';
 
 interface ComponentProps {
-  className?: string;
   children: ({isValid}: {isValid: boolean}) => JSX.Element;
   initialValues?: GenericFormValues;
   onSubmit(values: GenericFormValues): void | Promise<any>;
@@ -11,7 +11,7 @@ interface ComponentProps {
   validationSchema?: any;
 }
 
-const Form: FC<ComponentProps> = ({
+const Form: SFC<ComponentProps> = ({
   children,
   className,
   onSubmit,

@@ -1,15 +1,13 @@
-import React, {FC, ReactNode, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 
-import {Container, Footer, GoToTop} from 'components';
+import {Container, GoToTop} from 'components';
+import Footer from 'containers/Footer';
 import TopNav from 'containers/TopNav';
+import {SFC} from 'types/generic';
 import './Layout.scss';
 
-export interface LayoutProps {
-  children: ReactNode;
-}
-
-const Layout: FC<LayoutProps> = ({children}) => {
+const Layout: SFC = ({children}) => {
   const {hash, pathname} = useLocation();
 
   useEffect(() => {

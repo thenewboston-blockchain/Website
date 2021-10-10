@@ -2,45 +2,36 @@ import React, {FC, lazy} from 'react';
 import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom';
 
 import {Layout} from 'components';
+import {ROUTES} from 'constants/routes';
 import withSuspense from 'hoc/withSuspense';
 
-import Wallet from './Wallet';
-import ArchitectureDeepDive from './LivingWhitepaper/containers/ArchitectureDeepDive';
+import Analytics from './Analytics';
 import Assets from './Assets';
-import BankApi from './Api/BankApi';
-import ConfirmationValidatorApi from './Api/ConfirmationValidatorApi';
+import Bounties from './Bounties';
 import CreateAccount from './CreateAccount';
 import DeploymentGuide from './DeploymentGuide';
-import DeveloperPortalApprovedProjects from './DeveloperPortalProjects/containers/ApprovedProjects';
-import DeveloperPortalProjects from './DeveloperPortalProjects';
-import DeveloperPortalProjectRulesAndGuidelines from './DeveloperPortalProjects/containers/ProjectRulesAndGuidelines';
 import Donate from './Donate';
 import Download from './Download';
 import Faq, {faqFilters, FaqFilterType} from './Faq';
 import Guidelines from './Guidelines';
 import Home from './Home';
-import LivingWhitepaper from './LivingWhitepaper';
 import Openings from './Openings';
-import PrimaryValidatorApi from './Api/PrimaryValidatorApi';
-import PrincipalEntities from './LivingWhitepaper/containers/PrincipalEntities';
-import PrincipalEventsAndProcesses from './LivingWhitepaper/containers/PrincipalEventsAndProcesses';
 import PrivacyPolicy from './PrivacyPolicy';
 import Profile from './Profile';
 import Progress from './Progress';
-import ProjectRulesAndGuide from './Projects/ProjectRulesAndGuide';
 import SignIn from './SignIn';
 import SignOut from './SignOut';
 import Social from './Social';
 import StyleGuide from './StyleGuide';
-import Tasks from './Tasks';
 import Teams from './Teams';
 import TermsOfUse from './TermsOfUse';
+import Wallet from './Wallet';
 
 /**
- * Lazy load pages that may contribute a lot to the bundle size
+ * Lazy load pages that may contribute a lot to the bundle sizes
  */
-const DeveloperPortal = lazy(() => import('./DeveloperPortal'));
-const Projects = lazy(() => import('./Projects'));
+const Arcade = lazy(() => import('./Arcade'));
+const Roadmap = lazy(() => import('./Roadmap'));
 const Tutorials = lazy(() => import('./Tutorials'));
 
 interface GoogleAnalyticsWindow extends Window {
@@ -76,48 +67,34 @@ const App: FC = () => {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/guidelines" component={Guidelines} />
-          <Route exact path="/create-account" render={() => <CreateAccount disabled />} />
-          <Route exact path="/donate" component={Donate} />
-          <Route exact path="/developer" component={withSuspense(DeveloperPortal)} />
-          <Route exact path="/developer/projects" component={DeveloperPortalProjects} />
-          <Route exact path="/developer/projects/rules" component={DeveloperPortalProjectRulesAndGuidelines} />
-          <Route exact path="/developer/projects/approved-projects" component={DeveloperPortalApprovedProjects} />
-          <Route exact path="/developer/whitepaper" component={LivingWhitepaper} />
-          <Route exact path="/developer/whitepaper/principal-entities/:chapter?" component={PrincipalEntities} />
-          <Route
-            exact
-            path="/developer/whitepaper/principal-events/:chapter?"
-            component={PrincipalEventsAndProcesses}
-          />
-          <Route exact path="/developer/whitepaper/architecture/:chapter?" component={ArchitectureDeepDive} />
-          <Redirect exact from="/faq" to={`/faq/${faqFilters[FaqFilterType.all]}`} />
-          <Route exact path="/faq/:filter" component={Faq} />
-          <Route exact path="/assets" component={Assets} />
-          <Redirect exact from="/openings" to="/openings/All" />
-          <Route exact path="/openings/:category/:openingId?" render={() => <Openings />} />
-          <Route exact path="/social" component={Social} />
-          <Redirect exact from="/tasks" to="/tasks/All" />
-          <Route exact path="/tasks/:repository" component={Tasks} />
-          <Redirect exact path="/teams" to="/teams/All/Members" />
-          <Route exact path="/teams/:team/:tab?/:resource?" component={Teams} />
-          <Route path="/wallet/:chapter?" component={Wallet} />
-          <Route path="/developer/api/bank-api/:chapter?" component={BankApi} />
-          <Route path="/developer/api/confirmation-validator-api/:chapter?" component={ConfirmationValidatorApi} />
-          <Route path="/deployment-guide/:chapter?" component={DeploymentGuide} />
-          <Route path="/download" component={Download} />
-          <Route path="/developer/api/primary-validator-api/:chapter?" component={PrimaryValidatorApi} />
-          <Route path="/privacy-policy" component={PrivacyPolicy} />
-          <Route path="/progress" component={Progress} />
-          <Route path="/projects/:projectId?" component={withSuspense(Projects)} />
-          <Route path="/project-rules/:chapter" component={ProjectRulesAndGuide} />
-          <Route exact path="/sign-in" component={SignIn} />
-          <Route exact path="/sign-out" component={SignOut} />
-          <Route path="/style-guide/:chapter?" component={StyleGuide} />
-          <Redirect exact path="/tutorials" to="/tutorials/All" />
-          <Route exact path="/tutorials/:category/:playlistId?" component={withSuspense(Tutorials)} />
-          <Route exact path="/terms-of-use" component={TermsOfUse} />
-          <Route path="/users/:userId" component={Profile} />
+          <Route exact path={`${ROUTES.analytics}/:type?`} component={Analytics} />
+          <Route exact path={`${ROUTES.arcade}/:appId?`} component={withSuspense(Arcade)} />
+          <Route exact path={ROUTES.guidelines} component={Guidelines} />
+          <Route exact path={ROUTES.createAccount} render={() => <CreateAccount disabled />} />
+          <Route exact path={ROUTES.donate} component={Donate} />
+          <Redirect exact from={ROUTES.faq} to={`${ROUTES.faq}/${faqFilters[FaqFilterType.all]}`} />
+          <Route exact path={`${ROUTES.faq}/:filter`} component={Faq} />
+          <Route exact path={ROUTES.assets} component={Assets} />
+          <Redirect exact from={ROUTES.openings} to={`${ROUTES.openings}/All`} />
+          <Route exact path={`${ROUTES.openings}/:category/:openingId?`} render={() => <Openings />} />
+          <Route exact path={ROUTES.social} component={Social} />
+          <Redirect exact from={ROUTES.bounties} to={`${ROUTES.bounties}/All`} />
+          <Route exact path={`${ROUTES.bounties}/:repository`} component={Bounties} />
+          <Redirect exact path={ROUTES.teams} to={`${ROUTES.teams}/All/Members`} />
+          <Route exact path={`${ROUTES.teams}/:team/:tab?/:resource?`} component={Teams} />
+          <Route path={`${ROUTES.wallet}/:chapter?`} component={Wallet} />
+          <Route path={`${ROUTES.deploymentGuide}/:chapter?`} component={DeploymentGuide} />
+          <Route path={ROUTES.download} component={Download} />
+          <Route path={ROUTES.privacyPolicy} component={PrivacyPolicy} />
+          <Route path={ROUTES.progress} component={Progress} />
+          <Route path={ROUTES.roadmap} component={withSuspense(Roadmap)} />
+          <Route exact path={ROUTES.signin} component={SignIn} />
+          <Route exact path={ROUTES.signout} component={SignOut} />
+          <Route path={`${ROUTES.styleGuide}/:chapter?`} component={StyleGuide} />
+          <Redirect exact path={ROUTES.tutorials} to={`${ROUTES.tutorials}/All`} />
+          <Route exact path={`${ROUTES.tutorials}/:category/:playlistId?`} component={withSuspense(Tutorials)} />
+          <Route exact path={ROUTES.termsOfUse} component={TermsOfUse} />
+          <Route path={`${ROUTES.users}/:userId`} component={Profile} />
           <Redirect to="/" />
         </Switch>
       </Layout>

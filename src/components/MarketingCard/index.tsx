@@ -1,8 +1,9 @@
-import React, {FC} from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import {bemify} from '@thenewboston/utils';
 
 import {A} from 'components';
+import {SFC} from 'types/generic';
 import {SocialMedia} from 'types/social-media';
 import {socialMediaDescriptions, socialMediaHandles, socialMediaUrls} from 'utils/social-media';
 
@@ -13,6 +14,7 @@ import InstagramLogo from 'assets/logos/Instagram.png';
 import LinkedInLogo from 'assets/logos/LinkedIn.png';
 import PinterestLogo from 'assets/logos/Pinterest.png';
 import RedditLogo from 'assets/logos/Reddit.png';
+import TNBGamingLogo from 'assets/logos/TNBGaming.png';
 import TwitchLogo from 'assets/logos/Twitch.png';
 import TwitterLogo from 'assets/logos/Twitter.png';
 import YouTubeLogo from 'assets/logos/YouTube.png';
@@ -20,12 +22,11 @@ import YouTubeLogo from 'assets/logos/YouTube.png';
 import './MarketingCard.scss';
 
 export interface MarketingCardProps {
-  className?: string;
   customLink?: string;
   website: SocialMedia;
 }
 
-const MarketingCard: FC<MarketingCardProps> = ({className, customLink, website}) => {
+const MarketingCard: SFC<MarketingCardProps> = ({className, customLink, website}) => {
   const renderImage = (src: any) => (
     <img
       alt={website}
@@ -38,6 +39,7 @@ const MarketingCard: FC<MarketingCardProps> = ({className, customLink, website})
   const images = {
     discord: renderImage(DiscordLogo),
     facebook: renderImage(FacebookLogo),
+    gaming: renderImage(TNBGamingLogo),
     github: renderImage(GitHubLogo),
     instagram: renderImage(InstagramLogo),
     linkedin: renderImage(LinkedInLogo),

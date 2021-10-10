@@ -2,6 +2,7 @@ import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'r
 import {useHistory, useParams} from 'react-router-dom';
 
 import {BreadcrumbMenu, Container, EmptyPage, FlatNavLinks, PageTitle} from 'components';
+import {ROUTES} from 'constants/routes';
 import {getOpenings} from 'utils/data';
 import {NavOption} from 'types/option';
 import {OpeningCategory, OpeningsUrlParams} from 'types/openings';
@@ -29,7 +30,7 @@ const Openings: FC = () => {
     if (OPENING_CATEGORY_FILTERS.some((filter) => filter.pathname === categoryParam)) {
       setCategoryFilter(categoryParam);
     } else {
-      history.replace('/openings/All');
+      history.replace(`${ROUTES.openings}/All`);
     }
   }, [categoryParam, history]);
 
@@ -46,7 +47,7 @@ const Openings: FC = () => {
 
   const handleNavOptionClick = useCallback(
     (option: OpeningCategory) => (): void => {
-      history.push(`/openings/${option}`);
+      history.push(`${ROUTES.openings}/${option}`);
     },
     [history],
   );

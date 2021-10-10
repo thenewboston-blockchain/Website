@@ -1,20 +1,20 @@
-import React, {FC, ReactNode, useEffect, useState} from 'react';
+import React, {ReactNode, useEffect, useState} from 'react';
 import useOnclickOutside from 'react-cool-onclickoutside';
 import {useLocation} from 'react-router-dom';
-import clsx from 'clsx';
 import {Icon, IconType} from '@thenewboston/ui';
 
 import {Shadow} from 'components';
-import './BreadcrumbMenu.scss';
+import {SFC} from 'types/generic';
+
+import * as S from './Styles';
 
 interface ComponentProps {
-  className?: string;
   menuItems: ReactNode;
   pageName: string;
   sectionName: string;
 }
 
-const BreadcrumbMenu: FC<ComponentProps> = ({className, menuItems, pageName, sectionName}) => {
+const BreadcrumbMenu: SFC<ComponentProps> = ({className, menuItems, pageName, sectionName}) => {
   const {pathname} = useLocation();
   const [open, setOpen] = useState(false);
 
@@ -33,46 +33,43 @@ const BreadcrumbMenu: FC<ComponentProps> = ({className, menuItems, pageName, sec
 
   const renderBreadcrumbBar = (): ReactNode => {
     return (
-      <div
+      <S.BreadcrumbBar
         className="BreadcrumbMenu__bar"
         onClick={() => setOpen(!open)}
         role="button"
         tabIndex={0}
         data-testid="BreadcrumbMenu__bar"
       >
-        <div className="BreadcrumbMenu__navigation" data-testid="BreadcrumbMenu__navigation">
+        <S.BreadcrumbNavigation data-testid="BreadcrumbMenu__navigation">
           {sectionName}
           <Icon icon={IconType.menuRight} size={24} />
           {pageName}
-        </div>
+        </S.BreadcrumbNavigation>
         {renderToggle()}
-      </div>
+      </S.BreadcrumbBar>
     );
   };
 
   const renderDropdownMenu = (): ReactNode => {
     if (!open) return null;
     return (
-      <div className="BreadcrumbMenu__dropdown-menu" ref={ref} data-testid="BreadcrumbMenu__dropdown-menu">
+      <S.DropdownMenu ref={ref} data-testid="BreadcrumbMenu__dropdown-menu">
         <Shadow />
         {menuItems}
-      </div>
+      </S.DropdownMenu>
     );
   };
 
   const renderToggle = (): ReactNode => {
     return (
-      <div
-        className={clsx('BreadcrumbMenu__toggle-container', {'BreadcrumbMenu__toggle-container--open': open})}
-        data-testid="BreadcrumbMenu__toggle-container"
-      >
-        <Icon className="BreadcrumbMenu__toggle-arrow" icon={IconType.chevronDown} size={24} />
-      </div>
+      <S.ToggleArrowContainer data-testid="BreadcrumbMenu__toggle-container">
+        <S.ToggleArrow isOpened={open} icon={IconType.chevronDown} size={24} />
+      </S.ToggleArrowContainer>
     );
   };
 
   return (
-    <div className={clsx('BreadcrumbMenu', className)} data-testid="BreadcrumbMenu">
+    <div className={className} data-testid="BreadcrumbMenu">
       {renderBreadcrumbBar()}
       {renderDropdownMenu()}
     </div>
