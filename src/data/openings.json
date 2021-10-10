@@ -109,9 +109,9 @@
     "responsibilities": [
       "Designing and creating RESTful APIs",
       "Participating in architectural, design and product discussions",
-      "Working in an environment with an excellent team of engineers"  
+      "Working in an environment with an excellent team of engineers"
     ],
-  
+
     "requirements": [
       "Experience with Celery, Docker, Django REST Framework, and pytest",
       "2+ years of experience in Django",

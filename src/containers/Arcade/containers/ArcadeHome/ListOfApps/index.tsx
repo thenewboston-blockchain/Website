@@ -56,7 +56,7 @@ const ListOfApps: FC = () => {
         <S.Heading>Recent</S.Heading>
         <S.Grid>
           {apps.map((app) => {
-            const bannerUrl = app.images.length > 0 ? app.images[0].image : DefaultLogoSrc;
+            const bannerUrl = app.logo || DefaultLogoSrc;
             return (
               <AppCard
                 key={app.pk}
