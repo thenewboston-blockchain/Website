@@ -1,8 +1,5 @@
 import React from 'react';
-import clsx from 'clsx';
-import {bemify} from '@thenewboston/utils';
 
-import {A} from 'components';
 import {SFC} from 'types/generic';
 import {SocialMedia} from 'types/social-media';
 import {socialMediaDescriptions, socialMediaHandles, socialMediaUrls} from 'utils/social-media';
@@ -19,22 +16,15 @@ import TwitchLogo from 'assets/logos/Twitch.png';
 import TwitterLogo from 'assets/logos/Twitter.png';
 import YouTubeLogo from 'assets/logos/YouTube.png';
 
-import './MarketingCard.scss';
+import * as S from './Styles';
 
 export interface MarketingCardProps {
   customLink?: string;
   website: SocialMedia;
 }
 
-const MarketingCard: SFC<MarketingCardProps> = ({className, customLink, website}) => {
-  const renderImage = (src: any) => (
-    <img
-      alt={website}
-      className={clsx('MarketingCard__img', {...bemify(className, '__img')})}
-      data-testid="MarketingCard__img"
-      src={src}
-    />
-  );
+const MarketingCard: SFC<MarketingCardProps> = ({customLink, website}) => {
+  const renderImage = (src: any) => <S.Image alt={website} data-testid="MarketingCard__img" src={src} />;
 
   const images = {
     discord: renderImage(DiscordLogo),
@@ -51,27 +41,16 @@ const MarketingCard: SFC<MarketingCardProps> = ({className, customLink, website}
   };
 
   return (
-    <A className={clsx('MarketingCard', className)} href={customLink || socialMediaUrls[website]}>
+    <S.Container href={customLink || socialMediaUrls[website]}>
       {images[website]}
-      <div
-        className={clsx('MarketingCard__handle', {...bemify(className, '__handle')})}
-        data-testid="MarketingCard__handle"
-      >
-        {socialMediaHandles[website]}
-      </div>
-      <div
-        className={clsx('MarketingCard__description', {...bemify(className, '__description')})}
-        data-testid="MarketingCard__description"
-      >
-        <div
-          className={clsx('MarketingCard__description__handle', {...bemify(className, '__description__handle')})}
-          data-testid="MarketingCard__description__handle"
-        >
+      <S.Handle data-testid="MarketingCard__handle">{socialMediaHandles[website]}</S.Handle>
+      <S.Description data-testid="MarketingCard__description">
+        <S.DescriptionHandle data-testid="MarketingCard__description__handle">
           {socialMediaHandles[website]}
-        </div>{' '}
+        </S.DescriptionHandle>{' '}
         {socialMediaDescriptions[website]}
-      </div>
-    </A>
+      </S.Description>
+    </S.Container>
   );
 };
 
