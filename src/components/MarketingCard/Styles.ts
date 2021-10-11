@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import colors from 'styles/colors';
-import * as weights from 'styles/fonts/fontWeights';
+import * as fonts from 'styles/fonts';
 
 import {A} from 'components';
 
@@ -37,21 +37,21 @@ export const Description = styled.div`
   grid-column: 1 / 3;
 
   @media (min-width: 768px) {
-    display: inline;
+    grid-column: 2;
   }
 `;
 
 export const DescriptionHandle = styled.div`
   display: none;
-  font-weight: ${weights.fontWeightSemiBold};
+  font-weight: ${fonts.h3.bold};
 
   @media (min-width: 768px) {
-    grid-column: 2;
+    display: inline;
   }
 `;
 
 export const Handle = styled.div`
-  font-weight: ${weights.fontWeightSemiBold};
+  font-weight: ${fonts.h3.bold};
   grid-column: 2;
 
   @media (min-width: 768px) {
