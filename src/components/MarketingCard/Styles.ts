@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import colors from 'styles/colors';
-import * as fonts from 'styles/fonts';
+import fonts from 'styles/fonts/base';
 
 import {A} from 'components';
 
@@ -18,7 +18,7 @@ export const Container = styled(A)`
   row-gap: 12px;
   width: 100%;
 
-  :hover {
+  &:hover {
     background-color: rgba(0, 0, 0, 0.04);
   }
 
@@ -43,7 +43,7 @@ export const Description = styled.div`
 
 export const DescriptionHandle = styled.div`
   display: none;
-  font-weight: ${fonts.h3.bold};
+  font-weight: ${fonts.weight.semiBold};
 
   @media (min-width: 768px) {
     display: inline;
@@ -51,7 +51,7 @@ export const DescriptionHandle = styled.div`
 `;
 
 export const Handle = styled.div`
-  font-weight: ${fonts.h3.bold};
+  font-weight: ${fonts.weight.semiBold};
   grid-column: 2;
 
   @media (min-width: 768px) {
