@@ -4,25 +4,11 @@ import fonts from 'styles/fonts/base';
 
 import {Icon} from '@thenewboston/ui';
 
-export interface ContainerProps {
+export interface Props {
   expanded: boolean;
 }
 
-export interface ToggleArrowProps {
-  expanded: boolean;
-}
-
-export interface SubmenuProps {
-  expanded: boolean;
-}
-
-export const Container = styled.div<ContainerProps>`
-  &:last-of-type {
-    ${(props) => (props.expanded ? 'padding-bottom: 10px;' : '')}
-  }
-`;
-
-export const Toggle = styled.button`
+export const Toggle = styled.button<Props>`
   align-items: center;
   background-color: transparent;
   border: 0;
@@ -34,19 +20,23 @@ export const Toggle = styled.button`
   &:focus {
     outline: none;
   }
+
+  &:last-of-type {
+    ${(props) => (props.expanded ? 'padding-bottom: 10px;' : '')}
+  }
 `;
 
-export const ToggleArrow = styled(Icon)<ToggleArrowProps>`
+export const ToggleArrow = styled(Icon)<Props>`
   margin-right: 16px;
   transition-duration: 0.2s;
   ${(props) => (props.expanded ? `transform: rotate(90deg);` : 'transform: rotate(0deg);')}
 `;
 
-export const Title = styled.button`
+export const Title = styled.div`
   font-weight: ${fonts.weight.semiBold};
 `;
 
-export const Submenu = styled.div<SubmenuProps>`
+export const Submenu = styled.div<Props>`
   flex-direction: column;
   padding-left: 62px;
   ${(props) => (props.expanded ? 'display: flex;' : 'display: none;')}
