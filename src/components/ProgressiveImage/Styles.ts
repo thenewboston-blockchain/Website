@@ -20,15 +20,15 @@ export const ProgressiveImagePlaceholder = styled.img<ProgressiveImageProps>`
   filter: blur(20px);
   height: 100%;
   object-fit: contain;
-  width: 100%;
   opacity: ${({IsLoaded}) => (IsLoaded ? '0' : '1')};
+  width: 100%;
 `;
 
 export const ProgressiveImageReal = styled.img<ProgressiveImageProps>`
   ${CenteredPosition}
+  filter: ${({IsLoaded}) => (IsLoaded ? 'blur(0px)' : 'blur(20px)')};
   height: 100%;
   object-fit: contain;
   transition: filter 0.75s linear;
   width: 100%;
-  filter: ${({IsLoaded}) => (IsLoaded ? 'blur(0px)' : 'blur(20px)')};
 `;

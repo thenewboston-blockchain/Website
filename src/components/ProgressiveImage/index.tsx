@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {SFC} from 'types/generic';
-// import {type} from 'os';
 import * as S from './Styles';
 
 type Props = {
