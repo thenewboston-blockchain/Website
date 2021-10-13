@@ -19,7 +19,7 @@ describe('RequiredAsterisk', () => {
     render(<RequiredAsterisk />);
     const asterisk = screen.getByTestId('RequiredAsterisk');
 
-    expect(asterisk.className).toBe('RequiredAsterisk');
+    expect(asterisk.className).toContain('RequiredAsterisk');
   });
 
   it('renders with passed in className', () => {

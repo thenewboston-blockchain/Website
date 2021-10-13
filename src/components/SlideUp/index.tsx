@@ -3,8 +3,7 @@ import {createPortal} from 'react-dom';
 import clsx from 'clsx';
 import {SFC} from 'types/generic';
 import {bemify} from '@thenewboston/utils';
-
-import './SlideUp.scss';
+import * as S from './Style';
 
 interface ComponentProps {
   close(): void;
@@ -13,12 +12,21 @@ interface ComponentProps {
 const SlideUp: SFC<ComponentProps> = ({children, className, close}) => {
   return createPortal(
     <>
-      <div className="SlideUp__overlay" onClick={close} role="button" tabIndex={0} data-testid="SlideUp__overlay" />
-      <div className={clsx('SlideUp', className)} data-testid="SlideUp">
-        <div className={clsx('SlideUp__content', {...bemify(className, '__content')})} data-testid="SlideUp__content">
+      <S.SlideUp
+        className={`${className}"__overlay"`}
+        onClick={close}
+        role="button"
+        tabIndex={0}
+        data-testid="SlideUp__overlay"
+      />
+      <S.SlideUp className={clsx('SlideUp', className)} data-testid="SlideUp">
+        <S.SlideUp
+          className={clsx('SlideUp__content', {...bemify(className, '__content')})}
+          data-testid="SlideUp__content"
+        >
           {children}
-        </div>
-      </div>
+        </S.SlideUp>
+      </S.SlideUp>
     </>,
     document.getElementById('slide-up-root')!,
   );

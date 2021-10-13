@@ -1,14 +1,13 @@
 import React, {memo} from 'react';
 import clsx from 'clsx';
 import {SFC} from 'types/generic';
-
-import './RequiredAsterisk.scss';
+import * as S from './Style';
 
 const RequiredAsterisk: SFC = ({className}) => {
   return (
-    <span data-testid="RequiredAsterisk" className={clsx('RequiredAsterisk', className)}>
+    <S.RequiredAsterisk data-testid="RequiredAsterisk" className={clsx('RequiredAsterisk', className)}>
       *
-    </span>
+    </S.RequiredAsterisk>
   );
 };
 
