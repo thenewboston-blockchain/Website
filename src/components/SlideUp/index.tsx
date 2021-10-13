@@ -4,8 +4,6 @@ import clsx from 'clsx';
 import {SFC} from 'types/generic';
 import {bemify} from '@thenewboston/utils';
 import * as S from './Style';
-import * as C from '../SlideUpContent/Style';
-import * as O from '../SlideUpOverlay/Style';
 
 interface ComponentProps {
   close(): void;
@@ -14,7 +12,7 @@ interface ComponentProps {
 const SlideUp: SFC<ComponentProps> = ({children, className, close}) => {
   return createPortal(
     <>
-      <O.SlideUpOverlay
+      <S.SlideUpOverlay
         className={`${className}"__overlay"`}
         onClick={close}
         role="button"
@@ -22,9 +20,9 @@ const SlideUp: SFC<ComponentProps> = ({children, className, close}) => {
         data-testid="SlideUp__overlay"
       />
       <S.SlideUp className={className} data-testid="SlideUp">
-        <C.SlideUpContent className={clsx({...bemify(className, '__content')})} data-testid="SlideUp__content">
+        <S.SlideUpContent className={clsx({...bemify(className, '__content')})} data-testid="SlideUp__content">
           {children}
-        </C.SlideUpContent>
+        </S.SlideUpContent>
       </S.SlideUp>
     </>,
     document.getElementById('slide-up-root')!,
