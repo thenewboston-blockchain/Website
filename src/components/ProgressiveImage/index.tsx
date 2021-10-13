@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
-import clsx from 'clsx';
 import {SFC} from 'types/generic';
-
-import './ProgressiveImage.scss';
+import * as S from './Styles';
 
 type Props = {
   alt: string;
@@ -27,36 +25,26 @@ const ProgressiveImage: SFC<Props> = ({
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   return (
-    <div className={clsx('ProgressiveImage', containerClassName)} style={{height, width}}>
-      <img
+    <S.ProgressiveImageContainer style={{height, width}} className={containerClassName}>
+      <S.ProgressiveImagePlaceholder
         alt={alt}
-        className={clsx(
-          'ProgressiveImage-placeholder',
-          {
-            'ProgressiveImage-placeholder--loaded': isLoaded,
-          },
-          placeholderImageClassName,
-        )}
+        className={placeholderImageClassName}
+        IsLoaded={isLoaded}
         src={placeholderSrc}
         height={height}
         width={width}
       />
-      <img
+      <S.ProgressiveImageReal
         alt={alt}
-        className={clsx(
-          'ProgressiveImage-real',
-          {
-            'ProgressiveImage-real--loaded': isLoaded,
-          },
-          realImageClassName,
-        )}
+        className={realImageClassName}
+        IsLoaded={isLoaded}
         src={realSrc}
         loading="lazy"
         height={height}
         width={width}
         onLoad={() => setIsLoaded(true)}
       />
-    </div>
+    </S.ProgressiveImageContainer>
   );
 };
 
