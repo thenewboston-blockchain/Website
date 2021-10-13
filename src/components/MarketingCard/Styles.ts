@@ -4,7 +4,7 @@ import fonts from 'styles/fonts/base';
 
 import {A} from 'components';
 
-export const Container = styled(A)`
+export const LinkContainer = styled(A)`
   align-items: center;
   background: ${colors.white};
   border-radius: 12px;
