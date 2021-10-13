@@ -3,8 +3,6 @@ import {SFC} from 'types/generic';
 // import {type} from 'os';
 import * as S from './Styles';
 
-// import './ProgressiveImage.scss';
-
 type Props = {
   alt: string;
   containerClassName?: string;

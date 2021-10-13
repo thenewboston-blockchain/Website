@@ -2,8 +2,6 @@ import React from 'react';
 import {SFC} from 'types/generic';
 import * as S from './Styles';
 
-// import './ProgressBar.scss';
-
 type Props = {
   height?: number;
   percentage: number;
