@@ -41,7 +41,7 @@ const MarketingCard: SFC<MarketingCardProps> = ({customLink, website}) => {
   };
 
   return (
-    <S.Container href={customLink || socialMediaUrls[website]}>
+    <S.LinkContainer href={customLink || socialMediaUrls[website]}>
       {images[website]}
       <S.Handle data-testid="MarketingCard__handle">{socialMediaHandles[website]}</S.Handle>
       <S.Description data-testid="MarketingCard__description">
@@ -50,7 +50,7 @@ const MarketingCard: SFC<MarketingCardProps> = ({customLink, website}) => {
         </S.DescriptionHandle>{' '}
         {socialMediaDescriptions[website]}
       </S.Description>
-    </S.Container>
+    </S.LinkContainer>
   );
 };
 
