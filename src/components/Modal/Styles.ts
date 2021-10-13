@@ -59,7 +59,7 @@ export const CloseIcon = styled.div<{submitting?: boolean}>`
 `;
 
 export const Content = styled.div`
-  background: var(${colors.palette.gray['050']});
+  background: ${colors.palette.gray['050']};
   max-height: calc(85vh - #{${modalHeaderHeight}} - #{${modalFooterHeight}});
   overflow-y: auto;
   padding: 12px;
@@ -124,7 +124,7 @@ export const DefaultCancel = styled.div`
 `;
 
 export const Modal = styled.div<{defaultPosition?: boolean}>`
-  background: var(${colors.white});
+  background: ${colors.white};
   border-radius: 3px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -140,10 +140,10 @@ export const Modal = styled.div<{defaultPosition?: boolean}>`
     `}
 
   @media screen and (max-width: ${breakMobile}) {
-    background-color: var(${colors.palette.gray['050']});
+    background-color: ${colors.palette.gray['050']};
     height: 100%;
     position: fixed;
     width: 100vw;
-    z-index: ${zIndex.modal};
+    z-index: calc(${zIndex.modal}*100);
   }
 `;

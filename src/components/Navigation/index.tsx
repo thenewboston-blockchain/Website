@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
 import {useHistory} from 'react-router';
 import clsx from 'clsx';
-import {Icon, IconType} from '@thenewboston/ui';
+import {IconType} from '@thenewboston/ui';
 import {SFC} from 'types/generic';
 
 import * as S from './Styles';
-// import './Navigation.scss';
 
 type Props = {
   path: string;
@@ -28,24 +27,16 @@ const Navigation: SFC<Props> = ({className, text, type, path}) => {
     >
       {type === 'left' &&
         (isHovered ? (
-          <S.LeftIcon>
-            <Icon icon={IconType.arrowLeft} size={20} totalSize={24} />
-          </S.LeftIcon>
+          <S.LeftIcon icon={IconType.arrowLeft} size={20} totalSize={24} />
         ) : (
-          <S.LeftIcon>
-            <Icon icon={IconType.chevronLeft} size={16} totalSize={16} />
-          </S.LeftIcon>
+          <S.LeftIcon icon={IconType.chevronLeft} size={16} totalSize={16} />
         ))}
       <S.Text>{text}</S.Text>
       {type === 'right' &&
         (isHovered ? (
-          <S.RightIcon>
-            <Icon icon={IconType.arrowRight} size={20} totalSize={24} />
-          </S.RightIcon>
+          <S.RightIcon icon={IconType.arrowRight} size={20} totalSize={24} />
         ) : (
-          <S.RightIcon>
-            <Icon icon={IconType.chevronRight} size={16} totalSize={16} />
-          </S.RightIcon>
+          <S.RightIcon icon={IconType.chevronRight} size={16} totalSize={16} />
         ))}
     </S.Navigation>
   );
