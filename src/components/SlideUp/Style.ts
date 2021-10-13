@@ -10,11 +10,9 @@ export const SlideUp = styled.div`
 `;
 
 export const SlideUpContent = styled.div`
-  __content {
-    background: ${colors.white};
-    box-shadow: 0px -3px 12px rgba(4, 34, 53, 0.25);
-    padding: 24px 30px 40px;
-  }
+  background: ${colors.white};
+  box-shadow: 0px -3px 12px rgba(4, 34, 53, 0.25);
+  padding: 24px 30px 40px;
 `;
 
 const addOverlay = keyframes`
