@@ -1,17 +1,16 @@
 import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
 
-import {BreadcrumbMenu, Container, EmptyPage, FlatNavLinks, PageTitle} from 'components';
+import {getOpenings as getOpeningsApi} from 'apis/openings';
+import {BreadcrumbMenu, Container, EmptyPage, FlatNavLinks, Loader, PageTitle} from 'components';
+import {ApiProgress} from 'constants/api-progress';
 import {ROUTES} from 'constants/routes';
-import {getOpenings} from 'utils/data';
 import {NavOption} from 'types/option';
-import {OpeningCategory, OpeningsUrlParams} from 'types/openings';
+import {OpeningCategory, OpeningsUrlParams, Opening} from 'types/openings';
 
 import OpeningDetails from './OpeningDetails';
 import OpeningsOpening from './OpeningsOpening';
 import './Openings.scss';
-
-const openings = getOpenings();
 
 const OPENING_CATEGORY_FILTERS: NavOption[] = [
   {pathname: OpeningCategory.all, title: 'All'},
@@ -25,6 +24,21 @@ const Openings: FC = () => {
   const history = useHistory();
   const {category: categoryParam, openingId: openingIdParam} = useParams<OpeningsUrlParams>();
   const [categoryFilter, setCategoryFilter] = useState<OpeningCategory>(OpeningCategory.all);
+  const [openings, setOpenings] = useState<Opening[]>([]);
+  const [progress, setProgress] = useState<ApiProgress>(ApiProgress.Init);
+
+  useEffect(() => {
+    (async function getOpenings() {
+      try {
+        setProgress(ApiProgress.Requesting);
+        const openingsResponse = await getOpeningsApi();
+        setOpenings(openingsResponse.filter((response) => response.active));
+        setProgress(ApiProgress.Success);
+      } catch (err) {
+        setProgress(ApiProgress.Error);
+      }
+    })();
+  }, []);
 
   useEffect(() => {
     if (OPENING_CATEGORY_FILTERS.some((filter) => filter.pathname === categoryParam)) {
@@ -37,12 +51,12 @@ const Openings: FC = () => {
   const filteredOpenings = useMemo(
     () =>
       categoryFilter === OpeningCategory.all ? openings : openings.filter(({category}) => category === categoryFilter),
-    [categoryFilter],
+    [categoryFilter, openings],
   );
 
   const opening = useMemo(
-    () => openings.find(({category, openingId}) => category === categoryParam && openingId === openingIdParam) || null,
-    [categoryParam, openingIdParam],
+    () => openings.find(({category, pk}) => category === categoryParam && pk === openingIdParam) || null,
+    [categoryParam, openingIdParam, openings],
   );
 
   const handleNavOptionClick = useCallback(
@@ -64,15 +78,8 @@ const Openings: FC = () => {
 
   const renderOpenings = (): ReactNode => {
     if (!filteredOpenings.length) return <EmptyPage />;
-    return filteredOpenings.map(({category, description, openingId, position, project}) => (
-      <OpeningsOpening
-        category={category}
-        description={description}
-        key={openingId}
-        openingId={openingId}
-        position={position}
-        project={project}
-      />
+    return filteredOpenings.map(({category, description, pk, title}) => (
+      <OpeningsOpening category={category} description={description} key={pk} openingId={pk} position={title} />
     ));
   };
 
@@ -92,7 +99,10 @@ const Openings: FC = () => {
           sectionName="Open Positions"
         />
         <div className="Openings__left-menu">{renderCategoryFilter()}</div>
-        {openingIdParam ? (
+        {/* eslint-disable-next-line no-nested-ternary */}
+        {progress === ApiProgress.Requesting ? (
+          <Loader className="Openings__loader" />
+        ) : openingIdParam ? (
           <div className="Openings__opening-details">{renderOpeningDetails()}</div>
         ) : (
           <div className="Openings__opening-list">

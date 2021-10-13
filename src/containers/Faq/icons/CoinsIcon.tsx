@@ -28,12 +28,12 @@ const CoinsIcon: FC<CustomIconProps> = ({size = 24, state = 'default'}) => {
           <path d="M25.731 25.17a4.063 4.063 0 11-8.126-.001 4.063 4.063 0 018.126 0z" fill="#94090F" />
           <path d="M21.409 22.912h-1.104l2.024 2.086-2.024 2.085h1.104l2.023-2.085-2.023-2.086z" fill="#fff" />
         </g>
+        {state === 'default' && (
+          <g style={{mixBlendMode: 'saturation'}}>
+            <rect y="-0.299377" width="32" height="32" fill="white" />
+          </g>
+        )}
       </g>
-      {state === 'default' && (
-        <g style={{mixBlendMode: 'saturation'}}>
-          <rect y="-0.299377" width="32" height="32" fill="white" />
-        </g>
-      )}
       <defs>
         <clipPath id="faqCoinsClip0">
           <path fill="#fff" d="M0 0h32v32H0z" />
