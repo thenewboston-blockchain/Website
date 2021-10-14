@@ -72,7 +72,7 @@ describe('MenuGroup component', () => {
       </Router>,
     );
 
-    expect(screen.getByTestId('MenuGroup__submenu')).toHaveClass('MenuGroup__submenu--expanded');
+    expect(screen.getByTestId('MenuGroup__submenu')).toHaveStyle('display: flex;');
   });
 
   it('renders MenuGroup__toggle', () => {
@@ -84,10 +84,9 @@ describe('MenuGroup component', () => {
     );
 
     expect(screen.getByTestId('MenuGroup__toggle')).toBeTruthy();
-    expect(screen.getByTestId('MenuGroup__toggle')).toHaveClass('MenuGroup__toggle');
   });
 
-  it('renders MenuGroup__toggle--expanded when clicked', () => {
+  it('renders MenuGroup__toggle as expanded when clicked', () => {
     const history = createMemoryHistory();
     render(
       <Router history={history}>
@@ -97,7 +96,7 @@ describe('MenuGroup component', () => {
 
     const toggle = screen.getByTestId('MenuGroup__toggle');
     fireEvent.click(toggle);
-    expect(toggle).toHaveClass('MenuGroup__toggle--expanded');
+    expect(toggle).toHaveStyle('padding-bottom: 10px;');
   });
 
   it('renders MenuGroup__submenu', () => {
@@ -111,7 +110,7 @@ describe('MenuGroup component', () => {
     expect(screen.getByTestId('MenuGroup__submenu')).toBeTruthy();
   });
 
-  it('renders MenuGroup__submenu--expanded when toggle is clicked', () => {
+  it('renders MenuGroup__submenu as expanded when toggle is clicked', () => {
     const history = createMemoryHistory();
     render(
       <Router history={history}>
@@ -121,6 +120,6 @@ describe('MenuGroup component', () => {
 
     const toggle = screen.getByTestId('MenuGroup__toggle');
     fireEvent.click(toggle);
-    expect(screen.getByTestId('MenuGroup__submenu')).toHaveClass('MenuGroup__submenu--expanded');
+    expect(screen.getByTestId('MenuGroup__submenu')).toHaveStyle('display: flex;');
   });
 });
