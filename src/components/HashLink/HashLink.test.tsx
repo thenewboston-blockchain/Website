@@ -17,12 +17,13 @@ describe('HashLink', () => {
     render(<HashLink {...props} />);
   });
 
-  it('renders with default className', () => {
-    render(<HashLink {...props} />);
+  it('renders with custom className', () => {
+    const customClassName = 'Custom_HashLink';
+    render(<HashLink {...props} className="Custom_HashLink" />);
 
     const link = screen.getByTestId(testId);
 
-    expect(link).toHaveClass(testId);
+    expect(link).toHaveClass(customClassName);
   });
 
   it('renders with passed className', () => {
