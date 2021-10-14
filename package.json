@@ -91,6 +91,7 @@
     "eslint-plugin-react": "^7.21.3",
     "eslint-plugin-react-hooks": "^4.1.2",
     "husky": "^4.2.5",
+    "jest-styled-components": "^7.0.5",
     "lint-staged": "^10.2.9",
     "prettier": "^2.1.2",
     "react-app-rewired": "^2.1.8",
