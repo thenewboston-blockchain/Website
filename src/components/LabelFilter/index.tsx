@@ -1,9 +1,8 @@
-import React from 'react';
 import clsx from 'clsx';
-
 import {Label} from 'components';
+import React from 'react';
 import {SFC} from 'types/generic';
-import './LabelFilter.scss';
+import * as S from './Styles';
 
 export interface LabelFilterProps {
   handleLabelClick(labelName: string): () => void;
@@ -24,26 +23,20 @@ const DEFAULT_LABEL_COLOR = 'e3e8ee';
 const LabelFilter: SFC<LabelFilterProps> = ({className, handleLabelClick, selectedLabelNames}) => {
   const renderLabels = () => {
     return Object.entries(LABEL_COLORS).map(([labelName, hexColor]) => (
-      <button
-        className="LabelFilter__button"
-        data-testid="LabelFilter__button"
-        key={labelName}
-        onClick={handleLabelClick(labelName)}
-      >
+      <S.LabelFilterButton data-testid="LabelFilter__button" key={labelName} onClick={handleLabelClick(labelName)}>
         <Label
-          className="LabelFilter__label"
           color={selectedLabelNames.includes(labelName) ? hexColor : DEFAULT_LABEL_COLOR}
           key={labelName}
           name={labelName}
         />
-      </button>
+      </S.LabelFilterButton>
     ));
   };
 
   return (
-    <div className={clsx('LabelFilter', className)} data-testid="LabelFilter">
+    <S.LabelFilter className={clsx(className)} data-testid="LabelFilter">
       {renderLabels()}
-    </div>
+    </S.LabelFilter>
   );
 };
 

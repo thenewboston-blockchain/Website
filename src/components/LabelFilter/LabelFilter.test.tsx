@@ -1,15 +1,16 @@
 import React from 'react';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
+import 'jest-styled-components';
 
 import LabelFilter, {LabelFilterProps} from '.';
 
-const RGB_LABEL_COLORS = {
-  bug: 'rgb(205, 61, 100)',
-  design: 'rgb(199, 194, 234)',
+const HEX_LABEL_COLORS = {
+  bug: '#cd3d64',
+  design: '#c7c2ea',
 };
 
-const DEFAULT_RGB_LABEL_COLOR = 'rgb(227, 232, 238)';
+const DEFAULT_HEX_LABEL_COLOR = '#e3e8ee';
 
 const baseProps: LabelFilterProps = {
   handleLabelClick: jest.fn(),
@@ -17,15 +18,11 @@ const baseProps: LabelFilterProps = {
 };
 
 describe('LabelFilter', () => {
-  it('renders proper default className', () => {
-    render(<LabelFilter {...baseProps} />);
+  it('renders custom className', () => {
+    render(<LabelFilter className="Custom_LabelFilter" {...baseProps} />);
     const el = screen.getByTestId('LabelFilter');
-    const elButtons = screen.getAllByTestId('LabelFilter__button');
-    const elLabels = screen.getAllByTestId('Label');
 
-    expect(el.className).toBe('LabelFilter');
-    elLabels.every((elLabel) => expect(elLabel.className.includes('LabelFilter__label')).toBe(true));
-    elButtons.every((elButton) => expect(elButton.className).toBe('LabelFilter__button'));
+    expect(el.className).toContain('Custom_LabelFilter');
   });
 
   it('renders with classNames passed in', () => {
@@ -45,10 +42,10 @@ describe('LabelFilter', () => {
       (elLabel) => elLabel.textContent !== 'bug' && elLabel.textContent !== 'design',
     ) as HTMLElement[];
 
-    expect(selectedBugLabel.style).toHaveProperty('background-color', RGB_LABEL_COLORS.bug);
-    expect(selectedDesignLabel.style).toHaveProperty('background-color', RGB_LABEL_COLORS.design);
+    expect(selectedBugLabel).toHaveStyleRule('background-color', HEX_LABEL_COLORS.bug);
+    expect(selectedDesignLabel).toHaveStyleRule('background-color', HEX_LABEL_COLORS.design);
     unselectedLabels.every((unselectedLabel) =>
-      expect(unselectedLabel.style).toHaveProperty('background-color', DEFAULT_RGB_LABEL_COLOR),
+      expect(unselectedLabel).toHaveStyleRule('background-color', DEFAULT_HEX_LABEL_COLOR),
     );
   });
 
