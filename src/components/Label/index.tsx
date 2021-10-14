@@ -1,9 +1,7 @@
-import React from 'react';
 import clsx from 'clsx';
-
+import React from 'react';
 import {SFC} from 'types/generic';
-import {isLight} from 'utils/colors';
-import './Label.scss';
+import * as S from './Styles';
 
 export interface LabelProps {
   color: string;
@@ -14,16 +12,9 @@ const Label: SFC<LabelProps> = ({className, color, name}) => {
   const hexColor = `#${color}`;
 
   return (
-    <span
-      className={clsx('Label', className)}
-      data-testid="Label"
-      style={{
-        backgroundColor: hexColor,
-        color: isLight(hexColor) ? '#000' : '#fff',
-      }}
-    >
+    <S.Label className={clsx(className)} data-testid="Label" hexColor={hexColor}>
       {name}
-    </span>
+    </S.Label>
   );
 };
 
