@@ -25,6 +25,7 @@ const LabelFilter: SFC<LabelFilterProps> = ({className, handleLabelClick, select
     return Object.entries(LABEL_COLORS).map(([labelName, hexColor]) => (
       <S.LabelFilterButton data-testid="LabelFilter__button" key={labelName} onClick={handleLabelClick(labelName)}>
         <Label
+          className="LabelFilter__label"
           color={selectedLabelNames.includes(labelName) ? hexColor : DEFAULT_LABEL_COLOR}
           key={labelName}
           name={labelName}
