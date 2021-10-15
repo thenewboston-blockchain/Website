@@ -2,6 +2,10 @@ import {css} from 'styled-components';
 
 import fonts from './base';
 
+export const fontSizeD0 = css`
+  font-size: ${fonts.size.d0};
+`;
+
 export const fontSizeD1 = css`
   font-size: ${fonts.size.d1};
 `;

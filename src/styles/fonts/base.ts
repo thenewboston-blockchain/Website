@@ -8,6 +8,7 @@ const fonts = {
     mono: 'JetBrainsMono, monospace',
   },
   size: {
+    d0: '56px',
     d1: '42px',
     d2: '36px',
     h1: '24px',

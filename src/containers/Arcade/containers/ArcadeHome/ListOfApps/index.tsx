@@ -1,7 +1,7 @@
 import React, {FC, useEffect, useState} from 'react';
 
 import DefaultLogoSrc from 'assets/images/logo.png';
-import {getAllApps} from 'apis/arcade';
+import {getApps} from 'apis/arcade';
 import {ApiProgress} from 'constants/api-progress';
 import {useWindowDimensions} from 'hooks';
 import {App} from 'types/arcade';
@@ -33,7 +33,7 @@ const ListOfApps: FC = () => {
     (async function getListOfApps() {
       try {
         setProgress(ApiProgress.Requesting);
-        const appResponse = await getAllApps();
+        const appResponse = await getApps();
         setApps(appResponse);
         setProgress(ApiProgress.Success);
       } catch (err) {
