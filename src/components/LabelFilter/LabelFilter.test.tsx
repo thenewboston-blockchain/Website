@@ -1,8 +1,7 @@
-import React from 'react';
-import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
+import {render, screen} from '@testing-library/react';
 import 'jest-styled-components';
-
+import React from 'react';
 import LabelFilter, {LabelFilterProps} from '.';
 
 const HEX_LABEL_COLORS = {
@@ -18,11 +17,12 @@ const baseProps: LabelFilterProps = {
 };
 
 describe('LabelFilter', () => {
-  it('renders custom className', () => {
-    render(<LabelFilter className="Custom_LabelFilter" {...baseProps} />);
+  it('renders with custom className', () => {
+    const customClassName = 'Custom__LabelFilter';
+    render(<LabelFilter className={customClassName} {...baseProps} />);
     const el = screen.getByTestId('LabelFilter');
 
-    expect(el.className).toContain('Custom_LabelFilter');
+    expect(el.className).toContain(customClassName);
   });
 
   it('renders with classNames passed in', () => {

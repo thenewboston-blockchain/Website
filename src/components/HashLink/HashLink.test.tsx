@@ -1,12 +1,10 @@
-import React from 'react';
-import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-
+import {render, screen} from '@testing-library/react';
+import React from 'react';
 import {ClassName} from 'types/generic';
 import HashLink, {HashLinkProps} from './index';
 
 const props: HashLinkProps & ClassName = {
-  className: 'className-test',
   id: 'id-test',
 };
 
@@ -18,20 +16,12 @@ describe('HashLink', () => {
   });
 
   it('renders with custom className', () => {
-    const customClassName = 'Custom_HashLink';
-    render(<HashLink {...props} className="Custom_HashLink" />);
+    const customClassName = 'Custom__HashLink';
+    render(<HashLink className={customClassName} {...props} />);
 
     const link = screen.getByTestId(testId);
 
     expect(link).toHaveClass(customClassName);
-  });
-
-  it('renders with passed className', () => {
-    render(<HashLink {...props} />);
-
-    const link = screen.getByTestId(testId);
-
-    expect(link).toHaveClass('className-test');
   });
 
   it('renders with correct id', () => {

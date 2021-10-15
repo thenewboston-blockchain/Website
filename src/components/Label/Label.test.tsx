@@ -1,8 +1,7 @@
-import React from 'react';
-import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
+import {render, screen} from '@testing-library/react';
 import 'jest-styled-components';
-
+import React from 'react';
 import Label, {LabelProps} from '.';
 
 const darkColor = '222';
@@ -28,11 +27,12 @@ describe('Label', () => {
     expect(screen.getByTestId('Label').textContent).toEqual(testName);
   });
 
-  it('renders proper default className', () => {
-    render(<Label className="Custom__label-class" {...baseProps} />);
+  it('renders with custom className', () => {
+    const customClassName = 'Custom__Label';
+    render(<Label className={customClassName} {...baseProps} />);
     const el = screen.getByTestId('Label');
 
-    expect(el.className).toContain('Custom__label-class');
+    expect(el.className).toContain(customClassName);
   });
 
   it('renders with classNames passed in', () => {
