@@ -1,9 +1,7 @@
 import React from 'react';
-import clsx from 'clsx';
 import {SFC} from 'types/generic';
+import * as S from './Style';
 
-import './Shadow.scss';
-
-const Shadow: SFC = ({className}) => <div className={clsx('Shadow', className)} />;
+const Shadow: SFC = ({className}) => <S.Shadow className={className} />;
 
 export default Shadow;
