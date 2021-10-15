@@ -17,12 +17,22 @@ type AppThumbnail = {
   pk: string;
 };
 
+const HEADING_HIGHLIGHT_DELAY = 3000;
+
 const HomeHero: FC = () => {
   const history = useHistory();
   const {width} = useWindowDimensions();
-
+  const [highlightedHeading, setHighlightedHeading] = React.useState<0 | 1 | 2>(0);
   const [progress, setProgress] = React.useState<ApiProgress>(ApiProgress.Init);
   const [apps, setApps] = React.useState<AppThumbnail[]>([]);
+
+  React.useLayoutEffect(() => {
+    const headingInterval = setInterval(() => {
+      setHighlightedHeading((curr) => ((curr + 1) % 3) as 0 | 1 | 2);
+    }, HEADING_HIGHLIGHT_DELAY);
+
+    return () => clearInterval(headingInterval);
+  }, []);
 
   React.useEffect(() => {
     try {
@@ -58,7 +68,11 @@ const HomeHero: FC = () => {
 
   return (
     <S.Container>
-      <S.Heading>Learn, Develop, & Earn TNB Coins.</S.Heading>
+      <S.Heading>
+        <S.HeadingSegment highlighted={highlightedHeading === 0}>Learn,</S.HeadingSegment>{' '}
+        <S.HeadingSegment highlighted={highlightedHeading === 1}>Develop,</S.HeadingSegment> &{' '}
+        <S.HeadingSegment highlighted={highlightedHeading === 2}>Earn TNB Coins.</S.HeadingSegment>
+      </S.Heading>
       <S.Paragraph>
         Learn how to develop apps, propose an app idea, and get your app funded. Join thousands of developers in the
         community developing on our open source blockchain platform.

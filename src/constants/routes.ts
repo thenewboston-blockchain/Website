@@ -1,5 +1,6 @@
 // Internal URLs
 export const ROUTES = {
+  aboutUs: '/about-us',
   analytics: '/analytics',
   arcade: '/arcade',
   assets: '/assets',
@@ -29,10 +30,15 @@ export const ROUTES = {
 const developerPortalUrl = 'https://developer.thenewboston.com';
 
 export const URLS = {
+  apps: {
+    faucet: 'https://tnbfaucet.com/',
+  },
   blog: 'https://blog.thenewboston.com',
   developerPortal: {
+    api: `${developerPortalUrl}/api`,
     home: developerPortalUrl,
     projects: `${developerPortalUrl}/projects`,
+    sdkAndLibraries: `${developerPortalUrl}/developer-tools`,
     whitepaper: `${developerPortalUrl}/whitepaper`,
   },
   github: 'https://github.com/thenewboston-developers',

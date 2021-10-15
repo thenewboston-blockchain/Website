@@ -30,11 +30,6 @@ describe('FooterNavList component', () => {
     render(<WrappedComponent header={'Test'} links={TestLinks} />);
   });
 
-  test('renders FooterNavList component and query with className', () => {
-    const footerNavList = screen.getByTestId('FooterNavList');
-    expect(footerNavList.className).toContain('FooterNavList');
-  });
-
   test('renders FooterNavList component with Header test', () => {
     const header = screen.getByText('Test');
     expect(header).toBeTruthy();

@@ -11,12 +11,22 @@ $footer-height: 348px;
     min-height: calc(100vh - #{$top-nav-height + $footer-height});
   }
 
-  &__footer-wrapper {
-    background: var(--color-primary);
-    padding: 60px 60px 120px;
+  // to have higher specificity to overwrite Container
+  &__footer.footer {
+    @media (max-width: 768px) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
 
-    @media (max-width: 992px) {
-      padding: 60px 36px 120px;
+  &__footer-wrapper {
+    background: var(--color-neutral-075);
+    display: flex;
+    justify-content: center;
+    padding: 80px 48px;
+
+    @media (max-width: 768px) {
+      justify-content: start;
     }
   }
 
