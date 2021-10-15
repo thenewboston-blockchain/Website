@@ -43,6 +43,7 @@ export const Heading = styled.h1`
   line-height: 130%;
   margin-bottom: 24px;
   text-align: center;
+  transition: color 0.3s linear;
 
   @media (max-width: 1366px) {
     ${d1.bold}
@@ -51,6 +52,15 @@ export const Heading = styled.h1`
   @media (max-width: 992px) {
     ${d2.bold}
   }
+`;
+
+type HeadingSegmentProps = {
+  highlighted?: boolean;
+};
+
+export const HeadingSegment = styled.span<HeadingSegmentProps>`
+  ${(props) => props.highlighted && 'color: #0085FF'};
+  transition: color 0.3s linear;
 `;
 
 export const Paragraph = styled.p`
