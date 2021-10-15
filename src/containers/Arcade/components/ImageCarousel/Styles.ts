@@ -19,11 +19,11 @@ export const Container = styled.div`
 
 export const Carousel = styled(ReactCarousel)`
   box-sizing: content-box;
-  height: 400px;
+  height: 500px;
   margin-bottom: 32px;
   padding: 0 ${sidePadding};
   position: relative;
-  width: 640px;
+  width: 800px;
 
   // override custom css in carousel package to enable showing of arrows
   .carousel.carousel-slider {
@@ -35,41 +35,40 @@ export const Carousel = styled(ReactCarousel)`
   }
 
   @media (max-width: 992px) {
-    height: 330px;
+    height: 420px;
     padding: 0 ${sidePadding992};
-    width: 529px;
+    width: 672px;
   }
 
   @media (max-width: 768px) {
-    height: 173px;
-    max-height: 173px;
-    max-width: 281px;
+    max-height: 225px;
+    max-width: 360px;
     padding: 0 ${sidePadding768};
-    width: 281px;
+    width: 100%;
   }
 `;
 
 export const MainImage = styled.img`
-  height: 400px;
+  height: 500px;
   margin-bottom: 32px;
   object-fit: cover;
-  width: 640px;
+  width: 800px;
 
   @media (max-width: 992px) {
-    height: 330px;
-    width: 529px;
+    height: 420px;
+    width: 672px;
   }
 
   @media (max-width: 768px) {
-    max-height: 173px;
-    max-width: 281px;
+    max-height: 225px;
+    max-width: 360px;
   }
 `;
 
 export const ThumbnailContainer = styled.div`
   align-items: center;
   display: flex;
-  max-width: 640px;
+  max-width: 800px;
   overflow-x: auto;
 
   @media (max-width: 768px) {
@@ -105,11 +104,11 @@ export const Thumbnail = styled.img<{isSelected?: boolean}>`
 `;
 
 const Arrow = styled(Icon)`
+  color: ${colors.palette.gray['900']};
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  color: ${colors.palette.gray['900']};
 `;
 
 export const LeftArrow = styled(Arrow)`
