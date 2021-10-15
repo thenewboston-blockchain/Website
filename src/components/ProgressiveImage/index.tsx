@@ -17,6 +17,7 @@ type Props = {
 
 const ProgressiveImage: SFC<Props> = ({
   alt,
+  className,
   containerClassName,
   height,
   placeholderImageClassName,
@@ -27,7 +28,7 @@ const ProgressiveImage: SFC<Props> = ({
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   return (
-    <div className={clsx('ProgressiveImage', containerClassName)} style={{height, width}}>
+    <div className={clsx('ProgressiveImage', className, containerClassName)} style={{height, width}}>
       <img
         alt={alt}
         className={clsx(

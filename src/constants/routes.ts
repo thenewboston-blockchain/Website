@@ -1,5 +1,6 @@
 // Internal URLs
 export const ROUTES = {
+  aboutUs: '/about-us',
   analytics: '/analytics',
   arcade: '/arcade',
   assets: '/assets',
