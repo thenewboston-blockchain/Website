@@ -25,13 +25,6 @@ describe('LabelFilter', () => {
     expect(el.className).toContain(customClassName);
   });
 
-  it('renders with classNames passed in', () => {
-    render(<LabelFilter className="Test" {...baseProps} />);
-    const el = screen.getByTestId('LabelFilter');
-
-    expect(el.className).toContain('Test');
-  });
-
   it('renders selected options with correct background colors', () => {
     render(<LabelFilter {...baseProps} />);
     const elLabels = screen.getAllByTestId('Label');

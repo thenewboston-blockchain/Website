@@ -35,13 +35,6 @@ describe('Label', () => {
     expect(el.className).toContain(customClassName);
   });
 
-  it('renders with classNames passed in', () => {
-    render(<Label className="test" {...baseProps} />);
-    const el = screen.getByTestId('Label');
-
-    expect(el.className).toContain('test');
-  });
-
   it('renders with black text color with light background color passed in', () => {
     render(<Label className="test" {...baseProps} color={lightColor} />);
     const el = screen.getByTestId('Label');
