@@ -144,6 +144,6 @@ export const Modal = styled.div<{defaultPosition?: boolean}>`
     height: 100%;
     position: fixed;
     width: 100vw;
-    z-index: calc(${zIndex.modal}*100);
+    z-index: ${zIndex.modal};
   }
 `;
