@@ -1,12 +1,12 @@
 import React, {memo} from 'react';
 import clsx from 'clsx';
-import {Icon, IconType} from '@thenewboston/ui';
+import {IconType} from '@thenewboston/ui';
 import {SFC} from 'types/generic';
 
-import './Loader.scss';
+import * as S from './Styles';
 
 const Loader: SFC = ({className}) => {
-  return <Icon className={clsx('Loader', className)} icon={IconType.loading} size={15.35} dataTestId="Loader" />;
+  return <S.Loader className={clsx(className)} icon={IconType.loading} size={15.35} dataTestId="Loader" />;
 };
 
 export default memo(Loader);
