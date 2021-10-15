@@ -1,7 +1,7 @@
 import React from 'react';
 import {SFC} from 'types/generic';
 import clsx from 'clsx';
-import { bemify } from '@thenewboston/utils';
+import {bemify} from '@thenewboston/utils';
 
 import * as S from './Styles';
 

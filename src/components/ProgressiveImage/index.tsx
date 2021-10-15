@@ -28,7 +28,7 @@ const ProgressiveImage: SFC<Props> = ({
   return (
     <S.ProgressiveImage className={containerClassName} style={{height, width}}>
       <S.ProgressiveImagePlaceholder
-        IsLoaded={isLoaded}
+        isLoaded={isLoaded}
         alt={alt}
         className={placeholderImageClassName}
         src={placeholderSrc}
@@ -36,7 +36,7 @@ const ProgressiveImage: SFC<Props> = ({
         width={width}
       />
       <S.ProgressiveImageReal
-        IsLoaded={isLoaded}
+        isLoaded={isLoaded}
         alt={alt}
         className={realImageClassName}
         src={realSrc}
