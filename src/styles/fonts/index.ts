@@ -188,6 +188,10 @@ export const h4 = {
 };
 
 export const b1 = {
+  medium: css`
+    ${b1Base};
+    ${fontWeight.fontWeightMedium};
+  `,
   regular: css`
     ${b1Base};
     ${fontWeight.fontWeightRegular};

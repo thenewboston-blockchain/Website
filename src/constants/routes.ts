@@ -36,4 +36,5 @@ export const URLS = {
     whitepaper: `${developerPortalUrl}/whitepaper`,
   },
   github: 'https://github.com/thenewboston-developers',
+  tnbFaucet: 'https://tnbfaucet.com',
 };

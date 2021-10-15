@@ -7,6 +7,7 @@ const colors = {
   black: '#000',
   secondary: '#556cd6',
   tertiary: '#1ea672',
+  quaternary: '#0085ff',
   primary: '#2c3967',
   progressBar: '#17cead',
   white: '#fff',

@@ -68,6 +68,7 @@ export const Paragraph = styled.p`
 
   @media (max-width: 992px) {
     ${b1.regular}
+    max-width: 560px;
   }
 `;
 
@@ -82,6 +83,7 @@ export const Actions = styled.div`
   }
 
   @media (max-width: 768px) {
+    gap: 16px;
     margin-bottom: 48px;
   }
 `;
