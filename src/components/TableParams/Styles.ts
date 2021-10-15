@@ -1,47 +1,42 @@
-import styled from 'styled-components';
-import {string} from 'yup';
+import styled, {css} from 'styled-components';
+import {fontWeightRegular, fontWeightSemiBold} from 'styles/fonts/fontWeights';
 // import colors from 'styles/colors';
 // import type {Shape} from '.';
 
-interface TableParamsProps {
-  className?: string;
-}
-// shape?: Shape;
-
-export const TableParams = styled.div<TableParamsProps>`
+export const TableParams = styled.div`
   border: 1px solid #e6e6e6;
   margin: 0 0 20px;
   max-width: 100%;
   overflow-x: auto;
+`;
 
-  &__thead {
-    text-align: left;
+export const Thead = styled.thead`
+  text-align: left;
+`;
+
+export const Tr = styled.tr`
+  &--even {
+    background-color: #f6f6f6;
   }
+`;
 
-  &__tr {
-    &--even {
-      background-color: #f6f6f6;
-    }
-  }
-
-  &__th {
-    padding: 4px 8px;
-  }
-
-  &__td {
+export const Th = styled.th`
+  padding: 4px 8px;
+`;
+export const Td = styled.td`
     min-width: 260px;
     padding: 2px 8px;
 
     &--param {
-      font-family: var(--font-family-mono);
-      font-weight: var(--font-weight-semibold);
+      ${css}
+      ${fontWeightSemiBold}
       padding-right: 12px;
       white-space: nowrap;
     }
 
     &--sample-value {
       color: #9b9b9b;
-      font-family: var(--font-family-mono);
+     ${css}
       font-size: 13px;
     }
 
@@ -52,9 +47,13 @@ export const TableParams = styled.div<TableParamsProps>`
 
   &__data-type {
     color: #9b9b9b;
-    font-family: var(--font-family-mono);
+    ${css}
     font-size: 12px;
-    font-weight: var(--font-weight-regular);
+    ${fontWeightRegular}
     padding-left: 6px;
   }
+  `;
+
+export const commonFontFamily = css`
+  font-family: var(--font-family-mono);
 `;
