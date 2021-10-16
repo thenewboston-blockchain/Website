@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import {Container as SharedContainer} from 'components';
 import colors from 'styles/colors';
-import {b1, d2, h1, h2, h3} from 'styles/fonts';
+import {d2, h2, h3} from 'styles/fonts';
 
 export const Container = styled(SharedContainer)`
   display: grid;
@@ -45,11 +45,6 @@ export const ItemTitle = styled.h3`
     font-size: 30px;
     margin-top: 24px;
   }
-
-  @media (max-width: 768px) {
-    ${h1.bold}
-    margin-top: 24px;
-  }
 `;
 
 export const ItemDescription = styled.p`
@@ -59,9 +54,5 @@ export const ItemDescription = styled.p`
 
   @media (max-width: 1366px) {
     ${h3.regular}
-  }
-
-  @media (max-width: 768px) {
-    ${b1.regular}
   }
 `;
