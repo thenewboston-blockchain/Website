@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import {Label} from 'components';
 import React from 'react';
 import {SFC} from 'types/generic';
@@ -35,7 +34,7 @@ const LabelFilter: SFC<LabelFilterProps> = ({className, handleLabelClick, select
   };
 
   return (
-    <S.LabelFilter className={clsx(className)} data-testid="LabelFilter">
+    <S.LabelFilter className={className} data-testid="LabelFilter">
       {renderLabels()}
     </S.LabelFilter>
   );
