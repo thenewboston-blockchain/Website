@@ -21,7 +21,7 @@ export const Container = styled(SharedContainer)`
   }
 
   @media (max-width: 480px) {
-    gap: 56px;
+    gap: 48px;
     padding: 120px 24px;
   }
 `;
