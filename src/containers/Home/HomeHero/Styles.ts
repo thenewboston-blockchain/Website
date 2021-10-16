@@ -2,17 +2,17 @@ import styled from 'styled-components';
 
 import {Container as SharedContainer} from 'components';
 import colors from 'styles/colors';
-import {b1, d0, d1, d2, h2, h3} from 'styles/fonts';
+import {b1, d0, d2, h3} from 'styles/fonts';
 
 const THUMBNAIL_MARGIN = {
-  default: '10px',
+  default: '8px',
   lg: '8px',
   md: '8px',
   sm: '6px',
 };
 
 const THUMBNAIL_SIZE = {
-  default: '216px',
+  default: '170px',
   lg: '170px',
   md: '160px',
   sm: '108px',
@@ -22,10 +22,10 @@ export const Container = styled(SharedContainer)`
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 120px 24px;
+  padding: 120px 0 80px;
 
   @media (max-width: 1366px) {
-    padding: 120px 120px 80px;
+    padding: 120px 96px 80px;
   }
 
   @media (max-width: 992px) {
@@ -33,7 +33,7 @@ export const Container = styled(SharedContainer)`
   }
 
   @media (max-width: 768px) {
-    padding: 72px 24px 96px;
+    padding: 72px 24px;
   }
 `;
 
@@ -45,10 +45,6 @@ export const Heading = styled.h1`
   text-align: center;
   transition: color 0.3s linear;
 
-  @media (max-width: 1366px) {
-    ${d1.bold}
-  }
-
   @media (max-width: 992px) {
     ${d2.bold}
   }
@@ -59,22 +55,18 @@ type HeadingSegmentProps = {
 };
 
 export const HeadingSegment = styled.span<HeadingSegmentProps>`
-  ${(props) => props.highlighted && 'color: #0085FF'};
+  ${(props) => props.highlighted && 'color: #0085FF'}
   transition: color 0.3s linear;
 `;
 
 export const Paragraph = styled.p`
-  ${h2.regular}
+  ${h3.regular}
   color: ${colors.palette.neutral['600']};
   line-height: 150%;
   margin-bottom: 40px;
   margin-top: 0px;
   max-width: 800px;
   text-align: center;
-
-  @media (max-width: 1366px) {
-    ${h3.regular}
-  }
 
   @media (max-width: 992px) {
     ${b1.regular}
@@ -86,11 +78,7 @@ export const Actions = styled.div`
   display: grid;
   gap: 24px;
   grid-template-columns: auto auto;
-  margin-bottom: 72px;
-
-  @media (max-width: 1366px) {
-    margin-bottom: 64px;
-  }
+  margin-bottom: 64px;
 
   @media (max-width: 768px) {
     gap: 16px;
