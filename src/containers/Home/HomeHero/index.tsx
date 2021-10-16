@@ -17,7 +17,7 @@ type AppThumbnail = {
   pk: string;
 };
 
-const HEADING_HIGHLIGHT_DELAY = 3000;
+const HEADING_HIGHLIGHT_DELAY = 2000;
 
 const HomeHero: FC = () => {
   const history = useHistory();

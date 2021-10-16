@@ -116,7 +116,11 @@ const TopNavPopover: FC<ComponentProps> = ({
 
   return (
     <>
-      <button className={clsx('TopNavPopover', className)} onClick={handleButtonClick} ref={popoverButtonRef}>
+      <button
+        className={clsx('TopNavPopover', className, {'TopNavPopover--open': popoverIsOpen})}
+        onClick={handleButtonClick}
+        ref={popoverButtonRef}
+      >
         {customButtonContent || (
           <>
             {buttonText}

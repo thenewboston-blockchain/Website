@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import {Icon} from '@thenewboston/ui';
 import colors from 'styles/colors';
+import SharedDiscordLogo from 'assets/svgs/DiscordLogo';
 
 export const Container = styled.footer`
   display: grid;
@@ -24,4 +25,9 @@ export const SocialMediaLink = styled.div`
 export const SocialMediaIcon = styled(Icon)`
   color: ${colors.palette.neutral['400']};
   margin-right: 4px;
+`;
+
+export const DiscordIcon = styled(SharedDiscordLogo)`
+  margin-right: 8px;
+  margin-left: 4px;
 `;

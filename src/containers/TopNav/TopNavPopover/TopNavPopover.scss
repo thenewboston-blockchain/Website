@@ -4,8 +4,14 @@
 .TopNavPopover {
   @include top-nav-button;
   @extend %body1;
-  color: var(--color-gray-500);
+  color: var(--color-neutral-800);
   font-weight: var(--font-weight-regular);
+  min-width: 120px; // explicitly set min width to prevent content shifting when font is bolded due to hover
+
+  &--open {
+    color: var(--color-neutral-900);
+    font-weight: var(--font-weight-bold);
+  }
 
   &__chevron-icon {
     margin-left: 3px;

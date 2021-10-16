@@ -1,6 +1,7 @@
 import React, {FC, memo, useCallback} from 'react';
 
 import {ROUTES, URLS} from 'constants/routes';
+import colors from 'styles/colors';
 import {SocialMedia} from 'types/social-media';
 import {socialMediaUrls, socialMediaFooterIcons} from 'utils/social-media';
 
@@ -114,7 +115,8 @@ const navLists = [
         isExternal: true,
         title: (
           <S.SocialMediaLink>
-            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.discord]} />
+            {/* material ui's discord icon is slightly different from the design, hence we will use the custom one */}
+            <S.DiscordIcon color={colors.palette.neutral['400']} />
             {SocialMedia.discord}
           </S.SocialMediaLink>
         ),

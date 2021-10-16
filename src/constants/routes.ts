@@ -41,6 +41,7 @@ export const URLS = {
     sdkAndLibraries: `${developerPortalUrl}/developer-tools`,
     whitepaper: `${developerPortalUrl}/whitepaper`,
   },
+  discord: 'https://discord.com/invite/thenewboston',
   github: 'https://github.com/thenewboston-developers',
   tnbFaucet: 'https://tnbfaucet.com',
 };

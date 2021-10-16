@@ -1,12 +1,32 @@
 @import 'styles/font-mixins';
 
 .TopNavDesktopItems {
-  &__arcade-button {
-    margin-right: 16px;
+  &__apps {
+    margin-right: 24px;
   }
 
-  &__download-button {
-    margin-right: 24px;
+  &__apps-button,
+  &__discord-button {
+    align-items: center;
+    display: flex;
+  }
+
+  &__discord-button {
+    background-color: transparent;
+    border: 0;
+    color: var(--color-discord);
+    cursor: pointer;
+    font-weight: var(--font-weight-bold);
+    outline: none;
+
+    &:hover {
+      color: var(--color-discord-hover);
+    }
+  }
+
+  &__download,
+  &__discord-button {
+    margin-right: 16px;
   }
 
   &__profile-image {
@@ -18,13 +38,8 @@
   }
 
   &__right-item {
+    display: flex;
     margin-left: 24px;
-  }
-
-  &__link {
-    @extend %body1;
-    color: var(--color-gray-500);
-    font-weight: var(--font-weight-regular);
   }
 
   &__separator {

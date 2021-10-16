@@ -14,6 +14,8 @@ const colors = {
   alert: '#ed5f74',
   danger: '#d30c15',
   github: '#0366d6',
+  discord: '#5865f2',
+  discordHover: '#3441ce',
   palette: {
     neutral: {
       '050': '#f7fafc',

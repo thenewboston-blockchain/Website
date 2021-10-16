@@ -1,8 +1,5 @@
 import React, {FC} from 'react';
 
-import {A} from 'components';
-import {Link} from 'react-router-dom';
-
 import * as S from './Styles';
 
 interface NavLink {

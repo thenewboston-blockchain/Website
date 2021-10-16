@@ -1,4 +1,4 @@
-import React, {FC, ReactNode, useEffect, useState} from 'react';
+import React, {FC, ReactNode, useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 import clsx from 'clsx';
 
@@ -15,7 +15,6 @@ interface ComponentProps {
 
 const TopNav: FC<ComponentProps> = ({className}) => {
   const [mobileMenuIsOpen, toggleMobileMenu, , closeMobileMenu] = useBooleanState(false);
-  const [smallDevice, setSmallDevice] = useState(false);
   const {pathname} = useLocation();
   const {width} = useWindowDimensions();
 
@@ -24,20 +23,14 @@ const TopNav: FC<ComponentProps> = ({className}) => {
   }, [closeMobileMenu, pathname]);
 
   useEffect(() => {
-    if (width > 1200) closeMobileMenu();
-    setSmallDevice(width < 768);
-  }, [closeMobileMenu, smallDevice, width]);
+    if (width > 1366) closeMobileMenu();
+  }, [closeMobileMenu, width]);
 
   const renderRightItems = (): ReactNode => {
     return (
       <div className="TopNav__right">
         <TopNavDesktopItems />
-        <TopNavMobileMenu
-          closeMenu={closeMobileMenu}
-          menuOpen={mobileMenuIsOpen}
-          smallDevice={smallDevice}
-          toggleMenu={toggleMobileMenu}
-        />
+        <TopNavMobileMenu closeMenu={closeMobileMenu} menuOpen={mobileMenuIsOpen} toggleMenu={toggleMobileMenu} />
       </div>
     );
   };

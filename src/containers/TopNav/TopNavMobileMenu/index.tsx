@@ -5,23 +5,23 @@ import {Icon, IconType} from '@thenewboston/ui';
 
 import {A, Button} from 'components';
 import {ROUTES, URLS} from 'constants/routes';
+import TnbLogo from '../../../assets/svgs/TnbLogo';
+import DiscordLogo from '../../../assets/svgs/DiscordLogo';
 import './TopNavMobileMenu.scss';
 
 interface ComponentProps {
   closeMenu(): void;
   menuOpen: boolean;
-  smallDevice: boolean;
   toggleMenu(): void;
 }
 
-type SectionStrings = 'community' | 'getStarted' | 'resources' | 'about' | 'faq' | 'developer';
+type SectionStrings = 'developers' | 'getTNBC' | 'resources';
 
-const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice, toggleMenu}) => {
+const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, toggleMenu}) => {
   const history = useHistory();
   const [openSection, setOpenSection] = useState<SectionStrings | null>(null);
 
   const handleColumnTitleClick = (section: SectionStrings) => (): void => {
-    if (!smallDevice) return;
     setOpenSection(openSection === section ? null : section);
   };
 
@@ -29,19 +29,23 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice,
     return (
       <div className="TopNavMobileMenu__column">
         <button className="TopNavMobileMenu__title-wrapper" onClick={handleColumnTitleClick(section)}>
-          <span className="TopNavMobileMenu__column-title TopNavMobileMenu__column-title--accordion">{title}</span>
-          {smallDevice && (
-            <span className="TopNavMobileMenu__icon-holder">
-              <Icon
-                className={clsx('TopNavMobileMenu__chevron-icon', {
-                  'TopNavMobileMenu__chevron-icon--open': openSection === section,
-                })}
-                icon={IconType.chevronDown}
-              />
-            </span>
-          )}
+          <span
+            className={clsx('TopNavMobileMenu__column-title TopNavMobileMenu__column-title--accordion', {
+              'TopNavMobileMenu__column-title--open': openSection === section,
+            })}
+          >
+            {title}
+          </span>
+          <span className="TopNavMobileMenu__icon-holder">
+            <Icon
+              className={clsx('TopNavMobileMenu__chevron-icon', {
+                'TopNavMobileMenu__chevron-icon--open': openSection === section,
+              })}
+              icon={IconType.chevronDown}
+            />
+          </span>
         </button>
-        <div className="TopNavMobileMenu__links">{!smallDevice || openSection === section ? links : null}</div>
+        <div className="TopNavMobileMenu__links">{openSection === section ? links : null}</div>
       </div>
     );
   };
@@ -52,60 +56,60 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice,
         <div className="TopNavMobileMenu__dropdown-container">
           <div className="TopNavMobileMenu__links-container">
             {renderColumn(
-              'getStarted',
-              'Get Started',
+              'getTNBC',
+              'Get TNBC',
               <>
                 {renderMobileLink('Bounties', ROUTES.bounties)}
-                {renderMobileLink('Projects', URLS.developerPortal.projects, true)}
+                {renderMobileLink('Career', ROUTES.openings)}
+                {renderMobileLink('Faucet', URLS.apps.faucet, true)}
+                {renderMobileLink('Create Projects', URLS.developerPortal.projects, true)}
+                {renderMobileLink('Play Projects', ROUTES.arcade)}
               </>,
             )}
             {renderColumn(
-              'community',
-              'Community',
+              'developers',
+              'Developers',
               <>
-                {renderMobileLink('Join the Community!', ROUTES.social)}
-                {renderMobileLink('Weekly Progress', ROUTES.progress)}
-                {renderMobileLink('Openings', ROUTES.openings)}
-                {renderMobileLink('Community Guidelines', ROUTES.guidelines)}
-                {renderMobileLink('Analytics', ROUTES.analytics)}
-                {renderMobileLink('Beta Roadmap', ROUTES.roadmap)}
-                {renderMobileLink('Blog', URLS.blog, true)}
+                {renderMobileLink('Home', URLS.developerPortal.home, true)}
+                {renderMobileLink('Living Whitepaper', URLS.developerPortal.whitepaper, true)}
+                {renderMobileLink('Tutorials', ROUTES.tutorials)}
+                {renderMobileLink('Projects', URLS.developerPortal.projects, true)}
+                {renderMobileLink('APIS', URLS.developerPortal.api, true)}
+                {renderMobileLink('SDKs & Libraries', URLS.developerPortal.sdkAndLibraries, true)}
               </>,
-            )}
-            {renderColumn(
-              'developer',
-              'Developer',
-              <>{renderMobileLink('Developer', URLS.developerPortal.home, true)}</>,
             )}
             {renderColumn(
               'resources',
               'Resources',
               <>
-                {renderMobileLink('Documentation', ROUTES.wallet)}
-                {renderMobileLink('Tutorials', ROUTES.tutorials)}
+                {renderMobileLink('Roadmap', ROUTES.roadmap)}
+                {renderMobileLink('FAQ', ROUTES.faq)}
+                {renderMobileLink('Blog', URLS.blog, true)}
+                {renderMobileLink('Analytics', ROUTES.analytics)}
                 {renderMobileLink('Media Kit', ROUTES.assets)}
-              </>,
-            )}
-            {renderColumn(
-              'about',
-              'About',
-              <>
-                {renderMobileLink('Teams', ROUTES.teams)}
+                {renderMobileLink('Meet the team', ROUTES.teams)}
                 {renderMobileLink('Donate', ROUTES.donate)}
               </>,
             )}
-            {renderColumn('faq', 'FAQ', <>{renderMobileLink('FAQ', ROUTES.faq)}</>)}
           </div>
           <div className="TopNavMobileMenu__buttons-container">
+            <button
+              className="TopNavMobileMenu__discord-button"
+              onClick={() => window.open(URLS.discord, '_blank', 'noreferrer noopener')}
+            >
+              <DiscordLogo style={{marginRight: '8px'}} />
+              Discord
+            </button>
             <Button
-              className="TopNavMobileMenu__arcade-button"
-              onClick={() => history.push(ROUTES.arcade)}
+              className="TopNavMobileMenu__download-button"
+              onClick={() => history.push(ROUTES.download)}
               variant="outlined"
             >
-              Arcade
-            </Button>
-            <Button className="TopNavMobileMenu__download-button" onClick={() => history.push(ROUTES.download)}>
               Download Wallet
+            </Button>
+            <Button className="TopNavMobileMenu__apps-button" onClick={() => history.push(ROUTES.arcade)}>
+              <TnbLogo style={{marginRight: '8px'}} />
+              Apps
             </Button>
           </div>
         </div>
