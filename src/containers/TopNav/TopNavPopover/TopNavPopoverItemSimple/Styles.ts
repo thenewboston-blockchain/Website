@@ -1,11 +1,12 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 import {Link} from 'react-router-dom';
 
+import {A} from 'components';
 import colors from 'styles/colors';
 import {fontWeightMedium} from 'styles/fonts/fontWeights';
 
-export const PopoverLink = styled(Link)`
+const linkStyles = css`
   align-items: center;
   background: ${colors.white};
   border-radius: 6px;
@@ -26,4 +27,12 @@ export const PopoverLink = styled(Link)`
   &:hover {
     background: ${colors.palette.blue['100']};
   }
+`;
+
+export const InternalLink = styled(Link)`
+  ${linkStyles};
+`;
+
+export const ExternalLink = styled(A)`
+  ${linkStyles};
 `;

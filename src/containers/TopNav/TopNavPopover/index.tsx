@@ -168,6 +168,7 @@ const TopNavPopover: FC<ComponentProps> = ({
                   itemsRef.current[index] = el;
                 }
               }}
+              isExternal={isExternal}
               title={title}
               to={to}
             />

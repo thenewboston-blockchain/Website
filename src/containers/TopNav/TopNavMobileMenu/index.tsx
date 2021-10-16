@@ -100,7 +100,7 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, toggleMenu})
   const renderMobileLink = (label: string, to: string, isExternal?: boolean): ReactNode => {
     if (isExternal) {
       return (
-        <S.ExternalLink href={to} newWindow={false}>
+        <S.ExternalLink href={to} showNewWindowIcon={false}>
           {label}
         </S.ExternalLink>
       );

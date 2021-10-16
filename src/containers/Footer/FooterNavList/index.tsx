@@ -20,7 +20,7 @@ const FooterNavList: FC<FooterNavListProps> = ({header, links}) => {
       {links.map((link) => (
         <S.Item key={link.url}>
           {link.isExternal ? (
-            <S.ExternalLink href={link.url} newWindow={false}>
+            <S.ExternalLink href={link.url} showNewWindowIcon={false}>
               {link.title}
             </S.ExternalLink>
           ) : (
