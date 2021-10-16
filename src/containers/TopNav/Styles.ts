@@ -29,7 +29,7 @@ export const Wrapper = styled.div<{isOpened?: boolean}>`
 export const Container = styled(SharedContainer)`
   align-items: center;
   display: flex;
-  height: ${NAVBAR_HEIGHT};
+  height: ${NAVBAR_HEIGHT}px;
   justify-content: space-between;
 `;
 
@@ -37,7 +37,7 @@ export const LeftSection = styled.div`
   align-items: center;
   display: flex;
   flex: 1;
-  height: ${NAVBAR_HEIGHT};
+  height: ${NAVBAR_HEIGHT}px;
   position: relative;
   z-index: ${zIndex.topNav};
 `;
@@ -45,5 +45,5 @@ export const LeftSection = styled.div`
 export const RightSection = styled.div`
   align-items: center;
   display: flex;
-  height: ${NAVBAR_HEIGHT};
+  height: ${NAVBAR_HEIGHT}px;
 `;

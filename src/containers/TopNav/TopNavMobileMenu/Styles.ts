@@ -3,11 +3,11 @@ import styled, {css, keyframes} from 'styled-components';
 import {Icon} from '@thenewboston/ui';
 import {Link} from 'react-router-dom';
 import {A, Button} from 'components';
+import {NAVBAR_HEIGHT} from 'constants/offsets';
 import colors from 'styles/colors';
 import {fontWeightBold} from 'styles/fonts/fontWeights';
 import zIndex from 'styles/zIndex';
 
-const topNavHeight = '60px';
 const mobileDropdownHeight = '1000px';
 
 const addOverlayAnimation = keyframes`
@@ -22,11 +22,11 @@ const addOverlayAnimation = keyframes`
 const mobileSlideDownAnimation = keyframes`
   from {
     opacity: 0;
-    top: calc(${topNavHeight} - ${mobileDropdownHeight});
+    top: calc(${NAVBAR_HEIGHT}px - ${mobileDropdownHeight});
   }
   to {
     opacity: 1;
-    top: ${topNavHeight};
+    top: ${NAVBAR_HEIGHT}px;
   }
 `;
 
@@ -43,12 +43,12 @@ export const MenuButton = styled.button`
   background: transparent;
   border: none;
   display: flex;
-  height: ${topNavHeight};
+  height: ${NAVBAR_HEIGHT}px;
   justify-content: center;
   outline: none;
   position: relative;
   transition: background 0.1s ease-in;
-  width: ${topNavHeight};
+  width: ${NAVBAR_HEIGHT}px;
   z-index: ${zIndex.topNavMobileButton};
 
   @media (hover: hover) and (pointer: fine) {
@@ -90,11 +90,11 @@ export const InternalLink = styled(Link)`
 
 export const Overlay = styled.div`
   animation: ${addOverlayAnimation} 0.3s forwards;
-  height: calc(100vh - ${topNavHeight});
+  height: calc(100vh - ${NAVBAR_HEIGHT}px);
   left: 0;
   outline: none;
   position: fixed;
-  top: ${topNavHeight};
+  top: ${NAVBAR_HEIGHT}px;
   width: 100%;
   z-index: ${zIndex.slideupOverlay};
 `;
@@ -109,7 +109,7 @@ export const DropdownContainer = styled.div`
   left: 0;
   padding: 50px 36px 18px;
   position: fixed;
-  top: ${topNavHeight};
+  top: ${NAVBAR_HEIGHT}px;
   width: 100%;
   z-index: ${zIndex.topNavMobileDropdown};
 `;
