@@ -1,7 +1,6 @@
 import React, {forwardRef, KeyboardEvent} from 'react';
-import {Link} from 'react-router-dom';
 
-import './TopNavPopoverItemSimple.scss';
+import * as S from './Styles';
 
 interface ComponentProps {
   closePopover(): void;
@@ -17,9 +16,9 @@ const TopNavPopoverItemSimple = forwardRef<HTMLAnchorElement, ComponentProps>(
     };
 
     return (
-      <Link className="TopNavPopoverItemSimple" onClick={handleButtonClick} onKeyDown={handleKeyDown} ref={ref} to={to}>
+      <S.PopoverLink onClick={handleButtonClick} onKeyDown={handleKeyDown} ref={ref} to={to}>
         {title}
-      </Link>
+      </S.PopoverLink>
     );
   },
 );

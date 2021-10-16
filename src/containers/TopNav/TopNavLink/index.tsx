@@ -1,8 +1,6 @@
 import React, {FC} from 'react';
-import clsx from 'clsx';
-import {Link} from 'react-router-dom';
 
-import './TopNavLink.scss';
+import * as S from './Styles';
 
 interface ComponentProps {
   className?: string;
@@ -12,9 +10,9 @@ interface ComponentProps {
 
 const TopNavLink: FC<ComponentProps> = ({className, text, to}) => {
   return (
-    <Link className={clsx('TopNavLink', className)} to={to}>
+    <S.TopNavLink className={className} to={to}>
       {text}
-    </Link>
+    </S.TopNavLink>
   );
 };
 

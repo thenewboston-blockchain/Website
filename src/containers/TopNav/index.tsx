@@ -1,13 +1,11 @@
 import React, {FC, ReactNode, useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
-import clsx from 'clsx';
 
-import {Container} from 'components';
 import {useBooleanState, useWindowDimensions} from 'hooks';
 import TopNavDesktopItems from './TopNavDesktopItems';
 import TopNavLogo from './TopNavLogo';
 import TopNavMobileMenu from './TopNavMobileMenu';
-import './TopNav.scss';
+import * as S from './Styles';
 
 interface ComponentProps {
   className?: string;
@@ -28,22 +26,22 @@ const TopNav: FC<ComponentProps> = ({className}) => {
 
   const renderRightItems = (): ReactNode => {
     return (
-      <div className="TopNav__right">
+      <S.RightSection>
         <TopNavDesktopItems />
         <TopNavMobileMenu closeMenu={closeMobileMenu} menuOpen={mobileMenuIsOpen} toggleMenu={toggleMobileMenu} />
-      </div>
+      </S.RightSection>
     );
   };
 
   return (
-    <div className={clsx('TopNav__wrapper', {'TopNav__wrapper--mobile-menu-open': mobileMenuIsOpen})}>
-      <Container className={clsx('TopNav', className)} element="header">
-        <div className="TopNav__left">
+    <S.Wrapper isOpened={mobileMenuIsOpen}>
+      <S.Container className={className} element="header">
+        <S.LeftSection>
           <TopNavLogo />
-        </div>
+        </S.LeftSection>
         {renderRightItems()}
-      </Container>
-    </div>
+      </S.Container>
+    </S.Wrapper>
   );
 };
 

@@ -1,8 +1,7 @@
 import React, {useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
-import {Link} from 'react-router-dom';
+import {useHistory} from 'react-router';
 
-import {Avatar, Button} from 'components';
 import {isCreateAccountAllowed, isSignInAllowed} from 'config';
 import {ROUTES, URLS} from 'constants/routes';
 import TopNavLink from 'containers/TopNav/TopNavLink';
@@ -13,9 +12,10 @@ import {developerPopoverItems, getTNBCPopoverItems, resourcesPopoverItems} from 
 import TnbLogo from '../../../assets/svgs/TnbLogo';
 import DiscordLogo from '../../../assets/svgs/DiscordLogo';
 
-import './TopNavDesktopItems.scss';
+import * as S from './Styles';
 
 const TopNavDesktopItems = () => {
+  const history = useHistory();
   const activeUser = useSelector(selectActiveUser);
   const [activeUserAnchorEl, setActiveUserAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [developersAnchorEl, setDevelopersAnchorEl] = useState<HTMLButtonElement | null>(null);
@@ -41,7 +41,7 @@ const TopNavDesktopItems = () => {
       <TopNavPopover
         className="TopNavDesktopItems__profile-image"
         anchorEl={activeUserAnchorEl}
-        customButtonContent={<Avatar src={profileImage} size={36} />}
+        customButtonContent={<S.ProfileImage src={profileImage} size={36} />}
         items={activeUserPopoverItems}
         popoverId="active-user-popover"
         setAnchorEl={setActiveUserAnchorEl}
@@ -62,11 +62,10 @@ const TopNavDesktopItems = () => {
   };
 
   return (
-    <>
+    <S.Container>
       <TopNavPopover
         anchorEl={getTNBCAnchorEl}
         buttonText="Get TNBC"
-        className="TopNavDesktopItems__right-item"
         items={getTNBCPopoverItems}
         popoverId="get-tnbc-popover"
         setAnchorEl={setGetTNBCAnchorEl}
@@ -74,7 +73,6 @@ const TopNavDesktopItems = () => {
       <TopNavPopover
         anchorEl={developersAnchorEl}
         buttonText="Developers"
-        className="TopNavDesktopItems__right-item"
         items={developerPopoverItems}
         popoverId="developer-popover"
         setAnchorEl={setDevelopersAnchorEl}
@@ -82,16 +80,14 @@ const TopNavDesktopItems = () => {
       <TopNavPopover
         anchorEl={resourcesAnchorEl}
         buttonText="Resources"
-        className="TopNavDesktopItems__right-item"
         items={resourcesPopoverItems}
         popoverId="resources-popover"
         setAnchorEl={setResourcesAnchorEl}
       />
-      <div className="TopNavDesktopItems__separator" />
+      <S.Separator />
       {renderAuthButtons()}
-      <div className="TopNavDesktopItems__right-item">
-        <button
-          className="TopNavDesktopItems__discord-button"
+      <S.RightSection>
+        <S.DiscordButton
           onClick={() => window.open(URLS.discord, '_blank', 'noreferrer noopener')}
           onMouseEnter={() => setIsDiscordButtonHovered(true)}
           onMouseLeave={() => setIsDiscordButtonHovered(false)}
@@ -101,25 +97,21 @@ const TopNavDesktopItems = () => {
             style={{marginRight: '8px'}}
           />
           Discord
-        </button>
-        <Link className="TopNavDesktopItems__download" tabIndex={-1} to={ROUTES.download}>
-          <Button variant="outlined">Download Wallet</Button>
-        </Link>
-        <Link
-          className="TopNavDesktopItems__apps"
-          tabIndex={-1}
-          to={ROUTES.arcade}
+        </S.DiscordButton>
+        <S.DownloadButton onClick={() => history.push(ROUTES.download)} variant="outlined">
+          Download Wallet
+        </S.DownloadButton>
+        <S.AppButton
+          onClick={() => history.push(ROUTES.arcade)}
           onMouseEnter={() => setIsAppsButtonHovered(true)}
           onMouseLeave={() => setIsAppsButtonHovered(false)}
         >
-          <Button className="TopNavDesktopItems__apps-button">
-            <TnbLogo color={isAppsButtonHovered ? colors.primary : colors.white} style={{marginRight: '8px'}} />
-            Apps
-          </Button>
-        </Link>
-      </div>
+          <TnbLogo color={isAppsButtonHovered ? colors.primary : colors.white} style={{marginRight: '8px'}} />
+          Apps
+        </S.AppButton>
+      </S.RightSection>
       {renderActiveUser()}
-    </>
+    </S.Container>
   );
 };
 

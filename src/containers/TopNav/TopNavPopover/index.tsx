@@ -1,14 +1,13 @@
 import React, {FC, KeyboardEvent, ReactNode, useCallback, useEffect, useRef} from 'react';
 import {useHistory} from 'react-router-dom';
-import clsx from 'clsx';
-import {Icon, IconType} from '@thenewboston/ui';
+import {IconType} from '@thenewboston/ui';
 
 import {Popover} from 'components';
 import {useWindowDimensions} from 'hooks';
-
 import TopNavPopoverItem from './TopNavPopoverItem';
 import TopNavPopoverItemSimple from './TopNavPopoverItemSimple';
-import './TopNavPopover.scss';
+
+import * as S from './Styles';
 
 export interface TopNavPopoverItemType {
   description?: string;
@@ -116,27 +115,22 @@ const TopNavPopover: FC<ComponentProps> = ({
 
   return (
     <>
-      <button
-        className={clsx('TopNavPopover', className, {'TopNavPopover--open': popoverIsOpen})}
+      <S.PopoverButton
+        isOpened={popoverIsOpen}
+        className={className}
         onClick={handleButtonClick}
         ref={popoverButtonRef}
       >
         {customButtonContent || (
           <>
             {buttonText}
-            <Icon
-              className={clsx('TopNavPopover__chevron-icon', {
-                'TopNavPopover__chevron-icon--open': popoverIsOpen,
-              })}
-              icon={IconType.chevronDown}
-            />
+            <S.PopoverIcon isOpened={popoverIsOpen} icon={IconType.chevronDown} />
           </>
         )}
-      </button>
+      </S.PopoverButton>
       <Popover
         anchorEl={anchorEl}
         anchorOrigin={{horizontal: 'center', vertical: 'bottom'}}
-        className="TopNavPopover__Popover"
         closePopover={unsetAnchorEl}
         id={popoverId}
         open={popoverIsOpen}
