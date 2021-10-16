@@ -1,3 +1,5 @@
+import {EMAIL} from './contact';
+
 // Internal URLs
 export const ROUTES = {
   aboutUs: '/about-us',
@@ -34,6 +36,7 @@ export const URLS = {
     faucet: 'https://tnbfaucet.com/',
   },
   blog: 'https://blog.thenewboston.com',
+  contact: `mailto:${EMAIL}`,
   developerPortal: {
     api: `${developerPortalUrl}/api`,
     home: developerPortalUrl,
