@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import {A} from 'components';
 import colors from 'styles/colors';
-import {h2} from 'styles/fonts';
+import {h4} from 'styles/fonts';
 
 export const Container = styled.ul`
   list-style-type: none;
-  margin-right: 72px;
+  margin-right: 80px;
   padding-inline-start: 0;
 
   &:last-child {
@@ -20,24 +20,24 @@ export const Container = styled.ul`
 `;
 
 export const Header = styled.li`
-  ${h2.bold};
+  ${h4.bold};
   color: ${colors.palette.neutral['800']};
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   text-transform: capitalize;
 `;
 
 export const Item = styled.li`
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 `;
 
 export const ExternalLink = styled(A)`
-  ${h2.regular};
+  ${h4.regular};
   color: ${colors.palette.neutral['800']};
   text-transform: capitalize;
 `;
 
 export const InternalLink = styled(Link)`
-  ${h2.regular};
+  ${h4.regular};
   color: ${colors.palette.neutral['800']};
   text-transform: capitalize;
 `;

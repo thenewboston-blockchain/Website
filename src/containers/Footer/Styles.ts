@@ -4,12 +4,15 @@ import {Icon} from '@thenewboston/ui';
 import colors from 'styles/colors';
 
 export const Container = styled.footer`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   @media (max-width: 768px) {
-    flex-direction: column; // single column
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
 
