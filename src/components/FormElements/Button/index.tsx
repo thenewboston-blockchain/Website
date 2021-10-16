@@ -14,7 +14,7 @@ export interface BaseButtonProps {
   variant?: 'contained' | 'link' | 'outlined';
 }
 
-const Button: SFC<BaseButtonProps> = ({
+const Button: SFC<BaseButtonProps & React.HTMLProps<HTMLButtonElement>> = ({
   children,
   color = 'primary',
   className,
@@ -23,6 +23,7 @@ const Button: SFC<BaseButtonProps> = ({
   onClick,
   type = 'button',
   variant = 'contained',
+  ...otherProps
 }) => {
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -46,6 +47,7 @@ const Button: SFC<BaseButtonProps> = ({
       onClick={onClick}
       ref={buttonRef}
       type={type}
+      {...otherProps}
     >
       {children}
     </button>
