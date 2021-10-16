@@ -48,7 +48,7 @@ describe('FooterNavList component', () => {
 
       expect(link).toBeTruthy();
       expect(link.getAttribute('href')).toEqual(TestLinks[1].url);
-      expect(link.getAttribute('target')).toEqual('_self');
+      expect(link.getAttribute('target')).toEqual('_blank');
     });
   });
 });
