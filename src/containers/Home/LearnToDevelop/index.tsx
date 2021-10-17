@@ -13,52 +13,52 @@ import * as S from './Styles';
 const mockPlaylists = [
   {
     pk: '1',
-    thumbnail: 'https://via.placeholder.com/338x190',
+    thumbnail: 'https://via.placeholder.com/336x192',
     title: 'Node JS for Beginners',
   },
   {
     pk: '2',
-    thumbnail: 'https://via.placeholder.com/338x190',
+    thumbnail: 'https://via.placeholder.com/336x192',
     title: 'Python for Beginners',
   },
   {
     pk: '3',
-    thumbnail: 'https://via.placeholder.com/338x190',
+    thumbnail: 'https://via.placeholder.com/336x192',
     title: 'JS for Beginners',
   },
   {
     pk: '4',
-    thumbnail: 'https://via.placeholder.com/338x190',
+    thumbnail: 'https://via.placeholder.com/336x192',
     title: 'Blockchain for Beginners',
   },
   {
     pk: '5',
-    thumbnail: 'https://via.placeholder.com/338x190',
+    thumbnail: 'https://via.placeholder.com/336x192',
     title: 'TypeScript for Beginners',
   },
   {
     pk: '6',
-    thumbnail: 'https://via.placeholder.com/338x190',
+    thumbnail: 'https://via.placeholder.com/336x192',
     title: 'TypeScript for Beginners',
   },
   {
     pk: '7',
-    thumbnail: 'https://via.placeholder.com/338x190',
+    thumbnail: 'https://via.placeholder.com/336x192',
     title: 'TypeScript for Beginners',
   },
   {
     pk: '8',
-    thumbnail: 'https://via.placeholder.com/338x190',
+    thumbnail: 'https://via.placeholder.com/336x192',
     title: 'TypeScript for Beginners',
   },
   {
     pk: '9',
-    thumbnail: 'https://via.placeholder.com/338x190',
+    thumbnail: 'https://via.placeholder.com/336x192',
     title: 'TypeScript for Beginners',
   },
   {
     pk: '10',
-    thumbnail: 'https://via.placeholder.com/338x190',
+    thumbnail: 'https://via.placeholder.com/336x192',
     title: 'TypeScript for Beginners',
   },
 ];

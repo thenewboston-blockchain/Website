@@ -55,7 +55,7 @@ type HeadingSegmentProps = {
 };
 
 export const HeadingSegment = styled.span<HeadingSegmentProps>`
-  ${(props) => props.highlighted && 'color: #0085FF'}
+  ${(props) => props.highlighted && 'color: #0085FF;'}
   transition: color 0.3s linear;
 `;
 

@@ -9,16 +9,24 @@ export const Container = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 0 24px;
   overflow-x: hidden;
+  padding: 120px 24px 0px;
+
+  @media (max-width: 992px) {
+    padding-top: 80px;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 72px;
+  }
 `;
 
 export const Title = styled.h1`
   ${d0.bold};
   color: ${colors.palette.neutral['800']};
   margin-bottom: 24px;
-  text-align: center;
   max-width: 670px;
+  text-align: center;
 
   @media (max-width: 992px) {
     ${d1.bold};
