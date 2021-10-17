@@ -92,6 +92,7 @@ const LearnToDevelop = () => {
   const [scrollableWidth, setScrollableWidth] = React.useState<number>(0);
   const [totalSlides, setTotalSlides] = React.useState(1);
   const [currentSlide, setCurrentSlide] = React.useState(1);
+  const isNotSmallScreen = width > parseInt(breakpoints.small, 10);
 
   const sliderItemWidth = React.useMemo(() => {
     if (width > parseInt(breakpoints.large, 10)) return SLIDER_ITEM_WIDTH.lg;
@@ -127,7 +128,7 @@ const LearnToDevelop = () => {
   React.useEffect(() => {
     setScrollableWidth(sliderRef.current?.clientWidth ?? 0);
 
-    const scrollAreaWidth = width - paddingHorizontal;
+    const scrollAreaWidth = width - paddingHorizontal * 2;
     const calculatedSlides =
       (TOTAL_ITEMS * sliderItemWidth + SLIDER_ITEM_MARGIN_RIGHT * (TOTAL_ITEMS - 1)) / scrollAreaWidth;
 
@@ -142,7 +143,7 @@ const LearnToDevelop = () => {
         }}
         paddingHorizontal={paddingHorizontal}
       >
-        {width > parseInt(breakpoints.small, 10) && currentSlide !== 1 && (
+        {isNotSmallScreen && currentSlide !== 1 && (
           <S.SliderControl position="left" height={sliderItemHeight}>
             <S.SliderControlImg alt="Arrow Left" src={SliderArrowLeft} onClick={() => handleScroll(-scrollableWidth)} />
           </S.SliderControl>
@@ -161,7 +162,7 @@ const LearnToDevelop = () => {
             <S.SliderThumbnail alt={item.title} src={item.thumbnail} />
           </S.SliderItem>
         ))}
-        {width > parseInt(breakpoints.small, 10) && currentSlide !== totalSlides && (
+        {isNotSmallScreen && currentSlide !== totalSlides && (
           <S.SliderControl position="right" height={sliderItemHeight}>
             <S.SliderControlImg
               alt="Arrow Right"
