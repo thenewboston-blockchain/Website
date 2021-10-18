@@ -1,4 +1,6 @@
 import React from 'react';
+import colors from 'styles/colors';
+import fonts from 'styles/fonts/base';
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 
@@ -34,26 +36,15 @@ describe('MarketingCard component', () => {
     expect(screen.getByTestId('MarketingCard__img')).toHaveAttribute('alt', baseProps.website);
   });
 
-  it('renders with default className', () => {
+  it('renders with default styles', () => {
     render(<MarketingCard {...baseProps} />);
 
-    expect(screen.getByTestId('A')).toHaveClass('MarketingCard');
-    expect(screen.getByTestId('MarketingCard__img')).toHaveClass('MarketingCard__img');
-    expect(screen.getByTestId('MarketingCard__handle')).toHaveClass('MarketingCard__handle');
-    expect(screen.getByTestId('MarketingCard__description')).toHaveClass('MarketingCard__description');
-    expect(screen.getByTestId('MarketingCard__description__handle')).toHaveClass('MarketingCard__description__handle');
-  });
-
-  it('renders with className passedIn', () => {
-    const props = {...baseProps, className: 'Test'};
-
-    render(<MarketingCard {...props} />);
-
-    expect(screen.getByTestId('A')).toHaveClass('Test');
-    expect(screen.getByTestId('MarketingCard__img')).toHaveClass('Test__img');
-    expect(screen.getByTestId('MarketingCard__handle')).toHaveClass('Test__handle');
-    expect(screen.getByTestId('MarketingCard__description')).toHaveClass('Test__description');
-    expect(screen.getByTestId('MarketingCard__description__handle')).toHaveClass('Test__description__handle');
+    expect(screen.getByTestId('A')).toHaveStyle(`background: ${colors.white}; color: ${colors.primary};`);
+    expect(screen.getByTestId('MarketingCard__handle')).toHaveStyle(`font-weight: ${fonts.weight.semiBold};`);
+    expect(screen.getByTestId('MarketingCard__description')).toHaveStyle('grid-column: 1 / 3;');
+    expect(screen.getByTestId('MarketingCard__description__handle')).toHaveStyle(
+      `display: none; font-weight: ${fonts.weight.semiBold};`,
+    );
   });
 
   it('renders with social media link', () => {

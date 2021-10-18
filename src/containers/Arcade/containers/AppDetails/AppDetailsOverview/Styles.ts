@@ -1,15 +1,18 @@
 import styled from 'styled-components';
 
-import {Container as SharedContainer} from 'components';
 import colors from 'styles/colors';
 import {h1, b1} from 'styles/fonts';
 
-export const Container = styled(SharedContainer)`
-  @media (max-width: 1366px) {
-    padding: 0 48px;
-  }
+export const Container = styled.div`
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
 
   @media (max-width: 992px) {
+    max-width: 672px;
+  }
+
+  @media (max-width: 768px) {
     padding: 0 24px;
   }
 `;
@@ -19,7 +22,7 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.div`
-  ${h1.medium};
+  ${h1.bold};
   color: ${colors.palette.neutral['900']};
   margin-bottom: 24px;
 `;

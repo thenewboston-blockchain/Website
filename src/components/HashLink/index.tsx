@@ -1,8 +1,6 @@
 import React from 'react';
-import clsx from 'clsx';
 import {SFC} from 'types/generic';
-
-import './HashLink.scss';
+import * as S from './Styles';
 
 export interface HashLinkProps {
   id: string;
@@ -10,9 +8,9 @@ export interface HashLinkProps {
 
 const HashLink: SFC<HashLinkProps> = ({className, id}) => {
   return (
-    <a className={clsx('HashLink', className)} data-testid="HashLink" href={`#${id}`}>
+    <S.HashLink className={className} data-testid="HashLink" href={`#${id}`}>
       #
-    </a>
+    </S.HashLink>
   );
 };
 
