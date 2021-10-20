@@ -87,7 +87,7 @@ const SLIDER_ITEM_WIDTH = {
   xs: 160,
 };
 const SLIDER_ITEM_MARGIN_RIGHT = 16;
-const TOTAL_ITEMS = 10;
+const TOTAL_ITEMS = 11; // Note: remember to update this value when more items are needed to be displayed
 
 const LearnToDevelop = () => {
   const history = useHistory();
