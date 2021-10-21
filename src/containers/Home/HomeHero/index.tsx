@@ -74,7 +74,7 @@ const HomeHero: FC = () => {
     <S.Container>
       <S.Heading>
         <S.HeadingSegment highlighted={highlightedHeading === 0}>Learn,</S.HeadingSegment>{' '}
-        <S.HeadingSegment highlighted={highlightedHeading === 1}>Develop,</S.HeadingSegment> &{' '}
+        <S.HeadingSegment highlighted={highlightedHeading === 1}>Develop,</S.HeadingSegment> and{' '}
         <S.HeadingSegment highlighted={highlightedHeading === 2}>Earn TNB Coins.</S.HeadingSegment>
       </S.Heading>
       <S.Paragraph>
