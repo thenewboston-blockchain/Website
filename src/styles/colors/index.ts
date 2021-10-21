@@ -7,12 +7,15 @@ const colors = {
   black: '#000',
   secondary: '#556cd6',
   tertiary: '#1ea672',
+  quaternary: '#0085ff',
   primary: '#2c3967',
   progressBar: '#17cead',
   white: '#fff',
   alert: '#ed5f74',
   danger: '#d30c15',
   github: '#0366d6',
+  discord: '#5865f2',
+  discordHover: '#3441ce',
   palette: {
     neutral: {
       '050': '#f7fafc',
@@ -28,6 +31,7 @@ const colors = {
       '900': '#1a2936',
     },
     gray: {
+      '005': '#ededed',
       '050': '#f7fafc',
       '075': '#eef2f6',
       '100': '#e3e8ee',

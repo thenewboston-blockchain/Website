@@ -5,6 +5,7 @@ import {Layout} from 'components';
 import {ROUTES} from 'constants/routes';
 import withSuspense from 'hoc/withSuspense';
 
+import AboutUs from './AboutUs';
 import Analytics from './Analytics';
 import Assets from './Assets';
 import Bounties from './Bounties';
@@ -67,6 +68,7 @@ const App: FC = () => {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path={ROUTES.aboutUs} component={AboutUs} />
           <Route exact path={`${ROUTES.analytics}/:type?`} component={Analytics} />
           <Route exact path={`${ROUTES.arcade}/:appId?`} component={withSuspense(Arcade)} />
           <Route exact path={ROUTES.guidelines} component={Guidelines} />

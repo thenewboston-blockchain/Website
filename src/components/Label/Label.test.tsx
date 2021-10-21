@@ -1,20 +1,22 @@
-import React from 'react';
-import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-
+import {render, screen} from '@testing-library/react';
+import 'jest-styled-components';
+import React from 'react';
 import Label, {LabelProps} from '.';
 
-const rgbWhite = 'rgb(255, 255, 255)';
-const rgbBlack = 'rgb(0, 0, 0)';
-const rgbDark = 'rgb(34, 34, 34)';
-const rgbLight = 'rgb(221, 221, 221)';
-const hexDark = '222';
-const hexLight = 'ddd';
+const darkColor = '222';
+const blackColor = '000';
+const lightColor = 'ddd';
+const whiteColor = 'fff';
+const hexDark = `#${darkColor}`;
+const hexBlack = `#${blackColor}`;
+const hexLight = `#${lightColor}`;
+const hexWhite = `#${whiteColor}`;
 const testName = 'Hello world';
 
 describe('Label', () => {
   const baseProps: LabelProps = {
-    color: rgbWhite,
+    color: whiteColor,
     name: testName,
   };
 
@@ -25,33 +27,27 @@ describe('Label', () => {
     expect(screen.getByTestId('Label').textContent).toEqual(testName);
   });
 
-  it('renders proper default className', () => {
-    render(<Label {...baseProps} />);
+  it('renders with custom className', () => {
+    const customClassName = 'Custom__Label';
+    render(<Label className={customClassName} {...baseProps} />);
     const el = screen.getByTestId('Label');
 
-    expect(el.className).toBe('Label');
-  });
-
-  it('renders with classNames passed in', () => {
-    render(<Label className="test" {...baseProps} />);
-    const el = screen.getByTestId('Label');
-
-    expect(el.className).toContain('test');
+    expect(el.className).toContain(customClassName);
   });
 
   it('renders with black text color with light background color passed in', () => {
-    render(<Label className="test" {...baseProps} color={hexLight} />);
+    render(<Label className="test" {...baseProps} color={lightColor} />);
     const el = screen.getByTestId('Label');
 
-    expect(el.style).toHaveProperty('background-color', rgbLight);
-    expect(el.style).toHaveProperty('color', rgbBlack);
+    expect(el).toHaveStyleRule('background-color', hexLight);
+    expect(el).toHaveStyleRule('color', hexBlack);
   });
 
   it('renders with white text color with dark background color passed in', () => {
-    render(<Label className="test" {...baseProps} color={hexDark} />);
+    render(<Label className="test" {...baseProps} color={darkColor} />);
     const el = screen.getByTestId('Label');
 
-    expect(el.style).toHaveProperty('background-color', rgbDark);
-    expect(el.style).toHaveProperty('color', rgbWhite);
+    expect(el).toHaveStyleRule('background-color', hexDark);
+    expect(el).toHaveStyleRule('color', hexWhite);
   });
 });

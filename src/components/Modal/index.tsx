@@ -10,7 +10,7 @@ import Loader from 'components/FormElements/Loader';
 import {GenericFormValues} from 'types/forms';
 import {ClassName, GenericFunction, SFC} from 'types/generic';
 
-import './Modal.scss';
+import * as S from './Styles';
 
 export interface ModalButtonProps extends FormButtonProps, ClassName {
   content: ReactNode;
@@ -112,34 +112,42 @@ const Modal: SFC<ComponentProps> = ({
   const renderDefaultFooter = (): ReactNode => {
     return (
       <>
-        <FormButton
-          className={clsx('Modal__default-cancel', cancelProps.className, {
+        <S.DefaultCancel
+          className={clsx({
             ...bemify(className, '__default-cancel'),
           })}
-          color={cancelProps.color}
-          disabled={cancelProps.disabled}
-          ignoreDirty={cancelProps.ignoreDirty}
-          onClick={cancelProps.onClick}
-          submitting={cancelProps.submitting}
-          type={cancelProps.type}
-          variant={cancelProps.variant}
         >
-          {cancelProps.content}
-        </FormButton>
-        <FormButton
-          className={clsx('Modal__default-submit', submitProps.className, {
+          <FormButton
+            className={cancelProps.className}
+            color={cancelProps.color}
+            disabled={cancelProps.disabled}
+            ignoreDirty={cancelProps.ignoreDirty}
+            onClick={cancelProps.onClick}
+            submitting={cancelProps.submitting}
+            type={cancelProps.type}
+            variant={cancelProps.variant}
+          >
+            {cancelProps.content}
+          </FormButton>
+        </S.DefaultCancel>
+        <S.DefaultSubmit
+          className={clsx({
             ...bemify(className, '__default-submit'),
           })}
-          color={submitProps.color}
-          disabled={submitProps.disabled}
-          ignoreDirty={submitProps.ignoreDirty}
-          onClick={submitProps.onClick}
-          submitting={submitProps.submitting}
-          type={submitProps.type}
-          variant={submitProps.variant}
         >
-          {submitting ? <Loader /> : submitProps.content}
-        </FormButton>
+          <FormButton
+            className={submitProps.className}
+            color={submitProps.color}
+            disabled={submitProps.disabled}
+            ignoreDirty={submitProps.ignoreDirty}
+            onClick={submitProps.onClick}
+            submitting={submitProps.submitting}
+            type={submitProps.type}
+            variant={submitProps.variant}
+          >
+            {submitting ? <Loader /> : submitProps.content}
+          </FormButton>
+        </S.DefaultSubmit>
       </>
     );
   };
@@ -147,81 +155,75 @@ const Modal: SFC<ComponentProps> = ({
   const renderResponsiveHeader = (): ReactNode => {
     return (
       <>
-        <Icon
-          className={clsx('Modal__close-icon', {
-            'Modal__close-icon--submitting': submitting,
+        <S.CloseIcon
+          className={clsx({
             ...bemify(className, '__close-icon'),
             ...bemify(className, '__close-icon--submitting', submitting),
           })}
-          disabled={submitting}
-          icon={IconType.close}
-          onClick={close}
-        />
-        {typeof header === 'string' ? <h2>{header}</h2> : header}
-        <FormButton
-          className={clsx('Modal__default-submit', submitProps.className, {
+        >
+          <Icon disabled={submitting} icon={IconType.close} onClick={close} />
+        </S.CloseIcon>
+        {typeof header === 'string' ? <S.H2>{header}</S.H2> : header}
+        <S.DefaultSubmit
+          className={clsx({
             ...bemify(className, '__default-submit'),
           })}
-          color={submitProps.color}
-          disabled={submitProps.disabled}
-          ignoreDirty={submitProps.ignoreDirty}
-          onClick={submitProps.onClick}
-          submitting={submitProps.submitting}
-          type={submitProps.type}
-          variant={submitProps.variant}
         >
-          {submitting ? <Loader /> : submitProps.content}
-        </FormButton>
+          <FormButton
+            className={submitProps.className}
+            color={submitProps.color}
+            disabled={submitProps.disabled}
+            ignoreDirty={submitProps.ignoreDirty}
+            onClick={submitProps.onClick}
+            submitting={submitProps.submitting}
+            type={submitProps.type}
+            variant={submitProps.variant}
+          >
+            {submitting ? <Loader /> : submitProps.content}
+          </FormButton>
+        </S.DefaultSubmit>
       </>
     );
   };
 
   return createPortal(
     <>
-      <div
+      <S.Overlay
         role="contentinfo"
-        className={clsx('Modal__overlay', {
-          'Modal__overlay--submitting': submitting,
+        submitting={submitting}
+        className={clsx({
           ...bemify(className, '__overlay'),
           ...bemify(className, '__overlay--submitting', submitting),
         })}
         onClick={submitting ? noop : close}
       />
-      <div
-        className={clsx(
-          'Modal',
-          {'Modal--default-position': !style, ...bemify(className, '--default-position', !style)},
-          className,
-        )}
-        style={style}
-      >
-        <div className={clsx('Modal__header', {...bemify(className, '__header')})}>
-          {typeof header === 'string' ? <h2>{header}</h2> : header}
-          <Icon
-            className={clsx('Modal__close-icon', {
-              'Modal__close-icon--submitting': submitting,
+      <S.Modal defaultPosition={!style} style={style}>
+        <S.Header className={clsx({...bemify(className, '__header')})}>
+          {typeof header === 'string' ? <S.H2>{header}</S.H2> : header}
+          <S.CloseIcon
+            className={clsx({
               ...bemify(className, '__close-icon'),
               ...bemify(className, '__close-icon--submitting', submitting),
             })}
-            disabled={submitting}
-            icon={IconType.close}
-            onClick={close}
-          />
-        </div>
+            submitting={submitting}
+          >
+            <Icon disabled={submitting} icon={IconType.close} onClick={close} />
+          </S.CloseIcon>
+        </S.Header>
         <Form initialValues={initialValues} onSubmit={onSubmit} validationSchema={validationSchema}>
           {() => (
             <>
-              <div className={clsx('Modal__header_mobile', {...bemify(className, '__header_mobile')})}>
+              <S.HeaderMobile className={clsx({...bemify(className, '__header_mobile')})}>
                 {footer || renderResponsiveHeader()}
-              </div>
-              <div className={clsx('Modal__content', {...bemify(className, '__content')})}>{children}</div>
-              <div className={clsx('Modal__footer', {...bemify(className, '__footer')})}>
+              </S.HeaderMobile>
+              <S.Content className={clsx({...bemify(className, '__content')})}>{children}</S.Content>
+              <S.Footer className={clsx({...bemify(className, '__footer')})}>
                 {footer || renderDefaultFooter()}
-              </div>
+              </S.Footer>
             </>
           )}
         </Form>
-      </div>
+      </S.Modal>
     </>,
     document.getElementById('modal-root')!,
   );

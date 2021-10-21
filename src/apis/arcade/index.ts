@@ -3,11 +3,17 @@ import {PaginatedResponse} from 'types/api';
 import {App} from 'types/arcade';
 import {standardHeaders} from 'utils/requests';
 
-export async function getAllApps(): Promise<App[]> {
-  const response = await axios.get<PaginatedResponse<App>>(
-    `${process.env.REACT_APP_BACKEND_API}/app_store/apps`,
-    standardHeaders(),
-  );
+export async function getApps(limit?: number, offset?: number): Promise<App[]> {
+  let url = `${process.env.REACT_APP_BACKEND_API}/app_store/apps`;
+
+  if (limit) {
+    url += `?limit=${limit}`;
+  }
+  if (offset) {
+    url += `&offset=${offset}`;
+  }
+
+  const response = await axios.get<PaginatedResponse<App>>(url, standardHeaders());
 
   return response.data.results;
 }

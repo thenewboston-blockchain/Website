@@ -6,7 +6,7 @@ const zIndex = {
   breadcrumb: 2,
   goToTop: 2,
   layout: 2,
-  modal: 2,
+  modal: 200,
   slideupOverlay: 2,
   slideup: 2,
   topNavMobileDropdown: 3,

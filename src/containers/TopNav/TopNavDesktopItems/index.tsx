@@ -1,123 +1,28 @@
 import React, {useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
-import {Link} from 'react-router-dom';
-import {IconType} from '@thenewboston/ui';
+import {useHistory} from 'react-router';
 
-import {A, Avatar, Button} from 'components';
 import {isCreateAccountAllowed, isSignInAllowed} from 'config';
 import {ROUTES, URLS} from 'constants/routes';
 import TopNavLink from 'containers/TopNav/TopNavLink';
 import TopNavPopover, {TopNavPopoverItemType} from 'containers/TopNav/TopNavPopover';
 import {selectActiveUser} from 'selectors/state';
+import colors from 'styles/colors';
+import {developerPopoverItems, getTNBCPopoverItems, resourcesPopoverItems} from './constants';
+import TnbLogo from '../../../assets/svgs/TnbLogo';
+import DiscordLogo from '../../../assets/svgs/DiscordLogo';
 
-import './TopNavDesktopItems.scss';
-
-const communityPopoverItems: TopNavPopoverItemType[] = [
-  {
-    description: 'Discord, GitHub, YouTube, LinkedIn, etc',
-    iconType: IconType.earth,
-    title: 'Join the Community!',
-    to: ROUTES.social,
-  },
-  {
-    description: 'Stay up to date with our weekly sprints',
-    iconType: IconType.chartTimelineVariantShimmer,
-    title: 'Weekly Progress',
-    to: ROUTES.progress,
-  },
-  {
-    description: 'Join the team building the app',
-    iconType: IconType.humanHandsup,
-    title: 'Openings',
-    to: ROUTES.openings,
-  },
-  {
-    description: 'Read up on our community culture',
-    iconType: IconType.notebookCheckOutline,
-    title: 'Community Guidelines',
-    to: ROUTES.guidelines,
-  },
-  {
-    description: 'Real time analytics',
-    iconType: IconType.chartAreaspline,
-    title: 'Analytics',
-    to: ROUTES.analytics,
-  },
-  {
-    description: 'Tasks to finish up beta app',
-    iconType: IconType.mapMarkerCheck,
-    title: 'Beta Roadmap',
-    to: ROUTES.roadmap,
-  },
-  {
-    description: 'Stay updated with our latest articles',
-    iconType: IconType.textBox,
-    isExternal: true,
-    title: 'Blog',
-    to: URLS.blog,
-  },
-];
-
-const getStartedPopoverItems: TopNavPopoverItemType[] = [
-  {
-    description: 'Pick up bounties within GitHub and earn coins',
-    iconSize: 28,
-    iconType: IconType.github,
-    title: 'Bounties',
-    to: ROUTES.bounties,
-  },
-  {
-    description: 'Propose ideas you want built',
-    iconType: IconType.hammerWrench,
-    isExternal: true,
-    title: 'Projects',
-    to: URLS.developerPortal.home,
-  },
-];
-
-const resourcesPopoverItems: TopNavPopoverItemType[] = [
-  {
-    description: 'Start reading into Guides',
-    iconType: IconType.fileDocument,
-    title: 'Documentation',
-    to: ROUTES.wallet,
-  },
-  {
-    description: 'Watch tutorials made by the community',
-    iconType: IconType.playBoxMultiple,
-    title: 'Tutorials',
-    to: ROUTES.tutorials,
-  },
-  {
-    description: 'Download thenewboston assets',
-    iconType: IconType.fileDownload,
-    title: 'Media Kit',
-    to: ROUTES.assets,
-  },
-];
-
-const aboutPopoverItems: TopNavPopoverItemType[] = [
-  {
-    description: 'Meet our awesome teams',
-    iconType: IconType.accountGroup,
-    title: 'Teams',
-    to: ROUTES.teams,
-  },
-  {
-    description: 'Support thenewboston',
-    iconType: IconType.currencyUsd,
-    title: 'Donate',
-    to: ROUTES.donate,
-  },
-];
+import * as S from './Styles';
 
 const TopNavDesktopItems = () => {
+  const history = useHistory();
   const activeUser = useSelector(selectActiveUser);
   const [activeUserAnchorEl, setActiveUserAnchorEl] = useState<HTMLButtonElement | null>(null);
-  const [communityAnchorEl, setCommunityAnchorEl] = useState<HTMLButtonElement | null>(null);
-  const [getStartedAnchorEl, setGetStartedAnchorEl] = useState<HTMLButtonElement | null>(null);
+  const [developersAnchorEl, setDevelopersAnchorEl] = useState<HTMLButtonElement | null>(null);
+  const [getTNBCAnchorEl, setGetTNBCAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [resourcesAnchorEl, setResourcesAnchorEl] = useState<HTMLButtonElement | null>(null);
-  const [aboutAnchorEl, setAboutAnchorEl] = useState<HTMLButtonElement | null>(null);
+  const [isAppsButtonHovered, setIsAppsButtonHovered] = useState(false);
+  const [isDiscordButtonHovered, setIsDiscordButtonHovered] = useState(false);
 
   const activeUserPopoverItems = useMemo<TopNavPopoverItemType[]>(() => {
     if (activeUser) {
@@ -136,7 +41,7 @@ const TopNavDesktopItems = () => {
       <TopNavPopover
         className="TopNavDesktopItems__profile-image"
         anchorEl={activeUserAnchorEl}
-        customButtonContent={<Avatar src={profileImage} size={36} />}
+        customButtonContent={<S.ProfileImage src={profileImage} size={36} />}
         items={activeUserPopoverItems}
         popoverId="active-user-popover"
         setAnchorEl={setActiveUserAnchorEl}
@@ -157,61 +62,56 @@ const TopNavDesktopItems = () => {
   };
 
   return (
-    <>
+    <S.Container>
       <TopNavPopover
-        anchorEl={getStartedAnchorEl}
-        buttonText="Get Started"
-        className="TopNavDesktopItems__right-item"
-        items={getStartedPopoverItems}
-        popoverId="get-started-popover"
-        setAnchorEl={setGetStartedAnchorEl}
+        anchorEl={getTNBCAnchorEl}
+        buttonText="Get TNBC"
+        items={getTNBCPopoverItems}
+        popoverId="get-tnbc-popover"
+        setAnchorEl={setGetTNBCAnchorEl}
       />
       <TopNavPopover
-        anchorEl={communityAnchorEl}
-        buttonText="Community"
-        className="TopNavDesktopItems__right-item"
-        items={communityPopoverItems}
-        popoverId="community-popover"
-        setAnchorEl={setCommunityAnchorEl}
+        anchorEl={developersAnchorEl}
+        buttonText="Developers"
+        items={developerPopoverItems}
+        popoverId="developer-popover"
+        setAnchorEl={setDevelopersAnchorEl}
       />
-      <A
-        className="TopNavDesktopItems__right-item TopNavDesktopItems__link"
-        href={URLS.developerPortal.home}
-        showNewWindowIcon={false}
-      >
-        Developer
-      </A>
       <TopNavPopover
         anchorEl={resourcesAnchorEl}
         buttonText="Resources"
-        className="TopNavDesktopItems__right-item"
         items={resourcesPopoverItems}
         popoverId="resources-popover"
         setAnchorEl={setResourcesAnchorEl}
       />
-      <TopNavPopover
-        anchorEl={aboutAnchorEl}
-        buttonText="About"
-        className="TopNavDesktopItems__right-item"
-        items={aboutPopoverItems}
-        popoverId="about-popover"
-        setAnchorEl={setAboutAnchorEl}
-      />
-      <Link className="TopNavDesktopItems__right-item TopNavDesktopItems__link" tabIndex={-1} to={ROUTES.faq}>
-        FAQ
-      </Link>
-      <div className="TopNavDesktopItems__separator" />
+      <S.Separator />
       {renderAuthButtons()}
-      <div className="TopNavDesktopItems__right-item">
-        <Link className=" TopNavDesktopItems__arcade-button" tabIndex={-1} to={ROUTES.arcade}>
-          <Button variant="outlined">Arcade</Button>
-        </Link>
-        <Link className="TopNavDesktopItems__download-button" tabIndex={-1} to={ROUTES.download}>
-          <Button>Download Wallet</Button>
-        </Link>
-      </div>
+      <S.RightSection>
+        <S.DiscordButton
+          onClick={() => window.open(URLS.discord, '_blank', 'noreferrer noopener')}
+          onMouseEnter={() => setIsDiscordButtonHovered(true)}
+          onMouseLeave={() => setIsDiscordButtonHovered(false)}
+        >
+          <DiscordLogo
+            color={isDiscordButtonHovered ? colors.discordHover : colors.discord}
+            style={{marginRight: '8px'}}
+          />
+          Discord
+        </S.DiscordButton>
+        <S.DownloadButton onClick={() => history.push(ROUTES.download)} variant="outlined">
+          Download Wallet
+        </S.DownloadButton>
+        <S.AppButton
+          onClick={() => history.push(ROUTES.arcade)}
+          onMouseEnter={() => setIsAppsButtonHovered(true)}
+          onMouseLeave={() => setIsAppsButtonHovered(false)}
+        >
+          <TnbLogo color={isAppsButtonHovered ? colors.primary : colors.white} style={{marginRight: '8px'}} />
+          Apps
+        </S.AppButton>
+      </S.RightSection>
       {renderActiveUser()}
-    </>
+    </S.Container>
   );
 };
 

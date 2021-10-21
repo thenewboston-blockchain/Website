@@ -1,13 +1,12 @@
 import React, {FC} from 'react';
-import {NavLink} from 'react-router-dom';
 
 import Logo from 'assets/svgs/thenewboston-primary.svg';
-import './TopNavLogo.scss';
+import * as S from './Styles';
 
 const TopNavLogo: FC = () => (
-  <NavLink className="TopNavLogo" to="/">
-    <img alt="thenewboston Logo" className="TopNavLogo__img" src={Logo} />
-  </NavLink>
+  <S.LinkContainer to="/">
+    <S.Image alt="thenewboston Logo" src={Logo} />
+  </S.LinkContainer>
 );
 
 export default TopNavLogo;

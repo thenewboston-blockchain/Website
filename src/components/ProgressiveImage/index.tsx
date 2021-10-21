@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import React, {useState} from 'react';
 import {SFC} from 'types/generic';
 import * as S from './Styles';
@@ -15,6 +16,7 @@ type Props = {
 
 const ProgressiveImage: SFC<Props> = ({
   alt,
+  className,
   containerClassName,
   height,
   placeholderImageClassName,
@@ -26,7 +28,7 @@ const ProgressiveImage: SFC<Props> = ({
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <S.ProgressiveImage className={containerClassName} style={{height, width}}>
+    <S.ProgressiveImage className={clsx(containerClassName, className)} style={{height, width}}>
       <S.ProgressiveImagePlaceholder
         isLoaded={isLoaded}
         alt={alt}
