@@ -24,6 +24,10 @@ export const Container = styled(SharedContainer)`
     gap: 48px;
     padding: 120px 24px;
   }
+
+  @media (max-width: 360px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const Item = styled.div`
