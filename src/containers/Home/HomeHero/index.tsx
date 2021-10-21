@@ -3,7 +3,7 @@ import {useHistory} from 'react-router-dom';
 
 import {getApps} from 'apis/arcade';
 import {Button, Loader} from 'components';
-import {ROUTES} from 'constants/routes';
+import {ROUTES, URLS} from 'constants/routes';
 import {ApiProgress} from 'constants/api-progress';
 import {useWindowDimensions} from 'hooks';
 
@@ -51,6 +51,10 @@ const HomeHero: FC = () => {
     }
   }, [setProgress, width]);
 
+  const navigateToProjects = (): void => {
+    window.open(URLS.developerPortal.projects, '_blank', 'noreferrer noopener');
+  };
+
   const renderShowcase = (): ReactElement => {
     if (progress === ApiProgress.Requesting) {
       return <Loader />;
@@ -81,7 +85,7 @@ const HomeHero: FC = () => {
         <Button variant="contained" color="quaternary" onClick={() => history.push(ROUTES.tutorials)}>
           Watch Tutorials
         </Button>
-        <Button variant="outlined" onClick={() => history.push(ROUTES.bounties)}>
+        <Button variant="outlined" onClick={navigateToProjects}>
           How To Earn
         </Button>
       </S.Actions>
