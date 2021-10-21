@@ -2,17 +2,19 @@ import React, {FC} from 'react';
 
 import {PageTitle} from 'components';
 import HomeHero from './HomeHero';
-import HomeValues from './HomeValues';
-import GetStarted from './GetStarted';
-import HomeFaq from './HomeFaq';
+import HomeSpeed from './HomeSpeed';
+import DownloadWallet from './DownloadWallet';
+import Links from './Links';
+import LearnToDevelop from './LearnToDevelop';
 
 const Home: FC = () => (
   <>
     <PageTitle title="Home" />
     <HomeHero />
-    <HomeValues />
-    <GetStarted />
-    <HomeFaq />
+    <LearnToDevelop />
+    <HomeSpeed />
+    <DownloadWallet />
+    <Links />
   </>
 );
 
