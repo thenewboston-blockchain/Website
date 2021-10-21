@@ -169,7 +169,7 @@ export const DiscordButton = styled.button`
 
 export const LinkSection = styled.div`
   &:not(:last-child) {
-    border-bottom: 1px solid var(--color-gray-100);
+    border-bottom: 1px solid ${colors.palette.gray['100']};
     margin-bottom: 16px;
   }
 `;

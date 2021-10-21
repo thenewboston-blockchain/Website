@@ -1,18 +1,20 @@
 import {css} from 'styled-components';
+import colors from 'styles/colors';
+import {fontWeightMedium} from 'styles/fonts/fontWeights';
 
 export const topNavButton = css`
   align-items: center;
   background: transparent;
   border: none;
-  color: var(--color-sail-gray-500);
+  color: ${colors.palette.gray['500']};
   cursor: pointer;
   display: flex;
-  font-weight: var(--font-weight-medium);
+  ${fontWeightMedium};
   justify-content: center;
   transition: color 0.1s ease;
 
   &:hover,
   &:active {
-    color: var(--color-primary);
+    color: ${colors.primary};
   }
 `;
