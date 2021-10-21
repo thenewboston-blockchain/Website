@@ -1,115 +1,98 @@
 import React, {FC, ReactNode, useState} from 'react';
-import {Link, useHistory} from 'react-router-dom';
-import clsx from 'clsx';
+import {useHistory} from 'react-router-dom';
 import {Icon, IconType} from '@thenewboston/ui';
 
-import {A, Button} from 'components';
 import {ROUTES, URLS} from 'constants/routes';
-import './TopNavMobileMenu.scss';
+import TnbLogo from '../../../assets/svgs/TnbLogo';
+import DiscordLogo from '../../../assets/svgs/DiscordLogo';
+
+import * as S from './Styles';
 
 interface ComponentProps {
   closeMenu(): void;
   menuOpen: boolean;
-  smallDevice: boolean;
   toggleMenu(): void;
 }
 
-type SectionStrings = 'community' | 'getStarted' | 'resources' | 'about' | 'faq' | 'developer';
+type SectionStrings = 'developers' | 'getTNBC' | 'resources';
 
-const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice, toggleMenu}) => {
+const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, toggleMenu}) => {
   const history = useHistory();
   const [openSection, setOpenSection] = useState<SectionStrings | null>(null);
 
   const handleColumnTitleClick = (section: SectionStrings) => (): void => {
-    if (!smallDevice) return;
     setOpenSection(openSection === section ? null : section);
   };
 
   const renderColumn = (section: SectionStrings, title: string, links: ReactNode): ReactNode => {
+    const isOpened = openSection === section;
     return (
-      <div className="TopNavMobileMenu__column">
-        <button className="TopNavMobileMenu__title-wrapper" onClick={handleColumnTitleClick(section)}>
-          <span className="TopNavMobileMenu__column-title TopNavMobileMenu__column-title--accordion">{title}</span>
-          {smallDevice && (
-            <span className="TopNavMobileMenu__icon-holder">
-              <Icon
-                className={clsx('TopNavMobileMenu__chevron-icon', {
-                  'TopNavMobileMenu__chevron-icon--open': openSection === section,
-                })}
-                icon={IconType.chevronDown}
-              />
-            </span>
-          )}
-        </button>
-        <div className="TopNavMobileMenu__links">{!smallDevice || openSection === section ? links : null}</div>
-      </div>
+      <S.LinkSection>
+        <S.LinkSectionTitleButton onClick={handleColumnTitleClick(section)}>
+          <S.LinkSectionTitle isOpened={isOpened}>{title}</S.LinkSectionTitle>
+          <S.DropdownIcon isOpened={isOpened} icon={IconType.chevronDown} />
+        </S.LinkSectionTitleButton>
+        <S.ListOfLinks>{openSection === section ? links : null}</S.ListOfLinks>
+      </S.LinkSection>
     );
   };
 
   const renderMenu = (): ReactNode => {
     return (
       <>
-        <div className="TopNavMobileMenu__dropdown-container">
-          <div className="TopNavMobileMenu__links-container">
-            {renderColumn(
-              'getStarted',
-              'Get Started',
-              <>
-                {renderMobileLink('Bounties', ROUTES.bounties)}
-                {renderMobileLink('Projects', URLS.developerPortal.projects, true)}
-              </>,
-            )}
-            {renderColumn(
-              'community',
-              'Community',
-              <>
-                {renderMobileLink('Join the Community!', ROUTES.social)}
-                {renderMobileLink('Weekly Progress', ROUTES.progress)}
-                {renderMobileLink('Openings', ROUTES.openings)}
-                {renderMobileLink('Community Guidelines', ROUTES.guidelines)}
-                {renderMobileLink('Analytics', ROUTES.analytics)}
-                {renderMobileLink('Beta Roadmap', ROUTES.roadmap)}
-                {renderMobileLink('Blog', URLS.blog, true)}
-              </>,
-            )}
-            {renderColumn(
-              'developer',
-              'Developer',
-              <>{renderMobileLink('Developer', URLS.developerPortal.home, true)}</>,
-            )}
-            {renderColumn(
-              'resources',
-              'Resources',
-              <>
-                {renderMobileLink('Documentation', ROUTES.wallet)}
-                {renderMobileLink('Tutorials', ROUTES.tutorials)}
-                {renderMobileLink('Media Kit', ROUTES.assets)}
-              </>,
-            )}
-            {renderColumn(
-              'about',
-              'About',
-              <>
-                {renderMobileLink('Teams', ROUTES.teams)}
-                {renderMobileLink('Donate', ROUTES.donate)}
-              </>,
-            )}
-            {renderColumn('faq', 'FAQ', <>{renderMobileLink('FAQ', ROUTES.faq)}</>)}
-          </div>
-          <div className="TopNavMobileMenu__buttons-container">
-            <Button
-              className="TopNavMobileMenu__arcade-button"
-              onClick={() => history.push(ROUTES.arcade)}
-              variant="outlined"
-            >
-              Arcade
-            </Button>
-            <Button className="TopNavMobileMenu__download-button" onClick={() => history.push(ROUTES.download)}>
+        <S.DropdownContainer>
+          {renderColumn(
+            'getTNBC',
+            'Get TNBC',
+            <>
+              {renderMobileLink('Bounties', ROUTES.bounties)}
+              {renderMobileLink('Career', ROUTES.openings)}
+              {renderMobileLink('Faucet', URLS.apps.faucet, true)}
+              {renderMobileLink('Create Projects', URLS.developerPortal.projects, true)}
+              {renderMobileLink('Play Projects', ROUTES.arcade)}
+            </>,
+          )}
+          {renderColumn(
+            'developers',
+            'Developers',
+            <>
+              {renderMobileLink('Home', URLS.developerPortal.home, true)}
+              {renderMobileLink('Living Whitepaper', URLS.developerPortal.whitepaper, true)}
+              {renderMobileLink('Tutorials', ROUTES.tutorials)}
+              {renderMobileLink('Projects', URLS.developerPortal.projects, true)}
+              {renderMobileLink('APIS', URLS.developerPortal.api, true)}
+              {renderMobileLink('SDKs & Libraries', URLS.developerPortal.sdkAndLibraries, true)}
+            </>,
+          )}
+          {renderColumn(
+            'resources',
+            'Resources',
+            <>
+              {renderMobileLink('Roadmap', ROUTES.roadmap)}
+              {renderMobileLink('FAQ', ROUTES.faq)}
+              {renderMobileLink('Blog', URLS.blog, true)}
+              {renderMobileLink('Analytics', ROUTES.analytics)}
+              {renderMobileLink('Media Kit', ROUTES.assets)}
+              {renderMobileLink('Meet the team', ROUTES.teams)}
+              {renderMobileLink('About Us', ROUTES.aboutUs)}
+              {renderMobileLink('Donate', ROUTES.donate)}
+            </>,
+          )}
+          <S.ButtonsContainer>
+            <S.DiscordButton onClick={() => window.open(URLS.discord, '_blank', 'noreferrer noopener')}>
+              <DiscordLogo style={{marginRight: '8px'}} />
+              Discord
+            </S.DiscordButton>
+            <S.DownloadButton onClick={() => history.push(ROUTES.download)} variant="outlined">
               Download Wallet
-            </Button>
-          </div>
-        </div>
-        <div className="TopNavMobileMenu__overlay" onClick={closeMenu} role="button" tabIndex={0} />
+            </S.DownloadButton>
+            <S.AppButton onClick={() => history.push(ROUTES.arcade)}>
+              <TnbLogo style={{marginRight: '8px'}} />
+              Apps
+            </S.AppButton>
+          </S.ButtonsContainer>
+        </S.DropdownContainer>
+        <S.Overlay onClick={closeMenu} role="button" tabIndex={0} />
       </>
     );
   };
@@ -117,25 +100,21 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, smallDevice,
   const renderMobileLink = (label: string, to: string, isExternal?: boolean): ReactNode => {
     if (isExternal) {
       return (
-        <A className="TopNavMobileMenu__link" href={to} newWindow={false}>
+        <S.ExternalLink href={to} showNewWindowIcon={false}>
           {label}
-        </A>
+        </S.ExternalLink>
       );
     }
-    return (
-      <Link className="TopNavMobileMenu__link" to={to}>
-        {label}
-      </Link>
-    );
+    return <S.InternalLink to={to}>{label}</S.InternalLink>;
   };
 
   return (
-    <div className="TopNavMobileMenu">
-      <button className="TopNavMobileMenu__button" onClick={toggleMenu}>
+    <S.Container>
+      <S.MenuButton onClick={toggleMenu}>
         <Icon icon={IconType.menu} size={24} />
-      </button>
+      </S.MenuButton>
       {menuOpen && renderMenu()}
-    </div>
+    </S.Container>
   );
 };
 
