@@ -1,5 +1,6 @@
 import styled, {keyframes} from 'styled-components';
 import {Icon} from '@thenewboston/ui';
+
 import zIndex from 'styles/zIndex';
 import colors from 'styles/colors';
 
