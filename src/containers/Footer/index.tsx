@@ -26,6 +26,7 @@ const navLists = [
       },
       {
         isExternal: true,
+        newWindow: true,
         title: 'Faucet',
         url: URLS.apps.faucet,
       },
@@ -45,11 +46,13 @@ const navLists = [
     links: [
       {
         isExternal: true,
+        newWindow: false,
         title: 'Home',
         url: URLS.developerPortal.home,
       },
       {
         isExternal: true,
+        newWindow: false,
         title: 'Living Whitepaper',
         url: URLS.developerPortal.whitepaper,
       },
@@ -59,16 +62,19 @@ const navLists = [
       },
       {
         isExternal: true,
+        newWindow: false,
         title: 'Projects',
         url: URLS.developerPortal.projects,
       },
       {
         isExternal: true,
+        newWindow: false,
         title: 'APIs',
         url: URLS.developerPortal.api,
       },
       {
         isExternal: true,
+        newWindow: false,
         title: 'SDKs &  Libraries',
         url: URLS.developerPortal.sdkAndLibraries,
       },
@@ -87,6 +93,7 @@ const navLists = [
       },
       {
         isExternal: true,
+        newWindow: true,
         title: 'Blog',
         url: URLS.blog,
       },
@@ -103,6 +110,14 @@ const navLists = [
         url: ROUTES.teams,
       },
       {
+        title: 'About Us',
+        url: ROUTES.aboutUs,
+      },
+      {
+        title: 'Join the Community',
+        url: ROUTES.social,
+      },
+      {
         title: 'Donate',
         url: ROUTES.donate,
       },
@@ -113,6 +128,7 @@ const navLists = [
     links: [
       {
         isExternal: true,
+        newWindow: true,
         title: (
           <S.SocialMediaLink>
             {/* material ui's discord icon is slightly different from the design, hence we will use the custom one */}
@@ -124,9 +140,10 @@ const navLists = [
       },
       {
         isExternal: true,
+        newWindow: true,
         title: (
           <S.SocialMediaLink>
-            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.github]} />
+            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.github]} size={20} totalSize={20} />
             {SocialMedia.github}
           </S.SocialMediaLink>
         ),
@@ -134,9 +151,10 @@ const navLists = [
       },
       {
         isExternal: true,
+        newWindow: true,
         title: (
           <S.SocialMediaLink>
-            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.youtube]} />
+            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.youtube]} size={20} totalSize={20} />
             {SocialMedia.youtube}
           </S.SocialMediaLink>
         ),
@@ -144,9 +162,10 @@ const navLists = [
       },
       {
         isExternal: true,
+        newWindow: true,
         title: (
           <S.SocialMediaLink>
-            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.reddit]} />
+            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.reddit]} size={20} totalSize={20} />
             {SocialMedia.reddit}
           </S.SocialMediaLink>
         ),
@@ -154,9 +173,10 @@ const navLists = [
       },
       {
         isExternal: true,
+        newWindow: true,
         title: (
           <S.SocialMediaLink>
-            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.facebook]} />
+            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.facebook]} size={20} totalSize={20} />
             {SocialMedia.facebook}
           </S.SocialMediaLink>
         ),
@@ -164,9 +184,10 @@ const navLists = [
       },
       {
         isExternal: true,
+        newWindow: true,
         title: (
           <S.SocialMediaLink>
-            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.twitter]} />
+            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.twitter]} size={20} totalSize={20} />
             {SocialMedia.twitter}
           </S.SocialMediaLink>
         ),
@@ -174,9 +195,10 @@ const navLists = [
       },
       {
         isExternal: true,
+        newWindow: true,
         title: (
           <S.SocialMediaLink>
-            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.instagram]} />
+            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.instagram]} size={20} totalSize={20} />
             {SocialMedia.instagram}
           </S.SocialMediaLink>
         ),
@@ -184,9 +206,10 @@ const navLists = [
       },
       {
         isExternal: true,
+        newWindow: true,
         title: (
           <S.SocialMediaLink>
-            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.linkedin]} />
+            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.linkedin]} size={20} totalSize={20} />
             {SocialMedia.linkedin}
           </S.SocialMediaLink>
         ),

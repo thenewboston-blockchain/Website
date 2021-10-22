@@ -4,11 +4,13 @@ import {TopNavPopoverItemType} from 'containers/TopNav/TopNavPopover';
 export const developerPopoverItems: TopNavPopoverItemType[] = [
   {
     isExternal: true,
+    newWindow: false,
     title: 'Home',
     to: URLS.developerPortal.home,
   },
   {
     isExternal: true,
+    newWindow: false,
     title: 'Living Whitepaper',
     to: URLS.developerPortal.whitepaper,
   },
@@ -18,16 +20,19 @@ export const developerPopoverItems: TopNavPopoverItemType[] = [
   },
   {
     isExternal: true,
+    newWindow: false,
     title: 'Projects',
     to: URLS.developerPortal.projects,
   },
   {
     isExternal: true,
+    newWindow: false,
     title: 'APIs',
     to: URLS.developerPortal.api,
   },
   {
     isExternal: true,
+    newWindow: false,
     title: 'SDKs &  Libraries',
     to: URLS.developerPortal.sdkAndLibraries,
   },
@@ -44,11 +49,13 @@ export const getTNBCPopoverItems: TopNavPopoverItemType[] = [
   },
   {
     isExternal: true,
+    newWindow: true,
     title: 'Faucet',
     to: URLS.apps.faucet,
   },
   {
     isExternal: true,
+    newWindow: false,
     title: 'Create Projects',
     to: URLS.developerPortal.projects,
   },
@@ -69,6 +76,7 @@ export const resourcesPopoverItems: TopNavPopoverItemType[] = [
   },
   {
     isExternal: true,
+    newWindow: true,
     title: 'Blog',
     to: URLS.blog,
   },
@@ -87,6 +95,10 @@ export const resourcesPopoverItems: TopNavPopoverItemType[] = [
   {
     title: 'About Us',
     to: ROUTES.aboutUs,
+  },
+  {
+    title: 'Join the Community',
+    to: ROUTES.social,
   },
   {
     title: 'Donate',

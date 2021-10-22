@@ -7,17 +7,18 @@ interface ComponentProps {
   handleKeyDown(e: KeyboardEvent<HTMLAnchorElement>): void;
   title: string;
   isExternal?: boolean;
+  newWindow?: boolean;
   to: string;
 }
 
 const TopNavPopoverItemSimple = forwardRef<HTMLAnchorElement, ComponentProps>(
-  ({closePopover, handleKeyDown, isExternal, title, to}, ref) => {
+  ({closePopover, handleKeyDown, isExternal, newWindow = false, title, to}, ref) => {
     const handleButtonClick = (): void => {
       closePopover();
     };
 
     return isExternal ? (
-      <S.ExternalLink href={to} showNewWindowIcon={false}>
+      <S.ExternalLink href={to} showNewWindowIcon={false} newWindow={newWindow}>
         {title}
       </S.ExternalLink>
     ) : (
