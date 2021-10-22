@@ -28,7 +28,7 @@ const GoToTop: SFC = ({className}) => {
     <>
       {show && (
         <S.GoToTop
-          className={clsx(className)}
+          className={className}
           dataTestId="GoToTop"
           icon={IconType.chevronUp}
           size={50}
