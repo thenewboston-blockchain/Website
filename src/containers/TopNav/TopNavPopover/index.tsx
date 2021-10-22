@@ -14,6 +14,7 @@ export interface TopNavPopoverItemType {
   iconSize?: number;
   iconType?: IconType;
   isExternal?: boolean;
+  newWindow?: boolean;
   title: string;
   to: string;
 }
@@ -137,7 +138,7 @@ const TopNavPopover: FC<ComponentProps> = ({
         transformOrigin={{horizontal: 'center', vertical: 'top'}}
         transformOffset={{horizontal: 0, vertical: 12}}
       >
-        {items.map(({description, iconSize, iconType, isExternal, title, to}, index) => {
+        {items.map(({description, iconSize, iconType, isExternal, newWindow, title, to}, index) => {
           if (iconType !== undefined) {
             return (
               <TopNavPopoverItem
@@ -148,6 +149,7 @@ const TopNavPopover: FC<ComponentProps> = ({
                 iconType={iconType}
                 isExternal={isExternal}
                 key={title}
+                newWindow={newWindow}
                 ref={(el) => {
                   if (el) {
                     itemsRef.current[index] = el;
@@ -169,6 +171,7 @@ const TopNavPopover: FC<ComponentProps> = ({
                 }
               }}
               isExternal={isExternal}
+              newWindow={newWindow}
               title={title}
               to={to}
             />

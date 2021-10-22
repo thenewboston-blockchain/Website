@@ -10,12 +10,13 @@ interface ComponentProps {
   iconSize?: number;
   iconType: IconType;
   isExternal?: boolean;
+  newWindow?: boolean;
   title: string;
   to: string;
 }
 
 const TopNavPopoverItem = forwardRef<HTMLAnchorElement, ComponentProps>(
-  ({closePopover, description, handleKeyDown, iconSize, iconType, isExternal, title, to}, ref) => {
+  ({closePopover, description, handleKeyDown, iconSize, iconType, isExternal, newWindow = false, title, to}, ref) => {
     const handleButtonClick = (): void => {
       closePopover();
     };
@@ -33,7 +34,7 @@ const TopNavPopoverItem = forwardRef<HTMLAnchorElement, ComponentProps>(
     };
 
     return isExternal ? (
-      <S.ExternalLink href={to} newWindow={false}>
+      <S.ExternalLink href={to} newWindow={newWindow}>
         {renderChildren()}
       </S.ExternalLink>
     ) : (
