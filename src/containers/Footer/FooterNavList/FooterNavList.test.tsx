@@ -12,6 +12,7 @@ const TestLinks = [
   },
   {
     isExternal: true,
+    newWindow: true,
     title: 'External TestLink',
     url: '/externalTestLink',
   },

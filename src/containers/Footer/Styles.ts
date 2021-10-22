@@ -28,6 +28,7 @@ export const SocialMediaIcon = styled(Icon)`
 `;
 
 export const DiscordIcon = styled(SharedDiscordLogo)`
-  margin-right: 8px;
-  margin-left: 4px;
+  height: 20px;
+  margin-right: 4px;
+  width: 20px;
 `;

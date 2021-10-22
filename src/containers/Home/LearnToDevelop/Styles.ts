@@ -70,6 +70,7 @@ export const Slider = styled.div<SliderProps>`
 `;
 
 export const SliderItem = styled.div<SliderItemProps>`
+  box-shadow: 4px 0 6px rgba(26, 41, 54, 0.5);
   cursor: pointer;
   height: ${({height}) => height}px;
   min-width: ${({width}) => width}px;

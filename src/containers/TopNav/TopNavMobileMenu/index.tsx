@@ -47,8 +47,8 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, toggleMenu})
             <>
               {renderMobileLink('Bounties', ROUTES.bounties)}
               {renderMobileLink('Career', ROUTES.openings)}
-              {renderMobileLink('Faucet', URLS.apps.faucet, true)}
-              {renderMobileLink('Create Projects', URLS.developerPortal.projects, true)}
+              {renderMobileLink('Faucet', URLS.apps.faucet, true, true)}
+              {renderMobileLink('Create Projects', URLS.developerPortal.projects, true, false)}
               {renderMobileLink('Play Projects', ROUTES.arcade)}
             </>,
           )}
@@ -56,12 +56,12 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, toggleMenu})
             'developers',
             'Developers',
             <>
-              {renderMobileLink('Home', URLS.developerPortal.home, true)}
-              {renderMobileLink('Living Whitepaper', URLS.developerPortal.whitepaper, true)}
+              {renderMobileLink('Home', URLS.developerPortal.home, true, false)}
+              {renderMobileLink('Living Whitepaper', URLS.developerPortal.whitepaper, true, false)}
               {renderMobileLink('Tutorials', ROUTES.tutorials)}
-              {renderMobileLink('Projects', URLS.developerPortal.projects, true)}
-              {renderMobileLink('APIS', URLS.developerPortal.api, true)}
-              {renderMobileLink('SDKs & Libraries', URLS.developerPortal.sdkAndLibraries, true)}
+              {renderMobileLink('Projects', URLS.developerPortal.projects, true, false)}
+              {renderMobileLink('APIS', URLS.developerPortal.api, true, false)}
+              {renderMobileLink('SDKs & Libraries', URLS.developerPortal.sdkAndLibraries, true, false)}
             </>,
           )}
           {renderColumn(
@@ -75,6 +75,7 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, toggleMenu})
               {renderMobileLink('Media Kit', ROUTES.assets)}
               {renderMobileLink('Meet the team', ROUTES.teams)}
               {renderMobileLink('About Us', ROUTES.aboutUs)}
+              {renderMobileLink('Join the Community', ROUTES.social)}
               {renderMobileLink('Donate', ROUTES.donate)}
             </>,
           )}
@@ -97,10 +98,10 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, toggleMenu})
     );
   };
 
-  const renderMobileLink = (label: string, to: string, isExternal?: boolean): ReactNode => {
+  const renderMobileLink = (label: string, to: string, isExternal?: boolean, newWindow = false): ReactNode => {
     if (isExternal) {
       return (
-        <S.ExternalLink href={to} showNewWindowIcon={false}>
+        <S.ExternalLink href={to} showNewWindowIcon={false} newWindow={newWindow}>
           {label}
         </S.ExternalLink>
       );

@@ -4,6 +4,7 @@ import * as S from './Styles';
 
 interface NavLink {
   isExternal?: boolean;
+  newWindow?: boolean;
   title: React.ReactNode;
   url: string;
 }
@@ -20,7 +21,7 @@ const FooterNavList: FC<FooterNavListProps> = ({header, links}) => {
       {links.map((link) => (
         <S.Item key={link.url}>
           {link.isExternal ? (
-            <S.ExternalLink href={link.url} showNewWindowIcon={false}>
+            <S.ExternalLink href={link.url} showNewWindowIcon={false} newWindow={link.newWindow || false}>
               {link.title}
             </S.ExternalLink>
           ) : (

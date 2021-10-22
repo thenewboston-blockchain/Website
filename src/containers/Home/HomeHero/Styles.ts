@@ -107,6 +107,7 @@ export const Showcase = styled.div`
 
 export const App = styled.div`
   border-radius: 16px;
+  box-shadow: 4px 0 6px rgba(26, 41, 54, 0.5);
   cursor: pointer;
   height: ${THUMBNAIL_SIZE.default};
   margin: ${THUMBNAIL_MARGIN.default};
