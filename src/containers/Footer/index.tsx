@@ -143,7 +143,7 @@ const navLists = [
         newWindow: true,
         title: (
           <S.SocialMediaLink>
-            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.github]} />
+            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.github]} size={20} totalSize={20} />
             {SocialMedia.github}
           </S.SocialMediaLink>
         ),
@@ -154,7 +154,7 @@ const navLists = [
         newWindow: true,
         title: (
           <S.SocialMediaLink>
-            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.youtube]} />
+            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.youtube]} size={20} totalSize={20} />
             {SocialMedia.youtube}
           </S.SocialMediaLink>
         ),
@@ -165,7 +165,7 @@ const navLists = [
         newWindow: true,
         title: (
           <S.SocialMediaLink>
-            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.reddit]} />
+            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.reddit]} size={20} totalSize={20} />
             {SocialMedia.reddit}
           </S.SocialMediaLink>
         ),
@@ -176,7 +176,7 @@ const navLists = [
         newWindow: true,
         title: (
           <S.SocialMediaLink>
-            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.facebook]} />
+            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.facebook]} size={20} totalSize={20} />
             {SocialMedia.facebook}
           </S.SocialMediaLink>
         ),
@@ -187,7 +187,7 @@ const navLists = [
         newWindow: true,
         title: (
           <S.SocialMediaLink>
-            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.twitter]} />
+            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.twitter]} size={20} totalSize={20} />
             {SocialMedia.twitter}
           </S.SocialMediaLink>
         ),
@@ -198,7 +198,7 @@ const navLists = [
         newWindow: true,
         title: (
           <S.SocialMediaLink>
-            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.instagram]} />
+            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.instagram]} size={20} totalSize={20} />
             {SocialMedia.instagram}
           </S.SocialMediaLink>
         ),
@@ -209,7 +209,7 @@ const navLists = [
         newWindow: true,
         title: (
           <S.SocialMediaLink>
-            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.linkedin]} />
+            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.linkedin]} size={20} totalSize={20} />
             {SocialMedia.linkedin}
           </S.SocialMediaLink>
         ),
