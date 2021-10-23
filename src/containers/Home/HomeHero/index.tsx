@@ -79,11 +79,11 @@ const HomeHero: FC = () => {
       <S.Heading>
         <S.HeadingSegment highlighted={highlightedHeading === 0}>Learn,</S.HeadingSegment>{' '}
         <S.HeadingSegment highlighted={highlightedHeading === 1}>Develop,</S.HeadingSegment> and{' '}
-        <S.HeadingSegment highlighted={highlightedHeading === 2}>Earn TNB Coins.</S.HeadingSegment>
+        <S.HeadingSegment highlighted={highlightedHeading === 2}>Earn TNBC.</S.HeadingSegment>
       </S.Heading>
       <S.Paragraph>
         Learn how to develop apps, propose an app idea, and get your app funded. Join thousands of developers in the
-        community developing on our open source blockchain platform.
+        community developing on our open source blockchain network.
       </S.Paragraph>
       <S.Actions>
         <Button variant="contained" color="quaternary" onClick={() => history.push(ROUTES.tutorials)}>

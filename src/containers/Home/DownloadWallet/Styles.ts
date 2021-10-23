@@ -81,6 +81,7 @@ export const Image = styled.img`
   filter: drop-shadow(0px 10px 40px rgba(26, 41, 54, 0.25));
   height: auto;
   left: -40px;
+  margin-right: 80px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
