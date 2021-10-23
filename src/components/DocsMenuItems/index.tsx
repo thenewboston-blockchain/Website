@@ -57,13 +57,8 @@ const DocsMenuItems: SFC = () => {
       </MenuGroup>
 
       <MenuGroup title="Deployment Guides" urlBase="deployment-guide">
-        <NavLink to="/deployment-guide/bank">Bank</NavLink>
-        <NavLink to="/deployment-guide/validator">Validator</NavLink>
-      </MenuGroup>
-
-      <MenuGroup title="Style Guides" urlBase="style-guide">
-        <NavLink to="/style-guide/react">React / JSX</NavLink>
-        <NavLink to="/style-guide/css">CSS / SASS</NavLink>
+        <NavLink to={`${ROUTES.deploymentGuide}/bank`}>Bank</NavLink>
+        <NavLink to={`${ROUTES.deploymentGuide}/validator`}>Validator</NavLink>
       </MenuGroup>
     </>
   );

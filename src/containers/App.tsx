@@ -23,7 +23,6 @@ import Progress from './Progress';
 import SignIn from './SignIn';
 import SignOut from './SignOut';
 import Social from './Social';
-import StyleGuide from './StyleGuide';
 import Teams from './Teams';
 import TermsOfUse from './TermsOfUse';
 import Wallet from './Wallet';
@@ -92,7 +91,6 @@ const App: FC = () => {
           <Route path={ROUTES.roadmap} component={withSuspense(Roadmap)} />
           <Route exact path={ROUTES.signin} component={SignIn} />
           <Route exact path={ROUTES.signout} component={SignOut} />
-          <Route path={`${ROUTES.styleGuide}/:chapter?`} component={StyleGuide} />
           <Redirect exact path={ROUTES.tutorials} to={`${ROUTES.tutorials}/All`} />
           <Route exact path={`${ROUTES.tutorials}/:category/:playlistId?`} component={withSuspense(Tutorials)} />
           <Route exact path={ROUTES.termsOfUse} component={TermsOfUse} />
