@@ -70,10 +70,10 @@ $top-nav-height: 60px;
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding-top: 40px;
+    padding: 40px 0px 56px;
 
     @media (max-width: 992px) {
-      padding-top: 16px;
+      padding: 16px 0px 24px;
     }
   }
 
@@ -214,7 +214,7 @@ $top-nav-height: 60px;
 
     @media (max-width: 768px) {
       pre {
-        max-width: calc(100vw - 100px);
+        max-width: calc(100vw - 240px);
       }
     }
   }
