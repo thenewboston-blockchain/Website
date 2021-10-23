@@ -28,13 +28,7 @@ const GoToTop: SFC = ({className}) => {
   return (
     <>
       {show && (
-        <S.GoToTop
-          className={className}
-          dataTestId="GoToTop"
-          icon={IconType.chevronUp}
-          size={50}
-          onClick={scrollTop}
-        />
+        <S.GoToTop className={className} dataTestId="GoToTop" icon={IconType.chevronUp} size={50} onClick={scrollTop} />
       )}
     </>
   );
