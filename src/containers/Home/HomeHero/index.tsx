@@ -18,6 +18,9 @@ type AppThumbnail = {
 };
 
 const HEADING_HIGHLIGHT_DELAY = 2000;
+const APP_COUNT_MAX = 9;
+const APP_COUNT_1366 = 7;
+const APP_COUNT_768 = 5;
 
 const HomeHero: FC = () => {
   const history = useHistory();
@@ -25,6 +28,8 @@ const HomeHero: FC = () => {
   const [highlightedHeading, setHighlightedHeading] = React.useState<0 | 1 | 2>(0);
   const [progress, setProgress] = React.useState<ApiProgress>(ApiProgress.Init);
   const [apps, setApps] = React.useState<AppThumbnail[]>([]);
+  // eslint-disable-next-line no-nested-ternary
+  const numberOfAppsToDisplay = width > 1366 ? APP_COUNT_MAX : width > 768 ? APP_COUNT_1366 : APP_COUNT_768;
 
   React.useLayoutEffect(() => {
     const headingInterval = setInterval(() => {
@@ -38,8 +43,7 @@ const HomeHero: FC = () => {
     try {
       (async () => {
         setProgress(ApiProgress.Requesting);
-        const count = width <= 768 ? 5 : 7;
-        const appResponse = await getApps(count);
+        const appResponse = await getApps(APP_COUNT_MAX);
         const appList = appResponse.map((app) => ({name: app.name, pk: app.pk, thumbnail: app.logo || DefaultLogoSrc}));
         setApps(appList);
         setProgress(ApiProgress.Success);
@@ -49,7 +53,7 @@ const HomeHero: FC = () => {
     } finally {
       setProgress(ApiProgress.Ok);
     }
-  }, [setProgress, width]);
+  }, []);
 
   const navigateToProjects = (): void => {
     window.open(URLS.developerPortal.projects, '_blank', 'noreferrer noopener');
@@ -61,7 +65,7 @@ const HomeHero: FC = () => {
     }
     return (
       <S.Showcase>
-        {apps.map((app) => (
+        {apps.slice(0, numberOfAppsToDisplay).map((app) => (
           <S.App key={app.pk} role="button" tabIndex={0} onClick={() => history.push(`${ROUTES.arcade}/${app.pk}`)}>
             <S.AppImage src={app.thumbnail} alt={app.name} />
           </S.App>

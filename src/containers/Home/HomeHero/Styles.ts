@@ -90,7 +90,7 @@ export const Showcase = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: calc((${THUMBNAIL_SIZE.default} * 4) + (${THUMBNAIL_MARGIN.default} * 8));
+  max-width: calc((${THUMBNAIL_SIZE.default} * 5) + (${THUMBNAIL_MARGIN.default} * 10));
 
   @media (max-width: 1366px) {
     max-width: calc((${THUMBNAIL_SIZE.lg} * 4) + (${THUMBNAIL_MARGIN.lg} * 8));
