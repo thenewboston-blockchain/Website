@@ -7,6 +7,7 @@ import {
   CrossedSwordEmoji,
   DiceEmoji,
   DiscordEmoji,
+  LoudSpeakerEmoji,
   MailEmoji,
   NewspaperEmoji,
   RobotEmoji,
@@ -29,6 +30,7 @@ export enum EmojiType {
   Newspaper = '📰',
   Mail = '✉️',
   Discord = 'Discord',
+  LoudSpeaker = '📢',
 }
 
 type Props = {
@@ -36,7 +38,9 @@ type Props = {
   emoji: EmojiType;
   emojiSize?: number;
   size?: number;
+  transparentBackground?: boolean;
   marginBottom?: number;
+  marginRight?: number;
 };
 
 const getEmojiIcon = (emojiType: EmojiType, emojiSize: number) => {
@@ -52,6 +56,8 @@ const getEmojiIcon = (emojiType: EmojiType, emojiSize: number) => {
       return <DiceEmoji style={style} />;
     case EmojiType.Discord:
       return <DiscordEmoji style={style} />;
+    case EmojiType.LoudSpeaker:
+      return <LoudSpeakerEmoji style={style} />;
     case EmojiType.Mail:
       return <MailEmoji style={style} />;
     case EmojiType.Newspaper:
@@ -67,9 +73,26 @@ const getEmojiIcon = (emojiType: EmojiType, emojiSize: number) => {
   }
 };
 
-const EmojiIcon: SFC<Props> = ({className, color, emoji, emojiSize = 40, marginBottom = 0, size = 72}) => {
+const EmojiIcon: SFC<Props> = ({
+  className,
+  color,
+  emoji,
+  emojiSize = 40,
+  marginBottom = 0,
+  marginRight = 0,
+  size = 72,
+  transparentBackground = false,
+}) => {
   return (
-    <S.Container className={className} color={color} emojiSize={emojiSize} marginBottom={marginBottom} size={size}>
+    <S.Container
+      className={className}
+      color={color}
+      emojiSize={emojiSize}
+      marginBottom={marginBottom}
+      marginRight={marginRight}
+      size={size}
+      transparentBackground={transparentBackground}
+    >
       {getEmojiIcon(emoji, emojiSize)}
     </S.Container>
   );

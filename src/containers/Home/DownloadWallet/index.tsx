@@ -11,18 +11,21 @@ const DownloadWallet = () => {
   const history = useHistory();
 
   return (
-    <S.Container>
-      <S.Image alt="Wallet" src={WalletImage} />
-      <S.Content>
-        <S.Heading>Get TNB Coins</S.Heading>
-        <S.Paragraph>Download our desktop wallet to send and receive coins.</S.Paragraph>
-        <S.A href={URLS.tnbFaucet}>Get 50 free coins from the Faucet.</S.A>
-        <S.Button variant="outlined" onClick={() => history.push(ROUTES.download)}>
-          Download Wallet
-        </S.Button>
-      </S.Content>
-      <S.MobileImage alt="Wallet" src={WalletImage} />
-    </S.Container>
+    <S.Wrapper>
+      <S.Container>
+        <S.ImageContainer>
+          <S.Image alt="Wallet" src={WalletImage} />
+        </S.ImageContainer>
+        <S.Content>
+          <S.Heading>Get TNB Coins</S.Heading>
+          <S.Paragraph>Download our desktop wallet to send and receive coins.</S.Paragraph>
+          <S.A href={URLS.tnbFaucet}>Get 50 free coins from the Faucet.</S.A>
+          <S.Button variant="outlined" onClick={() => history.push(ROUTES.download)}>
+            Download Wallet
+          </S.Button>
+        </S.Content>
+      </S.Container>
+    </S.Wrapper>
   );
 };
 
