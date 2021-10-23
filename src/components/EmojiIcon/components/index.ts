@@ -8,3 +8,4 @@ export {default as DiscordEmoji} from './Discord';
 export {default as MailEmoji} from './Mail';
 export {default as NewspaperEmoji} from './Newspaper';
 export {default as ThoughtBalloonEmoji} from './ThoughtBalloon';
+export {default as LoudSpeakerEmoji} from './LoudSpeaker';
