@@ -143,6 +143,10 @@ export const h2 = {
     ${h2Base};
     ${fontWeight.fontWeightBold};
   `,
+  semiBold: css`
+    ${h2Base};
+    ${fontWeight.fontWeightSemiBold};
+  `,
   medium: css`
     ${h2Base};
     ${fontWeight.fontWeightMedium};

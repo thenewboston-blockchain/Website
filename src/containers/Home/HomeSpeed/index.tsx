@@ -36,9 +36,9 @@ const HomeSpeed: FC = () => {
         </S.StatisticSection>
         <S.StatisticDivider type={width > 992 ? 'vertical' : 'horizontal'} />
         <S.StatisticSection>
-          <S.StatisticTitle>Transaction</S.StatisticTitle>
+          <S.StatisticTitle>Eco-friendly</S.StatisticTitle>
           <S.StatisticTransactionDescription>
-            Transaction fees so low its basically free.
+            A fast and low carbon footprint blockchain.
           </S.StatisticTransactionDescription>
         </S.StatisticSection>
       </S.StatisticsContainer>

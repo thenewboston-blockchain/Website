@@ -29,6 +29,9 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   padding: 0px 48px;
 
   @media (max-width: 768px) {
@@ -37,7 +40,7 @@ export const Content = styled.div`
 `;
 
 export const Heading = styled.h2`
-  ${h2.bold}
+  ${h2.semiBold}
   color: ${colors.palette.neutral['800']};
   font-size: 30px;
 `;
@@ -48,6 +51,7 @@ export const Paragraph = styled.h2`
   line-height: 150%;
   margin-bottom: 48px;
   margin-top: 16px;
+  max-width: 670px;
 
   @media (max-width: 768px) {
     margin-bottom: 24px;
@@ -70,18 +74,18 @@ export const Slider = styled.div<SliderProps>`
 `;
 
 export const SliderItem = styled.div<SliderItemProps>`
-  box-shadow: 4px 0 6px rgba(26, 41, 54, 0.5);
   cursor: pointer;
+  filter: drop-shadow(0 4px 6px rgba(26, 41, 54, 0.5));
   height: ${({height}) => height}px;
   min-width: ${({width}) => width}px;
-  transition: filter 0.3s ease;
+  transition: transform 0.3s ease;
 
   &:not(:last-child) {
     margin-right: ${({marginRight}) => marginRight}px;
   }
 
   &:hover {
-    filter: drop-shadow(0px 4px 6px rgba(26, 41, 54, 0.5));
+    transform: scale(1.03);
   }
 `;
 

@@ -39,7 +39,7 @@ export const Item = styled.div`
 `;
 
 export const ItemTitle = styled.h3`
-  ${d2.medium}
+  ${d2.semiBold}
   color: ${colors.palette.neutral['800']};
   font-size: 30px;
   margin-bottom: 16px;

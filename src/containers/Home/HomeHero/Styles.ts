@@ -90,7 +90,7 @@ export const Showcase = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: calc((${THUMBNAIL_SIZE.default} * 4) + (${THUMBNAIL_MARGIN.default} * 8));
+  max-width: calc((${THUMBNAIL_SIZE.default} * 5) + (${THUMBNAIL_MARGIN.default} * 10));
 
   @media (max-width: 1366px) {
     max-width: calc((${THUMBNAIL_SIZE.lg} * 4) + (${THUMBNAIL_MARGIN.lg} * 8));
@@ -107,12 +107,17 @@ export const Showcase = styled.div`
 
 export const App = styled.div`
   border-radius: 16px;
-  box-shadow: 4px 0 6px rgba(26, 41, 54, 0.5);
   cursor: pointer;
+  filter: drop-shadow(0 4px 6px rgba(26, 41, 54, 0.5));
   height: ${THUMBNAIL_SIZE.default};
   margin: ${THUMBNAIL_MARGIN.default};
   overflow: hidden;
+  transition: transform 0.3s ease;
   width: ${THUMBNAIL_SIZE.default};
+
+  &:hover {
+    transform: scale(1.03);
+  }
 
   @media (max-width: 1366px) {
     height: ${THUMBNAIL_SIZE.lg};
