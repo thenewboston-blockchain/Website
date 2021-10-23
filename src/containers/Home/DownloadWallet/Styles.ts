@@ -1,48 +1,50 @@
 import styled from 'styled-components';
 
-import {A as AComponent, Button as ButtonComponent} from 'components';
+import {A as AComponent, Button as ButtonComponent, Container as SharedContainer} from 'components';
 import colors from 'styles/colors';
 import {d0, d1, d2, h3} from 'styles/fonts';
 
-export const Container = styled.div`
+export const Wrapper = styled.div`
   background: #eaf2f8;
-  height: 800px;
+  display: grid;
   overflow: hidden;
-  padding: 0 24px;
-  position: relative;
-
-  @media (max-width: 1366px) {
-    height: 596px;
-  }
+  padding: 120px 0;
+  place-items: center;
 
   @media (max-width: 992px) {
-    height: 650px;
+    padding: 72px 48px;
   }
 
   @media (max-width: 768px) {
-    height: 570px;
+    padding: 72px 24px;
   }
+`;
 
-  @media (max-width: 380px) {
-    height: 500px;
+export const Container = styled(SharedContainer)`
+  align-items: center;
+  display: flex;
+  width: 100%;
+
+  @media (max-width: 992px) {
+    flex-direction: column-reverse;
   }
 `;
 
 export const Content = styled.div`
-  left: 60%;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  flex: 1;
+  margin-left: 80px;
 
   @media (max-width: 1366px) {
-    left: 50%;
+    margin-left: 0px;
   }
 
   @media (max-width: 992px) {
-    padding: 72px 0;
-    position: static;
+    margin-bottom: 72px;
     text-align: center;
-    transform: translateY(0%);
+  }
+
+  @media (max-width: 992px) {
+    margin-bottom: 56px;
   }
 `;
 
@@ -77,56 +79,26 @@ export const Button = styled(ButtonComponent)`
   background: ${colors.white};
 `;
 
+export const ImageContainer = styled.div`
+  flex: 1;
+`;
+
 export const Image = styled.img`
   filter: drop-shadow(0px 10px 40px rgba(26, 41, 54, 0.25));
   height: auto;
-  left: -40px;
-  margin-right: 80px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 894px;
-
-  @media (max-width: 1560px) {
-    left: -120px;
-  }
+  max-width: 800px;
 
   @media (max-width: 1366px) {
-    left: -80px;
-    width: 549px;
+    margin-left: -80px;
+    max-width: 100%;
   }
 
   @media (max-width: 992px) {
-    display: none;
-  }
-`;
-
-export const MobileImage = styled.img`
-  bottom: -80px;
-  display: none;
-  filter: drop-shadow(0px 10px 40px rgba(26, 41, 54, 0.25));
-  height: auto;
-  left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-  width: 600px;
-
-  @media (max-width: 992px) {
-    display: block;
+    margin-bottom: -264px;
+    margin-left: 0px;
   }
 
   @media (max-width: 768px) {
-    bottom: -60px;
-    width: 420px;
-  }
-
-  @media (max-width: 478px) {
-    bottom: -40px;
-    width: 360px;
-  }
-
-  @media (max-width: 380px) {
-    bottom: -40px;
-    width: 320px;
+    margin-bottom: -96px;
   }
 `;
