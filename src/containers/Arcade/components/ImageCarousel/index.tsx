@@ -1,7 +1,4 @@
 import React, {FC, useState} from 'react';
-import {IconType} from '@thenewboston/ui';
-
-import {useWindowDimensions} from 'hooks';
 
 import * as S from './Styles';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -12,47 +9,15 @@ type Props = {
 
 const ImageCarousel: FC<Props> = ({imageUrls}) => {
   const [selectedThumbnailIndex, setSelectedThumbnailIndex] = useState(0);
-  const {width} = useWindowDimensions();
-
-  const iconSize = width > 992 ? 32 : 24;
 
   return (
     <S.Container>
       <S.Carousel
+        showArrows={false}
         showIndicators={false}
         showThumbs={false}
         showStatus={false}
         swipeable
-        renderArrowNext={(onClickHandler, hasNext) =>
-          // eslint-disable-next-line no-nested-ternary
-          width > 480 ? (
-            hasNext ? (
-              <S.RightArrow icon={IconType.arrowRight} onClick={onClickHandler} size={iconSize} totalSize={iconSize} />
-            ) : (
-              <S.DisabledRightArrow
-                icon={IconType.arrowRight}
-                onClick={onClickHandler}
-                size={iconSize}
-                totalSize={iconSize}
-              />
-            )
-          ) : null
-        }
-        renderArrowPrev={(onClickHandler, hasPrev) =>
-          // eslint-disable-next-line no-nested-ternary
-          width > 480 ? (
-            hasPrev ? (
-              <S.LeftArrow icon={IconType.arrowLeft} onClick={onClickHandler} size={iconSize} totalSize={iconSize} />
-            ) : (
-              <S.DisabledLeftArrow
-                icon={IconType.arrowLeft}
-                onClick={onClickHandler}
-                size={iconSize}
-                totalSize={iconSize}
-              />
-            )
-          ) : null
-        }
         selectedItem={selectedThumbnailIndex}
         onChange={(index) => setSelectedThumbnailIndex(index)}
       >
