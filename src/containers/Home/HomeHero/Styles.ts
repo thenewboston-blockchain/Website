@@ -18,6 +18,8 @@ const THUMBNAIL_SIZE = {
   sm: '108px',
 };
 
+const THUMBNAIL_BORDER_RADIUS = '16px';
+
 export const Container = styled(SharedContainer)`
   align-items: center;
   display: flex;
@@ -106,12 +108,11 @@ export const Showcase = styled.div`
 `;
 
 export const App = styled.div`
-  border-radius: 16px;
+  border-radius: ${THUMBNAIL_BORDER_RADIUS};
   cursor: pointer;
   filter: drop-shadow(0 4px 6px rgba(26, 41, 54, 0.5));
   height: ${THUMBNAIL_SIZE.default};
   margin: ${THUMBNAIL_MARGIN.default};
-  overflow: hidden;
   transition: transform 0.3s ease;
   width: ${THUMBNAIL_SIZE.default};
 
@@ -139,6 +140,7 @@ export const App = styled.div`
 `;
 
 export const AppImage = styled.img`
+  border-radius: ${THUMBNAIL_BORDER_RADIUS};
   height: 100%;
   object-fit: cover;
   width: 100%;
