@@ -1,3 +1,25 @@
 import styled from 'styled-components';
 
-export const Toast = styled.div``;
+export const Toast = styled.div`
+  display: flex;
+  padding: 12px;
+
+  &--success {
+    background: var(--color-tertiary);
+  }
+
+  &--warning {
+    background: var(--color-alert);
+  }
+
+  &__icon {
+    color: var(--color-white);
+    margin-right: 12px;
+  }
+
+  &__text {
+    align-items: center;
+    color: var(--color-white);
+    display: flex;
+  }
+`;
