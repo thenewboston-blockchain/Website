@@ -16,6 +16,7 @@
     "react": "^17.0.1",
     "react-cool-onclickoutside": "^1.5.5",
     "react-copy-to-clipboard": "^5.0.2",
+    "react-countup": "^6.0.0",
     "react-dom": "^17.0.1",
     "react-helmet-async": "^1.0.7",
     "react-image": "^4.0.3",
@@ -29,6 +30,7 @@
     "react-syntax-highlighter": "^15.3.0",
     "react-toastify": "^6.0.8",
     "react-tsparticles": "^1.29.2",
+    "react-visibility-sensor": "^5.1.1",
     "recharts": "^2.0.9",
     "yup": "^0.31.0"
   },
