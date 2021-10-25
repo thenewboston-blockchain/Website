@@ -22,10 +22,7 @@ const TableParams: SFC<ComponentProps> = ({className, headers, items}) => {
   const renderBody = (): ReactNode => {
     return (
       <S.TableParams>
-        <tbody
-          className={clsx('TableParams__tbody', {...bemify(className, '__tbody')})}
-          data-testid="TableParams__tbody"
-        >
+        <tbody className={clsx({...bemify(className, '__tbody')})} data-testid="TableParams__tbody">
           {items.map(({dataType, description, param, sampleValue}, index) => (
             <S.Tr
               key={index}
@@ -43,10 +40,7 @@ const TableParams: SFC<ComponentProps> = ({className, headers, items}) => {
                 data-testid="TableParams__td--param"
               >
                 {param}
-                <span
-                  className={clsx('TableParams__data-type', {...bemify(className, '__data-type')})}
-                  data-testid="TableParams__data-type"
-                >
+                <span className={clsx({...bemify(className, '__data-type')})} data-testid="TableParams__data-type">
                   {dataType}
                 </span>
               </S.Td>
@@ -82,25 +76,25 @@ const TableParams: SFC<ComponentProps> = ({className, headers, items}) => {
 
     return (
       <S.TableParams>
-        <thead
+        <S.Thead
           className={clsx('TableParams__thead', {...bemify(className, '__thead')})}
           data-testid="TableParams__thead"
         >
-          <tr className={clsx('TableParams__tr', {...bemify(className, '__tr')})}>
+          <S.Tr className={clsx('TableParams__tr', {...bemify(className, '__tr')})}>
             {headers.map((header, i) => (
-              <th key={i} className={clsx('TableParams__th', {...bemify(className, '__th')})}>
+              <S.Th key={i} className={clsx('TableParams__th', {...bemify(className, '__th')})}>
                 {header}
-              </th>
+              </S.Th>
             ))}
-          </tr>
-        </thead>
+          </S.Tr>
+        </S.Thead>
       </S.TableParams>
     );
   };
 
   return (
-    <div className={clsx('TableParams', className)} data-testid="TableParams">
-      <table className={clsx('TableParams__table', {...bemify(className, '__table')})} data-testid="TableParams__table">
+    <div className={clsx(className)} data-testid="TableParams">
+      <table className={clsx({...bemify(className, '__table')})} data-testid="TableParams__table">
         {renderHeaders()}
         {renderBody()}
       </table>

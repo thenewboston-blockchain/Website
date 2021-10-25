@@ -5,6 +5,7 @@ import {bemify} from '@thenewboston/utils';
 import {SFC} from 'types/generic';
 
 import './Toast.scss';
+import * as S from './Styles';
 
 export type ToastType = 'success' | 'warning';
 
@@ -23,7 +24,7 @@ const Toast: SFC<ComponentProps> = ({children, className, type = 'warning'}) => 
   }, [type]);
 
   return (
-    <div
+    <S.Toast
       className={clsx('Toast', className, {
         [`Toast--${type}`]: true,
         ...bemify(className, `--${type}`),
@@ -37,8 +38,8 @@ const Toast: SFC<ComponentProps> = ({children, className, type = 'warning'}) => 
         })}
         icon={iconType}
       />
-      <div className={clsx('Toast__text', {...bemify(className, '__text')})}>{children}</div>
-    </div>
+      <S.Toast className={clsx({...bemify(className, '__text')})}>{children}</S.Toast>
+    </S.Toast>
   );
 };
 
