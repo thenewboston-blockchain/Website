@@ -1,9 +1,9 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import clsx from 'clsx';
-import {Icon, IconType} from '@thenewboston/ui';
+import {IconType} from '@thenewboston/ui';
+
 import {SFC} from 'types/generic';
 
-import './GoToTop.scss';
+import * as S from './Styles';
 
 const GoToTop: SFC = ({className}) => {
   const [show, setShow] = useState<boolean>(false);
@@ -28,13 +28,7 @@ const GoToTop: SFC = ({className}) => {
   return (
     <>
       {show && (
-        <Icon
-          className={clsx('GoToTop', className)}
-          dataTestId="GoToTop"
-          icon={IconType.chevronUp}
-          size={50}
-          onClick={scrollTop}
-        />
+        <S.GoToTop className={className} dataTestId="GoToTop" icon={IconType.chevronUp} size={50} onClick={scrollTop} />
       )}
     </>
   );
