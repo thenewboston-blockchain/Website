@@ -1,13 +1,11 @@
 import React, {FC} from 'react';
 
-import {A} from 'components';
-import {Link} from 'react-router-dom';
-
-import './FooterNavList.scss';
+import * as S from './Styles';
 
 interface NavLink {
   isExternal?: boolean;
-  title: string;
+  newWindow?: boolean;
+  title: React.ReactNode;
   url: string;
 }
 
@@ -18,22 +16,20 @@ export interface FooterNavListProps {
 
 const FooterNavList: FC<FooterNavListProps> = ({header, links}) => {
   return (
-    <ul className="FooterNavList" data-testid="FooterNavList">
-      <li className="FooterNavList__header">{header}</li>
+    <S.Container data-testid="FooterNavList">
+      <S.Header>{header}</S.Header>
       {links.map((link) => (
-        <li className="FooterNavList__item" key={link.title}>
+        <S.Item key={link.url}>
           {link.isExternal ? (
-            <A className="FooterNavList__item-link" href={link.url} newWindow={false}>
+            <S.ExternalLink href={link.url} showNewWindowIcon={false} newWindow={link.newWindow || false}>
               {link.title}
-            </A>
+            </S.ExternalLink>
           ) : (
-            <Link className="FooterNavList__item-link" to={link.url}>
-              {link.title}
-            </Link>
+            <S.InternalLink to={link.url}>{link.title}</S.InternalLink>
           )}
-        </li>
+        </S.Item>
       ))}
-    </ul>
+    </S.Container>
   );
 };
 

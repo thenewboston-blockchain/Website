@@ -32,7 +32,7 @@ const Layout: SFC = ({children}) => {
       </div>
       <div className="Layout__footer-wrapper">
         <GoToTop />
-        <Container className="Layout__Footer">
+        <Container className="Layout__footer footer">
           <Footer />
         </Container>
       </div>

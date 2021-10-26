@@ -1,8 +1,9 @@
 import React from 'react';
-import clsx from 'clsx';
 import {SFC} from 'types/generic';
+import clsx from 'clsx';
+import {bemify} from '@thenewboston/utils';
 
-import './ProgressBar.scss';
+import * as S from './Styles';
 
 type Props = {
   height?: number;
@@ -11,15 +12,15 @@ type Props = {
 
 const ProgressBar: SFC<Props> = ({className, height, percentage}) => {
   return (
-    <div className={clsx(className, 'ProgressBar__bar')} style={{height}}>
-      <div
-        className={clsx('ProgressBar__bar', 'ProgressBar__bar--filled')}
+    <S.ProgressBar className={className} style={{height}}>
+      <S.ProgressFilled
+        className={clsx({...bemify(className, '--filled')})}
         style={{
           height,
           width: `${percentage}%`,
         }}
       />
-    </div>
+    </S.ProgressBar>
   );
 };
 

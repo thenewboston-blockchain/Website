@@ -1,6 +1,5 @@
 import styled, {css} from 'styled-components';
 
-import {Icon} from '@thenewboston/ui';
 import {Carousel as ReactCarousel} from 'react-responsive-carousel';
 
 import colors from 'styles/colors';
@@ -101,36 +100,4 @@ export const Thumbnail = styled.img<{isSelected?: boolean}>`
   &:not(:last-child) {
     margin-right: 16px;
   }
-`;
-
-const Arrow = styled(Icon)`
-  color: ${colors.palette.gray['900']};
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-`;
-
-export const LeftArrow = styled(Arrow)`
-  left: -80px;
-
-  @media (max-width: 768px) {
-    left: -48px;
-  }
-`;
-
-export const RightArrow = styled(Arrow)`
-  right: -80px;
-
-  @media (max-width: 768px) {
-    right: -48px;
-  }
-`;
-
-export const DisabledLeftArrow = styled(LeftArrow)`
-  color: ${colors.palette.gray['300']};
-`;
-
-export const DisabledRightArrow = styled(RightArrow)`
-  color: ${colors.palette.gray['300']};
 `;

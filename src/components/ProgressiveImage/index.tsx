@@ -1,8 +1,7 @@
-import React, {useState} from 'react';
 import clsx from 'clsx';
+import React, {useState} from 'react';
 import {SFC} from 'types/generic';
-
-import './ProgressiveImage.scss';
+import * as S from './Styles';
 
 type Props = {
   alt: string;
@@ -17,6 +16,7 @@ type Props = {
 
 const ProgressiveImage: SFC<Props> = ({
   alt,
+  className,
   containerClassName,
   height,
   placeholderImageClassName,
@@ -26,37 +26,28 @@ const ProgressiveImage: SFC<Props> = ({
   width,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
+
   return (
-    <div className={clsx('ProgressiveImage', containerClassName)} style={{height, width}}>
-      <img
+    <S.ProgressiveImage className={clsx(containerClassName, className)} style={{height, width}}>
+      <S.ProgressiveImagePlaceholder
+        isLoaded={isLoaded}
         alt={alt}
-        className={clsx(
-          'ProgressiveImage-placeholder',
-          {
-            'ProgressiveImage-placeholder--loaded': isLoaded,
-          },
-          placeholderImageClassName,
-        )}
+        className={placeholderImageClassName}
         src={placeholderSrc}
         height={height}
         width={width}
       />
-      <img
+      <S.ProgressiveImageReal
+        isLoaded={isLoaded}
         alt={alt}
-        className={clsx(
-          'ProgressiveImage-real',
-          {
-            'ProgressiveImage-real--loaded': isLoaded,
-          },
-          realImageClassName,
-        )}
+        className={realImageClassName}
         src={realSrc}
         loading="lazy"
         height={height}
         width={width}
         onLoad={() => setIsLoaded(true)}
       />
-    </div>
+    </S.ProgressiveImage>
   );
 };
 

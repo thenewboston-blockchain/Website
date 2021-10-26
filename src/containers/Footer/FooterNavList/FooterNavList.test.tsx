@@ -12,6 +12,7 @@ const TestLinks = [
   },
   {
     isExternal: true,
+    newWindow: true,
     title: 'External TestLink',
     url: '/externalTestLink',
   },
@@ -28,11 +29,6 @@ const WrappedComponent = ({header, links}: FooterNavListProps) => {
 describe('FooterNavList component', () => {
   beforeEach(() => {
     render(<WrappedComponent header={'Test'} links={TestLinks} />);
-  });
-
-  test('renders FooterNavList component and query with className', () => {
-    const footerNavList = screen.getByTestId('FooterNavList');
-    expect(footerNavList.className).toContain('FooterNavList');
   });
 
   test('renders FooterNavList component with Header test', () => {
@@ -53,7 +49,7 @@ describe('FooterNavList component', () => {
 
       expect(link).toBeTruthy();
       expect(link.getAttribute('href')).toEqual(TestLinks[1].url);
-      expect(link.getAttribute('target')).toEqual('_self');
+      expect(link.getAttribute('target')).toEqual('_blank');
     });
   });
 });

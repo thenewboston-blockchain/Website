@@ -1,10 +1,7 @@
 import React, {forwardRef, KeyboardEvent} from 'react';
-import {Link} from 'react-router-dom';
-import {Icon, IconType} from '@thenewboston/ui';
+import {IconType} from '@thenewboston/ui';
 
-import {A} from 'components';
-
-import './TopNavPopoverItem.scss';
+import * as S from './Styles';
 
 interface ComponentProps {
   closePopover(): void;
@@ -13,12 +10,13 @@ interface ComponentProps {
   iconSize?: number;
   iconType: IconType;
   isExternal?: boolean;
+  newWindow?: boolean;
   title: string;
   to: string;
 }
 
 const TopNavPopoverItem = forwardRef<HTMLAnchorElement, ComponentProps>(
-  ({closePopover, description, handleKeyDown, iconSize, iconType, isExternal, title, to}, ref) => {
+  ({closePopover, description, handleKeyDown, iconSize, iconType, isExternal, newWindow = false, title, to}, ref) => {
     const handleButtonClick = (): void => {
       closePopover();
     };
@@ -26,23 +24,23 @@ const TopNavPopoverItem = forwardRef<HTMLAnchorElement, ComponentProps>(
     const renderChildren = () => {
       return (
         <>
-          <Icon className="TopNavPopoverItem__icon" icon={iconType} size={iconSize} totalSize={42} />
-          <div className="TopNavPopoverItem__right">
-            <span className="TopNavPopoverItem__title">{title}</span>
-            <span className="TopNavPopoverItem__description">{description}</span>
+          <S.PopoverIcon icon={iconType} size={iconSize} totalSize={42} />
+          <div>
+            <S.PopoverTitle className="TopNavPopoverItem__title">{title}</S.PopoverTitle>
+            <S.PopoverDescription>{description}</S.PopoverDescription>
           </div>
         </>
       );
     };
 
     return isExternal ? (
-      <A className="TopNavPopoverItem" href={to} newWindow={false}>
+      <S.ExternalLink href={to} newWindow={newWindow}>
         {renderChildren()}
-      </A>
+      </S.ExternalLink>
     ) : (
-      <Link className="TopNavPopoverItem" onClick={handleButtonClick} onKeyDown={handleKeyDown} ref={ref} to={to}>
+      <S.InternalLink onClick={handleButtonClick} onKeyDown={handleKeyDown} ref={ref} to={to}>
         {renderChildren()}
-      </Link>
+      </S.InternalLink>
     );
   },
 );

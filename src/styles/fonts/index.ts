@@ -4,6 +4,11 @@ import * as fontFamily from './fontFamilies';
 import * as fontSize from './fontSizes';
 import * as fontWeight from './fontWeights';
 
+const d0Base = css`
+  ${fontFamily.fontFamilyDefault};
+  ${fontSize.fontSizeD0};
+`;
+
 const d1Base = css`
   ${fontFamily.fontFamilyDefault};
   ${fontSize.fontSizeD1};
@@ -48,6 +53,29 @@ const b3Base = css`
   ${fontFamily.fontFamilyDefault};
   ${fontSize.fontSizeB3};
 `;
+
+export const d0 = {
+  bold: css`
+    ${d0Base};
+    ${fontWeight.fontWeightBold};
+  `,
+  semiBold: css`
+    ${d0Base};
+    ${fontWeight.fontWeightSemiBold};
+  `,
+  medium: css`
+    ${d0Base};
+    ${fontWeight.fontWeightMedium};
+  `,
+  regular: css`
+    ${d0Base};
+    ${fontWeight.fontWeightRegular};
+  `,
+  light: css`
+    ${d0Base};
+    ${fontWeight.fontWeightLight};
+  `,
+};
 
 export const d1 = {
   bold: css`
@@ -115,6 +143,10 @@ export const h2 = {
     ${h2Base};
     ${fontWeight.fontWeightBold};
   `,
+  semiBold: css`
+    ${h2Base};
+    ${fontWeight.fontWeightSemiBold};
+  `,
   medium: css`
     ${h2Base};
     ${fontWeight.fontWeightMedium};
@@ -122,6 +154,10 @@ export const h2 = {
   regular: css`
     ${h2Base};
     ${fontWeight.fontWeightRegular};
+  `,
+  light: css`
+    ${h2Base};
+    ${fontWeight.fontWeightLight};
   `,
 };
 
@@ -156,6 +192,10 @@ export const h4 = {
 };
 
 export const b1 = {
+  medium: css`
+    ${b1Base};
+    ${fontWeight.fontWeightMedium};
+  `,
   regular: css`
     ${b1Base};
     ${fontWeight.fontWeightRegular};

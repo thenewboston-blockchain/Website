@@ -1,8 +1,9 @@
 import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'react';
 import {Link} from 'react-router-dom';
+import {useHistory} from 'react-router';
 
-import {A, Button, CodeSnippet, Container, Loader, PageTitle} from 'components';
-import {URLS} from 'constants/routes';
+import {A, Button, CodeSnippet, Container, EmojiIcon, EmojiType, Loader, PageTitle} from 'components';
+import {ROUTES, URLS} from 'constants/routes';
 import {Release} from 'types/github';
 import {fetchGithubReleases} from 'utils/github';
 import {displayErrorToast} from 'utils/toast';
@@ -20,6 +21,7 @@ enum Os {
 const Download: FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [releases, setReleases] = useState<Release[]>([]);
+  const history = useHistory();
 
   useEffect(() => {
     (async (): Promise<void> => {
@@ -185,6 +187,24 @@ const Download: FC = () => {
         ) : (
           <>
             <div className="Download__main-background">
+              <div className="Download__ticker-container">
+                <div className="Download__ticker-content">
+                  <div className="Download__ticker-left">
+                    <EmojiIcon
+                      color="#ffffff"
+                      emoji={EmojiType.LoudSpeaker}
+                      emojiSize={36}
+                      marginRight={16}
+                      size={36}
+                      transparentBackground
+                    />
+                    Beta Wallet Coming Soon...
+                  </div>
+                  <Button variant="outlined" onClick={() => history.push(ROUTES.roadmap)}>
+                    Learn More
+                  </Button>
+                </div>
+              </div>
               <Container className="Download__main-content">
                 <div className="Download__title">Download Wallet</div>
                 <div className="Download__subtitle">Send and receive coins with our free and secure wallet</div>

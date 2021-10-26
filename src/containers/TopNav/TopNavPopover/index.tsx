@@ -1,20 +1,20 @@
 import React, {FC, KeyboardEvent, ReactNode, useCallback, useEffect, useRef} from 'react';
 import {useHistory} from 'react-router-dom';
-import clsx from 'clsx';
-import {Icon, IconType} from '@thenewboston/ui';
+import {IconType} from '@thenewboston/ui';
 
 import {Popover} from 'components';
 import {useWindowDimensions} from 'hooks';
-
 import TopNavPopoverItem from './TopNavPopoverItem';
 import TopNavPopoverItemSimple from './TopNavPopoverItemSimple';
-import './TopNavPopover.scss';
+
+import * as S from './Styles';
 
 export interface TopNavPopoverItemType {
   description?: string;
   iconSize?: number;
   iconType?: IconType;
   isExternal?: boolean;
+  newWindow?: boolean;
   title: string;
   to: string;
 }
@@ -116,30 +116,29 @@ const TopNavPopover: FC<ComponentProps> = ({
 
   return (
     <>
-      <button className={clsx('TopNavPopover', className)} onClick={handleButtonClick} ref={popoverButtonRef}>
+      <S.PopoverButton
+        isOpened={popoverIsOpen}
+        className={className}
+        onClick={handleButtonClick}
+        ref={popoverButtonRef}
+      >
         {customButtonContent || (
           <>
             {buttonText}
-            <Icon
-              className={clsx('TopNavPopover__chevron-icon', {
-                'TopNavPopover__chevron-icon--open': popoverIsOpen,
-              })}
-              icon={IconType.chevronDown}
-            />
+            <S.PopoverIcon isOpened={popoverIsOpen} icon={IconType.chevronDown} />
           </>
         )}
-      </button>
+      </S.PopoverButton>
       <Popover
         anchorEl={anchorEl}
         anchorOrigin={{horizontal: 'center', vertical: 'bottom'}}
-        className="TopNavPopover__Popover"
         closePopover={unsetAnchorEl}
         id={popoverId}
         open={popoverIsOpen}
         transformOrigin={{horizontal: 'center', vertical: 'top'}}
         transformOffset={{horizontal: 0, vertical: 12}}
       >
-        {items.map(({description, iconSize, iconType, isExternal, title, to}, index) => {
+        {items.map(({description, iconSize, iconType, isExternal, newWindow, title, to}, index) => {
           if (iconType !== undefined) {
             return (
               <TopNavPopoverItem
@@ -150,6 +149,7 @@ const TopNavPopover: FC<ComponentProps> = ({
                 iconType={iconType}
                 isExternal={isExternal}
                 key={title}
+                newWindow={newWindow}
                 ref={(el) => {
                   if (el) {
                     itemsRef.current[index] = el;
@@ -170,6 +170,8 @@ const TopNavPopover: FC<ComponentProps> = ({
                   itemsRef.current[index] = el;
                 }
               }}
+              isExternal={isExternal}
+              newWindow={newWindow}
               title={title}
               to={to}
             />
