@@ -11,13 +11,6 @@ describe('Loader component', () => {
     expect(loader).toBeTruthy();
   });
 
-  test('renders with default className', () => {
-    render(<Loader />);
-    const loader = screen.getByTestId('Loader');
-    expect(loader).toBeTruthy();
-    expect(loader).toHaveClass('Loader');
-  });
-
   test('renders with role Button', () => {
     render(<Loader />);
     const loader = screen.getByRole('img');
