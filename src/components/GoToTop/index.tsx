@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import clsx from 'clsx';
 import {IconType} from '@thenewboston/ui';
+
 import {SFC} from 'types/generic';
 
 import * as S from './Styles';
