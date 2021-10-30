@@ -10,7 +10,6 @@ import Analytics from './Analytics';
 import Assets from './Assets';
 import Bounties from './Bounties';
 import CreateAccount from './CreateAccount';
-import DeploymentGuide from './DeploymentGuide';
 import Donate from './Donate';
 import Download from './Download';
 import Faq, {faqFilters, FaqFilterType} from './Faq';
@@ -84,7 +83,6 @@ const App: FC = () => {
           <Redirect exact path={ROUTES.teams} to={`${ROUTES.teams}/All/Members`} />
           <Route exact path={`${ROUTES.teams}/:team/:tab?/:resource?`} component={Teams} />
           <Route path={`${ROUTES.wallet}/:chapter?`} component={Wallet} />
-          <Route path={`${ROUTES.deploymentGuide}/:chapter?`} component={DeploymentGuide} />
           <Route path={ROUTES.download} component={Download} />
           <Route path={ROUTES.privacyPolicy} component={PrivacyPolicy} />
           <Route path={ROUTES.progress} component={Progress} />

@@ -55,11 +55,6 @@ const DocsMenuItems: SFC = () => {
       <MenuGroup title="Wallet" urlBase="wallet">
         {renderNavLinks(walletNavigationData)}
       </MenuGroup>
-
-      <MenuGroup title="Deployment Guides" urlBase="deployment-guide">
-        <NavLink to={`${ROUTES.deploymentGuide}/bank`}>Bank</NavLink>
-        <NavLink to={`${ROUTES.deploymentGuide}/validator`}>Validator</NavLink>
-      </MenuGroup>
     </>
   );
 };
