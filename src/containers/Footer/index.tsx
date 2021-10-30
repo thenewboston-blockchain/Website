@@ -75,8 +75,20 @@ const navLists = [
       {
         isExternal: true,
         newWindow: false,
+        title: 'Node Deployment',
+        url: URLS.developerPortal.nodeDeployment,
+      },
+      {
+        isExternal: true,
+        newWindow: false,
         title: 'SDKs &  Libraries',
         url: URLS.developerPortal.sdkAndLibraries,
+      },
+      {
+        isExternal: true,
+        newWindow: false,
+        title: 'Utilities',
+        url: URLS.developerPortal.utilities,
       },
     ],
   },
@@ -218,7 +230,7 @@ const navLists = [
     ],
   },
   {
-    header: 'Misc',
+    header: 'Legal',
     links: [
       {
         title: 'Community Guidelines',
