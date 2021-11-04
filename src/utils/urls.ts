@@ -13,3 +13,16 @@ export const getVideoUrl = (videoId: string, source: Source): string => {
   }
   return `https://www.vimeo.com/${videoId}`;
 };
+
+export const appendQueryParamsToUrl = (url: string, paramsObject: Record<string, string | boolean | undefined>) => {
+  const params = Object.entries(paramsObject)
+    .filter(([, value]) => typeof value !== 'undefined') // filter out undefined values
+    .map(([key, value]) => `${key}=${value}`)
+    .join('&');
+
+  if (params.length > 0) {
+    return `${url}?${params}`;
+  }
+
+  return url;
+};
