@@ -7,6 +7,7 @@ type Props = {
   marginRight: number;
   size: number;
   transparentBackground: boolean;
+  zoomOnHover: boolean;
 };
 
 export const Container = styled.div<Props>`
@@ -20,4 +21,18 @@ export const Container = styled.div<Props>`
   margin-bottom: ${(props) => props.marginBottom}px;
   margin-right: ${(props) => props.marginRight}px;
   width: ${(props) => props.size}px;
+
+  ${(props) =>
+    props.zoomOnHover &&
+    `
+    &:hover {
+      ${InnerContainer} {
+        transform: scale(1.1);
+      }
+    }
+  `}
+`;
+
+export const InnerContainer = styled.div`
+  transition: transform 0.2s;
 `;
