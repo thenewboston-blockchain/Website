@@ -40,8 +40,10 @@ export const URLS = {
   developerPortal: {
     api: `${developerPortalUrl}/api`,
     home: developerPortalUrl,
+    nodeDeployment: `${developerPortalUrl}/node-deployment`,
     projects: `${developerPortalUrl}/projects`,
-    sdkAndLibraries: `${developerPortalUrl}/developer-tools`,
+    sdkAndLibraries: `${developerPortalUrl}/sdks-and-libraries`,
+    utilities: `${developerPortalUrl}/utilities`,
     whitepaper: `${developerPortalUrl}/whitepaper`,
   },
   discord: 'https://discord.com/invite/thenewboston',

@@ -33,8 +33,20 @@ export const developerPopoverItems: TopNavPopoverItemType[] = [
   {
     isExternal: true,
     newWindow: false,
+    title: 'Node Deployment',
+    to: URLS.developerPortal.nodeDeployment,
+  },
+  {
+    isExternal: true,
+    newWindow: false,
     title: 'SDKs &  Libraries',
     to: URLS.developerPortal.sdkAndLibraries,
+  },
+  {
+    isExternal: true,
+    newWindow: false,
+    title: 'Utilities',
+    to: URLS.developerPortal.utilities,
   },
 ];
 

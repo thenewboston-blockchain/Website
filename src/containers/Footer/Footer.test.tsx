@@ -37,6 +37,6 @@ describe('Footer component', () => {
     expect(screen.getByText('Developer')).toBeTruthy();
     expect(screen.getByText('Resources')).toBeTruthy();
     expect(screen.getByText('Social')).toBeTruthy();
-    expect(screen.getByText('Misc')).toBeTruthy();
+    expect(screen.getByText('Legal')).toBeTruthy();
   });
 });
