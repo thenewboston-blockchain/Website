@@ -42,7 +42,7 @@ export const URLS = {
     home: developerPortalUrl,
     nodeDeployment: `${developerPortalUrl}/node-deployment`,
     projects: `${developerPortalUrl}/projects`,
-    sdkAndLibraries: `${developerPortalUrl}/developer-tools`,
+    sdkAndLibraries: `${developerPortalUrl}/sdks-and-libraries`,
     utilities: `${developerPortalUrl}/utilities`,
     whitepaper: `${developerPortalUrl}/whitepaper`,
   },
