@@ -41,6 +41,7 @@ type Props = {
   transparentBackground?: boolean;
   marginBottom?: number;
   marginRight?: number;
+  zoomOnHover?: boolean;
 };
 
 const getEmojiIcon = (emojiType: EmojiType, emojiSize: number) => {
@@ -82,6 +83,7 @@ const EmojiIcon: SFC<Props> = ({
   marginRight = 0,
   size = 72,
   transparentBackground = false,
+  zoomOnHover = false,
 }) => {
   return (
     <S.Container
@@ -92,8 +94,9 @@ const EmojiIcon: SFC<Props> = ({
       marginRight={marginRight}
       size={size}
       transparentBackground={transparentBackground}
+      zoomOnHover={zoomOnHover}
     >
-      {getEmojiIcon(emoji, emojiSize)}
+      <S.InnerContainer>{getEmojiIcon(emoji, emojiSize)}</S.InnerContainer>
     </S.Container>
   );
 };

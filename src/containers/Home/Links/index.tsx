@@ -79,6 +79,7 @@ const Links = () => {
             size={getEmojiContainerSize()}
             emojiSize={getEmojiSize()}
             color={item.emojiBgColor}
+            zoomOnHover
           />
           <S.ItemTitle>{item.title}</S.ItemTitle>
           <S.ItemDescription>{item.description}</S.ItemDescription>
