@@ -13,3 +13,14 @@ export const getVideoUrl = (videoId: string, source: Source): string => {
   }
   return `https://www.vimeo.com/${videoId}`;
 };
+
+/**
+ * Currently, the images provided from BE are generated with the presigned url for S3,
+ * which expires after 7 days.
+ * We currently have this workaround to remove the query params from the image src
+ * Note that we will need to solve the root cause from the BE and remove this
+ * @param src : image URL provided from BE api
+ */
+export const getSrcWithoutParams = (src: string) => {
+  return src.substring(0, src.indexOf('?')); // removes all query params from src
+};

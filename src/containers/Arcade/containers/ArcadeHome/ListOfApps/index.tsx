@@ -5,6 +5,7 @@ import {getApps} from 'apis/arcade';
 import {ApiProgress} from 'constants/api-progress';
 import {useWindowDimensions} from 'hooks';
 import {App} from 'types/arcade';
+import {getSrcWithoutParams} from 'utils/urls';
 
 import AppCard from '../../../components/AppCard';
 
@@ -34,7 +35,11 @@ const ListOfApps: FC = () => {
       try {
         setProgress(ApiProgress.Requesting);
         const appResponse = await getApps();
-        setApps(appResponse);
+        setApps(
+          appResponse.map((app) => {
+            return {...app, logo: getSrcWithoutParams(app.logo)};
+          }),
+        );
         setProgress(ApiProgress.Success);
       } catch (err) {
         setProgress(ApiProgress.Error);

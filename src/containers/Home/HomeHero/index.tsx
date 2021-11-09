@@ -6,6 +6,7 @@ import {Button, Loader} from 'components';
 import {ROUTES, URLS} from 'constants/routes';
 import {ApiProgress} from 'constants/api-progress';
 import {useWindowDimensions} from 'hooks';
+import {getSrcWithoutParams} from 'utils/urls';
 
 import DefaultLogoSrc from 'assets/images/logo.png';
 
@@ -44,7 +45,11 @@ const HomeHero: FC = () => {
       (async () => {
         setProgress(ApiProgress.Requesting);
         const appResponse = await getApps(APP_COUNT_MAX);
-        const appList = appResponse.map((app) => ({name: app.name, pk: app.pk, thumbnail: app.logo || DefaultLogoSrc}));
+        const appList = appResponse.map((app) => ({
+          name: app.name,
+          pk: app.pk,
+          thumbnail: getSrcWithoutParams(app.logo) || DefaultLogoSrc,
+        }));
         setApps(appList);
         setProgress(ApiProgress.Success);
       })();
