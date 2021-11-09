@@ -102,7 +102,7 @@ const TopNavDesktopItems = () => {
           Download Wallet
         </S.DownloadButton>
         <S.AppButton
-          onClick={() => history.push(ROUTES.arcade)}
+          onClick={() => history.push(ROUTES.apps)}
           onMouseEnter={() => setIsAppsButtonHovered(true)}
           onMouseLeave={() => setIsAppsButtonHovered(false)}
         >

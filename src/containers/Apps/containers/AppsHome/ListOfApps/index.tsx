@@ -1,10 +1,10 @@
 import React, {FC, useEffect, useState} from 'react';
 
 import DefaultLogoSrc from 'assets/images/logo.png';
-import {getApps} from 'apis/arcade';
+import {getApps} from 'apis/apps';
 import {ApiProgress} from 'constants/api-progress';
 import {useWindowDimensions} from 'hooks';
-import {App} from 'types/arcade';
+import {App} from 'types/apps';
 
 import AppCard from '../../../components/AppCard';
 

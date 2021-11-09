@@ -1,14 +1,16 @@
-import React, {FC} from 'react';
-
-import {Icon, IconType} from '@thenewboston/ui';
+import React, {FC, useState} from 'react';
 
 import {EmojiType} from 'components';
+import {URLS} from 'constants/routes';
 import {useWindowDimensions} from 'hooks';
+import colors from 'styles/colors';
 import {EMOJI_POSITION_CONFIG, EMOJI_SIZE_CONFIG} from './config';
+import DiscordLogo from '../../../../../assets/svgs/DiscordLogo';
 import * as S from './Styles';
 
-const ArcadeHero: FC = () => {
+const AppsHero: FC = () => {
   const {width} = useWindowDimensions();
+  const [isDiscordButtonHovered, setIsDiscordButtonHovered] = useState(false);
   let sizeConfig = EMOJI_SIZE_CONFIG.Infinity;
   let positionConfig = EMOJI_POSITION_CONFIG.Infinity;
 
@@ -34,17 +36,22 @@ const ArcadeHero: FC = () => {
   return (
     <S.Background>
       <S.Container>
-        <S.Title>Welcome to the Arcade</S.Title>
+        <S.Title>Explore our apps</S.Title>
         <S.SubTitle>
           Join thousands of other players and explore games and a variety of applications built by our community to earn
           or spend your TNBC.
         </S.SubTitle>
-        <S.Button
-          onClick={() => window.open('https://discord.gg/thenewboston', '_blank', 'noreferrer noopener')}
-          variant="outlined"
+        <S.DiscordButton
+          onClick={() => window.open(URLS.discord, '_blank', 'noreferrer noopener')}
+          onMouseEnter={() => setIsDiscordButtonHovered(true)}
+          onMouseLeave={() => setIsDiscordButtonHovered(false)}
         >
-          <Icon color="#1a2936" icon={IconType.discord} /> Join Discord
-        </S.Button>
+          <DiscordLogo
+            color={isDiscordButtonHovered ? colors.discordHover : colors.discord}
+            style={{marginRight: '8px'}}
+          />
+          Discord
+        </S.DiscordButton>
       </S.Container>
 
       {/* Left Emoji Icons */}
@@ -60,4 +67,4 @@ const ArcadeHero: FC = () => {
   );
 };
 
-export default ArcadeHero;
+export default AppsHero;

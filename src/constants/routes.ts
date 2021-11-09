@@ -4,7 +4,7 @@ import {EMAIL} from './contact';
 export const ROUTES = {
   aboutUs: '/about-us',
   analytics: '/analytics',
-  arcade: '/arcade',
+  apps: '/apps',
   assets: '/assets',
   bounties: '/bounties',
   createAccount: '/create-account',

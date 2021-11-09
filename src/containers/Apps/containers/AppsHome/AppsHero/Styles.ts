@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import {Button as SharedButton, Container as SharedContainer, EmojiIcon as SharedEmojiIcon} from 'components';
 import colors from 'styles/colors';
 import {d2, h3} from 'styles/fonts';
+import {fontWeightBold} from 'styles/fonts/fontWeights';
 import zIndex from 'styles/zIndex';
 
 export const Background = styled.div`
@@ -60,7 +61,7 @@ export const Button = styled(SharedButton)`
   background-color: ${colors.white};
   display: flex;
   width: fit-content;
-  z-index: ${zIndex.arcadeHeroButton};
+  z-index: ${zIndex.appsHeroButton};
 `;
 
 type PositionProps = {
@@ -76,4 +77,21 @@ export const EmojiIcon = styled(SharedEmojiIcon)<PositionProps>`
   left: ${(props) => `${props.left}px` || 'unset'};
   right: ${(props) => `${props.right}px` || 'unset'};
   position: absolute;
+`;
+
+export const DiscordButton = styled.button`
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  color: ${colors.discord};
+  cursor: pointer;
+  display: flex;
+  margin-right: 16px;
+  min-width: 100px;
+  outline: none;
+
+  &:hover {
+    color: ${colors.discordHover};
+    ${fontWeightBold};
+  }
 `;

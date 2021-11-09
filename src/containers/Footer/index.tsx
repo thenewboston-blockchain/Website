@@ -32,12 +32,12 @@ const navLists = [
       },
       {
         isExternal: true,
-        title: 'Create App',
+        title: 'Create Projects',
         url: URLS.developerPortal.projects,
       },
       {
-        title: 'Play Games',
-        url: ROUTES.arcade,
+        title: 'Apps',
+        url: ROUTES.apps,
       },
     ],
   },

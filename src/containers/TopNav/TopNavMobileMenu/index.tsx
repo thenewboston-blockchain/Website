@@ -49,7 +49,7 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, toggleMenu})
               {renderMobileLink('Career', ROUTES.openings)}
               {renderMobileLink('Faucet', URLS.apps.faucet, true, true)}
               {renderMobileLink('Create Projects', URLS.developerPortal.projects, true, false)}
-              {renderMobileLink('Play Projects', ROUTES.arcade)}
+              {renderMobileLink('Apps', ROUTES.apps)}
             </>,
           )}
           {renderColumn(
@@ -88,7 +88,7 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, toggleMenu})
             <S.DownloadButton onClick={() => history.push(ROUTES.download)} variant="outlined">
               Download Wallet
             </S.DownloadButton>
-            <S.AppButton onClick={() => history.push(ROUTES.arcade)}>
+            <S.AppButton onClick={() => history.push(ROUTES.apps)}>
               <TnbLogo style={{marginRight: '8px'}} />
               Apps
             </S.AppButton>
