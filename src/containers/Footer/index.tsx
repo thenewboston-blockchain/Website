@@ -110,10 +110,6 @@ const navLists = [
         url: URLS.blog,
       },
       {
-        title: 'Analytics',
-        url: ROUTES.analytics,
-      },
-      {
         title: 'Media Kit',
         url: ROUTES.assets,
       },

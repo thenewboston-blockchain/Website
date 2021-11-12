@@ -93,10 +93,6 @@ export const resourcesPopoverItems: TopNavPopoverItemType[] = [
     to: URLS.blog,
   },
   {
-    title: 'Analytics',
-    to: ROUTES.analytics,
-  },
-  {
     title: 'Media Kit',
     to: ROUTES.assets,
   },

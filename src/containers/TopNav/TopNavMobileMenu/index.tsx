@@ -73,7 +73,6 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, toggleMenu})
               {renderMobileLink('Roadmap', ROUTES.roadmap)}
               {renderMobileLink('FAQ', ROUTES.faq)}
               {renderMobileLink('Blog', URLS.blog, true)}
-              {renderMobileLink('Analytics', ROUTES.analytics)}
               {renderMobileLink('Media Kit', ROUTES.assets)}
               {renderMobileLink('Meet the team', ROUTES.teams)}
               {renderMobileLink('About Us', ROUTES.aboutUs)}

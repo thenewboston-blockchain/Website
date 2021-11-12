@@ -6,7 +6,6 @@ import {ROUTES} from 'constants/routes';
 import withSuspense from 'hoc/withSuspense';
 
 import AboutUs from './AboutUs';
-import Analytics from './Analytics';
 import Assets from './Assets';
 import Bounties from './Bounties';
 import CreateAccount from './CreateAccount';
@@ -67,7 +66,6 @@ const App: FC = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path={ROUTES.aboutUs} component={AboutUs} />
-          <Route exact path={`${ROUTES.analytics}/:type?`} component={Analytics} />
           <Route exact path={`${ROUTES.arcade}/:appId?`} component={withSuspense(Arcade)} />
           <Route exact path={ROUTES.guidelines} component={Guidelines} />
           <Route exact path={ROUTES.createAccount} render={() => <CreateAccount disabled />} />
