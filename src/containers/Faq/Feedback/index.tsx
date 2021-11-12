@@ -14,9 +14,22 @@ const initialValues = {
 };
 
 const validationSchema = yup.object().shape({
-  email: yup.string().email('Please enter a valid email format').required('This field is required'),
-  message: yup.string().required('This field is required'),
-  name: yup.string().required('This field is required'),
+  email: yup
+    .string()
+    .trim()
+    .email('Please enter a valid email format')
+    .required('This field is required')
+    .max(255, 'Please enter email with less than 255 characters'),
+  message: yup
+    .string()
+    .trim()
+    .required('This field is required')
+    .max(1024, 'Please enter message with less than 1024 characters'),
+  name: yup
+    .string()
+    .trim()
+    .required('This field is required')
+    .max(255, 'Please enter name with less than 255 characters'),
 });
 
 type FormValues = typeof initialValues;
