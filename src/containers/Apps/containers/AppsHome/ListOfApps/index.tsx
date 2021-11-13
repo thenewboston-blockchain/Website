@@ -3,9 +3,11 @@ import React, {FC, useEffect, useState} from 'react';
 import DefaultLogoSrc from 'assets/images/logo.png';
 import {getApps} from 'apis/apps';
 import {ApiProgress} from 'constants/api-progress';
+import * as breakpoints from 'constants/breakpoints';
 import {useWindowDimensions} from 'hooks';
 import {App} from 'types/apps';
 
+import {THUMBNAIL_WIDTH_MAPPING} from './constants';
 import AppCard from '../../../components/AppCard';
 
 import * as S from './Styles';
@@ -17,16 +19,19 @@ const ListOfApps: FC = () => {
   const {width} = useWindowDimensions();
 
   const thumbnailSize = React.useMemo(() => {
-    if (width >= 992) {
-      return 280;
+    if (width >= breakpoints.EXTRA_LARGE_DEVICE_WIDTH) {
+      return THUMBNAIL_WIDTH_MAPPING[breakpoints.EXTRA_LARGE_DEVICE_WIDTH];
     }
-    if (width >= 768) {
-      return 208;
+    if (width >= breakpoints.LARGE_DEVICE_WIDTH) {
+      return THUMBNAIL_WIDTH_MAPPING[breakpoints.LARGE_DEVICE_WIDTH];
     }
-    if (width >= 414) {
-      return 360;
+    if (width >= breakpoints.MEDIUM_DEVICE_WIDTH) {
+      return THUMBNAIL_WIDTH_MAPPING[breakpoints.MEDIUM_DEVICE_WIDTH];
     }
-    return 280;
+    if (width >= breakpoints.SMALL_DEVICE_WIDTH) {
+      return THUMBNAIL_WIDTH_MAPPING[breakpoints.SMALL_DEVICE_WIDTH];
+    }
+    return THUMBNAIL_WIDTH_MAPPING.default;
   }, [width]);
 
   useEffect(() => {
