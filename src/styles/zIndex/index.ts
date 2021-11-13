@@ -14,7 +14,7 @@ const zIndex = {
   topNavMobileButton: 4,
   slideupRoot: 150,
   popoverRoot: 200,
-  arcadeHeroButton: 1,
+  appsHeroButton: 1,
 };
 
 export default zIndex;

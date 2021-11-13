@@ -8,6 +8,7 @@ type ThumbnailsProps = {
 };
 
 export const Container = styled.div`
+  border-radius: 12px;
   cursor: pointer;
   position: relative;
   transition: transform 0.2s;
@@ -18,6 +19,7 @@ export const Container = styled.div`
 `;
 
 export const Thumbnail = styled.img<ThumbnailsProps>`
+  border-radius: 12px;
   height: ${(props) => props.size}px;
   object-fit: cover;
   width: ${(props) => props.size}px;

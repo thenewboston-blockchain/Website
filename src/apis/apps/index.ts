@@ -1,6 +1,6 @@
 import axios from 'axios';
 import {PaginatedResponse} from 'types/api';
-import {App} from 'types/arcade';
+import {App} from 'types/apps';
 import {standardHeaders} from 'utils/requests';
 
 export async function getApps(limit?: number, offset?: number): Promise<App[]> {
