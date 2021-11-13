@@ -99,6 +99,7 @@ const LearnToDevelop = () => {
           sliderRef.current = ref!;
         }}
         paddingHorizontal={paddingHorizontal}
+        height={sliderItemHeight}
       >
         {isNotSmallScreen && currentSlide !== 1 && (
           <S.SliderControl position="left" height={sliderItemHeight}>

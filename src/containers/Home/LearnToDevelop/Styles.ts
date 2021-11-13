@@ -7,6 +7,7 @@ import {h2, h3} from 'styles/fonts';
 const sliderControlOffset = 16;
 
 type SliderProps = {
+  height: number;
   paddingHorizontal: number;
 };
 
@@ -64,7 +65,9 @@ export const Link = styled(RouterLink)`
 `;
 
 export const Slider = styled.div<SliderProps>`
+  box-sizing: content-box;
   display: flex;
+  height: ${({height}) => height}px;
   overflow: hidden;
   padding: 16px ${({paddingHorizontal}) => paddingHorizontal}px;
 
