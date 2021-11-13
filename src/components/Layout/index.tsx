@@ -1,11 +1,11 @@
 import React, {useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 
-import {Container, GoToTop} from 'components';
+import {GoToTop} from 'components';
 import Footer from 'containers/Footer';
-import TopNav from 'containers/TopNav';
 import {SFC} from 'types/generic';
-import './Layout.scss';
+
+import * as S from './Styles';
 
 const Layout: SFC = ({children}) => {
   const {hash, pathname} = useLocation();
@@ -23,20 +23,18 @@ const Layout: SFC = ({children}) => {
   }, [hash, pathname]);
 
   return (
-    <div className="Layout" data-testid="Layout">
-      <div className="Layout__top-nav-wrapper">
-        <TopNav className="Layout__TopNav" />
-      </div>
-      <div className="Layout__content" data-testid="Layout__content">
-        {children}
-      </div>
-      <div className="Layout__footer-wrapper">
+    <S.Layout data-testid="Layout">
+      <S.LayoutTopNavWrapper>
+        <S.LayoutTopNav />
+      </S.LayoutTopNavWrapper>
+      <S.LayoutContent data-testid="Layout__content">{children}</S.LayoutContent>
+      <S.LayoutFooterWrapper>
         <GoToTop />
-        <Container className="Layout__footer footer">
+        <S.LayoutFooter>
           <Footer />
-        </Container>
-      </div>
-    </div>
+        </S.LayoutFooter>
+      </S.LayoutFooterWrapper>
+    </S.Layout>
   );
 };
 

@@ -32,10 +32,10 @@ describe('Dashboard Component', () => {
     await waitFor(() => expect(document.title).toEqual(`${baseProps.sectionName} | thenewboston`));
   });
 
-  test('expect to have breadcrumb menu rendered from dashboard', () => {
+  test('expect to have breadcrumb menu hidden', () => {
     render(<DashboardLayout {...baseProps} />, {wrapper: Wrapper});
 
-    expect(screen.getByTestId('BreadcrumbMenu')).toHaveClass('DashboardLayout__BreadcrumbMenu');
+    expect(screen.getByTestId('BreadcrumbMenu')).toHaveStyle('display: none;');
   });
 
   test('expect to have proper pageName passed in', () => {
