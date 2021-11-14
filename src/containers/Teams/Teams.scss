@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: 240px auto;
   height: 100%;
+  min-height: 50vh;
   overflow: hidden;
 
   &__back-container {

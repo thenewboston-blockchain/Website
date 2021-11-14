@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import {useHistory} from 'react-router';
 
+import {ROUTES} from 'constants/routes';
 import * as S from './Styles';
 
 type Props = {
@@ -15,7 +16,7 @@ const AppCard: FC<Props> = ({thumbnailUrl, id, title, category, thumbnailSize = 
   const history = useHistory();
 
   const handleClickCard = (): void => {
-    history.push(`/arcade/${id}`);
+    history.push(`${ROUTES.apps}/${id}`);
   };
 
   return (

@@ -28,7 +28,7 @@ import Wallet from './Wallet';
 /**
  * Lazy load pages that may contribute a lot to the bundle sizes
  */
-const Arcade = lazy(() => import('./Arcade'));
+const Apps = lazy(() => import('./Apps'));
 const Roadmap = lazy(() => import('./Roadmap'));
 const Tutorials = lazy(() => import('./Tutorials'));
 
@@ -66,7 +66,7 @@ const App: FC = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path={ROUTES.aboutUs} component={AboutUs} />
-          <Route exact path={`${ROUTES.arcade}/:appId?`} component={withSuspense(Arcade)} />
+          <Route exact path={`${ROUTES.apps}/:appId?`} component={withSuspense(Apps)} />
           <Route exact path={ROUTES.guidelines} component={Guidelines} />
           <Route exact path={ROUTES.createAccount} render={() => <CreateAccount disabled />} />
           <Route exact path={ROUTES.donate} component={Donate} />

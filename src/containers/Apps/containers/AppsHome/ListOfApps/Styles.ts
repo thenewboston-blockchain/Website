@@ -5,6 +5,9 @@ import {h1} from 'styles/fonts';
 
 import {Loader as SharedLoader, Container as SharedContainer} from 'components';
 
+import * as breakpoints from 'constants/breakpoints';
+import {THUMBNAIL_WIDTH_MAPPING} from './constants';
+
 export const Wrapper = styled.div`
   background: ${colors.palette.neutral['075']};
 `;
@@ -30,19 +33,19 @@ export const Container = styled(SharedContainer)`
 export const Grid = styled.div`
   column-gap: 24px;
   display: grid;
-  grid-template-columns: repeat(4, 280px);
+  grid-template-columns: repeat(6, ${THUMBNAIL_WIDTH_MAPPING[breakpoints.EXTRA_LARGE_DEVICE_WIDTH]}px);
   row-gap: 40px;
 
   @media (max-width: 1366px) {
-    grid-template-columns: repeat(3, 280px);
+    grid-template-columns: repeat(4, ${THUMBNAIL_WIDTH_MAPPING[breakpoints.LARGE_DEVICE_WIDTH]}px);
   }
 
   @media (max-width: 992px) {
-    grid-template-columns: repeat(3, 208px);
+    grid-template-columns: repeat(3, ${THUMBNAIL_WIDTH_MAPPING[breakpoints.MEDIUM_DEVICE_WIDTH]}px);
   }
 
   @media (max-width: 768px) {
-    grid-template-columns: 360px;
+    grid-template-columns: repeat(2, ${THUMBNAIL_WIDTH_MAPPING[breakpoints.SMALL_DEVICE_WIDTH]}px);
     row-gap: 48px;
   }
 

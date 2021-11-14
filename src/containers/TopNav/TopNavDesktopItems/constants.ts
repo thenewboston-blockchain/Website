@@ -72,8 +72,8 @@ export const getTNBCPopoverItems: TopNavPopoverItemType[] = [
     to: URLS.developerPortal.projects,
   },
   {
-    title: 'Play Games',
-    to: ROUTES.arcade,
+    title: 'Apps',
+    to: ROUTES.apps,
   },
 ];
 

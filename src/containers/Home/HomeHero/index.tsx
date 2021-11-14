@@ -1,7 +1,7 @@
 import React, {FC, ReactElement} from 'react';
 import {useHistory} from 'react-router-dom';
 
-import {getApps} from 'apis/arcade';
+import {getApps} from 'apis/apps';
 import {Button, Loader} from 'components';
 import {ROUTES, URLS} from 'constants/routes';
 import {ApiProgress} from 'constants/api-progress';
@@ -66,7 +66,7 @@ const HomeHero: FC = () => {
     return (
       <S.Showcase>
         {apps.slice(0, numberOfAppsToDisplay).map((app) => (
-          <S.App key={app.pk} role="button" tabIndex={0} onClick={() => history.push(`${ROUTES.arcade}/${app.pk}`)}>
+          <S.App key={app.pk} role="button" tabIndex={0} onClick={() => history.push(`${ROUTES.apps}/${app.pk}`)}>
             <S.AppImage src={app.thumbnail} alt={app.name} />
           </S.App>
         ))}

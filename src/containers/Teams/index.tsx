@@ -243,7 +243,7 @@ const Teams: FC = () => {
     }
   }, [renderResources, renderTeamMembers, tabParam, teamFilter, teams]);
 
-  const isReadyToDisplay = apiState.progress === APIProgress.SUCCESS && teamFilter && filteredMembers.length;
+  const isReadyToDisplay = apiState.progress === APIProgress.SUCCESS && teamFilter;
 
   if (apiState.progress === APIProgress.ERR) {
     return (
@@ -255,7 +255,7 @@ const Teams: FC = () => {
   }
 
   return (
-    <>
+    <Container className="Teams">
       <PageTitle
         ogDescription={teamFilter === 'All' ? 'All Teams' : `${teamFilter} Team`}
         title={teamFilter === 'All' ? 'All Teams' : `${teamFilter} Team`}
@@ -265,7 +265,7 @@ const Teams: FC = () => {
           <Loader />
         </div>
       ) : (
-        <Container className="Teams">
+        <>
           <BreadcrumbMenu
             className="Teams__BreadcrumbMenu"
             menuItems={renderTeamFilter()}
@@ -286,9 +286,9 @@ const Teams: FC = () => {
               </>
             )}
           </section>
-        </Container>
+        </>
       )}
-    </>
+    </Container>
   );
 };
 
