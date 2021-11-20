@@ -58,7 +58,7 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, toggleMenu})
             <>
               {renderMobileLink('Home', URLS.developerPortal.home, true, false)}
               {renderMobileLink('Living Whitepaper', URLS.developerPortal.whitepaper, true, false)}
-              {renderMobileLink('Tutorials', ROUTES.tutorials)}
+              {renderMobileLink('Tutorials', URLS.developerPortal.tutorials, true, false)}
               {renderMobileLink('Projects', URLS.developerPortal.projects, true, false)}
               {renderMobileLink('APIs', URLS.developerPortal.api, true, false)}
               {renderMobileLink('Node Deployment', URLS.developerPortal.nodeDeployment, true, false)}

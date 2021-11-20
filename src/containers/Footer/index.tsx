@@ -57,8 +57,10 @@ const navLists = [
         url: URLS.developerPortal.whitepaper,
       },
       {
+        isExternal: true,
+        newWindow: false,
         title: 'Tutorials',
-        url: ROUTES.tutorials,
+        url: URLS.developerPortal.tutorials,
       },
       {
         isExternal: true,
