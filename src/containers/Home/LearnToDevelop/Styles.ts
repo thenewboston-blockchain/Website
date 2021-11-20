@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Link as RouterLink} from 'react-router-dom';
+import {A} from 'components';
 
 import colors from 'styles/colors';
 import {h2, h3} from 'styles/fonts';
@@ -58,7 +58,7 @@ export const Paragraph = styled.h2`
   }
 `;
 
-export const Link = styled(RouterLink)`
+export const Link = styled(A)`
   ${h3.medium}
   color: ${colors.quaternary};
 `;

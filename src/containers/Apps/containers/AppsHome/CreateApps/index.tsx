@@ -1,15 +1,14 @@
 import React from 'react';
-import {useHistory} from 'react-router';
 
-import {ROUTES} from 'constants/routes';
+import {URLS} from 'constants/routes';
 import {Button} from 'components';
 
 import * as S from './Styles';
 
 const CreateApps = () => {
-  const history = useHistory();
-
-  const handleClick = () => history.push(ROUTES.tutorials);
+  const handleClick = () => {
+    window.location.href = URLS.developerPortal.tutorials;
+  };
 
   return (
     <S.Wrapper>

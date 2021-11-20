@@ -15,8 +15,10 @@ export const developerPopoverItems: TopNavPopoverItemType[] = [
     to: URLS.developerPortal.whitepaper,
   },
   {
+    isExternal: true,
+    newWindow: false,
     title: 'Tutorials',
-    to: ROUTES.tutorials,
+    to: URLS.developerPortal.tutorials,
   },
   {
     isExternal: true,

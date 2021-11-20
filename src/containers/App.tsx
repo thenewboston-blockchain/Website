@@ -30,7 +30,6 @@ import Wallet from './Wallet';
  */
 const Apps = lazy(() => import('./Apps'));
 const Roadmap = lazy(() => import('./Roadmap'));
-const Tutorials = lazy(() => import('./Tutorials'));
 
 interface GoogleAnalyticsWindow extends Window {
   ga: any;
@@ -87,8 +86,6 @@ const App: FC = () => {
           <Route path={ROUTES.roadmap} component={withSuspense(Roadmap)} />
           <Route exact path={ROUTES.signin} component={SignIn} />
           <Route exact path={ROUTES.signout} component={SignOut} />
-          <Redirect exact path={ROUTES.tutorials} to={`${ROUTES.tutorials}/All`} />
-          <Route exact path={`${ROUTES.tutorials}/:category/:playlistId?`} component={withSuspense(Tutorials)} />
           <Route exact path={ROUTES.termsOfUse} component={TermsOfUse} />
           <Route path={`${ROUTES.users}/:userId`} component={Profile} />
           <Redirect to="/" />

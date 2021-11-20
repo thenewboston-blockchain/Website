@@ -86,7 +86,13 @@ const HomeHero: FC = () => {
         community developing on our open source blockchain network.
       </S.Paragraph>
       <S.Actions>
-        <Button variant="contained" color="quaternary" onClick={() => history.push(ROUTES.tutorials)}>
+        <Button
+          variant="contained"
+          color="quaternary"
+          onClick={() => {
+            window.location.href = URLS.developerPortal.tutorials;
+          }}
+        >
           Watch Tutorials
         </Button>
         <Button variant="outlined" onClick={navigateToProjects}>
