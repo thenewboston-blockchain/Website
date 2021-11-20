@@ -1,7 +1,6 @@
 import React from 'react';
-import {useHistory} from 'react-router';
 
-import {ROUTES} from 'constants/routes';
+import {URLS} from 'constants/routes';
 import {useWindowDimensions} from 'hooks';
 import breakpoints from 'styles/breakpoints';
 
@@ -90,7 +89,6 @@ const SLIDER_ITEM_MARGIN_RIGHT = 16;
 const TOTAL_ITEMS = 11; // Note: remember to update this value when more items are needed to be displayed
 
 const LearnToDevelop = () => {
-  const history = useHistory();
   const {width} = useWindowDimensions();
 
   const sliderRef = React.useRef<HTMLDivElement>();
@@ -159,7 +157,9 @@ const LearnToDevelop = () => {
             title={item.title}
             role="button"
             tabIndex={0}
-            onClick={() => history.push(`${ROUTES.tutorials}/All/${item.pk}`)}
+            onClick={() => {
+              window.location.href = `${URLS.developerPortal.tutorials}/All/${item.pk}`;
+            }}
             marginRight={SLIDER_ITEM_MARGIN_RIGHT}
             width={sliderItemWidth}
             height={sliderItemHeight}
@@ -186,7 +186,9 @@ const LearnToDevelop = () => {
         <S.Heading>Learn to Develop Apps</S.Heading>
         <S.Paragraph>
           Watch free coding tutorials created by thenewboston YouTube channel to help you develop apps in any language.{' '}
-          <S.Link to={ROUTES.tutorials}>View All</S.Link>
+          <S.Link href={URLS.developerPortal.tutorials} newWindow={false} showNewWindowIcon={false}>
+            View All
+          </S.Link>
         </S.Paragraph>
       </S.Content>
       {renderSlider()}

@@ -23,7 +23,6 @@ export const ROUTES = {
   styleGuide: '/style-guide',
   teams: '/teams',
   termsOfUse: '/terms-of-use',
-  tutorials: '/tutorials',
   users: '/users',
   wallet: '/wallet',
 };
@@ -43,6 +42,7 @@ export const URLS = {
     nodeDeployment: `${developerPortalUrl}/node-deployment`,
     projects: `${developerPortalUrl}/projects`,
     sdkAndLibraries: `${developerPortalUrl}/sdks-and-libraries`,
+    tutorials: `${developerPortalUrl}/tutorials`,
     utilities: `${developerPortalUrl}/utilities`,
     whitepaper: `${developerPortalUrl}/whitepaper`,
   },
