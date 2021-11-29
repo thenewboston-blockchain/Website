@@ -71,7 +71,7 @@ const HomeSpeed: FC = () => {
                   useEasing
                 />
               </S.StatisticNumber>
-              <S.StatisticDescription>millisecond block time</S.StatisticDescription>
+              <S.StatisticDescription>second block time</S.StatisticDescription>
             </S.StatisticSection>
             <S.StatisticDivider type={width > 992 ? 'vertical' : 'horizontal'} />
             <S.StatisticSection>
