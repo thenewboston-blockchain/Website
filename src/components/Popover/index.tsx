@@ -1,13 +1,12 @@
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 import {useLocation} from 'react-router-dom';
-import clsx from 'clsx';
 import throttle from 'lodash/throttle';
-import {bemify} from '@thenewboston/utils';
 
 import {useEventListener, useWindowDimensions} from 'hooks';
 import {SFC} from 'types/generic';
-import './Popover.scss';
+
+import * as S from './Styles';
 
 interface DomRect {
   height: number;
@@ -35,7 +34,6 @@ const Popover: SFC<PopoverProps> = ({
   anchorEl,
   anchorOrigin = {horizontal: 'left', vertical: 'top'},
   children,
-  className,
   closePopover,
   id = 'popover',
   open,
@@ -176,12 +174,9 @@ const Popover: SFC<PopoverProps> = ({
   return (
     <>
       {createPortal(
-        <div
+        <S.Popover
           aria-hidden={!open}
-          className={clsx('Popover', className, {
-            'Popover--open': open,
-            ...bemify(className, '--open', open),
-          })}
+          open={open}
           data-testid="Popover"
           id={id}
           onClick={handleStopFromClosing}
@@ -191,7 +186,7 @@ const Popover: SFC<PopoverProps> = ({
           tabIndex={open ? undefined : -1}
         >
           {children}
-        </div>,
+        </S.Popover>,
         document.getElementById('popover-root')!,
       )}
     </>

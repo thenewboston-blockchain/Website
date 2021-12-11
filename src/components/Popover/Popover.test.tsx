@@ -44,32 +44,12 @@ describe('Popover component', () => {
     expect(screen.getByTestId('Popover')).toBeTruthy();
   });
 
-  it('renders with default className', () => {
-    render(<Popover {...baseProps}>{TestContent}</Popover>, {wrapper: Wrapper});
-
-    expect(screen.getByTestId('Popover')).toHaveClass('Popover');
-    expect(screen.getByTestId('Popover')).toHaveClass('Popover--open');
-  });
-
-  it('renders with default className--open when open is passed in as true', () => {
+  it('renders with attribute open when open is passed in as true', () => {
     const props = {...baseProps, open: true};
     render(<Popover {...props}>{TestContent}</Popover>, {wrapper: Wrapper});
 
-    expect(screen.getByTestId('Popover')).toHaveClass('Popover--open');
-  });
-
-  it('renders with className passed in', () => {
-    render(<Popover {...baseProps} />, {wrapper: Wrapper});
-
-    expect(screen.getByTestId('Popover')).toHaveClass('Test');
-    expect(screen.getByTestId('Popover')).toHaveClass('Test--open');
-  });
-
-  it('renders with className--open when open is passed in as true', () => {
-    const props = {...baseProps, open: true};
-    render(<Popover {...props}>{TestContent}</Popover>, {wrapper: Wrapper});
-
-    expect(screen.getByTestId('Popover')).toHaveClass('Test--open');
+    expect(screen.getByTestId('Popover')).toHaveAttribute('open');
+    expect(screen.getByTestId('Popover')).toHaveStyle('visibility: visible;');
   });
 
   it('renders children correctly', () => {
