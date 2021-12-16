@@ -38,8 +38,8 @@ const AppsHero: FC = () => {
       <S.Container>
         <S.Title>Explore our apps</S.Title>
         <S.SubTitle>
-          Join thousands of other players and explore games and a variety of applications built by our community to earn
-          or spend your TNBC.
+          Explore games and a variety of apps built by our community to earn or spend TNBC, the official cryptocurrency
+          of thenewboston.
         </S.SubTitle>
         <S.DiscordButton
           onClick={() => window.open(URLS.discord, '_blank', 'noreferrer noopener')}

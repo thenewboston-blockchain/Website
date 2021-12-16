@@ -7,10 +7,10 @@ import AppsHome from './containers/AppsHome';
 import AppDetails from './containers/AppDetails';
 
 const AppStore: FC = () => {
-  const {appId} = useParams<AppUrlParams>();
+  const {slug} = useParams<AppUrlParams>();
 
-  if (appId) {
-    return <AppDetails appId={appId} />;
+  if (slug) {
+    return <AppDetails slug={slug} />;
   }
 
   return <AppsHome />;

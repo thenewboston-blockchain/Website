@@ -66,7 +66,7 @@ const ListOfApps: FC = () => {
               <AppCard
                 key={app.pk}
                 thumbnailUrl={bannerUrl}
-                id={app.pk}
+                slug={app.slug}
                 title={app.name}
                 category={app.category?.name ?? '-'}
                 thumbnailSize={thumbnailSize}
