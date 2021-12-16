@@ -18,8 +18,11 @@ export async function getApps(limit?: number, offset?: number): Promise<App[]> {
   return response.data.results;
 }
 
-export async function getAppById(id: string): Promise<App> {
-  const response = await axios.get<App>(`${process.env.REACT_APP_BACKEND_API}/app_store/apps/${id}`, standardHeaders());
+export async function getAppBySlug(slug: string): Promise<App> {
+  const response = await axios.get<App>(
+    `${process.env.REACT_APP_BACKEND_API}/app_store/apps/${slug}`,
+    standardHeaders(),
+  );
 
   return response.data;
 }

@@ -6,17 +6,17 @@ import * as S from './Styles';
 
 type Props = {
   thumbnailUrl: string;
-  id: string;
+  slug: string;
   title: string;
   category: string;
   thumbnailSize?: number;
 };
 
-const AppCard: FC<Props> = ({thumbnailUrl, id, title, category, thumbnailSize = 280}) => {
+const AppCard: FC<Props> = ({thumbnailUrl, slug, title, category, thumbnailSize = 280}) => {
   const history = useHistory();
 
   const handleClickCard = (): void => {
-    history.push(`${ROUTES.apps}/${id}`);
+    history.push(`${ROUTES.apps}/${slug}`);
   };
 
   return (
