@@ -1,6 +1,7 @@
 import React, {FC, useEffect, useState} from 'react';
 
 import {getAppBySlug} from 'apis/apps';
+import {PageTitle} from 'components';
 import {ApiProgress} from 'constants/api-progress';
 import {App} from 'types/apps';
 
@@ -39,6 +40,8 @@ const AppDetails: FC<Props> = ({slug}) => {
 
   return (
     <>
+      <PageTitle title={app.name} />
+
       <AppDetailsTopSection description={app.tagline} logoUrl={app.logo} title={app.name} websiteUrl={app.website} />
       <S.Slider imageUrls={app.images.map((image) => image.image)} />
       <S.Overview className="AppDetails__overview" description={app.description} />
