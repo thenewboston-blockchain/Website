@@ -1,6 +1,7 @@
 import React, {FC, useEffect, useState} from 'react';
 
-import {getAppById} from 'apis/apps';
+import {getAppBySlug} from 'apis/apps';
+import {PageTitle} from 'components';
 import {ApiProgress} from 'constants/api-progress';
 import {App} from 'types/apps';
 
@@ -9,10 +10,10 @@ import AppDetailsTopSection from './AppDetailsTopSection';
 import * as S from './Styles';
 
 type Props = {
-  appId: string;
+  slug: string;
 };
 
-const AppDetails: FC<Props> = ({appId}) => {
+const AppDetails: FC<Props> = ({slug}) => {
   const [app, setApp] = useState<App | null>(null);
   const [progress, setProgress] = useState<ApiProgress>(ApiProgress.Init);
 
@@ -20,14 +21,14 @@ const AppDetails: FC<Props> = ({appId}) => {
     (async function getApp() {
       try {
         setProgress(ApiProgress.Requesting);
-        const appResponse = await getAppById(appId);
+        const appResponse = await getAppBySlug(slug);
         setApp(appResponse);
         setProgress(ApiProgress.Success);
       } catch (err) {
         setProgress(ApiProgress.Error);
       }
     })();
-  }, [appId]);
+  }, [slug]);
 
   if (progress === ApiProgress.Error) {
     return <S.ErrorContainer>App is unavailable.</S.ErrorContainer>;
@@ -39,6 +40,8 @@ const AppDetails: FC<Props> = ({appId}) => {
 
   return (
     <>
+      <PageTitle title={app.name} />
+
       <AppDetailsTopSection description={app.tagline} logoUrl={app.logo} title={app.name} websiteUrl={app.website} />
       <S.Slider imageUrls={app.images.map((image) => image.image)} />
       <S.Overview className="AppDetails__overview" description={app.description} />

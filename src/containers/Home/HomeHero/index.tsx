@@ -14,7 +14,7 @@ import * as S from './Styles';
 type AppThumbnail = {
   name: string;
   thumbnail: string;
-  pk: string;
+  slug: string;
 };
 
 const HEADING_HIGHLIGHT_DELAY = 2000;
@@ -44,7 +44,11 @@ const HomeHero: FC = () => {
       (async () => {
         setProgress(ApiProgress.Requesting);
         const appResponse = await getApps(APP_COUNT_MAX);
-        const appList = appResponse.map((app) => ({name: app.name, pk: app.pk, thumbnail: app.logo || DefaultLogoSrc}));
+        const appList = appResponse.map((app) => ({
+          name: app.name,
+          slug: app.slug,
+          thumbnail: app.logo || DefaultLogoSrc,
+        }));
         setApps(appList);
         setProgress(ApiProgress.Success);
       })();
@@ -66,7 +70,7 @@ const HomeHero: FC = () => {
     return (
       <S.Showcase>
         {apps.slice(0, numberOfAppsToDisplay).map((app) => (
-          <S.App key={app.pk} role="button" tabIndex={0} onClick={() => history.push(`${ROUTES.apps}/${app.pk}`)}>
+          <S.App key={app.slug} role="button" tabIndex={0} onClick={() => history.push(`${ROUTES.apps}/${app.slug}`)}>
             <S.AppImage src={app.thumbnail} alt={app.name} />
           </S.App>
         ))}

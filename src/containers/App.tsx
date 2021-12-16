@@ -65,7 +65,7 @@ const App: FC = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path={ROUTES.aboutUs} component={AboutUs} />
-          <Route exact path={`${ROUTES.apps}/:appId?`} component={withSuspense(Apps)} />
+          <Route exact path={`${ROUTES.apps}/:slug?`} component={withSuspense(Apps)} />
           <Route exact path={ROUTES.guidelines} component={Guidelines} />
           <Route exact path={ROUTES.createAccount} render={() => <CreateAccount disabled />} />
           <Route exact path={ROUTES.donate} component={Donate} />

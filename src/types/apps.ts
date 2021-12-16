@@ -1,5 +1,5 @@
 export interface AppUrlParams {
-  appId: string;
+  slug: string;
 }
 
 export interface AppCategory {
@@ -11,6 +11,7 @@ export interface AppCategory {
 
 export interface App {
   pk: string;
+  slug: string;
   name: string;
   category: AppCategory;
   description: string;
