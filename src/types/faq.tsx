@@ -294,7 +294,10 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
         answer: (
           <span>
             Check out our{' '}
-            <A newWindow={false} href="/governance/overview">
+            <A
+              newWindow={false}
+              href="https://developer.thenewboston.com/whitepaper/principal-entities#principal-entities-governance"
+            >
               docs
             </A>
           </span>
