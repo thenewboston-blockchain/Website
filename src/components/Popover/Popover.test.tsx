@@ -44,6 +44,12 @@ describe('Popover component', () => {
     expect(screen.getByTestId('Popover')).toBeTruthy();
   });
 
+  it('renders with className passed in', () => {
+    render(<Popover {...baseProps} />, {wrapper: Wrapper});
+
+    expect(screen.getByTestId('Popover')).toHaveClass('Test');
+  });
+
   it('renders with attribute open when open is passed in as true', () => {
     const props = {...baseProps, open: true};
     render(<Popover {...props}>{TestContent}</Popover>, {wrapper: Wrapper});

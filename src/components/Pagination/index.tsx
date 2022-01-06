@@ -11,7 +11,7 @@ export interface PaginationProps {
   navigationData: NavigationItem[];
 }
 
-const Pagination: SFC<PaginationProps> = ({navigationData}) => {
+const Pagination: SFC<PaginationProps> = ({className, navigationData}) => {
   const location = useLocation();
 
   const renderNextLink = () => {
@@ -39,7 +39,7 @@ const Pagination: SFC<PaginationProps> = ({navigationData}) => {
   };
 
   return (
-    <S.Pagination data-testid="Pagination">
+    <S.Pagination className={className} data-testid="Pagination">
       {renderPreviousLink()}
       {renderNextLink()}
     </S.Pagination>

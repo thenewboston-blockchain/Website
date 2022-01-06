@@ -39,6 +39,7 @@ const Popover: SFC<PopoverProps> = ({
   open,
   transformOrigin = {horizontal: 'left', vertical: 'top'},
   transformOffset = {horizontal: 0, vertical: 0},
+  className,
 }) => {
   const {pathname} = useLocation();
   const portalRef = useRef<HTMLDivElement>(null);
@@ -175,6 +176,7 @@ const Popover: SFC<PopoverProps> = ({
     <>
       {createPortal(
         <S.Popover
+          className={className}
           aria-hidden={!open}
           open={open}
           data-testid="Popover"
