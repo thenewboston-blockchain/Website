@@ -1,5 +1,6 @@
 import React from 'react';
 import {A} from 'components';
+import {URLS} from 'constants/routes';
 
 export interface FaqContent {
   answer: JSX.Element | string;
@@ -296,7 +297,7 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
             Check out our{' '}
             <A
               newWindow={false}
-              href="https://developer.thenewboston.com/whitepaper/principal-entities#principal-entities-governance"
+              href={`${URLS.developerPortal.whitepaper}/principal-entities#principal-entities-governance`}
             >
               docs
             </A>
