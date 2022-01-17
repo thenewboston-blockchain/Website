@@ -364,9 +364,9 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
         answer: (
           <>
             <p>
-              In reality there was never such a thought. It was more like "this is actually a great idea and would be a
-              huge improvement to the traditional economy, however, for this thing to take off, someone should solve all
-              these bottlenecks".
+              In reality, there was never a comparison between different architectures. It was more like "this is
+              actually a great idea and would be a huge improvement to the traditional economy, however, for this thing
+              to take off, someone should solve all these bottlenecks".
             </p>
             <p>
               It all started when Bucky read through the Bitcoin architecture, drew up how all the data was flowing
@@ -393,8 +393,7 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
           </>
         ),
         id: 'buckys-study',
-        question:
-          'Which cryptocurrency did Bucky study with extreme detail before saying "Bruh, imma make my own, these suck”?',
+        question: 'Which cryptocurrency did Bucky study with extreme detail before working on thenewboston?',
       },
       {
         answer:
