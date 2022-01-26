@@ -5,10 +5,10 @@ import {Loader} from 'components';
 import {ApiProgress} from 'constants/api-progress';
 import {RoadmapTask} from 'types/roadmap';
 
-import RoadmapHero from './RoadmapHero';
+import WalletProgressHero from './WalletProgressHero';
 import TeamRoadmaps from './TeamRoadmaps';
 
-import './Roadmap.scss';
+import './WalletProgress.scss';
 
 type TeamRoadmapState = {
   [teamName: string]: {
@@ -16,7 +16,7 @@ type TeamRoadmapState = {
   };
 };
 
-const Roadmap: FC = () => {
+const WalletProgress: FC = () => {
   const [teamRoadmaps, setTeamRoadmaps] = useState<TeamRoadmapState>({});
   const [progressPercentage, setProgressPercentage] = useState(0);
   const [progress, setProgress] = useState<ApiProgress>(ApiProgress.Init);
@@ -56,19 +56,19 @@ const Roadmap: FC = () => {
   }, []);
 
   if (progress === ApiProgress.Error) {
-    return <div className="Roadmap__error">Error while fetching roadmap. Please try again later.</div>;
+    return <div className="WalletProgress__error">Error while fetching progress status. Please try again later.</div>;
   }
 
   if (progress === ApiProgress.Requesting || progress === ApiProgress.Init || !teamRoadmaps) {
-    return <Loader className="Roadmap__loader" />;
+    return <Loader className="WalletProgress__loader" />;
   }
 
   return (
-    <div className="Roadmap">
-      <RoadmapHero className="Roadmap__hero" progressPercentage={progressPercentage} />
+    <div className="WalletProgress">
+      <WalletProgressHero className="WalletProgress__hero" progressPercentage={progressPercentage} />
       <TeamRoadmaps teamRoadmaps={teamRoadmaps} />
     </div>
   );
 };
 
-export default Roadmap;
+export default WalletProgress;

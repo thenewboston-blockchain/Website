@@ -15,7 +15,6 @@ export const ROUTES = {
   guidelines: '/guidelines',
   openings: '/openings',
   privacyPolicy: '/privacy-policy',
-  progress: '/progress',
   roadmap: '/roadmap',
   signin: 'sign-in',
   signout: '/sign-out',
@@ -25,6 +24,7 @@ export const ROUTES = {
   termsOfUse: '/terms-of-use',
   users: '/users',
   wallet: '/wallet',
+  walletProgress: '/wallet-progress',
 };
 
 // External URLs
