@@ -18,6 +18,10 @@ export const Container = styled.div`
   padding: 80px 0px;
   margin: 0 auto;
   max-width: 688px;
+
+  @media (max-width: 768px) {
+    padding: 48px 24px;
+  }
 `;
 
 export const Paragraph = styled.p<CommonProps>`
