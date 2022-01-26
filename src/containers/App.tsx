@@ -17,6 +17,7 @@ import Home from './Home';
 import Openings from './Openings';
 import PrivacyPolicy from './PrivacyPolicy';
 import Profile from './Profile';
+import Roadmap from './Roadmap';
 import SignIn from './SignIn';
 import SignOut from './SignOut';
 import Social from './Social';
@@ -81,6 +82,7 @@ const App: FC = () => {
           <Route path={`${ROUTES.wallet}/:chapter?`} component={Wallet} />
           <Route path={ROUTES.download} component={Download} />
           <Route path={ROUTES.privacyPolicy} component={PrivacyPolicy} />
+          <Route path={ROUTES.roadmap} component={Roadmap} />
           <Route exact path={ROUTES.signin} component={SignIn} />
           <Route exact path={ROUTES.signout} component={SignOut} />
           <Route exact path={ROUTES.termsOfUse} component={TermsOfUse} />
