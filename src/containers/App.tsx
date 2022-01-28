@@ -17,7 +17,7 @@ import Home from './Home';
 import Openings from './Openings';
 import PrivacyPolicy from './PrivacyPolicy';
 import Profile from './Profile';
-import Progress from './Progress';
+import Roadmap from './Roadmap';
 import SignIn from './SignIn';
 import SignOut from './SignOut';
 import Social from './Social';
@@ -29,7 +29,7 @@ import Wallet from './Wallet';
  * Lazy load pages that may contribute a lot to the bundle sizes
  */
 const Apps = lazy(() => import('./Apps'));
-const Roadmap = lazy(() => import('./Roadmap'));
+const WalletProgress = lazy(() => import('./WalletProgress'));
 
 interface GoogleAnalyticsWindow extends Window {
   ga: any;
@@ -82,12 +82,12 @@ const App: FC = () => {
           <Route path={`${ROUTES.wallet}/:chapter?`} component={Wallet} />
           <Route path={ROUTES.download} component={Download} />
           <Route path={ROUTES.privacyPolicy} component={PrivacyPolicy} />
-          <Route path={ROUTES.progress} component={Progress} />
-          <Route path={ROUTES.roadmap} component={withSuspense(Roadmap)} />
+          <Route path={ROUTES.roadmap} component={Roadmap} />
           <Route exact path={ROUTES.signin} component={SignIn} />
           <Route exact path={ROUTES.signout} component={SignOut} />
           <Route exact path={ROUTES.termsOfUse} component={TermsOfUse} />
           <Route path={`${ROUTES.users}/:userId`} component={Profile} />
+          <Route path={ROUTES.walletProgress} component={withSuspense(WalletProgress)} />
           <Redirect to="/" />
         </Switch>
       </Layout>
