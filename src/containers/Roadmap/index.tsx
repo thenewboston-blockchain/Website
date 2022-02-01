@@ -21,16 +21,15 @@ const Roadmap: React.FC = () => {
             <S.Highlight>Disclaimer: </S.Highlight>
             In this section, we discuss systems and core tech features that the core team owns entirely or partially,
             along with integrations (projects/apps) that are out of the core team's scope and control, yet the core team
-            believes will guide thenewboston community and its partners for 2022. The next section dives deeper into
-            ownership. However, for now, we present this technological suite in its entirety:
+            believes will guide thenewboston community and its partners for 2022. However, for now, we present this
+            technological suite in its entirety:
           </S.Paragraph>
           <S.List bold>
             <S.ListItem>Beta Blockchain Infrastructure</S.ListItem>
             <S.ListItem>Wallet+</S.ListItem>
             <S.ListItem>Token System</S.ListItem>
             <S.ListItem>NFT Marketplace</S.ListItem>
-            <S.ListItem>Bridge</S.ListItem>
-            <S.ListItem mb={0}>External Exchange Integration</S.ListItem>
+            <S.ListItem mb={0}>Bridge</S.ListItem>
           </S.List>
         </Section>
 
