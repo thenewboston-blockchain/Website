@@ -4,14 +4,15 @@ import {REGEX} from 'constants/regex';
 import * as api from 'apis/github';
 
 const parseGithubLabel = (label: string): number => {
-  const hasWeightedStoryWithBountyLabel = REGEX.githubWeightedLabel.test(label);
-  const weightedBounty = label.replace(REGEX.githubWeightedLabel, '');
+  const labelHasWeightedStoryAndBounty = REGEX.githubWeightedLabel.test(label);
+  const labelHasNumberAsBounty = REGEX.containsNumber.test(label);
 
-  if (weightedBounty && hasWeightedStoryWithBountyLabel && !Number.isNaN(weightedBounty)) {
-    return parseInt(weightedBounty, 10);
+  if (labelHasWeightedStoryAndBounty && labelHasNumberAsBounty) {
+    const weightedBounty = label.replace(REGEX.githubWeightedLabel, '');
+    return weightedBounty ? parseInt(weightedBounty, 10) : 0;
   }
   // supports previous GH labels (without story points)
-  if (!weightedBounty && Number.isNaN(weightedBounty)) {
+  if (!labelHasWeightedStoryAndBounty && labelHasNumberAsBounty) {
     return parseInt(label.replace(REGEX.excludingNumber, ''), 10);
   }
   return 0;
@@ -27,6 +28,7 @@ export const fetchGithubIssues = async (): Promise<Issue[]> => {
 
   return issues.map((issue) => {
     const amountLabels = issue.labels.filter(({color}: any) => color.toLowerCase() === AMOUNT_COLOR);
+
     return {
       ...issue,
       amount: amountLabels.length ? parseGithubLabel(amountLabels[0].name) : 0,
