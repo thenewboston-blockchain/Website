@@ -3,6 +3,20 @@ import {BaseRelease, FetchGithubReleasesParams, Issue, Release} from 'types/gith
 import {REGEX} from 'constants/regex';
 import * as api from 'apis/github';
 
+const parseGithubLabel = (label: string): number => {
+  const hasWeightedStoryWithBountyLabel = REGEX.githubWeightedLabel.test(label);
+  const weightedBounty = label.replace(REGEX.githubWeightedLabel, '');
+
+  if (weightedBounty && hasWeightedStoryWithBountyLabel && !Number.isNaN(weightedBounty)) {
+    return parseInt(weightedBounty, 10);
+  }
+  // supports previous GH labels (without story points)
+  if (!weightedBounty && Number.isNaN(weightedBounty)) {
+    return parseInt(label.replace(REGEX.excludingNumber, ''), 10);
+  }
+  return 0;
+};
+
 export const fetchGithubIssues = async (): Promise<Issue[]> => {
   const promises = REPOSITORIES.map((repoName) => api.getIssuesForRepo(repoName.pathname));
 
@@ -15,7 +29,7 @@ export const fetchGithubIssues = async (): Promise<Issue[]> => {
     const amountLabels = issue.labels.filter(({color}: any) => color.toLowerCase() === AMOUNT_COLOR);
     return {
       ...issue,
-      amount: amountLabels.length ? parseInt(amountLabels[0].name.replace(REGEX.excludingNumber, ''), 10) : 0,
+      amount: amountLabels.length ? parseGithubLabel(amountLabels[0].name) : 0,
       repositoryName: getRepositoryName(issue.repository_url),
     };
   });
