@@ -108,6 +108,7 @@ export const Showcase = styled.div`
 `;
 
 export const App = styled.div`
+  background-color: var(--color-gray-4);
   border-radius: ${THUMBNAIL_BORDER_RADIUS};
   cursor: pointer;
   filter: drop-shadow(0 4px 6px rgba(26, 41, 54, 0.5));

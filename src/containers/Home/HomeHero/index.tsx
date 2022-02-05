@@ -2,7 +2,7 @@ import React, {FC, ReactElement} from 'react';
 import {useHistory} from 'react-router-dom';
 
 import {getApps} from 'apis/apps';
-import {Button, Loader} from 'components';
+import {Button} from 'components';
 import {ROUTES, URLS} from 'constants/routes';
 import {ApiProgress} from 'constants/api-progress';
 import {useWindowDimensions} from 'hooks';
@@ -54,8 +54,6 @@ const HomeHero: FC = () => {
       })();
     } catch (err) {
       setProgress(ApiProgress.Error);
-    } finally {
-      setProgress(ApiProgress.Ok);
     }
   }, []);
 
@@ -64,8 +62,14 @@ const HomeHero: FC = () => {
   };
 
   const renderShowcase = (): ReactElement => {
-    if (progress === ApiProgress.Requesting) {
-      return <Loader />;
+    if (progress === ApiProgress.Requesting || progress === ApiProgress.Init) {
+      return (
+        <S.Showcase>
+          {[...Array(numberOfAppsToDisplay)].map((index) => (
+            <S.App key={index} />
+          ))}
+        </S.Showcase>
+      );
     }
     return (
       <S.Showcase>
