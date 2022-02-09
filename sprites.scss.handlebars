@@ -1,0 +1,12 @@
+// spritesmith does not take into account responsive sprites, hence we need extra
+// conversion from pixels to percentage to make it responsive.
+
+{{#items}}
+.sprite-{{name}} {
+  background-image: url({{{escaped_image}}});
+  background-position: (({{offset_x}} / ({{total_width}} - {{width}})) * -100%) (({{offset_y}} / ({{total_height}} - {{height}})) * -100%);
+  background-size: (({{total_width}} / {{width}}) * 100%) (({{total_height}} / {{height}}) * 100%);
+  height: {{px.height}};
+  width: {{px.width}};
+}
+{{/items}}

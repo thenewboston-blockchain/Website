@@ -59,9 +59,7 @@ export const Handle = styled.div`
   }
 `;
 
-export const Image = styled.img`
-  width: 100%;
-
+export const Image = styled.div`
   @media (min-width: 768px) {
     grid-row: 1;
   }

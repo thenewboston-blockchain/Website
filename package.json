@@ -35,11 +35,12 @@
     "yup": "^0.31.0"
   },
   "scripts": {
-    "build": "react-app-rewired build",
+    "build": "npm run css-sprite && react-app-rewired build",
     "eject": "react-scripts eject",
     "lint": "tsc --noEmit && eslint \"./src/**/*.{js,ts,tsx}\" && stylelint \"./src/**/*.{css,scss}\"",
     "prettier": "prettier --write \"{,!(node_modules)/**/}*.{ts,tsx,js,json,css,less,scss}\"",
-    "start": "react-app-rewired start",
+    "start": "npm run css-sprite && react-app-rewired start",
+    "css-sprite": "spritesmith",
     "stylelint": "stylelint \"./src/**/*.{css,scss}\" --fix",
     "test": "react-app-rewired test"
   },
@@ -99,6 +100,7 @@
     "react-app-rewired": "^2.1.8",
     "react-scripts": "^4.0.3",
     "sass": "^1.42.1",
+    "spritesmith-cli": "^1.1.2",
     "styled-components": "^5.3.1",
     "stylelint": "^13.8.0",
     "stylelint-order": "^4.1.0",

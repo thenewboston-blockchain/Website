@@ -13,7 +13,7 @@ export const Layout = styled.div`
 `;
 
 export const LayoutContent = styled.div`
-  min-height: calc(100vh - ${topNavHeight + footerHeight});
+  min-height: calc(100vh - (${topNavHeight} + ${footerHeight}));
 `;
 
 export const LayoutFooter = styled(Container)`

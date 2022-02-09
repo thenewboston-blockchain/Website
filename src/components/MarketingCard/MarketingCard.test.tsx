@@ -30,12 +30,6 @@ describe('MarketingCard component', () => {
     expect(screen.getAllByText(socialMediaDescriptions[baseProps.website])).toBeTruthy();
   });
 
-  it('renders social media image', () => {
-    render(<MarketingCard {...baseProps} />);
-
-    expect(screen.getByTestId('MarketingCard__img')).toHaveAttribute('alt', baseProps.website);
-  });
-
   it('renders with default styles', () => {
     render(<MarketingCard {...baseProps} />);
 
