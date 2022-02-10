@@ -21,7 +21,7 @@ const WalletProgressHero: FC<Props> = ({className, progressPercentage}) => {
         <div className="WalletProgressHero__content">
           <h1 className="WalletProgressHero__content-title">Wallet+ Progress</h1>
           <p className="WalletProgressHero__content-description">
-            This progress is going to be specifically for tasks that get us to finishing up the beta app
+            This progress page consists of tasks that relate to our beta blockchain milestone.
           </p>
           <div className="WalletProgressHero__progress">
             <ProgressBar className="WalletProgressHero__progress-bar" height={16} percentage={progressPercentage} />
