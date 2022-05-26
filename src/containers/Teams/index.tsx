@@ -222,26 +222,27 @@ const Teams: FC = () => {
   }, [handleBackClick, resourceParam]);
 
   const renderTabPanel = useCallback(() => {
-    switch (tabParam) {
-      case TeamTabOptions.members: {
-        return <div className="Teams__team-list">{renderTeamMembers()}</div>;
-      }
-      case TeamTabOptions.overview: {
-        const selectedTeam = teams.find(({title}) => title === teamFilter);
-
-        // team may not be present at this point
-        if (!selectedTeam) {
-          return;
-        }
-        return <TeamOverview team={selectedTeam} />;
-      }
-      case TeamTabOptions.resources: {
-        return <div className="Teams__resources">{renderResources()}</div>;
-      }
-      default:
-        return <EmptyPage />;
-    }
-  }, [renderResources, renderTeamMembers, tabParam, teamFilter, teams]);
+    return null;
+    // switch (tabParam) {
+    //   case TeamTabOptions.members: {
+    //     return <div className="Teams__team-list">{renderTeamMembers()}</div>;
+    //   }
+    //   case TeamTabOptions.overview: {
+    //     const selectedTeam = teams.find(({title}) => title === teamFilter);
+    //
+    //     // team may not be present at this point
+    //     if (!selectedTeam) {
+    //       return;
+    //     }
+    //     return <TeamOverview team={selectedTeam} />;
+    //   }
+    //   case TeamTabOptions.resources: {
+    //     return <div className="Teams__resources">{renderResources()}</div>;
+    //   }
+    //   default:
+    //     return <EmptyPage />;
+    // }
+  }, []);
 
   const isReadyToDisplay = apiState.progress === APIProgress.SUCCESS && teamFilter;
 
