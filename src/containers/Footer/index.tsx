@@ -14,34 +14,6 @@ interface ComponentProps {
 
 const navLists = [
   {
-    header: 'Get TNBC',
-    links: [
-      {
-        title: 'Bounties',
-        url: ROUTES.bounties,
-      },
-      {
-        title: 'Careers',
-        url: ROUTES.openings,
-      },
-      {
-        isExternal: true,
-        newWindow: true,
-        title: 'Faucet',
-        url: URLS.apps.faucet,
-      },
-      {
-        isExternal: true,
-        title: 'Create Projects',
-        url: URLS.developerPortal.projects,
-      },
-      {
-        title: 'Apps',
-        url: ROUTES.apps,
-      },
-    ],
-  },
-  {
     header: 'Developer',
     links: [
       {
@@ -53,44 +25,8 @@ const navLists = [
       {
         isExternal: true,
         newWindow: false,
-        title: 'Living Whitepaper',
-        url: URLS.developerPortal.whitepaper,
-      },
-      {
-        isExternal: true,
-        newWindow: false,
         title: 'Tutorials',
         url: URLS.developerPortal.tutorials,
-      },
-      {
-        isExternal: true,
-        newWindow: false,
-        title: 'Projects',
-        url: URLS.developerPortal.projects,
-      },
-      {
-        isExternal: true,
-        newWindow: false,
-        title: 'APIs',
-        url: URLS.developerPortal.api,
-      },
-      {
-        isExternal: true,
-        newWindow: false,
-        title: 'Node Deployment',
-        url: URLS.developerPortal.nodeDeployment,
-      },
-      {
-        isExternal: true,
-        newWindow: false,
-        title: 'SDKs &  Libraries',
-        url: URLS.developerPortal.sdkAndLibraries,
-      },
-      {
-        isExternal: true,
-        newWindow: false,
-        title: 'Utilities',
-        url: URLS.developerPortal.utilities,
       },
     ],
   },
@@ -98,38 +34,12 @@ const navLists = [
     header: 'Resources',
     links: [
       {
-        title: 'Roadmap',
-        url: ROUTES.roadmap,
-      },
-      {
-        title: 'FAQ',
-        url: ROUTES.faq,
-      },
-      {
-        isExternal: true,
-        newWindow: true,
-        title: 'Blog',
-        url: URLS.blog,
-      },
-      {
         title: 'Media Kit',
         url: ROUTES.assets,
       },
       {
-        title: 'Meet the Team',
-        url: ROUTES.teams,
-      },
-      {
-        title: 'About Us',
-        url: ROUTES.aboutUs,
-      },
-      {
         title: 'Join the Community',
         url: ROUTES.social,
-      },
-      {
-        title: 'Donate',
-        url: ROUTES.donate,
       },
     ],
   },

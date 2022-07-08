@@ -1,33 +1,19 @@
 import React, {FC, ReactNode, useCallback, useEffect, useState} from 'react';
-import {Link, useHistory, useParams} from 'react-router-dom';
+import {useHistory, useParams} from 'react-router-dom';
 import {Icon, IconType} from '@thenewboston/ui';
 
-import {api as teamsApi, CoreTeamMemberResponse, CoreTeamResponse} from 'apis/teams';
-import {A, BreadcrumbMenu, Container, EmptyPage, FlatNavLinks, Loader, PageTitle} from 'components';
+import {api as teamsApi, CoreTeamResponse} from 'apis/teams';
+import {BreadcrumbMenu, Container, EmptyPage, FlatNavLinks, Loader, PageTitle} from 'components';
 import {allTeamsFilter} from 'constants/teams';
 import {ROUTES} from 'constants/routes';
-import useQueryParams from 'hooks/useQueryParams';
-import {APIState, APIProgress, INITIAL_API_STATE} from 'types/api';
-import {NavigationItem} from 'types/navigation';
+import {APIProgress, APIState, INITIAL_API_STATE} from 'types/api';
 import {PageDataObject} from 'types/page-data';
-import {CoreTeamMember, TeamsUrlParams, TeamTabOptions} from 'types/teams';
+import {TeamsUrlParams, TeamTabOptions} from 'types/teams';
 
 import InternalTeamMemberPayments from './Resources/InternalTeamMemberPayments';
 import InternalBountyAccountRefills from './Resources/InternalBountyAccountRefills';
-import TeamMemberCard from './TeamMemberCard';
-import TeamOverview from './TeamOverview';
 import TeamTabs from './TeamTabs';
 import './Teams.scss';
-
-const sortTeamMembers = (members: CoreTeamMemberResponse[]): CoreTeamMemberResponse[] => {
-  const teamLeads = members
-    .filter(({is_lead}) => is_lead)
-    .sort((member1, member2) => (member1.user.display_name > member2.user.display_name ? 1 : -1));
-  const otherMembers = members
-    .filter(({is_lead}) => !is_lead)
-    .sort((member1, member2) => (member1.user.display_name > member2.user.display_name ? 1 : -1));
-  return teamLeads.concat(otherMembers);
-};
 
 const pageData: PageDataObject = {
   'bounty-account-refills': {
@@ -40,23 +26,12 @@ const pageData: PageDataObject = {
   },
 };
 
-const externalLinks: NavigationItem[] = [
-  {
-    name: 'Meeting Notes Template',
-    url: 'https://docs.google.com/document/d/15P7MPPGgC2O3ZhOWryOeuW1K5EO9TL8_TBWR4Z2-_eo/edit?usp=sharing',
-  },
-];
-
 const Teams: FC = () => {
   const history = useHistory();
   const {team: teamParam, tab: tabParam, resource: resourceParam} = useParams<TeamsUrlParams>();
-  const queryParams = useQueryParams();
-  const [filteredMembers, setFilteredMembers] = useState<CoreTeamMember[]>([]);
   const [teamFilter, setTeamFilter] = useState<string>('');
   const [teams, setTeams] = useState<CoreTeamResponse[]>([]);
   const [apiState, setAPIState] = useState<APIState>(INITIAL_API_STATE);
-
-  const queryTitle = queryParams.get('title');
 
   useEffect(() => {
     const isAllTeams = teamParam === allTeamsFilter.pathname;
@@ -117,39 +92,6 @@ const Teams: FC = () => {
     }
   }, [history, teamParam, teams, apiState]);
 
-  useEffect(() => {
-    if (apiState.progress !== APIProgress.SUCCESS || !teamFilter) {
-      return;
-    }
-
-    const getFilteredMembers = (): CoreTeamMemberResponse[] => {
-      const teamLeads: CoreTeamMemberResponse[] = [];
-      const otherMembers: CoreTeamMemberResponse[] = [];
-      let filteredTeams = teams;
-      if (teamFilter !== allTeamsFilter.title) {
-        filteredTeams = teams.filter(({title}) => title.toLowerCase() === teamFilter.toLowerCase());
-      }
-      filteredTeams.forEach((team) => {
-        team.core_members_meta.forEach((teamMember) => {
-          if (teamMember.is_lead) {
-            teamLeads.push({...teamMember});
-          } else {
-            otherMembers.push({...teamMember});
-          }
-        });
-      });
-      return teamLeads.concat(otherMembers);
-    };
-
-    const members = getFilteredMembers();
-    const sortedMembers = sortTeamMembers(members);
-    if (queryTitle) {
-      setFilteredMembers(sortedMembers.filter((member) => member.job_title.toLowerCase() === queryTitle.toLowerCase()));
-    } else {
-      setFilteredMembers(sortedMembers);
-    }
-  }, [apiState, queryTitle, teamFilter, teams]);
-
   const handleNavOptionClick = useCallback(
     (option: string) => (): void => {
       if (option === allTeamsFilter.pathname) {
@@ -167,40 +109,6 @@ const Teams: FC = () => {
       <FlatNavLinks handleOptionClick={handleNavOptionClick} options={navLinkOptions} selectedOption={teamParam} />
     );
   };
-
-  const renderTeamMembers = useCallback((): ReactNode => {
-    if (!filteredMembers.length) return <EmptyPage />;
-
-    return filteredMembers.map(({user, hourly_rate, is_lead, job_title, pk}) => (
-      <TeamMemberCard
-        displayName={user.display_name}
-        githubUsername={user.github_username}
-        isLead={is_lead}
-        hourlyRate={hourly_rate}
-        key={pk}
-        profileImage={user.profile_image}
-        discordUsername={user.discord_username}
-        title={job_title}
-      />
-    ));
-  }, [filteredMembers]);
-
-  const renderResources = useCallback((): ReactNode => {
-    return (
-      <>
-        {Object.entries(pageData).map(([key, value]) => (
-          <Link className="Teams__resources-item" key={key} to={`${ROUTES.teams}/${teamParam}/${tabParam}/${key}`}>
-            {value.name}
-          </Link>
-        ))}
-        {externalLinks.map((externalLink) => (
-          <A className="Teams__resources-item" href={externalLink.url} key={externalLink.name} newWindow>
-            {externalLink.name}
-          </A>
-        ))}
-      </>
-    );
-  }, [teamParam, tabParam]);
 
   const handleBackClick = useCallback((): void => {
     history.replace(`${ROUTES.teams}/${teamParam}/${tabParam}`);
@@ -223,25 +131,6 @@ const Teams: FC = () => {
 
   const renderTabPanel = useCallback(() => {
     return null;
-    // switch (tabParam) {
-    //   case TeamTabOptions.members: {
-    //     return <div className="Teams__team-list">{renderTeamMembers()}</div>;
-    //   }
-    //   case TeamTabOptions.overview: {
-    //     const selectedTeam = teams.find(({title}) => title === teamFilter);
-    //
-    //     // team may not be present at this point
-    //     if (!selectedTeam) {
-    //       return;
-    //     }
-    //     return <TeamOverview team={selectedTeam} />;
-    //   }
-    //   case TeamTabOptions.resources: {
-    //     return <div className="Teams__resources">{renderResources()}</div>;
-    //   }
-    //   default:
-    //     return <EmptyPage />;
-    // }
   }, []);
 
   const isReadyToDisplay = apiState.progress === APIProgress.SUCCESS && teamFilter;
