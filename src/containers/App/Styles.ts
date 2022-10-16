@@ -8,12 +8,7 @@ export const Container = styled.div`
   justify-content: center;
 `;
 
-export const Red = styled.span`
-  color: #dd0d15;
-`;
-
-export const Unite = styled.div`
-  color: white;
-  font-family: var(--font-family-mono);
-  font-size: 26px;
+export const Image = styled.img`
+  height: auto;
+  max-width: 260px;
 `;

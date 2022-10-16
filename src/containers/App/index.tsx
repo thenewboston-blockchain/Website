@@ -1,13 +1,12 @@
 import React, {FC} from 'react';
 
+import thenewbostonLogo from 'assets/logos/thenewboston.png';
 import * as S from './Styles';
 
 const App: FC = () => {
   return (
     <S.Container>
-      <S.Unite>
-        U<S.Red>n</S.Red>ite.
-      </S.Unite>
+      <S.Image alt="thenewboston logo" src={thenewbostonLogo} />
     </S.Container>
   );
 };
