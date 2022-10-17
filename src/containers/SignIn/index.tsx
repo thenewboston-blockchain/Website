@@ -25,6 +25,8 @@ const SignIn: FC = () => {
   const handleSubmit = async ({email, password}: FormValues): Promise<void> => {
     try {
       setSubmitting(true);
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       const {data} = await dispatch(login({email, password}));
       setSubmitting(false);
       history.push(`/users/${data.user.pk}`);

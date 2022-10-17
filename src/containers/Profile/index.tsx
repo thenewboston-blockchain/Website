@@ -26,6 +26,8 @@ const Profile: FC = () => {
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
       try {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         await dispatch(getUser(userId));
       } catch (error) {
         setErrorMessage('Error retrieving user');

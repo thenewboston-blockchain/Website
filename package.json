@@ -3,15 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@reduxjs/toolkit": "^1.5.0",
+    "@reduxjs/toolkit": "^1.8.6",
     "@thenewboston/ui": "^0.1.16",
     "@thenewboston/utils": "^1.0.0",
-    "axios": "^0.21.1",
+    "axios": "^0.21.4",
     "clsx": "^1.1.1",
     "date-fns": "^2.16.1",
     "formik": "^2.2.2",
     "normalize.css": "^8.0.1",
-    "qrcode": "^1.4.4",
+    "qrcode": "^1.5.1",
     "raf": "^3.4.1",
     "react": "^17.0.1",
     "react-cool-onclickoutside": "^1.5.5",
@@ -84,7 +84,7 @@
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-airbnb-typescript": "^11.0.0",
     "eslint-config-prettier": "^6.12.0",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^24.1.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-prettier": "^3.1.4",
@@ -104,7 +104,7 @@
     "typescript-plugin-styled-components": "^2.0.0"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   },
   "husky": {
     "hooks": {
