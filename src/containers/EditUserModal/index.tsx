@@ -39,6 +39,8 @@ const EditUserModal: FC<ComponentProps> = ({close}) => {
     try {
       setSubmitting(true);
       await dispatch(
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
         editUser({
           account_number: accountNumber,
           discord_username: discordUsername,
