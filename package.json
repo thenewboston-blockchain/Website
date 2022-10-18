@@ -90,7 +90,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.3",
     "eslint-plugin-react-hooks": "^4.1.2",
-    "husky": "^4.2.5",
+    "husky": "^4.3.8",
     "jest-styled-components": "^7.0.5",
     "lint-staged": "^10.2.9",
     "prettier": "^2.1.2",
